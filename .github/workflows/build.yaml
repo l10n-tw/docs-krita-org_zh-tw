@@ -25,12 +25,12 @@ jobs:
     - name: Build HTML docs
       run: |
         cd ~/docs
-        make html
-    - name: Upload build artifact
-      uses: actions/upload-artifact@v2
-      with:
-        name: html
-        path: ~/docs/_build/html/
+        make -e SPHINXOPTS="-D language='zh_TW'" html
+    # - name: Upload build artifact
+    #   uses: actions/upload-artifact@v2
+    #   with:
+    #     name: html
+    #     path: ~/docs/_build/html/
     - name: Deploy
       run: |
         git fetch --depth=1 origin gh-pages
