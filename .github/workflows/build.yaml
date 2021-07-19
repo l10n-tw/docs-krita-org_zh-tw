@@ -38,8 +38,7 @@ jobs:
         cd _deploy
         git config --local user.name github-actions[bot]
         git config --local user.email 41898282+github-actions[bot]@users.noreply.github.com
-        git rm -rf *
-        rsync -vr ~/docs/_build/html/ ./
+        rsync -vr --del --exclude .git ~/docs/_build/html/ ./
         git add -A
         git commit -m "Action \`build\`: Deploy build of ${GITHUB_SHA::7}"
         git push
