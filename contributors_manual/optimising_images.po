@@ -1,0 +1,660 @@
+# Copyright (C) licensed under the GNU Free Documentation License 1.3+
+# unless stated otherwise
+# This file is distributed under the same license as the Krita Manual
+# package.
+#
+# Alvin <alvin@alvinhc.com>, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: Krita Manual 4.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-07-19 22:30+0800\n"
+"PO-Revision-Date: 2021-07-10 16:17+0800\n"
+"Last-Translator: Alvin <alvin@alvinhc.com>\n"
+"Language-Team: Chinese <zh-l10n@lists.linux.org.tw>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Generated-By: Babel 2.6.0\n"
+"X-Generator: Lokalize 21.04.1\n"
+
+#: ../../contributors_manual/optimising_images.rst:1
+msgid "How to make and optimise images for use in the manual."
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:15
+msgid "Images for the Manual"
+msgstr "供手冊使用的影像"
+
+#: ../../contributors_manual/optimising_images.rst:17
+msgid ""
+"This one is a little bit an extension to :ref:`saving_for_the_web`. In "
+"particular it deals with making images for the manual, and how to optimise "
+"images."
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:19
+msgid "Contents"
+msgstr "目錄"
+
+#: ../../contributors_manual/optimising_images.rst:22
+msgid "Tools for making screenshots"
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:24
+msgid ""
+"Now, if you wish to make an image of the screen with all the dockers and "
+"tools, then :ref:`saving_for_the_web` won't be very helpful: It only saves "
+"out the canvas contents, after all!"
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:26
+msgid ""
+"So, instead, we'll make a screenshot. Depending on your operating system, "
+"there are several screenshot utilities available."
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:29
+#: ../../contributors_manual/optimising_images.rst:81
+msgid "Windows"
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:31
+msgid ""
+"Windows has a build-in screenshot tool. It is by default on the :kbd:`Print "
+"Screen` key. On laptops you will sometimes need to use the :kbd:`Fn` key."
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:34
+#: ../../contributors_manual/optimising_images.rst:88
+#: ../../contributors_manual/optimising_images.rst:154
+msgid "Linux"
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:35
+msgid ""
+"Both Gnome and KDE have decent screenshot tools showing up by default when "
+"using the :kbd:`Print Screen` key, as well do other popular desktop "
+"environments. If, for whatever reason, you have no"
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:40
+#: ../../contributors_manual/optimising_images.rst:219
+#: ../../contributors_manual/optimising_images.rst:240
+msgid "ImageMagick"
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:38
+msgid "With imagemagick, you can use the following command::"
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:40
+msgid "import -depth 8 -dither <filename.png>"
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:42
+msgid ""
+"While we should minimize the amount of GIFs in the manual for a variety of "
+"accessibility reasons, you sometimes still need to make GIFs and short "
+"videos. Furthermore, GIFs are quite nice to show off features with release "
+"notes."
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:44
+msgid "For making short GIFs, you can use the following programs:"
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:46
+msgid ""
+"`Peek <https://github.com/phw/peek>`_ -- This one has an AppImage and a very "
+"easy user-interface. Like many screenrecording programs it does show trouble "
+"on Wayland."
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:49
+#: ../../contributors_manual/optimising_images.rst:135
+msgid "macOS"
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:51
+msgid ""
+"The Screenshot hotkey on macOS is :kbd:`Shift + Command + 3`, according to "
+"`the official apple documentation <https://support.apple.com/en-us/"
+"HT201361>`_."
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:54
+msgid "The appropriate file format for the job"
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:56
+msgid ""
+"Different file formats are better for certain types of images. In the end, "
+"we want to have images that look nice and have a low filesize, because that "
+"makes the manual easier to download or browse on the internet."
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:58
+msgid "GUI screenshots"
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:59
+msgid "This should use PNG, and if possible, in GIF."
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:60
+msgid "Images that have a lot of flat colors."
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:61
+msgid "This should use PNG."
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:62
+msgid "Grayscale images"
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:63
+msgid "These should be GIF or PNG."
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:64
+msgid "Images with a lot of gradients"
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:65
+msgid "These should be JPG."
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:67
+msgid "Images with a lot of transparency."
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:67
+msgid "These should use PNG."
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:69
+msgid ""
+"The logic is the way how each of these saves colors. JPEG is ideal for "
+"photos and images with a lot of gradients because it :ref:`compresses "
+"differently <lossy_compression>`. However, contrasts don't do well in JPEG. "
+"PNG does a lot better with images with sharp contrasts, while in some cases "
+"we can even have less than 256 colors, so GIF might be better."
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:71
+msgid ""
+"Grayscale images, even when they have a lot of gradients variation, should "
+"be PNG. The reason is that when we use full color images, we are, depending "
+"on the image, using 3 to 5 numbers to describe those values, with each of "
+"those values having a possibility to contain any of 256 values. JPEG and "
+"other 'lossy' file formats use clever psychological tricks to cut back on "
+"the amount of values an image needs to show its contents. However, when we "
+"make grayscale images, we only keep track of the lightness. The lightness is "
+"only one number, that can have 256 values, making it much easier to just use "
+"GIF or PNG, instead of JPEG which could have nasty artifacts. (And, it is "
+"also a bit smaller)"
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:73
+msgid "**When in doubt, use PNG.**"
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:76
+msgid "Optimising Images in quality and size"
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:78
+msgid ""
+"Now, while most image editors try to give good defaults on image sizes, we "
+"can often make them even smaller by using certain tools."
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:83
+msgid ""
+"The most commonly recommended tool for this on Windows is `IrfranView "
+"<https://www.irfanview.com/>`_, but the dear writer of this document has no "
+"idea how to use it exactly."
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:85
+msgid "The other option is to use PNGCrush as mentioned in the linux section."
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:91
+msgid "Optimising PNG"
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:92
+msgid ""
+"There is a whole laundry list of `PNG optimisation tools <https://css-ig.net/"
+"png-tools-overview>`_ available on Linux. They come in two categories: Lossy "
+"(Using psychological tricks), and Lossless (trying to compress the data more "
+"conventionally). The following are however the most recommended:"
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:101
+msgid "`PNGQuant <https://pngquant.org/>`_"
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:95
+msgid ""
+"A PNG compressor using lossy techniques to reduce the amount of colors used "
+"in a smart way."
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:97
+msgid "To use PNGquant, go to the folder of choice, and type::"
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:99
+msgid "pngquant --quality=80-100 image.png"
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:101
+msgid ""
+"Where *image* is replaced with the image file name. When you press the :kbd:"
+"`Enter` key, a new image will appear in the folder with the compressed "
+"results. PNGQuant works for most images, but some images, like the color "
+"selectors don't do well with it, so always double check that the resulting "
+"image looks good, otherwise try one of the following options:"
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:108
+msgid "`PNGCrush <https://pmt.sourceforge.io/pngcrush/>`_"
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:104
+msgid "A lossless PNG compressor. Usage::"
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:106
+msgid "pngcrush image.png imageout.png"
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:108
+msgid ""
+"This will try the most common methods. Add ``-brute`` to try out all methods."
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:116
+msgid "`Optipng <http://optipng.sourceforge.net/>`_"
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:111
+msgid ""
+"Another lossless PNG compressor which can be run after using PNGQuant, it is "
+"apparently originally a fork of png crush. Usage::"
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:114
+msgid "optipng image.png"
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:116
+msgid ""
+"where image is the filename. OptiPNG will then proceed to test several "
+"compression algorithms and **overwrite** the *image.png* file with the "
+"optimised version. You can avoid overwriting with the ``--out imageout.png`` "
+"command."
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:119
+msgid "Optimising GIF"
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:121
+msgid "`FFmpeg <http://blog.pkh.me/p/21-high-quality-gif-with-ffmpeg.html>`_"
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:122
+msgid "`Gifski <https://gif.ski/>`_"
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:123
+msgid "`LossyGif <https://kornel.ski/lossygif>`_"
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:126
+msgid "Optimising JPEG"
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:128
+msgid ""
+"Now, JPEG is really tricky to optimize properly. This is because it is a :"
+"ref:`lossy file format <lossy_compression>`, and that means that it uses "
+"psychological tricks to store its data."
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:130
+msgid ""
+"However, tricks like these become very obvious when your image has a lot of "
+"contrast, like text. Furthermore, JPEGs don't do well when they are resaved "
+"over and over. Therefore, make sure that there's a lossless version of the "
+"image somewhere that you can edit, and that only the final result is in JPEG "
+"and gets compressed further."
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:137
+msgid ""
+"`ImageOptim <https://imageoptim.com/mac>`_ -- A Graphical User Interface "
+"wrapper around commandline tools like PNGquant and gifski."
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:140
+msgid "Editing the metadata of a file"
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:142
+msgid ""
+"Sometimes, personal information gets embedded into an image file. "
+"Othertimes, we want to embed information into a file to document it better."
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:144
+msgid ""
+"There are no less than 3 to 4 different ways of handling metadata, and "
+"metadata has different ways of handling certain files."
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:146
+msgid ""
+"The most commonly used tool to edit metadata is :program:`ExifTool`, another "
+"is to use :program:`ImageMagick`."
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:149
+msgid "Windows and macOS"
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:151
+msgid ""
+"To get exiftool, `just get it from the website <https://www.sno.phy.queensu."
+"ca/~phil/exiftool/>`_."
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:156
+msgid "On Linux, you can also install exiftool."
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:159
+msgid "Debian/Ubuntu"
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:159
+msgid "``sudo apt-get install libimage-exiftool-perl``"
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:162
+msgid "Viewing Metadata"
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:164
+msgid ""
+"Change the directory to the folder where the image is located and type::"
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:166
+msgid "exiftool image"
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:168
+msgid ""
+"where image is the file you'd like to examine. If you just type ``exiftool`` "
+"in any given folder it will output all the information it can give about any "
+"file it comes across. If you take a good look at some images, you'll see "
+"they contain author or location metadata. This can be a bit of a problem "
+"sometimes when it comes to privacy, and also the primary reason all metadata "
+"gets stripped."
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:170
+msgid ""
+"You can also use `ImageMagick's identify <https://www.imagemagick.org/script/"
+"identify.php>`_::"
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:172
+msgid "identify -verbose image"
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:175
+msgid "Stripping Metadata"
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:177
+msgid ""
+"Stripping metadata from the example ``image.png`` can be done as follows:"
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:182
+msgid ""
+"`ExifTool <http://www.linux-magazine.com/Online/Blogs/Productivity-Sauce/"
+"Remove-EXIF-Metadata-from-Photos-with-exiftool>`_"
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:180
+msgid "`exiftool -all= image.png`"
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:182
+msgid ""
+"This empties all tags exiftool can get to. You can also be specific and only "
+"remove a single tag: `exiftool -author= image.png`"
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:185
+msgid "OptiPNG"
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:185
+msgid "`optipng -strip image.png` This will strip and compress the png file."
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:188
+msgid ""
+"`ImageMagick <https://www.imagemagick.org/script/command-line-options."
+"php#strip>`_"
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:188
+msgid "`convert image.png --strip`"
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:191
+msgid "Extracting metadata"
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:193
+msgid ""
+"Sometimes we want to extract metadata, like an ICC profile, before stripping "
+"everything. This is done by converting the image to the profile type:"
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:203
+msgid ""
+"`ImageMagick's Convert <https://imagemagick.org/script/command-line-options."
+"php#profile>`_"
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:196
+msgid "First extract the metadata to a profile by converting::"
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:198
+msgid "convert image.png image_profile.icc"
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:200
+msgid "Then strip the file and readd the profile information::"
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:202
+msgid "convert -profile image_profile.icc image.png"
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:206
+msgid "Embedding description metadata"
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:208
+msgid ""
+"Description metadata is really useful for the purpose of helping people with "
+"screenreaders. Webbrowsers will often try to use the description metadata if "
+"there's no alt text to generate the alt-text. Another thing that you might "
+"want to embed is stuff like color space data."
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:210
+msgid "ExifTool"
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:213
+msgid "Setting an exif value::"
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:215
+msgid ""
+"convert -set exif:ImageDescription \"An image description\" image.png "
+"image_modified.png"
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:217
+msgid "Setting the PNG chunk for description::"
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:219
+msgid ""
+"convert -set Description \"An image description\" image.png image_modified."
+"png"
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:222
+msgid "Embedding license metadata"
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:224
+msgid ""
+"In a certain way, embedding license metadata is really nice because it "
+"allows you to permanently mark the image as such. However, if someone then "
+"uploads it to another website, it is very likely the metadata is stripped "
+"with imagemagick."
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:227
+msgid "Using Properties"
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:229
+msgid ""
+"You can use dcterms:license for defining the document where the license is "
+"defined."
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:232
+msgid "For the GDPL::"
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:234
+msgid ""
+"convert -set dcterms:license \"GDPL 1.3+ https://www.gnu.org/licenses/"
+"fdl-1.3.txt\" image.png"
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:236
+msgid "This defines a shorthand name and then license text."
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:238
+msgid "For Creative Commons BY-SA 4.0::"
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:240
+msgid ""
+"convert -set dcterms:license \"CC-BY-SA-4.0 https://creativecommons.org/"
+"licenses/by-sa/4.0/\" image.png"
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:242
+msgid ""
+"The problem with using properties is that they are a non-standard way to "
+"define a license, meaning that machines cannot do much with them."
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:245
+msgid "Using XMP"
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:247
+msgid ""
+"The creative commons website suggest we `use XMP for this <https://wiki."
+"creativecommons.org/wiki/XMP>`_. You can ask the Creative Commons License "
+"choose to generate an appropriate XMP file for you when picking a license."
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:249
+msgid ""
+"We'll need to use the `XMP tags for exiftool <https://www.sno.phy.queensu.ca/"
+"~phil/exiftool/TagNames/XMP.html>`_."
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:251
+msgid "So that would look something like this::"
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:253
+msgid ""
+"exiftool -Marked=true -License=\"https://creativecommons.org/licenses/by-"
+"sa/4.0\" -UsageTerms=\"This work is licensed under a <a rel=\"license\" href="
+"\"https://creativecommons.org/licenses/by-sa/4.0/\">Creative Commons "
+"Attribution-ShareAlike 4.0 International License</a>.\" -Copyright=\"CC-BY-"
+"SA-NC 4.0\" image.png"
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:255
+msgid "Another way of doing the marking is::"
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:257
+msgid ""
+"exiftool -Marked=true -License=\"https://creativecommons.org/licenses/by-"
+"sa/4.0\" -attributionURL=\"docs.krita.org\" attributionName=\"kritaManual\" "
+"image.png"
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:266
+msgid "With imagemagick you can use the profile option again."
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:260
+msgid "First extract the data (if there is any)::"
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:262
+msgid "convert image.png image_meta.xmp"
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:264
+msgid "Then modify the resulting file, and embed the image data::"
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:266
+msgid "convert -profile image_meta.xmp image.png"
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:268
+msgid ""
+"The XMP definitions per license. You can generate an XMP file for the "
+"metadata on the creative commons website."
+msgstr ""
+
+#: ../../contributors_manual/optimising_images.rst:10
+msgid "Metadata"
+msgstr "中繼資料"
+
+#: ../../contributors_manual/optimising_images.rst:10
+msgid "Optimising Images"
+msgstr "影像最佳化"

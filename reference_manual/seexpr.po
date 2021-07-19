@@ -1,0 +1,1599 @@
+# Copyright (C) licensed under the GNU Free Documentation License 1.3+
+# unless stated otherwise
+# This file is distributed under the same license as the Krita Manual
+# package.
+#
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+# Alvin <alvin@alvinhc.com>, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: Krita Manual 4.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-07-19 22:30+0800\n"
+"PO-Revision-Date: 2021-07-19 00:09+0800\n"
+"Last-Translator: Alvin <alvin@alvinhc.com>\n"
+"Language-Team: Chinese <zh-l10n@lists.linux.org.tw>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 21.04.1\n"
+
+#: ../../reference_manual/seexpr.rst:1
+msgid "SeExpr Quick Reference for Krita"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:17
+msgid "SeExpr Quick Reference"
+msgstr "SeExpr 快速參考"
+
+#: ../../reference_manual/seexpr.rst:19
+msgid ""
+"This page details all the available variables, functions, and operators in "
+"SeExpr. It is a heavily edited version of the official `user documentation "
+"<https://wdas.github.io/SeExpr/doxygen/userdoc.html>`_, adapted for usage "
+"with Krita."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:23
+msgid "Source code at `KDE Invent <https://invent.kde.org/lsegovia/seexpr>`_"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:24
+msgid ""
+"Disney's SeExpr `API Documentation <http://wdas.github.io/SeExpr/doxygen/>`_"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:27
+msgid ":ref:`seexpr_tut_intro`"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:28
+msgid ":ref:`seexpr_fill_layer`"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:29
+msgid ":ref:`resource_seexpr_scripts`"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:30
+msgid ""
+"`\"Procedural texture generator (example and wishes)\" on Krita Artists "
+"<https://krita-artists.org/t/procedural-texture-generator-example-and-"
+"wishes/7638>`_"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:31
+msgid "`Inigo Quilez's articles <https://iquilezles.org/www/index.htm>`_"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:32
+msgid "`The Book of Shaders <https://thebookofshaders.com/>`_"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:34
+msgid "Contents"
+msgstr "目錄"
+
+#: ../../reference_manual/seexpr.rst:38
+msgid "Variables"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:41
+msgid "External variables"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:43
+msgid ""
+"These variables are provided by host applications, in this case Krita. They "
+"are registered with SeExpr's autocomplete help, which can be accessed by :"
+"kbd:`Ctrl+Space`."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:48
+msgid "$u, $v"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:50
+msgid "Pixel position in normalized coordinates."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:51
+msgid "$w, $h"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:53
+msgid "Image's width and height in pixels."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:56
+msgid "Local Variables"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:58
+msgid "Local variables can be defined at the start of the expression::"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:60
+msgid ""
+"$a = noise($P);\n"
+"$b = noise($a * 1);\n"
+"pow($a, 0.5) + $b"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:64
+msgid ""
+"External variables can also be overridden by local assignment. This can be "
+"useful to scale the noise frequency for instance::"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:66
+msgid ""
+"$P = $P * 10; # increase noise frequency\n"
+"fbm(vnoise($P) + $P/4)"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:69
+msgid "You can also define namespaced variables, e.g.::"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:71
+msgid "$A::a = $u * 10;"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:75
+msgid "Control Structures"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:77
+msgid "SeExpr provides the well-known `if` conditional structure::"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:79
+msgid ""
+"if ($ u > 0.5) {\n"
+"    $color = [0, 0, 1];\n"
+"}\n"
+"else {\n"
+"    $color = [1, 0, 0];\n"
+"}\n"
+"\n"
+"$color"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:88
+msgid "And the *ternary operator*::"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:90
+msgid "$u = $i < .5 ? 0.0 : 10.0"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:92
+msgid "You can freely nest ternary operators, e.g.::"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:94
+msgid ""
+"$color = $u < .5 ? ($v < 0.5 ? [0, 0, 1] : [1, 0, 0]) : [0, 1, 0];\n"
+"$color"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:97
+msgid "You can also achieve the same with `if` structures::"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:99
+msgid ""
+"if ($ u > 0.5) {\n"
+"    if ($v < 0.5) {\n"
+"        $color = [0, 0, 1];\n"
+"    }\n"
+"    else {\n"
+"        $color = [1, 0, 0];\n"
+"    }\n"
+"}\n"
+"else {\n"
+"    $color = [1, 0, 0];\n"
+"}\n"
+"\n"
+"$color"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:115
+msgid "Operators (listed in decreasing precedence)"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:118
+msgid "[a,b,c]"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:120
+msgid "vector constructor"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:121
+msgid "$P[ n ]"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:123
+msgid "vector component access"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:125
+msgid "``n`` must be 0, 1, or 2, e.g.::"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:127
+msgid "$P[0]"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:128
+msgid "^"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:130
+msgid "exponentiation"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:132
+msgid "Same as the ``pow`` function."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:133
+msgid "!"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:135
+msgid "logical NOT"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:136
+msgid "~"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:138
+msgid "inversion"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:143
+msgid "~$A"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:145
+msgid "gives the same result as::"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:147
+msgid "1 - $A"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:148
+msgid "\\*/ %"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:150
+msgid "multiply, divide, modulus"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:152
+msgid "``%`` is the same as the ``fmod`` function."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:153
+msgid "+-"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:155
+msgid "add, subtract"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:156
+msgid "<> <= >="
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:158
+msgid ""
+"comparison: less than, greater than, less or equal than, greater or equal "
+"than"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:160
+msgid "Only uses the first component of a vector."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:161
+msgid "== !="
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:163
+msgid "equality, inequality"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:164
+msgid "&&"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:166
+msgid "logical AND"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:167
+msgid "||"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:169
+msgid "logical OR"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:170
+msgid "?:"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:172
+msgid "ternary ``if`` operator"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:174
+msgid "Example::"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:176
+msgid "$u < .5 ? 0 : 1"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:177
+msgid "->"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:179
+msgid ""
+"apply - The function on the right of the arrow is applied to the expression "
+"on the left."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:181
+msgid "Examples::"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:183
+msgid ""
+"$Cs->contrast(.7) -> clamp(0.2,0.8)\n"
+"$u->hsi(20,1.2,1,$Cs->gamma(1.2))"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:188
+msgid "Assignment Operators"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:190
+msgid "Besides the basic assignment statement::"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:192
+msgid "$foo = $bar"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:194
+msgid "you can also do operator assignments such as::"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:196
+msgid "$foo += $bar;"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:198
+msgid "which is equivalent to::"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:200
+msgid "$foo = $foo + $bar;"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:202
+msgid "Additionally, there are:"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:204
+msgid "``+=``"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:205
+msgid "``-=``"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:206
+msgid "``/=``"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:207
+msgid "``%=``"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:208
+msgid "``*=``"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:209
+msgid "``^=``"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:213
+msgid "Comments"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:215
+msgid ""
+"You can add comments to your script by using the ``#`` character. SeExpr "
+"will then skip the rest of the line for rendering purposes. However, they "
+"are not ignored; comments can still be used to declare the valid value range "
+"of integer, float, and vector variables. This enables you to manage them "
+"using widgets that will accept the specified range."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:223
+msgid ""
+"``$var0`` is an integer variable that ranges between 0 and 10 inclusive::"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:225
+msgid "$var0 = 0; # 0, 10"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:227
+msgid "``$var1`` is a floating point variable with the same range::"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:229
+msgid "$var1 = 0; # 0.000, 10.000"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:231
+msgid "``$var2`` is a vector variable::"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:233
+msgid "$var2 = [0, 0, 0] # 0.000, 10.000"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:235
+msgid ""
+"The latter is very helpful; SeExpr considers vectors with range ``[0, 1]`` "
+"as colors::"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:237
+msgid ""
+"# this is a dark red\n"
+"$color = [0.5, 0, 0] # 0.000, 1.000"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:240
+msgid ""
+"In all cases, if not specified, the associated widgets' range will go from 0 "
+"to 1."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:242
+msgid "For a multi-line expression, each line may have its own comment."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:246
+msgid "Logging Functions"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:249
+msgid "float **printf** ( string format, [param0, param1, ...] )"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:251
+msgid ""
+"Prints a string to stdout that is formatted as given. Formatting parameters "
+"possible are ``%f`` for float (takes the first component of vector argument) "
+"or ``%v`` for vector."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:256
+msgid "For example, if you wrote::"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:258
+msgid "$u = printf(\"test %f %v\",[1,2,3],[4,5,6]);"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:260
+msgid "you would get in your console::"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:262
+msgid "test 1 [4,5,6]"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:263
+msgid ""
+"string **sprintf** ( string format, [double|string, double|string, ...] )"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:265
+msgid ""
+"Returns a string formatted from the given values.  See ``man sprintf`` for "
+"format details."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:269
+msgid "Color, Masking, and Remapping Functions"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:272
+msgid "float **bias** ( float x, float b)"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:274
+msgid ""
+"Variation of gamma where control parameter goes from ``0`` to ``1`` with "
+"values ``> 0.5`` pulling the curve up and values ``< 0.5`` pulling the curve "
+"down. Defined as ``pow(x, log(b)/log(0.5))``."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:277
+msgid "float **boxstep** ( float x, float a )"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:278
+msgid "float **gaussstep** ( float x, float a, float b )"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:279
+msgid "float **linearstep** ( float x, float a, float b )"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:280
+msgid "float **smoothstep** ( float x, float a, float b )"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:282
+msgid ""
+"The step functions are zero for ``x < a`` and one for ``x > b`` (or ``x > "
+"a`` in the case of boxstep). Between ``a`` and ``b``, the value changes "
+"continuously between zero and one. The ``gausstep`` function uses the "
+"standard Gaussian \"bell\" curve which is based on an exponential curve. The "
+"``smoothstep`` function uses a cubic curve. Intuitively, ``gausstep`` has a "
+"sharper transition near one and a softer transition near zero whereas "
+"``smoothstep`` has a medium softness near both one and zero."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:290
+msgid "float **clamp** ( float x, float lo, float hi )"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:292
+msgid "Constrain ``x`` to range ``[lo, hi]``."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:293
+msgid "float **compress** ( float x, float lo, float hi )"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:295
+msgid "Compress the dynamic range from ``[0, 1]`` to ``[lo, hi]``."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:296
+msgid "float **contrast** ( float x, float c )"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:298
+msgid ""
+"Adjust the contrast. For ``c`` from ``0`` to ``0.5``, the contrast is "
+"decreased. For ``c > 0.5``, the contrast is increased."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:300
+msgid "float **expand** ( float x, float lo, float hi )"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:302
+msgid "Expand the dynamic range from ``[lo, hi]`` to ``[0, 1]``."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:303
+msgid "float **fit** ( float x, float a1, float b1, float a2, float b2 )"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:305
+msgid "Linear remapping of ``[a1..x..b1]`` to ``[a2..x..b2]``"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:306
+msgid "float **gamma** ( float x, float g)"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:308
+msgid "``pow(x, 1/g)``"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:309
+msgid "float **invert** ( float x )"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:311
+msgid "Invert the value. Defined as ``1 - x``."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:312
+msgid "color **hsi** ( color x, float h, float s, float i, float map=1 )"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:314
+msgid ""
+"The ``hsi`` function shifts the hue by ``h`` (in degrees) and scales the "
+"saturation and intensity by ``s`` and ``i`` respectively. A map may be "
+"supplied which will control the shift - the full shift will happen when the "
+"map is one and no shift will happen when the map is zero. The shift will be "
+"scaled back for values between zero and one."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:320
+msgid "color **hsltorgb** ( color hsl )"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:321
+msgid "color **rgbtohsl** ( color rgb )"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:323
+msgid ""
+"RGB to HSL color space conversion. HSL is Hue, Saturation, Lightness (all in "
+"the range ``[0, 1]``). These functions have also been extended to support "
+"RGB and HSL values outside of the range ``[0, 1]`` in a reasonable way. For "
+"any RGB or HSL value (except for negative values), the conversion is well-"
+"defined and reversible."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:329
+msgid ""
+"color **midhsi** ( color x, float h, float s, float i, float map, float "
+"falloff=1, int interp=0 )"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:331
+msgid ""
+"The ``midhsi`` function is just like the ``hsi`` function except that the "
+"control map is centered around the mid point (value of ``0.5``) and can "
+"scale the shift in both directions. At the mid point, no shift happens. At "
+"*1.0*, the full shift happens, and at ``0.0``, the full inverse shift "
+"happens. Additional ``falloff`` and ``interp`` controls are provided to "
+"adjust the map using the ``remap`` function. The default ``falloff`` and "
+"``interp`` values result in no remapping."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:338
+msgid "float **mix** ( float a, float b, float alpha )"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:340
+msgid ""
+"Blend of a and b according to alpha. Defined as ``a*(1-alpha) +b*alpha``."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:342
+msgid ""
+"float **remap** ( float x, float source, float range, float falloff, int "
+"interp )"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:344
+msgid ""
+"General remapping function. When ``x`` is within ``± range`` of source, the "
+"result is one. The result falls to zero beyond that range over ``falloff`` "
+"distance. The falloff shape is controlled by ``interp``."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:349
+msgid "Numeric values or named constants may be used:"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:351
+msgid "int **linear** = 0"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:352
+msgid "int **smooth** = 1"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:353
+msgid "int **gaussian** = 2"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:357
+msgid "Noise Functions"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:360
+msgid "float **cellnoise** ( vector v )"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:361
+msgid "float **cellnoise1** ( float x )"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:362
+msgid "float **cellnoise2** ( float x, float y )"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:363
+msgid "float **cellnoise3** ( float x, float y, float z )"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:364
+msgid "color **ccellnoise** ( vector v )"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:366
+msgid ""
+"``cellnoise`` generates a field of constant colored cubes based on the "
+"integer location. This is the same as the `PRMan cellnoise function <https://"
+"renderman.pixar.com/resources/RenderMan_20/cellnoise.html>`_."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:370
+msgid "``ccellnoise`` outputs color cellnoise."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:372
+msgid ""
+"float **fbm** ( vector v, int octaves=6, float lacunarity=2, float gain=0.5 )"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:373
+msgid ""
+"color **cfbm** ( vector v, int octaves=6, float lacunarity=2, float "
+"gain=0.5 )"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:374
+msgid ""
+"vector **vfbm** ( vector v, int octaves=6, float lacunarity=2, float "
+"gain=0.5 )"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:375
+msgid ""
+"float **fbm4** ( vector v, float time, int octaves=6, float lacunarity=2, "
+"float gain=0.5 )"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:376
+msgid ""
+"color **cfbm4** ( vector v, float time, int octaves=6, float lacunarity=2, "
+"float gain=0.5 )"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:377
+msgid ""
+"vector **vfbm4** ( vector v, float time, int octaves=6, float lacunarity=2, "
+"float gain=0.5 )"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:379
+msgid ""
+"``fbm`` (Fractal Brownian Motion) is a multi-frequency noise function. The "
+"base frequency is the same as the ``noise`` function. The total number of "
+"frequencies is controlled by ``octaves``. The ``lacunarity`` is the spacing "
+"between the frequencies - a value of 2 means each octave is twice the "
+"previous frequency. The ``gain`` controls how much each frequency is scaled "
+"relative to the previous frequency."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:388
+msgid "``cfbm`` and ``cfbm4`` outputs color noise."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:390
+msgid "``vfbm`` and ``vfbm4`` outputs vector noise."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:391
+msgid "float **hash** ( float seed1, [float seed2, ...] )"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:393
+msgid ""
+"Like ``rand``, but with no internal seeds. Any number of seeds may be given "
+"and the result will be a random function based on all the seeds."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:396
+msgid "float **noise** ( vector v )"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:397
+msgid "float **noise** ( float x, float y )"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:398
+msgid "float **noise** ( float x, float y, float z )"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:399
+msgid "float **noise** ( float x, float y, float z, float w )"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:400
+msgid "color **cnoise** ( vector v)"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:401
+msgid "color **cnoise4** ( vector v, float t)"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:402
+msgid "float **pnoise** ( vector v, vector period )"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:403
+msgid "float **snoise** ( vector v)"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:404
+msgid "float **snoise4** ( vector v, float t)"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:405
+msgid "vector **vnoise** (vector v )"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:406
+msgid "vector **vnoise4** (vector v, float t )"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:408
+msgid ""
+"``noise`` is a random function that smoothly blends between samples at "
+"integer locations. This is Ken Perlin's original noise function."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:413
+msgid "``cnoise`` and ``cnoise4`` output color noise."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:415
+msgid "``noise4`` outputs signed vector noise."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:417
+msgid "``pnoise`` outputs periodic noise."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:419
+msgid "``snoise`` and ``snoise4`` output signed noise with range ``[-1, 1]``."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:421
+msgid "``vnoise`` outputs signed vector noise."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:422
+msgid "float **rand** ( [float min, float max], [float seed] )"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:424
+msgid ""
+"Random number between ``[min, max]`` (or ``[0, 1]`` if unspecified). If a "
+"seed is supplied, it will be used in addition to the internal seeds and may "
+"be used to create multiple distinct generators."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:427
+msgid ""
+"float **turbulence** ( vector v, int octaves=6, float lacunarity=2, float "
+"gain=0.5 )"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:428
+msgid ""
+"color **cturbulence** ( vector v, int octaves=6, float lacunarity=2, float "
+"gain=0.5 )"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:429
+msgid ""
+"vector **vturbulence** ( vector v, int octaves=6, float lacunarity=2, float "
+"gain=0.5 )"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:431
+msgid ""
+"``turbulence`` is a variant of ``fbm`` where the absolute value of each "
+"noise term is taken. This gives a more billowy appearance."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:433
+msgid ""
+"float **voronoi** ( vector v, int type=1, float jitter=0.5, float "
+"fbmScale=0, int fbmOctaves=4, float fbmLacunarity=2, float fbmGain=0.5)"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:434
+msgid ""
+"color **cvoronoi** ( vector v, int type=1, float jitter=0.5, float "
+"fbmScale=0, int fbmOctaves=4, float fbmLacunarity=2, float fbmGain=0.5)"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:435
+msgid ""
+"vector **pvoronoi** ( vector v, float jitter=0.5, float fbmScale=0, int "
+"fbmOctaves=4, float fbmLacunarity=2, float fbmGain=0.5)"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:437
+msgid ""
+"``voronoi`` is a cellular noise pattern. It is a jittered variant of "
+"``cellnoise``. The type parameter describes different variants of the noise "
+"function. The ``jitter`` param controls how irregular the pattern is (0 is "
+"like ordinary cellnoise). The ``fbm...`` params can be used to distort the "
+"noise field. When ``fbmScale`` is zero (the default), there is no "
+"distortion. The remaining params are the same as for the ``fbm`` function."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:448
+msgid "Voronoi types 1 through 5:"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:450
+msgid "|image0| |image1| |image2| |image3| |image4|"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:739
+msgid "image0"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:739
+msgid ".. image:: images/seexpr/Se_voronoi_1.png"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:740
+msgid "image1"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:740
+msgid ".. image:: images/seexpr/Se_voronoi_2.png"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:741
+msgid "image2"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:741
+msgid ".. image:: images/seexpr/Se_voronoi_3.png"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:742
+msgid "image3"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:742
+msgid ".. image:: images/seexpr/Se_voronoi_4.png"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:743
+msgid "image4"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:743
+msgid ".. image:: images/seexpr/Se_voronoi_5.png"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:453
+msgid ""
+"``cvoronoi`` returns a random color for each cell and ``pvoronoi`` returns "
+"the point location of the center of the cell."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:459
+msgid "Selection Functions"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:462
+msgid "float **choose** ( float index, float choice1, float choice2, [...] )"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:464
+msgid ""
+"Chooses one of the supplied choices based on the index (assumed to be in the "
+"range ``[0, 1]``)."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:466
+msgid "int **cycle** ( int index, int loRange, int hiRange )"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:468
+msgid ""
+"Cycles through values between loRange and hiRange based on supplied index. "
+"This is an offset ``mod`` function. The result is computed as ``loRange + "
+"value % (hiRange-loRange+1)``."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:471
+msgid ""
+"int **pick** ( float index, int loRange, int hiRange, [ float "
+"weights, ... ] )"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:473
+msgid ""
+"Picks values randomly between loRange and hiRange based on supplied index "
+"(which is automatically hashed). The values will be distributed according to "
+"the supplied weights. Any weights not supplied are assumed to be 1.0."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:477
+msgid ""
+"float **wchoose** ( float index, float choice1, float weight1, float "
+"choice2, float weight2, [...] )"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:479
+msgid ""
+"Chooses one of the supplied choices based on the index (assumed to be in "
+"range ``[0, 1]``). The values will be distributed according to the supplied "
+"weights."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:485
+msgid "This example returns integer values between 1 and 10::"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:487
+msgid "pick(value, 1, 10)"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:489
+msgid ""
+"This example returns the values 1 and 2 twice and 2.5 times as often "
+"respectively as compared to the other values (3-10)::"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:492
+msgid "pick(value, 1, 10, 2, 2.5)"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:494
+msgid ""
+"This example returns 10, 11, and 13 through 20 (12 is skipped due to zero "
+"weight)::"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:496
+msgid "pick(value, 10, 20, 1, 1, 0)"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:501
+msgid "General Mathematical Constants and Functions"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:504
+msgid "float **PI**"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:508
+msgid "float PI = 3.14159..."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:509
+msgid "float **E**"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:513
+msgid "float E = 2.71828..."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:516
+msgid "float **abs** ( float x)"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:518
+msgid "Absolute value of ``x``."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:519
+msgid "float **cbrt** ( float x )"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:521
+msgid "Cube root."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:522
+msgid "float **ceil** ( float x )"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:524
+msgid "Next higher integer."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:525
+msgid "float **exp** ( float x )"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:527
+msgid "``E`` raised to the ``x`` power."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:528
+msgid "float **floor** ( float x )"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:530
+msgid "Next lower integer."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:531
+msgid "float **fmod** ( float x, float y )"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:533
+msgid "Remainder of ``x / y``."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:535
+msgid "Also available as the ``%`` operator."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:536
+msgid "float **log** ( float x )"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:538
+msgid "Natural logarithm."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:539
+msgid "float **log10** ( float x )"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:541
+msgid "Base 10 logarithm."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:542
+msgid "float **max** ( float a, float b )"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:544
+msgid "Greater of ``a`` and ``b``."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:545
+msgid "float **min** ( float a, float b )"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:547
+msgid "Lesser of ``a`` and ``b``."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:548
+msgid "float **pow** ( float x, float y )"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:550
+msgid "``x`` to the ``y`` power."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:552
+msgid "Also available as the ``^`` operator."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:553
+msgid "float **round** ( float x )"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:555
+msgid "Nearest integer."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:556
+msgid "float **sqrt** ( float x )"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:558
+msgid "Square root."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:559
+msgid "float **trunc** ( float x )"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:561
+msgid "Nearest integer towards zero."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:565
+msgid "Trigonometry Functions"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:568
+msgid "float **acos** ( float x )"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:570
+msgid "Arc cosine."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:571
+msgid "float **acosd** ( float x )"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:573
+msgid "Arc cosine in degrees."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:574
+msgid "float **acosh** ( float x )"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:576
+msgid "Hyperbolic arc cosine."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:577
+msgid "float **asin** ( float x )"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:579
+msgid "Arc sine."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:580
+msgid "float **asind** ( float x )"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:582
+msgid "Arc sine in degrees."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:583
+msgid "float **asinh** ( float x )"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:585
+msgid "Hyperbolic arc sine."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:586
+msgid "float **atan** ( float x )"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:588
+msgid "Arc tangent."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:589
+msgid "float **atand** ( float x )"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:591
+msgid "Arc tangent in degrees."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:592
+msgid "float **atan2** ( float y, float x)"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:594
+msgid "Arc tangent of ``y/x`` between ``-PI`` and ``PI``."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:595
+msgid "float **atan2d** ( float y, float x )"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:597
+msgid "Arc tangent in degrees of ``y/x`` between ``-180º`` and ``180º``."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:598
+msgid "float **atanh** ( float x )"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:600
+msgid "Hyperbolic arc tangent."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:601
+msgid "float **cos** ( float x )"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:603
+msgid "Cosine."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:604
+msgid "float **cosd** ( float x )"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:606
+msgid "Cosine in degrees."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:607
+msgid "float **cosh** ( float x )"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:609
+msgid "Hyperbolic cosine."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:610
+msgid "float **deg** ( float x )"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:612
+msgid "Radians to degrees."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:613
+msgid "float **hypot** ( float x, float y )"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:615
+msgid "Length of 2D vector ``[x, y]``."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:616
+msgid "float **rad** ( float x )"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:618
+msgid "Degrees to radians."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:619
+msgid "float **sin** ( float x )"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:621
+msgid "Sine."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:622
+msgid "float **sind** ( float x )"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:624
+msgid "Sine in degrees."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:625
+msgid "float **sinh** ( float x )"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:627
+msgid "Hyperbolic sine."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:628
+msgid "float **tan** ( float x )"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:630
+msgid "Tangent."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:631
+msgid "float **tand** ( float x )"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:633
+msgid "Tangent in degrees."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:634
+msgid "float **tanh** ( float x )"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:636
+msgid "Hyperbolic tangent."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:640
+msgid "Vector Functions"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:643
+msgid "float angle ( vector a, vector b )"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:645
+msgid "Angle between two vectors (in radians)."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:646
+msgid "vector **cross** ( vector a, vector b )"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:648
+msgid "Vector cross product."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:649
+msgid "float **dist** ( vector a, vector b )"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:651
+msgid "Distance between two points."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:652
+msgid "float **dot** ( vector a, vector b)"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:654
+msgid "Vector dot product."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:655
+msgid "float **length** ( vector v )"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:657
+msgid "Length of vector."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:658
+msgid "vector **norm** ( vector v )"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:660
+msgid "Vector scaled to unit length."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:661
+msgid "vector **ortho** ( vector a, vector b )"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:663
+msgid "Vector orthographic to two vectors."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:664
+msgid "vector **rotate** ( vector v, vector axis, float angle )"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:666
+msgid "Rotates ``v`` around axis by the given ``angle`` (in radians)."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:667
+msgid "vector **up** ( vector v, vector up )"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:669
+msgid ""
+"Rotates ``v`` such that the Y axis points in the given ``up`` direction."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:674
+msgid "Vector Support"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:676
+msgid ""
+"*Vectors* (points, colors, or 3D vectors) may be intermixed with *scalars* "
+"(simple floating point values). If a scalar is used in a vector context, it "
+"is replicated into the three components, e.g. ``0.5`` becomes ``[0.5, 0.5, "
+"0.5]``."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:680
+msgid ""
+"If a vector is used in a scalar context, only the first component is used. "
+"One of the benefits of this is that all the functions that are defined to "
+"work with scalars automatically extend to vectors. For instance, ``pick``, "
+"``choose``, ``cycle``, ``spline``, etc., will work just fine with vectors."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:686
+msgid ""
+"Arithmetic operators such as ``+``, ``*``, etc., and scalar functions are "
+"applied component-wise to vectors. For example, applying the ``gamma`` "
+"function to a map adjusts the gamma of all three color channels."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:692
+msgid "Curve Functions"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:694
+msgid ""
+"Interpolation of parameter values to a set of control points is governed by "
+"the following functions."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:698
+msgid ""
+"color **ccurve** ( float param, float pos0, color val0, int interp0, float "
+"pos1, color val1, int interp1, [...] )"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:700
+msgid ""
+"Interpolates color ramp given by control points at ``param``. Control points "
+"are specified by triples of parameters ``pos_i``, ``val_i``, and "
+"``interp_i``."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:705 ../../reference_manual/seexpr.rst:719
+msgid "Interpolation codes are:"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:707 ../../reference_manual/seexpr.rst:721
+msgid "0 - none"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:708 ../../reference_manual/seexpr.rst:722
+msgid "1 - linear"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:709 ../../reference_manual/seexpr.rst:723
+msgid "2 - smooth"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:710 ../../reference_manual/seexpr.rst:724
+msgid "3 - spline"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:711 ../../reference_manual/seexpr.rst:725
+msgid "4 - monotone (non-oscillating) spline"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:712
+msgid ""
+"float **curve** ( float param, float pos0, float val0, int interp0, float "
+"pos1, float val1, int interp1, [...] )"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:714
+msgid ""
+"Interpolates a 1D ramp defined by control points at ``param``. Control "
+"points are specified by triples of parameters ``pos_i``, ``val_i``, and "
+"``interp_i``."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:726
+msgid ""
+"float **spline** ( float param, float y1, float y2, float y3, float y4, "
+"[...] )"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:728
+msgid ""
+"Interpolates a set of values to the parameter specified where ``y1``, ..., "
+"``yn`` are distributed evenly from ``[0, 1]``."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:733
+msgid "Custom Plugins"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:735
+msgid ""
+"Custom functions may be written in C++ and loaded as one or more dynamic "
+"plugins.  See `Writing Custom Expression Plugins <https://wdas.github.io/"
+"SeExpr/doxygen/plugins.html>`_ for more details."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:737
+msgid "This functionality is not supported in Krita."
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:11
+msgid "Fill Layer"
+msgstr ""
+
+#: ../../reference_manual/seexpr.rst:11
+msgid "SeExpr"
+msgstr ""

@@ -1,0 +1,344 @@
+# Copyright (C) licensed under the GNU Free Documentation License 1.3+
+# unless stated otherwise
+# This file is distributed under the same license as the Krita Manual
+# package.
+#
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+# Alvin <alvin@alvinhc.com>, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: Krita Manual 4.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-07-19 22:30+0800\n"
+"PO-Revision-Date: 2021-07-19 00:03+0800\n"
+"Last-Translator: Alvin <alvin@alvinhc.com>\n"
+"Language-Team: Chinese <zh-l10n@lists.linux.org.tw>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Generated-By: Babel 2.6.0\n"
+"X-Generator: Lokalize 21.04.1\n"
+
+#: ../../user_manual/drawing_tablets.rst:1
+msgid ""
+"Basic page describing drawing tablets, how to set them up for Krita and how "
+"to troubleshoot common tablet issues."
+msgstr ""
+
+#: ../../user_manual/drawing_tablets.rst:18
+msgid "Drawing Tablets"
+msgstr "數位繪圖板"
+
+#: ../../user_manual/drawing_tablets.rst:20
+msgid ""
+"This page is about drawing tablets, what they are, how they work, and where "
+"things can go wrong."
+msgstr ""
+
+#: ../../user_manual/drawing_tablets.rst:24
+msgid "What are Tablets?"
+msgstr "甚麼是繪圖板、數位板？"
+
+#: ../../user_manual/drawing_tablets.rst:26
+msgid ""
+"Drawing with a mouse can be unintuitive and difficult compared to pencil and "
+"paper. Even worse, extended mouse use can result in carpal tunnel syndrome. "
+"That’s why most people who draw digitally use a specialized piece of "
+"hardware known as a drawing tablet."
+msgstr ""
+
+#: ../../user_manual/drawing_tablets.rst:32
+msgid ".. image:: images/Krita_tablet_types.png"
+msgstr ""
+
+#: ../../user_manual/drawing_tablets.rst:33
+msgid ""
+"A drawing tablet is a piece of hardware that you can plug into your machine, "
+"much like a keyboard or mouse. It usually looks like a plastic pad, with a "
+"stylus. Another popular format is a computer monitor with stylus used to "
+"draw directly on the screen. These are better to use than a mouse because "
+"it’s more natural to draw with a stylus and generally better for your wrists."
+msgstr ""
+
+#: ../../user_manual/drawing_tablets.rst:40
+msgid ""
+"With a properly installed tablet stylus, Krita can use information like "
+"pressure sensitivity, allowing you to make strokes that get bigger or "
+"smaller depending on the pressure you put on them, to create richer and more "
+"interesting strokes."
+msgstr ""
+
+#: ../../user_manual/drawing_tablets.rst:46
+msgid ""
+"Sometimes, people confuse finger-touch styluses with a proper tablet. You "
+"can tell the difference because a drawing tablet stylus usually has a pointy "
+"nib, while a stylus made for finger-touch has a big rubbery round nib, like "
+"a finger. These tablets may not give good results and a pressure-sensitive "
+"tablet is recommended."
+msgstr ""
+
+#: ../../user_manual/drawing_tablets.rst:0
+msgid ".. image:: images/Krita_tablet_stylus.png"
+msgstr ""
+
+#: ../../user_manual/drawing_tablets.rst:51
+#: ../../user_manual/drawing_tablets.rst:200
+msgid "Supported Tablets"
+msgstr "支援的繪圖板"
+
+#: ../../user_manual/drawing_tablets.rst:53
+msgid ""
+"Supported tablets are owned by Krita developers themselves, so they can "
+"reliably diagnose and fix bugs. :ref:`We maintain a list of those here "
+"<list_supported_tablets>`."
+msgstr ""
+
+#: ../../user_manual/drawing_tablets.rst:55
+msgid ""
+"If you're looking for information about iPad or Android tablets, :ref:`look "
+"here <krita_android>`."
+msgstr ""
+
+#: ../../user_manual/drawing_tablets.rst:58
+msgid "Drivers and Pressure Sensitivity"
+msgstr "驅動程式與筆壓感應"
+
+#: ../../user_manual/drawing_tablets.rst:60
+msgid ""
+"So you have bought a tablet, a real drawing tablet. And you want to get it "
+"to work with Krita! So you plug in the USB cable, start up Krita and... It "
+"doesn’t work! Or well, you can make strokes, but that pressure sensitivity "
+"you heard so much about doesn’t seem to work."
+msgstr ""
+
+#: ../../user_manual/drawing_tablets.rst:65
+msgid ""
+"This is because you need to install a program called a ‘driver’. Usually you "
+"can find the driver on a CD that was delivered alongside your tablet, or on "
+"the website of the manufacturer. Go install it, and while you wait, we’ll go "
+"into the details of what it is!"
+msgstr ""
+
+#: ../../user_manual/drawing_tablets.rst:70
+msgid ""
+"Running on your computer is a basic system doing all the tricky bits of "
+"running a computer for you. This is the operating system, or OS. Most people "
+"use an operating system called Windows, but people on an Apple device have "
+"an operating system called macOS, and some people, including many of the "
+"developers use a system called Linux."
+msgstr ""
+
+#: ../../user_manual/drawing_tablets.rst:76
+msgid ""
+"The base principle of all of these systems is the same though. You would "
+"like to run programs like Krita, called software, on your computer, and you "
+"want Krita to be able to communicate with the hardware, like your drawing "
+"tablet. But to have those two communicate can be really difficult - so the "
+"operating system, works as a glue between the two."
+msgstr ""
+
+#: ../../user_manual/drawing_tablets.rst:82
+msgid ""
+"Whenever you start Krita, Krita will first make connections with the "
+"operating system, so it can ask it for a lot of these things: It would like "
+"to display things, and use the memory, and so on. Most importantly, it would "
+"like to get information from the tablet!"
+msgstr ""
+
+#: ../../user_manual/drawing_tablets.rst:88
+msgid ".. image:: images/Krita_tablet_drivermissing.png"
+msgstr ""
+
+#: ../../user_manual/drawing_tablets.rst:89
+msgid ""
+"But it can’t! Turns out your operating system doesn’t know much about "
+"tablets. That’s what drivers are for. Installing a driver gives the "
+"operating system enough information, so the OS can provide Krita with the "
+"right information about the tablet. The hardware manufacturer's job is to "
+"write a proper driver for each operating system."
+msgstr ""
+
+#: ../../user_manual/drawing_tablets.rst:96
+msgid ""
+"Because drivers modify the operating system a little, you will always need "
+"to restart your computer when installing or uninstalling a driver, so don’t "
+"forget to do this! Conversely, because Krita isn’t a driver, you don’t need "
+"to even uninstall it to reset the configuration, just rename or delete the "
+"configuration file."
+msgstr ""
+
+#: ../../user_manual/drawing_tablets.rst:99
+msgid "Where it can go wrong: Windows"
+msgstr "在 Windows 上可能出現的問題"
+
+#: ../../user_manual/drawing_tablets.rst:101
+msgid ""
+"Krita automatically connects to your tablet if the drivers are installed. "
+"When things go wrong, usually the problem isn't with Krita."
+msgstr ""
+
+#: ../../user_manual/drawing_tablets.rst:105
+msgid "Surface Pro tablets need two drivers"
+msgstr "Surface Pro 平板電腦的數位板驅動程式"
+
+#: ../../user_manual/drawing_tablets.rst:107
+msgid ""
+"Certain tablets using n-trig, like the Surface Pro, have two types of "
+"drivers. One is native, n-trig and the other one is called Wintab. Since "
+"3.3, Krita can use Windows Ink style drivers, just go to :menuselection:"
+"`Settings --> Configure Krita... --> Tablet Settings` and toggle the :"
+"guilabel:`Windows 8+ Pointer Input (Windows Ink)` there. You don't need to "
+"install the Wintab drivers anymore for n-trig based pens."
+msgstr ""
+
+#: ../../user_manual/drawing_tablets.rst:115
+msgid "Windows 10 updates"
+msgstr "Windows 10 更新"
+
+#: ../../user_manual/drawing_tablets.rst:117
+msgid ""
+"Sometimes a Windows 10 update can mess up tablet drivers. In that case, "
+"reinstalling the drivers should work."
+msgstr ""
+
+#: ../../user_manual/drawing_tablets.rst:121
+msgid "Wacom Tablets"
+msgstr "Wacom 繪圖板"
+
+#: ../../user_manual/drawing_tablets.rst:123
+msgid "There are three known problems with Wacom tablets and Windows."
+msgstr ""
+
+#: ../../user_manual/drawing_tablets.rst:125
+msgid ""
+"The first is that if you have customized the driver settings, then "
+"sometimes, often after a driver update, but that is not necessary, the "
+"driver breaks. Resetting the driver to the default settings and then loading "
+"your settings from a backup will solve this problem."
+msgstr ""
+
+#: ../../user_manual/drawing_tablets.rst:130
+msgid ""
+"The second is that for some reason it might be necessary to change the "
+"display priority order. You might have to make your Cintiq screen your "
+"primary screen, or, on the other hand, make it the secondary screen. Double "
+"check in the Wacom settings utility that the tablet in the Cintiq is "
+"associated with the Cintiq screen."
+msgstr ""
+
+#: ../../user_manual/drawing_tablets.rst:136
+msgid ""
+"The third is that if you have a display tablet like a Cintiq and a Wacom "
+"ExpressKeys remote, and you have disabled Windows Ink in the calibration "
+"page of the stylus settings dialog, so you have the full set of Wintab "
+"features, the Cintiq needs to be the first item in Wacom's desktop "
+"application list. Otherwise, you will have an offset between stylus and "
+"mouse that will get worse the more displays there are to the left of the "
+"Cintiq display."
+msgstr ""
+
+#: ../../user_manual/drawing_tablets.rst:140
+msgid "Broken Drivers"
+msgstr "出問題的驅動程式"
+
+#: ../../user_manual/drawing_tablets.rst:142
+msgid ""
+"Tablet drivers need to be made by the manufacturer. Sometimes, with really "
+"cheap tablets, the hardware is fine, but the driver is badly written, which "
+"means that the driver just doesn’t work well. We cannot do anything about "
+"this, sadly. You will have to send a complaint to the manufacturer for this, "
+"or buy a better tablet with better quality drivers."
+msgstr ""
+
+#: ../../user_manual/drawing_tablets.rst:150
+msgid "Conflicting Drivers"
+msgstr "互相衝突的驅動程式"
+
+#: ../../user_manual/drawing_tablets.rst:152
+msgid ""
+"On Windows, you can only have a single Wintab-style driver installed at a "
+"time. So be sure to uninstall the previous driver before installing the one "
+"that comes with the tablet you want to use. Other operating systems are a "
+"bit better about this, but even Linux, where the drivers are often "
+"preinstalled, can't run two tablets with different drivers at once."
+msgstr ""
+
+#: ../../user_manual/drawing_tablets.rst:160
+msgid "Interfering software"
+msgstr "造成干擾的軟體"
+
+#: ../../user_manual/drawing_tablets.rst:162
+msgid ""
+"Sometimes, there's software that tries to make a security layer between "
+"Krita and the operating system. Sandboxie is an example of this. However, "
+"Krita cannot always connect to certain parts of the operating system while "
+"sandboxed, so it will often break in programs like Sandboxie. Similarly, "
+"certain mouse software, like Razer utilities can also affect whether Krita "
+"can talk to the operating system, converting tablet information to mouse "
+"information. This type of software should be configured to leave Krita "
+"alone, or be uninstalled."
+msgstr ""
+
+#: ../../user_manual/drawing_tablets.rst:171
+msgid ""
+"The following software has been reported to interfere with tablet events to "
+"Krita:"
+msgstr ""
+
+#: ../../user_manual/drawing_tablets.rst:174
+msgid "Sandboxie"
+msgstr ""
+
+#: ../../user_manual/drawing_tablets.rst:175
+msgid "Razer mouse utilities"
+msgstr ""
+
+#: ../../user_manual/drawing_tablets.rst:176
+msgid ""
+"AMD Catalyst:sup:`TM` “game mode” (this broke the right click for someone)"
+msgstr ""
+
+#: ../../user_manual/drawing_tablets.rst:179
+msgid "Flicks (Wait circle showing up and then calling the popup palette)"
+msgstr "筆觸動作（繪畫時出現白色圓圈後彈出浮動畫具板）"
+
+#: ../../user_manual/drawing_tablets.rst:181
+msgid ""
+"If you have a situation where trying to draw keeps bringing up the pop-up "
+"palette on Windows, then the problem might be flicks. These are a type of "
+"gesture, a bit of Windows functionality that allows you to make a motion to "
+"serve as a keyboard shortcut. Windows automatically turns these on when you "
+"install tablet drivers, because the people who made this part of Windows "
+"forgot that people also draw with computers. So you will need to turn it off "
+"in the Windows flicks configuration."
+msgstr ""
+
+#: ../../user_manual/drawing_tablets.rst:190
+msgid "Wacom Double Click Sensitivity (Straight starts of lines)"
+msgstr "Wacom 「雙響間距」（起筆時出現直線線段）"
+
+#: ../../user_manual/drawing_tablets.rst:192
+msgid ""
+"If you experience an issue where the start of the stroke is straight, and "
+"have a Wacom tablet, it could be caused by the Wacom driver double-click "
+"detection."
+msgstr ""
+
+#: ../../user_manual/drawing_tablets.rst:196
+msgid ""
+"To fix this, go to the Wacom settings utility and lower the double click "
+"sensitivity."
+msgstr ""
+
+#: ../../user_manual/drawing_tablets.rst:202
+msgid ""
+"Supported tablets are the ones of which Krita developers have a version "
+"themselves, so they can reliably fix bugs with them. :ref:`We maintain a "
+"list of those here <list_supported_tablets>`."
+msgstr ""
+
+#: ../../user_manual/drawing_tablets.rst:13
+msgid "Tablets"
+msgstr "數位板"

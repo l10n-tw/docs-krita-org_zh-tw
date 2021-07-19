@@ -1,0 +1,322 @@
+# Copyright (C) licensed under the GNU Free Documentation License 1.3+
+# unless stated otherwise
+# This file is distributed under the same license as the Krita Manual
+# package.
+#
+# Alvin <alvin@alvinhc.com>, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: Krita Manual 4.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-07-19 22:30+0800\n"
+"PO-Revision-Date: 2021-07-07 17:48+0800\n"
+"Last-Translator: Alvin <alvin@alvinhc.com>\n"
+"Language-Team: Chinese <zh-l10n@lists.linux.org.tw>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../general_concepts/colors/linear_and_gamma.rst:1
+msgid "The effect of gamma and linear."
+msgstr ""
+
+#: ../../general_concepts/colors/linear_and_gamma.rst:17
+msgid "Gamma and Linear"
+msgstr "Gamma 與線性色彩"
+
+#: ../../general_concepts/colors/linear_and_gamma.rst:19
+msgid ""
+"Now, the situation we talk about when talking theory is what we would call "
+"'linear'. Each step of brightness is the same value. Our eyes do not "
+"perceive linearly. Rather, we find it more easy to distinguish between "
+"darker grays than we do between lighter grays."
+msgstr ""
+
+#: ../../general_concepts/colors/linear_and_gamma.rst:22
+msgid ""
+"As humans are the ones using computers, we have made it so that computers "
+"will give more room to darker values in the coordinate system of the image. "
+"We call this 'gamma-encoding', because it is applying a gamma function to "
+"the TRC or transfer function of an image. The TRC in this case being the "
+"Tone Response Curve or Tone Reproduction Curve or Transfer function (because "
+"color management specialists hate themselves), which tells your computer or "
+"printer how much color corresponds to a certain value."
+msgstr ""
+
+#: ../../general_concepts/colors/linear_and_gamma.rst:28
+msgid ".. image:: images/color_category/Pepper_tonecurves.png"
+msgstr ""
+
+#: ../../general_concepts/colors/linear_and_gamma.rst:28
+msgid ""
+"One of the most common issues people have with Krita's color management is "
+"the assigning of the right colorspace to the encoded TRC. Above, the center "
+"Pepper is the right one, where the encoded and assigned TRC are the same. To "
+"the left we have a Pepper encoded in sRGB, but assigned a linear profile, "
+"and to the right we have a Pepper encoded with a linear TRC and assigned an "
+"sRGB TRC. Image from `Pepper & Carrot <https://www.peppercarrot.com/>`_."
+msgstr ""
+
+#: ../../general_concepts/colors/linear_and_gamma.rst:30
+msgid ""
+"The following table shows how there's a lot of space being used by lighter "
+"values in a linear space compared to the default sRGB TRC of our modern "
+"computers and other TRCs available in our delivered profiles:"
+msgstr ""
+
+#: ../../general_concepts/colors/linear_and_gamma.rst:None
+msgid ".. image:: images/color_category/trc_gray_gradients.svg"
+msgstr ""
+
+#: ../../general_concepts/colors/linear_and_gamma.rst:35
+msgid ""
+"If you look at linear of Rec. 709 TRCs, you can see there's quite a jump "
+"between the darker shades and the lighter shades, while if we look at the "
+"Lab L* TRC or the sRGB TRC, which seem more evenly spaced. This is due to "
+"our eyes' sensitivity to darker values. This also means that if you do not "
+"have enough bit depth, an image in a linear space will look as if it has "
+"ugly banding. Hence why, when we make images for viewing on a screen, we "
+"always use something like the Lab L\\*, sRGB or Gamma 2.2 TRCs to encode the "
+"image with."
+msgstr ""
+
+#: ../../general_concepts/colors/linear_and_gamma.rst:38
+msgid ""
+"However, this modification to give more space to darker values does lead to "
+"wonky color maths when mixing the colors."
+msgstr ""
+
+#: ../../general_concepts/colors/linear_and_gamma.rst:40
+msgid "We can see this with the following experiment:"
+msgstr ""
+
+#: ../../general_concepts/colors/linear_and_gamma.rst:46
+msgid ""
+".. image:: images/color_category/Krita_2_9_colormanagement_blending_1.png"
+msgstr ""
+
+#: ../../general_concepts/colors/linear_and_gamma.rst:46
+msgid ""
+"**Left:** Colored circles blurred in a regular sRGB space. **Right:** "
+"Colored circles blurred in a linear space."
+msgstr ""
+
+#: ../../general_concepts/colors/linear_and_gamma.rst:48
+msgid ""
+"Colored circles, half blurred. In a gamma-corrected environment, this gives "
+"an odd black border. In a linear environment, this gives us a nice gradation."
+msgstr ""
+
+#: ../../general_concepts/colors/linear_and_gamma.rst:50
+msgid "This also counts for Krita's color smudge brush:"
+msgstr ""
+
+#: ../../general_concepts/colors/linear_and_gamma.rst:56
+msgid ""
+".. image:: images/color_category/Krita_2_9_colormanagement_blending_2.png"
+msgstr ""
+
+#: ../../general_concepts/colors/linear_and_gamma.rst:56
+msgid ""
+"That's right, the 'muddying' of colors as is a common complaint by digital "
+"painters everywhere, is in fact, a gamma-corrected colorspace mucking up "
+"your colors. If you had been working in LAB to avoid this, be sure to try "
+"out a linear rgb color space."
+msgstr ""
+
+#: ../../general_concepts/colors/linear_and_gamma.rst:59
+msgid "What is happening under the hood"
+msgstr ""
+
+#: ../../general_concepts/colors/linear_and_gamma.rst:62
+msgid "Imagine we want to mix red and green."
+msgstr ""
+
+#: ../../general_concepts/colors/linear_and_gamma.rst:64
+msgid ""
+"First, we would need the color coordinates of red and green inside our color "
+"space's color model. So, that'd be..."
+msgstr ""
+
+#: ../../general_concepts/colors/linear_and_gamma.rst:67
+msgid "Color"
+msgstr ""
+
+#: ../../general_concepts/colors/linear_and_gamma.rst:67
+#: ../../general_concepts/colors/linear_and_gamma.rst:69
+#: ../../general_concepts/colors/linear_and_gamma.rst:76
+#: ../../general_concepts/colors/linear_and_gamma.rst:78
+msgid "Red"
+msgstr ""
+
+#: ../../general_concepts/colors/linear_and_gamma.rst:67
+#: ../../general_concepts/colors/linear_and_gamma.rst:70
+#: ../../general_concepts/colors/linear_and_gamma.rst:76
+#: ../../general_concepts/colors/linear_and_gamma.rst:80
+msgid "Green"
+msgstr ""
+
+#: ../../general_concepts/colors/linear_and_gamma.rst:67
+#: ../../general_concepts/colors/linear_and_gamma.rst:82
+msgid "Blue"
+msgstr ""
+
+#: ../../general_concepts/colors/linear_and_gamma.rst:69
+#: ../../general_concepts/colors/linear_and_gamma.rst:70
+#: ../../general_concepts/colors/linear_and_gamma.rst:78
+#: ../../general_concepts/colors/linear_and_gamma.rst:80
+msgid "1.0"
+msgstr ""
+
+#: ../../general_concepts/colors/linear_and_gamma.rst:69
+#: ../../general_concepts/colors/linear_and_gamma.rst:70
+#: ../../general_concepts/colors/linear_and_gamma.rst:78
+#: ../../general_concepts/colors/linear_and_gamma.rst:80
+#: ../../general_concepts/colors/linear_and_gamma.rst:82
+msgid "0.0"
+msgstr ""
+
+#: ../../general_concepts/colors/linear_and_gamma.rst:73
+msgid "We then average these coordinates over three mixes:"
+msgstr ""
+
+#: ../../general_concepts/colors/linear_and_gamma.rst:76
+msgid "Mix1"
+msgstr ""
+
+#: ../../general_concepts/colors/linear_and_gamma.rst:76
+msgid "Mix2"
+msgstr ""
+
+#: ../../general_concepts/colors/linear_and_gamma.rst:76
+msgid "Mix3"
+msgstr ""
+
+#: ../../general_concepts/colors/linear_and_gamma.rst:78
+#: ../../general_concepts/colors/linear_and_gamma.rst:80
+msgid "0.75"
+msgstr ""
+
+#: ../../general_concepts/colors/linear_and_gamma.rst:78
+#: ../../general_concepts/colors/linear_and_gamma.rst:80
+msgid "0.5"
+msgstr ""
+
+#: ../../general_concepts/colors/linear_and_gamma.rst:78
+#: ../../general_concepts/colors/linear_and_gamma.rst:80
+msgid "0.25"
+msgstr ""
+
+#: ../../general_concepts/colors/linear_and_gamma.rst:85
+msgid ""
+"But to figure out how these colors look on screen, we first put the "
+"individual values through the TRC of the color-space we're working with:"
+msgstr ""
+
+#: ../../general_concepts/colors/linear_and_gamma.rst:None
+msgid ".. image:: images/color_category/Basicreading3trcsv2.svg"
+msgstr ""
+
+#: ../../general_concepts/colors/linear_and_gamma.rst:93
+msgid ""
+"Then we fill in the values into the correct spot. Compare these to the "
+"values of the mixture table above!"
+msgstr ""
+
+#: ../../general_concepts/colors/linear_and_gamma.rst:None
+msgid ".. image:: images/color_category/red_green_mixes_trc.svg"
+msgstr ""
+
+#: ../../general_concepts/colors/linear_and_gamma.rst:99
+msgid ""
+"And this is why color mixtures are lighter and softer in linear space. "
+"Linear space is more physically correct, but sRGB is more efficient in terms "
+"of space, so hence why many images have an sRGB TRC encoded into them. In "
+"case this still doesn't make sense: *sRGB gives largely* **darker** *values "
+"than linear space for the same coordinates*."
+msgstr ""
+
+#: ../../general_concepts/colors/linear_and_gamma.rst:102
+msgid ""
+"So different TRCs give different mixes between colors, in the following "
+"example, every set of gradients is in order a mix using linear TRC, a mix "
+"using sRGB TRC and a mix using Lab L* TRC."
+msgstr ""
+
+#: ../../general_concepts/colors/linear_and_gamma.rst:None
+msgid ".. image:: images/color_category/3trcsresult.png"
+msgstr ""
+
+#: ../../general_concepts/colors/linear_and_gamma.rst:110
+msgid ""
+"So, you might be asking, how do I tick this option? Is it in the settings "
+"somewhere? The answer is that we have several ICC profiles that can be used "
+"for this kind of work:"
+msgstr ""
+
+#: ../../general_concepts/colors/linear_and_gamma.rst:112
+msgid "scRGB (linear)"
+msgstr ""
+
+#: ../../general_concepts/colors/linear_and_gamma.rst:113
+msgid "All 'elle'-profiles ending in 'g10', such as *sRGB-elle-v2-g10.icc*."
+msgstr ""
+
+#: ../../general_concepts/colors/linear_and_gamma.rst:115
+msgid ""
+"In fact, in all the 'elle'-profiles, the last number indicates the gamma. "
+"1.0 is linear, higher is gamma-corrected and 'srgbtrc' is a special gamma "
+"correction for the original sRGB profile."
+msgstr ""
+
+#: ../../general_concepts/colors/linear_and_gamma.rst:117
+msgid ""
+"If you use the color space browser, you can tell the TRC from the 'estimated "
+"gamma'(if it's 1.0, it's linear), or from the TRC widget in Krita 3.0, which "
+"looks exactly like the curve graphs above."
+msgstr ""
+
+#: ../../general_concepts/colors/linear_and_gamma.rst:119
+msgid ""
+"Even if you do not paint much, but are for example making textures for a "
+"videogame or rendering, using a linear space is very beneficial and will "
+"speed up the renderer a little, for it won't have to convert images on its "
+"own."
+msgstr ""
+
+#: ../../general_concepts/colors/linear_and_gamma.rst:121
+msgid ""
+"The downside of linear space is of course that white seems very overpowered "
+"when mixing with black, because in a linear space, light grays get more "
+"room. In the end, while linear space is physically correct, and a boon to "
+"work in when you are dealing with physically correct renderers for "
+"videogames and raytracing, Krita is a tool and no-one will hunt you down for "
+"preferring the dark mixing of the sRGB TRC."
+msgstr ""
+
+#: ../../general_concepts/colors/linear_and_gamma.rst:11
+msgid "Gamma"
+msgstr ""
+
+#: ../../general_concepts/colors/linear_and_gamma.rst:11
+msgid "Linear Color Space"
+msgstr ""
+
+#: ../../general_concepts/colors/linear_and_gamma.rst:11
+msgid "Linear"
+msgstr ""
+
+#: ../../general_concepts/colors/linear_and_gamma.rst:11
+msgid "Tone Response curve"
+msgstr ""
+
+#: ../../general_concepts/colors/linear_and_gamma.rst:11
+msgid "EOTF"
+msgstr ""
+
+#: ../../general_concepts/colors/linear_and_gamma.rst:11
+msgid "Transfer Curve"
+msgstr ""

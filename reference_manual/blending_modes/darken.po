@@ -1,0 +1,324 @@
+# Copyright (C) licensed under the GNU Free Documentation License 1.3+
+# unless stated otherwise
+# This file is distributed under the same license as the Krita Manual
+# package.
+#
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+# Alvin <alvin@alvinhc.com>, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: Krita Manual 4.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-07-19 22:30+0800\n"
+"PO-Revision-Date: 2021-07-19 00:41+0800\n"
+"Last-Translator: Alvin <alvin@alvinhc.com>\n"
+"Language-Team: Chinese <zh-l10n@lists.linux.org.tw>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Generated-By: Babel 2.6.0\n"
+"X-Generator: Lokalize 21.04.1\n"
+
+#: ../../reference_manual/blending_modes/darken.rst:1
+msgid ""
+"Page about the darken blending modes in Krita: Darken, Burn, Easy Burn, Fog "
+"Darken, Darker Color, Gamma Dark, Linear Burn and Shade."
+msgstr ""
+
+#: ../../reference_manual/blending_modes/darken.rst:16
+#: ../../reference_manual/blending_modes/darken.rst:79
+#: ../../reference_manual/blending_modes/darken.rst:75
+msgid "Darken"
+msgstr "變暗"
+
+#: ../../reference_manual/blending_modes/darken.rst:23
+msgid "Burn"
+msgstr "加深"
+
+#: ../../reference_manual/blending_modes/darken.rst:25
+msgid "A variation on Divide, sometimes called 'Color Burn' in some programs."
+msgstr ""
+
+#: ../../reference_manual/blending_modes/darken.rst:27
+msgid ""
+"This inverts the bottom layer, then divides it by the top layer, and inverts "
+"the result. This results in a darkened effect that takes the colors of the "
+"lower layer into account, similar to the burn technique used in traditional "
+"darkroom photography."
+msgstr ""
+
+#: ../../reference_manual/blending_modes/darken.rst:30
+msgid ""
+"1_{[1_Darker Gray(0.4, 0.4, 0.4)] / Lighter Gray(0.5, 0.5, 0.5)} = (-0.2, "
+"-0.2, -0.2) → Black(0, 0, 0)"
+msgstr ""
+
+#: ../../reference_manual/blending_modes/darken.rst:35
+msgid ""
+".. image:: images/blending_modes/darken/"
+"Blending_modes_Burn_Gray_0.4_and_Gray_0.5_n.png"
+msgstr ""
+
+#: ../../reference_manual/blending_modes/darken.rst:35
+#: ../../reference_manual/blending_modes/darken.rst:42
+#: ../../reference_manual/blending_modes/darken.rst:47
+msgid "Left: **Normal**. Right: **Burn**."
+msgstr ""
+
+#: ../../reference_manual/blending_modes/darken.rst:37
+msgid ""
+"1_{[1_Light Blue(0.1608, 0.6274, 0.8274)] / Orange(1, 0.5961, 0.0706)} = "
+"(0.1608, 0.3749, -1.4448) → Green(0.1608, 0.3749, 0)"
+msgstr ""
+
+#: ../../reference_manual/blending_modes/darken.rst:42
+msgid ""
+".. image:: images/blending_modes/darken/"
+"Blending_modes_Burn_Light_blue_and_Orange.png"
+msgstr ""
+
+#: ../../reference_manual/blending_modes/darken.rst:47
+msgid ""
+".. image:: images/blending_modes/darken/"
+"Blending_modes_Burn_Sample_image_with_dots.png"
+msgstr ""
+
+#: ../../reference_manual/blending_modes/darken.rst:53
+#: ../../reference_manual/blending_modes/darken.rst:49
+msgid "Easy Burn"
+msgstr "簡單加深"
+
+#: ../../reference_manual/blending_modes/darken.rst:55
+msgid ""
+"Aims to solve issues with Color Burn blending mode by using a formula which "
+"falloff is similar to Dodge, but the falloff rate is softer. It is within "
+"the range of 0.0f and 1.0f unlike Color Burn mode."
+msgstr ""
+
+#: ../../reference_manual/blending_modes/darken.rst:60
+msgid ""
+".. image:: images/blending_modes/darken/"
+"Blending_modes_Easy_Burn_Sample_image_with_dots.png"
+msgstr ""
+
+#: ../../reference_manual/blending_modes/darken.rst:60
+msgid "Left: **Normal**. Right: **Easy Burn**."
+msgstr ""
+
+#: ../../reference_manual/blending_modes/darken.rst:66
+msgid "Fog Darken (IFS Illusions)"
+msgstr "霧化暗淡 (IFS Illusions)"
+
+#: ../../reference_manual/blending_modes/darken.rst:68
+msgid ""
+"Darken the image in a way that there is a 'fog' in the end result. This is "
+"due to the unique property of fog darken in which midtones combined are "
+"lighter than non-midtones blend."
+msgstr ""
+"Krita 5.0 前稱「霧暗（IFS 錯覺）」。Darken the image in a way that there is "
+"a 'fog' in the end result. This is due to the unique property of fog darken "
+"in which midtones combined are lighter than non-midtones blend."
+
+#: ../../reference_manual/blending_modes/darken.rst:73
+msgid ""
+".. image:: images/blending_modes/darken/"
+"Blending_modes_Fog_Darken_Sample_image_with_dots.png"
+msgstr ""
+
+#: ../../reference_manual/blending_modes/darken.rst:73
+msgid "Left: **Normal**. Right: **Fog Darken** (exactly the same as Addition)."
+msgstr ""
+
+#: ../../reference_manual/blending_modes/darken.rst:81
+msgid ""
+"With the darken, the upper layer's colors are checked for their lightness. "
+"Only if they are darker than the underlying color on the lower layer, will "
+"they be visible."
+msgstr ""
+
+#: ../../reference_manual/blending_modes/darken.rst:83
+msgid ""
+"Is Lighter Gray(0.5, 0.5, 0.5) darker than Darker Gray(0.4, 0.4, 0.4)? = "
+"(no, no, no) → Darker Gray(0.4, 0.4, 0.4)"
+msgstr ""
+
+#: ../../reference_manual/blending_modes/darken.rst:88
+msgid ""
+".. image:: images/blending_modes/darken/"
+"Blending_modes_Darken_Gray_0.4_and_Gray_0.5_n.png"
+msgstr ""
+
+#: ../../reference_manual/blending_modes/darken.rst:88
+#: ../../reference_manual/blending_modes/darken.rst:95
+#: ../../reference_manual/blending_modes/darken.rst:100
+msgid "Left: **Normal**. Right: **Darken**."
+msgstr ""
+
+#: ../../reference_manual/blending_modes/darken.rst:90
+msgid ""
+"Is Orange(1, 0.5961, 0.0706) darker than Light Blue(0.1608, 0.6274, 0.8274)? "
+"= (no, yes, yes) → Green(0.1608, 0.5961, 0.0706)"
+msgstr ""
+
+#: ../../reference_manual/blending_modes/darken.rst:95
+msgid ""
+".. image:: images/blending_modes/darken/"
+"Blending_modes_Darken_Light_blue_and_Orange.png"
+msgstr ""
+
+#: ../../reference_manual/blending_modes/darken.rst:100
+msgid ""
+".. image:: images/blending_modes/darken/"
+"Blending_modes_Darken_Sample_image_with_dots.png"
+msgstr ""
+
+#: ../../reference_manual/blending_modes/darken.rst:106
+#: ../../reference_manual/blending_modes/darken.rst:102
+msgid "Darker Color"
+msgstr "較暗色彩"
+
+#: ../../reference_manual/blending_modes/darken.rst:111
+msgid ""
+".. image:: images/blending_modes/darken/"
+"Blending_modes_Darker_Color_Sample_image_with_dots.png"
+msgstr ""
+
+#: ../../reference_manual/blending_modes/darken.rst:111
+msgid "Left: **Normal**. Right: **Darker Color**."
+msgstr ""
+
+#: ../../reference_manual/blending_modes/darken.rst:117
+#: ../../reference_manual/blending_modes/darken.rst:113
+msgid "Gamma Dark"
+msgstr "Gamma 變暗"
+
+#: ../../reference_manual/blending_modes/darken.rst:119
+msgid ""
+"Divides 1 by the upper layer, and calculates the end result using that as "
+"the power of the lower layer."
+msgstr ""
+
+#: ../../reference_manual/blending_modes/darken.rst:121
+msgid ""
+"Darker Gray(0.4, 0.4, 0.4)^[1 / Lighter Gray(0.5, 0.5, 0.5)] = Even Darker "
+"Gray(0.1600, 0.1600, 0.1600)"
+msgstr ""
+
+#: ../../reference_manual/blending_modes/darken.rst:126
+msgid ""
+".. image:: images/blending_modes/darken/"
+"Blending_modes_Gamma_Dark_Gray_0.4_and_Gray_0.5_n.png"
+msgstr ""
+
+#: ../../reference_manual/blending_modes/darken.rst:126
+#: ../../reference_manual/blending_modes/darken.rst:133
+#: ../../reference_manual/blending_modes/darken.rst:138
+msgid "Left: **Normal**. Right: **Gamma Dark**."
+msgstr ""
+
+#: ../../reference_manual/blending_modes/darken.rst:128
+msgid ""
+"Light Blue(0.1608, 0.6274, 0.8274)^[1 / Orange(1, 0.5961, 0.0706)] = "
+"Green(0.1608, 0.4575, 0.0683)"
+msgstr ""
+
+#: ../../reference_manual/blending_modes/darken.rst:133
+msgid ""
+".. image:: images/blending_modes/darken/"
+"Blending_modes_Gamma_Dark_Light_blue_and_Orange.png"
+msgstr ""
+
+#: ../../reference_manual/blending_modes/darken.rst:138
+msgid ""
+".. image:: images/blending_modes/darken/"
+"Blending_modes_Gamma_Dark_Sample_image_with_dots.png"
+msgstr ""
+
+#: ../../reference_manual/blending_modes/darken.rst:144
+#: ../../reference_manual/blending_modes/darken.rst:140
+msgid "Linear Burn"
+msgstr "線性加深"
+
+#: ../../reference_manual/blending_modes/darken.rst:146
+msgid ""
+"Adds the values of the two layers together and then subtracts 1. Seems to "
+"produce the same result as :ref:`bm_inverse_subtract`."
+msgstr ""
+
+#: ../../reference_manual/blending_modes/darken.rst:148
+msgid ""
+"[Darker Gray(0.4, 0.4, 0.4) + Lighter Gray(0.5, 0.5, 0.5)]_1 = (-0.1000, "
+"-0.1000, -0.1000)  → Black(0, 0, 0)"
+msgstr ""
+
+#: ../../reference_manual/blending_modes/darken.rst:153
+msgid ""
+".. image:: images/blending_modes/darken/"
+"Blending_modes_Linear_Burn_Gray_0.4_and_Gray_0.5.png"
+msgstr ""
+
+#: ../../reference_manual/blending_modes/darken.rst:153
+#: ../../reference_manual/blending_modes/darken.rst:160
+#: ../../reference_manual/blending_modes/darken.rst:165
+msgid "Left: **Normal**. Right: **Linear Burn**."
+msgstr ""
+
+#: ../../reference_manual/blending_modes/darken.rst:155
+msgid ""
+"[Light Blue(0.1608, 0.6274, 0.8274) + Orange(1, 0.5961, 0.0706)]_1 = "
+"(0.1608, 0.2235, -0.1020) → Dark Green(0.1608, 0.2235, 0)"
+msgstr ""
+
+#: ../../reference_manual/blending_modes/darken.rst:160
+msgid ""
+".. image:: images/blending_modes/darken/"
+"Blending_modes_Linear_Burn_Light_blue_and_Orange.png"
+msgstr ""
+
+#: ../../reference_manual/blending_modes/darken.rst:165
+msgid ""
+".. image:: images/blending_modes/darken/"
+"Blending_modes_Linear_Burn_Sample_image_with_dots.png"
+msgstr ""
+
+#: ../../reference_manual/blending_modes/darken.rst:171
+msgid "Shade (IFS Illusions)"
+msgstr "陰影化 (IFS Illusions)"
+
+#: ../../reference_manual/blending_modes/darken.rst:173
+msgid ""
+"Basically, the blending mode only ends in shades of shades. This means that "
+"it's very useful for painting shading colors while still in the range of "
+"shades."
+msgstr ""
+"Krita 5.0 前稱「調子（IFS 錯覺）」。Basically, the blending mode only ends "
+"in shades of shades. This means that it's very useful for painting shading "
+"colors while still in the range of shades."
+
+#: ../../reference_manual/blending_modes/darken.rst:179
+msgid ""
+".. image:: images/blending_modes/darken/"
+"Blending_modes_Shade_Sample_image_with_dots.png"
+msgstr ""
+
+#: ../../reference_manual/blending_modes/darken.rst:179
+msgid "Left: **Normal**. Right: **Shade**."
+msgstr ""
+
+#: ../../reference_manual/blending_modes/darken.rst:18
+msgid "Color Burn"
+msgstr ""
+
+#: ../../reference_manual/blending_modes/darken.rst:18
+msgid "burn"
+msgstr ""
+
+#: ../../reference_manual/blending_modes/darken.rst:62
+msgid "Fog Darken"
+msgstr ""
+
+#: ../../reference_manual/blending_modes/darken.rst:167
+msgid "Shade"
+msgstr ""

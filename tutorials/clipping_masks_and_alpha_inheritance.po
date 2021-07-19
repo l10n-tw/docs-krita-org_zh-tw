@@ -1,0 +1,199 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) licensed under the GNU Free Documentation License 1.3+
+# unless stated otherwise
+# This file is distributed under the same license as the Krita Manual
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Krita Manual 4.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-07-19 22:30+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Chinese <kde-i18n-doc@kde.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../tutorials/clipping_masks_and_alpha_inheritance.rst:1
+msgid "An introduction for using clipping masks in Krita."
+msgstr ""
+
+#: ../../tutorials/clipping_masks_and_alpha_inheritance.rst:15
+msgid "Clipping Masks and Alpha Inheritance"
+msgstr ""
+
+#: ../../tutorials/clipping_masks_and_alpha_inheritance.rst:17
+msgid ""
+"Krita doesn't have clipping mask functionality in the manner that Photoshop "
+"and programs that mimic Photoshop's functionality have. That's because in "
+"Krita, unlike such software, a group layer is not an arbitrary collection of "
+"layers. Rather, in Krita, group layers are composited separately from the "
+"rest of the stack, and then the result is added into the stack. In other "
+"words, in Krita group layers are in effect distinct images inside your image."
+msgstr ""
+
+#: ../../tutorials/clipping_masks_and_alpha_inheritance.rst:None
+msgid ""
+"Animation showing that groups are composed before the rest of composition "
+"takes place."
+msgstr ""
+
+#: ../../tutorials/clipping_masks_and_alpha_inheritance.rst:None
+msgid ".. image:: images/clipping-masks/Composition_animation.gif"
+msgstr ""
+
+#: ../../tutorials/clipping_masks_and_alpha_inheritance.rst:24
+msgid ""
+"The exception is when using pass-through mode, meaning that alpha "
+"inheritance won't work right when turning on pass-through on the layer."
+msgstr ""
+
+#: ../../tutorials/clipping_masks_and_alpha_inheritance.rst:None
+msgid "An image showing the way layers composite in Krita."
+msgstr ""
+
+#: ../../tutorials/clipping_masks_and_alpha_inheritance.rst:None
+msgid ".. image:: images/layers/Layer-composite.png"
+msgstr ""
+
+#: ../../tutorials/clipping_masks_and_alpha_inheritance.rst:30
+msgid ""
+"When we turn on alpha inheritance, the alpha-inherited layer keeps the same "
+"transparency as the layers below."
+msgstr ""
+
+#: ../../tutorials/clipping_masks_and_alpha_inheritance.rst:None
+msgid "An image showing how the alpha inheritance works and affects layers."
+msgstr ""
+
+#: ../../tutorials/clipping_masks_and_alpha_inheritance.rst:None
+msgid ".. image:: images/layers/Krita-tutorial2-I.1-2.png"
+msgstr ""
+
+#: ../../tutorials/clipping_masks_and_alpha_inheritance.rst:36
+msgid ""
+"Combined with group layers this can be quite powerful. A situation where "
+"this is particularly useful is the following:"
+msgstr ""
+
+#: ../../tutorials/clipping_masks_and_alpha_inheritance.rst:None
+msgid "An image with line art and a layer for each flat of color."
+msgstr ""
+
+#: ../../tutorials/clipping_masks_and_alpha_inheritance.rst:None
+msgid ".. image:: images/clipping-masks/Tut_Clipping_1.png"
+msgstr ""
+
+#: ../../tutorials/clipping_masks_and_alpha_inheritance.rst:42
+msgid ""
+"Here we have an image with line art and a layer for each flat of colors. We "
+"want to add complicated multi-layered shading to this, while keeping the "
+"neatness of the existing color flats. To get a clipping mask working, you "
+"first need to put layers into a group. You can do this by making a group "
+"layer and drag-and-dropping the layers into it, or by selecting the layers "
+"you want grouped and pressing the :kbd:`Ctrl + G` shortcut. Here we do that "
+"with the iris and the eye-white layers."
+msgstr ""
+
+#: ../../tutorials/clipping_masks_and_alpha_inheritance.rst:None
+msgid ".. image:: images/clipping-masks/Tut_Clipping_2.png"
+msgstr ""
+
+#: ../../tutorials/clipping_masks_and_alpha_inheritance.rst:50
+msgid ""
+"We add a layer for the highlight above the other two layers, and add some "
+"white scribbles."
+msgstr ""
+
+#: ../../tutorials/clipping_masks_and_alpha_inheritance.rst:None
+msgid "Clipping mask step 3."
+msgstr ""
+
+#: ../../tutorials/clipping_masks_and_alpha_inheritance.rst:None
+msgid ".. image:: images/clipping-masks/Tut_Clipping_3.png"
+msgstr ""
+
+#: ../../tutorials/clipping_masks_and_alpha_inheritance.rst:None
+msgid "Clipping mask step 4."
+msgstr ""
+
+#: ../../tutorials/clipping_masks_and_alpha_inheritance.rst:None
+msgid ".. image:: images/clipping-masks/Tut_Clipping_4.png"
+msgstr ""
+
+#: ../../tutorials/clipping_masks_and_alpha_inheritance.rst:60
+msgid ""
+"In the above, we have our layer with a white scribble on the left, and on "
+"the right, the same layer, but with alpha inheritance active, limiting it to "
+"the combined area of the iris and eye-white layers."
+msgstr ""
+
+#: ../../tutorials/clipping_masks_and_alpha_inheritance.rst:None
+msgid "Clipping mask step 5."
+msgstr ""
+
+#: ../../tutorials/clipping_masks_and_alpha_inheritance.rst:None
+msgid ".. image:: images/clipping-masks/Tut_Clipping_5.png"
+msgstr ""
+
+#: ../../tutorials/clipping_masks_and_alpha_inheritance.rst:66
+msgid ""
+"Now there’s an easier way to set up alpha inheritance. If you select a layer "
+"or set of layers and press the :kbd:`Ctrl + Shift + G` shortcut, you create "
+"a quick clipping group. That is, you group the layers, and a ‘mask layer’ "
+"set with alpha inheritance is added on top."
+msgstr ""
+
+#: ../../tutorials/clipping_masks_and_alpha_inheritance.rst:None
+msgid "Clipping mask step 6."
+msgstr ""
+
+#: ../../tutorials/clipping_masks_and_alpha_inheritance.rst:None
+msgid ".. image:: images/clipping-masks/Tut_Clipping_6.png"
+msgstr ""
+
+#: ../../tutorials/clipping_masks_and_alpha_inheritance.rst:None
+msgid "Clipping mask step 7."
+msgstr ""
+
+#: ../../tutorials/clipping_masks_and_alpha_inheritance.rst:None
+msgid ".. image:: images/clipping-masks/Tut_Clipping_7.png"
+msgstr ""
+
+#: ../../tutorials/clipping_masks_and_alpha_inheritance.rst:76
+msgid ""
+"The fact that alpha inheritance can use the composited transparency from a "
+"combination of layers means that you can have a layer with the erase-"
+"blending mode in between, and have that affect the area that the layer above "
+"is clipped to. Above, the lower image is exactly the same as the upper one, "
+"except with the erase-layer hidden. Filters can also affect the alpha "
+"inheritance:"
+msgstr ""
+
+#: ../../tutorials/clipping_masks_and_alpha_inheritance.rst:None
+msgid "Filter layers and alpha inheritance."
+msgstr ""
+
+#: ../../tutorials/clipping_masks_and_alpha_inheritance.rst:None
+msgid ".. image:: images/clipping-masks/Tut_clip_blur.gif"
+msgstr ""
+
+#: ../../tutorials/clipping_masks_and_alpha_inheritance.rst:83
+msgid ""
+"Above, the blur filter layer gives different results when in different "
+"places, due to different parts being blurred."
+msgstr ""
+
+#: ../../tutorials/clipping_masks_and_alpha_inheritance.rst:10
+msgid "Alpha Inheritance"
+msgstr ""
+
+#: ../../tutorials/clipping_masks_and_alpha_inheritance.rst:10
+msgid "Clipping Masks"
+msgstr ""

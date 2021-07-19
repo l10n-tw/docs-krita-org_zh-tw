@@ -1,0 +1,352 @@
+# Copyright (C) licensed under the GNU Free Documentation License 1.3+
+# unless stated otherwise
+# This file is distributed under the same license as the Krita Manual
+# package.
+#
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+# Alvin <alvin@alvinhc.com>, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: Krita Manual 4.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-07-19 22:30+0800\n"
+"PO-Revision-Date: 2021-07-10 16:02+0800\n"
+"Last-Translator: Alvin <alvin@alvinhc.com>\n"
+"Language-Team: Chinese <zh-l10n@lists.linux.org.tw>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Generated-By: Babel 2.6.0\n"
+"X-Generator: Lokalize 21.04.1\n"
+
+#: ../../reference_manual/render_animation.rst:1
+msgid "How to use the render animation command in Krita."
+msgstr ""
+
+#: ../../reference_manual/render_animation.rst:18
+#: ../../reference_manual/render_animation.rst:43
+#: ../../reference_manual/render_animation.rst:13
+msgid "Render Animation"
+msgstr "繪製動畫"
+
+#: ../../reference_manual/render_animation.rst:20
+msgid ""
+"Render animation allows you to render your animation to an image sequence, "
+"``.gif``, ``.mp4``, ``.mkv``, or ``.ogg`` file. It replaces :guilabel:"
+"`Export Animation`."
+msgstr ""
+
+#: ../../reference_manual/render_animation.rst:22
+msgid ""
+"For rendering to an animated file format, Krita will first render to a PNG "
+"sequence and then use FFmpeg, which is really good at encoding into video "
+"files, to render that sequence to an animated file format. The reason for "
+"this two-step process is that animation files can be really complex and "
+"really big, and this is the best way to allow you to keep control over the "
+"export process. For example, if your computer has a hiccup, and one frame "
+"saves out weird, first saving the image sequence allows you to only resave "
+"that one weird frame before rendering."
+msgstr ""
+
+#: ../../reference_manual/render_animation.rst:24
+msgid ""
+"This means that you will need to find a good place to stick your frames "
+"before you can start rendering. If you only do throwaway animations, you can "
+"use a spot on your hard-drive with enough room and select :guilabel:`Delete "
+"Sequence After Rendering`."
+msgstr ""
+
+#: ../../reference_manual/render_animation.rst:27
+msgid "Image Sequence"
+msgstr "影像序列"
+
+#: ../../reference_manual/render_animation.rst:29
+msgid "Base Name"
+msgstr ""
+
+#: ../../reference_manual/render_animation.rst:30
+msgid ""
+"The base name of your image sequence. This will get suffixed with a number "
+"depending on the frame."
+msgstr ""
+
+#: ../../reference_manual/render_animation.rst:31
+msgid "File Format"
+msgstr ""
+
+#: ../../reference_manual/render_animation.rst:32
+msgid ""
+"The file format to export the sequence to. When rendering we enforce PNG. "
+"The usual export options can be modified with :guilabel:`...`."
+msgstr ""
+
+#: ../../reference_manual/render_animation.rst:33
+msgid "Render Location"
+msgstr ""
+
+#: ../../reference_manual/render_animation.rst:34
+msgid ""
+"Where you render the image sequence to. Some people prefer to use a flash-"
+"drive or perhaps a harddrive that is fast."
+msgstr ""
+
+#: ../../reference_manual/render_animation.rst:35
+msgid "First Frame"
+msgstr ""
+
+#: ../../reference_manual/render_animation.rst:36
+msgid ""
+"The first frame of the range of frames you wish to adjust. Automatically set "
+"to the first frame of your current selection in the timeline. This is useful "
+"when you only want to re-render a little part."
+msgstr ""
+
+#: ../../reference_manual/render_animation.rst:37
+msgid "Last Frame"
+msgstr ""
+
+#: ../../reference_manual/render_animation.rst:38
+msgid ""
+"As above, the last frame of the range of frames you wish to adjust. "
+"Automatically set to the last frame of your current selection in the "
+"timeline."
+msgstr ""
+
+#: ../../reference_manual/render_animation.rst:40
+msgid "Naming Sequence starts with"
+msgstr ""
+
+#: ../../reference_manual/render_animation.rst:40
+msgid ""
+"The frames are named by using :guilabel:`Base Name`  above and adding a "
+"number for the frame. This allows you to set where the frame number starts, "
+"so rendering from 8 to 10 with starting point 3 will give you images named "
+"11 and 15. Useful for programs that don't understand sequences starting with "
+"0, or for precision output."
+msgstr ""
+
+#: ../../reference_manual/render_animation.rst:45
+msgid "Render As"
+msgstr ""
+
+#: ../../reference_manual/render_animation.rst:46
+msgid ""
+"The file format to render to. All except GIF have extra options that can be "
+"manipulated via :guilabel:`...`."
+msgstr ""
+
+#: ../../reference_manual/render_animation.rst:47
+msgid "File"
+msgstr ""
+
+#: ../../reference_manual/render_animation.rst:48
+msgid "Location and name of the rendered animation."
+msgstr ""
+
+#: ../../reference_manual/render_animation.rst:49
+msgid "FFmpeg"
+msgstr ""
+
+#: ../../reference_manual/render_animation.rst:50
+msgid ""
+"The location where your have FFmpeg. If you don't have this, Krita cannot "
+"render an animation. For proper GIF support, you will need FFmpeg 2.6, as we "
+"use its palettegen functionality."
+msgstr ""
+
+#: ../../reference_manual/render_animation.rst:52
+msgid "Delete Sequence After Rendering"
+msgstr ""
+
+#: ../../reference_manual/render_animation.rst:52
+msgid ""
+"Delete the prerendered image sequence after done rendering. This allows you "
+"to choose whether to try and save some space, or to save the sequence for "
+"when encoding fails."
+msgstr ""
+
+#: ../../reference_manual/render_animation.rst:56
+msgid ""
+"Krita currently does not support rendering video with transparent elements, "
+"and will instead render them as black. To combat this, you can add in a "
+"fully colored, opaque layer at the bottom of the file before rendering."
+msgstr ""
+
+#: ../../reference_manual/render_animation.rst:59
+msgid "Setting Up Krita for Exporting Animations"
+msgstr ""
+
+#: ../../reference_manual/render_animation.rst:61
+msgid ""
+"You will need to download an extra application and link it in Krita for it "
+"to work. The application is pretty big (50MB), so the Krita developers "
+"didn't want to bundle it with the normal application. The software that we "
+"will use is free and called FFmpeg. The following instructions will explain "
+"how to get it and set it up. The setup is a one-time thing so you won't have "
+"to do it again."
+msgstr ""
+
+#: ../../reference_manual/render_animation.rst:64
+msgid "Step 1 - Downloading FFmpeg"
+msgstr ""
+
+#: ../../reference_manual/render_animation.rst:67
+#: ../../reference_manual/render_animation.rst:96
+msgid "For Windows"
+msgstr ""
+
+#: ../../reference_manual/render_animation.rst:69
+msgid "Open the FFmpeg `download page. <https://www.gyan.dev/ffmpeg/builds/>`_"
+msgstr ""
+
+#: ../../reference_manual/render_animation.rst:71
+msgid ""
+"Go to :guilabel:`release` section and choose the download link that says "
+"``ffmpeg-release-essentials.zip``."
+msgstr ""
+
+#: ../../reference_manual/render_animation.rst:75
+msgid ""
+"**Don't** download the file which filename contains the word ``shared``. It "
+"won't work with Krita."
+msgstr ""
+
+#: ../../reference_manual/render_animation.rst:77
+msgid ""
+"If the filename ends with ``.7z``, you can still use it, but then you need "
+"to have a program that can open 7zip archives (for example `7zip itself "
+"<https://www.gyan.dev/ffmpeg/builds/>`_). In case of a ``.zip`` file, you "
+"can open it just using the Windows file browser."
+msgstr ""
+
+#: ../../reference_manual/render_animation.rst:81
+#: ../../reference_manual/render_animation.rst:114
+msgid "For macOS"
+msgstr ""
+
+#: ../../reference_manual/render_animation.rst:83
+msgid ""
+"Please see the section above. However, FFmpeg is obtained from `here "
+"<https://evermeet.cx/ffmpeg/>`_ instead. Just pick the big green button on "
+"the left under the FFmpeg heading. You will also need an archiving utility "
+"that supports .7z, since FFmpeg provides their macOS builds in .7z format. "
+"If you don't have one, try something like `Keka <https://www.kekaosx.com>`_."
+msgstr ""
+
+#: ../../reference_manual/render_animation.rst:85
+msgid ""
+"Alternatively you can find the smaller text under the big green button that "
+"says :guilabel:`Download as ZIP`. Then you should be able to extract it just "
+"using Finder."
+msgstr ""
+
+#: ../../reference_manual/render_animation.rst:88
+#: ../../reference_manual/render_animation.rst:119
+msgid "For Linux"
+msgstr ""
+
+#: ../../reference_manual/render_animation.rst:90
+msgid ""
+"FFmpeg can be installed from the repositories on most Linux systems. Version "
+"2.6 is required for proper GIF support, as we use the palettegen "
+"functionality."
+msgstr ""
+
+#: ../../reference_manual/render_animation.rst:93
+msgid "Step 2 - Unzipping and Linking to Krita"
+msgstr ""
+
+#: ../../reference_manual/render_animation.rst:98
+msgid ""
+"Once you've downloaded, go to the file location. Right click on the FFmpeg "
+"file, and select ``Extract All...``. Select the file destination, and rename "
+"the file to 'ffmpeg'."
+msgstr ""
+
+#: ../../reference_manual/render_animation.rst:100
+msgid "Hint"
+msgstr ""
+
+#: ../../reference_manual/render_animation.rst:102
+msgid ""
+"It is easiest to save the file under C: drive, but any location is fine."
+msgstr ""
+
+#: ../../reference_manual/render_animation.rst:104
+msgid ""
+"Open Krita back up and go to :menuselection:`File --> Render Animation...`. "
+"Under ``Export > Video``, click the file icon next to FFmpeg. Select this "
+"file ``C:/ffmpeg/bin/ffmpeg.exe`` and click :guilabel:`OK`."
+msgstr ""
+
+#: ../../reference_manual/render_animation.rst:None
+msgid "FFmpeg path."
+msgstr ""
+
+#: ../../reference_manual/render_animation.rst:None
+msgid ".. image:: images/ffmpeg_screenshot_path.png"
+msgstr ""
+
+#: ../../reference_manual/render_animation.rst:109
+msgid "Tip"
+msgstr ""
+
+#: ../../reference_manual/render_animation.rst:111
+msgid ""
+"If you have saved FFmpeg to a different location, choose ``<ffmpeg location>/"
+"ffmpeg/bin/ffmpeg.exe``."
+msgstr ""
+
+#: ../../reference_manual/render_animation.rst:116
+msgid ""
+"After downloading FFmpeg, you just need to extract it and then simply point "
+"to it in the FFmpeg location in Krita like ``/Users/user/Downloads/ffmpeg`` "
+"(assuming you downloaded and extracted the .7z file to /Users/user/"
+"Downloads)."
+msgstr ""
+
+#: ../../reference_manual/render_animation.rst:121
+msgid ""
+"FFmpeg is, if installed from the repositories, usually found in ``/usr/bin/"
+"ffmpeg``."
+msgstr ""
+
+#: ../../reference_manual/render_animation.rst:124
+msgid "Step 3 - Testing out an animation"
+msgstr ""
+
+#: ../../reference_manual/render_animation.rst:126
+msgid ""
+"ffmpeg.exe is what Krita uses to do all of its animation export magic. Now "
+"that it is hooked up, let us test it out."
+msgstr ""
+
+#: ../../reference_manual/render_animation.rst:128
+msgid ""
+"Let's make an animated GIF. In the Render Animation dialog, change the :"
+"guilabel:`Render As`  field to \"GIF image\". Choose the file location where "
+"it will save with the \"File\" menu below. I just saved it to my desktop and "
+"called it \"*export.gif*\". When it is done, you should be able to open it "
+"up and see the animation."
+msgstr ""
+
+#: ../../reference_manual/render_animation.rst:132
+msgid ""
+"By default, FFmpeg will render MP4 files with a too new codec, which means "
+"that Windows Media Player won't be able to play it. So for Windows, select "
+"\"baseline\" for the profile instead of \"high422\" before rendering."
+msgstr ""
+
+#: ../../reference_manual/render_animation.rst:136
+msgid ""
+"macOS does not come with any software to play MP4 and MKV files. If you use "
+"Chrome for your web browser, you can drag the video file into that and the "
+"video should play. Otherwise you will need to get a program like VLC to see "
+"the video."
+msgstr ""
+
+#: ../../reference_manual/render_animation.rst:13
+msgid "Animation"
+msgstr ""

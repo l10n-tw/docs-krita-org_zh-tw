@@ -1,0 +1,232 @@
+# Copyright (C) licensed under the GNU Free Documentation License 1.3+
+# unless stated otherwise
+# This file is distributed under the same license as the Krita Manual
+# package.
+#
+# Alvin <alvin@alvinhc.com>, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: Krita Manual 4.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-07-19 22:30+0800\n"
+"PO-Revision-Date: 2021-07-07 18:18+0800\n"
+"Last-Translator: Alvin <alvin@alvinhc.com>\n"
+"Language-Team: Chinese <zh-l10n@lists.linux.org.tw>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../general_concepts/projection/perspective.rst:1
+msgid "Perspective projection."
+msgstr ""
+
+#: ../../general_concepts/projection/perspective.rst:10
+msgid ""
+"This is a continuation of the :ref:`axonometric tutorial "
+"<projection_axonometric>`, be sure to check it out if you get confused!"
+msgstr ""
+
+#: ../../general_concepts/projection/perspective.rst:16
+#: ../../general_concepts/projection/perspective.rst:12
+msgid "Perspective Projection"
+msgstr "透視投影"
+
+#: ../../general_concepts/projection/perspective.rst:18
+msgid ""
+"So, up till now we’ve done only parallel projection. This is called like "
+"that because all the projection lines we drew were parallel ones."
+msgstr ""
+
+#: ../../general_concepts/projection/perspective.rst:20
+msgid ""
+"However, in real life we don’t have parallel projection. This is due to the "
+"lens in our eyes."
+msgstr ""
+
+#: ../../general_concepts/projection/perspective.rst:None
+msgid ""
+".. image:: images/category_projection/Projection_Lens1_from_wikipedia.svg"
+msgstr ""
+
+#: ../../general_concepts/projection/perspective.rst:25
+msgid ""
+"Convex lenses, as this lovely image from `wikipedia <https://en.wikipedia."
+"org/wiki/Lens_%28optics%29>`_ shows us, have the ability to turn parallel "
+"lightrays into converging ones."
+msgstr ""
+
+#: ../../general_concepts/projection/perspective.rst:27
+msgid ""
+"The point where all the rays come together is called the focal point, and "
+"the vanishing point in a 2d drawing is related to it as it’s the expression "
+"of the maximum distortion that can be given to two parallel lines as they’re "
+"skewed toward the focal point."
+msgstr ""
+
+#: ../../general_concepts/projection/perspective.rst:29
+msgid ""
+"As you can see from the image, the focal point is not an end-point of the "
+"rays. Rather, it is where the rays cross before diverging again… The only "
+"difference is that the resulting image will be inverted. Even in our eyes "
+"this inversion happens, but our brains are used to this awkwardness since "
+"childhood and turn it around automatically."
+msgstr ""
+
+#: ../../general_concepts/projection/perspective.rst:31
+msgid "Let’s see if we can perspectively project our box now."
+msgstr ""
+
+#: ../../general_concepts/projection/perspective.rst:None
+msgid ".. image:: images/category_projection/projection-cube_12.svg"
+msgstr ""
+
+#: ../../general_concepts/projection/perspective.rst:36
+msgid ""
+"That went pretty well. As you can see we sort of *merged* the two sides into "
+"one (resulting into the purple side square) so we had an easier time "
+"projecting. The projection is limited to one or two vanishing point type "
+"projection, so only the horizontal lines get distorted. We can also distort "
+"the vertical lines"
+msgstr ""
+
+#: ../../general_concepts/projection/perspective.rst:None
+msgid ".. image:: images/category_projection/projection-cube_13.svg"
+msgstr ""
+
+#: ../../general_concepts/projection/perspective.rst:41
+msgid ""
+"… to get three-point projection, but this is a bit much. (And I totally made "
+"a mistake in there…)"
+msgstr ""
+
+#: ../../general_concepts/projection/perspective.rst:43
+msgid "Let’s setup our perspective projection again…"
+msgstr ""
+
+#: ../../general_concepts/projection/perspective.rst:None
+msgid ".. image:: images/category_projection/projection_image_31.png"
+msgstr ""
+
+#: ../../general_concepts/projection/perspective.rst:48
+msgid ""
+"We’ll be using a single vanishing point for our focal point. A guide line "
+"will be there for the projection plane, and we’re setting up horizontal and "
+"vertical parallel rules to easily draw the straight lines from the view "
+"plane to where they intersect."
+msgstr ""
+
+#: ../../general_concepts/projection/perspective.rst:50
+msgid ""
+"And now the workflow in GIF format… (don’t forget you can rotate the canvas "
+"with the :kbd:`4` and :kbd:`6` keys)"
+msgstr ""
+
+#: ../../general_concepts/projection/perspective.rst:None
+msgid ".. image:: images/category_projection/projection_animation_03.gif"
+msgstr ""
+
+#: ../../general_concepts/projection/perspective.rst:55
+msgid "Result:"
+msgstr ""
+
+#: ../../general_concepts/projection/perspective.rst:None
+msgid ".. image:: images/category_projection/projection_image_32.png"
+msgstr ""
+
+#: ../../general_concepts/projection/perspective.rst:60
+msgid "Looks pretty haughty, doesn’t he?"
+msgstr ""
+
+#: ../../general_concepts/projection/perspective.rst:62
+msgid "And again, there’s technically a simpler setup here…"
+msgstr ""
+
+#: ../../general_concepts/projection/perspective.rst:64
+msgid "Did you know you can use Krita to rotate in 3d? No?"
+msgstr ""
+
+#: ../../general_concepts/projection/perspective.rst:None
+msgid ".. image:: images/category_projection/projection_image_33.png"
+msgstr ""
+
+#: ../../general_concepts/projection/perspective.rst:69
+msgid "Well, now you do."
+msgstr ""
+
+#: ../../general_concepts/projection/perspective.rst:71
+msgid "The ortho graphics are being set to 45 and 135 degrees respectively."
+msgstr ""
+
+#: ../../general_concepts/projection/perspective.rst:73
+msgid ""
+"We draw horizontal lines on the originals, so that we can align vanishing "
+"point rulers to them."
+msgstr ""
+
+#: ../../general_concepts/projection/perspective.rst:None
+msgid ".. image:: images/category_projection/projection_image_34.png"
+msgstr ""
+
+#: ../../general_concepts/projection/perspective.rst:78
+msgid ""
+"And from this, like with the shearing method, we start drawing. (Don’t "
+"forget the top-views!)"
+msgstr ""
+
+#: ../../general_concepts/projection/perspective.rst:80
+msgid "Which should get you something like this:"
+msgstr ""
+
+#: ../../general_concepts/projection/perspective.rst:None
+msgid ".. image:: images/category_projection/projection_image_35.png"
+msgstr ""
+
+#: ../../general_concepts/projection/perspective.rst:85
+msgid "But again, the regular method is actually a bit easier..."
+msgstr ""
+
+#: ../../general_concepts/projection/perspective.rst:87
+msgid ""
+"But now you might be thinking: gee, this is a lot of work… Can’t we make it "
+"easier with the computer somehow?"
+msgstr ""
+
+#: ../../general_concepts/projection/perspective.rst:89
+msgid ""
+"Uhm, yes, that’s more or less why people spent time on developing 3d "
+"graphics technology:"
+msgstr ""
+
+#: ../../general_concepts/projection/perspective.rst:None
+msgid ".. image:: images/category_projection/projection_image_36.png"
+msgstr ""
+
+#: ../../general_concepts/projection/perspective.rst:None
+msgid ".. image:: images/category_projection/projection_image_37.png"
+msgstr ""
+
+#: ../../general_concepts/projection/perspective.rst:97
+msgid ""
+"(The image above is sculpted in blender using our orthographic reference)"
+msgstr ""
+
+#: ../../general_concepts/projection/perspective.rst:99
+msgid ""
+"So let us look at what this technique can be practically used for in the "
+"next part..."
+msgstr ""
+
+#: ../../general_concepts/projection/perspective.rst:12
+msgid "Projection"
+msgstr "投影"
+
+#: ../../general_concepts/projection/perspective.rst:12
+msgid "Perspective"
+msgstr "透視"
+
+#, fuzzy
+#~ msgid "toolperspectivegrid"
+#~ msgstr "透視"

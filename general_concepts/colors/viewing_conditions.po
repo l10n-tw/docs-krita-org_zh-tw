@@ -1,0 +1,230 @@
+# Copyright (C) licensed under the GNU Free Documentation License 1.3+
+# unless stated otherwise
+# This file is distributed under the same license as the Krita Manual
+# package.
+#
+# Alvin <alvin@alvinhc.com>, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: Krita Manual 4.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-07-19 22:30+0800\n"
+"PO-Revision-Date: 2021-07-07 17:55+0800\n"
+"Last-Translator: Alvin <alvin@alvinhc.com>\n"
+"Language-Team: Chinese <zh-l10n@lists.linux.org.tw>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../general_concepts/colors/viewing_conditions.rst:1
+msgid "What are viewing conditions."
+msgstr ""
+
+#: ../../general_concepts/colors/viewing_conditions.rst:15
+#: ../../general_concepts/colors/viewing_conditions.rst:10
+msgid "Viewing Conditions"
+msgstr "觀察時狀況"
+
+#: ../../general_concepts/colors/viewing_conditions.rst:17
+msgid ""
+"We mentioned viewing conditions before, but what does this have to do with "
+"'white points'?"
+msgstr ""
+
+#: ../../general_concepts/colors/viewing_conditions.rst:19
+msgid ""
+"A lot actually, rather, white points describe a type of viewing condition."
+msgstr ""
+
+#: ../../general_concepts/colors/viewing_conditions.rst:21
+msgid ""
+"So, usually what we mean by viewing conditions is the lighting and "
+"decoration of the room that you are viewing the image in. Our eyes try to "
+"make sense of both the colors that you are looking at actively (the colors "
+"of the image) and the colors you aren't looking at actively (the colors of "
+"the room), which means that both sets of colors affect how the image looks."
+msgstr ""
+
+#: ../../general_concepts/colors/viewing_conditions.rst:27
+msgid ".. image:: images/color_category/Meisje_met_de_parel_viewing.png"
+msgstr ""
+
+#: ../../general_concepts/colors/viewing_conditions.rst:27
+msgid ""
+"**Left**: Let's ruin Vermeer by putting a bright purple background that asks "
+"for more attention than the famous painting itself. **Center**: a much more "
+"neutral backdrop that an interior decorator would hate but brings out the "
+"colors. **Right**: The approximate color that this painting is displayed "
+"against in real life in the Maurits House, at the least, last time I was "
+"there. Original image from wikipedia commons."
+msgstr ""
+
+#: ../../general_concepts/colors/viewing_conditions.rst:29
+msgid ""
+"This is for example, the reason why museum exhibitioners can get really "
+"angry at the interior decorators when the walls of the museum are painted "
+"bright red or blue, because this will drastically change the way how the "
+"painting's colors look. (Which, if we are talking about a painter known for "
+"their colors like Vermeer, could result in a really bad experience)."
+msgstr ""
+
+#: ../../general_concepts/colors/viewing_conditions.rst:None
+msgid ".. image:: images/color_category/Krita_example_metamerism.png"
+msgstr ""
+
+#: ../../general_concepts/colors/viewing_conditions.rst:37
+msgid ""
+"Lighting is the other component of the viewing condition which can have "
+"dramatic effects. Lighting in particular affects the way how all colors "
+"look. For example, if you were to paint an image of sunflowers and poppies, "
+"print that out, and shine a bright yellow light on it, the sunflowers would "
+"become indistinguishable from the white background, and the poppies would "
+"look orange. This is called `metamerism <https://en.wikipedia.org/wiki/"
+"Metamerism_%28color%29>`_, and it's generally something you want to avoid in "
+"your color management pipeline."
+msgstr ""
+
+#: ../../general_concepts/colors/viewing_conditions.rst:39
+msgid ""
+"An example where metamerism could become a problem is when you start "
+"matching colors from different sources together."
+msgstr ""
+
+#: ../../general_concepts/colors/viewing_conditions.rst:None
+msgid ".. image:: images/color_category/White_point_mix_up_ex1_01.svg"
+msgstr ""
+
+#: ../../general_concepts/colors/viewing_conditions.rst:46
+msgid ""
+"For example, if you are designing a print for a red t-shirt that's not "
+"bright red, but not super grayish red either. And you want to make sure the "
+"colors of the print match the color of the t-shirt, so you make a dummy "
+"background layer that is approximately that red, as correctly as you can "
+"observe it, and paint on layers above that dummy layer. When you are done, "
+"you hide this dummy layer and sent the image with a transparent background "
+"to the press."
+msgstr ""
+
+#: ../../general_concepts/colors/viewing_conditions.rst:None
+msgid ".. image:: images/color_category/White_point_mixup_ex1_02.png"
+msgstr ""
+
+#: ../../general_concepts/colors/viewing_conditions.rst:54
+msgid ""
+"But when you get the t-shirt from the printer, you notice that all your "
+"colors look off, mismatched, and maybe too yellowish (and when did that T-"
+"Shirt become purple?)."
+msgstr ""
+
+#: ../../general_concepts/colors/viewing_conditions.rst:56
+msgid "This is where white points come in."
+msgstr ""
+
+#: ../../general_concepts/colors/viewing_conditions.rst:58
+msgid ""
+"You probably observed the t-shirt in a white room where there were "
+"incandescent lamps shining, because as a true artist, you started your work "
+"in the middle of the night, as that is when the best art is made. However, "
+"incandescent lamps have a black body temperature of roughly 2300-2800K, "
+"which makes them give a yellowish light, officially called White Point A."
+msgstr ""
+
+#: ../../general_concepts/colors/viewing_conditions.rst:61
+msgid ""
+"Your computer screen on the other hand, has a black body temperature of "
+"6500K, also known as D65. Which is a far more blueish color of light than "
+"the lamps you are hanging."
+msgstr ""
+
+#: ../../general_concepts/colors/viewing_conditions.rst:63
+msgid ""
+"What's worse, Printers print on the basis of using a white point of D50, the "
+"color of white paper under direct sunlight."
+msgstr ""
+
+#: ../../general_concepts/colors/viewing_conditions.rst:None
+msgid ".. image:: images/color_category/White_point_mix_up_ex1_03.svg"
+msgstr ""
+
+#: ../../general_concepts/colors/viewing_conditions.rst:70
+msgid ""
+"So, by eye-balling your t-shirt's color during the evening, you took its red "
+"color as transformed by the yellowish light. Had you made your observation "
+"in diffuse sunlight of an overcast (which is also roughly D65), or made it "
+"in direct sunlight light and painted your picture with a profile set to D50, "
+"the color would have been much closer, and thus your design would not be as "
+"yellowish."
+msgstr ""
+
+#: ../../general_concepts/colors/viewing_conditions.rst:77
+msgid ".. image:: images/color_category/White_point_mixup_ex1_03.png"
+msgstr ""
+
+#: ../../general_concepts/colors/viewing_conditions.rst:77
+msgid ""
+"Applying a white balance filter will sort of match the colors to the tone as "
+"in the middle, but you would have had a much better design had you designed "
+"against the actual color to begin with."
+msgstr ""
+
+#: ../../general_concepts/colors/viewing_conditions.rst:79
+msgid ""
+"Now, you could technically quickly fix this by using a white balancing "
+"filter, like the ones in G'MIC, but because this error is caught at the end "
+"of the production process, you basically limited your use of possible colors "
+"when you were designing, which is a pity."
+msgstr ""
+
+#: ../../general_concepts/colors/viewing_conditions.rst:81
+msgid ""
+"Another example where metamerism messes things up is with screen projections."
+msgstr ""
+
+#: ../../general_concepts/colors/viewing_conditions.rst:83
+msgid ""
+"We have a presentation where we mark one type of item with red, another with "
+"yellow and yet another with purple. On a computer the differences between "
+"the colors are very obvious."
+msgstr ""
+
+#: ../../general_concepts/colors/viewing_conditions.rst:None
+msgid ".. image:: images/color_category/Krita_metamerism_presentation.svg"
+msgstr ""
+
+#: ../../general_concepts/colors/viewing_conditions.rst:89
+msgid ""
+"However, when we start projecting, the lights of the room aren't dimmed, "
+"which means that the tone scale of the colors becomes crunched, and yellow "
+"becomes near indistinguishable from white. Furthermore, because the light in "
+"the room is slightly yellowish, the purple is transformed into red, making "
+"it indistinguishable from the red. Meaning that the graphic is difficult to "
+"read."
+msgstr ""
+
+#: ../../general_concepts/colors/viewing_conditions.rst:91
+msgid ""
+"In both cases, you can use Krita's color management a little to help you, "
+"but mostly, you just need to be ''aware'' of it, as Krita can hardly fix "
+"that you are looking at colors at night, or the fact that the presentation "
+"hall owner refuses to turn off the lights."
+msgstr ""
+
+#: ../../general_concepts/colors/viewing_conditions.rst:93
+msgid ""
+"That said, unless you have a display profile that uses LUTs, such as an OCIO "
+"LUT or a cLUT ICC profile, white point won't matter much when choosing a "
+"working space, due to weirdness in the ICC v4 workflow which always converts "
+"matrix profiles with relative colorimetric, meaning the white points are "
+"matched up."
+msgstr ""
+
+#: ../../general_concepts/colors/viewing_conditions.rst:10
+msgid "Metamerism"
+msgstr ""
+
+#: ../../general_concepts/colors/viewing_conditions.rst:10
+msgid "Color"
+msgstr ""

@@ -1,0 +1,243 @@
+# Copyright (C) licensed under the GNU Free Documentation License 1.3+
+# unless stated otherwise
+# This file is distributed under the same license as the Krita Manual
+# package.
+#
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+# Alvin <alvin@alvinhc.com>, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: Krita Manual 4.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-07-19 22:30+0800\n"
+"PO-Revision-Date: 2021-07-10 14:47+0800\n"
+"Last-Translator: Alvin <alvin@alvinhc.com>\n"
+"Language-Team: Chinese <zh-l10n@lists.linux.org.tw>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Generated-By: Babel 2.6.0\n"
+"X-Generator: Lokalize 21.04.1\n"
+
+#: ../../user_manual/soft_proofing.rst:1
+msgid "How to use softproofing in Krita."
+msgstr ""
+
+#: ../../user_manual/soft_proofing.rst:16
+msgid "Soft Proofing"
+msgstr "螢幕校樣"
+
+#: ../../user_manual/soft_proofing.rst:18
+msgid ""
+"When we make an image in Krita, and print that out with a printer, the image "
+"tends to look different. The colors are darker, or less dark than expected, "
+"maybe the reds are more aggressive, maybe contrast is lost. For simple "
+"documents, this isn’t much of a problem, but for professional prints, this "
+"can be very sad, as it can change the look and feel of an image drastically."
+msgstr ""
+
+#: ../../user_manual/soft_proofing.rst:20
+msgid ""
+"The reason this happens is simply because the printer uses a different color "
+"model (CMYK) and it has often access to a lower range of colors (called a "
+"gamut)."
+msgstr ""
+
+#: ../../user_manual/soft_proofing.rst:22
+msgid ""
+"A naive person would suggest the following solution: do your work within the "
+"CMYK color model! But there are three problems with that:"
+msgstr ""
+
+#: ../../user_manual/soft_proofing.rst:24
+msgid ""
+"Painting in a CMYK space doesn’t guarantee that the colors will be the same "
+"on your printer. For each combination of Ink, Paper and Printing device, the "
+"resulting gamut of colors you can use is different. Which means that each of "
+"these could have a different profile associated with them."
+msgstr ""
+
+#: ../../user_manual/soft_proofing.rst:25
+msgid ""
+"Furthermore, even if you have the profile and are working in the exact color "
+"space that your printer can output, the CMYK color space is very irregular, "
+"meaning that the color maths isn’t as nice as in other spaces. Blending "
+"modes are different in CMYK as well."
+msgstr ""
+
+#: ../../user_manual/soft_proofing.rst:26
+msgid ""
+"Finally, working in that specific CMYK space means that the image is stuck "
+"to that space. If you are preparing your work for  different a CMYK profile, "
+"due to the paper, printer or ink being different, you might have a bigger "
+"gamut with more bright colors that you would like to take advantage of."
+msgstr ""
+
+#: ../../user_manual/soft_proofing.rst:28
+msgid ""
+"So ideally, you would do the image in RGB, and use all your favorite RGB "
+"tools, and let the computer do a conversion to a given CMYK space on the "
+"fly, just for preview. This is possible, and is what we call ''Soft "
+"Proofing''."
+msgstr ""
+
+#: ../../user_manual/soft_proofing.rst:34
+msgid ".. image:: images/softproofing/Softproofing_regularsoftproof.png"
+msgstr ""
+
+#: ../../user_manual/soft_proofing.rst:34
+msgid ""
+"On the left, the original, on the right, a view where soft proofing is "
+"turned on. The difference is subtle due to the lack of really bright colors, "
+"but the soft proofed version is slightly less blueish in the whites of the "
+"flowers and slightly less saturated in the greens of the leaves."
+msgstr ""
+
+#: ../../user_manual/soft_proofing.rst:36
+msgid ""
+"You can toggle soft proofing on any image using the :kbd:`Ctrl + Y` "
+"shortcut. Unlike other programs, this is per-view, so that you can look at "
+"your image non-proofed and proofed, side by side. The settings are also per "
+"image, and saved into the ``.kra`` file. You can set the proofing options "
+"in :menuselection:`Image --> Image Properties --> Soft Proofing`."
+msgstr ""
+
+#: ../../user_manual/soft_proofing.rst:38
+msgid "There you can set the following options:"
+msgstr ""
+
+#: ../../user_manual/soft_proofing.rst:40
+msgid "Profile, Depth, Space"
+msgstr ""
+
+#: ../../user_manual/soft_proofing.rst:41
+msgid ""
+"Of these, only the profile is really important. This will serve as the "
+"profile you are proofing to. In a professional print workflow, this profile "
+"should be determined by the printing house."
+msgstr ""
+
+#: ../../user_manual/soft_proofing.rst:48
+msgid "Intent"
+msgstr ""
+
+#: ../../user_manual/soft_proofing.rst:43
+msgid ""
+"Set the proofing Intent. It uses the same intents as the intents mentioned "
+"in the :ref:`color managed workflow <color_managed_workflow>`."
+msgstr ""
+
+#: ../../user_manual/soft_proofing.rst:0
+msgid ".. image:: images/softproofing/Softproofing_adaptationstate.png"
+msgstr ""
+
+#: ../../user_manual/soft_proofing.rst:49
+msgid ""
+"Left: Soft proofed image with Adaptation state slider set to max. Right: "
+"Soft proofed image with Adaptation State set to minimum."
+msgstr ""
+
+#: ../../user_manual/soft_proofing.rst:50
+msgid "Adaptation State"
+msgstr ""
+
+#: ../../user_manual/soft_proofing.rst:51
+msgid ""
+"A feature which allows you to set whether :guilabel:`Absolute Colorimetric` "
+"will make the white in the image screen-white during proofing (the slider "
+"set to max), or whether it will use the white point of the profile (the "
+"slider set to minimum). Often CMYK profiles have a different white as the "
+"screen, or amongst one another due to the paper color being different."
+msgstr ""
+
+#: ../../user_manual/soft_proofing.rst:52
+msgid "Black Point Compensation"
+msgstr ""
+
+#: ../../user_manual/soft_proofing.rst:53
+msgid ""
+"Set the black point compensation. Turning this off will crunch the shadow "
+"values to the minimum the screen and the proofing profile can handle, while "
+"turning this on will scale the black to the screen-range, showing you the "
+"full range of grays in the image."
+msgstr ""
+
+#: ../../user_manual/soft_proofing.rst:55
+msgid "Gamut Warning"
+msgstr ""
+
+#: ../../user_manual/soft_proofing.rst:55
+msgid "Set the color of the out-of-gamut warning."
+msgstr ""
+
+#: ../../user_manual/soft_proofing.rst:57
+msgid ""
+"You can set the defaults that Krita uses in :menuselection:`Settings --> "
+"Configure Krita... --> Color Management`."
+msgstr ""
+
+#: ../../user_manual/soft_proofing.rst:59
+msgid ""
+"To configure this properly, it's recommended to make a test image to print "
+"(and that is printed by a properly set-up printer) and compare against, and "
+"then approximate in the proofing options how the image looks compared to the "
+"real-life copy you have made."
+msgstr ""
+
+#: ../../user_manual/soft_proofing.rst:62
+msgid "Out of Gamut Warning"
+msgstr "超出色域警告"
+
+#: ../../user_manual/soft_proofing.rst:64
+msgid ""
+"The out of gamut warning, or gamut alarm, is an extra option on top of Soft-"
+"Proofing: It allows you to see which colors are being clipped, by replacing "
+"the resulting color with the set alarm color."
+msgstr ""
+
+#: ../../user_manual/soft_proofing.rst:66
+msgid ""
+"This can be useful to determine where certain contrasts are being lost, and "
+"to allow you to change it slowly to a less contrasted image."
+msgstr ""
+
+#: ../../user_manual/soft_proofing.rst:72
+msgid ".. image:: images/softproofing/Softproofing_gamutwarnings.png"
+msgstr ""
+
+#: ../../user_manual/soft_proofing.rst:72
+msgid ""
+"Left: View with original image, Right: View with soft proofing and gamut "
+"warnings turned on. Krita will save the gamut warning color alongside the "
+"proofing options into the KRA file, so pick a color that you think will "
+"stand out for your current image."
+msgstr ""
+
+#: ../../user_manual/soft_proofing.rst:74
+msgid ""
+"You can activate Gamut Warnings with the :kbd:`Ctrl + Shift + Y` shortcut, "
+"but it needs soft proofing activated to work fully."
+msgstr ""
+
+#: ../../user_manual/soft_proofing.rst:77
+msgid ""
+"Soft Proofing doesn’t work properly in floating-point spaces, and attempting "
+"to force it will cause incorrect gamut alarms. It is therefore disabled."
+msgstr ""
+
+#: ../../user_manual/soft_proofing.rst:80
+msgid ""
+"Gamut Warnings sometimes give odd warnings for linear profiles in the "
+"shadows. This is a bug in LCMS, see `here <https://ninedegreesbelow.com/bug-"
+"reports/soft-proofing-problems.html>`_ for more info."
+msgstr ""
+
+#: ../../user_manual/soft_proofing.rst:11
+msgid "Color"
+msgstr "色彩"
+
+#: ../../user_manual/soft_proofing.rst:11
+msgid "Softproofing"
+msgstr "螢幕校樣"

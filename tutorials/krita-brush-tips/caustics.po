@@ -1,0 +1,260 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) licensed under the GNU Free Documentation License 1.3+
+# unless stated otherwise
+# This file is distributed under the same license as the Krita Manual
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Krita Manual 4.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-07-19 22:30+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Chinese <kde-i18n-doc@kde.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../tutorials/krita-brush-tips/caustics.rst:1
+msgid "Creating the caustic effects of underwater with Krita."
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/caustics.rst:13
+msgid "Brush Tips: Caustics"
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/caustics.rst:16
+msgid "Question"
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/caustics.rst:18
+msgid ""
+"Could you do a tutorial on how to recreate the look of light refracting in "
+"water?"
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/caustics.rst:20
+msgid ""
+"Sure, caustics, it’s not like it’s the most complicated effect known to CG "
+"graphics… Okay, so the first thing is that light effects never work in "
+"isolation: you need to be spot on with colors and other effects to make it "
+"work. So we first need to recreate the surroundings a bit."
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/caustics.rst:None
+msgid "Background gradient for creating caustic effects."
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/caustics.rst:None
+msgid ".. image:: images/brush-tips/Krita-brushtips-caustics_01.png"
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/caustics.rst:26
+msgid ""
+"We set up something simple with gradients. Some radial, some linear. The "
+"eraser mode works with gradients as well, so use that to your advantage!"
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/caustics.rst:28
+msgid ""
+"We create a simple smudge brush by taking smudge_soft and adding scattering "
+"to it, as well as an s-curve on the smudge length."
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/caustics.rst:None
+msgid "Brush Settings."
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/caustics.rst:None
+msgid ".. image:: images/brush-tips/Krita-brushtips-caustics_02.png"
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/caustics.rst:33
+msgid "And then we build up a quick base:"
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/caustics.rst:None
+msgid "Building a base for the caustic effects from the brush."
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/caustics.rst:None
+msgid ".. image:: images/brush-tips/Krita-brushtips-caustics_03.gif"
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/caustics.rst:38
+msgid ""
+"Note how the smudge brush here is used not just to mix areas, but also to "
+"create definition of borders by lowering the scatter. (If you reverse the "
+"pressure curve on the scatter, this’ll be easily done by increasing the "
+"pressure on the stylus)"
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/caustics.rst:40
+msgid ""
+"Now for the real magic. Caustics are a bit hairy, which means it’s a good "
+"candidate for the sketch brush engine."
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/caustics.rst:None
+msgid "Settings for the brush to create the caustic lines."
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/caustics.rst:None
+msgid ".. image:: images/brush-tips/Krita-brushtips-caustics_04.png"
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/caustics.rst:45
+msgid ""
+"Take *sketch_ink_big*, and add pressure to the :guilabel:`Line width` while "
+"setting :guilabel:`Density` under the :guilabel:`Brush size` to 100%. This "
+"makes it extra hairy."
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/caustics.rst:None
+msgid "Set color blending mode the color dodge."
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/caustics.rst:None
+msgid ".. image:: images/brush-tips/Krita-brushtips-caustics_05.png"
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/caustics.rst:50
+msgid ""
+"Set the brush blending mode to :guilabel:`Color Dodge`, and select the color "
+"of our caustics. Color dodge will cause a move towards white by applying "
+"special dodge color maths to our brush dabs instead of the :guilabel:"
+"`Normal` averaging color maths."
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/caustics.rst:52
+msgid ""
+"Outside of pressure for making varying strokes, glowiness for the light and "
+"extra density, we also want to have the size of the line decrease the "
+"further away it is…"
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/caustics.rst:None
+msgid "Setup the perspective assistant."
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/caustics.rst:None
+msgid ".. image:: images/brush-tips/Krita-brushtips-caustics_06.png"
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/caustics.rst:57
+msgid ""
+"Then, use the assistant editor tool to add a perspective grid. It doesn’t "
+"need to be perfectly in perspective, because we’ll only use it for the "
+"perspective sensor."
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/caustics.rst:None
+msgid "Select the perspective parameter in the brush settings."
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/caustics.rst:None
+msgid ".. image:: images/brush-tips/Krita-brushtips-caustics_07.png"
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/caustics.rst:62
+msgid ""
+"This will cause the brush to give smaller lines the further it registers on "
+"the perspective assistant. (It only works per single perspective assistant, "
+"making it not very good for chaining, but for our purpose this is good.)"
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/caustics.rst:64
+msgid ""
+"Then you start slowly building up your lines. (Make sure to make a copy of "
+"the layer. The color dodge blending doesn’t work well on a separate layer, "
+"so do it on one that also has the ground on it.)"
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/caustics.rst:None
+msgid "Painting the caustics."
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/caustics.rst:None
+msgid ".. image:: images/brush-tips/Krita-brushtips-caustics_08.png"
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/caustics.rst:69
+msgid ""
+"Make sure to try and follow the shapes you made. (*I failed at this*) The "
+"great thing about the sketch brush is that it causes those little ‘melt-"
+"togethers’ where two lines cross. This is only per stroke, so make a lot of "
+"long ongoing strokes with this brush to make use of it."
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/caustics.rst:None
+msgid "Adding a little gradient."
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/caustics.rst:None
+msgid ".. image:: images/brush-tips/Krita-brushtips-caustics_09.png"
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/caustics.rst:74
+msgid ""
+"Then take the gradient tool, and set the blending mode to color and the "
+"paint tool to a light blue, so we can get in the bluish atmospheric effect."
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/caustics.rst:None
+msgid "Adding some atmospheric effect."
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/caustics.rst:None
+msgid ".. image:: images/brush-tips/Krita-brushtips-caustics_10.png"
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/caustics.rst:79
+msgid ""
+"Then use the airbrush_pressure with the line tool to make some light-shafts "
+"of different sizes on a separate layer. (Don’t forget you can use the eraser "
+"mode for subtle erasing with the line tool as well)"
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/caustics.rst:None
+msgid "Add some light shafts."
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/caustics.rst:None
+msgid ".. image:: images/brush-tips/Krita-brushtips-caustics_11.png"
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/caustics.rst:84
+msgid "Set the blending mode to color dodge and lower the opacity."
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/caustics.rst:None
+msgid "Change the blend mode to color dodge of the layer."
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/caustics.rst:None
+msgid ".. image:: images/brush-tips/Krita-brushtips-caustics_12.png"
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/caustics.rst:89
+msgid ""
+"Finally, polish the piece with the airbrush tool and some local color "
+"picking."
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/caustics.rst:94
+msgid "Final polish."
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/caustics.rst:94
+msgid ".. image:: images/brush-tips/Krita-brushtips-caustics_13.png"
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/caustics.rst:94
+msgid "Final Result"
+msgstr ""

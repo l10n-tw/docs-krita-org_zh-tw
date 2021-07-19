@@ -1,0 +1,181 @@
+# Copyright (C) licensed under the GNU Free Documentation License 1.3+
+# unless stated otherwise
+# This file is distributed under the same license as the Krita Manual
+# package.
+#
+# Alvin <alvin@alvinhc.com>, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: Krita Manual 4.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-07-19 22:30+0800\n"
+"PO-Revision-Date: 2021-07-07 18:00+0800\n"
+"Last-Translator: Alvin <alvin@alvinhc.com>\n"
+"Language-Team: Chinese <zh-l10n@lists.linux.org.tw>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../general_concepts/file_formats/file_gih.rst:1
+msgid "The GIMP Image Hose file format in Krita."
+msgstr ""
+
+#: ../../general_concepts/file_formats/file_gih.rst:15
+msgid "\\*.gih"
+msgstr "\\*.gih"
+
+#: ../../general_concepts/file_formats/file_gih.rst:17
+msgid ""
+"The GIMP image hose format. Krita can open and save these, as well as import "
+"via the :ref:`predefined brush tab <predefined_brush_tip>`."
+msgstr ""
+
+#: ../../general_concepts/file_formats/file_gih.rst:19
+msgid ""
+"Image Hose means that this file format allows you to store multiple images "
+"and then set some options to make it specify how to output the multiple "
+"images."
+msgstr ""
+
+#: ../../general_concepts/file_formats/file_gih.rst:25
+msgid ".. image:: images/brushes/Gih-examples.png"
+msgstr ""
+
+#: ../../general_concepts/file_formats/file_gih.rst:25
+msgid "From top to bottom: Incremental, Pressure and Random"
+msgstr ""
+
+#: ../../general_concepts/file_formats/file_gih.rst:28
+msgid "Dimension and ranks."
+msgstr ""
+
+#: ../../general_concepts/file_formats/file_gih.rst:30
+msgid ""
+"The GIMP image hose format allows multiple dimensions for a given brush. You "
+"could for example have a dimension that updates incrementally, and one that "
+"updates on pressure, or updates randomly. Upon export, Krita will use the "
+"ranks to subdivide the layers per dimension. If you have a 24 layer image "
+"and three ranks, and the first dimension is set to 2, the second to 4 and "
+"the third to 3, then Krita will divide 24 into 2 groups of 12, each of which "
+"have unique images for the 2 parts of the first dimension. Then those 2 "
+"groups of 12 get divided into 8 groups of 4, each of which have unique brush "
+"tips for the four parts of the second dimension, and finally, the grouped "
+"three images have each a unique brush for the final dimension."
+msgstr ""
+
+#: ../../general_concepts/file_formats/file_gih.rst:32
+msgid ""
+"So, the following image has a table where dimension 1 is unique in one of 4 "
+"numbers, while dimension 2 is unique in one of 3 shapes. So our ranks for "
+"dimension 1 and dimension 2 need to be 4 and 3 respectively. Now, to order "
+"the layers, you need to subdivide the table first by the first dimension, "
+"and then by the second. So we end up with three layers each for a shape in "
+"the second dimension but for the first number, then another three layers, "
+"each for a shape, but then for the second number, and so forth."
+msgstr ""
+
+#: ../../general_concepts/file_formats/file_gih.rst:None
+msgid ""
+".. image:: images/category_filetypes/gih_multi_dimension_explaination.png"
+msgstr ""
+
+#: ../../general_concepts/file_formats/file_gih.rst:38
+msgid ""
+"See `the GIMP documentation <https://docs.gimp.org/2.8/en/gimp-using-"
+"animated-brushes.html>`_ for a more thorough explanation."
+msgstr ""
+
+#: ../../general_concepts/file_formats/file_gih.rst:41
+msgid "GIMP image hose format options:"
+msgstr ""
+
+#: ../../general_concepts/file_formats/file_gih.rst:43
+msgid "Constant"
+msgstr ""
+
+#: ../../general_concepts/file_formats/file_gih.rst:44
+msgid "This'll use the first image, no matter what."
+msgstr ""
+
+#: ../../general_concepts/file_formats/file_gih.rst:45
+msgid "Incremental"
+msgstr ""
+
+#: ../../general_concepts/file_formats/file_gih.rst:46
+msgid ""
+"This'll paint the image layers in sequence. This is good for images that can "
+"be strung together to create a pattern."
+msgstr ""
+
+#: ../../general_concepts/file_formats/file_gih.rst:47
+msgid "Pressure"
+msgstr ""
+
+#: ../../general_concepts/file_formats/file_gih.rst:48
+msgid ""
+"This'll paint the images depending on pressure. This is good for brushes "
+"imitating the hairs of a natural brush."
+msgstr ""
+
+#: ../../general_concepts/file_formats/file_gih.rst:49
+msgid "Random"
+msgstr ""
+
+#: ../../general_concepts/file_formats/file_gih.rst:50
+msgid ""
+"This'll draw the images randomly. This is good for image-collections used in "
+"speedpainting as well as images that generate texture. Or perhaps more "
+"graphical symbols."
+msgstr ""
+
+#: ../../general_concepts/file_formats/file_gih.rst:52
+msgid "Angle"
+msgstr ""
+
+#: ../../general_concepts/file_formats/file_gih.rst:52
+msgid "This'll use the dragging angle to determine with image to draw."
+msgstr ""
+
+#: ../../general_concepts/file_formats/file_gih.rst:54
+msgid ""
+"When exporting a Krita file as a ``.gih``, you will also get the option to "
+"set the default spacing, the option to set the name (very important for "
+"looking it up in the UI) and the ability to choose whether or not to "
+"generate the mask from the colors."
+msgstr ""
+
+#: ../../general_concepts/file_formats/file_gih.rst:57
+msgid "Use Color as Mask"
+msgstr ""
+
+#: ../../general_concepts/file_formats/file_gih.rst:57
+msgid ""
+"This'll turn the darkest values of the image as the ones that paint, and the "
+"whitest as transparent. Untick this if you are using colored images for the "
+"brush."
+msgstr ""
+
+#: ../../general_concepts/file_formats/file_gih.rst:59
+msgid ""
+"We have a :ref:`Krita Brush tip page <brush_tip_animated_brush>` on how to "
+"create your own GIH brush."
+msgstr ""
+
+#: ../../general_concepts/file_formats/file_gih.rst:10
+msgid "*.gih"
+msgstr "*.gih"
+
+#: ../../general_concepts/file_formats/file_gih.rst:10
+msgid "GIH"
+msgstr "GIH"
+
+#: ../../general_concepts/file_formats/file_gih.rst:10
+msgid "Image Hose"
+msgstr ""
+
+#: ../../general_concepts/file_formats/file_gih.rst:10
+msgid "Gimp Image Hose"
+msgstr ""

@@ -1,0 +1,412 @@
+# Copyright (C) licensed under the GNU Free Documentation License 1.3+
+# unless stated otherwise
+# This file is distributed under the same license as the Krita Manual
+# package.
+#
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+# Alvin <alvin@alvinhc.com>, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: Krita Manual 4.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-07-19 22:30+0800\n"
+"PO-Revision-Date: 2021-07-10 14:32+0800\n"
+"Last-Translator: Alvin <alvin@alvinhc.com>\n"
+"Language-Team: Chinese <zh-l10n@lists.linux.org.tw>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 21.04.1\n"
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:1
+msgid "Introduction to using Krita's python plugin API."
+msgstr ""
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:18
+msgid "Introduction to Python Scripting"
+msgstr "Python 指令稿編寫簡介"
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:22
+msgid ""
+"When we offered python scripting as one of Kickstarter Stretchgoals we could "
+"implement next to vectors and text, it won the backer vote by a landslide. "
+"Some people even only picked python and nothing else. So what exactly is "
+"python scripting?"
+msgstr ""
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:25
+msgid "What is Python Scripting?"
+msgstr "甚麼是 Python 指令稿？"
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:27
+msgid ""
+"Python is a scripting language, that can be used to automate tasks. What "
+"python scripting in Krita means is that we added an API to krita, which is a "
+"bit of programming that allows python to access to parts of Krita. With this "
+"we can make dockers, perform menial tasks on a lot of different files and "
+"even write our own exporters. People who work with computer graphics, like "
+"VFX and video game artists use python a lot to make things like sprite "
+"sheets, automate parts of export and more."
+msgstr ""
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:29
+msgid ""
+"It is outside the scope of this manual to teach you python itself. However, "
+"as python is an extremely popular programming language and great for "
+"beginners, there's tons of learning material around that can be quickly "
+"found with a simple 'learn python' internet search."
+msgstr ""
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:31
+msgid ""
+"This manual will instead focus on how to use python to automate and extend "
+"Krita. For that we'll first start with the basics: How to run Python "
+"commands in the scripter."
+msgstr ""
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:35
+msgid "How to Enable the Scripter Plugin"
+msgstr "如何啟用「指令稿執行器」外掛程式"
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:37
+msgid ""
+"The scripter plugin is not necessary to use python, but it is very useful "
+"for testing and playing around with python. It is a python console, written "
+"in python, which can be used to write small scripts and execute them on the "
+"fly."
+msgstr ""
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:39
+msgid ""
+"To open the scripter, navigate to :menuselection:`Tools --> Scripts --> "
+"Scripter`. If you don't see it listed, go to :menuselection:`Settings --> "
+"Configure Krita... --> Python Plugin Manager` and toggle \"Scripter\" in the "
+"list to enable it. If you don't see the scripter plugin, make sure you are "
+"using an up-to-date version of Krita."
+msgstr ""
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:41
+msgid ""
+"The scripter will pop up with a text editor window on top and an output "
+"window below. Input the following in the text area:"
+msgstr ""
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:43
+msgid "print(\"hello world\")"
+msgstr ""
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:48
+msgid ""
+"Press the big play button or press the :kbd:`Ctrl + R` shortcut to run the "
+"script. Then, below, in the output area the following should show up::"
+msgstr ""
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:50
+msgid ""
+"==== Warning: Script not saved! ====\n"
+"hello world"
+msgstr ""
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:53
+msgid ""
+"Now we have a console that can run functions like print() from the Python "
+"environment - but how do we use it to manage Krita?"
+msgstr ""
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:56
+msgid "Running basic Krita commands"
+msgstr "執行基本 Krita 命令"
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:58
+msgid ""
+"To allow Python to communicate with Krita, we will use the Krita module. At "
+"the top of every script, we will write: ``from krita import *``"
+msgstr ""
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:60
+msgid ""
+"This allows us to talk to Krita through ``Krita.instance()``. Let's try to "
+"double our coding abilities with Python."
+msgstr ""
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:62
+msgid ""
+"from krita import *\n"
+"\n"
+"Krita.instance().action('python_scripter').trigger()"
+msgstr ""
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:68
+msgid ""
+"You should see a second scripter window open. Pretty neat! Here is a "
+"slightly more advanced example."
+msgstr ""
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:70
+msgid ""
+"from krita import *\n"
+"\n"
+"d = Krita.instance().createDocument(512, 512, \"Python test document\", "
+"\"RGBA\", \"U8\", \"\", 120.0)\n"
+"Krita.instance().activeWindow().addView(d)"
+msgstr ""
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:77
+msgid ""
+"This will open up a new document. Clearly Python gives you quite a lot of "
+"control to automate Krita. Over time we expect the community to write all "
+"kinds of scripts that you can use simply by pasting them in the scripter."
+msgstr ""
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:79
+msgid ""
+"But what if you want to write new commands for yourself? The best place to "
+"start is very simple: search for examples written by other people! You can "
+"save a lot of time if someone else has written code that you can base your "
+"work on. It's also worth looking through the python plugins, which are "
+"located in /share/krita/pykrita. There's also a step by step guide for :ref:"
+"`krita_python_plugin_howto` here in the manual."
+msgstr ""
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:81
+msgid ""
+"But it's likely that you need more information. For that, we will need see "
+"what's hidden behind the asterisk when you ``import * from Krita``. To learn "
+"what Krita functions that are available and how to use them, you will want "
+"to go for Krita API reference documentation."
+msgstr ""
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:84
+msgid "Krita's API"
+msgstr "Krita 的 API（應用程式介面）"
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:86
+msgid ""
+"`LibKis API Overview <https://api.kde.org/extragear-api/graphics-apidocs/"
+"krita/libs/libkis/html/index.html>`_"
+msgstr ""
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:87
+msgid ""
+"`Krita class documentation <https://api.kde.org/extragear-api/graphics-"
+"apidocs/krita/libs/libkis/html/classKrita.html>`_"
+msgstr ""
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:89
+msgid ""
+"Those pages may look like a lot of jargon at first. This is because Krita's "
+"API documentation comes from the underlying C++ language that Krita is "
+"written in. The magic happens because of a Python tool called SIP, which "
+"makes it possible for python speak in C++ and talk to Krita. The end result "
+"is that when we ``import krita`` and call functions, we're actually using "
+"the C++ methods listed in that documentation."
+msgstr ""
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:91
+msgid ""
+"Let's see how this stuff works in more detail. Let's take a look at the "
+"second link, the `Krita class reference <https://api.kde.org/extragear-api/"
+"graphics-apidocs/krita/libs/libkis/html/classKrita."
+"html#aa55507903d088013ced2df8c74f28a63>`_. There we can see all the "
+"functions available to the Krita instance. If you type dir(Krita.instance()) "
+"in Python, it should match this page very closely - you can view the "
+"documentation of the functions createDocument(), activeWindow(), and "
+"action() which we used above."
+msgstr ""
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:93
+msgid ""
+"One of the more confusing things is seeing all the C++ classes that Krita "
+"uses, including the Qt classes that start with Q. But here is the beauty of "
+"SIP: it tries to make the translation from these classes into Python as "
+"simple and straightforward as possible. For example, you can see that the "
+"function filters() returns a QStringList. However, SIP converts those "
+"QStringLists into regular python list of strings!"
+msgstr ""
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:95
+msgid ""
+"from krita import *\n"
+"\n"
+"print(Krita.instance().filters())"
+msgstr ""
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:101
+msgid "Outputs as: ::"
+msgstr ""
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:103
+msgid ""
+"['asc-cdl', 'autocontrast', 'blur', 'burn', 'colorbalance', 'colortoalpha', "
+"'colortransfer',\n"
+"'desaturate', 'dodge', 'edge detection', 'emboss', 'emboss all directions', "
+"'emboss horizontal and vertical',\n"
+"'emboss horizontal only', 'emboss laplascian', 'emboss vertical only', "
+"'gaussian blur', 'gaussiannoisereducer',\n"
+"'gradientmap', 'halftone', 'height to normal', 'hsvadjustment', "
+"'indexcolors', 'invert', 'lens blur', 'levels',\n"
+"'maximize', 'mean removal', 'minimize', 'motion blur', 'noise', 'normalize', "
+"'oilpaint', 'perchannel', 'phongbumpmap',\n"
+"'pixelize', 'posterize', 'raindrops', 'randompick', 'roundcorners', "
+"'sharpen', 'smalltiles', 'threshold', 'unsharp',\n"
+"'wave', 'waveletnoisereducer']"
+msgstr ""
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:112
+msgid "However, sometimes the conversion doesn't go quite as smoothly."
+msgstr ""
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:114
+msgid ""
+"from krita import *\n"
+"\n"
+"print(Krita.instance().documents())"
+msgstr ""
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:120
+msgid "gives something like this::"
+msgstr ""
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:123
+msgid ""
+"[<PyKrita.krita.Document object at 0x7f7294630b88>,\n"
+"<PyKrita.krita.Document object at 0x7f72946309d8>,\n"
+"<PyKrita.krita.Document object at 0x7f7294630c18>]"
+msgstr ""
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:127
+msgid ""
+"It is a list of something, sure, but how to use it? If we go back to the "
+"Krita apidocs page and look at the function, documents() we'll see there's "
+"actually a clickable link on the 'Document' class. `If you follow that link "
+"<https://api.kde.org/extragear-api/graphics-apidocs/krita/libs/libkis/html/"
+"classDocument.html>`_, you'll see that the document has a function called "
+"name() which returns the name of the document, and functions width() and "
+"height() which return the dimensions. So if we wanted to generate an info "
+"report about the documents in Krita, we could write a script like this:"
+msgstr ""
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:129
+msgid ""
+"from krita import *\n"
+"\n"
+"for doc in Krita.instance().documents():\n"
+"    print(doc.name())\n"
+"    print(\" \"+str(doc.width())+\"x\"+str(doc.height()))"
+msgstr ""
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:137
+msgid "We get an output like::"
+msgstr ""
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:139
+msgid ""
+"==== Warning: Script not saved! ====\n"
+"Unnamed\n"
+" 2480x3508\n"
+"sketch21\n"
+" 3508x2480\n"
+"Blue morning\n"
+" 1600x900"
+msgstr ""
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:147
+msgid ""
+"Hopefully this will give you an idea of how to navigate the API docs now."
+msgstr ""
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:149
+msgid ""
+"Krita's API has many more classes, you can get to them by going to the top-"
+"left class list, or just clicking their names to get to their API docs. The "
+"functions print() or dir() are your friends here as well. This line will "
+"print out a list of all the actions in Krita - you could swap in one of "
+"these commands instead of 'python_scripter' in the example above."
+msgstr ""
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:151
+msgid "[print([a.objectName(), a.text()]) for a in Krita.instance().actions()]"
+msgstr ""
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:155
+msgid ""
+"The Python module ``inspect`` was designed for this sort of task. Here's a "
+"useful function to print info about a class to the console."
+msgstr ""
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:157
+msgid ""
+"import inspect\n"
+"def getInfo(target):\n"
+"    [print(item) for item in inspect.getmembers(target) if not item[0]."
+"startswith('_')]\n"
+"\n"
+"getInfo(Krita.instance())"
+msgstr ""
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:167
+msgid ""
+"Finally, in addition to the LibKis documentation, the Qt documentation, "
+"since Krita uses PyQt to expose nearly all of the Qt API to Python. You can "
+"build entire windows with buttons and forms this way, using the very same "
+"tools that Krita is using! You can read the `Qt documentation <https://doc."
+"qt.io/>`_ and the `PyQt documentation <https://www.riverbankcomputing.com/"
+"static/Docs/PyQt5/>`_ for more info about this, and also definitely study "
+"the included plugins as well to see how they work."
+msgstr ""
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:171
+msgid "Technical Details"
+msgstr "技術性資料"
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:177
+msgid "Python Scripting on Windows"
+msgstr "在 Windows 上使用 Python 指令稿"
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:179
+msgid ""
+"To get Python scripting working on Windows 7/8/8.1, you will need to install "
+"the `Universal C Runtime from Microsoft's website <https://www.microsoft.com/"
+"en-us/download/details.aspx?id=48234>`_. (Windows 10 already comes with it.)"
+msgstr ""
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:182
+msgid "Python 2 and 3"
+msgstr "Python 2 與 Python 3"
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:184
+msgid "By default Krita is compiled for python 3."
+msgstr ""
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:186
+msgid ""
+"However, it is possible to compile it with python 2. To do so, you will need "
+"to add the following to the cmake configuration line::"
+msgstr ""
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:188
+msgid "-DENABLE_PYTHON_2=ON"
+msgstr ""
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:13
+msgid "Python"
+msgstr "Python"
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:13
+msgid "Python Scripting"
+msgstr "Python 指令稿"
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:13
+msgid "Scripting"
+msgstr "指令碼"
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:13
+msgid "Plugin"
+msgstr "插件"
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:13
+msgid "Debug"
+msgstr "除錯"
