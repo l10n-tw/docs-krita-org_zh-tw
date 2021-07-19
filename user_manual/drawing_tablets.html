@@ -1,17 +1,17 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-TW" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-TW" > <!--<![endif]-->
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta property="og:title" name="title" content="Drawing Tablets" />
+  <meta property="og:title" name="title" content="數位繪圖板" />
   <meta property="og:site-name" content="Krita Manual" />
   <meta property="og:type" content="article" />
-  <meta property="og:locale" content="en" />
+  <meta property="og:locale" content="zh_TW" />
   <meta property="og:locale:alternate" content="ca" />
-  
+  <meta property="og:locale:alternate" content="en" />
   <meta property="og:locale:alternate" content="fr" />
   <meta property="og:locale:alternate" content="it" />
   <meta property="og:locale:alternate" content="ja" />
@@ -21,13 +21,13 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-07-19T15:33:59" />
+  <meta property="og:article:modified_time" content="2021-07-19T15:40:51" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="Basic page describing drawing tablets, how to set them up for Krita and how to troubleshoot common tablet issues." name="description" />
 
   
   
-  <title>Drawing Tablets &mdash; Krita Manual 5.0.0 Beta documentation</title>
+  <title>數位繪圖板 &mdash; Krita Manual 5.0.0 Beta 說明文件</title>
   
 
   
@@ -58,10 +58,10 @@
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Loading and Saving Brushes" href="loading_saving_brushes.html" />
-    <link rel="prev" title="Introduction to Krita coming from Paint Tool SAI" href="introduction_from_other_software/introduction_from_sai.html" /> 
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜尋" href="../search.html" />
+    <link rel="next" title="載入與儲存筆刷" href="loading_saving_brushes.html" />
+    <link rel="prev" title="Paint Tool SAI 使用者轉用 Krita 入門介紹" href="introduction_from_other_software/introduction_from_sai.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -92,7 +92,7 @@
           
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="搜尋文件" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -127,54 +127,54 @@
             
             
               <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="../user_manual.html">User Manual</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
-<li class="toctree-l2"><a class="reference internal" href="introduction_from_other_software.html">Introduction Coming From Other Software</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Drawing Tablets</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#what-are-tablets">What are Tablets?</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#supported-tablets">Supported Tablets</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#drivers-and-pressure-sensitivity">Drivers and Pressure Sensitivity</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#where-it-can-go-wrong-windows">Where it can go wrong: Windows</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#surface-pro-tablets-need-two-drivers">Surface Pro tablets need two drivers</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#windows-10-updates">Windows 10 updates</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../user_manual.html">使用者手冊</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="getting_started.html">新手入門</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction_from_other_software.html">為習慣其他軟體的使用者而設的入門介紹</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">數位繪圖板</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#what-are-tablets">甚麼是繪圖板、數位板？</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#supported-tablets">支援的繪圖板</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#drivers-and-pressure-sensitivity">驅動程式與筆壓感應</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#where-it-can-go-wrong-windows">在 Windows 上可能出現的問題</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#surface-pro-tablets-need-two-drivers">Surface Pro 平板電腦的數位板驅動程式</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#windows-10-updates">Windows 10 更新</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#wacom-tablets">Wacom Tablets</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#broken-drivers">Broken Drivers</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#conflicting-drivers">Conflicting Drivers</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#interfering-software">Interfering software</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#flicks-wait-circle-showing-up-and-then-calling-the-popup-palette">Flicks (Wait circle showing up and then calling the popup palette)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#wacom-double-click-sensitivity-straight-starts-of-lines">Wacom Double Click Sensitivity (Straight starts of lines)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#wacom-tablets">Wacom 繪圖板</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#broken-drivers">出問題的驅動程式</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#conflicting-drivers">互相衝突的驅動程式</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#interfering-software">造成干擾的軟體</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#flicks-wait-circle-showing-up-and-then-calling-the-popup-palette">筆觸動作（繪畫時出現白色圓圈後彈出浮動畫具板）</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#wacom-double-click-sensitivity-straight-starts-of-lines">Wacom 「雙響間距」（起筆時出現直線線段）</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#id2">Supported Tablets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">支援的繪圖板</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="loading_saving_brushes.html">Loading and Saving Brushes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="oncanvas_brush_editor.html">On-Canvas Brush Editor</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mirror_tools.html">Mirror Tools</a></li>
-<li class="toctree-l2"><a class="reference internal" href="painting_with_assistants.html">Painting with Assistants</a></li>
-<li class="toctree-l2"><a class="reference internal" href="working_with_images.html">Working with Images</a></li>
-<li class="toctree-l2"><a class="reference internal" href="autosave.html">Saving, AutoSave and Backup Files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="templates.html">Templates</a></li>
-<li class="toctree-l2"><a class="reference internal" href="layers_and_masks.html">Introduction to Layers and Masks</a></li>
-<li class="toctree-l2"><a class="reference internal" href="selections.html">Selections</a></li>
-<li class="toctree-l2"><a class="reference internal" href="python_scripting.html">Python Scripting</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tag_management.html">Tag Management</a></li>
-<li class="toctree-l2"><a class="reference internal" href="soft_proofing.html">Soft Proofing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="vector_graphics.html">Vector Graphics</a></li>
-<li class="toctree-l2"><a class="reference internal" href="snapping.html">Snapping</a></li>
-<li class="toctree-l2"><a class="reference internal" href="animation.html">Animation with Krita</a></li>
-<li class="toctree-l2"><a class="reference internal" href="japanese_animation_template.html">Japanese Animation Template</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gamut_masks.html">Gamut Masks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loading_saving_brushes.html">載入與儲存筆刷</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oncanvas_brush_editor.html">畫布上的筆刷分量設定</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mirror_tools.html">鏡像繪畫工具</a></li>
+<li class="toctree-l2"><a class="reference internal" href="painting_with_assistants.html">使用輔助尺來繪畫</a></li>
+<li class="toctree-l2"><a class="reference internal" href="working_with_images.html">如何以影像工作</a></li>
+<li class="toctree-l2"><a class="reference internal" href="autosave.html">儲存、自動儲存及備份檔案</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templates.html">範本</a></li>
+<li class="toctree-l2"><a class="reference internal" href="layers_and_masks.html">圖層及遮罩的入門</a></li>
+<li class="toctree-l2"><a class="reference internal" href="selections.html">選取區域</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python_scripting.html">Python 指令稿及外掛程式</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tag_management.html">標籤管理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="soft_proofing.html">螢幕校樣</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vector_graphics.html">向量圖形</a></li>
+<li class="toctree-l2"><a class="reference internal" href="snapping.html">吸附</a></li>
+<li class="toctree-l2"><a class="reference internal" href="animation.html">用 Krita 製作動畫</a></li>
+<li class="toctree-l2"><a class="reference internal" href="japanese_animation_template.html">日本動畫範本</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gamut_masks.html">色域遮罩</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../general_concepts.html">General Concepts</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../reference_manual.html">Reference Manual</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tutorials.html">Tutorials and How-tos</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../KritaFAQ.html">Krita FAQ</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../contributors_manual.html">Contributors Manual</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../resources_page.html">Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general_concepts.html">通用概念</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference_manual.html">參考文件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials.html">教學及指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../KritaFAQ.html">Krita 常見問題</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributors_manual.html">貢獻者手冊</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../resources_page.html">資源</a></li>
 </ul>
 
             
@@ -228,11 +228,11 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../index.html">Docs</a> &raquo;</li>
+      <li><a href="../index.html">文件</a> &raquo;</li>
         
-          <li><a href="../user_manual.html">User Manual</a> &raquo;</li>
+          <li><a href="../user_manual.html">使用者手冊</a> &raquo;</li>
         
-      <li>Drawing Tablets</li>
+      <li>數位繪圖板</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -242,7 +242,7 @@
             <a href="../_sources/user_manual/drawing_tablets.rst.txt" rel="nofollow"> 
              
               <img src="../_static/images/source-code.png" />
-             <!-- View page source -->
+             <!-- 檢視頁面原始碼 -->
 
           </a>
           
@@ -257,11 +257,11 @@
            <div itemprop="articleBody">
             
   <section id="drawing-tablets">
-<span id="index-0"></span><span id="id1"></span><h1>Drawing Tablets<a class="headerlink" href="#drawing-tablets" title="Permalink to this headline">¶</a></h1>
+<span id="index-0"></span><span id="id1"></span><h1>數位繪圖板<a class="headerlink" href="#drawing-tablets" title="本標題的永久連結">¶</a></h1>
 <p>This page is about drawing tablets, what they are, how they work, and
 where things can go wrong.</p>
 <section id="what-are-tablets">
-<h2>What are Tablets?<a class="headerlink" href="#what-are-tablets" title="Permalink to this headline">¶</a></h2>
+<h2>甚麼是繪圖板、數位板？<a class="headerlink" href="#what-are-tablets" title="本標題的永久連結">¶</a></h2>
 <p>Drawing with a mouse can be unintuitive and difficult compared to pencil
 and paper. Even worse, extended mouse use can result in carpal tunnel
 syndrome. That’s why most people who draw digitally use a specialized
@@ -278,20 +278,20 @@ pressure sensitivity, allowing you to make strokes that get bigger or
 smaller depending on the pressure you put on them, to create richer and
 more interesting strokes.</p>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
+<p class="admonition-title">備註</p>
 <p>Sometimes, people confuse finger-touch styluses with a proper tablet. You can tell the difference because a drawing tablet stylus usually has a pointy nib, while a stylus made for finger-touch has a big rubbery round nib, like a finger. These tablets may not give good results and a pressure-sensitive tablet is recommended.</p>
 <img alt="../_images/Krita_tablet_stylus.png" src="../_images/Krita_tablet_stylus.png" />
 </div>
 </section>
 <section id="supported-tablets">
-<h2>Supported Tablets<a class="headerlink" href="#supported-tablets" title="Permalink to this headline">¶</a></h2>
+<h2>支援的繪圖板<a class="headerlink" href="#supported-tablets" title="本標題的永久連結">¶</a></h2>
 <p>Supported tablets are owned by Krita developers themselves, so they can reliably diagnose and fix bugs. <a class="reference internal" href="../reference_manual/list_supported_tablets.html#list-supported-tablets"><span class="std std-ref">We maintain a list of those here</span></a>.</p>
-<p>If you’re looking for information about iPad or Android tablets, <a class="reference internal" href="../KritaFAQ.html#krita-android"><span class="std std-ref">look here</span></a>.</p>
+<p>If you're looking for information about iPad or Android tablets, <a class="reference internal" href="../KritaFAQ.html#krita-android"><span class="std std-ref">look here</span></a>.</p>
 </section>
 <section id="drivers-and-pressure-sensitivity">
-<h2>Drivers and Pressure Sensitivity<a class="headerlink" href="#drivers-and-pressure-sensitivity" title="Permalink to this headline">¶</a></h2>
+<h2>驅動程式與筆壓感應<a class="headerlink" href="#drivers-and-pressure-sensitivity" title="本標題的永久連結">¶</a></h2>
 <p>So you have bought a tablet, a real drawing tablet. And you want to get it
-to work with Krita! So you plug in the USB cable, start up Krita and…
+to work with Krita! So you plug in the USB cable, start up Krita and...
 It doesn’t work! Or well, you can make strokes, but that pressure
 sensitivity you heard so much about doesn’t seem to work.</p>
 <p>This is because you need to install a program called a ‘driver’. Usually
@@ -316,34 +316,34 @@ it would like to get information from the tablet!</p>
 <p>But it can’t! Turns out your operating system doesn’t know much about
 tablets. That’s what drivers are for. Installing a driver gives the
 operating system enough information, so the OS can provide Krita with the
-right information about the tablet. The hardware manufacturer’s job is
+right information about the tablet. The hardware manufacturer's job is
 to write a proper driver for each operating system.</p>
 <div class="admonition warning">
-<p class="admonition-title">Warning</p>
+<p class="admonition-title">警告</p>
 <p>Because drivers modify the operating system a little, you will always need to restart your computer when installing or uninstalling a driver, so don’t forget to do this! Conversely, because Krita isn’t a driver, you don’t need to even uninstall it to reset the configuration, just rename or delete the configuration file.</p>
 </div>
 </section>
 <section id="where-it-can-go-wrong-windows">
-<h2>Where it can go wrong: Windows<a class="headerlink" href="#where-it-can-go-wrong-windows" title="Permalink to this headline">¶</a></h2>
+<h2>在 Windows 上可能出現的問題<a class="headerlink" href="#where-it-can-go-wrong-windows" title="本標題的永久連結">¶</a></h2>
 <p>Krita automatically connects to your tablet if the drivers are
-installed. When things go wrong, usually the problem isn’t with Krita.</p>
+installed. When things go wrong, usually the problem isn't with Krita.</p>
 <section id="surface-pro-tablets-need-two-drivers">
-<h3>Surface Pro tablets need two drivers<a class="headerlink" href="#surface-pro-tablets-need-two-drivers" title="Permalink to this headline">¶</a></h3>
+<h3>Surface Pro 平板電腦的數位板驅動程式<a class="headerlink" href="#surface-pro-tablets-need-two-drivers" title="本標題的永久連結">¶</a></h3>
 <p>Certain tablets using n-trig, like the Surface Pro, have two types of
 drivers. One is native, n-trig and the other one is called Wintab.
 Since 3.3, Krita can use Windows Ink style drivers, just go to
-<span class="menuselection">Settings ‣ Configure Krita… ‣ Tablet Settings</span> and
+<span class="menuselection">Settings ‣ Configure Krita... ‣ Tablet Settings</span> and
 toggle the <span class="guilabel">Windows 8+ Pointer Input (Windows Ink)</span> there. You
-don’t need to install the Wintab drivers anymore for n-trig based pens.</p>
+don't need to install the Wintab drivers anymore for n-trig based pens.</p>
 </section>
 <section id="windows-10-updates">
-<h3>Windows 10 updates<a class="headerlink" href="#windows-10-updates" title="Permalink to this headline">¶</a></h3>
+<h3>Windows 10 更新<a class="headerlink" href="#windows-10-updates" title="本標題的永久連結">¶</a></h3>
 <p>Sometimes a Windows 10 update can mess up tablet drivers. In that case,
 reinstalling the drivers should work.</p>
 </section>
 </section>
 <section id="wacom-tablets">
-<h2>Wacom Tablets<a class="headerlink" href="#wacom-tablets" title="Permalink to this headline">¶</a></h2>
+<h2>Wacom 繪圖板<a class="headerlink" href="#wacom-tablets" title="本標題的永久連結">¶</a></h2>
 <p>There are three known problems with Wacom tablets and Windows.</p>
 <p>The first is that if you have customized the driver settings, then sometimes,
 often after a driver update, but that is not necessary, the driver breaks.
@@ -354,9 +354,9 @@ priority order. You might have to make your Cintiq screen your primary screen,
 or, on the other hand, make it the secondary screen. Double check in the Wacom
 settings utility that the tablet in the Cintiq is associated with the Cintiq
 screen.</p>
-<p>The third is that if you have a display tablet like a Cintiq and a Wacom ExpressKeys remote, and you have disabled Windows Ink in the calibration page of the stylus settings dialog, so you have the full set of Wintab features, the Cintiq needs to be the first item in Wacom’s desktop application list. Otherwise, you will have an offset between stylus and mouse that will get worse the more displays there are to the left of the Cintiq display.</p>
+<p>The third is that if you have a display tablet like a Cintiq and a Wacom ExpressKeys remote, and you have disabled Windows Ink in the calibration page of the stylus settings dialog, so you have the full set of Wintab features, the Cintiq needs to be the first item in Wacom's desktop application list. Otherwise, you will have an offset between stylus and mouse that will get worse the more displays there are to the left of the Cintiq display.</p>
 <section id="broken-drivers">
-<h3>Broken Drivers<a class="headerlink" href="#broken-drivers" title="Permalink to this headline">¶</a></h3>
+<h3>出問題的驅動程式<a class="headerlink" href="#broken-drivers" title="本標題的永久連結">¶</a></h3>
 <p>Tablet drivers need to be made by the manufacturer. Sometimes, with
 really cheap tablets, the hardware is fine, but the driver is badly
 written, which means that the driver just doesn’t work well. We cannot
@@ -365,17 +365,17 @@ manufacturer for this, or buy a better tablet with better quality
 drivers.</p>
 </section>
 <section id="conflicting-drivers">
-<h3>Conflicting Drivers<a class="headerlink" href="#conflicting-drivers" title="Permalink to this headline">¶</a></h3>
+<h3>互相衝突的驅動程式<a class="headerlink" href="#conflicting-drivers" title="本標題的永久連結">¶</a></h3>
 <p>On Windows, you can only have a single Wintab-style driver installed at
 a time. So be sure to uninstall the previous driver before installing
 the one that comes with the tablet you want to use. Other operating
 systems are a bit better about this, but even Linux, where the drivers
-are often preinstalled, can’t run two tablets with different drivers at
+are often preinstalled, can't run two tablets with different drivers at
 once.</p>
 </section>
 <section id="interfering-software">
-<h3>Interfering software<a class="headerlink" href="#interfering-software" title="Permalink to this headline">¶</a></h3>
-<p>Sometimes, there’s software that tries to make a security layer between
+<h3>造成干擾的軟體<a class="headerlink" href="#interfering-software" title="本標題的永久連結">¶</a></h3>
+<p>Sometimes, there's software that tries to make a security layer between
 Krita and the operating system. Sandboxie is an example of this.
 However, Krita cannot always connect to certain parts of the operating
 system while sandboxed, so it will often break in programs like
@@ -392,7 +392,7 @@ to Krita:</p>
 </ol>
 </section>
 <section id="flicks-wait-circle-showing-up-and-then-calling-the-popup-palette">
-<h3>Flicks (Wait circle showing up and then calling the popup palette)<a class="headerlink" href="#flicks-wait-circle-showing-up-and-then-calling-the-popup-palette" title="Permalink to this headline">¶</a></h3>
+<h3>筆觸動作（繪畫時出現白色圓圈後彈出浮動畫具板）<a class="headerlink" href="#flicks-wait-circle-showing-up-and-then-calling-the-popup-palette" title="本標題的永久連結">¶</a></h3>
 <p>If you have a situation where trying to draw keeps bringing up the
 pop-up palette on Windows, then the problem might be flicks. These are a
 type of gesture, a bit of Windows functionality that allows you to make
@@ -402,7 +402,7 @@ this part of Windows forgot that people also draw with computers. So you
 will need to turn it off in the Windows flicks configuration.</p>
 </section>
 <section id="wacom-double-click-sensitivity-straight-starts-of-lines">
-<h3>Wacom Double Click Sensitivity (Straight starts of lines)<a class="headerlink" href="#wacom-double-click-sensitivity-straight-starts-of-lines" title="Permalink to this headline">¶</a></h3>
+<h3>Wacom 「雙響間距」（起筆時出現直線線段）<a class="headerlink" href="#wacom-double-click-sensitivity-straight-starts-of-lines" title="本標題的永久連結">¶</a></h3>
 <p>If you experience an issue where the start of the stroke is straight,
 and have a Wacom tablet, it could be caused by the Wacom driver
 double-click detection.</p>
@@ -411,7 +411,7 @@ sensitivity.</p>
 </section>
 </section>
 <section id="id2">
-<h2>Supported Tablets<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<h2>支援的繪圖板<a class="headerlink" href="#id2" title="本標題的永久連結">¶</a></h2>
 <p>Supported tablets are the ones of which Krita developers have a version
 themselves, so they can reliably fix bugs with them. <a class="reference internal" href="../reference_manual/list_supported_tablets.html#list-supported-tablets"><span class="std std-ref">We maintain a list of those here</span></a>.</p>
 </section>
@@ -425,10 +425,10 @@ themselves, so they can reliably fix bugs with them. <a class="reference interna
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="loading_saving_brushes.html" class="btn btn-neutral float-right" title="Loading and Saving Brushes" accesskey="n" rel="next"> <!-- Next --> <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="loading_saving_brushes.html" class="btn btn-neutral float-right" title="載入與儲存筆刷" accesskey="n" rel="next"> <!-- 下一個 --> <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="introduction_from_other_software/introduction_from_sai.html" class="btn btn-neutral" title="Introduction to Krita coming from Paint Tool SAI" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- Previous  -->  </a>
+        <a href="introduction_from_other_software/introduction_from_sai.html" class="btn btn-neutral" title="Paint Tool SAI 使用者轉用 Krita 入門介紹" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- 上一個  -->  </a>
       
     </div>
   
@@ -437,19 +437,19 @@ themselves, so they can reliably fix bugs with them. <a class="reference interna
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright licensed under the GNU Free Documentation License 1.3+ unless stated otherwise.
+        &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          Revision <code>7c271ce</code>.
+          修訂版本 <code>7c271ce</code>
         </span>
       
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a modified <a href="https://github.com/rtfd/sphinx_rtd_theme">RTD theme</a>.<br/>
-  <a href="https://krita.org" title="Krita official website.">Krita official website</a> |
-  <a href="https://invent.kde.org/documentation/docs-krita-org/" title="The Gitlab instance to edit this pages and collaborate.">Git repository for docs.krita.org </a> |
-  <a href="https://www.kde.org/community/whatiskde/impressum-en.php" title="To know more about KDE, code of conduct, privacy policy and GDPR.">KDE Impressum</a>.
+  使用 <a href="http://sphinx-doc.org/">Sphinx</a> 以及經修改過的 <a href="https://github.com/rtfd/sphinx_rtd_theme">RTD 主題</a>建置<br/>
+  <a href="https://krita.org" title="Krita official website.">Krita 官方網站</a> |
+  <a href="https://invent.kde.org/documentation/docs-krita-org/" title="這份手冊在 KDE 的 GitLab 網址">docs.krita.org 的 Git 原始碼儲存庫</a> |
+  <a href="https://www.kde.org/community/whatiskde/impressum-en.php" title="了解更多關於 KDE、code of conduct、privacy policy 及 GDPR">KDE Impressum</a>
    
 
 </footer>
@@ -468,7 +468,7 @@ themselves, so they can reliably fix bugs with them. <a class="reference interna
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
             VERSION:'5.0.0 Beta',
-            LANGUAGE:'en',
+            LANGUAGE:'zh_TW',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,
@@ -479,6 +479,7 @@ themselves, so they can reliably fix bugs with them. <a class="reference interna
       <script type="text/javascript" src="../_static/jquery.js"></script>
       <script type="text/javascript" src="../_static/underscore.js"></script>
       <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
 
   
 

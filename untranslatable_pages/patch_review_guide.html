@@ -1,17 +1,17 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-TW" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-TW" > <!--<![endif]-->
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta property="og:title" name="title" content="Advanced Merge Request Guide" />
   <meta property="og:site-name" content="Krita Manual" />
   <meta property="og:type" content="article" />
-  <meta property="og:locale" content="en" />
+  <meta property="og:locale" content="zh_TW" />
   <meta property="og:locale:alternate" content="ca" />
-  
+  <meta property="og:locale:alternate" content="en" />
   <meta property="og:locale:alternate" content="fr" />
   <meta property="og:locale:alternate" content="it" />
   <meta property="og:locale:alternate" content="ja" />
@@ -21,13 +21,13 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-07-19T15:33:59" />
+  <meta property="og:article:modified_time" content="2021-07-19T15:40:51" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="Guide to creating and reviewing Krita patches in gitlab." name="description" />
 
   
   
-  <title>Advanced Merge Request Guide &mdash; Krita Manual 5.0.0 Beta documentation</title>
+  <title>Advanced Merge Request Guide &mdash; Krita Manual 5.0.0 Beta 說明文件</title>
   
 
   
@@ -58,8 +58,8 @@
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜尋" href="../search.html" />
     <link rel="next" title="Python Developer Tools" href="python_coding.html" />
     <link rel="prev" title="Google Summer of Code" href="participating_in_gsoc.html" /> 
 
@@ -92,7 +92,7 @@
           
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="搜尋文件" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -127,17 +127,17 @@
             
             
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../user_manual.html">User Manual</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../general_concepts.html">General Concepts</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../reference_manual.html">Reference Manual</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tutorials.html">Tutorials and How-tos</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../KritaFAQ.html">Krita FAQ</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../contributors_manual.html">Contributors Manual</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../contributors_manual/community.html">The Krita Community</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../contributors_manual/krita_manual_conventions.html">Mark-up conventions for the Krita Manual</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../contributors_manual/krita_manual_readme.html">Krita Manual Contribution Guide</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../contributors_manual/optimising_images.html">Images for the Manual</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../contributors_manual/user_support.html">Introduction to User Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_manual.html">使用者手冊</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general_concepts.html">通用概念</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference_manual.html">參考文件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials.html">教學及指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../KritaFAQ.html">Krita 常見問題</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../contributors_manual.html">貢獻者手冊</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../contributors_manual/community.html">Krita 的社群</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributors_manual/krita_manual_conventions.html">Krita 手冊中 reStructuredText 標記格式使用慣例</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributors_manual/krita_manual_readme.html">Krita 手冊貢獻指南</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributors_manual/optimising_images.html">供手冊使用的影像</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributors_manual/user_support.html">使用者支援入門介紹</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../untranslatable_pages.html">Technical Pages</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="building_krita.html">Building Krita from Source</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cmake_settings_for_developers.html">CMake Settings for Developers</a></li>
@@ -170,7 +170,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../resources_page.html">Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../resources_page.html">資源</a></li>
 </ul>
 
             
@@ -224,9 +224,9 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../index.html">Docs</a> &raquo;</li>
+      <li><a href="../index.html">文件</a> &raquo;</li>
         
-          <li><a href="../contributors_manual.html">Contributors Manual</a> &raquo;</li>
+          <li><a href="../contributors_manual.html">貢獻者手冊</a> &raquo;</li>
         
           <li><a href="../untranslatable_pages.html">Technical Pages</a> &raquo;</li>
         
@@ -240,7 +240,7 @@
             <a href="../_sources/untranslatable_pages/patch_review_guide.rst.txt" rel="nofollow"> 
              
               <img src="../_static/images/source-code.png" />
-             <!-- View page source -->
+             <!-- 檢視頁面原始碼 -->
 
           </a>
           
@@ -255,25 +255,25 @@
            <div itemprop="articleBody">
             
   <section id="advanced-merge-request-guide">
-<span id="patch-review-guide"></span><h1>Advanced Merge Request Guide<a class="headerlink" href="#advanced-merge-request-guide" title="Permalink to this headline">¶</a></h1>
-<p>Since April 2019, we’re using Gitlab to review merge requests and patches to the code. Check <a class="reference internal" href="intro_hacking_krita.html#forking-gitlab"><span class="std std-ref">Forking on Gitlab</span></a> on how to start with making a merge request.</p>
+<span id="patch-review-guide"></span><h1>Advanced Merge Request Guide<a class="headerlink" href="#advanced-merge-request-guide" title="本標題的永久連結">¶</a></h1>
+<p>Since April 2019, we're using Gitlab to review merge requests and patches to the code. Check <a class="reference internal" href="intro_hacking_krita.html#forking-gitlab"><span class="std std-ref">Forking on Gitlab</span></a> on how to start with making a merge request.</p>
 <section id="when-to-make-a-merge-request">
-<h2>When to make a merge request<a class="headerlink" href="#when-to-make-a-merge-request" title="Permalink to this headline">¶</a></h2>
-<p>There’s three times you need to make merge requests.</p>
+<h2>When to make a merge request<a class="headerlink" href="#when-to-make-a-merge-request" title="本標題的永久連結">¶</a></h2>
+<p>There's three times you need to make merge requests.</p>
 <ol class="arabic simple">
 <li><p>When you do not have commit access.</p></li>
 <li><p>When the change you are making is huge, like with feature development, large refactors, complex bugfixes. For these we do not fork, but instead make a branch in the main repository in the following format: <code class="docutils literal notranslate"><span class="pre">name/number-shortdescription</span></code>. Check <a class="reference internal" href="new_features.html#developing-features"><span class="std std-ref">Developing Features</span></a> for more information.</p></li>
-<li><p>When you are not sure about whether what you did is correct. It is common within the Krita community that even developers with commit access will have a weaning period in which they still make merge requests for each change as they’re getting comfortable with the codebase. It is not mandatory to do so at this point, but requests are the best way for us to help one another with writing good code.</p></li>
+<li><p>When you are not sure about whether what you did is correct. It is common within the Krita community that even developers with commit access will have a weaning period in which they still make merge requests for each change as they're getting comfortable with the codebase. It is not mandatory to do so at this point, but requests are the best way for us to help one another with writing good code.</p></li>
 </ol>
 </section>
 <section id="checklist-for-review">
-<h2>Checklist for review<a class="headerlink" href="#checklist-for-review" title="Permalink to this headline">¶</a></h2>
-<p>Here’s a quick checklist that is gone over when reviewing patches. While some requests require specialist knowledge, these items are so universal that anyone who knows how to check them can do so and comment on them. Feel free to do this yourself on <a class="reference external" href="https://invent.kde.org/graphics/krita.git/merge_requests?scope=all&amp;utf8=%E2%9C%93&amp;state=opened">open requests</a>, we welcome it!</p>
+<h2>Checklist for review<a class="headerlink" href="#checklist-for-review" title="本標題的永久連結">¶</a></h2>
+<p>Here's a quick checklist that is gone over when reviewing patches. While some requests require specialist knowledge, these items are so universal that anyone who knows how to check them can do so and comment on them. Feel free to do this yourself on <a class="reference external" href="https://invent.kde.org/graphics/krita.git/merge_requests?scope=all&amp;utf8=%E2%9C%93&amp;state=opened">open requests</a>, we welcome it!</p>
 <p>Also check out the <a class="reference external" href="https://invent.kde.org/help/user/project/merge_requests/index.md">manual for reviewing merge requests in Gitlab</a>.</p>
 <dl class="simple">
-<dt>Does the code build</dt><dd><p>Most important check. Apply the patch locally and build it. If it doesn’t build, the patch will not be accepted at all.</p>
+<dt>Does the code build</dt><dd><p>Most important check. Apply the patch locally and build it. If it doesn't build, the patch will not be accepted at all.</p>
 </dd>
-<dt>Does it not crash?</dt><dd><p>Basically, build the patch, run Krita, and check if the functions associated doesn’t crash. If it does, make a backtrace and post it in the review.</p>
+<dt>Does it not crash?</dt><dd><p>Basically, build the patch, run Krita, and check if the functions associated doesn't crash. If it does, make a backtrace and post it in the review.</p>
 </dd>
 <dt>Does it leak memory?</dt><dd></dd>
 <dt>Does the patch break tests?</dt><dd></dd>
@@ -281,7 +281,7 @@
 </dd>
 <dt>Is the code in conformance with KDE/Krita style?</dt><dd><p>Check the HACKING file for directions.</p>
 </dd>
-<dt>Are the commit messages sensible?</dt><dd><p>There’s several guides for this, but in general, try to make sure that the commit messages actually explain what you did.</p>
+<dt>Are the commit messages sensible?</dt><dd><p>There's several guides for this, but in general, try to make sure that the commit messages actually explain what you did.</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://github.com/RomuloOliveira/commit-messages-guide">https://github.com/RomuloOliveira/commit-messages-guide</a></p></li>
 </ul>
@@ -301,10 +301,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="python_coding.html" class="btn btn-neutral float-right" title="Python Developer Tools" accesskey="n" rel="next"> <!-- Next --> <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="python_coding.html" class="btn btn-neutral float-right" title="Python Developer Tools" accesskey="n" rel="next"> <!-- 下一個 --> <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="participating_in_gsoc.html" class="btn btn-neutral" title="Google Summer of Code" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- Previous  -->  </a>
+        <a href="participating_in_gsoc.html" class="btn btn-neutral" title="Google Summer of Code" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- 上一個  -->  </a>
       
     </div>
   
@@ -313,19 +313,19 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright licensed under the GNU Free Documentation License 1.3+ unless stated otherwise.
+        &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          Revision <code>7c271ce</code>.
+          修訂版本 <code>7c271ce</code>
         </span>
       
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a modified <a href="https://github.com/rtfd/sphinx_rtd_theme">RTD theme</a>.<br/>
-  <a href="https://krita.org" title="Krita official website.">Krita official website</a> |
-  <a href="https://invent.kde.org/documentation/docs-krita-org/" title="The Gitlab instance to edit this pages and collaborate.">Git repository for docs.krita.org </a> |
-  <a href="https://www.kde.org/community/whatiskde/impressum-en.php" title="To know more about KDE, code of conduct, privacy policy and GDPR.">KDE Impressum</a>.
+  使用 <a href="http://sphinx-doc.org/">Sphinx</a> 以及經修改過的 <a href="https://github.com/rtfd/sphinx_rtd_theme">RTD 主題</a>建置<br/>
+  <a href="https://krita.org" title="Krita official website.">Krita 官方網站</a> |
+  <a href="https://invent.kde.org/documentation/docs-krita-org/" title="這份手冊在 KDE 的 GitLab 網址">docs.krita.org 的 Git 原始碼儲存庫</a> |
+  <a href="https://www.kde.org/community/whatiskde/impressum-en.php" title="了解更多關於 KDE、code of conduct、privacy policy 及 GDPR">KDE Impressum</a>
    
 
 </footer>
@@ -344,7 +344,7 @@
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
             VERSION:'5.0.0 Beta',
-            LANGUAGE:'en',
+            LANGUAGE:'zh_TW',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,
@@ -355,6 +355,7 @@
       <script type="text/javascript" src="../_static/jquery.js"></script>
       <script type="text/javascript" src="../_static/underscore.js"></script>
       <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
 
   
 

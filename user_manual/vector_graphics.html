@@ -1,17 +1,17 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-TW" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-TW" > <!--<![endif]-->
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta property="og:title" name="title" content="Vector Graphics" />
+  <meta property="og:title" name="title" content="向量圖形" />
   <meta property="og:site-name" content="Krita Manual" />
   <meta property="og:type" content="article" />
-  <meta property="og:locale" content="en" />
+  <meta property="og:locale" content="zh_TW" />
   <meta property="og:locale:alternate" content="ca" />
-  
+  <meta property="og:locale:alternate" content="en" />
   <meta property="og:locale:alternate" content="fr" />
   <meta property="og:locale:alternate" content="it" />
   <meta property="og:locale:alternate" content="ja" />
@@ -21,13 +21,13 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-07-19T15:33:59" />
+  <meta property="og:article:modified_time" content="2021-07-19T15:40:51" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="Overview of vector graphics in Krita." name="description" />
 
   
   
-  <title>Vector Graphics &mdash; Krita Manual 5.0.0 Beta documentation</title>
+  <title>向量圖形 &mdash; Krita Manual 5.0.0 Beta 說明文件</title>
   
 
   
@@ -58,10 +58,10 @@
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Snapping" href="snapping.html" />
-    <link rel="prev" title="Soft Proofing" href="soft_proofing.html" /> 
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜尋" href="../search.html" />
+    <link rel="next" title="吸附" href="snapping.html" />
+    <link rel="prev" title="螢幕校樣" href="soft_proofing.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -92,7 +92,7 @@
           
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="搜尋文件" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -127,51 +127,51 @@
             
             
               <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="../user_manual.html">User Manual</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
-<li class="toctree-l2"><a class="reference internal" href="introduction_from_other_software.html">Introduction Coming From Other Software</a></li>
-<li class="toctree-l2"><a class="reference internal" href="drawing_tablets.html">Drawing Tablets</a></li>
-<li class="toctree-l2"><a class="reference internal" href="loading_saving_brushes.html">Loading and Saving Brushes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="oncanvas_brush_editor.html">On-Canvas Brush Editor</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mirror_tools.html">Mirror Tools</a></li>
-<li class="toctree-l2"><a class="reference internal" href="painting_with_assistants.html">Painting with Assistants</a></li>
-<li class="toctree-l2"><a class="reference internal" href="working_with_images.html">Working with Images</a></li>
-<li class="toctree-l2"><a class="reference internal" href="autosave.html">Saving, AutoSave and Backup Files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="templates.html">Templates</a></li>
-<li class="toctree-l2"><a class="reference internal" href="layers_and_masks.html">Introduction to Layers and Masks</a></li>
-<li class="toctree-l2"><a class="reference internal" href="selections.html">Selections</a></li>
-<li class="toctree-l2"><a class="reference internal" href="python_scripting.html">Python Scripting</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tag_management.html">Tag Management</a></li>
-<li class="toctree-l2"><a class="reference internal" href="soft_proofing.html">Soft Proofing</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Vector Graphics</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#what-are-vector-graphics">What are vector graphics?</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#tools-for-making-shapes">Tools for making shapes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#arranging-shapes">Arranging Shapes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#editing-shapes">Editing shapes</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#fill">Fill</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#stroke">Stroke</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#coordinates">Coordinates</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#editing-nodes-and-special-parameters">Editing nodes and special parameters</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../user_manual.html">使用者手冊</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="getting_started.html">新手入門</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction_from_other_software.html">為習慣其他軟體的使用者而設的入門介紹</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drawing_tablets.html">數位繪圖板</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loading_saving_brushes.html">載入與儲存筆刷</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oncanvas_brush_editor.html">畫布上的筆刷分量設定</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mirror_tools.html">鏡像繪畫工具</a></li>
+<li class="toctree-l2"><a class="reference internal" href="painting_with_assistants.html">使用輔助尺來繪畫</a></li>
+<li class="toctree-l2"><a class="reference internal" href="working_with_images.html">如何以影像工作</a></li>
+<li class="toctree-l2"><a class="reference internal" href="autosave.html">儲存、自動儲存及備份檔案</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templates.html">範本</a></li>
+<li class="toctree-l2"><a class="reference internal" href="layers_and_masks.html">圖層及遮罩的入門</a></li>
+<li class="toctree-l2"><a class="reference internal" href="selections.html">選取區域</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python_scripting.html">Python 指令稿及外掛程式</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tag_management.html">標籤管理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="soft_proofing.html">螢幕校樣</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">向量圖形</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#what-are-vector-graphics">甚麼是向量圖形？</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tools-for-making-shapes">製作圖形的工具</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#arranging-shapes">排列圖形</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#editing-shapes">編輯圖形</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#fill">填充</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#stroke">描邊</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#coordinates">坐標</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#editing-nodes-and-special-parameters">編輯節點及特殊參數</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#working-together-with-other-programs">Working together with other programs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#working-together-with-other-programs">與其他軟體共同作業</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#inkscape">Inkscape</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="snapping.html">Snapping</a></li>
-<li class="toctree-l2"><a class="reference internal" href="animation.html">Animation with Krita</a></li>
-<li class="toctree-l2"><a class="reference internal" href="japanese_animation_template.html">Japanese Animation Template</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gamut_masks.html">Gamut Masks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="snapping.html">吸附</a></li>
+<li class="toctree-l2"><a class="reference internal" href="animation.html">用 Krita 製作動畫</a></li>
+<li class="toctree-l2"><a class="reference internal" href="japanese_animation_template.html">日本動畫範本</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gamut_masks.html">色域遮罩</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../general_concepts.html">General Concepts</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../reference_manual.html">Reference Manual</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tutorials.html">Tutorials and How-tos</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../KritaFAQ.html">Krita FAQ</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../contributors_manual.html">Contributors Manual</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../resources_page.html">Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general_concepts.html">通用概念</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference_manual.html">參考文件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials.html">教學及指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../KritaFAQ.html">Krita 常見問題</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributors_manual.html">貢獻者手冊</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../resources_page.html">資源</a></li>
 </ul>
 
             
@@ -225,11 +225,11 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../index.html">Docs</a> &raquo;</li>
+      <li><a href="../index.html">文件</a> &raquo;</li>
         
-          <li><a href="../user_manual.html">User Manual</a> &raquo;</li>
+          <li><a href="../user_manual.html">使用者手冊</a> &raquo;</li>
         
-      <li>Vector Graphics</li>
+      <li>向量圖形</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -239,7 +239,7 @@
             <a href="../_sources/user_manual/vector_graphics.rst.txt" rel="nofollow"> 
              
               <img src="../_static/images/source-code.png" />
-             <!-- View page source -->
+             <!-- 檢視頁面原始碼 -->
 
           </a>
           
@@ -254,17 +254,17 @@
            <div itemprop="articleBody">
             
   <section id="vector-graphics">
-<span id="index-0"></span><span id="id1"></span><h1>Vector Graphics<a class="headerlink" href="#vector-graphics" title="Permalink to this headline">¶</a></h1>
-<p>Krita 4.0 has had a massive rewrite of the vector tools. So here’s a page explaining the vector tools:</p>
+<span id="index-0"></span><span id="id1"></span><h1>向量圖形<a class="headerlink" href="#vector-graphics" title="本標題的永久連結">¶</a></h1>
+<p>Krita 4.0 has had a massive rewrite of the vector tools. So here's a page explaining the vector tools:</p>
 <section id="what-are-vector-graphics">
-<h2>What are vector graphics?<a class="headerlink" href="#what-are-vector-graphics" title="Permalink to this headline">¶</a></h2>
+<h2>甚麼是向量圖形？<a class="headerlink" href="#what-are-vector-graphics" title="本標題的永久連結">¶</a></h2>
 <p>Krita is primarily a raster graphics editing tool, which means that most of the editing changes the values of the pixels on the raster that makes up the image.</p>
 <img alt="../_images/Pixels-brushstroke.png" src="../_images/Pixels-brushstroke.png" />
 <p>Vector graphics on the other hand use mathematics to describe a shape. Because it uses a formula, vector graphics can be resized to any size.</p>
 <p>On one hand, this makes vector graphics great for logos and banners. On the other hand, raster graphics are much easier to edit, so vectors tend to be the domain of deliberate design, using a lot of precision.</p>
 </section>
 <section id="tools-for-making-shapes">
-<h2>Tools for making shapes<a class="headerlink" href="#tools-for-making-shapes" title="Permalink to this headline">¶</a></h2>
+<h2>製作圖形的工具<a class="headerlink" href="#tools-for-making-shapes" title="本標題的永久連結">¶</a></h2>
 <p>You can start making vector graphics by first making a vector layer (press the arrow button next to the <span class="guilabel">+</span> in the layer docker to get extra layer types). Then, all the usual drawing tools outside of the freehand, dynamic and the multibrush tool can be used to draw shapes.</p>
 <p>The path and polyline tool are the tools you used most often on a vector layer, as they allow you to make the most dynamic of shapes.</p>
 <p>On the other hand, the <span class="guilabel">Ellipse</span> and <span class="guilabel">Rectangle</span> tools allow you to draw special shapes, which then can be edited to make special pie shapes, or for easy rounded rectangles.</p>
@@ -273,41 +273,41 @@
 <p>There is one last way to make vectors: the <span class="guilabel">Vector Image</span> tool.  It allows you to add shapes that have been defined in an SVG file as symbols. Unlike the other tools, these have their own fill and stroke.</p>
 </section>
 <section id="arranging-shapes">
-<h2>Arranging Shapes<a class="headerlink" href="#arranging-shapes" title="Permalink to this headline">¶</a></h2>
+<h2>排列圖形<a class="headerlink" href="#arranging-shapes" title="本標題的永久連結">¶</a></h2>
 <p>A vector layer has its own hierarchy of shapes, much like how the whole image has a hierarchy of layers. So shapes can be in front of one another. This can be modified with the arrange docker, or with the <span class="guilabel">Select Shapes</span> tool.</p>
 <p>The arrange docker also allows you to group and ungroup shapes. It also allows you to precisely align shapes, for example, have them aligned to the center, or have an even spacing between all the shapes.</p>
 </section>
 <section id="editing-shapes">
-<h2>Editing shapes<a class="headerlink" href="#editing-shapes" title="Permalink to this headline">¶</a></h2>
+<h2>編輯圖形<a class="headerlink" href="#editing-shapes" title="本標題的永久連結">¶</a></h2>
 <p>Editing of vector shapes is done with the <span class="guilabel">Select Shapes</span> tool and the <span class="guilabel">Edit Shapes</span> tool.</p>
 <p>The <span class="guilabel">Select Shapes</span> tool can be used to select vector shapes, to group them (via <img alt="mouseright" src="../_images/Krita_mouse_right.png" />), ungroup them, to use booleans to combine or subtract shapes from one another (via <img alt="mouseright" src="../_images/Krita_mouse_right.png" />), to move them up and down, or to do quick transforms.</p>
 <section id="fill">
-<h3>Fill<a class="headerlink" href="#fill" title="Permalink to this headline">¶</a></h3>
+<h3>填充<a class="headerlink" href="#fill" title="本標題的永久連結">¶</a></h3>
 <p>You can change the fill of a shape by selecting it and changing the active foreground color.</p>
 <p>You can also change it by going into the tool options of the <span class="guilabel">Select Shapes</span> tool and going to the <span class="guilabel">Fill</span> tab.</p>
 <p>Vector shapes can be filled with a solid color, a gradient or a pattern.</p>
 </section>
 <section id="stroke">
-<h3>Stroke<a class="headerlink" href="#stroke" title="Permalink to this headline">¶</a></h3>
+<h3>描邊<a class="headerlink" href="#stroke" title="本標題的永久連結">¶</a></h3>
 <p>Strokes can be filled with the same things as fills.</p>
 <p>However, they can also be further changed. For example, you can add dashes and markers to the line.</p>
 </section>
 <section id="coordinates">
-<h3>Coordinates<a class="headerlink" href="#coordinates" title="Permalink to this headline">¶</a></h3>
+<h3>坐標<a class="headerlink" href="#coordinates" title="本標題的永久連結">¶</a></h3>
 <p>Shapes can be moved with the <span class="guilabel">Select Shapes</span> tool, and in the tool options you can specify the exact coordinates.</p>
 </section>
 <section id="editing-nodes-and-special-parameters">
-<h3>Editing nodes and special parameters<a class="headerlink" href="#editing-nodes-and-special-parameters" title="Permalink to this headline">¶</a></h3>
+<h3>編輯節點及特殊參數<a class="headerlink" href="#editing-nodes-and-special-parameters" title="本標題的永久連結">¶</a></h3>
 <p>If you have a shape selected, you can double click it to get to the appropriate tool to edit it. Usually this is the <span class="guilabel">Edit Shape</span> tool, but for text this is the <span class="guilabel">Text</span> tool.</p>
 <p>In the <span class="guilabel">Edit Shape</span> tool, you can move around nodes on the canvas for regular paths. For special paths, like the ellipse and the rectangle, you can move nodes and edit the specific parameters in the <span class="guilabel">Tool Options</span> docker.</p>
 </section>
 </section>
 <section id="working-together-with-other-programs">
-<h2>Working together with other programs<a class="headerlink" href="#working-together-with-other-programs" title="Permalink to this headline">¶</a></h2>
+<h2>與其他軟體共同作業<a class="headerlink" href="#working-together-with-other-programs" title="本標題的永久連結">¶</a></h2>
 <p>One of the big things Krita 4.0 brought was moving from ODG to SVG. What this means is that Krita saves as SVG inside KRA files, and that means we can open SVGs just fine. This is important as SVG is the most popular vector format.</p>
 <section id="inkscape">
-<h3>Inkscape<a class="headerlink" href="#inkscape" title="Permalink to this headline">¶</a></h3>
-<p>You can copy and paste vectors from Krita to Inkscape, or from Inkscape to Krita. Only the SVG 1.1 features are supported, so don’t be surprised if a mesh gradient doesn’t cross over very well.</p>
+<h3>Inkscape<a class="headerlink" href="#inkscape" title="本標題的永久連結">¶</a></h3>
+<p>You can copy and paste vectors from Krita to Inkscape, or from Inkscape to Krita. Only the SVG 1.1 features are supported, so don't be surprised if a mesh gradient doesn't cross over very well.</p>
 </section>
 </section>
 </section>
@@ -320,10 +320,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="snapping.html" class="btn btn-neutral float-right" title="Snapping" accesskey="n" rel="next"> <!-- Next --> <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="snapping.html" class="btn btn-neutral float-right" title="吸附" accesskey="n" rel="next"> <!-- 下一個 --> <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="soft_proofing.html" class="btn btn-neutral" title="Soft Proofing" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- Previous  -->  </a>
+        <a href="soft_proofing.html" class="btn btn-neutral" title="螢幕校樣" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- 上一個  -->  </a>
       
     </div>
   
@@ -332,19 +332,19 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright licensed under the GNU Free Documentation License 1.3+ unless stated otherwise.
+        &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          Revision <code>7c271ce</code>.
+          修訂版本 <code>7c271ce</code>
         </span>
       
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a modified <a href="https://github.com/rtfd/sphinx_rtd_theme">RTD theme</a>.<br/>
-  <a href="https://krita.org" title="Krita official website.">Krita official website</a> |
-  <a href="https://invent.kde.org/documentation/docs-krita-org/" title="The Gitlab instance to edit this pages and collaborate.">Git repository for docs.krita.org </a> |
-  <a href="https://www.kde.org/community/whatiskde/impressum-en.php" title="To know more about KDE, code of conduct, privacy policy and GDPR.">KDE Impressum</a>.
+  使用 <a href="http://sphinx-doc.org/">Sphinx</a> 以及經修改過的 <a href="https://github.com/rtfd/sphinx_rtd_theme">RTD 主題</a>建置<br/>
+  <a href="https://krita.org" title="Krita official website.">Krita 官方網站</a> |
+  <a href="https://invent.kde.org/documentation/docs-krita-org/" title="這份手冊在 KDE 的 GitLab 網址">docs.krita.org 的 Git 原始碼儲存庫</a> |
+  <a href="https://www.kde.org/community/whatiskde/impressum-en.php" title="了解更多關於 KDE、code of conduct、privacy policy 及 GDPR">KDE Impressum</a>
    
 
 </footer>
@@ -363,7 +363,7 @@
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
             VERSION:'5.0.0 Beta',
-            LANGUAGE:'en',
+            LANGUAGE:'zh_TW',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,
@@ -374,6 +374,7 @@
       <script type="text/javascript" src="../_static/jquery.js"></script>
       <script type="text/javascript" src="../_static/underscore.js"></script>
       <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
 
   
 

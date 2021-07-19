@@ -1,17 +1,17 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-TW" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-TW" > <!--<![endif]-->
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta property="og:title" name="title" content="Mark-up conventions for the Krita Manual" />
+  <meta property="og:title" name="title" content="Krita 手冊中 reStructuredText 標記格式使用慣例" />
   <meta property="og:site-name" content="Krita Manual" />
   <meta property="og:type" content="article" />
-  <meta property="og:locale" content="en" />
+  <meta property="og:locale" content="zh_TW" />
   <meta property="og:locale:alternate" content="ca" />
-  
+  <meta property="og:locale:alternate" content="en" />
   <meta property="og:locale:alternate" content="fr" />
   <meta property="og:locale:alternate" content="it" />
   <meta property="og:locale:alternate" content="ja" />
@@ -21,13 +21,13 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-07-19T15:33:59" />
+  <meta property="og:article:modified_time" content="2021-07-19T15:40:51" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="reStructuredText conventions for the Krita Manual." name="description" />
 
   
   
-  <title>Mark-up conventions for the Krita Manual &mdash; Krita Manual 5.0.0 Beta documentation</title>
+  <title>Krita 手冊中 reStructuredText 標記格式使用慣例 &mdash; Krita Manual 5.0.0 Beta 說明文件</title>
   
 
   
@@ -58,10 +58,10 @@
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Krita Manual Contribution Guide" href="krita_manual_readme.html" />
-    <link rel="prev" title="The Krita Community" href="community.html" /> 
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜尋" href="../search.html" />
+    <link rel="next" title="Krita 手冊貢獻指南" href="krita_manual_readme.html" />
+    <link rel="prev" title="Krita 的社群" href="community.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -92,7 +92,7 @@
           
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="搜尋文件" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -127,14 +127,14 @@
             
             
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../user_manual.html">User Manual</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../general_concepts.html">General Concepts</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../reference_manual.html">Reference Manual</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tutorials.html">Tutorials and How-tos</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../KritaFAQ.html">Krita FAQ</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../contributors_manual.html">Contributors Manual</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="community.html">The Krita Community</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Mark-up conventions for the Krita Manual</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../user_manual.html">使用者手冊</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general_concepts.html">通用概念</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference_manual.html">參考文件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials.html">教學及指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../KritaFAQ.html">Krita 常見問題</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../contributors_manual.html">貢獻者手冊</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="community.html">Krita 的社群</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Krita 手冊中 reStructuredText 標記格式使用慣例</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#meta-data">Meta data</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#headings">Headings</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#linking">Linking</a><ul>
@@ -159,13 +159,13 @@
 <li class="toctree-l3"><a class="reference internal" href="#notes-for-translators">Notes for Translators</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="krita_manual_readme.html">Krita Manual Contribution Guide</a></li>
-<li class="toctree-l2"><a class="reference internal" href="optimising_images.html">Images for the Manual</a></li>
-<li class="toctree-l2"><a class="reference internal" href="user_support.html">Introduction to User Support</a></li>
+<li class="toctree-l2"><a class="reference internal" href="krita_manual_readme.html">Krita 手冊貢獻指南</a></li>
+<li class="toctree-l2"><a class="reference internal" href="optimising_images.html">供手冊使用的影像</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_support.html">使用者支援入門介紹</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../untranslatable_pages.html">Technical Pages</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../resources_page.html">Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../resources_page.html">資源</a></li>
 </ul>
 
             
@@ -219,11 +219,11 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../index.html">Docs</a> &raquo;</li>
+      <li><a href="../index.html">文件</a> &raquo;</li>
         
-          <li><a href="../contributors_manual.html">Contributors Manual</a> &raquo;</li>
+          <li><a href="../contributors_manual.html">貢獻者手冊</a> &raquo;</li>
         
-      <li>Mark-up conventions for the Krita Manual</li>
+      <li>Krita 手冊中 reStructuredText 標記格式使用慣例</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -233,7 +233,7 @@
             <a href="../_sources/contributors_manual/krita_manual_conventions.rst.txt" rel="nofollow"> 
              
               <img src="../_static/images/source-code.png" />
-             <!-- View page source -->
+             <!-- 檢視頁面原始碼 -->
 
           </a>
           
@@ -248,9 +248,9 @@
            <div itemprop="articleBody">
             
   <section id="mark-up-conventions-for-the-krita-manual">
-<span id="krita-markup-conventions"></span><h1><a class="toc-backref" href="#id12">Mark-up conventions for the Krita Manual</a><a class="headerlink" href="#mark-up-conventions-for-the-krita-manual" title="Permalink to this headline">¶</a></h1>
+<span id="krita-markup-conventions"></span><h1><a class="toc-backref" href="#id13">Krita 手冊中 reStructuredText 標記格式使用慣例</a><a class="headerlink" href="#mark-up-conventions-for-the-krita-manual" title="本標題的永久連結">¶</a></h1>
 <p>This details the style conventions for using restructured text for the Krita Manual.</p>
-<p>It’s recommended to look over the <a class="reference external" href="http://docutils.sourceforge.net/rst.html">official specification</a> for reStructuredText, and given it lives on sourceforge, to save a copy to your harddrive (sourceforge has, at this time of writing, some issues with server uptime):</p>
+<p>It's recommended to look over the <a class="reference external" href="http://docutils.sourceforge.net/rst.html">official specification</a> for reStructuredText, and given it lives on sourceforge, to save a copy to your harddrive (sourceforge has, at this time of writing, some issues with server uptime):</p>
 <dl class="simple">
 <dt>User Manual:</dt><dd><ul class="simple">
 <li><p><a class="reference external" href="http://docutils.sourceforge.net/docs/user/rst/quickstart.html">Primer</a></p></li>
@@ -266,46 +266,46 @@
 </ul>
 </dd>
 <dt>Sphinx specific docs:</dt><dd><ul class="simple">
-<li><p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html">Sphinx’ page on restructured text</a> – This is useful for the specific sphinx directives and roles it uses to generate for example table of contents.</p></li>
+<li><p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html">Sphinx' page on restructured text</a> -- This is useful for the specific sphinx directives and roles it uses to generate for example table of contents.</p></li>
 </ul>
 </dd>
 </dl>
 <p>There are differences between the official reStructuredText and the sphinx docs multiple ways to do things. This document specifies the suggested conventions to go with.</p>
-<div class="contents topic" id="contents">
-<p class="topic-title">Contents</p>
+<div class="contents topic" id="id1">
+<p class="topic-title">目錄</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#mark-up-conventions-for-the-krita-manual" id="id12">Mark-up conventions for the Krita Manual</a></p>
+<li><p><a class="reference internal" href="#mark-up-conventions-for-the-krita-manual" id="id13">Krita 手冊中 reStructuredText 標記格式使用慣例</a></p>
 <ul>
-<li><p><a class="reference internal" href="#meta-data" id="id13">Meta data</a></p></li>
-<li><p><a class="reference internal" href="#headings" id="id14">Headings</a></p></li>
-<li><p><a class="reference internal" href="#linking" id="id15">Linking</a></p>
+<li><p><a class="reference internal" href="#meta-data" id="id14">Meta data</a></p></li>
+<li><p><a class="reference internal" href="#headings" id="id15">Headings</a></p></li>
+<li><p><a class="reference internal" href="#linking" id="id16">Linking</a></p>
 <ul>
-<li><p><a class="reference internal" href="#footnotes-and-further-reading" id="id16">Footnotes and further reading</a></p></li>
+<li><p><a class="reference internal" href="#footnotes-and-further-reading" id="id17">Footnotes and further reading</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#images" id="id17">Images</a></p></li>
-<li><p><a class="reference internal" href="#in-text-markup" id="id18">In-text Markup</a></p></li>
-<li><p><a class="reference internal" href="#substitution-references" id="id19">Substitution References</a></p></li>
-<li><p><a class="reference internal" href="#lists" id="id20">Lists</a></p>
+<li><p><a class="reference internal" href="#images" id="id18">Images</a></p></li>
+<li><p><a class="reference internal" href="#in-text-markup" id="id19">In-text Markup</a></p></li>
+<li><p><a class="reference internal" href="#substitution-references" id="id20">Substitution References</a></p></li>
+<li><p><a class="reference internal" href="#lists" id="id21">Lists</a></p>
 <ul>
-<li><p><a class="reference internal" href="#ordinated-lists" id="id21">Ordinated lists</a></p></li>
-<li><p><a class="reference internal" href="#unordered-lists" id="id22">Unordered lists</a></p></li>
-<li><p><a class="reference internal" href="#definition-lists" id="id23">Definition Lists</a></p></li>
+<li><p><a class="reference internal" href="#ordinated-lists" id="id22">Ordinated lists</a></p></li>
+<li><p><a class="reference internal" href="#unordered-lists" id="id23">Unordered lists</a></p></li>
+<li><p><a class="reference internal" href="#definition-lists" id="id24">Definition Lists</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#tables" id="id24">Tables</a></p></li>
-<li><p><a class="reference internal" href="#admonishments-and-asides" id="id25">Admonishments and asides</a></p></li>
-<li><p><a class="reference internal" href="#code-snippets" id="id26">Code Snippets</a></p></li>
-<li><p><a class="reference internal" href="#other-preformatted-text" id="id27">Other preformatted text</a></p></li>
-<li><p><a class="reference internal" href="#glossaries-terms-and-index" id="id28">Glossaries, Terms and Index</a></p></li>
-<li><p><a class="reference internal" href="#quotes" id="id29">Quotes</a></p></li>
-<li><p><a class="reference internal" href="#notes-for-translators" id="id30">Notes for Translators</a></p></li>
+<li><p><a class="reference internal" href="#tables" id="id25">Tables</a></p></li>
+<li><p><a class="reference internal" href="#admonishments-and-asides" id="id26">Admonishments and asides</a></p></li>
+<li><p><a class="reference internal" href="#code-snippets" id="id27">Code Snippets</a></p></li>
+<li><p><a class="reference internal" href="#other-preformatted-text" id="id28">Other preformatted text</a></p></li>
+<li><p><a class="reference internal" href="#glossaries-terms-and-index" id="id29">Glossaries, Terms and Index</a></p></li>
+<li><p><a class="reference internal" href="#quotes" id="id30">Quotes</a></p></li>
+<li><p><a class="reference internal" href="#notes-for-translators" id="id31">Notes for Translators</a></p></li>
 </ul>
 </li>
 </ul>
 </div>
 <section id="meta-data">
-<h2><a class="toc-backref" href="#id13">Meta data</a><a class="headerlink" href="#meta-data" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id14">Meta data</a><a class="headerlink" href="#meta-data" title="本標題的永久連結">¶</a></h2>
 <p>Each page should start with the following three things:</p>
 <ol class="arabic">
 <li><dl>
@@ -331,7 +331,7 @@
 </dl>
 </li>
 <li><dl>
-<dt>Indexing terms.</dt><dd><p>These are comma-separated terms under which the page will be indexed in <a class="reference internal" href="../genindex.html"><span class="std std-ref">Index</span></a>. The generated index is quite useful for both PDF as well as people who are not sure what the exact name is of the term they are looking for. They are defined as follows:</p>
+<dt>Indexing terms.</dt><dd><p>These are comma-separated terms under which the page will be indexed in <a class="reference internal" href="../genindex.html"><span class="std std-ref">索引</span></a>. The generated index is quite useful for both PDF as well as people who are not sure what the exact name is of the term they are looking for. They are defined as follows:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>.. index:: Keyword, Keyword with Spaces, ! Main Definition Keyword
 </pre></div>
 </div>
@@ -350,7 +350,7 @@
 </ol>
 </section>
 <section id="headings">
-<h2><a class="toc-backref" href="#id14">Headings</a><a class="headerlink" href="#headings" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id15">Headings</a><a class="headerlink" href="#headings" title="本標題的永久連結">¶</a></h2>
 <p>Headings will be done in the following order:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">############</span>
 <span class="n">Part</span><span class="o">/</span><span class="n">Section</span>
@@ -380,45 +380,45 @@
 <span class="s1">&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;</span>
 </pre></div>
 </div>
-<p>These conventions were more or less decided by <a class="reference external" href="https://pandoc.org/">Pandoc</a>’s mediawiki to reStructuredText conversion. If you need more than 4 headings, ask yourself first if the page hasn’t gotten too complicated and needs splitting up.</p>
+<p>These conventions were more or less decided by <a class="reference external" href="https://pandoc.org/">Pandoc</a>'s mediawiki to reStructuredText conversion. If you need more than 4 headings, ask yourself first if the page hasn't gotten too complicated and needs splitting up.</p>
 <p>Sometimes you need to link to a subsection of a page, add a label above the heading in that case.</p>
 <p>Headers should not end with punctuation, as the header will be used as the link name when linking to a label.</p>
 </section>
 <section id="linking">
-<h2><a class="toc-backref" href="#id15">Linking</a><a class="headerlink" href="#linking" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id16">Linking</a><a class="headerlink" href="#linking" title="本標題的永久連結">¶</a></h2>
 <p>Linking is done with <code class="docutils literal notranslate"><span class="pre">:ref:`label_name`</span></code>. When you need an alternative link text, you use <code class="docutils literal notranslate"><span class="pre">:ref:`actual</span> <span class="pre">text</span> <span class="pre">shown</span> <span class="pre">&lt;label_name&gt;`</span></code>.</p>
-<p>Linking to external pages is done with <code class="docutils literal notranslate"><span class="pre">`url`_</span></code> and <code class="docutils literal notranslate"><span class="pre">`link</span> <span class="pre">name</span> <span class="pre">&lt;url&gt;`_</span></code>, which’ll become <a class="reference external" href="url">link name</a>.</p>
-<p><a class="reference external" href="https://pandoc.org/">Pandoc</a> likes to turn these into <code class="docutils literal notranslate"><span class="pre">`link</span> <span class="pre">name`__</span></code> and then add <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">__</span> <span class="pre">:url</span></code> at the end of the document. This is a so-called ‘anonymous hyperlink’, meaning that depending on the order of the links appearing in the text the order of the links at the end of the text are associated with one another. If this sounds confusing and difficult, it is because it is. That is also the exact reason why we’d like to avoid links like these.</p>
+<p>Linking to external pages is done with <code class="docutils literal notranslate"><span class="pre">`url`_</span></code> and <code class="docutils literal notranslate"><span class="pre">`link</span> <span class="pre">name</span> <span class="pre">&lt;url&gt;`_</span></code>, which'll become <a class="reference external" href="url">link name</a>.</p>
+<p><a class="reference external" href="https://pandoc.org/">Pandoc</a> likes to turn these into <code class="docutils literal notranslate"><span class="pre">`link</span> <span class="pre">name`__</span></code> and then add <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">__</span> <span class="pre">:url</span></code> at the end of the document. This is a so-called 'anonymous hyperlink', meaning that depending on the order of the links appearing in the text the order of the links at the end of the text are associated with one another. If this sounds confusing and difficult, it is because it is. That is also the exact reason why we'd like to avoid links like these.</p>
 <section id="footnotes-and-further-reading">
-<h3><a class="toc-backref" href="#id16">Footnotes and further reading</a><a class="headerlink" href="#footnotes-and-further-reading" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id17">Footnotes and further reading</a><a class="headerlink" href="#footnotes-and-further-reading" title="本標題的永久連結">¶</a></h3>
 <p>Footnotes can be made in 3 ways, the most common one is with autonumbering, as per reference:</p>
-<p><a class="footnote-reference brackets" href="#id4" id="id2">1</a> is a reference to footnote 1, and <a class="footnote-reference brackets" href="#id5" id="id3">2</a> is a reference to
+<p><a class="footnote-reference brackets" href="#id5" id="id3">1</a> is a reference to footnote 1, and <a class="footnote-reference brackets" href="#id6" id="id4">2</a> is a reference to
 footnote 2.</p>
 <dl class="footnote brackets">
-<dt class="label" id="id4"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>
+<dt class="label" id="id5"><span class="brackets"><a class="fn-backref" href="#id3">1</a></span></dt>
 <dd><p>This is footnote 1.</p>
 </dd>
-<dt class="label" id="id5"><span class="brackets"><a class="fn-backref" href="#id3">2</a></span></dt>
+<dt class="label" id="id6"><span class="brackets"><a class="fn-backref" href="#id4">2</a></span></dt>
 <dd><p>This is footnote 2.</p>
 </dd>
-<dt class="label" id="id6"><span class="brackets"><a class="fn-backref" href="#id7">3</a></span></dt>
+<dt class="label" id="id7"><span class="brackets"><a class="fn-backref" href="#id8">3</a></span></dt>
 <dd><p>This is footnote 3.</p>
 </dd>
 </dl>
-<p><a class="footnote-reference brackets" href="#id6" id="id7">3</a> is a reference to footnote 3.</p>
-<p>Here is a citation reference: <a class="reference internal" href="#cit2002" id="id8"><span>[CIT2002]</span></a> .</p>
+<p><a class="footnote-reference brackets" href="#id7" id="id8">3</a> is a reference to footnote 3.</p>
+<p>Here is a citation reference: <a class="reference internal" href="#cit2002" id="id9"><span>[CIT2002]</span></a> .</p>
 <dl class="citation">
-<dt class="label" id="cit2002"><span class="brackets"><a class="fn-backref" href="#id8">CIT2002</a></span></dt>
-<dd><p>This is the citation.  It’s just like a footnote,
+<dt class="label" id="cit2002"><span class="brackets"><a class="fn-backref" href="#id9">CIT2002</a></span></dt>
+<dd><p>This is the citation.  It's just like a footnote,
 except the label is textual.</p>
 </dd>
 </dl>
 <p>Citation can also be referenced with <code class="docutils literal notranslate"><span class="pre">`citation</span> <span class="pre">&lt;CIT2002&gt;`_</span></code>.</p>
-<p>We don’t actually use footnotes in the manual due to the fact that it is a little bit too academical for our readers. However, we do collect documents and links that give a little bit more information on a topic at the end of a page. Sphinx has the <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">seealso::</span></code> directive for linking to external links, while reStructuredText suggests to use <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">rubic::</span> <span class="pre">Footnotes</span></code> for specifically collecting footnotes as that plays nice with LaTeX.</p>
+<p>We don't actually use footnotes in the manual due to the fact that it is a little bit too academical for our readers. However, we do collect documents and links that give a little bit more information on a topic at the end of a page. Sphinx has the <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">seealso::</span></code> directive for linking to external links, while reStructuredText suggests to use <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">rubic::</span> <span class="pre">Footnotes</span></code> for specifically collecting footnotes as that plays nice with LaTeX.</p>
 </section>
 </section>
 <section id="images">
-<h2><a class="toc-backref" href="#id17">Images</a><a class="headerlink" href="#images" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id18">Images</a><a class="headerlink" href="#images" title="本標題的永久連結">¶</a></h2>
 <p>Use the image directive for images without captions:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">image</span><span class="p">::</span> <span class="o">/</span><span class="n">images</span><span class="o">/</span><span class="n">sample</span><span class="o">.</span><span class="n">png</span>
    <span class="p">:</span><span class="n">width</span><span class="p">:</span> <span class="mi">800</span>
@@ -437,17 +437,17 @@ except the label is textual.</p>
 </div>
 <p>The latter gives:</p>
 <blockquote>
-<div><figure class="align-center" id="id11" style="width: 800px">
+<div><figure class="align-center" id="id12" style="width: 800px">
 <img alt="an image." src="../_images/sample.png" />
 <figcaption>
-<p><span class="caption-text">A caption –  notice how the first letter of the caption in the directive is aligned with the :figwidth: option.</span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">A caption --  notice how the first letter of the caption in the directive is aligned with the :figwidth: option.</span><a class="headerlink" href="#id12" title="本圖片的永久連結">¶</a></p>
 </figcaption>
 </figure>
 </div></blockquote>
-<p>Images should go into the <code class="docutils literal notranslate"><span class="pre">/images</span></code> folder. By using <code class="docutils literal notranslate"><span class="pre">/images</span></code> instead of <code class="docutils literal notranslate"><span class="pre">images</span></code>, sphinx will know the filepath isn’t relative.</p>
+<p>Images should go into the <code class="docutils literal notranslate"><span class="pre">/images</span></code> folder. By using <code class="docutils literal notranslate"><span class="pre">/images</span></code> instead of <code class="docutils literal notranslate"><span class="pre">images</span></code>, sphinx will know the filepath isn't relative.</p>
 </section>
 <section id="in-text-markup">
-<h2><a class="toc-backref" href="#id18">In-text Markup</a><a class="headerlink" href="#in-text-markup" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id19">In-text Markup</a><a class="headerlink" href="#in-text-markup" title="本標題的永久連結">¶</a></h2>
 <p>You can make text <em>emphasized</em> and <strong>strong</strong> with a single asterisk and double respectively:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span><span class="n">emphasize</span><span class="o">*</span>
 <span class="o">**</span><span class="n">strong</span><span class="o">**</span>
@@ -465,30 +465,30 @@ except the label is textual.</p>
 <p>Avoid randomly bolding words. It does <em>not</em> make the text easier or friendlier to read.</p>
 </section>
 <section id="substitution-references">
-<h2><a class="toc-backref" href="#id19">Substitution References</a><a class="headerlink" href="#substitution-references" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id20">Substitution References</a><a class="headerlink" href="#substitution-references" title="本標題的永久連結">¶</a></h2>
 <p>You can create a sort of shorthand for a piece of text or an image by doing:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="o">|</span><span class="n">shorthand</span><span class="o">|</span> <span class="n">replace</span><span class="p">::</span> <span class="n">something</span> <span class="ow">or</span> <span class="n">the</span> <span class="n">other</span><span class="o">.</span>
 </pre></div>
 </div>
-<p>which means that if you use <code class="docutils literal notranslate"><span class="pre">|shorthand|</span></code>, in the text, it’ll be replaced with ‘something or the other’. This is useful for images and text that needs to be formatted in a complicated way, like in the case of “LaTeX”.</p>
-<p>The krita documentation has <code class="docutils literal notranslate"><span class="pre">|mouseleft|</span></code>, <code class="docutils literal notranslate"><span class="pre">|mousemiddle|</span></code>, <code class="docutils literal notranslate"><span class="pre">|mousescroll|</span></code> and <code class="docutils literal notranslate"><span class="pre">|mouseright|</span></code>, which’ll turn into <img alt="mouseleft" src="../_images/Krita_mouse_left.png" />, <img alt="mousemiddle" src="../_images/Krita_mouse_middle.png" />, <img alt="mousescroll" src="../_images/Krita_mouse_scroll.png" /> and <img alt="mouseright" src="../_images/Krita_mouse_right.png" /> respectively. These are defined in the sphinx conf.py, and are appended to each rst file.</p>
+<p>which means that if you use <code class="docutils literal notranslate"><span class="pre">|shorthand|</span></code>, in the text, it'll be replaced with 'something or the other'. This is useful for images and text that needs to be formatted in a complicated way, like in the case of &quot;LaTeX&quot;.</p>
+<p>The krita documentation has <code class="docutils literal notranslate"><span class="pre">|mouseleft|</span></code>, <code class="docutils literal notranslate"><span class="pre">|mousemiddle|</span></code>, <code class="docutils literal notranslate"><span class="pre">|mousescroll|</span></code> and <code class="docutils literal notranslate"><span class="pre">|mouseright|</span></code>, which'll turn into <img alt="mouseleft" src="../_images/Krita_mouse_left.png" />, <img alt="mousemiddle" src="../_images/Krita_mouse_middle.png" />, <img alt="mousescroll" src="../_images/Krita_mouse_scroll.png" /> and <img alt="mouseright" src="../_images/Krita_mouse_right.png" /> respectively. These are defined in the sphinx conf.py, and are appended to each rst file.</p>
 <p>For links, if you reuse the same link over and over, you can write something like the following at the end of the file:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">_bugzilla</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">bugs</span><span class="o">.</span><span class="n">kde</span><span class="o">.</span><span class="n">org</span><span class="o">/</span>
 <span class="o">..</span> <span class="n">_Krita</span> <span class="n">Manual</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">docs</span><span class="o">.</span><span class="n">krita</span><span class="o">.</span><span class="n">org</span><span class="o">/</span>
 </pre></div>
 </div>
-<p>Then, when typing a link, you can just use <code class="docutils literal notranslate"><span class="pre">`bugzilla`_</span></code> to link to bugzilla with “bugzilla” used as the text of the link. <code class="docutils literal notranslate"><span class="pre">`Krita</span> <span class="pre">Manual`_</span></code> will in turn link to docs.krita.org with the text “Krita Manual”.</p>
+<p>Then, when typing a link, you can just use <code class="docutils literal notranslate"><span class="pre">`bugzilla`_</span></code> to link to bugzilla with &quot;bugzilla&quot; used as the text of the link. <code class="docutils literal notranslate"><span class="pre">`Krita</span> <span class="pre">Manual`_</span></code> will in turn link to docs.krita.org with the text &quot;Krita Manual&quot;.</p>
 </section>
 <section id="lists">
-<h2><a class="toc-backref" href="#id20">Lists</a><a class="headerlink" href="#lists" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id21">Lists</a><a class="headerlink" href="#lists" title="本標題的永久連結">¶</a></h2>
 <section id="ordinated-lists">
-<h3><a class="toc-backref" href="#id21">Ordinated lists</a><a class="headerlink" href="#ordinated-lists" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id22">Ordinated lists</a><a class="headerlink" href="#ordinated-lists" title="本標題的永久連結">¶</a></h3>
 <ol class="arabic simple">
 <li><p>Apple</p></li>
 <li><p>Pear</p></li>
 <li><p>Banana</p></li>
 </ol>
-<p>Or…</p>
+<p>Or...</p>
 <ol class="upperalpha simple">
 <li><p>Table</p></li>
 <li><p>Chair</p></li>
@@ -525,7 +525,7 @@ except the label is textual.</p>
 </div>
 </section>
 <section id="unordered-lists">
-<h3><a class="toc-backref" href="#id22">Unordered lists</a><a class="headerlink" href="#unordered-lists" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id23">Unordered lists</a><a class="headerlink" href="#unordered-lists" title="本標題的永久連結">¶</a></h3>
 <ul class="simple">
 <li><p>red</p></li>
 <li><p>yellow</p></li>
@@ -572,7 +572,7 @@ except the label is textual.</p>
 </div>
 </section>
 <section id="definition-lists">
-<h3><a class="toc-backref" href="#id23">Definition Lists</a><a class="headerlink" href="#definition-lists" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id24">Definition Lists</a><a class="headerlink" href="#definition-lists" title="本標題的永久連結">¶</a></h3>
 <p>A favourite! Definition lists are especially useful when dealing with enumerating all the options in a docker and trying to add a simple explanation behind them.</p>
 <dl>
 <dt>Definition</dt><dd><p>Explanation.</p>
@@ -591,7 +591,7 @@ except the label is textual.</p>
 </section>
 </section>
 <section id="tables">
-<h2><a class="toc-backref" href="#id24">Tables</a><a class="headerlink" href="#tables" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id25">Tables</a><a class="headerlink" href="#tables" title="本標題的永久連結">¶</a></h2>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 60%" />
@@ -646,45 +646,45 @@ except the label is textual.</p>
      <span class="o">*</span> <span class="nb">list</span> <span class="n">table</span>
 </pre></div>
 </div>
-<p>Full grid tables are best for when you need all features like complex column and row spans, but they’re tricky to make. For that reason, small tables are best off being done with the simple syntax, while really long tables are best done with a list directive because that is just much easier to write and maintain.</p>
+<p>Full grid tables are best for when you need all features like complex column and row spans, but they're tricky to make. For that reason, small tables are best off being done with the simple syntax, while really long tables are best done with a list directive because that is just much easier to write and maintain.</p>
 </section>
 <section id="admonishments-and-asides">
-<h2><a class="toc-backref" href="#id25">Admonishments and asides</a><a class="headerlink" href="#admonishments-and-asides" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id26">Admonishments and asides</a><a class="headerlink" href="#admonishments-and-asides" title="本標題的永久連結">¶</a></h2>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
+<p class="admonition-title">備註</p>
 <p>Admonishments are sort of like a separate section that the reader needs to pay attention to.</p>
 </div>
 <p>Admonishments that can be used are the following (in order of seriousness):</p>
 <div class="admonition hint">
-<p class="admonition-title">Hint</p>
-<p>Hints are useful to give a little bit more information on a topic than is useful in the main text. Like, “These packages are named differently in openSuse versus Debian”.</p>
+<p class="admonition-title">提示</p>
+<p>Hints are useful to give a little bit more information on a topic than is useful in the main text. Like, &quot;These packages are named differently in openSuse versus Debian&quot;.</p>
 </div>
 <div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>Extra information on how to do something, like, “You can make a template of your favourite document setup”, or “Use m to mirror the canvas and see errors more easily in your drawing”.</p>
+<p class="admonition-title">小訣竅</p>
+<p>Extra information on how to do something, like, &quot;You can make a template of your favourite document setup&quot;, or &quot;Use m to mirror the canvas and see errors more easily in your drawing&quot;.</p>
 </div>
 <div class="admonition important">
-<p class="admonition-title">Important</p>
+<p class="admonition-title">重要</p>
 <p>Something that is important to note, but is not necessarily negative.</p>
 </div>
 <div class="admonition warning">
-<p class="admonition-title">Warning</p>
+<p class="admonition-title">警告</p>
 <p>This is in general when something is negative.</p>
 </div>
 <div class="admonition attention">
-<p class="admonition-title">Attention</p>
+<p class="admonition-title">注意</p>
 <p>General attention grabber. Use this when the subject is more important than warning, but not as important that is could get a dataloss.</p>
 </div>
 <div class="admonition caution">
-<p class="admonition-title">Caution</p>
+<p class="admonition-title">警示</p>
 <p>This is for things that could cause dataloss, like forgetting to save, or that Python currently has no undo functionality.</p>
 </div>
 <div class="admonition danger">
-<p class="admonition-title">Danger</p>
+<p class="admonition-title">危險</p>
 <p>This should be for things that are dangerous for the computer in general, this includes things that can cause out of memory style freezes.</p>
 </div>
 <div class="admonition error">
-<p class="admonition-title">Error</p>
+<p class="admonition-title">錯誤</p>
 <p>This one is probably not relevant for a manual. Sphinx can create these manually given some situations, but our configuration does not do so by default.</p>
 </div>
 <div class="admonition-generic-admonition-that-can-have-any-text admonition">
@@ -705,12 +705,12 @@ except the label is textual.</p>
 </div>
 <div class="topic">
 <p class="topic-title">Horizontal Rulers</p>
-<p>Horizontal rulers are usually used when the topic switches rather directly. This is very common in more narrative based writing, such as history or fiction. The Krita manual is more instruction and reference style writing, that is to say, we don’t usually tell a long story to indicate how different elements come together, but rather long stories are there to motivate why certain steps are taken in a certain manner. Topic changes then usually happen because we go into a new section, rather than switching to a related section. It is therefore better to use headings or the <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">Topic::</span></code> directive. Headings also make it easier to read.</p>
+<p>Horizontal rulers are usually used when the topic switches rather directly. This is very common in more narrative based writing, such as history or fiction. The Krita manual is more instruction and reference style writing, that is to say, we don't usually tell a long story to indicate how different elements come together, but rather long stories are there to motivate why certain steps are taken in a certain manner. Topic changes then usually happen because we go into a new section, rather than switching to a related section. It is therefore better to use headings or the <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">Topic::</span></code> directive. Headings also make it easier to read.</p>
 </div>
 <hr class="docutils" />
 <p>That said, horizontal rulers can be made with <code class="docutils literal notranslate"><span class="pre">----</span></code>.</p>
 <p class="rubric">The rubric directive</p>
-<p>The rubric directive is a heading directive that at first glance looks like “topic”, but where the topic is over several paragraphs, rubric itself only deals with the header, like so:</p>
+<p>The rubric directive is a heading directive that at first glance looks like &quot;topic&quot;, but where the topic is over several paragraphs, rubric itself only deals with the header, like so:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">rubric</span><span class="p">::</span> <span class="n">The</span> <span class="n">rubric</span> <span class="n">directive</span>
 </pre></div>
 </div>
@@ -719,22 +719,22 @@ except the label is textual.</p>
 <dl class="simple">
 <dt>Topic</dt><dd><p>When the text is separated from the flow, so it goes into a different subject than the text itself is naturally going to.</p>
 </dd>
-<dt>Rubric</dt><dd><p>When the text isn’t separated from the flow, but it does not need a header either.</p>
+<dt>Rubric</dt><dd><p>When the text isn't separated from the flow, but it does not need a header either.</p>
 </dd>
 <dt>Admonishments</dt><dd><p>Only when they fit semantically. This is especially necessary for the danger and warning admonishments, as seeing them too often can make users blind to them.</p>
 </dd>
 </dl>
 </section>
 <section id="code-snippets">
-<h2><a class="toc-backref" href="#id26">Code Snippets</a><a class="headerlink" href="#code-snippets" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id27">Code Snippets</a><a class="headerlink" href="#code-snippets" title="本標題的永久連結">¶</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">Inline</span> <span class="pre">code</span> <span class="pre">snippets</span></code> are done with <code class="docutils literal notranslate"><span class="pre">``backticks``</span></code>.</p>
-<p>Multi-line code snippets are done by ending the previous section with <code class="docutils literal notranslate"><span class="pre">::</span></code>, which’ll look like this:</p>
+<p>Multi-line code snippets are done by ending the previous section with <code class="docutils literal notranslate"><span class="pre">::</span></code>, which'll look like this:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">This</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">paragraph</span><span class="p">,</span> <span class="ow">and</span> <span class="n">we</span> <span class="n">define</span> <span class="n">a</span> <span class="n">preformated</span> <span class="n">snippet</span> <span class="n">like</span> <span class="n">so</span><span class="p">::</span>
 
     <span class="n">Be</span> <span class="n">sure</span> <span class="n">to</span> <span class="n">add</span> <span class="n">a</span> <span class="n">white</span> <span class="n">space</span> <span class="ow">and</span> <span class="n">a</span> <span class="n">tab</span> <span class="n">afterwards</span> <span class="n">before</span> <span class="n">starting</span> <span class="n">the</span> <span class="n">snippet</span><span class="o">.</span>
 </pre></div>
 </div>
-<p>You can also use the <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">code::</span></code> directive. If you add the language name after it, it’ll do the appropriate syntax highlighting:</p>
+<p>You can also use the <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">code::</span></code> directive. If you add the language name after it, it'll do the appropriate syntax highlighting:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">code</span><span class="p">::</span> <span class="n">python</span>
 
     <span class="c1"># Python comment</span>
@@ -752,7 +752,7 @@ except the label is textual.</p>
     <span class="n">string</span> <span class="o">=</span> <span class="s2">&quot;hello world&quot;</span>
 </pre></div>
 </div>
-<p>some more…</p>
+<p>some more...</p>
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// C++ comment</span>
 <span class="kt">int</span> <span class="nf">myFunction</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="p">)</span> <span class="p">{</span>
     <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
@@ -784,7 +784,7 @@ except the label is textual.</p>
 </div>
 </section>
 <section id="other-preformatted-text">
-<h2><a class="toc-backref" href="#id27">Other preformatted text</a><a class="headerlink" href="#other-preformatted-text" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id28">Other preformatted text</a><a class="headerlink" href="#other-preformatted-text" title="本標題的永久連結">¶</a></h2>
 <div class="line-block">
 <div class="line">One can</div>
 <div class="line">preformat</div>
@@ -809,13 +809,13 @@ absolutely required to represent content that needs exact formatting, but never
 merely for aesthetic reasons.</p>
 </section>
 <section id="glossaries-terms-and-index">
-<h2><a class="toc-backref" href="#id28">Glossaries, Terms and Index</a><a class="headerlink" href="#glossaries-terms-and-index" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id29">Glossaries, Terms and Index</a><a class="headerlink" href="#glossaries-terms-and-index" title="本標題的永久連結">¶</a></h2>
 <p>These are sphinx features.</p>
 <p>Index is used in the top section, right now only single index entries are used.</p>
 <p>Glossaries are used for some of the menu entry sections, but not all of them.</p>
 </section>
 <section id="quotes">
-<h2><a class="toc-backref" href="#id29">Quotes</a><a class="headerlink" href="#quotes" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id30">Quotes</a><a class="headerlink" href="#quotes" title="本標題的永久連結">¶</a></h2>
 <p>Quotes are done like this:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">I</span> <span class="n">am</span> <span class="ow">not</span> <span class="n">sure</span> <span class="n">why</span> <span class="n">you</span><span class="s1">&#39;d need quotes in a user manual...</span>
 
@@ -824,13 +824,13 @@ merely for aesthetic reasons.</p>
 </div>
 <p>This becomes a blockquote.</p>
 <blockquote>
-<div><p>I am not sure why you’d need quotes in a user manual…</p>
+<div><p>I am not sure why you'd need quotes in a user manual...</p>
 <p class="attribution">—Wolthera</p>
 </div></blockquote>
 <p>We do actually use quotes in some places. Try to add a link to the name to define where it came from.</p>
 </section>
 <section id="notes-for-translators">
-<h2><a class="toc-backref" href="#id30">Notes for Translators</a><a class="headerlink" href="#notes-for-translators" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id31">Notes for Translators</a><a class="headerlink" href="#notes-for-translators" title="本標題的永久連結">¶</a></h2>
 <p>If you are translating the manual for a language that does not usually use
 whitespaces around words (e.g. Chinese and Japanese), you can use an escaped
 whitespace to separate markup and words. This is particularly useful for page
@@ -843,8 +843,8 @@ another backslash:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>床前\\ `明月 &lt;https://krita.org/&gt;`_\\ 光
 </pre></div>
 </div>
-<p>The above produces “床前<a class="reference external" href="https://krita.org/">明月</a>光”, instead of
-“床前 <a class="reference external" href="https://krita.org/">明月</a> 光”.</p>
+<p>The above produces &quot;床前<a class="reference external" href="https://krita.org/">明月</a>光&quot;, instead of
+&quot;床前 <a class="reference external" href="https://krita.org/">明月</a> 光&quot;.</p>
 </section>
 </section>
 
@@ -856,10 +856,10 @@ another backslash:</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="krita_manual_readme.html" class="btn btn-neutral float-right" title="Krita Manual Contribution Guide" accesskey="n" rel="next"> <!-- Next --> <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="krita_manual_readme.html" class="btn btn-neutral float-right" title="Krita 手冊貢獻指南" accesskey="n" rel="next"> <!-- 下一個 --> <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="community.html" class="btn btn-neutral" title="The Krita Community" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- Previous  -->  </a>
+        <a href="community.html" class="btn btn-neutral" title="Krita 的社群" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- 上一個  -->  </a>
       
     </div>
   
@@ -868,19 +868,19 @@ another backslash:</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright licensed under the GNU Free Documentation License 1.3+ unless stated otherwise.
+        &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          Revision <code>7c271ce</code>.
+          修訂版本 <code>7c271ce</code>
         </span>
       
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a modified <a href="https://github.com/rtfd/sphinx_rtd_theme">RTD theme</a>.<br/>
-  <a href="https://krita.org" title="Krita official website.">Krita official website</a> |
-  <a href="https://invent.kde.org/documentation/docs-krita-org/" title="The Gitlab instance to edit this pages and collaborate.">Git repository for docs.krita.org </a> |
-  <a href="https://www.kde.org/community/whatiskde/impressum-en.php" title="To know more about KDE, code of conduct, privacy policy and GDPR.">KDE Impressum</a>.
+  使用 <a href="http://sphinx-doc.org/">Sphinx</a> 以及經修改過的 <a href="https://github.com/rtfd/sphinx_rtd_theme">RTD 主題</a>建置<br/>
+  <a href="https://krita.org" title="Krita official website.">Krita 官方網站</a> |
+  <a href="https://invent.kde.org/documentation/docs-krita-org/" title="這份手冊在 KDE 的 GitLab 網址">docs.krita.org 的 Git 原始碼儲存庫</a> |
+  <a href="https://www.kde.org/community/whatiskde/impressum-en.php" title="了解更多關於 KDE、code of conduct、privacy policy 及 GDPR">KDE Impressum</a>
    
 
 </footer>
@@ -899,7 +899,7 @@ another backslash:</p>
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
             VERSION:'5.0.0 Beta',
-            LANGUAGE:'en',
+            LANGUAGE:'zh_TW',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,
@@ -910,6 +910,7 @@ another backslash:</p>
       <script type="text/javascript" src="../_static/jquery.js"></script>
       <script type="text/javascript" src="../_static/underscore.js"></script>
       <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
 
   
 

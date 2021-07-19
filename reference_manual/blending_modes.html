@@ -1,17 +1,17 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-TW" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-TW" > <!--<![endif]-->
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta property="og:title" name="title" content="Blending Modes" />
+  <meta property="og:title" name="title" content="混色模式" />
   <meta property="og:site-name" content="Krita Manual" />
   <meta property="og:type" content="article" />
-  <meta property="og:locale" content="en" />
+  <meta property="og:locale" content="zh_TW" />
   <meta property="og:locale:alternate" content="ca" />
-  
+  <meta property="og:locale:alternate" content="en" />
   <meta property="og:locale:alternate" content="fr" />
   <meta property="og:locale:alternate" content="it" />
   <meta property="og:locale:alternate" content="ja" />
@@ -21,13 +21,13 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-07-19T15:33:59" />
+  <meta property="og:article:modified_time" content="2021-07-19T15:40:51" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="Overview of Krita's blending modes." lang="en" name="description" xml:lang="en" />
 
   
   
-  <title>Blending Modes &mdash; Krita Manual 5.0.0 Beta documentation</title>
+  <title>混色模式 &mdash; Krita Manual 5.0.0 Beta 說明文件</title>
   
 
   
@@ -58,10 +58,10 @@
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Arithmetic" href="blending_modes/arithmetic.html" />
-    <link rel="prev" title="Audio for Animation" href="audio_for_animation.html" /> 
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜尋" href="../search.html" />
+    <link rel="next" title="數學運算" href="blending_modes/arithmetic.html" />
+    <link rel="prev" title="動畫音訊" href="audio_for_animation.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -92,7 +92,7 @@
           
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="搜尋文件" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -127,62 +127,62 @@
             
             
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../user_manual.html">User Manual</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../general_concepts.html">General Concepts</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../reference_manual.html">Reference Manual</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="audio_for_animation.html">Audio for Animation</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Blending Modes</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#favorites">Favorites</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#hotkeys-associated-with-blending-modes">Hotkeys associated with Blending modes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#available-blending-modes">Available Blending Modes</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="blending_modes/arithmetic.html">Arithmetic</a></li>
-<li class="toctree-l4"><a class="reference internal" href="blending_modes/binary.html">Binary</a></li>
-<li class="toctree-l4"><a class="reference internal" href="blending_modes/darken.html">Darken</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_manual.html">使用者手冊</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general_concepts.html">通用概念</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../reference_manual.html">參考文件</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="audio_for_animation.html">動畫音訊</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">混色模式</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#favorites">首選</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hotkeys-associated-with-blending-modes">混色模式相關快捷鍵</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#available-blending-modes">可用的混色模式</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="blending_modes/arithmetic.html">數學運算</a></li>
+<li class="toctree-l4"><a class="reference internal" href="blending_modes/binary.html">二進位制</a></li>
+<li class="toctree-l4"><a class="reference internal" href="blending_modes/darken.html">變暗</a></li>
 <li class="toctree-l4"><a class="reference internal" href="blending_modes/hsx.html">HSX</a></li>
-<li class="toctree-l4"><a class="reference internal" href="blending_modes/lighten.html">Lighten</a></li>
-<li class="toctree-l4"><a class="reference internal" href="blending_modes/misc.html">Misc</a></li>
+<li class="toctree-l4"><a class="reference internal" href="blending_modes/lighten.html">變亮</a></li>
+<li class="toctree-l4"><a class="reference internal" href="blending_modes/misc.html">其他​​</a></li>
 <li class="toctree-l4"><a class="reference internal" href="blending_modes/mix.html">Mix</a></li>
-<li class="toctree-l4"><a class="reference internal" href="blending_modes/modulo.html">Modulo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="blending_modes/modulo.html">取模</a></li>
 <li class="toctree-l4"><a class="reference internal" href="blending_modes/negative.html">Negative</a></li>
-<li class="toctree-l4"><a class="reference internal" href="blending_modes/quadratic.html">Quadratic</a></li>
+<li class="toctree-l4"><a class="reference internal" href="blending_modes/quadratic.html">平方</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="brushes.html">Brushes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="clones_array.html">Clones Array</a></li>
-<li class="toctree-l2"><a class="reference internal" href="create_new_document.html">Create New Document</a></li>
-<li class="toctree-l2"><a class="reference internal" href="default_python_plugins.html">Pre-installed Python plugins</a></li>
-<li class="toctree-l2"><a class="reference internal" href="dockers.html">Dockers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="dr_minw_debugger.html">Dr. MinGW Debugger</a></li>
-<li class="toctree-l2"><a class="reference internal" href="filters.html">Filters</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hdr_display.html">HDR Display</a></li>
-<li class="toctree-l2"><a class="reference internal" href="image_split.html">Image Split</a></li>
+<li class="toctree-l2"><a class="reference internal" href="brushes.html">筆刷</a></li>
+<li class="toctree-l2"><a class="reference internal" href="clones_array.html">再製陣列</a></li>
+<li class="toctree-l2"><a class="reference internal" href="create_new_document.html">建立新文件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="default_python_plugins.html">預設裝有的 Python 外掛程式</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dockers.html">工具面板</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dr_minw_debugger.html">Dr. MinGW 除錯工具</a></li>
+<li class="toctree-l2"><a class="reference internal" href="filters.html">濾鏡</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hdr_display.html">HDR 顯示器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="image_split.html">分割影像</a></li>
 <li class="toctree-l2"><a class="reference internal" href="import_animation.html">Import Animation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="instant_preview.html">Instant Preview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="krita_4_preset_bundle.html">Krita 4 Preset Bundle Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="layers_and_masks.html">Layers and Masks</a></li>
-<li class="toctree-l2"><a class="reference internal" href="linux_command_line.html">Linux Command Line</a></li>
-<li class="toctree-l2"><a class="reference internal" href="list_supported_tablets.html">The List of Supported Tablets</a></li>
-<li class="toctree-l2"><a class="reference internal" href="main_menu.html">Main Menu</a></li>
-<li class="toctree-l2"><a class="reference internal" href="maths_input.html">Maths Input</a></li>
-<li class="toctree-l2"><a class="reference internal" href="popup-palette.html">Pop-up Palette</a></li>
-<li class="toctree-l2"><a class="reference internal" href="preferences.html">Preferences</a></li>
-<li class="toctree-l2"><a class="reference internal" href="render_animation.html">Render Animation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="resource_management.html">Resource Management</a></li>
-<li class="toctree-l2"><a class="reference internal" href="seexpr.html">SeExpr Quick Reference</a></li>
-<li class="toctree-l2"><a class="reference internal" href="separate_image.html">Separate Image</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sharing_krita_logs.html">Getting Krita logs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="split_layer.html">Split Layer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="stroke_selection.html">Stroke Selection</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tools.html">Tools</a></li>
-<li class="toctree-l2"><a class="reference internal" href="welcome_screen.html">Welcome Screen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="instant_preview.html">即時預覽</a></li>
+<li class="toctree-l2"><a class="reference internal" href="krita_4_preset_bundle.html">Krita 4 資源包介紹</a></li>
+<li class="toctree-l2"><a class="reference internal" href="layers_and_masks.html">圖層及遮罩</a></li>
+<li class="toctree-l2"><a class="reference internal" href="linux_command_line.html">命令列及參數</a></li>
+<li class="toctree-l2"><a class="reference internal" href="list_supported_tablets.html">支援的繪圖板、數位板</a></li>
+<li class="toctree-l2"><a class="reference internal" href="main_menu.html">主選單</a></li>
+<li class="toctree-l2"><a class="reference internal" href="maths_input.html">數學運算式輸入</a></li>
+<li class="toctree-l2"><a class="reference internal" href="popup-palette.html">浮動畫具板</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preferences.html">偏好選項</a></li>
+<li class="toctree-l2"><a class="reference internal" href="render_animation.html">繪製動畫</a></li>
+<li class="toctree-l2"><a class="reference internal" href="resource_management.html">資源管理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seexpr.html">SeExpr 快速參考</a></li>
+<li class="toctree-l2"><a class="reference internal" href="separate_image.html">分離影像</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sharing_krita_logs.html">獲取紀錄檔</a></li>
+<li class="toctree-l2"><a class="reference internal" href="split_layer.html">分割圖層</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stroke_selection.html">對選取區域描邊</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tools.html">工具</a></li>
+<li class="toctree-l2"><a class="reference internal" href="welcome_screen.html">歡迎畫面</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../tutorials.html">Tutorials and How-tos</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../KritaFAQ.html">Krita FAQ</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../contributors_manual.html">Contributors Manual</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../resources_page.html">Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials.html">教學及指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../KritaFAQ.html">Krita 常見問題</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributors_manual.html">貢獻者手冊</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../resources_page.html">資源</a></li>
 </ul>
 
             
@@ -236,11 +236,11 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../index.html">Docs</a> &raquo;</li>
+      <li><a href="../index.html">文件</a> &raquo;</li>
         
-          <li><a href="../reference_manual.html">Reference Manual</a> &raquo;</li>
+          <li><a href="../reference_manual.html">參考文件</a> &raquo;</li>
         
-      <li>Blending Modes</li>
+      <li>混色模式</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -250,7 +250,7 @@
             <a href="../_sources/reference_manual/blending_modes.rst.txt" rel="nofollow"> 
              
               <img src="../_static/images/source-code.png" />
-             <!-- View page source -->
+             <!-- 檢視頁面原始碼 -->
 
           </a>
           
@@ -265,74 +265,74 @@
            <div itemprop="articleBody">
             
   <section id="blending-modes">
-<span id="index-0"></span><span id="id1"></span><h1>Blending Modes<a class="headerlink" href="#blending-modes" title="Permalink to this headline">¶</a></h1>
+<span id="index-0"></span><span id="id1"></span><h1>混色模式<a class="headerlink" href="#blending-modes" title="本標題的永久連結">¶</a></h1>
 <p>Blending modes are a little difficult to explain. Basically, when one layer is above the other, the computer uses a bit of programming to decide how the combination of both layers will look.</p>
 <p>Blending modes can not just apply to Layers, but also to individual strokes.</p>
 <section id="favorites">
-<h2>Favorites<a class="headerlink" href="#favorites" title="Permalink to this headline">¶</a></h2>
+<h2>首選<a class="headerlink" href="#favorites" title="本標題的永久連結">¶</a></h2>
 <p>These are the blending modes that have been ticked as favorites, defaulting these are:</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="blending_modes/arithmetic.html#bm-addition"><span class="std std-ref">Addition</span></a></p></li>
-<li><p><a class="reference internal" href="blending_modes/darken.html#bm-color-burn"><span class="std std-ref">Burn</span></a></p></li>
-<li><p><a class="reference internal" href="blending_modes/hsx.html#bm-color"><span class="std std-ref">Color, HSV, HSI, HSL, HSY</span></a></p></li>
-<li><p><a class="reference internal" href="blending_modes/lighten.html#bm-color-dodge"><span class="std std-ref">Color Dodge</span></a></p></li>
-<li><p><a class="reference internal" href="blending_modes/darken.html#bm-darken"><span class="std std-ref">Darken</span></a></p></li>
+<li><p><a class="reference internal" href="blending_modes/arithmetic.html#bm-addition"><span class="std std-ref">相加</span></a></p></li>
+<li><p><a class="reference internal" href="blending_modes/darken.html#bm-color-burn"><span class="std std-ref">加深</span></a></p></li>
+<li><p><a class="reference internal" href="blending_modes/hsx.html#bm-color"><span class="std std-ref">色彩 HSV、HSI、HSL、HSY</span></a></p></li>
+<li><p><a class="reference internal" href="blending_modes/lighten.html#bm-color-dodge"><span class="std std-ref">加亮色彩</span></a></p></li>
+<li><p><a class="reference internal" href="blending_modes/darken.html#bm-darken"><span class="std std-ref">變暗</span></a></p></li>
 <li><p><a class="reference internal" href="blending_modes/mix.html#bm-erase"><span class="std std-ref">Erase</span></a></p></li>
-<li><p><a class="reference internal" href="blending_modes/lighten.html#bm-lighten"><span class="std std-ref">Lighten</span></a></p></li>
-<li><p><a class="reference internal" href="blending_modes/hsx.html#bm-luminosity"><span class="std std-ref">Luminosity</span></a></p></li>
-<li><p><a class="reference internal" href="blending_modes/arithmetic.html#bm-multiply"><span class="std std-ref">Multiply</span></a></p></li>
+<li><p><a class="reference internal" href="blending_modes/lighten.html#bm-lighten"><span class="std std-ref">變亮</span></a></p></li>
+<li><p><a class="reference internal" href="blending_modes/hsx.html#bm-luminosity"><span class="std std-ref">光度</span></a></p></li>
+<li><p><a class="reference internal" href="blending_modes/arithmetic.html#bm-multiply"><span class="std std-ref">色彩增值（相乘）</span></a></p></li>
 <li><p><a class="reference internal" href="blending_modes/mix.html#bm-normal"><span class="std std-ref">Normal</span></a></p></li>
 <li><p><a class="reference internal" href="blending_modes/mix.html#bm-overlay"><span class="std std-ref">Overlay</span></a></p></li>
-<li><p><a class="reference internal" href="blending_modes/hsx.html#bm-saturation"><span class="std std-ref">Saturation HSI, HSV, HSL, HSY</span></a></p></li>
+<li><p><a class="reference internal" href="blending_modes/hsx.html#bm-saturation"><span class="std std-ref">飽和度 HSI、HSV、HSL、HSY</span></a></p></li>
 </ul>
 </section>
 <section id="hotkeys-associated-with-blending-modes">
-<h2>Hotkeys associated with Blending modes<a class="headerlink" href="#hotkeys-associated-with-blending-modes" title="Permalink to this headline">¶</a></h2>
+<h2>混色模式相關快捷鍵<a class="headerlink" href="#hotkeys-associated-with-blending-modes" title="本標題的永久連結">¶</a></h2>
 <p>Defaultly the following hotkeys are associated with blending modes used for painting. Note: these shortcuts do not change the blending mode of the current layer.</p>
 <p>You first need to use modifiers <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Alt</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Shift</kbd></kbd>, then use the following hotkey to have the associated blending mode:</p>
 <ul class="simple">
-<li><p><kbd class="kbd docutils literal notranslate">A</kbd> <a class="reference internal" href="blending_modes/darken.html#bm-linear-burn"><span class="std std-ref">Linear Burn</span></a></p></li>
-<li><p><kbd class="kbd docutils literal notranslate">B</kbd> <a class="reference internal" href="blending_modes/darken.html#bm-color-burn"><span class="std std-ref">Burn</span></a></p></li>
-<li><p><kbd class="kbd docutils literal notranslate">C</kbd> <a class="reference internal" href="blending_modes/hsx.html#bm-color"><span class="std std-ref">Color, HSV, HSI, HSL, HSY</span></a></p></li>
-<li><p><kbd class="kbd docutils literal notranslate">D</kbd> <a class="reference internal" href="blending_modes/lighten.html#bm-color-dodge"><span class="std std-ref">Color Dodge</span></a></p></li>
+<li><p><kbd class="kbd docutils literal notranslate">A</kbd> <a class="reference internal" href="blending_modes/darken.html#bm-linear-burn"><span class="std std-ref">線性加深</span></a></p></li>
+<li><p><kbd class="kbd docutils literal notranslate">B</kbd> <a class="reference internal" href="blending_modes/darken.html#bm-color-burn"><span class="std std-ref">加深</span></a></p></li>
+<li><p><kbd class="kbd docutils literal notranslate">C</kbd> <a class="reference internal" href="blending_modes/hsx.html#bm-color"><span class="std std-ref">色彩 HSV、HSI、HSL、HSY</span></a></p></li>
+<li><p><kbd class="kbd docutils literal notranslate">D</kbd> <a class="reference internal" href="blending_modes/lighten.html#bm-color-dodge"><span class="std std-ref">加亮色彩</span></a></p></li>
 <li><p><kbd class="kbd docutils literal notranslate">E</kbd> <a class="reference internal" href="blending_modes/negative.html#bm-difference"><span class="std std-ref">Difference</span></a></p></li>
-<li><p><kbd class="kbd docutils literal notranslate">F</kbd> <a class="reference internal" href="blending_modes/lighten.html#bm-soft-light"><span class="std std-ref">Soft Light (Photoshop) &amp; Soft Light SVG</span></a></p></li>
-<li><p><kbd class="kbd docutils literal notranslate">G</kbd> <a class="reference internal" href="blending_modes/lighten.html#bm-lighten"><span class="std std-ref">Lighten</span></a></p></li>
-<li><p><kbd class="kbd docutils literal notranslate">H</kbd> <a class="reference internal" href="blending_modes/lighten.html#bm-hard-light"><span class="std std-ref">Hard Light</span></a></p></li>
-<li><p><kbd class="kbd docutils literal notranslate">I</kbd> <a class="reference internal" href="blending_modes/misc.html#bm-dissolve"><span class="std std-ref">Dissolve</span></a></p></li>
-<li><p><kbd class="kbd docutils literal notranslate">J</kbd> <a class="reference internal" href="blending_modes/lighten.html#bm-linear-light"><span class="std std-ref">Linear Light</span></a></p></li>
-<li><p><kbd class="kbd docutils literal notranslate">K</kbd> <a class="reference internal" href="blending_modes/darken.html#bm-darken"><span class="std std-ref">Darken</span></a></p></li>
+<li><p><kbd class="kbd docutils literal notranslate">F</kbd> <a class="reference internal" href="blending_modes/lighten.html#bm-soft-light"><span class="std std-ref">柔光 (Photoshop) 與柔光 (SVG)</span></a></p></li>
+<li><p><kbd class="kbd docutils literal notranslate">G</kbd> <a class="reference internal" href="blending_modes/lighten.html#bm-lighten"><span class="std std-ref">變亮</span></a></p></li>
+<li><p><kbd class="kbd docutils literal notranslate">H</kbd> <a class="reference internal" href="blending_modes/lighten.html#bm-hard-light"><span class="std std-ref">實光</span></a></p></li>
+<li><p><kbd class="kbd docutils literal notranslate">I</kbd> <a class="reference internal" href="blending_modes/misc.html#bm-dissolve"><span class="std std-ref">溶解</span></a></p></li>
+<li><p><kbd class="kbd docutils literal notranslate">J</kbd> <a class="reference internal" href="blending_modes/lighten.html#bm-linear-light"><span class="std std-ref">線性光</span></a></p></li>
+<li><p><kbd class="kbd docutils literal notranslate">K</kbd> <a class="reference internal" href="blending_modes/darken.html#bm-darken"><span class="std std-ref">變暗</span></a></p></li>
 <li><p><kbd class="kbd docutils literal notranslate">L</kbd> <a class="reference internal" href="blending_modes/mix.html#bm-hard-mix"><span class="std std-ref">Hard Mix</span></a></p></li>
-<li><p><kbd class="kbd docutils literal notranslate">M</kbd> <a class="reference internal" href="blending_modes/arithmetic.html#bm-multiply"><span class="std std-ref">Multiply</span></a></p></li>
+<li><p><kbd class="kbd docutils literal notranslate">M</kbd> <a class="reference internal" href="blending_modes/arithmetic.html#bm-multiply"><span class="std std-ref">色彩增值（相乘）</span></a></p></li>
 <li><p><kbd class="kbd docutils literal notranslate">N</kbd> <a class="reference internal" href="blending_modes/mix.html#bm-normal"><span class="std std-ref">Normal</span></a></p></li>
 <li><p><kbd class="kbd docutils literal notranslate">O</kbd> <a class="reference internal" href="blending_modes/mix.html#bm-overlay"><span class="std std-ref">Overlay</span></a></p></li>
 <li><p><kbd class="kbd docutils literal notranslate">P</kbd> <a class="reference internal" href="blending_modes/mix.html#bm-hard-overlay"><span class="std std-ref">Hard Overlay</span></a></p></li>
 <li><p><kbd class="kbd docutils literal notranslate">Q</kbd> <a class="reference internal" href="blending_modes/mix.html#bm-behind"><span class="std std-ref">Behind</span></a></p></li>
-<li><p><kbd class="kbd docutils literal notranslate">S</kbd> <a class="reference internal" href="blending_modes/lighten.html#bm-screen"><span class="std std-ref">Screen</span></a></p></li>
-<li><p><kbd class="kbd docutils literal notranslate">T</kbd> <a class="reference internal" href="blending_modes/hsx.html#bm-saturation"><span class="std std-ref">Saturation HSI, HSV, HSL, HSY</span></a></p></li>
-<li><p><kbd class="kbd docutils literal notranslate">U</kbd> <a class="reference internal" href="blending_modes/hsx.html#bm-hue"><span class="std std-ref">Hue HSV, HSI, HSL, HSY</span></a></p></li>
-<li><p><kbd class="kbd docutils literal notranslate">V</kbd> <a class="reference internal" href="blending_modes/lighten.html#bm-vivid-light"><span class="std std-ref">Vivid Light</span></a></p></li>
+<li><p><kbd class="kbd docutils literal notranslate">S</kbd> <a class="reference internal" href="blending_modes/lighten.html#bm-screen"><span class="std std-ref">濾色</span></a></p></li>
+<li><p><kbd class="kbd docutils literal notranslate">T</kbd> <a class="reference internal" href="blending_modes/hsx.html#bm-saturation"><span class="std std-ref">飽和度 HSI、HSV、HSL、HSY</span></a></p></li>
+<li><p><kbd class="kbd docutils literal notranslate">U</kbd> <a class="reference internal" href="blending_modes/hsx.html#bm-hue"><span class="std std-ref">色相 HSV、HSI、HSL、HSY</span></a></p></li>
+<li><p><kbd class="kbd docutils literal notranslate">V</kbd> <a class="reference internal" href="blending_modes/lighten.html#bm-vivid-light"><span class="std std-ref">強光源</span></a></p></li>
 <li><p><kbd class="kbd docutils literal notranslate">W</kbd> <a class="reference internal" href="blending_modes/negative.html#bm-exclusion"><span class="std std-ref">Exclusion</span></a></p></li>
-<li><p><kbd class="kbd docutils literal notranslate">X</kbd> <a class="reference internal" href="blending_modes/lighten.html#bm-linear-dodge"><span class="std std-ref">Linear Dodge</span></a></p></li>
-<li><p><kbd class="kbd docutils literal notranslate">Y</kbd> <a class="reference internal" href="blending_modes/hsx.html#bm-luminosity"><span class="std std-ref">Luminosity</span></a></p></li>
-<li><p><kbd class="kbd docutils literal notranslate">Z</kbd> <a class="reference internal" href="blending_modes/lighten.html#bm-pin-light"><span class="std std-ref">Pin Light</span></a></p></li>
-<li><p>Next Blending Mode <kbd class="kbd docutils literal notranslate">+</kbd></p></li>
-<li><p>Previous Blending Mode <kbd class="kbd docutils literal notranslate">-</kbd></p></li>
+<li><p><kbd class="kbd docutils literal notranslate">X</kbd> <a class="reference internal" href="blending_modes/lighten.html#bm-linear-dodge"><span class="std std-ref">線性加亮</span></a></p></li>
+<li><p><kbd class="kbd docutils literal notranslate">Y</kbd> <a class="reference internal" href="blending_modes/hsx.html#bm-luminosity"><span class="std std-ref">光度</span></a></p></li>
+<li><p><kbd class="kbd docutils literal notranslate">Z</kbd> <a class="reference internal" href="blending_modes/lighten.html#bm-pin-light"><span class="std std-ref">微光源</span></a></p></li>
+<li><p><kbd class="kbd docutils literal notranslate">+</kbd> 下一個混色模式</p></li>
+<li><p><kbd class="kbd docutils literal notranslate">-</kbd> 上一個混色模式</p></li>
 </ul>
 </section>
 <section id="available-blending-modes">
-<h2>Available Blending Modes<a class="headerlink" href="#available-blending-modes" title="Permalink to this headline">¶</a></h2>
+<h2>可用的混色模式<a class="headerlink" href="#available-blending-modes" title="本標題的永久連結">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="blending_modes/arithmetic.html">Arithmetic</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="blending_modes/arithmetic.html#addition">Addition</a></li>
-<li class="toctree-l2"><a class="reference internal" href="blending_modes/arithmetic.html#divide">Divide</a></li>
-<li class="toctree-l2"><a class="reference internal" href="blending_modes/arithmetic.html#inverse-subtract">Inverse Subtract</a></li>
-<li class="toctree-l2"><a class="reference internal" href="blending_modes/arithmetic.html#multiply">Multiply</a></li>
-<li class="toctree-l2"><a class="reference internal" href="blending_modes/arithmetic.html#subtract">Subtract</a></li>
+<li class="toctree-l1"><a class="reference internal" href="blending_modes/arithmetic.html">數學運算</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="blending_modes/arithmetic.html#addition">相加</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blending_modes/arithmetic.html#divide">除去</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blending_modes/arithmetic.html#inverse-subtract">減去反轉值</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blending_modes/arithmetic.html#multiply">色彩增值（相乘）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blending_modes/arithmetic.html#subtract">減去</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="blending_modes/binary.html">Binary</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="blending_modes/binary.html">二進位制</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="blending_modes/binary.html#and">AND</a></li>
 <li class="toctree-l2"><a class="reference internal" href="blending_modes/binary.html#converse">CONVERSE</a></li>
 <li class="toctree-l2"><a class="reference internal" href="blending_modes/binary.html#implication">IMPLICATION</a></li>
@@ -345,15 +345,15 @@
 <li class="toctree-l2"><a class="reference internal" href="blending_modes/binary.html#xnor">XNOR</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="blending_modes/darken.html">Darken</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="blending_modes/darken.html#burn">Burn</a></li>
-<li class="toctree-l2"><a class="reference internal" href="blending_modes/darken.html#easy-burn">Easy Burn</a></li>
-<li class="toctree-l2"><a class="reference internal" href="blending_modes/darken.html#fog-darken-ifs-illusions">Fog Darken (IFS Illusions)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="blending_modes/darken.html#bm-darken">Darken</a></li>
-<li class="toctree-l2"><a class="reference internal" href="blending_modes/darken.html#darker-color">Darker Color</a></li>
-<li class="toctree-l2"><a class="reference internal" href="blending_modes/darken.html#gamma-dark">Gamma Dark</a></li>
-<li class="toctree-l2"><a class="reference internal" href="blending_modes/darken.html#linear-burn">Linear Burn</a></li>
-<li class="toctree-l2"><a class="reference internal" href="blending_modes/darken.html#shade-ifs-illusions">Shade (IFS Illusions)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="blending_modes/darken.html">變暗</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="blending_modes/darken.html#burn">加深</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blending_modes/darken.html#easy-burn">簡單加深</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blending_modes/darken.html#fog-darken-ifs-illusions">霧化暗淡 (IFS Illusions)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blending_modes/darken.html#bm-darken">變暗</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blending_modes/darken.html#darker-color">較暗色彩</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blending_modes/darken.html#gamma-dark">Gamma 變暗</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blending_modes/darken.html#linear-burn">線性加深</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blending_modes/darken.html#shade-ifs-illusions">陰影化 (IFS Illusions)</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="blending_modes/hsx.html">HSX</a><ul>
@@ -364,36 +364,36 @@
 <li class="toctree-l2"><a class="reference internal" href="blending_modes/hsx.html#hsx-blending-modes">HSX Blending Modes</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="blending_modes/lighten.html">Lighten</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="blending_modes/lighten.html#color-dodge">Color Dodge</a></li>
-<li class="toctree-l2"><a class="reference internal" href="blending_modes/lighten.html#gamma-illumination">Gamma Illumination</a></li>
-<li class="toctree-l2"><a class="reference internal" href="blending_modes/lighten.html#gamma-light">Gamma Light</a></li>
-<li class="toctree-l2"><a class="reference internal" href="blending_modes/lighten.html#hard-light">Hard Light</a></li>
-<li class="toctree-l2"><a class="reference internal" href="blending_modes/lighten.html#bm-lighten">Lighten</a></li>
-<li class="toctree-l2"><a class="reference internal" href="blending_modes/lighten.html#lighter-color">Lighter Color</a></li>
-<li class="toctree-l2"><a class="reference internal" href="blending_modes/lighten.html#linear-dodge">Linear Dodge</a></li>
-<li class="toctree-l2"><a class="reference internal" href="blending_modes/lighten.html#easy-dodge">Easy Dodge</a></li>
-<li class="toctree-l2"><a class="reference internal" href="blending_modes/lighten.html#flat-light">Flat Light</a></li>
-<li class="toctree-l2"><a class="reference internal" href="blending_modes/lighten.html#fog-lighten-ifs-illusions">Fog Lighten (IFS Illusions)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="blending_modes/lighten.html#linear-light">Linear Light</a></li>
-<li class="toctree-l2"><a class="reference internal" href="blending_modes/lighten.html#luminosity-shine-sai">Luminosity/Shine (SAI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="blending_modes/lighten.html">變亮</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="blending_modes/lighten.html#color-dodge">加亮色彩</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blending_modes/lighten.html#gamma-illumination">Gamma 光照</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blending_modes/lighten.html#gamma-light">Gamma 變亮</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blending_modes/lighten.html#hard-light">實光</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blending_modes/lighten.html#bm-lighten">變亮</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blending_modes/lighten.html#lighter-color">較亮色彩</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blending_modes/lighten.html#linear-dodge">線性加亮</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blending_modes/lighten.html#easy-dodge">簡單加亮</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blending_modes/lighten.html#flat-light">平光源</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blending_modes/lighten.html#fog-lighten-ifs-illusions">霧化光亮 (IFS Illusions)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blending_modes/lighten.html#linear-light">線性光</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blending_modes/lighten.html#luminosity-shine-sai">發光 / Shine (SAI)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="blending_modes/lighten.html#p-norm-a">P-Norm A</a></li>
 <li class="toctree-l2"><a class="reference internal" href="blending_modes/lighten.html#p-norm-b">P-Norm B</a></li>
-<li class="toctree-l2"><a class="reference internal" href="blending_modes/lighten.html#pin-light">Pin Light</a></li>
-<li class="toctree-l2"><a class="reference internal" href="blending_modes/lighten.html#screen">Screen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="blending_modes/lighten.html#soft-light-photoshop-soft-light-svg">Soft Light (Photoshop) &amp; Soft Light SVG</a></li>
-<li class="toctree-l2"><a class="reference internal" href="blending_modes/lighten.html#soft-light-ifs-illusions-soft-light-pegtop-delphi">Soft Light (IFS Illusions) &amp; Soft Light (Pegtop-Delphi)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="blending_modes/lighten.html#super-light">Super Light</a></li>
-<li class="toctree-l2"><a class="reference internal" href="blending_modes/lighten.html#tint-ifs-illusions">Tint (IFS Illusions)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="blending_modes/lighten.html#vivid-light">Vivid Light</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blending_modes/lighten.html#pin-light">微光源</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blending_modes/lighten.html#screen">濾色</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blending_modes/lighten.html#soft-light-photoshop-soft-light-svg">柔光 (Photoshop) 與柔光 (SVG)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blending_modes/lighten.html#soft-light-ifs-illusions-soft-light-pegtop-delphi">柔光 (IFS Illusions) 與柔光 (Pegtop-Delphi)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blending_modes/lighten.html#super-light">超光</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blending_modes/lighten.html#tint-ifs-illusions">淡色化 (IFS Illusions)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blending_modes/lighten.html#vivid-light">強光源</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="blending_modes/misc.html">Misc</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="blending_modes/misc.html#bumpmap">Bumpmap</a></li>
-<li class="toctree-l2"><a class="reference internal" href="blending_modes/misc.html#combine-normal-map">Combine Normal Map</a></li>
-<li class="toctree-l2"><a class="reference internal" href="blending_modes/misc.html#copy">Copy</a></li>
-<li class="toctree-l2"><a class="reference internal" href="blending_modes/misc.html#copy-red-green-blue">Copy Red, Green, Blue</a></li>
-<li class="toctree-l2"><a class="reference internal" href="blending_modes/misc.html#dissolve">Dissolve</a></li>
+<li class="toctree-l1"><a class="reference internal" href="blending_modes/misc.html">其他​​</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="blending_modes/misc.html#bumpmap">凹凸貼圖</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blending_modes/misc.html#combine-normal-map">合併法線貼圖</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blending_modes/misc.html#copy">複製</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blending_modes/misc.html#copy-red-green-blue">複製紅色、綠色、藍色通道</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blending_modes/misc.html#dissolve">溶解</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="blending_modes/mix.html">Mix</a><ul>
@@ -420,10 +420,10 @@
 <li class="toctree-l2"><a class="reference internal" href="blending_modes/mix.html#penumbra-d">Penumbra D</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="blending_modes/modulo.html">Modulo</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="blending_modes/modulo.html">取模</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="blending_modes/modulo.html#divisive-modulo">Divisive Modulo</a></li>
 <li class="toctree-l2"><a class="reference internal" href="blending_modes/modulo.html#divisive-modulo-continuous">Divisive Modulo - Continuous</a></li>
-<li class="toctree-l2"><a class="reference internal" href="blending_modes/modulo.html#bm-modulo">Modulo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blending_modes/modulo.html#bm-modulo">取模</a></li>
 <li class="toctree-l2"><a class="reference internal" href="blending_modes/modulo.html#modulo-continuous">Modulo - Continuous</a></li>
 <li class="toctree-l2"><a class="reference internal" href="blending_modes/modulo.html#modulo-shift">Modulo Shift</a></li>
 <li class="toctree-l2"><a class="reference internal" href="blending_modes/modulo.html#modulo-shift-continuous">Modulo Shift - Continuous</a></li>
@@ -438,7 +438,7 @@
 <li class="toctree-l2"><a class="reference internal" href="blending_modes/negative.html#negation">Negation</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="blending_modes/quadratic.html">Quadratic</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="blending_modes/quadratic.html">平方</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="blending_modes/quadratic.html#freeze">Freeze</a></li>
 <li class="toctree-l2"><a class="reference internal" href="blending_modes/quadratic.html#freeze-reflect">Freeze-Reflect</a></li>
 <li class="toctree-l2"><a class="reference internal" href="blending_modes/quadratic.html#glow">Glow</a></li>
@@ -453,11 +453,11 @@
 </ul>
 </div>
 <div class="admonition seealso">
-<p class="admonition-title">See also</p>
+<p class="admonition-title">也參考</p>
 <dl class="simple">
-<dt>Basic blending modes:</dt><dd><p><a class="reference external" href="https://en.wikipedia.org/wiki/Blend_modes">https://en.wikipedia.org/wiki/Blend_modes</a></p>
+<dt>基本混色模式：</dt><dd><p><a class="reference external" href="https://en.wikipedia.org/wiki/Blend_modes">https://en.wikipedia.org/wiki/Blend_modes</a></p>
 </dd>
-<dt>Grain Extract/Grain Merge:</dt><dd><p><a class="reference external" href="https://docs.gimp.org/en/gimp-concepts-layer-modes.html">https://docs.gimp.org/en/gimp-concepts-layer-modes.html</a></p>
+<dt>減去變亮 (Gran Extract) / 相加變深 (Grain Merge)：</dt><dd><p><a class="reference external" href="https://docs.gimp.org/en/gimp-concepts-layer-modes.html">https://docs.gimp.org/en/gimp-concepts-layer-modes.html</a></p>
 </dd>
 </dl>
 </div>
@@ -472,10 +472,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="blending_modes/arithmetic.html" class="btn btn-neutral float-right" title="Arithmetic" accesskey="n" rel="next"> <!-- Next --> <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="blending_modes/arithmetic.html" class="btn btn-neutral float-right" title="數學運算" accesskey="n" rel="next"> <!-- 下一個 --> <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="audio_for_animation.html" class="btn btn-neutral" title="Audio for Animation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- Previous  -->  </a>
+        <a href="audio_for_animation.html" class="btn btn-neutral" title="動畫音訊" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- 上一個  -->  </a>
       
     </div>
   
@@ -484,19 +484,19 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright licensed under the GNU Free Documentation License 1.3+ unless stated otherwise.
+        &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          Revision <code>7c271ce</code>.
+          修訂版本 <code>7c271ce</code>
         </span>
       
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a modified <a href="https://github.com/rtfd/sphinx_rtd_theme">RTD theme</a>.<br/>
-  <a href="https://krita.org" title="Krita official website.">Krita official website</a> |
-  <a href="https://invent.kde.org/documentation/docs-krita-org/" title="The Gitlab instance to edit this pages and collaborate.">Git repository for docs.krita.org </a> |
-  <a href="https://www.kde.org/community/whatiskde/impressum-en.php" title="To know more about KDE, code of conduct, privacy policy and GDPR.">KDE Impressum</a>.
+  使用 <a href="http://sphinx-doc.org/">Sphinx</a> 以及經修改過的 <a href="https://github.com/rtfd/sphinx_rtd_theme">RTD 主題</a>建置<br/>
+  <a href="https://krita.org" title="Krita official website.">Krita 官方網站</a> |
+  <a href="https://invent.kde.org/documentation/docs-krita-org/" title="這份手冊在 KDE 的 GitLab 網址">docs.krita.org 的 Git 原始碼儲存庫</a> |
+  <a href="https://www.kde.org/community/whatiskde/impressum-en.php" title="了解更多關於 KDE、code of conduct、privacy policy 及 GDPR">KDE Impressum</a>
    
 
 </footer>
@@ -515,7 +515,7 @@
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
             VERSION:'5.0.0 Beta',
-            LANGUAGE:'en',
+            LANGUAGE:'zh_TW',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,
@@ -526,6 +526,7 @@
       <script type="text/javascript" src="../_static/jquery.js"></script>
       <script type="text/javascript" src="../_static/underscore.js"></script>
       <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
 
   
 

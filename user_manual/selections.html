@@ -1,17 +1,17 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-TW" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-TW" > <!--<![endif]-->
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta property="og:title" name="title" content="Selections" />
+  <meta property="og:title" name="title" content="選取區域" />
   <meta property="og:site-name" content="Krita Manual" />
   <meta property="og:type" content="article" />
-  <meta property="og:locale" content="en" />
+  <meta property="og:locale" content="zh_TW" />
   <meta property="og:locale:alternate" content="ca" />
-  
+  <meta property="og:locale:alternate" content="en" />
   <meta property="og:locale:alternate" content="fr" />
   <meta property="og:locale:alternate" content="it" />
   <meta property="og:locale:alternate" content="ja" />
@@ -21,13 +21,13 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-07-19T15:33:59" />
+  <meta property="og:article:modified_time" content="2021-07-19T15:40:51" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="How selections work in Krita." name="description" />
 
   
   
-  <title>Selections &mdash; Krita Manual 5.0.0 Beta documentation</title>
+  <title>選取區域 &mdash; Krita Manual 5.0.0 Beta 說明文件</title>
   
 
   
@@ -58,10 +58,10 @@
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Python Scripting" href="python_scripting.html" />
-    <link rel="prev" title="Introduction to Layers and Masks" href="layers_and_masks.html" /> 
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜尋" href="../search.html" />
+    <link rel="next" title="Python 指令稿及外掛程式" href="python_scripting.html" />
+    <link rel="prev" title="圖層及遮罩的入門" href="layers_and_masks.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -92,7 +92,7 @@
           
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="搜尋文件" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -127,45 +127,45 @@
             
             
               <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="../user_manual.html">User Manual</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
-<li class="toctree-l2"><a class="reference internal" href="introduction_from_other_software.html">Introduction Coming From Other Software</a></li>
-<li class="toctree-l2"><a class="reference internal" href="drawing_tablets.html">Drawing Tablets</a></li>
-<li class="toctree-l2"><a class="reference internal" href="loading_saving_brushes.html">Loading and Saving Brushes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="oncanvas_brush_editor.html">On-Canvas Brush Editor</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mirror_tools.html">Mirror Tools</a></li>
-<li class="toctree-l2"><a class="reference internal" href="painting_with_assistants.html">Painting with Assistants</a></li>
-<li class="toctree-l2"><a class="reference internal" href="working_with_images.html">Working with Images</a></li>
-<li class="toctree-l2"><a class="reference internal" href="autosave.html">Saving, AutoSave and Backup Files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="templates.html">Templates</a></li>
-<li class="toctree-l2"><a class="reference internal" href="layers_and_masks.html">Introduction to Layers and Masks</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Selections</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#creating-selections">Creating Selections</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#editing-selections">Editing Selections</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#removing-selections">Removing Selections</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#display-modes">Display Modes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#global-selection-mask-painting-a-selection">Global Selection Mask (Painting a Selection)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#selection-from-layer-transparency">Selection from layer transparency</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#pixel-and-vector-selection-types">Pixel and Vector Selection Types</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#common-shortcuts-while-using-selections">Common Shortcuts while Using Selections</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../user_manual.html">使用者手冊</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="getting_started.html">新手入門</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction_from_other_software.html">為習慣其他軟體的使用者而設的入門介紹</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drawing_tablets.html">數位繪圖板</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loading_saving_brushes.html">載入與儲存筆刷</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oncanvas_brush_editor.html">畫布上的筆刷分量設定</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mirror_tools.html">鏡像繪畫工具</a></li>
+<li class="toctree-l2"><a class="reference internal" href="painting_with_assistants.html">使用輔助尺來繪畫</a></li>
+<li class="toctree-l2"><a class="reference internal" href="working_with_images.html">如何以影像工作</a></li>
+<li class="toctree-l2"><a class="reference internal" href="autosave.html">儲存、自動儲存及備份檔案</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templates.html">範本</a></li>
+<li class="toctree-l2"><a class="reference internal" href="layers_and_masks.html">圖層及遮罩的入門</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">選取區域</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#creating-selections">建立選取區域</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#editing-selections">修改選取區域</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#removing-selections">取消選取</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#display-modes">顯示模式</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#global-selection-mask-painting-a-selection">全域選取區域遮罩（繪畫出選取區域）</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#selection-from-layer-transparency">自圖層透明度產生選取區域</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pixel-and-vector-selection-types">像素及向量選取區域類型</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#common-shortcuts-while-using-selections">選取區域作業的通用快捷鍵</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="python_scripting.html">Python Scripting</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tag_management.html">Tag Management</a></li>
-<li class="toctree-l2"><a class="reference internal" href="soft_proofing.html">Soft Proofing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="vector_graphics.html">Vector Graphics</a></li>
-<li class="toctree-l2"><a class="reference internal" href="snapping.html">Snapping</a></li>
-<li class="toctree-l2"><a class="reference internal" href="animation.html">Animation with Krita</a></li>
-<li class="toctree-l2"><a class="reference internal" href="japanese_animation_template.html">Japanese Animation Template</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gamut_masks.html">Gamut Masks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python_scripting.html">Python 指令稿及外掛程式</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tag_management.html">標籤管理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="soft_proofing.html">螢幕校樣</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vector_graphics.html">向量圖形</a></li>
+<li class="toctree-l2"><a class="reference internal" href="snapping.html">吸附</a></li>
+<li class="toctree-l2"><a class="reference internal" href="animation.html">用 Krita 製作動畫</a></li>
+<li class="toctree-l2"><a class="reference internal" href="japanese_animation_template.html">日本動畫範本</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gamut_masks.html">色域遮罩</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../general_concepts.html">General Concepts</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../reference_manual.html">Reference Manual</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tutorials.html">Tutorials and How-tos</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../KritaFAQ.html">Krita FAQ</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../contributors_manual.html">Contributors Manual</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../resources_page.html">Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general_concepts.html">通用概念</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference_manual.html">參考文件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials.html">教學及指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../KritaFAQ.html">Krita 常見問題</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributors_manual.html">貢獻者手冊</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../resources_page.html">資源</a></li>
 </ul>
 
             
@@ -219,11 +219,11 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../index.html">Docs</a> &raquo;</li>
+      <li><a href="../index.html">文件</a> &raquo;</li>
         
-          <li><a href="../user_manual.html">User Manual</a> &raquo;</li>
+          <li><a href="../user_manual.html">使用者手冊</a> &raquo;</li>
         
-      <li>Selections</li>
+      <li>選取區域</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -233,7 +233,7 @@
             <a href="../_sources/user_manual/selections.rst.txt" rel="nofollow"> 
              
               <img src="../_static/images/source-code.png" />
-             <!-- View page source -->
+             <!-- 檢視頁面原始碼 -->
 
           </a>
           
@@ -248,10 +248,10 @@
            <div itemprop="articleBody">
             
   <section id="selections">
-<span id="selections-basics"></span><span id="index-0"></span><h1>Selections<a class="headerlink" href="#selections" title="Permalink to this headline">¶</a></h1>
+<span id="selections-basics"></span><span id="index-0"></span><h1>選取區域<a class="headerlink" href="#selections" title="本標題的永久連結">¶</a></h1>
 <p>Selections allow you to pick a specific area of your artwork to change. This is useful when you want to move a section of the painting, transform it, or paint on it without affecting the other sections. There are many selection tools available that select in different ways. Once an area is selected, most tools will stay inside that area. On that area you can draw or use gradients to quickly get colored and/or shaded shapes with hard edges. The selections in Krita are not limited to the canvas boundary, so you can also selection portions of the painting that are beyond the canvas boundary.</p>
 <section id="creating-selections">
-<h2>Creating Selections<a class="headerlink" href="#creating-selections" title="Permalink to this headline">¶</a></h2>
+<h2>建立選取區域<a class="headerlink" href="#creating-selections" title="本標題的永久連結">¶</a></h2>
 <p>The most common selection tools all exist at the bottom of the toolbox. Each tool selects things slightly differently. The links for each tool go into a more detailed description of how to use it.</p>
 <table class="docutils align-default">
 <colgroup>
@@ -295,12 +295,12 @@
 </tbody>
 </table>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
+<p class="admonition-title">備註</p>
 <p>You can also use the transform tools on your selection, a great way to try different proportions on parts of your image.</p>
 </div>
 </section>
 <section id="editing-selections">
-<h2>Editing Selections<a class="headerlink" href="#editing-selections" title="Permalink to this headline">¶</a></h2>
+<h2>修改選取區域<a class="headerlink" href="#editing-selections" title="本標題的永久連結">¶</a></h2>
 <p>The tool options for each selection tool gives you the ability to modify
 your selection.</p>
 <table class="docutils align-default">
@@ -323,7 +323,7 @@ your selection.</p>
 </tr>
 <tr class="row-odd"><td><p>Intersect</p></td>
 <td><p>Shift + Alt</p></td>
-<td><p>–</p></td>
+<td><p>--</p></td>
 <td><p>Get the overlapping section of both selections.</p></td>
 </tr>
 <tr class="row-even"><td><p>Add</p></td>
@@ -338,8 +338,8 @@ your selection.</p>
 </tr>
 <tr class="row-even"><td><p>Symmetric
 Difference</p></td>
-<td><p>–</p></td>
-<td><p>–</p></td>
+<td><p>--</p></td>
+<td><p>--</p></td>
 <td><p>Make a selection where both the new and current
 do not overlap.</p></td>
 </tr>
@@ -349,24 +349,24 @@ do not overlap.</p></td>
 <p>If you hover over a selection with a selection tool and no selection is activated, you can move it. To quickly go into transform mode, <img alt="mouseright" src="../_images/Krita_mouse_right.png" /> and select <span class="guilabel">Edit Selection</span>.</p>
 </section>
 <section id="removing-selections">
-<h2>Removing Selections<a class="headerlink" href="#removing-selections" title="Permalink to this headline">¶</a></h2>
+<h2>取消選取<a class="headerlink" href="#removing-selections" title="本標題的永久連結">¶</a></h2>
 <p>If you want to delete the entire selection, the easiest way is to deselect everything. <span class="menuselection">Select ‣ Deselect</span>. Shortcut <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">A</kbd></kbd>.
 When you have one of the selection tool active, and the mode of selection is in intersect, replace or symmetric difference then you can also deselect by just <img alt="mouseleft" src="../_images/Krita_mouse_left.png" /> anywhere on the canvas.</p>
 </section>
 <section id="display-modes">
-<h2>Display Modes<a class="headerlink" href="#display-modes" title="Permalink to this headline">¶</a></h2>
-<p>In the bottom left-hand corner of the status bar there is a button to toggle how the selection is displayed. The two display modes are the following: (Marching) Ants and Mask. The red color with Mask can be changed in the preferences. You can edit the color under <span class="menuselection">Settings ‣ Configure Krita… ‣ Display ‣ Selection Overlay</span>. If there is no selection,
+<h2>顯示模式<a class="headerlink" href="#display-modes" title="本標題的永久連結">¶</a></h2>
+<p>In the bottom left-hand corner of the status bar there is a button to toggle how the selection is displayed. The two display modes are the following: (Marching) Ants and Mask. The red color with Mask can be changed in the preferences. You can edit the color under <span class="menuselection">Settings ‣ Configure Krita... ‣ Display ‣ Selection Overlay</span>. If there is no selection,
 this button will not do anything.</p>
 <img alt="../_images/Ants-displayMode.jpg" src="../_images/Ants-displayMode.jpg" />
 <p>Ants display mode (default) is best if you want to see the areas that are not selected.</p>
 <img alt="../_images/Mask-displayMode.jpg" src="../_images/Mask-displayMode.jpg" />
 <p>Mask display mode is good if you are interested in seeing the various transparency levels for your selection. For example, when you have a selection with very soft edges due using feathering.</p>
 <div class="versionchanged">
-<p><span class="versionmodified changed">Changed in version 4.2: </span>Mask mode is activated as well when a selection mask is the active layer so you can see the different selection levels.</p>
+<p><span class="versionmodified changed">4.2 版更變: </span>Mask mode is activated as well when a selection mask is the active layer so you can see the different selection levels.</p>
 </div>
 </section>
 <section id="global-selection-mask-painting-a-selection">
-<h2>Global Selection Mask (Painting a Selection)<a class="headerlink" href="#global-selection-mask-painting-a-selection" title="Permalink to this headline">¶</a></h2>
+<h2>全域選取區域遮罩（繪畫出選取區域）<a class="headerlink" href="#global-selection-mask-painting-a-selection" title="本標題的永久連結">¶</a></h2>
 <p>The global Selection Mask is your selection that appears on the layers docker. By default, this is hidden, so you will need to make it visible via <span class="menuselection">Select ‣ Show Global Selection Mask</span>.</p>
 <img alt="../_images/Global-selection-mask.jpg" src="../_images/Global-selection-mask.jpg" />
 <p>Once the global Selection Mask is shown, you will need to create a selection. The benefit of using this is that you can paint your
@@ -374,15 +374,15 @@ selection using any of the normal painting tools, including the transform and mo
 <p>You can enter the global selection mask mode quickly from the selection tools by doing <img alt="mouseright" src="../_images/Krita_mouse_right.png" /> and select <span class="guilabel">Edit Selection</span>.</p>
 </section>
 <section id="selection-from-layer-transparency">
-<h2>Selection from layer transparency<a class="headerlink" href="#selection-from-layer-transparency" title="Permalink to this headline">¶</a></h2>
-<p>You can create a selection based on a layer’s transparency by right-clicking on the layer in the layer docker and selecting <span class="guilabel">Select Opaque</span> from the context menu.</p>
+<h2>自圖層透明度產生選取區域<a class="headerlink" href="#selection-from-layer-transparency" title="本標題的永久連結">¶</a></h2>
+<p>You can create a selection based on a layer's transparency by right-clicking on the layer in the layer docker and selecting <span class="guilabel">Select Opaque</span> from the context menu.</p>
 <div class="versionadded">
-<p><span class="versionmodified added">New in version 4.2: </span>You can also do this for adding, subtracting and intersecting by going to <span class="menuselection">Select ‣ Select Opaque</span>, where you can find specific actions for each.</p>
+<p><span class="versionmodified added">4.2 版新加入: </span>You can also do this for adding, subtracting and intersecting by going to <span class="menuselection">Select ‣ Select Opaque</span>, where you can find specific actions for each.</p>
 <p>If you want to quickly select parts of layers, you can hold the <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="mouseleft" src="../_images/Krita_mouse_left.png" /> shortcut on the layer <em>thumbnail</em>. To add a selection do <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="mouseleft" src="../_images/Krita_mouse_left.png" />, to remove <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Alt</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="mouseleft" src="../_images/Krita_mouse_left.png" /> and to intersect <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Alt</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="mouseleft" src="../_images/Krita_mouse_left.png" />. This works with any mask that has pixel or vector data (so everything but transform masks).</p>
 </div>
 </section>
 <section id="pixel-and-vector-selection-types">
-<span id="pixel-vector-selection"></span><h2>Pixel and Vector Selection Types<a class="headerlink" href="#pixel-and-vector-selection-types" title="Permalink to this headline">¶</a></h2>
+<span id="pixel-vector-selection"></span><h2>像素及向量選取區域類型<a class="headerlink" href="#pixel-and-vector-selection-types" title="本標題的永久連結">¶</a></h2>
 <p>Vector selections allow you to modify your selection with vector anchor tools. Pixel selections allow you to modify selections with pixel information. They both have their benefits and disadvantages. You can convert one type of selection to another.</p>
 <img alt="../_images/Vector-pixel-selections.jpg" src="../_images/Vector-pixel-selections.jpg" />
 <p>When creating a selection, you can select what type of selection you want from the Mode in the selection tool options: Pixel or Vector. By default this will be Vector.</p>
@@ -391,24 +391,24 @@ selection using any of the normal painting tools, including the transform and mo
 <p>If you started with a pixel selection, you can still convert it to a
 vector selection to get these benefits. Go to <span class="menuselection">Select ‣ Convert to Vector Selection</span>.</p>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
+<p class="admonition-title">備註</p>
 <p>If you have multiple levels of transparency when you convert a selection to vector, you will lose the semi-transparent values.</p>
 </div>
 </section>
 <section id="common-shortcuts-while-using-selections">
-<h2>Common Shortcuts while Using Selections<a class="headerlink" href="#common-shortcuts-while-using-selections" title="Permalink to this headline">¶</a></h2>
+<h2>選取區域作業的通用快捷鍵<a class="headerlink" href="#common-shortcuts-while-using-selections" title="本標題的永久連結">¶</a></h2>
 <ul class="simple">
-<li><p>Copy – <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">C</kbd></kbd> or <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Ins</kbd></kbd></p></li>
-<li><p>Paste – <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">V</kbd></kbd> or <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Ins</kbd></kbd></p></li>
-<li><p>Cut – <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">X</kbd></kbd>, <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Del</kbd></kbd></p></li>
-<li><p>Copy From All Layers – <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">C</kbd></kbd></p></li>
-<li><p>Copy Selection to New Layer – <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Alt</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">J</kbd></kbd></p></li>
-<li><p>Cut Selection to New Layer – <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">J</kbd></kbd></p></li>
+<li><p>Copy -- <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">C</kbd></kbd> or <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Ins</kbd></kbd></p></li>
+<li><p>Paste -- <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">V</kbd></kbd> or <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Ins</kbd></kbd></p></li>
+<li><p>Cut -- <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">X</kbd></kbd>, <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Del</kbd></kbd></p></li>
+<li><p>Copy From All Layers -- <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">C</kbd></kbd></p></li>
+<li><p>Copy Selection to New Layer -- <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Alt</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">J</kbd></kbd></p></li>
+<li><p>Cut Selection to New Layer -- <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">J</kbd></kbd></p></li>
 <li><p>Display or hide selection with <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">H</kbd></kbd></p></li>
-<li><p>Select Opaque – <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="mouseleft" src="../_images/Krita_mouse_left.png" /> on layer thumbnail.</p></li>
-<li><p>Select Opaque (Add) – <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="mouseleft" src="../_images/Krita_mouse_left.png" /> on layer thumbnail.</p></li>
-<li><p>Select Opaque (Subtract) – <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Alt</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="mouseleft" src="../_images/Krita_mouse_left.png" /> on layer thumbnail.</p></li>
-<li><p>Select Opaque (Intersect) – <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Alt</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="mouseleft" src="../_images/Krita_mouse_left.png" /> on layer thumbnail.</p></li>
+<li><p>Select Opaque -- <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="mouseleft" src="../_images/Krita_mouse_left.png" /> on layer thumbnail.</p></li>
+<li><p>Select Opaque (Add) -- <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="mouseleft" src="../_images/Krita_mouse_left.png" /> on layer thumbnail.</p></li>
+<li><p>Select Opaque (Subtract) -- <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Alt</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="mouseleft" src="../_images/Krita_mouse_left.png" /> on layer thumbnail.</p></li>
+<li><p>Select Opaque (Intersect) -- <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Alt</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="mouseleft" src="../_images/Krita_mouse_left.png" /> on layer thumbnail.</p></li>
 </ul>
 </section>
 </section>
@@ -421,10 +421,10 @@ vector selection to get these benefits. Go to <span class="menuselection">Select
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="python_scripting.html" class="btn btn-neutral float-right" title="Python Scripting" accesskey="n" rel="next"> <!-- Next --> <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="python_scripting.html" class="btn btn-neutral float-right" title="Python 指令稿及外掛程式" accesskey="n" rel="next"> <!-- 下一個 --> <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="layers_and_masks.html" class="btn btn-neutral" title="Introduction to Layers and Masks" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- Previous  -->  </a>
+        <a href="layers_and_masks.html" class="btn btn-neutral" title="圖層及遮罩的入門" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- 上一個  -->  </a>
       
     </div>
   
@@ -433,19 +433,19 @@ vector selection to get these benefits. Go to <span class="menuselection">Select
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright licensed under the GNU Free Documentation License 1.3+ unless stated otherwise.
+        &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          Revision <code>7c271ce</code>.
+          修訂版本 <code>7c271ce</code>
         </span>
       
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a modified <a href="https://github.com/rtfd/sphinx_rtd_theme">RTD theme</a>.<br/>
-  <a href="https://krita.org" title="Krita official website.">Krita official website</a> |
-  <a href="https://invent.kde.org/documentation/docs-krita-org/" title="The Gitlab instance to edit this pages and collaborate.">Git repository for docs.krita.org </a> |
-  <a href="https://www.kde.org/community/whatiskde/impressum-en.php" title="To know more about KDE, code of conduct, privacy policy and GDPR.">KDE Impressum</a>.
+  使用 <a href="http://sphinx-doc.org/">Sphinx</a> 以及經修改過的 <a href="https://github.com/rtfd/sphinx_rtd_theme">RTD 主題</a>建置<br/>
+  <a href="https://krita.org" title="Krita official website.">Krita 官方網站</a> |
+  <a href="https://invent.kde.org/documentation/docs-krita-org/" title="這份手冊在 KDE 的 GitLab 網址">docs.krita.org 的 Git 原始碼儲存庫</a> |
+  <a href="https://www.kde.org/community/whatiskde/impressum-en.php" title="了解更多關於 KDE、code of conduct、privacy policy 及 GDPR">KDE Impressum</a>
    
 
 </footer>
@@ -464,7 +464,7 @@ vector selection to get these benefits. Go to <span class="menuselection">Select
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
             VERSION:'5.0.0 Beta',
-            LANGUAGE:'en',
+            LANGUAGE:'zh_TW',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,
@@ -475,6 +475,7 @@ vector selection to get these benefits. Go to <span class="menuselection">Select
       <script type="text/javascript" src="../_static/jquery.js"></script>
       <script type="text/javascript" src="../_static/underscore.js"></script>
       <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
 
   
 

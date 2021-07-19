@@ -1,17 +1,17 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-TW" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-TW" > <!--<![endif]-->
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta property="og:title" name="title" content="Profiling and Calibration" />
+  <meta property="og:title" name="title" content="色彩測量及校準" />
   <meta property="og:site-name" content="Krita Manual" />
   <meta property="og:type" content="article" />
-  <meta property="og:locale" content="en" />
+  <meta property="og:locale" content="zh_TW" />
   <meta property="og:locale:alternate" content="ca" />
-  
+  <meta property="og:locale:alternate" content="en" />
   <meta property="og:locale:alternate" content="fr" />
   <meta property="og:locale:alternate" content="it" />
   <meta property="og:locale:alternate" content="ja" />
@@ -21,13 +21,13 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-07-19T15:33:59" />
+  <meta property="og:article:modified_time" content="2021-07-19T15:40:51" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="Color Models in Krita" name="description" />
 
   
   
-  <title>Profiling and Calibration &mdash; Krita Manual 5.0.0 Beta documentation</title>
+  <title>色彩測量及校準 &mdash; Krita Manual 5.0.0 Beta 說明文件</title>
   
 
   
@@ -58,10 +58,10 @@
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-    <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Scene Linear Painting" href="scene_linear_painting.html" />
-    <link rel="prev" title="Gamma and Linear" href="linear_and_gamma.html" /> 
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜尋" href="../../search.html" />
+    <link rel="next" title="場景線性作畫" href="scene_linear_painting.html" />
+    <link rel="prev" title="Gamma 與線性色彩" href="linear_and_gamma.html" /> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -92,7 +92,7 @@
           
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="搜尋文件" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -127,32 +127,32 @@
             
             
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../user_manual.html">User Manual</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../../general_concepts.html">General Concepts</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="../colors.html">Colors</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="bit_depth.html">Bit Depth</a></li>
-<li class="toctree-l3"><a class="reference internal" href="color_managed_workflow.html">Color Managed Workflow</a></li>
-<li class="toctree-l3"><a class="reference internal" href="color_mixing.html">Mixing Colors</a></li>
-<li class="toctree-l3"><a class="reference internal" href="color_models.html">Color Models</a></li>
-<li class="toctree-l3"><a class="reference internal" href="color_space_size.html">Color Space Size</a></li>
-<li class="toctree-l3"><a class="reference internal" href="linear_and_gamma.html">Gamma and Linear</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Profiling and Calibration</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../user_manual.html">使用者手冊</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../general_concepts.html">通用概念</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../colors.html">色彩</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="bit_depth.html">色彩深度</a></li>
+<li class="toctree-l3"><a class="reference internal" href="color_managed_workflow.html">色彩管理作業流程</a></li>
+<li class="toctree-l3"><a class="reference internal" href="color_mixing.html">色彩混合</a></li>
+<li class="toctree-l3"><a class="reference internal" href="color_models.html">色彩模型</a></li>
+<li class="toctree-l3"><a class="reference internal" href="color_space_size.html">色彩空問的範圍</a></li>
+<li class="toctree-l3"><a class="reference internal" href="linear_and_gamma.html">Gamma 與線性色彩</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">色彩測量及校準</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#profiling-devices">Profiling devices</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="scene_linear_painting.html">Scene Linear Painting</a></li>
-<li class="toctree-l3"><a class="reference internal" href="viewing_conditions.html">Viewing Conditions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="scene_linear_painting.html">場景線性作畫</a></li>
+<li class="toctree-l3"><a class="reference internal" href="viewing_conditions.html">觀察時狀況</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../file_formats.html">File Formats</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../projection.html">Perspective Projection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../file_formats.html">檔案格式</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projection.html">透視投影</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../reference_manual.html">Reference Manual</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../tutorials.html">Tutorials and How-tos</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../KritaFAQ.html">Krita FAQ</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../contributors_manual.html">Contributors Manual</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../resources_page.html">Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference_manual.html">參考文件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials.html">教學及指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../KritaFAQ.html">Krita 常見問題</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributors_manual.html">貢獻者手冊</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../resources_page.html">資源</a></li>
 </ul>
 
             
@@ -206,13 +206,13 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../../index.html">Docs</a> &raquo;</li>
+      <li><a href="../../index.html">文件</a> &raquo;</li>
         
-          <li><a href="../../general_concepts.html">General Concepts</a> &raquo;</li>
+          <li><a href="../../general_concepts.html">通用概念</a> &raquo;</li>
         
-          <li><a href="../colors.html">Colors</a> &raquo;</li>
+          <li><a href="../colors.html">色彩</a> &raquo;</li>
         
-      <li>Profiling and Calibration</li>
+      <li>色彩測量及校準</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -222,7 +222,7 @@
             <a href="../../_sources/general_concepts/colors/profiling_and_callibration.rst.txt" rel="nofollow"> 
              
               <img src="../../_static/images/source-code.png" />
-             <!-- View page source -->
+             <!-- 檢視頁面原始碼 -->
 
           </a>
           
@@ -237,9 +237,9 @@
            <div itemprop="articleBody">
             
   <section id="profiling-and-calibration">
-<span id="index-0"></span><span id="id1"></span><h1>Profiling and Calibration<a class="headerlink" href="#profiling-and-calibration" title="Permalink to this headline">¶</a></h1>
+<span id="index-0"></span><span id="id1"></span><h1>色彩測量及校準<a class="headerlink" href="#profiling-and-calibration" title="本標題的永久連結">¶</a></h1>
 <p>So to make it simple, a color profile is just a file defining a set of colors inside a pure XYZ color cube.
-This “color set” can be used to define different things:</p>
+This &quot;color set&quot; can be used to define different things:</p>
 <ul class="simple">
 <li><p>the colors inside an image</p></li>
 <li><p>the colors a device can output</p></li>
@@ -252,28 +252,28 @@ If we use a linear profile as described above to define those color values, we w
 <p>This is why was created the sRGB profile to fit more different colors in this limited amount of values, in a perceptually regular grading, by applying a custom gamma curve (see picture here: <a class="reference external" href="https://en.wikipedia.org/wiki/SRGB">https://en.wikipedia.org/wiki/SRGB</a>) to emulate the standard response curve of old CRT screens.
 So sRGB profile is optimized to fit all colors that most common screen can reproduce in those 256 values per R/G/B channels.
 Some other profiles like Adobe RGB are optimized to fit more printable colors in this limited range, primarily extending cyan-green hues. Working with such profile can be useful to improve print results, but is dangerous if not used with a properly profiled and/or calibrated good display.
-Most common CMYK workspace profile can usually fit all their colors within 8bit/channel depth, but they are all so different and specific that it’s usually better to work with a regular RGB workspace first and then convert the output to the appropriate CMYK profile.</p>
+Most common CMYK workspace profile can usually fit all their colors within 8bit/channel depth, but they are all so different and specific that it's usually better to work with a regular RGB workspace first and then convert the output to the appropriate CMYK profile.</p>
 <p>Starting with 16bit/channel, we already have 65536 values instead of 256, so we can use workspace profiles with higher gamut range like Wide-gamut RGB or Pro-photo RGB, or even unlimited gamut like scRGB.</p>
-<p>But sRGB being a generic profile (even more as it comes from old CRT specifications…), there are big chances that your monitor have actually a different color response curve, and so color profile.
+<p>But sRGB being a generic profile (even more as it comes from old CRT specifications...), there are big chances that your monitor have actually a different color response curve, and so color profile.
 So when you are using sRGB workspace and have a proper screen profile loaded (see next point), Krita knows that the colors the file contains are within the sRGB color space, and converts those sRGB values to corresponding color values from your monitor profile to display the canvas.</p>
 <p>Note that when you export your file and view it in another software, this software has to do two things:</p>
 <ul class="simple">
-<li><p>read the embed profile to know the “good” color values from the file (which most software do nowadays; when they don’t they usually default to sRGB, so in the case described here we’re safe )</p></li>
+<li><p>read the embed profile to know the &quot;good&quot; color values from the file (which most software do nowadays; when they don't they usually default to sRGB, so in the case described here we're safe )</p></li>
 <li><p>and then convert it to the profile associated to the monitor (which very few software actually does, and just output to sRGB.. so this can explain some viewing differences most of the time).</p></li>
 </ul>
 <p>Krita uses profiles extensively, and comes bundled with many.</p>
-<p>The most important one is the one of your own screen. It doesn’t come bundled, and you have to make it with a color profiling device.
-In case you don’t have access to such a device, you can’t make use of Krita’s color management as intended. However, Krita does allow the luxury of picking any of the other bundled profiles as working spaces.</p>
+<p>The most important one is the one of your own screen. It doesn't come bundled, and you have to make it with a color profiling device.
+In case you don't have access to such a device, you can't make use of Krita's color management as intended. However, Krita does allow the luxury of picking any of the other bundled profiles as working spaces.</p>
 <section id="profiling-devices">
-<h2>Profiling devices<a class="headerlink" href="#profiling-devices" title="Permalink to this headline">¶</a></h2>
+<h2>Profiling devices<a class="headerlink" href="#profiling-devices" title="本標題的永久連結">¶</a></h2>
 <p>Profiling devices, called Colorimeters, are tiny little cameras of a kind that you connect to your computer via an usb, and then you run a profiling software (often delivered alongside of the device).</p>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>If you don’t have software packaged with your colorimeter, or are unhappy with the results, we recommend <a class="reference external" href="https://www.argyllcms.com/">ArgyllCMS</a>.</p>
+<p class="admonition-title">備註</p>
+<p>If you don't have software packaged with your colorimeter, or are unhappy with the results, we recommend <a class="reference external" href="https://www.argyllcms.com/">ArgyllCMS</a>.</p>
 </div>
 <p>The little camera then measures what the brightest red, green, blue, white and black are like on your screen using a predefined white as base. It also measures how gray the color gray is.</p>
 <p>It then puts all this information into an ICC profile, which can be used by the computer to correct your colors.</p>
-<p>It’s recommended not to change the “calibration” (contrast, brightness, you know the menu) of your screen after profiling. Doing so makes the profile useless, as the qualities of the screen change significantly while calibrating.</p>
+<p>It's recommended not to change the &quot;calibration&quot; (contrast, brightness, you know the menu) of your screen after profiling. Doing so makes the profile useless, as the qualities of the screen change significantly while calibrating.</p>
 <p>To make your screen display more accurate colors, you can do one or two things:
 profile your screen or calibrate and profile it.</p>
 <p>Just profiling your screen means measuring the colors of your monitor with its native settings and put those values in a color profile, which can be used by color-managed application to adapt source colors to the screen for optimal result.
@@ -291,7 +291,7 @@ Calibrating is done first with hardware controls (lightness, contrast, gamma cur
 <dl class="simple">
 <dt>Bad monitors</dt><dd><p>As explained just before.</p>
 </dd>
-<dt>Multi-monitor setup</dt><dd><p>When using several monitors, and specially in mirror mode where both monitor have the same content, you can’t have this content color-managed for both screen profiles. In such case, calibrating both screens to match sRGB profile (or another standard for high-end monitors if they both support it) can be a good solution.</p>
+<dt>Multi-monitor setup</dt><dd><p>When using several monitors, and specially in mirror mode where both monitor have the same content, you can't have this content color-managed for both screen profiles. In such case, calibrating both screens to match sRGB profile (or another standard for high-end monitors if they both support it) can be a good solution.</p>
 </dd>
 <dt>Soft-proofing</dt><dd><p>When you need to match an exact rendering context for soft-proofing, calibrating can help getting closer to the expected result. Though switching through several monitor calibration and profiles should be done extremely carefully.</p>
 </dd>
@@ -307,10 +307,10 @@ Calibrating is done first with hardware controls (lightness, contrast, gamma cur
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="scene_linear_painting.html" class="btn btn-neutral float-right" title="Scene Linear Painting" accesskey="n" rel="next"> <!-- Next --> <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="scene_linear_painting.html" class="btn btn-neutral float-right" title="場景線性作畫" accesskey="n" rel="next"> <!-- 下一個 --> <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="linear_and_gamma.html" class="btn btn-neutral" title="Gamma and Linear" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- Previous  -->  </a>
+        <a href="linear_and_gamma.html" class="btn btn-neutral" title="Gamma 與線性色彩" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- 上一個  -->  </a>
       
     </div>
   
@@ -319,19 +319,19 @@ Calibrating is done first with hardware controls (lightness, contrast, gamma cur
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright licensed under the GNU Free Documentation License 1.3+ unless stated otherwise.
+        &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          Revision <code>7c271ce</code>.
+          修訂版本 <code>7c271ce</code>
         </span>
       
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a modified <a href="https://github.com/rtfd/sphinx_rtd_theme">RTD theme</a>.<br/>
-  <a href="https://krita.org" title="Krita official website.">Krita official website</a> |
-  <a href="https://invent.kde.org/documentation/docs-krita-org/" title="The Gitlab instance to edit this pages and collaborate.">Git repository for docs.krita.org </a> |
-  <a href="https://www.kde.org/community/whatiskde/impressum-en.php" title="To know more about KDE, code of conduct, privacy policy and GDPR.">KDE Impressum</a>.
+  使用 <a href="http://sphinx-doc.org/">Sphinx</a> 以及經修改過的 <a href="https://github.com/rtfd/sphinx_rtd_theme">RTD 主題</a>建置<br/>
+  <a href="https://krita.org" title="Krita official website.">Krita 官方網站</a> |
+  <a href="https://invent.kde.org/documentation/docs-krita-org/" title="這份手冊在 KDE 的 GitLab 網址">docs.krita.org 的 Git 原始碼儲存庫</a> |
+  <a href="https://www.kde.org/community/whatiskde/impressum-en.php" title="了解更多關於 KDE、code of conduct、privacy policy 及 GDPR">KDE Impressum</a>
    
 
 </footer>
@@ -350,7 +350,7 @@ Calibrating is done first with hardware controls (lightness, contrast, gamma cur
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../../',
             VERSION:'5.0.0 Beta',
-            LANGUAGE:'en',
+            LANGUAGE:'zh_TW',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,
@@ -361,6 +361,7 @@ Calibrating is done first with hardware controls (lightness, contrast, gamma cur
       <script type="text/javascript" src="../../_static/jquery.js"></script>
       <script type="text/javascript" src="../../_static/underscore.js"></script>
       <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/translations.js"></script>
 
   
 

@@ -1,17 +1,17 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-TW" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-TW" > <!--<![endif]-->
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta property="og:title" name="title" content="Color Models" />
+  <meta property="og:title" name="title" content="色彩模型" />
   <meta property="og:site-name" content="Krita Manual" />
   <meta property="og:type" content="article" />
-  <meta property="og:locale" content="en" />
+  <meta property="og:locale" content="zh_TW" />
   <meta property="og:locale:alternate" content="ca" />
-  
+  <meta property="og:locale:alternate" content="en" />
   <meta property="og:locale:alternate" content="fr" />
   <meta property="og:locale:alternate" content="it" />
   <meta property="og:locale:alternate" content="ja" />
@@ -21,13 +21,13 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-07-19T15:33:59" />
+  <meta property="og:article:modified_time" content="2021-07-19T15:40:51" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="Color Models in Krita" name="description" />
 
   
   
-  <title>Color Models &mdash; Krita Manual 5.0.0 Beta documentation</title>
+  <title>色彩模型 &mdash; Krita Manual 5.0.0 Beta 說明文件</title>
   
 
   
@@ -58,10 +58,10 @@
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-    <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Color Space Size" href="color_space_size.html" />
-    <link rel="prev" title="Mixing Colors" href="color_mixing.html" /> 
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜尋" href="../../search.html" />
+    <link rel="next" title="色彩空問的範圍" href="color_space_size.html" />
+    <link rel="prev" title="色彩混合" href="color_mixing.html" /> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -92,7 +92,7 @@
           
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="搜尋文件" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -127,13 +127,13 @@
             
             
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../user_manual.html">User Manual</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../../general_concepts.html">General Concepts</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="../colors.html">Colors</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="bit_depth.html">Bit Depth</a></li>
-<li class="toctree-l3"><a class="reference internal" href="color_managed_workflow.html">Color Managed Workflow</a></li>
-<li class="toctree-l3"><a class="reference internal" href="color_mixing.html">Mixing Colors</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Color Models</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../user_manual.html">使用者手冊</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../general_concepts.html">通用概念</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../colors.html">色彩</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="bit_depth.html">色彩深度</a></li>
+<li class="toctree-l3"><a class="reference internal" href="color_managed_workflow.html">色彩管理作業流程</a></li>
+<li class="toctree-l3"><a class="reference internal" href="color_mixing.html">色彩混合</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">色彩模型</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#rgb">RGB</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#grayscale">Grayscale</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#cmyk">CMYK</a></li>
@@ -141,22 +141,22 @@
 <li class="toctree-l4"><a class="reference internal" href="#filters-and-blending-modes">Filters and blending modes</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="color_space_size.html">Color Space Size</a></li>
-<li class="toctree-l3"><a class="reference internal" href="linear_and_gamma.html">Gamma and Linear</a></li>
-<li class="toctree-l3"><a class="reference internal" href="profiling_and_callibration.html">Profiling and Calibration</a></li>
-<li class="toctree-l3"><a class="reference internal" href="scene_linear_painting.html">Scene Linear Painting</a></li>
-<li class="toctree-l3"><a class="reference internal" href="viewing_conditions.html">Viewing Conditions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="color_space_size.html">色彩空問的範圍</a></li>
+<li class="toctree-l3"><a class="reference internal" href="linear_and_gamma.html">Gamma 與線性色彩</a></li>
+<li class="toctree-l3"><a class="reference internal" href="profiling_and_callibration.html">色彩測量及校準</a></li>
+<li class="toctree-l3"><a class="reference internal" href="scene_linear_painting.html">場景線性作畫</a></li>
+<li class="toctree-l3"><a class="reference internal" href="viewing_conditions.html">觀察時狀況</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../file_formats.html">File Formats</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../projection.html">Perspective Projection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../file_formats.html">檔案格式</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projection.html">透視投影</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../reference_manual.html">Reference Manual</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../tutorials.html">Tutorials and How-tos</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../KritaFAQ.html">Krita FAQ</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../contributors_manual.html">Contributors Manual</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../resources_page.html">Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference_manual.html">參考文件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials.html">教學及指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../KritaFAQ.html">Krita 常見問題</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributors_manual.html">貢獻者手冊</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../resources_page.html">資源</a></li>
 </ul>
 
             
@@ -210,13 +210,13 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../../index.html">Docs</a> &raquo;</li>
+      <li><a href="../../index.html">文件</a> &raquo;</li>
         
-          <li><a href="../../general_concepts.html">General Concepts</a> &raquo;</li>
+          <li><a href="../../general_concepts.html">通用概念</a> &raquo;</li>
         
-          <li><a href="../colors.html">Colors</a> &raquo;</li>
+          <li><a href="../colors.html">色彩</a> &raquo;</li>
         
-      <li>Color Models</li>
+      <li>色彩模型</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -226,7 +226,7 @@
             <a href="../../_sources/general_concepts/colors/color_models.rst.txt" rel="nofollow"> 
              
               <img src="../../_static/images/source-code.png" />
-             <!-- View page source -->
+             <!-- 檢視頁面原始碼 -->
 
           </a>
           
@@ -241,10 +241,10 @@
            <div itemprop="articleBody">
             
   <section id="color-models">
-<span id="index-0"></span><span id="id1"></span><h1>Color Models<a class="headerlink" href="#color-models" title="Permalink to this headline">¶</a></h1>
+<span id="index-0"></span><span id="id1"></span><h1>色彩模型<a class="headerlink" href="#color-models" title="本標題的永久連結">¶</a></h1>
 <p>Krita has many different color spaces and models. Following here is a brief explanation of each, and their use-cases.</p>
 <section id="rgb">
-<span id="model-rgb"></span><h2>RGB<a class="headerlink" href="#rgb" title="Permalink to this headline">¶</a></h2>
+<span id="model-rgb"></span><h2>RGB<a class="headerlink" href="#rgb" title="本標題的永久連結">¶</a></h2>
 <p>Red, Green, Blue.</p>
 <p>These are the most efficient primaries for light-based color mixing, like computer screens. Adding Red, Green and Blue light together results in White, and is thus named the additive color wheel.</p>
 <p>RGB is used for two purposes:</p>
@@ -254,9 +254,9 @@
 <li><p>Or for Video games, both sprites and textures are best in RGB there.</p></li>
 <li><p>Or for 3d rendering, visual effects and cg animation.</p></li>
 </ul>
-<p>And for the working space. A working space is an RGB gamut that is really large and predictable, meaning it’s good for image manipulation. You use this next to a profiled monitor. This way you can have precise colors while also being able to view them correctly on multiple screens.</p>
+<p>And for the working space. A working space is an RGB gamut that is really large and predictable, meaning it's good for image manipulation. You use this next to a profiled monitor. This way you can have precise colors while also being able to view them correctly on multiple screens.</p>
 <section id="blending-modes-in-rgb">
-<h3>Blending modes in RGB<a class="headerlink" href="#blending-modes-in-rgb" title="Permalink to this headline">¶</a></h3>
+<h3>Blending modes in RGB<a class="headerlink" href="#blending-modes-in-rgb" title="本標題的永久連結">¶</a></h3>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 8%" />
@@ -341,13 +341,13 @@
 </table>
 </section>
 <section id="rgb-models-hsv-hsl-hsi-and-hsy">
-<h3>RGB models: HSV, HSL, HSI and HSY<a class="headerlink" href="#rgb-models-hsv-hsl-hsi-and-hsy" title="Permalink to this headline">¶</a></h3>
+<h3>RGB models: HSV, HSL, HSI and HSY<a class="headerlink" href="#rgb-models-hsv-hsl-hsi-and-hsy" title="本標題的永久連結">¶</a></h3>
 <p>These are not included as their own color spaces in Krita. However, they do show up in the blending modes and color selectors, so a brief overview:</p>
-<p>–Images of relationship rgb-hsv etc.</p>
+<p>--Images of relationship rgb-hsv etc.</p>
 <dl class="simple">
-<dt>Hue</dt><dd><p>The tint of a color, or, whether it’s red, yellow, green, etc. Krita’s Hue is measured in 360 degrees, with 0 being red, 120 being green and 240 being blue.</p>
+<dt>Hue</dt><dd><p>The tint of a color, or, whether it's red, yellow, green, etc. Krita's Hue is measured in 360 degrees, with 0 being red, 120 being green and 240 being blue.</p>
 </dd>
-<dt>Saturation</dt><dd><p>How vibrant a color is. Saturation is slightly different between HSV and the others. In HSV it’s a measurement of the difference between two base colors being used and three base colors being used. In the others it’s a measurement of how close a color is to gray, and sometimes this value is called <strong>Chroma</strong>. Saturation ranges from 0 (gray) to 100 (pure color).</p>
+<dt>Saturation</dt><dd><p>How vibrant a color is. Saturation is slightly different between HSV and the others. In HSV it's a measurement of the difference between two base colors being used and three base colors being used. In the others it's a measurement of how close a color is to gray, and sometimes this value is called <strong>Chroma</strong>. Saturation ranges from 0 (gray) to 100 (pure color).</p>
 </dd>
 <dt>Value</dt><dd><p>Sometimes known as Brightness. Measurement of how much the pixel needs to light up. Also measured from 0 to 100.</p>
 </dd>
@@ -355,13 +355,13 @@
 </dd>
 <dt>Intensity</dt><dd><p>Similar to lightness, except it acknowledges that yellow (1,1,0) is lighter than blue (0,0,1). Ranges from 0 to 100.</p>
 </dd>
-<dt>Luma (Y’)</dt><dd><p>Similar to lightness and Intensity, except it weights the red, green and blue components based real-life measurements of how much light a color reflects to determine its lightness. Ranges from 0 to 100. Luma is well known for being used in film-color spaces.</p>
+<dt>Luma (Y')</dt><dd><p>Similar to lightness and Intensity, except it weights the red, green and blue components based real-life measurements of how much light a color reflects to determine its lightness. Ranges from 0 to 100. Luma is well known for being used in film-color spaces.</p>
 </dd>
 </dl>
 </section>
 </section>
 <section id="grayscale">
-<span id="model-gray"></span><h2>Grayscale<a class="headerlink" href="#grayscale" title="Permalink to this headline">¶</a></h2>
+<span id="model-gray"></span><h2>Grayscale<a class="headerlink" href="#grayscale" title="本標題的永久連結">¶</a></h2>
 <p>This color space only registers gray values.
 This is useful, because by only registering gray values, it only needs one channel of information, which in turn means the image becomes much lighter in memory consumption!</p>
 <p>This is useful for textures, but also anything else that needs to stay grayscale, like Black and White comics.</p>
@@ -402,9 +402,9 @@ This is useful, because by only registering gray values, it only needs one chann
 </table>
 </section>
 <section id="cmyk">
-<span id="model-cmyk"></span><h2>CMYK<a class="headerlink" href="#cmyk" title="Permalink to this headline">¶</a></h2>
+<span id="model-cmyk"></span><h2>CMYK<a class="headerlink" href="#cmyk" title="本標題的永久連結">¶</a></h2>
 <p>Cyan, Magenta, Yellow, Key</p>
-<p>This is the color space of printers. Unlike computers, printers have these four colors, and adding them all adds up to black instead of white. This is thus also called a ‘subtractive’ color space.</p>
+<p>This is the color space of printers. Unlike computers, printers have these four colors, and adding them all adds up to black instead of white. This is thus also called a 'subtractive' color space.</p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 6%" />
@@ -507,7 +507,7 @@ This is useful, because by only registering gray values, it only needs one chann
 </tr>
 </tbody>
 </table>
-<p>There’s also a difference between ‘colored gray’ and ‘neutral gray’ depending on the profile.</p>
+<p>There's also a difference between 'colored gray' and 'neutral gray' depending on the profile.</p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 17%" />
@@ -579,34 +579,34 @@ This is useful, because by only registering gray values, it only needs one chann
 <figure class="align-center" id="id2" style="width: 500px">
 <img alt="../../_images/Cmyk_black_differences.png" src="../../_images/Cmyk_black_differences.png" />
 <figcaption>
-<p><span class="caption-text">In Krita, there’s also the fact that the default color is a perfect black in RGB, which then gets converted to our default CMYK in a funny manner, giving a yellow look to the strokes. Again, another good reason to work in RGB and let the conversion be done by the printing house.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">In Krita, there's also the fact that the default color is a perfect black in RGB, which then gets converted to our default CMYK in a funny manner, giving a yellow look to the strokes. Again, another good reason to work in RGB and let the conversion be done by the printing house.</span><a class="headerlink" href="#id2" title="本圖片的永久連結">¶</a></p>
 </figcaption>
 </figure>
-<p>While CMYK has a smaller ‘gamut’ than RGB, however, it’s still recommended to use an RGB working space profile to do your editing in. Afterwards, you can convert it to your printer’s CMYK profile using either perceptual or relative colorimetric intent.
+<p>While CMYK has a smaller 'gamut' than RGB, however, it's still recommended to use an RGB working space profile to do your editing in. Afterwards, you can convert it to your printer's CMYK profile using either perceptual or relative colorimetric intent.
 Or you can just give the workspace rgb image to your printer and let them handle the work.</p>
 </section>
 <section id="ycrcb">
-<span id="model-ycrcb"></span><h2>YCrCb<a class="headerlink" href="#ycrcb" title="Permalink to this headline">¶</a></h2>
+<span id="model-ycrcb"></span><h2>YCrCb<a class="headerlink" href="#ycrcb" title="本標題的永久連結">¶</a></h2>
 <p>Luminosity, Red-chroma, Blue-chroma</p>
 <p>YCrCb stands for:</p>
 <dl class="simple">
-<dt>Y’/Y</dt><dd><p>Luma/Luminosity, thus, the amount of light a color reflects.</p>
+<dt>Y'/Y</dt><dd><p>Luma/Luminosity, thus, the amount of light a color reflects.</p>
 </dd>
 <dt>Cr</dt><dd><p>Red Chroma. This value measures how red a color is versus how green it is.</p>
 </dd>
 <dt>Cb</dt><dd><p>Blue Chroma. This value measures how blue a color is versus how yellow it is.</p>
 </dd>
 </dl>
-<p>This color space is often used in photography and in (correct) implementations of JPEG. As a human you’re much more sensitive to the lightness of colors, and thus JPEG tries to compress the Cr and Cb channels, and leave the Y channel in full quality.</p>
+<p>This color space is often used in photography and in (correct) implementations of JPEG. As a human you're much more sensitive to the lightness of colors, and thus JPEG tries to compress the Cr and Cb channels, and leave the Y channel in full quality.</p>
 <div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Krita doesn’t bundle a ICC profile for YCrCb on the basis of there being no open source ICC profiles for this color space. It’s unusable without one, and also probably very untested.</p>
+<p class="admonition-title">警告</p>
+<p>Krita doesn't bundle a ICC profile for YCrCb on the basis of there being no open source ICC profiles for this color space. It's unusable without one, and also probably very untested.</p>
 </div>
 <section id="xyz">
-<span id="model-xyz"></span><h3>XYZ<a class="headerlink" href="#xyz" title="Permalink to this headline">¶</a></h3>
+<span id="model-xyz"></span><h3>XYZ<a class="headerlink" href="#xyz" title="本標題的永久連結">¶</a></h3>
 <p>Back in 1931, the CIE (Institute of Color and Light), was studying human color perception.
 In doing so, they made the first color spaces, with XYZ being the one best at approximating human vision.</p>
-<p>It’s almost impossible to really explain what XYZ is.</p>
+<p>It's almost impossible to really explain what XYZ is.</p>
 <dl class="simple">
 <dt>Y</dt><dd><p>Is equal to green.</p>
 </dd>
@@ -618,7 +618,7 @@ In doing so, they made the first color spaces, with XYZ being the one best at ap
 <p>XYZ is used as a baseline reference for all other profiles and models. All color conversions are done in XYZ, and all profiles coordinates match XYZ.</p>
 </section>
 <section id="l-a-b">
-<span id="model-lab"></span><h3>L*a*b*<a class="headerlink" href="#l-a-b" title="Permalink to this headline">¶</a></h3>
+<span id="model-lab"></span><h3>L*a*b*<a class="headerlink" href="#l-a-b" title="本標題的永久連結">¶</a></h3>
 <p>Stands for:</p>
 <dl class="simple">
 <dt>L*</dt><dd><p>Lightness, similar to luminosity in this case.</p>
@@ -628,13 +628,13 @@ In doing so, they made the first color spaces, with XYZ being the one best at ap
 <dt>b*</dt><dd><p>b* in this case is a measurement of how yellow a color is versus how blue a color is.</p>
 </dd>
 </dl>
-<p>L*a*b* is supposed to be a more comprehensible variety of XYZ and the most ‘complete’ of all color spaces. It’s often used as an in between color space in conversion, but even more as the correct color space to do color-balancing in. It’s far easier to adjust the contrast and color tone in L*a*b*.</p>
-<p>L*a*b* is technically the same as Photoshop’s LAB. Photoshop specifically uses CIELAB d50.</p>
+<p>L*a*b* is supposed to be a more comprehensible variety of XYZ and the most 'complete' of all color spaces. It's often used as an in between color space in conversion, but even more as the correct color space to do color-balancing in. It's far easier to adjust the contrast and color tone in L*a*b*.</p>
+<p>L*a*b* is technically the same as Photoshop's LAB. Photoshop specifically uses CIELAB d50.</p>
 </section>
 </section>
 <section id="filters-and-blending-modes">
-<h2>Filters and blending modes<a class="headerlink" href="#filters-and-blending-modes" title="Permalink to this headline">¶</a></h2>
-<p>Maybe you have noticed that blending modes in LAB don’t work like they do in RGB or CMYK. This is because the blending modes work by doing a bit of maths on the color coordinates, and because color coordinates are different per color space, the blending modes look different.</p>
+<h2>Filters and blending modes<a class="headerlink" href="#filters-and-blending-modes" title="本標題的永久連結">¶</a></h2>
+<p>Maybe you have noticed that blending modes in LAB don't work like they do in RGB or CMYK. This is because the blending modes work by doing a bit of maths on the color coordinates, and because color coordinates are different per color space, the blending modes look different.</p>
 </section>
 </section>
 
@@ -646,10 +646,10 @@ In doing so, they made the first color spaces, with XYZ being the one best at ap
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="color_space_size.html" class="btn btn-neutral float-right" title="Color Space Size" accesskey="n" rel="next"> <!-- Next --> <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="color_space_size.html" class="btn btn-neutral float-right" title="色彩空問的範圍" accesskey="n" rel="next"> <!-- 下一個 --> <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="color_mixing.html" class="btn btn-neutral" title="Mixing Colors" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- Previous  -->  </a>
+        <a href="color_mixing.html" class="btn btn-neutral" title="色彩混合" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- 上一個  -->  </a>
       
     </div>
   
@@ -658,19 +658,19 @@ In doing so, they made the first color spaces, with XYZ being the one best at ap
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright licensed under the GNU Free Documentation License 1.3+ unless stated otherwise.
+        &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          Revision <code>7c271ce</code>.
+          修訂版本 <code>7c271ce</code>
         </span>
       
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a modified <a href="https://github.com/rtfd/sphinx_rtd_theme">RTD theme</a>.<br/>
-  <a href="https://krita.org" title="Krita official website.">Krita official website</a> |
-  <a href="https://invent.kde.org/documentation/docs-krita-org/" title="The Gitlab instance to edit this pages and collaborate.">Git repository for docs.krita.org </a> |
-  <a href="https://www.kde.org/community/whatiskde/impressum-en.php" title="To know more about KDE, code of conduct, privacy policy and GDPR.">KDE Impressum</a>.
+  使用 <a href="http://sphinx-doc.org/">Sphinx</a> 以及經修改過的 <a href="https://github.com/rtfd/sphinx_rtd_theme">RTD 主題</a>建置<br/>
+  <a href="https://krita.org" title="Krita official website.">Krita 官方網站</a> |
+  <a href="https://invent.kde.org/documentation/docs-krita-org/" title="這份手冊在 KDE 的 GitLab 網址">docs.krita.org 的 Git 原始碼儲存庫</a> |
+  <a href="https://www.kde.org/community/whatiskde/impressum-en.php" title="了解更多關於 KDE、code of conduct、privacy policy 及 GDPR">KDE Impressum</a>
    
 
 </footer>
@@ -689,7 +689,7 @@ In doing so, they made the first color spaces, with XYZ being the one best at ap
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../../',
             VERSION:'5.0.0 Beta',
-            LANGUAGE:'en',
+            LANGUAGE:'zh_TW',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,
@@ -700,6 +700,7 @@ In doing so, they made the first color spaces, with XYZ being the one best at ap
       <script type="text/javascript" src="../../_static/jquery.js"></script>
       <script type="text/javascript" src="../../_static/underscore.js"></script>
       <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/translations.js"></script>
 
   
 
