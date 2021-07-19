@@ -1,0 +1,485 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" name="title" content="Introduction to Python Scripting" />
+  <meta property="og:site-name" content="Krita Manual" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="en" />
+  <meta property="og:locale:alternate" content="ca" />
+  
+  <meta property="og:locale:alternate" content="fr" />
+  <meta property="og:locale:alternate" content="it" />
+  <meta property="og:locale:alternate" content="ja" />
+  <meta property="og:locale:alternate" content="ko" />
+  <meta property="og:locale:alternate" content="nl" />
+  <meta property="og:locale:alternate" content="pl" />
+  <meta property="og:locale:alternate" content="pt_PT" />
+  <meta property="og:locale:alternate" content="uk_UA" />
+  <meta property="og:locale:alternate" content="zh_CN" />
+  <meta property="og:article:modified_time" content="2021-07-19T15:33:59" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<meta content="Introduction to using Krita's python plugin API." name="description" />
+
+  
+  
+  <title>Introduction to Python Scripting &mdash; Krita Manual 5.0.0 Beta documentation</title>
+  
+
+  
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    
+  
+  
+  
+    <link rel="canonical" href="en/user_manual/python_scripting/introduction_to_python_scripting.html"/>
+    <meta property="og:url" content="en/user_manual/python_scripting/introduction_to_python_scripting.html" />
+    <meta property="og:image" content="en/_static/sidebar-logo.png" />
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="How to make a Krita Python plugin" href="krita_python_plugin_howto.html" />
+    <link rel="prev" title="Managing Python plugins" href="install_custom_python_plugin.html" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+       
+           <a href="../../index.html" class="icon icon-home">
+
+			<img src="../../_static/sidebar-logo.png" class="logo" alt="Logo"/>
+           	
+           <!--	Krita Manual -->
+
+
+          </a>
+
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-side-nav-language-selector">
+        	<p class="caption-text">
+	        	<select id="language-selector-container">
+	        		<option value="ca">Català</option>
+	        		<option value="en">English</option>
+	        		<option value="fr">français</option>
+	        		<option value="it">Italiano</option>
+	        		<option value="ja">日本語</option>
+	        		<option value="ko">한국어</option>
+	        		<option value="nl">Nederlands</option>
+	        		<option value="pl">Polski</option>
+	        		<option value="pt_PT">português</option>
+	        		<option value="uk_UA">Українська</option>
+	        		<option value="zh_CN">简体中文</option>
+	        	</select>
+        	</p>
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../user_manual.html">User Manual</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../getting_started.html">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction_from_other_software.html">Introduction Coming From Other Software</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../drawing_tablets.html">Drawing Tablets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../loading_saving_brushes.html">Loading and Saving Brushes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../oncanvas_brush_editor.html">On-Canvas Brush Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mirror_tools.html">Mirror Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../painting_with_assistants.html">Painting with Assistants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../working_with_images.html">Working with Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../autosave.html">Saving, AutoSave and Backup Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../templates.html">Templates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../layers_and_masks.html">Introduction to Layers and Masks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../selections.html">Selections</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../python_scripting.html">Python Scripting</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="install_custom_python_plugin.html">Managing Python plugins</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Introduction to Python Scripting</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#what-is-python-scripting">What is Python Scripting?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#technical-details">Technical Details</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="krita_python_plugin_howto.html">How to make a Krita Python plugin</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../tag_management.html">Tag Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../soft_proofing.html">Soft Proofing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vector_graphics.html">Vector Graphics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../snapping.html">Snapping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation.html">Animation with Krita</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../japanese_animation_template.html">Japanese Animation Template</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gamut_masks.html">Gamut Masks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../general_concepts.html">General Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference_manual.html">Reference Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials.html">Tutorials and How-tos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../KritaFAQ.html">Krita FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributors_manual.html">Contributors Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../resources_page.html">Resources</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+	<!-- start top banner area (for fundraisers or messages)
+
+	<div style="text-align: center; background-color: #333">
+		<a href="https://krita.org/en/fundraising-2018-campaign/" target="_self" onclick="ga('send', 'event', 'frontpage', 'button', 'Fundraiser 2018');">
+			<img src="https://krita.org/wp-content/themes/krita-org-theme/images/decoration/2018-fundraiser-banner.png" style="max-width: 100%">
+		</a>
+	</div>
+	
+	 end top banner area -->
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Krita Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../user_manual.html">User Manual</a> &raquo;</li>
+        
+          <li><a href="../python_scripting.html">Python Scripting</a> &raquo;</li>
+        
+      <li>Introduction to Python Scripting</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+          
+            <a href="../../_sources/user_manual/python_scripting/introduction_to_python_scripting.rst.txt" rel="nofollow"> 
+             
+              <img src="../../_static/images/source-code.png" />
+             <!-- View page source -->
+
+          </a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="introduction-to-python-scripting">
+<span id="index-0"></span><span id="id1"></span><h1>Introduction to Python Scripting<a class="headerlink" href="#introduction-to-python-scripting" title="Permalink to this headline">¶</a></h1>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 4.0.</span></p>
+</div>
+<p>When we offered python scripting as one of Kickstarter Stretchgoals we could implement next to vectors and text, it won the backer vote by a landslide. Some people even only picked python and nothing else. So what exactly is python scripting?</p>
+<section id="what-is-python-scripting">
+<h2>What is Python Scripting?<a class="headerlink" href="#what-is-python-scripting" title="Permalink to this headline">¶</a></h2>
+<p>Python is a scripting language, that can be used to automate tasks. What python scripting in Krita means is that we added an API to krita, which is a bit of programming that allows python to access to parts of Krita. With this we can make dockers, perform menial tasks on a lot of different files and even write our own exporters. People who work with computer graphics, like VFX and video game artists use python a lot to make things like sprite sheets, automate parts of export and more.</p>
+<p>It is outside the scope of this manual to teach you python itself. However, as python is an extremely popular programming language and great for beginners, there’s tons of learning material around that can be quickly found with a simple ‘learn python’ internet search.</p>
+<p>This manual will instead focus on how to use python to automate and extend Krita. For that we’ll first start with the basics: How to run Python commands in the scripter.</p>
+<section id="how-to-enable-the-scripter-plugin">
+<h3>How to Enable the Scripter Plugin<a class="headerlink" href="#how-to-enable-the-scripter-plugin" title="Permalink to this headline">¶</a></h3>
+<p>The scripter plugin is not necessary to use python, but it is very useful for testing and playing around with python. It is a python console, written in python, which can be used to write small scripts and execute them on the fly.</p>
+<p>To open the scripter, navigate to <span class="menuselection">Tools ‣ Scripts ‣ Scripter</span>. If you don’t see it listed, go to <span class="menuselection">Settings ‣ Configure Krita… ‣ Python Plugin Manager</span> and toggle “Scripter” in the list to enable it. If you don’t see the scripter plugin, make sure you are using an up-to-date version of Krita.</p>
+<p>The scripter will pop up with a text editor window on top and an output window below. Input the following in the text area:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="s2">&quot;hello world&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Press the big play button or press the <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">R</kbd></kbd> shortcut to run the script. Then, below, in the output area the following should show up:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>==== Warning: Script not saved! ====
+hello world
+</pre></div>
+</div>
+<p>Now we have a console that can run functions like print() from the Python environment - but how do we use it to manage Krita?</p>
+</section>
+<section id="running-basic-krita-commands">
+<h3>Running basic Krita commands<a class="headerlink" href="#running-basic-krita-commands" title="Permalink to this headline">¶</a></h3>
+<p>To allow Python to communicate with Krita, we will use the Krita module. At the top of every script, we will write: <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">krita</span> <span class="pre">import</span> <span class="pre">*</span></code></p>
+<p>This allows us to talk to Krita through <code class="docutils literal notranslate"><span class="pre">Krita.instance()</span></code>. Let’s try to double our coding abilities with Python.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">krita</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="n">Krita</span><span class="o">.</span><span class="n">instance</span><span class="p">()</span><span class="o">.</span><span class="n">action</span><span class="p">(</span><span class="s1">&#39;python_scripter&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">trigger</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>You should see a second scripter window open. Pretty neat! Here is a slightly more advanced example.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">krita</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="n">d</span> <span class="o">=</span> <span class="n">Krita</span><span class="o">.</span><span class="n">instance</span><span class="p">()</span><span class="o">.</span><span class="n">createDocument</span><span class="p">(</span><span class="mi">512</span><span class="p">,</span> <span class="mi">512</span><span class="p">,</span> <span class="s2">&quot;Python test document&quot;</span><span class="p">,</span> <span class="s2">&quot;RGBA&quot;</span><span class="p">,</span> <span class="s2">&quot;U8&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="mf">120.0</span><span class="p">)</span>
+<span class="n">Krita</span><span class="o">.</span><span class="n">instance</span><span class="p">()</span><span class="o">.</span><span class="n">activeWindow</span><span class="p">()</span><span class="o">.</span><span class="n">addView</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This will open up a new document. Clearly Python gives you quite a lot of control to automate Krita. Over time we expect the community to write all kinds of scripts that you can use simply by pasting them in the scripter.</p>
+<p>But what if you want to write new commands for yourself? The best place to start is very simple: search for examples written by other people! You can save a lot of time if someone else has written code that you can base your work on. It’s also worth looking through the python plugins, which are located in /share/krita/pykrita. There’s also a step by step guide for <a class="reference internal" href="krita_python_plugin_howto.html#krita-python-plugin-howto"><span class="std std-ref">How to make a Krita Python plugin</span></a> here in the manual.</p>
+<p>But it’s likely that you need more information. For that, we will need see what’s hidden behind the asterisk when you <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">*</span> <span class="pre">from</span> <span class="pre">Krita</span></code>. To learn what Krita functions that are available and how to use them, you will want to go for Krita API reference documentation.</p>
+</section>
+<section id="krita-s-api">
+<h3>Krita’s API<a class="headerlink" href="#krita-s-api" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://api.kde.org/extragear-api/graphics-apidocs/krita/libs/libkis/html/index.html">LibKis API Overview</a></p></li>
+<li><p><a class="reference external" href="https://api.kde.org/extragear-api/graphics-apidocs/krita/libs/libkis/html/classKrita.html">Krita class documentation</a></p></li>
+</ul>
+<p>Those pages may look like a lot of jargon at first. This is because Krita’s API documentation comes from the underlying C++ language that Krita is written in. The magic happens because of a Python tool called SIP, which makes it possible for python speak in C++ and talk to Krita. The end result is that when we <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">krita</span></code> and call functions, we’re actually using the C++ methods listed in that documentation.</p>
+<p>Let’s see how this stuff works in more detail. Let’s take a look at the second link, the <a class="reference external" href="https://api.kde.org/extragear-api/graphics-apidocs/krita/libs/libkis/html/classKrita.html#aa55507903d088013ced2df8c74f28a63">Krita class reference</a>. There we can see all the functions available to the Krita instance. If you type dir(Krita.instance()) in Python, it should match this page very closely - you can view the documentation of the functions createDocument(), activeWindow(), and action() which we used above.</p>
+<p>One of the more confusing things is seeing all the C++ classes that Krita uses, including the Qt classes that start with Q. But here is the beauty of SIP: it tries to make the translation from these classes into Python as simple and straightforward as possible. For example, you can see that the function filters() returns a QStringList. However, SIP converts those QStringLists into regular python list of strings!</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">krita</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">Krita</span><span class="o">.</span><span class="n">instance</span><span class="p">()</span><span class="o">.</span><span class="n">filters</span><span class="p">())</span>
+</pre></div>
+</div>
+<p>Outputs as:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="s1">&#39;asc-cdl&#39;</span><span class="p">,</span> <span class="s1">&#39;autocontrast&#39;</span><span class="p">,</span> <span class="s1">&#39;blur&#39;</span><span class="p">,</span> <span class="s1">&#39;burn&#39;</span><span class="p">,</span> <span class="s1">&#39;colorbalance&#39;</span><span class="p">,</span> <span class="s1">&#39;colortoalpha&#39;</span><span class="p">,</span> <span class="s1">&#39;colortransfer&#39;</span><span class="p">,</span>
+<span class="s1">&#39;desaturate&#39;</span><span class="p">,</span> <span class="s1">&#39;dodge&#39;</span><span class="p">,</span> <span class="s1">&#39;edge detection&#39;</span><span class="p">,</span> <span class="s1">&#39;emboss&#39;</span><span class="p">,</span> <span class="s1">&#39;emboss all directions&#39;</span><span class="p">,</span> <span class="s1">&#39;emboss horizontal and vertical&#39;</span><span class="p">,</span>
+<span class="s1">&#39;emboss horizontal only&#39;</span><span class="p">,</span> <span class="s1">&#39;emboss laplascian&#39;</span><span class="p">,</span> <span class="s1">&#39;emboss vertical only&#39;</span><span class="p">,</span> <span class="s1">&#39;gaussian blur&#39;</span><span class="p">,</span> <span class="s1">&#39;gaussiannoisereducer&#39;</span><span class="p">,</span>
+<span class="s1">&#39;gradientmap&#39;</span><span class="p">,</span> <span class="s1">&#39;halftone&#39;</span><span class="p">,</span> <span class="s1">&#39;height to normal&#39;</span><span class="p">,</span> <span class="s1">&#39;hsvadjustment&#39;</span><span class="p">,</span> <span class="s1">&#39;indexcolors&#39;</span><span class="p">,</span> <span class="s1">&#39;invert&#39;</span><span class="p">,</span> <span class="s1">&#39;lens blur&#39;</span><span class="p">,</span> <span class="s1">&#39;levels&#39;</span><span class="p">,</span>
+<span class="s1">&#39;maximize&#39;</span><span class="p">,</span> <span class="s1">&#39;mean removal&#39;</span><span class="p">,</span> <span class="s1">&#39;minimize&#39;</span><span class="p">,</span> <span class="s1">&#39;motion blur&#39;</span><span class="p">,</span> <span class="s1">&#39;noise&#39;</span><span class="p">,</span> <span class="s1">&#39;normalize&#39;</span><span class="p">,</span> <span class="s1">&#39;oilpaint&#39;</span><span class="p">,</span> <span class="s1">&#39;perchannel&#39;</span><span class="p">,</span> <span class="s1">&#39;phongbumpmap&#39;</span><span class="p">,</span>
+<span class="s1">&#39;pixelize&#39;</span><span class="p">,</span> <span class="s1">&#39;posterize&#39;</span><span class="p">,</span> <span class="s1">&#39;raindrops&#39;</span><span class="p">,</span> <span class="s1">&#39;randompick&#39;</span><span class="p">,</span> <span class="s1">&#39;roundcorners&#39;</span><span class="p">,</span> <span class="s1">&#39;sharpen&#39;</span><span class="p">,</span> <span class="s1">&#39;smalltiles&#39;</span><span class="p">,</span> <span class="s1">&#39;threshold&#39;</span><span class="p">,</span> <span class="s1">&#39;unsharp&#39;</span><span class="p">,</span>
+<span class="s1">&#39;wave&#39;</span><span class="p">,</span> <span class="s1">&#39;waveletnoisereducer&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>However, sometimes the conversion doesn’t go quite as smoothly.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">krita</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">Krita</span><span class="o">.</span><span class="n">instance</span><span class="p">()</span><span class="o">.</span><span class="n">documents</span><span class="p">())</span>
+</pre></div>
+</div>
+<p>gives something like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="o">&lt;</span><span class="n">PyKrita</span><span class="o">.</span><span class="n">krita</span><span class="o">.</span><span class="n">Document</span> <span class="nb">object</span> <span class="n">at</span> <span class="mh">0x7f7294630b88</span><span class="o">&gt;</span><span class="p">,</span>
+<span class="o">&lt;</span><span class="n">PyKrita</span><span class="o">.</span><span class="n">krita</span><span class="o">.</span><span class="n">Document</span> <span class="nb">object</span> <span class="n">at</span> <span class="mh">0x7f72946309d8</span><span class="o">&gt;</span><span class="p">,</span>
+<span class="o">&lt;</span><span class="n">PyKrita</span><span class="o">.</span><span class="n">krita</span><span class="o">.</span><span class="n">Document</span> <span class="nb">object</span> <span class="n">at</span> <span class="mh">0x7f7294630c18</span><span class="o">&gt;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>It is a list of something, sure, but how to use it? If we go back to the Krita apidocs page and look at the function, documents() we’ll see there’s actually a clickable link on the ‘Document’ class. <a class="reference external" href="https://api.kde.org/extragear-api/graphics-apidocs/krita/libs/libkis/html/classDocument.html">If you follow that link</a>, you’ll see that the document has a function called name() which returns the name of the document, and functions width() and height() which return the dimensions. So if we wanted to generate an info report about the documents in Krita, we could write a script like this:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">krita</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="k">for</span> <span class="n">doc</span> <span class="ow">in</span> <span class="n">Krita</span><span class="o">.</span><span class="n">instance</span><span class="p">()</span><span class="o">.</span><span class="n">documents</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">doc</span><span class="o">.</span><span class="n">name</span><span class="p">())</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">doc</span><span class="o">.</span><span class="n">width</span><span class="p">())</span><span class="o">+</span><span class="s2">&quot;x&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">doc</span><span class="o">.</span><span class="n">height</span><span class="p">()))</span>
+</pre></div>
+</div>
+<p>We get an output like:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>==== Warning: Script not saved! ====
+Unnamed
+ 2480x3508
+sketch21
+ 3508x2480
+Blue morning
+ 1600x900
+</pre></div>
+</div>
+<p>Hopefully this will give you an idea of how to navigate the API docs now.</p>
+<p>Krita’s API has many more classes, you can get to them by going to the top-left class list, or just clicking their names to get to their API docs. The functions print() or dir() are your friends here as well. This line will print out a list of all the actions in Krita - you could swap in one of these commands instead of ‘python_scripter’ in the example above.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="k">print</span><span class="p">([</span><span class="n">a</span><span class="o">.</span><span class="n">objectName</span><span class="p">(),</span> <span class="n">a</span><span class="o">.</span><span class="n">text</span><span class="p">()])</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">Krita</span><span class="o">.</span><span class="n">instance</span><span class="p">()</span><span class="o">.</span><span class="n">actions</span><span class="p">()]</span>
+</pre></div>
+</div>
+<p>The Python module <code class="docutils literal notranslate"><span class="pre">inspect</span></code> was designed for this sort of task. Here’s a useful function to print info about a class to the console.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">inspect</span>
+<span class="k">def</span> <span class="nf">getInfo</span><span class="p">(</span><span class="n">target</span><span class="p">):</span>
+    <span class="p">[</span><span class="k">print</span><span class="p">(</span><span class="n">item</span><span class="p">)</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">inspect</span><span class="o">.</span><span class="n">getmembers</span><span class="p">(</span><span class="n">target</span><span class="p">)</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">item</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;_&#39;</span><span class="p">)]</span>
+
+<span class="n">getInfo</span><span class="p">(</span><span class="n">Krita</span><span class="o">.</span><span class="n">instance</span><span class="p">())</span>
+</pre></div>
+</div>
+<p>Finally, in addition to the LibKis documentation, the Qt documentation, since Krita uses PyQt to expose nearly all of the Qt API to Python. You can build entire windows with buttons and forms this way, using the very same tools that Krita is using! You can read the <a class="reference external" href="https://doc.qt.io/">Qt documentation</a> and the <a class="reference external" href="https://www.riverbankcomputing.com/static/Docs/PyQt5/">PyQt documentation</a> for more info about this, and also definitely study the included plugins as well to see how they work.</p>
+</section>
+</section>
+<section id="technical-details">
+<h2>Technical Details<a class="headerlink" href="#technical-details" title="Permalink to this headline">¶</a></h2>
+<section id="python-scripting-on-windows">
+<h3>Python Scripting on Windows<a class="headerlink" href="#python-scripting-on-windows" title="Permalink to this headline">¶</a></h3>
+<p>To get Python scripting working on Windows 7/8/8.1, you will need to install the <a class="reference external" href="https://www.microsoft.com/en-us/download/details.aspx?id=48234">Universal C Runtime from Microsoft’s website</a>. (Windows 10 already comes with it.)</p>
+</section>
+<section id="python-2-and-3">
+<h3>Python 2 and 3<a class="headerlink" href="#python-2-and-3" title="Permalink to this headline">¶</a></h3>
+<p>By default Krita is compiled for python 3.</p>
+<p>However, it is possible to compile it with python 2. To do so, you will need to add the following to the cmake configuration line:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="n">DENABLE_PYTHON_2</span><span class="o">=</span><span class="n">ON</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="krita_python_plugin_howto.html" class="btn btn-neutral float-right" title="How to make a Krita Python plugin" accesskey="n" rel="next"> <!-- Next --> <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="install_custom_python_plugin.html" class="btn btn-neutral" title="Managing Python plugins" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- Previous  -->  </a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright licensed under the GNU Free Documentation License 1.3+ unless stated otherwise.
+      
+        <span class="commit">
+          Revision <code>7c271ce</code>.
+        </span>
+      
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a modified <a href="https://github.com/rtfd/sphinx_rtd_theme">RTD theme</a>.<br/>
+  <a href="https://krita.org" title="Krita official website.">Krita official website</a> |
+  <a href="https://invent.kde.org/documentation/docs-krita-org/" title="The Gitlab instance to edit this pages and collaborate.">Git repository for docs.krita.org </a> |
+  <a href="https://www.kde.org/community/whatiskde/impressum-en.php" title="To know more about KDE, code of conduct, privacy policy and GDPR.">KDE Impressum</a>.
+   
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'5.0.0 Beta',
+            LANGUAGE:'en',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/documentation_options.js"></script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
+      });
+  </script> 
+
+ <script type="text/javascript">
+	 var _paq=_paq||[];
+	 _paq.push(['setCookieDomain','*.krita.org']);
+	 _paq.push(['setDomains','*.krita.org']);
+	 _paq.push(['setDocumentTitle',document.domain+"/"+document.title]);
+	 _paq.push(['trackPageView']);
+	 _paq.push(['enableLinkTracking']);
+
+	 (function(){
+	 	var u="//stats.kde.org/";
+	    _paq.push(['setTrackerUrl',u+'piwik.php']);
+	    _paq.push(['setSiteId',13]);
+	    var d = document, g = d.createElement('script'),s=d.getElementsByTagName('script')[0];
+	    g.type = 'text/javascript';
+	    g.async = true;
+	    g.defer = true;
+	    g.src = u+'piwik.js';
+	    s.parentNode.insertBefore(g,s);
+	  })();
+</script> 
+<noscript><p><img src="//stats.kde.org/piwik.php?idsite=13" style="border:0;" alt="" /></p></noscript>
+
+</body>
+</html>

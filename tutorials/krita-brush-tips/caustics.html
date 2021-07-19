@@ -1,0 +1,390 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" name="title" content="Brush Tips: Caustics" />
+  <meta property="og:site-name" content="Krita Manual" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="en" />
+  <meta property="og:locale:alternate" content="ca" />
+  
+  <meta property="og:locale:alternate" content="fr" />
+  <meta property="og:locale:alternate" content="it" />
+  <meta property="og:locale:alternate" content="ja" />
+  <meta property="og:locale:alternate" content="ko" />
+  <meta property="og:locale:alternate" content="nl" />
+  <meta property="og:locale:alternate" content="pl" />
+  <meta property="og:locale:alternate" content="pt_PT" />
+  <meta property="og:locale:alternate" content="uk_UA" />
+  <meta property="og:locale:alternate" content="zh_CN" />
+  <meta property="og:article:modified_time" content="2021-07-19T15:33:59" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<meta content="Creating the caustic effects of underwater with Krita." lang="en" name="description" xml:lang="en" />
+
+  
+  
+  <title>Brush Tips: Caustics &mdash; Krita Manual 5.0.0 Beta documentation</title>
+  
+
+  
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    
+  
+  
+  
+    <link rel="canonical" href="en/tutorials/krita-brush-tips/caustics.html"/>
+    <meta property="og:url" content="en/tutorials/krita-brush-tips/caustics.html" />
+    <meta property="og:image" content="en/_static/sidebar-logo.png" />
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Painting fur" href="fur.html" />
+    <link rel="prev" title="Heightmap Bristle Brush Tips" href="bristle_from_heightmap_brush_tip.html" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+       
+           <a href="../../index.html" class="icon icon-home">
+
+			<img src="../../_static/sidebar-logo.png" class="logo" alt="Logo"/>
+           	
+           <!--	Krita Manual -->
+
+
+          </a>
+
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-side-nav-language-selector">
+        	<p class="caption-text">
+	        	<select id="language-selector-container">
+	        		<option value="ca">Català</option>
+	        		<option value="en">English</option>
+	        		<option value="fr">français</option>
+	        		<option value="it">Italiano</option>
+	        		<option value="ja">日本語</option>
+	        		<option value="ko">한국어</option>
+	        		<option value="nl">Nederlands</option>
+	        		<option value="pl">Polski</option>
+	        		<option value="pt_PT">português</option>
+	        		<option value="uk_UA">Українська</option>
+	        		<option value="zh_CN">简体中文</option>
+	        	</select>
+        	</p>
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../user_manual.html">User Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../general_concepts.html">General Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference_manual.html">Reference Manual</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../tutorials.html">Tutorials and How-tos</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../clipping_masks_and_alpha_inheritance.html">Clipping Masks and Alpha Inheritance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common_workflows.html">Common Workflows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../eye_tracker.html">An Example Setup for Using Krita with an Eye Tracker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../flat-coloring.html">Flat Coloring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../inking.html">Inking</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../krita-brush-tips.html">Krita Brush Tips</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="animated_brushes.html">Animated Brushes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bokeh-brush.html">Brush Tips: Bokeh</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bristle_from_heightmap_brush_tip.html">Heightmap Bristle Brush Tips</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Brush Tips: Caustics</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#question">Question</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="fur.html">Painting fur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gradient_map_brush_tip.html">Gradient Map Brush Tips</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hair.html">Brush-tips:Hair</a></li>
+<li class="toctree-l3"><a class="reference internal" href="outline.html">Brush-tips:Outline</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rainbow-brush.html">Brush-tips:Rainbow Brush</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sculpt-paint-brush.html">Brush-tips:Sculpt-paint-brush</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../making_an_azalea_with_the_transformation_masks.html">Making An Azalea With The Transformation Masks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../saving-for-the-web.html">Saving For The Web</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../seexpr.html">Introduction to SeExpr</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../KritaFAQ.html">Krita FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributors_manual.html">Contributors Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../resources_page.html">Resources</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+	<!-- start top banner area (for fundraisers or messages)
+
+	<div style="text-align: center; background-color: #333">
+		<a href="https://krita.org/en/fundraising-2018-campaign/" target="_self" onclick="ga('send', 'event', 'frontpage', 'button', 'Fundraiser 2018');">
+			<img src="https://krita.org/wp-content/themes/krita-org-theme/images/decoration/2018-fundraiser-banner.png" style="max-width: 100%">
+		</a>
+	</div>
+	
+	 end top banner area -->
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Krita Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../tutorials.html">Tutorials and How-tos</a> &raquo;</li>
+        
+          <li><a href="../krita-brush-tips.html">Krita Brush Tips</a> &raquo;</li>
+        
+      <li>Brush Tips: Caustics</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+          
+            <a href="../../_sources/tutorials/krita-brush-tips/caustics.rst.txt" rel="nofollow"> 
+             
+              <img src="../../_static/images/source-code.png" />
+             <!-- View page source -->
+
+          </a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="brush-tips-caustics">
+<span id="caustics"></span><h1>Brush Tips: Caustics<a class="headerlink" href="#brush-tips-caustics" title="Permalink to this headline">¶</a></h1>
+<section id="question">
+<h2>Question<a class="headerlink" href="#question" title="Permalink to this headline">¶</a></h2>
+<p>Could you do a tutorial on how to recreate the look of light refracting in water?</p>
+<p>Sure, caustics, it’s not like it’s the most complicated effect known to CG graphics… Okay, so the first thing is that light effects never work in isolation: you need to be spot on with colors and other effects to make it work. So we first need to recreate the surroundings a bit.</p>
+<a class="reference internal image-reference" href="../../_images/Krita-brushtips-caustics_01.png"><img alt="Background gradient for creating caustic effects." src="../../_images/Krita-brushtips-caustics_01.png" style="width: 800px;" /></a>
+<p>We set up something simple with gradients. Some radial, some linear. The eraser mode works with gradients as well, so use that to your advantage!</p>
+<p>We create a simple smudge brush by taking smudge_soft and adding scattering to it, as well as an s-curve on the smudge length.</p>
+<img alt="Brush Settings." src="../../_images/Krita-brushtips-caustics_02.png" />
+<p>And then we build up a quick base:</p>
+<img alt="Building a base for the caustic effects from the brush." src="../../_images/Krita-brushtips-caustics_03.gif" />
+<p>Note how the smudge brush here is used not just to mix areas, but also to create definition of borders by lowering the scatter. (If you reverse the pressure curve on the scatter, this’ll be easily done by increasing the pressure on the stylus)</p>
+<p>Now for the real magic. Caustics are a bit hairy, which means it’s a good candidate for the sketch brush engine.</p>
+<img alt="Settings for the brush to create the caustic lines." src="../../_images/Krita-brushtips-caustics_04.png" />
+<p>Take <em>sketch_ink_big</em>, and add pressure to the <span class="guilabel">Line width</span> while setting <span class="guilabel">Density</span> under the <span class="guilabel">Brush size</span> to 100%. This makes it extra hairy.</p>
+<img alt="Set color blending mode the color dodge." src="../../_images/Krita-brushtips-caustics_05.png" />
+<p>Set the brush blending mode to <span class="guilabel">Color Dodge</span>, and select the color of our caustics. Color dodge will cause a move towards white by applying special dodge color maths to our brush dabs instead of the <span class="guilabel">Normal</span> averaging color maths.</p>
+<p>Outside of pressure for making varying strokes, glowiness for the light and extra density, we also want to have the size of the line decrease the further away it is…</p>
+<img alt="Setup the perspective assistant." src="../../_images/Krita-brushtips-caustics_06.png" />
+<p>Then, use the assistant editor tool to add a perspective grid. It doesn’t need to be perfectly in perspective, because we’ll only use it for the perspective sensor.</p>
+<img alt="Select the perspective parameter in the brush settings." src="../../_images/Krita-brushtips-caustics_07.png" />
+<p>This will cause the brush to give smaller lines the further it registers on the perspective assistant. (It only works per single perspective assistant, making it not very good for chaining, but for our purpose this is good.)</p>
+<p>Then you start slowly building up your lines. (Make sure to make a copy of the layer. The color dodge blending doesn’t work well on a separate layer, so do it on one that also has the ground on it.)</p>
+<img alt="Painting the caustics." src="../../_images/Krita-brushtips-caustics_08.png" />
+<p>Make sure to try and follow the shapes you made. (<em>I failed at this</em>) The great thing about the sketch brush is that it causes those little ‘melt-togethers’ where two lines cross. This is only per stroke, so make a lot of long ongoing strokes with this brush to make use of it.</p>
+<img alt="Adding a little gradient." src="../../_images/Krita-brushtips-caustics_09.png" />
+<p>Then take the gradient tool, and set the blending mode to color and the paint tool to a light blue, so we can get in the bluish atmospheric effect.</p>
+<img alt="Adding some atmospheric effect." src="../../_images/Krita-brushtips-caustics_10.png" />
+<p>Then use the airbrush_pressure with the line tool to make some light-shafts of different sizes on a separate layer. (Don’t forget you can use the eraser mode for subtle erasing with the line tool as well)</p>
+<img alt="Add some light shafts." src="../../_images/Krita-brushtips-caustics_11.png" />
+<p>Set the blending mode to color dodge and lower the opacity.</p>
+<img alt="Change the blend mode to color dodge of the layer." src="../../_images/Krita-brushtips-caustics_12.png" />
+<p>Finally, polish the piece with the airbrush tool and some local color picking.</p>
+<figure class="align-default" id="id1">
+<img alt="Final polish." src="../../_images/Krita-brushtips-caustics_13.png" />
+<figcaption>
+<p><span class="caption-text">Final Result</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="fur.html" class="btn btn-neutral float-right" title="Painting fur" accesskey="n" rel="next"> <!-- Next --> <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="bristle_from_heightmap_brush_tip.html" class="btn btn-neutral" title="Heightmap Bristle Brush Tips" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- Previous  -->  </a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright licensed under the GNU Free Documentation License 1.3+ unless stated otherwise.
+      
+        <span class="commit">
+          Revision <code>7c271ce</code>.
+        </span>
+      
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a modified <a href="https://github.com/rtfd/sphinx_rtd_theme">RTD theme</a>.<br/>
+  <a href="https://krita.org" title="Krita official website.">Krita official website</a> |
+  <a href="https://invent.kde.org/documentation/docs-krita-org/" title="The Gitlab instance to edit this pages and collaborate.">Git repository for docs.krita.org </a> |
+  <a href="https://www.kde.org/community/whatiskde/impressum-en.php" title="To know more about KDE, code of conduct, privacy policy and GDPR.">KDE Impressum</a>.
+   
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'5.0.0 Beta',
+            LANGUAGE:'en',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/documentation_options.js"></script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
+      });
+  </script> 
+
+ <script type="text/javascript">
+	 var _paq=_paq||[];
+	 _paq.push(['setCookieDomain','*.krita.org']);
+	 _paq.push(['setDomains','*.krita.org']);
+	 _paq.push(['setDocumentTitle',document.domain+"/"+document.title]);
+	 _paq.push(['trackPageView']);
+	 _paq.push(['enableLinkTracking']);
+
+	 (function(){
+	 	var u="//stats.kde.org/";
+	    _paq.push(['setTrackerUrl',u+'piwik.php']);
+	    _paq.push(['setSiteId',13]);
+	    var d = document, g = d.createElement('script'),s=d.getElementsByTagName('script')[0];
+	    g.type = 'text/javascript';
+	    g.async = true;
+	    g.defer = true;
+	    g.src = u+'piwik.js';
+	    s.parentNode.insertBefore(g,s);
+	  })();
+</script> 
+<noscript><p><img src="//stats.kde.org/piwik.php?idsite=13" style="border:0;" alt="" /></p></noscript>
+
+</body>
+</html>

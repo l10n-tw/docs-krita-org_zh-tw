@@ -1,0 +1,496 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" name="title" content="Reporting Bugs" />
+  <meta property="og:site-name" content="Krita Manual" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="en" />
+  <meta property="og:locale:alternate" content="ca" />
+  
+  <meta property="og:locale:alternate" content="fr" />
+  <meta property="og:locale:alternate" content="it" />
+  <meta property="og:locale:alternate" content="ja" />
+  <meta property="og:locale:alternate" content="ko" />
+  <meta property="og:locale:alternate" content="nl" />
+  <meta property="og:locale:alternate" content="pl" />
+  <meta property="og:locale:alternate" content="pt_PT" />
+  <meta property="og:locale:alternate" content="uk_UA" />
+  <meta property="og:locale:alternate" content="zh_CN" />
+  <meta property="og:article:modified_time" content="2021-07-19T15:33:59" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<meta content="Guide to Reporting Bugs." name="description" />
+
+  
+  
+  <title>Reporting Bugs &mdash; Krita Manual 5.0.0 Beta documentation</title>
+  
+
+  
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    
+  
+  
+  
+    <link rel="canonical" href="en/untranslatable_pages/reporting_bugs.html"/>
+    <meta property="og:url" content="en/untranslatable_pages/reporting_bugs.html" />
+    <meta property="og:image" content="en/_static/sidebar-logo.png" />
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Running Krita from Source" href="running_krita.html" />
+    <link rel="prev" title="Making a release" href="release_krita.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+       
+           <a href="../index.html" class="icon icon-home">
+
+			<img src="../_static/sidebar-logo.png" class="logo" alt="Logo"/>
+           	
+           <!--	Krita Manual -->
+
+
+          </a>
+
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-side-nav-language-selector">
+        	<p class="caption-text">
+	        	<select id="language-selector-container">
+	        		<option value="ca">Català</option>
+	        		<option value="en">English</option>
+	        		<option value="fr">français</option>
+	        		<option value="it">Italiano</option>
+	        		<option value="ja">日本語</option>
+	        		<option value="ko">한국어</option>
+	        		<option value="nl">Nederlands</option>
+	        		<option value="pl">Polski</option>
+	        		<option value="pt_PT">português</option>
+	        		<option value="uk_UA">Українська</option>
+	        		<option value="zh_CN">简体中文</option>
+	        	</select>
+        	</p>
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../user_manual.html">User Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general_concepts.html">General Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference_manual.html">Reference Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials.html">Tutorials and How-tos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../KritaFAQ.html">Krita FAQ</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../contributors_manual.html">Contributors Manual</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../contributors_manual/community.html">The Krita Community</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributors_manual/krita_manual_conventions.html">Mark-up conventions for the Krita Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributors_manual/krita_manual_readme.html">Krita Manual Contribution Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributors_manual/optimising_images.html">Images for the Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributors_manual/user_support.html">Introduction to User Support</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../untranslatable_pages.html">Technical Pages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="building_krita.html">Building Krita from Source</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cmake_settings_for_developers.html">CMake Settings for Developers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="intro_hacking_krita.html">Introduction to Hacking Krita</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kpl_defintion.html">The Krita Palette format KPL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="krita_svg_extensions.html">Krita SVG Extensions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modern_cpp_in_krita.html">Modern C++ usage guidelines for the Krita codebase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new_features.html">Developing Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="optimizing_tips_for_krita.html">Optimizing tips and tools for Krita</a></li>
+<li class="toctree-l3"><a class="reference internal" href="participating_in_gsoc.html">Google Summer of Code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="patch_review_guide.html">Advanced Merge Request Guide</a></li>
+<li class="toctree-l3"><a class="reference internal" href="python_coding.html">Python Developer Tools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quality_assurance.html">Introduction to Quality Assurance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release_krita.html">Making a release</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Reporting Bugs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#only-report-bugs">Only Report Bugs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#check-the-faq">Check the FAQ</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ask-on-krita-artists-or-irc-chat-channel">Ask on Krita Artists or IRC Chat Channel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#use-the-latest-version-of-krita">Use the Latest Version of Krita</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#be-complete-and-be-completely-clear">Be Complete and Be Completely Clear</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#after-you-have-filed-the-report">After You Have Filed the Report</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="running_krita.html">Running Krita from Source</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strokes_documentation.html">Strokes queue</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strokes_documentation.html#strokes-public-api">Strokes public API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strokes_documentation.html#internals-of-the-freehand-tool">Internals of the freehand tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strokes_documentation.html#scheduled-undo-redo">Scheduled Undo/Redo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strokes_documentation.html#processings-framework">Processings framework</a></li>
+<li class="toctree-l3"><a class="reference internal" href="testing_strategy.html">Testing Strategy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="triaging_bugs.html">Triaging Bugs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="unit_tests_in_krita.html">Unittests in Krita</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../resources_page.html">Resources</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+	<!-- start top banner area (for fundraisers or messages)
+
+	<div style="text-align: center; background-color: #333">
+		<a href="https://krita.org/en/fundraising-2018-campaign/" target="_self" onclick="ga('send', 'event', 'frontpage', 'button', 'Fundraiser 2018');">
+			<img src="https://krita.org/wp-content/themes/krita-org-theme/images/decoration/2018-fundraiser-banner.png" style="max-width: 100%">
+		</a>
+	</div>
+	
+	 end top banner area -->
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Krita Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../contributors_manual.html">Contributors Manual</a> &raquo;</li>
+        
+          <li><a href="../untranslatable_pages.html">Technical Pages</a> &raquo;</li>
+        
+      <li>Reporting Bugs</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+          
+            <a href="../_sources/untranslatable_pages/reporting_bugs.rst.txt" rel="nofollow"> 
+             
+              <img src="../_static/images/source-code.png" />
+             <!-- View page source -->
+
+          </a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="reporting-bugs">
+<span id="bugs-reporting"></span><h1><a class="toc-backref" href="#id2">Reporting Bugs</a><a class="headerlink" href="#reporting-bugs" title="Permalink to this headline">¶</a></h1>
+<p>Krita is, together with many other projects, part of the KDE community. Therefore, bugs for Krita are tracked in KDE’s bug tracker: <a class="reference external" href="https://bugs.kde.org">KDE’s bug tracker</a>. The bug tracker is a tool for Krita’s developers to help them manage bugs in the software, prioritize them and plan fixes. It is not a place to get user support!</p>
+<p>The bug tracker contains two kinds of reports: bugs and wishes. Bugs are errors in Krita’s code that interrupt using Krita. Wishes are feature requests: the reporter thinks some functionality is missing or would be cool to have.</p>
+<p>Do not just create a feature request in the bug tracker: follow <a class="reference external" href="https://krita.org/en/item/ways-to-help-krita-work-on-feature-requests/">Feature Requests</a> to learn how to create a good feature request.</p>
+<p>This guide will help you create a good bug report. If you take the time to create a good bug report, you have a much better chance of getting a developer to work on the issue. If there is not enough information to work with, or if the bug report is unreadable, a developer will not be able to understand and fix the issue.</p>
+<div class="contents topic" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#reporting-bugs" id="id2">Reporting Bugs</a></p>
+<ul>
+<li><p><a class="reference internal" href="#only-report-bugs" id="id3">Only Report Bugs</a></p></li>
+<li><p><a class="reference internal" href="#check-the-faq" id="id4">Check the FAQ</a></p></li>
+<li><p><a class="reference internal" href="#ask-on-krita-artists-or-irc-chat-channel" id="id5">Ask on Krita Artists or IRC Chat Channel</a></p></li>
+<li><p><a class="reference internal" href="#use-the-latest-version-of-krita" id="id6">Use the Latest Version of Krita</a></p></li>
+<li><p><a class="reference internal" href="#be-complete-and-be-completely-clear" id="id7">Be Complete and Be Completely Clear</a></p></li>
+<li><p><a class="reference internal" href="#after-you-have-filed-the-report" id="id8">After You Have Filed the Report</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<section id="only-report-bugs">
+<h2><a class="toc-backref" href="#id3">Only Report Bugs</a><a class="headerlink" href="#only-report-bugs" title="Permalink to this headline">¶</a></h2>
+<p>A bug is a problem in Krita’s code.</p>
+<ul class="simple">
+<li><p>If you have problems with your drawing tablet, for instance no support for pressure, then that is unlikely to be a problem in Krita’s code: it is almost certain to be a problem with your setup or the driver for your tablet.</p></li>
+<li><p>If you’ve lost the toolbox, that’s not a bug.</p></li>
+<li><p>If you have deleted your work, that is not a bug.</p></li>
+<li><p>If Krita works differently from another application, that’s not a bug.</p></li>
+<li><p>If Krita works differently than you expected, that’s not a bug.</p></li>
+<li><p>If Krita is slower than you expected, that’s not a bug.</p></li>
+<li><p>If Krita crashes, that’s a bug.</p></li>
+<li><p>If a file you save comes out garbled, that’s a bug.</p></li>
+<li><p>If Krita stops working, that’s a bug.</p></li>
+<li><p>If Krita stops displaying correctly, that’s a bug.</p></li>
+</ul>
+</section>
+<section id="check-the-faq">
+<h2><a class="toc-backref" href="#id4">Check the FAQ</a><a class="headerlink" href="#check-the-faq" title="Permalink to this headline">¶</a></h2>
+<p>If you’ve got a problem with Krita, first check the <a class="reference external" href="https://docs.krita.org/en/KritaFAQ.html">FAQ</a>. See whether your problem is mentioned there. If it is, apply the solution.</p>
+</section>
+<section id="ask-on-krita-artists-or-irc-chat-channel">
+<h2><a class="toc-backref" href="#id5">Ask on Krita Artists or IRC Chat Channel</a><a class="headerlink" href="#ask-on-krita-artists-or-irc-chat-channel" title="Permalink to this headline">¶</a></h2>
+<p>If uncertain, ask us in the chatroom “#krita” via matrix. A introduction about Matrix is given <a class="reference external" href="https://community.kde.org/Matrix">here</a>. Create a matrix on kde.org account and join the #krita:kde.org channel. Or ask a question on <a class="reference external" href="https://krita-artists.org/c/support/6">Krita Artists</a> forum.</p>
+<p>Krita’s chat channel is maintained on Libera.Chat. Developers and users hang out to discuss Krita’s development and help people who have questions.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Most Krita developers live in Europe, and the channel is very quiet when it’s night in Europe. You also have to be patient: it may take some time for people to notice your question even if they are awake.</p>
+</div>
+<div class="admonition-also admonition">
+<p class="admonition-title">Also …</p>
+<p>Krita does not have a paid support staff. You will chat with volunteers, users and developers. It is not a help desk.</p>
+</div>
+<p>But you can still ask your question, and the people in the channel are a friendly and helpful lot.</p>
+</section>
+<section id="use-the-latest-version-of-krita">
+<h2><a class="toc-backref" href="#id6">Use the Latest Version of Krita</a><a class="headerlink" href="#use-the-latest-version-of-krita" title="Permalink to this headline">¶</a></h2>
+<p>Check Krita’s website to see whether you are using the latest version of Krita. There are two “latest” versions:</p>
+<ul class="simple">
+<li><p>Latest stable: check the <a class="reference external" href="https://krita.org/download/">Download page</a>. Always try to reproduce your bug with this version.</p></li>
+<li><p>Stable and Unstable Nightly builds: The stable nightly build is built from the last release plus all bug fixes done since the last release. This is called <strong>Krita Plus</strong> The unstable nightly build contains new features and is straight from the development branch of Krita. This is called <strong>Krita Next</strong>. You can download these builds from the <a class="reference external" href="https://krita.org/download/">Download page</a>.</p></li>
+</ul>
+</section>
+<section id="be-complete-and-be-completely-clear">
+<h2><a class="toc-backref" href="#id7">Be Complete and Be Completely Clear</a><a class="headerlink" href="#be-complete-and-be-completely-clear" title="Permalink to this headline">¶</a></h2>
+<p>Give all information. That means that you should give information about your operating system, hardware, the version of Krita you’re using and, of course about the problem.</p>
+<ul class="simple">
+<li><p>Open the <a class="reference external" href="https://bugs.kde.org/enter_bug.cgi?product=krita">the bug tracker</a>.</p></li>
+<li><p>If you do not have an account yet, create one.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../_images/bugzilla_simple.png"><img alt="the bug tracker's new bug form, advanced fields hidden" class="align-center" src="../_images/bugzilla_simple.png" style="width: 800px;" /></a>
+<p>In the New Bug form, fill in the following fields:</p>
+<ul>
+<li><p>Component: if you experience an issue when running a filter, select Filters. If you don’t know the component, select “* Unknown”</p></li>
+<li><p>Version: select the correct version. You can find the version of Krita in <span class="menuselection">Help‣About Krita.</span></p></li>
+<li><p>Severity: if you have experienced a crash, select “crash”. If you are making a feature request, select “wish”. Otherwise, “normal” is correct. Do not select “major” or “grave”, not even if you feel the issue you are reporting is really important.</p></li>
+<li><p>Platform: select the from the combobox the platform you run Krita on, for instance “Microsoft Windows”</p></li>
+<li><p>OS: this probably already correctly preselected. (If you’re wondering why there are two fields that have more or less the same meaning, it’s because “Platform” should allow you to select between Windows Installer, Windows Portable Zip File, Windows Store or Steam”, it’s a bug in bugzilla that it doesn’t have those options.)</p></li>
+<li><p>Summary: a one line statement of what happened, like “Krita crashes when opening the attached PSD file”.</p></li>
+<li><p>Description: this is the most important field.</p>
+<blockquote>
+<div><p>Here you need to state very clearly:</p>
+<ul class="simple">
+<li><p>what happened,</p></li>
+<li><p>what had you expected to happen instead,</p></li>
+<li><p>how the problem can be reproduced.</p></li>
+</ul>
+<p>Give a concise and short description, then enumerate the steps needed to reproduce the problem. If you cannot reproduce the problem, and it isn’t a crash, think twice before making the report: the developers likely cannot reproduce it either.</p>
+<p>The template here is used for all projects in the KDE community and isn’t especially suitable for Krita.</p>
+</div></blockquote>
+</li>
+<li><p>Attachments</p>
+<blockquote>
+<div><ul>
+<li><p>In all cases, attach the contents of the <span class="menuselection">Help ‣ Show system information for bug teports</span> dialog to the bug report.</p></li>
+<li><p>In all cases, attach the contents of the <span class="menuselection">Help ‣ Show krita log for nug reports</span> dialog to the bug report.</p></li>
+<li><p>Your file</p>
+<blockquote>
+<div><p>If at all possible, attach your original Krita file (the one that ends in <code class="docutils literal notranslate"><span class="pre">.kra</span></code>) to the bug report, or if it’s too big, add a link for download. If you do that, make sure the file will be there for <strong>years</strong> to come: do not remove it. If the problem is with loading or saving a file in another format, please attach that file.</p>
+</div></blockquote>
+</li>
+<li><p>A video</p>
+<blockquote>
+<div><p>If you think it would be useful, you can also attach or link to a video. Note that the Krita developers and bug triagers are extremely busy, and that it takes less time to read a good description and a set of steps to reproduce than it takes to watch a video for clues for what is going on.</p>
+<p>When making a video or a screenshot, include the whole Krita window, including the titlebar and the statusbar.</p>
+</div></blockquote>
+</li>
+<li><p>If you are reporting a crash, attach a crash log. On Windows, you will find a kritacrash.log file in the local AppData folder. On Linux, follow your distribution’s instructions to install debug symbols if you have installed Krita from a distribution package. It is not possible to create a useful crash log with Linux AppImages.</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</section>
+<section id="after-you-have-filed-the-report">
+<h2><a class="toc-backref" href="#id8">After You Have Filed the Report</a><a class="headerlink" href="#after-you-have-filed-the-report" title="Permalink to this headline">¶</a></h2>
+<p>After you have filed your bug, mail will be sent out to all Krita developers and bug triagers. You do not have to go to the chat channel and tell us you created a bug.</p>
+<p>When a developer decides to investigate your report, they will start adding comments to the bug. There might be additional questions: please answer them as soon as possible.</p>
+<p>When the developer has come to a conclusion, they will <strong>resolve</strong> the bug. That is done by changing the resolution status in the bug tracker. These statuses are phrased in developer speak, that is to say, they might sound quite rude to you. There’s nothing that we can do about that, so do not take it personally. The bug reporter should <em>never</em> change the status after a developer changed it.</p>
+<p>These are the most used statuses:</p>
+<ul class="simple">
+<li><p>Unconfirmed: your bug has not been investigated yet, or nobody can reproduce your bug.</p></li>
+<li><p>Confirmed: your bug is a bug, but there is no solution yet.</p></li>
+<li><p>Assigned: your bug is a bug, someone is going to work on it.</p></li>
+<li><p>Resolved/Fixed: your bug was a genuine problem in Krita’s code. The developer has fixed the issue and the solution will be in the next release.</p></li>
+<li><p>Duplicate: your bug has been reported before.</p></li>
+<li><p>Needinfo/WaitingForInfo. You need to provide more information. If you do not reply within a reasonable amount of time the bug will be closed automatically.</p></li>
+<li><p>Resolved/Not a Bug: your report was not about a bug: that is, it did not report something that can be fixed in Krita’s code.</p></li>
+<li><p>Resolved/Upstream: the issue you observed is because of a bug in a library Krita uses, or a hardware driver, or your operating system. We cannot do anything about it.</p></li>
+<li><p>Resolved/Downstream: Only on Linux. The issue you observed happens because your Linux distribution packages Krita in a way that causes problems.</p></li>
+</ul>
+<p>See also our chapter on <a class="reference external" href="https://docs.krita.org/en/untranslatable_pages/triaging_bugs.html">Bug Triaging</a></p>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="running_krita.html" class="btn btn-neutral float-right" title="Running Krita from Source" accesskey="n" rel="next"> <!-- Next --> <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="release_krita.html" class="btn btn-neutral" title="Making a release" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- Previous  -->  </a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright licensed under the GNU Free Documentation License 1.3+ unless stated otherwise.
+      
+        <span class="commit">
+          Revision <code>7c271ce</code>.
+        </span>
+      
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a modified <a href="https://github.com/rtfd/sphinx_rtd_theme">RTD theme</a>.<br/>
+  <a href="https://krita.org" title="Krita official website.">Krita official website</a> |
+  <a href="https://invent.kde.org/documentation/docs-krita-org/" title="The Gitlab instance to edit this pages and collaborate.">Git repository for docs.krita.org </a> |
+  <a href="https://www.kde.org/community/whatiskde/impressum-en.php" title="To know more about KDE, code of conduct, privacy policy and GDPR.">KDE Impressum</a>.
+   
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'5.0.0 Beta',
+            LANGUAGE:'en',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/documentation_options.js"></script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
+      });
+  </script> 
+
+ <script type="text/javascript">
+	 var _paq=_paq||[];
+	 _paq.push(['setCookieDomain','*.krita.org']);
+	 _paq.push(['setDomains','*.krita.org']);
+	 _paq.push(['setDocumentTitle',document.domain+"/"+document.title]);
+	 _paq.push(['trackPageView']);
+	 _paq.push(['enableLinkTracking']);
+
+	 (function(){
+	 	var u="//stats.kde.org/";
+	    _paq.push(['setTrackerUrl',u+'piwik.php']);
+	    _paq.push(['setSiteId',13]);
+	    var d = document, g = d.createElement('script'),s=d.getElementsByTagName('script')[0];
+	    g.type = 'text/javascript';
+	    g.async = true;
+	    g.defer = true;
+	    g.src = u+'piwik.js';
+	    s.parentNode.insertBefore(g,s);
+	  })();
+</script> 
+<noscript><p><img src="//stats.kde.org/piwik.php?idsite=13" style="border:0;" alt="" /></p></noscript>
+
+</body>
+</html>

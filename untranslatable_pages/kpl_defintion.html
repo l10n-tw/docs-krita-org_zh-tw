@@ -1,0 +1,600 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" name="title" content="The Krita Palette format KPL" />
+  <meta property="og:site-name" content="Krita Manual" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="en" />
+  <meta property="og:locale:alternate" content="ca" />
+  
+  <meta property="og:locale:alternate" content="fr" />
+  <meta property="og:locale:alternate" content="it" />
+  <meta property="og:locale:alternate" content="ja" />
+  <meta property="og:locale:alternate" content="ko" />
+  <meta property="og:locale:alternate" content="nl" />
+  <meta property="og:locale:alternate" content="pl" />
+  <meta property="og:locale:alternate" content="pt_PT" />
+  <meta property="og:locale:alternate" content="uk_UA" />
+  <meta property="og:locale:alternate" content="zh_CN" />
+  <meta property="og:article:modified_time" content="2021-07-19T15:33:59" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<meta content="A Technical description of the Krita Palette format." name="description" property="og:description" />
+
+  
+  
+  <title>The Krita Palette format KPL &mdash; Krita Manual 5.0.0 Beta documentation</title>
+  
+
+  
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    
+  
+  
+  
+    <link rel="canonical" href="en/untranslatable_pages/kpl_defintion.html"/>
+    <meta property="og:url" content="en/untranslatable_pages/kpl_defintion.html" />
+    <meta property="og:image" content="en/_static/sidebar-logo.png" />
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Krita SVG Extensions" href="krita_svg_extensions.html" />
+    <link rel="prev" title="Introduction to Hacking Krita" href="intro_hacking_krita.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+       
+           <a href="../index.html" class="icon icon-home">
+
+			<img src="../_static/sidebar-logo.png" class="logo" alt="Logo"/>
+           	
+           <!--	Krita Manual -->
+
+
+          </a>
+
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-side-nav-language-selector">
+        	<p class="caption-text">
+	        	<select id="language-selector-container">
+	        		<option value="ca">Català</option>
+	        		<option value="en">English</option>
+	        		<option value="fr">français</option>
+	        		<option value="it">Italiano</option>
+	        		<option value="ja">日本語</option>
+	        		<option value="ko">한국어</option>
+	        		<option value="nl">Nederlands</option>
+	        		<option value="pl">Polski</option>
+	        		<option value="pt_PT">português</option>
+	        		<option value="uk_UA">Українська</option>
+	        		<option value="zh_CN">简体中文</option>
+	        	</select>
+        	</p>
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../user_manual.html">User Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general_concepts.html">General Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference_manual.html">Reference Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials.html">Tutorials and How-tos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../KritaFAQ.html">Krita FAQ</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../contributors_manual.html">Contributors Manual</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../contributors_manual/community.html">The Krita Community</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributors_manual/krita_manual_conventions.html">Mark-up conventions for the Krita Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributors_manual/krita_manual_readme.html">Krita Manual Contribution Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributors_manual/optimising_images.html">Images for the Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributors_manual/user_support.html">Introduction to User Support</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../untranslatable_pages.html">Technical Pages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="building_krita.html">Building Krita from Source</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cmake_settings_for_developers.html">CMake Settings for Developers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="intro_hacking_krita.html">Introduction to Hacking Krita</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">The Krita Palette format KPL</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#basic-structure">Basic Structure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#profiles-xml">profiles.xml</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#colorset-xml">colorset.xml</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#group">Group</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#colorsetentry">ColorSetEntry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#color-swatch-definition-from-the-create-wiki">Color swatch definition from the Create Wiki:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#using-for-validating">Using for validating</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#color-grouping-proposal">Color Grouping Proposal</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="krita_svg_extensions.html">Krita SVG Extensions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modern_cpp_in_krita.html">Modern C++ usage guidelines for the Krita codebase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new_features.html">Developing Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="optimizing_tips_for_krita.html">Optimizing tips and tools for Krita</a></li>
+<li class="toctree-l3"><a class="reference internal" href="participating_in_gsoc.html">Google Summer of Code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="patch_review_guide.html">Advanced Merge Request Guide</a></li>
+<li class="toctree-l3"><a class="reference internal" href="python_coding.html">Python Developer Tools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quality_assurance.html">Introduction to Quality Assurance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release_krita.html">Making a release</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reporting_bugs.html">Reporting Bugs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="running_krita.html">Running Krita from Source</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strokes_documentation.html">Strokes queue</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strokes_documentation.html#strokes-public-api">Strokes public API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strokes_documentation.html#internals-of-the-freehand-tool">Internals of the freehand tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strokes_documentation.html#scheduled-undo-redo">Scheduled Undo/Redo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strokes_documentation.html#processings-framework">Processings framework</a></li>
+<li class="toctree-l3"><a class="reference internal" href="testing_strategy.html">Testing Strategy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="triaging_bugs.html">Triaging Bugs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="unit_tests_in_krita.html">Unittests in Krita</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../resources_page.html">Resources</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+	<!-- start top banner area (for fundraisers or messages)
+
+	<div style="text-align: center; background-color: #333">
+		<a href="https://krita.org/en/fundraising-2018-campaign/" target="_self" onclick="ga('send', 'event', 'frontpage', 'button', 'Fundraiser 2018');">
+			<img src="https://krita.org/wp-content/themes/krita-org-theme/images/decoration/2018-fundraiser-banner.png" style="max-width: 100%">
+		</a>
+	</div>
+	
+	 end top banner area -->
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Krita Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../contributors_manual.html">Contributors Manual</a> &raquo;</li>
+        
+          <li><a href="../untranslatable_pages.html">Technical Pages</a> &raquo;</li>
+        
+      <li>The Krita Palette format KPL</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+          
+            <a href="../_sources/untranslatable_pages/kpl_defintion.rst.txt" rel="nofollow"> 
+             
+              <img src="../_static/images/source-code.png" />
+             <!-- View page source -->
+
+          </a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="the-krita-palette-format-kpl">
+<span id="kpl-format-definition"></span><span id="index-0"></span><h1>The Krita Palette format KPL<a class="headerlink" href="#the-krita-palette-format-kpl" title="Permalink to this headline">¶</a></h1>
+<p>There’s been a number of color swatch definitions over the years. To ensure we can store color managed color, as well as store other metadata we use, Krita has it’s own color palette format, KPL.</p>
+<p>This document is a technical description of the format.</p>
+<section id="basic-structure">
+<h2>Basic Structure<a class="headerlink" href="#basic-structure" title="Permalink to this headline">¶</a></h2>
+<p>KPL files are zip files containing the following files:</p>
+<dl class="simple">
+<dt>mimetype</dt><dd><p>A text file containing the mimetype, to differentiate it from a regular zip. <code class="docutils literal notranslate"><span class="pre">application/x-krita-palette</span></code></p>
+</dd>
+<dt>colorset.xml</dt><dd><p>The main color definition file.</p>
+</dd>
+<dt>profiles.xml</dt><dd><p>This is a manifest of the icc profiles that are inside the zip file. We wanted to have no ambiguity in regards to which icc files were bundled.</p>
+</dd>
+<dt>A number of icc files.</dt><dd><p>These are the necessary icc profiles for interpreting the values in colorset.xml</p>
+</dd>
+</dl>
+</section>
+<section id="profiles-xml">
+<h2>profiles.xml<a class="headerlink" href="#profiles-xml" title="Permalink to this headline">¶</a></h2>
+<p>A manifest of the icc profiles that are inside the zip file. We wanted to have no ambiguity in regards to which icc files were bundled.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;Profiles&gt;</span>
+   <span class="nt">&lt;Profile</span> <span class="na">name=</span><span class="s">&quot;sRGB-elle-V2-g10.icc&quot;</span> <span class="na">filename=</span><span class="s">&quot;sRGB-elle-V2-g10.icc&quot;</span> <span class="na">colorModelId=</span><span class="s">&quot;RGBA&quot;</span> <span class="na">colorDepthId=</span><span class="s">&quot;F32&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/Profiles&gt;</span>
+</pre></div>
+</div>
+<p>Krita doesn’t store every profile it uses. XYZ and LAB are colorspaces that only have one real space definition, and therefore it doesn’t make sense to embed these files.</p>
+</section>
+<section id="colorset-xml">
+<h2>colorset.xml<a class="headerlink" href="#colorset-xml" title="Permalink to this headline">¶</a></h2>
+<p>This is the main palette definition. It can handle comments, groups and more.</p>
+<p>The top level element is a <code class="docutils literal notranslate"><span class="pre">Colorset</span></code> element, it’s children can either be <code class="docutils literal notranslate"><span class="pre">ColorSetEntry</span></code> elements, or <code class="docutils literal notranslate"><span class="pre">Group</span></code> elements. <code class="docutils literal notranslate"><span class="pre">ColorSetEntry</span></code> s that are direct children of <code class="docutils literal notranslate"><span class="pre">Colorset</span></code> are the ungrouped colors, and are, inside Krita, referred to as the “default” group.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;Colorset</span> <span class="na">name=</span><span class="s">&quot;Scene Linear Swatches&quot;</span> <span class="na">comment=</span><span class="s">&quot;This is a palette for easy access to some swatches ready for scene-linear painting.&quot;</span> <span class="na">columns=</span><span class="s">&quot;9&quot;</span> <span class="na">rows=</span><span class="s">&quot;1&quot;</span> <span class="na">readonly=</span><span class="s">&quot;false&quot;</span> <span class="na">version=</span><span class="s">&quot;1.0&quot;</span><span class="nt">&gt;</span>
+</pre></div>
+</div>
+<dl class="simple">
+<dt>name</dt><dd><p>The human friendly name of the color palette.</p>
+</dd>
+<dt>comment</dt><dd><p>The description for the palette.</p>
+</dd>
+<dt>columns</dt><dd><p>The amount of columns in the palette in total. This is the same for all groups.</p>
+</dd>
+<dt>rows</dt><dd><p>The rows of the default group, see group for more info.</p>
+</dd>
+<dt>readonly</dt><dd><p>Whether the file can be edited.</p>
+</dd>
+<dt>version</dt><dd><p>The version of the file.</p>
+</dd>
+</dl>
+</section>
+<section id="group">
+<h2>Group<a class="headerlink" href="#group" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">Group</span></code> elements can only have <code class="docutils literal notranslate"><span class="pre">ColorSetEntry</span></code> s as children. <code class="docutils literal notranslate"><span class="pre">Group</span></code> s are shown in the UI as a grid where the cells can be empty or contain a <code class="docutils literal notranslate"><span class="pre">ColorSetEntry</span></code>.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;Group</span> <span class="na">name=</span><span class="s">&quot;Hot Colors&quot;</span> <span class="na">rows=</span><span class="s">&quot;5&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/Group&gt;</span>
+</pre></div>
+</div>
+<dl class="simple">
+<dt>name</dt><dd><p>The name of the group.</p>
+</dd>
+<dt>rows</dt><dd><p>The total amount of rows this group takes up, this, together with the column value in the toplevel <code class="docutils literal notranslate"><span class="pre">Colorset</span></code> element, determines the grid size.</p>
+</dd>
+</dl>
+</section>
+<section id="colorsetentry">
+<h2>ColorSetEntry<a class="headerlink" href="#colorsetentry" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;ColorSetEntry</span> <span class="na">name=</span><span class="s">&quot;Noon daylight at 0 EV&quot;</span> <span class="na">id=</span><span class="s">&quot;SI-D65-0EV&quot;</span> <span class="na">bitdepth=</span><span class="s">&quot;F32&quot;</span> <span class="na">spot=</span><span class="s">&quot;false&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;XYZ</span> <span class="na">space=</span><span class="s">&quot;XYZ identity built-in&quot;</span> <span class="na">x=</span><span class="s">&quot;0.17107713223&quot;</span> <span class="na">y=</span><span class="s">&quot;0.18000000715&quot;</span> <span class="na">z=</span><span class="s">&quot;0.17107713223&quot;</span>  <span class="nt">/&gt;</span>
+  <span class="nt">&lt;Position</span> <span class="na">row=</span><span class="s">&quot;0&quot;</span> <span class="na">column=</span><span class="s">&quot;0&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/ColorSetEntry&gt;</span>
+</pre></div>
+</div>
+<dl class="simple">
+<dt>name</dt><dd><p>The name of the color. Unlike the create swatches, we don’t support translated color names.</p>
+</dd>
+<dt>id</dt><dd><p>The id value. This is for complex colorsets where there is a human friendly name, and a name that uniquely identifies the color in the swatch database. In the above example, which encodes the D65 standard illuminant at 0 stops, <code class="docutils literal notranslate"><span class="pre">SI-D65-0EV</span></code> is a clear unambiguous id, but “Noon daylight at 0 EV” is a much more human friendly way to refer to it. Often, the ID is used for referencing spot colors inside files.</p>
+</dd>
+<dt>bitdepth</dt><dd><p>The bitdepth at which the color should be loaded. This is largely for our own convenience. Values are <cite>U8</cite> (Unassigned 8bit integer), <cite>U16</cite> (Unassigned 16bit integer), <cite>F16</cite> (16 bit Floating Point), and <cite>F32</cite> (32 bit Floating Point). Lab and CMYK don’t support <cite>F16</cite>, and for CMYK <cite>F32</cite> is not recommended because it doesn’t deserialize the same way as the integer colorspaces.</p>
+</dd>
+<dt>spot</dt><dd><p>Whether or not the color is a spot color. This is currently not used elsewhere in Krita, but the intend is to use it for encoding spot colors as only the id.</p>
+</dd>
+</dl>
+<p><code class="docutils literal notranslate"><span class="pre">ColorSetEntry</span></code> s have two children:</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">Position</span></code> element is the position of the swatch inside the parent group grid. Krita doesn’t store empty swatches.</p>
+<p>The other child element is a Create Swatch defintion. Krita supports <cite>Gray</cite>, <cite>sRGB</cite>, <cite>RGB</cite>, <cite>XYZ</cite>, <cite>CMYK</cite>, <cite>Lab</cite> and in theory <cite>YCrCb</cite>. Note that Krita supports unbounded colors as long as the bitdepth is F32.</p>
+</section>
+<section id="color-swatch-definition-from-the-create-wiki">
+<h2>Color swatch definition from the Create Wiki:<a class="headerlink" href="#color-swatch-definition-from-the-create-wiki" title="Permalink to this headline">¶</a></h2>
+<p>The following is the Color Swatch definition from the <a class="reference external" href="https://web.archive.org/web/20110826002520/http://create.freedesktop.org/wiki/Swatches_-_colour_file_format/Draft">old create wiki</a> . Krita largely uses this definition. Because the Create wiki is down, it’s contents are reproduced here. It is for reference only.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;colors</span> <span class="na">xmlns:xlink=</span><span class="s">&quot;http://www.w3.org/1999/xlink&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">&quot;blue&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">lang=</span><span class="s">&quot;en&quot;</span><span class="nt">&gt;</span>Blue<span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">lang=</span><span class="s">&quot;es&quot;</span><span class="nt">&gt;</span>Azul<span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">lang=</span><span class="s">&quot;en_US_SoCal&quot;</span><span class="nt">&gt;</span>glassy<span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;CMYK</span> <span class="na">space=</span><span class="s">&quot;2ndFloorCMYK&quot;</span> <span class="na">c=</span><span class="s">&quot;0.8703&quot;</span> <span class="na">m=</span><span class="s">&quot;0.6172&quot;</span> <span class="na">y=</span><span class="s">&quot;0&quot;</span> <span class="na">k=</span><span class="s">&quot;0&quot;</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;Lab</span> <span class="na">space=</span><span class="s">&quot;mine&quot;</span> <span class="na">L=</span><span class="s">&quot;34.67&quot;</span> <span class="na">a=</span><span class="s">&quot;54.1289&quot;</span> <span class="na">b=</span><span class="s">&quot;-103.3359&quot;</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;HSV</span> <span class="na">space=</span><span class="s">&quot;prof01&quot;</span> <span class="na">h=</span><span class="s">&quot;240&quot;</span> <span class="na">s=</span><span class="s">&quot;1&quot;</span> <span class="na">v=</span><span class="s">&quot;1&quot;</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;HLS</span> <span class="na">space=</span><span class="s">&quot;prof02&quot;</span> <span class="na">h=</span><span class="s">&quot;240&quot;</span> <span class="na">l=</span><span class="s">&quot;0.5&quot;</span> <span class="na">s=</span><span class="s">&quot;1&quot;</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;Luv</span> <span class="na">space=</span><span class="s">&quot;prof03&quot;</span> <span class="na">L=</span><span class="s">&quot;34.6701&quot;</span> <span class="na">u=</span><span class="s">&quot;-15.0121&quot;</span> <span class="na">v=</span><span class="s">&quot;-124.7986&quot;</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;XYZ</span> <span class="na">space=</span><span class="s">&quot;prof04&quot;</span> <span class="na">x=</span><span class="s">&quot;0.1566&quot;</span> <span class="na">y=</span><span class="s">&quot;0.0833&quot;</span> <span class="na">z=</span><span class="s">&quot;0.7196&quot;</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;Yxy</span> <span class="na">space=</span><span class="s">&quot;prof05&quot;</span> <span class="na">Y=</span><span class="s">&quot;0.0833&quot;</span> <span class="na">x=</span><span class="s">&quot;0.1632&quot;</span> <span class="na">y=</span><span class="s">&quot;0.0869&quot;</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;Gray</span> <span class="na">space=</span><span class="s">&quot;prof06&quot;</span> <span class="na">g=</span><span class="s">&quot;0.2515&quot;</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;sRGB</span> <span class="na">r=</span><span class="s">&quot;0&quot;</span> <span class="na">g=</span><span class="s">&quot;0&quot;</span> <span class="na">b=</span><span class="s">&quot;1.0&quot;</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;RGB</span> <span class="na">space=</span><span class="s">&quot;lcd&quot;</span> <span class="na">r=</span><span class="s">&quot;0.1608&quot;</span> <span class="na">g=</span><span class="s">&quot;-0.1518&quot;</span> <span class="na">b=</span><span class="s">&quot;1.0753&quot;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;/color&gt;</span>
+
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">&quot;red&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">lang=</span><span class="s">&quot;en&quot;</span><span class="nt">&gt;</span>Red<span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;CMYK</span> <span class="na">space=</span><span class="s">&quot;2ndFloorCMYK&quot;</span> <span class="na">c=</span><span class="s">&quot;0.0011&quot;</span> <span class="na">m=</span><span class="s">&quot;0.7992&quot;</span> <span class="na">y=</span><span class="s">&quot;0.9405&quot;</span> <span class="na">k=</span><span class="s">&quot;0.0038&quot;</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;sRGB</span> <span class="na">r=</span><span class="s">&quot;1.0&quot;</span> <span class="na">g=</span><span class="s">&quot;0&quot;</span> <span class="na">b=</span><span class="s">&quot;0&quot;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;/color&gt;</span>
+
+    <span class="nt">&lt;colorspace</span> <span class="na">name=</span><span class="s">&quot;2ndFloorCMYK&quot;</span> <span class="na">xlink:href=</span><span class="s">&quot;2nd_floor.icm&quot;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;colorspace</span> <span class="na">name=</span><span class="s">&quot;mine&quot;</span> <span class="na">xlink:href=</span><span class="s">&quot;sample.icm&quot;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;colorspace</span> <span class="na">name=</span><span class="s">&quot;lcd&quot;</span> <span class="na">xlink:href=</span><span class="s">&quot;generic_lcd.icm&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/colors&gt;</span>
+</pre></div>
+</div>
+<section id="relax-ng-for-the-swatches">
+<h3>Relax-NG for the swatches<a class="headerlink" href="#relax-ng-for-the-swatches" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-rnc notranslate"><div class="highlight"><pre><span></span><span class="kn">namespace</span> xlink <span class="o">=</span> <span class="s2">&quot;http://www.w3.org/1999/xlink&quot;</span>
+grammar <span class="p">{</span>
+start <span class="o">=</span> <span class="kd">element</span><span class="nv"> colors </span><span class="p">{</span>
+color+<span class="o">,</span> colorSpace<span class="o">*</span>
+<span class="p">}</span>
+color <span class="o">=</span> <span class="kd">element</span><span class="nv"> color </span><span class="p">{</span>
+<span class="kd">attribute</span><span class="nv"> name </span><span class="p">{</span> <span class="kt">text</span> <span class="p">}</span><span class="o">,</span>
+label <span class="o">*,</span>
+<span class="p">(</span>RGB <span class="o">?</span> <span class="o">&amp;</span> sRGB <span class="o">?</span> <span class="o">&amp;</span> CMYK <span class="o">?</span> <span class="o">&amp;</span> Lab <span class="o">?</span> <span class="o">&amp;</span> HSV <span class="o">?</span> <span class="o">&amp;</span> HLS <span class="o">?</span> <span class="o">&amp;</span> Luv <span class="o">?</span> <span class="o">&amp;</span> XYZ <span class="o">?</span> <span class="o">&amp;</span> Yxy <span class="o">?</span> <span class="o">&amp;</span> Gray <span class="o">?</span> <span class="o">&amp;</span> YCbCr <span class="o">?</span><span class="p">)</span>
+<span class="p">}</span>
+label <span class="o">=</span> <span class="kd">element</span><span class="nv"> label </span><span class="p">{</span>
+<span class="kd">attribute</span><span class="nv"> lang </span><span class="p">{</span> <span class="kt">text</span> <span class="p">}</span> <span class="o">?,</span>
+<span class="kt">text</span>
+<span class="p">}</span>
+spaceAttribute <span class="o">=</span> <span class="kd">attribute</span><span class="nv"> space </span><span class="p">{</span> <span class="kt">text</span> <span class="p">}</span>
+RGBAttributes <span class="o">=</span>
+<span class="kd">attribute</span><span class="nv"> r </span><span class="p">{</span> <span class="kt">xsd:float</span> <span class="p">}</span><span class="o">,</span>
+<span class="kd">attribute</span><span class="nv"> g </span><span class="p">{</span> <span class="kt">xsd:float</span> <span class="p">}</span><span class="o">,</span>
+<span class="kd">attribute</span><span class="nv"> b </span><span class="p">{</span> <span class="kt">xsd:float</span> <span class="p">}</span>
+RGB <span class="o">=</span> <span class="kd">element</span><span class="nv"> RGB </span><span class="p">{</span>
+spaceAttribute<span class="o">,</span>
+RGBAttributes
+<span class="p">}</span>
+sRGB <span class="o">=</span> <span class="kd">element</span><span class="nv"> sRGB </span><span class="p">{</span>
+RGBAttributes
+<span class="p">}</span>
+CMYK <span class="o">=</span> <span class="kd">element</span><span class="nv"> CMYK </span><span class="p">{</span>
+spaceAttribute<span class="o">,</span>
+<span class="kd">attribute</span><span class="nv"> c </span><span class="p">{</span> <span class="kt">xsd:float</span> <span class="p">}</span><span class="o">,</span>
+<span class="kd">attribute</span><span class="nv"> m </span><span class="p">{</span> <span class="kt">xsd:float</span> <span class="p">}</span><span class="o">,</span>
+<span class="kd">attribute</span><span class="nv"> y </span><span class="p">{</span> <span class="kt">xsd:float</span> <span class="p">}</span><span class="o">,</span>
+<span class="kd">attribute</span><span class="nv"> k </span><span class="p">{</span> <span class="kt">xsd:float</span> <span class="p">}</span>
+<span class="p">}</span>
+Lab <span class="o">=</span> <span class="kd">element</span><span class="nv"> Lab </span><span class="p">{</span>
+spaceAttribute<span class="o">,</span>
+<span class="kd">attribute</span><span class="nv"> L </span><span class="p">{</span> <span class="kt">xsd:float</span> <span class="p">}</span><span class="o">,</span>
+<span class="kd">attribute</span><span class="nv"> a </span><span class="p">{</span> <span class="kt">xsd:float</span> <span class="p">}</span><span class="o">,</span>
+<span class="kd">attribute</span><span class="nv"> b </span><span class="p">{</span> <span class="kt">xsd:float</span> <span class="p">}</span>
+<span class="p">}</span>
+HSV <span class="o">=</span> <span class="kd">element</span><span class="nv"> HSV </span><span class="p">{</span>
+spaceAttribute<span class="o">,</span>
+<span class="kd">attribute</span><span class="nv"> h </span><span class="p">{</span> <span class="kt">xsd:float</span> <span class="p">}</span><span class="o">,</span>
+<span class="kd">attribute</span><span class="nv"> s </span><span class="p">{</span> <span class="kt">xsd:float</span> <span class="p">}</span><span class="o">,</span>
+<span class="kd">attribute</span><span class="nv"> v </span><span class="p">{</span> <span class="kt">xsd:float</span> <span class="p">}</span>
+<span class="p">}</span>
+HLS <span class="o">=</span> <span class="kd">element</span><span class="nv"> HLS </span><span class="p">{</span>
+spaceAttribute<span class="o">,</span>
+<span class="kd">attribute</span><span class="nv"> h </span><span class="p">{</span> <span class="kt">xsd:float</span> <span class="p">}</span><span class="o">,</span>
+<span class="kd">attribute</span><span class="nv"> l </span><span class="p">{</span> <span class="kt">xsd:float</span> <span class="p">}</span><span class="o">,</span>
+<span class="kd">attribute</span><span class="nv"> s </span><span class="p">{</span> <span class="kt">xsd:float</span> <span class="p">}</span>
+<span class="p">}</span>
+Luv <span class="o">=</span> <span class="kd">element</span><span class="nv"> Luv </span><span class="p">{</span>
+spaceAttribute<span class="o">,</span>
+<span class="kd">attribute</span><span class="nv"> L </span><span class="p">{</span> <span class="kt">xsd:float</span> <span class="p">}</span><span class="o">,</span>
+<span class="kd">attribute</span><span class="nv"> u </span><span class="p">{</span> <span class="kt">xsd:float</span> <span class="p">}</span><span class="o">,</span>
+<span class="kd">attribute</span><span class="nv"> v </span><span class="p">{</span> <span class="kt">xsd:float</span> <span class="p">}</span>
+<span class="p">}</span>
+XYZ <span class="o">=</span> <span class="kd">element</span><span class="nv"> XYZ </span><span class="p">{</span>
+spaceAttribute<span class="o">,</span>
+<span class="kd">attribute</span><span class="nv"> x </span><span class="p">{</span> <span class="kt">xsd:float</span> <span class="p">}</span><span class="o">,</span>
+<span class="kd">attribute</span><span class="nv"> y </span><span class="p">{</span> <span class="kt">xsd:float</span> <span class="p">}</span><span class="o">,</span>
+<span class="kd">attribute</span><span class="nv"> z </span><span class="p">{</span> <span class="kt">xsd:float</span> <span class="p">}</span>
+<span class="p">}</span>
+Yxy <span class="o">=</span> <span class="kd">element</span><span class="nv"> Yxy </span><span class="p">{</span>
+spaceAttribute<span class="o">,</span>
+<span class="kd">attribute</span><span class="nv"> Y </span><span class="p">{</span> <span class="kt">xsd:float</span> <span class="p">}</span><span class="o">,</span>
+<span class="kd">attribute</span><span class="nv"> x </span><span class="p">{</span> <span class="kt">xsd:float</span> <span class="p">}</span><span class="o">,</span>
+<span class="kd">attribute</span><span class="nv"> y </span><span class="p">{</span> <span class="kt">xsd:float</span> <span class="p">}</span>
+<span class="p">}</span>
+YCbCr <span class="o">=</span> <span class="kd">element</span><span class="nv"> YCbCr </span><span class="p">{</span>
+spaceAttribute<span class="o">,</span>
+<span class="kd">attribute</span><span class="nv"> Y </span><span class="p">{</span> <span class="kt">xsd:float</span> <span class="p">}</span><span class="o">,</span>
+<span class="kd">attribute</span><span class="nv"> Cb </span><span class="p">{</span> <span class="kt">xsd:float</span> <span class="p">}</span><span class="o">,</span>
+<span class="kd">attribute</span><span class="nv"> Cr </span><span class="p">{</span> <span class="kt">xsd:float</span> <span class="p">}</span>
+<span class="p">}</span>
+Gray <span class="o">=</span> <span class="kd">element</span><span class="nv"> Gray </span><span class="p">{</span>
+spaceAttribute<span class="o">,</span>
+<span class="kd">attribute</span><span class="nv"> g </span><span class="p">{</span> <span class="kt">xsd:float</span> <span class="p">}</span>
+<span class="p">}</span>
+colorSpace <span class="o">=</span> <span class="kd">element</span><span class="nv"> colorspace </span><span class="p">{</span>
+<span class="kd">attribute</span><span class="nv"> name </span><span class="p">{</span> <span class="kt">text</span> <span class="p">}</span><span class="o">,</span>
+<span class="kd">attribute</span><span class="nv"> xlink:href </span><span class="p">{</span> <span class="kt">xsd:anyURI</span> <span class="p">}</span>
+<span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="using-for-validating">
+<h2>Using for validating<a class="headerlink" href="#using-for-validating" title="Permalink to this headline">¶</a></h2>
+<p>To use the above RelaxNG compact schema to validate a swatch you can use:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>trang -I rnc -O rng colors.rnc colors.rng
+xmllint --relaxng colors.rng colors.xml
+</pre></div>
+</div>
+</section>
+<section id="color-grouping-proposal">
+<h2>Color Grouping Proposal<a class="headerlink" href="#color-grouping-proposal" title="Permalink to this headline">¶</a></h2>
+<p>Krita doesn’t use this.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;group&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">lang=</span><span class="s">&#39;en&#39;</span><span class="nt">&gt;</span>One group<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">&#39;red&#39;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">lang=</span><span class="s">&#39;en&#39;</span><span class="nt">&gt;</span>Red<span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;sRGB</span> <span class="na">r=</span><span class="s">&quot;1.0&quot;</span> <span class="na">g=</span><span class="s">&quot;0&quot;</span> <span class="na">b=</span><span class="s">&quot;0&quot;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;group&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">lang=</span><span class="s">&#39;en&#39;</span><span class="nt">&gt;</span>Nested group<span class="nt">&lt;/label&gt;</span>
+        ...
+    <span class="nt">&lt;/group&gt;</span>
+    <span class="nt">&lt;/group&gt;</span>
+<span class="nt">&lt;group&gt;</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="krita_svg_extensions.html" class="btn btn-neutral float-right" title="Krita SVG Extensions" accesskey="n" rel="next"> <!-- Next --> <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="intro_hacking_krita.html" class="btn btn-neutral" title="Introduction to Hacking Krita" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- Previous  -->  </a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright licensed under the GNU Free Documentation License 1.3+ unless stated otherwise.
+      
+        <span class="commit">
+          Revision <code>7c271ce</code>.
+        </span>
+      
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a modified <a href="https://github.com/rtfd/sphinx_rtd_theme">RTD theme</a>.<br/>
+  <a href="https://krita.org" title="Krita official website.">Krita official website</a> |
+  <a href="https://invent.kde.org/documentation/docs-krita-org/" title="The Gitlab instance to edit this pages and collaborate.">Git repository for docs.krita.org </a> |
+  <a href="https://www.kde.org/community/whatiskde/impressum-en.php" title="To know more about KDE, code of conduct, privacy policy and GDPR.">KDE Impressum</a>.
+   
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'5.0.0 Beta',
+            LANGUAGE:'en',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/documentation_options.js"></script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
+      });
+  </script> 
+
+ <script type="text/javascript">
+	 var _paq=_paq||[];
+	 _paq.push(['setCookieDomain','*.krita.org']);
+	 _paq.push(['setDomains','*.krita.org']);
+	 _paq.push(['setDocumentTitle',document.domain+"/"+document.title]);
+	 _paq.push(['trackPageView']);
+	 _paq.push(['enableLinkTracking']);
+
+	 (function(){
+	 	var u="//stats.kde.org/";
+	    _paq.push(['setTrackerUrl',u+'piwik.php']);
+	    _paq.push(['setSiteId',13]);
+	    var d = document, g = d.createElement('script'),s=d.getElementsByTagName('script')[0];
+	    g.type = 'text/javascript';
+	    g.async = true;
+	    g.defer = true;
+	    g.src = u+'piwik.js';
+	    s.parentNode.insertBefore(g,s);
+	  })();
+</script> 
+<noscript><p><img src="//stats.kde.org/piwik.php?idsite=13" style="border:0;" alt="" /></p></noscript>
+
+</body>
+</html>

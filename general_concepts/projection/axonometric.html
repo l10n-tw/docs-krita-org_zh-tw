@@ -1,0 +1,404 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" name="title" content="Axonometric" />
+  <meta property="og:site-name" content="Krita Manual" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="en" />
+  <meta property="og:locale:alternate" content="ca" />
+  
+  <meta property="og:locale:alternate" content="fr" />
+  <meta property="og:locale:alternate" content="it" />
+  <meta property="og:locale:alternate" content="ja" />
+  <meta property="og:locale:alternate" content="ko" />
+  <meta property="og:locale:alternate" content="nl" />
+  <meta property="og:locale:alternate" content="pl" />
+  <meta property="og:locale:alternate" content="pt_PT" />
+  <meta property="og:locale:alternate" content="uk_UA" />
+  <meta property="og:locale:alternate" content="zh_CN" />
+  <meta property="og:article:modified_time" content="2021-07-19T15:33:59" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<meta content="Axonometric projection." name="description" />
+
+  
+  
+  <title>Axonometric &mdash; Krita Manual 5.0.0 Beta documentation</title>
+  
+
+  
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    
+  
+  
+  
+    <link rel="canonical" href="en/general_concepts/projection/axonometric.html"/>
+    <meta property="og:url" content="en/general_concepts/projection/axonometric.html" />
+    <meta property="og:image" content="en/_static/sidebar-logo.png" />
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Perspective Projection" href="perspective.html" />
+    <link rel="prev" title="Orthographic" href="orthographic_oblique.html" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+       
+           <a href="../../index.html" class="icon icon-home">
+
+			<img src="../../_static/sidebar-logo.png" class="logo" alt="Logo"/>
+           	
+           <!--	Krita Manual -->
+
+
+          </a>
+
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-side-nav-language-selector">
+        	<p class="caption-text">
+	        	<select id="language-selector-container">
+	        		<option value="ca">Català</option>
+	        		<option value="en">English</option>
+	        		<option value="fr">français</option>
+	        		<option value="it">Italiano</option>
+	        		<option value="ja">日本語</option>
+	        		<option value="ko">한국어</option>
+	        		<option value="nl">Nederlands</option>
+	        		<option value="pl">Polski</option>
+	        		<option value="pt_PT">português</option>
+	        		<option value="uk_UA">Українська</option>
+	        		<option value="zh_CN">简体中文</option>
+	        	</select>
+        	</p>
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../user_manual.html">User Manual</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../general_concepts.html">General Concepts</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../colors.html">Colors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../file_formats.html">File Formats</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../projection.html">Perspective Projection</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="orthographic_oblique.html">Orthographic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="orthographic_oblique.html#oblique">Oblique</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Axonometric</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#alternative-axonometric-with-the-transform-tool">Alternative axonometric with the transform tool</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="perspective.html">Perspective Projection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="practical.html">Practical</a></li>
+<li class="toctree-l3"><a class="reference internal" href="practical.html#conclusion-and-afterthoughts">Conclusion and afterthoughts</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference_manual.html">Reference Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials.html">Tutorials and How-tos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../KritaFAQ.html">Krita FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributors_manual.html">Contributors Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../resources_page.html">Resources</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+	<!-- start top banner area (for fundraisers or messages)
+
+	<div style="text-align: center; background-color: #333">
+		<a href="https://krita.org/en/fundraising-2018-campaign/" target="_self" onclick="ga('send', 'event', 'frontpage', 'button', 'Fundraiser 2018');">
+			<img src="https://krita.org/wp-content/themes/krita-org-theme/images/decoration/2018-fundraiser-banner.png" style="max-width: 100%">
+		</a>
+	</div>
+	
+	 end top banner area -->
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Krita Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../general_concepts.html">General Concepts</a> &raquo;</li>
+        
+          <li><a href="../projection.html">Perspective Projection</a> &raquo;</li>
+        
+      <li>Axonometric</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+          
+            <a href="../../_sources/general_concepts/projection/axonometric.rst.txt" rel="nofollow"> 
+             
+              <img src="../../_static/images/source-code.png" />
+             <!-- View page source -->
+
+          </a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <p>This is a continuation of <a class="reference internal" href="orthographic_oblique.html#projection-orthographic"><span class="std std-ref">the orthographic and oblique tutorial</span></a>, be sure to check it out if you get confused!</p>
+<section id="axonometric">
+<span id="projection-axonometric"></span><span id="index-0"></span><h1>Axonometric<a class="headerlink" href="#axonometric" title="Permalink to this headline">¶</a></h1>
+<p>So, the logic of adding the top is still similar to that of the side.</p>
+<img alt="../../_images/projection-cube_07.svg" class="align-center" src="../../_images/projection-cube_07.svg" /><p>Not very interesting. But it gets much more interesting when we use a side projection:</p>
+<img alt="../../_images/projection-cube_08.svg" class="align-center" src="../../_images/projection-cube_08.svg" /><p>Because our cube is red on both front-sides, and blue on both left and right side, we can just use copies, this simplifies the method for cubes a lot. We call this form of axonometric projection ‘dimetric’ as it deforms two parallel lines equally.</p>
+<p>Isometric is sorta like dimetric where we have the same angle between all main lines:</p>
+<img alt="../../_images/projection-cube_09.svg" class="align-center" src="../../_images/projection-cube_09.svg" /><p>True isometric is done with a 90-54.736=35.264° angle from ground plane:</p>
+<img alt="../../_images/projection-cube_10.svg" class="align-center" src="../../_images/projection-cube_10.svg" /><p>(as you can see, it doesn’t line up perfectly, because Inkscape, while more designed for making these kinds of diagrams than Krita, doesn’t have tools to manipulate the line’s angle in degrees)</p>
+<p>This is a bit of an awkward angle, and on top of that, it doesn’t line up with pixels sensibly, so for videogames an angle of 30° from the ground plane is used.</p>
+<img alt="../../_images/projection-cube_11.svg" class="align-center" src="../../_images/projection-cube_11.svg" /><p>Alright, so, let’s make an isometric out of our boy then.</p>
+<p>We make a new document, and add a vector layer.</p>
+<p>On the vector layer, we select the straight line tool, start a line and then hold the <kbd class="kbd docutils literal notranslate">Shift</kbd> key to make it snap to angles. This’ll allow us to make a 30° setup like above:</p>
+<img alt="../../_images/projection_image_15.png" class="align-center" src="../../_images/projection_image_15.png" />
+<p>We then import some of the frames from the animation via <span class="menuselection">Layers ‣ Import/Export ‣ Import layer</span>.</p>
+<p>Then crop it by setting the crop tool to <span class="guilabel">Layer</span>, and use <span class="menuselection">Filters ‣ Colors ‣ Color to alpha…</span> to remove any background. I also set the layers to 50% opacity. We then align the vectors to them:</p>
+<img alt="../../_images/projection_image_16.png" class="align-center" src="../../_images/projection_image_16.png" />
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>To resize a vector but keep its angle, you just select it with the shape handling tool (the white arrow) drag on the corners of the bounding box to start moving them, and then press the <kbd class="kbd docutils literal notranslate">Shift</kbd> key to constrain the ratio. This’ll allow you to keep the angle.</p>
+</div>
+<p>The lower image is ‘the back seen from the front’, we’ll be using this to determine where the ear should go.</p>
+<p>Now, we obviously have too little space, so select the crop tool, select <span class="guilabel">Image</span> and tick <span class="guilabel">Grow</span> and do the following:</p>
+<img alt="../../_images/projection_image_17.png" class="align-center" src="../../_images/projection_image_17.png" />
+<p>Grow is a more practical way of resizing the canvas in width and height immediately.</p>
+<p>Then we align the other heads and transform them by using the transform tool options:</p>
+<img alt="../../_images/projection_image_18.png" class="align-center" src="../../_images/projection_image_18.png" />
+<p>(330° here is 360°-30°)</p>
+<p>Our rectangle we’ll be working in slowly becomes visible. Now, this is a bit of a difficult angle to work at, so we go to <span class="menuselection">Image ‣ Rotate ‣ Rotate Image</span> and fill in 30° clockwise:</p>
+<img alt="../../_images/projection_image_19.png" class="align-center" src="../../_images/projection_image_19.png" />
+<img alt="../../_images/projection_image_20.png" class="align-center" src="../../_images/projection_image_20.png" />
+<p>(of course, we could’ve just rotated the left two images 30°, this is mostly to be less confusing compared to the cube)</p>
+<p>So, we do some cropping, some cleanup and add two parallel assistants like we did with the orthographic:</p>
+<img alt="../../_images/projection_image_21.png" class="align-center" src="../../_images/projection_image_21.png" />
+<p>So the idea here is that you draw parallel lines from both sides to find points in the drawing area. You can use the previews of the assistants for this to keep things clean, but I drew the lines anyway for your convenience.</p>
+<img alt="../../_images/projection_image_22.png" class="align-center" src="../../_images/projection_image_22.png" />
+<p>The best is to make a few sampling points, like with the eyebrows here, and then draw the eyebrow over it.</p>
+<img alt="../../_images/projection_image_23.png" class="align-center" src="../../_images/projection_image_23.png" />
+<section id="alternative-axonometric-with-the-transform-tool">
+<h2>Alternative axonometric with the transform tool<a class="headerlink" href="#alternative-axonometric-with-the-transform-tool" title="Permalink to this headline">¶</a></h2>
+<p>Now, there’s an alternative way of getting there that doesn’t require as much space.</p>
+<p>We open our orthographic with <span class="guilabel">Open existing Document as Untitled Document</span> so that we don’t save over it.</p>
+<p>Our game-safe isometric has its angle at two pixels horizontal is one pixel vertical. So, we shear the ortho graphics with transform masks to -.5/+.5 pixels (this is proportional)</p>
+<img alt="../../_images/projection_image_24.png" class="align-center" src="../../_images/projection_image_24.png" />
+<p>Use the grid to setup two parallel rulers that represent both diagonals (you can snap them with the <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">S</kbd></kbd> shortcut):</p>
+<img alt="../../_images/projection_image_25.png" class="align-center" src="../../_images/projection_image_25.png" />
+<p>Add the top view as well:</p>
+<img alt="../../_images/projection_image_26.png" class="align-center" src="../../_images/projection_image_26.png" />
+<p>if you do this for all slices, you get something like this:</p>
+<img alt="../../_images/projection_image_27.png" class="align-center" src="../../_images/projection_image_27.png" />
+<p>Using the parallel rulers, you can then figure out the position of a point in 3d-ish space:</p>
+<img alt="../../_images/projection_image_28.png" class="align-center" src="../../_images/projection_image_28.png" />
+<p>As you can see, this version both looks more 3d as well as more creepy.</p>
+<p>That’s because there are less steps involved as the previous version – We’re deriving our image directly from the orthographic view – so there are less errors involved.</p>
+<p>The creepiness is because we’ve had the tiniest bit of stylisation in our side view, so the eyes come out HUGE. This is because when we stylize the side view of an eye, we tend to draw it not perfectly from the side, but rather slightly at an angle. If you look carefully at the turntable, the same problem crops up there as well.</p>
+<p>Generally, stylized stuff tends to fall apart in 3d view, and you might need to make some choices on how to make it work.</p>
+<p>For example, we can just easily fix the side view (because we used transform masks, this is easy.)</p>
+<img alt="../../_images/projection_image_29.png" class="align-center" src="../../_images/projection_image_29.png" />
+<p>And then generate a new drawing from that…</p>
+<img alt="../../_images/projection_animation_02.gif" class="align-center" src="../../_images/projection_animation_02.gif" />
+<p>Compare to the old one and you should be able to see that the new result’s eyes are much less creepy:</p>
+<img alt="../../_images/projection_image_30.png" class="align-center" src="../../_images/projection_image_30.png" />
+<p>It still feels very squashed compared to the regular parallel projection above, and it might be an idea to not just skew but also stretch the orthos a bit.</p>
+<p>Let’s continue with perspective projection in the next one!</p>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="perspective.html" class="btn btn-neutral float-right" title="Perspective Projection" accesskey="n" rel="next"> <!-- Next --> <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="orthographic_oblique.html" class="btn btn-neutral" title="Orthographic" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- Previous  -->  </a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright licensed under the GNU Free Documentation License 1.3+ unless stated otherwise.
+      
+        <span class="commit">
+          Revision <code>7c271ce</code>.
+        </span>
+      
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a modified <a href="https://github.com/rtfd/sphinx_rtd_theme">RTD theme</a>.<br/>
+  <a href="https://krita.org" title="Krita official website.">Krita official website</a> |
+  <a href="https://invent.kde.org/documentation/docs-krita-org/" title="The Gitlab instance to edit this pages and collaborate.">Git repository for docs.krita.org </a> |
+  <a href="https://www.kde.org/community/whatiskde/impressum-en.php" title="To know more about KDE, code of conduct, privacy policy and GDPR.">KDE Impressum</a>.
+   
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'5.0.0 Beta',
+            LANGUAGE:'en',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/documentation_options.js"></script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
+      });
+  </script> 
+
+ <script type="text/javascript">
+	 var _paq=_paq||[];
+	 _paq.push(['setCookieDomain','*.krita.org']);
+	 _paq.push(['setDomains','*.krita.org']);
+	 _paq.push(['setDocumentTitle',document.domain+"/"+document.title]);
+	 _paq.push(['trackPageView']);
+	 _paq.push(['enableLinkTracking']);
+
+	 (function(){
+	 	var u="//stats.kde.org/";
+	    _paq.push(['setTrackerUrl',u+'piwik.php']);
+	    _paq.push(['setSiteId',13]);
+	    var d = document, g = d.createElement('script'),s=d.getElementsByTagName('script')[0];
+	    g.type = 'text/javascript';
+	    g.async = true;
+	    g.defer = true;
+	    g.src = u+'piwik.js';
+	    s.parentNode.insertBefore(g,s);
+	  })();
+</script> 
+<noscript><p><img src="//stats.kde.org/piwik.php?idsite=13" style="border:0;" alt="" /></p></noscript>
+
+</body>
+</html>

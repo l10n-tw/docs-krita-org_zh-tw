@@ -1,0 +1,535 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" name="title" content="Shape Edit Tool" />
+  <meta property="og:site-name" content="Krita Manual" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="en" />
+  <meta property="og:locale:alternate" content="ca" />
+  
+  <meta property="og:locale:alternate" content="fr" />
+  <meta property="og:locale:alternate" content="it" />
+  <meta property="og:locale:alternate" content="ja" />
+  <meta property="og:locale:alternate" content="ko" />
+  <meta property="og:locale:alternate" content="nl" />
+  <meta property="og:locale:alternate" content="pl" />
+  <meta property="og:locale:alternate" content="pt_PT" />
+  <meta property="og:locale:alternate" content="uk_UA" />
+  <meta property="og:locale:alternate" content="zh_CN" />
+  <meta property="og:article:modified_time" content="2021-07-19T15:33:59" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<meta content="Krita's shape edit tool reference." name="description" />
+
+  
+  
+  <title>Shape Edit Tool &mdash; Krita Manual 5.0.0 Beta documentation</title>
+  
+
+  
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    
+  
+  
+  
+    <link rel="canonical" href="en/reference_manual/tools/shape_edit.html"/>
+    <meta property="og:url" content="en/reference_manual/tools/shape_edit.html" />
+    <meta property="og:image" content="en/_static/sidebar-logo.png" />
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Text Tool" href="text.html" />
+    <link rel="prev" title="Shape Selection Tool" href="shape_selection.html" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+       
+           <a href="../../index.html" class="icon icon-home">
+
+			<img src="../../_static/sidebar-logo.png" class="logo" alt="Logo"/>
+           	
+           <!--	Krita Manual -->
+
+
+          </a>
+
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-side-nav-language-selector">
+        	<p class="caption-text">
+	        	<select id="language-selector-container">
+	        		<option value="ca">Català</option>
+	        		<option value="en">English</option>
+	        		<option value="fr">français</option>
+	        		<option value="it">Italiano</option>
+	        		<option value="ja">日本語</option>
+	        		<option value="ko">한국어</option>
+	        		<option value="nl">Nederlands</option>
+	        		<option value="pl">Polski</option>
+	        		<option value="pt_PT">português</option>
+	        		<option value="uk_UA">Українська</option>
+	        		<option value="zh_CN">简体中文</option>
+	        	</select>
+        	</p>
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../user_manual.html">User Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../general_concepts.html">General Concepts</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../reference_manual.html">Reference Manual</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../audio_for_animation.html">Audio for Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blending_modes.html">Blending Modes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../brushes.html">Brushes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../clones_array.html">Clones Array</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_new_document.html">Create New Document</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../default_python_plugins.html">Pre-installed Python plugins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dockers.html">Dockers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dr_minw_debugger.html">Dr. MinGW Debugger</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../filters.html">Filters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hdr_display.html">HDR Display</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../image_split.html">Image Split</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../import_animation.html">Import Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../instant_preview.html">Instant Preview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../krita_4_preset_bundle.html">Krita 4 Preset Bundle Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../layers_and_masks.html">Layers and Masks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../linux_command_line.html">Linux Command Line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../list_supported_tablets.html">The List of Supported Tablets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../main_menu.html">Main Menu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../maths_input.html">Maths Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../popup-palette.html">Pop-up Palette</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preferences.html">Preferences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../render_animation.html">Render Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../resource_management.html">Resource Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../seexpr.html">SeExpr Quick Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../separate_image.html">Separate Image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sharing_krita_logs.html">Getting Krita logs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../split_layer.html">Split Layer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../stroke_selection.html">Stroke Selection</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../tools.html">Tools</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="shape_selection.html">Shape Selection Tool</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Shape Edit Tool</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#on-canvas-editing-of-shapes">On Canvas Editing of Shapes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tool-options">Tool Options</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="text.html">Text Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gradient_edit.html">Gradient Editing Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pattern_edit.html">Pattern Editing Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="calligraphy.html">Calligraphy Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="freehand_brush.html">Freehand Brush Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="line.html">Straight Line Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rectangle.html">Rectangle Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ellipse.html">Ellipse Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="polygon.html">Polygon Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="polyline.html">Polyline Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="path.html">Bezier Curve Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="freehand_path.html">Freehand Path Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dyna.html">Dynamic Brush Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="multibrush.html">Multibrush Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="crop.html">Crop Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="move.html">Move Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="transform.html">Transform Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fill.html">Fill Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gradient_draw.html">Gradient Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="color_sampler.html">Color Sampler Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="colorize_mask.html">Colorize Mask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="smart_patch.html">Smart Patch Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="assistant.html">Assistant Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reference_images_tool.html">Reference Images Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="measure.html">Measure Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rectangular_select.html">Rectangular Selection Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="elliptical_select.html">Elliptical Selection Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="freehand_select.html">Freehand Selection Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="polygonal_select.html">Polygonal Selection Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="contiguous_select.html">Contiguous Selection Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="path_select.html">Path Selection Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="similar_select.html">Similar Color Selection Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="magnetic_select.html">Magnetic Selection Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="zoom.html">Zoom Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pan.html">Pan Tool</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../welcome_screen.html">Welcome Screen</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials.html">Tutorials and How-tos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../KritaFAQ.html">Krita FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributors_manual.html">Contributors Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../resources_page.html">Resources</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+	<!-- start top banner area (for fundraisers or messages)
+
+	<div style="text-align: center; background-color: #333">
+		<a href="https://krita.org/en/fundraising-2018-campaign/" target="_self" onclick="ga('send', 'event', 'frontpage', 'button', 'Fundraiser 2018');">
+			<img src="https://krita.org/wp-content/themes/krita-org-theme/images/decoration/2018-fundraiser-banner.png" style="max-width: 100%">
+		</a>
+	</div>
+	
+	 end top banner area -->
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Krita Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../reference_manual.html">Reference Manual</a> &raquo;</li>
+        
+          <li><a href="../tools.html">Tools</a> &raquo;</li>
+        
+      <li>Shape Edit Tool</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+          
+            <a href="../../_sources/reference_manual/tools/shape_edit.rst.txt" rel="nofollow"> 
+             
+              <img src="../../_static/images/source-code.png" />
+             <!-- View page source -->
+
+          </a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="shape-edit-tool">
+<span id="index-0"></span><span id="id1"></span><h1>Shape Edit Tool<a class="headerlink" href="#shape-edit-tool" title="Permalink to this headline">¶</a></h1>
+<p><img alt="toolshapeedit" src="../../_images/shape_edit_tool.svg" /></p>
+<p>The shape editing tool is for editing vector shapes. In Krita versions before 4.0 it would only show up in the docker when you had a vector shape selected. In Krita 4.0, this tool is always visible and has the Shape Properties docker as a part of it.</p>
+<img alt="../../_images/Shape-editing-tool-example.png" src="../../_images/Shape-editing-tool-example.png" />
+<p>You can access the Edit Shapes tool by clicking on the icon in the toolbox, but you can also access it by pressing the <kbd class="kbd docutils literal notranslate">Enter</kbd> key when in the Shape Selection tool and having a shape selected that can be most efficiently edited with the edit shapes tool (right now, that’s all shapes but text).</p>
+<section id="on-canvas-editing-of-shapes">
+<h2>On Canvas Editing of Shapes<a class="headerlink" href="#on-canvas-editing-of-shapes" title="Permalink to this headline">¶</a></h2>
+<p>As detailed further in the Tool Options, there’s a difference between path shapes and specialized vector shapes that make it easy to have perfect ellipses, rectangles and more.</p>
+<section id="path-shapes">
+<h3>Path Shapes<a class="headerlink" href="#path-shapes" title="Permalink to this headline">¶</a></h3>
+<p>Path shapes can be recognized by the different nodes they have.</p>
+<p>Paths in Krita are mostly bezier curves, and are made up of nodes. For straight lines, the nodes are connected by a line-segment and that’s it. For curved lines, each node has a side handle to allow curving of that segment using the <a class="reference external" href="https://en.wikipedia.org/wiki/B%C3%A9zier_curve#/media/File:B%C3%A9zier_3_big.gif">cubic bezier curve algorithm</a>.</p>
+<p><strong>What that means, in short, is that moving the side handles into a given direction will make the segment curve in that direction, and the longer the line of the node to the side handle, the stronger the curving.</strong></p>
+<section id="selecting-nodes-for-editing">
+<h4>Selecting Nodes for Editing<a class="headerlink" href="#selecting-nodes-for-editing" title="Permalink to this headline">¶</a></h4>
+<p>You can select a single node with <img alt="mouseleft" src="../../_images/Krita_mouse_left.png" />, they will turn bright green if selected.</p>
+<p><img alt="mouseleft" src="../../_images/Krita_mouse_left.png" /> <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">+</kbd> <kbd class="kbd docutils literal notranslate">Shift</kbd></kbd> on unselected nodes will add them to a selection.</p>
+<p><img alt="mouseleft" src="../../_images/Krita_mouse_left.png" /> + drag will make a selection rectangle. All nodes whose handles are touched by the rectangle will be selected. This combines with the <img alt="mouseleft" src="../../_images/Krita_mouse_left.png" /> <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">+</kbd> <kbd class="kbd docutils literal notranslate">Shift</kbd></kbd> shortcut above.</p>
+</section>
+<section id="selected-nodes">
+<h4>Selected Nodes<a class="headerlink" href="#selected-nodes" title="Permalink to this headline">¶</a></h4>
+<p>You can add and remove side handles from a selected node with the <img alt="mouseleft" src="../../_images/Krita_mouse_left.png" /> <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">+</kbd> <kbd class="kbd docutils literal notranslate">Shift</kbd></kbd> shortcut.</p>
+<p>Krita has several node-types that allow you control the side handles more efficiently. These are the corner, smooth and symmetric modes.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>Corner</dt><dd><p>Represented by a diamond, the corner type allows you to have handles that can point in different directions and have different lengths.</p>
+</dd>
+<dt>Smooth</dt><dd><p>Represented by a circle, the smooth type will ensure a smooth transition by always pointing the handles into opposite directions, but they can still have different lengths.</p>
+</dd>
+<dt>Symmetric</dt><dd><p>Represented by a square, the symmetric node will force handles to always point in opposite directions and have the same length.</p>
+</dd>
+</dl>
+</div></blockquote>
+<p><img alt="mouseleft" src="../../_images/Krita_mouse_left.png" /> <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">+</kbd> <kbd class="kbd docutils literal notranslate">Ctrl</kbd></kbd> on a selected node will cycle between the node-types.</p>
+<p><kbd class="kbd docutils literal notranslate">Del</kbd> will remove the selected node.</p>
+</section>
+<section id="selected-segments">
+<h4>Selected Segments<a class="headerlink" href="#selected-segments" title="Permalink to this headline">¶</a></h4>
+<p>Segments are the lines between nodes. Hovering over a segment will show a dotted line, indicating it can be selected.</p>
+<p>You can <img alt="mouseleft" src="../../_images/Krita_mouse_left.png" /> and drag on a segment to curve it to the mouse point. Clicking on different parts of the segment and dragging will curve it differently.</p>
+<p>Double <img alt="mouseleft" src="../../_images/Krita_mouse_left.png" /> on a segment will add a node on the segment under the mouse cursor. The new node will be selected.</p>
+</section>
+</section>
+<section id="other-shapes">
+<h3>Other Shapes<a class="headerlink" href="#other-shapes" title="Permalink to this headline">¶</a></h3>
+<p>Shapes that aren’t path shapes only have a single type of node: A small diamond like, that changes the specific parameters of that shape on-canvas. For example, you can change the corner radius on rectangles by dragging the nodes, or make the ellipse into a pie-segment.</p>
+</section>
+</section>
+<section id="tool-options">
+<h2>Tool Options<a class="headerlink" href="#tool-options" title="Permalink to this headline">¶</a></h2>
+<img alt="../../_images/Shape-editing-tool-tool-options.png" src="../../_images/Shape-editing-tool-tool-options.png" />
+<p>Path shapes have options. The top left options are for converting to different anchor point types. The bottom left options are for adding or removing points. The top right options are for converting the line to different types. The bottom right options are for breaking and joining line segments.</p>
+<p>The tool options of the Edit Shapes Tool change depending on the type of shape you have selected. With the exception of the path shape, all shapes have a <span class="guilabel">Convert to Path</span> action, which converts said shape to a path shape.</p>
+<section id="id2">
+<h3>Path Shapes<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p><img alt="toolbeziercurve" src="../../_images/bezier_curve.svg" />, <img alt="toolline" src="../../_images/line_tool.svg" />, <img alt="toolpolyline" src="../../_images/polyline_tool.svg" />, <img alt="toolpolygon" src="../../_images/polygon_tool.svg" />, <img alt="toolfreehandpath" src="../../_images/freehand_path_tool.svg" /></p>
+<p>Path shapes are the most common shape and can be made with the following tools:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="path.html#path-tool"><span class="std std-ref">Bezier Curve Tool</span></a></p></li>
+<li><p><a class="reference internal" href="line.html#line-tool"><span class="std std-ref">Straight Line Tool</span></a></p></li>
+<li><p><a class="reference internal" href="polygon.html#polygon-tool"><span class="std std-ref">Polygon Tool</span></a></p></li>
+<li><p><a class="reference internal" href="polyline.html#polyline-tool"><span class="std std-ref">Polyline Tool</span></a></p></li>
+<li><p><a class="reference internal" href="freehand_path.html#freehand-path-tool"><span class="std std-ref">Freehand Path Tool</span></a></p></li>
+</ul>
+<dl>
+<dt>Node Editing</dt><dd><p>Edit the nodes.</p>
+<dl class="simple">
+<dt>Corner Point</dt><dd><p>Make the selected node a corner or cusp. This means that the side handles can point in different directions and be different lengths.</p>
+</dd>
+<dt>Smooth Point</dt><dd><p>Make the selected node smooth. The two side handles will always point in opposite directions, but their length can be different.</p>
+</dd>
+<dt>Symmetric Point</dt><dd><p>Make the selected node symmetric. The two side handles will always point in opposite directions, and their length will stay the same.</p>
+</dd>
+<dt>Insert Point</dt><dd><p>Insert a new node into the middle of the selected segment.</p>
+</dd>
+<dt>Remove Point</dt><dd><p>Remove the selected node.</p>
+</dd>
+</dl>
+</dd>
+<dt>Line Segment Editing</dt><dd><p>Edit line segments between nodes.</p>
+<dl class="simple">
+<dt>Segment To Line</dt><dd><p>Make the current segment a straight line.</p>
+</dd>
+<dt>Segment To Curve</dt><dd><p>Make the current segment a curve: It’ll add side handles for this segment to the nodes attached to it.</p>
+</dd>
+<dt>Make Line Point</dt><dd><p>Turn the selected node into a sharp corner: This will remove the side handles.</p>
+</dd>
+<dt>Make Curve Point</dt><dd><p>Turn the selected node into one that can curve: This will add side handles to the node.</p>
+</dd>
+<dt>Break at Point</dt><dd><p>Break the path at this point.</p>
+</dd>
+<dt>Break Segment</dt><dd><p>Break the path at the selected segment.</p>
+</dd>
+<dt>Join with Segment</dt><dd><p>Join two nodes that are only attached on one side with a segment.</p>
+</dd>
+<dt>Merge Points</dt><dd><p>Merge two nodes into one, if the nodes are adjacent or if both nodes are only attached on one side with a segment.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+<section id="rectangle-shapes">
+<h3>Rectangle Shapes<a class="headerlink" href="#rectangle-shapes" title="Permalink to this headline">¶</a></h3>
+<p><img alt="toolrectangle" src="../../_images/rectangle_tool.svg" /></p>
+<p>Rectangle shapes are the ones made with the <a class="reference internal" href="rectangle.html#rectangle-tool"><span class="std std-ref">Rectangle Tool</span></a>. It has extra options to make rounded corners easy.</p>
+<dl class="simple">
+<dt>Corner radius x</dt><dd><p>The radius of the x-axis of the corner curve.</p>
+</dd>
+<dt>Corner radius y</dt><dd><p>The radius of the y-axis of the corner curve.</p>
+</dd>
+</dl>
+</section>
+<section id="ellipse-shapes">
+<h3>Ellipse Shapes<a class="headerlink" href="#ellipse-shapes" title="Permalink to this headline">¶</a></h3>
+<p><img alt="toolellipse" src="../../_images/ellipse_tool.svg" /></p>
+<p>Ellipse shapes are the ones made with the <a class="reference internal" href="ellipse.html#ellipse-tool"><span class="std std-ref">Ellipse Tool</span></a>.</p>
+<dl>
+<dt>Type</dt><dd><p>The type of ellipse shape it is.</p>
+<dl class="simple">
+<dt>Arc</dt><dd><p>An arc shape will keep the path open when it isn’t fully circular.</p>
+</dd>
+<dt>Pie</dt><dd><p>A pie shape will add two extra lines to the center when the shape isn’t fully circular, like how one cuts out a piece from a pie.</p>
+</dd>
+<dt>Chord</dt><dd><p>A cord shape will add a straight line between the two ends if the path isn’t fully circular, as if a cord is being strung between the two points.</p>
+</dd>
+</dl>
+</dd>
+<dt>Start Angle</dt><dd><p>The angle at which the shape starts.</p>
+</dd>
+<dt>End Angle</dt><dd><p>The angle at which the shape ends.</p>
+</dd>
+<dt>Close Ellipse</dt><dd><p>An action to quickly make the ellipse fully circular.</p>
+</dd>
+</dl>
+</section>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="text.html" class="btn btn-neutral float-right" title="Text Tool" accesskey="n" rel="next"> <!-- Next --> <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="shape_selection.html" class="btn btn-neutral" title="Shape Selection Tool" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- Previous  -->  </a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright licensed under the GNU Free Documentation License 1.3+ unless stated otherwise.
+      
+        <span class="commit">
+          Revision <code>7c271ce</code>.
+        </span>
+      
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a modified <a href="https://github.com/rtfd/sphinx_rtd_theme">RTD theme</a>.<br/>
+  <a href="https://krita.org" title="Krita official website.">Krita official website</a> |
+  <a href="https://invent.kde.org/documentation/docs-krita-org/" title="The Gitlab instance to edit this pages and collaborate.">Git repository for docs.krita.org </a> |
+  <a href="https://www.kde.org/community/whatiskde/impressum-en.php" title="To know more about KDE, code of conduct, privacy policy and GDPR.">KDE Impressum</a>.
+   
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'5.0.0 Beta',
+            LANGUAGE:'en',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/documentation_options.js"></script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
+      });
+  </script> 
+
+ <script type="text/javascript">
+	 var _paq=_paq||[];
+	 _paq.push(['setCookieDomain','*.krita.org']);
+	 _paq.push(['setDomains','*.krita.org']);
+	 _paq.push(['setDocumentTitle',document.domain+"/"+document.title]);
+	 _paq.push(['trackPageView']);
+	 _paq.push(['enableLinkTracking']);
+
+	 (function(){
+	 	var u="//stats.kde.org/";
+	    _paq.push(['setTrackerUrl',u+'piwik.php']);
+	    _paq.push(['setSiteId',13]);
+	    var d = document, g = d.createElement('script'),s=d.getElementsByTagName('script')[0];
+	    g.type = 'text/javascript';
+	    g.async = true;
+	    g.defer = true;
+	    g.src = u+'piwik.js';
+	    s.parentNode.insertBefore(g,s);
+	  })();
+</script> 
+<noscript><p><img src="//stats.kde.org/piwik.php?idsite=13" style="border:0;" alt="" /></p></noscript>
+
+</body>
+</html>

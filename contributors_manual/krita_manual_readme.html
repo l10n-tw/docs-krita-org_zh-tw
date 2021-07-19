@@ -1,0 +1,714 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" name="title" content="Krita Manual Contribution Guide" />
+  <meta property="og:site-name" content="Krita Manual" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="en" />
+  <meta property="og:locale:alternate" content="ca" />
+  
+  <meta property="og:locale:alternate" content="fr" />
+  <meta property="og:locale:alternate" content="it" />
+  <meta property="og:locale:alternate" content="ja" />
+  <meta property="og:locale:alternate" content="ko" />
+  <meta property="og:locale:alternate" content="nl" />
+  <meta property="og:locale:alternate" content="pl" />
+  <meta property="og:locale:alternate" content="pt_PT" />
+  <meta property="og:locale:alternate" content="uk_UA" />
+  <meta property="og:locale:alternate" content="zh_CN" />
+  <meta property="og:article:modified_time" content="2021-07-19T15:33:59" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<meta content="Contributor's Readme for the Krita Manual." name="description" />
+
+  
+  
+  <title>Krita Manual Contribution Guide &mdash; Krita Manual 5.0.0 Beta documentation</title>
+  
+
+  
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    
+  
+  
+  
+    <link rel="canonical" href="en/contributors_manual/krita_manual_readme.html"/>
+    <meta property="og:url" content="en/contributors_manual/krita_manual_readme.html" />
+    <meta property="og:image" content="en/_static/sidebar-logo.png" />
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Images for the Manual" href="optimising_images.html" />
+    <link rel="prev" title="Mark-up conventions for the Krita Manual" href="krita_manual_conventions.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+       
+           <a href="../index.html" class="icon icon-home">
+
+			<img src="../_static/sidebar-logo.png" class="logo" alt="Logo"/>
+           	
+           <!--	Krita Manual -->
+
+
+          </a>
+
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-side-nav-language-selector">
+        	<p class="caption-text">
+	        	<select id="language-selector-container">
+	        		<option value="ca">Català</option>
+	        		<option value="en">English</option>
+	        		<option value="fr">français</option>
+	        		<option value="it">Italiano</option>
+	        		<option value="ja">日本語</option>
+	        		<option value="ko">한국어</option>
+	        		<option value="nl">Nederlands</option>
+	        		<option value="pl">Polski</option>
+	        		<option value="pt_PT">português</option>
+	        		<option value="uk_UA">Українська</option>
+	        		<option value="zh_CN">简体中文</option>
+	        	</select>
+        	</p>
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../user_manual.html">User Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general_concepts.html">General Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference_manual.html">Reference Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials.html">Tutorials and How-tos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../KritaFAQ.html">Krita FAQ</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../contributors_manual.html">Contributors Manual</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="community.html">The Krita Community</a></li>
+<li class="toctree-l2"><a class="reference internal" href="krita_manual_conventions.html">Mark-up conventions for the Krita Manual</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Krita Manual Contribution Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#for-first-timers">For first timers</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#making-changes">Making changes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#general-philosophy">General philosophy</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#demographics-and-target-audience-s">Demographics and target audience(s)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#general-writing">General Writing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#regarding-photos-and-paintings">Regarding photos and paintings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#regarding-images-in-general">Regarding images in general</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#protocol">Protocol</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#tagging-and-branches">Tagging and Branches</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#removing-pages">Removing Pages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#adding-pages">Adding Pages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#changing-pages">Changing Pages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#faulty-pages">Faulty pages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#proofreading">Proofreading</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#translating">Translating</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#other">Other</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="optimising_images.html">Images for the Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_support.html">Introduction to User Support</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../untranslatable_pages.html">Technical Pages</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../resources_page.html">Resources</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+	<!-- start top banner area (for fundraisers or messages)
+
+	<div style="text-align: center; background-color: #333">
+		<a href="https://krita.org/en/fundraising-2018-campaign/" target="_self" onclick="ga('send', 'event', 'frontpage', 'button', 'Fundraiser 2018');">
+			<img src="https://krita.org/wp-content/themes/krita-org-theme/images/decoration/2018-fundraiser-banner.png" style="max-width: 100%">
+		</a>
+	</div>
+	
+	 end top banner area -->
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Krita Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../contributors_manual.html">Contributors Manual</a> &raquo;</li>
+        
+      <li>Krita Manual Contribution Guide</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+          
+            <a href="../_sources/contributors_manual/krita_manual_readme.rst.txt" rel="nofollow"> 
+             
+              <img src="../_static/images/source-code.png" />
+             <!-- View page source -->
+
+          </a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="krita-manual-contribution-guide">
+<span id="krita-manual-contributors-guide"></span><h1>Krita Manual Contribution Guide<a class="headerlink" href="#krita-manual-contribution-guide" title="Permalink to this headline">¶</a></h1>
+<p>Welcome to the Krita Manual Contribution Guide!</p>
+<p>If you’re interested in contributing to Krita’s documentation, you’re in the right place.</p>
+<p>Krita is (free) open source software, which effectively makes us a community project with dozens of volunteers pitching in to make it better. This, of course, requires we keep track of manuals and how-to’s for new volunteers to come in and help us. The various places we’ve done this have been rather spread out, so the contributors’ manual is an attempt to consolidate all the information. It is therefore very technical in places.</p>
+<p>This documentation will include:</p>
+<dl>
+<dt>A reference manual for Krita</dt><dd><p>This one is probably what everyone is expecting when they look up Krita’s documentation. Dry, basic, ‘what does this button do’ type of information.</p>
+</dd>
+<dt>General concept tutorials.</dt><dd><p>We’ve found over the past two years that for certain types of users, a reference manual, even with some examples, just isn’t enough. The manual should also provide fast and concise explanations for things, and provide a basic workflow for preparing an image for the web.</p>
+<p>We also have found that certain concepts, such as color management and layer handling are far more advanced in Krita than the average artist is used to. Krita is free and many of its users will not have formal training in digital artwork. So there is no pre-existing artist-focused knowledge on how to use color management or filter layers.</p>
+<p>In addition there are systems that are unique to Krita, for example the brush system, the transform masks, the alpha inheritance and the perspective assistants. Finally, there are users who aren’t familiar with even standard painting workflows, and are not flexible enough to understand how to port a tutorial for Sai or Photoshop to Krita.</p>
+</dd>
+<dt>A list of known tutorials and video tutorials</dt><dd><p>Apparently, one of the great things about Krita’s team is how we connect with artists and acknowledge that they’re doing cool stuff. The same should count for tutorials, especially because there are ways of using Krita and ways of approaching painting that are unique and we should encourage people to share their knowledge.</p>
+</dd>
+<dt>Contributors’ Manual</dt><dd><p>What you’re reading right now!</p>
+</dd>
+<dt>krita.org tutorials</dt><dd><p>There have been a bunch of tutorials on the krita.org and the krita-foundation.tumblr.com, the former focusing on explaining how to use a new feature and the later stimulated by user request.</p>
+</dd>
+<dt>FAQ</dt><dd><p>This one is already online and a merger of the different FAQs that we had. It’s currently being translated and we hope to keep this one the primary one to update.</p>
+</dd>
+</dl>
+<section id="for-first-timers">
+<h2>For first timers<a class="headerlink" href="#for-first-timers" title="Permalink to this headline">¶</a></h2>
+<p>Unlike Mediawiki, Sphinx works more like how we write code for Krita.</p>
+<p>First things first, you will want to talk to us! For this you can join us in the chatroom “#krita” via matrix. A introduction about Matrix is given <a class="reference external" href="https://community.kde.org/Matrix">here</a>. Create a matrix on webchat.kde.org account and join the #krita:kde.org channel. Or more importantly, make an account at <a class="reference external" href="https://identity.kde.org/">identity.kde.org</a>. The account you make at identity can be used to both access invent.kde.org as well as the <a class="reference external" href="https://phabricator.kde.org">phabricator</a>, where we organise Krita development.</p>
+<p>Sphinx works by writing simple text files with reStructuredText mark up, and then it takes those text files and turns them into the manual. We keep track of changes in the manual by putting them into a version control system called <strong class="program">Git</strong>.</p>
+<section id="making-changes">
+<span id="making-changes-sphinx"></span><h3>Making changes<a class="headerlink" href="#making-changes" title="Permalink to this headline">¶</a></h3>
+<p>Because we use Git, there’s only a few people who can put things into the version control system, so if you want to make changes you will need to put it up for review.</p>
+<section id="creating-merge-requests-using-edit-mode">
+<span id="merge-request-edit"></span><h4>Creating merge requests using Edit mode<a class="headerlink" href="#creating-merge-requests-using-edit-mode" title="Permalink to this headline">¶</a></h4>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This method is only suitable if you have no push access to KDE repositories. Otherwise it would commit your changes directly to the repository, which is against the current guidelines.</p>
+</div>
+<p>Recommended for users without a technical knowledge.</p>
+<p>Not recommended when you want to change more than one file at once. (See <a class="reference internal" href="#merge-request-webide"><span class="std std-ref">Creating merge requests using WebIDE</span></a> or <a class="reference internal" href="#merge-request-terminal"><span class="std std-ref">Creating merge requests using command line</span></a> if you want to change more files, or simply edit only one per merge request).</p>
+<p>If you have a lot of changes you want to contribute, we recommend trying to follow these instructions.</p>
+<ol class="arabic simple">
+<li><p>Get a KDE identity.</p></li>
+<li><p>Login to <a class="reference external" href="https://invent.kde.org/">KDE_gitlab</a>.</p></li>
+<li><p>Go to the <a class="reference external" href="https://invent.kde.org/documentation/docs-krita-org/tree/master">repository</a> and press <span class="guilabel">fork</span>.</p></li>
+<li><p>You should be redirected to the fork of your repository now. Typically it’s located at <code class="docutils literal notranslate"><span class="pre">invent.kde.org/YOUR_KDE_LOGIN_NAME/docs-krita-org</span></code>.</p></li>
+<li><p>Come back to the official repository. Make sure you’re browsing <code class="docutils literal notranslate"><span class="pre">Documentation</span> <span class="pre">&gt;</span> <span class="pre">Krita.org</span> <span class="pre">Documentation</span></code>, not your own fork. Otherwise this method won’t work correctly.</p></li>
+</ol>
+<blockquote>
+<div><ol class="arabic">
+<li><p>Gitlab has an option to Edit files in the gitlab itself. To access this, go to <span class="menuselection">Repository ‣ Files</span>.</p></li>
+<li><p>At the top of the page you should see a dropbox with <code class="docutils literal notranslate"><span class="pre">master</span></code> as a chosen item.</p></li>
+<li><p>Find the file you want to edit, open it and then click <span class="guilabel">Edit</span>.</p></li>
+<li><p>Make your changes. (Note: in this mode you can edit only one file at a time).</p></li>
+<li><p>Go to the smaller textbox below and write a nice message in the commit message section with the changes you’ve made. When done, press <span class="guilabel">Commit changes</span>. This will make a merge request for you, just fill in all of the fields as explained here: <a class="reference internal" href="#new-merge-request"><span class="std std-ref">Guidelines for new merge requests</span></a>.</p>
+<blockquote>
+<div><p>The downside is that right now there’s no way to tell if you made errors with the mark up using this method. Please check your changes with the <a class="reference external" href="https://livesphinx.herokuapp.com/">Online Sphinx Editor</a> (just copy and paste the entire file you’re editing).</p>
+</div></blockquote>
+</li>
+</ol>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p><span class="guilabel">Edit</span> and <span class="guilabel">WebIDE</span> are two different things! Make sure you select <span class="guilabel">Edit</span>.</p>
+</div>
+</div></blockquote>
+<a class="reference internal image-reference" href="../_images/screenshot_editmode.png"><img alt="../_images/screenshot_editmode.png" src="../_images/screenshot_editmode.png" style="width: 1000px;" /></a>
+</section>
+<section id="creating-merge-requests-using-webide">
+<span id="merge-request-webide"></span><h4>Creating merge requests using WebIDE<a class="headerlink" href="#creating-merge-requests-using-webide" title="Permalink to this headline">¶</a></h4>
+<p>Recommended for users with a bit of knowledge about Git that want to edit multiple files at once.</p>
+<p>Not recommended when you don’t know what a branch is (see <a class="reference internal" href="#merge-request-edit"><span class="std std-ref">Creating merge requests using Edit mode</span></a> instead).</p>
+<ol class="arabic simple">
+<li><p>Follow the instructions above to login to <a class="reference external" href="https://invent.kde.org/">KDE_gitlab</a> and create your fork.</p></li>
+<li><p>Go to your fork (make sure the url contains your username).</p></li>
+<li><p>Make sure you’re on the <code class="docutils literal notranslate"><span class="pre">master</span></code> branch.</p></li>
+<li><p>Click <span class="guilabel">WebIDE</span>. This should take you to a page that has a list of files on the left side and a big empty space for file contents on the right side.</p></li>
+<li><p>Open the files you want to edit and make the changes.</p></li>
+<li><p>Click <span class="guilabel">Commit…</span>. Double-click on all files in the <span class="guilabel">Unstaged changes</span> category to move them to <span class="guilabel">Staged changes</span>.</p></li>
+<li><p>Click <span class="guilabel">Commit…</span> again - it will expand a commit message textbox. Write commit message that explains what changes have you made and why.</p></li>
+<li><p>Make sure the settings are correct: you need to select <span class="guilabel">Create a new branch</span> (the name of the branch should be: <code class="docutils literal notranslate"><span class="pre">[username]/[very</span> <span class="pre">short</span> <span class="pre">description</span> <span class="pre">of</span> <span class="pre">your</span> <span class="pre">changes]</span></code>). If you finished your changes, make sure that <span class="guilabel">Start a new merge request</span> is checked. Otherwise you’ll need to make a new merge request manually later.</p></li>
+<li><p>Click <span class="guilabel">Stage &amp; Commit</span>.</p></li>
+<li><p>Fill all of the fields correctly: see <a class="reference internal" href="#new-merge-request"><span class="std std-ref">Guidelines for new merge requests</span></a>.</p></li>
+<li><p>To create a new merge request manually, go to Krita Manual official repository (make sure the url <em>doesn’t</em> contain your username now) and click <span class="guilabel">Create a new merge request</span> (bright green button at the left). Select your fork and select the branch that you’ve created in WebIDE.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you don’t have a push access to the official repository, gitlab won’t allow you to save your changes if you were editing the official repository by mistake (and <span class="guilabel">Create a merge request</span> won’t help with that: you still need to commit your changes to your branch, but if you don’t have push access, you can’t do it). It will just show the message: <em>An error occurred whilst committing your changes. Please try again.</em></p>
+<p>In this case, simply copy contents of all of the files you changed, go to your fork and paste them in the fork WebIDE.</p>
+</div>
+</section>
+<section id="creating-merge-requests-using-command-line">
+<span id="merge-request-terminal"></span><h4>Creating merge requests using command line<a class="headerlink" href="#creating-merge-requests-using-command-line" title="Permalink to this headline">¶</a></h4>
+<p>Recommended for users that know how Git works and how to use command line.</p>
+<p>Not recommended when you don’t know what a branch is (see <a class="reference internal" href="#merge-request-edit"><span class="std std-ref">Creating merge requests using Edit mode</span></a> instead).</p>
+<ol class="arabic">
+<li><p>Follow the instructions above to login to <a class="reference external" href="https://invent.kde.org/">KDE_gitlab</a> and create your fork.</p></li>
+<li><p>Clone the repository locally with <span class="guilabel">git clone</span>. The repository page has the urls you can perform git clone from, and you can then push to your fork. The advantage of this is that you can use all the tools on your computer to edit these text files as well as build the manual locally to check for errors. (You need to do this step only once).</p>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># for ssh access</span>
+git clone git@invent.kde.org:&lt;username&gt;/docs-krita-org.git
+git remote add upstream git@invent.kde.org:documentation/docs-krita-org.git
+
+<span class="c1"># for https access</span>
+git clone https://invent.kde.org/&lt;username&gt;/docs-krita-org.git
+git remote add upstream https://invent.kde.org/documentation/docs-krita-org.git
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Remember to always pull changes from the official repository before making new changes:</p>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git pull upstream master
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Make sure you create a new branch for your changes, since september 2019, all changes should be branched from <code class="docutils literal notranslate"><span class="pre">master</span></code>.</p>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git checkout master
+
+<span class="c1"># and then:</span>
+git checkout -b <span class="s2">&quot;&lt;username&gt;/&lt;description of the new feature&gt;&quot;</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>After you make your changes, commit them and push to your fork. For a detailed description of how to use Git in terminal in case of this workflow, go to <a class="reference internal" href="../untranslatable_pages/intro_hacking_krita.html#forking-gitlab"><span class="std std-ref">Forking on Gitlab</span></a>.</p>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># install the python3-sphinx package for your system. For example for Ubuntu:</span>
+sudo apt install python3-sphinx
+<span class="c1"># build the manual (reports potential errors, allows to inspect changes in the browser)</span>
+make html
+<span class="c1"># make sure everything is correct</span>
+git status
+git diff
+<span class="c1"># add all of the files</span>
+git add .
+<span class="c1"># commit your changes</span>
+git commit
+<span class="c1"># submit your changes to your fork</span>
+git push
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Finally, go to the website of the original repository, and then to Merge Requests. Select your fork and the correct branch and create a new merge request. For instruction on how to fill the fields, see <a class="reference internal" href="#new-merge-request"><span class="std std-ref">Guidelines for new merge requests</span></a>.</p></li>
+</ol>
+</section>
+<section id="guidelines-for-new-merge-requests">
+<span id="new-merge-request"></span><h4>Guidelines for new merge requests<a class="headerlink" href="#guidelines-for-new-merge-requests" title="Permalink to this headline">¶</a></h4>
+<ol class="arabic">
+<li><p>Your commit messages should conform to standards explained here: <a class="reference external" href="https://chris.beams.io/posts/git-commit/">How to Write a Git Commit Message</a></p></li>
+<li><p><span class="guilabel">Title</span> and <span class="guilabel">Description</span> should explain what changes did you make and why did you make them, just like a commit message, so follow the guidelines from the link above in this case, too.</p></li>
+<li><p><span class="guilabel">Target</span> should point to <code class="docutils literal notranslate"><span class="pre">master</span></code>.</p></li>
+<li><p>If you’re sure the merge request will demand some changes later, start the title of your merge request with <code class="code docutils literal notranslate"><span class="pre">[WIP]</span></code>.</p></li>
+<li><p>Make sure you checked <span class="guilabel">Allow commits from members who can merge to the target branch.</span> – it is often needed for technical reasons that merge request is rebased on master, which technically changes the merge request, but it doesn’t change the actual content of it. Rebase can be done by you or by the reviewer – if you don’t want to be bothered later too much, better check this checkbox so the reviewer can do it themselves with only a few clicks.</p></li>
+<li><p>You can safely check <span class="guilabel">Delete source branch when merge request is accepted</span> in most cases.</p></li>
+<li><p>Unless your reviewers tell you otherwise, check <span class="guilabel">Squash commits when merge request is accepted</span>. The first line of the commit message will come from the <span class="guilabel">Title</span> of your merge request and the rest of it will be taken from the <span class="guilabel">Description</span> of the merge request.</p></li>
+<li><p>When you finish creating your merge request, go to IRC (see <a class="reference internal" href="community.html#internet-relay-chat"><span class="std std-ref">Internet Relay Chat</span></a>) and ask someone with push access to add the <code class="docutils literal notranslate"><span class="pre">Needs</span> <span class="pre">Review</span></code> label on your merge request.</p></li>
+<li><p>You might get feedback on your merge request if it has mistakes. Just fix the mistakes in your branch in one of the following ways.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>If you want to use <span class="guilabel">Edit</span> mode, just go to <span class="guilabel">Changes</span> section of the merge request and click on the pencil icon (with a tooltip that says <em>Edit</em>) to use the Edit mode again.</p></li>
+<li><p>If you want to use <span class="guilabel">WebIDE</span> mode, go to your fork, select the branch your changes are on and go to the WebIDE.</p></li>
+<li><p>If you edit files on your computer and work with terminal, make sure you’re on the correct branch and push your changes - gitlab will update your merge request automatically.</p></li>
+</ul>
+<p>After making changes, make sure you ask someone to change the label to <code class="docutils literal notranslate"><span class="pre">Needs</span> <span class="pre">Review</span></code> again.</p>
+</div></blockquote>
+</li>
+</ol>
+<p>For more detailed information, check out <a class="reference internal" href="../untranslatable_pages/intro_hacking_krita.html#forking-gitlab"><span class="std std-ref">Forking on Gitlab</span></a> in the technical section.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>At the time of writing this guide setting labels on merge requests is only possible by contributors with write access to the official repository. (If you don’t know what that means, you’re most probably not one of them). Because of that, when you create or change your merge request you need to get on IRC (see <a class="reference internal" href="community.html#the-krita-community"><span class="std std-ref">The Krita Community</span></a>) and ask someone to label it for you.</p>
+</div>
+</section>
+<section id="building-the-manual-in-the-command-line">
+<h4>Building the manual in the command line<a class="headerlink" href="#building-the-manual-in-the-command-line" title="Permalink to this headline">¶</a></h4>
+<p>For those that first want to try out some changes before embarking on a merge
+request right away (and already know how to use git and the command line) this
+is described as part of step 5. in <a class="reference internal" href="#merge-request-terminal"><span class="std std-ref">Creating merge requests using command line</span></a>.</p>
+</section>
+</section>
+</section>
+<section id="general-philosophy">
+<h2>General philosophy<a class="headerlink" href="#general-philosophy" title="Permalink to this headline">¶</a></h2>
+<p>This is for determining what is an appropriate writing style. A writing style, whether we consider its practical or aesthetic qualities, is usually underpinned by a goal or general philosophy. What do we want to achieve with the manual, and for whom is the manual meant?</p>
+<section id="demographics-and-target-audience-s">
+<h3>Demographics and target audience(s)<a class="headerlink" href="#demographics-and-target-audience-s" title="Permalink to this headline">¶</a></h3>
+<p>We cannot talk about a demographic in the sense that we know all Krita users are 55 year old men. Krita is used by a hugely different amount of people, and we are actually kind of proud that we have such a varied userbase.</p>
+<p>Despite that, we know a couple of things about our users:</p>
+<ul>
+<li><p>They are artists. This is explicitly the type of users that we target.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Therefore, we know they prefer pretty pictures.</p></li>
+<li><p>They are visual.</p></li>
+<li><p>They are trying to achieve pretty pictures.</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<p>Therefore, the implicit goal of each page would be to get the feature used for pretty pictures.</p>
+<p>Other than that, we’ve observed the following groups:</p>
+<ul>
+<li><p>High-school and college students trying out drawing software for illustrations. These usually have some previous experience with drawing software, like Painttool Sai or Photoshop, but need to be introduced to possibilities in <strong class="program">Krita</strong>. This group’s strength is that they share a lot of information with each other like tips and tricks and tutorials.</p></li>
+<li><p>Professionals, people who earn their money with digital drawing software. The strength of this group is that they have a lot of know-how and are willing to donate to improve the program. These come in two types:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Non technical professionals. These are people who do not really grasp the more mathematical bits of a piece of software, but have developed solid workflows over the years and work with software using their finely honed instincts. These tend to be illustrators, painters and people working with print.</p></li>
+<li><p>Technical professionals. These are people who use <strong class="program">Krita</strong> as part of a pipeline, and care about the precise maths and pixel pushing. These tend to be people working in the games and VFX industry, but occasionally there’s a scientist in there as well.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Adult and elderly hobbyists. This group doesn’t know much about computers, and they always seem to get snagged on that one little step missing from a tutorial. Their strength as a group is that they adapt unconventional workflows from real life that the student wouldn’t know about and the professional has no time for and create cool stuff with that, as well as that they have a tempering effect on the first group in the larger community.</p></li>
+</ul>
+<p>From these four groups…</p>
+<ul class="simple">
+<li><p>there’s only one that is technical. Which is why we need the concept pages, so that we can create a solid base to write our manual texts on top of.</p></li>
+<li><p>three of them likely have previous experience with software and may need migration guides and be told how.</p></li>
+<li><p>two of them need to know how to get Krita to cooperate with other software.</p></li>
+<li><p>two of them have no clue what they are doing and may need to be guided through the most basic of steps.</p></li>
+</ul>
+<p>From that we can get the following rules:</p>
+</section>
+<section id="general-writing">
+<h3>General Writing<a class="headerlink" href="#general-writing" title="Permalink to this headline">¶</a></h3>
+<dl class="simple">
+<dt>Use American English if possible.</dt><dd><p>We use American English in the manual, in accordance to Krita’s UI being American English by default.</p>
+</dd>
+<dt>Keep the language polite, but do not use academic language.</dt><dd><p>As a community, we want to be welcoming to the users, so we try to avoid language that is unwelcoming. Swearing is already not condoned by KDE, but going to the far other end, an academic style where neither writer nor reader is acknowledged might give the idea that the text is far more complex than necessary, and thus scare away users.</p>
+</dd>
+<dt>Avoid using GIFs (open for debate)</dt><dd><p>The reason is that people with epilepsy may be affected by fast moving images. Similarly, GIFs can sometimes carry too much of the burden of explanation. If you can’t help but use GIFs, at the least notify the reader of this in the introduction of the page.</p>
+</dd>
+<dt>Keep it translation compatible</dt><dd><p>This consists of using SVG for infographics, and using the appropriate markup for a given text.</p>
+</dd>
+</dl>
+</section>
+<section id="regarding-photos-and-paintings">
+<h3>Regarding photos and paintings<a class="headerlink" href="#regarding-photos-and-paintings" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>I would like to discourage photos and traditional paintings in the manual if they are not illustrating a concept. The reason is that it is very silly and a little dishonest to show Rembrandt’s work inside the Krita GUI, when we have so many modern works that were made in Krita. All of the pepper&amp;carrot artwork was made in Krita and the original files are available, so when you do not have an image handy, start there. Photos should be avoided because Krita is a painting program. Too many photos can give the impression Krita is trying to be a solution for photo retouching, which really isn’t the focus.</p></li>
+<li><p>Of course, we still want to show certain concepts in play in photos and master paintings, such as glossing or indirect light. In this case, add a caption that mentions the name of the painting or the painter, or mentions it’s a photograph.</p></li>
+<li><p>Photos can still be used for photobashing and the like, but only if it’s obviously used in the context of photobashing.</p></li>
+</ul>
+</section>
+<section id="regarding-images-in-general">
+<h3>Regarding images in general<a class="headerlink" href="#regarding-images-in-general" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Avoid text in the images and use the caption instead. You can do this with the figure directive.</p></li>
+<li><p>If you do need to use text, make either an SVG, so the text inside can be manipulated easier, or try to minimize the amount of text.</p></li>
+<li><p>Try to make your images high quality/cute. Let’s give people the idea that they are using a program for drawing!</p></li>
+<li><p>Remember that the manual is licensed under GDPL 1.3, so images submitted will be licensed under that. In the case of CC-By-Sa/CC-By ensure that the file gets attributed appropriately through a figure caption. Needless to say, don’t submit images that cannot be licensed under either license.</p></li>
+</ul>
+</section>
+</section>
+<section id="protocol">
+<h2>Protocol<a class="headerlink" href="#protocol" title="Permalink to this headline">¶</a></h2>
+<p>So here we line out all the boring workflows.</p>
+<section id="tagging-and-branches">
+<h3>Tagging and Branches<a class="headerlink" href="#tagging-and-branches" title="Permalink to this headline">¶</a></h3>
+<p>Adding and removing text will be done in the <code class="docutils literal notranslate"><span class="pre">draft</span></code> branch.</p>
+<p>Proofreading results for old pages will be considered as bugfixes and thus will go into the <code class="docutils literal notranslate"><span class="pre">master</span></code> branch and merged into the <code class="docutils literal notranslate"><span class="pre">draft</span></code> branch as necessary.</p>
+<p>Before the <code class="docutils literal notranslate"><span class="pre">draft</span></code> branch is merged for a given release:</p>
+<ul class="simple">
+<li><p>The master branch will be tagged with the old version.</p></li>
+<li><p>The draft branch is first double checked that it has updated version number and updated epub cover.</p></li>
+</ul>
+<p>The <code class="docutils literal notranslate"><span class="pre">draft</span></code> branch will not be merged until the day before a release to keep the pages intact for long enough.</p>
+<p>Each release will have a version of the epub uploaded as part of the release process.
+.. Where do we get the POT files from? Even the translated versions?</p>
+</section>
+<section id="removing-pages">
+<h3>Removing Pages<a class="headerlink" href="#removing-pages" title="Permalink to this headline">¶</a></h3>
+<p>If a feature is removed in a certain version, the corresponding pages:</p>
+<ol class="arabic">
+<li><p>Will first be marked deprecated.</p>
+<blockquote>
+<div><p>This can be done as so:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">deprecated</span><span class="p">::</span> <span class="n">version</span> <span class="n">number</span>
+
+    <span class="n">Text</span> <span class="n">to</span> <span class="n">indicate</span> <span class="n">what</span> <span class="n">the</span> <span class="n">user</span> <span class="n">should</span> <span class="n">do</span> <span class="n">without</span> <span class="n">this</span> <span class="n">feature</span><span class="o">.</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Will be linked on a page called ‘deprecated’</p></li>
+<li><p>If the next version rolls around, all the pages linked in the deprecated section will be removed.</p></li>
+</ol>
+</section>
+<section id="adding-pages">
+<h3>Adding Pages<a class="headerlink" href="#adding-pages" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic">
+<li><p>Ensure that it is located in the right place.</p></li>
+<li><p>Follow the <a class="reference internal" href="krita_manual_conventions.html#krita-markup-conventions"><span class="std std-ref">Mark-up conventions for the Krita Manual</span></a> to ensure the page is formatted correctly.</p></li>
+<li><p>Add the page to the TOC.</p></li>
+<li><p>If the feature is new, add in versionadded:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">versionadded</span><span class="p">::</span> <span class="n">version</span> <span class="n">number</span>
+
+    <span class="n">optional</span> <span class="n">something</span> <span class="ow">or</span> <span class="n">the</span> <span class="n">other</span><span class="o">.</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<p>As with images, don’t add text that you do not have permission to add. This means that text is either written by you, or you have permission to port it from the original author. The manual is GDPL 1.3+ so the text will be relicensed under that.</p>
+</section>
+<section id="changing-pages">
+<h3>Changing Pages<a class="headerlink" href="#changing-pages" title="Permalink to this headline">¶</a></h3>
+<p>If you fully rewrite a page, as opposed to proofreading it, the resulting page should be reviewed.</p>
+<p>If you change a page because a feature has changed, and you have commit access, the change can be pushed without review (unless you feel more comfortable with a review), but you should add:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">versionchanged</span><span class="p">::</span> <span class="n">version</span> <span class="n">number</span>
+
+    <span class="n">This</span> <span class="ow">and</span> <span class="n">that</span> <span class="n">changed</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>In all cases, check if you want to add yourself to the author field in the metadata section on top.</p>
+<p>Using deprecated, versionadded and versionchanged with the version number allows us to easily search the manual for these terms with grep:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>grep -d recurse versionadded * --exclude-dir<span class="o">={</span>_build,locale<span class="o">}</span>
+</pre></div>
+</div>
+</section>
+<section id="faulty-pages">
+<h3>Faulty pages<a class="headerlink" href="#faulty-pages" title="Permalink to this headline">¶</a></h3>
+<p>If a page slips through the cracks, either…</p>
+<ul class="simple">
+<li><p>Make a merge request per the <a class="reference internal" href="#making-changes-sphinx"><span class="std std-ref">Making changes</span></a> section.</p></li>
+<li><p>Make a task at the <a class="reference external" href="https://phabricator.kde.org/project/view/135/">Manual Project Workboard</a>.</p></li>
+<li><p>Make a bug at <a class="reference external" href="https://bugs.kde.org/">bugzilla</a> under the project Krita in the section ‘documentation’.</p></li>
+</ul>
+</section>
+<section id="proofreading">
+<h3>Proofreading<a class="headerlink" href="#proofreading" title="Permalink to this headline">¶</a></h3>
+<p>There are two types of proofreading that needs to be done.</p>
+<p>The most important one is <strong>reviewing changes people make</strong>. You can do this on <a class="reference external" href="https://invent.kde.org/">KDE_gitlab</a> in two ways:</p>
+<ol class="arabic">
+<li><p>Reviewing merge requests</p>
+<p>You can help review merge requests. Request reviewing is usually done by programmers to find mistakes in each other’s code, but because programming code is text based just like regular text, we can use this to check against typos as well!</p>
+<blockquote>
+<div><p>A merge request, is an amount of changes done in a document (added, removed) put into a machine readable file. When someone submits a review request (on system like gitlab or github this is a merge or pull request), people who maintain the original files will have to look them over and can make comments about things needing to change. This allows them to comment on things like typos, over-complicated writing but also things that are incorrect. After a patch has been accepted it can be pushed into the version control system.</p>
+</div></blockquote>
+</li>
+<li><p>Commenting on changes in the manual.</p>
+<blockquote>
+<div><p>Commenting changes happens after the fact. You can comment on a change by going to the commit message (from the repository page, go to history and then click on an entry), where you will be able to make comments on the changes made.</p>
+</div></blockquote>
+</li>
+</ol>
+<p>In both cases, the interface consists of the difference being shown, with on the left the old version, and on the right the new version. Lines that have been added will be marked in green while lines that have been removed will be marked with red. You can click a speech bubble icon to add an ‘inline’ comment.</p>
+<p>The second major way the manual needs to be proofread is <strong>over the whole file</strong>. Many of the pages have only been checked for correctness but not for style and grammar.</p>
+<p>For this you will need to follow the <a class="reference internal" href="#making-changes-sphinx"><span class="std std-ref">Making changes</span></a> section, so that you can have full access to the pages and edit them.</p>
+</section>
+<section id="translating">
+<h3>Translating<a class="headerlink" href="#translating" title="Permalink to this headline">¶</a></h3>
+<p>Translation of the manual is handled by the <a class="reference external" href="https://l10n.kde.org/">KDE localization community</a>. To join the translation effort, go to the localization site, select the list of <a class="reference external" href="https://l10n.kde.org/teams-list.php">translation teams</a>, select the language you wish to translate for, and follow the instructions on the team page to get in contact with fellow translators.</p>
+<p>The localization team has access to the PO files for this manual, which is a file type used by translation programs like POEdit and Lokalize. A translation team is able to work together on translating these files and uploading them to the translations SVN. A special script will then take the translations from the SVN and bring them to the manual section to be incorporated on a daily basis.</p>
+<p>Images can be translated if a translation team wants to provide their own images. All images in the image folder are by default for ‘en’. When you want to translate a specific image, go into that folder and add another folder with your language code to add in the translated versions of images. So Sphinx will search for a dutch version of <code class="file docutils literal notranslate"><span class="pre">/images/Pixels-brushstroke.png</span></code> at <code class="file docutils literal notranslate"><span class="pre">/images/nl/Pixels-brushstroke.png</span></code> and for a dutch version of <code class="file docutils literal notranslate"><span class="pre">/images/dockers/Krita-tutorial2-I.1-2.png</span></code> in <code class="file docutils literal notranslate"><span class="pre">/images/dockers/nl/Krita-tutorial2-I.1-2.png</span></code>.</p>
+<p>Finished translations also need to be added to the build script to show up online. Translator teams which are confident in the state of their translation should contact the main Krita team via the kimageshop mailinglist(<a class="reference external" href="mailto:kimageshop&#37;&#52;&#48;kde&#46;org">kimageshop<span>&#64;</span>kde<span>&#46;</span>org</a>), or <a class="reference external" href="mailto:foundation&#37;&#52;&#48;krita&#46;org">foundation<span>&#64;</span>krita<span>&#46;</span>org</a>, to accomplish this.</p>
+</section>
+</section>
+<section id="other">
+<h2>Other<a class="headerlink" href="#other" title="Permalink to this headline">¶</a></h2>
+<p>For restructured text conventions, check <a class="reference internal" href="krita_manual_conventions.html#krita-markup-conventions"><span class="std std-ref">Mark-up conventions for the Krita Manual</span></a>.</p>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="optimising_images.html" class="btn btn-neutral float-right" title="Images for the Manual" accesskey="n" rel="next"> <!-- Next --> <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="krita_manual_conventions.html" class="btn btn-neutral" title="Mark-up conventions for the Krita Manual" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- Previous  -->  </a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright licensed under the GNU Free Documentation License 1.3+ unless stated otherwise.
+      
+        <span class="commit">
+          Revision <code>7c271ce</code>.
+        </span>
+      
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a modified <a href="https://github.com/rtfd/sphinx_rtd_theme">RTD theme</a>.<br/>
+  <a href="https://krita.org" title="Krita official website.">Krita official website</a> |
+  <a href="https://invent.kde.org/documentation/docs-krita-org/" title="The Gitlab instance to edit this pages and collaborate.">Git repository for docs.krita.org </a> |
+  <a href="https://www.kde.org/community/whatiskde/impressum-en.php" title="To know more about KDE, code of conduct, privacy policy and GDPR.">KDE Impressum</a>.
+   
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'5.0.0 Beta',
+            LANGUAGE:'en',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/documentation_options.js"></script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
+      });
+  </script> 
+
+ <script type="text/javascript">
+	 var _paq=_paq||[];
+	 _paq.push(['setCookieDomain','*.krita.org']);
+	 _paq.push(['setDomains','*.krita.org']);
+	 _paq.push(['setDocumentTitle',document.domain+"/"+document.title]);
+	 _paq.push(['trackPageView']);
+	 _paq.push(['enableLinkTracking']);
+
+	 (function(){
+	 	var u="//stats.kde.org/";
+	    _paq.push(['setTrackerUrl',u+'piwik.php']);
+	    _paq.push(['setSiteId',13]);
+	    var d = document, g = d.createElement('script'),s=d.getElementsByTagName('script')[0];
+	    g.type = 'text/javascript';
+	    g.async = true;
+	    g.defer = true;
+	    g.src = u+'piwik.js';
+	    s.parentNode.insertBefore(g,s);
+	  })();
+</script> 
+<noscript><p><img src="//stats.kde.org/piwik.php?idsite=13" style="border:0;" alt="" /></p></noscript>
+
+</body>
+</html>

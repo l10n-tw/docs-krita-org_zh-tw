@@ -1,0 +1,358 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" name="title" content="Clipping Masks and Alpha Inheritance" />
+  <meta property="og:site-name" content="Krita Manual" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="en" />
+  <meta property="og:locale:alternate" content="ca" />
+  
+  <meta property="og:locale:alternate" content="fr" />
+  <meta property="og:locale:alternate" content="it" />
+  <meta property="og:locale:alternate" content="ja" />
+  <meta property="og:locale:alternate" content="ko" />
+  <meta property="og:locale:alternate" content="nl" />
+  <meta property="og:locale:alternate" content="pl" />
+  <meta property="og:locale:alternate" content="pt_PT" />
+  <meta property="og:locale:alternate" content="uk_UA" />
+  <meta property="og:locale:alternate" content="zh_CN" />
+  <meta property="og:article:modified_time" content="2021-07-19T15:33:59" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<meta content="An introduction for using clipping masks in Krita." lang="en" name="description" xml:lang="en" />
+
+  
+  
+  <title>Clipping Masks and Alpha Inheritance &mdash; Krita Manual 5.0.0 Beta documentation</title>
+  
+
+  
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    
+  
+  
+  
+    <link rel="canonical" href="en/tutorials/clipping_masks_and_alpha_inheritance.html"/>
+    <meta property="og:url" content="en/tutorials/clipping_masks_and_alpha_inheritance.html" />
+    <meta property="og:image" content="en/_static/sidebar-logo.png" />
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Common Workflows" href="common_workflows.html" />
+    <link rel="prev" title="Tutorials and How-tos" href="../tutorials.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+       
+           <a href="../index.html" class="icon icon-home">
+
+			<img src="../_static/sidebar-logo.png" class="logo" alt="Logo"/>
+           	
+           <!--	Krita Manual -->
+
+
+          </a>
+
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-side-nav-language-selector">
+        	<p class="caption-text">
+	        	<select id="language-selector-container">
+	        		<option value="ca">Català</option>
+	        		<option value="en">English</option>
+	        		<option value="fr">français</option>
+	        		<option value="it">Italiano</option>
+	        		<option value="ja">日本語</option>
+	        		<option value="ko">한국어</option>
+	        		<option value="nl">Nederlands</option>
+	        		<option value="pl">Polski</option>
+	        		<option value="pt_PT">português</option>
+	        		<option value="uk_UA">Українська</option>
+	        		<option value="zh_CN">简体中文</option>
+	        	</select>
+        	</p>
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../user_manual.html">User Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general_concepts.html">General Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference_manual.html">Reference Manual</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../tutorials.html">Tutorials and How-tos</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Clipping Masks and Alpha Inheritance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="common_workflows.html">Common Workflows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eye_tracker.html">An Example Setup for Using Krita with an Eye Tracker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="flat-coloring.html">Flat Coloring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inking.html">Inking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="krita-brush-tips.html">Krita Brush Tips</a></li>
+<li class="toctree-l2"><a class="reference internal" href="making_an_azalea_with_the_transformation_masks.html">Making An Azalea With The Transformation Masks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="saving-for-the-web.html">Saving For The Web</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seexpr.html">Introduction to SeExpr</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../KritaFAQ.html">Krita FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributors_manual.html">Contributors Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../resources_page.html">Resources</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+	<!-- start top banner area (for fundraisers or messages)
+
+	<div style="text-align: center; background-color: #333">
+		<a href="https://krita.org/en/fundraising-2018-campaign/" target="_self" onclick="ga('send', 'event', 'frontpage', 'button', 'Fundraiser 2018');">
+			<img src="https://krita.org/wp-content/themes/krita-org-theme/images/decoration/2018-fundraiser-banner.png" style="max-width: 100%">
+		</a>
+	</div>
+	
+	 end top banner area -->
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Krita Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../tutorials.html">Tutorials and How-tos</a> &raquo;</li>
+        
+      <li>Clipping Masks and Alpha Inheritance</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+          
+            <a href="../_sources/tutorials/clipping_masks_and_alpha_inheritance.rst.txt" rel="nofollow"> 
+             
+              <img src="../_static/images/source-code.png" />
+             <!-- View page source -->
+
+          </a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="clipping-masks-and-alpha-inheritance">
+<span id="index-0"></span><span id="id1"></span><h1>Clipping Masks and Alpha Inheritance<a class="headerlink" href="#clipping-masks-and-alpha-inheritance" title="Permalink to this headline">¶</a></h1>
+<p>Krita doesn’t have clipping mask functionality in the manner that Photoshop and programs that mimic Photoshop’s functionality have. That’s because in Krita, unlike such software, a group layer is not an arbitrary collection of layers.
+Rather, in Krita, group layers are composited separately from the rest of the stack, and then the result is added into the stack. In other words, in Krita group layers are in effect distinct images inside your image.</p>
+<a class="reference internal image-reference" href="../_images/Composition_animation.gif"><img alt="Animation showing that groups are composed before the rest of composition takes place." src="../_images/Composition_animation.gif" style="width: 800px;" /></a>
+<p>The exception is when using pass-through mode, meaning that alpha inheritance won’t work right when turning on pass-through on the layer.</p>
+<a class="reference internal image-reference" href="../_images/Layer-composite.png"><img alt="An image showing the way layers composite in Krita." src="../_images/Layer-composite.png" style="width: 800px;" /></a>
+<p>When we turn on alpha inheritance, the alpha-inherited layer keeps the same transparency as the layers below.</p>
+<a class="reference internal image-reference" href="../_images/Krita-tutorial2-I.1-2.png"><img alt="An image showing how the alpha inheritance works and affects layers." src="../_images/Krita-tutorial2-I.1-2.png" style="width: 800px;" /></a>
+<p>Combined with group layers this can be quite powerful. A situation where this is particularly useful is the following:</p>
+<a class="reference internal image-reference" href="../_images/Tut_Clipping_1.png"><img alt="An image with line art and a layer for each flat of color." src="../_images/Tut_Clipping_1.png" style="width: 800px;" /></a>
+<p>Here we have an image with line art and a layer for each flat of colors. We want to add complicated multi-layered shading to this, while keeping the neatness of the existing color flats.
+To get a clipping mask working, you first need to put layers into a group. You can do this by making a group layer and drag-and-dropping the layers into it, or by selecting the layers you want grouped and pressing the <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">G</kbd></kbd> shortcut. Here we do that with the iris and the eye-white layers.</p>
+<a class="reference internal image-reference" href="../_images/Tut_Clipping_2.png"><img alt="An image showing how the alpha inheritance works and affects layers." src="../_images/Tut_Clipping_2.png" style="width: 800px;" /></a>
+<p>We add a layer for the highlight above the other two layers, and add some white scribbles.</p>
+<a class="reference internal image-reference" href="../_images/Tut_Clipping_3.png"><img alt="Clipping mask step 3." src="../_images/Tut_Clipping_3.png" style="width: 800px;" /></a>
+<a class="reference internal image-reference" href="../_images/Tut_Clipping_4.png"><img alt="Clipping mask step 4." src="../_images/Tut_Clipping_4.png" style="width: 800px;" /></a>
+<p>In the above, we have our layer with a white scribble on the left, and on the right, the same layer, but with alpha inheritance active, limiting it to the combined area of the iris and eye-white layers.</p>
+<a class="reference internal image-reference" href="../_images/Tut_Clipping_5.png"><img alt="Clipping mask step 5." src="../_images/Tut_Clipping_5.png" style="width: 800px;" /></a>
+<p>Now there’s an easier way to set up alpha inheritance. If you select a layer or set of layers and press the <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">G</kbd></kbd> shortcut, you create a quick clipping group. That is, you group the layers, and a ‘mask layer’ set with alpha inheritance is added on top.</p>
+<a class="reference internal image-reference" href="../_images/Tut_Clipping_6.png"><img alt="Clipping mask step 6." src="../_images/Tut_Clipping_6.png" style="width: 800px;" /></a>
+<a class="reference internal image-reference" href="../_images/Tut_Clipping_7.png"><img alt="Clipping mask step 7." src="../_images/Tut_Clipping_7.png" style="width: 800px;" /></a>
+<p>The fact that alpha inheritance can use the composited transparency from a combination of layers means that you can have a layer with the erase-blending mode in between, and have that affect the area that the layer above is clipped to.
+Above, the lower image is exactly the same as the upper one, except with the erase-layer hidden. Filters can also affect the alpha inheritance:</p>
+<a class="reference internal image-reference" href="../_images/Tut_clip_blur.gif"><img alt="Filter layers and alpha inheritance." src="../_images/Tut_clip_blur.gif" style="width: 800px;" /></a>
+<p>Above, the blur filter layer gives different results when in different places, due to different parts being blurred.</p>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="common_workflows.html" class="btn btn-neutral float-right" title="Common Workflows" accesskey="n" rel="next"> <!-- Next --> <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../tutorials.html" class="btn btn-neutral" title="Tutorials and How-tos" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- Previous  -->  </a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright licensed under the GNU Free Documentation License 1.3+ unless stated otherwise.
+      
+        <span class="commit">
+          Revision <code>7c271ce</code>.
+        </span>
+      
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a modified <a href="https://github.com/rtfd/sphinx_rtd_theme">RTD theme</a>.<br/>
+  <a href="https://krita.org" title="Krita official website.">Krita official website</a> |
+  <a href="https://invent.kde.org/documentation/docs-krita-org/" title="The Gitlab instance to edit this pages and collaborate.">Git repository for docs.krita.org </a> |
+  <a href="https://www.kde.org/community/whatiskde/impressum-en.php" title="To know more about KDE, code of conduct, privacy policy and GDPR.">KDE Impressum</a>.
+   
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'5.0.0 Beta',
+            LANGUAGE:'en',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/documentation_options.js"></script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
+      });
+  </script> 
+
+ <script type="text/javascript">
+	 var _paq=_paq||[];
+	 _paq.push(['setCookieDomain','*.krita.org']);
+	 _paq.push(['setDomains','*.krita.org']);
+	 _paq.push(['setDocumentTitle',document.domain+"/"+document.title]);
+	 _paq.push(['trackPageView']);
+	 _paq.push(['enableLinkTracking']);
+
+	 (function(){
+	 	var u="//stats.kde.org/";
+	    _paq.push(['setTrackerUrl',u+'piwik.php']);
+	    _paq.push(['setSiteId',13]);
+	    var d = document, g = d.createElement('script'),s=d.getElementsByTagName('script')[0];
+	    g.type = 'text/javascript';
+	    g.async = true;
+	    g.defer = true;
+	    g.src = u+'piwik.js';
+	    s.parentNode.insertBefore(g,s);
+	  })();
+</script> 
+<noscript><p><img src="//stats.kde.org/piwik.php?idsite=13" style="border:0;" alt="" /></p></noscript>
+
+</body>
+</html>

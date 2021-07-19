@@ -1,0 +1,543 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" name="title" content="Animation Timeline Docker" />
+  <meta property="og:site-name" content="Krita Manual" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="en" />
+  <meta property="og:locale:alternate" content="ca" />
+  
+  <meta property="og:locale:alternate" content="fr" />
+  <meta property="og:locale:alternate" content="it" />
+  <meta property="og:locale:alternate" content="ja" />
+  <meta property="og:locale:alternate" content="ko" />
+  <meta property="og:locale:alternate" content="nl" />
+  <meta property="og:locale:alternate" content="pl" />
+  <meta property="og:locale:alternate" content="pt_PT" />
+  <meta property="og:locale:alternate" content="uk_UA" />
+  <meta property="og:locale:alternate" content="zh_CN" />
+  <meta property="og:article:modified_time" content="2021-07-19T15:33:59" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<meta content="Overview of the timeline docker." name="description" />
+
+  
+  
+  <title>Animation Timeline Docker &mdash; Krita Manual 5.0.0 Beta documentation</title>
+  
+
+  
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    
+  
+  
+  
+    <link rel="canonical" href="en/reference_manual/dockers/animation_timeline.html"/>
+    <meta property="og:url" content="en/reference_manual/dockers/animation_timeline.html" />
+    <meta property="og:image" content="en/_static/sidebar-logo.png" />
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Arrange" href="arrange.html" />
+    <link rel="prev" title="Animation Docker" href="animation_docker.html" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+       
+           <a href="../../index.html" class="icon icon-home">
+
+			<img src="../../_static/sidebar-logo.png" class="logo" alt="Logo"/>
+           	
+           <!--	Krita Manual -->
+
+
+          </a>
+
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-side-nav-language-selector">
+        	<p class="caption-text">
+	        	<select id="language-selector-container">
+	        		<option value="ca">Català</option>
+	        		<option value="en">English</option>
+	        		<option value="fr">français</option>
+	        		<option value="it">Italiano</option>
+	        		<option value="ja">日本語</option>
+	        		<option value="ko">한국어</option>
+	        		<option value="nl">Nederlands</option>
+	        		<option value="pl">Polski</option>
+	        		<option value="pt_PT">português</option>
+	        		<option value="uk_UA">Українська</option>
+	        		<option value="zh_CN">简体中文</option>
+	        	</select>
+        	</p>
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../user_manual.html">User Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../general_concepts.html">General Concepts</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../reference_manual.html">Reference Manual</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../audio_for_animation.html">Audio for Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blending_modes.html">Blending Modes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../brushes.html">Brushes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../clones_array.html">Clones Array</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_new_document.html">Create New Document</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../default_python_plugins.html">Pre-installed Python plugins</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../dockers.html">Dockers</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="add_shape.html">Add Shape</a></li>
+<li class="toctree-l3"><a class="reference internal" href="advanced_color_selector.html">Advanced Color Selector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="animation_curves.html">Animation Curves Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="animation_docker.html">Animation Docker</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Animation Timeline Docker</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#animating">Animating</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tips">Tips</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#controls">Controls</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="arrange.html">Arrange</a></li>
+<li class="toctree-l3"><a class="reference internal" href="artistic_color_selector.html">Artistic Color Selector Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="brush_preset_docker.html">Preset Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="channels_docker.html">Channels</a></li>
+<li class="toctree-l3"><a class="reference internal" href="color_sliders.html">Color Sliders</a></li>
+<li class="toctree-l3"><a class="reference internal" href="compositions.html">Compositions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="digital_color_mixer.html">Digital Color Mixer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gamut_mask_docker.html">Gamut Masks Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="grids_and_guides.html">Grids and Guides Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="histogram_docker.html">Histogram Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="layers.html">Layers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="log_viewer.html">Log Viewer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lut_management.html">LUT Management</a></li>
+<li class="toctree-l3"><a class="reference internal" href="onion_skin.html">Onion Skin Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="overview.html">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="palette_docker.html">Palette Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pattern_docker.html">Patterns Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="recorder_docker.html">Recorder Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reference_images_docker.html">Reference Images Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="shape_properties_docker.html">Shape Properties Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="small_color_selector.html">Small Color Selector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="snapshot_docker.html">Snapshot Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="specific_color_selector.html">Specific Color Selector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="storyboard_docker.html">Storyboard Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="task_sets.html">Task Sets Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="touch_docker.html">Touch Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="undo_history.html">Undo History</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vector_library.html">Vector Library</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../dr_minw_debugger.html">Dr. MinGW Debugger</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../filters.html">Filters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hdr_display.html">HDR Display</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../image_split.html">Image Split</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../import_animation.html">Import Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../instant_preview.html">Instant Preview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../krita_4_preset_bundle.html">Krita 4 Preset Bundle Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../layers_and_masks.html">Layers and Masks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../linux_command_line.html">Linux Command Line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../list_supported_tablets.html">The List of Supported Tablets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../main_menu.html">Main Menu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../maths_input.html">Maths Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../popup-palette.html">Pop-up Palette</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preferences.html">Preferences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../render_animation.html">Render Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../resource_management.html">Resource Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../seexpr.html">SeExpr Quick Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../separate_image.html">Separate Image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sharing_krita_logs.html">Getting Krita logs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../split_layer.html">Split Layer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../stroke_selection.html">Stroke Selection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools.html">Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../welcome_screen.html">Welcome Screen</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials.html">Tutorials and How-tos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../KritaFAQ.html">Krita FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributors_manual.html">Contributors Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../resources_page.html">Resources</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+	<!-- start top banner area (for fundraisers or messages)
+
+	<div style="text-align: center; background-color: #333">
+		<a href="https://krita.org/en/fundraising-2018-campaign/" target="_self" onclick="ga('send', 'event', 'frontpage', 'button', 'Fundraiser 2018');">
+			<img src="https://krita.org/wp-content/themes/krita-org-theme/images/decoration/2018-fundraiser-banner.png" style="max-width: 100%">
+		</a>
+	</div>
+	
+	 end top banner area -->
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Krita Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../reference_manual.html">Reference Manual</a> &raquo;</li>
+        
+          <li><a href="../dockers.html">Dockers</a> &raquo;</li>
+        
+      <li>Animation Timeline Docker</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+          
+            <a href="../../_sources/reference_manual/dockers/animation_timeline.rst.txt" rel="nofollow"> 
+             
+              <img src="../../_static/images/source-code.png" />
+             <!-- View page source -->
+
+          </a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="animation-timeline-docker">
+<span id="timeline-docker"></span><span id="index-0"></span><h1>Animation Timeline Docker<a class="headerlink" href="#animation-timeline-docker" title="Permalink to this headline">¶</a></h1>
+<p>The <em class="dfn">Animation Timeline Docker</em> is at the heart of <strong class="program">Krita</strong>’s raster animation tools, providing everything you need to create, edit and preview traditional hand-drawn animations.</p>
+<img alt="../../_images/Animation_Timeline_Docker.png" class="align-center" src="../../_images/Animation_Timeline_Docker.png" />
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>As shown in the image above, Krita’s Animation Timeline Docker can be thought of as different sections:</p>
+<ol class="upperalpha">
+<li><p><em class="dfn">Utilities</em> – The left side of the toolbar gives animators quick access to all of the widgets that are critical to their workflow; <em class="dfn">transport controls</em> (previous, play/pause, stop and next buttons), a frame counter, preview controls (speed and drop frames), and buttons for quickly creating new frames and deleting unwanted ones.</p></li>
+<li><p><em class="dfn">Settings</em> – While all of the high-traffic controls are presented directly, the right end of the toolbar also contains buttons for opening submenus for things like <a class="reference internal" href="onion_skin.html#onion-skin-docker"><span class="std std-ref">Onion Skin Docker</span></a> and settings that you can generally set and forget (for example: playback range, frame rate and autokey mode).</p></li>
+<li><p><em class="dfn">Layer List</em> – This area contains some subset of the layers of your current document. Similar to the <a class="reference internal" href="layers.html#layer-docker"><span class="std std-ref">Layers</span></a>, each layer has various properties that can also be toggled here (visibility, locking, onion skins, etc.).  While the currently active layer is always shown here, layers can also be “pinned” to the timeline using the pin button to the left of each layer’s name, the <span class="guilabel">Pin to Timeline</span> menu action, or the <span class="guilabel">Pin Existing Layer</span> submenu so they will be visible even when inactive.</p>
+<blockquote>
+<div><blockquote>
+<div><div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Depending on your preference, newly created paint layers can start pinned or unpinned by setting the <span class="guilabel">Automatically pin new layers to timeline</span> option in <span class="guilabel">Settings –&gt; Configure Krita… –&gt; General –&gt; Miscellaneous</span>.</p>
+</div>
+</div></blockquote>
+<dl class="glossary simple">
+<dt id="term-Active-Layer">Active Layer:<a class="headerlink" href="#term-Active-Layer" title="Permalink to this term">¶</a></dt><dd><p>The <em class="dfn">active layer</em> is the layer that you’re currently able to edit or draw on, shown as a highlighted row in the layer list. Clicking a layer within the layer list will make it the currently active layer.</p>
+</dd>
+<dt id="term-Layer-Menu">Layer Menu:<a class="headerlink" href="#term-Layer-Menu" title="Permalink to this term">¶</a></dt><dd><p>A small menu for manipulating <em class="dfn">animated layers</em> at the top left of the layer list. You can create new layers, remove existing ones, as well as pin or unpin the active layer. (This menu also shows up when right-clicking on layer headers inside of the Layer List.)</p>
+</dd>
+<dt id="term-Audio-Menu">Audio Menu:<a class="headerlink" href="#term-Audio-Menu" title="Permalink to this term">¶</a></dt><dd><p>Another small menu at the top of the layer list for animating along with audio sources. This is also where you can open or close audio sources and control output volume/muting.</p>
+</dd>
+<dt id="term-Zoom-Handle">Zoom Handle:<a class="headerlink" href="#term-Zoom-Handle" title="Permalink to this term">¶</a></dt><dd><p>This special widget allows you to zoom in and out on the frame table, centered around the current frame time. Click-dragging from within the zoom handle controls the zoom level.</p>
+</dd>
+</dl>
+</div></blockquote>
+</li>
+<li><p><em class="dfn">Frame Table</em> – The <em class="dfn">frame table</em> is a large grid of cells which can either hold a single keyframe or be empty. Each row of the trame table represents an <em class="dfn">animated layer</em> and each column represents a <em class="dfn">frame time</em>. Just like the layer list, the active layer is highlighted across the entire frame table. For those who are familiar with pen-and-paper animation, you can think of the frame table as Krita’s <em class="dfn">dope sheet</em> or time sheet.</p>
+<blockquote>
+<div><blockquote>
+<div><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It’s important to understand that frame timings are not based on units of time like seconds, but on <em class="dfn">frames</em>, which can then be played back at any speed, depending on the animation’s <em class="dfn">frame rate</em> and <em class="dfn">play speed</em> settings.</p>
+</div>
+</div></blockquote>
+<p>Keyframes can be moved around the timeline by left-clicking and dragging from one slot to another, even across layers. Furthermore, holding the <kbd class="kbd docutils literal notranslate">Ctrl</kbd> key while dragging creates a copy, and holding the <kbd class="kbd docutils literal notranslate">Alt</kbd> key while dragging creates a clone frame. Finally, right-clicking anywhere in the frame table will bring up a context menu for adding, removing, copying, pasting or adjusting timing.</p>
+<dl class="glossary">
+<dt id="term-Active-Keyframe">Active Keyframe<a class="headerlink" href="#term-Active-Keyframe" title="Permalink to this term">¶</a></dt><dd><p>Right now, it’s only possible to view and draw on one keyframe at a time. This is known as the <em class="dfn">active keyframe</em>, and is represented on the frame table as a block filled with diagonal stripes. Often, in simple animations, the active keyframe will be the frame on the active layer that is on or just before the current time. However, if the active keyframe has one or more <a class="reference internal" href="#term-Clone-frames"><span class="xref std std-term">clone frames</span></a> all drawing, painting and editing will also affect all of its clones.</p>
+</dd>
+<dt id="term-Clone-frames">Clone frames<a class="headerlink" href="#term-Clone-frames" title="Permalink to this term">¶</a></dt><dd><p>A <em class="dfn">clone frame</em> is of a keyframe is a reference to that keyframe at a different position. Clone frames share the exact same image data under the hood, and will have the same diagonal markings as the active frame when an active frame with clone frames is selected.</p>
+</dd>
+<dt id="term-Duplicate-keyframe">Duplicate keyframe<a class="headerlink" href="#term-Duplicate-keyframe" title="Permalink to this term">¶</a></dt><dd><p>Not to be confused with <a class="reference internal" href="#term-Clone-frames"><span class="xref std std-term">Clone Frames</span></a>, a duplicate frame is merely the <a class="reference internal" href="#term-Active-Keyframe"><span class="xref std std-term">Active Keyframe</span></a> copied and pasted as a separate <a class="reference internal" href="#term-Keyframe"><span class="xref std std-term">Keyframe</span></a>. Where clone frames will automatically duplicate the changes you make to them to each cloned frame, a duplicated frame is just another keyframe that happens to have the same content as the source.</p>
+</dd>
+<dt id="term-Current-Selection">Current Selection<a class="headerlink" href="#term-Current-Selection" title="Permalink to this term">¶</a></dt><dd><p>Frames highlighted in orange represent a selection or multiple selections. While multiple frames are selected, right-clicking anywhere in the frame table will bring up a context menu that will allow for adding and removing keyframes or holds within the current selection. It’s also possible to have multiple separate (non-contiguous) selections if needed.</p>
+<blockquote>
+<div><div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Painting always happens <em>only</em> on the <a class="reference internal" href="#term-Active-Keyframe"><span class="xref std std-term">active keyframe</span></a>, which is not necessarily part of your current selection on the timeline!</p>
+</div>
+</div></blockquote>
+</dd>
+<dt id="term-Keyframe">Keyframe<a class="headerlink" href="#term-Keyframe" title="Permalink to this term">¶</a></dt><dd><p>In <strong class="program">Krita</strong>, we call the images that make up your animation <em class="dfn">keyframes</em>. Each keyframe can also be assigned a <a class="reference internal" href="layers.html#term-Color-Label"><span class="xref std std-term">Color Label</span></a>, as a matter of personal organization and workflow.</p>
+</dd>
+<dt id="term-Blank-Keyframe">Blank Keyframe<a class="headerlink" href="#term-Blank-Keyframe" title="Permalink to this term">¶</a></dt><dd><p>Within the frame table, keyframes that contain drawings are displayed as <em>filled blocks</em> within a cell, while a <em class="dfn">blank keyframe</em> is shown as a <em>hollow outline</em>. Unlike some other tools, <strong class="program">Krita</strong> automatically holds each keyframe until the next keyframe on that layer; these <em class="dfn">holds</em> are shown as a <em>colored line</em> that’s drawn across all held frames.</p>
+</dd>
+<dt id="term-Frame-Timing-Header">Frame Timing Header<a class="headerlink" href="#term-Frame-Timing-Header" title="Permalink to this term">¶</a></dt><dd><p>The frame timing header is a ruler at the top of the frame table. This header is divided into small notched sections which are based on the current <em class="dfn">frame rate</em> (set in the animation settings submenu at the right end of the toolbar). While each frame is marked with a single line, each second is marked by a subtle double-line. Major notches are also marked by a frame number.</p>
+</dd>
+<dt id="term-Cached-Frames">Cached Frames<a class="headerlink" href="#term-Cached-Frames" title="Permalink to this term">¶</a></dt><dd><p>The frame timing header also shows important information about which frames are currently <em class="dfn">cached</em>. When something is said to be “cached”, that means that it is stored in your device’s working memory (RAM) for extra fast access. Cached frames are shown by the header with a small light-gray rectangle in each column. While this information isn’t always critical for us artists, it’s helpful to know that Krita is working behind the curtains to cache our animation frames for the smoothest possible experience when scrubbing through or playing back your animation.</p>
+</dd>
+<dt id="term-Current-Time-Scrubber">Current Time Scrubber:<a class="headerlink" href="#term-Current-Time-Scrubber" title="Permalink to this term">¶</a></dt><dd><p>A highlighted column in the frame table which controls the current frame time and, as such, what is currently displayed in the viewport.</p>
+</dd>
+<dt id="term-Zoomable-Scrollbar">Zoomable Scrollbar<a class="headerlink" href="#term-Zoomable-Scrollbar" title="Permalink to this term">¶</a></dt><dd><p>Not only can the scrollbars on the Animation Timeline Docker be used to <em class="dfn">pan</em> the frame table by dragging left and right, it can also be used to quickly <em class="dfn">zoom</em> in and out by dragging up and down. Pan and zoom in one flick of a wrist!</p>
+</dd>
+</dl>
+</div></blockquote>
+</li>
+<li><p><em class="dfn">Onion Skins Docker</em> – While technically a separate docker, the <a class="reference internal" href="onion_skin.html#onion-skin-docker"><span class="std std-ref">Onion Skin Docker</span></a> is used in conjunction with the Animation Timeline docker to help animators see how their animation changes between neighboring keyframes. The <span class="guilabel">onion skins menu</span> button on the Animation Timeline Docker can be used to quickly toggle the visibility of the Onion Skins Docker.</p></li>
+</ol>
+</section>
+<section id="animating">
+<h2>Animating<a class="headerlink" href="#animating" title="Permalink to this headline">¶</a></h2>
+<p>In order to begin animating with <strong class="program">Krita</strong>, we first need to turn our paint layer into an <em class="dfn">animated layer</em> by adding our first <a class="reference internal" href="#term-Keyframe"><span class="xref std std-term">keyframe</span></a>. In our case we will start with a <a class="reference internal" href="#term-Blank-Keyframe"><span class="xref std std-term">blank keyframe</span></a>, but if you’ve already drawn something on the paint layer and would like to transfer it to your new keyframe you can create a <a class="reference internal" href="#term-Duplicate-keyframe"><span class="xref std std-term">duplicate keyframe</span></a> instead.</p>
+<p>To make a new, blank keyframe, <img alt="mouseright" src="../../_images/Krita_mouse_right.png" /> any square on the timeline docker and select <span class="guilabel">Create Blank Frame</span>. A blank frame (one that you haven’t yet drawn anything in) appears as a <em>hollow outline</em> instead of a solid box, making that frame active and drawing on the canvas will make it appear as a <em>solid, colored rectangle</em>. To move a keyframe around, you can drag and drop it into another empty frame slot, even across animation layers.</p>
+<p>The currently selected layer will automatically be shown on the timeline. However, while animating you may find that you want to keep another layer “pinned”, making it visible in the Animation Timeline Docker regardless of which layer is selected. There are a few ways to do this in Krita, but it doesn’t get any simpler than clicking on the little pushpin icon next to the layer’s name.</p>
+<p>It’s not much of an animation with only one frame, so to add another new frame you can do the same thing we did last time by selecting <span class="guilabel">Create Blank Frame</span> from the right-click menu or by double-clicking on a particular frame slot. For the sake of this lesson, however, we will mix it up by creating a duplicate keyframe by scrubbing to a different <em>time</em> and click the <span class="guilabel">Create Duplicate Keyframe</span> button on toolbar at the top of the Animation Timeline Docker.</p>
+<p>As you can see, there are quick a few convenient ways to add or remove keyframes from your animation in Krita, depending on your personal preference, input devices and workflow!</p>
+<p>Now that we have more than one keyframe, we can do different drawings in each and play back our simple animation by clicking on the <span class="guilabel">Play/Pause</span> button on the toolbar at the top of the docker. Another crucial technique for animating is manually switching between frames at your own pace to inspect the frame-by-frame movement of your animation as you work, also known as “scrubbing”. Like everything else, we’ve made sure that there are a few different ways to scrub through you animation, but one of my favorites is to simply click and drag between different times on the <a class="reference internal" href="#term-Frame-Timing-Header"><span class="xref std std-term">Frame Timing Header</span></a> at the top of the frame table.</p>
+<p>I know that’s a lot of info to digest, but all you really need to know to get started is how to create new keyframes and scrub through your animation to check your progress. From there, all that’s left is the hard but rewarding work of drawing lots and lots (and lots) of animation frames!</p>
+</section>
+<section id="tips">
+<h2>Tips<a class="headerlink" href="#tips" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>There are a couple subtle features built into the docker’s transport controls that you might find useful. For example, clicking the <span class="guilabel">stop button</span> <em>while your animation is playing</em> will jump back to whatever frame you started playing from, and clicking it again <em>when your animation is not playing</em> will jump back to the first frame of your animation. Similarly, the <span class="guilabel">next keyframe</span> button will jump the selection to the next available keyframe on the active layer, but <em>if there is no next keyframe on that layer it will use the timing of your animation to estimate where you may want to place your next keyframe, and jump to that position.</em> While a bit advanced, nuances like this mean that the Animation Timeline Docker’s buttons (and keybind-able actions) almost always do something useful for animators.</p></li>
+<li><p>It’s possible to add multiple keyframes by right-clicking inside the frame table and selecting <span class="menuselection">Keyframes ‣ Insert Multiple Keyframes</span>. With this option you can specify the number of frames to add with the option of built in timing for quickly creating a series of 1s, 2s, 3s, etc. These settings are saved between uses.</p></li>
+<li><p>You can also change the color of keyframes within the frame table so that you can easily identify important frames or distinguish between different sections of your animation. The current color selection is remembered for new frames so that you can easily make a set of colored frames and then switch to another color. (By the way, it’s even possible to quickly jump between frames of the same color by assigning a keyboard shortcut to <span class="guilabel">Previous/Next Matching Keyframe</span>.)</p></li>
+<li><p>Clicking with <img alt="mouseright" src="../../_images/Krita_mouse_right.png" /> within the <a class="reference internal" href="#term-Frame-Timing-Header"><span class="xref std std-term">Frame Timing Header</span></a> instead of the frame table gives you access to a few more option which allow you to add or remove entire columns of frames or holds at a time, as well as reset your animation cache if needed. For example, selecting <span class="menuselection">Keyframe Columns ‣ Insert Keyframe Column Left</span> will add new frames to each layer that’s currently visible in the Timeline Docker.</p></li>
+</ul>
+<img alt="../../_images/Timeline_insertkeys.png" class="align-center" src="../../_images/Timeline_insertkeys.png" />
+<ul class="simple">
+<li><p>To delete frames, <img alt="mouseright" src="../../_images/Krita_mouse_right.png" /> the frame and press <span class="guilabel">Remove Keyframe</span>. This will delete all selected frames. Similarly, selecting <span class="guilabel">Remove Frame and Pull</span> will delete the selected frames and pull or shift all subsequent frames back/left as much as possible.</p></li>
+</ul>
+</section>
+<section id="controls">
+<h2>Controls<a class="headerlink" href="#controls" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p><em class="dfn">Layer List</em></p>
+<blockquote>
+<div><ul class="simple">
+<li><p><img alt="mouseleft" src="../../_images/Krita_mouse_left.png" /> : Select active layer.</p></li>
+<li><p><img alt="mouseright" src="../../_images/Krita_mouse_right.png" /> : Layers Menu (add/remove/show layers, etc.).</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><a class="reference internal" href="#term-Frame-Timing-Header"><span class="xref std std-term">Frame Timing Header</span></a></p>
+<blockquote>
+<div><ul class="simple">
+<li><p><img alt="mouseleft" src="../../_images/Krita_mouse_left.png" /> : Move to time and select frame of the active layer.</p></li>
+<li><p><img alt="mouseleft" src="../../_images/Krita_mouse_left.png" /> <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">+</kbd> <kbd class="kbd docutils literal notranslate">drag</kbd></kbd> : Scrub through time and select frame of the active layer.</p></li>
+<li><p><img alt="mouseright" src="../../_images/Krita_mouse_right.png" /> : Frame Columns Menu (insert/remove/copy/paste columns and hold columns).</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><em class="dfn">Frames Table</em></p>
+<blockquote>
+<div><ul class="simple">
+<li><p><img alt="mouseleft" src="../../_images/Krita_mouse_left.png" /> : Selects a single frame or slot and switches time, but <em>does not switch active layer</em>.</p></li>
+<li><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Space</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="mouseleft" src="../../_images/Krita_mouse_left.png" /> : Pan.</p></li>
+<li><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Space</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="mouseright" src="../../_images/Krita_mouse_right.png" /> : Zoom.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><em class="dfn">Frames Table</em> (On Empty Slot).</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><img alt="mouseright" src="../../_images/Krita_mouse_right.png" /> : Frames menu (insert/copy/paste frames and insert/remove holds).</p></li>
+<li><p><img alt="mouseleft" src="../../_images/Krita_mouse_left.png" /> <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">+</kbd> <kbd class="kbd docutils literal notranslate">drag</kbd></kbd> : Select multiple frames and switch time to the last selected, but <em>does not switch active layer</em>.</p></li>
+<li><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="mouseleft" src="../../_images/Krita_mouse_left.png" /> : Select all frames between the active and the clicked frame.</p></li>
+<li><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="mouseleft" src="../../_images/Krita_mouse_left.png" /> : Select individual frames together. <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">click</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">drag</kbd></kbd> them into place.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><em class="dfn">Frames Table</em> (On Existing Frame)</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><img alt="mouseright" src="../../_images/Krita_mouse_right.png" /> : Frames menu (remove/copy/paste frames and insert/remove holds).</p></li>
+<li><p><img alt="mouseleft" src="../../_images/Krita_mouse_left.png" /> <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">+</kbd> <kbd class="kbd docutils literal notranslate">drag</kbd></kbd> : <em>Move</em> a frame or multiple frames.</p></li>
+<li><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="mouseleft" src="../../_images/Krita_mouse_left.png" /> <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">+</kbd> <kbd class="kbd docutils literal notranslate">drag</kbd></kbd> : Copy a frame or multiple frames.</p></li>
+<li><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Alt</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="mouseleft" src="../../_images/Krita_mouse_left.png" /> <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">+</kbd> <kbd class="kbd docutils literal notranslate">drag</kbd></kbd> : Clone a frame or multiple frames.</p></li>
+<li><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="mouseleft" src="../../_images/Krita_mouse_left.png" /> <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">+</kbd> <kbd class="kbd docutils literal notranslate">drag</kbd></kbd> : Move selected frame(s) and <em>all</em> the frames to the right of it. (This is useful for when you need to clear up some space in your animation, but don’t want to select all the frames to the right of a particular frame!)</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ol>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="arrange.html" class="btn btn-neutral float-right" title="Arrange" accesskey="n" rel="next"> <!-- Next --> <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="animation_docker.html" class="btn btn-neutral" title="Animation Docker" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- Previous  -->  </a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright licensed under the GNU Free Documentation License 1.3+ unless stated otherwise.
+      
+        <span class="commit">
+          Revision <code>7c271ce</code>.
+        </span>
+      
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a modified <a href="https://github.com/rtfd/sphinx_rtd_theme">RTD theme</a>.<br/>
+  <a href="https://krita.org" title="Krita official website.">Krita official website</a> |
+  <a href="https://invent.kde.org/documentation/docs-krita-org/" title="The Gitlab instance to edit this pages and collaborate.">Git repository for docs.krita.org </a> |
+  <a href="https://www.kde.org/community/whatiskde/impressum-en.php" title="To know more about KDE, code of conduct, privacy policy and GDPR.">KDE Impressum</a>.
+   
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'5.0.0 Beta',
+            LANGUAGE:'en',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/documentation_options.js"></script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
+      });
+  </script> 
+
+ <script type="text/javascript">
+	 var _paq=_paq||[];
+	 _paq.push(['setCookieDomain','*.krita.org']);
+	 _paq.push(['setDomains','*.krita.org']);
+	 _paq.push(['setDocumentTitle',document.domain+"/"+document.title]);
+	 _paq.push(['trackPageView']);
+	 _paq.push(['enableLinkTracking']);
+
+	 (function(){
+	 	var u="//stats.kde.org/";
+	    _paq.push(['setTrackerUrl',u+'piwik.php']);
+	    _paq.push(['setSiteId',13]);
+	    var d = document, g = d.createElement('script'),s=d.getElementsByTagName('script')[0];
+	    g.type = 'text/javascript';
+	    g.async = true;
+	    g.defer = true;
+	    g.src = u+'piwik.js';
+	    s.parentNode.insertBefore(g,s);
+	  })();
+</script> 
+<noscript><p><img src="//stats.kde.org/piwik.php?idsite=13" style="border:0;" alt="" /></p></noscript>
+
+</body>
+</html>

@@ -1,0 +1,1098 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" name="title" content="Strokes queue" />
+  <meta property="og:site-name" content="Krita Manual" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="en" />
+  <meta property="og:locale:alternate" content="ca" />
+  
+  <meta property="og:locale:alternate" content="fr" />
+  <meta property="og:locale:alternate" content="it" />
+  <meta property="og:locale:alternate" content="ja" />
+  <meta property="og:locale:alternate" content="ko" />
+  <meta property="og:locale:alternate" content="nl" />
+  <meta property="og:locale:alternate" content="pl" />
+  <meta property="og:locale:alternate" content="pt_PT" />
+  <meta property="og:locale:alternate" content="uk_UA" />
+  <meta property="og:locale:alternate" content="zh_CN" />
+  <meta property="og:article:modified_time" content="2021-07-19T15:33:59" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<meta content="Strokes documentation" name="description" />
+
+  
+  
+  <title>Strokes queue &mdash; Krita Manual 5.0.0 Beta documentation</title>
+  
+
+  
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    
+  
+  
+  
+    <link rel="canonical" href="en/untranslatable_pages/strokes_documentation.html"/>
+    <meta property="og:url" content="en/untranslatable_pages/strokes_documentation.html" />
+    <meta property="og:image" content="en/_static/sidebar-logo.png" />
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Testing Strategy" href="testing_strategy.html" />
+    <link rel="prev" title="Running Krita from Source" href="running_krita.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+       
+           <a href="../index.html" class="icon icon-home">
+
+			<img src="../_static/sidebar-logo.png" class="logo" alt="Logo"/>
+           	
+           <!--	Krita Manual -->
+
+
+          </a>
+
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-side-nav-language-selector">
+        	<p class="caption-text">
+	        	<select id="language-selector-container">
+	        		<option value="ca">Català</option>
+	        		<option value="en">English</option>
+	        		<option value="fr">français</option>
+	        		<option value="it">Italiano</option>
+	        		<option value="ja">日本語</option>
+	        		<option value="ko">한국어</option>
+	        		<option value="nl">Nederlands</option>
+	        		<option value="pl">Polski</option>
+	        		<option value="pt_PT">português</option>
+	        		<option value="uk_UA">Українська</option>
+	        		<option value="zh_CN">简体中文</option>
+	        	</select>
+        	</p>
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../user_manual.html">User Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general_concepts.html">General Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference_manual.html">Reference Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials.html">Tutorials and How-tos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../KritaFAQ.html">Krita FAQ</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../contributors_manual.html">Contributors Manual</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../contributors_manual/community.html">The Krita Community</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributors_manual/krita_manual_conventions.html">Mark-up conventions for the Krita Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributors_manual/krita_manual_readme.html">Krita Manual Contribution Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributors_manual/optimising_images.html">Images for the Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributors_manual/user_support.html">Introduction to User Support</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../untranslatable_pages.html">Technical Pages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="building_krita.html">Building Krita from Source</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cmake_settings_for_developers.html">CMake Settings for Developers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="intro_hacking_krita.html">Introduction to Hacking Krita</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kpl_defintion.html">The Krita Palette format KPL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="krita_svg_extensions.html">Krita SVG Extensions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modern_cpp_in_krita.html">Modern C++ usage guidelines for the Krita codebase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new_features.html">Developing Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="optimizing_tips_for_krita.html">Optimizing tips and tools for Krita</a></li>
+<li class="toctree-l3"><a class="reference internal" href="participating_in_gsoc.html">Google Summer of Code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="patch_review_guide.html">Advanced Merge Request Guide</a></li>
+<li class="toctree-l3"><a class="reference internal" href="python_coding.html">Python Developer Tools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quality_assurance.html">Introduction to Quality Assurance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release_krita.html">Making a release</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reporting_bugs.html">Reporting Bugs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="running_krita.html">Running Krita from Source</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Strokes queue</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#strokes-jobs-what-it-is-all-about-theory">Strokes, jobs… What it is all about? (theory)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#implementation-practice">Implementation (practice)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#strokes-public-api">Strokes public API</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#simplified-stroke-classes">Simplified stroke classes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#unit-testing-of-the-strokes">Unit-testing of the strokes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#predefined-classes-for-usage-as-base-classes">Predefined classes for usage as base classes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#example-classes">Example classes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#internals-of-the-freehand-tool">Internals of the freehand tool</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#motivation-for-so-many-classes">Motivation for so many classes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#kisresourcessnapshot">KisResourcesSnapshot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#kistoolfreehand-and-kisscratchpad"><code class="docutils literal notranslate"><span class="pre">KisToolFreehand</span></code> and <code class="docutils literal notranslate"><span class="pre">KisScratchPad</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#kistoolmultihand"><code class="docutils literal notranslate"><span class="pre">KisToolMultihand</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#scheduled-undo-redo">Scheduled Undo/Redo</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#two-ways-of-working-with-undo-commands">Two ways of working with undo commands</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#new-undo-adapters">New Undo Adapters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#undo-adapters-and-undo-stores">Undo Adapters and Undo Stores</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#processings-framework">Processings framework</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#motivation">Motivation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#processing-visitors">Processing visitors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#implementation-of-kisprocessingapplicator">Implementation of <code class="docutils literal notranslate"><span class="pre">KisProcessingApplicator</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#emission-of-signals-trick">Emission of signals trick</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#progress-reporting">Progress reporting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#testing">Testing</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="testing_strategy.html">Testing Strategy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="triaging_bugs.html">Triaging Bugs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="unit_tests_in_krita.html">Unittests in Krita</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../resources_page.html">Resources</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+	<!-- start top banner area (for fundraisers or messages)
+
+	<div style="text-align: center; background-color: #333">
+		<a href="https://krita.org/en/fundraising-2018-campaign/" target="_self" onclick="ga('send', 'event', 'frontpage', 'button', 'Fundraiser 2018');">
+			<img src="https://krita.org/wp-content/themes/krita-org-theme/images/decoration/2018-fundraiser-banner.png" style="max-width: 100%">
+		</a>
+	</div>
+	
+	 end top banner area -->
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Krita Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../contributors_manual.html">Contributors Manual</a> &raquo;</li>
+        
+          <li><a href="../untranslatable_pages.html">Technical Pages</a> &raquo;</li>
+        
+      <li>Strokes queue</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+          
+            <a href="../_sources/untranslatable_pages/strokes_documentation.rst.txt" rel="nofollow"> 
+             
+              <img src="../_static/images/source-code.png" />
+             <!-- View page source -->
+
+          </a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="strokes-queue">
+<span id="strokes-documentation"></span><h1>Strokes queue<a class="headerlink" href="#strokes-queue" title="Permalink to this headline">¶</a></h1>
+<section id="strokes-jobs-what-it-is-all-about-theory">
+<h2>Strokes, jobs… What it is all about? (theory)<a class="headerlink" href="#strokes-jobs-what-it-is-all-about-theory" title="Permalink to this headline">¶</a></h2>
+<section id="structure-of-a-stroke">
+<h3>Structure of a stroke<a class="headerlink" href="#structure-of-a-stroke" title="Permalink to this headline">¶</a></h3>
+<p>An abstraction of a <em>stroke</em> represents a complete action performed by a
+user. This action can be canceled when it has not been finished yet, or
+can be undone after it’s undo data has been added to the undo stack.
+Every stroke consists of a set of <em>stroke jobs</em>. Every job sits in a
+queue and does a part of work that the stroke as a whole must perform on
+an image. A stroke job cannot be canceled while execution and you cannot
+undo a single job of the stroke without canceling the whole stroke.</p>
+<p><strong>Example:</strong> Lets look at how the Freehand Tool works. Every time the
+user paints a single line on a canvas it creates a <em>stroke</em>. This stroke
+consists of several <em>stroke jobs</em>: one job initializes indirect painting
+device and starts a transaction, several jobs paint dabs of a canvas and
+the last job merges indirect painting device into the canvas and commit
+the undo information.</p>
+<p>The jobs of the stroke can demand special order of their execution. That
+is the way how they will be executed on a multi-core machine. Every job
+can be either of the type:</p>
+<dl>
+<dt><code class="docutils literal notranslate"><span class="pre">CONCURRENT</span></code></dt><dd><p><em>concurrent</em> job may be executed in parallel with any other
+concurrent job of the stroke as well as with any update job executed
+by the scheduler</p>
+<p><strong>Example:</strong> in Scale Image action each job scales its own layer. All
+the jobs are executed in parallel.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">SEQUENTIAL</span></code></dt><dd><p>if the job is <em>sequential</em>, no other job may interleave with this
+one. It means that when the scheduler encounters a sequential job, it
+waits until all the other stroke jobs are done, starts the sequential
+job and will not start any other job until this job is finished. Note
+that a sequential job can be executed in parallel with update jobs
+those merge layers and masks.</p>
+<p><strong>Example:</strong> All the jobs of the Freehand Tool are sequential because
+you cannot rearrange the painting of dabs. And more than that, you
+cannot mix the creation of the transaction with painting of anything
+on a canvas.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">BARRIER</span></code></dt><dd><p><em>barrier</em> jobs are special. They created to allow stroke jobs to
+synchronize with updates when needed. A barrier job works like a
+sequential one: it does not allow two stroke jobs to be executed
+simultaneously, but it has one significant addition. A barrier job
+will not start its execution until <em>all</em> the updates (those were
+requested with <code class="docutils literal notranslate"><span class="pre">setDirty()</span></code> calls before) has finished their
+execution. Such behavior is really useful for the case when you need
+to perform some action after the changes you requested in previous
+jobs are done and the projection of the image does now correspond the
+changes you’ve just done.</p>
+<p><strong>Example:</strong> in Scale Image action the signals of the image like
+<code class="docutils literal notranslate"><span class="pre">sigSizeChanged</span></code> should be emitted after all the work is done and
+all the updates are finished. So it runs as a barrier job. See
+<code class="docutils literal notranslate"><span class="pre">KisProcessingApplicator</span></code> class for details.</p>
+</dd>
+</dl>
+<p>Besides one of the types above a job may be defined as <code class="docutils literal notranslate"><span class="pre">EXCLUSIVE</span></code>.
+Exclusive property makes the job to be executed on the scheduler
+exclusively. It means that there will be no other jobs (strokes or
+updates) executed in parallel to this one.</p>
+</section>
+<section id="the-queue-of-strokes">
+<h3>The queue of strokes<a class="headerlink" href="#the-queue-of-strokes" title="Permalink to this headline">¶</a></h3>
+<p>The strokes themselves are stored in a queue and executed one by one.
+This is important to know that any two jobs owned by different strokes
+cannot be executed simultaneously. That is the first job of a stroke
+starts its execution only <em>after</em> the last job of the previous stroke
+has finished.</p>
+<p>The stroke is just a container for jobs. It stores some information
+about the work done, like <code class="docutils literal notranslate"><span class="pre">id()</span></code> and <code class="docutils literal notranslate"><span class="pre">name()</span></code>. Alongside storing
+this information it can affect the order of execution of jobs as well.
+The stroke can be defined <em>exclusive</em>. The meaning of this resembles the
+behavior of stroke job’s exclusive property. <em>Exclusive stroke</em> is a
+stroke that executes its jobs with all the updates blocked. The
+execution of updates will start only after the stroke is finished.</p>
+</section>
+</section>
+<section id="implementation-practice">
+<h2>Implementation (practice)<a class="headerlink" href="#implementation-practice" title="Permalink to this headline">¶</a></h2>
+<section id="implementation-of-a-stroke">
+<h3>Implementation of a stroke<a class="headerlink" href="#implementation-of-a-stroke" title="Permalink to this headline">¶</a></h3>
+<figure class="align-default" id="id1">
+<img alt="Overview of stroke classes" src="../_images/strokes_queue_internals.png" />
+<figcaption>
+<p><span class="caption-text">Overview of stroke classes</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>Each stroke is represented by a <code class="docutils literal notranslate"><span class="pre">KisStroke</span></code> object. It has all the
+basic manipulating methods like: <code class="docutils literal notranslate"><span class="pre">addJob()</span></code>, <code class="docutils literal notranslate"><span class="pre">endStroke()</span></code> and
+<code class="docutils literal notranslate"><span class="pre">cancelStroke()</span></code>. The behavior of a stroke is defined by a <em>stroke
+strategy</em> (KisStrokeStrategy class). This strategy is passed to the
+KisStroke object during construction and owned by the stroke.</p>
+<p>Each stroke job is represented by <code class="docutils literal notranslate"><span class="pre">KisStrokeJob</span></code> object. The queue of
+<code class="docutils literal notranslate"><span class="pre">KisStrokeJob</span></code> objects is stored in every stroke object. This very
+object is used for actual running the job (<code class="docutils literal notranslate"><span class="pre">KisUpdateJobItem</span></code> calls
+<code class="docutils literal notranslate"><span class="pre">KisStrokeJob::run()</span></code> method while running). The behavior of the
+stroke job is defined by a strategy (<code class="docutils literal notranslate"><span class="pre">KisStrokeStrategy</span></code>) and a data
+(<code class="docutils literal notranslate"><span class="pre">KisStrokeJobData</span></code>). Those two objects are passed during the
+construction of the KisStrokeJob object.</p>
+<p>A stroke can have four types of jobs:</p>
+<ul class="simple">
+<li><p>initialization</p></li>
+<li><p>canceling</p></li>
+<li><p>finishing</p></li>
+<li><p>actual painting (named as ‘dab’ in the code)</p></li>
+</ul>
+<p>During construction the stroke asks its strategy to create strategies
+for all the four types of job. Then it uses these strategies on creation
+of jobs on corresponding events: initialization, canceling, finishing
+and when the user calls <code class="docutils literal notranslate"><span class="pre">addJob()</span></code> method.</p>
+<p>The strategies define all the properties of strokes and stroke jobs we
+were talking above. The data class is used for passing information to
+the stroke by high-level code.</p>
+<p><strong>Example:</strong> <code class="docutils literal notranslate"><span class="pre">FreehandStrokeStrategy::Data</span></code> accepts such information
+as: <code class="docutils literal notranslate"><span class="pre">node</span></code>, <code class="docutils literal notranslate"><span class="pre">painter</span></code>, <code class="docutils literal notranslate"><span class="pre">paintInformation</span></code>, <code class="docutils literal notranslate"><span class="pre">dragDistance</span></code></p>
+<p>Other information that is common to the whole stroke like names of the
+paintOp, compositeOp are passed directly to the constructor of the
+stroke strategy.</p>
+</section>
+<section id="execution-of-strokes-by-kisstrokesqueue">
+<h3>Execution of strokes by <code class="docutils literal notranslate"><span class="pre">KisStrokesQueue</span></code><a class="headerlink" href="#execution-of-strokes-by-kisstrokesqueue" title="Permalink to this headline">¶</a></h3>
+<p>The key class of the strokes’ execution is <code class="docutils literal notranslate"><span class="pre">KisStrokesQueue</span></code>. The most
+important method that is responsible for applying all the rules about
+interleaving of jobs mentioned above is
+<code class="docutils literal notranslate"><span class="pre">KisStrokesQueue::processOneJob</span></code>. This method is called by the update
+scheduler each time a free thread appears. First it gets the number of
+merge and stroke jobs currently executing in the updater context. Then
+it checks all the rules one by one.</p>
+</section>
+<section id="canceling-and-undo-information-trick">
+<h3>Canceling and undo information trick<a class="headerlink" href="#canceling-and-undo-information-trick" title="Permalink to this headline">¶</a></h3>
+<p>It was stated above that a stroke can be canceled in each moment of
+time. That happens when a user calls <code class="docutils literal notranslate"><span class="pre">KisStroke::cancelStroke()</span></code>
+method. When it is requested the stroke drops all the jobs those are
+present in its queue and has not been started yet. Then it enqueues a
+special kind of job named <em>cancel job</em> that reverts all the work done by
+the stroke. This is used for interactive canceling of tools’ strokes.</p>
+<p>Taking into account that the strokes can be reverted, we cannot use
+<code class="docutils literal notranslate"><span class="pre">QUndoStack</span></code> capabilities directly. We should add commands to the
+stack <em>after</em> they have been executed. This resembles the way how
+<code class="docutils literal notranslate"><span class="pre">KisTransactionData</span></code> works: its first redo() method doesn’t do
+anything because everything has already been painted on a device. Here
+in strokes this “after-effect-addition” is implemented in general way.
+Strokes work with a special kind of undo adapter:
+<code class="docutils literal notranslate"><span class="pre">KisPostExecutionUndoAdapter</span></code>. This adapter wraps the commands in a
+special wrapper that puts them into the stack without calling <code class="docutils literal notranslate"><span class="pre">redo()</span></code>
+and controls their threaded <code class="docutils literal notranslate"><span class="pre">undo()</span></code> and <code class="docutils literal notranslate"><span class="pre">redo()</span></code> operations. See
+information about <code class="docutils literal notranslate"><span class="pre">KisPostExecutionUndoAdapter</span></code> in a separate
+document.</p>
+</section>
+<section id="queues-balancing">
+<h3>Queues balancing<a class="headerlink" href="#queues-balancing" title="Permalink to this headline">¶</a></h3>
+<p>So we ended up with a solution where our scheduler has two queues that
+it should spread between limited amount of threads. Of course there
+should be some algorithm that balances the queues. Ideally, we should
+balance them by the total area of image the queue should process. But we
+cannot achieve that currently. So the formula for size metrics is quite
+simple:</p>
+<p><code class="docutils literal notranslate"><span class="pre">updatesMetric</span> <span class="pre">=</span> <span class="pre">&lt;number</span> <span class="pre">of</span> <span class="pre">update</span> <span class="pre">jobs</span> <span class="pre">in</span> <span class="pre">the</span> <span class="pre">queue&gt;</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">strokesMetric</span> <span class="pre">=</span> <span class="pre">&lt;number</span> <span class="pre">of</span> <span class="pre">strokes&gt;</span> <span class="pre">*</span> <span class="pre">&lt;jobs</span> <span class="pre">in</span> <span class="pre">the</span> <span class="pre">first</span> <span class="pre">stroke&gt;</span></code></p>
+<p>Balancing formula:</p>
+<p><code class="docutils literal notranslate"><span class="pre">balancingRatio</span> <span class="pre">=</span> <span class="pre">&lt;updatesMetric&gt;</span> <span class="pre">/</span> <span class="pre">&lt;strokesMetric&gt;</span></code></p>
+</section>
+<section id="starting-a-stroke">
+<h3>Starting a stroke<a class="headerlink" href="#starting-a-stroke" title="Permalink to this headline">¶</a></h3>
+<p>The main entry point to strokes for the user is <code class="docutils literal notranslate"><span class="pre">KisStrokesFacade</span></code>
+interface. This interfaces provides four methods: <code class="docutils literal notranslate"><span class="pre">startStroke()</span></code>,
+<code class="docutils literal notranslate"><span class="pre">addJob()</span></code>, <code class="docutils literal notranslate"><span class="pre">endStroke()</span></code> and <code class="docutils literal notranslate"><span class="pre">cancelStroke()</span></code>. So every time you
+work with strokes you should work using this interface.</p>
+<p><strong>Note:</strong> KisImage and KisUpdateScheduler both implement this interface,
+so you can use them as a strokes facade. But please try not to store
+pointers to the whole image. Try store a link to interface only, if
+possible.</p>
+<p>So if you want to start a stroke you should do the following:</p>
+<ol class="arabic">
+<li><p>Create a stroke strategy</p></li>
+<li><p>Start a stroke with:</p>
+<p><code class="docutils literal notranslate"><span class="pre">KisStrokeId</span> <span class="pre">strokeId</span> <span class="pre">=</span> <span class="pre">strokesFacade-&gt;startStroke(myStrategy);</span></code></p>
+<p><strong>Note:</strong> you’ll get a KisStrokeId handle for the stroke you created.
+This handle will be used in all the other methods for controlling the
+stroke. This handle is introduced, because several users can access
+the strokes facade simultaneously, so there may be several strokes
+opened simultaneously. It’s important to understand that even when
+several strokes are opened simultaneously, only one of them executes
+on the cpu. All the other strokes will be delayed until it is
+finished.</p>
+</li>
+<li><p>Create a data for your stroke job</p></li>
+<li><p>Add a job to the execution queue:</p>
+<p><code class="docutils literal notranslate"><span class="pre">strokesFacade-&gt;addJob(strokeId,</span> <span class="pre">myData);</span></code></p>
+</li>
+<li><p>You may add as many jobs as you wish</p></li>
+<li><p>End or cancel the stroke:</p>
+<p><code class="docutils literal notranslate"><span class="pre">strokesFacade-&gt;endStroke(strokeId);</span></code></p>
+<p>or</p>
+<p><code class="docutils literal notranslate"><span class="pre">strokesFacade-&gt;cancelStroke(strokeId);</span></code></p>
+</li>
+</ol>
+</section>
+</section>
+</section>
+<section id="strokes-public-api">
+<h1>Strokes public API<a class="headerlink" href="#strokes-public-api" title="Permalink to this headline">¶</a></h1>
+<section id="simplified-stroke-classes">
+<h2>Simplified stroke classes<a class="headerlink" href="#simplified-stroke-classes" title="Permalink to this headline">¶</a></h2>
+<p>As you might noticed the internal strokes API is quite complex. If you
+decide to create your own stroke you need to create at least six new
+classes:</p>
+<ul class="simple">
+<li><p>stroke strategy class</p></li>
+<li><p>four stroke jobs strategies (init, finish, cancel, dab)</p></li>
+<li><p>data that will be passes to a dab-strategy-based job</p></li>
+</ul>
+<p>That is not really a good solution for a public API, so we introduced an
+adapter that simplifies all these stuff. The class is called
+<code class="docutils literal notranslate"><span class="pre">KisSimpleStrokeStrategy</span></code>. It allows you to define all the jobs you
+need in a single class.</p>
+<figure class="align-default" id="id2">
+<img alt="Simple stroke classes" src="../_images/strokes_simplified_api.png" />
+<figcaption>
+<p><span class="caption-text">Simple stroke classes</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>This class has four virtual methods those you can use as callbacks. When
+you need to use one of them just override it in your own class and add
+activation of the corresponding callback to the constructor of your
+class:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">MyOwnStroke</span> <span class="p">:</span> <span class="n">public</span> <span class="n">KisSimpleStrokeStrategy</span> <span class="p">{</span>
+    <span class="n">MyOwnStroke</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">enableJob</span><span class="p">(</span><span class="n">KisSimpleStrokeStrategy</span><span class="p">::</span><span class="n">JOB_INIT</span><span class="p">);</span>
+        <span class="n">enableJob</span><span class="p">(</span><span class="n">KisSimpleStrokeStrategy</span><span class="p">::</span><span class="n">JOB_FINISH</span><span class="p">);</span>
+        <span class="n">enableJob</span><span class="p">(</span><span class="n">KisSimpleStrokeStrategy</span><span class="p">::</span><span class="n">JOB_CANCEL</span><span class="p">);</span>
+        <span class="n">enableJob</span><span class="p">(</span><span class="n">KisSimpleStrokeStrategy</span><span class="p">::</span><span class="n">JOB_DAB</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="n">void</span> <span class="n">initStrokeCallback</span><span class="p">()</span>
+    <span class="p">{</span>
+    <span class="p">}</span>
+
+    <span class="n">void</span> <span class="n">finishStrokeCallback</span><span class="p">()</span>
+    <span class="p">{</span>
+    <span class="p">}</span>
+
+    <span class="n">void</span> <span class="n">cancelStrokeCallback</span><span class="p">()</span>
+    <span class="p">{</span>
+    <span class="p">}</span>
+
+    <span class="n">void</span> <span class="n">doStrokeCallback</span><span class="p">(</span><span class="n">KisStrokeJobData</span> <span class="o">*</span><span class="n">data</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">Q_UNUSED</span><span class="p">(</span><span class="n">data</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<p>Internally, <code class="docutils literal notranslate"><span class="pre">KisSimpleStrokeStrategy</span></code> creates all the job strategies
+needed for the lowlevel API. And these internal job strategies call the
+callbacks of the parental class.</p>
+<p><strong>Important:</strong> Notice that the job data passed to <em>init</em>, <em>finish</em> and
+<em>cancel</em> jobs is always null. It means that these jobs will always be
+<em>sequential</em> and <em>non-exclusive</em>. That is done intentionally to simplify
+the API. At the same time that is a limitation of the API. But
+currently, this is perfectly enough for us.</p>
+</section>
+<section id="unit-testing-of-the-strokes">
+<h2>Unit-testing of the strokes<a class="headerlink" href="#unit-testing-of-the-strokes" title="Permalink to this headline">¶</a></h2>
+<p>One of the benefits of using the strokes is that you are able to test
+them separately from the UI using a common infrastructure.</p>
+<section id="utils-stroketester-class">
+<h3><code class="docutils literal notranslate"><span class="pre">utils::StrokeTester</span></code> class<a class="headerlink" href="#utils-stroketester-class" title="Permalink to this headline">¶</a></h3>
+<p>That is a really simple class that you can use to test your own stroke.
+It test the following aspects of your stroke:</p>
+<ul class="simple">
+<li><p>canceling of the stroke</p></li>
+<li><p>working with indirect painting activated</p></li>
+<li><p>testing updates of the image projection after your stroke</p></li>
+<li><p>working with a layer that is not connected to any image</p></li>
+</ul>
+<p>The result of the execution is compared against the reference png files
+those you create manually while writing your test.</p>
+</section>
+<section id="how-to-write-your-own-test">
+<h3>How to write your own test<a class="headerlink" href="#how-to-write-your-own-test" title="Permalink to this headline">¶</a></h3>
+<p>You can check examples in <code class="docutils literal notranslate"><span class="pre">MoveStrokeTest</span></code> and <code class="docutils literal notranslate"><span class="pre">FreehandStrokeTest</span></code>
+tests.</p>
+<ol class="arabic">
+<li><p>You need to inherit your tester class from <code class="docutils literal notranslate"><span class="pre">utils::StrokeTester</span></code>.
+The constructor of that class accepts the name of your stroke (it’ll
+be used for generating filenames), size of the image and a filename
+of the preset for the paintOp.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">StrokeTester</span><span class="p">(</span><span class="n">const</span> <span class="n">QString</span> <span class="o">&amp;</span><span class="n">name</span><span class="p">,</span> <span class="n">const</span> <span class="n">QSize</span> <span class="o">&amp;</span><span class="n">imageSize</span><span class="p">,</span>
+             <span class="n">const</span> <span class="n">QString</span> <span class="o">&amp;</span><span class="n">presetFileName</span> <span class="o">=</span> <span class="s2">&quot;autobrush_300px.kpp&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</li>
+<li><p>Then you need to override at least two methods:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">KisStrokeStrategy</span><span class="o">*</span> <span class="n">createStroke</span><span class="p">(</span><span class="nb">bool</span> <span class="n">indirectPainting</span><span class="p">,</span>
+                                <span class="n">KisResourcesSnapshotSP</span> <span class="n">resources</span><span class="p">,</span>
+                                <span class="n">KisPainter</span> <span class="o">*</span><span class="n">painter</span><span class="p">,</span>
+                                <span class="n">KisImageWSP</span> <span class="n">image</span><span class="p">);</span>
+<span class="n">void</span> <span class="n">addPaintingJobs</span><span class="p">(</span><span class="n">KisImageWSP</span> <span class="n">image</span><span class="p">,</span>
+                     <span class="n">KisResourcesSnapshotSP</span> <span class="n">resources</span><span class="p">,</span>
+                     <span class="n">KisPainter</span> <span class="o">*</span><span class="n">painter</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>If you thing you need it you may do some corrections for the image
+and active node in the following method:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">void</span> <span class="n">initImage</span><span class="p">(</span><span class="n">KisImageWSP</span> <span class="n">image</span><span class="p">,</span> <span class="n">KisNodeSP</span> <span class="n">activeNode</span><span class="p">);</span>
+</pre></div>
+</div>
+</li>
+<li><p>Run your test in a testing slot:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">void</span> <span class="n">MyStrokeTest</span><span class="p">::</span><span class="n">testStroke</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">MyTester</span> <span class="n">tester</span><span class="p">();</span>
+    <span class="n">tester</span><span class="o">.</span><span class="n">test</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+<li><p>During the first run the test will report you many fails and will
+generate you several files with actual result of the test. You need
+to check these files, then move them into the tests’ data folder:
+<code class="docutils literal notranslate"><span class="pre">tests/data/&lt;your_stroke_name&gt;/</span></code></p></li>
+<li><p>After you copied the files the tester will compare the actual result
+against these very files. That means it’ll catch all the changes in
+the work of your stroke, so you’ll be able to catch all the
+regressions automatically.</p></li>
+</ol>
+</section>
+</section>
+<section id="predefined-classes-for-usage-as-base-classes">
+<h2>Predefined classes for usage as base classes<a class="headerlink" href="#predefined-classes-for-usage-as-base-classes" title="Permalink to this headline">¶</a></h2>
+<section id="kispainterbasedstrokestrategy">
+<h3><code class="docutils literal notranslate"><span class="pre">KisPainterBasedStrokeStrategy</span></code><a class="headerlink" href="#kispainterbasedstrokestrategy" title="Permalink to this headline">¶</a></h3>
+<p>This class can be used for the strokes those work with the node using a
+painter (or painters like in <code class="docutils literal notranslate"><span class="pre">KisToolMultihand</span></code>). This class accepts
+resources snapshot (<code class="docutils literal notranslate"><span class="pre">KisResourcesSnapshot</span></code>) and a painter (painters).
+Initialization, finishing and canceling callbacks of this class do all
+the work for dealing with indirect painting support, creation of
+transaction, reverting the stroke on canceling. This base class is used
+for <code class="docutils literal notranslate"><span class="pre">FreehandStroke</span></code> mostly.</p>
+</section>
+<section id="kisstrokestrategyundocommandbased">
+<h3><code class="docutils literal notranslate"><span class="pre">KisStrokeStrategyUndoCommandBased</span></code><a class="headerlink" href="#kisstrokestrategyundocommandbased" title="Permalink to this headline">¶</a></h3>
+<p>It is obvious from the name of the class that it works with undo
+commands. In constructor you define which method of undo command should
+be used undo() or redo(). Afterwards, you just add commands to the
+stroke and they are executed with any the sequentiality constraints.
+This stroke strategy does all the work for adding the commands to the
+undo adapter and for canceling them if needed.</p>
+</section>
+</section>
+<section id="example-classes">
+<h2>Example classes<a class="headerlink" href="#example-classes" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">KisPainterBasedStrokeStrategy</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">FreehandStrokeStrategy</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">KisStrokeStrategyUndoCommandBased</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MoveStrokeStrategy</span></code></p></li>
+</ul>
+</section>
+</section>
+<section id="internals-of-the-freehand-tool">
+<h1>Internals of the freehand tool<a class="headerlink" href="#internals-of-the-freehand-tool" title="Permalink to this headline">¶</a></h1>
+<figure class="align-default" id="id3">
+<img alt="Freehand tool classes" src="../_images/freehand_tool_internals.png" />
+<figcaption>
+<p><span class="caption-text">Freehand tool classes</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<section id="motivation-for-so-many-classes">
+<h2>Motivation for so many classes<a class="headerlink" href="#motivation-for-so-many-classes" title="Permalink to this headline">¶</a></h2>
+<p>We need to share the codebase between at least four classes:
+<code class="docutils literal notranslate"><span class="pre">KisToolFreehand</span></code>, <code class="docutils literal notranslate"><span class="pre">KisToolMultihand</span></code>, <code class="docutils literal notranslate"><span class="pre">KisScratchPad</span></code>. All these
+classes paint on a canvas with <code class="docutils literal notranslate"><span class="pre">KisPainter</span></code>, so they share quite much
+common code.</p>
+</section>
+<section id="kisresourcessnapshot">
+<h2>KisResourcesSnapshot<a class="headerlink" href="#kisresourcessnapshot" title="Permalink to this headline">¶</a></h2>
+<p>After we introduced the strokes, the moments of time when user paints
+with mouse and when the line is actually painted on the canvas do not
+coincide. It means that by the time a thread starts actual changing the
+device, the contents of <code class="docutils literal notranslate"><span class="pre">KoCanvasResourceProvider</span></code> might have already
+changed. So before we start a stroke we should create a snapshot of all
+the resources we have and pass this snapshot to the stroke.</p>
+<p>For this purpose we introduced <code class="docutils literal notranslate"><span class="pre">KisResourcesSnapshot</span></code> class. It solves
+two problems at the same time: first it stores all the resources we
+might have and second it encapsulates the algorithm of loading these
+resources into a <code class="docutils literal notranslate"><span class="pre">KisPainter</span></code> object. So this class is really easy to
+use. You just create the snapshot and then just load all the resources
+to the painter when needed.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">KisResourcesSnapshotSP</span> <span class="n">resources</span> <span class="o">=</span>
+    <span class="n">new</span> <span class="n">KisResourcesSnapshot</span><span class="p">(</span><span class="n">image</span><span class="p">,</span>
+                             <span class="n">undoAdapter</span><span class="p">,</span>
+                             <span class="n">resourceManager</span><span class="p">);</span>
+<span class="n">KisPainter</span> <span class="n">painter</span><span class="p">;</span>
+<span class="n">painter</span><span class="o">.</span><span class="n">begin</span><span class="p">(</span><span class="n">device</span><span class="p">,</span> <span class="n">selection</span><span class="p">);</span>
+<span class="n">resources</span><span class="o">-&gt;</span><span class="n">setupPainter</span><span class="p">(</span><span class="o">&amp;</span><span class="n">painter</span><span class="p">);</span>
+
+<span class="o">//</span> <span class="n">paint</span> <span class="n">something</span>
+
+<span class="n">painter</span><span class="o">.</span><span class="n">end</span><span class="p">();</span>
+</pre></div>
+</div>
+<p>In our implementation this class is usually created by
+<code class="docutils literal notranslate"><span class="pre">KisToolFreehandHelper</span></code> and passed to the
+<code class="docutils literal notranslate"><span class="pre">KisPainterBasedStrokeStrategy</span></code> class. The latter one creates painters
+and initializes them using <code class="docutils literal notranslate"><span class="pre">setupPainter()</span></code>.</p>
+</section>
+<section id="kistoolfreehand-and-kisscratchpad">
+<h2><code class="docutils literal notranslate"><span class="pre">KisToolFreehand</span></code> and <code class="docutils literal notranslate"><span class="pre">KisScratchPad</span></code><a class="headerlink" href="#kistoolfreehand-and-kisscratchpad" title="Permalink to this headline">¶</a></h2>
+<p>The freehand tool is split into four classes:</p>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">KisToolFreehand</span></code></dt><dd><p>highlevel tool class that get the mouse events form the Ko-classes
+and distributes events among internal classes.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">KisToolPaintingInformationBuilder</span></code></dt><dd><p>converts mouse events represented by <code class="docutils literal notranslate"><span class="pre">KoPointerEvent</span></code> objects into
+<code class="docutils literal notranslate"><span class="pre">KisPaintInformation</span></code> objects.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">KisRecordingAdapter</span></code></dt><dd><p>stays in charge of adding recording information into the image’s
+action recorder. This class has two purposes: first we need to be
+able to disable recording for the scratch pad (then we just pass NULL
+instead of a recording adapter), second when the strokes are able to
+do their own recording, it’ll be easier to port the freehand tool to
+it.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">KisToolFreehandHelper</span></code></dt><dd><p>this is the main class that combines all the classes we were talking
+above. It accepts a mouse event, converts it using a painting
+information builder into the paint information, notifies recording
+adapter, takes the snapshot of resources and finally starts a stroke.
+Then it populates the stroke with stroke jobs, when the user moves
+the mouse (<code class="docutils literal notranslate"><span class="pre">paint(event)</span></code> method) and finishes the stroke in the
+end.</p>
+</dd>
+</dl>
+<p>Such splitting allows us to use the same classes in both
+<code class="docutils literal notranslate"><span class="pre">KisToolFreehand</span></code> and <code class="docutils literal notranslate"><span class="pre">KisScratchPad</span></code>. The only difference between
+them is that the scratch pad doesn’t have a recording adapter at all,
+and uses base class <code class="docutils literal notranslate"><span class="pre">KisPaintingInformationBuilder</span></code> instead of
+<code class="docutils literal notranslate"><span class="pre">KisToolPaintingInformationBuilder</span></code>. The latter differs from the
+former one in a way that it supports painting assistants
+(<code class="docutils literal notranslate"><span class="pre">adjustDocumentPoint()</span></code> method), complex coordinate transformations
+with <code class="docutils literal notranslate"><span class="pre">KisCoordinatesConverter</span></code> (<code class="docutils literal notranslate"><span class="pre">documentToImage()</span></code> method) and
+perspective painting (<code class="docutils literal notranslate"><span class="pre">calculatePerspective()</span></code> method). The rest of
+the code is shared.</p>
+</section>
+<section id="kistoolmultihand">
+<h2><code class="docutils literal notranslate"><span class="pre">KisToolMultihand</span></code><a class="headerlink" href="#kistoolmultihand" title="Permalink to this headline">¶</a></h2>
+<p>Multihand tool uses the same classes. The only difference, it has a
+couple of modifications in its helper (<code class="docutils literal notranslate"><span class="pre">KisToolMultihandHelper</span></code>),
+those allow it to have several painters at the same time. The tool’s
+class inherits the freehand tool’s class and just substitutes the helper
+with its own (with <code class="docutils literal notranslate"><span class="pre">resetHelper()</span></code> method).</p>
+</section>
+</section>
+<section id="scheduled-undo-redo">
+<h1>Scheduled Undo/Redo<a class="headerlink" href="#scheduled-undo-redo" title="Permalink to this headline">¶</a></h1>
+<section id="two-ways-of-working-with-undo-commands">
+<h2>Two ways of working with undo commands<a class="headerlink" href="#two-ways-of-working-with-undo-commands" title="Permalink to this headline">¶</a></h2>
+<p>The key problem of designing the undo system for strokes was that there
+are two ways of working with undo commands. That is we have two types of
+commands actually:</p>
+<ul class="simple">
+<li><p><em>Qt-like command</em> - command’s redo() method is executed while the
+command is added into the undo stack</p></li>
+<li><p><em>Transaction-like command</em> - the command is added to the stack
+<em>after</em> its action has already been performed. It means that the
+first redo() of this command (the one that is called by undo stack)
+does nothing. That is a transaction-like command just saves undo data
+for the future and does not perform anything on addition.</p></li>
+</ul>
+<p>You already know that our strokes can be reverted on the go, it means
+that the stroke’s undo command should be added to the undo stack only
+<em>after</em> all the actions of the stroke have been performed. So it looks
+like the stroke’s commands are <em>transaction-like</em>.</p>
+<p>But there is another problem: the stroke should be able to execute
+regular undo commands those are not transaction-like (like is it done in
+<code class="docutils literal notranslate"><span class="pre">KisStrokeStrategyUndoCommand</span></code>). More than that, undo and redo of for
+such strokes should be performed with the same sequentiality properties
+(read “undo/redo operations should be threaded as well”).</p>
+<p>It follows that the undo commands generated by the stroke should be
+wrapped in a special <em>wrapper command</em>, lets call it
+<code class="docutils literal notranslate"><span class="pre">KisSavedCommand</span></code>, that hold the following properties:</p>
+<ul class="simple">
+<li><p>the wrapper skips the first redo(). It means the wrapped command’s
+redo() method will not be called on its addition to the stack.
+Obviously, it is not needed, because the action has already been
+performed by the stroke itself.</p></li>
+<li><p>when undo stack calls to undo/redo methods of the wrapper-command,
+the command creates a stroke (<code class="docutils literal notranslate"><span class="pre">KisStrokeStrategyUndoCommandBased</span></code>)
+and runs the wrapped command in a context of this stroke.</p></li>
+<li><p>a special <em>macro wrapper command</em>, lets call is
+<code class="docutils literal notranslate"><span class="pre">KisSavedMacroCommand</span></code>, should be able to save all the commands
+executed by a stroke and undo/redo all of them in the original order
+with original sequentiality properties (concurrent, sequential,
+barrier, exclusive).</p></li>
+</ul>
+<p>That is exactly what we have: <code class="docutils literal notranslate"><span class="pre">KisSavedUndoCommand</span></code> skips the first
+redo and runs undo()/redo() of an internal command in a separate stroke.
+We have <code class="docutils literal notranslate"><span class="pre">KisSavedMacroCommand</span></code> as well to save the contents of the
+whole stroke.</p>
+<figure class="align-default" id="id4">
+<img alt="Scheduled commands" src="../_images/scheduled_undo_redo.png" />
+<figcaption>
+<p><span class="caption-text">Scheduled commands</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="new-undo-adapters">
+<h2>New Undo Adapters<a class="headerlink" href="#new-undo-adapters" title="Permalink to this headline">¶</a></h2>
+<p>Well, it would be quite insane to ask all the users of strokes to wrap
+their commands into wrapper, so we introduced a separate undo adapter
+for strokes: <code class="docutils literal notranslate"><span class="pre">KisPostExecutionUndoAdapter</span></code>. This adapter wraps your
+command and puts it into the undo stack automatically. This is the only
+adapter we can use inside strokes, that is why all the strokes accept
+the pointer to it.</p>
+<p>For the legacy code we still have <code class="docutils literal notranslate"><span class="pre">KisUndoAdapter</span></code>, but now we call it
+“legacy undo adapter”. It works as usual: it adds a command to undo
+stack directly, so it gets executed right in the moment of addition. But
+there still is one trick. Stroke’s commands come to the undo stack
+asynchronously, so if we try to simply add a command to the stack, we
+can catch a race condition easily. That’s why the legacy undo adapter
+must guard itself from strokes with locking the strokes system. That is
+done with a special kind of lock <code class="docutils literal notranslate"><span class="pre">barrierLock()</span></code>. This barrier lock
+differs from a regular lock in a way that it ways for all the running
+<em>strokes</em> are finished, while a regular lock waits for all the running
+<em>stroke jobs</em> are done. That’s the only difference.</p>
+<p>The same race conditions problem applies to the undo()/redo() signals
+from the UI. The user may request the undo operation while the stroke is
+adding its commands. This will surely lead to a crash. We solved this
+problem in a bit hacky way: we hacked <code class="docutils literal notranslate"><span class="pre">QUndoStack</span></code> and made it’s
+undo()/redo() slots virtual. After that we overridden the stack with our
+own, and changed these methods to block the strokes while undo()/redo()
+is happening. We use <code class="docutils literal notranslate"><span class="pre">tryBarrierLock()</span></code> there, because it is easier to
+cancel the undo than to wait until all the strokes are finished.</p>
+</section>
+<section id="undo-adapters-and-undo-stores">
+<h2>Undo Adapters and Undo Stores<a class="headerlink" href="#undo-adapters-and-undo-stores" title="Permalink to this headline">¶</a></h2>
+<p>Well, we have two types of undo adapters now (not counting
+<code class="docutils literal notranslate"><span class="pre">KisSurrrogateUndoAdapter</span></code>). It’s obvious that they should share some
+code. That is why we split the work with the actual undo stack into a
+separate class <code class="docutils literal notranslate"><span class="pre">KisUndoStore</span></code>. So now the undo store defines “where to
+store the undo data”, and undo adapter defines “how to adapt krita’s
+commands to qt’s stack”. There are additional types of store classes for
+using in tests and for special purposes.</p>
+<figure class="align-default" id="id5">
+<img alt="Undo Adapter vs Undo Store" src="../_images/undo_adapters.png" />
+<figcaption>
+<p><span class="caption-text">Undo Adapter vs Undo Store</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+<section id="processings-framework">
+<h1>Processings framework<a class="headerlink" href="#processings-framework" title="Permalink to this headline">¶</a></h1>
+<section id="motivation">
+<h2>Motivation<a class="headerlink" href="#motivation" title="Permalink to this headline">¶</a></h2>
+<p>In Krita we have many actions which have common structure of execution.
+Take a look at actions like Scale Image, Rotate Image, Change Color
+Space - all of them have common phases:</p>
+<ol class="arabic simple">
+<li><p>Lock the image</p></li>
+<li><p>Do the processing of nodes</p></li>
+<li><p>Unlock the image</p></li>
+<li><p>Emit setDirty() calls and update the projection of the nodes</p></li>
+<li><p>Wait until all the setDirty()’es are finished</p></li>
+<li><p>Emit image’s signals like sigImageSizeChanged</p></li>
+</ol>
+<p>More than that, you should pay attention to the fact that all these
+actions should support undo/redo operations. And the last two phases
+cannot be implemented as usual qt-commands inside a usual macro, because
+they should always be executed <em>in the end</em> of the action (in qt
+commands are executed in reverse order during undo operations, that is
+not what we want).</p>
+<p>And, btw, it would be really good idea to have multithreading support
+for such actions, because some of them (like Scale Image) may be quite
+slow.</p>
+<p><code class="docutils literal notranslate"><span class="pre">KisNodeVisitor</span></code> cannot fit all these requirements, because it has
+important design limitations: first, walking through nodes is
+implemented inside the visitor itself and, second, emitting signals is
+put into visitors as well. These two limitations prevent the code to be
+shared between actions. That is why we introduced new shiny
+<code class="docutils literal notranslate"><span class="pre">KisProcessingVisitor</span></code> and a separate framework for them.</p>
+</section>
+<section id="processing-visitors">
+<h2>Processing visitors<a class="headerlink" href="#processing-visitors" title="Permalink to this headline">¶</a></h2>
+<figure class="align-default" id="id6">
+<img alt="Processing framework" src="../_images/processings_framework.png" />
+<figcaption>
+<p><span class="caption-text">Processing framework</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>The key class of the processing framework is <code class="docutils literal notranslate"><span class="pre">KisProcessingVisitor</span></code>.
+Its main difference from the old visitor is that it is extremely simple.
+It performs one task only, it processes one node. And that is all. It
+does no locking, performs no updates, emits no signals. It just
+processes (that is, changes the content) a single node. You can look at
+the reference implementation of it in <code class="docutils literal notranslate"><span class="pre">KisCropProcessingVisitor</span></code> and
+<code class="docutils literal notranslate"><span class="pre">KisTransformProcessingVisitor</span></code>. The key idea of this framework is to
+keep the processings as simple as possible. So the rest of the work is
+done by external classes, those are shared between all the processings.</p>
+<p>We have one such class. Its name is <code class="docutils literal notranslate"><span class="pre">KisProcessingApplicator</span></code>. This
+class performs several tasks:</p>
+<ul class="simple">
+<li><p>creates a stroke. So all the actions executed with this applicator
+will be undo/redo’able.</p></li>
+<li><p>applies a visitor to a requested node.</p></li>
+<li><p>applies a visitor recursively to a node and all its children. Note,
+that you can choose any sequentiality property for the execution of
+your visitor. It means that the visitors can be applied to nodes
+concurrently in multithreaded way.</p></li>
+<li><p>applies a usual qt-command to the image. Sequentiality properties may
+vary as well.</p></li>
+<li><p>emits setDirty() calls for all the nodes which need it. It is done in
+efficient way, so no nodes are updated twice.</p></li>
+<li><p>emits image signals <em>after</em> all the actions and updates are finished.</p></li>
+</ul>
+<p>Lets look at an example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>void KisImage::resizeImageImpl(const QRect&amp; newRect, bool cropLayers)
+{
+    if(newRect == bounds()) return;
+
+    QString actionName = cropLayers ? i18n(&quot;Crop Image&quot;) : i18n(&quot;Resize Image&quot;);
+
+(1) KisImageSignalVector emitSignals;
+(2) emitSignals &lt;&lt; SizeChangedSignal &lt;&lt; ModifiedSignal;
+
+(3) KisProcessingApplicator applicator(this, m_d-&gt;rootLayer,
+                                       KisProcessingApplicator::RECURSIVE,
+                                       emitSignals, actionName);
+
+    if(cropLayers || !newRect.topLeft().isNull()) {
+(4)     KisProcessingVisitorSP visitor =
+            new KisCropProcessingVisitor(newRect, cropLayers, true);
+(5)     applicator.applyVisitor(visitor, KisStrokeJobData::CONCURRENT);
+    }
+(6) applicator.applyCommand(new KisImageResizeCommand(this, newRect.size()));
+(7) applicator.end();
+}
+</pre></div>
+</div>
+<p>In lines (1) and (2) we create a list of signals we should emit after
+the execution of the applicator. This list should be passed to the
+<em>constructor</em> of the applicator (3) (the list is passed to the
+constructor instead of end() function, because we face a limitation
+connected with the internals of the implementation of undo for
+processings, I doubt it can create any troubles). In the line (3) we
+create a recursive applicator. In lines (4) and (5) we create a visitor
+and apply it to nodes recursively in a multithreaded way. <strong>Warning:</strong>
+the visitor is shared between all the threads so it should be written in
+a <em>thread-safe</em> way. In line (6) we apply a command sequentially, it
+means that it’ll be executed right after <em>all</em> the threads with visitors
+has finished. Line (7) closes the stroke an tells it to perform all the
+updates and emit all the signals.</p>
+</section>
+<section id="implementation-of-kisprocessingapplicator">
+<h2>Implementation of <code class="docutils literal notranslate"><span class="pre">KisProcessingApplicator</span></code><a class="headerlink" href="#implementation-of-kisprocessingapplicator" title="Permalink to this headline">¶</a></h2>
+<p>The applicator is based on the “undo command”-based stroke
+(<code class="docutils literal notranslate"><span class="pre">KisStrokeStrategyUndoCommandBased</span></code>). It starts the stroke in the
+constructor and adds undo commands to it on every user request. The
+processings are inernally wrapped into a special command
+(<code class="docutils literal notranslate"><span class="pre">KisProcessingCommand</span></code>). This command has its own undo stack that
+collects the transactions executed by the processing. This can be easily
+achieved with our undo adapters interface. The command just defines its
+own <code class="docutils literal notranslate"><span class="pre">KisSurrogateUndoAdapter</span></code> and passes it to the processing.
+Processing adds its transactions to the fake adapter. And later, the
+command just uses the undo stack to undo/redo actions executed by the
+transaction.</p>
+<p>The applicator defines several internal commands as well:
+<code class="docutils literal notranslate"><span class="pre">UpdateCommand</span></code> and <code class="docutils literal notranslate"><span class="pre">EmitSignalsCommand</span></code>. These commands are added
+to the beginning and to the end of every stroke, so that they can be
+executed in the end of both undo and redo operations. The parameter
+<code class="docutils literal notranslate"><span class="pre">finalUpdate</span></code> controls whether the command is executed during its
+redo() or undo() operation.</p>
+</section>
+<section id="emission-of-signals-trick">
+<h2>Emission of signals trick<a class="headerlink" href="#emission-of-signals-trick" title="Permalink to this headline">¶</a></h2>
+<p>After actions have been moved to separate threads, problems with image
+signals appeared. When everything was executed in a single thread the
+connection of signals like <code class="docutils literal notranslate"><span class="pre">sigAboutToAddNode</span></code> and
+<code class="docutils literal notranslate"><span class="pre">sigNodeHasBeenAdded</span></code> worked as <em>Qt::DirectConnection</em>. So these
+signals were effectively function calls. After we moved the actions to a
+separate thread, all of them became <em>Qt::QueuedConnection</em>. I guess you
+know what it means. They simply lost all their sense. So we had to start
+to use <em>Qt::BlockingQueuedConnection</em>. But there is another problem with
+it. Some of the (old) code is still executed in a context of the UI
+thread and they emit signals as well. So all that code causes deadlocks
+when using <code class="docutils literal notranslate"><span class="pre">Qt::BlockingQueuedConnection</span></code>. That is why we had to
+introduce <code class="docutils literal notranslate"><span class="pre">KisImageSignalRouter</span></code>. This class checks which thread emits
+the signal and emits it either using <code class="docutils literal notranslate"><span class="pre">Qt::DirectConnection</span></code> or
+<code class="docutils literal notranslate"><span class="pre">Qt::BlockingQueuedConnection</span></code>. So no deadlocks are possible.</p>
+</section>
+<section id="progress-reporting">
+<h2>Progress reporting<a class="headerlink" href="#progress-reporting" title="Permalink to this headline">¶</a></h2>
+<p>The fact that a processing visitor does a really simple task (processes
+a single node) that is very easy to report progress using progress bars
+in the layer box. We just need to use progress proxy of the node we
+process (<code class="docutils literal notranslate"><span class="pre">KisNodeProgressProxy</span></code>). Our processings framework provides
+an even easier way of doing this. You just need to instantiate a
+<code class="docutils literal notranslate"><span class="pre">ProgressHelper</span></code> object and ask it to create a <code class="docutils literal notranslate"><span class="pre">KoUpdater</span></code> object
+for you. And all is done. You can see an example in
+<code class="docutils literal notranslate"><span class="pre">KisTransformProcessingVisitor</span></code> class.</p>
+</section>
+<section id="testing">
+<h2>Testing<a class="headerlink" href="#testing" title="Permalink to this headline">¶</a></h2>
+<p>Usage of a common framework makes testing really simple. There is a
+separate unittest in image’s tests folder: <code class="docutils literal notranslate"><span class="pre">KisProcessingsTest</span></code>. To
+test a processing you need to write just a couple of lines. Everything
+is done by <code class="docutils literal notranslate"><span class="pre">BaseProcessingTest</span></code> helper class. This class will run your
+processing and compare results against reference png files those are
+stored in data folder. If there are some problems found, it’ll dump
+result files to the current directory.</p>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="testing_strategy.html" class="btn btn-neutral float-right" title="Testing Strategy" accesskey="n" rel="next"> <!-- Next --> <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="running_krita.html" class="btn btn-neutral" title="Running Krita from Source" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- Previous  -->  </a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright licensed under the GNU Free Documentation License 1.3+ unless stated otherwise.
+      
+        <span class="commit">
+          Revision <code>7c271ce</code>.
+        </span>
+      
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a modified <a href="https://github.com/rtfd/sphinx_rtd_theme">RTD theme</a>.<br/>
+  <a href="https://krita.org" title="Krita official website.">Krita official website</a> |
+  <a href="https://invent.kde.org/documentation/docs-krita-org/" title="The Gitlab instance to edit this pages and collaborate.">Git repository for docs.krita.org </a> |
+  <a href="https://www.kde.org/community/whatiskde/impressum-en.php" title="To know more about KDE, code of conduct, privacy policy and GDPR.">KDE Impressum</a>.
+   
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'5.0.0 Beta',
+            LANGUAGE:'en',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/documentation_options.js"></script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
+      });
+  </script> 
+
+ <script type="text/javascript">
+	 var _paq=_paq||[];
+	 _paq.push(['setCookieDomain','*.krita.org']);
+	 _paq.push(['setDomains','*.krita.org']);
+	 _paq.push(['setDocumentTitle',document.domain+"/"+document.title]);
+	 _paq.push(['trackPageView']);
+	 _paq.push(['enableLinkTracking']);
+
+	 (function(){
+	 	var u="//stats.kde.org/";
+	    _paq.push(['setTrackerUrl',u+'piwik.php']);
+	    _paq.push(['setSiteId',13]);
+	    var d = document, g = d.createElement('script'),s=d.getElementsByTagName('script')[0];
+	    g.type = 'text/javascript';
+	    g.async = true;
+	    g.defer = true;
+	    g.src = u+'piwik.js';
+	    s.parentNode.insertBefore(g,s);
+	  })();
+</script> 
+<noscript><p><img src="//stats.kde.org/piwik.php?idsite=13" style="border:0;" alt="" /></p></noscript>
+
+</body>
+</html>

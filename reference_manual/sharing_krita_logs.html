@@ -1,0 +1,648 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" name="title" content="Getting Krita logs" />
+  <meta property="og:site-name" content="Krita Manual" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="en" />
+  <meta property="og:locale:alternate" content="ca" />
+  
+  <meta property="og:locale:alternate" content="fr" />
+  <meta property="og:locale:alternate" content="it" />
+  <meta property="og:locale:alternate" content="ja" />
+  <meta property="og:locale:alternate" content="ko" />
+  <meta property="og:locale:alternate" content="nl" />
+  <meta property="og:locale:alternate" content="pl" />
+  <meta property="og:locale:alternate" content="pt_PT" />
+  <meta property="og:locale:alternate" content="uk_UA" />
+  <meta property="og:locale:alternate" content="zh_CN" />
+  <meta property="og:article:modified_time" content="2021-07-19T15:33:59" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<meta content="How to get a Krita Usage Log, Krita's backtrace or Krita's text output." name="description" />
+
+  
+  
+  <title>Getting Krita logs &mdash; Krita Manual 5.0.0 Beta documentation</title>
+  
+
+  
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    
+  
+  
+  
+    <link rel="canonical" href="en/reference_manual/sharing_krita_logs.html"/>
+    <meta property="og:url" content="en/reference_manual/sharing_krita_logs.html" />
+    <meta property="og:image" content="en/_static/sidebar-logo.png" />
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Split Layer" href="split_layer.html" />
+    <link rel="prev" title="Separate Image" href="separate_image.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+       
+           <a href="../index.html" class="icon icon-home">
+
+			<img src="../_static/sidebar-logo.png" class="logo" alt="Logo"/>
+           	
+           <!--	Krita Manual -->
+
+
+          </a>
+
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-side-nav-language-selector">
+        	<p class="caption-text">
+	        	<select id="language-selector-container">
+	        		<option value="ca">Català</option>
+	        		<option value="en">English</option>
+	        		<option value="fr">français</option>
+	        		<option value="it">Italiano</option>
+	        		<option value="ja">日本語</option>
+	        		<option value="ko">한국어</option>
+	        		<option value="nl">Nederlands</option>
+	        		<option value="pl">Polski</option>
+	        		<option value="pt_PT">português</option>
+	        		<option value="uk_UA">Українська</option>
+	        		<option value="zh_CN">简体中文</option>
+	        	</select>
+        	</p>
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../user_manual.html">User Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general_concepts.html">General Concepts</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../reference_manual.html">Reference Manual</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="audio_for_animation.html">Audio for Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blending_modes.html">Blending Modes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="brushes.html">Brushes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="clones_array.html">Clones Array</a></li>
+<li class="toctree-l2"><a class="reference internal" href="create_new_document.html">Create New Document</a></li>
+<li class="toctree-l2"><a class="reference internal" href="default_python_plugins.html">Pre-installed Python plugins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dockers.html">Dockers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dr_minw_debugger.html">Dr. MinGW Debugger</a></li>
+<li class="toctree-l2"><a class="reference internal" href="filters.html">Filters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hdr_display.html">HDR Display</a></li>
+<li class="toctree-l2"><a class="reference internal" href="image_split.html">Image Split</a></li>
+<li class="toctree-l2"><a class="reference internal" href="import_animation.html">Import Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="instant_preview.html">Instant Preview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="krita_4_preset_bundle.html">Krita 4 Preset Bundle Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="layers_and_masks.html">Layers and Masks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="linux_command_line.html">Linux Command Line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="list_supported_tablets.html">The List of Supported Tablets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="main_menu.html">Main Menu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="maths_input.html">Maths Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="popup-palette.html">Pop-up Palette</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preferences.html">Preferences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="render_animation.html">Render Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="resource_management.html">Resource Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seexpr.html">SeExpr Quick Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="separate_image.html">Separate Image</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Getting Krita logs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#quick-access">Quick access</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#krita-usage-log">Krita Usage Log</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#through-gui">Through GUI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#from-the-file-system">From the file system</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#system-information-related-to-krita">System information related to Krita</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id2">Through GUI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">From the file system</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#crash-log-and-backtrace">Crash log and backtrace</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#windows">Windows</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#linux">Linux</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#macos">macOS</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#krita-s-text-output">Krita’s text output</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#krita-text-output-logviewer">Through GUI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#from-the-console">From the console</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#from-the-debugview">From the DebugView</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="split_layer.html">Split Layer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stroke_selection.html">Stroke Selection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tools.html">Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="welcome_screen.html">Welcome Screen</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials.html">Tutorials and How-tos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../KritaFAQ.html">Krita FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributors_manual.html">Contributors Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../resources_page.html">Resources</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+	<!-- start top banner area (for fundraisers or messages)
+
+	<div style="text-align: center; background-color: #333">
+		<a href="https://krita.org/en/fundraising-2018-campaign/" target="_self" onclick="ga('send', 'event', 'frontpage', 'button', 'Fundraiser 2018');">
+			<img src="https://krita.org/wp-content/themes/krita-org-theme/images/decoration/2018-fundraiser-banner.png" style="max-width: 100%">
+		</a>
+	</div>
+	
+	 end top banner area -->
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Krita Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../reference_manual.html">Reference Manual</a> &raquo;</li>
+        
+      <li>Getting Krita logs</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+          
+            <a href="../_sources/reference_manual/sharing_krita_logs.rst.txt" rel="nofollow"> 
+             
+              <img src="../_static/images/source-code.png" />
+             <!-- View page source -->
+
+          </a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="getting-krita-logs">
+<span id="sharing-logs"></span><span id="index-0"></span><h1>Getting Krita logs<a class="headerlink" href="#getting-krita-logs" title="Permalink to this headline">¶</a></h1>
+<p>There are three different kinds of logs that Krita can produce. Depending on the issue, you might be asked for a specific one or for all of them. This page will tell you how to gather the necessary information to give to Krita developers or user supporters.</p>
+<ol class="arabic simple">
+<li><p><a class="reference internal" href="#krita-usage-log"><span class="std std-ref">Krita Usage Log</span></a> – this log contains your last 10 Krita sessions (one session means opening Krita). It shows times when you opened it, basic information about your system and Krita, and all files you created, opened and saved, including all auto-saves.</p></li>
+<li><p><a class="reference internal" href="#getting-system-information"><span class="std std-ref">System information</span></a> – this is not exactly a log, but a file that contains detailed system information related to Krita.</p></li>
+<li><p><a class="reference internal" href="#getting-backtrace"><span class="std std-ref">Crash log/backtrace</span></a> – this log is created when Krita closes incorrectly because of an internal issue. This log is often necessary to get the issue fixed if developers cannot reproduce issue (repeat steps to get the crash).</p></li>
+<li><p><a class="reference internal" href="#krita-console-debugview"><span class="std std-ref">Krita console output/Log Viewer output/DebugView output</span></a> – this log contains anything random that Krita felt the need to report. It often contains some useful additional information that can help solving the issue.</p></li>
+</ol>
+<section id="quick-access">
+<h2>Quick access<a class="headerlink" href="#quick-access" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p>Windows</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference internal" href="#krita-usage-log"><span class="std std-ref">Krita Usage Log</span></a></p></li>
+<li><p><a class="reference internal" href="#getting-system-information"><span class="std std-ref">System information</span></a></p></li>
+<li><p><a class="reference internal" href="#getting-backtrace-windows"><span class="std std-ref">Backtrace</span></a></p></li>
+<li><p>Krita text output from <a class="reference internal" href="#krita-text-output-logviewer"><span class="std std-ref">Log Viewer (in GUI)</span></a>, <a class="reference internal" href="#krita-text-output-console"><span class="std std-ref">console</span></a> or <a class="reference internal" href="#using-debug-view"><span class="std std-ref">DebugView (external application)</span></a></p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Linux</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference internal" href="#krita-usage-log"><span class="std std-ref">Krita Usage Log</span></a></p></li>
+<li><p><a class="reference internal" href="#getting-system-information"><span class="std std-ref">System information</span></a></p></li>
+<li><p><a class="reference internal" href="#getting-backtrace-linux"><span class="std std-ref">Backtrace</span></a></p></li>
+<li><p>Krita text output from <a class="reference internal" href="#krita-text-output-logviewer"><span class="std std-ref">Log Viewer (in GUI)</span></a> or <a class="reference internal" href="#krita-text-output-console"><span class="std std-ref">console</span></a></p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>macOS</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference internal" href="#krita-usage-log"><span class="std std-ref">Krita Usage Log</span></a></p></li>
+<li><p><a class="reference internal" href="#getting-system-information"><span class="std std-ref">System information</span></a></p></li>
+<li><p><a class="reference internal" href="#getting-backtrace-mac"><span class="std std-ref">Backtrace</span></a></p></li>
+<li><p>Krita text output from <a class="reference internal" href="#krita-text-output-logviewer"><span class="std std-ref">Log Viewer (in GUI)</span></a> or <a class="reference internal" href="#krita-text-output-console"><span class="std std-ref">console</span></a></p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</section>
+<section id="krita-usage-log">
+<span id="id1"></span><h2>Krita Usage Log<a class="headerlink" href="#krita-usage-log" title="Permalink to this headline">¶</a></h2>
+<section id="through-gui">
+<h3>Through GUI<a class="headerlink" href="#through-gui" title="Permalink to this headline">¶</a></h3>
+<p>The easiest way to get Krita Usage Log is through Krita’s GUI. Go to  <span class="menuselection">Help ‣ Show Krita Log for bug reports</span>. A new dialog will open, showing the content of the log.</p>
+</section>
+<section id="from-the-file-system">
+<h3>From the file system<a class="headerlink" href="#from-the-file-system" title="Permalink to this headline">¶</a></h3>
+<p>Sometimes however it is not possible to use Krita’s GUI, for example when it doesn’t even open. Since logs are regular text files, you can get them from your file system by yourself.</p>
+<p>The file is called <code class="file docutils literal notranslate"><span class="pre">krita.log</span></code>. Location of the file:</p>
+<blockquote>
+<div><dl class="simple">
+<dt>Linux</dt><dd><p><code class="file docutils literal notranslate"><span class="pre">$HOME/.local/share/krita.log</span></code></p>
+</dd>
+<dt>Windows</dt><dd><p><code class="file docutils literal notranslate"><span class="pre">%LOCALAPPDATA%\krita.log</span></code></p>
+</dd>
+<dt>macOS</dt><dd><p><code class="file docutils literal notranslate"><span class="pre">$HOME/Library/Application</span> <span class="pre">Support/krita.log</span></code></p>
+</dd>
+</dl>
+</div></blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In Windows you can simply paste this path into the Windows Explorer’s search box, on the top bar, and it will find the file for you.</p>
+</div>
+</section>
+</section>
+<section id="system-information-related-to-krita">
+<span id="getting-system-information"></span><h2>System information related to Krita<a class="headerlink" href="#system-information-related-to-krita" title="Permalink to this headline">¶</a></h2>
+<section id="id2">
+<h3>Through GUI<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>The easiest way to get system information related to Krita is through Krita’s GUI. Go to  <span class="menuselection">Help ‣ Show system information for bug reports</span>. A new dialog will open, showing the content.</p>
+</section>
+<section id="id3">
+<h3>From the file system<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>Sometimes however it is not possible to use Krita’s GUI, for example when it doesn’t even open. Since logs are regular text files, you can get them from your file system by yourself.</p>
+<p>The file is called <code class="file docutils literal notranslate"><span class="pre">krita-sysinfo.log</span></code>. Location of the file:</p>
+<blockquote>
+<div><dl class="simple">
+<dt>Linux</dt><dd><p><code class="file docutils literal notranslate"><span class="pre">$HOME/.local/share/krita-sysinfo.log</span></code></p>
+</dd>
+<dt>Windows</dt><dd><p><code class="file docutils literal notranslate"><span class="pre">%LOCALAPPDATA%\krita-sysinfo.log</span></code></p>
+</dd>
+<dt>macOS</dt><dd><p><code class="file docutils literal notranslate"><span class="pre">$HOME/Library/Application</span> <span class="pre">Support/krita-sysinfo.log</span></code></p>
+</dd>
+</dl>
+</div></blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In Windows you can simply paste this path into the file browser textbox on the top bar and it will find you the file.</p>
+</div>
+</section>
+</section>
+<section id="crash-log-and-backtrace">
+<span id="getting-backtrace"></span><h2>Crash log and backtrace<a class="headerlink" href="#crash-log-and-backtrace" title="Permalink to this headline">¶</a></h2>
+<p>Location and the way to get a backtrace is different on all systems.</p>
+<section id="windows">
+<span id="getting-backtrace-windows"></span><h3>Windows<a class="headerlink" href="#windows" title="Permalink to this headline">¶</a></h3>
+<p>Usually, it is sufficient to share the content of <span class="menuselection">Help ‣ Show Krita Log for bug reports</span> as it contains the backtrace.</p>
+<p>If you cannot open Krita because it crashes on startup, please provide the <code class="file docutils literal notranslate"><span class="pre">%LOCALAPPDATA%\kritacrash.log</span></code>. Sometimes more detailed information is needed, then you will be asked to closely follow <a class="reference internal" href="dr_minw_debugger.html#dr-minw"><span class="std std-ref">Dr. Mingw debugger</span></a> guide.</p>
+</section>
+<section id="linux">
+<span id="getting-backtrace-linux"></span><h3>Linux<a class="headerlink" href="#linux" title="Permalink to this headline">¶</a></h3>
+<p>On Linux, there are five ways of installing Krita.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Using distribution packages</p></li>
+<li><p>Building Krita yourself from source</p></li>
+<li><p>Using a snap package</p></li>
+<li><p>Using a flatpak package</p></li>
+<li><p>Using the official AppImage</p></li>
+</ul>
+</div></blockquote>
+<p>Only distribution packages and built-from-source can produce usable crash logs/backtraces. For distribution packages, you will need to install the corresponding debug or dbg packages; the method for that is different from distribution to distribution. If you use distribution packages and the KDE Plasma Desktop, a crash dialog will be shown that has the backtrace in the “Developer” tab.</p>
+<p>Otherwise, you have to use <code class="docutils literal notranslate"><span class="pre">gdb</span></code> in a terminal window.</p>
+<ol class="arabic">
+<li><p>Open Krita in <code class="docutils literal notranslate"><span class="pre">gdb</span></code>:</p>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># if you have Krita installed from repositories, you may need to only write &#39;gdb krita&#39;</span>
+<span class="c1"># if not, write the path to the executable file</span>
+gdb path/to/krita
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Disable pagination:</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">set</span> <span class="n">pagination</span> <span class="n">off</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Run Krita:</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">run</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Make it crash.</p></li>
+<li><p>Get the short backtrace:</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">thread</span> <span class="n">apply</span> <span class="nb">all</span> <span class="n">bt</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Get the long backtrace:</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">thread</span> <span class="n">apply</span> <span class="nb">all</span> <span class="n">bt</span> <span class="n">full</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Short and long backtraces save to separate text files.</p></li>
+<li><p>From the short backtrace, it’s recommended to cut out all threads that are identical to some others or don’t seem to hold any additional information.</p>
+<blockquote>
+<div><p>If you feel like you know which part of the backtrace is the most important (it’s usually the longest thread), then cut it out and put this fragment in the bug report in a comment. Both backtraces still will be needed: attach them to the bug report as well.</p>
+<p>If you prefer not to make this decision, just attach both files with backtraces to the bug report.</p>
+</div></blockquote>
+</li>
+</ol>
+</section>
+<section id="macos">
+<span id="getting-backtrace-mac"></span><h3>macOS<a class="headerlink" href="#macos" title="Permalink to this headline">¶</a></h3>
+<p>On macOS it’s recommended to use <code class="docutils literal notranslate"><span class="pre">lldb</span></code>.</p>
+<ol class="arabic">
+<li><p>Open Terminal.app</p></li>
+<li><p>Open Krita in <code class="docutils literal notranslate"><span class="pre">lldb</span></code>:</p>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>lldb /Applications/krita.app/Contents/MacOS/krita
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Run Krita:</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">run</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Make it crash.</p></li>
+<li><p>Get the backtrace:</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">thread</span> <span class="n">backtrace</span> <span class="nb">all</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Save the backtrace to a text file.</p></li>
+<li><p>From the backtrace it’s recommended to cut out all threads that are identical to some others or don’t seem to hold any additional information to put into the comment (so it’s easily accessible for the developer).</p>
+<blockquote>
+<div><p>If you feel like you know which part of the backtrace is the most important (it’s usually the longest thread), then cut it out and put this fragment in the bug report in a comment. The full backtrace still will be needed: attach it to the bug report as well.</p>
+<p>If you prefer not to make this decision, just attach the file with the backtrace to the bug report.</p>
+</div></blockquote>
+</li>
+</ol>
+</section>
+</section>
+<section id="krita-s-text-output">
+<span id="krita-console-debugview"></span><h2>Krita’s text output<a class="headerlink" href="#krita-s-text-output" title="Permalink to this headline">¶</a></h2>
+<p>Most of Krita’s text output can be gathered using <span class="guilabel">Log Viewer</span>. The only exception are messages from when Krita is starting up, so there is no GUI yet, or when it closes or crashes so no user interaction is possible after the event.</p>
+<section id="krita-text-output-logviewer">
+<span id="id4"></span><h3>Through GUI<a class="headerlink" href="#krita-text-output-logviewer" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li><p>Go to <span class="menuselection">Settings ‣ Dockers ‣ Log Viewer</span>.</p></li>
+<li><p>The first button from the left enables and disables logging, so make sure it is pressed.</p></li>
+<li><p>Do the thing you want to get the output of.</p></li>
+<li><p>Use the third button (tooltip says: <em>Save the log</em>) to save the log to a file.</p></li>
+<li><p>Attach the file to the bug report.</p></li>
+</ol>
+</section>
+<section id="from-the-console">
+<span id="krita-text-output-console"></span><h3>From the console<a class="headerlink" href="#from-the-console" title="Permalink to this headline">¶</a></h3>
+<p>Using the console is the most reliable way to get Krita’s text output. This way is similar on macOS and Linux.</p>
+<blockquote>
+<div><div class="versionchanged">
+<p><span class="versionmodified changed">Changed in version 5.0: </span>This is now also possible on Windows using the <code class="file docutils literal notranslate"><span class="pre">krita.com</span></code> executable.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <strong class="program">krita.com</strong> executable starts Krita as a command-line program with a console window. This was not available before Krita version 5.0. If you have an older version or would prefer to use the <strong class="program">krita.exe</strong> program without a console window, see <a class="reference internal" href="#using-debug-view"><span class="std std-ref">DebugView guide</span></a>.</p>
+</div>
+</div>
+</div></blockquote>
+<ol class="arabic">
+<li><p>On macOS open <strong class="program">Terminal.app</strong>, on Linux open your favorite terminal or console application. On Windows, open a Command Prompt by typing <code class="code docutils literal notranslate"><span class="pre">cmd.exe</span></code> on the Start Menu and pressing <kbd class="kbd docutils literal notranslate">Enter</kbd>.</p></li>
+<li><p>Write the path to the Krita executable.</p>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># On Linux, if installed from repositories:</span>
+krita
+<span class="c1"># On Linux, in all other cases:</span>
+<span class="c1">#  (remember that if you want to reference a file from the directory</span>
+<span class="c1">#   you&#39;re currently in, you need to write: &#39;./krita_filename&#39; instead of &#39;krita_filename&#39;</span>
+<span class="c1">#   and remember that this file need to have execution rights to be executed)</span>
+path/to/krita
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># On macOS:</span>
+/Applications/krita.app/Contents/MacOS/krita
+</pre></div>
+</div>
+<div class="highlight-bat notranslate"><div class="highlight"><pre><span></span><span class="c1">REM  On Windows:</span>
+<span class="c1">REM  By default, cmd.exe will prefer running the .COM file over the .EXE, so</span>
+<span class="c1">REM  you may also leave out the .COM file extension.</span>
+<span class="s2">&quot;C:\Program Files\Krita (x64)\bin\krita.com&quot;</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Do the thing you want to get the output of.</p></li>
+<li><p>Copy the content, save to a file and attach to the bug report.</p></li>
+</ol>
+</section>
+<section id="from-the-debugview">
+<span id="using-debug-view"></span><h3>From the DebugView<a class="headerlink" href="#from-the-debugview" title="Permalink to this headline">¶</a></h3>
+<p>To get the text output of Krita on Windows using the graphical program, you need an external program called <code class="docutils literal notranslate"><span class="pre">DebugView</span></code>. Compared to using the console, DebugView has the benefit of including timestamps to the log entries.</p>
+<ol class="arabic simple">
+<li><p><a class="reference external" href="https://docs.microsoft.com/en-us/sysinternals/downloads/debugview">Download DebugView</a> if you haven’t already. Click on the blue bold <span class="guilabel">Download DebugView</span> text with underline, downloading should start immediately.</p></li>
+<li><p>The file you download is a .zip archive. Windows 10 has a zip archive opener already included. Just extract all of the files somewhere. You can learn more about extracing on <a class="reference external" href="https://support.microsoft.com/en-us/help/4028088/windows-zip-and-unzip-files">Windows extracting manual page</a>.</p></li>
+<li><p>There is a file inside the archive that is called <code class="file docutils literal notranslate"><span class="pre">DbgView.exe</span></code> (which you can see as <code class="file docutils literal notranslate"><span class="pre">DbgView</span></code>, depending on your system settings). Double-click on it.</p></li>
+<li><p>Let the program run and open Krita.</p></li>
+<li><p>Do things you want to get output of.</p></li>
+<li><p>Switch to DebugView and copy the content. Save to a file and attach to the bug report.</p></li>
+</ol>
+</section>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="split_layer.html" class="btn btn-neutral float-right" title="Split Layer" accesskey="n" rel="next"> <!-- Next --> <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="separate_image.html" class="btn btn-neutral" title="Separate Image" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- Previous  -->  </a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright licensed under the GNU Free Documentation License 1.3+ unless stated otherwise.
+      
+        <span class="commit">
+          Revision <code>7c271ce</code>.
+        </span>
+      
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a modified <a href="https://github.com/rtfd/sphinx_rtd_theme">RTD theme</a>.<br/>
+  <a href="https://krita.org" title="Krita official website.">Krita official website</a> |
+  <a href="https://invent.kde.org/documentation/docs-krita-org/" title="The Gitlab instance to edit this pages and collaborate.">Git repository for docs.krita.org </a> |
+  <a href="https://www.kde.org/community/whatiskde/impressum-en.php" title="To know more about KDE, code of conduct, privacy policy and GDPR.">KDE Impressum</a>.
+   
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'5.0.0 Beta',
+            LANGUAGE:'en',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/documentation_options.js"></script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
+      });
+  </script> 
+
+ <script type="text/javascript">
+	 var _paq=_paq||[];
+	 _paq.push(['setCookieDomain','*.krita.org']);
+	 _paq.push(['setDomains','*.krita.org']);
+	 _paq.push(['setDocumentTitle',document.domain+"/"+document.title]);
+	 _paq.push(['trackPageView']);
+	 _paq.push(['enableLinkTracking']);
+
+	 (function(){
+	 	var u="//stats.kde.org/";
+	    _paq.push(['setTrackerUrl',u+'piwik.php']);
+	    _paq.push(['setSiteId',13]);
+	    var d = document, g = d.createElement('script'),s=d.getElementsByTagName('script')[0];
+	    g.type = 'text/javascript';
+	    g.async = true;
+	    g.defer = true;
+	    g.src = u+'piwik.js';
+	    s.parentNode.insertBefore(g,s);
+	  })();
+</script> 
+<noscript><p><img src="//stats.kde.org/piwik.php?idsite=13" style="border:0;" alt="" /></p></noscript>
+
+</body>
+</html>

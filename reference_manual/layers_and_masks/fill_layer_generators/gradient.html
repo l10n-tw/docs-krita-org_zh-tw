@@ -1,0 +1,578 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" name="title" content="Gradient Fill" />
+  <meta property="og:site-name" content="Krita Manual" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="en" />
+  <meta property="og:locale:alternate" content="ca" />
+  
+  <meta property="og:locale:alternate" content="fr" />
+  <meta property="og:locale:alternate" content="it" />
+  <meta property="og:locale:alternate" content="ja" />
+  <meta property="og:locale:alternate" content="ko" />
+  <meta property="og:locale:alternate" content="nl" />
+  <meta property="og:locale:alternate" content="pl" />
+  <meta property="og:locale:alternate" content="pt_PT" />
+  <meta property="og:locale:alternate" content="uk_UA" />
+  <meta property="og:locale:alternate" content="zh_CN" />
+  <meta property="og:article:modified_time" content="2021-07-19T15:33:59" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<meta content="How to use Gradient generation in Krita." name="description" />
+
+  
+  
+  <title>Gradient Fill &mdash; Krita Manual 5.0.0 Beta documentation</title>
+  
+
+  
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    
+  
+  
+  
+    <link rel="canonical" href="en/reference_manual/layers_and_masks/fill_layer_generators/gradient.html"/>
+    <meta property="og:url" content="en/reference_manual/layers_and_masks/fill_layer_generators/gradient.html" />
+    <meta property="og:image" content="en/_static/sidebar-logo.png" />
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Multigrid" href="multigrid.html" />
+    <link rel="prev" title="Fill Layers" href="../fill_layers.html" /> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+       
+           <a href="../../../index.html" class="icon icon-home">
+
+			<img src="../../../_static/sidebar-logo.png" class="logo" alt="Logo"/>
+           	
+           <!--	Krita Manual -->
+
+
+          </a>
+
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-side-nav-language-selector">
+        	<p class="caption-text">
+	        	<select id="language-selector-container">
+	        		<option value="ca">Català</option>
+	        		<option value="en">English</option>
+	        		<option value="fr">français</option>
+	        		<option value="it">Italiano</option>
+	        		<option value="ja">日本語</option>
+	        		<option value="ko">한국어</option>
+	        		<option value="nl">Nederlands</option>
+	        		<option value="pl">Polski</option>
+	        		<option value="pt_PT">português</option>
+	        		<option value="uk_UA">Українська</option>
+	        		<option value="zh_CN">简体中文</option>
+	        	</select>
+        	</p>
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../user_manual.html">User Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../general_concepts.html">General Concepts</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../reference_manual.html">Reference Manual</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../audio_for_animation.html">Audio for Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../blending_modes.html">Blending Modes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../brushes.html">Brushes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../clones_array.html">Clones Array</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../create_new_document.html">Create New Document</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../default_python_plugins.html">Pre-installed Python plugins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dockers.html">Dockers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dr_minw_debugger.html">Dr. MinGW Debugger</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../filters.html">Filters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../hdr_display.html">HDR Display</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../image_split.html">Image Split</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../import_animation.html">Import Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../instant_preview.html">Instant Preview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../krita_4_preset_bundle.html">Krita 4 Preset Bundle Overview</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../layers_and_masks.html">Layers and Masks</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../clone_layers.html">Clone Layers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../file_layers.html">File Layers</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../fill_layers.html">Fill Layers</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Gradient Fill</a></li>
+<li class="toctree-l4"><a class="reference internal" href="multigrid.html">Multigrid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pattern_fill.html">Pattern Fill</a></li>
+<li class="toctree-l4"><a class="reference internal" href="screentone.html">Screentone</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seexpr.html">SeExpr</a></li>
+<li class="toctree-l4"><a class="reference internal" href="simplex_noise.html">Simplex Noise</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../fill_layers.html#painting-on-a-fill-layer">Painting on a fill layer</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../filter_layers.html">Filter Layer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../filter_masks.html">Filter Masks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../group_layers.html">Group Layers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../layer_styles.html">Layer Styles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../paint_layers.html">Paint Layers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../selection_masks.html">Selection Masks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../split_alpha.html">Split Alpha</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../transformation_masks.html">Transformation Masks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../transparency_masks.html">Transparency Masks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../vector_layers.html">Vector Layers</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../linux_command_line.html">Linux Command Line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../list_supported_tablets.html">The List of Supported Tablets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../main_menu.html">Main Menu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../maths_input.html">Maths Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../popup-palette.html">Pop-up Palette</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences.html">Preferences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render_animation.html">Render Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../resource_management.html">Resource Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../seexpr.html">SeExpr Quick Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../separate_image.html">Separate Image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../sharing_krita_logs.html">Getting Krita logs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../split_layer.html">Split Layer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../stroke_selection.html">Stroke Selection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools.html">Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../welcome_screen.html">Welcome Screen</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tutorials.html">Tutorials and How-tos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../KritaFAQ.html">Krita FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributors_manual.html">Contributors Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../resources_page.html">Resources</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+	<!-- start top banner area (for fundraisers or messages)
+
+	<div style="text-align: center; background-color: #333">
+		<a href="https://krita.org/en/fundraising-2018-campaign/" target="_self" onclick="ga('send', 'event', 'frontpage', 'button', 'Fundraiser 2018');">
+			<img src="https://krita.org/wp-content/themes/krita-org-theme/images/decoration/2018-fundraiser-banner.png" style="max-width: 100%">
+		</a>
+	</div>
+	
+	 end top banner area -->
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Krita Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../../reference_manual.html">Reference Manual</a> &raquo;</li>
+        
+          <li><a href="../../layers_and_masks.html">Layers and Masks</a> &raquo;</li>
+        
+          <li><a href="../fill_layers.html">Fill Layers</a> &raquo;</li>
+        
+      <li>Gradient Fill</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+          
+            <a href="../../../_sources/reference_manual/layers_and_masks/fill_layer_generators/gradient.rst.txt" rel="nofollow"> 
+             
+              <img src="../../../_static/images/source-code.png" />
+             <!-- View page source -->
+
+          </a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="gradient-fill">
+<span id="index-0"></span><span id="id1"></span><h1>Gradient Fill<a class="headerlink" href="#gradient-fill" title="Permalink to this headline">¶</a></h1>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 4.4.2.</span></p>
+</div>
+<p>Fills the layer with a gradient in the same way as the gradient tool does.</p>
+<section id="general-options">
+<h2>General Options<a class="headerlink" href="#general-options" title="Permalink to this headline">¶</a></h2>
+<dl>
+<dt>Shape:</dt><dd><dl>
+<dt>Linear</dt><dd><p>This will draw a straight gradient. The distance and angle between the start and
+end points will define the size and rotation of the gradient, respectively.</p>
+<figure class="align-default" id="id2">
+<img alt="Linear Gradient." src="../../../_images/linear.png" />
+<figcaption>
+<p><span class="caption-text">Left: <strong>None</strong>. Middle: <strong>Forwards</strong>. Right: <strong>Alternating</strong>.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+</dd>
+<dt>Bilinear</dt><dd><blockquote>
+<div><p>This will draw a straight gradient, mirrored along the axis.
+The distance and angle between the start and
+end points will define the size and rotation of the gradient, respectively.</p>
+</div></blockquote>
+<figure class="align-default" id="id3">
+<img alt="../../../_images/bilinear.png" src="../../../_images/bilinear.png" />
+<figcaption>
+<p><span class="caption-text">Left: <strong>None</strong>. Middle: <strong>Forwards</strong>. Right: <strong>Alternating</strong>.</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+</dd>
+<dt>Radial</dt><dd><blockquote>
+<div><p>This will draw the gradient from a center, defined by the start point, with a radius equal to the distance
+between the start and end points.</p>
+</div></blockquote>
+<figure class="align-default" id="id4">
+<img alt="../../../_images/radial.png" src="../../../_images/radial.png" />
+<figcaption>
+<p><span class="caption-text">Left: <strong>None</strong>. Middle: <strong>Forwards</strong>. Right: <strong>Alternating</strong>.</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+</dd>
+<dt>Square</dt><dd><p>This will draw the gradient from a center in a square shape, defined by the start point. The distance and angle between
+the start and end points will define the distance from that center to a side of the square and its rotation, respectively.</p>
+<figure class="align-default" id="id5">
+<img alt="../../../_images/square.png" src="../../../_images/square.png" />
+<figcaption>
+<p><span class="caption-text">Left: <strong>None</strong>. Middle: <strong>Forwards</strong>. Right: <strong>Alternating</strong>.</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+</dd>
+<dt>Conical</dt><dd><p>This will wrap the gradient around a center, defined by the start point. The angle between the start and end points
+will define where the gradient starts.</p>
+<figure class="align-default" id="id6">
+<img alt="../../../_images/conical.png" src="../../../_images/conical.png" />
+<figcaption>
+<p><span class="caption-text">Left: <strong>None</strong>. Middle: <strong>Forwards</strong>. Right: <strong>Alternating</strong>.</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+</dd>
+<dt>Conical-symmetric</dt><dd><p>This will wrap the gradient around a center, defined by the start point, but will mirror the wrap once.
+The angle between the start and end points will define where the gradient starts.</p>
+<figure class="align-default" id="id7">
+<img alt="../../../_images/conical_symmetric.png" src="../../../_images/conical_symmetric.png" />
+<figcaption>
+<p><span class="caption-text">Left: <strong>None</strong>. Middle: <strong>Forwards</strong>. Right: <strong>Alternating</strong>.</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+</dd>
+<dt>Spiral</dt><dd><p>This will draw the gradient spiral from a center, defined by the start point. The distance and angle between
+the start and end points will define the distance between loops and the rotation of the spiral, respectively.</p>
+<figure class="align-default" id="id8">
+<img alt="../../../_images/spiral.png" src="../../../_images/spiral.png" />
+<figcaption>
+<p><span class="caption-text">Left: <strong>None</strong>. Middle: <strong>Forwards</strong>. Right: <strong>Alternating</strong>.</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+</dd>
+<dt>Reverse Spiral</dt><dd><p>This will draw the gradient spiral from a center, defined by the start point, but direction is
+flipped perpendicular to the line that passes through the star and end points. The distance and angle between
+the start and end points will define the distance between loops and the rotation of the spiral, respectively.</p>
+<figure class="align-default" id="id9">
+<img alt="../../../_images/reverse_spiral.png" src="../../../_images/reverse_spiral.png" />
+<figcaption>
+<p><span class="caption-text">Left: <strong>None</strong>. Middle: <strong>Forwards</strong>. Right: <strong>Alternating</strong>.</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+</dd>
+<dt>Shaped</dt><dd><p>This will shape the gradient depending on the image bounds.</p>
+<figure class="align-default">
+<img alt="../../../_images/shaped_image_bounds.png" src="../../../_images/shaped_image_bounds.png" />
+</figure>
+</dd>
+</dl>
+</dd>
+<dt>Repeat:</dt><dd><dl class="simple">
+<dt>None</dt><dd><p>This will extend the gradient into infinity.</p>
+</dd>
+<dt>Forward</dt><dd><p>This will repeat the gradient into one direction.</p>
+</dd>
+<dt>Alternating</dt><dd><p>This will repeat the gradient, alternating the normal direction and the reversed.</p>
+</dd>
+</dl>
+</dd>
+<dt>Reverse</dt><dd><p>Reverses the direction of the gradient.</p>
+</dd>
+<dt>Antialias threshold</dt><dd><p>Controls how smooth is the border between repetitions.</p>
+<ul class="simple">
+<li><p>A value equal to 0 means there is no smoothing. The border is aliased.</p></li>
+<li><p>A value greater than 0 tells Krita how many pixels to each side of the border should be smoothed.</p></li>
+</ul>
+<figure class="align-default" id="id10">
+<img alt="../../../_images/antialias_threshold.png" src="../../../_images/antialias_threshold.png" />
+<figcaption>
+<p><span class="caption-text">Left: <strong>0</strong>. Middle: <strong>0.5</strong>. Right: <strong>1</strong>.</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+</dd>
+</dl>
+</section>
+<section id="positioning-options">
+<h2>Positioning Options<a class="headerlink" href="#positioning-options" title="Permalink to this headline">¶</a></h2>
+<dl>
+<dt>Start</dt><dd><p>Allows you to set the start point for the gradient (in the gradient tool this is the point where you first click).</p>
+</dd>
+<dt>End</dt><dd><p>Allows you to set the endpoint for the gradient (in the gradient tool this is the point where you release the mouse button after dragging).</p>
+</dd>
+<dt>Units</dt><dd><p>You can make the values set for the start and end points mean different things by changing the units associated with them:</p>
+<dl class="simple">
+<dt>Pixels</dt><dd><p>The value indicates a distance in pixels.</p>
+</dd>
+<dt>Percent of the width</dt><dd><p>The value indicates a distance as a percentage of the width of the image.
+So for example, if the image is 1000 pixels wide and 500 pixels high, and the value is 25, then this would be translated to
+pixels as 250 (25% of the width).</p>
+</dd>
+<dt>Percent of the height</dt><dd><p>The value indicates a distance as a percentage of the height of the image.
+So for example, if the image is 1000 pixels wide and 500 pixels high, and the value is 25, then this would be translated to
+pixels as 125 (25% of the height).</p>
+</dd>
+<dt>Percent of the shortest side</dt><dd><p>The value indicates a distance as a percentage of the shortest side of the image.
+So for example, if the image is 1000 pixels wide and 500 pixels high, and the value is 25, then this would
+be translated to pixels as 125 (25% of the shortest side).</p>
+</dd>
+<dt>Percent of the longest side</dt><dd><p>The value indicates a distance as a percentage of the longest side of the image.
+So for example, if the image is 1000 pixels wide and 500 pixels high, and the value is 25, then this would
+be translated to pixels as 250 (25% of the longest side).</p>
+</dd>
+</dl>
+<p>Values that have percentage units are useful when changing the image size. For example, if you want to have a
+linear gradient that always goes from the left to the right of the image, you can set the start point to
+(x = 0 pixels, y = 0 pixels) and the end point to (x = 100% of the width, y = 0 pixels).</p>
+<p>On the other hand, if you want a gradient to have the same size regardless of the image size, you should use pixel units.</p>
+<figure class="align-default">
+<img alt="../../../_images/fill_layer_gradient_units.png" src="../../../_images/fill_layer_gradient_units.png" />
+</figure>
+<p>To make a gradient like the one in the image above, you can set the start position’s
+X coordinate to 80 pixels, 25% of the width, or 25% of the longest side, and its
+Y coordinate to 60 pixels, 25% of the height, or 25% of the shortest side.
+Likewise, you could set the end position’s
+X coordinate to 240 pixels, 75% of the width, or 75% of the longest side, and its
+Y coordinate to 180 pixels, 75% of the height, or 75% of the shortest side.</p>
+<p>Keep in mind that if you use percentages the gradient’s start and end positions will adapt
+to the size of the image, while using pixel units will make the gradient’s positions be static.</p>
+</dd>
+<dt>Positioning</dt><dd><p>You can choose if the end point’s coordinates are relative to the start point.</p>
+<dl class="simple">
+<dt>Absolute</dt><dd><p>The end coordinate indicates a distance from the top-left corner of the image.</p>
+</dd>
+<dt>Relative</dt><dd><p>The end coordinate indicates a distance from the start point.</p>
+</dd>
+</dl>
+</dd>
+<dt>Coordinate System</dt><dd><p>You can set the end point in cartesian or polar coordinates.</p>
+<dl class="simple">
+<dt>Cartesian</dt><dd><p>The coordinates of the end point are set by establishing horizontal and vertical distances
+relative to the top-left corner of the image or to the start point.</p>
+</dd>
+<dt>Polar</dt><dd><p>The coordinates of the end point are set by establishing an angle and a distance
+relative to the start point.</p>
+</dd>
+</dl>
+<figure class="align-default">
+<img alt="../../../_images/fill_layer_gradient_coordinate_system.png" src="../../../_images/fill_layer_gradient_coordinate_system.png" />
+</figure>
+<p>To set the end point’s position in the gradient on the image above, you could use cartesian coordinates and
+set the X and Y coordinates relative to the top-left corner of the image (absolute positioning)
+or relative to the start point (relative positioning).</p>
+<p>However, in some cases it is more convenient using polar coordinates and setting the end point’s
+position by establishing an angle and a distance relative to the start point (polar coordinates are always
+relative to the start point’s position).</p>
+</dd>
+</dl>
+</section>
+<section id="gradient-colors">
+<h2>Gradient Colors<a class="headerlink" href="#gradient-colors" title="Permalink to this headline">¶</a></h2>
+<p>Here you can select the actual colors used by the gradient.</p>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="multigrid.html" class="btn btn-neutral float-right" title="Multigrid" accesskey="n" rel="next"> <!-- Next --> <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../fill_layers.html" class="btn btn-neutral" title="Fill Layers" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- Previous  -->  </a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright licensed under the GNU Free Documentation License 1.3+ unless stated otherwise.
+      
+        <span class="commit">
+          Revision <code>7c271ce</code>.
+        </span>
+      
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a modified <a href="https://github.com/rtfd/sphinx_rtd_theme">RTD theme</a>.<br/>
+  <a href="https://krita.org" title="Krita official website.">Krita official website</a> |
+  <a href="https://invent.kde.org/documentation/docs-krita-org/" title="The Gitlab instance to edit this pages and collaborate.">Git repository for docs.krita.org </a> |
+  <a href="https://www.kde.org/community/whatiskde/impressum-en.php" title="To know more about KDE, code of conduct, privacy policy and GDPR.">KDE Impressum</a>.
+   
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'5.0.0 Beta',
+            LANGUAGE:'en',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/documentation_options.js"></script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
+      });
+  </script> 
+
+ <script type="text/javascript">
+	 var _paq=_paq||[];
+	 _paq.push(['setCookieDomain','*.krita.org']);
+	 _paq.push(['setDomains','*.krita.org']);
+	 _paq.push(['setDocumentTitle',document.domain+"/"+document.title]);
+	 _paq.push(['trackPageView']);
+	 _paq.push(['enableLinkTracking']);
+
+	 (function(){
+	 	var u="//stats.kde.org/";
+	    _paq.push(['setTrackerUrl',u+'piwik.php']);
+	    _paq.push(['setSiteId',13]);
+	    var d = document, g = d.createElement('script'),s=d.getElementsByTagName('script')[0];
+	    g.type = 'text/javascript';
+	    g.async = true;
+	    g.defer = true;
+	    g.src = u+'piwik.js';
+	    s.parentNode.insertBefore(g,s);
+	  })();
+</script> 
+<noscript><p><img src="//stats.kde.org/piwik.php?idsite=13" style="border:0;" alt="" /></p></noscript>
+
+</body>
+</html>

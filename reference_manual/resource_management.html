@@ -1,0 +1,539 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" name="title" content="Resource Management" />
+  <meta property="og:site-name" content="Krita Manual" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="en" />
+  <meta property="og:locale:alternate" content="ca" />
+  
+  <meta property="og:locale:alternate" content="fr" />
+  <meta property="og:locale:alternate" content="it" />
+  <meta property="og:locale:alternate" content="ja" />
+  <meta property="og:locale:alternate" content="ko" />
+  <meta property="og:locale:alternate" content="nl" />
+  <meta property="og:locale:alternate" content="pl" />
+  <meta property="og:locale:alternate" content="pt_PT" />
+  <meta property="og:locale:alternate" content="uk_UA" />
+  <meta property="og:locale:alternate" content="zh_CN" />
+  <meta property="og:article:modified_time" content="2021-07-19T15:33:59" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<meta content="Overview of Resource Management in Krita." name="description" property="og:description" />
+
+  
+  
+  <title>Resource Management &mdash; Krita Manual 5.0.0 Beta documentation</title>
+  
+
+  
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    
+  
+  
+  
+    <link rel="canonical" href="en/reference_manual/resource_management.html"/>
+    <meta property="og:url" content="en/reference_manual/resource_management.html" />
+    <meta property="og:image" content="en/_static/sidebar-logo.png" />
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Brush Preset" href="resource_management/paintoppresets.html" />
+    <link rel="prev" title="Render Animation" href="render_animation.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+       
+           <a href="../index.html" class="icon icon-home">
+
+			<img src="../_static/sidebar-logo.png" class="logo" alt="Logo"/>
+           	
+           <!--	Krita Manual -->
+
+
+          </a>
+
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-side-nav-language-selector">
+        	<p class="caption-text">
+	        	<select id="language-selector-container">
+	        		<option value="ca">Català</option>
+	        		<option value="en">English</option>
+	        		<option value="fr">français</option>
+	        		<option value="it">Italiano</option>
+	        		<option value="ja">日本語</option>
+	        		<option value="ko">한국어</option>
+	        		<option value="nl">Nederlands</option>
+	        		<option value="pl">Polski</option>
+	        		<option value="pt_PT">português</option>
+	        		<option value="uk_UA">Українська</option>
+	        		<option value="zh_CN">简体中文</option>
+	        	</select>
+        	</p>
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../user_manual.html">User Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general_concepts.html">General Concepts</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../reference_manual.html">Reference Manual</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="audio_for_animation.html">Audio for Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blending_modes.html">Blending Modes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="brushes.html">Brushes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="clones_array.html">Clones Array</a></li>
+<li class="toctree-l2"><a class="reference internal" href="create_new_document.html">Create New Document</a></li>
+<li class="toctree-l2"><a class="reference internal" href="default_python_plugins.html">Pre-installed Python plugins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dockers.html">Dockers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dr_minw_debugger.html">Dr. MinGW Debugger</a></li>
+<li class="toctree-l2"><a class="reference internal" href="filters.html">Filters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hdr_display.html">HDR Display</a></li>
+<li class="toctree-l2"><a class="reference internal" href="image_split.html">Image Split</a></li>
+<li class="toctree-l2"><a class="reference internal" href="import_animation.html">Import Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="instant_preview.html">Instant Preview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="krita_4_preset_bundle.html">Krita 4 Preset Bundle Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="layers_and_masks.html">Layers and Masks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="linux_command_line.html">Linux Command Line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="list_supported_tablets.html">The List of Supported Tablets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="main_menu.html">Main Menu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="maths_input.html">Maths Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="popup-palette.html">Pop-up Palette</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preferences.html">Preferences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="render_animation.html">Render Animation</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Resource Management</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#resource-libraries">Resource Libraries</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#importing-bundles">Importing Bundles</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#creating-your-own-bundle">Creating your own Bundle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#deleting-imported-bundles">Deleting Imported Bundles</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#managing-resources">Managing Resources</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#importing-resources">Importing resources</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#activating-and-deactivating">Activating and Deactivating</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#returning-a-resource-to-the-previous-version">Returning a resource to the previous version</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#deleting-backup-files">Deleting Backup files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tags">Tags</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#filtering">Filtering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#resource-types-in-krita">Resource Types in Krita</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="resource_management/paintoppresets.html">Brush Preset</a></li>
+<li class="toctree-l4"><a class="reference internal" href="resource_management/resource_brushtips.html">Brushes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="resource_management/resource_gradients.html">Gradients</a></li>
+<li class="toctree-l4"><a class="reference internal" href="resource_management/resource_patterns.html">Patterns</a></li>
+<li class="toctree-l4"><a class="reference internal" href="resource_management/resource_workspace.html">Workspaces</a></li>
+<li class="toctree-l4"><a class="reference internal" href="resource_management/seexpr_scripts.html">SeExpr Scripts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#other-resource-types">Other Resource Types</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="seexpr.html">SeExpr Quick Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="separate_image.html">Separate Image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sharing_krita_logs.html">Getting Krita logs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="split_layer.html">Split Layer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stroke_selection.html">Stroke Selection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tools.html">Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="welcome_screen.html">Welcome Screen</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials.html">Tutorials and How-tos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../KritaFAQ.html">Krita FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributors_manual.html">Contributors Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../resources_page.html">Resources</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+	<!-- start top banner area (for fundraisers or messages)
+
+	<div style="text-align: center; background-color: #333">
+		<a href="https://krita.org/en/fundraising-2018-campaign/" target="_self" onclick="ga('send', 'event', 'frontpage', 'button', 'Fundraiser 2018');">
+			<img src="https://krita.org/wp-content/themes/krita-org-theme/images/decoration/2018-fundraiser-banner.png" style="max-width: 100%">
+		</a>
+	</div>
+	
+	 end top banner area -->
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Krita Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../reference_manual.html">Reference Manual</a> &raquo;</li>
+        
+      <li>Resource Management</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+          
+            <a href="../_sources/reference_manual/resource_management.rst.txt" rel="nofollow"> 
+             
+              <img src="../_static/images/source-code.png" />
+             <!-- View page source -->
+
+          </a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="resource-management">
+<span id="index-0"></span><span id="id1"></span><h1>Resource Management<a class="headerlink" href="#resource-management" title="Permalink to this headline">¶</a></h1>
+<p>Resources are pluggable bits of data, like brush presets or patterns. Krita has a sophisticated resource management system, which allows tagging, disabling, sharing and more.</p>
+<div class="versionchanged">
+<p><span class="versionmodified changed">Changed in version 5.0.</span></p>
+</div>
+<p>All resources are stored in the resource folder. This folder can be configured in <a class="reference internal" href="preferences/general_settings.html#resource-settings"><span class="std std-ref">the general preferences</span></a>. As keeping track of all those resources can be a handful, Krita creates a SQLite cache in which it keeps the tags, names, version and other data about the resource.</p>
+<p>Thanks to this cache, Krita can avoid loading a resource until necessary. This makes Krita a lot lighter than when it did not have this cache. Deleting the cache will delete the tags and relationships it keeps track of, so be careful.</p>
+<p>If you have not changed your resource folder location, the resources can be found at…</p>
+<dl class="simple">
+<dt>Linux</dt><dd><p><code class="file docutils literal notranslate"><span class="pre">$HOME/.local/share/krita/</span></code></p>
+</dd>
+<dt>Windows</dt><dd><p><code class="file docutils literal notranslate"><span class="pre">%APPDATA%\krita\</span></code></p>
+</dd>
+<dt>macOS</dt><dd><p><code class="file docutils literal notranslate"><span class="pre">~/Library/Application</span> <span class="pre">Support/Krita/</span></code></p>
+</dd>
+<dt>If you installed Krita in the Windows Store, your custom resources will be in a location like:</dt><dd><p><code class="file docutils literal notranslate"><span class="pre">%LOCALAPPDATA%\Packages\49800Krita_</span><em><span class="pre">RANDOM</span> <span class="pre">STRING</span></em><span class="pre">\LocalCacheRoamingkrita</span></code></p>
+</dd>
+</dl>
+<section id="resource-libraries">
+<span id="id2"></span><h2>Resource Libraries<a class="headerlink" href="#resource-libraries" title="Permalink to this headline">¶</a></h2>
+<p>Krita can load a variety of resource libraries.</p>
+<dl class="glossary simple">
+<dt id="term-Resource-Folder">Resource Folder<a class="headerlink" href="#term-Resource-Folder" title="Permalink to this term">¶</a></dt><dd><p>The resource folder is considered the primary library. When creating new resources, they will all end up here. You can configure its location in the <a class="reference internal" href="preferences/general_settings.html#resource-settings"><span class="std std-ref">general preferences</span></a>.</p>
+</dd>
+<dt id="term-Resource-Bundle">Resource Bundle<a class="headerlink" href="#term-Resource-Bundle" title="Permalink to this term">¶</a></dt><dd><p>The primary format to share resources is <em class="dfn">Resource Bundles</em>, which is a compressed file containing all the resources together. It also contains some other information like metadata and a manifest so Krita can check there’s no errors in the file.</p>
+</dd>
+<dt id="term-Adobe-Brush-Library">Adobe Brush Library<a class="headerlink" href="#term-Adobe-Brush-Library" title="Permalink to this term">¶</a></dt><dd><p>An <code class="docutils literal notranslate"><span class="pre">ABR</span></code> with multiple images inside. Previous versions of Krita could not load this, but now Krita will load them as a library of <a class="reference internal" href="resource_management/resource_brushtips.html#resource-brush-tips"><span class="std std-ref">brushes</span></a>.</p>
+</dd>
+<dt id="term-Adobe-Style-Library">Adobe Style Library<a class="headerlink" href="#term-Adobe-Style-Library" title="Permalink to this term">¶</a></dt><dd><p>This is the <strong class="program">Photoshop</strong> <code class="docutils literal notranslate"><span class="pre">ASL</span></code> format, which stores <a class="reference internal" href="layers_and_masks/layer_styles.html#layer-style"><span class="std std-ref">Layer Styles</span></a>.</p>
+</dd>
+<dt id="term-Document-Storage">Document Storage<a class="headerlink" href="#term-Document-Storage" title="Permalink to this term">¶</a></dt><dd><p>Every Krita document can store resources and act as a resource library. This is currently only used for palettes.</p>
+</dd>
+<dt id="term-Memory-Storage">Memory Storage<a class="headerlink" href="#term-Memory-Storage" title="Permalink to this term">¶</a></dt><dd><p>Finally, the memory library is where temporary resources are kept, which are generated by Krita and have no physical version on disk. This is currently used for the fore-to-background gradient.</p>
+</dd>
+</dl>
+<p>You can manage resource libraries by going to <span class="menuselection">Settings ‣ Manage Resource Libraries</span>. In this dialog, you can import resource libraries, deactivate them, and also <a class="reference internal" href="#create-bundle"><span class="std std-ref">Creating your own Bundle</span></a>.</p>
+<section id="importing-bundles">
+<h3>Importing Bundles<a class="headerlink" href="#importing-bundles" title="Permalink to this headline">¶</a></h3>
+<p>To import a bundle click on <span class="guilabel">Import</span> button on the top right side of the dialog.
+Select <code class="docutils literal notranslate"><span class="pre">.bundle</span></code> file format from the file type if it is not already selected, browse to the folder where you have downloaded the bundle, select it and click <span class="guilabel">Open</span>. Once the bundle is imported it will be listed in the bundle view. To enable or disable a bundle, select the entry in the view, and then select <span class="guilabel">Deactivate</span>.</p>
+</section>
+<section id="creating-your-own-bundle">
+<span id="create-bundle"></span><h3>Creating your own Bundle<a class="headerlink" href="#creating-your-own-bundle" title="Permalink to this headline">¶</a></h3>
+<p>You can create your own bundle from the resources of your choice. Click on the <span class="guilabel">Create bundle</span> button. This will open a dialog box as shown below.</p>
+<img alt="../_images/Creating-bundle.png" src="../_images/Creating-bundle.png" />
+<p>The left hand section is for filling up information about the bundle like author name, website, email, bundle icon, etc.
+The right hand side provides a list of available resources. Choose the type of resource you wish to add in to the bundle from the drop-down above and add it to the bundle by selecting a resource and clicking on the arrow button.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Make sure you add brush tips for used in the respective paintop presets you are adding to the bundle. If you don’t provide the brush tips then the brush presets loaded from this bundle will have a ‘X’ mark on the thumbnail denoting that the texture is missing. And the brush preset won’t be the same.</p>
+</div>
+<p>Once you have added all the resources you can create bundle by clicking on the <span class="guilabel">Save</span> button, the bundle will be saved in the location you have specified. You can then share this bundle with other artists or load it on other workstations.</p>
+</section>
+<section id="deleting-imported-bundles">
+<h3>Deleting Imported Bundles<a class="headerlink" href="#deleting-imported-bundles" title="Permalink to this headline">¶</a></h3>
+<p>In case you wish to delete the bundles you have imported <em>permanently</em> click on the <span class="guilabel">Open Resource Folder</span> button in the <span class="guilabel">Manage Resources</span> dialog. This will open the resource folder in your file browser. Go inside the bundles folder and delete the bundle file which you don’t need any more. The next time you start Krita the bundle and its associated resources will not be loaded.</p>
+</section>
+</section>
+<section id="managing-resources">
+<span id="resource-manager"></span><h2>Managing Resources<a class="headerlink" href="#managing-resources" title="Permalink to this headline">¶</a></h2>
+<p>As mentioned earlier Krita has a flexible resource management system. Starting from version 2.9 you can share various resources mentioned above by sharing a single compressed ZIP file created within Krita.</p>
+<p>The manage resources section in the settings was also revamped for making it easy for the artists to prepare these bundle files. You can open manage resource section by going to <span class="menuselection">Settings ‣ Manage Resources…</span> menu item.</p>
+<img alt="../_images/Manageresources.png" class="align-center" src="../_images/Manageresources.png" />
+<p>You can do a variety of things here, like deleting backup files, mass-tagging, deleting/deactivating the resource itself, importing resources and open the create bundle dialog.</p>
+<section id="importing-resources">
+<span id="import-resources"></span><h3>Importing resources<a class="headerlink" href="#importing-resources" title="Permalink to this headline">¶</a></h3>
+<p>To import resources, select the <span class="guilabel">import</span> in the resource choosers or the resource manager.</p>
+<p>The resource chooser import is fairly straight forward. You can only select certain kinds of files, and all the files you can select are possible to import for that resource.</p>
+<p>The import button in the resource manager however sometimes needs to make a choice on whether an imported <a class="reference internal" href="../general_concepts/file_formats/file_png.html#file-png"><span class="std std-ref">*.png</span></a> file is a brush tip or a texture. When importing a format that can be used for multiple types of resources, a window will pop up asking which resource type you intended to import the file for.</p>
+</section>
+<section id="activating-and-deactivating">
+<span id="activating-resources"></span><span id="deactivating-resources"></span><h3>Activating and Deactivating<a class="headerlink" href="#activating-and-deactivating" title="Permalink to this headline">¶</a></h3>
+<p>Deactivating resources is done by selecting them in their respective resource chooser, and pressing the trashcan icon.</p>
+<p>For activating a resource, go to <span class="menuselection">Setti<span class="accelerator">n</span>gs ‣ Manage Resources…</span>, then turn on <span class="guilabel"><span class="accelerator">S</span>how Deleted Resources</span>. The deactivated resources should now be visible, select them, and then press <span class="guilabel">Undelete Resource</span>.</p>
+</section>
+<section id="returning-a-resource-to-the-previous-version">
+<span id="resource-version-history"></span><h3>Returning a resource to the previous version<a class="headerlink" href="#returning-a-resource-to-the-previous-version" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li><p>First go to the resource folder, <span class="menuselection">Settings ‣ Manage Resources… ‣ Open Resource Folder</span>.</p></li>
+<li><p>Then go into the <code class="docutils literal notranslate"><span class="pre">paintoppresets</span></code> folder.</p></li>
+<li><p>Backup (select and cut) all versions of the related resource into a place you can find them. Delete all these files from the <code class="docutils literal notranslate"><span class="pre">paintoppresets</span></code> folder.</p></li>
+<li><p>restart Krita.</p></li>
+<li><p>add only the desired version of the resource.</p></li>
+</ol>
+</section>
+<section id="deleting-backup-files">
+<span id="delete-backup-files"></span><h3>Deleting Backup files<a class="headerlink" href="#deleting-backup-files" title="Permalink to this headline">¶</a></h3>
+<p>When you delete a preset from Krita, Krita doesn’t actually delete the physical copy of the preset. It just adds it to a black list so that the next time when you start Krita the presets from this list are not loaded. To delete the brushes from this list click on <span class="guilabel">Delete Backup Files</span>.</p>
+</section>
+<section id="tags">
+<span id="resource-tagging"></span><h3>Tags<a class="headerlink" href="#tags" title="Permalink to this headline">¶</a></h3>
+<p>Tagging allows you to manage the resources on the fly while painting. All Krita resources can be tagged. These tags can be added via the resource manager, but also via the respective dockers such as brush preset docker, pattern docker etc. You can <img alt="mouseleft" src="../_images/Krita_mouse_left.png" /> the <span class="guilabel">+</span> icon in the docker and add a tag name. In addition to adding you can rename and delete a tag as well.</p>
+<img alt="../_images/Tags-krita.png" class="align-center" src="../_images/Tags-krita.png" />
+<ul class="simple">
+<li><p>Resources can belong to one or more tags.  For example, you may have a Brush Preset of a favorite <em class="dfn">Ink Pen</em> variant and have it tagged so it shows in up in your Inking, Painting, Comics and Favorites groups of brushes.</p></li>
+<li><p>Every resource can be tagged, so brushes in the <span class="guilabel">Predefined</span> tab of the Brush Settings Editor can be also tagged and grouped for convenience.</p></li>
+</ul>
+<p>In the resource manager, you can tag multiple resources at once. To select multiple resources, use <kbd class="kbd docutils literal notranslate">Ctrl</kbd> for adding individual resources to the selection or <kbd class="kbd docutils literal notranslate">Shift</kbd> for adding every resource at once. Then press the plus icon next to the <span class="guilabel">tags</span> section to add a tag to every selected resource.</p>
+<p>Some tags are translated. If you make bundles for others, using such tags can be useful to ensure cross-language compatibility. The tags that get localized are…</p>
+<ul class="simple">
+<li><p>Digital</p></li>
+<li><p>Erasers</p></li>
+<li><p>FX</p></li>
+<li><p>Favorites</p></li>
+<li><p>Ink</p></li>
+<li><p>Paint</p></li>
+<li><p>Pixel_Art</p></li>
+<li><p>Sketch</p></li>
+<li><p>Textures</p></li>
+</ul>
+</section>
+</section>
+<section id="filtering">
+<h2>Filtering<a class="headerlink" href="#filtering" title="Permalink to this headline">¶</a></h2>
+<p>Some dockers, for example the brush preset docker as shown below, have a resource filter, which functions like a search bar for the resource in question.</p>
+<img alt="../_images/Brushpreset-filters.png" src="../_images/Brushpreset-filters.png" />
+<p>You can enter brush name, tag name to quickly pull up a list of brush presets you want. When you select any tag from the tag drop-down and want to include brush presets from other tags as well then you can add filters the following way:</p>
+<ul class="simple">
+<li><p>To filter based on the partial, case insensitive name of the resources you can add <code class="docutils literal notranslate"><span class="pre">partialname</span></code> or <code class="docutils literal notranslate"><span class="pre">!partialname</span></code>.</p></li>
+<li><p>To include other Tags type the respective name of the tag in square brackets like this <code class="docutils literal notranslate"><span class="pre">[Tagname]</span></code> or to exclude a tag type <code class="docutils literal notranslate"><span class="pre">![Tagname]</span></code>.</p></li>
+<li><p>For case sensitive matching of preset name type <code class="docutils literal notranslate"><span class="pre">&quot;Preset</span> <span class="pre">name&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">!</span> <span class="pre">&quot;Preset</span> <span class="pre">name&quot;</span></code> to exclude.</p></li>
+</ul>
+<p>An incredibly quick way to save a group or brushes into a tag is to:</p>
+<ol class="arabic simple">
+<li><p>Create a new tag by <img alt="mouseleft" src="../_images/Krita_mouse_left.png" /> on the <span class="guilabel">+</span>.  This will empty out the contents of the Brush Preset docker.</p></li>
+<li><p>Use the <span class="guilabel">Resource Filter</span> at the bottom of the <span class="guilabel">Brush Presets</span> dock or <span class="guilabel">Brush Settings Editor</span> to type in what you want to group.  For instance: if you type <code class="docutils literal notranslate"><span class="pre">Pencil</span></code> in the filter box you will get all Brush Presets with <code class="docutils literal notranslate"><span class="pre">Pencil</span></code> somewhere in their name.  Now you have all the Pencil-related Brush Presets together in one place.</p></li>
+<li><p>To finish, click the <span class="guilabel">Save</span> button (small disk icon to the right of the <span class="guilabel">Resource Filter</span> box) or press the <kbd class="kbd docutils literal notranslate">Enter</kbd> key and all the items will be saved with the new tag you created.</p></li>
+</ol>
+<p>Now, anytime you want to open up your “digital pencil box” and see what you have to work with all you have to do is use the pull-down and select <span class="guilabel">Pencils</span>.  The Resource Filter works the same way in other parts of Krita so be on the lookout for it!</p>
+<dl class="simple">
+<dt>Resource Zooming</dt><dd><p>If you find the thumbnails of the resources such as color swatches brushes and pattern to be small you can make them bigger or <em class="dfn">Zoom in</em>. All resource selectors can be zoomed in and out of, by hovering over the selector and using the <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="mousescroll" src="../_images/Krita_mouse_scroll.png" /> shortcut.</p>
+</dd>
+</dl>
+</section>
+<section id="resource-types-in-krita">
+<h2>Resource Types in Krita<a class="headerlink" href="#resource-types-in-krita" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Main Resource Types</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="resource_management/paintoppresets.html">Brush Preset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="resource_management/resource_brushtips.html">Brushes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="resource_management/resource_gradients.html">Gradients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="resource_management/resource_patterns.html">Patterns</a></li>
+<li class="toctree-l1"><a class="reference internal" href="resource_management/resource_workspace.html">Workspaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="resource_management/seexpr_scripts.html">SeExpr Scripts</a></li>
+</ul>
+</div>
+<section id="other-resource-types">
+<h3>Other Resource Types<a class="headerlink" href="#other-resource-types" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference internal" href="dockers/gamut_mask_docker.html#gamut-mask-docker"><span class="std std-ref">Gamut Masks Docker</span></a></p></li>
+<li><p><a class="reference internal" href="layers_and_masks/layer_styles.html#layer-style"><span class="std std-ref">Layer Styles</span></a></p></li>
+<li><p><a class="reference internal" href="dockers/task_sets.html#task-sets-docker"><span class="std std-ref">Task Sets Docker</span></a></p></li>
+<li><p><a class="reference internal" href="dockers/vector_library.html#vector-library-docker"><span class="std std-ref">Vector Library</span></a></p></li>
+<li><p><a class="reference internal" href="dockers/palette_docker.html#palette-docker"><span class="std std-ref">Palette Docker</span></a></p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="resource_management/paintoppresets.html" class="btn btn-neutral float-right" title="Brush Preset" accesskey="n" rel="next"> <!-- Next --> <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="render_animation.html" class="btn btn-neutral" title="Render Animation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- Previous  -->  </a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright licensed under the GNU Free Documentation License 1.3+ unless stated otherwise.
+      
+        <span class="commit">
+          Revision <code>7c271ce</code>.
+        </span>
+      
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a modified <a href="https://github.com/rtfd/sphinx_rtd_theme">RTD theme</a>.<br/>
+  <a href="https://krita.org" title="Krita official website.">Krita official website</a> |
+  <a href="https://invent.kde.org/documentation/docs-krita-org/" title="The Gitlab instance to edit this pages and collaborate.">Git repository for docs.krita.org </a> |
+  <a href="https://www.kde.org/community/whatiskde/impressum-en.php" title="To know more about KDE, code of conduct, privacy policy and GDPR.">KDE Impressum</a>.
+   
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'5.0.0 Beta',
+            LANGUAGE:'en',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/documentation_options.js"></script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
+      });
+  </script> 
+
+ <script type="text/javascript">
+	 var _paq=_paq||[];
+	 _paq.push(['setCookieDomain','*.krita.org']);
+	 _paq.push(['setDomains','*.krita.org']);
+	 _paq.push(['setDocumentTitle',document.domain+"/"+document.title]);
+	 _paq.push(['trackPageView']);
+	 _paq.push(['enableLinkTracking']);
+
+	 (function(){
+	 	var u="//stats.kde.org/";
+	    _paq.push(['setTrackerUrl',u+'piwik.php']);
+	    _paq.push(['setSiteId',13]);
+	    var d = document, g = d.createElement('script'),s=d.getElementsByTagName('script')[0];
+	    g.type = 'text/javascript';
+	    g.async = true;
+	    g.defer = true;
+	    g.src = u+'piwik.js';
+	    s.parentNode.insertBefore(g,s);
+	  })();
+</script> 
+<noscript><p><img src="//stats.kde.org/piwik.php?idsite=13" style="border:0;" alt="" /></p></noscript>
+
+</body>
+</html>

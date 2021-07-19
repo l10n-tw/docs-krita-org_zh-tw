@@ -1,0 +1,577 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" name="title" content="Painting with Assistants" />
+  <meta property="og:site-name" content="Krita Manual" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="en" />
+  <meta property="og:locale:alternate" content="ca" />
+  
+  <meta property="og:locale:alternate" content="fr" />
+  <meta property="og:locale:alternate" content="it" />
+  <meta property="og:locale:alternate" content="ja" />
+  <meta property="og:locale:alternate" content="ko" />
+  <meta property="og:locale:alternate" content="nl" />
+  <meta property="og:locale:alternate" content="pl" />
+  <meta property="og:locale:alternate" content="pt_PT" />
+  <meta property="og:locale:alternate" content="uk_UA" />
+  <meta property="og:locale:alternate" content="zh_CN" />
+  <meta property="og:article:modified_time" content="2021-07-19T15:33:59" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<meta content="How to use the painting assistants in Krita to draw perspectives." name="description" property="og:description" />
+
+  
+  
+  <title>Painting with Assistants &mdash; Krita Manual 5.0.0 Beta documentation</title>
+  
+
+  
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    
+  
+  
+  
+    <link rel="canonical" href="en/user_manual/painting_with_assistants.html"/>
+    <meta property="og:url" content="en/user_manual/painting_with_assistants.html" />
+    <meta property="og:image" content="en/_static/sidebar-logo.png" />
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Working with Images" href="working_with_images.html" />
+    <link rel="prev" title="Mirror Tools" href="mirror_tools.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+       
+           <a href="../index.html" class="icon icon-home">
+
+			<img src="../_static/sidebar-logo.png" class="logo" alt="Logo"/>
+           	
+           <!--	Krita Manual -->
+
+
+          </a>
+
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-side-nav-language-selector">
+        	<p class="caption-text">
+	        	<select id="language-selector-container">
+	        		<option value="ca">Català</option>
+	        		<option value="en">English</option>
+	        		<option value="fr">français</option>
+	        		<option value="it">Italiano</option>
+	        		<option value="ja">日本語</option>
+	        		<option value="ko">한국어</option>
+	        		<option value="nl">Nederlands</option>
+	        		<option value="pl">Polski</option>
+	        		<option value="pt_PT">português</option>
+	        		<option value="uk_UA">Українська</option>
+	        		<option value="zh_CN">简体中文</option>
+	        	</select>
+        	</p>
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../user_manual.html">User Manual</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction_from_other_software.html">Introduction Coming From Other Software</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drawing_tablets.html">Drawing Tablets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loading_saving_brushes.html">Loading and Saving Brushes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oncanvas_brush_editor.html">On-Canvas Brush Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mirror_tools.html">Mirror Tools</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Painting with Assistants</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#types">Types</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#ellipse">Ellipse</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#perspective">Perspective</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ruler">Ruler</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#spline">Spline</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#vanishing-point">Vanishing Point</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fish-eye-point">Fish Eye Point</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#point-perspective">2 Point Perspective</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#setting-up-krita-for-technical-drawing-like-perspectives">Setting up Krita for technical drawing-like perspectives</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#orthographic">Orthographic</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#axonometric">Axonometric</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#linear-perspective">Linear Perspective</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#logic-of-the-vanishing-point">Logic of the vanishing point</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fish-eye-perspective">Fish Eye perspective</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="working_with_images.html">Working with Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="autosave.html">Saving, AutoSave and Backup Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templates.html">Templates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="layers_and_masks.html">Introduction to Layers and Masks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="selections.html">Selections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python_scripting.html">Python Scripting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tag_management.html">Tag Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="soft_proofing.html">Soft Proofing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vector_graphics.html">Vector Graphics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="snapping.html">Snapping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="animation.html">Animation with Krita</a></li>
+<li class="toctree-l2"><a class="reference internal" href="japanese_animation_template.html">Japanese Animation Template</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gamut_masks.html">Gamut Masks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../general_concepts.html">General Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference_manual.html">Reference Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials.html">Tutorials and How-tos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../KritaFAQ.html">Krita FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributors_manual.html">Contributors Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../resources_page.html">Resources</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+	<!-- start top banner area (for fundraisers or messages)
+
+	<div style="text-align: center; background-color: #333">
+		<a href="https://krita.org/en/fundraising-2018-campaign/" target="_self" onclick="ga('send', 'event', 'frontpage', 'button', 'Fundraiser 2018');">
+			<img src="https://krita.org/wp-content/themes/krita-org-theme/images/decoration/2018-fundraiser-banner.png" style="max-width: 100%">
+		</a>
+	</div>
+	
+	 end top banner area -->
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Krita Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../user_manual.html">User Manual</a> &raquo;</li>
+        
+      <li>Painting with Assistants</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+          
+            <a href="../_sources/user_manual/painting_with_assistants.rst.txt" rel="nofollow"> 
+             
+              <img src="../_static/images/source-code.png" />
+             <!-- View page source -->
+
+          </a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="painting-with-assistants">
+<span id="index-0"></span><span id="id1"></span><h1>Painting with Assistants<a class="headerlink" href="#painting-with-assistants" title="Permalink to this headline">¶</a></h1>
+<p>The assistant system allows you to have a little help while drawing
+straight lines or circles.</p>
+<p>They can function as a preview shape, or you can snap onto them with the
+freehand brush tool. In the tool options of free hand brush, you can
+toggle <span class="guilabel">Snap to Assistants</span> to turn on snapping.</p>
+<figure class="align-default" id="id2">
+<a class="reference internal image-reference" href="../_images/Krita_basic_assistants.png"><img alt="Krita's vanishing point assistants in action." src="../_images/Krita_basic_assistants.png" style="width: 800px;" /></a>
+<figcaption>
+<p><span class="caption-text">Krita’s vanishing point assistants in action.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>The following assistants are available in Krita:</p>
+<section id="types">
+<h2>Types<a class="headerlink" href="#types" title="Permalink to this headline">¶</a></h2>
+<p>There are several types in Krita. You can select a type of assistant via
+the tool options docker.</p>
+<section id="ellipse">
+<span id="assistant-ellipse"></span><h3>Ellipse<a class="headerlink" href="#ellipse" title="Permalink to this headline">¶</a></h3>
+<p>An assistant for drawing ellipses and circles.</p>
+<p>This assistant consists of three points: the first two are the axis of
+the ellipse, and the last one is to determine its width.</p>
+<dl class="simple">
+<dt>Concentric Ellipse</dt><dd><p>The same an ellipse, but allows for making ellipses that are
+concentric to each other.</p>
+</dd>
+</dl>
+<p>If you press the <kbd class="kbd docutils literal notranslate">Shift</kbd> key while holding the first two handles, they will snap
+to perfectly horizontal or vertical lines. Press the <kbd class="kbd docutils literal notranslate">Shift</kbd> key while holding the
+third handle, and it’ll snap to a perfect circle.</p>
+</section>
+<section id="perspective">
+<span id="assistant-perspective"></span><h3>Perspective<a class="headerlink" href="#perspective" title="Permalink to this headline">¶</a></h3>
+<p>This ruler allows you to draw and manipulate grids on the canvas that can serve as perspective guides for your painting. A grid can be added to your canvas by first clicking the tool in the toolbar and then clicking four points on the canvas which will serve as the four corners of your grid.</p>
+<img alt="../_images/Perspectivegrid.png" src="../_images/Perspectivegrid.png" />
+<p>This grid can be used with the ‘perspective’ sensor, which can influence
+brushes.</p>
+<p>The grid can be manipulated by pulling on any of its four corners. The grid can be extended by clicking and dragging a midpoint of one of its edges. This will allow you to expand the grid at other angles. This process can be repeated on any subsequent grid or grid section. If you press the <kbd class="kbd docutils literal notranslate">Shift</kbd> key while holding any of the corner handles, they’ll snap
+to one of the other corner handles, in sets. You can delete any grid by clicking on the cancel button at its center. This tool can be used to build reference for complex scenes.</p>
+</section>
+<section id="ruler">
+<span id="assistant-ruler"></span><h3>Ruler<a class="headerlink" href="#ruler" title="Permalink to this headline">¶</a></h3>
+<p>There are three assistants in this group:</p>
+<dl class="simple">
+<dt>Ruler</dt><dd><p>Helps create a straight line between two points.</p>
+</dd>
+<dt>Infinite Ruler</dt><dd><p>Extrapolates a straight line beyond the two visible points on the
+canvas.</p>
+</dd>
+<dt>Parallel Ruler</dt><dd><p>This ruler allows you to draw a line parallel to the line between
+the two points anywhere on the canvas.</p>
+</dd>
+</dl>
+<p>If you press the <kbd class="kbd docutils literal notranslate">Shift</kbd> key while holding the first two handles, they will snap
+to perfectly horizontal or vertical lines.</p>
+</section>
+<section id="spline">
+<span id="assistant-spline"></span><h3>Spline<a class="headerlink" href="#spline" title="Permalink to this headline">¶</a></h3>
+<p>This assistant allows you to position and adjust four points to create a
+cubic bezier curve. You can then draw along the curve, snapping your
+brush stroke directly to the curve line. Perfect curves every time!</p>
+<p>If you press the <kbd class="kbd docutils literal notranslate">Shift</kbd> key while holding the first two handles, they will snap
+to perfectly horizontal or vertical lines. Press the <kbd class="kbd docutils literal notranslate">Shift</kbd> key while holding the
+third or fourth handle, they will snap relative to the handle they are
+attached to.</p>
+</section>
+<section id="vanishing-point">
+<span id="assistant-vanishing-point"></span><h3>Vanishing Point<a class="headerlink" href="#vanishing-point" title="Permalink to this headline">¶</a></h3>
+<p>This assistant allows you to create a vanishing point, typically used
+for a horizon line. A preview line is drawn and all your snapped lines are drawn to this line.</p>
+<p>It is one point, with four helper points to align it to previously
+created perspective lines.</p>
+<p>They are made and manipulated with the <a class="reference internal" href="../reference_manual/tools/assistant.html#assistant-tool"><span class="std std-ref">Assistant Tool</span></a>.</p>
+<p>If you press the <kbd class="kbd docutils literal notranslate">Shift</kbd> key while holding the center handle, they will snap to
+perfectly horizontal or vertical lines depending on the position of
+where it previously was.</p>
+<div class="versionchanged">
+<p><span class="versionmodified changed">Changed in version 4.1: </span>The vanishing point assistant also shows several general lines.</p>
+<p>When you’ve just created, or when you’ve just moved a vanishing point assistant, it will be selected. This means you can modify the amount of lines shown in the tool options of the <a class="reference internal" href="../reference_manual/tools/assistant.html#assistant-tool"><span class="std std-ref">Assistant Tool</span></a>.</p>
+</div>
+</section>
+<section id="fish-eye-point">
+<span id="assistant-fish-eye"></span><h3>Fish Eye Point<a class="headerlink" href="#fish-eye-point" title="Permalink to this headline">¶</a></h3>
+<p>Like the vanishing point assistant, this assistant is per a set of
+parallel lines in a 3d space. So to use it effectively, use two, where
+the second is at a 90 degrees angle of the first, and add a vanishing
+point to the center of both. Or combine one with a parallel ruler and a
+vanishing point, or even one with two vanishing points. The
+possibilities are quite large.</p>
+<p>This assistant will not just give feedback/snapping between the
+vanishing points, but also give feedback to the relative left and right
+of the assistant. This is so you can use it in edge-cases like panoramas
+with relative ease.</p>
+<p>If you press the <kbd class="kbd docutils literal notranslate">Shift</kbd> key while holding the first two handles, they will snap
+to perfectly horizontal or vertical lines. Press the <kbd class="kbd docutils literal notranslate">Shift</kbd> key while holding the
+third handle, and it’ll snap to a perfect circle.</p>
+</section>
+<section id="point-perspective">
+<span id="assistant-2-point"></span><h3>2 Point Perspective<a class="headerlink" href="#point-perspective" title="Permalink to this headline">¶</a></h3>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 5.0.</span></p>
+</div>
+<p>This assistant simplifies the setup of a two point perspective by putting the two vanishing points and the parallel vertical ruler into one signle assistant. This allows it to draw a grid of squares. It requires 3 points at minimum: 2 for perspective, and the final for the mid-point of the vanishing points, which controls how the grid is drawn.</p>
+<dl class="simple">
+<dt>Density</dt><dd><p>An extra option in the tool options, this controls how dense the grid is.</p>
+</dd>
+<dt>Enable Vertical Ruler</dt><dd><p>This allows you to disable the vertical ruler, so that the assistant is only two vanishing points and a grid.</p>
+</dd>
+</dl>
+<figure class="align-default" id="id3">
+<img alt="../_images/Assistants_2_pointperspective_03.png" src="../_images/Assistants_2_pointperspective_03.png" />
+<figcaption>
+<p><span class="caption-text">In the above image, a two point perspective with an area limiter is enough to draw an indoor area. The assistant is colored blue here.</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<section id="tutorials">
+<h4>Tutorials<a class="headerlink" href="#tutorials" title="Permalink to this headline">¶</a></h4>
+<p>Check out this in depth discussion and tutorial on
+<a class="reference external" href="https://www.youtube.com/watch?v=OhEv2pw3EuI">https://www.youtube.com/watch?v=OhEv2pw3EuI</a></p>
+</section>
+</section>
+</section>
+<section id="setting-up-krita-for-technical-drawing-like-perspectives">
+<span id="index-1"></span><h2>Setting up Krita for technical drawing-like perspectives<a class="headerlink" href="#setting-up-krita-for-technical-drawing-like-perspectives" title="Permalink to this headline">¶</a></h2>
+<p>So now that you’ve seen the wide range of drawing assistants that Krita
+offers, here is an example of how using these assistants you can set up
+Krita for technical drawing.</p>
+<p>This tutorial below should give you an idea of how to set up the
+assistants for specific types of technical views.</p>
+<p>If you want to instead do the true projection, check out <a class="reference internal" href="../general_concepts/projection.html#cat-projection"><span class="std std-ref">the projection category</span></a>.</p>
+<section id="orthographic">
+<h3>Orthographic<a class="headerlink" href="#orthographic" title="Permalink to this headline">¶</a></h3>
+<p>Orthographic is a mode where you try to look at something from the left
+or the front. Typically, you try to keep everything in exact scale with
+each other, unlike perspective deformation.</p>
+<p>The key assistant you want to use here is the Parallel
+Ruler. You can set these up horizontally or vertically, so
+you always have access to a Grid.</p>
+</section>
+<section id="axonometric">
+<h3>Axonometric<a class="headerlink" href="#axonometric" title="Permalink to this headline">¶</a></h3>
+<p>All of these are set up using three Parallel Rulers.</p>
+<img alt="../_images/Assistants_oblique.png" src="../_images/Assistants_oblique.png" />
+<dl class="simple">
+<dt>Oblique</dt><dd><p>For oblique, set two parallel rulers to horizontal and vertical, and
+one to an angle, representing depth.</p>
+</dd>
+</dl>
+<img alt="../_images/Assistants_dimetric.png" src="../_images/Assistants_dimetric.png" />
+<dl class="simple">
+<dt>Dimetric &amp; Isometric</dt><dd><p>Isometric perspective has technically all three rulers set up at
+120° from each other. Except when it’s game isometric, then it’s a
+type of dimetric projection where the diagonal values are a 116.565°
+from the main. The latter can be easily set up by snapping the
+assistants to a grid.</p>
+</dd>
+</dl>
+<img alt="../_images/Assistants_trimetric.png" src="../_images/Assistants_trimetric.png" />
+<dl class="simple">
+<dt>Trimetric</dt><dd><p>Is when all the angles are slightly different. Often looks like a
+slightly angled isometric.</p>
+</dd>
+</dl>
+</section>
+<section id="linear-perspective">
+<h3>Linear Perspective<a class="headerlink" href="#linear-perspective" title="Permalink to this headline">¶</a></h3>
+<img alt="../_images/Assistants_1_point_perspective.png" src="../_images/Assistants_1_point_perspective.png" />
+<dl class="simple">
+<dt>1 Point Perspective</dt><dd><p>A 1 point perspective is set up using 1 vanishing point, and two
+crossing perpendicular parallel rulers.</p>
+</dd>
+</dl>
+<img alt="../_images/Assistants_2_point_perspective.png" src="../_images/Assistants_2_point_perspective.png" />
+<dl class="simple">
+<dt>2 Point Perspective</dt><dd><p>A 2 point perspective is set up using 2 vanishing point and 1 vertical parallel ruler. Often, putting the vanishing points outside the frame a little can decrease the strength of it. You can also use a <a class="reference internal" href="#assistant-2-point"><span class="std std-ref">2 Point Perspective</span></a> Ruler to set this one up very quickly.</p>
+</dd>
+</dl>
+<img alt="../_images/Assistants_2_pointperspective_02.png" src="../_images/Assistants_2_pointperspective_02.png" />
+<img alt="../_images/Assistants_3_point_perspective.png" src="../_images/Assistants_3_point_perspective.png" />
+<dl class="simple">
+<dt>3 Point Perspective</dt><dd><p>A 3 point perspective is set up using 3 vanishing point rulers.</p>
+</dd>
+</dl>
+</section>
+<section id="logic-of-the-vanishing-point">
+<h3>Logic of the vanishing point<a class="headerlink" href="#logic-of-the-vanishing-point" title="Permalink to this headline">¶</a></h3>
+<p>There’s a little secret that perspective tutorials don’t always tell you, and that’s that a vanishing point is the point where any two parallel lines meet. This means that a 1 point perspective and 2 point perspective are virtually the same.</p>
+<p>We can prove this via a little experiment. That good old problem: drawing a rail-road.</p>
+<img alt="../_images/Assistants_vanishing_point_logic_01.png" src="../_images/Assistants_vanishing_point_logic_01.png" />
+<p>You are probably familiar
+with the problem: How to determine where the next beam is going to be, as perspective projection will make them look closer together.</p>
+<p>Typically, the solution is to draw a line in the middle and then draw lines diagonally across. After all, those lines are parallel, meaning that the exact same distance is used.</p>
+<img alt="../_images/Assistants_vanishing_point_logic_02.png" src="../_images/Assistants_vanishing_point_logic_02.png" />
+<p>But because they are parallel, we can use a vanishing point assistant instead, and we use the alignment handles to align it to the diagonal of the beam, and to the
+horizontal (here marked with red).</p>
+<p>That diagonal can then in turn be used to determine the position of the
+beams:</p>
+<img alt="../_images/Assistants_vanishing_point_logic_03.png" src="../_images/Assistants_vanishing_point_logic_03.png" />
+<p>Because any given set of lines has a vanishing point (outside the ones flat on the view-plane), there can be an infinite amount of vanishing points in a linear perspective. Therefore, Krita allows you to set vanishing points yourself instead of forcing you to only use a few.</p>
+</section>
+<section id="fish-eye-perspective">
+<h3>Fish Eye perspective<a class="headerlink" href="#fish-eye-perspective" title="Permalink to this headline">¶</a></h3>
+<p>Fish eye perspective works much the same as the linear perspective, the
+big difference being that in a fish-eye perspective, any parallel set of
+lines has two vanishing points, each for one side.</p>
+<p>So, to set them up, the easiest way is one horizontal, one vertical, on
+the same spot, and one vanishing point assistant in the middle.</p>
+<img alt="../_images/Fish-eye.gif" src="../_images/Fish-eye.gif" />
+<p>But, you can also make one horizontal one that is just as big as the
+other horizontal one, and put it halfway:</p>
+<img alt="../_images/Assistants_fish-eye_2_02.png" src="../_images/Assistants_fish-eye_2_02.png" />
+</section>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="working_with_images.html" class="btn btn-neutral float-right" title="Working with Images" accesskey="n" rel="next"> <!-- Next --> <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="mirror_tools.html" class="btn btn-neutral" title="Mirror Tools" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- Previous  -->  </a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright licensed under the GNU Free Documentation License 1.3+ unless stated otherwise.
+      
+        <span class="commit">
+          Revision <code>7c271ce</code>.
+        </span>
+      
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a modified <a href="https://github.com/rtfd/sphinx_rtd_theme">RTD theme</a>.<br/>
+  <a href="https://krita.org" title="Krita official website.">Krita official website</a> |
+  <a href="https://invent.kde.org/documentation/docs-krita-org/" title="The Gitlab instance to edit this pages and collaborate.">Git repository for docs.krita.org </a> |
+  <a href="https://www.kde.org/community/whatiskde/impressum-en.php" title="To know more about KDE, code of conduct, privacy policy and GDPR.">KDE Impressum</a>.
+   
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'5.0.0 Beta',
+            LANGUAGE:'en',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/documentation_options.js"></script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
+      });
+  </script> 
+
+ <script type="text/javascript">
+	 var _paq=_paq||[];
+	 _paq.push(['setCookieDomain','*.krita.org']);
+	 _paq.push(['setDomains','*.krita.org']);
+	 _paq.push(['setDocumentTitle',document.domain+"/"+document.title]);
+	 _paq.push(['trackPageView']);
+	 _paq.push(['enableLinkTracking']);
+
+	 (function(){
+	 	var u="//stats.kde.org/";
+	    _paq.push(['setTrackerUrl',u+'piwik.php']);
+	    _paq.push(['setSiteId',13]);
+	    var d = document, g = d.createElement('script'),s=d.getElementsByTagName('script')[0];
+	    g.type = 'text/javascript';
+	    g.async = true;
+	    g.defer = true;
+	    g.src = u+'piwik.js';
+	    s.parentNode.insertBefore(g,s);
+	  })();
+</script> 
+<noscript><p><img src="//stats.kde.org/piwik.php?idsite=13" style="border:0;" alt="" /></p></noscript>
+
+</body>
+</html>

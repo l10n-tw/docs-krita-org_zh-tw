@@ -1,0 +1,380 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" name="title" content="Gradient Map Brush Tips" />
+  <meta property="og:site-name" content="Krita Manual" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="en" />
+  <meta property="og:locale:alternate" content="ca" />
+  
+  <meta property="og:locale:alternate" content="fr" />
+  <meta property="og:locale:alternate" content="it" />
+  <meta property="og:locale:alternate" content="ja" />
+  <meta property="og:locale:alternate" content="ko" />
+  <meta property="og:locale:alternate" content="nl" />
+  <meta property="og:locale:alternate" content="pl" />
+  <meta property="og:locale:alternate" content="pt_PT" />
+  <meta property="og:locale:alternate" content="uk_UA" />
+  <meta property="og:locale:alternate" content="zh_CN" />
+  <meta property="og:article:modified_time" content="2021-07-19T15:33:59" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<meta content="How to use gradient map brush tips for loading multiple colors onto a brush." name="description" property="og:description" />
+
+  
+  
+  <title>Gradient Map Brush Tips &mdash; Krita Manual 5.0.0 Beta documentation</title>
+  
+
+  
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    
+  
+  
+  
+    <link rel="canonical" href="en/tutorials/krita-brush-tips/gradient_map_brush_tip.html"/>
+    <meta property="og:url" content="en/tutorials/krita-brush-tips/gradient_map_brush_tip.html" />
+    <meta property="og:image" content="en/_static/sidebar-logo.png" />
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Brush-tips:Hair" href="hair.html" />
+    <link rel="prev" title="Painting fur" href="fur.html" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+       
+           <a href="../../index.html" class="icon icon-home">
+
+			<img src="../../_static/sidebar-logo.png" class="logo" alt="Logo"/>
+           	
+           <!--	Krita Manual -->
+
+
+          </a>
+
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-side-nav-language-selector">
+        	<p class="caption-text">
+	        	<select id="language-selector-container">
+	        		<option value="ca">Català</option>
+	        		<option value="en">English</option>
+	        		<option value="fr">français</option>
+	        		<option value="it">Italiano</option>
+	        		<option value="ja">日本語</option>
+	        		<option value="ko">한국어</option>
+	        		<option value="nl">Nederlands</option>
+	        		<option value="pl">Polski</option>
+	        		<option value="pt_PT">português</option>
+	        		<option value="uk_UA">Українська</option>
+	        		<option value="zh_CN">简体中文</option>
+	        	</select>
+        	</p>
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../user_manual.html">User Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../general_concepts.html">General Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference_manual.html">Reference Manual</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../tutorials.html">Tutorials and How-tos</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../clipping_masks_and_alpha_inheritance.html">Clipping Masks and Alpha Inheritance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common_workflows.html">Common Workflows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../eye_tracker.html">An Example Setup for Using Krita with an Eye Tracker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../flat-coloring.html">Flat Coloring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../inking.html">Inking</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../krita-brush-tips.html">Krita Brush Tips</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="animated_brushes.html">Animated Brushes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bokeh-brush.html">Brush Tips: Bokeh</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bristle_from_heightmap_brush_tip.html">Heightmap Bristle Brush Tips</a></li>
+<li class="toctree-l3"><a class="reference internal" href="caustics.html">Brush Tips: Caustics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fur.html">Painting fur</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Gradient Map Brush Tips</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hair.html">Brush-tips:Hair</a></li>
+<li class="toctree-l3"><a class="reference internal" href="outline.html">Brush-tips:Outline</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rainbow-brush.html">Brush-tips:Rainbow Brush</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sculpt-paint-brush.html">Brush-tips:Sculpt-paint-brush</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../making_an_azalea_with_the_transformation_masks.html">Making An Azalea With The Transformation Masks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../saving-for-the-web.html">Saving For The Web</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../seexpr.html">Introduction to SeExpr</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../KritaFAQ.html">Krita FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributors_manual.html">Contributors Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../resources_page.html">Resources</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+	<!-- start top banner area (for fundraisers or messages)
+
+	<div style="text-align: center; background-color: #333">
+		<a href="https://krita.org/en/fundraising-2018-campaign/" target="_self" onclick="ga('send', 'event', 'frontpage', 'button', 'Fundraiser 2018');">
+			<img src="https://krita.org/wp-content/themes/krita-org-theme/images/decoration/2018-fundraiser-banner.png" style="max-width: 100%">
+		</a>
+	</div>
+	
+	 end top banner area -->
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Krita Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../tutorials.html">Tutorials and How-tos</a> &raquo;</li>
+        
+          <li><a href="../krita-brush-tips.html">Krita Brush Tips</a> &raquo;</li>
+        
+      <li>Gradient Map Brush Tips</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+          
+            <a href="../../_sources/tutorials/krita-brush-tips/gradient_map_brush_tip.rst.txt" rel="nofollow"> 
+             
+              <img src="../../_static/images/source-code.png" />
+             <!-- View page source -->
+
+          </a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="gradient-map-brush-tips">
+<span id="gradient-brush-tips"></span><span id="index-0"></span><h1>Gradient Map Brush Tips<a class="headerlink" href="#gradient-map-brush-tips" title="Permalink to this headline">¶</a></h1>
+<p>Used in Rosemåling and single-stroke flower paintings, the technique of loading two separate colors can be emulated in Krita with <a class="reference internal" href="../../reference_manual/brushes/brush_settings/brush_tips.html#predefined-brush-tip"><span class="std std-ref">gradient-mapped brush tips</span></a>.</p>
+<p>Gradient mapped tips work much in the same way as the gradient map filter does: The grey-values of each pixel in the brush is mapped to the gradient color. As gradients can have some of their colors be assigned to be the fore or background color, you can effectively make dual-loaded brush tips this way.</p>
+<figure class="align-default" id="id1">
+<a class="reference internal image-reference" href="../../_images/gradient_map_example.svg"><img alt="Graphic demonstrating how gradients map to grayscale values." src="../../_images/gradient_map_example.svg" width="800" /></a>
+<figcaption>
+<p><span class="caption-text">If we imagine a continuous color gradient mapping to a grayscale gradient, we can imagine how grayscale colors can be transformed to the colors of the gradient. This is called gradient mapping, because you are mapping a grayscale to a gradient.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>Making such a tip is actually quite easy:</p>
+<ol class="arabic simple">
+<li><p>Make a tip that’s black on one side and white on the other</p></li>
+<li><p><span class="menuselection">Select ‣ Select All</span></p></li>
+<li><p><span class="menuselection">Edit ‣ Copy Merged</span></p></li>
+<li><p><kbd class="kbd docutils literal notranslate">f5</kbd> to call up the brush settings. There, go to the <span class="menuselection">Brush tip ‣ Predefined</span> tab, and select <span class="guilabel">Clipboard</span>.</p></li>
+<li><p>In the popup, give it any name you want, and then make sure to <strong>untick</strong> <span class="guilabel">Create Mask From Color</span> (as that would make the lighter colors transparent). Press ok.</p></li>
+<li><p>Then select the new brush tip. Set <span class="guilabel">Brush mode</span> to <span class="guilabel">Gradient Map</span>, and adjust other brush settings like <span class="guilabel">Spacing</span>.</p></li>
+<li><p>Draw with you brush. Switching the active gradient in the toolbar allows you to use different colors. The <span class="guilabel">Fore to Background</span> gradient is especially useful here, as it always uses the currently selected fore and background color.</p></li>
+</ol>
+<figure class="align-default" id="id2">
+<img alt="A selection of different brush tips and their gradient map results." src="../../_images/gradient_map_tips.png" />
+<figcaption>
+<p><span class="caption-text">Different brush tips lead to different kinds of strokes. The last stroke in the above examples was done using the <span class="guilabel">Lightness Map</span> brush mode, which only uses the current foreground color.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>With <span class="guilabel">Rotation</span> to mapped to <span class="guilabel">Drawing angle</span>, you can easily create effects like Rosemåling, while you’ll need a tilt-enabled tablet for single stroke brushes.</p>
+<figure class="align-default">
+<img alt="An example of Rosemåling, the drawing of curly decorative plant motives with gradiated strokes using the gradient map tips." src="../../_images/gradient_map_brush_tip_rosemaling.png" />
+</figure>
+<figure class="align-default">
+<img alt="Example showing both gradient map on the brush tip and on the pattern." src="../../_images/gradient_map_brush_tip_flowers_patterned.png" />
+</figure>
+<p>The texture option also has the ability to map it’s greys to a texture. Combining both these gradient map functions together with the strength parameter to switch between either, and you can make cool results like the above.</p>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="hair.html" class="btn btn-neutral float-right" title="Brush-tips:Hair" accesskey="n" rel="next"> <!-- Next --> <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="fur.html" class="btn btn-neutral" title="Painting fur" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- Previous  -->  </a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright licensed under the GNU Free Documentation License 1.3+ unless stated otherwise.
+      
+        <span class="commit">
+          Revision <code>7c271ce</code>.
+        </span>
+      
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a modified <a href="https://github.com/rtfd/sphinx_rtd_theme">RTD theme</a>.<br/>
+  <a href="https://krita.org" title="Krita official website.">Krita official website</a> |
+  <a href="https://invent.kde.org/documentation/docs-krita-org/" title="The Gitlab instance to edit this pages and collaborate.">Git repository for docs.krita.org </a> |
+  <a href="https://www.kde.org/community/whatiskde/impressum-en.php" title="To know more about KDE, code of conduct, privacy policy and GDPR.">KDE Impressum</a>.
+   
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'5.0.0 Beta',
+            LANGUAGE:'en',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/documentation_options.js"></script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
+      });
+  </script> 
+
+ <script type="text/javascript">
+	 var _paq=_paq||[];
+	 _paq.push(['setCookieDomain','*.krita.org']);
+	 _paq.push(['setDomains','*.krita.org']);
+	 _paq.push(['setDocumentTitle',document.domain+"/"+document.title]);
+	 _paq.push(['trackPageView']);
+	 _paq.push(['enableLinkTracking']);
+
+	 (function(){
+	 	var u="//stats.kde.org/";
+	    _paq.push(['setTrackerUrl',u+'piwik.php']);
+	    _paq.push(['setSiteId',13]);
+	    var d = document, g = d.createElement('script'),s=d.getElementsByTagName('script')[0];
+	    g.type = 'text/javascript';
+	    g.async = true;
+	    g.defer = true;
+	    g.src = u+'piwik.js';
+	    s.parentNode.insertBefore(g,s);
+	  })();
+</script> 
+<noscript><p><img src="//stats.kde.org/piwik.php?idsite=13" style="border:0;" alt="" /></p></noscript>
+
+</body>
+</html>

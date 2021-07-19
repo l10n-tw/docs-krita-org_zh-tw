@@ -1,0 +1,511 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" name="title" content="Options" />
+  <meta property="og:site-name" content="Krita Manual" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="en" />
+  <meta property="og:locale:alternate" content="ca" />
+  
+  <meta property="og:locale:alternate" content="fr" />
+  <meta property="og:locale:alternate" content="it" />
+  <meta property="og:locale:alternate" content="ja" />
+  <meta property="og:locale:alternate" content="ko" />
+  <meta property="og:locale:alternate" content="nl" />
+  <meta property="og:locale:alternate" content="pl" />
+  <meta property="og:locale:alternate" content="pt_PT" />
+  <meta property="og:locale:alternate" content="uk_UA" />
+  <meta property="og:locale:alternate" content="zh_CN" />
+  <meta property="og:article:modified_time" content="2021-07-19T15:33:59" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<meta content="Krita's Brush Engine options overview." name="description" />
+
+  
+  
+  <title>Options &mdash; Krita Manual 5.0.0 Beta documentation</title>
+  
+
+  
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    
+  
+  
+  
+    <link rel="canonical" href="en/reference_manual/brushes/brush_settings/options.html"/>
+    <meta property="og:url" content="en/reference_manual/brushes/brush_settings/options.html" />
+    <meta property="og:image" content="en/_static/sidebar-logo.png" />
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Sensors" href="tablet_sensors.html" />
+    <link rel="prev" title="Opacity and Flow" href="opacity_and_flow.html" /> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+       
+           <a href="../../../index.html" class="icon icon-home">
+
+			<img src="../../../_static/sidebar-logo.png" class="logo" alt="Logo"/>
+           	
+           <!--	Krita Manual -->
+
+
+          </a>
+
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-side-nav-language-selector">
+        	<p class="caption-text">
+	        	<select id="language-selector-container">
+	        		<option value="ca">Català</option>
+	        		<option value="en">English</option>
+	        		<option value="fr">français</option>
+	        		<option value="it">Italiano</option>
+	        		<option value="ja">日本語</option>
+	        		<option value="ko">한국어</option>
+	        		<option value="nl">Nederlands</option>
+	        		<option value="pl">Polski</option>
+	        		<option value="pt_PT">português</option>
+	        		<option value="uk_UA">Українська</option>
+	        		<option value="zh_CN">简体中文</option>
+	        	</select>
+        	</p>
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../user_manual.html">User Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../general_concepts.html">General Concepts</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../reference_manual.html">Reference Manual</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../audio_for_animation.html">Audio for Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../blending_modes.html">Blending Modes</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../brushes.html">Brushes</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../brush_engines.html">Brush Engines</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../brush_settings.html">Brush Settings</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="brush_tips.html">Brush Tips</a></li>
+<li class="toctree-l4"><a class="reference internal" href="locked_brush_settings.html">Locked Brush Settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="masked_brush.html">Masked Brush</a></li>
+<li class="toctree-l4"><a class="reference internal" href="opacity_and_flow.html">Opacity and Flow</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Options</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tablet_sensors.html">Sensors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="texture.html">Texture</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../clones_array.html">Clones Array</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../create_new_document.html">Create New Document</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../default_python_plugins.html">Pre-installed Python plugins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dockers.html">Dockers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dr_minw_debugger.html">Dr. MinGW Debugger</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../filters.html">Filters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../hdr_display.html">HDR Display</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../image_split.html">Image Split</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../import_animation.html">Import Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../instant_preview.html">Instant Preview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../krita_4_preset_bundle.html">Krita 4 Preset Bundle Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../layers_and_masks.html">Layers and Masks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../linux_command_line.html">Linux Command Line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../list_supported_tablets.html">The List of Supported Tablets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../main_menu.html">Main Menu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../maths_input.html">Maths Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../popup-palette.html">Pop-up Palette</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences.html">Preferences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render_animation.html">Render Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../resource_management.html">Resource Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../seexpr.html">SeExpr Quick Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../separate_image.html">Separate Image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../sharing_krita_logs.html">Getting Krita logs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../split_layer.html">Split Layer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../stroke_selection.html">Stroke Selection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools.html">Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../welcome_screen.html">Welcome Screen</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tutorials.html">Tutorials and How-tos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../KritaFAQ.html">Krita FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributors_manual.html">Contributors Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../resources_page.html">Resources</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+	<!-- start top banner area (for fundraisers or messages)
+
+	<div style="text-align: center; background-color: #333">
+		<a href="https://krita.org/en/fundraising-2018-campaign/" target="_self" onclick="ga('send', 'event', 'frontpage', 'button', 'Fundraiser 2018');">
+			<img src="https://krita.org/wp-content/themes/krita-org-theme/images/decoration/2018-fundraiser-banner.png" style="max-width: 100%">
+		</a>
+	</div>
+	
+	 end top banner area -->
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Krita Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../../reference_manual.html">Reference Manual</a> &raquo;</li>
+        
+          <li><a href="../../brushes.html">Brushes</a> &raquo;</li>
+        
+          <li><a href="../brush_settings.html">Brush Settings</a> &raquo;</li>
+        
+      <li>Options</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+          
+            <a href="../../../_sources/reference_manual/brushes/brush_settings/options.rst.txt" rel="nofollow"> 
+             
+              <img src="../../../_static/images/source-code.png" />
+             <!-- View page source -->
+
+          </a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="options">
+<span id="brush-options"></span><h1>Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h1>
+<section id="airbrush">
+<span id="option-airbrush"></span><span id="index-0"></span><h2>Airbrush<a class="headerlink" href="#airbrush" title="Permalink to this headline">¶</a></h2>
+<img alt="../../../_images/Krita_2_9_brushengine_airbrush.png" src="../../../_images/Krita_2_9_brushengine_airbrush.png" />
+<p>If you hold the brush still, but are still pressing down, this will keep adding color onto the canvas. The lower the rate, the quicker the color gets added.</p>
+</section>
+<section id="mirror">
+<span id="option-mirror"></span><span id="index-1"></span><h2>Mirror<a class="headerlink" href="#mirror" title="Permalink to this headline">¶</a></h2>
+<img alt="../../../_images/Krita_Pixel_Brush_Settings_Mirror.png" src="../../../_images/Krita_Pixel_Brush_Settings_Mirror.png" />
+<p>This allows you to mirror the Brush tip with Sensors.</p>
+<dl class="simple">
+<dt>Horizontal</dt><dd><p>Mirrors the mask horizontally.</p>
+</dd>
+<dt>Vertical</dt><dd><p>Mirrors the mask vertically.</p>
+</dd>
+</dl>
+<img alt="../../../_images/Krita_2_9_brushengine_mirror.jpg" src="../../../_images/Krita_2_9_brushengine_mirror.jpg" />
+<p>Some examples of mirroring and using it in combination with <a class="reference internal" href="#option-rotation"><span class="std std-ref">Rotation</span></a>.</p>
+</section>
+<section id="rotation">
+<span id="option-rotation"></span><h2>Rotation<a class="headerlink" href="#rotation" title="Permalink to this headline">¶</a></h2>
+<p>This allows you to affect Angle of your brush tip with Sensors.</p>
+<img alt="../../../_images/Krita_2_9_brushengine_rotation.png" src="../../../_images/Krita_2_9_brushengine_rotation.png" />
+<img alt="../../../_images/Krita_Pixel_Brush_Settings_Rotation.png" src="../../../_images/Krita_Pixel_Brush_Settings_Rotation.png" />
+<p>In the above example, several applications of the parameter.</p>
+<ol class="arabic simple">
+<li><p>Drawing Angle – A common one, usually used in combination with rake-type brushes. Especially effect because it does not rely on tablet-specific sensors. Sometimes, Tilt-Direction or Rotation is used to achieve a similar-more tablet focused effect, where with Tilt the 0° is at 12 o’clock, Drawing angle uses 3 o’clock as 0°.</p></li>
+<li><p>Fuzzy – Also very common, this gives a nice bit of randomness for texture.</p></li>
+<li><p>Distance – With careful editing of the Sensor curve, you can create nice patterns.</p></li>
+<li><p>Fade – This slowly fades the rotation from one into another.</p></li>
+<li><p>Pressure – An interesting one that can create an alternative looking line.</p></li>
+</ol>
+</section>
+<section id="lightness-strength">
+<span id="option-lightness-strength"></span><h2>Lightness Strength<a class="headerlink" href="#lightness-strength" title="Permalink to this headline">¶</a></h2>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 4.4: </span>This allows you to affect the Lightness Strength of your brush tip with Sensors. Only available with brush tips in Lightness Map mode.</p>
+</div>
+<img alt="../../../_images/lightness_strength_demo.png" src="../../../_images/lightness_strength_demo.png" />
+<p>This changes the contrast of the brush tip, so that at 100%, the full effect of the lightness variation is visible in the brush, while at 0% the brush paints without any lightness variation.  This allows a variable impasto effect with lightness brushes, and for variation in texture stamp brushes that use a lightness-enabled brush tip.</p>
+</section>
+<section id="scatter">
+<span id="option-scatter"></span><h2>Scatter<a class="headerlink" href="#scatter" title="Permalink to this headline">¶</a></h2>
+<p>This parameter allows you to set the random placing of a brush-dab. You can affect them with Sensors.</p>
+<dl class="simple">
+<dt>X</dt><dd><p>The scattering on the angle you are drawing from.</p>
+</dd>
+<dt>Y</dt><dd><p>The scattering, perpendicular to the drawing angle (has the most effect).</p>
+</dd>
+</dl>
+<img alt="../../../_images/Krita_2_9_brushengine_scatter.png" src="../../../_images/Krita_2_9_brushengine_scatter.png" />
+</section>
+<section id="sharpness">
+<span id="option-sharpness"></span><h2>Sharpness<a class="headerlink" href="#sharpness" title="Permalink to this headline">¶</a></h2>
+<img alt="../../../_images/Krita_Pixel_Brush_Settings_Sharpness.png" src="../../../_images/Krita_Pixel_Brush_Settings_Sharpness.png" />
+<p>Puts a threshold filter over the brush mask. This can be used for brush like strokes, but it also makes for good pixel art brushes.</p>
+<dl class="simple">
+<dt>Strength</dt><dd><p>Controls the threshold, and can be controlled by the sensors below.</p>
+</dd>
+<dt>Softness</dt><dd><p>Controls the extra non-fully opaque pixels. This adds a little softness to the stroke.</p>
+</dd>
+</dl>
+<div class="versionchanged">
+<p><span class="versionmodified changed">Changed in version 4.2: </span>The sensors now control the threshold instead of the subpixel precision, softness slider was added.</p>
+</div>
+</section>
+<section id="size">
+<span id="option-size"></span><h2>Size<a class="headerlink" href="#size" title="Permalink to this headline">¶</a></h2>
+<img alt="../../../_images/Krita_Pixel_Brush_Settings_Size.png" src="../../../_images/Krita_Pixel_Brush_Settings_Size.png" />
+<p>This parameter is not the diameter itself, but rather the curve for how it’s affected.</p>
+<p>So, if you want to lock the diameter of the brush, lock the Brush tip. Locking the size parameter will only lock this curve. Allowing this curve to be affected by the Sensors can be very useful to get the right kind of brush. For example, if you have trouble drawing fine lines, try to use a concave curve set to pressure. That way you’ll have to press hard for thick lines.</p>
+<img alt="../../../_images/Krita_2_9_brushengine_size_01.png" src="../../../_images/Krita_2_9_brushengine_size_01.png" />
+<p>Also popular is setting the size to the sensor fuzzy or perspective, with the later in combination with a <a class="reference internal" href="../../../user_manual/painting_with_assistants.html#assistant-perspective"><span class="std std-ref">Perspective</span></a>.</p>
+<img alt="../../../_images/Krita_2_9_brushengine_size_02.png" src="../../../_images/Krita_2_9_brushengine_size_02.png" />
+</section>
+<section id="softness">
+<span id="option-softness"></span><h2>Softness<a class="headerlink" href="#softness" title="Permalink to this headline">¶</a></h2>
+<p>This allows you to affect Fade with Sensors.</p>
+<img alt="../../../_images/Krita_2_9_brushengine_softness.png" src="../../../_images/Krita_2_9_brushengine_softness.png" />
+<p>Has a slight brush-decreasing effect, especially noticeable with soft-brush, and is overall more noticeable on large brushes.</p>
+</section>
+<section id="source">
+<span id="option-source"></span><h2>Source<a class="headerlink" href="#source" title="Permalink to this headline">¶</a></h2>
+<p>Picks the source-color for the brush-dab.</p>
+<dl class="simple">
+<dt>Plain Color</dt><dd><p>Current foreground color.</p>
+</dd>
+<dt>Gradient</dt><dd><p>Picks active gradient.</p>
+</dd>
+<dt>Uniform Random</dt><dd><p>Gives a random color to each brush dab.</p>
+</dd>
+<dt>Total Random</dt><dd><p>Random noise pattern is now painted.</p>
+</dd>
+<dt>Pattern</dt><dd><p>Uses active pattern, but alignment is different per stroke.</p>
+</dd>
+<dt>Locked Pattern</dt><dd><p>Locks the pattern to the brushdab.</p>
+</dd>
+</dl>
+</section>
+<section id="mix">
+<span id="option-mix"></span><h2>Mix<a class="headerlink" href="#mix" title="Permalink to this headline">¶</a></h2>
+<p>Allows you to affect the mix of the <a class="reference internal" href="#option-source"><span class="std std-ref">Source</span></a> color with Sensors. It will work with Plain Color and Gradient as source. If Plain Color is selected as source, it will mix between the currently selected foreground and background color. If Gradient is selected, it chooses a point on the gradient to use as painting color according to the sensors selected.</p>
+<img alt="../../../_images/Krita_2_9_brushengine_mix_01.png" src="../../../_images/Krita_2_9_brushengine_mix_01.png" />
+<section id="uses">
+<h3>Uses<a class="headerlink" href="#uses" title="Permalink to this headline">¶</a></h3>
+<img alt="../../../_images/Krita_2_9_brushengine_mix_02.png" src="../../../_images/Krita_2_9_brushengine_mix_02.png" />
+<dl class="simple">
+<dt>Flow map</dt><dd><p>The above example uses a <strong class="program">Krita</strong> painted flowmap in the 3D program <strong class="program">Blender</strong>.
+A brush was set to <span class="menuselection">Source ‣ Gradient</span> and <span class="menuselection">Mix ‣ Drawing angle</span>. The gradient in question contained the 360° for normal map colors. Flow maps are used in several Shaders, such as brushed metal, hair and certain river-shaders.</p>
+</dd>
+</dl>
+</section>
+<section id="gradient">
+<span id="option-gradient"></span><h3>Gradient<a class="headerlink" href="#gradient" title="Permalink to this headline">¶</a></h3>
+<p>Exactly the same as using <span class="menuselection">Source ‣ Gradient</span> with <span class="guilabel">Mix</span>, but only available for the Color Smudge Brush.</p>
+<img alt="../../../_images/Krita-tutorial5-I.6-1.png" src="../../../_images/Krita-tutorial5-I.6-1.png" />
+<p>You can either:</p>
+<ul class="simple">
+<li><p>Leave the default <span class="menuselection">Foreground ‣ Background gradient</span> setting, and just change the foreground and background colors</p></li>
+<li><p>Select a more specific gradient</p></li>
+<li><p>Or make custom gradients.</p></li>
+</ul>
+</section>
+</section>
+<section id="spacing">
+<span id="option-spacing"></span><span id="index-2"></span><h2>Spacing<a class="headerlink" href="#spacing" title="Permalink to this headline">¶</a></h2>
+<img alt="../../../_images/Krita_Pixel_Brush_Settings_Spacing.png" src="../../../_images/Krita_Pixel_Brush_Settings_Spacing.png" />
+<p>This allows you to affect <a class="reference internal" href="brush_tips.html#option-brush-tip"><span class="std std-ref">Brush Tips</span></a> with <a class="reference internal" href="tablet_sensors.html#sensors"><span class="std std-ref">Sensors</span></a>.</p>
+<img alt="../../../_images/Krita_2_9_brushengine_spacing_02.png" src="../../../_images/Krita_2_9_brushengine_spacing_02.png" />
+<dl class="simple">
+<dt>Isotropic spacing</dt><dd><p>Instead of the spacing being related to the ratio of the brush, it will be on diameter only.</p>
+</dd>
+</dl>
+<img alt="../../../_images/Krita_2_9_brushengine_spacing_01.png" src="../../../_images/Krita_2_9_brushengine_spacing_01.png" />
+</section>
+<section id="ratio">
+<span id="option-ratio"></span><span id="index-3"></span><h2>Ratio<a class="headerlink" href="#ratio" title="Permalink to this headline">¶</a></h2>
+<p>Allows you to change the ratio of the brush and bind it to parameters. This also works for predefined brushes.</p>
+<img alt="../../../_images/Krita_3_0_1_Brush_engine_ratio.png" src="../../../_images/Krita_3_0_1_Brush_engine_ratio.png" />
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="tablet_sensors.html" class="btn btn-neutral float-right" title="Sensors" accesskey="n" rel="next"> <!-- Next --> <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="opacity_and_flow.html" class="btn btn-neutral" title="Opacity and Flow" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- Previous  -->  </a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright licensed under the GNU Free Documentation License 1.3+ unless stated otherwise.
+      
+        <span class="commit">
+          Revision <code>7c271ce</code>.
+        </span>
+      
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a modified <a href="https://github.com/rtfd/sphinx_rtd_theme">RTD theme</a>.<br/>
+  <a href="https://krita.org" title="Krita official website.">Krita official website</a> |
+  <a href="https://invent.kde.org/documentation/docs-krita-org/" title="The Gitlab instance to edit this pages and collaborate.">Git repository for docs.krita.org </a> |
+  <a href="https://www.kde.org/community/whatiskde/impressum-en.php" title="To know more about KDE, code of conduct, privacy policy and GDPR.">KDE Impressum</a>.
+   
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'5.0.0 Beta',
+            LANGUAGE:'en',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/documentation_options.js"></script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
+      });
+  </script> 
+
+ <script type="text/javascript">
+	 var _paq=_paq||[];
+	 _paq.push(['setCookieDomain','*.krita.org']);
+	 _paq.push(['setDomains','*.krita.org']);
+	 _paq.push(['setDocumentTitle',document.domain+"/"+document.title]);
+	 _paq.push(['trackPageView']);
+	 _paq.push(['enableLinkTracking']);
+
+	 (function(){
+	 	var u="//stats.kde.org/";
+	    _paq.push(['setTrackerUrl',u+'piwik.php']);
+	    _paq.push(['setSiteId',13]);
+	    var d = document, g = d.createElement('script'),s=d.getElementsByTagName('script')[0];
+	    g.type = 'text/javascript';
+	    g.async = true;
+	    g.defer = true;
+	    g.src = u+'piwik.js';
+	    s.parentNode.insertBefore(g,s);
+	  })();
+</script> 
+<noscript><p><img src="//stats.kde.org/piwik.php?idsite=13" style="border:0;" alt="" /></p></noscript>
+
+</body>
+</html>

@@ -1,0 +1,731 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" name="title" content="Color Smudge Brush Engine" />
+  <meta property="og:site-name" content="Krita Manual" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="en" />
+  <meta property="og:locale:alternate" content="ca" />
+  
+  <meta property="og:locale:alternate" content="fr" />
+  <meta property="og:locale:alternate" content="it" />
+  <meta property="og:locale:alternate" content="ja" />
+  <meta property="og:locale:alternate" content="ko" />
+  <meta property="og:locale:alternate" content="nl" />
+  <meta property="og:locale:alternate" content="pl" />
+  <meta property="og:locale:alternate" content="pt_PT" />
+  <meta property="og:locale:alternate" content="uk_UA" />
+  <meta property="og:locale:alternate" content="zh_CN" />
+  <meta property="og:article:modified_time" content="2021-07-19T15:33:59" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<meta content="The Color Smudge Brush Engine manual page." name="description" property="og:description" />
+
+  
+  
+  <title>Color Smudge Brush Engine &mdash; Krita Manual 5.0.0 Beta documentation</title>
+  
+
+  
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    
+  
+  
+  
+    <link rel="canonical" href="en/reference_manual/brushes/brush_engines/color_smudge_engine.html"/>
+    <meta property="og:url" content="en/reference_manual/brushes/brush_engines/color_smudge_engine.html" />
+    <meta property="og:image" content="en/_static/sidebar-logo.png" />
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Curve Brush Engine" href="curve_engine.html" />
+    <link rel="prev" title="Clone Brush Engine" href="clone_engine.html" /> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+       
+           <a href="../../../index.html" class="icon icon-home">
+
+			<img src="../../../_static/sidebar-logo.png" class="logo" alt="Logo"/>
+           	
+           <!--	Krita Manual -->
+
+
+          </a>
+
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-side-nav-language-selector">
+        	<p class="caption-text">
+	        	<select id="language-selector-container">
+	        		<option value="ca">Català</option>
+	        		<option value="en">English</option>
+	        		<option value="fr">français</option>
+	        		<option value="it">Italiano</option>
+	        		<option value="ja">日本語</option>
+	        		<option value="ko">한국어</option>
+	        		<option value="nl">Nederlands</option>
+	        		<option value="pl">Polski</option>
+	        		<option value="pt_PT">português</option>
+	        		<option value="uk_UA">Українська</option>
+	        		<option value="zh_CN">简体中文</option>
+	        	</select>
+        	</p>
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../user_manual.html">User Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../general_concepts.html">General Concepts</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../reference_manual.html">Reference Manual</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../audio_for_animation.html">Audio for Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../blending_modes.html">Blending Modes</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../brushes.html">Brushes</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../brush_engines.html">Brush Engines</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="bristle_engine.html">Bristle Brush Engine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="chalk_engine.html">Chalk Brush Engine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="clone_engine.html">Clone Brush Engine</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Color Smudge Brush Engine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="curve_engine.html">Curve Brush Engine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="deform_brush_engine.html">Deform Brush Engine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dyna_brush_engine.html">Dyna Brush Engine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="filter_brush_engine.html">Filter Brush Engine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="grid_brush_engine.html">Grid Brush Engine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hatching_brush_engine.html">Hatching Brush Engine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mypaint_engine.html">MyPaint Brush Engine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="particle_brush_engine.html">Particle Brush Engine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pixel_brush_engine.html">Pixel Brush Engine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="quick_brush_engine.html">Quick Brush Engine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="shape_brush_engine.html">Shape Brush Engine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sketch_brush_engine.html">Sketch Brush Engine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spray_brush_engine.html">Spray Brush Engine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tangen_normal_brush_engine.html">Tangent Normal Brush Engine</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../brush_settings.html">Brush Settings</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../clones_array.html">Clones Array</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../create_new_document.html">Create New Document</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../default_python_plugins.html">Pre-installed Python plugins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dockers.html">Dockers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dr_minw_debugger.html">Dr. MinGW Debugger</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../filters.html">Filters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../hdr_display.html">HDR Display</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../image_split.html">Image Split</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../import_animation.html">Import Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../instant_preview.html">Instant Preview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../krita_4_preset_bundle.html">Krita 4 Preset Bundle Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../layers_and_masks.html">Layers and Masks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../linux_command_line.html">Linux Command Line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../list_supported_tablets.html">The List of Supported Tablets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../main_menu.html">Main Menu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../maths_input.html">Maths Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../popup-palette.html">Pop-up Palette</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences.html">Preferences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render_animation.html">Render Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../resource_management.html">Resource Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../seexpr.html">SeExpr Quick Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../separate_image.html">Separate Image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../sharing_krita_logs.html">Getting Krita logs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../split_layer.html">Split Layer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../stroke_selection.html">Stroke Selection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools.html">Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../welcome_screen.html">Welcome Screen</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tutorials.html">Tutorials and How-tos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../KritaFAQ.html">Krita FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributors_manual.html">Contributors Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../resources_page.html">Resources</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+	<!-- start top banner area (for fundraisers or messages)
+
+	<div style="text-align: center; background-color: #333">
+		<a href="https://krita.org/en/fundraising-2018-campaign/" target="_self" onclick="ga('send', 'event', 'frontpage', 'button', 'Fundraiser 2018');">
+			<img src="https://krita.org/wp-content/themes/krita-org-theme/images/decoration/2018-fundraiser-banner.png" style="max-width: 100%">
+		</a>
+	</div>
+	
+	 end top banner area -->
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Krita Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../../reference_manual.html">Reference Manual</a> &raquo;</li>
+        
+          <li><a href="../../brushes.html">Brushes</a> &raquo;</li>
+        
+          <li><a href="../brush_engines.html">Brush Engines</a> &raquo;</li>
+        
+      <li>Color Smudge Brush Engine</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+          
+            <a href="../../../_sources/reference_manual/brushes/brush_engines/color_smudge_engine.rst.txt" rel="nofollow"> 
+             
+              <img src="../../../_static/images/source-code.png" />
+             <!-- View page source -->
+
+          </a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="color-smudge-brush-engine">
+<span id="index-0"></span><span id="id1"></span><h1>Color Smudge Brush Engine<a class="headerlink" href="#color-smudge-brush-engine" title="Permalink to this headline">¶</a></h1>
+<img alt="../../../_images/colorsmudge.svg" src="../../../_images/colorsmudge.svg" /><p>The Color Smudge Brush is a brush engine that allows you to mix colors by smearing or dulling. A very powerful brush engine to the painter.</p>
+<section id="options">
+<h2>Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="../brush_settings/brush_tips.html#option-brush-tip"><span class="std std-ref">Brush Tips</span></a></p></li>
+<li><p><a class="reference internal" href="../../blending_modes.html#blending-modes"><span class="std std-ref">Blending Modes</span></a></p></li>
+<li><p><a class="reference internal" href="../brush_settings/opacity_and_flow.html#option-opacity-n-flow"><span class="std std-ref">Opacity and Flow</span></a></p></li>
+<li><p><a class="reference internal" href="../brush_settings/options.html#option-size"><span class="std std-ref">Size</span></a></p></li>
+<li><p><a class="reference internal" href="../brush_settings/options.html#option-ratio"><span class="std std-ref">Ratio</span></a></p></li>
+<li><p><a class="reference internal" href="../brush_settings/options.html#option-spacing"><span class="std std-ref">Spacing</span></a></p></li>
+<li><p><a class="reference internal" href="#option-paint-thickness"><span class="std std-ref">Paint Thickness</span></a></p></li>
+<li><p><a class="reference internal" href="../brush_settings/options.html#option-mirror"><span class="std std-ref">Mirror</span></a></p></li>
+<li><p><a class="reference internal" href="../brush_settings/options.html#option-rotation"><span class="std std-ref">Rotation</span></a></p></li>
+<li><p><a class="reference internal" href="../brush_settings/options.html#option-scatter"><span class="std std-ref">Scatter</span></a></p></li>
+<li><p><a class="reference internal" href="../brush_settings/options.html#option-gradient"><span class="std std-ref">Gradient</span></a></p></li>
+<li><p><a class="reference internal" href="../brush_settings/options.html#option-airbrush"><span class="std std-ref">Airbrush</span></a></p></li>
+<li><p><a class="reference internal" href="../brush_settings/texture.html#option-texture"><span class="std std-ref">Texture</span></a></p></li>
+<li><p><a class="reference internal" href="#option-overlay"><span class="std std-ref">Overlay</span></a></p></li>
+<li><p><a class="reference internal" href="#option-hue-sat-val-color-smudge"><span class="std std-ref">Hue, Saturation, Value</span></a></p></li>
+</ul>
+</section>
+<section id="options-unique-to-the-color-smudge-brush">
+<h2>Options Unique to the Color Smudge Brush<a class="headerlink" href="#options-unique-to-the-color-smudge-brush" title="Permalink to this headline">¶</a></h2>
+<section id="color-rate">
+<span id="option-color-rate"></span><h3>Color Rate<a class="headerlink" href="#color-rate" title="Permalink to this headline">¶</a></h3>
+<p>How much of the foreground color is added to the smudging mix. Works together with <a class="reference internal" href="#option-smudge-length"><span class="std std-ref">Smudge Length</span></a> and <a class="reference internal" href="#option-smudge-radius"><span class="std std-ref">Smudge Radius</span></a>.</p>
+<figure class="align-default" id="id2">
+<img alt="../../../_images/brushengine_color_rate_smear.svg" src="../../../_images/brushengine_color_rate_smear.svg" /><figcaption>
+<p><span class="caption-text">A variety of color smudge strokes in the <em class="dfn">Smear Mode</em> with different opacities, smudge lengths and spacing. All are with 50% <em class="dfn">Color Rate</em>. Left-hand set being the old algorithm and the right-hand set the new algorithm. The bottom two strokes are using the <a class="reference internal" href="../../blending_modes/lighten.html#bm-color-dodge"><span class="std std-ref">Color Dodge</span></a> blending mode.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 5.0: </span>The option <span class="guilabel">Use new smudge algorithm</span> greatly affects how the <em class="dfn">Color Rate</em> works. With the old algorithm, the <em class="dfn">Color Rate</em> will be affected by both smudge length and opacity, while with the new algorithm, <em class="dfn">Color Rate</em> will only interact with <em class="dfn">Opacity</em>.</p>
+<p>At first glance, this may seem like it reduces nuance. But instead, the new algorithm simplifies brush creation, with it being far clearer which elements interact with <em class="dfn">Color Rate</em>.</p>
+</div>
+<figure class="align-default" id="id3">
+<img alt="../../../_images/brushengine_color_rate_dulling.svg" src="../../../_images/brushengine_color_rate_dulling.svg" /><figcaption>
+<p><span class="caption-text">Same as figure above, but then in <em class="dfn">Dulling Mode</em>.</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>Using the new algorithm, turning off the smudge length is all that’s needed to make a brush that is similar to the <a class="reference internal" href="pixel_brush_engine.html#pixel-brush-engine"><span class="std std-ref">Pixel Brush Engine</span></a>. This is useful as a starting point for brushes that only need a little smudge.</p>
+<p>When using the <a class="reference internal" href="../brush_settings/brush_tips.html#brush-mode"><span class="std std-ref">gradient mode</span></a>, the <em class="dfn">Color Rate</em> will control the colored brush tip instead of a flat color.</p>
+<p>Blending modes are applied when the color part is composed onto the smudge part. This effectively means that color smudge brushes with a blending mode other than <a class="reference internal" href="../../blending_modes/mix.html#bm-normal"><span class="std std-ref">Normal</span></a> will be greatly affected by <em class="dfn">Color Rate</em> in addition to <a class="reference internal" href="../brush_settings/options.html#option-spacing"><span class="std std-ref">Spacing</span></a> and <a class="reference internal" href="../brush_settings/opacity_and_flow.html#option-opacity-n-flow"><span class="std std-ref">opacity</span></a>.</p>
+</section>
+<section id="smudge-length">
+<span id="option-smudge-length"></span><h3>Smudge Length<a class="headerlink" href="#smudge-length" title="Permalink to this headline">¶</a></h3>
+<p>Affects smudging and allows you to set it to Sensors. Smudging is greatly affected by <a class="reference internal" href="../brush_settings/options.html#option-spacing"><span class="std std-ref">Spacing</span></a> as well as <a class="reference internal" href="../brush_settings/opacity_and_flow.html#option-opacity-n-flow"><span class="std std-ref">Opacity</span></a>. The former controls how many dabs are placed, and thus how many samples are made. This results in a smoother result for <em class="dfn">Smear Mode</em>, and a more opaque result for <em class="dfn">Dulling Mode</em>.</p>
+<p>There are two major types:</p>
+<dl>
+<dt>Smearing</dt><dd><p>Copies the area underneath the previous position of the brush onto the new position, taking opacity into account. This tends to result in a smear-effect.</p>
+<p>Great for making brushes that have a very impasto oil feel to them. It’s recommended to have a low spacing for Smear, as this will result in a less grainy looking smear.</p>
+<figure class="align-default" id="id4">
+<img alt="../../../_images/brushengine_smudge_length_smear.svg" src="../../../_images/brushengine_smudge_length_smear.svg" /><figcaption>
+<p><span class="caption-text">A variety of color smudge strokes in the <em class="dfn">Smear Mode</em> with different opacities, smudge lengths and spacing. Left-hand set being the old algorithm and the right-hand set the new algorithm. The bottom two strokes are using the <a class="reference internal" href="../../blending_modes/lighten.html#bm-color-dodge"><span class="std std-ref">Color Dodge</span></a> blending mode, which does not have any meaningful effect, given the <a class="reference internal" href="#option-color-rate"><span class="std std-ref">Color Rate</span></a> is set to 0%.</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+</dd>
+<dt>Dulling</dt><dd><p>Picks the color underneath the brush dab (using the Smudge Radius, if applicable), and first fills the whole dab with that before applying the color and the opacity. Named so because it dulls strong colors.</p>
+<p>Using an arithmetic blending type, Dulling is great for more smooth type of painting. It’s recommended to increase the spacing on dulling brushes as much as possible without the stroke looking choppy, as it speeds up the brush without losing smudge quality. The resulting stroke can be made stronger by increasing the smudge radius or the opacity.</p>
+<figure class="align-default" id="id5">
+<img alt="../../../_images/brushengine_smudge_length_dulling.svg" src="../../../_images/brushengine_smudge_length_dulling.svg" /><figcaption>
+<p><span class="caption-text">Same as above, but then for the <em class="dfn">Dulling Mode</em>.</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+</dd>
+<dt>Strength</dt><dd><p>Affects how much the smudge length takes from the previous dab its sampling. This means that smudge length at 100% will never decrease, but smudge lengths under that will decrease based on <a class="reference internal" href="../brush_settings/options.html#option-spacing"><span class="std std-ref">Spacing</span></a> and <a class="reference internal" href="../brush_settings/opacity_and_flow.html#option-opacity-n-flow"><span class="std std-ref">Opacity</span></a>.</p>
+</dd>
+<dt>Smear Alpha</dt><dd><p>Controls whether the transparency of the smeared pixels is taken into account when painting. This can be helpful to get a more opaque effect, as if laying down thick layers of paint, without losing the smudge effect.</p>
+<figure class="align-default" id="id6">
+<img alt="../../../_images/brushengine_smudge_length_smear_alpha.png" src="../../../_images/brushengine_smudge_length_smear_alpha.png" />
+<figcaption>
+<p><span class="caption-text">Different strokes showing how smear alpha functions.</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+<div class="legend">
+<ol class="arabic simple">
+<li><p><em class="dfn">Smear Mode</em> with <em class="dfn">Smear Alpha</em>.</p></li>
+<li><p><em class="dfn">Smear Mode</em> without <em class="dfn">Smear Alpha</em>.</p></li>
+<li><p><em class="dfn">Dulling Mode</em> with <em class="dfn">Smear Alpha</em>.</p></li>
+<li><p><em class="dfn">Dulling Mode</em> without <em class="dfn">Smear Alpha</em>.</p></li>
+<li><p><em class="dfn">Dulling Mode</em> without <em class="dfn">Smear Alpha</em>, and <a class="reference internal" href="#option-smudge-radius"><span class="std std-ref">Smudge Radius</span></a> set to 100%.</p></li>
+</ol>
+</div>
+</figcaption>
+</figure>
+</dd>
+<dt>Use new smudge algorithm</dt><dd><div class="versionadded">
+<p><span class="versionmodified added">New in version 5.0.</span></p>
+</div>
+<p>The new smudge algorithm was initially introduced to allow <a class="reference internal" href="../brush_settings/brush_tips.html#brush-mode"><span class="std std-ref">lightness and gradient modes</span></a> on the color smudge. But it allows for more: it is a little quicker, and it has a better separation between the <a class="reference internal" href="#option-color-rate"><span class="std std-ref">Color Rate</span></a> and the <em class="dfn">Smudge Length</em>.</p>
+</dd>
+</dl>
+<section id="common-behaviors">
+<h4>Common behaviors:<a class="headerlink" href="#common-behaviors" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>Unchecking the smudge length function sets smudge length to 100% (not 0.00).</p></li>
+<li><p>Opacity: Below 50%, there is practically no smudging left: keep opacity over 50%.</p></li>
+</ul>
+</section>
+<section id="differences">
+<h4>Differences:<a class="headerlink" href="#differences" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>Spacing with Smearing: the lower the spacing, the smoother the effect, so for smearing with a round brush you may prefer a value of 0.05 or less. Spacing affects the length of the smudge trail, but to a much lesser extent. The <span class="guilabel">strength</span> of the effect remains more or less the same however.</p></li>
+<li><p>Spacing with Dulling: the lower the spacing, the stronger the effect: lowering the spacing too much can make the dulling effect too strong (it picks up a color and never lets go of it). The length of the effect is also affected.</p></li>
+<li><p>Both Smearing and Dulling have a “smudge trail”, but in the case of Dulling, the brush shape is preserved. Instead, the trail determines how fast the color it picked up is dropped off.</p></li>
+</ul>
+</section>
+</section>
+<section id="smudge-radius">
+<span id="option-smudge-radius"></span><h3>Smudge Radius<a class="headerlink" href="#smudge-radius" title="Permalink to this headline">¶</a></h3>
+<p>The <span class="guilabel">Smudge Radius</span> allows you to sample a larger radius when using smudge-length in <span class="guilabel">Dulling</span> mode.</p>
+<p>The slider is percentage of the brush-size. You can have it modified with <span class="guilabel">Sensors</span>.</p>
+<figure class="align-default" id="id7">
+<img alt="../../../_images/brushengine_smudge_radius.png" src="../../../_images/brushengine_smudge_radius.png" />
+<figcaption>
+<p><span class="caption-text">A variety of brush strokes using 50% color rate, 50% smudge length and 50% opacity, but different smudge radii. The top stroke is in <em class="dfn">smear mode</em> and thus smudge radius is not in effect.</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<div class="versionchanged">
+<p><span class="versionmodified changed">Changed in version 5.0: </span>It used to be possible to go beyond three time the size of the current brush. The smudge radius is now limited to the total size of the brush, but is also faster.</p>
+</div>
+</section>
+<section id="overlay">
+<span id="option-overlay"></span><h3>Overlay<a class="headerlink" href="#overlay" title="Permalink to this headline">¶</a></h3>
+<p>Overlay is a toggle that determine whether the smudge brush will sample all layers (overlay on), or only the current one.</p>
+<p>By default, the Color Smudge Brush only takes information from the layer it is on. However, if you want it to take color information from all the layers, you can turn on the Overlay mode.</p>
+<p>Be aware though, that it does so by “picking up” bits of the layer underneath, which may mess up your drawing if you later make changes to the layer underneath.</p>
+</section>
+<section id="paint-thickness">
+<span id="option-paint-thickness"></span><h3>Paint Thickness<a class="headerlink" href="#paint-thickness" title="Permalink to this headline">¶</a></h3>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 5.0.</span></p>
+</div>
+<p>This affects how strong the <a class="reference internal" href="../brush_settings/brush_tips.html#brush-mode"><span class="std std-ref">lightness modes</span></a> affect the current color. Because the <em class="dfn">Color Smudge Brush</em> smudges, what actually happens is that the lightness part is painted into a separate height map, which prevents the shadows and highlights of the current lightness brush tip are mixed into the smudge, which would have resulted in all smudges becoming white or black. The height map is discarded when switching brush engines, layers or tools. Because this heightmap only exists for the layer currently being edited, lightness brushes and paint thickness cannot be used together with <a class="reference internal" href="#option-overlay"><span class="std std-ref">Overlay</span></a>.</p>
+<figure class="align-default" id="id8">
+<img alt="../../../_images/brushengine_paint_thickness_strength.png" src="../../../_images/brushengine_paint_thickness_strength.png" />
+<figcaption>
+<p><span class="caption-text">Image showing off different variations of <em class="dfn">Paint Thickness</em>, with the top three strokes being in <em class="dfn">Smear Mode</em> and the bottom three in <em class="dfn">Dulling Mode</em>. Strengths are 100%, 50%, and 0% from top to bottom.</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>This has two modes, which change how the existing heightmap is interpreted:</p>
+<dl class="simple">
+<dt>Overwrite (Smooth out when low) existing paint thickness</dt><dd><p>Here the lightness value of the brushstroke overrides the value that was there before, effectively smoothing out previous paint if the thickness value is low. The Opacity setting will cause it to blend with the previous paint height, but that will also bring down the color. This mode is useful for a brush that can paint with thickness, but can also smooth out existing paint if you wish.</p>
+</dd>
+<dt>Paint over existing paint thickness (controlled by smudge length)</dt><dd><p>Here the lightness value blends with the previous values, based on the Smudge Length, as described above. It allows the kind of blending with previous paint height that Opacity allows in the Overwrite mode, but without affecting the color rate.</p>
+</dd>
+</dl>
+<figure class="align-default" id="id9">
+<img alt="../../../_images/brushengine_paint_thickness_type.svg" src="../../../_images/brushengine_paint_thickness_type.svg" /><figcaption>
+<p><span class="caption-text">Image demonstrating the two modes, with the top strokes being <em class="dfn">Overwrite Existing Paint Thickness</em> and the bottom strokes <em class="dfn">Paint over existing paint thickness</em>. In both cases, a red stroke was laid with 100% paint thickness. Blue strokes were overlaid going from thin to thick. Notice how the <em class="dfn">Paint over existing</em> type differs between 0% and 100% <em class="dfn">Smudge Length</em>.</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="hue-saturation-value">
+<span id="option-hue-sat-val-color-smudge"></span><h3>Hue, Saturation, Value<a class="headerlink" href="#hue-saturation-value" title="Permalink to this headline">¶</a></h3>
+<p>Identical to <a class="reference internal" href="pixel_brush_engine.html#option-hue-sat-val-pixel"><span class="std std-ref">Hue, Saturation, Value</span></a> in the Pixel Brush Engine, this will adjust the current foreground color before it is mixed in via <a class="reference internal" href="#option-color-rate"><span class="std std-ref">Color Rate</span></a>. Introduced because this brush engine used to have a small rounding error leading to iridescent smears, which was fixed. Artists who liked this effect can now emulate it by enabling <span class="guilabel">Hue</span>, enabling <span class="guilabel">Fuzzy Dab</span> and disabling <span class="guilabel">Pressure</span> and finally setting <span class="guilabel">Strength</span> to 40%.</p>
+<figure class="align-default" id="id10">
+<img alt="../../../_images/brushengine_smudge_hue_variance.png" src="../../../_images/brushengine_smudge_hue_variance.png" />
+<figcaption>
+<p><span class="caption-text"><em>Top</em>: without hue variance, <em>Bottom</em>: with hue variance.</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>Hue, Saturation and Value don’t affect brush-tips using the <a class="reference internal" href="../brush_settings/brush_tips.html#brush-mode"><span class="std std-ref">gradient mode</span></a>.</p>
+</section>
+<section id="brush-tips">
+<h3>Brush tips<a class="headerlink" href="#brush-tips" title="Permalink to this headline">¶</a></h3>
+<p>The <em class="dfn">Color Smudge Brush</em> has all the same <a class="reference internal" href="../brush_settings/brush_tips.html#option-brush-tip"><span class="std std-ref">Brush Tips</span></a> as the <a class="reference internal" href="pixel_brush_engine.html#pixel-brush-engine"><span class="std std-ref">Pixel Brush Engine</span></a>!</p>
+<img alt="../../../_images/Krita-tutorial5-I.4.png" src="../../../_images/Krita-tutorial5-I.4.png" />
+<p>Just remember that the smudge effects are weaker when a brush tip’s opacity is lower, so for low-opacity brush tips, increase the opacity and smudge/color rates.</p>
+</section>
+<section id="scatter-and-other-shape-dynamics">
+<h3>Scatter and other shape dynamics<a class="headerlink" href="#scatter-and-other-shape-dynamics" title="Permalink to this headline">¶</a></h3>
+<p>The <em class="dfn">Color Smudge Brush</em> shares a number of options with the <a class="reference internal" href="pixel_brush_engine.html#pixel-brush-engine"><span class="std std-ref">Pixel Brush Engine</span></a>.</p>
+<p>However, because of the Smudge effects, the outcome will be different from the Pixel Brush. In particular, the Scatter option becomes much more significant.</p>
+<img alt="../../../_images/Krita-tutorial5-I.5-1.png" src="../../../_images/Krita-tutorial5-I.5-1.png" />
+<p>A few things to note:</p>
+<ul class="simple">
+<li><p>Scattering is proportional to the brush size. It’s fine to use a scattering of 500% for a tiny round brush, but for bigger brushes, you may want to get it down to 50% or less.</p></li>
+<li><p>You may notice the lines with the <span class="guilabel">Smearing</span> option. Those are caused by the fact that it picked up the hard lines of the rectangle.</p></li>
+<li><p>For scattering, the brush picks up colors within a certain distance, not the color directly under the paintbrush:</p></li>
+</ul>
+<img alt="../../../_images/Krita-tutorial5-I.5-2.png" src="../../../_images/Krita-tutorial5-I.5-2.png" />
+</section>
+</section>
+<section id="tutorial-color-smudge-brushes">
+<h2>Tutorial: Color Smudge Brushes<a class="headerlink" href="#tutorial-color-smudge-brushes" title="Permalink to this headline">¶</a></h2>
+<p>I recommend at least skimming over the first part to get an idea of what does what.</p>
+<section id="smudging-and-blending">
+<h3>Smudging and blending<a class="headerlink" href="#smudging-and-blending" title="Permalink to this headline">¶</a></h3>
+<p>This part describes use cases with color rate off.</p>
+<p>I won’t explain the settings for dynamics in detail, as you can find the explanations in the <a class="reference internal" href="pixel_brush_engine.html#pixel-brush-engine"><span class="std std-ref">Pixel Brush tutorial</span></a>.</p>
+<section id="smudging-effects">
+<h4>Smudging effects<a class="headerlink" href="#smudging-effects" title="Permalink to this headline">¶</a></h4>
+<p>For simple smudging:</p>
+<ul class="simple">
+<li><p>Pick the Color Smudge Brush. You can use either Smearing or Dulling.</p></li>
+<li><p>Turn off Color Rate</p></li>
+<li><p>Smudge away</p></li>
+</ul>
+<img alt="../../../_images/Krita-tutorial5-II.2.png" src="../../../_images/Krita-tutorial5-II.2.png" />
+<p>When using lower opacity brush tips, remember to “compensate” for the less visible effects by increasing both <span class="guilabel">Smudge Rate</span> and <span class="guilabel">Opacity</span>, if necessary to maximum.</p>
+<section id="some-settings-for-smearing">
+<h5>Some settings for Smearing<a class="headerlink" href="#some-settings-for-smearing" title="Permalink to this headline">¶</a></h5>
+<ul class="simple">
+<li><p>For smoother smearing, decrease spacing. Remember that spacing is proportional to brush tip size. For a small round brush, 0.10 spacing is fine, but for mid-sized and large brushes, decrease spacing to 0.05 or less.</p></li>
+</ul>
+</section>
+<section id="some-settings-for-dulling">
+<h5>Some settings for Dulling<a class="headerlink" href="#some-settings-for-dulling" title="Permalink to this headline">¶</a></h5>
+<ul class="simple">
+<li><p>Lowering the spacing will also make the smudging effect stronger, so find a right balance. 0.10 for most mid-sized round brushes should be fine.</p></li>
+<li><p>Unlike Smearing, Dulling preserves the brush shape and size, so it won’t “fade off” in size like Smearing brushes do. You can mimic that effect through the simple size fade dynamic.</p></li>
+</ul>
+</section>
+</section>
+<section id="textured-blending">
+<h4>Textured blending<a class="headerlink" href="#textured-blending" title="Permalink to this headline">¶</a></h4>
+<p>In this case, what I refer to as “Blending” here is simply using one of the following two dynamics:</p>
+<ul class="simple">
+<li><p><span class="guilabel">Rotation</span> set to <span class="guilabel">Distance</span> or <span class="guilabel">Fuzzy</span></p></li>
+<li><dl class="simple">
+<dt>And/or Scatter:</dt><dd><ul>
+<li><p>For most mid-sized brushes you will probably want to lower the scatter rate to 50% or lower. Higher settings are okay for tiny brushes.</p></li>
+<li><p>Note that Scatter picks colors within a certain distance, not the color directly under the brush (see <a class="reference internal" href="../brush_settings/brush_tips.html#option-brush-tip"><span class="std std-ref">Brush Tips</span></a>).</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>Optional: Pile on size and other dynamics and vary brush tips. In fact, the <em class="dfn">Color Smudge Brush</em> is not a blur brush, so smudging is not a very good method of “smooth” blending. To blend smoothly, you’ll have better luck with:</p></li>
+<li><p>Building up the transition by painting with intermediate values, described later</p></li>
+<li><p>Or using the “blur with feathered selection” method that I’ll briefly mention at the end of this tutorial.</p></li>
+</ul>
+<p>I’ve tried to achieve smooth blending with <em class="dfn">Color Smudge Brush</em> by adding rotation and scatter dynamics, but honestly they looked like crap.</p>
+<p>However, the <em class="dfn">Color Smudge Brush</em> is very good at “textured blending”:</p>
+<img alt="../../../_images/Krita-tutorial5-II.3.png" src="../../../_images/Krita-tutorial5-II.3.png" />
+<p>Basically you can paint first and add textured transitions after.</p>
+</section>
+</section>
+<section id="coloring">
+<h3>Coloring<a class="headerlink" href="#coloring" title="Permalink to this headline">¶</a></h3>
+<p>For this last section, <span class="guilabel">Color Rate</span> is on.</p>
+<section id="layer-options">
+<h4>Layer options<a class="headerlink" href="#layer-options" title="Permalink to this headline">¶</a></h4>
+<p>Before we get started, notice that you have several possibilities for your set-up:</p>
+<ul>
+<li><p>Shading on the same layer</p></li>
+<li><p>Shading on a separate layer, possibly making use of alpha-inheritance. The brush blends with the transparency of the layer it’s on. This means:</p>
+<blockquote>
+<div><ul>
+<li><p>If the area underneath is more of less uniform, the output is actually similar as if shading on the same layer</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>But if the area underneath is not uniform, then you’ll get fewer color variations.</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Shading on a separate layer, using <a class="reference internal" href="#option-overlay"><span class="std std-ref">Overlay</span></a> mode. Use this only if you’re fairly sure you don’t need to adjust the layer below, or the colors may become a mess.</p></li>
+</ul>
+<img alt="../../../_images/Krita-tutorial5-III.1-1.png" src="../../../_images/Krita-tutorial5-III.1-1.png" />
+<section id="issue-with-transparency">
+<h5>Issue with transparency<a class="headerlink" href="#issue-with-transparency" title="Permalink to this headline">¶</a></h5>
+<p>The <em class="dfn">Color Smudge Brush</em> blends with transparency. What this means is that when you start a new, transparent layer and “paint” on this layer, you will nearly always get less than full opacity.</p>
+<p>Basically:</p>
+<ul class="simple">
+<li><p>It may look great when you’re coloring on a blank canvas</p></li>
+<li><p>But it won’t look so great when you add something underneath</p></li>
+</ul>
+<img alt="../../../_images/Krita-tutorial5-III.1-2.png" src="../../../_images/Krita-tutorial5-III.1-2.png" />
+<p>The solution is pretty simple though:</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt>Make sure you have the area underneath colored in first:</dt><dd><ul>
+<li><p>With tinting, you already have the color underneath colored, so that’s done</p></li>
+<li><p>For painting, roughly color in the background layer first</p></li>
+<li><p>Or color in the shape on a new layer and make use of alpha-inheritance</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>For the last solution, use colors that contrast highly with what you’re using for best effect. For example, shade in the darkest shadow area first, or the lightest highlights, and use the color smudge brush for the contrasting color.</p></li>
+</ul>
+<img alt="../../../_images/Krita-tutorial5-III.1-3.png" src="../../../_images/Krita-tutorial5-III.1-3.png" />
+</section>
+</section>
+</section>
+<section id="soft-shading">
+<h3>Soft-shading<a class="headerlink" href="#soft-shading" title="Permalink to this headline">¶</a></h3>
+<p>Suppose you want more or less smooth color transitions. You can either:</p>
+<ul class="simple">
+<li><p><span class="guilabel">Color Rate</span> as low as 10% for round brushes, higher with non fully opaque brush tips.</p></li>
+<li><p>Or set the <span class="guilabel">Smudge Rate</span> as low as 10% instead.</p></li>
+<li><p>Or a combination of the two. Please try yourself for the output you like best.</p></li>
+<li><p>Optional: turn on <span class="guilabel">Rotation</span> for smoother blending.</p></li>
+<li><p>Optional: turn on <span class="guilabel">Scatter</span> for certain effects.</p></li>
+<li><p>Optional: fiddle with <span class="guilabel">Size</span> and <span class="guilabel">Opacity</span> dynamics as necessary.</p></li>
+</ul>
+<img alt="../../../_images/Krita-tutorial5-III.2-1.png" src="../../../_images/Krita-tutorial5-III.2-1.png" />
+<p>This remains, in fact, a so-so way of making smooth transitions. It’s best to build up intermediate values instead. Here:</p>
+<ul class="simple">
+<li><p>I first passed over the blue area three times with a red color. I select 3 shades.</p></li>
+<li><p>I color picked each of these values with the <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="mouseleft" src="../../../_images/Krita_mouse_left.png" /> shortcut, then used them in succession.</p></li>
+</ul>
+<img alt="../../../_images/Krita-tutorial5-III.2-2.png" src="../../../_images/Krita-tutorial5-III.2-2.png" />
+</section>
+<section id="painting-thick-oil-style">
+<h3>Painting: thick oil style<a class="headerlink" href="#painting-thick-oil-style" title="Permalink to this headline">¶</a></h3>
+<p>Many of the included color smudge brush presets produce a thick oil paint-like effect.
+This is mainly achieved with the Smearing mode on. Basically:</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt>Smearing mode with high smudge and color rates</dt><dd><ul>
+<li><p>Both at 0.50 are fine for normal round brushes or fully opaque predefined brushes</p></li>
+<li><p>Up to 1.00 each for brushes with less density or non fully-opaque predefined brushes</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>Add Size/Rotation/Scatter dynamics as needed. When you do this, increase smudge and color rates to compensate for increased color mixing.</p></li>
+</ul>
+<img alt="../../../_images/Krita-tutorial5-III.3-1.png" src="../../../_images/Krita-tutorial5-III.3-1.png" />
+<p>One thing I really like to do is to set different foreground and background colors, then turn on <span class="menuselection">Gradient ‣ Fuzzy</span>. Alternatively, just paint with different colors in succession (bottom-right example).</p>
+<img alt="../../../_images/Krita-tutorial5-III.3-2.png" src="../../../_images/Krita-tutorial5-III.3-2.png" />
+<p>Here’s some final random stuff. With pixel brushes, you can get all sorts of frill designs by using elongated brushes and setting the dynamics to rotation. You won’t get that with Color Smudge Brushes. Instead, you’ll get something that looks more like… yarn. Which is cool too. Here, I just used oval brushes and <span class="menuselection">Rotation ‣ Distance</span>.</p>
+<img alt="../../../_images/Krita-tutorial5-III.3-3.png" src="../../../_images/Krita-tutorial5-III.3-3.png" />
+</section>
+<section id="painting-digital-watercolor-style">
+<h3>Painting: Digital watercolor style<a class="headerlink" href="#painting-digital-watercolor-style" title="Permalink to this headline">¶</a></h3>
+<p>When I say “digital watercolor”, it refers to a style often seen online, i.e. a soft, smooth shading style rather than realistic watercolor. For this you mostly need the Dulling mode. A few things:</p>
+<ul class="simple">
+<li><p>Contrary to the Smearing mode, you may want to lower opacity for normal round brushes to get a smoother effect, to 70% for example.</p></li>
+<li><p>Vary the brush tip fade value as well.</p></li>
+<li><p>When using <span class="guilabel">Scatter</span> or other dynamics, you can choose to set smudge and color values to high or low values, for different outcomes.</p></li>
+</ul>
+<img alt="../../../_images/Krita-tutorial5-III.4.png" src="../../../_images/Krita-tutorial5-III.4.png" />
+</section>
+<section id="blurring">
+<h3>Blurring<a class="headerlink" href="#blurring" title="Permalink to this headline">¶</a></h3>
+<p>You can:</p>
+<ul class="simple">
+<li><p>Paint then smudge, for mostly texture transitions</p></li>
+<li><p>Or build up transitions by using intermediate color values</p></li>
+</ul>
+<p>If you want even smoother effects, well, just use blur. Gaussian blur to be exact.</p>
+<img alt="../../../_images/Krita-tutorial5-III.5.png" src="../../../_images/Krita-tutorial5-III.5.png" />
+<p>And there you go. That last little trick concludes this tutorial.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="curve_engine.html" class="btn btn-neutral float-right" title="Curve Brush Engine" accesskey="n" rel="next"> <!-- Next --> <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="clone_engine.html" class="btn btn-neutral" title="Clone Brush Engine" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- Previous  -->  </a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright licensed under the GNU Free Documentation License 1.3+ unless stated otherwise.
+      
+        <span class="commit">
+          Revision <code>7c271ce</code>.
+        </span>
+      
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a modified <a href="https://github.com/rtfd/sphinx_rtd_theme">RTD theme</a>.<br/>
+  <a href="https://krita.org" title="Krita official website.">Krita official website</a> |
+  <a href="https://invent.kde.org/documentation/docs-krita-org/" title="The Gitlab instance to edit this pages and collaborate.">Git repository for docs.krita.org </a> |
+  <a href="https://www.kde.org/community/whatiskde/impressum-en.php" title="To know more about KDE, code of conduct, privacy policy and GDPR.">KDE Impressum</a>.
+   
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'5.0.0 Beta',
+            LANGUAGE:'en',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/documentation_options.js"></script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
+      });
+  </script> 
+
+ <script type="text/javascript">
+	 var _paq=_paq||[];
+	 _paq.push(['setCookieDomain','*.krita.org']);
+	 _paq.push(['setDomains','*.krita.org']);
+	 _paq.push(['setDocumentTitle',document.domain+"/"+document.title]);
+	 _paq.push(['trackPageView']);
+	 _paq.push(['enableLinkTracking']);
+
+	 (function(){
+	 	var u="//stats.kde.org/";
+	    _paq.push(['setTrackerUrl',u+'piwik.php']);
+	    _paq.push(['setSiteId',13]);
+	    var d = document, g = d.createElement('script'),s=d.getElementsByTagName('script')[0];
+	    g.type = 'text/javascript';
+	    g.async = true;
+	    g.defer = true;
+	    g.src = u+'piwik.js';
+	    s.parentNode.insertBefore(g,s);
+	  })();
+</script> 
+<noscript><p><img src="//stats.kde.org/piwik.php?idsite=13" style="border:0;" alt="" /></p></noscript>
+
+</body>
+</html>

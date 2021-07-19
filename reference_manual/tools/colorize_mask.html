@@ -1,0 +1,498 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" name="title" content="Colorize Mask" />
+  <meta property="og:site-name" content="Krita Manual" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="en" />
+  <meta property="og:locale:alternate" content="ca" />
+  
+  <meta property="og:locale:alternate" content="fr" />
+  <meta property="og:locale:alternate" content="it" />
+  <meta property="og:locale:alternate" content="ja" />
+  <meta property="og:locale:alternate" content="ko" />
+  <meta property="og:locale:alternate" content="nl" />
+  <meta property="og:locale:alternate" content="pl" />
+  <meta property="og:locale:alternate" content="pt_PT" />
+  <meta property="og:locale:alternate" content="uk_UA" />
+  <meta property="og:locale:alternate" content="zh_CN" />
+  <meta property="og:article:modified_time" content="2021-07-19T15:33:59" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<meta content="How to use the colorize mask in Krita." name="description" />
+
+  
+  
+  <title>Colorize Mask &mdash; Krita Manual 5.0.0 Beta documentation</title>
+  
+
+  
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    
+  
+  
+  
+    <link rel="canonical" href="en/reference_manual/tools/colorize_mask.html"/>
+    <meta property="og:url" content="en/reference_manual/tools/colorize_mask.html" />
+    <meta property="og:image" content="en/_static/sidebar-logo.png" />
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Smart Patch Tool" href="smart_patch.html" />
+    <link rel="prev" title="Color Sampler Tool" href="color_sampler.html" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+       
+           <a href="../../index.html" class="icon icon-home">
+
+			<img src="../../_static/sidebar-logo.png" class="logo" alt="Logo"/>
+           	
+           <!--	Krita Manual -->
+
+
+          </a>
+
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-side-nav-language-selector">
+        	<p class="caption-text">
+	        	<select id="language-selector-container">
+	        		<option value="ca">Català</option>
+	        		<option value="en">English</option>
+	        		<option value="fr">français</option>
+	        		<option value="it">Italiano</option>
+	        		<option value="ja">日本語</option>
+	        		<option value="ko">한국어</option>
+	        		<option value="nl">Nederlands</option>
+	        		<option value="pl">Polski</option>
+	        		<option value="pt_PT">português</option>
+	        		<option value="uk_UA">Українська</option>
+	        		<option value="zh_CN">简体中文</option>
+	        	</select>
+        	</p>
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../user_manual.html">User Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../general_concepts.html">General Concepts</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../reference_manual.html">Reference Manual</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../audio_for_animation.html">Audio for Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blending_modes.html">Blending Modes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../brushes.html">Brushes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../clones_array.html">Clones Array</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_new_document.html">Create New Document</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../default_python_plugins.html">Pre-installed Python plugins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dockers.html">Dockers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dr_minw_debugger.html">Dr. MinGW Debugger</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../filters.html">Filters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hdr_display.html">HDR Display</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../image_split.html">Image Split</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../import_animation.html">Import Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../instant_preview.html">Instant Preview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../krita_4_preset_bundle.html">Krita 4 Preset Bundle Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../layers_and_masks.html">Layers and Masks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../linux_command_line.html">Linux Command Line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../list_supported_tablets.html">The List of Supported Tablets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../main_menu.html">Main Menu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../maths_input.html">Maths Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../popup-palette.html">Pop-up Palette</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preferences.html">Preferences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../render_animation.html">Render Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../resource_management.html">Resource Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../seexpr.html">SeExpr Quick Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../separate_image.html">Separate Image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sharing_krita_logs.html">Getting Krita logs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../split_layer.html">Split Layer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../stroke_selection.html">Stroke Selection</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../tools.html">Tools</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="shape_selection.html">Shape Selection Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="shape_edit.html">Shape Edit Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="text.html">Text Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gradient_edit.html">Gradient Editing Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pattern_edit.html">Pattern Editing Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="calligraphy.html">Calligraphy Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="freehand_brush.html">Freehand Brush Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="line.html">Straight Line Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rectangle.html">Rectangle Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ellipse.html">Ellipse Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="polygon.html">Polygon Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="polyline.html">Polyline Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="path.html">Bezier Curve Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="freehand_path.html">Freehand Path Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dyna.html">Dynamic Brush Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="multibrush.html">Multibrush Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="crop.html">Crop Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="move.html">Move Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="transform.html">Transform Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fill.html">Fill Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gradient_draw.html">Gradient Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="color_sampler.html">Color Sampler Tool</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Colorize Mask</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#usage">Usage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tool-options">Tool Options</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#layer-properties">Layer properties</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="smart_patch.html">Smart Patch Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="assistant.html">Assistant Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reference_images_tool.html">Reference Images Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="measure.html">Measure Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rectangular_select.html">Rectangular Selection Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="elliptical_select.html">Elliptical Selection Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="freehand_select.html">Freehand Selection Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="polygonal_select.html">Polygonal Selection Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="contiguous_select.html">Contiguous Selection Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="path_select.html">Path Selection Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="similar_select.html">Similar Color Selection Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="magnetic_select.html">Magnetic Selection Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="zoom.html">Zoom Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pan.html">Pan Tool</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../welcome_screen.html">Welcome Screen</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials.html">Tutorials and How-tos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../KritaFAQ.html">Krita FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributors_manual.html">Contributors Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../resources_page.html">Resources</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+	<!-- start top banner area (for fundraisers or messages)
+
+	<div style="text-align: center; background-color: #333">
+		<a href="https://krita.org/en/fundraising-2018-campaign/" target="_self" onclick="ga('send', 'event', 'frontpage', 'button', 'Fundraiser 2018');">
+			<img src="https://krita.org/wp-content/themes/krita-org-theme/images/decoration/2018-fundraiser-banner.png" style="max-width: 100%">
+		</a>
+	</div>
+	
+	 end top banner area -->
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Krita Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../reference_manual.html">Reference Manual</a> &raquo;</li>
+        
+          <li><a href="../tools.html">Tools</a> &raquo;</li>
+        
+      <li>Colorize Mask</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+          
+            <a href="../../_sources/reference_manual/tools/colorize_mask.rst.txt" rel="nofollow"> 
+             
+              <img src="../../_static/images/source-code.png" />
+             <!-- View page source -->
+
+          </a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="colorize-mask">
+<span id="index-0"></span><span id="id1"></span><h1>Colorize Mask<a class="headerlink" href="#colorize-mask" title="Permalink to this headline">¶</a></h1>
+<p><img alt="toolcolorizemask" src="../../_images/colorizemask_tool.svg" /></p>
+<p>A tool for quickly coloring line art, the Colorize Mask Editing tool can be found next to the gradient tool on your toolbox.</p>
+<p>This feature is technically already in 3.1, but disabled by default because we had not optimized the filling algorithm for production use yet. To enable it, find your krita configuration file, open it in notepad, and add “disableColorizeMaskFeature=false” to the top. Then restart Krita. Its official incarnation is in 4.0.</p>
+<section id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<p>This tool works in conjunction with the colorize mask, and the usage is as follows:</p>
+<p>For this example, we’ll be using the ghost lady also used to explain masks on <a class="reference internal" href="../../user_manual/getting_started/basic_concepts.html#basic-concepts"><span class="std std-ref">the basic concepts page</span></a>.</p>
+<a class="reference internal image-reference" href="../../_images/Krita_4_0_colorize_mask_usage_01.png"><img alt="../../_images/Krita_4_0_colorize_mask_usage_01.png" class="align-center" src="../../_images/Krita_4_0_colorize_mask_usage_01.png" style="width: 800px;" /></a>
+<p>This image has the line art for the lady separated from the background, and what’s more, the background is made up of two layers: one main and one for the details.</p>
+<p>First, select the colorize mask editing tool while having the line art layer selected. <img alt="mouseleft" src="../../_images/Krita_mouse_left.png" /> the canvas will add a colorize mask to the layer.
+You can also <img alt="mouseright" src="../../_images/Krita_mouse_right.png" /> the line art layer, and then <span class="menuselection">Add ‣ Colorize Mask</span>. The line art will suddenly become really weird, this is the prefiltering which are filters through which we put the line art to make the algorithm easier to use. The tool options overview below shows which options control that.</p>
+<a class="reference internal image-reference" href="../../_images/Krita_4_0_colorize_mask_usage_02.png"><img alt="../../_images/Krita_4_0_colorize_mask_usage_02.png" class="align-center" src="../../_images/Krita_4_0_colorize_mask_usage_02.png" style="width: 800px;" /></a>
+<p>Now, you make strokes with brush colors, press <span class="guilabel">Update</span> in the tool options, or tick the last icon of the colorize mask properties. In the layer docker, you will be able to see a little progress bar appear on the colorize mask indicating how long it takes. The bigger your file, the longer it will take.</p>
+<a class="reference internal image-reference" href="../../_images/Krita_4_0_colorize_mask_usage_03.png"><img alt="../../_images/Krita_4_0_colorize_mask_usage_03.png" class="align-center" src="../../_images/Krita_4_0_colorize_mask_usage_03.png" style="width: 800px;" /></a>
+<p>We want to have the blue transparent. In the tool options of the colorize editing tool you will see a small palette. These are the colors already used. You can remove colors here, or mark a single color as standing for transparent, by selecting it and pressing “transparent”. Updating the mask will still show the blue stroke, but the result will be transparent:</p>
+<a class="reference internal image-reference" href="../../_images/Krita_4_0_colorize_mask_usage_04.png"><img alt="../../_images/Krita_4_0_colorize_mask_usage_04.png" class="align-center" src="../../_images/Krita_4_0_colorize_mask_usage_04.png" style="width: 800px;" /></a>
+<p>Because the colorize mask algorithm is slow, and we only need a part of our layer to be filled to fill the whole ghost lady figure, we can make use of <span class="guilabel">Limit to layer bounds</span>. This will limit Colorize Mask to use the combined size of the line art and the coloring key strokes. Therefore, make sure that the colorizing keystrokes only take up as much as they really need.</p>
+<a class="reference internal image-reference" href="../../_images/Krita_4_0_colorize_mask_usage_05.png"><img alt="../../_images/Krita_4_0_colorize_mask_usage_05.png" class="align-center" src="../../_images/Krita_4_0_colorize_mask_usage_05.png" style="width: 800px;" /></a>
+<p>Now the algorithm will be possibly a lot faster, allowing us to add strokes and press <span class="guilabel">Update</span> in rapid succession:</p>
+<a class="reference internal image-reference" href="../../_images/Krita_4_0_colorize_mask_usage_06.png"><img alt="../../_images/Krita_4_0_colorize_mask_usage_06.png" class="align-center" src="../../_images/Krita_4_0_colorize_mask_usage_06.png" style="width: 800px;" /></a>
+<p>To see the final result, disable <span class="guilabel">Edit Key Strokes</span> or toggle the second to last icon on the colorize mask.</p>
+<a class="reference internal image-reference" href="../../_images/Krita_4_0_colorize_mask_usage_07.png"><img alt="../../_images/Krita_4_0_colorize_mask_usage_07.png" class="align-center" src="../../_images/Krita_4_0_colorize_mask_usage_07.png" style="width: 800px;" /></a>
+<p>If you want to edit the strokes again, re-enable <span class="guilabel">Edit Key Strokes</span>.</p>
+<p>Now, the colorize mask, being a mask, can also be added to a group of line art layers. It will then use the composition of the whole group as the line art. This is perfect for our background which has two separate line art layers. It also means that the colorize mask will be disabled when added to a group with pass-through enabled, because those have no final composition. You can recognize a disabled colorize mask because its name is stricken through.</p>
+<p>To add a colorize mask to a group, select the group and <img alt="mouseleft" src="../../_images/Krita_mouse_left.png" /> the canvas with the Colorize Mask editing tool, or <img alt="mouseright" src="../../_images/Krita_mouse_right.png" /> the layer to <span class="menuselection">Add ‣ Colorize Mask</span>.</p>
+<a class="reference internal image-reference" href="../../_images/Krita_4_0_colorize_mask_usage_08.png"><img alt="../../_images/Krita_4_0_colorize_mask_usage_08.png" class="align-center" src="../../_images/Krita_4_0_colorize_mask_usage_08.png" style="width: 800px;" /></a>
+<p>Now, we add strokes to the background quickly. We do not need to use the <span class="menuselection">Limit to Layer Bounds</span> because the background covers the whole image.</p>
+<a class="reference internal image-reference" href="../../_images/Krita_4_0_colorize_mask_usage_09.png"><img alt="../../_images/Krita_4_0_colorize_mask_usage_09.png" class="align-center" src="../../_images/Krita_4_0_colorize_mask_usage_09.png" style="width: 800px;" /></a>
+<p>For the record, you can use other brushes and tools also work on the colorize mask as long as they can draw. The Colorize Mask Editing tool is just the most convenient because you can get to the algorithm options.</p>
+<p>Out final result looks like this:</p>
+<a class="reference internal image-reference" href="../../_images/Krita_4_0_colorize_mask_usage_10.png"><img alt="../../_images/Krita_4_0_colorize_mask_usage_10.png" class="align-center" src="../../_images/Krita_4_0_colorize_mask_usage_10.png" style="width: 800px;" /></a>
+<p>Now we are done, <img alt="mouseright" src="../../_images/Krita_mouse_right.png" /> the colorize mask and <span class="menuselection">Convert ‣ to Paint Layer</span>. Then, <span class="menuselection">Layer ‣ Split ‣ Split Layer</span>. This will give separate color islands that you can easily edit:</p>
+<a class="reference internal image-reference" href="../../_images/Krita_4_0_colorize_mask_usage_11.png"><img alt="../../_images/Krita_4_0_colorize_mask_usage_11.png" class="align-center" src="../../_images/Krita_4_0_colorize_mask_usage_11.png" style="width: 800px;" /></a>
+<p>This way we can very quickly paint the image. Due to the colorize mask going from the first image to the following took only 30 minutes, and would’ve taken quite a bit longer.</p>
+<a class="reference internal image-reference" href="../../_images/Krita_4_0_colorize_mask_usage_12.png"><img alt="../../_images/Krita_4_0_colorize_mask_usage_12.png" class="align-center" src="../../_images/Krita_4_0_colorize_mask_usage_12.png" style="width: 800px;" /></a>
+<p>The colorize masks are saved to the <code class="docutils literal notranslate"><span class="pre">.kra</span></code> file, so as long as you don’t save and open to a different file format, nor convert the colorize mask to a paintlayer, you can keep working adjust the results.</p>
+</section>
+<section id="tool-options">
+<h2>Tool Options<a class="headerlink" href="#tool-options" title="Permalink to this headline">¶</a></h2>
+<dl>
+<dt>Update</dt><dd><p>Run the colorize mask algorithm. The progress bar for updates on a colorize mask shows only in the layer docker.</p>
+</dd>
+<dt>Edit key strokes</dt><dd><p>Put the mask into edit mode. In edit mode, it will also show the ‘prefiltering’ on the line art, which is for example a blur filter for gap closing.</p>
+</dd>
+<dt>Show output</dt><dd><p>Show the output of the colorize mask. If <span class="guilabel">Edit key strokes</span> is active, this will be shown semi-transparently, so it will be easy to recognize the difference between the strokes and the output.</p>
+<figure class="align-center" id="id2">
+<a class="reference internal image-reference" href="../../_images/Krita_4_0_colorize_mask_show_output_edit_strokes.png"><img alt="../../_images/Krita_4_0_colorize_mask_show_output_edit_strokes.png" src="../../_images/Krita_4_0_colorize_mask_show_output_edit_strokes.png" style="width: 800px;" /></a>
+<figcaption>
+<p><span class="caption-text">On the <strong>Left</strong>: <span class="guilabel">Show Output</span> is on, <span class="guilabel">Edit Key Strokes</span> is off. In the <strong>Middle</strong>: <span class="guilabel">Show Output</span> and <span class="guilabel">Edit Key Strokes</span> are on. On the <strong>Right</strong>: <span class="guilabel">Show Output</span> is off and <span class="guilabel">Edit Key Strokes</span> is on.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+</dd>
+<dt>Limit to layer bounds</dt><dd><p>Limit the colorize mask to the combined layer bounds of the strokes and the line art it is filling. This can speed up the use of the mask on complicated compositions, such as comic pages.</p>
+</dd>
+<dt>Edge detection</dt><dd><p>Activate this for line art with large solid areas, for example shadows on an object. For the best use, set the value to the thinnest lines on the image. In the image below, note how edge detection affects the big black areas:</p>
+<figure class="align-center" id="id3">
+<a class="reference internal image-reference" href="../../_images/Krita_4_0_colorize_mask_edge_detection.png"><img alt="../../_images/Krita_4_0_colorize_mask_edge_detection.png" src="../../_images/Krita_4_0_colorize_mask_edge_detection.png" style="width: 800px;" /></a>
+<figcaption>
+<p><span class="caption-text">From left to right: an example with big black shadows on an object but no edge detection, the same example without the edit key strokes enabled. Then the same example with edge detection enabled and set to 2px, and that same example without edit key strokes enabled.</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+</dd>
+<dt>Gap close hint</dt><dd><p>While the algorithm is pretty good against gaps in contours, this will improve the gap recognition. The higher this value is, the bigger the gaps it will try to close, but a too high value can lead to other errors. Note how the prefiltered line art (that’s the blurry haze) affects the color patches.</p>
+<figure class="align-center" id="id4">
+<a class="reference internal image-reference" href="../../_images/Krita_4_0_colorize_mask_gap_close_hint.png"><img alt="../../_images/Krita_4_0_colorize_mask_gap_close_hint.png" src="../../_images/Krita_4_0_colorize_mask_gap_close_hint.png" style="width: 800px;" /></a>
+<figcaption>
+<p><span class="caption-text">On the <strong>Left</strong>: <span class="guilabel">Gap close hint</span> is 0px. In the <strong>Middle</strong>: <span class="guilabel">Gap close hint</span> is 15px (the lines are 10px). On the <strong>Right</strong>: <span class="guilabel">Gap close hint</span> is 275px.</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+</dd>
+<dt>Clean up</dt><dd><p>This will attempt to handle messy strokes that overlap the line art where they shouldn’t. At 0 no clean up is done, at 100% the clean-up is most aggressive.</p>
+<a class="reference internal image-reference" href="../../_images/Krita_4_0_colorize_mask_clean_up.png"><img alt="../../_images/Krita_4_0_colorize_mask_clean_up.png" class="align-center" src="../../_images/Krita_4_0_colorize_mask_clean_up.png" style="width: 800px;" /></a>
+</dd>
+<dt>Key strokes</dt><dd><p>This palette keeps track of the colors used by the strokes. This is useful so you can switch back to colors easily. You can increase the swatch size by hovering over it with the mouse, and doing <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="mousescroll" src="../../_images/Krita_mouse_scroll.png" />.</p>
+</dd>
+<dt>Transparent</dt><dd><p>This button is under the keystrokes palette, you can mark the selected color to be interpreted a ‘transparent’ with this. In the clean-up screenshot above, cyan had been marked as transparent.</p>
+</dd>
+</dl>
+</section>
+<section id="layer-properties">
+<h2>Layer properties<a class="headerlink" href="#layer-properties" title="Permalink to this headline">¶</a></h2>
+<p>The colorize mask layer has four properties. They are all the buttons on the right side of the colorize mask layer:</p>
+<dl class="simple">
+<dt>Show output</dt><dd><p><img alt="show-output" src="../../_images/colorize-show-output-icons.png" /> The show output icon allows you to toggle whether you’ll see the output from the colorize algorithm.</p>
+</dd>
+<dt>Lock</dt><dd><p><img alt="lock-icon" src="../../_images/colorize-lock-icon.png" /> This icon stops the mask from being edited.</p>
+</dd>
+<dt>Edit key strokes</dt><dd><p><img alt="edit-strokes" src="../../_images/colorize-edit-key-strokes-icon.png" /> This icon shows whether the colorize mask is in edit mode. In edit mode it’ll show the strokes, and the output will be semi-transparent.</p>
+</dd>
+<dt>Update</dt><dd><p><img alt="update-icon" src="../../_images/colorize-update-icon.png" /> This icon will force the colorize mask to update, even when you’re in a different tool.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Colorize masks cannot be animated.</p>
+</div>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="smart_patch.html" class="btn btn-neutral float-right" title="Smart Patch Tool" accesskey="n" rel="next"> <!-- Next --> <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="color_sampler.html" class="btn btn-neutral" title="Color Sampler Tool" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- Previous  -->  </a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright licensed under the GNU Free Documentation License 1.3+ unless stated otherwise.
+      
+        <span class="commit">
+          Revision <code>7c271ce</code>.
+        </span>
+      
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a modified <a href="https://github.com/rtfd/sphinx_rtd_theme">RTD theme</a>.<br/>
+  <a href="https://krita.org" title="Krita official website.">Krita official website</a> |
+  <a href="https://invent.kde.org/documentation/docs-krita-org/" title="The Gitlab instance to edit this pages and collaborate.">Git repository for docs.krita.org </a> |
+  <a href="https://www.kde.org/community/whatiskde/impressum-en.php" title="To know more about KDE, code of conduct, privacy policy and GDPR.">KDE Impressum</a>.
+   
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'5.0.0 Beta',
+            LANGUAGE:'en',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/documentation_options.js"></script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
+      });
+  </script> 
+
+ <script type="text/javascript">
+	 var _paq=_paq||[];
+	 _paq.push(['setCookieDomain','*.krita.org']);
+	 _paq.push(['setDomains','*.krita.org']);
+	 _paq.push(['setDocumentTitle',document.domain+"/"+document.title]);
+	 _paq.push(['trackPageView']);
+	 _paq.push(['enableLinkTracking']);
+
+	 (function(){
+	 	var u="//stats.kde.org/";
+	    _paq.push(['setTrackerUrl',u+'piwik.php']);
+	    _paq.push(['setSiteId',13]);
+	    var d = document, g = d.createElement('script'),s=d.getElementsByTagName('script')[0];
+	    g.type = 'text/javascript';
+	    g.async = true;
+	    g.defer = true;
+	    g.src = u+'piwik.js';
+	    s.parentNode.insertBefore(g,s);
+	  })();
+</script> 
+<noscript><p><img src="//stats.kde.org/piwik.php?idsite=13" style="border:0;" alt="" /></p></noscript>
+
+</body>
+</html>

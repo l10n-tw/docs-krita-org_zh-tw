@@ -1,0 +1,480 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" name="title" content="Introduction to Layers and Masks" />
+  <meta property="og:site-name" content="Krita Manual" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="en" />
+  <meta property="og:locale:alternate" content="ca" />
+  
+  <meta property="og:locale:alternate" content="fr" />
+  <meta property="og:locale:alternate" content="it" />
+  <meta property="og:locale:alternate" content="ja" />
+  <meta property="og:locale:alternate" content="ko" />
+  <meta property="og:locale:alternate" content="nl" />
+  <meta property="og:locale:alternate" content="pl" />
+  <meta property="og:locale:alternate" content="pt_PT" />
+  <meta property="og:locale:alternate" content="uk_UA" />
+  <meta property="og:locale:alternate" content="zh_CN" />
+  <meta property="og:article:modified_time" content="2021-07-19T15:33:59" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<meta content="An introduction guide to how layers and masks work inside Krita." name="description" />
+
+  
+  
+  <title>Introduction to Layers and Masks &mdash; Krita Manual 5.0.0 Beta documentation</title>
+  
+
+  
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    
+  
+  
+  
+    <link rel="canonical" href="en/user_manual/layers_and_masks.html"/>
+    <meta property="og:url" content="en/user_manual/layers_and_masks.html" />
+    <meta property="og:image" content="en/_static/sidebar-logo.png" />
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Selections" href="selections.html" />
+    <link rel="prev" title="Templates" href="templates.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+       
+           <a href="../index.html" class="icon icon-home">
+
+			<img src="../_static/sidebar-logo.png" class="logo" alt="Logo"/>
+           	
+           <!--	Krita Manual -->
+
+
+          </a>
+
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-side-nav-language-selector">
+        	<p class="caption-text">
+	        	<select id="language-selector-container">
+	        		<option value="ca">Català</option>
+	        		<option value="en">English</option>
+	        		<option value="fr">français</option>
+	        		<option value="it">Italiano</option>
+	        		<option value="ja">日本語</option>
+	        		<option value="ko">한국어</option>
+	        		<option value="nl">Nederlands</option>
+	        		<option value="pl">Polski</option>
+	        		<option value="pt_PT">português</option>
+	        		<option value="uk_UA">Українська</option>
+	        		<option value="zh_CN">简体中文</option>
+	        	</select>
+        	</p>
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../user_manual.html">User Manual</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction_from_other_software.html">Introduction Coming From Other Software</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drawing_tablets.html">Drawing Tablets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loading_saving_brushes.html">Loading and Saving Brushes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oncanvas_brush_editor.html">On-Canvas Brush Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mirror_tools.html">Mirror Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="painting_with_assistants.html">Painting with Assistants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="working_with_images.html">Working with Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="autosave.html">Saving, AutoSave and Backup Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templates.html">Templates</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Introduction to Layers and Masks</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#managing-layers">Managing layers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#types-of-layers">Types of Layers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-are-layers-composited-in-krita">How are layers composited in Krita ?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#inherit-alpha-or-clipping-layers">Inherit Alpha or Clipping layers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#masks-and-filters">Masks and Filters</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="selections.html">Selections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python_scripting.html">Python Scripting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tag_management.html">Tag Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="soft_proofing.html">Soft Proofing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vector_graphics.html">Vector Graphics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="snapping.html">Snapping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="animation.html">Animation with Krita</a></li>
+<li class="toctree-l2"><a class="reference internal" href="japanese_animation_template.html">Japanese Animation Template</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gamut_masks.html">Gamut Masks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../general_concepts.html">General Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference_manual.html">Reference Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials.html">Tutorials and How-tos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../KritaFAQ.html">Krita FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributors_manual.html">Contributors Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../resources_page.html">Resources</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+	<!-- start top banner area (for fundraisers or messages)
+
+	<div style="text-align: center; background-color: #333">
+		<a href="https://krita.org/en/fundraising-2018-campaign/" target="_self" onclick="ga('send', 'event', 'frontpage', 'button', 'Fundraiser 2018');">
+			<img src="https://krita.org/wp-content/themes/krita-org-theme/images/decoration/2018-fundraiser-banner.png" style="max-width: 100%">
+		</a>
+	</div>
+	
+	 end top banner area -->
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Krita Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../user_manual.html">User Manual</a> &raquo;</li>
+        
+      <li>Introduction to Layers and Masks</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+          
+            <a href="../_sources/user_manual/layers_and_masks.rst.txt" rel="nofollow"> 
+             
+              <img src="../_static/images/source-code.png" />
+             <!-- View page source -->
+
+          </a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="introduction-to-layers-and-masks">
+<span id="layers-and-masks"></span><span id="index-0"></span><h1>Introduction to Layers and Masks<a class="headerlink" href="#introduction-to-layers-and-masks" title="Permalink to this headline">¶</a></h1>
+<p>Krita supports layers which help to better control parts and elements of
+your painting.</p>
+<p>Think of an artwork or collage made with various stacks of papers with
+some paper cut such that they show the paper beneath them while some
+hide what’s beneath them. If you want to replace an element in the
+artwork, you replace that piece of paper instead of drawing the entire
+thing. In Krita instead of papers we use <strong>Layers</strong>. Layers are part of
+the document which may or may not be transparent, they may be smaller or
+bigger than the document itself, they can arrange one above other, named
+and grouped.</p>
+<p>Layers can give better control over your artwork for example you can
+re-color an entire artwork just by working on the separate color layer
+and thereby not destroying the line art which will reside above this
+color layer.</p>
+<p>You can edit individual layers, you can even add special effects to
+them, like Layer styles, blending modes, transparency, filters and
+transforms. Krita takes all these layers in its layer stack, including
+the special effects and combines or composites together a final image.
+This is just one of the many digital image manipulation tricks that
+<strong class="program">Krita</strong> has up its sleeve!</p>
+<p>Usually, when you put one paint layer on top of another, the upper paint
+layer will be fully visible, while the layer behind it will either be
+obscured, occluded or only partially visible.</p>
+<section id="managing-layers">
+<h2>Managing layers<a class="headerlink" href="#managing-layers" title="Permalink to this headline">¶</a></h2>
+<p>Some artists draw with limited number of layers but some prefer to have
+different elements of the artwork on separate layer. Krita has some good
+layer management features which make the layer management task easy.</p>
+<p>You can <a class="reference internal" href="../reference_manual/layers_and_masks/group_layers.html#group-layers"><span class="std std-ref">group layers</span></a> and organize
+the elements of your artwork.</p>
+<p>The layer order can be changed or layers can be moved in and out of a
+group in the layer stack by simply holding them and dragging and
+dropping. Layers can also be copied across documents while in the
+<a class="reference internal" href="../reference_manual/preferences/general_settings.html#window-settings"><span class="std std-ref">subwindow mode</span></a>, by
+dragging and dropping from one document to another.</p>
+<p>These features save time and also help artists in maintaining the file
+with a layer stack which will be easy to understand for others who work
+on the same file. In addition to these layers and groups can both be
+labeled and filtered by colors, thus helping the artists to visually
+differentiate them.</p>
+<p>To assign a color label to your layer or layer group you have to right
+click on the layer and choose one of the given colors from the context
+menu. To remove an already existing color label you can click on the ‘x’
+marked box in the context menu.</p>
+<a class="reference internal image-reference" href="../_images/Layer-color-filters.png"><img alt="../_images/Layer-color-filters.png" src="../_images/Layer-color-filters.png" style="width: 400px;" /></a>
+<p>Once you assign color labels to your layers, you can then filter layers
+having similar color label by clicking on one or more colors in the list
+from the drop-down situated at the top-right corner of the layer docker.</p>
+<a class="reference internal image-reference" href="../_images/Layer-color-filters-menu.png"><img alt="../_images/Layer-color-filters-menu.png" src="../_images/Layer-color-filters-menu.png" style="width: 600px;" /></a>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 5.0: </span>You can also use this dropdown to filter the layers by layer name.</p>
+</div>
+</section>
+<section id="types-of-layers">
+<h2>Types of Layers<a class="headerlink" href="#types-of-layers" title="Permalink to this headline">¶</a></h2>
+<a class="reference internal image-reference" href="../_images/500px-Krita-types-of-layers.png"><img alt="../_images/500px-Krita-types-of-layers.png" src="../_images/500px-Krita-types-of-layers.png" style="width: 600px;" /></a>
+<p>The image above shows the various types of layers in <a class="reference internal" href="../reference_manual/dockers/layers.html#layer-docker"><span class="std std-ref">Layers</span></a>. Each layer type has a different purpose for example all the vector elements can be only placed on a vector layer and similarly normal raster elements are mostly on the paint layer, <a class="reference internal" href="../reference_manual/layers_and_masks.html#cat-layers-and-masks"><span class="std std-ref">Layers and Masks</span></a> page contains more information about these types layers.</p>
+<p>Now Let us see how these layers are composited in Krita.</p>
+</section>
+<section id="how-are-layers-composited-in-krita">
+<h2>How are layers composited in Krita ?<a class="headerlink" href="#how-are-layers-composited-in-krita" title="Permalink to this headline">¶</a></h2>
+<p>In Krita, the visible layers form a composite image which is shown on
+the canvas. The order in which Krita composites the layers is from
+bottom to top, much like the stack of papers we discussed above. As we
+continue adding layers, the image we see changes, according to the
+properties of the newly added layers on top. Group Layers composite
+separately from the other layers in the stack, except when pass through
+mode is activated. The layers inside a group form a composite image
+first and then this composite is taken into consideration while the
+layer stack is composited to form a whole image. If the pass through
+mode is activated by pressing the icon similar to bricked wall, the
+layers within the group are considered as if they are outside of that
+particular group in the layer stack, however, the visibility of the
+layers in a group depends on the visibility of the group.</p>
+<img alt="../_images/Passthrough-mode_.png" src="../_images/Passthrough-mode_.png" />
+<img alt="../_images/Layer-composite.png" src="../_images/Layer-composite.png" />
+<p>The groups in a PSD file saved from Photoshop have pass-through mode on
+by default unless they are specifically set with other blending modes.</p>
+</section>
+<section id="inherit-alpha-or-clipping-layers">
+<span id="index-1"></span><h2>Inherit Alpha or Clipping layers<a class="headerlink" href="#inherit-alpha-or-clipping-layers" title="Permalink to this headline">¶</a></h2>
+<p>There is a clipping feature in Krita called inherit alpha. It is denoted
+by an alpha icon in the layer stack.</p>
+<img alt="../_images/Inherit-alpha-02.png" src="../_images/Inherit-alpha-02.png" />
+<p>It can be somewhat hard to figure out how the inherit alpha feature
+works in Krita for the first time. Once you click on the inherit alpha
+icon on the layer stack, the pixels of the layer you are painting on are
+confined to the combined pixel area of all the layers below it. That
+means if you have the default white background layer as first layer,
+clicking on the inherit alpha icon and painting on any layer above will
+seem to have no effect as the entire canvas is filled with white. Hence,
+it is advised to put the base layer that you want the pixels to clip in
+a group layer. As mentioned above, group layers are composited
+separately, hence the layer which is the lowest layer in a group becomes
+the bounding layer and the content of the layers above this layer clips
+to it if inherit alpha is enabled.</p>
+<img alt="../_images/Inherit-alpha-krita.jpg" src="../_images/Inherit-alpha-krita.jpg" />
+<img alt="../_images/Krita-tutorial2-I.1-2.png" src="../_images/Krita-tutorial2-I.1-2.png" />
+<p>You can also enable alpha inheritance to a group layer.</p>
+</section>
+<section id="masks-and-filters">
+<h2>Masks and Filters<a class="headerlink" href="#masks-and-filters" title="Permalink to this headline">¶</a></h2>
+<p>Krita supports non-destructive editing of the content of the layer.
+Non-destructive editing means editing or changing a layer or image
+without actually changing the original source image permanently, the
+changes are just added as filters or masks over the original image while
+keeping it intact, this helps a lot when your workflow requires constant
+back and forth. You can go back to original image with a click of a
+button. Just hide the filter or mask you have your initial image.</p>
+<p>You can add various filters to a layer with Filter mask, or add Filter
+layer which will affect the whole image. Layers can also be transformed non-destructively with the transformation masks, and even have portions temporarily hidden with a Transparent Mask. Non-destructive effects like these are very useful when you change your mind later, or need to make a set of variations of a given image.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can merge all visible layers by selecting everything first <span class="menuselection">Layer ‣ Select ‣ Visible Layers</span>. Then Combine them all by merging <span class="menuselection">Layer ‣ Merge with Layer Below</span>.</p>
+</div>
+<p>These filters and masks are accessible through the right-click menu (as
+shown in the image below) and the Plus icon on the layer docker.</p>
+<img alt="../_images/Layer-right-click.png" src="../_images/Layer-right-click.png" />
+<p>You can also add a filter as a mask from filter dialog itself, by
+clicking on the <span class="guilabel">Create Filter Mask</span> button.</p>
+<img alt="../_images/Filtermask-button.png" src="../_images/Filtermask-button.png" />
+<p>All the filters and masks can also be applied over a group too, thus
+making it easy to non-destructively edit multiple layers at once. In the
+<a class="reference internal" href="../reference_manual/layers_and_masks.html#cat-layers-and-masks"><span class="std std-ref">category Layers and masks</span></a> you can read
+more about the individual types of layers and masks.</p>
+<p><a class="reference internal" href="../reference_manual/dockers/layers.html#layer-docker"><span class="std std-ref">Layer Docker</span></a> has more information about
+the shortcuts and other layer management workflows.</p>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="selections.html" class="btn btn-neutral float-right" title="Selections" accesskey="n" rel="next"> <!-- Next --> <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="templates.html" class="btn btn-neutral" title="Templates" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- Previous  -->  </a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright licensed under the GNU Free Documentation License 1.3+ unless stated otherwise.
+      
+        <span class="commit">
+          Revision <code>7c271ce</code>.
+        </span>
+      
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a modified <a href="https://github.com/rtfd/sphinx_rtd_theme">RTD theme</a>.<br/>
+  <a href="https://krita.org" title="Krita official website.">Krita official website</a> |
+  <a href="https://invent.kde.org/documentation/docs-krita-org/" title="The Gitlab instance to edit this pages and collaborate.">Git repository for docs.krita.org </a> |
+  <a href="https://www.kde.org/community/whatiskde/impressum-en.php" title="To know more about KDE, code of conduct, privacy policy and GDPR.">KDE Impressum</a>.
+   
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'5.0.0 Beta',
+            LANGUAGE:'en',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/documentation_options.js"></script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
+      });
+  </script> 
+
+ <script type="text/javascript">
+	 var _paq=_paq||[];
+	 _paq.push(['setCookieDomain','*.krita.org']);
+	 _paq.push(['setDomains','*.krita.org']);
+	 _paq.push(['setDocumentTitle',document.domain+"/"+document.title]);
+	 _paq.push(['trackPageView']);
+	 _paq.push(['enableLinkTracking']);
+
+	 (function(){
+	 	var u="//stats.kde.org/";
+	    _paq.push(['setTrackerUrl',u+'piwik.php']);
+	    _paq.push(['setSiteId',13]);
+	    var d = document, g = d.createElement('script'),s=d.getElementsByTagName('script')[0];
+	    g.type = 'text/javascript';
+	    g.async = true;
+	    g.defer = true;
+	    g.src = u+'piwik.js';
+	    s.parentNode.insertBefore(g,s);
+	  })();
+</script> 
+<noscript><p><img src="//stats.kde.org/piwik.php?idsite=13" style="border:0;" alt="" /></p></noscript>
+
+</body>
+</html>

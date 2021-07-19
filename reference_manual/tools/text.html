@@ -1,0 +1,596 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" name="title" content="Text Tool" />
+  <meta property="og:site-name" content="Krita Manual" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="en" />
+  <meta property="og:locale:alternate" content="ca" />
+  
+  <meta property="og:locale:alternate" content="fr" />
+  <meta property="og:locale:alternate" content="it" />
+  <meta property="og:locale:alternate" content="ja" />
+  <meta property="og:locale:alternate" content="ko" />
+  <meta property="og:locale:alternate" content="nl" />
+  <meta property="og:locale:alternate" content="pl" />
+  <meta property="og:locale:alternate" content="pt_PT" />
+  <meta property="og:locale:alternate" content="uk_UA" />
+  <meta property="og:locale:alternate" content="zh_CN" />
+  <meta property="og:article:modified_time" content="2021-07-19T15:33:59" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<meta content="Krita's text tool reference." name="description" />
+
+  
+  
+  <title>Text Tool &mdash; Krita Manual 5.0.0 Beta documentation</title>
+  
+
+  
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    
+  
+  
+  
+    <link rel="canonical" href="en/reference_manual/tools/text.html"/>
+    <meta property="og:url" content="en/reference_manual/tools/text.html" />
+    <meta property="og:image" content="en/_static/sidebar-logo.png" />
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Gradient Editing Tool" href="gradient_edit.html" />
+    <link rel="prev" title="Shape Edit Tool" href="shape_edit.html" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+       
+           <a href="../../index.html" class="icon icon-home">
+
+			<img src="../../_static/sidebar-logo.png" class="logo" alt="Logo"/>
+           	
+           <!--	Krita Manual -->
+
+
+          </a>
+
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-side-nav-language-selector">
+        	<p class="caption-text">
+	        	<select id="language-selector-container">
+	        		<option value="ca">Català</option>
+	        		<option value="en">English</option>
+	        		<option value="fr">français</option>
+	        		<option value="it">Italiano</option>
+	        		<option value="ja">日本語</option>
+	        		<option value="ko">한국어</option>
+	        		<option value="nl">Nederlands</option>
+	        		<option value="pl">Polski</option>
+	        		<option value="pt_PT">português</option>
+	        		<option value="uk_UA">Українська</option>
+	        		<option value="zh_CN">简体中文</option>
+	        	</select>
+        	</p>
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../user_manual.html">User Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../general_concepts.html">General Concepts</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../reference_manual.html">Reference Manual</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../audio_for_animation.html">Audio for Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blending_modes.html">Blending Modes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../brushes.html">Brushes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../clones_array.html">Clones Array</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_new_document.html">Create New Document</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../default_python_plugins.html">Pre-installed Python plugins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dockers.html">Dockers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dr_minw_debugger.html">Dr. MinGW Debugger</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../filters.html">Filters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hdr_display.html">HDR Display</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../image_split.html">Image Split</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../import_animation.html">Import Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../instant_preview.html">Instant Preview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../krita_4_preset_bundle.html">Krita 4 Preset Bundle Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../layers_and_masks.html">Layers and Masks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../linux_command_line.html">Linux Command Line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../list_supported_tablets.html">The List of Supported Tablets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../main_menu.html">Main Menu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../maths_input.html">Maths Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../popup-palette.html">Pop-up Palette</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preferences.html">Preferences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../render_animation.html">Render Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../resource_management.html">Resource Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../seexpr.html">SeExpr Quick Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../separate_image.html">Separate Image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sharing_krita_logs.html">Getting Krita logs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../split_layer.html">Split Layer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../stroke_selection.html">Stroke Selection</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../tools.html">Tools</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="shape_selection.html">Shape Selection Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="shape_edit.html">Shape Edit Tool</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Text Tool</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#tool-options">Tool Options</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#text-editor">Text Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fine-typographic-control-with-the-svg-source-tab">Fine typographic control with the SVG Source tab</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="gradient_edit.html">Gradient Editing Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pattern_edit.html">Pattern Editing Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="calligraphy.html">Calligraphy Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="freehand_brush.html">Freehand Brush Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="line.html">Straight Line Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rectangle.html">Rectangle Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ellipse.html">Ellipse Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="polygon.html">Polygon Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="polyline.html">Polyline Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="path.html">Bezier Curve Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="freehand_path.html">Freehand Path Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dyna.html">Dynamic Brush Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="multibrush.html">Multibrush Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="crop.html">Crop Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="move.html">Move Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="transform.html">Transform Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fill.html">Fill Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gradient_draw.html">Gradient Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="color_sampler.html">Color Sampler Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="colorize_mask.html">Colorize Mask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="smart_patch.html">Smart Patch Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="assistant.html">Assistant Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reference_images_tool.html">Reference Images Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="measure.html">Measure Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rectangular_select.html">Rectangular Selection Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="elliptical_select.html">Elliptical Selection Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="freehand_select.html">Freehand Selection Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="polygonal_select.html">Polygonal Selection Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="contiguous_select.html">Contiguous Selection Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="path_select.html">Path Selection Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="similar_select.html">Similar Color Selection Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="magnetic_select.html">Magnetic Selection Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="zoom.html">Zoom Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pan.html">Pan Tool</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../welcome_screen.html">Welcome Screen</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials.html">Tutorials and How-tos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../KritaFAQ.html">Krita FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributors_manual.html">Contributors Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../resources_page.html">Resources</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+	<!-- start top banner area (for fundraisers or messages)
+
+	<div style="text-align: center; background-color: #333">
+		<a href="https://krita.org/en/fundraising-2018-campaign/" target="_self" onclick="ga('send', 'event', 'frontpage', 'button', 'Fundraiser 2018');">
+			<img src="https://krita.org/wp-content/themes/krita-org-theme/images/decoration/2018-fundraiser-banner.png" style="max-width: 100%">
+		</a>
+	</div>
+	
+	 end top banner area -->
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Krita Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../reference_manual.html">Reference Manual</a> &raquo;</li>
+        
+          <li><a href="../tools.html">Tools</a> &raquo;</li>
+        
+      <li>Text Tool</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+          
+            <a href="../../_sources/reference_manual/tools/text.rst.txt" rel="nofollow"> 
+             
+              <img src="../../_static/images/source-code.png" />
+             <!-- View page source -->
+
+          </a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="text-tool">
+<span id="index-0"></span><span id="id1"></span><h1>Text Tool<a class="headerlink" href="#text-tool" title="Permalink to this headline">¶</a></h1>
+<p><img alt="tooltext" src="../../_images/text-tool.svg" /></p>
+<p>This tool allows you to add text to your artwork.</p>
+<p>You use it by doing <img alt="mouseleft" src="../../_images/Krita_mouse_left.png" /> + drag to create a rectangular selection. When releasing <img alt="mouseleft" src="../../_images/Krita_mouse_left.png" /> a default text will be created and the text editor window will pop-up.</p>
+<p>Hovering over other text shapes will highlight their bounding box. <img alt="mouseleft" src="../../_images/Krita_mouse_left.png" /> on a highlighted text will select it as the active text.</p>
+<section id="tool-options">
+<h2>Tool Options<a class="headerlink" href="#tool-options" title="Permalink to this headline">¶</a></h2>
+<img alt="../../_images/Krita-tool-options-text.png" src="../../_images/Krita-tool-options-text.png" />
+<dl>
+<dt>Create new texts with…</dt><dd><p>This contains features with which to create new texts, the following items are available:</p>
+<dl class="simple">
+<dt>Font</dt><dd><p>The letter type used by newly created texts.</p>
+</dd>
+<dt>Size in pt</dt><dd><p>The letter-size used by newly created texts. It is in pts (points), which is a common standard for fonts that is measured 72 points per inch. It therefore will stay proportionally the same size if you increase or decrease canvas dpi.</p>
+</dd>
+<dt>Anchor/Align text to the left/middle/right</dt><dd><p>Text alignment. This allows you to align text to the left, center it, or to the right. This is called text-anchor because SVG 1.1’s multiline text only uses text-anchor, and this is a slight bit different than text-align (and also the reason justify isn’t available at the moment).</p>
+</dd>
+<dt>Letter Spacing</dt><dd><p>The letter spacing used by newly created texts.</p>
+</dd>
+</dl>
+</dd>
+<dt>Edit Text</dt><dd><p>This will summon the text editor for the currently selected shape. This can be quickly invoked with either pressing the <kbd class="kbd docutils literal notranslate">Enter</kbd> key or <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">double</kbd>-<kbd class="kbd docutils literal notranslate">click</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="mouseleft" src="../../_images/Krita_mouse_left.png" /> shortcut on the shape.</p>
+</dd>
+</dl>
+</section>
+<section id="text-editor">
+<h2>Text Editor<a class="headerlink" href="#text-editor" title="Permalink to this headline">¶</a></h2>
+<p>A small window for all your text editing needs. The Text Editor has two tabs: Rich text and SVG source.</p>
+<img alt="../../_images/Text-editor-example.png" src="../../_images/Text-editor-example.png" />
+<dl>
+<dt>Activating</dt><dd><p>You can use the Text tool to first create a text box. There are a few options in the tool options if you want to customize how the text will be adding. You will need to drag a rectangle on the canvas to create the text area. Once your text is created, you can edit the text from two ways:</p>
+<ol class="arabic simple">
+<li><p>Select the text with the shape selection tool (first tool). Press the <kbd class="kbd docutils literal notranslate">Enter</kbd> key. The text editor will appear.</p></li>
+<li><p>Select the text with the shape selection tool (first tool). Then click the Text tool. In the tool options there is an <span class="guilabel">Edit Text</span> button. When you click that the text editor window will appear.</p></li>
+</ol>
+</dd>
+<dt>Editing</dt><dd><p>If you are unfamiliar with the way SVG text works, use the rich text tab, it will allow you to edit the text as you see it, at the cost of not having all functionality.</p>
+<p>If you are a little bit more familiar with SVG text, you can directly edit the SVG source. Do note that not all attributes and properties are converted back to the rich text editor, so do be careful when switching back.</p>
+<p>Press <span class="guilabel">Save</span> as you’re done with your edits to preview them on canvas.</p>
+</dd>
+<dt>File</dt><dd><dl class="simple">
+<dt>Save <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">S</kbd></kbd></dt><dd><p>Save current edits to the text on canvas.</p>
+</dd>
+<dt>Close <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">W</kbd></kbd></dt><dd><p>Close the editor.</p>
+</dd>
+</dl>
+</dd>
+<dt>Edit</dt><dd><p>Basic editing functions:</p>
+<dl class="simple">
+<dt>Undo <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Z</kbd></kbd></dt><dd><p>Undo the last action in the text editor.</p>
+</dd>
+<dt>Redo <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Z</kbd></kbd></dt><dd><p>Redo the last undone action in the text editor.</p>
+</dd>
+<dt>Cut <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">X</kbd></kbd></dt><dd><p>Cut selected text to the clipboard.</p>
+</dd>
+<dt>Copy <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">C</kbd></kbd></dt><dd><p>Copy selected text to the clipboard.</p>
+</dd>
+<dt>Paste <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">V</kbd></kbd></dt><dd><p>Paste text from the clipboard.</p>
+</dd>
+<dt>Select all <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">A</kbd></kbd></dt><dd><p>Select all text in the active editor.</p>
+</dd>
+<dt>Deselect <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">A</kbd></kbd></dt><dd><p>Deselect any selected text.</p>
+</dd>
+<dt>Find <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">F</kbd></kbd></dt><dd><p>Pops up a window with an input to find the given text in the active editor.</p>
+</dd>
+<dt>Find Next <kbd class="kbd docutils literal notranslate">F3</kbd></dt><dd><p>Searches for the next text using the last search key.</p>
+</dd>
+<dt>Find Previous <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">F3</kbd></kbd></dt><dd><p>Searches for the last text using the last search key.</p>
+</dd>
+<dt>Replace… <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">R</kbd></kbd></dt><dd><p>Pops up a dialog with two inputs: The string you wish to find, and the string you wish to replace it with. Will always replace ALL found instances.</p>
+</dd>
+</dl>
+</dd>
+<dt>View</dt><dd><dl class="simple">
+<dt>Zoom Out <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">-</kbd></kbd></dt><dd><p>Zoom out the text.</p>
+</dd>
+<dt>Zoom In <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd></dt><dd><p>Zoom in the text.</p>
+</dd>
+</dl>
+</dd>
+<dt>Insert</dt><dd><dl class="simple">
+<dt>Special Character… <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Alt</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">C</kbd></kbd></dt><dd><p>Pops up a dialog that allows you to search for special characters that are difficult to type in with your keyboard.</p>
+</dd>
+</dl>
+</dd>
+<dt>Format</dt><dd><dl class="simple">
+<dt>Bold <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">B</kbd></kbd></dt><dd><p>Set the font-weight to <strong>bold</strong>.</p>
+</dd>
+<dt>Italic <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">I</kbd></kbd></dt><dd><p>Sets the selected text <em>italic</em>.</p>
+</dd>
+<dt>Underline <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">U</kbd></kbd></dt><dd><p>Underline the selected text.</p>
+</dd>
+<dt>Strike-Through</dt><dd><p>Adds a strike-through text decoration.</p>
+</dd>
+<dt>Superscript <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">P</kbd></kbd></dt><dd><p>Sets the text to super-script baseline.</p>
+</dd>
+<dt>Subscript <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">B</kbd></kbd></dt><dd><p>Sets the text to subscript baseline.</p>
+</dd>
+<dt>Weight</dt><dd><p>Sets the font weight a little more specifically. Possibilities are… Light, Normal, Bold, and Black.</p>
+</dd>
+<dt>Align Left</dt><dd><p>Align the selected paragraph to the left.</p>
+</dd>
+<dt>Align Center <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Alt</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">C</kbd></kbd></dt><dd><p>Center the selected paragraph.</p>
+</dd>
+<dt>Align Right <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Alt</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">R</kbd></kbd></dt><dd><p>Align the selected paragraph to the right.</p>
+</dd>
+<dt>Kerning</dt><dd><p>Toggles kerning for selected text.</p>
+</dd>
+</dl>
+</dd>
+<dt>Settings</dt><dd><dl class="simple">
+<dt>Settings…</dt><dd><p>Calls up the text-editor settings dialog.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<section id="text-editor-settings">
+<h3>Text Editor Settings<a class="headerlink" href="#text-editor-settings" title="Permalink to this headline">¶</a></h3>
+<p>The settings that can be configured for the text editor.</p>
+<dl>
+<dt>Editor Mode</dt><dd><p>Whether you want both the Rich Text Editor and the SVG Source Editor, or only one of either.</p>
+</dd>
+<dt>Colors</dt><dd><p>Here you can configure the syntax highlighting for the SVG source.</p>
+<dl class="simple">
+<dt>Keyword</dt><dd><p>These highlights important characters like &lt;, /, and &gt;.</p>
+</dd>
+<dt>Element</dt><dd><p>The format for highlighting the element tag name. <strong>text</strong> and <strong>tspan</strong> are examples of element names.</p>
+</dd>
+<dt>Attribute</dt><dd><p>The format for highlighting the attributes of the tag. For example, <code class="docutils literal notranslate"><span class="pre">font-family</span></code>, when it isn’t in the <code class="docutils literal notranslate"><span class="pre">style</span></code> tag is usually written as an attribute.</p>
+</dd>
+<dt>Value</dt><dd><p>The format for highlighting value of attributes.</p>
+</dd>
+<dt>Comment</dt><dd><p>This highlights XML comments, which are written as following: <code class="docutils literal notranslate"><span class="pre">&lt;!--</span> <span class="pre">This</span> <span class="pre">is</span> <span class="pre">an</span> <span class="pre">XML</span> <span class="pre">comment</span> <span class="pre">--&gt;</span></code>. Comments are pieces of text that never get interpreted.</p>
+</dd>
+<dt>Editor Text Color</dt><dd><p>The main color of the editor.</p>
+</dd>
+<dt>Editor background color</dt><dd><p>The main background color of the editor.</p>
+</dd>
+</dl>
+</dd>
+<dt>Fonts</dt><dd><p>This allows you to filter the selection of fonts in the editor by writing system. Some systems have a lot of fonts specifically for showing foreign languages properly, but these might not be useful for you. You just tick the writing systems which you use yourself, and the font drop-down will only show fonts that have full support for that language.</p>
+</dd>
+</dl>
+</section>
+</section>
+<section id="fine-typographic-control-with-the-svg-source-tab">
+<h2>Fine typographic control with the SVG Source tab<a class="headerlink" href="#fine-typographic-control-with-the-svg-source-tab" title="Permalink to this headline">¶</a></h2>
+<p>So, the rich text editor cannot control all functionality that SVG text allows for. For that, you will need to touch the SVG source directly. But to do that, you will first need to go to the text editor settings and enable either <span class="guilabel">SVG Source</span> or <span class="guilabel">Both</span> editor mode. The Rich Text editor will lose some information, so if you go all out, use <span class="guilabel">SVG Source</span>.</p>
+<section id="word-spacing-letter-spacing-and-kerning">
+<h3>Word-spacing, Letter-spacing and Kerning<a class="headerlink" href="#word-spacing-letter-spacing-and-kerning" title="Permalink to this headline">¶</a></h3>
+<p>These three are written and read from the rich text tab, but only two of them can be controlled from Rich Text tab.</p>
+<dl>
+<dt>Kerning</dt><dd><p><a class="reference external" href="https://www.w3.org/TR/SVG/text.html#KerningProperty">Kerning, in SVG 1.1</a> behaves slightly differently than <code class="docutils literal notranslate"><span class="pre">font-kerning</span></code> in CSS. Krita by default uses the <code class="docutils literal notranslate"><span class="pre">auto</span></code> property for this, which means it is on. To turn it off use <code class="docutils literal notranslate"><span class="pre">kerning:</span> <span class="pre">0;</span></code> in the <code class="docutils literal notranslate"><span class="pre">style</span></code> section of the text. Any other numeric value will be added to current <code class="docutils literal notranslate"><span class="pre">letter-spacing</span></code>.</p>
+<img alt="../../_images/Krita_4_0_text_kerning.png" class="align-center" src="../../_images/Krita_4_0_text_kerning.png" />
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">text</span> <span class="n">style</span><span class="o">=</span><span class="s2">&quot;kerning:0; font-family:Dancing Script; font-size:18pt; font-size-adjust:0.265625&quot;</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">tspan</span><span class="o">&gt;</span><span class="n">No</span> <span class="n">Kerning</span> <span class="n">on</span> <span class="n">Valhalla</span> <span class="n">Tower</span><span class="o">.&lt;/</span><span class="n">tspan</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">text</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</dd>
+<dt>Letter-spacing</dt><dd><p>This is the distance between letters in pts, usually. Just write <code class="docutils literal notranslate"><span class="pre">letter-spacing</span></code> in the <code class="docutils literal notranslate"><span class="pre">style</span></code> and add a distance in pts behind it. A negative value will decrease the value between letters.</p>
+</dd>
+<dt>Word-spacing</dt><dd><p>This is the extra distance between words, defaulting to pts. By default, <code class="docutils literal notranslate"><span class="pre">word-spacing:</span> <span class="pre">0;</span></code> will have it use only the width of the space character for that font. A negative value will decrease the amount of space between words:</p>
+<img alt="../../_images/Krita_4_0_letter_and_word_spacing.png" class="align-center" src="../../_images/Krita_4_0_letter_and_word_spacing.png" />
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">text</span> <span class="n">style</span><span class="o">=</span><span class="s2">&quot;font-family:Noto Serif; font-size:12pt; font-size-adjust:0.389915; text-anchor:middle&quot;</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">tspan</span><span class="o">&gt;</span><span class="n">No</span> <span class="n">Adjustment</span><span class="o">.&lt;/</span><span class="n">tspan</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">tspan</span> <span class="n">style</span><span class="o">=</span><span class="s2">&quot;letter-spacing:2&quot;</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;0&quot;</span> <span class="n">dy</span><span class="o">=</span><span class="s2">&quot;22pt&quot;</span><span class="o">&gt;</span><span class="n">Letter</span> <span class="n">spacing</span><span class="p">:</span> <span class="mi">2</span><span class="o">&lt;/</span><span class="n">tspan</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">tspan</span> <span class="n">style</span><span class="o">=</span><span class="s2">&quot;letter-spacing:-2&quot;</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;0&quot;</span> <span class="n">dy</span><span class="o">=</span><span class="s2">&quot;22pt&quot;</span><span class="o">&gt;</span><span class="n">Letter</span> <span class="n">spacing</span><span class="p">:</span> <span class="o">-</span><span class="mi">2</span><span class="o">&lt;/</span><span class="n">tspan</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">tspan</span> <span class="n">style</span><span class="o">=</span><span class="s2">&quot;word-spacing:5&quot;</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;0&quot;</span> <span class="n">dy</span><span class="o">=</span><span class="s2">&quot;22pt&quot;</span><span class="o">&gt;</span><span class="n">Word</span> <span class="n">spacing</span><span class="p">:</span> <span class="mi">5</span><span class="o">&lt;/</span><span class="n">tspan</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">tspan</span> <span class="n">style</span><span class="o">=</span><span class="s2">&quot;word-spacing:-5&quot;</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;0&quot;</span> <span class="n">dy</span><span class="o">=</span><span class="s2">&quot;22pt&quot;</span><span class="o">&gt;</span><span class="n">Word</span> <span class="n">spacing</span><span class="p">:</span> <span class="o">-</span><span class="mi">5</span><span class="o">&lt;/</span><span class="n">tspan</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">text</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</section>
+<section id="x-y-dx-dy">
+<h3>x, y, dx, dy<a class="headerlink" href="#x-y-dx-dy" title="Permalink to this headline">¶</a></h3>
+<p>These are even finer-grained controls that can be used to position text. However, they CANNOT be reliably converted to the format of the rich text editor, because the rich text editor uses these to figure out if a line is a new-line and thus writes to these.</p>
+<dl class="simple">
+<dt>X and Y</dt><dd><p>X and Y are absolute coordinates. But because you cannot change the absolute coordinates of the text from the editor, these get added to the position when they show up in a tspan.</p>
+</dd>
+<dt>dx and dy</dt><dd><p>These are relative coordinates to the position of the previous letter.</p>
+</dd>
+</dl>
+</section>
+<section id="font-stretch-and-small-caps">
+<h3>Font-stretch and Small-caps<a class="headerlink" href="#font-stretch-and-small-caps" title="Permalink to this headline">¶</a></h3>
+<p>These can also be stored and written to the rich text tab’s internal format, but they don’t get used in the on screen text object.</p>
+</section>
+<section id="dominant-baseline-alignment-baseline-font-size-adjust-writing-mode-glyph-orientation-rotate">
+<h3>Dominant Baseline, Alignment baseline, Font-size-adjust, Writing mode, Glyph-orientation, rotate<a class="headerlink" href="#dominant-baseline-alignment-baseline-font-size-adjust-writing-mode-glyph-orientation-rotate" title="Permalink to this headline">¶</a></h3>
+<p>These are not stored in the rich text right now, and while they can be written into the SVG text, the SVG text-shape doesn’t do anything with them.</p>
+<p>Krita generates <code class="docutils literal notranslate"><span class="pre">font-size-adjust</span></code> for the font when coming from rich text, as this can help designers when they want to use the SVG source as a basis for later adjustments.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="gradient_edit.html" class="btn btn-neutral float-right" title="Gradient Editing Tool" accesskey="n" rel="next"> <!-- Next --> <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="shape_edit.html" class="btn btn-neutral" title="Shape Edit Tool" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- Previous  -->  </a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright licensed under the GNU Free Documentation License 1.3+ unless stated otherwise.
+      
+        <span class="commit">
+          Revision <code>7c271ce</code>.
+        </span>
+      
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a modified <a href="https://github.com/rtfd/sphinx_rtd_theme">RTD theme</a>.<br/>
+  <a href="https://krita.org" title="Krita official website.">Krita official website</a> |
+  <a href="https://invent.kde.org/documentation/docs-krita-org/" title="The Gitlab instance to edit this pages and collaborate.">Git repository for docs.krita.org </a> |
+  <a href="https://www.kde.org/community/whatiskde/impressum-en.php" title="To know more about KDE, code of conduct, privacy policy and GDPR.">KDE Impressum</a>.
+   
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'5.0.0 Beta',
+            LANGUAGE:'en',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/documentation_options.js"></script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
+      });
+  </script> 
+
+ <script type="text/javascript">
+	 var _paq=_paq||[];
+	 _paq.push(['setCookieDomain','*.krita.org']);
+	 _paq.push(['setDomains','*.krita.org']);
+	 _paq.push(['setDocumentTitle',document.domain+"/"+document.title]);
+	 _paq.push(['trackPageView']);
+	 _paq.push(['enableLinkTracking']);
+
+	 (function(){
+	 	var u="//stats.kde.org/";
+	    _paq.push(['setTrackerUrl',u+'piwik.php']);
+	    _paq.push(['setSiteId',13]);
+	    var d = document, g = d.createElement('script'),s=d.getElementsByTagName('script')[0];
+	    g.type = 'text/javascript';
+	    g.async = true;
+	    g.defer = true;
+	    g.src = u+'piwik.js';
+	    s.parentNode.insertBefore(g,s);
+	  })();
+</script> 
+<noscript><p><img src="//stats.kde.org/piwik.php?idsite=13" style="border:0;" alt="" /></p></noscript>
+
+</body>
+</html>

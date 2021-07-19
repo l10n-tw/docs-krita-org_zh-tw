@@ -1,0 +1,585 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" name="title" content="Storyboard Docker" />
+  <meta property="og:site-name" content="Krita Manual" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="en" />
+  <meta property="og:locale:alternate" content="ca" />
+  
+  <meta property="og:locale:alternate" content="fr" />
+  <meta property="og:locale:alternate" content="it" />
+  <meta property="og:locale:alternate" content="ja" />
+  <meta property="og:locale:alternate" content="ko" />
+  <meta property="og:locale:alternate" content="nl" />
+  <meta property="og:locale:alternate" content="pl" />
+  <meta property="og:locale:alternate" content="pt_PT" />
+  <meta property="og:locale:alternate" content="uk_UA" />
+  <meta property="og:locale:alternate" content="zh_CN" />
+  <meta property="og:article:modified_time" content="2021-07-19T15:33:59" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<meta content="Overview of the storyboard docker." name="description" />
+
+  
+  
+  <title>Storyboard Docker &mdash; Krita Manual 5.0.0 Beta documentation</title>
+  
+
+  
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    
+  
+  
+  
+    <link rel="canonical" href="en/reference_manual/dockers/storyboard_docker.html"/>
+    <meta property="og:url" content="en/reference_manual/dockers/storyboard_docker.html" />
+    <meta property="og:image" content="en/_static/sidebar-logo.png" />
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Task Sets Docker" href="task_sets.html" />
+    <link rel="prev" title="Specific Color Selector" href="specific_color_selector.html" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+       
+           <a href="../../index.html" class="icon icon-home">
+
+			<img src="../../_static/sidebar-logo.png" class="logo" alt="Logo"/>
+           	
+           <!--	Krita Manual -->
+
+
+          </a>
+
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-side-nav-language-selector">
+        	<p class="caption-text">
+	        	<select id="language-selector-container">
+	        		<option value="ca">Català</option>
+	        		<option value="en">English</option>
+	        		<option value="fr">français</option>
+	        		<option value="it">Italiano</option>
+	        		<option value="ja">日本語</option>
+	        		<option value="ko">한국어</option>
+	        		<option value="nl">Nederlands</option>
+	        		<option value="pl">Polski</option>
+	        		<option value="pt_PT">português</option>
+	        		<option value="uk_UA">Українська</option>
+	        		<option value="zh_CN">简体中文</option>
+	        	</select>
+        	</p>
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../user_manual.html">User Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../general_concepts.html">General Concepts</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../reference_manual.html">Reference Manual</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../audio_for_animation.html">Audio for Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blending_modes.html">Blending Modes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../brushes.html">Brushes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../clones_array.html">Clones Array</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_new_document.html">Create New Document</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../default_python_plugins.html">Pre-installed Python plugins</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../dockers.html">Dockers</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="add_shape.html">Add Shape</a></li>
+<li class="toctree-l3"><a class="reference internal" href="advanced_color_selector.html">Advanced Color Selector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="animation_curves.html">Animation Curves Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="animation_docker.html">Animation Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="animation_timeline.html">Animation Timeline Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="arrange.html">Arrange</a></li>
+<li class="toctree-l3"><a class="reference internal" href="artistic_color_selector.html">Artistic Color Selector Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="brush_preset_docker.html">Preset Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="channels_docker.html">Channels</a></li>
+<li class="toctree-l3"><a class="reference internal" href="color_sliders.html">Color Sliders</a></li>
+<li class="toctree-l3"><a class="reference internal" href="compositions.html">Compositions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="digital_color_mixer.html">Digital Color Mixer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gamut_mask_docker.html">Gamut Masks Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="grids_and_guides.html">Grids and Guides Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="histogram_docker.html">Histogram Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="layers.html">Layers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="log_viewer.html">Log Viewer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lut_management.html">LUT Management</a></li>
+<li class="toctree-l3"><a class="reference internal" href="onion_skin.html">Onion Skin Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="overview.html">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="palette_docker.html">Palette Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pattern_docker.html">Patterns Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="recorder_docker.html">Recorder Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reference_images_docker.html">Reference Images Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="shape_properties_docker.html">Shape Properties Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="small_color_selector.html">Small Color Selector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="snapshot_docker.html">Snapshot Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="specific_color_selector.html">Specific Color Selector</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Storyboard Docker</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#toolbar-buttons">Toolbar Buttons</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#storyboard-scene">Storyboard Scene</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#storyboard-view-and-modes">Storyboard View and Modes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#using-storyboard-docker">Using Storyboard docker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#exporting-storyboard">Exporting Storyboard</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="task_sets.html">Task Sets Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="touch_docker.html">Touch Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="undo_history.html">Undo History</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vector_library.html">Vector Library</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../dr_minw_debugger.html">Dr. MinGW Debugger</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../filters.html">Filters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hdr_display.html">HDR Display</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../image_split.html">Image Split</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../import_animation.html">Import Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../instant_preview.html">Instant Preview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../krita_4_preset_bundle.html">Krita 4 Preset Bundle Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../layers_and_masks.html">Layers and Masks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../linux_command_line.html">Linux Command Line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../list_supported_tablets.html">The List of Supported Tablets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../main_menu.html">Main Menu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../maths_input.html">Maths Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../popup-palette.html">Pop-up Palette</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preferences.html">Preferences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../render_animation.html">Render Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../resource_management.html">Resource Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../seexpr.html">SeExpr Quick Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../separate_image.html">Separate Image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sharing_krita_logs.html">Getting Krita logs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../split_layer.html">Split Layer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../stroke_selection.html">Stroke Selection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools.html">Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../welcome_screen.html">Welcome Screen</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials.html">Tutorials and How-tos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../KritaFAQ.html">Krita FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributors_manual.html">Contributors Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../resources_page.html">Resources</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+	<!-- start top banner area (for fundraisers or messages)
+
+	<div style="text-align: center; background-color: #333">
+		<a href="https://krita.org/en/fundraising-2018-campaign/" target="_self" onclick="ga('send', 'event', 'frontpage', 'button', 'Fundraiser 2018');">
+			<img src="https://krita.org/wp-content/themes/krita-org-theme/images/decoration/2018-fundraiser-banner.png" style="max-width: 100%">
+		</a>
+	</div>
+	
+	 end top banner area -->
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Krita Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../reference_manual.html">Reference Manual</a> &raquo;</li>
+        
+          <li><a href="../dockers.html">Dockers</a> &raquo;</li>
+        
+      <li>Storyboard Docker</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+          
+            <a href="../../_sources/reference_manual/dockers/storyboard_docker.rst.txt" rel="nofollow"> 
+             
+              <img src="../../_static/images/source-code.png" />
+             <!-- View page source -->
+
+          </a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="storyboard-docker">
+<span id="index-0"></span><span id="id1"></span><h1>Storyboard Docker<a class="headerlink" href="#storyboard-docker" title="Permalink to this headline">¶</a></h1>
+<img alt="../../_images/Storyboard_thumbnailonly_view.png" src="../../_images/Storyboard_thumbnailonly_view.png" />
+<p>A storyboard is a series of drawings and directions that outlines a film as a set of
+scenes. These scenes may be accompanied with text that can provide additional context
+such as dialog, action descriptions, or pertinent details needed for production.
+Storyboarding is used extensively during the planning phase of a film to achieve a
+better understanding of the overall production and its needs. Storyboards are
+also useful for teams to discuss the scene-by-scene flow of a film or make any
+necessary changes before entering the production phase.</p>
+<p>Krita’s Storyboard Docker allows the user to develop a story by creating and managing scenes. This includes the
+addition, removal, or adjustment of a scene. Users can also insert additional scenes between other scenes
+when necessary, or reorder scenes via drag-and-drop. The storyboard’s visual content exists within Krita’s
+internal animation system, which gives users the ability to preview the sequence using the Animation Timeline’s
+transport controls. The storyboard docker also supports exporting the contents of a storyboard
+to a document; The current supported formats for export are <cite>SVG</cite> and <cite>PDF</cite>.</p>
+<section id="toolbar-buttons">
+<h2>Toolbar Buttons<a class="headerlink" href="#toolbar-buttons" title="Permalink to this headline">¶</a></h2>
+<img alt="../../_images/Storyboard_uper_buttons.png" src="../../_images/Storyboard_uper_buttons.png" />
+<dl class="simple" id="storyboard-export-menu">
+<dt>Export</dt><dd><p>A drop down menu with export options available for the current storyboard.
+This can be used to export the storyboard to a desired format. You can specify
+the layout of the exported file using the export dialog options. This might be useful
+when discussing ideas and planning the animation with teammates or if you want to show
+your animation ideas to a potential client. Krita currently supports exporting
+storyboards to <cite>.pdf</cite> or <cite>.svg</cite> formats. For additional details see <a class="reference internal" href="#exporting-storyboard"><span class="std std-ref">Exporting Storyboard</span></a></p>
+</dd>
+</dl>
+<dl id="storyboard-comment-menu">
+<dt>Comment</dt><dd><p>A drop down menu which consists of a list of comments for storyboard items which includes a
+<cite>Delete Comment</cite> button and an <cite>Add Comment</cite> button. You can add comment sections to all entries,
+remove comment sections, or change their visiblity from the drop down menu. The order
+of comments can be changed using drag-and-drop. Actions within this menu will apply to
+every entry within the storyboard docker.</p>
+<img alt="../../_images/Storyboard_comment.png" src="../../_images/Storyboard_comment.png" />
+</dd>
+<dt>Lock</dt><dd><p>This option is used to freeze the docker in its current state. When this option is enabled thumbnails, comments,
+duration and frame number do not change. Reordering of scenes using drag and drop is also be disabled. This can be used
+to preserve the state of the storyboard docker even when modifying the contents of the image.</p>
+</dd>
+</dl>
+<dl id="storyboard-arrange-menu">
+<dt>Arrange</dt><dd><p>A drop-down menu which provides options for changing <cite>View</cite> and <cite>Mode</cite> settings. These settings change the
+arrangement of scenes withhin the docker. For additional details, see <a class="reference internal" href="#storyboard-views-and-modes"><span class="std std-ref">Storyboard View and Modes</span></a></p>
+<img alt="../../_images/Storyboard_arrange.png" src="../../_images/Storyboard_arrange.png" />
+</dd>
+</dl>
+</section>
+<section id="storyboard-scene">
+<h2>Storyboard Scene<a class="headerlink" href="#storyboard-scene" title="Permalink to this headline">¶</a></h2>
+<p>A storyboard scene represents an individual scene in a larger production. There can be multiple keyframes within
+the duration of a single scene, with the thumbnail representing the first keyframe of a given scene. Each
+scene has a header with editable fields – such as scene names and durations. Storyboard scenes can be inserted before or
+after any other scene. The order of scenes can be changed at any time using drag-and-drop. Changing the order of
+scenes will be reflected appropriately in the timeline, where keyframes will be reordered to accomodate the new
+desired scene order.</p>
+<dl class="simple">
+<dt>Frame Number</dt><dd><p>This shows the starting frame number of the scene. This field cannot be edited.</p>
+</dd>
+<dt>Name</dt><dd><p>The scene name. Double- <img alt="mouseleft" src="../../_images/Krita_mouse_left.png" /> to make it editable, and press the <kbd class="kbd docutils literal notranslate">Enter</kbd> key to finish editing.</p>
+</dd>
+<dt>Duration in Seconds</dt><dd><p>A spin-box. This will set the duration of the scene in seconds.</p>
+</dd>
+<dt>Duration in Frames</dt><dd><p>A spin-box. This will set the duration of the scene in frames. Frames represent the division of seconds, which is dependant on the users’ desired <cite>Frame Rate</cite> setting.</p>
+</dd>
+<dt>Thumbnail</dt><dd><p>A thumbnail representing the contents of a scene. Unlike the comments, it cannot be edited inside the docker directly. Instead, changes must be made within the canvas after selection.</p>
+</dd>
+<dt>Add Item</dt><dd><p>A button on the lower left corner of the thumbnail that adds a new scene after the duration of the current scene. The new scene will start with a duration of 1 frame, which is the smallest possible length of a scene.</p>
+</dd>
+<dt>Delete Item</dt><dd><p>A button on the lower right corner of the thumbnail that deletes the current scene. The keyframe contents of the deleted scene will be transferred to the scene just before. This is used to prevent accidental data loss.</p>
+</dd>
+<dt>Comment Name</dt><dd><p>Name of the comment field. This field is uneditable directly but can be edited from the <a class="reference internal" href="#storyboard-comment-menu"><span class="std std-ref">Comment menu</span></a>.</p>
+</dd>
+<dt>Comment Field</dt><dd><p>The comment content. Double- <img alt="mouseleft" src="../../_images/Krita_mouse_left.png" /> to make it editable, and press the <kbd class="kbd docutils literal notranslate">Enter</kbd> key to finish editing.</p>
+</dd>
+</dl>
+</section>
+<section id="storyboard-view-and-modes">
+<span id="storyboard-views-and-modes"></span><h2>Storyboard View and Modes<a class="headerlink" href="#storyboard-view-and-modes" title="Permalink to this headline">¶</a></h2>
+<p>The View and Mode options for the Storyboard Docker are available via the <a class="reference internal" href="#storyboard-arrange-menu"><span class="std std-ref">Arrange menu</span></a>.
+These options allow the user to change the visual arrangement or elements of the scenes.</p>
+<dl>
+<dt>View</dt><dd><p>Options that filter which parts of the scene to show within the Storyboard Docker.</p>
+<ul>
+<li><p>Thumbnail Only : Show only the thumbnail portion of a scene.</p>
+<blockquote>
+<div><img alt="../../_images/Storyboard_thumbnailonly_view.png" src="../../_images/Storyboard_thumbnailonly_view.png" />
+</div></blockquote>
+</li>
+<li><p>Comments Only : Show only the comments section of a scene.</p>
+<blockquote>
+<div><img alt="../../_images/Storyboard_commentonly_view.png" src="../../_images/Storyboard_commentonly_view.png" />
+</div></blockquote>
+</li>
+<li><p>All : Show all elements of a scene.</p>
+<blockquote>
+<div><img alt="../../_images/Storyboard_grid_mode.png" src="../../_images/Storyboard_grid_mode.png" />
+</div></blockquote>
+</li>
+</ul>
+</dd>
+<dt>Mode</dt><dd><p>Allows the user to change the visual arrangement of scenes within the Storyboard Docker.</p>
+<ul>
+<li><p>Row : Scenes are arranged in a row-wise fashion. The scene’s comments are on the right side of the thumbnail.</p>
+<blockquote>
+<div><img alt="../../_images/Storyboard_row_mode.png" src="../../_images/Storyboard_row_mode.png" />
+</div></blockquote>
+</li>
+<li><p>Column : Scenes are arranged in column-wise fashion. The scene’s comments are below the thumbnail.</p>
+<blockquote>
+<div><img alt="../../_images/Storyboard_column_mode.png" src="../../_images/Storyboard_column_mode.png" />
+</div></blockquote>
+</li>
+<li><p>Grid : Scenes are arranged in a grid. In this mode, if you change the size of the docker, the grid is rearranged to accomodate more scenes in the docker.</p>
+<blockquote>
+<div><img alt="../../_images/Storyboard_grid_mode.png" src="../../_images/Storyboard_grid_mode.png" />
+</div></blockquote>
+</li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="using-storyboard-docker">
+<span id="id2"></span><h2>Using Storyboard docker<a class="headerlink" href="#using-storyboard-docker" title="Permalink to this headline">¶</a></h2>
+<dl>
+<dt>Adding Scenes</dt><dd><p>There are two ways to add scenes :</p>
+<ul class="simple">
+<li><p><img alt="mouseright" src="../../_images/Krita_mouse_right.png" /> and choose either <span class="guilabel">Add Scene After</span> or <span class="guilabel">Add Scene Before</span></p></li>
+<li><p>Press the <cite>Add Button</cite> at the lower left corner of thumbnail of the scene, this is the same as <span class="guilabel">Add Scene After</span>.</p></li>
+</ul>
+</dd>
+<dt>Deleting Scenes</dt><dd><p>There are two ways to delete scenes :</p>
+<ul class="simple">
+<li><p><img alt="mouseright" src="../../_images/Krita_mouse_right.png" /> and <span class="guilabel">Remove Scene</span>.</p></li>
+<li><p>Delete button at the lower right corner of thumbnail of scene, this is the same as <span class="guilabel">Remove Scene</span>.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Deleting scene in storyboard does not delete the keyframes at the scene’s frame. Instead the duration of the deleted scene gets added to the previous scene. This is prevent accidental data loss upon removing a scene.</p>
+</div>
+</dd>
+<dt>Reordering Scenes</dt><dd><p>Scenes can be reordered using drag and drop. All the keyframes within the duration of that scene will move upon reordering.</p>
+</dd>
+<dt>Managing Comment Fields</dt><dd><p>The storyboard docker allows for the management of multiple optional comment fields. While some projects might require only one comment field for dialog per scene, some might require additional fields that describe character actions or camera directions. The <a class="reference internal" href="#storyboard-comment-menu"><span class="std std-ref">Comment menu</span></a> allows the user to configure these comment fields.</p>
+<ul class="simple">
+<li><p>To make a new comment field, go to <a class="reference internal" href="#storyboard-comment-menu"><span class="std std-ref">Comment menu</span></a> and click on the plus button at the bottom-left. A new comment field will be added to the menu. Change its name and press <kbd class="kbd docutils literal notranslate">Enter</kbd>. Every scene will now have the new comment field available to edit.</p></li>
+<li><p>To delete a comment field, select it and press the Delete button at the bottom-right corner of the <a class="reference internal" href="#storyboard-comment-menu"><span class="std std-ref">Comment menu</span></a>.</p></li>
+<li><p>To toggle visiblity of a comment field click on the eye icon.</p></li>
+<li><p>To rearrange the order of comment fields use drag and drop in the <a class="reference internal" href="#storyboard-comment-menu"><span class="std std-ref">Comment menu</span></a>.</p></li>
+</ul>
+</dd>
+<dt>Adding Comments</dt><dd><p>To add a comment to a comment field in a scene, double click on the comment’s area to make it editable. When finished, click outside of the area to save it.</p>
+</dd>
+<dt>Changing duration</dt><dd><p>Use the spin-box’s up and down button to change duration by one. Double click to make the field editable by typing.</p>
+</dd>
+<dt>Working with multiple layers</dt><dd><p>When working with multiple layers, if you want to change only one of the scene thumbnails when drawing on canvas, you should insert keyframes at that scene’s time in the current layer.
+An easy way to do this is to turn the <span class="guilabel">Auto Frame</span> mode on in the <a class="reference internal" href="animation_docker.html#animation-docker"><span class="std std-ref">animation docker</span></a>. That way any changes that you make with the scene selected will insert a keyframe at the scene’s time in the current layer and thus would change the thumbnail for that scene.</p>
+</dd>
+</dl>
+</section>
+<section id="exporting-storyboard">
+<span id="id3"></span><h2>Exporting Storyboard<a class="headerlink" href="#exporting-storyboard" title="Permalink to this headline">¶</a></h2>
+<p>The storyboard created using the docker can be exported to PDF or SVG documents. The <a class="reference internal" href="#storyboard-export-menu"><span class="std std-ref">Export Menu</span></a> offers options to export the storyboard.
+It has options to export as either a PDF or SVG document. Choosing any of these will take you to the Export Dialog where you can pick the layout, that is, how scenes of the storyboard are arranged in the exported document.
+You can either set the layout using custom options provided or using an SVG file. The Export dialog also provides options for which the scenes to export.</p>
+<p>You can choose the range using the frame number of storyboard scene. The first two options in the dialog let you select the first and last frame to export. All scenes that have frame number in that range (inclusive of both the first and last) would be exported.
+Here you can also select the font size of any text on the document, such as scenes’ name, duration or the comments.</p>
+<dl>
+<dt>Specifying layout using custom options</dt><dd><p>The following options are provided to specify layout :</p>
+<ul class="simple">
+<li><p>Rows per page</p></li>
+<li><p>Columns per page</p></li>
+<li><p>Page Size</p></li>
+<li><p>Page Orientation</p></li>
+</ul>
+<img alt="../../_images/storyboard_custom_options.png" src="../../_images/storyboard_custom_options.png" />
+</dd>
+<dt>Specifying Layout using SVG file</dt><dd><p>For specifying layout using an SVG file you have to upload an SVG file. The file should have one or more non-overlapping rectangles.</p>
+<img alt="../../_images/storyboard_SVG_layout.png" src="../../_images/storyboard_SVG_layout.png" />
+</dd>
+<dt>File name for Export document</dt><dd><ul class="simple">
+<li><p>PDF : Choose the filename of the export document.</p></li>
+<li><p>SVG : Choose the directory where you want to save the exported files and a base name. The exported files will be named baseName followed by a numerical suffix. e.g. base0, base1 etc.</p></li>
+</ul>
+<img alt="../../_images/storyboard_export_file.png" src="../../_images/storyboard_export_file.png" />
+</dd>
+</dl>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="task_sets.html" class="btn btn-neutral float-right" title="Task Sets Docker" accesskey="n" rel="next"> <!-- Next --> <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="specific_color_selector.html" class="btn btn-neutral" title="Specific Color Selector" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- Previous  -->  </a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright licensed under the GNU Free Documentation License 1.3+ unless stated otherwise.
+      
+        <span class="commit">
+          Revision <code>7c271ce</code>.
+        </span>
+      
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a modified <a href="https://github.com/rtfd/sphinx_rtd_theme">RTD theme</a>.<br/>
+  <a href="https://krita.org" title="Krita official website.">Krita official website</a> |
+  <a href="https://invent.kde.org/documentation/docs-krita-org/" title="The Gitlab instance to edit this pages and collaborate.">Git repository for docs.krita.org </a> |
+  <a href="https://www.kde.org/community/whatiskde/impressum-en.php" title="To know more about KDE, code of conduct, privacy policy and GDPR.">KDE Impressum</a>.
+   
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'5.0.0 Beta',
+            LANGUAGE:'en',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/documentation_options.js"></script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
+      });
+  </script> 
+
+ <script type="text/javascript">
+	 var _paq=_paq||[];
+	 _paq.push(['setCookieDomain','*.krita.org']);
+	 _paq.push(['setDomains','*.krita.org']);
+	 _paq.push(['setDocumentTitle',document.domain+"/"+document.title]);
+	 _paq.push(['trackPageView']);
+	 _paq.push(['enableLinkTracking']);
+
+	 (function(){
+	 	var u="//stats.kde.org/";
+	    _paq.push(['setTrackerUrl',u+'piwik.php']);
+	    _paq.push(['setSiteId',13]);
+	    var d = document, g = d.createElement('script'),s=d.getElementsByTagName('script')[0];
+	    g.type = 'text/javascript';
+	    g.async = true;
+	    g.defer = true;
+	    g.src = u+'piwik.js';
+	    s.parentNode.insertBefore(g,s);
+	  })();
+</script> 
+<noscript><p><img src="//stats.kde.org/piwik.php?idsite=13" style="border:0;" alt="" /></p></noscript>
+
+</body>
+</html>

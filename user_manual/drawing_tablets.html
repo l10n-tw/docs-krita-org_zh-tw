@@ -1,0 +1,521 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" name="title" content="Drawing Tablets" />
+  <meta property="og:site-name" content="Krita Manual" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="en" />
+  <meta property="og:locale:alternate" content="ca" />
+  
+  <meta property="og:locale:alternate" content="fr" />
+  <meta property="og:locale:alternate" content="it" />
+  <meta property="og:locale:alternate" content="ja" />
+  <meta property="og:locale:alternate" content="ko" />
+  <meta property="og:locale:alternate" content="nl" />
+  <meta property="og:locale:alternate" content="pl" />
+  <meta property="og:locale:alternate" content="pt_PT" />
+  <meta property="og:locale:alternate" content="uk_UA" />
+  <meta property="og:locale:alternate" content="zh_CN" />
+  <meta property="og:article:modified_time" content="2021-07-19T15:33:59" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<meta content="Basic page describing drawing tablets, how to set them up for Krita and how to troubleshoot common tablet issues." name="description" />
+
+  
+  
+  <title>Drawing Tablets &mdash; Krita Manual 5.0.0 Beta documentation</title>
+  
+
+  
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    
+  
+  
+  
+    <link rel="canonical" href="en/user_manual/drawing_tablets.html"/>
+    <meta property="og:url" content="en/user_manual/drawing_tablets.html" />
+    <meta property="og:image" content="en/_static/sidebar-logo.png" />
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Loading and Saving Brushes" href="loading_saving_brushes.html" />
+    <link rel="prev" title="Introduction to Krita coming from Paint Tool SAI" href="introduction_from_other_software/introduction_from_sai.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+       
+           <a href="../index.html" class="icon icon-home">
+
+			<img src="../_static/sidebar-logo.png" class="logo" alt="Logo"/>
+           	
+           <!--	Krita Manual -->
+
+
+          </a>
+
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-side-nav-language-selector">
+        	<p class="caption-text">
+	        	<select id="language-selector-container">
+	        		<option value="ca">Català</option>
+	        		<option value="en">English</option>
+	        		<option value="fr">français</option>
+	        		<option value="it">Italiano</option>
+	        		<option value="ja">日本語</option>
+	        		<option value="ko">한국어</option>
+	        		<option value="nl">Nederlands</option>
+	        		<option value="pl">Polski</option>
+	        		<option value="pt_PT">português</option>
+	        		<option value="uk_UA">Українська</option>
+	        		<option value="zh_CN">简体中文</option>
+	        	</select>
+        	</p>
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../user_manual.html">User Manual</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction_from_other_software.html">Introduction Coming From Other Software</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Drawing Tablets</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#what-are-tablets">What are Tablets?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#supported-tablets">Supported Tablets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#drivers-and-pressure-sensitivity">Drivers and Pressure Sensitivity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#where-it-can-go-wrong-windows">Where it can go wrong: Windows</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#surface-pro-tablets-need-two-drivers">Surface Pro tablets need two drivers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#windows-10-updates">Windows 10 updates</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#wacom-tablets">Wacom Tablets</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#broken-drivers">Broken Drivers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#conflicting-drivers">Conflicting Drivers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#interfering-software">Interfering software</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#flicks-wait-circle-showing-up-and-then-calling-the-popup-palette">Flicks (Wait circle showing up and then calling the popup palette)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#wacom-double-click-sensitivity-straight-starts-of-lines">Wacom Double Click Sensitivity (Straight starts of lines)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">Supported Tablets</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="loading_saving_brushes.html">Loading and Saving Brushes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oncanvas_brush_editor.html">On-Canvas Brush Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mirror_tools.html">Mirror Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="painting_with_assistants.html">Painting with Assistants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="working_with_images.html">Working with Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="autosave.html">Saving, AutoSave and Backup Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templates.html">Templates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="layers_and_masks.html">Introduction to Layers and Masks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="selections.html">Selections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python_scripting.html">Python Scripting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tag_management.html">Tag Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="soft_proofing.html">Soft Proofing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vector_graphics.html">Vector Graphics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="snapping.html">Snapping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="animation.html">Animation with Krita</a></li>
+<li class="toctree-l2"><a class="reference internal" href="japanese_animation_template.html">Japanese Animation Template</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gamut_masks.html">Gamut Masks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../general_concepts.html">General Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference_manual.html">Reference Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials.html">Tutorials and How-tos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../KritaFAQ.html">Krita FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributors_manual.html">Contributors Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../resources_page.html">Resources</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+	<!-- start top banner area (for fundraisers or messages)
+
+	<div style="text-align: center; background-color: #333">
+		<a href="https://krita.org/en/fundraising-2018-campaign/" target="_self" onclick="ga('send', 'event', 'frontpage', 'button', 'Fundraiser 2018');">
+			<img src="https://krita.org/wp-content/themes/krita-org-theme/images/decoration/2018-fundraiser-banner.png" style="max-width: 100%">
+		</a>
+	</div>
+	
+	 end top banner area -->
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Krita Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../user_manual.html">User Manual</a> &raquo;</li>
+        
+      <li>Drawing Tablets</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+          
+            <a href="../_sources/user_manual/drawing_tablets.rst.txt" rel="nofollow"> 
+             
+              <img src="../_static/images/source-code.png" />
+             <!-- View page source -->
+
+          </a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="drawing-tablets">
+<span id="index-0"></span><span id="id1"></span><h1>Drawing Tablets<a class="headerlink" href="#drawing-tablets" title="Permalink to this headline">¶</a></h1>
+<p>This page is about drawing tablets, what they are, how they work, and
+where things can go wrong.</p>
+<section id="what-are-tablets">
+<h2>What are Tablets?<a class="headerlink" href="#what-are-tablets" title="Permalink to this headline">¶</a></h2>
+<p>Drawing with a mouse can be unintuitive and difficult compared to pencil
+and paper. Even worse, extended mouse use can result in carpal tunnel
+syndrome. That’s why most people who draw digitally use a specialized
+piece of hardware known as a drawing tablet.</p>
+<img alt="../_images/Krita_tablet_types.png" src="../_images/Krita_tablet_types.png" />
+<p>A drawing tablet is a piece of hardware that you can plug into your
+machine, much like a keyboard or mouse. It usually looks like a plastic
+pad, with a stylus. Another popular format is a computer monitor with
+stylus used to draw directly on the screen. These are better to use than
+a mouse because it’s more natural to draw with a stylus and generally
+better for your wrists.</p>
+<p>With a properly installed tablet stylus, Krita can use information like
+pressure sensitivity, allowing you to make strokes that get bigger or
+smaller depending on the pressure you put on them, to create richer and
+more interesting strokes.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Sometimes, people confuse finger-touch styluses with a proper tablet. You can tell the difference because a drawing tablet stylus usually has a pointy nib, while a stylus made for finger-touch has a big rubbery round nib, like a finger. These tablets may not give good results and a pressure-sensitive tablet is recommended.</p>
+<img alt="../_images/Krita_tablet_stylus.png" src="../_images/Krita_tablet_stylus.png" />
+</div>
+</section>
+<section id="supported-tablets">
+<h2>Supported Tablets<a class="headerlink" href="#supported-tablets" title="Permalink to this headline">¶</a></h2>
+<p>Supported tablets are owned by Krita developers themselves, so they can reliably diagnose and fix bugs. <a class="reference internal" href="../reference_manual/list_supported_tablets.html#list-supported-tablets"><span class="std std-ref">We maintain a list of those here</span></a>.</p>
+<p>If you’re looking for information about iPad or Android tablets, <a class="reference internal" href="../KritaFAQ.html#krita-android"><span class="std std-ref">look here</span></a>.</p>
+</section>
+<section id="drivers-and-pressure-sensitivity">
+<h2>Drivers and Pressure Sensitivity<a class="headerlink" href="#drivers-and-pressure-sensitivity" title="Permalink to this headline">¶</a></h2>
+<p>So you have bought a tablet, a real drawing tablet. And you want to get it
+to work with Krita! So you plug in the USB cable, start up Krita and…
+It doesn’t work! Or well, you can make strokes, but that pressure
+sensitivity you heard so much about doesn’t seem to work.</p>
+<p>This is because you need to install a program called a ‘driver’. Usually
+you can find the driver on a CD that was delivered alongside your
+tablet, or on the website of the manufacturer. Go install it, and while
+you wait, we’ll go into the details of what it is!</p>
+<p>Running on your computer is a basic system doing all the tricky bits of
+running a computer for you. This is the operating system, or OS. Most
+people use an operating system called Windows, but people on an Apple
+device have an operating system called macOS, and some people, including
+many of the developers use a system called Linux.</p>
+<p>The base principle of all of these systems is the same though. You would
+like to run programs like Krita, called software, on your computer, and
+you want Krita to be able to communicate with the hardware, like your
+drawing tablet. But to have those two communicate can be really
+difficult - so the operating system, works as a glue between the two.</p>
+<p>Whenever you start Krita, Krita will first make connections with the
+operating system, so it can ask it for a lot of these things: It would
+like to display things, and use the memory, and so on. Most importantly,
+it would like to get information from the tablet!</p>
+<img alt="../_images/Krita_tablet_drivermissing.png" src="../_images/Krita_tablet_drivermissing.png" />
+<p>But it can’t! Turns out your operating system doesn’t know much about
+tablets. That’s what drivers are for. Installing a driver gives the
+operating system enough information, so the OS can provide Krita with the
+right information about the tablet. The hardware manufacturer’s job is
+to write a proper driver for each operating system.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Because drivers modify the operating system a little, you will always need to restart your computer when installing or uninstalling a driver, so don’t forget to do this! Conversely, because Krita isn’t a driver, you don’t need to even uninstall it to reset the configuration, just rename or delete the configuration file.</p>
+</div>
+</section>
+<section id="where-it-can-go-wrong-windows">
+<h2>Where it can go wrong: Windows<a class="headerlink" href="#where-it-can-go-wrong-windows" title="Permalink to this headline">¶</a></h2>
+<p>Krita automatically connects to your tablet if the drivers are
+installed. When things go wrong, usually the problem isn’t with Krita.</p>
+<section id="surface-pro-tablets-need-two-drivers">
+<h3>Surface Pro tablets need two drivers<a class="headerlink" href="#surface-pro-tablets-need-two-drivers" title="Permalink to this headline">¶</a></h3>
+<p>Certain tablets using n-trig, like the Surface Pro, have two types of
+drivers. One is native, n-trig and the other one is called Wintab.
+Since 3.3, Krita can use Windows Ink style drivers, just go to
+<span class="menuselection">Settings ‣ Configure Krita… ‣ Tablet Settings</span> and
+toggle the <span class="guilabel">Windows 8+ Pointer Input (Windows Ink)</span> there. You
+don’t need to install the Wintab drivers anymore for n-trig based pens.</p>
+</section>
+<section id="windows-10-updates">
+<h3>Windows 10 updates<a class="headerlink" href="#windows-10-updates" title="Permalink to this headline">¶</a></h3>
+<p>Sometimes a Windows 10 update can mess up tablet drivers. In that case,
+reinstalling the drivers should work.</p>
+</section>
+</section>
+<section id="wacom-tablets">
+<h2>Wacom Tablets<a class="headerlink" href="#wacom-tablets" title="Permalink to this headline">¶</a></h2>
+<p>There are three known problems with Wacom tablets and Windows.</p>
+<p>The first is that if you have customized the driver settings, then sometimes,
+often after a driver update, but that is not necessary, the driver breaks.
+Resetting the driver to the default settings and then loading your settings
+from a backup will solve this problem.</p>
+<p>The second is that for some reason it might be necessary to change the display
+priority order. You might have to make your Cintiq screen your primary screen,
+or, on the other hand, make it the secondary screen. Double check in the Wacom
+settings utility that the tablet in the Cintiq is associated with the Cintiq
+screen.</p>
+<p>The third is that if you have a display tablet like a Cintiq and a Wacom ExpressKeys remote, and you have disabled Windows Ink in the calibration page of the stylus settings dialog, so you have the full set of Wintab features, the Cintiq needs to be the first item in Wacom’s desktop application list. Otherwise, you will have an offset between stylus and mouse that will get worse the more displays there are to the left of the Cintiq display.</p>
+<section id="broken-drivers">
+<h3>Broken Drivers<a class="headerlink" href="#broken-drivers" title="Permalink to this headline">¶</a></h3>
+<p>Tablet drivers need to be made by the manufacturer. Sometimes, with
+really cheap tablets, the hardware is fine, but the driver is badly
+written, which means that the driver just doesn’t work well. We cannot
+do anything about this, sadly. You will have to send a complaint to the
+manufacturer for this, or buy a better tablet with better quality
+drivers.</p>
+</section>
+<section id="conflicting-drivers">
+<h3>Conflicting Drivers<a class="headerlink" href="#conflicting-drivers" title="Permalink to this headline">¶</a></h3>
+<p>On Windows, you can only have a single Wintab-style driver installed at
+a time. So be sure to uninstall the previous driver before installing
+the one that comes with the tablet you want to use. Other operating
+systems are a bit better about this, but even Linux, where the drivers
+are often preinstalled, can’t run two tablets with different drivers at
+once.</p>
+</section>
+<section id="interfering-software">
+<h3>Interfering software<a class="headerlink" href="#interfering-software" title="Permalink to this headline">¶</a></h3>
+<p>Sometimes, there’s software that tries to make a security layer between
+Krita and the operating system. Sandboxie is an example of this.
+However, Krita cannot always connect to certain parts of the operating
+system while sandboxed, so it will often break in programs like
+Sandboxie. Similarly, certain mouse software, like Razer utilities can
+also affect whether Krita can talk to the operating system, converting
+tablet information to mouse information. This type of software should be
+configured to leave Krita alone, or be uninstalled.</p>
+<p>The following software has been reported to interfere with tablet events
+to Krita:</p>
+<ol class="arabic simple">
+<li><p>Sandboxie</p></li>
+<li><p>Razer mouse utilities</p></li>
+<li><p>AMD Catalyst:sup:<cite>TM</cite> “game mode” (this broke the right click for someone)</p></li>
+</ol>
+</section>
+<section id="flicks-wait-circle-showing-up-and-then-calling-the-popup-palette">
+<h3>Flicks (Wait circle showing up and then calling the popup palette)<a class="headerlink" href="#flicks-wait-circle-showing-up-and-then-calling-the-popup-palette" title="Permalink to this headline">¶</a></h3>
+<p>If you have a situation where trying to draw keeps bringing up the
+pop-up palette on Windows, then the problem might be flicks. These are a
+type of gesture, a bit of Windows functionality that allows you to make
+a motion to serve as a keyboard shortcut. Windows automatically turns
+these on when you install tablet drivers, because the people who made
+this part of Windows forgot that people also draw with computers. So you
+will need to turn it off in the Windows flicks configuration.</p>
+</section>
+<section id="wacom-double-click-sensitivity-straight-starts-of-lines">
+<h3>Wacom Double Click Sensitivity (Straight starts of lines)<a class="headerlink" href="#wacom-double-click-sensitivity-straight-starts-of-lines" title="Permalink to this headline">¶</a></h3>
+<p>If you experience an issue where the start of the stroke is straight,
+and have a Wacom tablet, it could be caused by the Wacom driver
+double-click detection.</p>
+<p>To fix this, go to the Wacom settings utility and lower the double click
+sensitivity.</p>
+</section>
+</section>
+<section id="id2">
+<h2>Supported Tablets<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>Supported tablets are the ones of which Krita developers have a version
+themselves, so they can reliably fix bugs with them. <a class="reference internal" href="../reference_manual/list_supported_tablets.html#list-supported-tablets"><span class="std std-ref">We maintain a list of those here</span></a>.</p>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="loading_saving_brushes.html" class="btn btn-neutral float-right" title="Loading and Saving Brushes" accesskey="n" rel="next"> <!-- Next --> <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="introduction_from_other_software/introduction_from_sai.html" class="btn btn-neutral" title="Introduction to Krita coming from Paint Tool SAI" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- Previous  -->  </a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright licensed under the GNU Free Documentation License 1.3+ unless stated otherwise.
+      
+        <span class="commit">
+          Revision <code>7c271ce</code>.
+        </span>
+      
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a modified <a href="https://github.com/rtfd/sphinx_rtd_theme">RTD theme</a>.<br/>
+  <a href="https://krita.org" title="Krita official website.">Krita official website</a> |
+  <a href="https://invent.kde.org/documentation/docs-krita-org/" title="The Gitlab instance to edit this pages and collaborate.">Git repository for docs.krita.org </a> |
+  <a href="https://www.kde.org/community/whatiskde/impressum-en.php" title="To know more about KDE, code of conduct, privacy policy and GDPR.">KDE Impressum</a>.
+   
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'5.0.0 Beta',
+            LANGUAGE:'en',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/documentation_options.js"></script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
+      });
+  </script> 
+
+ <script type="text/javascript">
+	 var _paq=_paq||[];
+	 _paq.push(['setCookieDomain','*.krita.org']);
+	 _paq.push(['setDomains','*.krita.org']);
+	 _paq.push(['setDocumentTitle',document.domain+"/"+document.title]);
+	 _paq.push(['trackPageView']);
+	 _paq.push(['enableLinkTracking']);
+
+	 (function(){
+	 	var u="//stats.kde.org/";
+	    _paq.push(['setTrackerUrl',u+'piwik.php']);
+	    _paq.push(['setSiteId',13]);
+	    var d = document, g = d.createElement('script'),s=d.getElementsByTagName('script')[0];
+	    g.type = 'text/javascript';
+	    g.async = true;
+	    g.defer = true;
+	    g.src = u+'piwik.js';
+	    s.parentNode.insertBefore(g,s);
+	  })();
+</script> 
+<noscript><p><img src="//stats.kde.org/piwik.php?idsite=13" style="border:0;" alt="" /></p></noscript>
+
+</body>
+</html>

@@ -1,0 +1,1009 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" name="title" content="SeExpr Quick Reference" />
+  <meta property="og:site-name" content="Krita Manual" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="en" />
+  <meta property="og:locale:alternate" content="ca" />
+  
+  <meta property="og:locale:alternate" content="fr" />
+  <meta property="og:locale:alternate" content="it" />
+  <meta property="og:locale:alternate" content="ja" />
+  <meta property="og:locale:alternate" content="ko" />
+  <meta property="og:locale:alternate" content="nl" />
+  <meta property="og:locale:alternate" content="pl" />
+  <meta property="og:locale:alternate" content="pt_PT" />
+  <meta property="og:locale:alternate" content="uk_UA" />
+  <meta property="og:locale:alternate" content="zh_CN" />
+  <meta property="og:article:modified_time" content="2021-07-19T15:33:59" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<meta content="SeExpr Quick Reference for Krita" name="description" />
+
+  
+  
+  <title>SeExpr Quick Reference &mdash; Krita Manual 5.0.0 Beta documentation</title>
+  
+
+  
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    
+  
+  
+  
+    <link rel="canonical" href="en/reference_manual/seexpr.html"/>
+    <meta property="og:url" content="en/reference_manual/seexpr.html" />
+    <meta property="og:image" content="en/_static/sidebar-logo.png" />
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Separate Image" href="separate_image.html" />
+    <link rel="prev" title="SeExpr Scripts" href="resource_management/seexpr_scripts.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+       
+           <a href="../index.html" class="icon icon-home">
+
+			<img src="../_static/sidebar-logo.png" class="logo" alt="Logo"/>
+           	
+           <!--	Krita Manual -->
+
+
+          </a>
+
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-side-nav-language-selector">
+        	<p class="caption-text">
+	        	<select id="language-selector-container">
+	        		<option value="ca">Català</option>
+	        		<option value="en">English</option>
+	        		<option value="fr">français</option>
+	        		<option value="it">Italiano</option>
+	        		<option value="ja">日本語</option>
+	        		<option value="ko">한국어</option>
+	        		<option value="nl">Nederlands</option>
+	        		<option value="pl">Polski</option>
+	        		<option value="pt_PT">português</option>
+	        		<option value="uk_UA">Українська</option>
+	        		<option value="zh_CN">简体中文</option>
+	        	</select>
+        	</p>
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../user_manual.html">User Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general_concepts.html">General Concepts</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../reference_manual.html">Reference Manual</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="audio_for_animation.html">Audio for Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blending_modes.html">Blending Modes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="brushes.html">Brushes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="clones_array.html">Clones Array</a></li>
+<li class="toctree-l2"><a class="reference internal" href="create_new_document.html">Create New Document</a></li>
+<li class="toctree-l2"><a class="reference internal" href="default_python_plugins.html">Pre-installed Python plugins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dockers.html">Dockers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dr_minw_debugger.html">Dr. MinGW Debugger</a></li>
+<li class="toctree-l2"><a class="reference internal" href="filters.html">Filters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hdr_display.html">HDR Display</a></li>
+<li class="toctree-l2"><a class="reference internal" href="image_split.html">Image Split</a></li>
+<li class="toctree-l2"><a class="reference internal" href="import_animation.html">Import Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="instant_preview.html">Instant Preview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="krita_4_preset_bundle.html">Krita 4 Preset Bundle Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="layers_and_masks.html">Layers and Masks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="linux_command_line.html">Linux Command Line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="list_supported_tablets.html">The List of Supported Tablets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="main_menu.html">Main Menu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="maths_input.html">Maths Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="popup-palette.html">Pop-up Palette</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preferences.html">Preferences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="render_animation.html">Render Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="resource_management.html">Resource Management</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">SeExpr Quick Reference</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#variables">Variables</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#external-variables">External variables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#local-variables">Local Variables</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#control-structures">Control Structures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#operators-listed-in-decreasing-precedence">Operators (listed in decreasing precedence)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#assignment-operators">Assignment Operators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#comments">Comments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#logging-functions">Logging Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#color-masking-and-remapping-functions">Color, Masking, and Remapping Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#noise-functions">Noise Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#selection-functions">Selection Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#general-mathematical-constants-and-functions">General Mathematical Constants and Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#trigonometry-functions">Trigonometry Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#vector-functions">Vector Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#vector-support">Vector Support</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#curve-functions">Curve Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#custom-plugins">Custom Plugins</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="separate_image.html">Separate Image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sharing_krita_logs.html">Getting Krita logs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="split_layer.html">Split Layer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stroke_selection.html">Stroke Selection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tools.html">Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="welcome_screen.html">Welcome Screen</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials.html">Tutorials and How-tos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../KritaFAQ.html">Krita FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributors_manual.html">Contributors Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../resources_page.html">Resources</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+	<!-- start top banner area (for fundraisers or messages)
+
+	<div style="text-align: center; background-color: #333">
+		<a href="https://krita.org/en/fundraising-2018-campaign/" target="_self" onclick="ga('send', 'event', 'frontpage', 'button', 'Fundraiser 2018');">
+			<img src="https://krita.org/wp-content/themes/krita-org-theme/images/decoration/2018-fundraiser-banner.png" style="max-width: 100%">
+		</a>
+	</div>
+	
+	 end top banner area -->
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Krita Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../reference_manual.html">Reference Manual</a> &raquo;</li>
+        
+      <li>SeExpr Quick Reference</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+          
+            <a href="../_sources/reference_manual/seexpr.rst.txt" rel="nofollow"> 
+             
+              <img src="../_static/images/source-code.png" />
+             <!-- View page source -->
+
+          </a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="seexpr-quick-reference">
+<span id="seexpr"></span><span id="index-0"></span><h1><a class="toc-backref" href="#id1">SeExpr Quick Reference</a><a class="headerlink" href="#seexpr-quick-reference" title="Permalink to this headline">¶</a></h1>
+<p>This page details all the available variables, functions, and operators in SeExpr.
+It is a heavily edited version of the official <a class="reference external" href="https://wdas.github.io/SeExpr/doxygen/userdoc.html">user documentation</a>, adapted for usage with Krita.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<ul class="simple">
+<li><p>Source code at <a class="reference external" href="https://invent.kde.org/lsegovia/seexpr">KDE Invent</a></p></li>
+<li><p>Disney’s SeExpr <a class="reference external" href="http://wdas.github.io/SeExpr/doxygen/">API Documentation</a></p></li>
+</ul>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../tutorials/seexpr.html#seexpr-tut-intro"><span class="std std-ref">Introduction to SeExpr</span></a></p></li>
+<li><p><a class="reference internal" href="layers_and_masks/fill_layer_generators/seexpr.html#seexpr-fill-layer"><span class="std std-ref">SeExpr</span></a></p></li>
+<li><p><a class="reference internal" href="resource_management/seexpr_scripts.html#resource-seexpr-scripts"><span class="std std-ref">SeExpr Scripts</span></a></p></li>
+<li><p><a class="reference external" href="https://krita-artists.org/t/procedural-texture-generator-example-and-wishes/7638">“Procedural texture generator (example and wishes)” on Krita Artists</a></p></li>
+<li><p><a class="reference external" href="https://iquilezles.org/www/index.htm">Inigo Quilez’s articles</a></p></li>
+<li><p><a class="reference external" href="https://thebookofshaders.com/">The Book of Shaders</a></p></li>
+</ul>
+</div>
+<div class="contents topic" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#seexpr-quick-reference" id="id1">SeExpr Quick Reference</a></p>
+<ul>
+<li><p><a class="reference internal" href="#variables" id="id2">Variables</a></p>
+<ul>
+<li><p><a class="reference internal" href="#external-variables" id="id3">External variables</a></p></li>
+<li><p><a class="reference internal" href="#local-variables" id="id4">Local Variables</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#control-structures" id="id5">Control Structures</a></p></li>
+<li><p><a class="reference internal" href="#operators-listed-in-decreasing-precedence" id="id6">Operators (listed in decreasing precedence)</a></p></li>
+<li><p><a class="reference internal" href="#assignment-operators" id="id7">Assignment Operators</a></p></li>
+<li><p><a class="reference internal" href="#comments" id="id8">Comments</a></p></li>
+<li><p><a class="reference internal" href="#logging-functions" id="id9">Logging Functions</a></p></li>
+<li><p><a class="reference internal" href="#color-masking-and-remapping-functions" id="id10">Color, Masking, and Remapping Functions</a></p></li>
+<li><p><a class="reference internal" href="#noise-functions" id="id11">Noise Functions</a></p></li>
+<li><p><a class="reference internal" href="#selection-functions" id="id12">Selection Functions</a></p></li>
+<li><p><a class="reference internal" href="#general-mathematical-constants-and-functions" id="id13">General Mathematical Constants and Functions</a></p></li>
+<li><p><a class="reference internal" href="#trigonometry-functions" id="id14">Trigonometry Functions</a></p></li>
+<li><p><a class="reference internal" href="#vector-functions" id="id15">Vector Functions</a></p></li>
+<li><p><a class="reference internal" href="#vector-support" id="id16">Vector Support</a></p></li>
+<li><p><a class="reference internal" href="#curve-functions" id="id17">Curve Functions</a></p></li>
+<li><p><a class="reference internal" href="#custom-plugins" id="id18">Custom Plugins</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<section id="variables">
+<h2><a class="toc-backref" href="#id2">Variables</a><a class="headerlink" href="#variables" title="Permalink to this headline">¶</a></h2>
+<section id="external-variables">
+<h3><a class="toc-backref" href="#id3">External variables</a><a class="headerlink" href="#external-variables" title="Permalink to this headline">¶</a></h3>
+<p>These variables are provided by host applications, in this case Krita.
+They are registered with SeExpr’s autocomplete help, which can be
+accessed by <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>+<kbd class="kbd docutils literal notranslate">Space</kbd></kbd>.</p>
+<dl class="glossary simple">
+<dt id="term-u-v">$u, $v<a class="headerlink" href="#term-u-v" title="Permalink to this term">¶</a></dt><dd><p>Pixel position in normalized coordinates.</p>
+</dd>
+<dt id="term-w-h">$w, $h<a class="headerlink" href="#term-w-h" title="Permalink to this term">¶</a></dt><dd><p>Image’s width and height in pixels.</p>
+</dd>
+</dl>
+</section>
+<section id="local-variables">
+<h3><a class="toc-backref" href="#id4">Local Variables</a><a class="headerlink" href="#local-variables" title="Permalink to this headline">¶</a></h3>
+<p>Local variables can be defined at the start of the expression:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$a = noise($P);
+$b = noise($a * 1);
+pow($a, 0.5) + $b
+</pre></div>
+</div>
+<p>External variables can also be overridden by local assignment. This can be useful to scale the noise frequency for instance:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$P = $P * 10; # increase noise frequency
+fbm(vnoise($P) + $P/4)
+</pre></div>
+</div>
+<p>You can also define namespaced variables, e.g.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$A::a = $u * 10;
+</pre></div>
+</div>
+</section>
+</section>
+<section id="control-structures">
+<h2><a class="toc-backref" href="#id5">Control Structures</a><a class="headerlink" href="#control-structures" title="Permalink to this headline">¶</a></h2>
+<p>SeExpr provides the well-known <cite>if</cite> conditional structure:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>if ($ u &gt; 0.5) {
+    $color = [0, 0, 1];
+}
+else {
+    $color = [1, 0, 0];
+}
+
+$color
+</pre></div>
+</div>
+<p>And the <em>ternary operator</em>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$u = $i &lt; .5 ? 0.0 : 10.0
+</pre></div>
+</div>
+<p>You can freely nest ternary operators, e.g.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$color = $u &lt; .5 ? ($v &lt; 0.5 ? [0, 0, 1] : [1, 0, 0]) : [0, 1, 0];
+$color
+</pre></div>
+</div>
+<p>You can also achieve the same with <cite>if</cite> structures:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>if ($ u &gt; 0.5) {
+    if ($v &lt; 0.5) {
+        $color = [0, 0, 1];
+    }
+    else {
+        $color = [1, 0, 0];
+    }
+}
+else {
+    $color = [1, 0, 0];
+}
+
+$color
+</pre></div>
+</div>
+</section>
+<section id="operators-listed-in-decreasing-precedence">
+<h2><a class="toc-backref" href="#id6">Operators (listed in decreasing precedence)</a><a class="headerlink" href="#operators-listed-in-decreasing-precedence" title="Permalink to this headline">¶</a></h2>
+<dl class="glossary">
+<dt id="term-a-b-c">[a,b,c]<a class="headerlink" href="#term-a-b-c" title="Permalink to this term">¶</a></dt><dd><p>vector constructor</p>
+</dd>
+<dt id="term-P-n">$P[ n ]<a class="headerlink" href="#term-P-n" title="Permalink to this term">¶</a></dt><dd><p>vector component access</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p><code class="docutils literal notranslate"><span class="pre">n</span></code> must be 0, 1, or 2, e.g.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$P[0]
+</pre></div>
+</div>
+</div>
+</dd>
+<dt id="term-0">^<a class="headerlink" href="#term-0" title="Permalink to this term">¶</a></dt><dd><p>exponentiation</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Same as the <code class="docutils literal notranslate"><span class="pre">pow</span></code> function.</p>
+</div>
+</dd>
+<dt id="term-1">!<a class="headerlink" href="#term-1" title="Permalink to this term">¶</a></dt><dd><p>logical NOT</p>
+</dd>
+<dt id="term-2">~<a class="headerlink" href="#term-2" title="Permalink to this term">¶</a></dt><dd><p>inversion</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>~$A
+</pre></div>
+</div>
+<p>gives the same result as:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>1 - $A
+</pre></div>
+</div>
+</div>
+</dd>
+<dt id="term-3">*/ %<a class="headerlink" href="#term-3" title="Permalink to this term">¶</a></dt><dd><p>multiply, divide, modulus</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code class="docutils literal notranslate"><span class="pre">%</span></code> is the same as the <code class="docutils literal notranslate"><span class="pre">fmod</span></code> function.</p>
+</div>
+</dd>
+<dt id="term-4">+-<a class="headerlink" href="#term-4" title="Permalink to this term">¶</a></dt><dd><p>add, subtract</p>
+</dd>
+<dt id="term-5">&lt;&gt; &lt;= &gt;=<a class="headerlink" href="#term-5" title="Permalink to this term">¶</a></dt><dd><p>comparison: less than, greater than, less or equal than, greater or equal than</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Only uses the first component of a vector.</p>
+</div>
+</dd>
+<dt id="term-6">== !=<a class="headerlink" href="#term-6" title="Permalink to this term">¶</a></dt><dd><p>equality, inequality</p>
+</dd>
+<dt id="term-7">&amp;&amp;<a class="headerlink" href="#term-7" title="Permalink to this term">¶</a></dt><dd><p>logical AND</p>
+</dd>
+<dt id="term-8">||<a class="headerlink" href="#term-8" title="Permalink to this term">¶</a></dt><dd><p>logical OR</p>
+</dd>
+<dt id="term-9">?:<a class="headerlink" href="#term-9" title="Permalink to this term">¶</a></dt><dd><p>ternary <code class="docutils literal notranslate"><span class="pre">if</span></code> operator</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$u &lt; .5 ? 0 : 1
+</pre></div>
+</div>
+</div>
+</dd>
+<dt id="term-10">-&gt;<a class="headerlink" href="#term-10" title="Permalink to this term">¶</a></dt><dd><p>apply - The function on the right of the arrow is applied to the expression on the left.</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>Examples:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$Cs-&gt;contrast(.7) -&gt; clamp(0.2,0.8)
+$u-&gt;hsi(20,1.2,1,$Cs-&gt;gamma(1.2))
+</pre></div>
+</div>
+</div>
+</dd>
+</dl>
+</section>
+<section id="assignment-operators">
+<h2><a class="toc-backref" href="#id7">Assignment Operators</a><a class="headerlink" href="#assignment-operators" title="Permalink to this headline">¶</a></h2>
+<p>Besides the basic assignment statement:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$foo = $bar
+</pre></div>
+</div>
+<p>you can also do operator assignments such as:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$foo += $bar;
+</pre></div>
+</div>
+<p>which is equivalent to:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$foo = $foo + $bar;
+</pre></div>
+</div>
+<p>Additionally, there are:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">+=</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-=</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">/=</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">%=</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">*=</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">^=</span></code></p></li>
+</ul>
+</section>
+<section id="comments">
+<h2><a class="toc-backref" href="#id8">Comments</a><a class="headerlink" href="#comments" title="Permalink to this headline">¶</a></h2>
+<p>You can add comments to your script by using the <code class="docutils literal notranslate"><span class="pre">#</span></code> character.
+SeExpr will then skip the rest of the line for rendering purposes.
+However, they are not ignored; comments can still be used to declare
+the valid value range of integer, float, and vector variables.
+This enables you to manage them using widgets that will accept the
+specified range.</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p><code class="docutils literal notranslate"><span class="pre">$var0</span></code> is an integer variable that ranges between 0 and 10 inclusive:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$var0 = 0; # 0, 10
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">$var1</span></code> is a floating point variable with the same range:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$var1 = 0; # 0.000, 10.000
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">$var2</span></code> is a vector variable:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$var2 = [0, 0, 0] # 0.000, 10.000
+</pre></div>
+</div>
+<p>The latter is very helpful; SeExpr considers vectors with range <code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">1]</span></code> as colors:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># this is a dark red
+$color = [0.5, 0, 0] # 0.000, 1.000
+</pre></div>
+</div>
+<p>In all cases, if not specified, the associated widgets’ range will go from 0 to 1.</p>
+</div>
+<p>For a multi-line expression, each line may have its own comment.</p>
+</section>
+<section id="logging-functions">
+<h2><a class="toc-backref" href="#id9">Logging Functions</a><a class="headerlink" href="#logging-functions" title="Permalink to this headline">¶</a></h2>
+<dl class="glossary">
+<dt id="term-float-printf-string-format-param0-param1-...">float <strong>printf</strong> ( string format, [param0, param1, …] )<a class="headerlink" href="#term-float-printf-string-format-param0-param1-..." title="Permalink to this term">¶</a></dt><dd><p>Prints a string to stdout that is formatted as given. Formatting
+parameters possible are <code class="docutils literal notranslate"><span class="pre">%f</span></code> for float (takes the first component of vector
+argument) or <code class="docutils literal notranslate"><span class="pre">%v</span></code> for vector.</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>For example, if you wrote:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$u = printf(&quot;test %f %v&quot;,[1,2,3],[4,5,6]);
+</pre></div>
+</div>
+<p>you would get in your console:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">test</span> <span class="mi">1</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</dd>
+<dt id="term-string-sprintf-string-format-double-string-double-string-...">string <strong>sprintf</strong> ( string format, [double|string, double|string, …] )<a class="headerlink" href="#term-string-sprintf-string-format-double-string-double-string-..." title="Permalink to this term">¶</a></dt><dd><p>Returns a string formatted from the given values.  See <code class="docutils literal notranslate"><span class="pre">man</span> <span class="pre">sprintf</span></code> for format details.</p>
+</dd>
+</dl>
+</section>
+<section id="color-masking-and-remapping-functions">
+<h2><a class="toc-backref" href="#id10">Color, Masking, and Remapping Functions</a><a class="headerlink" href="#color-masking-and-remapping-functions" title="Permalink to this headline">¶</a></h2>
+<dl class="glossary">
+<dt id="term-float-bias-float-x-float-b">float <strong>bias</strong> ( float x, float b)<a class="headerlink" href="#term-float-bias-float-x-float-b" title="Permalink to this term">¶</a></dt><dd><p>Variation of gamma where control parameter goes from <code class="docutils literal notranslate"><span class="pre">0</span></code> to <code class="docutils literal notranslate"><span class="pre">1</span></code> with
+values <code class="docutils literal notranslate"><span class="pre">&gt;</span> <span class="pre">0.5</span></code> pulling the curve up and values <code class="docutils literal notranslate"><span class="pre">&lt;</span> <span class="pre">0.5</span></code> pulling the curve
+down. Defined as <code class="docutils literal notranslate"><span class="pre">pow(x,</span> <span class="pre">log(b)/log(0.5))</span></code>.</p>
+</dd>
+<dt id="term-float-boxstep-float-x-float-a">float <strong>boxstep</strong> ( float x, float a )<a class="headerlink" href="#term-float-boxstep-float-x-float-a" title="Permalink to this term">¶</a></dt><dt id="term-float-gaussstep-float-x-float-a-float-b">float <strong>gaussstep</strong> ( float x, float a, float b )<a class="headerlink" href="#term-float-gaussstep-float-x-float-a-float-b" title="Permalink to this term">¶</a></dt><dt id="term-float-linearstep-float-x-float-a-float-b">float <strong>linearstep</strong> ( float x, float a, float b )<a class="headerlink" href="#term-float-linearstep-float-x-float-a-float-b" title="Permalink to this term">¶</a></dt><dt id="term-float-smoothstep-float-x-float-a-float-b">float <strong>smoothstep</strong> ( float x, float a, float b )<a class="headerlink" href="#term-float-smoothstep-float-x-float-a-float-b" title="Permalink to this term">¶</a></dt><dd><p>The step functions are zero for <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">&lt;</span> <span class="pre">a</span></code> and one for <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">&gt;</span> <span class="pre">b</span></code> (or <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">&gt;</span> <span class="pre">a</span></code> in
+the case of boxstep). Between <code class="docutils literal notranslate"><span class="pre">a</span></code> and <code class="docutils literal notranslate"><span class="pre">b</span></code>, the value changes
+continuously between zero and one. The <code class="docutils literal notranslate"><span class="pre">gausstep</span></code> function uses the
+standard Gaussian “bell” curve which is based on an exponential
+curve. The <code class="docutils literal notranslate"><span class="pre">smoothstep</span></code> function uses a cubic curve. Intuitively,
+<code class="docutils literal notranslate"><span class="pre">gausstep</span></code> has a sharper transition near one and a softer transition
+near zero whereas <code class="docutils literal notranslate"><span class="pre">smoothstep</span></code> has a medium softness near both one
+and zero.</p>
+</dd>
+<dt id="term-float-clamp-float-x-float-lo-float-hi">float <strong>clamp</strong> ( float x, float lo, float hi )<a class="headerlink" href="#term-float-clamp-float-x-float-lo-float-hi" title="Permalink to this term">¶</a></dt><dd><p>Constrain <code class="docutils literal notranslate"><span class="pre">x</span></code> to range <code class="docutils literal notranslate"><span class="pre">[lo,</span> <span class="pre">hi]</span></code>.</p>
+</dd>
+<dt id="term-float-compress-float-x-float-lo-float-hi">float <strong>compress</strong> ( float x, float lo, float hi )<a class="headerlink" href="#term-float-compress-float-x-float-lo-float-hi" title="Permalink to this term">¶</a></dt><dd><p>Compress the dynamic range from <code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">1]</span></code> to <code class="docutils literal notranslate"><span class="pre">[lo,</span> <span class="pre">hi]</span></code>.</p>
+</dd>
+<dt id="term-float-contrast-float-x-float-c">float <strong>contrast</strong> ( float x, float c )<a class="headerlink" href="#term-float-contrast-float-x-float-c" title="Permalink to this term">¶</a></dt><dd><p>Adjust the contrast. For <code class="docutils literal notranslate"><span class="pre">c</span></code> from <code class="docutils literal notranslate"><span class="pre">0</span></code> to <code class="docutils literal notranslate"><span class="pre">0.5</span></code>, the contrast
+is decreased. For <code class="docutils literal notranslate"><span class="pre">c</span> <span class="pre">&gt;</span> <span class="pre">0.5</span></code>, the contrast is increased.</p>
+</dd>
+<dt id="term-float-expand-float-x-float-lo-float-hi">float <strong>expand</strong> ( float x, float lo, float hi )<a class="headerlink" href="#term-float-expand-float-x-float-lo-float-hi" title="Permalink to this term">¶</a></dt><dd><p>Expand the dynamic range from <code class="docutils literal notranslate"><span class="pre">[lo,</span> <span class="pre">hi]</span></code> to <code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">1]</span></code>.</p>
+</dd>
+<dt id="term-float-fit-float-x-float-a1-float-b1-float-a2-float-b2">float <strong>fit</strong> ( float x, float a1, float b1, float a2, float b2 )<a class="headerlink" href="#term-float-fit-float-x-float-a1-float-b1-float-a2-float-b2" title="Permalink to this term">¶</a></dt><dd><p>Linear remapping of <code class="docutils literal notranslate"><span class="pre">[a1..x..b1]</span></code> to <code class="docutils literal notranslate"><span class="pre">[a2..x..b2]</span></code></p>
+</dd>
+<dt id="term-float-gamma-float-x-float-g">float <strong>gamma</strong> ( float x, float g)<a class="headerlink" href="#term-float-gamma-float-x-float-g" title="Permalink to this term">¶</a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">pow(x,</span> <span class="pre">1/g)</span></code></p>
+</dd>
+<dt id="term-float-invert-float-x">float <strong>invert</strong> ( float x )<a class="headerlink" href="#term-float-invert-float-x" title="Permalink to this term">¶</a></dt><dd><p>Invert the value. Defined as <code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">-</span> <span class="pre">x</span></code>.</p>
+</dd>
+<dt id="term-color-hsi-color-x-float-h-float-s-float-i-float-map-1">color <strong>hsi</strong> ( color x, float h, float s, float i, float map=1 )<a class="headerlink" href="#term-color-hsi-color-x-float-h-float-s-float-i-float-map-1" title="Permalink to this term">¶</a></dt><dd><p>The <code class="docutils literal notranslate"><span class="pre">hsi</span></code> function shifts the hue by <code class="docutils literal notranslate"><span class="pre">h</span></code> (in degrees) and
+scales the saturation and intensity by <code class="docutils literal notranslate"><span class="pre">s</span></code> and <code class="docutils literal notranslate"><span class="pre">i</span></code>
+respectively. A map may be
+supplied which will control the shift - the full shift will happen
+when the map is one and no shift will happen when the map is zero.
+The shift will be scaled back for values between zero and one.</p>
+</dd>
+<dt id="term-color-hsltorgb-color-hsl">color <strong>hsltorgb</strong> ( color hsl )<a class="headerlink" href="#term-color-hsltorgb-color-hsl" title="Permalink to this term">¶</a></dt><dt id="term-color-rgbtohsl-color-rgb">color <strong>rgbtohsl</strong> ( color rgb )<a class="headerlink" href="#term-color-rgbtohsl-color-rgb" title="Permalink to this term">¶</a></dt><dd><p>RGB to HSL color space conversion.
+HSL is Hue, Saturation, Lightness (all in the range <code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">1]</span></code>).
+These functions have also been extended to support RGB and HSL values
+outside of the range <code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">1]</span></code> in a reasonable way. For any RGB or HSL
+value (except for negative values), the conversion is well-defined
+and reversible.</p>
+</dd>
+<dt id="term-color-midhsi-color-x-float-h-float-s-float-i-float-map-float-falloff-1-int-interp-0">color <strong>midhsi</strong> ( color x, float h, float s, float i, float map, float falloff=1, int interp=0 )<a class="headerlink" href="#term-color-midhsi-color-x-float-h-float-s-float-i-float-map-float-falloff-1-int-interp-0" title="Permalink to this term">¶</a></dt><dd><p>The <code class="docutils literal notranslate"><span class="pre">midhsi</span></code> function is just like the <code class="docutils literal notranslate"><span class="pre">hsi</span></code> function except that the
+control map is centered around the mid point (value of <code class="docutils literal notranslate"><span class="pre">0.5</span></code>) and can
+scale the shift in both directions. At the mid point, no shift
+happens. At <em>1.0</em>, the full shift happens, and at <code class="docutils literal notranslate"><span class="pre">0.0</span></code>, the full
+inverse shift happens. Additional <code class="docutils literal notranslate"><span class="pre">falloff</span></code> and <code class="docutils literal notranslate"><span class="pre">interp</span></code> controls are
+provided to adjust the map using the <code class="docutils literal notranslate"><span class="pre">remap</span></code> function. The default
+<code class="docutils literal notranslate"><span class="pre">falloff</span></code> and <code class="docutils literal notranslate"><span class="pre">interp</span></code> values result in no remapping.</p>
+</dd>
+<dt id="term-float-mix-float-a-float-b-float-alpha">float <strong>mix</strong> ( float a, float b, float alpha )<a class="headerlink" href="#term-float-mix-float-a-float-b-float-alpha" title="Permalink to this term">¶</a></dt><dd><p>Blend of a and b according to alpha. Defined as
+<code class="docutils literal notranslate"><span class="pre">a*(1-alpha)</span> <span class="pre">+b*alpha</span></code>.</p>
+</dd>
+<dt id="term-float-remap-float-x-float-source-float-range-float-falloff-int-interp">float <strong>remap</strong> ( float x, float source, float range, float falloff, int interp )<a class="headerlink" href="#term-float-remap-float-x-float-source-float-range-float-falloff-int-interp" title="Permalink to this term">¶</a></dt><dd><p>General remapping function. When <code class="docutils literal notranslate"><span class="pre">x</span></code> is within <code class="docutils literal notranslate"><span class="pre">±</span> <span class="pre">range</span></code> of source,
+the result is one. The result falls to zero beyond that range over
+<code class="docutils literal notranslate"><span class="pre">falloff</span></code> distance. The falloff shape is controlled by <code class="docutils literal notranslate"><span class="pre">interp</span></code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Numeric values or named constants may be used:</p>
+<ul class="simple">
+<li><p>int <strong>linear</strong> = 0</p></li>
+<li><p>int <strong>smooth</strong> = 1</p></li>
+<li><p>int <strong>gaussian</strong> = 2</p></li>
+</ul>
+</div>
+</dd>
+</dl>
+</section>
+<section id="noise-functions">
+<h2><a class="toc-backref" href="#id11">Noise Functions</a><a class="headerlink" href="#noise-functions" title="Permalink to this headline">¶</a></h2>
+<dl class="glossary">
+<dt id="term-float-cellnoise-vector-v">float <strong>cellnoise</strong> ( vector v )<a class="headerlink" href="#term-float-cellnoise-vector-v" title="Permalink to this term">¶</a></dt><dt id="term-float-cellnoise1-float-x">float <strong>cellnoise1</strong> ( float x )<a class="headerlink" href="#term-float-cellnoise1-float-x" title="Permalink to this term">¶</a></dt><dt id="term-float-cellnoise2-float-x-float-y">float <strong>cellnoise2</strong> ( float x, float y )<a class="headerlink" href="#term-float-cellnoise2-float-x-float-y" title="Permalink to this term">¶</a></dt><dt id="term-float-cellnoise3-float-x-float-y-float-z">float <strong>cellnoise3</strong> ( float x, float y, float z )<a class="headerlink" href="#term-float-cellnoise3-float-x-float-y-float-z" title="Permalink to this term">¶</a></dt><dt id="term-color-ccellnoise-vector-v">color <strong>ccellnoise</strong> ( vector v )<a class="headerlink" href="#term-color-ccellnoise-vector-v" title="Permalink to this term">¶</a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">cellnoise</span></code> generates a field of constant colored cubes based on the
+integer location. This is the same as the <a class="reference external" href="https://renderman.pixar.com/resources/RenderMan_20/cellnoise.html">PRMan cellnoise function</a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code class="docutils literal notranslate"><span class="pre">ccellnoise</span></code> outputs color cellnoise.</p>
+</div>
+</dd>
+<dt id="term-float-fbm-vector-v-int-octaves-6-float-lacunarity-2-float-gain-0.5">float <strong>fbm</strong> ( vector v, int octaves=6, float lacunarity=2, float gain=0.5 )<a class="headerlink" href="#term-float-fbm-vector-v-int-octaves-6-float-lacunarity-2-float-gain-0.5" title="Permalink to this term">¶</a></dt><dt id="term-color-cfbm-vector-v-int-octaves-6-float-lacunarity-2-float-gain-0.5">color <strong>cfbm</strong> ( vector v, int octaves=6, float lacunarity=2, float gain=0.5 )<a class="headerlink" href="#term-color-cfbm-vector-v-int-octaves-6-float-lacunarity-2-float-gain-0.5" title="Permalink to this term">¶</a></dt><dt id="term-vector-vfbm-vector-v-int-octaves-6-float-lacunarity-2-float-gain-0.5">vector <strong>vfbm</strong> ( vector v, int octaves=6, float lacunarity=2, float gain=0.5 )<a class="headerlink" href="#term-vector-vfbm-vector-v-int-octaves-6-float-lacunarity-2-float-gain-0.5" title="Permalink to this term">¶</a></dt><dt id="term-float-fbm4-vector-v-float-time-int-octaves-6-float-lacunarity-2-float-gain-0.5">float <strong>fbm4</strong> ( vector v, float time, int octaves=6, float lacunarity=2, float gain=0.5 )<a class="headerlink" href="#term-float-fbm4-vector-v-float-time-int-octaves-6-float-lacunarity-2-float-gain-0.5" title="Permalink to this term">¶</a></dt><dt id="term-color-cfbm4-vector-v-float-time-int-octaves-6-float-lacunarity-2-float-gain-0.5">color <strong>cfbm4</strong> ( vector v, float time, int octaves=6, float lacunarity=2, float gain=0.5 )<a class="headerlink" href="#term-color-cfbm4-vector-v-float-time-int-octaves-6-float-lacunarity-2-float-gain-0.5" title="Permalink to this term">¶</a></dt><dt id="term-vector-vfbm4-vector-v-float-time-int-octaves-6-float-lacunarity-2-float-gain-0.5">vector <strong>vfbm4</strong> ( vector v, float time, int octaves=6, float lacunarity=2, float gain=0.5 )<a class="headerlink" href="#term-vector-vfbm4-vector-v-float-time-int-octaves-6-float-lacunarity-2-float-gain-0.5" title="Permalink to this term">¶</a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">fbm</span></code> (Fractal Brownian Motion) is a multi-frequency noise function.
+The base frequency is the same as the <code class="docutils literal notranslate"><span class="pre">noise</span></code> function. The total
+number of frequencies is controlled by <code class="docutils literal notranslate"><span class="pre">octaves</span></code>. The <code class="docutils literal notranslate"><span class="pre">lacunarity</span></code>
+is the spacing between the frequencies - a value of 2 means each
+octave is twice the previous frequency. The <code class="docutils literal notranslate"><span class="pre">gain</span></code> controls how much
+each frequency is scaled relative to the previous frequency.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code class="docutils literal notranslate"><span class="pre">cfbm</span></code> and <code class="docutils literal notranslate"><span class="pre">cfbm4</span></code> outputs color noise.</p>
+<p><code class="docutils literal notranslate"><span class="pre">vfbm</span></code> and <code class="docutils literal notranslate"><span class="pre">vfbm4</span></code> outputs vector noise.</p>
+</div>
+</dd>
+<dt id="term-float-hash-float-seed1-float-seed2-...">float <strong>hash</strong> ( float seed1, [float seed2, …] )<a class="headerlink" href="#term-float-hash-float-seed1-float-seed2-..." title="Permalink to this term">¶</a></dt><dd><p>Like <code class="docutils literal notranslate"><span class="pre">rand</span></code>, but with no internal seeds. Any number of seeds may be
+given and the result will be a random function based on all the
+seeds.</p>
+</dd>
+<dt id="term-float-noise-vector-v">float <strong>noise</strong> ( vector v )<a class="headerlink" href="#term-float-noise-vector-v" title="Permalink to this term">¶</a></dt><dt id="term-float-noise-float-x-float-y">float <strong>noise</strong> ( float x, float y )<a class="headerlink" href="#term-float-noise-float-x-float-y" title="Permalink to this term">¶</a></dt><dt id="term-float-noise-float-x-float-y-float-z">float <strong>noise</strong> ( float x, float y, float z )<a class="headerlink" href="#term-float-noise-float-x-float-y-float-z" title="Permalink to this term">¶</a></dt><dt id="term-float-noise-float-x-float-y-float-z-float-w">float <strong>noise</strong> ( float x, float y, float z, float w )<a class="headerlink" href="#term-float-noise-float-x-float-y-float-z-float-w" title="Permalink to this term">¶</a></dt><dt id="term-color-cnoise-vector-v">color <strong>cnoise</strong> ( vector v)<a class="headerlink" href="#term-color-cnoise-vector-v" title="Permalink to this term">¶</a></dt><dt id="term-color-cnoise4-vector-v-float-t">color <strong>cnoise4</strong> ( vector v, float t)<a class="headerlink" href="#term-color-cnoise4-vector-v-float-t" title="Permalink to this term">¶</a></dt><dt id="term-float-pnoise-vector-v-vector-period">float <strong>pnoise</strong> ( vector v, vector period )<a class="headerlink" href="#term-float-pnoise-vector-v-vector-period" title="Permalink to this term">¶</a></dt><dt id="term-float-snoise-vector-v">float <strong>snoise</strong> ( vector v)<a class="headerlink" href="#term-float-snoise-vector-v" title="Permalink to this term">¶</a></dt><dt id="term-float-snoise4-vector-v-float-t">float <strong>snoise4</strong> ( vector v, float t)<a class="headerlink" href="#term-float-snoise4-vector-v-float-t" title="Permalink to this term">¶</a></dt><dt id="term-vector-vnoise-vector-v">vector <strong>vnoise</strong> (vector v )<a class="headerlink" href="#term-vector-vnoise-vector-v" title="Permalink to this term">¶</a></dt><dt id="term-vector-vnoise4-vector-v-float-t">vector <strong>vnoise4</strong> (vector v, float t )<a class="headerlink" href="#term-vector-vnoise4-vector-v-float-t" title="Permalink to this term">¶</a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">noise</span></code> is a random function that smoothly blends between samples at
+integer locations. This is Ken Perlin’s original noise function.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code class="docutils literal notranslate"><span class="pre">cnoise</span></code> and <code class="docutils literal notranslate"><span class="pre">cnoise4</span></code> output color noise.</p>
+<p><code class="docutils literal notranslate"><span class="pre">noise4</span></code> outputs signed vector noise.</p>
+<p><code class="docutils literal notranslate"><span class="pre">pnoise</span></code> outputs periodic noise.</p>
+<p><code class="docutils literal notranslate"><span class="pre">snoise</span></code> and <code class="docutils literal notranslate"><span class="pre">snoise4</span></code> output signed noise with range <code class="docutils literal notranslate"><span class="pre">[-1,</span> <span class="pre">1]</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">vnoise</span></code> outputs signed vector noise.</p>
+</div>
+</dd>
+<dt id="term-float-rand-float-min-float-max-float-seed">float <strong>rand</strong> ( [float min, float max], [float seed] )<a class="headerlink" href="#term-float-rand-float-min-float-max-float-seed" title="Permalink to this term">¶</a></dt><dd><p>Random number between <code class="docutils literal notranslate"><span class="pre">[min,</span> <span class="pre">max]</span></code> (or <code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">1]</span></code> if unspecified).
+If a seed is supplied, it will be used in addition to the internal
+seeds and may be used to create multiple distinct generators.</p>
+</dd>
+<dt id="term-float-turbulence-vector-v-int-octaves-6-float-lacunarity-2-float-gain-0.5">float <strong>turbulence</strong> ( vector v, int octaves=6, float lacunarity=2, float gain=0.5 )<a class="headerlink" href="#term-float-turbulence-vector-v-int-octaves-6-float-lacunarity-2-float-gain-0.5" title="Permalink to this term">¶</a></dt><dt id="term-color-cturbulence-vector-v-int-octaves-6-float-lacunarity-2-float-gain-0.5">color <strong>cturbulence</strong> ( vector v, int octaves=6, float lacunarity=2, float gain=0.5 )<a class="headerlink" href="#term-color-cturbulence-vector-v-int-octaves-6-float-lacunarity-2-float-gain-0.5" title="Permalink to this term">¶</a></dt><dt id="term-vector-vturbulence-vector-v-int-octaves-6-float-lacunarity-2-float-gain-0.5">vector <strong>vturbulence</strong> ( vector v, int octaves=6, float lacunarity=2, float gain=0.5 )<a class="headerlink" href="#term-vector-vturbulence-vector-v-int-octaves-6-float-lacunarity-2-float-gain-0.5" title="Permalink to this term">¶</a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">turbulence</span></code> is a variant of <code class="docutils literal notranslate"><span class="pre">fbm</span></code> where the absolute value of each
+noise term is taken. This gives a more billowy appearance.</p>
+</dd>
+<dt id="term-float-voronoi-vector-v-int-type-1-float-jitter-0.5-float-fbmScale-0-int-fbmOctaves-4-float-fbmLacunarity-2-float-fbmGain-0.5">float <strong>voronoi</strong> ( vector v, int type=1, float jitter=0.5, float fbmScale=0, int fbmOctaves=4, float fbmLacunarity=2, float fbmGain=0.5)<a class="headerlink" href="#term-float-voronoi-vector-v-int-type-1-float-jitter-0.5-float-fbmScale-0-int-fbmOctaves-4-float-fbmLacunarity-2-float-fbmGain-0.5" title="Permalink to this term">¶</a></dt><dt id="term-color-cvoronoi-vector-v-int-type-1-float-jitter-0.5-float-fbmScale-0-int-fbmOctaves-4-float-fbmLacunarity-2-float-fbmGain-0.5">color <strong>cvoronoi</strong> ( vector v, int type=1, float jitter=0.5, float fbmScale=0, int fbmOctaves=4, float fbmLacunarity=2, float fbmGain=0.5)<a class="headerlink" href="#term-color-cvoronoi-vector-v-int-type-1-float-jitter-0.5-float-fbmScale-0-int-fbmOctaves-4-float-fbmLacunarity-2-float-fbmGain-0.5" title="Permalink to this term">¶</a></dt><dt id="term-vector-pvoronoi-vector-v-float-jitter-0.5-float-fbmScale-0-int-fbmOctaves-4-float-fbmLacunarity-2-float-fbmGain-0.5">vector <strong>pvoronoi</strong> ( vector v, float jitter=0.5, float fbmScale=0, int fbmOctaves=4, float fbmLacunarity=2, float fbmGain=0.5)<a class="headerlink" href="#term-vector-pvoronoi-vector-v-float-jitter-0.5-float-fbmScale-0-int-fbmOctaves-4-float-fbmLacunarity-2-float-fbmGain-0.5" title="Permalink to this term">¶</a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">voronoi</span></code> is a cellular noise pattern. It is a jittered variant of
+<code class="docutils literal notranslate"><span class="pre">cellnoise</span></code>.
+The type parameter describes different variants of the noise
+function. The <code class="docutils literal notranslate"><span class="pre">jitter</span></code> param controls how irregular the pattern is
+(0 is like ordinary cellnoise). The <code class="docutils literal notranslate"><span class="pre">fbm...</span></code> params can be
+used to distort the noise field. When <code class="docutils literal notranslate"><span class="pre">fbmScale</span></code> is zero (the
+default), there is no distortion. The remaining params are the same
+as for the <code class="docutils literal notranslate"><span class="pre">fbm</span></code> function.</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>Voronoi types 1 through 5:</p>
+<p><img alt="image0" src="../_images/Se_voronoi_1.png" /> <img alt="image1" src="../_images/Se_voronoi_2.png" /> <img alt="image2" src="../_images/Se_voronoi_3.png" /> <img alt="image3" src="../_images/Se_voronoi_4.png" /> <img alt="image4" src="../_images/Se_voronoi_5.png" /></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code class="docutils literal notranslate"><span class="pre">cvoronoi</span></code> returns a random color for each cell and
+<code class="docutils literal notranslate"><span class="pre">pvoronoi</span></code> returns the point location of the center of the cell.</p>
+</div>
+</dd>
+</dl>
+</section>
+<section id="selection-functions">
+<h2><a class="toc-backref" href="#id12">Selection Functions</a><a class="headerlink" href="#selection-functions" title="Permalink to this headline">¶</a></h2>
+<dl class="glossary simple">
+<dt id="term-float-choose-float-index-float-choice1-float-choice2-...">float <strong>choose</strong> ( float index, float choice1, float choice2, […] )<a class="headerlink" href="#term-float-choose-float-index-float-choice1-float-choice2-..." title="Permalink to this term">¶</a></dt><dd><p>Chooses one of the supplied choices based on the index (assumed to be
+in the range <code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">1]</span></code>).</p>
+</dd>
+<dt id="term-int-cycle-int-index-int-loRange-int-hiRange">int <strong>cycle</strong> ( int index, int loRange, int hiRange )<a class="headerlink" href="#term-int-cycle-int-index-int-loRange-int-hiRange" title="Permalink to this term">¶</a></dt><dd><p>Cycles through values between loRange and hiRange based on supplied
+index. This is an offset <code class="docutils literal notranslate"><span class="pre">mod</span></code> function. The result is computed as
+<code class="docutils literal notranslate"><span class="pre">loRange</span> <span class="pre">+</span> <span class="pre">value</span> <span class="pre">%</span> <span class="pre">(hiRange-loRange+1)</span></code>.</p>
+</dd>
+<dt id="term-int-pick-float-index-int-loRange-int-hiRange-float-weights-...">int <strong>pick</strong> ( float index, int loRange, int hiRange, [ float weights, … ] )<a class="headerlink" href="#term-int-pick-float-index-int-loRange-int-hiRange-float-weights-..." title="Permalink to this term">¶</a></dt><dd><p>Picks values randomly between loRange and hiRange based on supplied
+index (which is automatically hashed). The values will be
+distributed according to the supplied weights. Any weights not
+supplied are assumed to be 1.0.</p>
+</dd>
+<dt id="term-float-wchoose-float-index-float-choice1-float-weight1-float-choice2-float-weight2-...">float <strong>wchoose</strong> ( float index, float choice1, float weight1, float choice2, float weight2, […] )<a class="headerlink" href="#term-float-wchoose-float-index-float-choice1-float-weight1-float-choice2-float-weight2-..." title="Permalink to this term">¶</a></dt><dd><p>Chooses one of the supplied choices based on the index (assumed to be
+in range <code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">1]</span></code>). The values will be distributed according to
+the supplied weights.</p>
+</dd>
+</dl>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>This example returns integer values between 1 and 10:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pick</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This example returns the values 1 and 2 twice and 2.5 times as often
+respectively as compared to the other values (3-10):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pick</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This example returns 10, 11, and 13 through 20 (12 is skipped due to zero weight):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pick</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="general-mathematical-constants-and-functions">
+<h2><a class="toc-backref" href="#id13">General Mathematical Constants and Functions</a><a class="headerlink" href="#general-mathematical-constants-and-functions" title="Permalink to this headline">¶</a></h2>
+<dl class="glossary">
+<dt id="term-float-PI">float <strong>PI</strong><a class="headerlink" href="#term-float-PI" title="Permalink to this term">¶</a></dt><dd><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">float</span> <span class="n">PI</span> <span class="o">=</span> <span class="mf">3.14159</span><span class="o">...</span>
+</pre></div>
+</div>
+</dd>
+<dt id="term-float-E">float <strong>E</strong><a class="headerlink" href="#term-float-E" title="Permalink to this term">¶</a></dt><dd><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">float</span> <span class="n">E</span> <span class="o">=</span> <span class="mf">2.71828</span><span class="o">...</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+<dl class="glossary">
+<dt id="term-float-abs-float-x">float <strong>abs</strong> ( float x)<a class="headerlink" href="#term-float-abs-float-x" title="Permalink to this term">¶</a></dt><dd><p>Absolute value of <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
+</dd>
+<dt id="term-float-cbrt-float-x">float <strong>cbrt</strong> ( float x )<a class="headerlink" href="#term-float-cbrt-float-x" title="Permalink to this term">¶</a></dt><dd><p>Cube root.</p>
+</dd>
+<dt id="term-float-ceil-float-x">float <strong>ceil</strong> ( float x )<a class="headerlink" href="#term-float-ceil-float-x" title="Permalink to this term">¶</a></dt><dd><p>Next higher integer.</p>
+</dd>
+<dt id="term-float-exp-float-x">float <strong>exp</strong> ( float x )<a class="headerlink" href="#term-float-exp-float-x" title="Permalink to this term">¶</a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">E</span></code> raised to the <code class="docutils literal notranslate"><span class="pre">x</span></code> power.</p>
+</dd>
+<dt id="term-float-floor-float-x">float <strong>floor</strong> ( float x )<a class="headerlink" href="#term-float-floor-float-x" title="Permalink to this term">¶</a></dt><dd><p>Next lower integer.</p>
+</dd>
+<dt id="term-float-fmod-float-x-float-y">float <strong>fmod</strong> ( float x, float y )<a class="headerlink" href="#term-float-fmod-float-x-float-y" title="Permalink to this term">¶</a></dt><dd><p>Remainder of <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">/</span> <span class="pre">y</span></code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Also available as the <code class="docutils literal notranslate"><span class="pre">%</span></code> operator.</p>
+</div>
+</dd>
+<dt id="term-float-log-float-x">float <strong>log</strong> ( float x )<a class="headerlink" href="#term-float-log-float-x" title="Permalink to this term">¶</a></dt><dd><p>Natural logarithm.</p>
+</dd>
+<dt id="term-float-log10-float-x">float <strong>log10</strong> ( float x )<a class="headerlink" href="#term-float-log10-float-x" title="Permalink to this term">¶</a></dt><dd><p>Base 10 logarithm.</p>
+</dd>
+<dt id="term-float-max-float-a-float-b">float <strong>max</strong> ( float a, float b )<a class="headerlink" href="#term-float-max-float-a-float-b" title="Permalink to this term">¶</a></dt><dd><p>Greater of <code class="docutils literal notranslate"><span class="pre">a</span></code> and <code class="docutils literal notranslate"><span class="pre">b</span></code>.</p>
+</dd>
+<dt id="term-float-min-float-a-float-b">float <strong>min</strong> ( float a, float b )<a class="headerlink" href="#term-float-min-float-a-float-b" title="Permalink to this term">¶</a></dt><dd><p>Lesser of <code class="docutils literal notranslate"><span class="pre">a</span></code> and <code class="docutils literal notranslate"><span class="pre">b</span></code>.</p>
+</dd>
+<dt id="term-float-pow-float-x-float-y">float <strong>pow</strong> ( float x, float y )<a class="headerlink" href="#term-float-pow-float-x-float-y" title="Permalink to this term">¶</a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">x</span></code> to the <code class="docutils literal notranslate"><span class="pre">y</span></code> power.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Also available as the <code class="docutils literal notranslate"><span class="pre">^</span></code> operator.</p>
+</div>
+</dd>
+<dt id="term-float-round-float-x">float <strong>round</strong> ( float x )<a class="headerlink" href="#term-float-round-float-x" title="Permalink to this term">¶</a></dt><dd><p>Nearest integer.</p>
+</dd>
+<dt id="term-float-sqrt-float-x">float <strong>sqrt</strong> ( float x )<a class="headerlink" href="#term-float-sqrt-float-x" title="Permalink to this term">¶</a></dt><dd><p>Square root.</p>
+</dd>
+<dt id="term-float-trunc-float-x">float <strong>trunc</strong> ( float x )<a class="headerlink" href="#term-float-trunc-float-x" title="Permalink to this term">¶</a></dt><dd><p>Nearest integer towards zero.</p>
+</dd>
+</dl>
+</section>
+<section id="trigonometry-functions">
+<h2><a class="toc-backref" href="#id14">Trigonometry Functions</a><a class="headerlink" href="#trigonometry-functions" title="Permalink to this headline">¶</a></h2>
+<dl class="glossary simple">
+<dt id="term-float-acos-float-x">float <strong>acos</strong> ( float x )<a class="headerlink" href="#term-float-acos-float-x" title="Permalink to this term">¶</a></dt><dd><p>Arc cosine.</p>
+</dd>
+<dt id="term-float-acosd-float-x">float <strong>acosd</strong> ( float x )<a class="headerlink" href="#term-float-acosd-float-x" title="Permalink to this term">¶</a></dt><dd><p>Arc cosine in degrees.</p>
+</dd>
+<dt id="term-float-acosh-float-x">float <strong>acosh</strong> ( float x )<a class="headerlink" href="#term-float-acosh-float-x" title="Permalink to this term">¶</a></dt><dd><p>Hyperbolic arc cosine.</p>
+</dd>
+<dt id="term-float-asin-float-x">float <strong>asin</strong> ( float x )<a class="headerlink" href="#term-float-asin-float-x" title="Permalink to this term">¶</a></dt><dd><p>Arc sine.</p>
+</dd>
+<dt id="term-float-asind-float-x">float <strong>asind</strong> ( float x )<a class="headerlink" href="#term-float-asind-float-x" title="Permalink to this term">¶</a></dt><dd><p>Arc sine in degrees.</p>
+</dd>
+<dt id="term-float-asinh-float-x">float <strong>asinh</strong> ( float x )<a class="headerlink" href="#term-float-asinh-float-x" title="Permalink to this term">¶</a></dt><dd><p>Hyperbolic arc sine.</p>
+</dd>
+<dt id="term-float-atan-float-x">float <strong>atan</strong> ( float x )<a class="headerlink" href="#term-float-atan-float-x" title="Permalink to this term">¶</a></dt><dd><p>Arc tangent.</p>
+</dd>
+<dt id="term-float-atand-float-x">float <strong>atand</strong> ( float x )<a class="headerlink" href="#term-float-atand-float-x" title="Permalink to this term">¶</a></dt><dd><p>Arc tangent in degrees.</p>
+</dd>
+<dt id="term-float-atan2-float-y-float-x">float <strong>atan2</strong> ( float y, float x)<a class="headerlink" href="#term-float-atan2-float-y-float-x" title="Permalink to this term">¶</a></dt><dd><p>Arc tangent of <code class="docutils literal notranslate"><span class="pre">y/x</span></code> between <code class="docutils literal notranslate"><span class="pre">-PI</span></code> and <code class="docutils literal notranslate"><span class="pre">PI</span></code>.</p>
+</dd>
+<dt id="term-float-atan2d-float-y-float-x">float <strong>atan2d</strong> ( float y, float x )<a class="headerlink" href="#term-float-atan2d-float-y-float-x" title="Permalink to this term">¶</a></dt><dd><p>Arc tangent in degrees of <code class="docutils literal notranslate"><span class="pre">y/x</span></code> between <code class="docutils literal notranslate"><span class="pre">-180º</span></code> and <code class="docutils literal notranslate"><span class="pre">180º</span></code>.</p>
+</dd>
+<dt id="term-float-atanh-float-x">float <strong>atanh</strong> ( float x )<a class="headerlink" href="#term-float-atanh-float-x" title="Permalink to this term">¶</a></dt><dd><p>Hyperbolic arc tangent.</p>
+</dd>
+<dt id="term-float-cos-float-x">float <strong>cos</strong> ( float x )<a class="headerlink" href="#term-float-cos-float-x" title="Permalink to this term">¶</a></dt><dd><p>Cosine.</p>
+</dd>
+<dt id="term-float-cosd-float-x">float <strong>cosd</strong> ( float x )<a class="headerlink" href="#term-float-cosd-float-x" title="Permalink to this term">¶</a></dt><dd><p>Cosine in degrees.</p>
+</dd>
+<dt id="term-float-cosh-float-x">float <strong>cosh</strong> ( float x )<a class="headerlink" href="#term-float-cosh-float-x" title="Permalink to this term">¶</a></dt><dd><p>Hyperbolic cosine.</p>
+</dd>
+<dt id="term-float-deg-float-x">float <strong>deg</strong> ( float x )<a class="headerlink" href="#term-float-deg-float-x" title="Permalink to this term">¶</a></dt><dd><p>Radians to degrees.</p>
+</dd>
+<dt id="term-float-hypot-float-x-float-y">float <strong>hypot</strong> ( float x, float y )<a class="headerlink" href="#term-float-hypot-float-x-float-y" title="Permalink to this term">¶</a></dt><dd><p>Length of 2D vector <code class="docutils literal notranslate"><span class="pre">[x,</span> <span class="pre">y]</span></code>.</p>
+</dd>
+<dt id="term-float-rad-float-x">float <strong>rad</strong> ( float x )<a class="headerlink" href="#term-float-rad-float-x" title="Permalink to this term">¶</a></dt><dd><p>Degrees to radians.</p>
+</dd>
+<dt id="term-float-sin-float-x">float <strong>sin</strong> ( float x )<a class="headerlink" href="#term-float-sin-float-x" title="Permalink to this term">¶</a></dt><dd><p>Sine.</p>
+</dd>
+<dt id="term-float-sind-float-x">float <strong>sind</strong> ( float x )<a class="headerlink" href="#term-float-sind-float-x" title="Permalink to this term">¶</a></dt><dd><p>Sine in degrees.</p>
+</dd>
+<dt id="term-float-sinh-float-x">float <strong>sinh</strong> ( float x )<a class="headerlink" href="#term-float-sinh-float-x" title="Permalink to this term">¶</a></dt><dd><p>Hyperbolic sine.</p>
+</dd>
+<dt id="term-float-tan-float-x">float <strong>tan</strong> ( float x )<a class="headerlink" href="#term-float-tan-float-x" title="Permalink to this term">¶</a></dt><dd><p>Tangent.</p>
+</dd>
+<dt id="term-float-tand-float-x">float <strong>tand</strong> ( float x )<a class="headerlink" href="#term-float-tand-float-x" title="Permalink to this term">¶</a></dt><dd><p>Tangent in degrees.</p>
+</dd>
+<dt id="term-float-tanh-float-x">float <strong>tanh</strong> ( float x )<a class="headerlink" href="#term-float-tanh-float-x" title="Permalink to this term">¶</a></dt><dd><p>Hyperbolic tangent.</p>
+</dd>
+</dl>
+</section>
+<section id="vector-functions">
+<h2><a class="toc-backref" href="#id15">Vector Functions</a><a class="headerlink" href="#vector-functions" title="Permalink to this headline">¶</a></h2>
+<dl class="glossary simple">
+<dt id="term-float-angle-vector-a-vector-b">float angle ( vector a, vector b )<a class="headerlink" href="#term-float-angle-vector-a-vector-b" title="Permalink to this term">¶</a></dt><dd><p>Angle between two vectors (in radians).</p>
+</dd>
+<dt id="term-vector-cross-vector-a-vector-b">vector <strong>cross</strong> ( vector a, vector b )<a class="headerlink" href="#term-vector-cross-vector-a-vector-b" title="Permalink to this term">¶</a></dt><dd><p>Vector cross product.</p>
+</dd>
+<dt id="term-float-dist-vector-a-vector-b">float <strong>dist</strong> ( vector a, vector b )<a class="headerlink" href="#term-float-dist-vector-a-vector-b" title="Permalink to this term">¶</a></dt><dd><p>Distance between two points.</p>
+</dd>
+<dt id="term-float-dot-vector-a-vector-b">float <strong>dot</strong> ( vector a, vector b)<a class="headerlink" href="#term-float-dot-vector-a-vector-b" title="Permalink to this term">¶</a></dt><dd><p>Vector dot product.</p>
+</dd>
+<dt id="term-float-length-vector-v">float <strong>length</strong> ( vector v )<a class="headerlink" href="#term-float-length-vector-v" title="Permalink to this term">¶</a></dt><dd><p>Length of vector.</p>
+</dd>
+<dt id="term-vector-norm-vector-v">vector <strong>norm</strong> ( vector v )<a class="headerlink" href="#term-vector-norm-vector-v" title="Permalink to this term">¶</a></dt><dd><p>Vector scaled to unit length.</p>
+</dd>
+<dt id="term-vector-ortho-vector-a-vector-b">vector <strong>ortho</strong> ( vector a, vector b )<a class="headerlink" href="#term-vector-ortho-vector-a-vector-b" title="Permalink to this term">¶</a></dt><dd><p>Vector orthographic to two vectors.</p>
+</dd>
+<dt id="term-vector-rotate-vector-v-vector-axis-float-angle">vector <strong>rotate</strong> ( vector v, vector axis, float angle )<a class="headerlink" href="#term-vector-rotate-vector-v-vector-axis-float-angle" title="Permalink to this term">¶</a></dt><dd><p>Rotates <code class="docutils literal notranslate"><span class="pre">v</span></code> around axis by the given <code class="docutils literal notranslate"><span class="pre">angle</span></code> (in radians).</p>
+</dd>
+<dt id="term-vector-up-vector-v-vector-up">vector <strong>up</strong> ( vector v, vector up )<a class="headerlink" href="#term-vector-up-vector-v-vector-up" title="Permalink to this term">¶</a></dt><dd><p>Rotates <code class="docutils literal notranslate"><span class="pre">v</span></code> such that the Y axis points in the given <code class="docutils literal notranslate"><span class="pre">up</span></code> direction.</p>
+</dd>
+</dl>
+</section>
+<section id="vector-support">
+<h2><a class="toc-backref" href="#id16">Vector Support</a><a class="headerlink" href="#vector-support" title="Permalink to this headline">¶</a></h2>
+<p><em>Vectors</em> (points, colors, or 3D vectors) may be intermixed with <em>scalars</em>
+(simple floating point values). If a scalar is used in a vector context, it is
+replicated into the three components, e.g. <code class="docutils literal notranslate"><span class="pre">0.5</span></code> becomes <code class="docutils literal notranslate"><span class="pre">[0.5,</span> <span class="pre">0.5,</span> <span class="pre">0.5]</span></code>.</p>
+<p>If a vector is used in a scalar context, only the first component is used.
+One of the benefits of this is that all the functions that are defined
+to work with scalars automatically extend to vectors. For instance,
+<code class="docutils literal notranslate"><span class="pre">pick</span></code>, <code class="docutils literal notranslate"><span class="pre">choose</span></code>, <code class="docutils literal notranslate"><span class="pre">cycle</span></code>, <code class="docutils literal notranslate"><span class="pre">spline</span></code>, etc., will work just fine
+with vectors.</p>
+<p>Arithmetic operators such as <code class="docutils literal notranslate"><span class="pre">+</span></code>, <code class="docutils literal notranslate"><span class="pre">*</span></code>, etc., and scalar functions are
+applied component-wise to vectors. For example, applying the <code class="docutils literal notranslate"><span class="pre">gamma</span></code>
+function to a map adjusts the gamma of all three color channels.</p>
+</section>
+<section id="curve-functions">
+<h2><a class="toc-backref" href="#id17">Curve Functions</a><a class="headerlink" href="#curve-functions" title="Permalink to this headline">¶</a></h2>
+<p>Interpolation of parameter values to a set of control points is governed
+by the following functions.</p>
+<dl class="glossary">
+<dt id="term-color-ccurve-float-param-float-pos0-color-val0-int-interp0-float-pos1-color-val1-int-interp1-...">color <strong>ccurve</strong> ( float param, float pos0, color val0, int interp0, float pos1, color val1, int interp1, […] )<a class="headerlink" href="#term-color-ccurve-float-param-float-pos0-color-val0-int-interp0-float-pos1-color-val1-int-interp1-..." title="Permalink to this term">¶</a></dt><dd><p>Interpolates color ramp given by control points at <code class="docutils literal notranslate"><span class="pre">param</span></code>. Control
+points are specified by triples of parameters <code class="docutils literal notranslate"><span class="pre">pos_i</span></code>, <code class="docutils literal notranslate"><span class="pre">val_i</span></code>, and
+<code class="docutils literal notranslate"><span class="pre">interp_i</span></code>.</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>Interpolation codes are:</p>
+<ul class="simple">
+<li><p>0 - none</p></li>
+<li><p>1 - linear</p></li>
+<li><p>2 - smooth</p></li>
+<li><p>3 - spline</p></li>
+<li><p>4 - monotone (non-oscillating) spline</p></li>
+</ul>
+</div>
+</dd>
+<dt id="term-float-curve-float-param-float-pos0-float-val0-int-interp0-float-pos1-float-val1-int-interp1-...">float <strong>curve</strong> ( float param, float pos0, float val0, int interp0, float pos1, float val1, int interp1, […] )<a class="headerlink" href="#term-float-curve-float-param-float-pos0-float-val0-int-interp0-float-pos1-float-val1-int-interp1-..." title="Permalink to this term">¶</a></dt><dd><p>Interpolates a 1D ramp defined by control points at <code class="docutils literal notranslate"><span class="pre">param</span></code>. Control
+points are specified by triples of parameters <code class="docutils literal notranslate"><span class="pre">pos_i</span></code>, <code class="docutils literal notranslate"><span class="pre">val_i</span></code>, and
+<code class="docutils literal notranslate"><span class="pre">interp_i</span></code>.</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>Interpolation codes are:</p>
+<ul class="simple">
+<li><p>0 - none</p></li>
+<li><p>1 - linear</p></li>
+<li><p>2 - smooth</p></li>
+<li><p>3 - spline</p></li>
+<li><p>4 - monotone (non-oscillating) spline</p></li>
+</ul>
+</div>
+</dd>
+<dt id="term-float-spline-float-param-float-y1-float-y2-float-y3-float-y4-...">float <strong>spline</strong> ( float param, float y1, float y2, float y3, float y4, […] )<a class="headerlink" href="#term-float-spline-float-param-float-y1-float-y2-float-y3-float-y4-..." title="Permalink to this term">¶</a></dt><dd><p>Interpolates a set of values to the parameter specified where
+<code class="docutils literal notranslate"><span class="pre">y1</span></code>, …, <code class="docutils literal notranslate"><span class="pre">yn</span></code> are distributed evenly from <code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">1]</span></code>.</p>
+</dd>
+</dl>
+</section>
+<section id="custom-plugins">
+<h2><a class="toc-backref" href="#id18">Custom Plugins</a><a class="headerlink" href="#custom-plugins" title="Permalink to this headline">¶</a></h2>
+<p>Custom functions may be written in C++ and loaded as one or more dynamic plugins.  See <a class="reference external" href="https://wdas.github.io/SeExpr/doxygen/plugins.html">Writing Custom Expression Plugins</a> for more details.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This functionality is not supported in Krita.</p>
+</div>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="separate_image.html" class="btn btn-neutral float-right" title="Separate Image" accesskey="n" rel="next"> <!-- Next --> <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="resource_management/seexpr_scripts.html" class="btn btn-neutral" title="SeExpr Scripts" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- Previous  -->  </a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright licensed under the GNU Free Documentation License 1.3+ unless stated otherwise.
+      
+        <span class="commit">
+          Revision <code>7c271ce</code>.
+        </span>
+      
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a modified <a href="https://github.com/rtfd/sphinx_rtd_theme">RTD theme</a>.<br/>
+  <a href="https://krita.org" title="Krita official website.">Krita official website</a> |
+  <a href="https://invent.kde.org/documentation/docs-krita-org/" title="The Gitlab instance to edit this pages and collaborate.">Git repository for docs.krita.org </a> |
+  <a href="https://www.kde.org/community/whatiskde/impressum-en.php" title="To know more about KDE, code of conduct, privacy policy and GDPR.">KDE Impressum</a>.
+   
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'5.0.0 Beta',
+            LANGUAGE:'en',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/documentation_options.js"></script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
+      });
+  </script> 
+
+ <script type="text/javascript">
+	 var _paq=_paq||[];
+	 _paq.push(['setCookieDomain','*.krita.org']);
+	 _paq.push(['setDomains','*.krita.org']);
+	 _paq.push(['setDocumentTitle',document.domain+"/"+document.title]);
+	 _paq.push(['trackPageView']);
+	 _paq.push(['enableLinkTracking']);
+
+	 (function(){
+	 	var u="//stats.kde.org/";
+	    _paq.push(['setTrackerUrl',u+'piwik.php']);
+	    _paq.push(['setSiteId',13]);
+	    var d = document, g = d.createElement('script'),s=d.getElementsByTagName('script')[0];
+	    g.type = 'text/javascript';
+	    g.async = true;
+	    g.defer = true;
+	    g.src = u+'piwik.js';
+	    s.parentNode.insertBefore(g,s);
+	  })();
+</script> 
+<noscript><p><img src="//stats.kde.org/piwik.php?idsite=13" style="border:0;" alt="" /></p></noscript>
+
+</body>
+</html>

@@ -1,0 +1,513 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" name="title" content="Animation Curves Docker" />
+  <meta property="og:site-name" content="Krita Manual" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="en" />
+  <meta property="og:locale:alternate" content="ca" />
+  
+  <meta property="og:locale:alternate" content="fr" />
+  <meta property="og:locale:alternate" content="it" />
+  <meta property="og:locale:alternate" content="ja" />
+  <meta property="og:locale:alternate" content="ko" />
+  <meta property="og:locale:alternate" content="nl" />
+  <meta property="og:locale:alternate" content="pl" />
+  <meta property="og:locale:alternate" content="pt_PT" />
+  <meta property="og:locale:alternate" content="uk_UA" />
+  <meta property="og:locale:alternate" content="zh_CN" />
+  <meta property="og:article:modified_time" content="2021-07-19T15:33:59" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<meta content="Overview of the Animation Curves docker." name="description" />
+
+  
+  
+  <title>Animation Curves Docker &mdash; Krita Manual 5.0.0 Beta documentation</title>
+  
+
+  
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    
+  
+  
+  
+    <link rel="canonical" href="en/reference_manual/dockers/animation_curves.html"/>
+    <meta property="og:url" content="en/reference_manual/dockers/animation_curves.html" />
+    <meta property="og:image" content="en/_static/sidebar-logo.png" />
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Animation Docker" href="animation_docker.html" />
+    <link rel="prev" title="Advanced Color Selector" href="advanced_color_selector.html" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+       
+           <a href="../../index.html" class="icon icon-home">
+
+			<img src="../../_static/sidebar-logo.png" class="logo" alt="Logo"/>
+           	
+           <!--	Krita Manual -->
+
+
+          </a>
+
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-side-nav-language-selector">
+        	<p class="caption-text">
+	        	<select id="language-selector-container">
+	        		<option value="ca">Català</option>
+	        		<option value="en">English</option>
+	        		<option value="fr">français</option>
+	        		<option value="it">Italiano</option>
+	        		<option value="ja">日本語</option>
+	        		<option value="ko">한국어</option>
+	        		<option value="nl">Nederlands</option>
+	        		<option value="pl">Polski</option>
+	        		<option value="pt_PT">português</option>
+	        		<option value="uk_UA">Українська</option>
+	        		<option value="zh_CN">简体中文</option>
+	        	</select>
+        	</p>
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../user_manual.html">User Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../general_concepts.html">General Concepts</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../reference_manual.html">Reference Manual</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../audio_for_animation.html">Audio for Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blending_modes.html">Blending Modes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../brushes.html">Brushes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../clones_array.html">Clones Array</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_new_document.html">Create New Document</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../default_python_plugins.html">Pre-installed Python plugins</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../dockers.html">Dockers</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="add_shape.html">Add Shape</a></li>
+<li class="toctree-l3"><a class="reference internal" href="advanced_color_selector.html">Advanced Color Selector</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Animation Curves Docker</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#animating-opacity">Animating Opacity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#animating-transform-masks">Animating Transform Masks</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#controls">Controls</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="animation_docker.html">Animation Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="animation_timeline.html">Animation Timeline Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="arrange.html">Arrange</a></li>
+<li class="toctree-l3"><a class="reference internal" href="artistic_color_selector.html">Artistic Color Selector Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="brush_preset_docker.html">Preset Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="channels_docker.html">Channels</a></li>
+<li class="toctree-l3"><a class="reference internal" href="color_sliders.html">Color Sliders</a></li>
+<li class="toctree-l3"><a class="reference internal" href="compositions.html">Compositions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="digital_color_mixer.html">Digital Color Mixer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gamut_mask_docker.html">Gamut Masks Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="grids_and_guides.html">Grids and Guides Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="histogram_docker.html">Histogram Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="layers.html">Layers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="log_viewer.html">Log Viewer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lut_management.html">LUT Management</a></li>
+<li class="toctree-l3"><a class="reference internal" href="onion_skin.html">Onion Skin Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="overview.html">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="palette_docker.html">Palette Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pattern_docker.html">Patterns Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="recorder_docker.html">Recorder Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reference_images_docker.html">Reference Images Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="shape_properties_docker.html">Shape Properties Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="small_color_selector.html">Small Color Selector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="snapshot_docker.html">Snapshot Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="specific_color_selector.html">Specific Color Selector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="storyboard_docker.html">Storyboard Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="task_sets.html">Task Sets Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="touch_docker.html">Touch Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="undo_history.html">Undo History</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vector_library.html">Vector Library</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../dr_minw_debugger.html">Dr. MinGW Debugger</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../filters.html">Filters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hdr_display.html">HDR Display</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../image_split.html">Image Split</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../import_animation.html">Import Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../instant_preview.html">Instant Preview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../krita_4_preset_bundle.html">Krita 4 Preset Bundle Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../layers_and_masks.html">Layers and Masks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../linux_command_line.html">Linux Command Line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../list_supported_tablets.html">The List of Supported Tablets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../main_menu.html">Main Menu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../maths_input.html">Maths Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../popup-palette.html">Pop-up Palette</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preferences.html">Preferences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../render_animation.html">Render Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../resource_management.html">Resource Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../seexpr.html">SeExpr Quick Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../separate_image.html">Separate Image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sharing_krita_logs.html">Getting Krita logs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../split_layer.html">Split Layer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../stroke_selection.html">Stroke Selection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools.html">Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../welcome_screen.html">Welcome Screen</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials.html">Tutorials and How-tos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../KritaFAQ.html">Krita FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributors_manual.html">Contributors Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../resources_page.html">Resources</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+	<!-- start top banner area (for fundraisers or messages)
+
+	<div style="text-align: center; background-color: #333">
+		<a href="https://krita.org/en/fundraising-2018-campaign/" target="_self" onclick="ga('send', 'event', 'frontpage', 'button', 'Fundraiser 2018');">
+			<img src="https://krita.org/wp-content/themes/krita-org-theme/images/decoration/2018-fundraiser-banner.png" style="max-width: 100%">
+		</a>
+	</div>
+	
+	 end top banner area -->
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Krita Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../reference_manual.html">Reference Manual</a> &raquo;</li>
+        
+          <li><a href="../dockers.html">Dockers</a> &raquo;</li>
+        
+      <li>Animation Curves Docker</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+          
+            <a href="../../_sources/reference_manual/dockers/animation_curves.rst.txt" rel="nofollow"> 
+             
+              <img src="../../_static/images/source-code.png" />
+             <!-- View page source -->
+
+          </a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="animation-curves-docker">
+<span id="index-0"></span><span id="id1"></span><h1>Animation Curves Docker<a class="headerlink" href="#animation-curves-docker" title="Permalink to this headline">¶</a></h1>
+<p><strong class="program">Krita</strong>’s <em class="dfn">Animation Curves Docker</em> allows artists to animate the values of some properties over time.</p>
+<p>When animating a complex cut, it’s not unusual to want to animate things that would be difficult or inefficient to do through drawing alone. In traditional pen-and-paper animation dating back to the 1920s, special lighting rigs and purpose-built devices like multiplane cameras were used to pull off special effects that changed animation forever! Likewise, Krita’s Animation Curves docker allows us to animate more than just the lines on your canvas, such as a layer’s opacity or the position, rotation and scale of a <a class="reference internal" href="../layers_and_masks/transformation_masks.html#transformation-masks"><span class="std std-ref">Transform Mask</span></a>.</p>
+<p>Because most things can be boiled down to numeric values (for example, opacity as a percentage or the position of a Transform Mask), and because computers are great with maths and automation, we can plot and visualize the change in values over time on a simple 2D graph. What’s more, we can also draw lines and curves that show the computer how we want it to calculate the values in between each of our plotted keyframe values; a technique known as interpolation or <em class="dfn">tweening</em>.</p>
+<img alt="../../_images/Animation_Curves_Docker.png" src="../../_images/Animation_Curves_Docker.png" />
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>As shown in the image above, Krita’s Animation Curves Docker can be thought of as different sections:</p>
+<ol class="upperalpha simple">
+<li><p><em class="dfn">Utilities</em> – The left side of the toolbar gives animators quick access to all of the widgets that are critical to their workflow; <em class="dfn">transport controls</em> (previous, play/pause, stop and next buttons), a frame counter, preview controls (speed and drop frames), buttons for adding and removing <em class="dfn">scalar keyframes</em>, buttons for changing the <em class="dfn">interpolation mode</em> and <em class="dfn">tangent mode</em> of the selected keyframe, a box for setting the selected keyframe to a specific value, as well as buttons to help zoom and navigate the main graph view.</p></li>
+<li><p><em class="dfn">Settings</em> – While all of the high-traffic controls are presented directly, the right end of the toolbar also contains buttons for opening submenus for things like onion skins and settings that you can generally set and forget (for example, <em class="dfn">playback range</em>, <em class="dfn">frame rate</em> and <em class="dfn">autokey mode</em>).</p></li>
+<li><p><em class="dfn">Channels List</em> – This area shows the various channels of the current layer that are currently being animated within the Animation Curves Docker. Each independent channel is associated with a unique color and its visibility within the graph view can be toggled by clicking on the eyeball icon.</p></li>
+<li><p><em class="dfn">Graph View</em> – Last but not least is the <em class="dfn">graph view</em>, the big graph of values and times that we use to animate the value of parameters over time. When a <a class="reference internal" href="animation_timeline.html#term-Keyframe"><span class="xref std std-term">keyframe</span></a> is added to the current channel at the current time it will appear as a colored circle within the graph view. After clicking on the keyframe to select it, you can change the value by dragging the circle vertically or by entering a specific value into the value box on the toolbar. Similarly, you can change the time of the selected frame by dragging it horizontally. Finally, when the select keyframe is using <span class="guilabel">bezier curve interpolation</span>, selecting it will cause one or more <em class="dfn">curve handles</em> to appear, which can be used to change the shape of the interpolation curve over time.</p></li>
+</ol>
+</section>
+<section id="animating-opacity">
+<h2>Animating Opacity<a class="headerlink" href="#animating-opacity" title="Permalink to this headline">¶</a></h2>
+<p>Starting with <strong class="program">Krita 5</strong>, we can use the Animation Curves Docker to animate a layer’s <a class="reference internal" href="layers.html#term-Opacity"><span class="xref std std-term">opacity</span></a> and, with the help of a <a class="reference internal" href="../layers_and_masks/transformation_masks.html#transformation-masks"><span class="std std-ref">Transform Mask</span></a>, its <em class="dfn">position</em>, <em class="dfn">rotation</em>, <em class="dfn">scale</em> and <em class="dfn">shear</em>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Though the design is pretty similar to the <a class="reference internal" href="animation_timeline.html#timeline-docker"><span class="std std-ref">Animation Timeline Docker</span></a>, the Animation Curves Docker may be a bit confusing or intimidating when you first open it, especially if you haven’t done digital animation before.</p>
+</div>
+<p>Let’s look first at <em>animating a layer’s opacity</em>:</p>
+<p>Say you want to animate something like an expanding cloud of dust that gradually becomes more transparent as it dissipates, or maybe a haunting ghost that seems to materialize out of thin air. These types of effects are pretty hard to get right by traditionally animated line drawings alone, and that’s exactly where the Animation Curves Docker can step in.</p>
+<p>After <em>selecting the layer</em> that you want to animate the opacity of, you need to <em>select the frame time you want the opacity to start changing at</em> by clicking somewhere on the <a class="reference internal" href="animation_timeline.html#term-Frame-Timing-Header"><span class="xref std std-term">frame timing header</span></a> at the top of the graph view. Just like the <a class="reference internal" href="animation_timeline.html#timeline-docker"><span class="std std-ref">Animation Timeline Docker</span></a>, we can click and drag anywhere on the timing header to “scrub” across your animation and preview the results.</p>
+<p>Next we create our first scalar <a class="reference internal" href="animation_timeline.html#term-Keyframe"><span class="xref std std-term">keyframe</span></a> by clicking on the <span class="guilabel">add keyframe</span> button on the docker’s titlebar.</p>
+<p>When you do this you’ll notice two things happen. First, a new <span class="guilabel">opacity channel</span> will appear in the <em class="dfn">channels list</em> on the left-hand side, next to a colored mark that’s associated with the color of the keyframes and curves in the <em class="dfn">graph view</em>. Second, a single keyframe will appear somewhere inside the graph view at the currently active time.</p>
+<p>Of course it takes more than a single point to make a line or curve, so we have a little bit more work to do.</p>
+<p>Just like our first keyframe, we need to make a second keyframe. Let’s change the active frame time again (by clicking or scrubbing across the timing header) and add another keyframe at that new time (by clicking on the <span class="guilabel">add keyframe</span> button). As you’d expect, a second keyframe has appeared at the new time and a straight line has appeared between them.</p>
+<p>With the active time still over our new keyframe, you’ll find that as you change the <em class="dfn">opacity slider</em> above the <a class="reference internal" href="layers.html#layer-docker"><span class="std std-ref">Layers</span></a> the new keyframe that we’ve created will move up and down. Likewise, moving the keyframe up and down will cause the opacity <em>at that time</em> to change.</p>
+<p>And just like that, when you press the <span class="guilabel">play button</span> you’ll see the opacity of the layer animate over time!</p>
+<blockquote>
+<div><div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Unlike traditional methods, animating with curves can cause values to change across every frame of your animation. This can be more demanding on your machine and cause the caching process to take a little bit more time, as it calculates and stores each frame.</p>
+</div>
+</div></blockquote>
+<p><em>Before we move on</em>, let’s use <em class="dfn">interpolation curves</em> instead of a straight line to change the timing and general feel of our opacity animation.</p>
+<p>If you select the first keyframe (the one on the left-hand side) of your line segment and click on the <span class="guilabel">bezier curve interpolation</span> button in the utilities section of the titlebar, you’ll notice that the keyframe will appear as a hollow circle on the graph view. That hollow circle is a <em class="dfn">handle</em>, and by clicking on it and dragging in different directions you can change the arc of the curve between your two keyframes.</p>
+<p>Similarly, you can like on the <span class="guilabel">linear interpolation</span> button to change your curve back into a line, or the <span class="guilabel">constant</span> button to turn off interpolation altogether, causing values to jump suddenly between keyframes.</p>
+<blockquote>
+<div><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It’s important to be aware of which animation frame is selected and active, as shown by the highlighted vertical line on the graph view. The keyframe that changes as you make adjustments elsewhere in the program will always be dependent on the active frame time!</p>
+</div>
+</div></blockquote>
+<p><em>Ok, it’s a bit tough to put in writing…</em> But it’s not so bad once you get the hang of it!</p>
+</section>
+<section id="animating-transform-masks">
+<h2>Animating Transform Masks<a class="headerlink" href="#animating-transform-masks" title="Permalink to this headline">¶</a></h2>
+<p>Now let’s talk a bit about how we can use a <a class="reference internal" href="../layers_and_masks/transformation_masks.html#transformation-masks"><span class="std std-ref">Transformation Masks</span></a> to <em>animate our layer’s position, rotation, scale and shear</em> for <em class="dfn">“tweening”</em> effects:</p>
+<p>Animating a transform mask is a lot like animating opacity, but first we need to <em>add a Transform Mask</em>. (You can do this by <img alt="mouseright" src="../../_images/Krita_mouse_right.png" /> on the layer that you want to animate, and then <span class="menuselection">Add ‣ Transform Mask</span>.)</p>
+<p>Transform Masks allow us to <em class="dfn">transform</em> (translate, rotate, scale, or shear) the layer that they are attached to, without affecting its original position. And (starting with Krita 5) they also allow us to animate a layer’s transform!</p>
+<p>Much like how we animated opacity above, we need to add our first transformation keyframe. To do this, <em>first make sure that you have your layer’s Transform Mask selected</em>, and then click on the <span class="guilabel">add keyframe</span> button at the top of the docker.</p>
+<blockquote>
+<div><div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Remember (as of Krita 5.0) we can only <em>directly</em> animate the opacity curve of a layer. In order to animate a layer’s position, rotation, scale and shear, we need to attach a Transform Mask and animate it instead.</p>
+<p>As such, <em>when you have a regular paint layer selected</em> the Animation Curves Docker will automatically add opacity keyframes, and <em>when you have a transform mask selected</em> the Animation Curves Docker will automatically add transformation keyframes.</p>
+<p>Try to always keep in mind what type of layer you have selected when animating curves in Krita!</p>
+</div>
+</div></blockquote>
+<p>You should see a whole bunch of channels appear in the channels list, each with a unique name and color, as well as a number of corresponding keyframes.</p>
+<p>If you want to you can edit these key frames directly in the graph view, but it’s probably more intuitive to do it directly on the canvas. So now, when you use the <a class="reference internal" href="../tools/transform.html#transform-tool"><span class="std std-ref">Transform Tool</span></a> on your <a class="reference internal" href="../layers_and_masks/transformation_masks.html#transformation-masks"><span class="std std-ref">Transformation Masks</span></a>, you should see the various keyframes of each channel moving around in the graph view to reflect the changes.</p>
+<blockquote>
+<div><div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Animating a Transform Mask spawns a lot of channels but, depending on your goals, you may only want to work with a small number of them at a time. <em>Hiding</em> and <em>soloing</em> channels in the channels list can make it much easier to see and edit curves, especially since you can use the <span class="guilabel">zoom to channel</span> and <span class="guilabel">zoom to curve</span> buttons at the top of the docker to fit the graph view to the currently visible channels.</p>
+<p>Navigating by click-dragging on the zoomable scrollbars and and <em>values header</em> (on the left-hand side of the graph view) can also really help with editing curves!</p>
+</div>
+</div></blockquote>
+<p>Finally, click or scrub to a different frame time, add another keyframe, and use the Transform Tool on the same Transform Mask again.</p>
+<p>Press the <span class="guilabel">play button</span> and (after a little bit of caching) there you have it, a layer with an animated Transform Mask!</p>
+</section>
+<section id="controls">
+<h2>Controls<a class="headerlink" href="#controls" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p><em class="dfn">Channels List</em></p>
+<blockquote>
+<div><ul class="simple">
+<li><p><img alt="mouseleft" src="../../_images/Krita_mouse_left.png" /> on Eye Icon: Toggle show/hide channel.</p></li>
+<li><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="mouseleft" src="../../_images/Krita_mouse_left.png" /> on Eye Icon: Solo channel.</p></li>
+<li><p><img alt="mouseright" src="../../_images/Krita_mouse_right.png" /> : Open layer or channel context menu. [Reset Channel(s)]</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><em class="dfn">Graph View</em></p>
+<blockquote>
+<div><ul class="simple">
+<li><p><img alt="mouseleft" src="../../_images/Krita_mouse_left.png" /> : Select keyframe.</p></li>
+<li><p><img alt="mouseleft" src="../../_images/Krita_mouse_left.png" /> <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">+</kbd> <kbd class="kbd docutils literal notranslate">drag</kbd></kbd> : <em>Move</em> frame(s).</p></li>
+<li><p><img alt="mouseleft" src="../../_images/Krita_mouse_left.png" /> double-click : Select all keyframes at time.</p></li>
+<li><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Alt</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="mouseleft" src="../../_images/Krita_mouse_left.png" /> double-click : Select all keyframes of channel.</p></li>
+<li><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Space</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="mouseleft" src="../../_images/Krita_mouse_left.png" /> : Pan.</p></li>
+<li><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Space</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="mouseright" src="../../_images/Krita_mouse_right.png" /> : Zoom.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><em class="dfn">Frame Timing Header</em></p>
+<blockquote>
+<div><ul class="simple">
+<li><p><img alt="mouseleft" src="../../_images/Krita_mouse_left.png" /> : Move to time and select frame of the active layer.</p></li>
+<li><p><img alt="mouseleft" src="../../_images/Krita_mouse_left.png" /> <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">+</kbd> <kbd class="kbd docutils literal notranslate">drag</kbd></kbd> : Scrub through time and select frame of the active layer.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><em class="dfn">Value Header</em></p>
+<blockquote>
+<div><ul class="simple">
+<li><p><img alt="mouseleft" src="../../_images/Krita_mouse_left.png" /> <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">+</kbd> <kbd class="kbd docutils literal notranslate">drag</kbd></kbd> : Zoom graph view.</p></li>
+<li><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Space</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="mouseleft" src="../../_images/Krita_mouse_left.png" /> <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">+</kbd> <kbd class="kbd docutils literal notranslate">drag</kbd></kbd> : Pan graph view.</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ol>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="animation_docker.html" class="btn btn-neutral float-right" title="Animation Docker" accesskey="n" rel="next"> <!-- Next --> <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="advanced_color_selector.html" class="btn btn-neutral" title="Advanced Color Selector" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- Previous  -->  </a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright licensed under the GNU Free Documentation License 1.3+ unless stated otherwise.
+      
+        <span class="commit">
+          Revision <code>7c271ce</code>.
+        </span>
+      
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a modified <a href="https://github.com/rtfd/sphinx_rtd_theme">RTD theme</a>.<br/>
+  <a href="https://krita.org" title="Krita official website.">Krita official website</a> |
+  <a href="https://invent.kde.org/documentation/docs-krita-org/" title="The Gitlab instance to edit this pages and collaborate.">Git repository for docs.krita.org </a> |
+  <a href="https://www.kde.org/community/whatiskde/impressum-en.php" title="To know more about KDE, code of conduct, privacy policy and GDPR.">KDE Impressum</a>.
+   
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'5.0.0 Beta',
+            LANGUAGE:'en',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/documentation_options.js"></script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
+      });
+  </script> 
+
+ <script type="text/javascript">
+	 var _paq=_paq||[];
+	 _paq.push(['setCookieDomain','*.krita.org']);
+	 _paq.push(['setDomains','*.krita.org']);
+	 _paq.push(['setDocumentTitle',document.domain+"/"+document.title]);
+	 _paq.push(['trackPageView']);
+	 _paq.push(['enableLinkTracking']);
+
+	 (function(){
+	 	var u="//stats.kde.org/";
+	    _paq.push(['setTrackerUrl',u+'piwik.php']);
+	    _paq.push(['setSiteId',13]);
+	    var d = document, g = d.createElement('script'),s=d.getElementsByTagName('script')[0];
+	    g.type = 'text/javascript';
+	    g.async = true;
+	    g.defer = true;
+	    g.src = u+'piwik.js';
+	    s.parentNode.insertBefore(g,s);
+	  })();
+</script> 
+<noscript><p><img src="//stats.kde.org/piwik.php?idsite=13" style="border:0;" alt="" /></p></noscript>
+
+</body>
+</html>

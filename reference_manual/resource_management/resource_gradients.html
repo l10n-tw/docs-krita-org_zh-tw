@@ -1,0 +1,619 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" name="title" content="Gradients" />
+  <meta property="og:site-name" content="Krita Manual" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="en" />
+  <meta property="og:locale:alternate" content="ca" />
+  
+  <meta property="og:locale:alternate" content="fr" />
+  <meta property="og:locale:alternate" content="it" />
+  <meta property="og:locale:alternate" content="ja" />
+  <meta property="og:locale:alternate" content="ko" />
+  <meta property="og:locale:alternate" content="nl" />
+  <meta property="og:locale:alternate" content="pl" />
+  <meta property="og:locale:alternate" content="pt_PT" />
+  <meta property="og:locale:alternate" content="uk_UA" />
+  <meta property="og:locale:alternate" content="zh_CN" />
+  <meta property="og:article:modified_time" content="2021-07-19T15:33:59" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<meta content="Creating and managing gradients in Krita." name="description" property="og:description" />
+
+  
+  
+  <title>Gradients &mdash; Krita Manual 5.0.0 Beta documentation</title>
+  
+
+  
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    
+  
+  
+  
+    <link rel="canonical" href="en/reference_manual/resource_management/resource_gradients.html"/>
+    <meta property="og:url" content="en/reference_manual/resource_management/resource_gradients.html" />
+    <meta property="og:image" content="en/_static/sidebar-logo.png" />
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Patterns" href="resource_patterns.html" />
+    <link rel="prev" title="Brushes" href="resource_brushtips.html" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+       
+           <a href="../../index.html" class="icon icon-home">
+
+			<img src="../../_static/sidebar-logo.png" class="logo" alt="Logo"/>
+           	
+           <!--	Krita Manual -->
+
+
+          </a>
+
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-side-nav-language-selector">
+        	<p class="caption-text">
+	        	<select id="language-selector-container">
+	        		<option value="ca">Català</option>
+	        		<option value="en">English</option>
+	        		<option value="fr">français</option>
+	        		<option value="it">Italiano</option>
+	        		<option value="ja">日本語</option>
+	        		<option value="ko">한국어</option>
+	        		<option value="nl">Nederlands</option>
+	        		<option value="pl">Polski</option>
+	        		<option value="pt_PT">português</option>
+	        		<option value="uk_UA">Українська</option>
+	        		<option value="zh_CN">简体中文</option>
+	        	</select>
+        	</p>
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../user_manual.html">User Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../general_concepts.html">General Concepts</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../reference_manual.html">Reference Manual</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../audio_for_animation.html">Audio for Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blending_modes.html">Blending Modes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../brushes.html">Brushes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../clones_array.html">Clones Array</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_new_document.html">Create New Document</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../default_python_plugins.html">Pre-installed Python plugins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dockers.html">Dockers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dr_minw_debugger.html">Dr. MinGW Debugger</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../filters.html">Filters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hdr_display.html">HDR Display</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../image_split.html">Image Split</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../import_animation.html">Import Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../instant_preview.html">Instant Preview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../krita_4_preset_bundle.html">Krita 4 Preset Bundle Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../layers_and_masks.html">Layers and Masks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../linux_command_line.html">Linux Command Line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../list_supported_tablets.html">The List of Supported Tablets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../main_menu.html">Main Menu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../maths_input.html">Maths Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../popup-palette.html">Pop-up Palette</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preferences.html">Preferences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../render_animation.html">Render Animation</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../resource_management.html">Resource Management</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../resource_management.html#resource-libraries">Resource Libraries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../resource_management.html#managing-resources">Managing Resources</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../resource_management.html#filtering">Filtering</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../resource_management.html#resource-types-in-krita">Resource Types in Krita</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="paintoppresets.html">Brush Preset</a></li>
+<li class="toctree-l4"><a class="reference internal" href="resource_brushtips.html">Brushes</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Gradients</a></li>
+<li class="toctree-l4"><a class="reference internal" href="resource_patterns.html">Patterns</a></li>
+<li class="toctree-l4"><a class="reference internal" href="resource_workspace.html">Workspaces</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seexpr_scripts.html">SeExpr Scripts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../resource_management.html#other-resource-types">Other Resource Types</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../seexpr.html">SeExpr Quick Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../separate_image.html">Separate Image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sharing_krita_logs.html">Getting Krita logs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../split_layer.html">Split Layer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../stroke_selection.html">Stroke Selection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools.html">Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../welcome_screen.html">Welcome Screen</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials.html">Tutorials and How-tos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../KritaFAQ.html">Krita FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributors_manual.html">Contributors Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../resources_page.html">Resources</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+	<!-- start top banner area (for fundraisers or messages)
+
+	<div style="text-align: center; background-color: #333">
+		<a href="https://krita.org/en/fundraising-2018-campaign/" target="_self" onclick="ga('send', 'event', 'frontpage', 'button', 'Fundraiser 2018');">
+			<img src="https://krita.org/wp-content/themes/krita-org-theme/images/decoration/2018-fundraiser-banner.png" style="max-width: 100%">
+		</a>
+	</div>
+	
+	 end top banner area -->
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Krita Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../reference_manual.html">Reference Manual</a> &raquo;</li>
+        
+          <li><a href="../resource_management.html">Resource Management</a> &raquo;</li>
+        
+      <li>Gradients</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+          
+            <a href="../../_sources/reference_manual/resource_management/resource_gradients.rst.txt" rel="nofollow"> 
+             
+              <img src="../../_static/images/source-code.png" />
+             <!-- View page source -->
+
+          </a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="gradients">
+<span id="resource-gradients"></span><span id="index-0"></span><h1>Gradients<a class="headerlink" href="#gradients" title="Permalink to this headline">¶</a></h1>
+<section id="accessing-a-gradient">
+<h2>Accessing a Gradient<a class="headerlink" href="#accessing-a-gradient" title="Permalink to this headline">¶</a></h2>
+<p>The Gradients configuration panel is accessed by clicking the Gradients icon (usually the icon next to the disk).</p>
+<img alt="../../_images/Gradient_Toolbar_Panel.png" src="../../_images/Gradient_Toolbar_Panel.png" />
+<p>Gradients are configurations of blending between colors.  Krita provides over a dozen preset dynamic gradients for you to choose from.  In addition, you can design and save your own.</p>
+<p>Some typical uses of gradients are:</p>
+<ul class="simple">
+<li><p>Fill for vector shapes.</p></li>
+<li><p>Gradient tool</p></li>
+<li><p>As a source of color for the pixel brush.</p></li>
+</ul>
+<p>There is no gradients docker. They can only be accessed through the gradient “quick-menu” in the toolbar.</p>
+</section>
+<section id="editing-a-gradient">
+<h2>Editing a Gradient<a class="headerlink" href="#editing-a-gradient" title="Permalink to this headline">¶</a></h2>
+<p>Krita has two gradient types:</p>
+<ol class="arabic simple">
+<li><p>Segmented Gradients, which are compatible with GIMP, have many different features but are also a bit complicated to make.</p></li>
+<li><p>Stop Gradients, which are saved as SVG files and similar to how most applications do their gradients, but has less features than the segmented gradient.</p></li>
+</ol>
+<p>Initially we could only make segmented gradients in Krita, but in 3.0.2 we can also make stop gradients.</p>
+<img alt="../../_images/Krita_new_gradient.png" class="align-center" src="../../_images/Krita_new_gradient.png" />
+<p>You can make a new gradient by going into the drop-down and selecting the gradient type you wish to have. By default Krita will make a stop-gradient.</p>
+<section id="stop-gradients">
+<h3>Stop Gradients<a class="headerlink" href="#stop-gradients" title="Permalink to this headline">¶</a></h3>
+<p>Stop gradients are simply a list of <em>gradient stops</em>. A gradient stop has two properties associated with it: a position and a color.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 4.4: </span>Gradients can have stops that use the currently selected Foreground or Background colors. This makes them dynamic: if a gradient uses the Foreground or Background colors then changing those will also change the gradient appearance.</p>
+</div>
+<p>Creating stop gradients is very straight forward. Following is a breakdown of the stop gradient editor:</p>
+<img alt="../../_images/stop_gradient_editor_breakdown.png" class="align-center" src="../../_images/stop_gradient_editor_breakdown.png" />
+<ol class="arabic simple">
+<li><p><em class="dfn">Name text field</em> - In this text field you can write a name for the gradient.</p></li>
+<li><p><span class="guilabel">Select stop</span> - With these arrow buttons you can select the previous or next stop.</p></li>
+<li><p><em class="dfn">Selected stop label</em> - This label shows the currently selected stop index.</p></li>
+<li><p><span class="guilabel">Delete stop</span> - With this button you can delete the currently selected stop.</p></li>
+<li><p><em class="dfn">Gradient slider</em> - This <em>slider</em> is the main part of the editor, where the gradient preview is shown and where you can perform some basic operations to change the gradient:</p>
+<ul class="simple">
+<li><p><img alt="mouseleft" src="../../_images/Krita_mouse_left.png" /> on the gradient to add a stop.</p></li>
+<li><p><img alt="mouseleft" src="../../_images/Krita_mouse_left.png" /> on the stop handles (the drop-shaped icons) to select a stop, and drag to move them.</p></li>
+<li><p>Drag the stop handles outside of the bar or press <kbd class="kbd docutils literal notranslate">Delete</kbd> to remove the selected stop.</p></li>
+<li><p>Double-<img alt="mouseleft" src="../../_images/Krita_mouse_left.png" /> on a stop handle or press <kbd class="kbd docutils literal notranslate">Enter</kbd> to open a color dialog where you can choose the color of the stop.</p></li>
+<li><p>Use the <img alt="mousescroll" src="../../_images/Krita_mouse_scroll.png" /> or the <kbd class="kbd docutils literal notranslate">Left</kbd> and <kbd class="kbd docutils literal notranslate">Right</kbd> keys to move the selected stop. If you also press <kbd class="kbd docutils literal notranslate">Shift</kbd> the increment will be smaller.</p></li>
+<li><p>Use <kbd class="kbd docutils literal notranslate">Ctrl</kbd> + <img alt="mousescroll" src="../../_images/Krita_mouse_scroll.png" /> or <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Left</kbd></kbd> and <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Right</kbd></kbd> to select the previous or next stop.</p></li>
+</ul>
+</li>
+<li><p><em class="dfn">Color type</em> - Whith these three buttons you can select the type of color used by the selected stop (Foreground, Background or custom).</p></li>
+<li><p><em class="dfn">Color button</em> - If the selected stop uses a custom color then you can use this button to open a color dialog and change the color.</p></li>
+<li><p><span class="guilabel">Flip gradient</span> - With this button you can reverse the order of the stops in the gradient.</p></li>
+<li><p><span class="guilabel">Sort stops by value</span> - Clicking this button will sort the stops by its value.</p></li>
+<li><p><span class="guilabel">Distribute stops evenly</span> - Clicking this button will space the stops leaving the same amount of space between them.</p></li>
+<li><p><span class="guilabel">Sort stops by hue</span> - Clicking this button will sort the stops by its hue.</p></li>
+<li><p><em class="dfn">Opacity slider</em> - If the selected stop uses a custom color then you can use this slider to change its opacity.</p></li>
+<li><p><em class="dfn">Position slider</em> - This slider allows to fine-tune the position of the selected stop.</p></li>
+</ol>
+<p>As per SVG spec, you can make a sudden change between stops by moving them close together. The stops will overlap, but you can still drag them around:</p>
+<img alt="../../_images/Krita_stop_sudden_change.png" class="align-center" src="../../_images/Krita_stop_sudden_change.png" />
+<p>Right now, stop gradients are the only ones that are capable of handling <a class="reference internal" href="../../general_concepts/colors/color_space_size.html#color-space-size"><span class="std std-ref">colors outside of sRGB</span></a>.</p>
+</section>
+<section id="segmented-gradients">
+<h3>Segmented Gradients<a class="headerlink" href="#segmented-gradients" title="Permalink to this headline">¶</a></h3>
+<p>Segmented gradients are a list of <em>gradient segments</em>. A gradient segment has the following properties:</p>
+<ul>
+<li><p>A start and end positions that denote where the segment is placed inside the gradient.</p></li>
+<li><p>A start and end colors associated with the start and end positions.</p>
+<blockquote>
+<div><div class="versionadded">
+<p><span class="versionmodified added">New in version 4.4: </span>Gradients can have segment endpoints that use the currently selected Foreground or Background colors, and those endpoints can be transparent. This makes them dynamic: if a gradient uses the Foreground or Background colors then changing those will also change the gradient appearance. These features allow full compatibility with GIMP gradients.</p>
+</div>
+</div></blockquote>
+</li>
+<li><p>A blending strategy used to fill the segment inbetween the extreme colors. This strategy is formed by two different properties:</p>
+<blockquote>
+<div><ul>
+<li><p>A color model:</p>
+<blockquote>
+<div><img alt="../../_images/Krita_gradient_segment_color_model.png" src="../../_images/Krita_gradient_segment_color_model.png" />
+<ol class="arabic simple">
+<li><p><span class="guilabel">RGB</span> - Does the blending in RGB model.</p></li>
+<li><p><span class="guilabel">HSV clockwise</span> - Blends the two colors using the HSV model, and follows the hue clockwise (red-yellow-green-cyan-blue-purple). The above screenshot is an example of this.</p></li>
+<li><p><span class="guilabel">HSV counter-clock wise</span> - Blends the color as the previous options, but then counter-clockwise.</p></li>
+</ol>
+</div></blockquote>
+</li>
+<li><p>An interpolation function used to determine how the colors should vary along the segment:</p>
+<blockquote>
+<div><img alt="../../_images/Krita_gradient_segment_blending.png" src="../../_images/Krita_gradient_segment_blending.png" />
+<ol class="arabic simple">
+<li><p><span class="guilabel">Linear</span> - Does a linear blending between both extreme colors.</p></li>
+<li><p><span class="guilabel">Curved</span> - This causes the mix to ease-in and out faster.</p></li>
+<li><p><span class="guilabel">Sine</span> - Uses a sine function. This causes the mix to ease in and out slower.</p></li>
+<li><p><span class="guilabel">Sphere, increasing</span> - This puts emphasis on the later color during the mix.</p></li>
+<li><p><span class="guilabel">Sphere, decreasing</span> - This puts emphasis on the first color during the mix.</p></li>
+</ol>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>A segment middle position used to set where the <em>center</em> color obtained with the blending strategy should go. The visual effect is as if you stretched one half of the segment and squashed the other.</p>
+<blockquote>
+<div><img alt="../../_images/Krita_gradient_segment_mid_position.png" src="../../_images/Krita_gradient_segment_mid_position.png" />
+</div></blockquote>
+</li>
+</ul>
+<p>The segmented gradient editor is very similar to the stop gradient editor. The main difference is that you can select three different types of handles to edit the gradient: segment, stop, and middle point handles. When selecting one of these handles the widgets around the gradient slider will change to reflect the actions that you can perform on that handle. For example, for a segment handle you can change the start and end colors (amongst other actions), but for a middle point handle you can only change its position.</p>
+<p>Following are a general breakdown and three specific breakdowns of the editor corresponding to the different user interfaces that are presented when the different handles are selected.</p>
+<dl>
+<dt>General UI Breakdown</dt><dd><img alt="../../_images/segment_gradient_editor_general_breakdown.png" class="align-center" src="../../_images/segment_gradient_editor_general_breakdown.png" />
+<ol class="arabic simple">
+<li><p><em class="dfn">Name text field</em> - In this text field you can write a name for the gradient.</p></li>
+<li><p><em class="dfn">Select handle buttons</em> - With these arrow buttons you can select the previous or next handle.</p></li>
+<li><p><em class="dfn">Selected handle label</em> - This label shows the currently selected handle index.</p></li>
+<li><p><em class="dfn">Handle actions area</em> - In this area will appear some actions you can perform on the selected handle. They vary depending on the type of handle selected.</p></li>
+<li><p><span class="guilabel">Flip gradient</span> - With this button you can reverse the order of the segments (and their start and end colors) in the gradient.</p></li>
+<li><p><span class="guilabel">Distribute segments evenly</span> - Clicking this button will make all the segments have the same amount of space.</p></li>
+<li><p><em class="dfn">Gradient slider</em> - This <em class="dfn">slider</em> is the main part of the editor, where the gradient preview is shown and where you can perform some basic operations to change the gradient. These operations basicaly make changes to the different handles and are explained in the following sections. You can change the selected handle by pressing <kbd class="kbd docutils literal notranslate">Ctrl</kbd> and using <img alt="mousescroll" src="../../_images/Krita_mouse_scroll.png" /> or by pressing <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Left</kbd></kbd> and <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Right</kbd></kbd>.</p></li>
+<li><p><em class="dfn">Handle properties area</em> - In this area will appear some widgets you can use to change the different properties of the selected handle.</p></li>
+</ol>
+</dd>
+</dl>
+<p>Segment Handle UI Breakdown</p>
+<blockquote>
+<div><img alt="../../_images/segment_gradient_editor_segment_handle_breakdown.png" class="align-center" src="../../_images/segment_gradient_editor_segment_handle_breakdown.png" />
+<ol class="arabic simple">
+<li><p><span class="guilabel">Delete segment</span> - Pressing this button will delete the selected segment (unless it is the only one).</p></li>
+<li><p><span class="guilabel">Flip segment</span> - Pressing this button you can reverse the start and end colors of the selected segment as well as its middle point.</p></li>
+<li><p><span class="guilabel">Split segment</span> - Pressing this button will divide the selected segment in two, using the segment middle point as the cutting position.</p></li>
+<li><p><span class="guilabel">Duplicate segment</span> - Pressing this button will create a copy of the selected segment to its right.</p></li>
+<li><p><em class="dfn">Gradient slider</em> - Here is a list of the segment related actions you can perform on the gradient slider:</p>
+<ul class="simple">
+<li><p>You can select a segment by <img alt="mouseleft" src="../../_images/Krita_mouse_left.png" /> on an area of the slider where there is no stop handle (the drop-shaped icon) or middle point handle (the rhombus-shaped icon).</p></li>
+<li><p>You can move the whole segment by <img alt="mouseleft" src="../../_images/Krita_mouse_left.png" /> and dragging on an area of the slider where there is no stop handle or middle point handle. You can also move the segment by using <img alt="mousescroll" src="../../_images/Krita_mouse_scroll.png" /> or <kbd class="kbd docutils literal notranslate">Left</kbd> and <kbd class="kbd docutils literal notranslate">Right</kbd> and while doing that, if you also press <kbd class="kbd docutils literal notranslate">Shift</kbd>, then the increment will be smaller. The first and last segments can not be moved.</p></li>
+<li><p>You can delete the selected segment by pressing <kbd class="kbd docutils literal notranslate">Delete</kbd> or by dragging it outside the slider area.</p></li>
+<li><p>You can split a segment by pressing <kbd class="kbd docutils literal notranslate">Ctrl</kbd> and <img alt="mouseleft" src="../../_images/Krita_mouse_left.png" /> on it. The cutting point will be where you clicked.</p></li>
+<li><p>You can duplicate a segment by pressing <kbd class="kbd docutils literal notranslate">Shift</kbd> and <img alt="mouseleft" src="../../_images/Krita_mouse_left.png" /> on it.</p></li>
+</ul>
+</li>
+<li><p><span class="guilabel">Left color</span> - In this row of widgets you can change the properties related to the start of the segment:</p>
+<ul class="simple">
+<li><p>With the first three buttons you can set the type of color used (Foreground, Background or custom).</p></li>
+<li><p>Next to the color type buttons will appear a check box when the color type is Foreground or Background that you can use to stablish that the color should also be transparent. If the color type is custom, then instead a color button and an opacity slider will appear to let you choose a specific color.</p></li>
+<li><p>Lastly there is a position slider you can use to fine-tune the start position of the segment. This also changes the end position of the previous segment.</p></li>
+</ul>
+</li>
+<li><p><span class="guilabel">Right color</span> - In this row of widgets you can change the properties related to the end of the segment. They are pretty much the same as the ones explained in the previous point.</p></li>
+<li><p><span class="guilabel">Interpolation</span> - In this row you can set the interpolation method and color model used to blend the colors inbetween the segment.</p></li>
+</ol>
+</div></blockquote>
+<dl>
+<dt>Stop Handle UI Breakdown</dt><dd><p>Keep in mind that a segmented gradient is just a list of gradient segments. There isn’t really a concept of <em>stop</em> associated with it. The stop handles are just a convention used in the editor to ease the editing of the gradient. When manipulating or changing the properties of a stop handle you are really modifying the end of the segment on the left and the start of the segment on the right synchronously.</p>
+<img alt="../../_images/segment_gradient_editor_stop_handle_breakdown.png" class="align-center" src="../../_images/segment_gradient_editor_stop_handle_breakdown.png" />
+<ol class="arabic simple">
+<li><p><span class="guilabel">Delete stop</span> - Pressing this button will delete the selected stop. Under the hood this action will merge the left and right segments, keeping the start of the left segment and the end of the right segment.</p></li>
+<li><p><span class="guilabel">Center stop</span> - Pressing this button will center the stop between the start position of the left segment and the end position of the right segment.</p></li>
+<li><p><span class="guilabel">Gradient slider</span> - Here is a list of the stop related actions you can perform on the gradient slider:</p>
+<ul class="simple">
+<li><p>You can select a stop handle by <img alt="mouseleft" src="../../_images/Krita_mouse_left.png" /> on one of the drop-shaped icons.</p></li>
+<li><p>You can move the stop handle by <img alt="mouseleft" src="../../_images/Krita_mouse_left.png" /> and dragging the drop-shaped icon. You can also move the stop handle by using <img alt="mousescroll" src="../../_images/Krita_mouse_scroll.png" /> or <kbd class="kbd docutils literal notranslate">Left</kbd> and <kbd class="kbd docutils literal notranslate">Right</kbd> and while doing that, if you also press <kbd class="kbd docutils literal notranslate">Shift</kbd>, then the increment will be smaller. The first and last stop handles can not be moved.</p></li>
+<li><p>You can delete the selected stop by pressing <kbd class="kbd docutils literal notranslate">Delete</kbd> or by dragging it outside the slider area.</p></li>
+<li><p>You can create a new stop by pressing <kbd class="kbd docutils literal notranslate">Ctrl</kbd> and <img alt="mouseleft" src="../../_images/Krita_mouse_left.png" /> on an area of the slider where there is no stop handle or middle point handle. This is exactly the same action as splitting a segment.</p></li>
+</ul>
+</li>
+<li><p><span class="guilabel">Left Color</span> - In this row of widgets you can change the properties related to the end of the segment on the left of the stop:</p>
+<ul class="simple">
+<li><p>With the first three buttons you can set the type of color used (Foreground, Background or custom).</p></li>
+<li><p>Next to the color type buttons will appear a check box when the color type is Foreground or Background that you can use to stablish that the color should also be transparent. If the color type is custom, then instead a color button and an opacity slider will appear to let you choose a specific color.</p></li>
+</ul>
+</li>
+<li><p><span class="guilabel">Right color</span> - In this row of widgets you can change the properties related to the start of the segment on the right of the stop. They are pretty much the same as the ones explained in the previous point.</p></li>
+<li><p><span class="guilabel">Link colors</span> - If this button is checked then changing the properties on the <em>left color” area will also change the properties on the *right color</em> area and viceversa. Check it if you want the two colors to be synchronized.</p></li>
+<li><p><span class="guilabel">Position</span> - you can use this slider to fine-tune the position of the stop. This cahnges the end position of the segment on the left and the start position of the segment on the right.</p></li>
+</ol>
+</dd>
+</dl>
+<p>Middle Point Handle UI Breakdown</p>
+<blockquote>
+<div><img alt="../../_images/segment_gradient_editor_midpoint_handle_breakdown.png" class="align-center" src="../../_images/segment_gradient_editor_midpoint_handle_breakdown.png" />
+<ol class="arabic simple">
+<li><p><em class="dfn">Center middle point</em> - Pressing this button will center the middle point of the selected segment.</p></li>
+<li><p><em class="dfn">Gradient slider</em> - Here is a list of the middle point related actions you can perform on the gradient slider:</p>
+<ul class="simple">
+<li><p>You can select a segment middle point by <img alt="mouseleft" src="../../_images/Krita_mouse_left.png" /> on one of the rhombus-shaped icons.</p></li>
+<li><p>You can move the middle point by <img alt="mouseleft" src="../../_images/Krita_mouse_left.png" /> and dragging the rhombus-shaped icon. You can also move it by using <img alt="mousescroll" src="../../_images/Krita_mouse_scroll.png" /> or <kbd class="kbd docutils literal notranslate">Left</kbd> and <kbd class="kbd docutils literal notranslate">Right</kbd> and while doing that, if you also press <kbd class="kbd docutils literal notranslate">Shift</kbd>, then the increment will be smaller.</p></li>
+</ul>
+</li>
+<li><p><span class="guilabel">Position</span> - With this slider you can fine-tune the position of the middle point of the segment.</p></li>
+</ol>
+</div></blockquote>
+</section>
+<section id="compact-gradient-editors">
+<h3>Compact Gradient Editors<a class="headerlink" href="#compact-gradient-editors" title="Permalink to this headline">¶</a></h3>
+<p>In some places in the GUI a compact version of the gradient editors may be used because of the lack of space or other reasons. They just show the gradient slider and all the other functionality that is exposed in the non-compact mode is compacted and moved to the side.</p>
+<img alt="../../_images/compact_stop_gradient_editor.png" class="align-center" src="../../_images/compact_stop_gradient_editor.png" />
+</section>
+<section id="generic-gradient-editor">
+<h3>Generic Gradient Editor<a class="headerlink" href="#generic-gradient-editor" title="Permalink to this headline">¶</a></h3>
+<p>In some places you will find that the previously mentioned gradient preset
+chooser and editors are shown together and that they are interconnected. When
+this happens, you are probably using the generic gradient editor, that was
+introduced to ease the creation and manipulation of gradients.</p>
+<p>It’s main features are:</p>
+<ul class="simple">
+<li><p>Allows you to load/save gradients from/to the gradient resources to/from the
+editor.</p></li>
+<li><p>Allows to overwrite an existing gradient resource.</p></li>
+<li><p>A specific editor is shown automatically depending on the type of the
+gradient (stop gradient or segmented gradient).</p></li>
+<li><p>Allows to convert between gradient types</p></li>
+</ul>
+<p>Following is a breakdown of the interface of the editor:</p>
+<img alt="../../_images/generic_gradient_editor_breakdown.png" class="align-center" src="../../_images/generic_gradient_editor_breakdown.png" />
+<ol class="arabic simple">
+<li><p><span class="guilabel">Add gradient button</span> - Pressing this button you can add the current gradient to
+the resources.</p></li>
+<li><p><span class="guilabel">Update gradient button</span> - Pressing this button you can overwrite the gradient
+resource that is currently selected in the gradient chooser. Keep in mind
+that the type of the gradient resource and the type of the gradient that is
+currently being edited must match.</p></li>
+<li><p><span class="guilabel">Convert gradient button</span> - Pressing this button you can convert the current
+gradient to a stop gradient if it is a segmented gradient or to a segmented
+gradient if it is a stop gradient.</p></li>
+<li><p><span class="guilabel">Convert gradient warning</span> - This icon will appear when pressing the convert
+button means that some data or info will be lost in the conversion. This can
+happen when converting from a segmented gradient to a stop gradient.</p></li>
+<li><p><span class="guilabel">Gradient presets button</span> - Pressing this button will pop-up a gradient preset
+chooser to let you choose a gradient and edit it. This button is only
+available if the “use a pop-up gradient preset chooser” is checked.</p></li>
+<li><p><span class="guilabel">Options button</span> - Pressing this button will show an options menu.</p></li>
+<li><p><em class="dfn">Specific editor area</em> - Here the stop or segmented gradient editor will be
+shown when a gradient is selected. The specific gradient editors are
+documented in the previous sections.</p></li>
+<li><p><em class="dfn">Gradient preset chooser</em> - This widget shows a collection of gradient resources
+and allows you to load one of those gradients into the editor.</p></li>
+<li><p><span class="guilabel">Use a pop-up gradient preset chooser</span> - If this option is checked, the
+gradient preset chooser will be accessed through a pop-up window that is
+shown by clicking the “choose gradient preset” button; If this option is not
+checked then the gradient preset chooser is shown inline above all the other
+widgets.</p></li>
+<li><p><span class="guilabel">Show compact gradient preset chooser</span> - If this option is checked,
+then only the collection of gradient resources is shown, without any
+surrounding buttons or options. If it is not checked then the gradient
+preset chooser will also show some extra buttons, like tag filtering or
+viewing options.</p></li>
+</ol>
+</section>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="resource_patterns.html" class="btn btn-neutral float-right" title="Patterns" accesskey="n" rel="next"> <!-- Next --> <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="resource_brushtips.html" class="btn btn-neutral" title="Brushes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- Previous  -->  </a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright licensed under the GNU Free Documentation License 1.3+ unless stated otherwise.
+      
+        <span class="commit">
+          Revision <code>7c271ce</code>.
+        </span>
+      
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a modified <a href="https://github.com/rtfd/sphinx_rtd_theme">RTD theme</a>.<br/>
+  <a href="https://krita.org" title="Krita official website.">Krita official website</a> |
+  <a href="https://invent.kde.org/documentation/docs-krita-org/" title="The Gitlab instance to edit this pages and collaborate.">Git repository for docs.krita.org </a> |
+  <a href="https://www.kde.org/community/whatiskde/impressum-en.php" title="To know more about KDE, code of conduct, privacy policy and GDPR.">KDE Impressum</a>.
+   
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'5.0.0 Beta',
+            LANGUAGE:'en',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/documentation_options.js"></script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
+      });
+  </script> 
+
+ <script type="text/javascript">
+	 var _paq=_paq||[];
+	 _paq.push(['setCookieDomain','*.krita.org']);
+	 _paq.push(['setDomains','*.krita.org']);
+	 _paq.push(['setDocumentTitle',document.domain+"/"+document.title]);
+	 _paq.push(['trackPageView']);
+	 _paq.push(['enableLinkTracking']);
+
+	 (function(){
+	 	var u="//stats.kde.org/";
+	    _paq.push(['setTrackerUrl',u+'piwik.php']);
+	    _paq.push(['setSiteId',13]);
+	    var d = document, g = d.createElement('script'),s=d.getElementsByTagName('script')[0];
+	    g.type = 'text/javascript';
+	    g.async = true;
+	    g.defer = true;
+	    g.src = u+'piwik.js';
+	    s.parentNode.insertBefore(g,s);
+	  })();
+</script> 
+<noscript><p><img src="//stats.kde.org/piwik.php?idsite=13" style="border:0;" alt="" /></p></noscript>
+
+</body>
+</html>

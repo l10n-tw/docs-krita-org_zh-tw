@@ -1,0 +1,464 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" name="title" content="Developing Features" />
+  <meta property="og:site-name" content="Krita Manual" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="en" />
+  <meta property="og:locale:alternate" content="ca" />
+  
+  <meta property="og:locale:alternate" content="fr" />
+  <meta property="og:locale:alternate" content="it" />
+  <meta property="og:locale:alternate" content="ja" />
+  <meta property="og:locale:alternate" content="ko" />
+  <meta property="og:locale:alternate" content="nl" />
+  <meta property="og:locale:alternate" content="pl" />
+  <meta property="og:locale:alternate" content="pt_PT" />
+  <meta property="og:locale:alternate" content="uk_UA" />
+  <meta property="og:locale:alternate" content="zh_CN" />
+  <meta property="og:article:modified_time" content="2021-07-19T15:33:59" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<meta content="Guide to the development of new features." name="description" />
+
+  
+  
+  <title>Developing Features &mdash; Krita Manual 5.0.0 Beta documentation</title>
+  
+
+  
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    
+  
+  
+  
+    <link rel="canonical" href="en/untranslatable_pages/new_features.html"/>
+    <meta property="og:url" content="en/untranslatable_pages/new_features.html" />
+    <meta property="og:image" content="en/_static/sidebar-logo.png" />
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Optimizing tips and tools for Krita" href="optimizing_tips_for_krita.html" />
+    <link rel="prev" title="Modern C++ usage guidelines for the Krita codebase" href="modern_cpp_in_krita.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+       
+           <a href="../index.html" class="icon icon-home">
+
+			<img src="../_static/sidebar-logo.png" class="logo" alt="Logo"/>
+           	
+           <!--	Krita Manual -->
+
+
+          </a>
+
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-side-nav-language-selector">
+        	<p class="caption-text">
+	        	<select id="language-selector-container">
+	        		<option value="ca">Català</option>
+	        		<option value="en">English</option>
+	        		<option value="fr">français</option>
+	        		<option value="it">Italiano</option>
+	        		<option value="ja">日本語</option>
+	        		<option value="ko">한국어</option>
+	        		<option value="nl">Nederlands</option>
+	        		<option value="pl">Polski</option>
+	        		<option value="pt_PT">português</option>
+	        		<option value="uk_UA">Українська</option>
+	        		<option value="zh_CN">简体中文</option>
+	        	</select>
+        	</p>
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../user_manual.html">User Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general_concepts.html">General Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference_manual.html">Reference Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials.html">Tutorials and How-tos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../KritaFAQ.html">Krita FAQ</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../contributors_manual.html">Contributors Manual</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../contributors_manual/community.html">The Krita Community</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributors_manual/krita_manual_conventions.html">Mark-up conventions for the Krita Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributors_manual/krita_manual_readme.html">Krita Manual Contribution Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributors_manual/optimising_images.html">Images for the Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributors_manual/user_support.html">Introduction to User Support</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../untranslatable_pages.html">Technical Pages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="building_krita.html">Building Krita from Source</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cmake_settings_for_developers.html">CMake Settings for Developers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="intro_hacking_krita.html">Introduction to Hacking Krita</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kpl_defintion.html">The Krita Palette format KPL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="krita_svg_extensions.html">Krita SVG Extensions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modern_cpp_in_krita.html">Modern C++ usage guidelines for the Krita codebase</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Developing Features</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#step-1-making-a-proposal">Step 1: Making a proposal</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-2-triaging-the-proposal">Step 2: Triaging the proposal</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-3-discussing-in-irc-phab">Step 3: Discussing in irc/phab</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-4-work-in-a-feature-branch">Step 4: Work in a feature branch</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-5-documentation-and-demonstration">Step 5: Documentation and demonstration</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="optimizing_tips_for_krita.html">Optimizing tips and tools for Krita</a></li>
+<li class="toctree-l3"><a class="reference internal" href="participating_in_gsoc.html">Google Summer of Code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="patch_review_guide.html">Advanced Merge Request Guide</a></li>
+<li class="toctree-l3"><a class="reference internal" href="python_coding.html">Python Developer Tools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quality_assurance.html">Introduction to Quality Assurance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release_krita.html">Making a release</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reporting_bugs.html">Reporting Bugs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="running_krita.html">Running Krita from Source</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strokes_documentation.html">Strokes queue</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strokes_documentation.html#strokes-public-api">Strokes public API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strokes_documentation.html#internals-of-the-freehand-tool">Internals of the freehand tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strokes_documentation.html#scheduled-undo-redo">Scheduled Undo/Redo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strokes_documentation.html#processings-framework">Processings framework</a></li>
+<li class="toctree-l3"><a class="reference internal" href="testing_strategy.html">Testing Strategy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="triaging_bugs.html">Triaging Bugs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="unit_tests_in_krita.html">Unittests in Krita</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../resources_page.html">Resources</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+	<!-- start top banner area (for fundraisers or messages)
+
+	<div style="text-align: center; background-color: #333">
+		<a href="https://krita.org/en/fundraising-2018-campaign/" target="_self" onclick="ga('send', 'event', 'frontpage', 'button', 'Fundraiser 2018');">
+			<img src="https://krita.org/wp-content/themes/krita-org-theme/images/decoration/2018-fundraiser-banner.png" style="max-width: 100%">
+		</a>
+	</div>
+	
+	 end top banner area -->
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Krita Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../contributors_manual.html">Contributors Manual</a> &raquo;</li>
+        
+          <li><a href="../untranslatable_pages.html">Technical Pages</a> &raquo;</li>
+        
+      <li>Developing Features</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+          
+            <a href="../_sources/untranslatable_pages/new_features.rst.txt" rel="nofollow"> 
+             
+              <img src="../_static/images/source-code.png" />
+             <!-- View page source -->
+
+          </a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="developing-features">
+<span id="id1"></span><h1>Developing Features<a class="headerlink" href="#developing-features" title="Permalink to this headline">¶</a></h1>
+<p>There’s several stages to making a feature request become reality. The first section of this page goes over a set of common issues with making feature requests and gives hints on how to make a simple feature request into a proper proposal. The rest documents how a feature goes from a proposal to an actual reality.</p>
+<section id="step-1-making-a-proposal">
+<h2>Step 1: Making a proposal<a class="headerlink" href="#step-1-making-a-proposal" title="Permalink to this headline">¶</a></h2>
+<p><em>“vOpenBlackCanvasMischiefPhotoPaintStormToolKaikai has a frobdinger tool! Krita will never amount to a row of beans unless Krita gets a frobdinger tool, too!”</em></p>
+<p>The cool thing about open source is that you can add features yourself, and even if you cannot code, you talk directly with the developers about the features you need in your workflow. Try that with closed-source proprietary software! But, often, the communication goes awry, leaving both users with bright ideas and developers with itchy coding fingers unsatisfied.</p>
+<p>This post is all about how to work, first together with other artists, then with developers to create good feature requests, feature requests that are good enough that they can end up being implemented.</p>
+<p>For us as developers it’s sometimes really difficult to read feature requests, and we have a really big to-do list (600+ items at the time of writing, excluding our own dreams and desires). So, having a well written feature proposal is very helpful for us and will lodge the idea better into our conscious. Conversely, a demand for a frobdinger tool because another application has it, so Krita must have it, too, is likely not to get far.</p>
+<p>Writing proposals is a bit of an art form in itself, and pretty difficult to do right! Asking for a copy of a feature in another application is almost always wrong because it doesn’t tell us the most important thing:</p>
+<p>What we primarily need like to know is HOW you intend to use the feature. This is the most important part. All Krita features are carefully considered in terms of the workflow they affect, and we will not start working on any feature unless we know why it is useful and how it is exactly used. Even better, once we know how it’s used, we as developers can start thinking about what else we can do to make the workflow even more fluid!</p>
+<p>Good examples of this approach can be found in the pop-up palette using tags, the layer docker redesign of 3.0, the onion skin docker, the time-line dockers and the assistants.</p>
+<p>Feature requests should start on the forum, so other artists can chime in. What we want is that a consensus about workflow, about use-cases emerges, something our UX people can then try to grok and create a design for. Once the design emerges, we’ll try an implementation, and that needs testing.</p>
+<p>For your forum post about the feature you have in mind, check this list:</p>
+<ul class="simple">
+<li><p>It is worth investigating first if the feature in question has similar functionality in Krita that might need to be extended to solve the problem. We in fact kind of expect that you have used Krita for a while before making feature requests. Check the manual first!</p></li>
+<li><p>If your English is not very good or you have difficulty finding the right words, make pictures. If you need a drawing program, I heard Krita is pretty good.</p></li>
+<li><p>In fact, mock-ups are super useful! And why wouldn’t you make them? Krita is a drawing program made for artists, and a lot of us developers are artists ourselves. Furthermore, this gets past that nasty problem called ‘communication problems’.</p></li>
+<li><p>Focus on the workflow. You need to prepare a certain illustration, comic, matte painting, you would be (much) more productive if you could just do — whatever. Tell us about your problem and be open to suggestions about alternatives. A feature request should be an exploration of possibilities, not a final demand!</p></li>
+<li><p>The longer your request, the more formatting is appreciated. Some of us are pretty good at reading long incomprehensible texts, but not all of us. Keep to the ABC of clarity, brevity, accuracy. If you format and organize your request we’ll read it much faster and will be able to spent more time on giving feedback on the exact content. This also helps other users to understand you and give detailed feedback! The final proposal can even be a multi-page PDF.</p></li>
+<li><p>We prefer it if you read and reply to other people’s requests than to start from scratch. For animation we’ve had the request for importing frames, instancing frames, adding audio support, from tons of different people, sometimes even in the same thread. We’d rather you reply to someone else’s post (you can even reply to old posts) than to list it amongst other newer requests, as it makes it very difficult to tell those other requests apart, and it turns us into bookkeepers when we could have been programming.</p></li>
+</ul>
+<p>Keep in mind that the Krita development team is insanely overloaded. We’re not a big company, we’re a small group of mostly volunteers who are spending way too much of our spare time on Krita already. You want time from us: it’s your job to make life as easy as possible for us!</p>
+<p>So we come to: <strong>Things That Will Not Help.</strong></p>
+<p>There’s certain things that people do to make their feature request sound important but are, in fact, really unhelpful and even somewhat rude:</p>
+<dl>
+<dt>“Application X has this, so Krita must have it, too”.</dt><dd><p>See above. Extra malus points for using the words “industry standard”, double so if it refers to an Adobe file format.</p>
+<p>We honestly don’t care if application X has feature Y, especially as long as you do not specify how it’s used.</p>
+<p>Now, instead of thinking ‘what can we do to make the best solution for this problem’, it gets replaced with ‘oh god, now I have to find a copy of application X, and then test it for a whole night to figure out every single feature… I have no time for this’.</p>
+<p>We do realize that for many people it’s hard to think in terms of workflow instead of “I used to use this in ImagePainterDoublePlusPro with the humdinger tool, so I need a humdinger tool in krita” — but it’s your responsibility when you are thinking about a feature request to go beyond that level and make a good case: we cannot play guessing games!</p>
+</dd>
+<dt>“Professionals in the industry use this”.</dt><dd><p>Which professionals? What industry? We cater to digital illustrators, matte painters, comic book artists, texture artists, animators… These guys don’t share an industry. This one is peculiar because it is often applied to features that professionals never actually use. There might be hundreds of tutorials for a certain feature, and it still isn’t actually used in people’s daily work.</p>
+</dd>
+<dt>“People need this.”</dt><dd><p>For the exact same reason as above. Why do they need it, and who are these ‘people’? And what is it, exactly, what they need?</p>
+</dd>
+<dt>“Krita will never be taken seriously if it doesn’t have a glingangiation filter.”</dt><dd><p>Weeell, Krita is quite a serious thing, used by hundreds of thousands of people, so whenever this sentence shows up in a feature request, we feel it might be a bit of emotional blackmail: it tries to to get us upset enough to work on it. Think about how that must feel.</p>
+</dd>
+<dt>“This should be easy to implement.”</dt><dd><p>Well, the code is open and we have excellent build guides, why doesn’t the feature request come with a patch then? The issue with this is very likely it is not actually all that easy. Telling us how to implement a feature based on a guess about Krita’s architecture, instead of telling us the problem the feature is meant to solve makes life really hard!</p>
+<p>A good example of this is the idea that because Krita has an OpenGL accelerated canvas, it is easy to have the filters be done on the GPU. It isn’t: The GPU accelerated canvas is currently pretty one-way, and filters would be a two-way process. Getting that two way process right is very difficult and also the difference between GPU filters being faster than regular filters or them being unusable. And that problem is only the tip of the iceberg.</p>
+</dd>
+</dl>
+<p>Some other things to keep in mind:</p>
+<ul class="simple">
+<li><p>It is actually possible to get your needed features into Krita outside of the Kickstarter sprints by funding it directly via the Krita foundation, you can mail the official email linked on krita.org for that.</p></li>
+<li><p>It’s also actually possible to start hacking on Krita and make patches. You don’t need permission or anything!</p></li>
+<li><p>Sometimes developers have already had the feature in question on their radar for a very long time. Their thinking might already be quite advanced on the topic and then they might say things like ‘we first need to get this done’, or an incomprehensible technical paragraph. This is a developer being in deep thought while they write. You can just ask for clarification if the feedback contains too much technobabble…</p></li>
+<li><p>Did we mention we’re overloaded already? It can easily be a year or two, three before we can get down to a feature. But that’s sort of fine, because the process from idea to design should take months to a year as well!</p></li>
+</ul>
+<p>To summarize: a good feature request:</p>
+<ul class="simple">
+<li><p>starts with the need to streamline a certain workflow, not with the need for a copy of a feature in another application</p></li>
+<li><p>has been discussed on the forums with other artists</p></li>
+<li><p>is illustrated with mock-ups and example</p></li>
+<li><p>gets discussed with UX people</p></li>
+<li><p>and is finally prepared as a proposal</p></li>
+<li><p>and then it’s time to find time to implement it!</p></li>
+<li><p>and then you need to test the result.</p></li>
+</ul>
+</section>
+<section id="step-2-triaging-the-proposal">
+<h2>Step 2: Triaging the proposal<a class="headerlink" href="#step-2-triaging-the-proposal" title="Permalink to this headline">¶</a></h2>
+<p>This is strictly a developer task. What is done is that we identify how much work a proposal would need to be implemented. Since 2016 we use these groups to categorize wishbugs so we can plan them into a current release or select them for a fundraiser.</p>
+<p>To fulfill this step, we need to have a full list which consolidated the ideas and requirements. A good feature request from step one will have these lined out.</p>
+<dl class="simple">
+<dt>WISHGROUP: Pie-in-the-sky</dt><dd><p>not going to happen, but it would be really cool.</p>
+</dd>
+<dt>WISHGROUP: Big Projects</dt><dd><p>needs more definition, maybe two, three months of work.</p>
+</dd>
+<dt>WISHGROUP: Stretchgoal</dt><dd><p>up to a couple of weeks or a month of work.</p>
+</dd>
+<dt>WISHGROUP: Larger Usability Fixes</dt><dd><p>maybe a week or two weeks of work.</p>
+</dd>
+<dt>WISHGROUP: Small Usability Fixes</dt><dd><p>half a day or a day of work.</p>
+</dd>
+<dt>WISHGROUP: Out of scope</dt><dd><p>too far from our current core goals to implement.</p>
+</dd>
+<dt>WISHGROUP: Needs proposal and design</dt><dd><p>needs discussion among artists to define scope first. A good proposal doesn’t need this.</p>
+</dd>
+</dl>
+</section>
+<section id="step-3-discussing-in-irc-phab">
+<h2>Step 3: Discussing in irc/phab<a class="headerlink" href="#step-3-discussing-in-irc-phab" title="Permalink to this headline">¶</a></h2>
+<p>Again, strictly a developer task. While nothing stops an adventurous programmer from just going in and implementing something, it helps to go to the #krita irc on Libera.Chat and tell us you’re working on it. Not because you need permission(Krita is open source after all), but we do want to be able to help you in your endeavours. Such help can include technical help, like where things are in the code, but also interface design help.</p>
+<p>Some features, such as new frame types for animation, or multithreading on some part or the other also needs careful discussion so we know what is going to need changes.</p>
+<p>Eventually, a phabricator task will be made to track the issue as well as including mockups. Branch progress is also discussed during the weekly meeting in the irc.</p>
+</section>
+<section id="step-4-work-in-a-feature-branch">
+<h2>Step 4: Work in a feature branch<a class="headerlink" href="#step-4-work-in-a-feature-branch" title="Permalink to this headline">¶</a></h2>
+<p>New feature branches are called ‘name/number-shortdescription’. Examples: “rempt/T379-resource-management”, “kazakov/hdr-support”, “wolthera/edgedetectionfilter”, “jounip/T8764-clone-frames”.</p>
+<p>Originally this was lastname only, but some users have an endlessly long last name while others prefer using their kde identity name. The main purpose is to identify who is responsible for the work in the branch.</p>
+<p>Work in a feature branch continues till all major elements are done. A <a class="reference internal" href="patch_review_guide.html#patch-review-guide"><span class="std std-ref">review request</span></a> is done over the whole branch. Sometimes, for UI purposes, people check out the branch to test it.</p>
+<p>When the review is accepted, the branch is merged into master for further testing. When such a branch is merged, a mail needs to be sent to <a class="reference external" href="mailto:kimageshop&#37;&#52;&#48;kde&#46;org">kimageshop<span>&#64;</span>kde<span>&#46;</span>org</a> to notify everyone about this, you can do this automatically by adding ‘CCMAIL:kimageshop&#64;kde.org’ to your merge commit.</p>
+<p>As Krita’s nightlies are based on master that means a binary will be compiled for the master branch with the new feature in at most 24 hours.</p>
+</section>
+<section id="step-5-documentation-and-demonstration">
+<h2>Step 5: Documentation and demonstration<a class="headerlink" href="#step-5-documentation-and-demonstration" title="Permalink to this headline">¶</a></h2>
+<p>When a feature hits the master branch, an entry will be written for the draft branch of this very manual. In particular a reference manual entry will be written to ensure some documentation, some bigger features that interact with one another might also receive a tutorial.</p>
+<p>The people who programmed or designed the feature are encouraged to help with this documentation process(as they know it best), but it is not mandatory. What is appreciated is that the issue or task is assigned to the manual team.</p>
+<p>Similarly, demonstration videos or images are welcome, as they will be used for the release notes. The release notes for the next big version are <a class="reference external" href="https://krita.org/en/krita-4-2-release-notes/">available here</a>, come help us with making the page look good!</p>
+<p>Finally, upon release a stable branch is created for the master branch (often named Krita/versionnumber), and a release is made with the new feature.</p>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="optimizing_tips_for_krita.html" class="btn btn-neutral float-right" title="Optimizing tips and tools for Krita" accesskey="n" rel="next"> <!-- Next --> <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="modern_cpp_in_krita.html" class="btn btn-neutral" title="Modern C++ usage guidelines for the Krita codebase" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- Previous  -->  </a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright licensed under the GNU Free Documentation License 1.3+ unless stated otherwise.
+      
+        <span class="commit">
+          Revision <code>7c271ce</code>.
+        </span>
+      
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a modified <a href="https://github.com/rtfd/sphinx_rtd_theme">RTD theme</a>.<br/>
+  <a href="https://krita.org" title="Krita official website.">Krita official website</a> |
+  <a href="https://invent.kde.org/documentation/docs-krita-org/" title="The Gitlab instance to edit this pages and collaborate.">Git repository for docs.krita.org </a> |
+  <a href="https://www.kde.org/community/whatiskde/impressum-en.php" title="To know more about KDE, code of conduct, privacy policy and GDPR.">KDE Impressum</a>.
+   
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'5.0.0 Beta',
+            LANGUAGE:'en',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/documentation_options.js"></script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
+      });
+  </script> 
+
+ <script type="text/javascript">
+	 var _paq=_paq||[];
+	 _paq.push(['setCookieDomain','*.krita.org']);
+	 _paq.push(['setDomains','*.krita.org']);
+	 _paq.push(['setDocumentTitle',document.domain+"/"+document.title]);
+	 _paq.push(['trackPageView']);
+	 _paq.push(['enableLinkTracking']);
+
+	 (function(){
+	 	var u="//stats.kde.org/";
+	    _paq.push(['setTrackerUrl',u+'piwik.php']);
+	    _paq.push(['setSiteId',13]);
+	    var d = document, g = d.createElement('script'),s=d.getElementsByTagName('script')[0];
+	    g.type = 'text/javascript';
+	    g.async = true;
+	    g.defer = true;
+	    g.src = u+'piwik.js';
+	    s.parentNode.insertBefore(g,s);
+	  })();
+</script> 
+<noscript><p><img src="//stats.kde.org/piwik.php?idsite=13" style="border:0;" alt="" /></p></noscript>
+
+</body>
+</html>

@@ -1,0 +1,465 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" name="title" content="Scene Linear Painting" />
+  <meta property="og:site-name" content="Krita Manual" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="en" />
+  <meta property="og:locale:alternate" content="ca" />
+  
+  <meta property="og:locale:alternate" content="fr" />
+  <meta property="og:locale:alternate" content="it" />
+  <meta property="og:locale:alternate" content="ja" />
+  <meta property="og:locale:alternate" content="ko" />
+  <meta property="og:locale:alternate" content="nl" />
+  <meta property="og:locale:alternate" content="pl" />
+  <meta property="og:locale:alternate" content="pt_PT" />
+  <meta property="og:locale:alternate" content="uk_UA" />
+  <meta property="og:locale:alternate" content="zh_CN" />
+  <meta property="og:article:modified_time" content="2021-07-19T15:33:59" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<meta content="Scene Linear painting in Krita" name="description" />
+
+  
+  
+  <title>Scene Linear Painting &mdash; Krita Manual 5.0.0 Beta documentation</title>
+  
+
+  
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    
+  
+  
+  
+    <link rel="canonical" href="en/general_concepts/colors/scene_linear_painting.html"/>
+    <meta property="og:url" content="en/general_concepts/colors/scene_linear_painting.html" />
+    <meta property="og:image" content="en/_static/sidebar-logo.png" />
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Viewing Conditions" href="viewing_conditions.html" />
+    <link rel="prev" title="Profiling and Calibration" href="profiling_and_callibration.html" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+       
+           <a href="../../index.html" class="icon icon-home">
+
+			<img src="../../_static/sidebar-logo.png" class="logo" alt="Logo"/>
+           	
+           <!--	Krita Manual -->
+
+
+          </a>
+
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-side-nav-language-selector">
+        	<p class="caption-text">
+	        	<select id="language-selector-container">
+	        		<option value="ca">Català</option>
+	        		<option value="en">English</option>
+	        		<option value="fr">français</option>
+	        		<option value="it">Italiano</option>
+	        		<option value="ja">日本語</option>
+	        		<option value="ko">한국어</option>
+	        		<option value="nl">Nederlands</option>
+	        		<option value="pl">Polski</option>
+	        		<option value="pt_PT">português</option>
+	        		<option value="uk_UA">Українська</option>
+	        		<option value="zh_CN">简体中文</option>
+	        	</select>
+        	</p>
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../user_manual.html">User Manual</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../general_concepts.html">General Concepts</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../colors.html">Colors</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="bit_depth.html">Bit Depth</a></li>
+<li class="toctree-l3"><a class="reference internal" href="color_managed_workflow.html">Color Managed Workflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="color_mixing.html">Mixing Colors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="color_models.html">Color Models</a></li>
+<li class="toctree-l3"><a class="reference internal" href="color_space_size.html">Color Space Size</a></li>
+<li class="toctree-l3"><a class="reference internal" href="linear_and_gamma.html">Gamma and Linear</a></li>
+<li class="toctree-l3"><a class="reference internal" href="profiling_and_callibration.html">Profiling and Calibration</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Scene Linear Painting</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#yes-but-what-is-the-point">Yes, but what is the point?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#okay-but-why-isnt-this-all-the-rage-then">Okay, but why isn’t this all the rage then?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#getting-to-actual-painting">Getting to actual painting</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="viewing_conditions.html">Viewing Conditions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../file_formats.html">File Formats</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projection.html">Perspective Projection</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference_manual.html">Reference Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials.html">Tutorials and How-tos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../KritaFAQ.html">Krita FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributors_manual.html">Contributors Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../resources_page.html">Resources</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+	<!-- start top banner area (for fundraisers or messages)
+
+	<div style="text-align: center; background-color: #333">
+		<a href="https://krita.org/en/fundraising-2018-campaign/" target="_self" onclick="ga('send', 'event', 'frontpage', 'button', 'Fundraiser 2018');">
+			<img src="https://krita.org/wp-content/themes/krita-org-theme/images/decoration/2018-fundraiser-banner.png" style="max-width: 100%">
+		</a>
+	</div>
+	
+	 end top banner area -->
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Krita Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../general_concepts.html">General Concepts</a> &raquo;</li>
+        
+          <li><a href="../colors.html">Colors</a> &raquo;</li>
+        
+      <li>Scene Linear Painting</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+          
+            <a href="../../_sources/general_concepts/colors/scene_linear_painting.rst.txt" rel="nofollow"> 
+             
+              <img src="../../_static/images/source-code.png" />
+             <!-- View page source -->
+
+          </a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="scene-linear-painting">
+<span id="index-0"></span><span id="id1"></span><h1>Scene Linear Painting<a class="headerlink" href="#scene-linear-painting" title="Permalink to this headline">¶</a></h1>
+<p>Previously referred to as HDR painting and Scene Referred painting, Scene Linear Painting is doing digital painting in a peculiar type of colorspace. It is painting in a color space that is…</p>
+<ol class="arabic simple">
+<li><p>Linear - there’s no gamma encoding, or tone-mapping or whatever going on with the pixels you manipulate. (This is different from the pixels you see, but we’ll get to that later)</p></li>
+<li><p>Floating Point - So 16bit or 32bit floating point per channel.</p></li>
+</ol>
+<p>These are the two important characteristics. The colorspace has a few more properties than this, such as the white point, or more importantly, the colorants that make up the gamut. But here’s the thing, those two could be anything, as long as the space is linear and the color depth is floating point.</p>
+<p>So, <em>Scene Linear is not a single one colorspace, but a</em> <strong>TYPE</strong> <em>of colorspace</em>. You can have a scene linear space that uses the sRGB/Rec. 709 colorants, or one that uses adobeRGB, or maybe one that uses Rec. 2020, as long as it is <em>linear</em> and in a <em>floating point bit depth</em>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you want to create images for display on an HDR canvas, you will need to select the Rec. 2020 space profile with a linear gamma. The default profile in Krita for that is <span class="guilabel">Rec2020-elle-V4-g10.icc</span>.</p>
+</div>
+<p>These two factors are for one reason: To make black and white arbitrary values. This might seem a bit weird. But when you are dealing with light-sources, you are dealing with a massive range of contrasts, and will have to decide afterwards which white and black you’d like to have. This is what the scene means in scene-linear, the relevant values are unique per scene, like a real world scene: a flower field lit by moonlight, a city in twilight or a sunny beach. You want to be able to put the right emphasis on the most important contrasting values, and being able to choose what is white and what is black is a very powerful tool here. After all, humans in the real world can see much more when they get used to the dark, or to the sun, so why not apply that to how we make our images?</p>
+<p>This is also why it needs to be Linear. Gamma and Tone-mapped color spaces are already choosing which contrast is the most important to you. But for that, they too need to choose what is white or black. Linear doesn’t make such assumptions, so much better for when you want to choose yourself. You will eventually want to stick your image through some tone-mapping or gamma correction, but only at the end after you have applied filters and mixed colors!</p>
+<p>In fact, there’s always a non-destructive sort of transform going on while you are working on your image which includes the tone-mapping. This is called a display or view transform, and they provide a sort of set of binoculars into the world of your image. Without it, your computer cannot show these colors properly; it doesn’t know how to interpret it properly, often making the image too dark. Providing such a transform and allowing you to configure it is the prime function of color management.</p>
+<p>Between different view and display transforms, there’s also a difference in types. Some are really naive, others are more sophisticated, and some need to be used in a certain manner to work properly. The ICC color management can only give a certain type of view transforms, while OCIO color management in the LUT docker can give much more complex transforms easily configurable and custom settings that can be shared between programs.</p>
+<figure class="align-center" id="id2" style="width: 800px">
+<img alt="../../_images/Krita_scenelinear_cat_01.png" src="../../_images/Krita_scenelinear_cat_01.png" />
+<figcaption>
+<p><span class="caption-text">Above, an example of the more naive transform provided by going from scene-linear sRGB to regular sRGB, and to the right a more sophisticated transform coming from the filmic blender OCIO configuration. Look at the difference between the paws. Image by Wolthera van Hövell tot Westerflier, License: CC-BY-SA</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>Conversely, transforming and interpreting your image’s colors is the only thing OCIO can do, and it can do it with really complex transforms, really fast. It doesn’t understand what your image’s color space is originally, doesn’t understand what CMYK is, and there’s also no such thing as a OCIO color profile. Therefore you will need to switch to an ICC workflow if you wish to prepare for print.</p>
+<section id="yes-but-what-is-the-point">
+<h2>Yes, but what is the point?<a class="headerlink" href="#yes-but-what-is-the-point" title="Permalink to this headline">¶</a></h2>
+<p>The point is making things easier in the long run:</p>
+<ol class="arabic simple">
+<li><p>It is easier to keep saturated non-muddy colors in a linear space.</p></li>
+<li><p>The high bit depth makes it easier to get smoother color mixes.</p></li>
+<li><p>Filters are more powerful and give nicer results in this space. It is far more easy to get nice blurring and bokeh results.</p></li>
+<li><p>Simple Blending Modes like Multiply or Addition are suddenly black magic. This is because Scene-Linear is the closest you can get to the physical (as in, physics, not material) model of color where multiplying colors with one another is one of the main ways to calculate the effect of light.</p></li>
+<li><p>Combining painting with other image results such as photography and physically based rendering is much easier as they too work in such a type of colorspace. So you could use such images as a reference with little qualms, or make textures that play nice with such a renderer.</p></li>
+</ol>
+<p>So the advantages are prettier colors, cooler filter results, more control and easier interchange with other methods.</p>
+</section>
+<section id="okay-but-why-isnt-this-all-the-rage-then">
+<h2>Okay, but why isn’t this all the rage then?<a class="headerlink" href="#okay-but-why-isnt-this-all-the-rage-then" title="Permalink to this headline">¶</a></h2>
+<p>Simply put, because while it’s easier in the long run, you will also have to drop tools and change habits…</p>
+<p>In particular, there are many tools in a digital painter’s toolbox that have <strong>hard-coded assumptions about black and white</strong>.</p>
+<p>A very simple but massive problem is one with <strong>inversion</strong>. Inverting colors is done code-wise by taking the color for white and subtracting the color you want to invert from it. It’s used in many blending modes. But often the color white is hardcoded in these filters. There’s currently no application out there that allows you to define the value range that inversion is done with, so inverting is useless. And that also means the filters and blending modes that use it, such as (but not limited to)…</p>
+<ul class="simple">
+<li><p>Screen (invert+multiply+invert)</p></li>
+<li><p>Overlay (screens values below midtone-value, in sRGB this would be middle gray)</p></li>
+<li><p>Color-dodge (divides the lower color with an inversion of the top one)</p></li>
+<li><p>Color-burn (inverts the lower color and then divides it by the top color)</p></li>
+<li><p>Hardlight (a different way of doing overlay, including the inversion)</p></li>
+<li><p>Softlight (uses several inversions along the way)</p></li>
+</ul>
+<p>Conversely Multiply, Linear Dodge/Addition (they’re the same thing), Subtract, Divide, Darker (only compares colors’ channel values), Lighter (ditto), and Difference <em>are fine to use</em>, as long as the program you use doesn’t do weird clipping there.</p>
+<p>Another one is HSL, HSI and HSY algorithms. They too need to assume something about the top value to allow scaling to white. HSV doesn’t have this problem. So it’s best to use an HSV color selector.</p>
+<p>For the blending modes that use HSY, there’s always the issue that they tend to be hardcoded to sRGB/Rec. 709 values, but are otherwise fine (and they give actually far more correct results in a linear space). So these are not a good idea to use with wide-gamut colorspaces, and due to the assumption about black and white, not with scene linear painting. The following blending modes use them:</p>
+<ul class="simple">
+<li><p>Color</p></li>
+<li><p>Luminosity</p></li>
+<li><p>Saturation</p></li>
+<li><p>Darker Color (uses luminosity to determine the color)</p></li>
+<li><p>Lighter Color (Ditto)</p></li>
+</ul>
+<p>So that is the blending modes. Many filters suffer from similar issues, and in many applications, filters aren’t adjusted to work with arbitrary whites.</p>
+<p>Speaking of filters, when using the transform tool, you should also avoid using lanczos3, it’ll give a weird black halo to sharp contrasts in scene-linear. The bilinear interpolation filter will work just fine in this case.</p>
+<p>The second big problem is that <strong>black doesn’t work quite the same</strong>.</p>
+<p>If you have mixed pigments before, you will know that black can quite easily overpower the other colors, so you should only add the tiniest amount of it to a mixture. White in contrast gets dirtied quite easily.</p>
+<p>In a Scene Linear Color space, this is flipped. White is now more overpowering and black gets washed out super quickly. This relates to the additive nature of digital color theory, that becomes more obvious when working in linear.</p>
+<p>This makes sketching a bit different, after all, it’s really difficult to make marks now. To get around this, you can do the following:</p>
+<ul class="simple">
+<li><p>Sketch on a mid-gray background. This is recommended anyway, as it serves as a neutral backdrop. For a linear space, 18% or 22% gray would be a good neutral.</p></li>
+<li><p>Make a special brush that is more opaque than the regular sketching brushes you use.</p></li>
+<li><p>Or conversely, sketch with white instead.</p></li>
+<li><p>For painting, block out the shapes with a big opaque brush before you start doing your mixing.</p></li>
+</ul>
+<p>Overall, this is something that will take a little while getting used to, but you will get used to it soon enough.</p>
+<p>Finally, there’s the <strong>issue of size</strong>.</p>
+<p>16 bit float per channel images are big. 32 bit float per channel images are bigger. This means that they will eat RAM and that painting and filtering will be slower. This is something that will fix itself over the years, but not many people have such a high-end PC yet, so it can be a blocker.</p>
+<p>So the issues are tools, expectations and size.</p>
+<section id="in-summary">
+<h3>In Summary<a class="headerlink" href="#in-summary" title="Permalink to this headline">¶</a></h3>
+<p>Scene Linear Painting is painting an image in a color space that is linear and has a floating point bit depth. This does not assume anything about the values of black and white, so you can only use tools that don’t assume anything about the values of black and white. It has the advantage of having nicer filter results and better color mixtures as well as better interoperability with other scene-linear output.</p>
+<p>To be able to view such an image you use a view transform, also called a display conversion. Which means that if you wish to finalize your image for the web, you make a copy of the image that goes through a display conversion or view transform that then gets saved to PNG, JPEG or TIFF.</p>
+</section>
+</section>
+<section id="getting-to-actual-painting">
+<h2>Getting to actual painting<a class="headerlink" href="#getting-to-actual-painting" title="Permalink to this headline">¶</a></h2>
+<p>Now we’ve covered the theory, let us look at a workflow for painting scene linear.</p>
+<section id="setting-up-the-canvas">
+<h3>Setting up the Canvas<a class="headerlink" href="#setting-up-the-canvas" title="Permalink to this headline">¶</a></h3>
+<p>Select either a 16bit or 32bit image. By default Krita will select a linear sRGB profile. If you want to create images for HDR display, you will need to make sure that the profile selected is the <span class="guilabel">Rec2020-elle-V4-g10.icc</span> profile. HDR images are standardised to use the Rec. 2020 gamut, which is much larger than sRGB in size, so this ensures you’ve got access to all the colors.</p>
+<p>If you’re working on a non-HDR enabled monitor, you should enable OCIO in the LUT docker.</p>
+<p>Keep in mind everything mentioned above. Not all filters and not all blending modes work. This will improve in the future. Other than that, everything else is the same.</p>
+</section>
+<section id="picking-really-bright-colors">
+<h3>Picking really bright colors<a class="headerlink" href="#picking-really-bright-colors" title="Permalink to this headline">¶</a></h3>
+<p>Picking regular colors is easy, but how do we pick the really bright colors? There are three ways of getting access to the really bright colors in Krita:</p>
+<ol class="arabic simple">
+<li><p>By lowering the exposure in the LUT docker. This will increase the visible range of colors in the color selectors. You can even hotkey the exposure in the canvas input settings.</p></li>
+<li><p>By setting the nits slider in the <a class="reference internal" href="../../reference_manual/dockers/small_color_selector.html#small-color-selector"><span class="std std-ref">Small Color Selector</span></a> higher than 100.</p></li>
+<li><p>Or simply by opening the internal color selector by double clicking the dual color button and typing in values higher than 1 into the input field.</p></li>
+<li><p>And finally by picking a really bright color from an image that has such values.</p></li>
+</ol>
+<p>Then paint. It’s recommended to make a bunch of swatches in the corner, at the least, until Krita’s new Palette docker allows you to save the values properly.</p>
+</section>
+<section id="lighting-based-workflow">
+<h3>Lighting based workflow<a class="headerlink" href="#lighting-based-workflow" title="Permalink to this headline">¶</a></h3>
+<p>So, we have our typical value based workflow, where we only paint the grays of the image so that we can focus on the values of the image. We can do something similar with Scene Linear Painting.</p>
+<p>Where with the value based workflow you paint the image as if it were a grayscale of what you intended to paint, with a lighting based workflow you paint as if all the objects are white. The effect of the color of an object can be determined by multiplying its base color with the color of the light. So you could paint objects as if they were white, paint the colors on a separate layer and just use the Multiply blending mode to get the right colors.</p>
+<figure class="align-center" id="id3" style="width: 800px">
+<img alt="../../_images/Krita_scenelinear_cat_02.png" src="../../_images/Krita_scenelinear_cat_02.png" />
+<figcaption>
+<p><span class="caption-text">The leftmost image is both the lighting based one and the color layer separate, the middle with the two layers multiplied and the right a luminosity based view. This cat is a nice example as it demonstrates why having textures and lighting separate could be interesting.</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>You can even combine this with a value based workflow by opening a new view and setting the component to luminosity. That way you can see both the grayscale as well as the lighting based version of the image next to one another.</p>
+<p>The keen minded will notice that a lighting based workflow kind of resembles the idea of a light pass and a color pass in 3d rendering. And indeed, it is basically the same, so you can use lighting passes from 3d renders here, just save them as EXR and import them as a layer. One of the examples where scene linear painting simplifies combining methods.</p>
+</section>
+<section id="finishing-up">
+<h3>Finishing up<a class="headerlink" href="#finishing-up" title="Permalink to this headline">¶</a></h3>
+<p>When you are done, you will want to apply the view transform you have been using to the image (at the least, if you want to post the end result on the Internet)… This is called LUT baking and not possible yet in Krita. Therefore you will have to save out your image in EXR and open it in either Blender or Natron. Then, in Blender it is enough to just use the same OCIO config, select the right values and save the result as a PNG.</p>
+<p>For saving HDR images, check the <a class="reference internal" href="../../reference_manual/hdr_display.html#hdr-display"><span class="std std-ref">HDR Display</span></a> page.</p>
+<p>You can even use some of Blender’s or Natron’s filters at this stage, and when working with others, you would save out in EXR so that others can use those.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="viewing_conditions.html" class="btn btn-neutral float-right" title="Viewing Conditions" accesskey="n" rel="next"> <!-- Next --> <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="profiling_and_callibration.html" class="btn btn-neutral" title="Profiling and Calibration" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- Previous  -->  </a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright licensed under the GNU Free Documentation License 1.3+ unless stated otherwise.
+      
+        <span class="commit">
+          Revision <code>7c271ce</code>.
+        </span>
+      
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a modified <a href="https://github.com/rtfd/sphinx_rtd_theme">RTD theme</a>.<br/>
+  <a href="https://krita.org" title="Krita official website.">Krita official website</a> |
+  <a href="https://invent.kde.org/documentation/docs-krita-org/" title="The Gitlab instance to edit this pages and collaborate.">Git repository for docs.krita.org </a> |
+  <a href="https://www.kde.org/community/whatiskde/impressum-en.php" title="To know more about KDE, code of conduct, privacy policy and GDPR.">KDE Impressum</a>.
+   
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'5.0.0 Beta',
+            LANGUAGE:'en',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/documentation_options.js"></script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
+      });
+  </script> 
+
+ <script type="text/javascript">
+	 var _paq=_paq||[];
+	 _paq.push(['setCookieDomain','*.krita.org']);
+	 _paq.push(['setDomains','*.krita.org']);
+	 _paq.push(['setDocumentTitle',document.domain+"/"+document.title]);
+	 _paq.push(['trackPageView']);
+	 _paq.push(['enableLinkTracking']);
+
+	 (function(){
+	 	var u="//stats.kde.org/";
+	    _paq.push(['setTrackerUrl',u+'piwik.php']);
+	    _paq.push(['setSiteId',13]);
+	    var d = document, g = d.createElement('script'),s=d.getElementsByTagName('script')[0];
+	    g.type = 'text/javascript';
+	    g.async = true;
+	    g.defer = true;
+	    g.src = u+'piwik.js';
+	    s.parentNode.insertBefore(g,s);
+	  })();
+</script> 
+<noscript><p><img src="//stats.kde.org/piwik.php?idsite=13" style="border:0;" alt="" /></p></noscript>
+
+</body>
+</html>

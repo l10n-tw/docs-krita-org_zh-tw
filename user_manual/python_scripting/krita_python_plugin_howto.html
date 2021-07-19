@@ -1,0 +1,653 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" name="title" content="How to make a Krita Python plugin" />
+  <meta property="og:site-name" content="Krita Manual" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="en" />
+  <meta property="og:locale:alternate" content="ca" />
+  
+  <meta property="og:locale:alternate" content="fr" />
+  <meta property="og:locale:alternate" content="it" />
+  <meta property="og:locale:alternate" content="ja" />
+  <meta property="og:locale:alternate" content="ko" />
+  <meta property="og:locale:alternate" content="nl" />
+  <meta property="og:locale:alternate" content="pl" />
+  <meta property="og:locale:alternate" content="pt_PT" />
+  <meta property="og:locale:alternate" content="uk_UA" />
+  <meta property="og:locale:alternate" content="zh_CN" />
+  <meta property="og:article:modified_time" content="2021-07-19T15:33:59" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<meta content="Guide on all the specifics of creating Krita python plugins." name="description" />
+
+  
+  
+  <title>How to make a Krita Python plugin &mdash; Krita Manual 5.0.0 Beta documentation</title>
+  
+
+  
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    
+  
+  
+  
+    <link rel="canonical" href="en/user_manual/python_scripting/krita_python_plugin_howto.html"/>
+    <meta property="og:url" content="en/user_manual/python_scripting/krita_python_plugin_howto.html" />
+    <meta property="og:image" content="en/_static/sidebar-logo.png" />
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Tag Management" href="../tag_management.html" />
+    <link rel="prev" title="Introduction to Python Scripting" href="introduction_to_python_scripting.html" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+       
+           <a href="../../index.html" class="icon icon-home">
+
+			<img src="../../_static/sidebar-logo.png" class="logo" alt="Logo"/>
+           	
+           <!--	Krita Manual -->
+
+
+          </a>
+
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-side-nav-language-selector">
+        	<p class="caption-text">
+	        	<select id="language-selector-container">
+	        		<option value="ca">Català</option>
+	        		<option value="en">English</option>
+	        		<option value="fr">français</option>
+	        		<option value="it">Italiano</option>
+	        		<option value="ja">日本語</option>
+	        		<option value="ko">한국어</option>
+	        		<option value="nl">Nederlands</option>
+	        		<option value="pl">Polski</option>
+	        		<option value="pt_PT">português</option>
+	        		<option value="uk_UA">Українська</option>
+	        		<option value="zh_CN">简体中文</option>
+	        	</select>
+        	</p>
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../user_manual.html">User Manual</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../getting_started.html">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction_from_other_software.html">Introduction Coming From Other Software</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../drawing_tablets.html">Drawing Tablets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../loading_saving_brushes.html">Loading and Saving Brushes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../oncanvas_brush_editor.html">On-Canvas Brush Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mirror_tools.html">Mirror Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../painting_with_assistants.html">Painting with Assistants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../working_with_images.html">Working with Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../autosave.html">Saving, AutoSave and Backup Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../templates.html">Templates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../layers_and_masks.html">Introduction to Layers and Masks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../selections.html">Selections</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../python_scripting.html">Python Scripting</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="install_custom_python_plugin.html">Managing Python plugins</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduction_to_python_scripting.html">Introduction to Python Scripting</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">How to make a Krita Python plugin</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#getting-krita-to-recognize-your-plugin">Getting Krita to recognize your plugin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#creating-an-extension">Creating an extension</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#creating-configurable-keyboard-shortcuts">Creating configurable keyboard shortcuts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#creating-a-docker">Creating a docker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyqt-signals-and-slots">PyQt Signals and Slots</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#a-note-on-unit-tests">A note on unit tests</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#conclusion">Conclusion</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../tag_management.html">Tag Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../soft_proofing.html">Soft Proofing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vector_graphics.html">Vector Graphics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../snapping.html">Snapping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation.html">Animation with Krita</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../japanese_animation_template.html">Japanese Animation Template</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gamut_masks.html">Gamut Masks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../general_concepts.html">General Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference_manual.html">Reference Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials.html">Tutorials and How-tos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../KritaFAQ.html">Krita FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributors_manual.html">Contributors Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../resources_page.html">Resources</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+	<!-- start top banner area (for fundraisers or messages)
+
+	<div style="text-align: center; background-color: #333">
+		<a href="https://krita.org/en/fundraising-2018-campaign/" target="_self" onclick="ga('send', 'event', 'frontpage', 'button', 'Fundraiser 2018');">
+			<img src="https://krita.org/wp-content/themes/krita-org-theme/images/decoration/2018-fundraiser-banner.png" style="max-width: 100%">
+		</a>
+	</div>
+	
+	 end top banner area -->
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Krita Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../user_manual.html">User Manual</a> &raquo;</li>
+        
+          <li><a href="../python_scripting.html">Python Scripting</a> &raquo;</li>
+        
+      <li>How to make a Krita Python plugin</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+          
+            <a href="../../_sources/user_manual/python_scripting/krita_python_plugin_howto.rst.txt" rel="nofollow"> 
+             
+              <img src="../../_static/images/source-code.png" />
+             <!-- View page source -->
+
+          </a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="how-to-make-a-krita-python-plugin">
+<span id="krita-python-plugin-howto"></span><span id="index-0"></span><h1>How to make a Krita Python plugin<a class="headerlink" href="#how-to-make-a-krita-python-plugin" title="Permalink to this headline">¶</a></h1>
+<p>You might have some neat scripts you have written in the Scripter Python runner, but maybe you want to do more with it and run it automatically for instance. Wrapping your script in a plugin can give you much more flexibility and power than running scripts from the Scripter editor.</p>
+<p>Okay, so even if you know python really well, there are some little details to getting Krita to recognize a python plugin. So this page will give an overview how to create the various types of python script unique to Krita.</p>
+<p>These mini-tutorials are written for people with a basic understanding of python, and in such a way to encourage experimentation instead of plainly copy and pasting code, so read the text carefully.</p>
+<section id="getting-krita-to-recognize-your-plugin">
+<h2>Getting Krita to recognize your plugin<a class="headerlink" href="#getting-krita-to-recognize-your-plugin" title="Permalink to this headline">¶</a></h2>
+<p>A script in Krita has two components - the script directory (holding your script’s Python files) and a “.desktop” file that Krita uses to load and register your script. For Krita to load your script both of these must put be in the pykrita subdirectory of your Krita resources folder (on Linux  ~/.local/share/krita/pykrita). To find your resources folder start Krita and click the <span class="menuselection">Settings ‣ Manage Resources…</span> menu item. This will open a dialog box. Click the <span class="guilabel">Open Resources Folder</span> button. This should open a file manager on your system at your Krita resources folder. See the <a class="reference external" href="https://api.kde.org/extragear-api/graphics-apidocs/krita/libs/libkis/html/index.html">API</a> docs under “Auto starting scripts”.  If there is no pykrita subfolder in the Krita resources directory use your file manager to create one.</p>
+<p>Scripts are identified by a file that ends in a .desktop extension that contain information about the script itself.</p>
+<p>Therefore, for each proper plugin you will need to create a folder, and a desktop file.</p>
+<p>The desktop file should look as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">Desktop</span> <span class="n">Entry</span><span class="p">]</span>
+<span class="n">Type</span><span class="o">=</span><span class="n">Service</span>
+<span class="n">ServiceTypes</span><span class="o">=</span><span class="n">Krita</span><span class="o">/</span><span class="n">PythonPlugin</span>
+<span class="n">X</span><span class="o">-</span><span class="n">KDE</span><span class="o">-</span><span class="n">Library</span><span class="o">=</span><span class="n">myplugin</span>
+<span class="n">X</span><span class="o">-</span><span class="n">Python</span><span class="o">-</span><span class="mi">2</span><span class="o">-</span><span class="n">Compatible</span><span class="o">=</span><span class="n">false</span>
+<span class="n">X</span><span class="o">-</span><span class="n">Krita</span><span class="o">-</span><span class="n">Manual</span><span class="o">=</span><span class="n">myPluginManual</span><span class="o">.</span><span class="n">html</span>
+<span class="n">Name</span><span class="o">=</span><span class="n">My</span> <span class="n">Own</span> <span class="n">Plugin</span>
+<span class="n">Comment</span><span class="o">=</span><span class="n">Our</span> <span class="n">very</span> <span class="n">own</span> <span class="n">plugin</span><span class="o">.</span>
+</pre></div>
+</div>
+<dl class="simple">
+<dt>Type</dt><dd><p>This should always be service.</p>
+</dd>
+<dt>ServiceTypes</dt><dd><p>This should always be Krita/PythonPlugin for python plugins.</p>
+</dd>
+<dt>X-KDE-Library</dt><dd><p>This should be the name of the plugin folder you just created.</p>
+</dd>
+<dt>X-Python-2-Compatible</dt><dd><p>Whether it is python 2 compatible. If Krita was built with python 2 instead of 3 (<code class="docutils literal notranslate"><span class="pre">-DENABLE_PYTHON_2=ON</span></code> in the cmake configuration), then this plugin will not show up in the list.</p>
+</dd>
+<dt>X-Krita-Manual</dt><dd><p>An Optional Value that will point to the manual item. This is shown in the Python Plugin manager. If it’s <a class="reference external" href="https://doc.qt.io/qt-5/richtext-html-subset.html">an HTML file it’ll be shown as rich text</a>, if not, it’ll be shown as plain text.</p>
+</dd>
+<dt>Name</dt><dd><p>The name that will show up in the Python Plugin Manager.</p>
+</dd>
+<dt>Comment</dt><dd><p>The description that will show up in the Python Plugin Manager.</p>
+</dd>
+</dl>
+<p>Krita python plugins need to be python modules, so make sure there’s an __init__.py script, containing something like…</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">.myplugin</span> <span class="kn">import</span> <span class="o">*</span>
+</pre></div>
+</div>
+<p>Where .myplugin is the name of the main file of your plugin. If you restart Krita, it now should show this in the Python Plugin Manager in the settings, but it will be grayed out, because there’s no myplugin.py. If you hover over disabled plugins, you can see the error with them.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You need to explicitly enable your plugin. Go to the Settings menu, open the <span class="guilabel">Configure Krita</span> dialog and go to the Python Plugin Manager page and enable your plugin.</p>
+</div>
+<section id="summary">
+<h3>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h3>
+<p>In summary, if you want to create a script called <em>myplugin</em>:</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt>in your Krita <em>resources/pykrita</em> directory create</dt><dd><ul>
+<li><p>a folder called <em>myplugin</em></p></li>
+<li><p>a file called <em>myplugin.desktop</em></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>in the <em>myplugin</em> folder create</dt><dd><ul>
+<li><p>a file called <em>__init__.py</em></p></li>
+<li><p>a file called <em>myplugin.py</em></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>in the <em>__init__.py</em> file put this code:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">.myplugin</span> <span class="kn">import</span> <span class="o">*</span>
+</pre></div>
+</div>
+<ul>
+<li><p>in the desktop file put this code:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">Desktop</span> <span class="n">Entry</span><span class="p">]</span>
+<span class="n">Type</span><span class="o">=</span><span class="n">Service</span>
+<span class="n">ServiceTypes</span><span class="o">=</span><span class="n">Krita</span><span class="o">/</span><span class="n">PythonPlugin</span>
+<span class="n">X</span><span class="o">-</span><span class="n">KDE</span><span class="o">-</span><span class="n">Library</span><span class="o">=</span><span class="n">myplugin</span>
+<span class="n">X</span><span class="o">-</span><span class="n">Python</span><span class="o">-</span><span class="mi">2</span><span class="o">-</span><span class="n">Compatible</span><span class="o">=</span><span class="n">false</span>
+<span class="n">Name</span><span class="o">=</span><span class="n">My</span> <span class="n">Own</span> <span class="n">Plugin</span>
+<span class="n">Comment</span><span class="o">=</span><span class="n">Our</span> <span class="n">very</span> <span class="n">own</span> <span class="n">plugin</span><span class="o">.</span>
+</pre></div>
+</div>
+</li>
+<li><p>write your script in the ‘’myplugin/myplugin.py’’ file.</p></li>
+</ul>
+</section>
+</section>
+<section id="creating-an-extension">
+<h2>Creating an extension<a class="headerlink" href="#creating-an-extension" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://api.kde.org/extragear-api/graphics-apidocs/krita/libs/libkis/html/classExtension.html">Extensions</a> are relatively simple python scripts that run on Krita start. They are made by extending the Extension class, and the most barebones extension looks like this:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">krita</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="k">class</span> <span class="nc">MyExtension</span><span class="p">(</span><span class="n">Extension</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent</span><span class="p">):</span>
+        <span class="c1"># This is initialising the parent, always important when subclassing.</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">parent</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">setup</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">pass</span>
+
+    <span class="k">def</span> <span class="nf">createActions</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">window</span><span class="p">):</span>
+        <span class="k">pass</span>
+
+<span class="c1"># And add the extension to Krita&#39;s list of extensions:</span>
+<span class="n">Krita</span><span class="o">.</span><span class="n">instance</span><span class="p">()</span><span class="o">.</span><span class="n">addExtension</span><span class="p">(</span><span class="n">MyExtension</span><span class="p">(</span><span class="n">Krita</span><span class="o">.</span><span class="n">instance</span><span class="p">()))</span>
+</pre></div>
+</div>
+<p>This code of course doesn’t do anything. Typically, in createActions we add actions to Krita, so we can access our script from the <span class="guilabel">Tools</span> menu.</p>
+<p>First, let’s create an <a class="reference external" href="https://api.kde.org/extragear-api/graphics-apidocs/krita/libs/libkis/html/classAction.html">action</a>. We can do that easily with <a class="reference external" href="https://api.kde.org/extragear-api/graphics-apidocs/krita/libs/libkis/html/classWindow.html#a72ec58e53844076c1461966c34a9115c">Window.createAction()</a>. Krita will call createActions for every Window that is created and pass the right window object that we have to use.</p>
+<p>So…</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">createActions</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">window</span><span class="p">):</span>
+    <span class="n">action</span> <span class="o">=</span> <span class="n">window</span><span class="o">.</span><span class="n">createAction</span><span class="p">(</span><span class="s2">&quot;myAction&quot;</span><span class="p">,</span> <span class="s2">&quot;My Script&quot;</span><span class="p">,</span> <span class="s2">&quot;tools/scripts&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="simple">
+<dt>“myAction”</dt><dd><p>This should be replaced with a unique id that Krita will use to find the action.</p>
+</dd>
+<dt>“My Script”</dt><dd><p>This is what will be visible in the tools menu.</p>
+</dd>
+</dl>
+<p>If you now restart Krita, you will have an action called “My Script”. It still doesn’t do anything, because we haven’t connected it to a script.</p>
+<p>So, let’s make a simple export document script. Add the following to the extension class, make sure it is above where you add the extension to Krita:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">exportDocument</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="c1"># Get the document:</span>
+    <span class="n">doc</span> <span class="o">=</span>  <span class="n">Krita</span><span class="o">.</span><span class="n">instance</span><span class="p">()</span><span class="o">.</span><span class="n">activeDocument</span><span class="p">()</span>
+    <span class="c1"># Saving a non-existent document causes crashes, so lets check for that first.</span>
+    <span class="k">if</span> <span class="n">doc</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="c1"># This calls up the save dialog. The save dialog returns a tuple.</span>
+        <span class="n">fileName</span> <span class="o">=</span> <span class="n">QFileDialog</span><span class="o">.</span><span class="n">getSaveFileName</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="c1"># And export the document to the fileName location.</span>
+        <span class="c1"># InfoObject is a dictionary with specific export options, but when we make an empty one Krita will use the export defaults.</span>
+        <span class="n">doc</span><span class="o">.</span><span class="n">exportImage</span><span class="p">(</span><span class="n">fileName</span><span class="p">,</span> <span class="n">InfoObject</span><span class="p">())</span>
+</pre></div>
+</div>
+<p>And add the import for QFileDialog above with the imports:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">krita</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">PyQt5.QtWidgets</span> <span class="kn">import</span> <span class="n">QFileDialog</span>
+</pre></div>
+</div>
+<p>Then, to connect the action to the new export document:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">createActions</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">window</span><span class="p">):</span>
+    <span class="n">action</span> <span class="o">=</span> <span class="n">window</span><span class="o">.</span><span class="n">createAction</span><span class="p">(</span><span class="s2">&quot;myAction&quot;</span><span class="p">,</span> <span class="s2">&quot;My Script&quot;</span><span class="p">)</span>
+    <span class="n">action</span><span class="o">.</span><span class="n">triggered</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">exportDocument</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This is an example of a <a class="reference external" href="https://doc.qt.io/qt-5/signalsandslots.html">signal/slot connection</a>, which Qt applications like Krita use a lot. We’ll go over how to make our own signals and slots a bit later.</p>
+<p>Restart Krita and your new action ought to now export the document.</p>
+</section>
+<section id="creating-configurable-keyboard-shortcuts">
+<h2>Creating configurable keyboard shortcuts<a class="headerlink" href="#creating-configurable-keyboard-shortcuts" title="Permalink to this headline">¶</a></h2>
+<p>Now, your new action doesn’t show up in <span class="menuselection">Settings ‣ Configure Krita ‣ Keyboard Shortcuts</span>.</p>
+<p>Krita, for various reasons, only adds actions to the shortcuts menu when they are present in an .action file. The action file to get our action to be added to shortcuts should look like this:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="nt">&lt;ActionCollection</span> <span class="na">version=</span><span class="s">&quot;2&quot;</span> <span class="na">name=</span><span class="s">&quot;Scripts&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;Actions</span> <span class="na">category=</span><span class="s">&quot;Scripts&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;text&gt;</span>My Scripts<span class="nt">&lt;/text&gt;</span>
+
+        <span class="nt">&lt;Action</span> <span class="na">name=</span><span class="s">&quot;myAction&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;icon&gt;&lt;/icon&gt;</span>
+        <span class="nt">&lt;text&gt;</span>My Script<span class="nt">&lt;/text&gt;</span>
+        <span class="nt">&lt;whatsThis&gt;&lt;/whatsThis&gt;</span>
+        <span class="nt">&lt;toolTip&gt;&lt;/toolTip&gt;</span>
+        <span class="nt">&lt;iconText&gt;&lt;/iconText&gt;</span>
+        <span class="nt">&lt;activationFlags&gt;</span>10000<span class="nt">&lt;/activationFlags&gt;</span>
+        <span class="nt">&lt;activationConditions&gt;</span>0<span class="nt">&lt;/activationConditions&gt;</span>
+        <span class="nt">&lt;shortcut&gt;</span>ctrl+alt+shift+p<span class="nt">&lt;/shortcut&gt;</span>
+        <span class="nt">&lt;isCheckable&gt;</span>false<span class="nt">&lt;/isCheckable&gt;</span>
+        <span class="nt">&lt;statusTip&gt;&lt;/statusTip&gt;</span>
+        <span class="nt">&lt;/Action&gt;</span>
+    <span class="nt">&lt;/Actions&gt;</span>
+<span class="nt">&lt;/ActionCollection&gt;</span>
+</pre></div>
+</div>
+<dl class="simple">
+<dt>&lt;text&gt;My Scripts&lt;/text&gt;</dt><dd><p>This will create a sub-category under scripts called “My Scripts” to add your shortcuts to.</p>
+</dd>
+<dt>name</dt><dd><p>This should be the unique id you made for your action when creating it in the setup of the extension.</p>
+</dd>
+<dt>icon</dt><dd><p>the name of a possible icon. These will only show up on KDE plasma, because Gnome and Windows users complained they look ugly.</p>
+</dd>
+<dt>text</dt><dd><p>The text that it will show in the shortcut editor.</p>
+</dd>
+<dt>whatsThis</dt><dd><p>The text it will show when a Qt application specifically calls for ‘what is this’, which is a help action.</p>
+</dd>
+<dt>toolTip</dt><dd><p>The tool tip, this will show up on hover-over.</p>
+</dd>
+<dt>iconText</dt><dd><p>The text it will show when displayed in a toolbar. So for example, “Resize Image to New Size” could be shortened to “Resize Image” to save space, so we’d put that in here.</p>
+</dd>
+<dt>activationFlags</dt><dd><p>This determines when an action is disabled or not.</p>
+</dd>
+<dt>activationConditions</dt><dd><p>This determines activation conditions (e.g. activate only when selection is editable). See <a class="reference external" href="https://invent.kde.org/graphics/krita/-/blob/master/libs/ui/kis_action.h#L41">the code</a> for examples.</p>
+</dd>
+<dt>shortcut</dt><dd><p>Default shortcut.</p>
+</dd>
+<dt>isCheckable</dt><dd><p>Whether it is a checkbox or not.</p>
+</dd>
+<dt>statusTip</dt><dd><p>The status tip that is displayed on a status bar.</p>
+</dd>
+</dl>
+<p>Save this file as “myplugin.action” where myplugin is the name of your plugin. The action file should be saved, not in the pykrita resources folder, but rather in a resources folder named “actions”. (So, share/pykrita is where the python plugins and desktop files go, and share/actions is where the action files go) Restart Krita. The shortcut should now show up in the shortcut action list.</p>
+</section>
+<section id="creating-a-docker">
+<h2>Creating a docker<a class="headerlink" href="#creating-a-docker" title="Permalink to this headline">¶</a></h2>
+<p>Creating a custom <a class="reference external" href="https://api.kde.org/extragear-api/graphics-apidocs/krita/libs/libkis/html/classDockWidget.html">docker</a> is much like creating an extension. Dockers are in some ways a little easier, but they also require more use of widgets. This is the barebones docker code:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">PyQt5.QtWidgets</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">krita</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="k">class</span> <span class="nc">MyDocker</span><span class="p">(</span><span class="n">DockWidget</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setWindowTitle</span><span class="p">(</span><span class="s2">&quot;My Docker&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">canvasChanged</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">canvas</span><span class="p">):</span>
+        <span class="k">pass</span>
+
+<span class="n">Krita</span><span class="o">.</span><span class="n">instance</span><span class="p">()</span><span class="o">.</span><span class="n">addDockWidgetFactory</span><span class="p">(</span><span class="n">DockWidgetFactory</span><span class="p">(</span><span class="s2">&quot;myDocker&quot;</span><span class="p">,</span> <span class="n">DockWidgetFactoryBase</span><span class="o">.</span><span class="n">DockRight</span><span class="p">,</span> <span class="n">MyDocker</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>The window title is how it will appear in the docker list in Krita. canvasChanged always needs to be present, but you don’t have to do anything with it, so hence just ‘pass’.</p>
+<p>For the addDockWidgetFactory…</p>
+<dl class="simple">
+<dt>“myDocker”</dt><dd><p>Replace this with an unique ID for your docker that Krita uses to keep track of it.</p>
+</dd>
+<dt>DockWidgetFactoryBase.DockRight</dt><dd><p>The location. These can be DockTornOff, DockTop, DockBottom, DockRight, DockLeft, or DockMinimized</p>
+</dd>
+<dt>MyDocker</dt><dd><p>Replace this with the class name of the docker you want to add.</p>
+</dd>
+</dl>
+<p>So, if we add our export document function we created in the extension section to this docker code, how do we allow the user to activate it? First, we’ll need to do some Qt GUI coding: Let’s add a button!</p>
+<p>By default, Krita uses PyQt, but its documentation is pretty bad, mostly because the regular Qt documentation is really good, and you’ll often find that the PyQt documentation of a class, say, <a class="reference external" href="https://www.riverbankcomputing.com/static/Docs/PyQt5/api/qtwidgets/qwidget.html">QWidget</a> is like a weird copy of the regular <a class="reference external" href="https://doc.qt.io/qt-5/qwidget.html">Qt documentation</a> for that class.</p>
+<p>Anyway, what we need to do first is that we need to create a QWidget, it’s not very complicated, under setWindowTitle, add:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mainWidget</span> <span class="o">=</span> <span class="n">QWidget</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">setWidget</span><span class="p">(</span><span class="n">mainWidget</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Then, we create a button:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">buttonExportDocument</span> <span class="o">=</span> <span class="n">QPushButton</span><span class="p">(</span><span class="s2">&quot;Export Document&quot;</span><span class="p">,</span> <span class="n">mainWidget</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Now, to connect the button to our function, we’ll need to look at the signals in the documentation. <a class="reference external" href="https://doc.qt.io/qt-5/qpushbutton.html">QPushButton</a> has no unique signals of its own, but it does say it inherits 4 signals from <a class="reference external" href="https://doc.qt.io/qt-5/qabstractbutton.html#signals">QAbstractButton</a>, which means that we can use those too. In our case, we want clicked.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">buttonExportDocument</span><span class="o">.</span><span class="n">clicked</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">exportDocument</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>If we now restart Krita, we’ll have a new docker and in that docker there’s a button. Clicking on the button will call up the export function.</p>
+<p>However, the button looks aligned a bit oddly. That’s because our mainWidget has no layout. Let’s quickly do that:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mainWidget</span><span class="o">.</span><span class="n">setLayout</span><span class="p">(</span><span class="n">QVBoxLayout</span><span class="p">())</span>
+<span class="n">mainWidget</span><span class="o">.</span><span class="n">layout</span><span class="p">()</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">buttonExportDocument</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Qt has several <a class="reference external" href="https://doc.qt.io/qt-5/qlayout.html">layouts</a>, but the <a class="reference external" href="https://doc.qt.io/qt-5/qboxlayout.html">QHBoxLayout and the QVBoxLayout</a> are the easiest to use, they just arrange widgets horizontally or vertically.</p>
+<p>Restart Krita and the button should now be laid out nicely.</p>
+</section>
+<section id="pyqt-signals-and-slots">
+<h2>PyQt Signals and Slots<a class="headerlink" href="#pyqt-signals-and-slots" title="Permalink to this headline">¶</a></h2>
+<p>We’ve already been using PyQt signals and slots already, but there are times where you want to create your own signals and slots.
+<a class="reference external" href="https://www.riverbankcomputing.com/static/Docs/PyQt5/signals_slots.html">As PyQt’s documentation is pretty difficult to understand</a>, and the way how signals and slots are created is very different from C++ Qt, we’re explaining it here:</p>
+<p>All python functions you make in PyQt can be understood as slots, meaning that they can be connected to signals like Action.triggered or QPushButton.clicked. However, QCheckBox has a signal for toggled, which sends a boolean. How do we get our function to accept that boolean?</p>
+<p>First, make sure you have the right import for making custom slots:</p>
+<p><code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">PyQt5.QtCore</span> <span class="pre">import</span> <span class="pre">pyqtSlot</span></code></p>
+<p>(If there’s <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">PyQt5.QtCore</span> <span class="pre">import</span> <span class="pre">*</span></code> already in the list of imports, then you won’t have to do this, of course.)</p>
+<p>Then, you need to add a PyQt slot definition before your function:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@pyqtSlot</span><span class="p">(</span><span class="nb">bool</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">myFunction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">enabled</span><span class="p">):</span>
+    <span class="n">enabledString</span> <span class="o">=</span> <span class="s2">&quot;disabled&quot;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">enabled</span> <span class="o">==</span> <span class="bp">True</span><span class="p">):</span>
+        <span class="n">enabledString</span> <span class="o">=</span> <span class="s2">&quot;enabled&quot;</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;The checkbox is&quot;</span><span class="o">+</span><span class="n">enabledString</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Then, when you have created your checkbox, you can do something like myCheckbox.toggled.connect(self.myFunction).</p>
+<p>Similarly, to make your own PyQt signals, you do the following:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># signal name is added to the member variables of the class</span>
+<span class="n">signal_name</span> <span class="o">=</span> <span class="n">pyqtSignal</span><span class="p">(</span><span class="nb">bool</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;signalName&#39;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">emitMySignal</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="c1"># And this is how you trigger the signal to be emitted.</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">signal_name</span><span class="o">.</span><span class="n">emit</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>And use the right import:</p>
+<p><code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">PyQt5.QtCore</span> <span class="pre">import</span> <span class="pre">pyqtSignal</span></code></p>
+<p>To emit or create slots for objects that aren’t standard python objects, you only have to put their names between quotation marks.</p>
+</section>
+<section id="a-note-on-unit-tests">
+<h2>A note on unit tests<a class="headerlink" href="#a-note-on-unit-tests" title="Permalink to this headline">¶</a></h2>
+<p>If you want to write unit tests for your plugin, have a look at the <a class="reference external" href="https://github.com/rbreu/krita-python-mock">mock krita module</a>.</p>
+</section>
+<section id="conclusion">
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
+<p>Okay, so that covers all the Krita specific details for creating python plugins. It doesn’t handle how to parse the pixel data, or best practices with documents, but if you have a little bit of experience with python you should be able to start creating your own plugins.</p>
+<p>As always, read the code carefully and read the API docs for python, Krita and Qt carefully to see what is possible, and you’ll get pretty far.</p>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../tag_management.html" class="btn btn-neutral float-right" title="Tag Management" accesskey="n" rel="next"> <!-- Next --> <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="introduction_to_python_scripting.html" class="btn btn-neutral" title="Introduction to Python Scripting" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- Previous  -->  </a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright licensed under the GNU Free Documentation License 1.3+ unless stated otherwise.
+      
+        <span class="commit">
+          Revision <code>7c271ce</code>.
+        </span>
+      
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a modified <a href="https://github.com/rtfd/sphinx_rtd_theme">RTD theme</a>.<br/>
+  <a href="https://krita.org" title="Krita official website.">Krita official website</a> |
+  <a href="https://invent.kde.org/documentation/docs-krita-org/" title="The Gitlab instance to edit this pages and collaborate.">Git repository for docs.krita.org </a> |
+  <a href="https://www.kde.org/community/whatiskde/impressum-en.php" title="To know more about KDE, code of conduct, privacy policy and GDPR.">KDE Impressum</a>.
+   
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'5.0.0 Beta',
+            LANGUAGE:'en',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/documentation_options.js"></script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
+      });
+  </script> 
+
+ <script type="text/javascript">
+	 var _paq=_paq||[];
+	 _paq.push(['setCookieDomain','*.krita.org']);
+	 _paq.push(['setDomains','*.krita.org']);
+	 _paq.push(['setDocumentTitle',document.domain+"/"+document.title]);
+	 _paq.push(['trackPageView']);
+	 _paq.push(['enableLinkTracking']);
+
+	 (function(){
+	 	var u="//stats.kde.org/";
+	    _paq.push(['setTrackerUrl',u+'piwik.php']);
+	    _paq.push(['setSiteId',13]);
+	    var d = document, g = d.createElement('script'),s=d.getElementsByTagName('script')[0];
+	    g.type = 'text/javascript';
+	    g.async = true;
+	    g.defer = true;
+	    g.src = u+'piwik.js';
+	    s.parentNode.insertBefore(g,s);
+	  })();
+</script> 
+<noscript><p><img src="//stats.kde.org/piwik.php?idsite=13" style="border:0;" alt="" /></p></noscript>
+
+</body>
+</html>

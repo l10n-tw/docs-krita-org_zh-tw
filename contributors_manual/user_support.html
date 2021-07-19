@@ -1,0 +1,493 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" name="title" content="Introduction to User Support" />
+  <meta property="og:site-name" content="Krita Manual" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="en" />
+  <meta property="og:locale:alternate" content="ca" />
+  
+  <meta property="og:locale:alternate" content="fr" />
+  <meta property="og:locale:alternate" content="it" />
+  <meta property="og:locale:alternate" content="ja" />
+  <meta property="og:locale:alternate" content="ko" />
+  <meta property="og:locale:alternate" content="nl" />
+  <meta property="og:locale:alternate" content="pl" />
+  <meta property="og:locale:alternate" content="pt_PT" />
+  <meta property="og:locale:alternate" content="uk_UA" />
+  <meta property="og:locale:alternate" content="zh_CN" />
+  <meta property="og:article:modified_time" content="2021-07-19T15:33:59" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<meta content="Introduction to user support." name="description" />
+
+  
+  
+  <title>Introduction to User Support &mdash; Krita Manual 5.0.0 Beta documentation</title>
+  
+
+  
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    
+  
+  
+  
+    <link rel="canonical" href="en/contributors_manual/user_support.html"/>
+    <meta property="og:url" content="en/contributors_manual/user_support.html" />
+    <meta property="og:image" content="en/_static/sidebar-logo.png" />
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Technical Pages" href="../untranslatable_pages.html" />
+    <link rel="prev" title="Images for the Manual" href="optimising_images.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+       
+           <a href="../index.html" class="icon icon-home">
+
+			<img src="../_static/sidebar-logo.png" class="logo" alt="Logo"/>
+           	
+           <!--	Krita Manual -->
+
+
+          </a>
+
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-side-nav-language-selector">
+        	<p class="caption-text">
+	        	<select id="language-selector-container">
+	        		<option value="ca">Català</option>
+	        		<option value="en">English</option>
+	        		<option value="fr">français</option>
+	        		<option value="it">Italiano</option>
+	        		<option value="ja">日本語</option>
+	        		<option value="ko">한국어</option>
+	        		<option value="nl">Nederlands</option>
+	        		<option value="pl">Polski</option>
+	        		<option value="pt_PT">português</option>
+	        		<option value="uk_UA">Українська</option>
+	        		<option value="zh_CN">简体中文</option>
+	        	</select>
+        	</p>
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../user_manual.html">User Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general_concepts.html">General Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference_manual.html">Reference Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials.html">Tutorials and How-tos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../KritaFAQ.html">Krita FAQ</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../contributors_manual.html">Contributors Manual</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="community.html">The Krita Community</a></li>
+<li class="toctree-l2"><a class="reference internal" href="krita_manual_conventions.html">Mark-up conventions for the Krita Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="krita_manual_readme.html">Krita Manual Contribution Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="optimising_images.html">Images for the Manual</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Introduction to User Support</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#tablet-support">Tablet Support</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#quick-solutions">Quick solutions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gathering-information">Gathering information</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#additional-information-for-supporters">Additional information for supporters</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#animation">Animation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#onion-skin-issues">Onion skin issues</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#crash">Crash</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#other-possible-questions-with-quick-solutions">Other possible questions with quick solutions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#advices-for-supporters">Advices for supporters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-to-share-a-file">How to share a file</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../untranslatable_pages.html">Technical Pages</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../resources_page.html">Resources</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+	<!-- start top banner area (for fundraisers or messages)
+
+	<div style="text-align: center; background-color: #333">
+		<a href="https://krita.org/en/fundraising-2018-campaign/" target="_self" onclick="ga('send', 'event', 'frontpage', 'button', 'Fundraiser 2018');">
+			<img src="https://krita.org/wp-content/themes/krita-org-theme/images/decoration/2018-fundraiser-banner.png" style="max-width: 100%">
+		</a>
+	</div>
+	
+	 end top banner area -->
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Krita Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../contributors_manual.html">Contributors Manual</a> &raquo;</li>
+        
+      <li>Introduction to User Support</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+          
+            <a href="../_sources/contributors_manual/user_support.rst.txt" rel="nofollow"> 
+             
+              <img src="../_static/images/source-code.png" />
+             <!-- View page source -->
+
+          </a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="introduction-to-user-support">
+<span id="intro-user-support"></span><h1><a class="toc-backref" href="#id3">Introduction to User Support</a><a class="headerlink" href="#introduction-to-user-support" title="Permalink to this headline">¶</a></h1>
+<div class="contents topic" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#introduction-to-user-support" id="id3">Introduction to User Support</a></p>
+<ul>
+<li><p><a class="reference internal" href="#tablet-support" id="id4">Tablet Support</a></p>
+<ul>
+<li><p><a class="reference internal" href="#quick-solutions" id="id5">Quick solutions</a></p></li>
+<li><p><a class="reference internal" href="#gathering-information" id="id6">Gathering information</a></p></li>
+<li><p><a class="reference internal" href="#additional-information-for-supporters" id="id7">Additional information for supporters</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#animation" id="id8">Animation</a></p></li>
+<li><p><a class="reference internal" href="#onion-skin-issues" id="id9">Onion skin issues</a></p></li>
+<li><p><a class="reference internal" href="#crash" id="id10">Crash</a></p></li>
+<li><p><a class="reference internal" href="#other-possible-questions-with-quick-solutions" id="id11">Other possible questions with quick solutions</a></p></li>
+<li><p><a class="reference internal" href="#advices-for-supporters" id="id12">Advices for supporters</a></p></li>
+<li><p><a class="reference internal" href="#how-to-share-a-file" id="id13">How to share a file</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<section id="tablet-support">
+<h2><a class="toc-backref" href="#id4">Tablet Support</a><a class="headerlink" href="#tablet-support" title="Permalink to this headline">¶</a></h2>
+<p>The majority of help requests are about pen pressure and tablet support in general.</p>
+<section id="quick-solutions">
+<h3><a class="toc-backref" href="#id5">Quick solutions</a><a class="headerlink" href="#quick-solutions" title="Permalink to this headline">¶</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>With every change mentioned below you might need to restart your PC to see the effect.</p>
+</div>
+<p><em>For Windows, all devices:</em></p>
+<ol class="arabic">
+<li><p>Change API in <span class="menuselection">Settings ‣ Configure Krita… ‣ Tablet Settings</span>.</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Wintab: older standard; it supports multiple buttons and high number of pressure levels. If it works fine for you, don’t change to Windows Ink. 2-in-1 devices by default use Windows Ink, you can get a Wintab driver but you need to install it separately.</p></li>
+<li><p>Windows 8+ Pointer (Windows Ink): newer standard; it cuts the pressure levels to 1024. It is more suitable for 2-in-1 devices like Surface Pro and Yoga. Some less known brands might not have this standard implemented.</p></li>
+</ol>
+</div></blockquote>
+</li>
+</ol>
+<p><em>For Windows, tablet/digitizer devices (not convertible/2-in-1 ones):</em></p>
+<ol class="arabic simple">
+<li><p>Reinstall your driver (Windows Update often breaks tablet driver settings, reinstallation helps).</p></li>
+<li><p><em>Wacom tablets:</em> if you get straight lines at the beginnings of the strokes, first try to update your driver: it should be fixed in 6.3.34-3. If it doesn’t work, disable/minimize “double-click distance” in Wacom settings.</p></li>
+<li><p><em>XP-Pen tablets, pressure being uneven:</em> either switch to Windows 8+ Pointer (Windows Ink) in <span class="menuselection">Configure Krita ‣ Tablet Settings</span>, or disable Windows Ink in XP-Pen settings.</p></li>
+</ol>
+</section>
+<section id="gathering-information">
+<h3><a class="toc-backref" href="#id6">Gathering information</a><a class="headerlink" href="#gathering-information" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic">
+<li><p>Which OS do you use?</p></li>
+<li><p>Which tablet do you have?</p></li>
+<li><p>What is the version of the tablet driver?</p></li>
+<li><p>Please collect Tablet Tester (<span class="menuselection">Configure Krita ‣ Tablet Settings ‣ Tablet Tester`</span>) text output and share it: <a class="reference internal" href="#intro-user-support-sharing-files"><span class="std std-ref">How to share a file</span></a>.</p></li>
+<li><p>More detailed Tablet Events log:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Go to <span class="menuselection">Settings ‣ Dockers ‣ Log Viewer</span> docker, make sure it’s checked.</p></li>
+<li><p>In the Log Viewer docker, make sure the first button is pressed (which means the logging is turned on).</p></li>
+<li><p>Press <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">T</kbd></kbd> to turn on tablet events logging.</p></li>
+<li><p>Make a few strokes (depending on the situation, the user supporter or developer can ask you for specific series of strokes).</p></li>
+<li><p>Press <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">T</kbd></kbd> to turn off the logging of the tablet events.</p></li>
+<li><p>Press the third button in the Log Viewer to save the output into a file.</p></li>
+<li><p>Share the file or share the content of the file: <a class="reference internal" href="#intro-user-support-sharing-files"><span class="std std-ref">How to share a file</span></a>.</p></li>
+</ol>
+<p>On Linux, you can just use a console instead of Log Viewer – then you’d only need to enable tablet events logging, not logging in general.</p>
+</div></blockquote>
+</li>
+</ol>
+</section>
+<section id="additional-information-for-supporters">
+<h3><a class="toc-backref" href="#id7">Additional information for supporters</a><a class="headerlink" href="#additional-information-for-supporters" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li><p>Except for the issue with beginnings of the strokes, Wacom tablets usually work no matter the OS.</p></li>
+<li><p>Huion tablets should work on Windows and on Linux, on macOS there might be issues.</p></li>
+<li><p>XP-Pen tablets and the rest of brands can have issues everywhere (on all systems).</p></li>
+<li><p>If someone asks about a tablet to buy, generally a cheaper Wacom or a Huion are the best options as of 2019, if they want to work with Krita. <a class="reference internal" href="../reference_manual/list_supported_tablets.html#list-supported-tablets"><span class="std std-ref">The List of Supported Tablets</span></a>.</p></li>
+<li><p><a class="reference external" href="https://www.reddit.com/r/krita/comments/btzh72/xppen_artist_12s_issue_with_krita_how_to_fix_it/">Possibly useful instruction in case of XP-Pen tablet issues</a>.</p></li>
+</ol>
+</section>
+</section>
+<section id="animation">
+<h2><a class="toc-backref" href="#id8">Animation</a><a class="headerlink" href="#animation" title="Permalink to this headline">¶</a></h2>
+<p>Issues with rendering animation can be of various shapes and colors. First thing to find out is whether the issue happens on Krita’s or FFmpeg’s side (Krita saves all the frames, then FFmpeg is used to render a video using this sequence of images). To learn that, instruct the user to render as “Image Sequence”. If the image sequence is correct, FFmpeg (or more often: render options) are at fault. If the image sequence is incorrect, either the options are wrong (if for example not every frame got rendered), or it’s a bug in Krita.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If the user opens the Log Viewer docker, turns on logging and then tries to render a video, Krita will print out the whole ffmpeg command to Log Viewer so it can be easily investigated.</p>
+</div>
+<p>There is a log file called <em>log_encode.log</em> in the directory that user tries to render to. It can contain information useful to investigation of the issue (sharing files: <a class="reference internal" href="#intro-user-support-sharing-files"><span class="std std-ref">How to share a file</span></a>).</p>
+</section>
+<section id="onion-skin-issues">
+<h2><a class="toc-backref" href="#id9">Onion skin issues</a><a class="headerlink" href="#onion-skin-issues" title="Permalink to this headline">¶</a></h2>
+<p>The great majority of issues with onion skin are just user errors, not bugs. Nonetheless, you need to find out why it happens and direct the user how to use onion skin properly.</p>
+</section>
+<section id="crash">
+<h2><a class="toc-backref" href="#id10">Crash</a><a class="headerlink" href="#crash" title="Permalink to this headline">¶</a></h2>
+<p>In case of crash try to determine if the problem is known, if not, instruct user to create a bug report (or create it yourself) with following information:</p>
+<ol class="arabic simple">
+<li><p>What happened, what was being done just before the crash.</p></li>
+<li><p>Is it possible to reproduce (repeat)? If yes, provide a step-by-step instruction to get the crash.</p></li>
+<li><p>Backtrace (crashlog) – the instruction for Windows is here: <a class="reference internal" href="../reference_manual/dr_minw_debugger.html#dr-minw"><span class="std std-ref">Dr. MinGW Debugger</span></a>, and the debug symbols can be found in the annoucement of the version of Krita that the user has. But it could be easier to just point the user to <a class="reference external" href="https://download.kde.org/stable/krita">https://download.kde.org/stable/krita</a>.</p></li>
+</ol>
+</section>
+<section id="other-possible-questions-with-quick-solutions">
+<h2><a class="toc-backref" href="#id11">Other possible questions with quick solutions</a><a class="headerlink" href="#other-possible-questions-with-quick-solutions" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p>When the user has any weird issue, something you’ve never heard about, ask them to reset the configuration: <a class="reference internal" href="../KritaFAQ.html#faq-reset-krita-configuration"><span class="std std-ref">Resetting Krita configuration</span></a>.</p></li>
+<li><p>When the user on Windows has trouble with anything related to preview or display, ask them to change <span class="guilabel">Canvas Graphics Acceleration</span> in <span class="menuselection">Settings ‣ Configure Krita ‣ Display</span>.</p>
+<blockquote>
+<div><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Telling people to disable canvas acceleration to get better performance is something we shouldn’t do, ever.</p>
+</div>
+</div></blockquote>
+</li>
+</ol>
+</section>
+<section id="advices-for-supporters">
+<h2><a class="toc-backref" href="#id12">Advices for supporters</a><a class="headerlink" href="#advices-for-supporters" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li><p>If you don’t understand the question, ask for clarification – asking for a screen recording or a screenshot is perfectly fine.</p></li>
+<li><p>If you don’t know the solution but you know what information will be needed to investigate the issue further, don’t hesitate to ask. Other supporters may know the answer, but have too little time to move the user through the whole process, so you’re helping a lot just by asking for additional information. This is very much true in case of tablet issues, for example.</p></li>
+<li><p>If you don’t know the answer/solution and the question looks abandoned by other supporters, you can always ask for help on Krita IRC channel. It’s #krita on Libera.Chat: <a class="reference internal" href="community.html#the-krita-community"><span class="std std-ref">The Krita Community</span></a>.</p></li>
+<li><p>Explain steps the user needs to make clearly, for example if you need them to change something in settings, clearly state the whole path of buttons and tabs to get there.</p></li>
+<li><p>Instead of <span class="menuselection">Settings ‣ Configure Krita…</span> use just <span class="menuselection">Configure Krita</span> – it’s easy enough to find and macOS users (where you need to select <span class="menuselection">Krita ‣ Preferences…</span>) won’t get confused.</p></li>
+<li><p>If you ask for an image, mention usage of <a class="reference external" href="https://imgur.com">Imgur</a> or <a class="reference external" href="https://pasteboard.co">Pasteboard</a> (<a class="reference internal" href="#intro-user-support-sharing-files"><span class="std std-ref">How to share a file</span></a>), otherwise Reddit users might create a new post with this image instead of including it to the old conversation.</p></li>
+<li><p>If you want to quickly answer someone, just link to the appropriate place in this manual page – you can click on the little link icon next to the section or subsection title and give the link to the user so they for example know what information about their tablet issue you need.</p></li>
+</ol>
+</section>
+<section id="how-to-share-a-file">
+<span id="intro-user-support-sharing-files"></span><h2><a class="toc-backref" href="#id13">How to share a file</a><a class="headerlink" href="#how-to-share-a-file" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p>Images (e.g. screenshots): <a class="reference external" href="https://imgur.com">Imgur</a> [*], <a class="reference external" href="https://pasteboard.co">Pasteboard</a></p></li>
+<li><p>Text only: <a class="reference external" href="https://pastebin.com">Pastebin</a> [*], <a class="reference external" href="https://bpaste.net">BPaste</a>, <a class="reference external" href="https://paste.ubuntu.org.cn">paste.ubuntu.org.cn</a>, <a class="reference external" href="https://paste.centos.org/">CentOS’s Pastebin Service</a> or <a class="reference external" href="https://invent.kde.org/dashboard/snippets">KDE Snippets (needs KDE Identity)</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.kra</span></code> and other formats: by mail? Or encode the file using <em>base64</em> command on Linux, send by mail or on Pastebin, then decode using the same command.</p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>If you ask user to store their log or other data on a website, make sure it stays there long enough for you to get it – for example bpaste.net stores files by default only for a day! And you can extend it only to one week.</p>
+</div>
+<div class="admonition-blocked-websites admonition">
+<p class="admonition-title">Blocked websites</p>
+<p>If the user is behind a firewall of some sorts (for example lives in China), websites with [*] will probably be blocked; please use the alternatives.</p>
+</div>
+</li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../untranslatable_pages.html" class="btn btn-neutral float-right" title="Technical Pages" accesskey="n" rel="next"> <!-- Next --> <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="optimising_images.html" class="btn btn-neutral" title="Images for the Manual" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- Previous  -->  </a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright licensed under the GNU Free Documentation License 1.3+ unless stated otherwise.
+      
+        <span class="commit">
+          Revision <code>7c271ce</code>.
+        </span>
+      
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a modified <a href="https://github.com/rtfd/sphinx_rtd_theme">RTD theme</a>.<br/>
+  <a href="https://krita.org" title="Krita official website.">Krita official website</a> |
+  <a href="https://invent.kde.org/documentation/docs-krita-org/" title="The Gitlab instance to edit this pages and collaborate.">Git repository for docs.krita.org </a> |
+  <a href="https://www.kde.org/community/whatiskde/impressum-en.php" title="To know more about KDE, code of conduct, privacy policy and GDPR.">KDE Impressum</a>.
+   
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'5.0.0 Beta',
+            LANGUAGE:'en',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/documentation_options.js"></script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
+      });
+  </script> 
+
+ <script type="text/javascript">
+	 var _paq=_paq||[];
+	 _paq.push(['setCookieDomain','*.krita.org']);
+	 _paq.push(['setDomains','*.krita.org']);
+	 _paq.push(['setDocumentTitle',document.domain+"/"+document.title]);
+	 _paq.push(['trackPageView']);
+	 _paq.push(['enableLinkTracking']);
+
+	 (function(){
+	 	var u="//stats.kde.org/";
+	    _paq.push(['setTrackerUrl',u+'piwik.php']);
+	    _paq.push(['setSiteId',13]);
+	    var d = document, g = d.createElement('script'),s=d.getElementsByTagName('script')[0];
+	    g.type = 'text/javascript';
+	    g.async = true;
+	    g.defer = true;
+	    g.src = u+'piwik.js';
+	    s.parentNode.insertBefore(g,s);
+	  })();
+</script> 
+<noscript><p><img src="//stats.kde.org/piwik.php?idsite=13" style="border:0;" alt="" /></p></noscript>
+
+</body>
+</html>

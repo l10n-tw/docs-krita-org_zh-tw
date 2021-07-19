@@ -1,0 +1,471 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" name="title" content="Vector Layers" />
+  <meta property="og:site-name" content="Krita Manual" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="en" />
+  <meta property="og:locale:alternate" content="ca" />
+  
+  <meta property="og:locale:alternate" content="fr" />
+  <meta property="og:locale:alternate" content="it" />
+  <meta property="og:locale:alternate" content="ja" />
+  <meta property="og:locale:alternate" content="ko" />
+  <meta property="og:locale:alternate" content="nl" />
+  <meta property="og:locale:alternate" content="pl" />
+  <meta property="og:locale:alternate" content="pt_PT" />
+  <meta property="og:locale:alternate" content="uk_UA" />
+  <meta property="og:locale:alternate" content="zh_CN" />
+  <meta property="og:article:modified_time" content="2021-07-19T15:33:59" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<meta content="How to use vector layers in Krita." name="description" />
+
+  
+  
+  <title>Vector Layers &mdash; Krita Manual 5.0.0 Beta documentation</title>
+  
+
+  
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    
+  
+  
+  
+    <link rel="canonical" href="en/reference_manual/layers_and_masks/vector_layers.html"/>
+    <meta property="og:url" content="en/reference_manual/layers_and_masks/vector_layers.html" />
+    <meta property="og:image" content="en/_static/sidebar-logo.png" />
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Linux Command Line" href="../linux_command_line.html" />
+    <link rel="prev" title="Transparency Masks" href="transparency_masks.html" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+       
+           <a href="../../index.html" class="icon icon-home">
+
+			<img src="../../_static/sidebar-logo.png" class="logo" alt="Logo"/>
+           	
+           <!--	Krita Manual -->
+
+
+          </a>
+
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-side-nav-language-selector">
+        	<p class="caption-text">
+	        	<select id="language-selector-container">
+	        		<option value="ca">Català</option>
+	        		<option value="en">English</option>
+	        		<option value="fr">français</option>
+	        		<option value="it">Italiano</option>
+	        		<option value="ja">日本語</option>
+	        		<option value="ko">한국어</option>
+	        		<option value="nl">Nederlands</option>
+	        		<option value="pl">Polski</option>
+	        		<option value="pt_PT">português</option>
+	        		<option value="uk_UA">Українська</option>
+	        		<option value="zh_CN">简体中文</option>
+	        	</select>
+        	</p>
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../user_manual.html">User Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../general_concepts.html">General Concepts</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../reference_manual.html">Reference Manual</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../audio_for_animation.html">Audio for Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blending_modes.html">Blending Modes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../brushes.html">Brushes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../clones_array.html">Clones Array</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_new_document.html">Create New Document</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../default_python_plugins.html">Pre-installed Python plugins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dockers.html">Dockers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dr_minw_debugger.html">Dr. MinGW Debugger</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../filters.html">Filters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hdr_display.html">HDR Display</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../image_split.html">Image Split</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../import_animation.html">Import Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../instant_preview.html">Instant Preview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../krita_4_preset_bundle.html">Krita 4 Preset Bundle Overview</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../layers_and_masks.html">Layers and Masks</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="clone_layers.html">Clone Layers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="file_layers.html">File Layers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fill_layers.html">Fill Layers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="filter_layers.html">Filter Layer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="filter_masks.html">Filter Masks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="group_layers.html">Group Layers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="layer_styles.html">Layer Styles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="paint_layers.html">Paint Layers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="selection_masks.html">Selection Masks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="split_alpha.html">Split Alpha</a></li>
+<li class="toctree-l3"><a class="reference internal" href="transformation_masks.html">Transformation Masks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="transparency_masks.html">Transparency Masks</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Vector Layers</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#what-is-a-vector-layer">What is a Vector Layer?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#creating-a-vector-layer">Creating a vector layer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#editing-shapes-on-a-vector-layer">Editing Shapes on a Vector Layer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#point-and-curve-shape-manipulation">Point and Curve Shape Manipulation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#stroke-and-fill">Stroke and Fill</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../linux_command_line.html">Linux Command Line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../list_supported_tablets.html">The List of Supported Tablets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../main_menu.html">Main Menu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../maths_input.html">Maths Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../popup-palette.html">Pop-up Palette</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preferences.html">Preferences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../render_animation.html">Render Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../resource_management.html">Resource Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../seexpr.html">SeExpr Quick Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../separate_image.html">Separate Image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sharing_krita_logs.html">Getting Krita logs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../split_layer.html">Split Layer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../stroke_selection.html">Stroke Selection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools.html">Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../welcome_screen.html">Welcome Screen</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials.html">Tutorials and How-tos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../KritaFAQ.html">Krita FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributors_manual.html">Contributors Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../resources_page.html">Resources</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+	<!-- start top banner area (for fundraisers or messages)
+
+	<div style="text-align: center; background-color: #333">
+		<a href="https://krita.org/en/fundraising-2018-campaign/" target="_self" onclick="ga('send', 'event', 'frontpage', 'button', 'Fundraiser 2018');">
+			<img src="https://krita.org/wp-content/themes/krita-org-theme/images/decoration/2018-fundraiser-banner.png" style="max-width: 100%">
+		</a>
+	</div>
+	
+	 end top banner area -->
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Krita Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../reference_manual.html">Reference Manual</a> &raquo;</li>
+        
+          <li><a href="../layers_and_masks.html">Layers and Masks</a> &raquo;</li>
+        
+      <li>Vector Layers</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+          
+            <a href="../../_sources/reference_manual/layers_and_masks/vector_layers.rst.txt" rel="nofollow"> 
+             
+              <img src="../../_static/images/source-code.png" />
+             <!-- View page source -->
+
+          </a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="vector-layers">
+<span id="index-0"></span><span id="id1"></span><h1>Vector Layers<a class="headerlink" href="#vector-layers" title="Permalink to this headline">¶</a></h1>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This page is outdated. Check <a class="reference internal" href="../../user_manual/vector_graphics.html#vector-graphics"><span class="std std-ref">Vector Graphics</span></a> for a better overview.</p>
+</div>
+<section id="what-is-a-vector-layer">
+<h2>What is a Vector Layer?<a class="headerlink" href="#what-is-a-vector-layer" title="Permalink to this headline">¶</a></h2>
+<p>A Vector Layers, also known as a shape layer, is a type of layers that contains only vector elements.</p>
+<p>This is how vector layers will appear in the <strong class="program">Krita</strong> Layers docker.</p>
+<img alt="../../_images/Vectorlayer.png" src="../../_images/Vectorlayer.png" />
+<p>It shows the vector contents of the layer on the left side. The icon showing the page with the red bookmark denotes that it is a vector layer. To the right of that is the layer name. Next are the layer visibility and accessibility icons. Clicking the “eye” will toggle visibility. Clicking the lock into a closed position will lock the content and editing will no longer be allowed until it is clicked again and the lock on the layer is released.</p>
+</section>
+<section id="creating-a-vector-layer">
+<h2>Creating a vector layer<a class="headerlink" href="#creating-a-vector-layer" title="Permalink to this headline">¶</a></h2>
+<p>You can create a vector layer in two ways. Using the extra options from the “Add Layer” button you can click the “Vector Layer” item and it will create a new vector layer. You can also drag a rectangle or ellipse from the <strong>Add shape</strong> dock onto an active Paint Layer.  If the active layer is a Vector Layer then the shape will be added directly to it.</p>
+</section>
+<section id="editing-shapes-on-a-vector-layer">
+<h2>Editing Shapes on a Vector Layer<a class="headerlink" href="#editing-shapes-on-a-vector-layer" title="Permalink to this headline">¶</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>There’s currently a bug with the vector layers that they will always consider themselves to be at 72dpi, regardless of the actual pixel-size. This can make manipulating shapes a little difficult, as the precise input will not allow cm or inch, even though the vector layer coordinate system uses those as a basis.</p>
+</div>
+<section id="basic-shape-manipulation">
+<h3>Basic Shape Manipulation<a class="headerlink" href="#basic-shape-manipulation" title="Permalink to this headline">¶</a></h3>
+<p>To edit the shape and colors of your vector element, you will need to use the basic shape manipulation tool.</p>
+<p>Once you have selected this tool, click on the element you want to manipulate and you will see guides appear around your shape.</p>
+<img alt="../../_images/Vectorguides.png" src="../../_images/Vectorguides.png" />
+<p>There are four ways to manipulate your image using this tool and the guides on your shape.</p>
+</section>
+<section id="transform-move">
+<h3>Transform/Move<a class="headerlink" href="#transform-move" title="Permalink to this headline">¶</a></h3>
+<img alt="../../_images/Transform.png" src="../../_images/Transform.png" />
+<p>This feature of the tool allows you to move your object by clicking and dragging your shape around the canvas. Holding the <kbd class="kbd docutils literal notranslate">Ctrl</kbd> key will lock your moves to one axis.</p>
+</section>
+<section id="size-stretch">
+<h3>Size/Stretch<a class="headerlink" href="#size-stretch" title="Permalink to this headline">¶</a></h3>
+<img alt="../../_images/Resize.png" src="../../_images/Resize.png" />
+<p>This feature of the tool allows you to stretch your shape.  Selecting a midpoint will allow stretching along one axis. Selecting a corner point will allow stretching across both axis. Holding the <kbd class="kbd docutils literal notranslate">Shift</kbd> key will allow you to scale your object. Holding the <kbd class="kbd docutils literal notranslate">Ctrl</kbd> key will cause your manipulation to be mirrored across your object.</p>
+</section>
+<section id="rotate">
+<h3>Rotate<a class="headerlink" href="#rotate" title="Permalink to this headline">¶</a></h3>
+<img alt="../../_images/Rotatevector.png" src="../../_images/Rotatevector.png" />
+<p>This feature of the tool will allow you to rotate your object around its center. Holding the <kbd class="kbd docutils literal notranslate">Ctrl</kbd> key will cause your rotation to lock to 45 degree angles.</p>
+</section>
+<section id="skew">
+<h3>Skew<a class="headerlink" href="#skew" title="Permalink to this headline">¶</a></h3>
+<img alt="../../_images/Skew.png" src="../../_images/Skew.png" />
+<p>This feature of the tool will allow you to skew your object.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>At the moment there is no way to scale only one side of your vector object. The developers are aware that this could be useful and will work on it as manpower allows.</p>
+</div>
+</section>
+</section>
+<section id="point-and-curve-shape-manipulation">
+<h2>Point and Curve Shape Manipulation<a class="headerlink" href="#point-and-curve-shape-manipulation" title="Permalink to this headline">¶</a></h2>
+<p>Double-click on a vector object to edit the specific points or curves which make up the shape. Click and drag a point to move it around the canvas. Click and drag along a line to curve it between two points. Holding the <kbd class="kbd docutils literal notranslate">Ctrl</kbd> key will lock your moves to one axis.</p>
+<img alt="../../_images/Pointcurvemanip.png" src="../../_images/Pointcurvemanip.png" />
+</section>
+<section id="stroke-and-fill">
+<h2>Stroke and Fill<a class="headerlink" href="#stroke-and-fill" title="Permalink to this headline">¶</a></h2>
+<p>In addition to being defined by points and curves, a shape also has two defining properties: <strong>Fill</strong> and <strong>Stroke</strong>. <strong>Fill</strong> defines the color, gradient, or pattern that fills the space inside of the shape object. ‘<strong>Stroke</strong>’ defines the color, gradient, pattern, and thickness of the border along the edge of the shape. These two can be edited using the <strong>Stroke and Fill</strong> dock. The dock has two modes. One for stroke and one for fill. You can change modes by clicking in the dock on the filled square or the black line. The active mode will be shown by which is on top of the other.</p>
+<p>Here is the dock with the fill element active. Notice the red line across the solid white square. This tells us that there is no fill assigned therefore the inside of the shape will be transparent.</p>
+<img alt="../../_images/Strokeandfill.png" src="../../_images/Strokeandfill.png" />
+<p>Here is the dock with the stroke element active.</p>
+<img alt="../../_images/Strokeandfillstroke.png" src="../../_images/Strokeandfillstroke.png" />
+<section id="editing-stroke-properties">
+<h3>Editing Stroke Properties<a class="headerlink" href="#editing-stroke-properties" title="Permalink to this headline">¶</a></h3>
+<p>The stroke properties dock will allow you to edit a different aspect of how the outline of your vector shape looks.</p>
+<img alt="../../_images/Strokeprops.png" src="../../_images/Strokeprops.png" />
+<p>The style selector allows you to choose different patterns and line styles. The width option changes the thickness of the outline on your vector shape. The cap option changes how line endings appear. The join option changes how corners appear.</p>
+<p>The Miter limit controls how harsh the corners of your object will display. The higher the number the more the corners will be allowed to stretch out past the points. Lower numbers will restrict the stroke to shorter and less sharp corners.</p>
+</section>
+<section id="editing-fill-properties">
+<h3>Editing Fill Properties<a class="headerlink" href="#editing-fill-properties" title="Permalink to this headline">¶</a></h3>
+<p>All of the fill properties are contained in the <strong>Stroke and Fill</strong> dock.</p>
+<img alt="../../_images/Strokeandfill.png" src="../../_images/Strokeandfill.png" />
+<p>The large red <strong>X</strong> button will set the fill to none causing the area inside of the vector shape to be transparent.</p>
+<p>To the right of that is the solid square. This sets the fill to be a solid color which is displayed in the long button and can be selected by pressing the arrow just to the right of the long button. To the right of the solid square is the gradient button. This will set the fill to display as a gradient. A gradient can be selected by pressing the down arrow next to the long button.</p>
+<p>Under the <strong>X</strong> is a button that shows a pattern. This inside area will be filled with a pattern. A pattern can be chosen by pressing the arrows next to the long button. The two other buttons are for <strong>fill rules</strong>: the way a self-overlapping path is filled.</p>
+<ul class="simple">
+<li><p>The button with the inner square blank toggles even-odd mode, where every filled region of the path is next to an unfilled one, like this:</p></li>
+</ul>
+<figure class="align-center" style="width: 500px">
+<img alt="../../_images/Fill_rule_even-odd.svg" src="../../_images/Fill_rule_even-odd.svg" /></figure>
+<ul class="simple">
+<li><p>The button with the inner square filled toggles non zero mode, where most of the time a self overlapping path is entirely filled except when it overlaps with a sub-path of a different direction that ‘decrease the level of overlapping’ so that the region between the two is considered outside the path and remain unfilled, like this:</p></li>
+</ul>
+<figure class="align-center" style="width: 500px">
+<img alt="../../_images/Fill_rule_non-zero.svg" src="../../_images/Fill_rule_non-zero.svg" /></figure>
+<p>For more (and better) information about fill rules check the <a class="reference external" href="http://tavmjong.free.fr/INKSCAPE/MANUAL/html/Attributes-Fill-Stroke.html#Attributes-Fill-Rule">Inkscape manual</a>.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../linux_command_line.html" class="btn btn-neutral float-right" title="Linux Command Line" accesskey="n" rel="next"> <!-- Next --> <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="transparency_masks.html" class="btn btn-neutral" title="Transparency Masks" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- Previous  -->  </a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright licensed under the GNU Free Documentation License 1.3+ unless stated otherwise.
+      
+        <span class="commit">
+          Revision <code>7c271ce</code>.
+        </span>
+      
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a modified <a href="https://github.com/rtfd/sphinx_rtd_theme">RTD theme</a>.<br/>
+  <a href="https://krita.org" title="Krita official website.">Krita official website</a> |
+  <a href="https://invent.kde.org/documentation/docs-krita-org/" title="The Gitlab instance to edit this pages and collaborate.">Git repository for docs.krita.org </a> |
+  <a href="https://www.kde.org/community/whatiskde/impressum-en.php" title="To know more about KDE, code of conduct, privacy policy and GDPR.">KDE Impressum</a>.
+   
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'5.0.0 Beta',
+            LANGUAGE:'en',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/documentation_options.js"></script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
+      });
+  </script> 
+
+ <script type="text/javascript">
+	 var _paq=_paq||[];
+	 _paq.push(['setCookieDomain','*.krita.org']);
+	 _paq.push(['setDomains','*.krita.org']);
+	 _paq.push(['setDocumentTitle',document.domain+"/"+document.title]);
+	 _paq.push(['trackPageView']);
+	 _paq.push(['enableLinkTracking']);
+
+	 (function(){
+	 	var u="//stats.kde.org/";
+	    _paq.push(['setTrackerUrl',u+'piwik.php']);
+	    _paq.push(['setSiteId',13]);
+	    var d = document, g = d.createElement('script'),s=d.getElementsByTagName('script')[0];
+	    g.type = 'text/javascript';
+	    g.async = true;
+	    g.defer = true;
+	    g.src = u+'piwik.js';
+	    s.parentNode.insertBefore(g,s);
+	  })();
+</script> 
+<noscript><p><img src="//stats.kde.org/piwik.php?idsite=13" style="border:0;" alt="" /></p></noscript>
+
+</body>
+</html>

@@ -1,0 +1,849 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" name="title" content="Building Krita from Source" />
+  <meta property="og:site-name" content="Krita Manual" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="en" />
+  <meta property="og:locale:alternate" content="ca" />
+  
+  <meta property="og:locale:alternate" content="fr" />
+  <meta property="og:locale:alternate" content="it" />
+  <meta property="og:locale:alternate" content="ja" />
+  <meta property="og:locale:alternate" content="ko" />
+  <meta property="og:locale:alternate" content="nl" />
+  <meta property="og:locale:alternate" content="pl" />
+  <meta property="og:locale:alternate" content="pt_PT" />
+  <meta property="og:locale:alternate" content="uk_UA" />
+  <meta property="og:locale:alternate" content="zh_CN" />
+  <meta property="og:article:modified_time" content="2021-07-19T15:33:59" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<meta content="Guide to building Krita from source." name="description" />
+
+  
+  
+  <title>Building Krita from Source &mdash; Krita Manual 5.0.0 Beta documentation</title>
+  
+
+  
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    
+  
+  
+  
+    <link rel="canonical" href="en/untranslatable_pages/building_krita.html"/>
+    <meta property="og:url" content="en/untranslatable_pages/building_krita.html" />
+    <meta property="og:image" content="en/_static/sidebar-logo.png" />
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Half-automatic building script on Windows" href="building/auto_build_script.html" />
+    <link rel="prev" title="Technical Pages" href="../untranslatable_pages.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+       
+           <a href="../index.html" class="icon icon-home">
+
+			<img src="../_static/sidebar-logo.png" class="logo" alt="Logo"/>
+           	
+           <!--	Krita Manual -->
+
+
+          </a>
+
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-side-nav-language-selector">
+        	<p class="caption-text">
+	        	<select id="language-selector-container">
+	        		<option value="ca">Català</option>
+	        		<option value="en">English</option>
+	        		<option value="fr">français</option>
+	        		<option value="it">Italiano</option>
+	        		<option value="ja">日本語</option>
+	        		<option value="ko">한국어</option>
+	        		<option value="nl">Nederlands</option>
+	        		<option value="pl">Polski</option>
+	        		<option value="pt_PT">português</option>
+	        		<option value="uk_UA">Українська</option>
+	        		<option value="zh_CN">简体中文</option>
+	        	</select>
+        	</p>
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../user_manual.html">User Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general_concepts.html">General Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference_manual.html">Reference Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials.html">Tutorials and How-tos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../KritaFAQ.html">Krita FAQ</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../contributors_manual.html">Contributors Manual</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../contributors_manual/community.html">The Krita Community</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributors_manual/krita_manual_conventions.html">Mark-up conventions for the Krita Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributors_manual/krita_manual_readme.html">Krita Manual Contribution Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributors_manual/optimising_images.html">Images for the Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributors_manual/user_support.html">Introduction to User Support</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../untranslatable_pages.html">Technical Pages</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Building Krita from Source</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#building-on-linux">Building on Linux</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#building-on-windows">Building on Windows</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#building-on-macos">Building on macOS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#building-on-android">Building on Android</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#specialized-ways-of-building-krita">Specialized Ways of Building Krita</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="cmake_settings_for_developers.html">CMake Settings for Developers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="intro_hacking_krita.html">Introduction to Hacking Krita</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kpl_defintion.html">The Krita Palette format KPL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="krita_svg_extensions.html">Krita SVG Extensions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modern_cpp_in_krita.html">Modern C++ usage guidelines for the Krita codebase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new_features.html">Developing Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="optimizing_tips_for_krita.html">Optimizing tips and tools for Krita</a></li>
+<li class="toctree-l3"><a class="reference internal" href="participating_in_gsoc.html">Google Summer of Code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="patch_review_guide.html">Advanced Merge Request Guide</a></li>
+<li class="toctree-l3"><a class="reference internal" href="python_coding.html">Python Developer Tools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quality_assurance.html">Introduction to Quality Assurance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release_krita.html">Making a release</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reporting_bugs.html">Reporting Bugs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="running_krita.html">Running Krita from Source</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strokes_documentation.html">Strokes queue</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strokes_documentation.html#strokes-public-api">Strokes public API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strokes_documentation.html#internals-of-the-freehand-tool">Internals of the freehand tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strokes_documentation.html#scheduled-undo-redo">Scheduled Undo/Redo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strokes_documentation.html#processings-framework">Processings framework</a></li>
+<li class="toctree-l3"><a class="reference internal" href="testing_strategy.html">Testing Strategy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="triaging_bugs.html">Triaging Bugs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="unit_tests_in_krita.html">Unittests in Krita</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../resources_page.html">Resources</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+	<!-- start top banner area (for fundraisers or messages)
+
+	<div style="text-align: center; background-color: #333">
+		<a href="https://krita.org/en/fundraising-2018-campaign/" target="_self" onclick="ga('send', 'event', 'frontpage', 'button', 'Fundraiser 2018');">
+			<img src="https://krita.org/wp-content/themes/krita-org-theme/images/decoration/2018-fundraiser-banner.png" style="max-width: 100%">
+		</a>
+	</div>
+	
+	 end top banner area -->
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Krita Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../contributors_manual.html">Contributors Manual</a> &raquo;</li>
+        
+          <li><a href="../untranslatable_pages.html">Technical Pages</a> &raquo;</li>
+        
+      <li>Building Krita from Source</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+          
+            <a href="../_sources/untranslatable_pages/building_krita.rst.txt" rel="nofollow"> 
+             
+              <img src="../_static/images/source-code.png" />
+             <!-- View page source -->
+
+          </a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="building-krita-from-source">
+<span id="building-krita"></span><h1><a class="toc-backref" href="#id7">Building Krita from Source</a><a class="headerlink" href="#building-krita-from-source" title="Permalink to this headline">¶</a></h1>
+<p>If you want to help developing Krita, you need to know how to build Krita yourself. If you merely want to run the latest version of Krita, to test a bug or play with, you can use the <a class="reference external" href="https://binary-factory.kde.org/job/Krita_Nightly_Windows_Build/">nightly build for Windows</a> the <a class="reference external" href="https://binary-factory.kde.org/job/Krita_Nightly_Appimage_Build/">nightly build for Linux</a>, or the <a class="reference external" href="https://binary-factory.kde.org/job/Krita_Nightly_MacOS_Build/">nightly build for macOS</a>.</p>
+<div class="contents topic" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#building-krita-from-source" id="id7">Building Krita from Source</a></p>
+<ul>
+<li><p><a class="reference internal" href="#building-on-linux" id="id8">Building on Linux</a></p>
+<ul>
+<li><p><a class="reference internal" href="#preparing-your-development-environment" id="id9">Preparing your development environment</a></p></li>
+<li><p><a class="reference internal" href="#getting-the-source-code" id="id10">Getting the Source Code</a></p></li>
+<li><p><a class="reference internal" href="#configuring-the-build" id="id11">Configuring the Build</a></p></li>
+<li><p><a class="reference internal" href="#installing" id="id12">Installing</a></p></li>
+<li><p><a class="reference internal" href="#running-krita" id="id13">Running Krita</a></p></li>
+<li><p><a class="reference internal" href="#updating" id="id14">Updating</a></p></li>
+<li><p><a class="reference internal" href="#trouble-shooting" id="id15">Trouble Shooting</a></p></li>
+<li><p><a class="reference internal" href="#common-problems" id="id16">Common problems</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#building-on-windows" id="id17">Building on Windows</a></p>
+<ul>
+<li><p><a class="reference internal" href="#prerequisites" id="id18">Prerequisites</a></p></li>
+<li><p><a class="reference internal" href="#preparation" id="id19">Preparation</a></p></li>
+<li><p><a class="reference internal" href="#getting-the-dependencies" id="id20">Getting the dependencies</a></p>
+<ul>
+<li><p><a class="reference internal" href="#using-prebuilt-dependencies-from-the-binary-factory" id="id21">Using prebuilt dependencies from the binary factory</a></p></li>
+<li><p><a class="reference internal" href="#building-dependencies-yourself" id="id22">Building dependencies yourself</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#id1" id="id23">Building Krita</a></p></li>
+<li><p><a class="reference internal" href="#id2" id="id24">Running Krita</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#building-on-macos" id="id25">Building on macOS</a></p>
+<ul>
+<li><p><a class="reference internal" href="#prequisites" id="id26">Prequisites</a></p></li>
+<li><p><a class="reference internal" href="#id3" id="id27">Preparation</a></p></li>
+<li><p><a class="reference internal" href="#building-the-dependencies" id="id28">Building the dependencies</a></p></li>
+<li><p><a class="reference internal" href="#id4" id="id29">Building Krita</a></p></li>
+<li><p><a class="reference internal" href="#id5" id="id30">Running Krita</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#building-on-android" id="id31">Building on Android</a></p>
+<ul>
+<li><p><a class="reference internal" href="#setting-up-android-sdk-and-ndk" id="id32">Setting up Android SDK and NDK</a></p></li>
+<li><p><a class="reference internal" href="#id6" id="id33">Building Krita</a></p></li>
+<li><p><a class="reference internal" href="#installing-krita-apk" id="id34">Installing Krita APK</a></p></li>
+<li><p><a class="reference internal" href="#crash" id="id35">Crash</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#specialized-ways-of-building-krita" id="id36">Specialized Ways of Building Krita</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<p>You can build Krita on Linux, Windows, macOS and on Linux for Android. The libraries Krita needs (for instance to load and save various image types) are called dependencies.</p>
+<p>Linux is the easiest operating system to build Krita on because all the libraries that Krita needs are available on most recent Linux distributions. For an easy guide to building Krita see <a class="reference external" href="https://www.davidrevoy.com/article193/compil-krita-from-source-code-on-linux-for-cats">Building Krita on Linux for Cats</a>.</p>
+<p>On macOS you can use tools like homebrew to get the dependencies, or build the dependencies manually. Building the dependencies manually is recommended because we have a number of changes to the source for libraries to make them function better with Krita.</p>
+<p>On Windows you will have to build the dependencies yourself.</p>
+<p>On all operating systems, you need to be familiar with using a terminal. Building Krita is a technical task and demands accuracy in following instructions and intelligence in understanding what happens.</p>
+<section id="building-on-linux">
+<h2><a class="toc-backref" href="#id8">Building on Linux</a><a class="headerlink" href="#building-on-linux" title="Permalink to this headline">¶</a></h2>
+<section id="preparing-your-development-environment">
+<h3><a class="toc-backref" href="#id9">Preparing your development environment</a><a class="headerlink" href="#preparing-your-development-environment" title="Permalink to this headline">¶</a></h3>
+<img alt="../_images/Krita-building_for-cats_001-init-dir_001_by-deevad.jpg" src="../_images/Krita-building_for-cats_001-init-dir_001_by-deevad.jpg" />
+<p>The most convenient layout is as follows:</p>
+<ul class="simple">
+<li><p>$HOME/kritadev/krita – the source code</p></li>
+<li><p>$HOME/kritadev/build – the location where you compile krita</p></li>
+<li><p>$HOME/kritadev/install – the location where you install krita to and run krita from</p></li>
+</ul>
+<p>we will call the “kritadev” folder your build root.</p>
+<p>Note: type in what’s shown after ‘&gt;’ in the following commands</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">you@yourcomputer:~&gt;cd</span>
+<span class="go">you@yourcomputer:~&gt;mkdir kritadev</span>
+<span class="go">you@yourcomputer:~/&gt;cd kritadev</span>
+<span class="go">you@yourcomputer:~/kritadev&gt; mkdir build</span>
+<span class="go">you@yourcomputer:~/kritadev&gt; mkdir install</span>
+</pre></div>
+</div>
+</section>
+<section id="getting-the-source-code">
+<h3><a class="toc-backref" href="#id10">Getting the Source Code</a><a class="headerlink" href="#getting-the-source-code" title="Permalink to this headline">¶</a></h3>
+<img alt="../_images/Krita-building_for-cats_002-git-clone_001_by-deevad.jpg" src="../_images/Krita-building_for-cats_002-git-clone_001_by-deevad.jpg" />
+<p>Open a terminal and enter the build root. Clone Krita from kde’s git infrastructure (not github):</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">you@yourcomputer:~/kritadev&gt; git clone https://invent.kde.org/graphics/krita.git</span>
+</pre></div>
+</div>
+</section>
+<section id="configuring-the-build">
+<h3><a class="toc-backref" href="#id11">Configuring the Build</a><a class="headerlink" href="#configuring-the-build" title="Permalink to this headline">¶</a></h3>
+<img alt="../_images/Krita-building_for-cats_004-configure_001_by-deevad.jpg" src="../_images/Krita-building_for-cats_004-configure_001_by-deevad.jpg" />
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">you@yourcomputer:~/kritadev&gt; cd build</span>
+</pre></div>
+</div>
+<p>Krita uses cmake (<a class="reference external" href="https://cmake.org">https://cmake.org</a>) to define how Krita is built on various platforms. You first need to run cmake to generate the build system, in the <code class="file docutils literal notranslate"><span class="pre">kritadevs/build</span></code> directory, then run make to make Krita, then run make install to install krita.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>you@yourcomputer:~/kritadev/build&gt;cmake ../krita \
+        -DCMAKE_INSTALL_PREFIX=$HOME/kritadev/install  \
+        -DCMAKE_BUILD_TYPE=Debug \
+        -DKRITA_DEVS=ON
+</pre></div>
+</div>
+<img alt="../_images/Krita-building_for-cats_003-get-libs_001_by-deevad.jpg" src="../_images/Krita-building_for-cats_003-get-libs_001_by-deevad.jpg" />
+<p>Unless you have installed all the dependencies Krita needs, on first running cmake, cmake will complain about missing dependencies. For instance:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">--</span> <span class="n">The</span> <span class="n">following</span> <span class="n">RECOMMENDED</span> <span class="n">packages</span> <span class="n">have</span> <span class="ow">not</span> <span class="n">been</span> <span class="n">found</span><span class="p">:</span>
+
+<span class="o">*</span> <span class="n">GSL</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">gnu</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">software</span><span class="o">/</span><span class="n">gsl</span><span class="o">/&gt;</span>
+<span class="n">Required</span> <span class="n">by</span> <span class="n">Krita</span><span class="s1">&#39;s Transform tool.</span>
+</pre></div>
+</div>
+<p>This is not an error, and you can fix this by installing the missing package using your distribution’s package manager. Do not download these packages manually from the source website and build them manually. Do use your distribution’s package manager to find the right packages.</p>
+<p>For example, for Ubuntu, you can start with:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">you</span><span class="nd">@yourcomputer</span><span class="p">:</span><span class="o">~/</span><span class="n">kritadev</span><span class="o">/</span><span class="n">build</span><span class="o">&gt;</span><span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">build</span><span class="o">-</span><span class="n">dep</span> <span class="n">krita</span>
+</pre></div>
+</div>
+<p>Which will install all the dependencies of the version of Krita in the repositories. You might need to enable the deb-src repositories by editing /etc/apt/sources.list (see <a class="reference external" href="https://help.ubuntu.com/community/Repositories/CommandLine">https://help.ubuntu.com/community/Repositories/CommandLine</a>) or, if you’re using the KDE Plasma desktop, enabling them in the the Settings of the Discover application.</p>
+<p>However, the development version might use different dependencies, to find these, you can use <code class="docutils literal notranslate"><span class="pre">apt-cache</span> <span class="pre">search</span></code>:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">you@yourcomputer:~/kritadev/build&gt;apt-cache search quazip</span>
+<span class="go">libquazip-dev - C++ wrapper for ZIP/UNZIP (development files, Qt4 build)</span>
+<span class="go">libquazip-doc - C++ wrapper for ZIP/UNZIP (documentation)</span>
+<span class="go">libquazip-headers - C++ wrapper for ZIP/UNZIP (development header files)</span>
+<span class="go">libquazip1 - C++ wrapper for ZIP/UNZIP (Qt4 build)</span>
+<span class="go">libquazip5-1 - C++ wrapper for ZIP/UNZIP (Qt5 build)</span>
+<span class="go">libquazip5-dev - C++ wrapper for ZIP/UNZIP (development files, Qt5 build)</span>
+<span class="go">libquazip5-headers - C++ wrapper for ZIP/UNZIP (development header files, Qt5 build)</span>
+</pre></div>
+</div>
+<p>You will want to get the ‘dev’ library here, because you’re doing dev, and then Krita is using Qt5, so select that one. If this doesn’t help, check the <a class="reference external" href="https://packages.ubuntu.com/">Ubuntu packages search</a>.</p>
+<p>If all dependencies have been installed, cmake will output something like this:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">-- Configuring done</span>
+<span class="go">-- Generating done</span>
+<span class="go">-- Build files have been written to: /home/boud/dev/b-krita</span>
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>There is one run-time package that you need to install. CMake will not warn about it missing. That is the Qt5 SQLite database driver package. On Ubuntu this is named libqt5sql5-sqlite, the name might be different on other distributions. You need this to be able to start Krita after you have built and installed Krita! This is only needed if you build the master (5.0) branch of Krita.</p>
+</div>
+<p><strong>Until that is shown, cmake has not succeeded and you cannot build Krita.</strong> When this is shown, you can build Krita:</p>
+<img alt="../_images/Krita-building_for-cats_005-build_001_by-deevad.jpg" src="../_images/Krita-building_for-cats_005-build_001_by-deevad.jpg" />
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">you@yourcomputer:~/kritadev/build&gt; make</span>
+</pre></div>
+</div>
+<p>You can speed this up by enabling multithreading. To do so, you first figure out how many threads your processor can handle:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">cat /proc/cpuinfo | grep processor | wc -l</span>
+</pre></div>
+</div>
+<p>Then, add the resulting number with -j (for ‘Jobs’) at the end, so for example:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">you@yourcomputer:~/kritadev/build&gt; make -j4</span>
+</pre></div>
+</div>
+</section>
+<section id="installing">
+<h3><a class="toc-backref" href="#id12">Installing</a><a class="headerlink" href="#installing" title="Permalink to this headline">¶</a></h3>
+<img alt="../_images/Krita-building_for-cats_006-installing_by-deevad.jpg" src="../_images/Krita-building_for-cats_006-installing_by-deevad.jpg" />
+<p>When the build has fully succeeded, you can install:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">you@yourcomputer:~/kritadev/build&gt; make install</span>
+</pre></div>
+</div>
+<p>And when that is complete, you can run Krita:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">you</span><span class="nd">@yourcomputer</span><span class="p">:</span><span class="o">~/</span><span class="n">kritadev</span><span class="o">/</span><span class="n">build</span><span class="o">&gt;../</span><span class="n">install</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">krita</span>
+</pre></div>
+</div>
+</section>
+<section id="running-krita">
+<h3><a class="toc-backref" href="#id13">Running Krita</a><a class="headerlink" href="#running-krita" title="Permalink to this headline">¶</a></h3>
+<p>You do not have to set environment variables in order to run Krita.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">you@yourcomputer:~&gt; cd ~/kritadev/</span>
+<span class="go">you@yourcomputer:~&gt; ./install/bin/krita</span>
+</pre></div>
+</div>
+<img alt="../_images/Krita-building_for-cats_008-running-success_by-deevad.jpg" src="../_images/Krita-building_for-cats_008-running-success_by-deevad.jpg" />
+</section>
+<section id="updating">
+<h3><a class="toc-backref" href="#id14">Updating</a><a class="headerlink" href="#updating" title="Permalink to this headline">¶</a></h3>
+<img alt="../_images/Krita-building_for-cats_009-want-update_by-deevad.jpg" src="../_images/Krita-building_for-cats_009-want-update_by-deevad.jpg" />
+<p>Now, Krita is in constant development, so you will want to update your build from time to time. Maybe a cool feature got in, or a bug was fixed, or you just want the latest source.</p>
+<img alt="../_images/Krita-building_for-cats_010-git-update_by-deevad.jpg" src="../_images/Krita-building_for-cats_010-git-update_by-deevad.jpg" />
+<p>First, we get the new source from the git repository:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">you@yourcomputer:~&gt; cd ~/kritadev/krita/</span>
+<span class="go">you@yourcomputer:~/kritadev/krita&gt; git pull</span>
+</pre></div>
+</div>
+<p>If you want to get the code from a specific branch, you will need to <code class="docutils literal notranslate"><span class="pre">checkout</span></code> that branch first:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">you@yourcomputer:~/kritadev/krita&gt; git checkout &lt;name of the branch&gt;</span>
+<span class="go">you@yourcomputer:~/kritadev/krita&gt; git pull</span>
+</pre></div>
+</div>
+<img alt="../_images/Krita-building_for-cats_011-git-update-success_by-deevad.jpg" src="../_images/Krita-building_for-cats_011-git-update-success_by-deevad.jpg" />
+<p>Then, we build again:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">you@yourcomputer:~/kritadev/krita&gt; cd ~/kritadev/build/</span>
+<span class="go">you@yourcomputer:~/kritadev/build&gt; make install</span>
+</pre></div>
+</div>
+<p>If you update daily, you might want to automate these command by making your own minimal bash script.</p>
+</section>
+<section id="trouble-shooting">
+<h3><a class="toc-backref" href="#id15">Trouble Shooting</a><a class="headerlink" href="#trouble-shooting" title="Permalink to this headline">¶</a></h3>
+<img alt="../_images/Krita-building_for-cats_012-git-update-fail_by-deevad.jpg" src="../_images/Krita-building_for-cats_012-git-update-fail_by-deevad.jpg" />
+<p>The recent development version might break, or sometime be just unusable. Experimental changes are made daily.</p>
+<p>This will affect your productivity if you don’t know how to ‘go back in time’ (for example, your favorite brush doesn’t work anymore).</p>
+<p>But if you know how to do it, <em>no issue can really affect you</em>, because you know how to come back to a previous state.</p>
+<img alt="../_images/Krita-building_for-cats_013_by-deevad.jpg" src="../_images/Krita-building_for-cats_013_by-deevad.jpg" />
+<p>To travel the source in time we need to read the timeline history. The terminal tool for it is <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">log</span></code>.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">you@yourcomputer:~&gt; cd ~/kritadev/krita/</span>
+<span class="go">you@yourcomputer:~/kritadev/krita&gt; git log</span>
+</pre></div>
+</div>
+<p>With git log, you can consult all the last changes to the code, the ‘commit’. What we’re interested in is the long identification number, the ‘git hash’ (such as <code class="docutils literal notranslate"><span class="pre">cca5819b19e0da3434192c5b352285b987a48796</span></code>). You can scroll the <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">log</span></code>, copy the ID number then quit(letter <kbd class="kbd docutils literal notranslate">Q</kbd> on keyboard). Then time-travel in your source directory:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">you@yourcomputer:~/kritadev/krita&gt; git checkout cca5819b19e0da3434192c5b352285b987a48796</span>
+<span class="go">you@yourcomputer:~/kritadev/krita&gt; git pull</span>
+</pre></div>
+</div>
+<p>And, we build again:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">you@yourcomputer:~/kritadev/krita&gt; cd ~/kritadev/build/</span>
+<span class="go">you@yourcomputer:~/kritadev/build&gt; make install</span>
+</pre></div>
+</div>
+<img alt="../_images/Krita-building_for-cats_intro_by-deevad.jpg" src="../_images/Krita-building_for-cats_intro_by-deevad.jpg" />
+<p>To update again to the actual and ‘fresh from a minute ago’ source-code named <code class="docutils literal notranslate"><span class="pre">master</span></code>, simply ask git to come back to it with <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">checkout</span></code> then <code class="docutils literal notranslate"><span class="pre">pull</span></code> to update :</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">you@yourcomputer:~/kritadev/krita&gt; git checkout master</span>
+<span class="go">you@yourcomputer:~/kritadev/krita&gt; git pull</span>
+</pre></div>
+</div>
+</section>
+<section id="common-problems">
+<h3><a class="toc-backref" href="#id16">Common problems</a><a class="headerlink" href="#common-problems" title="Permalink to this headline">¶</a></h3>
+<img alt="../_images/Krita-building_for-cats_012-git-update-fail_by-deevad.jpg" src="../_images/Krita-building_for-cats_012-git-update-fail_by-deevad.jpg" />
+<p>Outside of the source being unstable, there’s the following common problems:</p>
+<ul class="simple">
+<li><p>The most common problem is a missing dependency. Install it. A missing dependency is not an “error” that you need to report to the other Krita developers.</p></li>
+<li><p>A dependency can also be too old. CMake will report when the version of a dependency is too old. That is also not an “error”. You might need to update your Linux installation to a newer version.</p></li>
+<li><p>You can also have a successful build, then update your linux installation, and then find that Krita no longer builds. A library got updated, and you need to remove the <code class="docutils literal notranslate"><span class="pre">CMakeCache.txt</span></code> file in your build dir and run cmake again.</p></li>
+<li><p>Sometimes, changes in Krita’s source code from git revision to git revision make it necessary to make your installation and/or build dir empty and build from scratch. One example is where a plugin is removed from Krita; the plugin will be in your install dir, and won’t get updated when Krita’s internals change.</p></li>
+</ul>
+</section>
+</section>
+<section id="building-on-windows">
+<h2><a class="toc-backref" href="#id17">Building on Windows</a><a class="headerlink" href="#building-on-windows" title="Permalink to this headline">¶</a></h2>
+<p>On Windows, you will have to build all the dependencies yourself. This will take a long time. Note that you will do all your work in a CMD command window.</p>
+<p>This is also more difficult than building Krita on Linux, so you need to pay attention to details. If you follow the guide closely, install correct dependencies and make sure your PATH doesn’t contain anything unwanted, there should be no issues.</p>
+<section id="prerequisites">
+<h3><a class="toc-backref" href="#id18">Prerequisites</a><a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li><p>Git - <a class="reference external" href="https://git-scm.com/downloads">https://git-scm.com/downloads</a></p></li>
+<li><dl class="simple">
+<dt>CMake 3.3.2 or later - <a class="reference external" href="https://cmake.org/download/">https://cmake.org/download/</a></dt><dd><ul class="simple">
+<li><p>CMake 3.9 does not build Krita properly at the moment, please use 3.8 or 3.10 instead.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Make sure you have a compiler - Only mingw-w64 7.3 (by mingw-builds) - <a class="reference external" href="https://files.kde.org/krita/build/x86_64-7.3.0-release-posix-seh-rt_v5-rev0.7z">https://files.kde.org/krita/build/x86_64-7.3.0-release-posix-seh-rt_v5-rev0.7z</a></dt><dd><ul class="simple">
+<li><p>For threading, select posix.</p></li>
+<li><p>For exceptions, select seh (64-bit) or dwarf (32-bit).</p></li>
+<li><p>Unzip mingw with <a class="reference external" href="https://www.7-zip.org/">7zip</a> into a folder like C:mingw-w64; the full path must not contain any spaces.</p></li>
+<li><p>MSVC is <em>not</em> supported at the moment.</p></li>
+<li><p>CLANG is <em>not</em> supported at the moment.</p></li>
+<li><p>MSYS is <em>not</em> supported at the moment.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>You will also need a release of Python 3.8 (not 3.7, not 3.9) - <a class="reference external" href="https://www.python.org">https://www.python.org</a>.</dt><dd><ul class="simple">
+<li><p>Make sure to have that version of python.exe in your path. This version of Python will be used for two things to configure Qt and to build the Python scripting module.  Do not set PYTHONHOME or PYTHONPATH.</p></li>
+<li><p>Make sure that your Python will have the correct architecture for the version you are trying to build. If building for 32-bit target, you need the 32-bit release of Python.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>Install the Windows 10 SDK - <a class="reference external" href="https://developer.microsoft.com/en-us/windows/downloads/windows-10-sdk/">https://developer.microsoft.com/en-us/windows/downloads/windows-10-sdk/</a></p></li>
+<li><p>It is useful to install Qt Creator - <a class="reference external" href="https://download.qt.io/official_releases/qtcreator/">https://download.qt.io/official_releases/qtcreator/</a></p></li>
+</ol>
+<p><strong>*MAKE DOUBLE PLUS SURE YOU DO NOT HAVE ANY OTHER COMPILER OR DEVELOPMENT ENVIRONMENT OR PYTHON INSTALLATION IN YOUR PATH*</strong></p>
+</section>
+<section id="preparation">
+<h3><a class="toc-backref" href="#id19">Preparation</a><a class="headerlink" href="#preparation" title="Permalink to this headline">¶</a></h3>
+<img alt="../_images/Krita-building_for-cats_001-init-dir_001_by-deevad.jpg" src="../_images/Krita-building_for-cats_001-init-dir_001_by-deevad.jpg" />
+<p>After installing the Prerequisites, prepare your working directory. Keep this as short as possible.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">cd  c:\</span>
+<span class="go">mkdir c:\dev</span>
+<span class="go">mkdir c:\d</span>
+<span class="go">mkdir c:\i</span>
+</pre></div>
+</div>
+<p>Then prepare a batch file to set the environment. Every time you want to build or run your home-grown Krita, open the CMD windows, go to the c:dev folder and run the env.bat file. Read this example and ADJUST THE VERSION NUMBERS where necessary so the PATH is correct.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">set DLLTOOL_EXE=C:\mingw-w64\x86_64-7.3.0-posix-seh-rt_v5-rev0\mingw64\bin\dlltool.exe</span>
+<span class="go">set MINGW_GCC_BIN=C:\mingw-w64\x86_64-7.3.0-posix-seh-rt_v5-rev0\mingw64\\bin</span>
+<span class="go">set MINGW_BIN_DIR=C:\mingw-w64\x86_64-7.3.0-posix-seh-rt_v5-rev0\mingw64\\bin</span>
+<span class="go">set BUILDROOT=c:\dev</span>
+<span class="go">set BUILDDIR_INSTALL=%BUILDROOT%\i</span>
+<span class="go">set PATH=%BUILDROOT%\i\bin;%BUILDROOT%\i\lib;%MINGW_GCC_BIN%;C:\Program Files\CMake\bin;c:\qt\qtcreator-4.12.0\bin;%PATH%</span>
+<span class="go">set &quot;WindowsSdkDir=%ProgramFiles(x86)%\Windows Kits\10&quot;</span>
+<span class="go">set &quot;WindowsSdkVerBinPath=%ProgramFiles(x86)%\Windows Kits\10\bin\10.0.17763.0&quot;</span>
+
+<span class="go">:: Since Krita 5.1 when using SIP5+ you also need to set up PYTHONPATH manually</span>
+<span class="go">set PYTHONPATH=%BUILDROOT%\i\lib\site-packages;%PYTHONPATH%</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">cd c:\dev</span>
+<span class="go">env.bat</span>
+</pre></div>
+</div>
+<p>Then get krita:</p>
+<img alt="../_images/Krita-building_for-cats_002-git-clone_001_by-deevad.jpg" src="../_images/Krita-building_for-cats_002-git-clone_001_by-deevad.jpg" />
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">cd c:\dev</span>
+<span class="go">git clone https://invent.kde.org/graphics/krita.git</span>
+</pre></div>
+</div>
+</section>
+<section id="getting-the-dependencies">
+<h3><a class="toc-backref" href="#id20">Getting the dependencies</a><a class="headerlink" href="#getting-the-dependencies" title="Permalink to this headline">¶</a></h3>
+<img alt="../_images/Krita-building_for-cats_003-get-libs_001_by-deevad.jpg" src="../_images/Krita-building_for-cats_003-get-libs_001_by-deevad.jpg" />
+<p>Here we have two options. The quick one is to reuse prebuilt dependencies from the binary factory (you need to have the same version of the compiler locally as the one used on the binary factory). And the slow one is to build everything ourselves.</p>
+<section id="using-prebuilt-dependencies-from-the-binary-factory">
+<h4><a class="toc-backref" href="#id21">Using prebuilt dependencies from the binary factory</a><a class="headerlink" href="#using-prebuilt-dependencies-from-the-binary-factory" title="Permalink to this headline">¶</a></h4>
+<p>To fetch prebuilt dependencies just run the embedded cmake script:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">cd c:\dev</span>
+<span class="go">mkdir b</span>
+<span class="go">cd b</span>
+<span class="go">cmake ..\krita\build-tools\ci-deps -G &quot;MinGW Makefiles&quot; -DCMAKE_INSTALL_PREFIX=..\i</span>
+<span class="go">cmake --build .</span>
+</pre></div>
+</div>
+</section>
+<section id="building-dependencies-yourself">
+<h4><a class="toc-backref" href="#id22">Building dependencies yourself</a><a class="headerlink" href="#building-dependencies-yourself" title="Permalink to this headline">¶</a></h4>
+<p>We will build everything on Windows with the same script that is used to make the nightly builds and the releases:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">cd c:\dev</span>
+<span class="go">krita\build-tools\windows\build.cmd --no-interactive --jobs 8 --skip-krita --src-dir c:\dev\krita --download-dir c:\dev\d --deps-build-dir c:\dev\b --deps-install-dir c:\dev\i</span>
+</pre></div>
+</div>
+<p>This will take several hours, but you only need to do it once. When it’s ready, make a zip archive of the c:devi folder. That’s a backup because we will install krita into the same folder as the dependencies, and if you need to nuke your krita build (because you’re switching between branches or for some other reason, you’ll also nuke your built dependencies. You can also build the depedencies into another folder, like c:devi_deps, BUT in that case you’re going to have trouble running Krita without first packaging it.</p>
+</section>
+</section>
+<section id="id1">
+<h3><a class="toc-backref" href="#id23">Building Krita</a><a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<img alt="../_images/Krita-building_for-cats_005-build_001_by-deevad.jpg" src="../_images/Krita-building_for-cats_005-build_001_by-deevad.jpg" />
+<p>Again, on the command line, with the same script that is used to make the nightly builds and the releases:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">cd c:\dev</span>
+<span class="go">krita\build-tools\windows\build.cmd --no-interactive --jobs 8 --skip-deps --src-dir c:\dev\krita --download-dir c:\dev\d --deps-build-dir c:\dev\b --deps-install-dir c:\dev\is --krita-build-dir c:\dev\b_krita --krita-install-dir c:\dev\i</span>
+</pre></div>
+</div>
+<p>If you are hacking on Krita, you can can rebuild Krita without running this script by entering the build directory and running mingw3-make install.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">cd c:\dev\b_krita</span>
+<span class="go">mingw32-make install</span>
+</pre></div>
+</div>
+<img alt="../_images/Krita-building_for-cats_006-installing_by-deevad.jpg" src="../_images/Krita-building_for-cats_006-installing_by-deevad.jpg" />
+</section>
+<section id="id2">
+<h3><a class="toc-backref" href="#id24">Running Krita</a><a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>You must start Krita from the command prompt, after having run env.bat:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">cd c:\dev\b_krita</span>
+<span class="go">env.bat</span>
+<span class="go">c:\dev\i\bin\krita.exe</span>
+</pre></div>
+</div>
+<img alt="../_images/Krita-building_for-cats_008-running-success_by-deevad.jpg" src="../_images/Krita-building_for-cats_008-running-success_by-deevad.jpg" />
+</section>
+</section>
+<section id="building-on-macos">
+<h2><a class="toc-backref" href="#id25">Building on macOS</a><a class="headerlink" href="#building-on-macos" title="Permalink to this headline">¶</a></h2>
+<p>We will build Krita on macOS with the same scripts that are used to build the nightly builds and the releases. We will <em>NOT</em> be building krita from within XCode, but from within the terminal.</p>
+<section id="prequisites">
+<h3><a class="toc-backref" href="#id26">Prequisites</a><a class="headerlink" href="#prequisites" title="Permalink to this headline">¶</a></h3>
+<p>You will need to install:</p>
+<ul class="simple">
+<li><p>CMake: <a class="reference external" href="https://cmake.org">https://cmake.org</a></p></li>
+<li><p>XCode: get it from the app store</p></li>
+<li><p>Qt Creator: <a class="reference external" href="https://download.qt.io/official_releases/qtcreator/">https://download.qt.io/official_releases/qtcreator/</a></p></li>
+</ul>
+</section>
+<section id="id3">
+<h3><a class="toc-backref" href="#id27">Preparation</a><a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>Open Terminal.app</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">cd</span>
+<span class="go">mkdir dev</span>
+<span class="go">cd dev</span>
+<span class="go">git clone https://invent.kde.org/graphics/krita.git</span>
+</pre></div>
+</div>
+<img alt="../_images/Krita-building_for-cats_002-git-clone_001_by-deevad.jpg" src="../_images/Krita-building_for-cats_002-git-clone_001_by-deevad.jpg" />
+<p>Create an env.sh file that should contain the following lines:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">export BUILDROOT=$HOME/dev</span>
+<span class="go">export PATH=/Applications/CMake.app/Contents/bin:$BUILDROOT/i/bin/:$PATH</span>
+</pre></div>
+</div>
+</section>
+<section id="building-the-dependencies">
+<h3><a class="toc-backref" href="#id28">Building the dependencies</a><a class="headerlink" href="#building-the-dependencies" title="Permalink to this headline">¶</a></h3>
+<img alt="../_images/Krita-building_for-cats_003-get-libs_001_by-deevad.jpg" src="../_images/Krita-building_for-cats_003-get-libs_001_by-deevad.jpg" />
+<p>It is possible to build Krita against dependencies installed through MacPorts or some similar packaging service. If you do that, you’re on your own though.</p>
+<p>Open Terminal.app and source the env.sh file you just created:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">cd ~/dev</span>
+<span class="go">. env.sh</span>
+<span class="go">./krita/packaging/macos/osxbuild.sh builddeps</span>
+</pre></div>
+</div>
+<p>This will complain several time that it cannot find the Java SDK: just click that away, and don’t worry. Building the dependencies will take several hours.</p>
+</section>
+<section id="id4">
+<h3><a class="toc-backref" href="#id29">Building Krita</a><a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<p>In the same terminal window (if you open a new one, you will have to <em>source</em> the env.sh script again by running “. env.sh” – that’s a dot.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">./krita/packaging/macos/osxbuild.sh buildinstall</span>
+</pre></div>
+</div>
+<p>This will build and install Krita to $HOME/dev/i/krita.app</p>
+<img alt="../_images/Krita-building_for-cats_006-installing_by-deevad.jpg" src="../_images/Krita-building_for-cats_006-installing_by-deevad.jpg" />
+</section>
+<section id="id5">
+<h3><a class="toc-backref" href="#id30">Running Krita</a><a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<p>You can run krita in the same terminal window:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">~/dev/i/krita.app/Contents/MacOS/krita</span>
+</pre></div>
+</div>
+<p>If you want to debug krita with lldb:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">lldb ~/dev/i/krita.app/Contents/MacOS/krita</span>
+<span class="go">(lldb) target create &quot;./i/bin/krita.app/Contents/MacOS/krita&quot;</span>
+<span class="go">Current executable set to &#39;./i/bin/krita.app/Contents/MacOS/krita&#39; (x86_64).</span>
+<span class="go">(lldb) r</span>
+</pre></div>
+</div>
+<img alt="../_images/Krita-building_for-cats_008-running-success_by-deevad.jpg" src="../_images/Krita-building_for-cats_008-running-success_by-deevad.jpg" />
+</section>
+</section>
+<section id="building-on-android">
+<h2><a class="toc-backref" href="#id31">Building on Android</a><a class="headerlink" href="#building-on-android" title="Permalink to this headline">¶</a></h2>
+<p>Use Linux to build Krita for Android. Building Krita for Android on another system is <em>NOT</em> supported.</p>
+<section id="setting-up-android-sdk-and-ndk">
+<h3><a class="toc-backref" href="#id32">Setting up Android SDK and NDK</a><a class="headerlink" href="#setting-up-android-sdk-and-ndk" title="Permalink to this headline">¶</a></h3>
+<p>We right now use Android NDK version <code class="docutils literal notranslate"><span class="pre">r18b</span></code> to do our builds. So, I would recommend to use that. Download it from <a class="reference external" href="https://developer.android.com/ndk/downloads/older_releases.html">google’s
+website</a>
+then extract it.</p>
+<p>Next, Android SDK. You can either download Android Studio or just the <code class="docutils literal notranslate"><span class="pre">sdk-tools</span></code>. Both could be downloaded from <a class="reference external" href="https://developer.android.com/studio">google’s
+website</a>.</p>
+<p>If you downloaded Android Studio then open SDK manager and download <code class="docutils literal notranslate"><span class="pre">Android</span> <span class="pre">SDK</span> <span class="pre">Build-Tools</span></code>. (more info:
+<a class="reference external" href="https://developer.android.com/studio/intro/update#sdk-manager">https://developer.android.com/studio/intro/update#sdk-manager</a>)</p>
+<p>If you download just <code class="docutils literal notranslate"><span class="pre">sdk-tools</span></code>, then, extract it and run:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> &lt;extracted-android-sdk-tools&gt;/tools/bin
+./sdkmanager --licenses
+./sdkmanager platform-tools
+./sdkmanager <span class="s2">&quot;platforms;android-21&quot;</span>
+./sdkmanager <span class="s2">&quot;platforms;android-28&quot;</span>    <span class="c1"># for androiddeployqt</span>
+./sdkmanager <span class="s2">&quot;build-tools;28.0.2&quot;</span>
+</pre></div>
+</div>
+<p>If you get some <code class="docutils literal notranslate"><span class="pre">ClasNotFoundException</span></code> it might be because <code class="docutils literal notranslate"><span class="pre">java</span></code>
+version is set to <code class="docutils literal notranslate"><span class="pre">11</span></code>. For <code class="docutils literal notranslate"><span class="pre">sdkmanager</span></code> to work, set it to <code class="docutils literal notranslate"><span class="pre">8</span></code>
+and then run it again.</p>
+<p>That’s the only dependency we have to manage manually!</p>
+</section>
+<section id="id6">
+<h3><a class="toc-backref" href="#id33">Building Krita</a><a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<p>Now, to build krita, run
+<code class="docutils literal notranslate"><span class="pre">&lt;krita-source&gt;/packaging/android/androidbuild.sh</span> <span class="pre">--help</span></code> and pass the required arguments.</p>
+<p>Example:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>./androidbuild.sh -p<span class="o">=</span>all --src<span class="o">=</span>/home/sh_zam/workspace/krita --build-type<span class="o">=</span>Debug --build-root<span class="o">=</span>/home/sh_zam/workspace/build-krita-android --ndk-path<span class="o">=</span>/home/sh_zam/Android/Sdk/ndk-bundle --sdk-path<span class="o">=</span>/home/sh_zam/Android/Sdk --api-level<span class="o">=</span><span class="m">21</span> --android-abi<span class="o">=</span>armeabi-v7a
+</pre></div>
+</div>
+</section>
+<section id="installing-krita-apk">
+<h3><a class="toc-backref" href="#id34">Installing Krita APK</a><a class="headerlink" href="#installing-krita-apk" title="Permalink to this headline">¶</a></h3>
+<p>To install run
+<code class="docutils literal notranslate"><span class="pre">adb</span> <span class="pre">install</span> <span class="pre">-d</span> <span class="pre">-r</span> <span class="pre">&lt;build-root&gt;/krita_build_apk/build/outputs/apk/debug/krita_build_apk-debug.apk</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">adb</span></code> should be in <code class="docutils literal notranslate"><span class="pre">&lt;sdk-root&gt;/platform-tools/</span></code></p>
+</section>
+<section id="crash">
+<h3><a class="toc-backref" href="#id35">Crash</a><a class="headerlink" href="#crash" title="Permalink to this headline">¶</a></h3>
+<p>If Krita crashes you can look up the logs using <code class="docutils literal notranslate"><span class="pre">adb</span> <span class="pre">logcat</span></code></p>
+</section>
+</section>
+<section id="specialized-ways-of-building-krita">
+<h2><a class="toc-backref" href="#id36">Specialized Ways of Building Krita</a><a class="headerlink" href="#specialized-ways-of-building-krita" title="Permalink to this headline">¶</a></h2>
+<p>These are specialized ways of building Krita on Windows and Linux while re-using the dependencies built on KDE’s binary factory. You only need to try this if you don’t want to build Krita’s dependencies yourself on Windows or use distribution dependencies on Linux.</p>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="building/auto_build_script.html">Half-automatic building script on Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="building/build_krita_with_docker_on_linux.html">Building krita with Docker on Linux</a></li>
+</ul>
+</div>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="building/auto_build_script.html" class="btn btn-neutral float-right" title="Half-automatic building script on Windows" accesskey="n" rel="next"> <!-- Next --> <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../untranslatable_pages.html" class="btn btn-neutral" title="Technical Pages" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- Previous  -->  </a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright licensed under the GNU Free Documentation License 1.3+ unless stated otherwise.
+      
+        <span class="commit">
+          Revision <code>7c271ce</code>.
+        </span>
+      
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a modified <a href="https://github.com/rtfd/sphinx_rtd_theme">RTD theme</a>.<br/>
+  <a href="https://krita.org" title="Krita official website.">Krita official website</a> |
+  <a href="https://invent.kde.org/documentation/docs-krita-org/" title="The Gitlab instance to edit this pages and collaborate.">Git repository for docs.krita.org </a> |
+  <a href="https://www.kde.org/community/whatiskde/impressum-en.php" title="To know more about KDE, code of conduct, privacy policy and GDPR.">KDE Impressum</a>.
+   
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'5.0.0 Beta',
+            LANGUAGE:'en',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/documentation_options.js"></script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
+      });
+  </script> 
+
+ <script type="text/javascript">
+	 var _paq=_paq||[];
+	 _paq.push(['setCookieDomain','*.krita.org']);
+	 _paq.push(['setDomains','*.krita.org']);
+	 _paq.push(['setDocumentTitle',document.domain+"/"+document.title]);
+	 _paq.push(['trackPageView']);
+	 _paq.push(['enableLinkTracking']);
+
+	 (function(){
+	 	var u="//stats.kde.org/";
+	    _paq.push(['setTrackerUrl',u+'piwik.php']);
+	    _paq.push(['setSiteId',13]);
+	    var d = document, g = d.createElement('script'),s=d.getElementsByTagName('script')[0];
+	    g.type = 'text/javascript';
+	    g.async = true;
+	    g.defer = true;
+	    g.src = u+'piwik.js';
+	    s.parentNode.insertBefore(g,s);
+	  })();
+</script> 
+<noscript><p><img src="//stats.kde.org/piwik.php?idsite=13" style="border:0;" alt="" /></p></noscript>
+
+</body>
+</html>

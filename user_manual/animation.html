@@ -1,0 +1,547 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" name="title" content="Animation with Krita" />
+  <meta property="og:site-name" content="Krita Manual" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="en" />
+  <meta property="og:locale:alternate" content="ca" />
+  
+  <meta property="og:locale:alternate" content="fr" />
+  <meta property="og:locale:alternate" content="it" />
+  <meta property="og:locale:alternate" content="ja" />
+  <meta property="og:locale:alternate" content="ko" />
+  <meta property="og:locale:alternate" content="nl" />
+  <meta property="og:locale:alternate" content="pl" />
+  <meta property="og:locale:alternate" content="pt_PT" />
+  <meta property="og:locale:alternate" content="uk_UA" />
+  <meta property="og:locale:alternate" content="zh_CN" />
+  <meta property="og:article:modified_time" content="2021-07-19T15:33:59" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<meta content="Detailed guide on the animation workflow in Krita." name="description" property="og:description" />
+
+  
+  
+  <title>Animation with Krita &mdash; Krita Manual 5.0.0 Beta documentation</title>
+  
+
+  
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    
+  
+  
+  
+    <link rel="canonical" href="en/user_manual/animation.html"/>
+    <meta property="og:url" content="en/user_manual/animation.html" />
+    <meta property="og:image" content="en/_static/sidebar-logo.png" />
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Japanese Animation Template" href="japanese_animation_template.html" />
+    <link rel="prev" title="Snapping" href="snapping.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+       
+           <a href="../index.html" class="icon icon-home">
+
+			<img src="../_static/sidebar-logo.png" class="logo" alt="Logo"/>
+           	
+           <!--	Krita Manual -->
+
+
+          </a>
+
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-side-nav-language-selector">
+        	<p class="caption-text">
+	        	<select id="language-selector-container">
+	        		<option value="ca">Català</option>
+	        		<option value="en">English</option>
+	        		<option value="fr">français</option>
+	        		<option value="it">Italiano</option>
+	        		<option value="ja">日本語</option>
+	        		<option value="ko">한국어</option>
+	        		<option value="nl">Nederlands</option>
+	        		<option value="pl">Polski</option>
+	        		<option value="pt_PT">português</option>
+	        		<option value="uk_UA">Українська</option>
+	        		<option value="zh_CN">简体中文</option>
+	        	</select>
+        	</p>
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../user_manual.html">User Manual</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction_from_other_software.html">Introduction Coming From Other Software</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drawing_tablets.html">Drawing Tablets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loading_saving_brushes.html">Loading and Saving Brushes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oncanvas_brush_editor.html">On-Canvas Brush Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mirror_tools.html">Mirror Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="painting_with_assistants.html">Painting with Assistants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="working_with_images.html">Working with Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="autosave.html">Saving, AutoSave and Backup Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templates.html">Templates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="layers_and_masks.html">Introduction to Layers and Masks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="selections.html">Selections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python_scripting.html">Python Scripting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tag_management.html">Tag Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="soft_proofing.html">Soft Proofing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vector_graphics.html">Vector Graphics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="snapping.html">Snapping</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Animation with Krita</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#workflow">Workflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#introduction-to-animation-how-to-make-a-walk-cycle">Introduction to animation: How to make a walk cycle</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#setup">Setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#animating">Animating</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#expanding-upon-your-rough-walk-cycle">Expanding upon your rough walk cycle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#animating-with-multiple-layers">Animating with multiple layers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#exporting">Exporting</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="japanese_animation_template.html">Japanese Animation Template</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gamut_masks.html">Gamut Masks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../general_concepts.html">General Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference_manual.html">Reference Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials.html">Tutorials and How-tos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../KritaFAQ.html">Krita FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributors_manual.html">Contributors Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../resources_page.html">Resources</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+	<!-- start top banner area (for fundraisers or messages)
+
+	<div style="text-align: center; background-color: #333">
+		<a href="https://krita.org/en/fundraising-2018-campaign/" target="_self" onclick="ga('send', 'event', 'frontpage', 'button', 'Fundraiser 2018');">
+			<img src="https://krita.org/wp-content/themes/krita-org-theme/images/decoration/2018-fundraiser-banner.png" style="max-width: 100%">
+		</a>
+	</div>
+	
+	 end top banner area -->
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Krita Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../user_manual.html">User Manual</a> &raquo;</li>
+        
+      <li>Animation with Krita</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+          
+            <a href="../_sources/user_manual/animation.rst.txt" rel="nofollow"> 
+             
+              <img src="../_static/images/source-code.png" />
+             <!-- View page source -->
+
+          </a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <span class="target" id="index-0"></span><section id="animation-with-krita">
+<span id="animation"></span><h1>Animation with Krita<a class="headerlink" href="#animation-with-krita" title="Permalink to this headline">¶</a></h1>
+<p>Thanks to the 2015 Kickstarter, <strong class="program">Krita</strong> has animation. In specific, <strong class="program">Krita</strong> has frame-by-frame raster animation.</p>
+<p>To access the animation features, the easiest way is to change your workspace to Animation. This will make the animation dockers and workflow appear.</p>
+<section id="workflow">
+<h2>Workflow<a class="headerlink" href="#workflow" title="Permalink to this headline">¶</a></h2>
+<p>In traditional animation workflow, what you do is that you make <a class="reference internal" href="../reference_manual/dockers/animation_timeline.html#term-Keyframe"><span class="xref std std-term">Keyframes</span></a>, which contain the important poses, and then draw frames in between (<em class="dfn">tweening</em> in highly sophisticated animator’s jargon).</p>
+<p>For this workflow, there are three important dockers:</p>
+<ol class="arabic simple">
+<li><p>The <a class="reference internal" href="../reference_manual/dockers/animation_timeline.html#timeline-docker"><span class="std std-ref">Animation Timeline Docker</span></a>. View and control all of the frames in your animation. The timeline docker also contains functions to manage your layers. The layers that are created in the timeline docker also appear on the normal Layer docker.</p></li>
+<li><p>The <a class="reference internal" href="../reference_manual/dockers/onion_skin.html#onion-skin-docker"><span class="std std-ref">Onion Skin Docker</span></a>. This docker controls the look of the onion skin, which in turn is useful for seeing the previous frame.</p></li>
+<li><p>The <a class="reference internal" href="../reference_manual/dockers/animation_curves.html#animation-curves-docker"><span class="std std-ref">Animation Curves Docker</span></a>. This docker allows you to do minor tweening for animation curves.</p></li>
+<li><p>The <a class="reference internal" href="../reference_manual/dockers/storyboard_docker.html#storyboard-docker"><span class="std std-ref">Storyboard Docker</span></a>. This docker helps you create and keep track of storyboards.</p></li>
+</ol>
+<p>Furthermore, especially when you want to do a big animation, that is, any animation longer than 3 seconds, you will need to think about how you are going to approach this. Krita is specialized in frame by frame animation, and because of this Krita keeps all the frames in memory. This means that animation files will eat up all of your computer’s working memory (RAM). If you don’t know what working memory is, you probably have too little to do a long sequence in Krita. Therefore, you need to take a page from professional animation and do some planning!</p>
+<p>Typically, most animation projects start with a script or at the very least an outline of actions that will happen. You can do this in any kind of text editor you like. The next step is to create a <a class="reference internal" href="../reference_manual/dockers/storyboard_docker.html#storyboard-docker"><span class="std std-ref">storyboard</span></a>. They are sketches of the basic composition of each scene, with some extra notes on what is going to move, like camera movement, character movement, notes on audio, notes on color. These seem closer to a comic than an animation, but the key difference between the two is that in comics the composition is made to help the reader move their eyes over the page, while in animation the viewer’s eyes will stay in relatively the same spot, so consecutive storyboard frames will have their most important elements in relatively the same place. If that seems a little abstract, don’t worry. You can make a story board by using the animation functions, but the key here is that you use as little frames as possible. Export the story board using the render animation option.</p>
+<p>Then, the next step is to make an <em class="dfn">Animatic</em>. An animatic is basically the storyboard, but then animated. You are best off doing this in a video editor like <a class="reference external" href="http://kdenlive.org/">KDENLive</a>, <a class="reference external" href="https://www.openshot.org/">Openshot</a>, <a class="reference external" href="https://olivevideoeditor.org/index.php">Olive</a>, or even Windows Movie Maker. If you want to put everything together into one big animation you will need to learn how to use such a program to begin with, as Krita doesn’t have extensive video and audio montage functions.</p>
+<p>Doing the animatic will allow you to see how the animation can be subdivided into small clips. If you are just starting out, you are best off limiting yourself to 12 frames per second. Then, a 10-second clip would be 120 frames. Try to figure out if you can subdivide your animation idea into clips of 10 seconds or shorter. You can import the story board frames associated with a specific clip by going to <span class="menuselection">File ‣ Import Animation Frames</span>. From there, slowly start building up your animation. During the sketching phase it may also help to work on a low resolution, like 800×450 pixels. High resolution only starts mattering when you are doing line art, after all. And it will be hard to get to that point if you don’t even have a rough outline.</p>
+<p>Always keep an eye on the memory consumption. You can see the memory consumption in the status bar, by clicking the resolution label. This label should also have a little progress bar that shows how much memory Krita is using at this moment. Don’t let the memory bar get full: it will lead to Krita slowing down, and sometimes it might even mean Krita won’t be able to export the animation on your specific machine. You can reduce memory consumption by:</p>
+<ol class="arabic simple">
+<li><p>Merging together layers. Yes, you cannot afford to have a layer for every single change. Often, the fewer layers, the better.</p></li>
+<li><p>In some cases by going to <span class="menuselection">Image ‣ Crop Layers to Image Size</span>, this will crop all layers to remove sections that are outside the canvas.</p></li>
+<li><p>Sometimes, certain layers don’t need to be full color, especially if they’re just black and white. You can then go to <span class="menuselection">Layers ‣ Convert ‣ Convert Layer Color Space</span> and convert the layer to a grayscale one. This will half the amount of RAM this specific layer will take up.</p></li>
+<li><p>Working smaller. Even if you imagined yourself animating in the 4K resolution, you might need to accept your computer just cannot handle this. Try going a step lower, on animations, even a 20% reduction can make a huge difference in memory consumption, while not being a huge difference in resolution.</p></li>
+</ol>
+<p>Also watch out that other programs on your computer aren’t hogging all the RAM. Web browsers and chat programs tend to be the biggest culprits here, especially if you are streaming music or videos. If you are hurting for memory, see if you can get these functions to work on a separate device like a phone instead.</p>
+<p>Another thing you will want to do is make a ton of backups. Every time you hit an important section with an animation, like you finished the line art, or you did a pretty tricky section, you will want to use <span class="menuselection">File ‣ Incremental Backup</span> to make a separate copy of the current file to continue working in. This way, if the animation file gets corrupt, which could happen due to a power outage, or a cat jumping on the keyboard, you will still have a snapshot of the last important section. Other backup techniques, like copying the files to a cloud service, or to a backup hard drive are also very recommended.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>And while we’re at it, whenever you’ve hit a milestone, don’t forget to take a break as well! Doing big projects like animations take a lot of effort and concentration, so taking breaks is important to recharge yourself.</p>
+</div>
+<p>When you are done, you will want to use <span class="guilabel">Render Animation</span> again. Now either export a frame sequence or a small video file, and then compose all of the frame sequences and video files together in the video editor. Then you can render it to <code class="docutils literal notranslate"><span class="pre">WebM</span></code>, and upload it to your favorite video hosting website.</p>
+<p>This may all seem a little complicated, but if your computer doesn’t have a lot of resources, you have got to be resourceful yourself!</p>
+</section>
+<section id="introduction-to-animation-how-to-make-a-walk-cycle">
+<h2>Introduction to animation: How to make a walk cycle<a class="headerlink" href="#introduction-to-animation-how-to-make-a-walk-cycle" title="Permalink to this headline">¶</a></h2>
+<p>The best way to get to understand all these different parts is to
+actually use them. Walk cycles are considered the most basic form of a full animation, because of all the different parts involved with them. Therefore, going over how one makes a walk cycle should serve as a good introduction.</p>
+<section id="setup">
+<h3>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h3>
+<p>First, we make a new file. On the first tab, we type in a nice ratio like 1280×1024, set the dpi to 72 (we’re making this for screens after all) and title the document ‘walk cycle’.</p>
+<p>In the second tab, we choose a nice background color, and set the background to canvas-color. This means that Krita will automatically fill in any transparent bits with the background color. You can change this in <span class="menuselection">Image ‣ Image Properties</span>. This is very useful for animation, as the layer you do animation on <strong>must</strong> be semi-transparent to get <em class="dfn">onion skinning</em> working.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Krita has a bunch of functionality for meta-data, starting at the <span class="guilabel">Create Document</span> screen. The title will be automatically used as a suggestion for saving and the description can be used by databases, or for you to leave comments behind. Not many people use it individually, but it can be useful for working in larger groups.</p>
+</div>
+<p>Then hit <span class="guilabel">Create</span>!</p>
+<p>Then, to get all the necessary tools for animation, select the animation workspace in <span class="menuselection"><span class="accelerator">W</span>indow ‣ Wor<span class="accelerator">k</span>space ‣ Animation</span></p>
+<p>Which should result in this:</p>
+<figure class="align-default" id="id1">
+<img alt="../_images/Introduction_to_animation_01.png" src="../_images/Introduction_to_animation_01.png" />
+<figcaption>
+<p><span class="caption-text">The animation workspace adds the <a class="reference internal" href="../reference_manual/dockers/animation_timeline.html#timeline-docker"><span class="std std-ref">Animation Timeline Docker</span></a> at the bottom.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="animating">
+<h3>Animating<a class="headerlink" href="#animating" title="Permalink to this headline">¶</a></h3>
+<p>Make sure there’s two transparent layers setup in the layer docker. You can add a new layer by pressing the <span class="guilabel">+</span> or by pressing <kbd class="kbd docutils literal notranslate">ins</kbd>. Let’s name the bottom one ‘environment’ and the top ‘walkcycle’ by double-clicking their names in the layer docker.</p>
+<figure class="align-default">
+<img alt="Layout of the layer stack." src="../_images/Introduction_to_animation_02.png" />
+</figure>
+<p>Use the <a class="reference internal" href="../reference_manual/tools/line.html#line-tool"><span class="std std-ref">Straight Line Tool</span></a> to draw a single horizontal line. This is
+the ground.</p>
+<img alt="Our simple environment, consisting of a single horizon." src="../_images/Introduction_to_animation_03.png" />
+<p>Then, select the ‘walkcycle’ layer and draw a head and torso (you can use any brush for this).</p>
+<img alt="A head and torso." src="../_images/Introduction_to_animation_04.png" />
+<p>Now, selecting a new frame will not make a new frame automatically.
+Krita doesn’t actually see the ‘walkcycle’ layer as an animated layer at
+all!</p>
+<p>We can make it an animated layer by adding a frame to the timeline. A frame in the timeline to get a context menu. Select <span class="guilabel">Create Duplicate Frame</span> (<img alt="duplicateframe" src="../_images/addduplicateframe.svg" />).</p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>If you select <span class="guilabel">Create Blank Frame</span>, the content of the layer will be dropped and a new blank frame will appear; since you want to preserve the image, you need to use <span class="guilabel">Create Duplicate Frame</span>.</p>
+</div>
+<img alt="Location of the onion skin icon." src="../_images/Introduction_to_animation_05.png" />
+<p>You can see it has become an animated layer because of the onion skin icon (<img alt="onionon" src="../_images/onionOn.svg" />) showing up in the timeline docker.</p>
+<p>Use the <span class="guilabel">Create Duplicate Frame</span> button to copy the first frame onto the second. Then, use the <a class="reference internal" href="../reference_manual/tools/move.html#move-tool"><span class="std std-ref">Move Tool</span></a> (switch to it using the <kbd class="kbd docutils literal notranslate">T</kbd> shortcut) with the <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">↑</kbd></kbd> shortcut to move the frame contents up.</p>
+<p>We can see the difference by turning on the onion skinning (press the <img alt="onionoff" src="../_images/onionOff.svg" />, so it becomes <img alt="onionon" src="../_images/onionOn.svg" />):</p>
+<figure class="align-default">
+<img alt="Onion skin is turned on." src="../_images/Introduction_to_animation_06.png" />
+</figure>
+<figure class="align-default">
+<img alt="The current frame in black and the silhouette of the previous frame in red." src="../_images/Introduction_to_animation_07.png" />
+</figure>
+<p>Now, you should see the previous frame as red.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Krita sees white as a color, not as transparent, so make sure the animation layer you are working on is transparent in the bits where there’s no drawing. You can fix the situation by use the <a class="reference internal" href="../reference_manual/filters/colors.html#filter-color-to-alpha"><span class="std std-ref">Color to Alpha</span></a> filter, but prevention is best.</p>
+</div>
+<figure class="align-default">
+<img alt="Current frame is black and silhouette of the future frame is green." src="../_images/Introduction_to_animation_08.png" />
+</figure>
+<p>Future frames are drawn in green, and both colors can be configured in the onion skin docker.</p>
+<p>Now, we’re going to draw the two extremes of the walk cycle. These are the pose where both legs are as far apart as possible, and the pose where one leg is full stretched and the other pulled in, ready to take the next step.</p>
+<figure class="align-default" id="id2">
+<img alt="../_images/Introduction_to_animation_09.png" src="../_images/Introduction_to_animation_09.png" />
+<figcaption>
+<p><span class="caption-text">The above image shows our two extremes: legs far apart, and one leg straight while the other is bent, as it’s taking a step. This also shows the power of onion skins, as we can see both extremes at once.
+Notice also how the legs have been made semi-transparent. This isn’t necessary with a stick figure, but useful in this case when we start copying.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>Now, let’s copy these two. You can do this by doing <img alt="mouseright" src="../_images/Krita_mouse_right.png" /> on the frame, and then selecting <span class="guilabel">Copy Keyframes</span>. Then select the new position in the time line, <img alt="mouseright" src="../_images/Krita_mouse_right.png" /> again, and <span class="guilabel">Paste Keyframes</span>.</p>
+<p>Now then…</p>
+<ol class="arabic">
+<li><p>Copy frame 0 to frame 2.</p></li>
+<li><p>Copy frame 1 to frame 3.</p></li>
+<li><p>Erase the semi transparent lines to make it obvious which leg is in front of the other. In 0 and 1, we have the closer leg to the right, then bend, and in 2 and 3, we have the further leg to the right and then bend.</p>
+<figure class="align-default">
+<img alt="../_images/Introduction_to_animation_10.png" src="../_images/Introduction_to_animation_10.png" />
+</figure>
+</li>
+<li><p>In the animation settings, set the frame-rate to 4</p>
+<figure class="align-default">
+<img alt="../_images/Introduction_to_animation_11.png" src="../_images/Introduction_to_animation_11.png" />
+</figure>
+</li>
+<li><p>Select all frames in the timeline docker by dragging-selecting them.</p>
+<figure class="align-default">
+<img alt="../_images/Introduction_to_animation_12.png" src="../_images/Introduction_to_animation_12.png" />
+</figure>
+</li>
+<li><p>Press play in the header.</p></li>
+<li><p>Enjoy your first animation!</p></li>
+</ol>
+<img alt="../_images/animation_walkcycle_2021_4_frames.gif" src="../_images/animation_walkcycle_2021_4_frames.gif" />
+</section>
+<section id="expanding-upon-your-rough-walk-cycle">
+<h3>Expanding upon your rough walk cycle<a class="headerlink" href="#expanding-upon-your-rough-walk-cycle" title="Permalink to this headline">¶</a></h3>
+<img alt="../_images/Introduction_to_animation_14.png" src="../_images/Introduction_to_animation_14.png" />
+<p>You can quickly make some space by the <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Alt</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">drag</kbd></kbd> shortcut on any frame. This’ll move that frame and all others after it
+in one go. More efficient for us, however, is to select all frames, <img alt="mouseright" src="../_images/Krita_mouse_right.png" /> them, and then select <span class="menuselection">Holdframes ‣ Insert Hold Frame</span>, which will insert an empty space or <em class="dfn">Hold Frame</em> in between each <em class="dfn">Keyframe</em>.</p>
+<p>Make new frames in between each keyframe, and try to interpolate, or inbetween each frame you add.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A lot has been written about how to inbetween properly, and it’s one of the areas where animators express their own style the clearest. As such, we won’t cover inbetweening itself here. We recommend you do a search for inbetweening tutorials on the internet. We also recommend animation analyses to get an idea of how intricate this subject is.</p>
+<p>For this particular example, I prefer to start by finding the position of the heel in a frame, then draw the rest of the foot, then the knees, and then the rest of the legs.</p>
+</div>
+<img alt="../_images/Introduction_to_animation_14.png" src="../_images/Introduction_to_animation_14.png" />
+<img alt="../_images/Introduction_to_animation_13.png" src="../_images/Introduction_to_animation_13.png" />
+<p>You’ll find that the more frames you add, the more difficult it becomes to keep track of the animation. There are two things you can do here. The first is to color label frames, you can do <img alt="mouseright" src="../_images/Krita_mouse_right.png" /> on the keyframes, and select any of the colors on the bottom.</p>
+<figure class="align-default" id="id3">
+<img alt="../_images/Introduction_to_animation_13b.png" src="../_images/Introduction_to_animation_13b.png" />
+<figcaption>
+<p><span class="caption-text">In this example, the extremes are blue, the first inbetweens green and the less important inbetweens in yellow and orange.</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>Another thing you can do is to adjust the onion skins.</p>
+<p>You can modify the onion skin by using the <a class="reference internal" href="../reference_manual/dockers/onion_skin.html#onion-skin-docker"><span class="std std-ref">Onion Skin Docker</span></a>, where you can change how many frames are visible at once, by toggling them on the top row. The bottom row is for controlling transparency, while below there you can modify the colors and intensity of the coloring.</p>
+<img alt="../_images/Introduction_to_animation_15.png" src="../_images/Introduction_to_animation_15.png" />
+<figure class="align-default" id="id4">
+<img alt="../_images/Introduction_to_animation_14b.png" src="../_images/Introduction_to_animation_14b.png" />
+<figcaption>
+<p><span class="caption-text">Here we’ve turned off all onion skinned frames except the next and previous ones.</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="animating-with-multiple-layers">
+<h3>Animating with multiple layers<a class="headerlink" href="#animating-with-multiple-layers" title="Permalink to this headline">¶</a></h3>
+<p>Okay, our walk cycle is missing some hands, let’s add them on a separate
+layer. So we make a new layer, and name it hands and…</p>
+<img alt="../_images/Introduction_to_animation_16.png" src="../_images/Introduction_to_animation_16.png" />
+<p>Our walk cycle is gone from the timeline docker! This is a feature
+actually. A full animation can have so many little parts that an
+animator might want to remove the layers they’re not working on from the timeline docker.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 4.3.0: </span>In <strong class="program">Krita 4.3.0</strong> and later, all new layers are pinned to the timeline by default.</p>
+</div>
+<p>To show a layer whether it’s active or not, you can “pin” it to the
+timeline by clicking the <img alt="pintimeline" src="../_images/reference_images_tool.svg" /> icon while having the layer you want pinned selected in the <a class="reference internal" href="../reference_manual/dockers/layers.html#layer-docker"><span class="std std-ref">layer docker</span></a>. We recommend pinning any layers that you’re currently animating on.</p>
+<img alt="../_images/Introduction_to_animation_17.png" src="../_images/Introduction_to_animation_17.png" />
+<img alt="../_images/Introduction_to_animation_18.png" src="../_images/Introduction_to_animation_18.png" />
+</section>
+<section id="exporting">
+<h3>Exporting<a class="headerlink" href="#exporting" title="Permalink to this headline">¶</a></h3>
+<p>When you are done, select <span class="menuselection">File ‣ Render Animation</span>. To render to a video file, you’ll need a program called <strong class="program">FFmpeg</strong>. To learn more, please read <a class="reference internal" href="../reference_manual/render_animation.html#render-animation"><span class="std std-ref">Render Animation</span></a>.</p>
+<p>Enjoy your walk cycle!</p>
+<img alt="../_images/Introduction_to_animation_walkcycle_02.gif" src="../_images/Introduction_to_animation_walkcycle_02.gif" />
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../reference_manual/dockers/animation_timeline.html#timeline-docker"><span class="std std-ref">Animation Timeline Docker</span></a></p></li>
+<li><p><a class="reference internal" href="../reference_manual/dockers/onion_skin.html#onion-skin-docker"><span class="std std-ref">Onion Skin Docker</span></a></p></li>
+<li><p><a class="reference internal" href="../reference_manual/dockers/animation_curves.html#animation-curves-docker"><span class="std std-ref">Animation Curves Docker</span></a></p></li>
+<li><p><a class="reference internal" href="../reference_manual/dockers/storyboard_docker.html#storyboard-docker"><span class="std std-ref">Storyboard Docker</span></a></p></li>
+<li><p><a class="reference internal" href="../reference_manual/import_animation.html#import-animation"><span class="std std-ref">Import Animation</span></a></p></li>
+<li><p><a class="reference internal" href="../reference_manual/audio_for_animation.html#audio-animation"><span class="std std-ref">Audio for Animation</span></a></p></li>
+<li><p><a class="reference internal" href="../reference_manual/render_animation.html#render-animation"><span class="std std-ref">Render Animation</span></a></p></li>
+<li><p><a class="reference internal" href="japanese_animation_template.html#japanese-animation-template"><span class="std std-ref">Japanese Animation Template</span></a></p></li>
+</ul>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="japanese_animation_template.html" class="btn btn-neutral float-right" title="Japanese Animation Template" accesskey="n" rel="next"> <!-- Next --> <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="snapping.html" class="btn btn-neutral" title="Snapping" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- Previous  -->  </a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright licensed under the GNU Free Documentation License 1.3+ unless stated otherwise.
+      
+        <span class="commit">
+          Revision <code>7c271ce</code>.
+        </span>
+      
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a modified <a href="https://github.com/rtfd/sphinx_rtd_theme">RTD theme</a>.<br/>
+  <a href="https://krita.org" title="Krita official website.">Krita official website</a> |
+  <a href="https://invent.kde.org/documentation/docs-krita-org/" title="The Gitlab instance to edit this pages and collaborate.">Git repository for docs.krita.org </a> |
+  <a href="https://www.kde.org/community/whatiskde/impressum-en.php" title="To know more about KDE, code of conduct, privacy policy and GDPR.">KDE Impressum</a>.
+   
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'5.0.0 Beta',
+            LANGUAGE:'en',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/documentation_options.js"></script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
+      });
+  </script> 
+
+ <script type="text/javascript">
+	 var _paq=_paq||[];
+	 _paq.push(['setCookieDomain','*.krita.org']);
+	 _paq.push(['setDomains','*.krita.org']);
+	 _paq.push(['setDocumentTitle',document.domain+"/"+document.title]);
+	 _paq.push(['trackPageView']);
+	 _paq.push(['enableLinkTracking']);
+
+	 (function(){
+	 	var u="//stats.kde.org/";
+	    _paq.push(['setTrackerUrl',u+'piwik.php']);
+	    _paq.push(['setSiteId',13]);
+	    var d = document, g = d.createElement('script'),s=d.getElementsByTagName('script')[0];
+	    g.type = 'text/javascript';
+	    g.async = true;
+	    g.defer = true;
+	    g.src = u+'piwik.js';
+	    s.parentNode.insertBefore(g,s);
+	  })();
+</script> 
+<noscript><p><img src="//stats.kde.org/piwik.php?idsite=13" style="border:0;" alt="" /></p></noscript>
+
+</body>
+</html>

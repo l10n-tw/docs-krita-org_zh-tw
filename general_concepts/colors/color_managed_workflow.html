@@ -1,0 +1,616 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" name="title" content="Color Managed Workflow" />
+  <meta property="og:site-name" content="Krita Manual" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="en" />
+  <meta property="og:locale:alternate" content="ca" />
+  
+  <meta property="og:locale:alternate" content="fr" />
+  <meta property="og:locale:alternate" content="it" />
+  <meta property="og:locale:alternate" content="ja" />
+  <meta property="og:locale:alternate" content="ko" />
+  <meta property="og:locale:alternate" content="nl" />
+  <meta property="og:locale:alternate" content="pl" />
+  <meta property="og:locale:alternate" content="pt_PT" />
+  <meta property="og:locale:alternate" content="uk_UA" />
+  <meta property="og:locale:alternate" content="zh_CN" />
+  <meta property="og:article:modified_time" content="2021-07-19T15:33:59" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<meta content="How a color managed workflow works." name="description" />
+
+  
+  
+  <title>Color Managed Workflow &mdash; Krita Manual 5.0.0 Beta documentation</title>
+  
+
+  
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    
+  
+  
+  
+    <link rel="canonical" href="en/general_concepts/colors/color_managed_workflow.html"/>
+    <meta property="og:url" content="en/general_concepts/colors/color_managed_workflow.html" />
+    <meta property="og:image" content="en/_static/sidebar-logo.png" />
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Mixing Colors" href="color_mixing.html" />
+    <link rel="prev" title="Bit Depth" href="bit_depth.html" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+       
+           <a href="../../index.html" class="icon icon-home">
+
+			<img src="../../_static/sidebar-logo.png" class="logo" alt="Logo"/>
+           	
+           <!--	Krita Manual -->
+
+
+          </a>
+
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-side-nav-language-selector">
+        	<p class="caption-text">
+	        	<select id="language-selector-container">
+	        		<option value="ca">Català</option>
+	        		<option value="en">English</option>
+	        		<option value="fr">français</option>
+	        		<option value="it">Italiano</option>
+	        		<option value="ja">日本語</option>
+	        		<option value="ko">한국어</option>
+	        		<option value="nl">Nederlands</option>
+	        		<option value="pl">Polski</option>
+	        		<option value="pt_PT">português</option>
+	        		<option value="uk_UA">Українська</option>
+	        		<option value="zh_CN">简体中文</option>
+	        	</select>
+        	</p>
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../user_manual.html">User Manual</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../general_concepts.html">General Concepts</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../colors.html">Colors</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="bit_depth.html">Bit Depth</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Color Managed Workflow</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#basic-info">Basic Info</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#what-is-the-problem">What is the problem?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#what-is-color-management">What is color management?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">Color managed workflow</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#so-what-does-this-mean">So what does this mean?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#icc-profiles">ICC profiles</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#lut-docker-and-hdr-imaging">LUT docker and HDR imaging</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#in-summary">In summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#exporting">Exporting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#interaction-with-other-applications">Interaction with other applications</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#example-workflows">Example workflows</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="color_mixing.html">Mixing Colors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="color_models.html">Color Models</a></li>
+<li class="toctree-l3"><a class="reference internal" href="color_space_size.html">Color Space Size</a></li>
+<li class="toctree-l3"><a class="reference internal" href="linear_and_gamma.html">Gamma and Linear</a></li>
+<li class="toctree-l3"><a class="reference internal" href="profiling_and_callibration.html">Profiling and Calibration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="scene_linear_painting.html">Scene Linear Painting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="viewing_conditions.html">Viewing Conditions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../file_formats.html">File Formats</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projection.html">Perspective Projection</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference_manual.html">Reference Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials.html">Tutorials and How-tos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../KritaFAQ.html">Krita FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributors_manual.html">Contributors Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../resources_page.html">Resources</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+	<!-- start top banner area (for fundraisers or messages)
+
+	<div style="text-align: center; background-color: #333">
+		<a href="https://krita.org/en/fundraising-2018-campaign/" target="_self" onclick="ga('send', 'event', 'frontpage', 'button', 'Fundraiser 2018');">
+			<img src="https://krita.org/wp-content/themes/krita-org-theme/images/decoration/2018-fundraiser-banner.png" style="max-width: 100%">
+		</a>
+	</div>
+	
+	 end top banner area -->
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Krita Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../general_concepts.html">General Concepts</a> &raquo;</li>
+        
+          <li><a href="../colors.html">Colors</a> &raquo;</li>
+        
+      <li>Color Managed Workflow</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+          
+            <a href="../../_sources/general_concepts/colors/color_managed_workflow.rst.txt" rel="nofollow"> 
+             
+              <img src="../../_static/images/source-code.png" />
+             <!-- View page source -->
+
+          </a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="color-managed-workflow">
+<span id="index-0"></span><span id="id1"></span><h1>Color Managed Workflow<a class="headerlink" href="#color-managed-workflow" title="Permalink to this headline">¶</a></h1>
+<p>You may have heard that Krita has something called color-management. Or maybe you just wondered what all these ‘color model’ and ‘color profile’ things you can find in the menus mean. Color management is pretty useful for people who work in digital imaging professionally, and hopefully this page will explain why.</p>
+<section id="basic-info">
+<h2>Basic Info<a class="headerlink" href="#basic-info" title="Permalink to this headline">¶</a></h2>
+<p>If you’ve never worked with color management before, and have no clue what it is, then know that you’ve probably been working in the 8bit RGB color space with the sRGB profile. This means you can choose for <em>sRGB built-in</em> or <em>sRGB-elle-v2-srgbtrc.icc</em>. With the new color space browser this profile is marked with <em>(default)</em> when using 8bit.</p>
+<p>We’ll go into what these terms mean in the theory, but if you’re here only for trying to figure out which is the default, you now know it. Maybe, after reading this, you may feel like changing the default, to get new and interesting results from filters, blending modes, or just the color smudge brush.</p>
+</section>
+<section id="what-is-the-problem">
+<h2>What is the problem?<a class="headerlink" href="#what-is-the-problem" title="Permalink to this headline">¶</a></h2>
+<p>To explain the point of color management, you’d first need to learn which problem color management tries to solve.</p>
+<p>Let us imagine a kinder garden:</p>
+<p>The class of 28 children is subdivided in groups of 7. Each group has its own table.</p>
+<p>The teacher gives them a painting assignment: They need to paint a red triangle, a blue square, a green circle and put a yellow border around the three.
+The kids are very experienced with painting already, so the teacher can confidently leave the smarter ones to their own devices, and spent more time on those who need help.</p>
+<p>The following results come from painting:</p>
+<p>Even though all groups had the same assignment, each group’s result looks different.</p>
+<figure class="align-center" style="width: 500px">
+<img alt="../../_images/Krita_2_9_colormanagement_group1.png" src="../../_images/Krita_2_9_colormanagement_group1.png" />
+</figure>
+<p>Group 1 had vermillion red, citron yellow and ultramarine blue to their disposal. This means their triangle looks nice and red, but their circle’s green is muddy. This is because ultramarine is too dark of a blue to create nice greens with.</p>
+<figure class="align-center" style="width: 500px">
+<img alt="../../_images/Krita_2_9_colormanagement_group2.png" src="../../_images/Krita_2_9_colormanagement_group2.png" />
+</figure>
+<p>Group 2 had magenta red, citron yellow and cerulean blue. Magenta is a type of red that is closer to pink, opposed to vermillion, which is closer to orange. However, their green looks nice because cerulean is a much lighter blue.</p>
+<figure class="align-center" style="width: 500px">
+<img alt="../../_images/Krita_2_9_colormanagement_group3.png" src="../../_images/Krita_2_9_colormanagement_group3.png" />
+</figure>
+<p>Group 3 had vermillion red, citron yellow, emerald green and cerulean blue. They didn’t mix their green, and thus ended up with a purer color.</p>
+<figure class="align-center" style="width: 500px">
+<img alt="../../_images/Krita_2_9_colormanagement_group4.png" src="../../_images/Krita_2_9_colormanagement_group4.png" />
+</figure>
+<p>Finally, group 4 has vermillion red, citron yellow and cerulean blue. Their colors probably look like what you imagined.</p>
+<p>Now, these are kindergarteners, so this isn’t the largest problem in the world. However, imagine that something like this happened at a printing company? Imagine four printers printing the same magazine with wildly different results? That would be disastrous!</p>
+<p>For this purpose, we invented color management.</p>
+</section>
+<section id="what-is-color-management">
+<h2>What is color management?<a class="headerlink" href="#what-is-color-management" title="Permalink to this headline">¶</a></h2>
+<p>Color management is, dryly put, a set of systems that tries to have the same color translate properly between color devices.</p>
+<p>It usually works by attempting to convert a color to the reference color space XYZ. XYZ is a coordinate system that has a spot for all colors that the average human eye can see.</p>
+<p>From XYZ it can then be translated back into another device space, such as RGB (for screens), or CMYK (for printers).</p>
+<p>Krita has two systems dedicated to color management. On the one hand, we have <strong>lcms2</strong>, which deal with ICC profiles, and on the other, we have <strong>OCIO</strong>, which deal with LUT color management.</p>
+<p>To give a crude estimate, ICC profiles deal with keeping colors consistent over many interpretations of devices (screens, printers) by using a reference space, and OCIO deals with manipulating the interpretation of said colors.</p>
+<p>Within both we can identify the following color spaces:</p>
+<dl class="simple">
+<dt>Device spaces</dt><dd><p>Device spaces are those describing your monitor, and have to be made using a little device that is called “colorimeter”. This device, in combination with the right software, measures the strongest red, green and blue your screen can produce, as well as the white, black and gray it produces. Using these and several other measurements it creates an ICC profile unique to your screen. You set these in Krita’s color management tab.
+By default we assume sRGB for screens, but it’s very likely that your screen isn’t exactly fitting sRGB, especially if you have a high quality screen, where it may be a bigger space instead. Device spaces are also why you should first consult with your printer what profile they expect. Many printing houses have their own device profiles for their printers, or may prefer doing color conversion themselves.
+You can read more about colorimeter usage <a class="reference internal" href="profiling_and_callibration.html#profiling-and-calibration"><span class="std std-ref">here</span></a>.</p>
+</dd>
+<dt>Working spaces</dt><dd><p>These are delivered alongside Krita for ICC, and downloadable from the OCIO website for OCIO. Working spaces are particularly nice to do color calculations in, which programs like Krita do often. It’s therefore recommended to have a working space profile for your image.</p>
+</dd>
+<dt>Aesthetic or Look spaces</dt><dd><p>These are special spaces that have been deformed to give a certain look to an image. Krita doesn’t deliver Look profiles for ICC, nor does it yet support Look spaces for OCIO.</p>
+</dd>
+</dl>
+</section>
+<section id="id2">
+<h2>Color managed workflow<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>Knowing this about these spaces of course doesn’t give you an idea of how to use them, but it does make it easier to explain how to use them. So let us look at a typical color management workflow:</p>
+<figure class="align-center" id="id4" style="width: 800px">
+<img alt="../../_images/Krita-colormanaged-workflow_text.svg" src="../../_images/Krita-colormanaged-workflow_text.svg" /><figcaption>
+<p><span class="caption-text">A typical example of a color managed workflow. We have input from scanners and cameras, which we convert to a working space that can be used between different editing software, and is converted to an output space for viewing on screen or printing.</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>In a traditional color managed workflow, we usually think in terms of real world colors being converted to computer colors and the other way around. So, for example photos from a camera or scanned in images. If you have a device space of such a device, we first assign said device space to the image, and then convert it to a working space.</p>
+<p>We then do all our editing in the working space, and use the working space to communicate between editing programs. In Krita’s case, due to it having two color management systems, we use ICC profiles between programs like Gimp 2.9+, Inkscape, digiKam and Scribus, and OCIO configuration between Blender and Natron.</p>
+<p>You also store your working files in the working space, just like how you have the layers unmerged in the working file, or have it at a very high resolution.</p>
+<p>Sometimes, we apply aesthetic or ‘look’ spaces to an image as part of the editing process. This is rather advanced, and probably not something to worry about in Krita’s case.</p>
+<p>Then, when we’re done editing, we try to convert to an output space, which is another device space. This can be CMYK for printers or a special screen RGB profile. When you are dealing with professional printing houses, it is best to ask them about this step. They have a lot of experience with doing the best conversion, and may prefer to do the conversion from your working space to the device space of their printers.</p>
+<p>Another form of output is the way your screen displays the color. Unlike regular output, this one is done all the time during editing: After all, you need to be able to see what you are doing, but your screen is still a device with a device space, so it does distort how the image looks. In this manner, you can see your screen as a set of binoculars you have to look through to see your image at all.</p>
+<p>Therefore, without a profiled monitor, you actually don’t know what the actual colors you are working with are like, because the computer doesn’t know the relevant properties of your screen. So if you profiled your monitor, give Krita the profile in the settings, and select the sRGB space to draw in, you are for the first time seeing the actual colors of the sRGB space.</p>
+</section>
+<section id="so-what-does-this-mean">
+<h2>So what does this mean?<a class="headerlink" href="#so-what-does-this-mean" title="Permalink to this headline">¶</a></h2>
+<figure class="align-right" id="id5" style="width: 300px">
+<img alt="../../_images/Krita-colormanaged-workflow_krita_text.svg" src="../../_images/Krita-colormanaged-workflow_krita_text.svg" /><figcaption>
+<p><span class="caption-text">When we paint from scratch, we can see our screen profile as the input space, because we use it to determine what colors to pick. This somewhat simplifies the workflow, but makes the screen profile and viewing conditions more important.</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>Now, photographers and people who do a tricky discipline of VFX called ‘color grading’ will go completely mad over trying to get the colors they put in to come out 100% correctly, and will even count in factors like the time of day and the color they painted their walls. For example, if the wall behind your computer is pure red, your eyes will adjust to be less sensitive to red, which means that the colors they pick in the program could come out redder. We call these the <em>viewing conditions</em>.</p>
+<p>Thankfully, artists have to worry a slight bit less about this. As illustrations are fully handmade, we are able to identify the important bits and make appropriate contrasts between colors. This means that even if our images turn out to be slightly redder than intended, it is less likely the whole image is ruined. If we look back at the kindergarten example above, we still understand what the image was supposed to look like, despite there being different colors on each image. Furthermore, because the colors in illustrations are deliberately picked, we can correct them more easily on a later date. Yet, at the same time, it is of course a big drag to do this, and we might have had much more flexibility had we taken viewing conditions under consideration.</p>
+<p>That said, for artists it is also very useful to understand the working spaces. Different working spaces give different results with filters and mixing, and only some working spaces can be used for advanced technology like HDR.</p>
+<p>Similarly, Krita, as a program intended to make images from scratch, doesn’t really worry about assigning workspaces after having made the image. But because you are using the screen as a binocular to look at your image, and to pick colors, you can see your screen’s device space as an input space to the image. Hence why profiling your monitor and giving the profile to Krita in the settings can help with preparing your work for print and future ventures in the long run.</p>
+<p>Overall, it is kinda useful to keep things like viewing conditions in the back of your mind. Many professional artists use a mid-gray color as their default canvas background because they find they create much more dynamic images due to having improved their viewing conditions. It is also why a lot of graphics programs, including Krita, come with a dark theme nowadays. (Though, of course this might also be because dark themes can be considered cool, who knows.)</p>
+</section>
+<section id="icc-profiles">
+<span id="id3"></span><h2>ICC profiles<a class="headerlink" href="#icc-profiles" title="Permalink to this headline">¶</a></h2>
+<p>An ICC profile is a set of coordinates describing the extremities of the device space within XYZ, and it is the color management data you use to communicate your working space to printers and applications that are designed for the print industry, such as Gimp, Scribus, Photoshop, Illustrator, Inkscape, digiKam, RawTheraphee, etc. You have two types of ICC profiles:</p>
+<dl>
+<dt>Matrix Shaper profiles</dt><dd><p>These are delivered alongside Krita. Matrix shaper profiles are made by setting parameters and interpolating between these to get the exact size of the color space. Due to this, Krita’s color space browser can give you a lot of information on these profiles. Such profiles are also preferable as working space.</p>
+<figure class="align-center" id="id6" style="width: 500px">
+<img alt="../../_images/Kiki_matrix_profile.png" src="../../_images/Kiki_matrix_profile.png" />
+<figcaption>
+<p><span class="caption-text">Matrix shaper profiles have a few parameters that describe the color space which are then interpolated between, this requires a lot of maths.</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+</dd>
+<dt>cLUT profiles</dt><dd><p>These are fairly rare, and primarily used to describe printer profiles, such as CMYK. cLUT, or Color Look-up Table profiles store far more data than Matrix shaper profiles, so they can hold data of little particularities caused by, for example, unexpected results from mixing pigments. This is a far more organic approach to describing a color space, hence why a lot of programs that don’t care for color management much don’t support these.</p>
+<figure class="align-center" id="id7" style="width: 500px">
+<img alt="../../_images/Kiki_cLUTprofiles.png" src="../../_images/Kiki_cLUTprofiles.png" />
+<figcaption>
+<p><span class="caption-text">cLUT profiles work by holding tables of each color in a color space and their respective coordinates in a reference space. For CMYK this is typically L*A*B* and for the rest XYZ. These tables are tricky to make, which means these profiles are a lot rarer.</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+</dd>
+</dl>
+<p>The interesting thing about ICC profiles is that your working space can be larger than your device space. This is generally not bad. However, when converting, you do end up with the question of how to translate the working space values.</p>
+<dl class="simple">
+<dt>Perceptual</dt><dd><p>This just squishes the values of the working space into the space it’s converted to. It’s a nice method to see all possible values in this, but not so good if you want accurate color reproduction. Use this if you want to see all colors in an image, or want to express all possible contrasts. Doesn’t work with Matrix Shaper profiles, defaults to relative colorimetric.</p>
+</dd>
+<dt>Absolute Colorimetric</dt><dd><p>The opposite to Perceptual, Absolute colorimetric will attempt to retain all the correct colors at whatever cost, which may result in awful looking colors. Recommended only for reproduction work. Doesn’t work with Matrix Shaper profiles in Krita due to ICC v4 workflow standards.</p>
+</dd>
+<dt>Relative Colorimetric</dt><dd><p>An in between solution between perceptual and absolute, relative will try to fit whatever colors it can match between color spaces. It does this by aligning the white and black points. It cuts off the rest to their respective borders. This is what all matrix shaper profiles default to during conversion, because the ICC v4 workflow specifies to only use Relative Colorimetric for matrix shaper profiles.</p>
+</dd>
+<dt>Saturation</dt><dd><p>Does anything to retain colorfulness, even hue will be sacrificed. Used in infographics. Doesn’t work with Matrix Shaper profiles, defaults to relative colorimetric.</p>
+</dd>
+</dl>
+<p><em>ICC profile version</em> is the last thing to keep in mind when dealing with ICC profiles. Krita delivers both Version 2 and Version 4 profiles, with the later giving better results in doing color maths, but the former being more widely supported (as seen below in ‘Interaction with other applications’). This is also why Krita defaults to V2, and we recommend using V2 when you aren’t certain if the other programs you are using support V4.</p>
+</section>
+<section id="lut-docker-and-hdr-imaging">
+<h2>LUT docker and HDR imaging<a class="headerlink" href="#lut-docker-and-hdr-imaging" title="Permalink to this headline">¶</a></h2>
+<figure class="align-center" style="width: 300px">
+<img alt="../../_images/LUT_Management_Docker.png" src="../../_images/LUT_Management_Docker.png" />
+</figure>
+<p>The <a class="reference internal" href="../../reference_manual/dockers/lut_management.html#lut-docker"><span class="std std-ref">LUT Management</span></a> is the second important bit of color management in Krita that is shared between Krita and programs like Blender, Natron and Nuke, and only uses Look Up Tables that are configured via a config file.</p>
+<p>You can set the workingspace of the image under input color space, and the display to sRGB or your own LUT if you have added it to the configuration. View in this case is for proofing transforms to a certain display device.</p>
+<p>Component, exposure, gamma, whitepoint and blackpoint are knobs which allows you to modify the display filter.</p>
+<figure class="align-center" style="width: 800px">
+<img alt="../../_images/Krita_HDR_1.svg" src="../../_images/Krita_HDR_1.svg" /></figure>
+<p>As explained before, we can see our monitor as a telescope or binocular into the world of our picture. Which means it distorts our view of the image a little. But we can modify this binocular, or display filter to see our image in a different way. For example, to allow us to see the white in an image that are whiter than the white of our screen. To explain what that means, we need to think about what white is.</p>
+<p>For example, white, on our monitor is full red, full green and full blue. But it’s certainly different from white on our paper, or the color of milk, white from the sun, or even the white of our cell-phone displays.</p>
+<p>Black similarly, is brighter on a LCD display than a LED one, and incomparable with the black of a carefully sealed room.</p>
+<p>This means that there’s potentially blacker blacks than screen black, and white whites than screen white. However, for simplicity’s sake we still assign the black-point and the white-point to certain values. From there, we can determine whether a white is whiter than the white point, or a black blacker than the black-point.</p>
+<p>The LUT docker allows us to control this display-filter and modify the distortion. This is useful when we start modifying images that are made with scene referred values, such as HDR photos, or images coming out of a render engine.</p>
+<figure class="align-center" style="width: 800px">
+<img alt="../../_images/Krita_HDR2.svg" src="../../_images/Krita_HDR2.svg" /></figure>
+<p>So, for example, we can choose to scale whiter-than-screen-white to our screen-white so we can see the contrasts there.</p>
+<p>The point of this is that you can take advantage of more lightness detail in an image. While you can’t see the difference between screen white and whiter-than-screen-white (because your screen can’t show the difference), graphics programs can certainly use it.</p>
+<p>A common example is matching the lighting between a 3d model and a real world scene. Others are advanced photo retouching, with much more contrast information available to the user. In painting itself, this allows you to create an image where you can be flippant with the contrast, and allow yourself to go as bright as you’d like.</p>
+<p>LUT docker manipulations are per view, so you can create a new view and set it to luminosity. This way you can see the image in both color as well as grayscale and keep a good eye on your values.</p>
+<p>Another example is to carefully watch the gradients in a certain section.</p>
+<p>Like ICC, the LUT Docker allows you to create a profile of sorts for your device. In this case it’s the ‘LUT’, which stands for ‘Look Up Table’, and which can be added to OCIO by modifying the configuration file. When OCIO is turned on, the configuration in <span class="menuselection">Settings ‣ Configure Krita… ‣ Color Management</span> is turned off, unless you are using the <span class="guilabel">Internal</span> color engine.</p>
+</section>
+<section id="in-summary">
+<h2>In summary<a class="headerlink" href="#in-summary" title="Permalink to this headline">¶</a></h2>
+<p>Krita has two modes of color management:</p>
+<ul class="simple">
+<li><p>ICC works in terms of spaces relative to the CIEXYZ space, and requires an ICC profile.</p></li>
+<li><p>OCIO works in terms of interpretation, and makes use of LUTs.</p></li>
+<li><p>both can be made with a colorimeter.</p></li>
+<li><p>If you want to have a properly color managed workflow, you have one made customary for the input device (your screen) and the output devices (your printer, or target screen). For web the output is always sRGB.</p></li>
+<li><p>Set up your screen profiles under <span class="menuselection">Settings ‣ Configure Krita… ‣ Color management</span>.</p></li>
+<li><p>Do NOT use screen profiles or other device profiles to draw in. Use a working space profile such as any of the ‘elle’ profiles for this, as the color maths will be much more predictable and pleasant. Krita will convert between your screen and working space on the fly, allowing you to pick the correct colors. This turns your screen into binoculars to view the image.</p></li>
+<li><p>Use the appropriate color management for the appropriate workflow. If you are working with Blender, you will be better off using OCIO, than ICC. If you are working with Scribus or Photoshop, use ICC.</p></li>
+</ul>
+<p>Krita does a lot of color maths, often concerning the blending of colors. This color maths works best in linear color space, and linear color space requires a bit depth of at the least 16bit to work correctly. The disadvantage is that linear space can be confusing to work in.</p>
+<p>If you like painting, have a decent amount of RAM, and are looking to start your baby-steps in taking advantage of Krita’s color management, try upgrading from having all your images in sRGB built-in to sRGB-v2-elle-g10.icc or rec2020-v2-elle-g10.icc at 16bit float. This’ll give you better color blending while opening up the possibility for you to start working in HDR!</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Some graphics cards, such as those of the NVidia-brand actually have the best performance under 16bit float, because NVidia cards convert to floating point internally. When it does not need to do that, it speeds up!</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>No amount of color management in the world can make the image on your screen and the image out of the printer have 100% the same color.</p>
+</div>
+</section>
+<section id="exporting">
+<h2>Exporting<a class="headerlink" href="#exporting" title="Permalink to this headline">¶</a></h2>
+<p>When you have finished your image and are ready to export it, you can modify the color space to optimize it:</p>
+<p>If you are preparing an image for the web:</p>
+<ul>
+<li><p>If you use 16bit color depth or higher, convert the image to 8bit color depth. This will make the image much smaller.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Krita doesn’t have built-in dithering currently, which means that 16 to 8bit conversions can come out a bit banded. But you can simulate it by adding a fill layer with a pattern, set this fill layer to overlay, and to 5% opacity. Then flatten the whole image and convert it to 8bit. The pattern will function as dithering giving a smoother look to gradients.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>If it’s a gray-scale image, convert it to gray-scale.</p></li>
+<li><p>If it’s a color image, keep it in the working space profile: Many web browsers these days support color profiles embedded into images. Firefox, for example, will try to convert your image to fit the color profile of the other monitor (if they have one). That way, the image will look almost exactly the same on your screen and on other profiled monitors.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In some versions of Firefox, the colors actually look strange: This is a bug in Firefox, which is because its <a class="reference external" href="https://ninedegreesbelow.com/galleries/viewing-photographs-on-the-web.html">color management system is incomplete</a>, save your PNG, JPG or TIFF without an embedded profile to work around this.</p>
+</div>
+<p>If you are preparing for print:</p>
+<ul class="simple">
+<li><p>You hopefully made the picture in a working space profile instead of the actual custom profile of your screen, if not, convert it to something like Adobe RGB, sRGB or Rec. 2020.</p></li>
+<li><p>Check with the printer what kind of image they expect. Maybe they expect sRGB color space, or perhaps they have their own profile.</p></li>
+</ul>
+</section>
+<section id="interaction-with-other-applications">
+<h2>Interaction with other applications<a class="headerlink" href="#interaction-with-other-applications" title="Permalink to this headline">¶</a></h2>
+<section id="blender">
+<h3>Blender<a class="headerlink" href="#blender" title="Permalink to this headline">¶</a></h3>
+<p>If you wish to use Krita’s OCIO functionality, and in particular in combination with Blender’s color management, you can try to have it use Blender’s OCIO config.</p>
+<p>Blender’s OCIO config is under <code class="docutils literal notranslate"><span class="pre">&lt;Blender-folder&gt;/version</span> <span class="pre">number/datafiles/colormanagement</span></code>.
+Set the LUT docker to use the OCIO engine, and select the config from the above path. This will give you Blender’s input and screen spaces, but not the looks, as those aren’t supported in Krita yet.</p>
+</section>
+<section id="windows-photo-viewer">
+<h3>Windows Photo Viewer<a class="headerlink" href="#windows-photo-viewer" title="Permalink to this headline">¶</a></h3>
+<p>You might encounter some issues when using different applications together. One important thing to note is that the standard Windows Photo Viewer application does not handle modern ICC profiles. Krita uses version 4 profiles; Photo Viewer can only handle version 2 profiles. If you export to JPEG with an embedded profile, Photo Viewer will display your image much too dark.</p>
+</section>
+</section>
+<section id="example-workflows">
+<h2>Example workflows<a class="headerlink" href="#example-workflows" title="Permalink to this headline">¶</a></h2>
+<p>Here are some example workflows to get a feeling of how your color management workflow may look like.</p>
+<p>As mentioned before, input for your screen is set via <span class="menuselection">Settings ‣ Configure Krita… ‣ Color management</span>, or via the LUT docker’s ‘screen space’. Working space is set via new file per document, or in the LUT docker via ‘input space’.</p>
+<section id="webcomic">
+<h3>Webcomic<a class="headerlink" href="#webcomic" title="Permalink to this headline">¶</a></h3>
+<a class="reference internal image-reference" href="../../_images/Krita-colormanaged-workflow_webcomic.svg"><img alt="../../_images/Krita-colormanaged-workflow_webcomic.svg" class="align-center" src="../../_images/Krita-colormanaged-workflow_webcomic.svg" width="800" /></a>
+<dl class="simple">
+<dt>Input</dt><dd><p>Your screen profile. (You pick colors via your screen)</p>
+</dd>
+<dt>Workingspace</dt><dd><p>sRGB (the default screen profile) or any larger profile if you can spare the bit depth and like working in them.</p>
+</dd>
+<dt>Output</dt><dd><p>sRGB, ICC version 2, sRGB TRC for the internet, and a specialized CMYK profile from the printing house for the printed images.</p>
+</dd>
+</dl>
+<p>Use the sRGB-elle-V2-srgbtrc.icc for going between Inkscape, Photoshop, Painttool Sai, Illustrator, Gimp, Manga Studio, Paintstorm Studio, MyPaint, Artrage, Scribus, etc. and Krita.</p>
+<p>If you are using a larger space via ICC, you will only be able to interchange it between Krita, Photoshop, Illustrator, Gimp 2.9, Manga Studio and Scribus. All others assume sRGB for your space, no matter what, because they don’t have color management.</p>
+<p>If you are going between Krita and Blender, Nuke or Natron, use OCIO and set the input space to ‘sRGB’, but make sure to select the sRGB profile for ICC when creating a new file.</p>
+<p>For the final for the web, convert the image to sRGB 8bit, ‘srgbtrc’, do not embed the ICC profile. Then, if using PNG, put it through something like ‘pngcrush’ or other PNG optimizers. sRGB in this case is chosen because you can assume the vast majority of your audience hasn’t profiled their screen, nor do they have screens that are advanced enough for the wide gamut stuff. So hence why we convert to the screen default for the internet, sRGB.</p>
+</section>
+<section id="print">
+<h3>Print<a class="headerlink" href="#print" title="Permalink to this headline">¶</a></h3>
+<a class="reference internal image-reference" href="../../_images/Krita-colormanaged-workflow_print.svg"><img alt="../../_images/Krita-colormanaged-workflow_print.svg" class="align-center" src="../../_images/Krita-colormanaged-workflow_print.svg" width="800" /></a>
+<dl class="simple">
+<dt>Input</dt><dd><p>Your screen profile. (You pick colors via your screen)</p>
+</dd>
+<dt>Workingspace</dt><dd><p>sRGB or Rec. 2020 if you can afford the bit-depth being 16bit.</p>
+</dd>
+<dt>Output</dt><dd><p>Specialized CMYK profile from the printing house for the printed images.</p>
+</dd>
+</dl>
+<p>The CMYK profiles are different per printer, and even per paper or ink-type so don’t be presumptuous and ask ahead for them, instead of doing something like trying to paint in any random CMYK profile. As mentioned in the viewing conditions section, you want to keep your options open.</p>
+<p>You can set the advanced color selector to transform to a given profile via <span class="menuselection">Settings ‣ Configure Krita… ‣ Color Selector Settings</span>. There, tick <span class="guilabel">Color Selector Uses Different Color Space than Image</span> and select the CMYK profile you are aiming for. This will limit your colors a little bit, but keep all the nice filter and blending options from RGB.</p>
+</section>
+<section id="games">
+<h3>Games<a class="headerlink" href="#games" title="Permalink to this headline">¶</a></h3>
+<a class="reference internal image-reference" href="../../_images/Krita-colormanaged-workflow_games.svg"><img alt="../../_images/Krita-colormanaged-workflow_games.svg" class="align-center" src="../../_images/Krita-colormanaged-workflow_games.svg" width="800" /></a>
+<dl class="simple">
+<dt>Input</dt><dd><p>Your screen profile. (You pick colors via your screen)</p>
+</dd>
+<dt>Workingspace</dt><dd><p>sRGB or grayscale linear for roughness and specular maps.</p>
+</dd>
+<dt>Output</dt><dd><p>This one is tricky, but in the end it’ll be sRGB for the regular player.</p>
+</dd>
+</dl>
+<p>So this one is tricky. You can use OCIO and ICC between programs, but recommended is to have your images to the engine in sRGB or grayscale. Many physically based renderers these days allow you to set whether an image should be read as a linear or ‘srgbtrc’ image, and this is even vital to have the images being considered properly in the physically based calculations of the game renderer.</p>
+<p>While game engines need to have optimized content, and it’s recommended to stay within 8bit, future screens may have higher bit depths, and when renderers will start supporting those, it may be beneficial to develop a workflow where the working-space files are rather unnecessarily big and you run some scripts to optimize them for your current render needs, making updating the game in the future for fancier screens less of a drag.</p>
+<p>Normal maps and heightmaps are officially supposed to be defined with a ‘non-color data’ working space, but you’ll find that most engines will not care much for this. Instead, tell the game engine not to do any conversion on the file when importing.</p>
+<p>Specular, glossiness, metalness and roughness maps are all based on linear calculations, and when you find that certain material has a metalness of 0.3, this is 30% gray in a linear space. Therefore, make sure to tell the game engine renderer that this is a linear space image (or at the very least, should NOT be converted).</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.youtube.com/watch?v=x0-qoXOCOow">Visualizing the XYZ color space</a>.</p></li>
+<li><p><a class="reference external" href="https://www.cambridgeincolour.com/tutorials/gamma-correction.htm">Basics of gamma correction</a>.</p></li>
+<li><p><a class="reference external" href="https://www.panda3d.org/blog/the-new-opengl-features-in-panda3d-1-9/">Panda3D example of how an image that has gamma encoded without the 3D renderer being notified of it having gamma-encoding can result in too dark images</a>.</p></li>
+<li><p><a class="reference external" href="https://ninedegreesbelow.com/photography/linear-gamma-blur-normal-blend.html">2D examples of the effect of gamma-encoding on color maths</a>.</p></li>
+<li><p><a class="reference external" href="https://www.argyllcms.com/doc/ColorManagement.html">Basic overview of color management from ArgyllCMS manual</a>.</p></li>
+</ul>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="color_mixing.html" class="btn btn-neutral float-right" title="Mixing Colors" accesskey="n" rel="next"> <!-- Next --> <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="bit_depth.html" class="btn btn-neutral" title="Bit Depth" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- Previous  -->  </a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright licensed under the GNU Free Documentation License 1.3+ unless stated otherwise.
+      
+        <span class="commit">
+          Revision <code>7c271ce</code>.
+        </span>
+      
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a modified <a href="https://github.com/rtfd/sphinx_rtd_theme">RTD theme</a>.<br/>
+  <a href="https://krita.org" title="Krita official website.">Krita official website</a> |
+  <a href="https://invent.kde.org/documentation/docs-krita-org/" title="The Gitlab instance to edit this pages and collaborate.">Git repository for docs.krita.org </a> |
+  <a href="https://www.kde.org/community/whatiskde/impressum-en.php" title="To know more about KDE, code of conduct, privacy policy and GDPR.">KDE Impressum</a>.
+   
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'5.0.0 Beta',
+            LANGUAGE:'en',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/documentation_options.js"></script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
+      });
+  </script> 
+
+ <script type="text/javascript">
+	 var _paq=_paq||[];
+	 _paq.push(['setCookieDomain','*.krita.org']);
+	 _paq.push(['setDomains','*.krita.org']);
+	 _paq.push(['setDocumentTitle',document.domain+"/"+document.title]);
+	 _paq.push(['trackPageView']);
+	 _paq.push(['enableLinkTracking']);
+
+	 (function(){
+	 	var u="//stats.kde.org/";
+	    _paq.push(['setTrackerUrl',u+'piwik.php']);
+	    _paq.push(['setSiteId',13]);
+	    var d = document, g = d.createElement('script'),s=d.getElementsByTagName('script')[0];
+	    g.type = 'text/javascript';
+	    g.async = true;
+	    g.defer = true;
+	    g.src = u+'piwik.js';
+	    s.parentNode.insertBefore(g,s);
+	  })();
+</script> 
+<noscript><p><img src="//stats.kde.org/piwik.php?idsite=13" style="border:0;" alt="" /></p></noscript>
+
+</body>
+</html>

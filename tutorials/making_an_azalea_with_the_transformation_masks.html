@@ -1,0 +1,403 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" name="title" content="Making An Azalea With The Transformation Masks" />
+  <meta property="og:site-name" content="Krita Manual" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="en" />
+  <meta property="og:locale:alternate" content="ca" />
+  
+  <meta property="og:locale:alternate" content="fr" />
+  <meta property="og:locale:alternate" content="it" />
+  <meta property="og:locale:alternate" content="ja" />
+  <meta property="og:locale:alternate" content="ko" />
+  <meta property="og:locale:alternate" content="nl" />
+  <meta property="og:locale:alternate" content="pl" />
+  <meta property="og:locale:alternate" content="pt_PT" />
+  <meta property="og:locale:alternate" content="uk_UA" />
+  <meta property="og:locale:alternate" content="zh_CN" />
+  <meta property="og:article:modified_time" content="2021-07-19T15:33:59" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<meta content="Tutorial for making azalea with the help of transform masks." lang="en" name="description" xml:lang="en" />
+
+  
+  
+  <title>Making An Azalea With The Transformation Masks &mdash; Krita Manual 5.0.0 Beta documentation</title>
+  
+
+  
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    
+  
+  
+  
+    <link rel="canonical" href="en/tutorials/making_an_azalea_with_the_transformation_masks.html"/>
+    <meta property="og:url" content="en/tutorials/making_an_azalea_with_the_transformation_masks.html" />
+    <meta property="og:image" content="en/_static/sidebar-logo.png" />
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Saving For The Web" href="saving-for-the-web.html" />
+    <link rel="prev" title="Brush-tips:Sculpt-paint-brush" href="krita-brush-tips/sculpt-paint-brush.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+       
+           <a href="../index.html" class="icon icon-home">
+
+			<img src="../_static/sidebar-logo.png" class="logo" alt="Logo"/>
+           	
+           <!--	Krita Manual -->
+
+
+          </a>
+
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-side-nav-language-selector">
+        	<p class="caption-text">
+	        	<select id="language-selector-container">
+	        		<option value="ca">Català</option>
+	        		<option value="en">English</option>
+	        		<option value="fr">français</option>
+	        		<option value="it">Italiano</option>
+	        		<option value="ja">日本語</option>
+	        		<option value="ko">한국어</option>
+	        		<option value="nl">Nederlands</option>
+	        		<option value="pl">Polski</option>
+	        		<option value="pt_PT">português</option>
+	        		<option value="uk_UA">Українська</option>
+	        		<option value="zh_CN">简体中文</option>
+	        	</select>
+        	</p>
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../user_manual.html">User Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general_concepts.html">General Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference_manual.html">Reference Manual</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../tutorials.html">Tutorials and How-tos</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="clipping_masks_and_alpha_inheritance.html">Clipping Masks and Alpha Inheritance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="common_workflows.html">Common Workflows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eye_tracker.html">An Example Setup for Using Krita with an Eye Tracker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="flat-coloring.html">Flat Coloring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inking.html">Inking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="krita-brush-tips.html">Krita Brush Tips</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Making An Azalea With The Transformation Masks</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#lets-get-to-drawing">Let’s get to drawing!</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#clone-layers">Clone Layers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#enter-transform-masks">Enter Transform Masks!</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="saving-for-the-web.html">Saving For The Web</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seexpr.html">Introduction to SeExpr</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../KritaFAQ.html">Krita FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributors_manual.html">Contributors Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../resources_page.html">Resources</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+	<!-- start top banner area (for fundraisers or messages)
+
+	<div style="text-align: center; background-color: #333">
+		<a href="https://krita.org/en/fundraising-2018-campaign/" target="_self" onclick="ga('send', 'event', 'frontpage', 'button', 'Fundraiser 2018');">
+			<img src="https://krita.org/wp-content/themes/krita-org-theme/images/decoration/2018-fundraiser-banner.png" style="max-width: 100%">
+		</a>
+	</div>
+	
+	 end top banner area -->
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Krita Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../tutorials.html">Tutorials and How-tos</a> &raquo;</li>
+        
+      <li>Making An Azalea With The Transformation Masks</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+          
+            <a href="../_sources/tutorials/making_an_azalea_with_the_transformation_masks.rst.txt" rel="nofollow"> 
+             
+              <img src="../_static/images/source-code.png" />
+             <!-- View page source -->
+
+          </a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="making-an-azalea-with-the-transformation-masks">
+<span id="id1"></span><h1>Making An Azalea With The Transformation Masks<a class="headerlink" href="#making-an-azalea-with-the-transformation-masks" title="Permalink to this headline">¶</a></h1>
+<img alt="Making azalea with transform masks." src="../_images/Krita-screencast-azaleas.png" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This page was ported from the original post on the main page to KDE UserBase wiki.</p>
+</div>
+<p>Okay, so I’ve wanted to do a tutorial for transform masks for a while now, and this is sorta ending up to be a flower-drawing tutorial. Do note that this tutorial requires you to use <strong>Krita 2.9.4 at MINIMUM</strong>. It has a certain speed-up that allows you to work with transform masks reliably!</p>
+<p>I like drawing flowers because they are a bit of an unappreciated subject, yet allow for a lot of practice in terms of rendering. Also, you can explore cool tricks in Krita with them.</p>
+<p>Today’s flower is the Azalea flower. These flowers are usually pink to red and appear in clusters, the clusters allow me to exercise with transform masks!</p>
+<p>I got an image from Wikipedia for reference, mostly because it’s public domain, and as an artist I find it important to respect other artists. You can copy it and, if you already have a canvas, <span class="menuselection">Edit ‣ Paste into New Image</span> or <span class="menuselection">New ‣ Create from Clipboard</span>.</p>
+<p>Then, if you didn’t have a new canvas make one. I made an A5 300dpi canvas. This is not very big, but we’re only practicing. I also have the background color set to a yellow-grayish color (#CAC5B3), partly because it reminds me of paper, and partly because bright screen white can strain the eyes and make it difficult to focus on values and colors while painting. Also, due to the lack of strain on the eyes, you’ll find yourself soothed a bit. Other artists use #c0c0c0, or even more different values.</p>
+<p>So, if you go to <span class="menuselection">Window ‣ Tile</span>, you will find that now your reference image and your working canvas are side by side. The reason I am using this instead of the docker is because I am lazy and don’t feel like saving the wikipedia image. We’re not going to touch the image much.</p>
+<section id="lets-get-to-drawing">
+<h2>Let’s get to drawing!<a class="headerlink" href="#lets-get-to-drawing" title="Permalink to this headline">¶</a></h2>
+<img alt="Starting with the trunk and reference image." src="../_images/Azelea_01_trunk-.png" />
+<p>First we make a bunch of branches. I picked a slightly darker color here than usual, because I know that I’ll be painting over these branches with the lighter colors later on. Look at the reference how branches are formed.</p>
+<img alt="Making the outline of the flowers." src="../_images/Azelea_02_drawing-flowers.png" />
+<p>Then we make an approximation of a single flower on a layer. We make a few of these, all on separate layers. We also do not sample the red from the image with the color sampler tool, but we guess at it. This is good practice, so we can learn to analyze a color as well as how to use our color selector. If we’d only sample colors from the image, it would be difficult to understand the relationship between them, so it’s best to attempt matching them by eye.</p>
+<img alt="Coloring the details and filling the flowers." src="../_images/Azelea_03_filling-flowers.png" />
+<p>I chose to make the flower shape opaque quickly by using the <em>behind</em> blending mode. This’ll mean Krita is painting the new pixels behind the old ones. Very useful for quickly filling up shapes, just don’t forget to go back to <em>normal</em> once you’re done.</p>
+<img alt="Finished setup for making azalea." src="../_images/Azelea_04_finished-setup.png" />
+<p>Now, we’ll put the flowers in the upper left corner, and group them. You can group by making a group layer, and selecting the flower layers in your docker with the <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="mouseleft" src="../_images/Krita_mouse_left.png" /> shortcut and dragging them into the group. The reason why we’re putting them in the upper left corner is because we’ll be selecting them a lot, and Krita allows you to select layers with the <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">R</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="mouseleft" src="../_images/Krita_mouse_left.png" /> shortcut on the canvas quickly. Just hold the <kbd class="kbd docutils literal notranslate">R</kbd> key and <img alt="mouseleft" src="../_images/Krita_mouse_left.png" /> the pixels belonging to the layer you want, and Krita will select the layer in the Layer docker.</p>
+</section>
+<section id="clone-layers">
+<h2>Clone Layers<a class="headerlink" href="#clone-layers" title="Permalink to this headline">¶</a></h2>
+<p>Now, we will make clusters. What we’ll be doing is that we select a given flower and then make a new clone layer. A clone layer is a layer that is literally a clone of the original. They can’t be edited themselves, but edit the original and the clone layer will follow suit. Clone Layers, and File layers, are our greatest friends when it comes to transform masks, and you’ll see why in a moment.</p>
+<img alt="Create clone layers of the flowers." src="../_images/Azelea_05_clonelayer.png" />
+<p>You’ll quickly notice that our flowers are not good enough for a cluster: we need far more angles on the profile for example. If only there was a way to transform them… but we can’t do that with clone layers. Or can we?</p>
+</section>
+<section id="enter-transform-masks">
+<h2>Enter Transform Masks!<a class="headerlink" href="#enter-transform-masks" title="Permalink to this headline">¶</a></h2>
+<p>Transform Masks are a really powerful feature introduced in 2.9. They are in fact so powerful, that when you first use them, you can’t even begin to grasp where to use them.</p>
+<p>Transform masks allow us to do a transform operation onto a layer, any given layer, and have it be completely dynamic! This includes our clone layer flowers!</p>
+<p>How to use them:</p>
+<p><img alt="mouseright" src="../_images/Krita_mouse_right.png" /> the layer you want to do the transform on, and add a <strong>Transform mask</strong>.</p>
+<p>A transform mask should now have been added. You can recognize them by the little ‘scissor’ icon.</p>
+<img alt="Adding transform masks to the cloned layers." src="../_images/Azelea_06_transformmask.png" />
+<p>Now, with the transform mask selected, select the <img alt="tooltransform" src="../_images/transform_tool.svg" />, and rotate our clone layer. Apply the transform. You know you’re successful when you can hide the transform mask, and the layer goes back to its original state!</p>
+<p>You can even go and edit your transform! Just activate the <img alt="tooltransform" src="../_images/transform_tool.svg" /> again while on a transform mask, and you will see the original transform so you can edit it. If you go to a different transform operation however, you will reset the transform completely, so watch out.</p>
+<img alt="Adding more clusters." src="../_images/Azelea_07_clusters.png" />
+<p>We’ll be only using affine transformations in this tutorial (which are the regular and perspective transform), but this can also be done with warp, cage and liquify, which’ll have a bit of a delay (3 seconds to be precise). This is to prevent your computer from being over-occupied with these more complex transforms, so you can keep on painting.</p>
+<p>We continue on making our clusters till we have a nice arrangement.</p>
+<img alt="Making leaves." src="../_images/Azelea_08_leaves.png" />
+<p>Now do the same thing for the leaves.</p>
+<img alt="Painting originals." src="../_images/Azelea_09_paintingoriginals.png" />
+<p>Now, if you select the original paint layers and draw on them, you can see that all clone masks are immediately updated!</p>
+<p>Above you can see there’s been a new view added so we can focus on painting the flower and at the same time see how it’ll look. You can make a new view by going <span class="menuselection">Window ‣ New View</span> and selecting the name of your current canvas (save first!). Views can be rotated and mirrored differently.</p>
+<p>Now continue painting the original flowers and leaves, and we’ll move over to adding extra shadow to make it seem more lifelike!</p>
+<img alt="Using the alpha inheritance." src="../_images/Azelea_10_alphainheritance_1.png" />
+<p>We’re now going to use <em>Alpha Inheritance</em>. Alpha inheritance is an ill-understood concept, because a lot of programs use <em>clipping masks</em> instead, which clip the layer’s alpha using only the alpha of the first next layer.</p>
+<p>Alpha inheritance, however, uses all layers in a stack, so all the layers in the group that haven’t got alpha inheritance active themselves, or all the layers in the stack when the layer isn’t in a group. Because most people have an opaque layer at the bottom of their layer stack, alpha inheritance doesn’t seem to do much.</p>
+<p>But for us, alpha inheritance is useful, because we can use all clone-layers in a cluster (if you grouped them), transformed or not, for clipping. Just draw a light blue square over all the flowers in a given cluster.</p>
+<img alt="Clipping the cluster with alpha inheritance." src="../_images/Azelea_11_alphainheritance_2.png" />
+<p>Then press the last icon in the layer stack, the alpha-inherit button, to activate alpha-inheritance.</p>
+<img alt="Activate alpha inheritance." src="../_images/Azelea_12_alphainheritance_3.png" />
+<p>Set the layer to <em>multiply</em> then, so it’ll look like everything’s darker blue.</p>
+<img alt="Multiplying the clipped shape." src="../_images/Azelea_13_alphainheritance_4.png" />
+<p>Then, with multiply and alpha inheritance on, use an eraser to remove the areas where there should be no shadow.</p>
+<img alt="Remove extra areas with the eraser." src="../_images/Azelea_14_alphainheritance_5.png" />
+<p>For the highlights use exactly the same method, AND exactly the same color, but instead set the layer to Divide (you can find this amongst the Arithmetic blending modes). Using Divide has exactly the opposite effect as using multiply with the same color. The benefit of this is that you can easily set up a complementary harmony in your shadows and highlights using these two.</p>
+<img alt="Add shadows and highlights with alpha inheritance technique." src="../_images/Azelea_15_alphainheritance_6.png" />
+<p>Do this with all clusters and leaves, and maybe on the whole plant (you will first need to stick it into a group layer given the background is opaque) and you’re done!</p>
+<p>Transform masks can be used on paint layers, vector layers, group layers, clone layers and even file layers. I hope this tutorial has given you a nice idea on how to use them, and hope to see much more use of the transform masks in the future!</p>
+<p>You can get the file I made <a class="reference external" href="https://share.kde.org/public.php?service=files&amp;t=48c601aaf17271d7ca516c44cbe8590e">here</a> to examine it further! (Caution: It will freeze up Krita if your version is below 2.9.4. The speed-ups in 2.9.4 are due to this file.)</p>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="saving-for-the-web.html" class="btn btn-neutral float-right" title="Saving For The Web" accesskey="n" rel="next"> <!-- Next --> <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="krita-brush-tips/sculpt-paint-brush.html" class="btn btn-neutral" title="Brush-tips:Sculpt-paint-brush" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- Previous  -->  </a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright licensed under the GNU Free Documentation License 1.3+ unless stated otherwise.
+      
+        <span class="commit">
+          Revision <code>7c271ce</code>.
+        </span>
+      
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a modified <a href="https://github.com/rtfd/sphinx_rtd_theme">RTD theme</a>.<br/>
+  <a href="https://krita.org" title="Krita official website.">Krita official website</a> |
+  <a href="https://invent.kde.org/documentation/docs-krita-org/" title="The Gitlab instance to edit this pages and collaborate.">Git repository for docs.krita.org </a> |
+  <a href="https://www.kde.org/community/whatiskde/impressum-en.php" title="To know more about KDE, code of conduct, privacy policy and GDPR.">KDE Impressum</a>.
+   
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'5.0.0 Beta',
+            LANGUAGE:'en',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/documentation_options.js"></script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
+      });
+  </script> 
+
+ <script type="text/javascript">
+	 var _paq=_paq||[];
+	 _paq.push(['setCookieDomain','*.krita.org']);
+	 _paq.push(['setDomains','*.krita.org']);
+	 _paq.push(['setDocumentTitle',document.domain+"/"+document.title]);
+	 _paq.push(['trackPageView']);
+	 _paq.push(['enableLinkTracking']);
+
+	 (function(){
+	 	var u="//stats.kde.org/";
+	    _paq.push(['setTrackerUrl',u+'piwik.php']);
+	    _paq.push(['setSiteId',13]);
+	    var d = document, g = d.createElement('script'),s=d.getElementsByTagName('script')[0];
+	    g.type = 'text/javascript';
+	    g.async = true;
+	    g.defer = true;
+	    g.src = u+'piwik.js';
+	    s.parentNode.insertBefore(g,s);
+	  })();
+</script> 
+<noscript><p><img src="//stats.kde.org/piwik.php?idsite=13" style="border:0;" alt="" /></p></noscript>
+
+</body>
+</html>

@@ -1,0 +1,509 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" name="title" content="Import Animation" />
+  <meta property="og:site-name" content="Krita Manual" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="en" />
+  <meta property="og:locale:alternate" content="ca" />
+  
+  <meta property="og:locale:alternate" content="fr" />
+  <meta property="og:locale:alternate" content="it" />
+  <meta property="og:locale:alternate" content="ja" />
+  <meta property="og:locale:alternate" content="ko" />
+  <meta property="og:locale:alternate" content="nl" />
+  <meta property="og:locale:alternate" content="pl" />
+  <meta property="og:locale:alternate" content="pt_PT" />
+  <meta property="og:locale:alternate" content="uk_UA" />
+  <meta property="og:locale:alternate" content="zh_CN" />
+  <meta property="og:article:modified_time" content="2021-07-19T15:33:59" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<meta content="Importing video frames." name="description" property="og:description" />
+
+  
+  
+  <title>Import Animation &mdash; Krita Manual 5.0.0 Beta documentation</title>
+  
+
+  
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    
+  
+  
+  
+    <link rel="canonical" href="en/reference_manual/import_animation.html"/>
+    <meta property="og:url" content="en/reference_manual/import_animation.html" />
+    <meta property="og:image" content="en/_static/sidebar-logo.png" />
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Instant Preview" href="instant_preview.html" />
+    <link rel="prev" title="Image Split" href="image_split.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+       
+           <a href="../index.html" class="icon icon-home">
+
+			<img src="../_static/sidebar-logo.png" class="logo" alt="Logo"/>
+           	
+           <!--	Krita Manual -->
+
+
+          </a>
+
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-side-nav-language-selector">
+        	<p class="caption-text">
+	        	<select id="language-selector-container">
+	        		<option value="ca">Català</option>
+	        		<option value="en">English</option>
+	        		<option value="fr">français</option>
+	        		<option value="it">Italiano</option>
+	        		<option value="ja">日本語</option>
+	        		<option value="ko">한국어</option>
+	        		<option value="nl">Nederlands</option>
+	        		<option value="pl">Polski</option>
+	        		<option value="pt_PT">português</option>
+	        		<option value="uk_UA">Українська</option>
+	        		<option value="zh_CN">简体中文</option>
+	        	</select>
+        	</p>
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../user_manual.html">User Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general_concepts.html">General Concepts</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../reference_manual.html">Reference Manual</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="audio_for_animation.html">Audio for Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blending_modes.html">Blending Modes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="brushes.html">Brushes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="clones_array.html">Clones Array</a></li>
+<li class="toctree-l2"><a class="reference internal" href="create_new_document.html">Create New Document</a></li>
+<li class="toctree-l2"><a class="reference internal" href="default_python_plugins.html">Pre-installed Python plugins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dockers.html">Dockers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dr_minw_debugger.html">Dr. MinGW Debugger</a></li>
+<li class="toctree-l2"><a class="reference internal" href="filters.html">Filters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hdr_display.html">HDR Display</a></li>
+<li class="toctree-l2"><a class="reference internal" href="image_split.html">Image Split</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Import Animation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#import-frames">Import Frames</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#order">Order</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#timing">Timing</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#import-video-file">Import video file</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#video-file-info">Video file info</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#import-options">Import Options</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#options">Options</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="instant_preview.html">Instant Preview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="krita_4_preset_bundle.html">Krita 4 Preset Bundle Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="layers_and_masks.html">Layers and Masks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="linux_command_line.html">Linux Command Line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="list_supported_tablets.html">The List of Supported Tablets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="main_menu.html">Main Menu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="maths_input.html">Maths Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="popup-palette.html">Pop-up Palette</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preferences.html">Preferences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="render_animation.html">Render Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="resource_management.html">Resource Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seexpr.html">SeExpr Quick Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="separate_image.html">Separate Image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sharing_krita_logs.html">Getting Krita logs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="split_layer.html">Split Layer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stroke_selection.html">Stroke Selection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tools.html">Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="welcome_screen.html">Welcome Screen</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials.html">Tutorials and How-tos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../KritaFAQ.html">Krita FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributors_manual.html">Contributors Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../resources_page.html">Resources</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+	<!-- start top banner area (for fundraisers or messages)
+
+	<div style="text-align: center; background-color: #333">
+		<a href="https://krita.org/en/fundraising-2018-campaign/" target="_self" onclick="ga('send', 'event', 'frontpage', 'button', 'Fundraiser 2018');">
+			<img src="https://krita.org/wp-content/themes/krita-org-theme/images/decoration/2018-fundraiser-banner.png" style="max-width: 100%">
+		</a>
+	</div>
+	
+	 end top banner area -->
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Krita Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../reference_manual.html">Reference Manual</a> &raquo;</li>
+        
+      <li>Import Animation</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+          
+            <a href="../_sources/reference_manual/import_animation.rst.txt" rel="nofollow"> 
+             
+              <img src="../_static/images/source-code.png" />
+             <!-- View page source -->
+
+          </a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="import-animation">
+<span id="index-0"></span><span id="id1"></span><h1>Import Animation<a class="headerlink" href="#import-animation" title="Permalink to this headline">¶</a></h1>
+<p>Krita has several options for allowing you to import an animation.</p>
+<section id="import-frames">
+<span id="id2"></span><h2>Import Frames<a class="headerlink" href="#import-frames" title="Permalink to this headline">¶</a></h2>
+<p>Frame import will import a list of images into an animation layer. This is a format that most other animation software can export, and thus very useful for interchange.</p>
+<p>First let us take a sprite sheet from Open Game Art. (This is the Libre Pixel Cup male walkcycle <a class="footnote-reference brackets" href="#id4" id="id3">1</a>).</p>
+<p>We’ll use <a class="reference internal" href="image_split.html#image-split"><span class="std std-ref">Image Split</span></a> to split up the sprite sheet.</p>
+<img alt="../_images/Animation_split_spritesheet.png" src="../_images/Animation_split_spritesheet.png" />
+<p>The slices are even, so for a sprite sheet of 9 sprites, use 8 vertical slices and 0 horizontal slices. Give it a proper name and save it as png.</p>
+<p>Then, make a new canvas, and select <span class="menuselection">File ‣ Import Animation Frames</span>. This will give you a little window. Select <span class="guilabel">Add images</span>. This should get you a file browser where you can select your images.</p>
+<img alt="../_images/Animation_import_sprites.png" src="../_images/Animation_import_sprites.png" />
+<p>You can select multiple images at once.</p>
+<img alt="../_images/Animation_set_everything.png" src="../_images/Animation_set_everything.png" />
+<p>The frames are currently automatically
+ordered. You can set the ordering with the top-left two drop-down boxes.</p>
+<p>Press <span class="guilabel">OK</span>, and your animation should be imported as a new layer.</p>
+<img alt="../_images/Animation_import_done.png" src="../_images/Animation_import_done.png" />
+<dl class="simple">
+<dt>Add images.</dt><dd><p>Add frames. You can select multiple frames in the file chooser.</p>
+</dd>
+<dt>Remove.</dt><dd><p>Remove the selected frame</p>
+</dd>
+<dt>Add hold frames automatically.</dt><dd><p>If a frame sequence has gaps, such as a sequence that has frames 1, 2 and 5, ticking this option will input empty frames at 3 and 4.</p>
+</dd>
+</dl>
+<section id="order">
+<h3>Order<a class="headerlink" href="#order" title="Permalink to this headline">¶</a></h3>
+<dl class="simple">
+<dt>Ascending vs Descending</dt><dd><p>Whether it will import the frames in order from lowest to highest (ascending), or from highest to lowest (descending).</p>
+</dd>
+<dt>Numerical vs Alphabetical</dt><dd><p>Whether it will use numbers or Alphabetical ordering for the frames.</p>
+</dd>
+</dl>
+</section>
+<section id="timing">
+<h3>Timing<a class="headerlink" href="#timing" title="Permalink to this headline">¶</a></h3>
+<dl class="simple">
+<dt>Start at</dt><dd><p>The frame number to import at. Importing at 3 will have the resulting animation start at frame 3 within Krita.</p>
+</dd>
+<dt>Step</dt><dd><p>The amount of frames to input for each imported frame. For importing a 6 fps animation into a 24 fps animation, you will need to set this to 24 / 6 = 4. This will ensure the playback speed stays the same.</p>
+</dd>
+<dt>Source FPS</dt><dd><p>This displays what Krita thinks the fps of the input is with the current timing settings. You can use this to make sure that the input you made is correct with the FPS of your document.</p>
+</dd>
+</dl>
+</section>
+</section>
+<section id="import-video-file">
+<span id="import-video-animation"></span><h2>Import video file<a class="headerlink" href="#import-video-file" title="Permalink to this headline">¶</a></h2>
+<p>Video import allows you to import a sample of a video file as an animated paint layer.</p>
+<img alt="../_images/import_video.png" src="../_images/import_video.png" />
+<dl class="simple">
+<dt>Choose a video file</dt><dd><p>This will bring up a file chooser for you to select the file in question.</p>
+</dd>
+<dt>Preview</dt><dd><p>Gives a preview of the file to import.</p>
+</dd>
+<dt>Slider</dt><dd><p>Allows you to scrub through the file in question.</p>
+</dd>
+<dt>Frame Counter</dt><dd><p>Allows you to select the frame in question</p>
+</dd>
+<dt>Frame Switcher</dt><dd><p>Two buttons to switch per frame.</p>
+</dd>
+</dl>
+<section id="video-file-info">
+<h3>Video file info<a class="headerlink" href="#video-file-info" title="Permalink to this headline">¶</a></h3>
+<dl class="simple">
+<dt>Width</dt><dd><p>The width of the current file.</p>
+</dd>
+<dt>Height</dt><dd><p>The height of the current file.</p>
+</dd>
+<dt>Duration</dt><dd><p>The duration in seconds.</p>
+</dd>
+<dt>Frames</dt><dd><p>The total amount of frames</p>
+</dd>
+<dt>FPS</dt><dd><p>The frames per second.</p>
+</dd>
+<dt>Color Primaries</dt><dd><p>The name of the color space primaries Krita has detected. These will be used for the color profile with which the file imports. Only shows up on files where this data is detected.</p>
+</dd>
+<dt>Color Transfer</dt><dd><p>The name of the color space trc that Krita has found. This too will be used for the color profile. Only shows up on files where this data is detected.</p>
+</dd>
+</dl>
+</section>
+<section id="import-options">
+<h3>Import Options<a class="headerlink" href="#import-options" title="Permalink to this headline">¶</a></h3>
+<dl class="simple">
+<dt>FPS</dt><dd><p>The FPS to import at. Importing 2 seconds of footage at 24 fps will import 48 frames, and at 60 fps, 120 frames will be imported.</p>
+</dd>
+<dt>Skip Interval</dt><dd><p>Same as <span class="guilabel">Step</span> in the <a class="reference internal" href="#import-frames"><span class="std std-ref">Import Frames</span></a> section.</p>
+</dd>
+<dt>Start at</dt><dd><p>Time code to start at.</p>
+</dd>
+<dt>Duration</dt><dd><p>Length of the imported animation.</p>
+</dd>
+<dt>Import into</dt><dd><p>Document to import the file into. Options are current document and new document. With new document, extra options become available on the second tab.</p>
+</dd>
+</dl>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Videos, because you usually only play them in a media player, are compressed in special ways. Because Krita is designed to allow you to draw each individual frame, this data gets uncompressed. What this means is that even though you can watch a video file on your computer, you likely cannot import all the frames into Krita. A warning will be displayed and inform you how many frames you can import with your current setup.</p>
+</div>
+</section>
+<section id="options">
+<h3>Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h3>
+<section id="document-options">
+<h4>Document Options<a class="headerlink" href="#document-options" title="Permalink to this headline">¶</a></h4>
+<p>Only enabled when the import is into a new document.</p>
+<dl class="simple">
+<dt>Width</dt><dd><p>Width of the new document.</p>
+</dd>
+<dt>Height</dt><dd><p>Height of the new document.</p>
+</dd>
+</dl>
+</section>
+<section id="import-video-scale">
+<h4>Import Video Scale<a class="headerlink" href="#import-video-scale" title="Permalink to this headline">¶</a></h4>
+<dl class="simple">
+<dt>Width</dt><dd><p>The desired width in pixels</p>
+</dd>
+<dt>Height</dt><dd><p>The desired height in pixels</p>
+</dd>
+<dt>Filter</dt><dd><p>The filter to use for the resizing.</p>
+</dd>
+</dl>
+</section>
+<section id="ffmpeg">
+<h4>FFMpeg<a class="headerlink" href="#ffmpeg" title="Permalink to this headline">¶</a></h4>
+<dl class="simple">
+<dt>FFMpeg Path</dt><dd><p>Path to the ffmpeg executable, necessary for importing the video data.</p>
+</dd>
+<dt>FFProbe path</dt><dd><p>Path to the ffmpeg probe executable, which is included with ffmpeg. This allows Krita to learn the video information from the file.</p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="footnote brackets">
+<dt class="label" id="id4"><span class="brackets"><a class="fn-backref" href="#id3">1</a></span></dt>
+<dd><p><a class="reference external" href="https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles">The source for the libre pixel cup male walk cycle</a></p>
+</dd>
+</dl>
+</div>
+</section>
+</section>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="instant_preview.html" class="btn btn-neutral float-right" title="Instant Preview" accesskey="n" rel="next"> <!-- Next --> <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="image_split.html" class="btn btn-neutral" title="Image Split" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- Previous  -->  </a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright licensed under the GNU Free Documentation License 1.3+ unless stated otherwise.
+      
+        <span class="commit">
+          Revision <code>7c271ce</code>.
+        </span>
+      
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a modified <a href="https://github.com/rtfd/sphinx_rtd_theme">RTD theme</a>.<br/>
+  <a href="https://krita.org" title="Krita official website.">Krita official website</a> |
+  <a href="https://invent.kde.org/documentation/docs-krita-org/" title="The Gitlab instance to edit this pages and collaborate.">Git repository for docs.krita.org </a> |
+  <a href="https://www.kde.org/community/whatiskde/impressum-en.php" title="To know more about KDE, code of conduct, privacy policy and GDPR.">KDE Impressum</a>.
+   
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'5.0.0 Beta',
+            LANGUAGE:'en',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/documentation_options.js"></script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
+      });
+  </script> 
+
+ <script type="text/javascript">
+	 var _paq=_paq||[];
+	 _paq.push(['setCookieDomain','*.krita.org']);
+	 _paq.push(['setDomains','*.krita.org']);
+	 _paq.push(['setDocumentTitle',document.domain+"/"+document.title]);
+	 _paq.push(['trackPageView']);
+	 _paq.push(['enableLinkTracking']);
+
+	 (function(){
+	 	var u="//stats.kde.org/";
+	    _paq.push(['setTrackerUrl',u+'piwik.php']);
+	    _paq.push(['setSiteId',13]);
+	    var d = document, g = d.createElement('script'),s=d.getElementsByTagName('script')[0];
+	    g.type = 'text/javascript';
+	    g.async = true;
+	    g.defer = true;
+	    g.src = u+'piwik.js';
+	    s.parentNode.insertBefore(g,s);
+	  })();
+</script> 
+<noscript><p><img src="//stats.kde.org/piwik.php?idsite=13" style="border:0;" alt="" /></p></noscript>
+
+</body>
+</html>

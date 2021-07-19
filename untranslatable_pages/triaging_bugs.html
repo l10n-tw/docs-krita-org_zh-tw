@@ -1,0 +1,569 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" name="title" content="Triaging Bugs" />
+  <meta property="og:site-name" content="Krita Manual" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="en" />
+  <meta property="og:locale:alternate" content="ca" />
+  
+  <meta property="og:locale:alternate" content="fr" />
+  <meta property="og:locale:alternate" content="it" />
+  <meta property="og:locale:alternate" content="ja" />
+  <meta property="og:locale:alternate" content="ko" />
+  <meta property="og:locale:alternate" content="nl" />
+  <meta property="og:locale:alternate" content="pl" />
+  <meta property="og:locale:alternate" content="pt_PT" />
+  <meta property="og:locale:alternate" content="uk_UA" />
+  <meta property="og:locale:alternate" content="zh_CN" />
+  <meta property="og:article:modified_time" content="2021-07-19T15:33:59" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<meta content="Guide to bugtriaging." name="description" />
+
+  
+  
+  <title>Triaging Bugs &mdash; Krita Manual 5.0.0 Beta documentation</title>
+  
+
+  
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    
+  
+  
+  
+    <link rel="canonical" href="en/untranslatable_pages/triaging_bugs.html"/>
+    <meta property="og:url" content="en/untranslatable_pages/triaging_bugs.html" />
+    <meta property="og:image" content="en/_static/sidebar-logo.png" />
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Unittests in Krita" href="unit_tests_in_krita.html" />
+    <link rel="prev" title="Testing Strategy" href="testing_strategy.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+       
+           <a href="../index.html" class="icon icon-home">
+
+			<img src="../_static/sidebar-logo.png" class="logo" alt="Logo"/>
+           	
+           <!--	Krita Manual -->
+
+
+          </a>
+
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-side-nav-language-selector">
+        	<p class="caption-text">
+	        	<select id="language-selector-container">
+	        		<option value="ca">Català</option>
+	        		<option value="en">English</option>
+	        		<option value="fr">français</option>
+	        		<option value="it">Italiano</option>
+	        		<option value="ja">日本語</option>
+	        		<option value="ko">한국어</option>
+	        		<option value="nl">Nederlands</option>
+	        		<option value="pl">Polski</option>
+	        		<option value="pt_PT">português</option>
+	        		<option value="uk_UA">Українська</option>
+	        		<option value="zh_CN">简体中文</option>
+	        	</select>
+        	</p>
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../user_manual.html">User Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general_concepts.html">General Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference_manual.html">Reference Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials.html">Tutorials and How-tos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../KritaFAQ.html">Krita FAQ</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../contributors_manual.html">Contributors Manual</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../contributors_manual/community.html">The Krita Community</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributors_manual/krita_manual_conventions.html">Mark-up conventions for the Krita Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributors_manual/krita_manual_readme.html">Krita Manual Contribution Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributors_manual/optimising_images.html">Images for the Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributors_manual/user_support.html">Introduction to User Support</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../untranslatable_pages.html">Technical Pages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="building_krita.html">Building Krita from Source</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cmake_settings_for_developers.html">CMake Settings for Developers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="intro_hacking_krita.html">Introduction to Hacking Krita</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kpl_defintion.html">The Krita Palette format KPL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="krita_svg_extensions.html">Krita SVG Extensions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modern_cpp_in_krita.html">Modern C++ usage guidelines for the Krita codebase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new_features.html">Developing Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="optimizing_tips_for_krita.html">Optimizing tips and tools for Krita</a></li>
+<li class="toctree-l3"><a class="reference internal" href="participating_in_gsoc.html">Google Summer of Code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="patch_review_guide.html">Advanced Merge Request Guide</a></li>
+<li class="toctree-l3"><a class="reference internal" href="python_coding.html">Python Developer Tools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quality_assurance.html">Introduction to Quality Assurance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release_krita.html">Making a release</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reporting_bugs.html">Reporting Bugs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="running_krita.html">Running Krita from Source</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strokes_documentation.html">Strokes queue</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strokes_documentation.html#strokes-public-api">Strokes public API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strokes_documentation.html#internals-of-the-freehand-tool">Internals of the freehand tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strokes_documentation.html#scheduled-undo-redo">Scheduled Undo/Redo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strokes_documentation.html#processings-framework">Processings framework</a></li>
+<li class="toctree-l3"><a class="reference internal" href="testing_strategy.html">Testing Strategy</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Triaging Bugs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#status-flow">Status flow</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#canned-answers-and-recognizing-common-reports">Canned Answers and Recognizing Common Reports</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="unit_tests_in_krita.html">Unittests in Krita</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../resources_page.html">Resources</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+	<!-- start top banner area (for fundraisers or messages)
+
+	<div style="text-align: center; background-color: #333">
+		<a href="https://krita.org/en/fundraising-2018-campaign/" target="_self" onclick="ga('send', 'event', 'frontpage', 'button', 'Fundraiser 2018');">
+			<img src="https://krita.org/wp-content/themes/krita-org-theme/images/decoration/2018-fundraiser-banner.png" style="max-width: 100%">
+		</a>
+	</div>
+	
+	 end top banner area -->
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Krita Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../contributors_manual.html">Contributors Manual</a> &raquo;</li>
+        
+          <li><a href="../untranslatable_pages.html">Technical Pages</a> &raquo;</li>
+        
+      <li>Triaging Bugs</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+          
+            <a href="../_sources/untranslatable_pages/triaging_bugs.rst.txt" rel="nofollow"> 
+             
+              <img src="../_static/images/source-code.png" />
+             <!-- View page source -->
+
+          </a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="triaging-bugs">
+<span id="id1"></span><h1><a class="toc-backref" href="#id4">Triaging Bugs</a><a class="headerlink" href="#triaging-bugs" title="Permalink to this headline">¶</a></h1>
+<p>There are over 1000 bugs and 350 wishes reported against Krita per year, and that number is rising.
+The Krita developers cannot handle that stream on their own! Please consider helping out by triaging bugs. This document gives some simple guidelines to get started, and some common cases that can often be answered with a standard text.</p>
+<p>For more details, see also <a class="reference external" href="https://community.kde.org/Guidelines_and_HOWTOs/Bug_triaging">https://community.kde.org/Guidelines_and_HOWTOs/Bug_triaging</a></p>
+<div class="contents topic" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#triaging-bugs" id="id4">Triaging Bugs</a></p>
+<ul>
+<li><p><a class="reference internal" href="#status-flow" id="id5">Status flow</a></p>
+<ul>
+<li><p><a class="reference internal" href="#platform" id="id6">Platform</a></p></li>
+<li><p><a class="reference internal" href="#version" id="id7">Version</a></p></li>
+<li><p><a class="reference internal" href="#can-reproduce" id="id8">Can Reproduce</a></p></li>
+<li><p><a class="reference internal" href="#cannot-reproduce" id="id9">Cannot Reproduce</a></p></li>
+<li><p><a class="reference internal" href="#importance" id="id10">Importance</a></p></li>
+<li><p><a class="reference internal" href="#guidance-for-using-importance" id="id11">Guidance for using Importance</a></p></li>
+<li><p><a class="reference internal" href="#asserts-and-crashes" id="id12">Asserts and Crashes</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#canned-answers-and-recognizing-common-reports" id="id13">Canned Answers and Recognizing Common Reports</a></p>
+<ul>
+<li><p><a class="reference internal" href="#cannot-save" id="id14">Cannot Save</a></p></li>
+<li><p><a class="reference internal" href="#broken-canvas" id="id15">Broken Canvas</a></p></li>
+<li><p><a class="reference internal" href="#my-stylus-has-an-offset" id="id16">My stylus has an offset</a></p></li>
+<li><p><a class="reference internal" href="#other-tablet-issues" id="id17">Other tablet issues</a></p></li>
+<li><p><a class="reference internal" href="#krita-lags" id="id18">Krita lags</a></p></li>
+<li><p><a class="reference internal" href="#i-cannot-paint-at-all-in-a-particular-document" id="id19">I cannot paint at all, in a particular document</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<section id="status-flow">
+<h2><a class="toc-backref" href="#id5">Status flow</a><a class="headerlink" href="#status-flow" title="Permalink to this headline">¶</a></h2>
+<p>A bug begins as <code class="docutils literal notranslate"><span class="pre">UNCONFIRMED</span></code>. When triaging, only <code class="docutils literal notranslate"><span class="pre">UNCONFIRMED</span></code> bugs are still relevant.</p>
+<section id="platform">
+<h3><a class="toc-backref" href="#id6">Platform</a><a class="headerlink" href="#platform" title="Permalink to this headline">¶</a></h3>
+<p>If the user has not entered the Platform correctly (i.e., it is “unspecified/Linux”), then ask which platform they are using. Mark the bug as <code class="docutils literal notranslate"><span class="pre">NEEDDINFO/WAITINFORINFO</span></code>.</p>
+<div class="admonition-tell-the-user admonition">
+<p class="admonition-title">Tell the user:</p>
+<p>Please indicate your operating system correctly. For Linux, select the distribution, AppImage or compiled from sources and Linux, for Windows, select MS Windows/MS Windows, for macOS or macOS, select macports, disk images or homebrew and macOS.</p>
+</div>
+<p>If the user has selected Windows CE for platform, set it to MS Windows without asking them.</p>
+</section>
+<section id="version">
+<h3><a class="toc-backref" href="#id7">Version</a><a class="headerlink" href="#version" title="Permalink to this headline">¶</a></h3>
+<p>If the user has not entered the version (i.e., the version is unspecified), ask them for the version and mark the bug as <code class="docutils literal notranslate"><span class="pre">NEEDDINFO/WAITINFORINFO</span></code>.</p>
+<div class="admonition-tell-the-user admonition">
+<p class="admonition-title">Tell the user:</p>
+<p>Please select the version of Krita you are using. You can find the version in Help/About Krita.</p>
+</div>
+</section>
+<section id="can-reproduce">
+<h3><a class="toc-backref" href="#id8">Can Reproduce</a><a class="headerlink" href="#can-reproduce" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>If you can reproduce the bug, add a comment indicating you can reproduce it, maybe with clearer steps to reproduce and anything pertinent that you observed. If you have a backtrace, also add it. Set the bug status to <code class="docutils literal notranslate"><span class="pre">CONFIRMED</span></code> and add the <code class="docutils literal notranslate"><span class="pre">triaged</span></code> keyword to the keywords.</p></li>
+<li><p>If you can reproduce the bug, and want to go the extra mile, use an older version of Krita to see whether you could reproduce it there as well. If you couldn’t, it’s a <em>regression</em>, so add the regression keyword to the keywords and mark which version of Krita the latest was that did not have the bug.</p></li>
+</ul>
+</section>
+<section id="cannot-reproduce">
+<h3><a class="toc-backref" href="#id9">Cannot Reproduce</a><a class="headerlink" href="#cannot-reproduce" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p>If you cannot reproduce, the user either has not given enough information or the bug is specific to their system.</p></li>
+<li><p>If there is not enough information, ask for more information. Depending on the report, the steps to reproduce might need to be described more clearly and/or a screenshot, a screen recording or the original files might be necessary. Set text (ask for what you think is needed):</p>
+<blockquote>
+<div><div class="admonition-ask-the-user admonition">
+<p class="admonition-title">Ask the user:</p>
+<p>I am sorry, I cannot reproduce your issue. Could you specify the steps to reproduce more clearly, and maybe add a screen recording/screenshot/original file</p>
+</div>
+<ul class="simple">
+<li><p>Mark the bug as <code class="docutils literal notranslate"><span class="pre">NEEDINFO/WAITINGFORINFO</span></code>.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>If the issue seems to be specific to the user’s system, ask for the output of help/System information for bug reports as well. Set text:</p>
+<blockquote>
+<div><blockquote>
+<div><div class="admonition-tell-the-user admonition">
+<p class="admonition-title">Tell the user:</p>
+<p>I am sorry, but I cannot reproduce the bug on my system. Please add the output of help/System Information for Bug reports as well.</p>
+</div>
+</div></blockquote>
+<ul class="simple">
+<li><p>Mark the bug as <code class="docutils literal notranslate"><span class="pre">NEEDINFO/WAITINGFORINFO</span></code>.</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</section>
+<section id="importance">
+<h3><a class="toc-backref" href="#id10">Importance</a><a class="headerlink" href="#importance" title="Permalink to this headline">¶</a></h3>
+<p>Importance is a tool for developers, not for bug reports. It’s developers and triagers who decide what the importance is. If a bug reporter complains about a change in importance, use this text:</p>
+<div class="admonition-tell-the-user admonition">
+<p class="admonition-title">Tell the user:</p>
+<p>I am sorry, but the importance field is a tool for the developers to work with. Please do not change the importance back.</p>
+</div>
+<p>There are the following Importances:</p>
+<dl class="simple">
+<dt>Critical:</dt><dd><p>the bug leads to immediate dataloss. Example: a saved file cannot be opened in Krita</p>
+</dd>
+<dt>Grave:</dt><dd><p>shouldn’t be used, it doesn’t mean a thing</p>
+</dd>
+<dt>Major:</dt><dd><p>it’s a bug, but it’s kinda important.</p>
+</dd>
+<dt>Crash:</dt><dd><p>the bug is about a crash or an assert <a class="footnote-reference brackets" href="#id3" id="id2">1</a></p>
+</dd>
+<dt>Normal:</dt><dd><p>it’s a bug</p>
+</dd>
+<dt>Minor:</dt><dd><p>it’s a bug, but it’s kinda unimportant</p>
+</dd>
+<dt>Wish:</dt><dd><p>it’s a feature request</p>
+</dd>
+<dt>Task:</dt><dd><p>not used.</p>
+</dd>
+</dl>
+<p>The main difference is between Wish and the rest: Wishes are feature requests, and don’t need immediate triaging. A wish bug is a bug that asks whether some functionality can be added to Krita, or complains that some functionality is missing.</p>
+<p>The rest are bugs, that is, problems in Krita that can be fixed by changing Krita’s code.</p>
+<p>However, we also get many reports that are not bugs and not wishes: reports that are basically users asking for help because they do not understand Krita or their computer, or what a file is, or that Krita isn’t the same application as Photoshop. Those reports need to be weeded out, and the status set to <code class="docutils literal notranslate"><span class="pre">INVALID</span></code>.</p>
+</section>
+<section id="guidance-for-using-importance">
+<h3><a class="toc-backref" href="#id11">Guidance for using Importance</a><a class="headerlink" href="#guidance-for-using-importance" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>If you encounter a bug that reports dataloss when loading a saved file, set it to critical.</p></li>
+<li><p>If you encounter a bug that reports a crash or an assert but is not set to crash, set it to crash.</p></li>
+<li><p>If you encounter a report that asks for functionality that is not currently present, set it to wish.</p></li>
+<li><p>If you encounter a report that is a user request, check whether you can reply with a link to the faq (<a class="reference external" href="https://docs.krita.org/en/KritaFAQ.html">https://docs.krita.org/en/KritaFAQ.html</a>), and maybe a canned answer, and change the status of the bug to <code class="docutils literal notranslate"><span class="pre">INVALID</span></code>.</p></li>
+</ul>
+</section>
+<section id="asserts-and-crashes">
+<h3><a class="toc-backref" href="#id12">Asserts and Crashes</a><a class="headerlink" href="#asserts-and-crashes" title="Permalink to this headline">¶</a></h3>
+<dl class="footnote brackets">
+<dt class="label" id="id3"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>
+<dd><p><strong>Crash or assert.</strong></p>
+<p>These are different things. A crash happens when Krita spontaneously stops working <em>or</em> hangs. An assert happens when Krita stops working because we, developers, have added some code to detect an invalid state.</p>
+<p>Asserts are printed to the terminal or shown in a popup window. You can identify an assert by asking for terminal output, debugview output or by checking the backtrace, if there is one.</p>
+<p>If the backtrace contains a line like:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">SAFE</span> <span class="n">ASSERT</span> <span class="p">(</span><span class="n">krita</span><span class="p">):</span> <span class="s2">&quot;!sanityCheckPointer.isValid()&quot;</span> <span class="ow">in</span> <span class="n">file</span> <span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">nix</span><span class="o">-</span><span class="n">build</span><span class="o">-</span><span class="n">krita</span><span class="o">-</span><span class="mf">4.0</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">pre2c</span><span class="o">.</span><span class="n">drv</span><span class="o">-</span><span class="mi">0</span><span class="o">/</span><span class="n">krita</span><span class="o">-</span><span class="mi">1</span><span class="n">b1695a</span><span class="o">/</span><span class="n">libs</span><span class="o">/</span><span class="n">ui</span><span class="o">/</span><span class="n">KisDocument</span><span class="o">.</span><span class="n">cpp</span><span class="p">,</span> <span class="n">line</span> <span class="mi">490</span>
+</pre></div>
+</div>
+<p>Or another mention of assert, Q_ASSERT or similar, it’s an assert, not a crash.</p>
+</dd>
+</dl>
+</section>
+</section>
+<section id="canned-answers-and-recognizing-common-reports">
+<h2><a class="toc-backref" href="#id13">Canned Answers and Recognizing Common Reports</a><a class="headerlink" href="#canned-answers-and-recognizing-common-reports" title="Permalink to this headline">¶</a></h2>
+<p>We get a lot of duplicate bug reports. Sometimes it’s clear that it’s a duplicate, and you can mark it a such. In all cases, we want to give the reporter useful information so they can solve their problems. Of course, (almost) all solutions are also in the FAQ, but just pointing people to the FAQ is often considered impolite.</p>
+<p>So, do never reply to a bug report with:</p>
+<blockquote>
+<div><p>“Just read the FAQ.”</p>
+</div></blockquote>
+<p>It takes a bit of experience to recognize a bug from an often incomplete description. Here are a couple of common cases:</p>
+<section id="cannot-save">
+<h3><a class="toc-backref" href="#id14">Cannot Save</a><a class="headerlink" href="#cannot-save" title="Permalink to this headline">¶</a></h3>
+<p>For instance:
+“I cannot save/my file doesn’t get saved/it says it cannot copy the file”</p>
+<p>This happens most often on Windows, if the user has got any security software installed that doesn’t come with Windows. Examples are Sandboxie, Totaldefender, or others. Mark the bug as <code class="docutils literal notranslate"><span class="pre">NEEDSINFO/WAITINGFORINFO</span></code> and add this text:</p>
+<div class="admonition-ask-the-user admonition">
+<p class="admonition-title">Ask the user:</p>
+<p>Are you using Windows? If so, do you have any non-standard security software installed such as Total Defender, Sandboxie or XXX? Please make an exception for Krita in the settings, or uninstall this software. Since Windows 10, it is no longer necessary to have any security software installed other than what comes with Windows.</p>
+</div>
+<p>If the user replies that they are using extra security software, close the bug as <code class="docutils literal notranslate"><span class="pre">RESOLVED/INVALID</span></code>.</p>
+</section>
+<section id="broken-canvas">
+<h3><a class="toc-backref" href="#id15">Broken Canvas</a><a class="headerlink" href="#broken-canvas" title="Permalink to this headline">¶</a></h3>
+<p>This happens on Windows. Symptoms will be: the canvas is black, the canvas stays blank, the canvas only updates when the user clicks outside the canvas. Mark the bug as a duplicate of <a class="reference external" href="https://bugs.kde.org/show_bug.cgi?id=360601">https://bugs.kde.org/show_bug.cgi?id=360601</a>, and add the following text:</p>
+<div class="admonition-tell-the-user admonition">
+<p class="admonition-title">Tell the user:</p>
+<p>You probably are using a Windows system with an Intel display chip. Please update to Krita 3.3.3, which enables the Direct3D (Angle) renderer by default. If you do not want to update, check <a class="reference external" href="https://docs.krita.org/en/KritaFAQ.html#krita-starts-with-an-empty-canvas-and-nothing-changes-when-you-try-to-draw-or-krita-shows-a-black-or-blank-screen-or-krita-crashes-when-creating-a-document-or-krita-s-menubar-is-hidden-on-a-windows-system-with-an-intel-gpu">https://docs.krita.org/en/KritaFAQ.html#krita-starts-with-an-empty-canvas-and-nothing-changes-when-you-try-to-draw-or-krita-shows-a-black-or-blank-screen-or-krita-crashes-when-creating-a-document-or-krita-s-menubar-is-hidden-on-a-windows-system-with-an-intel-gpu</a></p>
+</div>
+</section>
+<section id="my-stylus-has-an-offset">
+<h3><a class="toc-backref" href="#id16">My stylus has an offset</a><a class="headerlink" href="#my-stylus-has-an-offset" title="Permalink to this headline">¶</a></h3>
+<p>This happens on Windows. Symptoms will be: the user reports that the stylus cursor has an offset or moves the cursor on another screen. Usually, the user will have a misconfigured multi-monitor system. Mark the bug as <code class="docutils literal notranslate"><span class="pre">NEEDSINFO/WAITINGFORINFO</span></code> and ask the user:</p>
+<div class="admonition-ask-the-user admonition">
+<p class="admonition-title">Ask the user:</p>
+<p>Do you have a multi-monitor setup? If so, this is a configuration issue. Please reset your tablet driver’s configuration and Krita’s configuration (<a class="reference external" href="https://docs.krita.org/en/KritaFAQ.html#resetting-krita-configuration">https://docs.krita.org/en/KritaFAQ.html#resetting-krita-configuration</a>). If you have a single-monitor setup, then please calibrate your tablet.</p>
+</div>
+<p>If the user checks back and tells us the problems are solved, mark the bug as <code class="docutils literal notranslate"><span class="pre">RESOLVED/UPSTREAM</span></code>.</p>
+</section>
+<section id="other-tablet-issues">
+<h3><a class="toc-backref" href="#id17">Other tablet issues</a><a class="headerlink" href="#other-tablet-issues" title="Permalink to this headline">¶</a></h3>
+<p>Often, the user will tell you that their tablet will work perfectly with another application. This is not relevant.</p>
+<div class="admonition-tell-the-user admonition">
+<p class="admonition-title">Tell the user:</p>
+<p>Windows tablet drivers often have a special code for different applications. Whether an application works or not depends on whether the programmers have tested their driver with an application or not. Tablet issues are almost always caused by the drivers being broken.</p>
+</div>
+</section>
+<section id="krita-lags">
+<h3><a class="toc-backref" href="#id18">Krita lags</a><a class="headerlink" href="#krita-lags" title="Permalink to this headline">¶</a></h3>
+<p>The word “lag” is meaningless. Complaints about “lag” are not bug reports. However, we should help the complainer.</p>
+<p>Mark the bug as <code class="docutils literal notranslate"><span class="pre">NEEDSINFO/WAITINGFORINFO</span></code> and ask the user:</p>
+<div class="admonition-ask-the-user admonition">
+<p class="admonition-title">Ask the user:</p>
+<p>Have you enabled the stabilizer? Check the tool options panel for the freehand tool. Also check the other possibilities mentioned here: <a class="reference external" href="https://docs.krita.org/en/KritaFAQ.html#krita-is-slow">https://docs.krita.org/en/KritaFAQ.html#krita-is-slow</a></p>
+</div>
+</section>
+<section id="i-cannot-paint-at-all-in-a-particular-document">
+<h3><a class="toc-backref" href="#id19">I cannot paint at all, in a particular document</a><a class="headerlink" href="#i-cannot-paint-at-all-in-a-particular-document" title="Permalink to this headline">¶</a></h3>
+<p>The user probably created, accidentally, a tiny selection, and saved that with the document. Mark as <code class="docutils literal notranslate"><span class="pre">NEEDSINFO/WAITINGFORINFO</span></code> and ask them:</p>
+<div class="admonition-ask-the-user admonition">
+<p class="admonition-title">Ask the user:</p>
+<p>Do you have a selection saved with that document? Use select/deselect on your image and check whether you can paint again. If not, please attach the <code class="docutils literal notranslate"><span class="pre">.kra</span></code> document to this bug report or make it available.</p>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="unit_tests_in_krita.html" class="btn btn-neutral float-right" title="Unittests in Krita" accesskey="n" rel="next"> <!-- Next --> <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="testing_strategy.html" class="btn btn-neutral" title="Testing Strategy" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- Previous  -->  </a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright licensed under the GNU Free Documentation License 1.3+ unless stated otherwise.
+      
+        <span class="commit">
+          Revision <code>7c271ce</code>.
+        </span>
+      
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a modified <a href="https://github.com/rtfd/sphinx_rtd_theme">RTD theme</a>.<br/>
+  <a href="https://krita.org" title="Krita official website.">Krita official website</a> |
+  <a href="https://invent.kde.org/documentation/docs-krita-org/" title="The Gitlab instance to edit this pages and collaborate.">Git repository for docs.krita.org </a> |
+  <a href="https://www.kde.org/community/whatiskde/impressum-en.php" title="To know more about KDE, code of conduct, privacy policy and GDPR.">KDE Impressum</a>.
+   
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'5.0.0 Beta',
+            LANGUAGE:'en',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/documentation_options.js"></script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
+      });
+  </script> 
+
+ <script type="text/javascript">
+	 var _paq=_paq||[];
+	 _paq.push(['setCookieDomain','*.krita.org']);
+	 _paq.push(['setDomains','*.krita.org']);
+	 _paq.push(['setDocumentTitle',document.domain+"/"+document.title]);
+	 _paq.push(['trackPageView']);
+	 _paq.push(['enableLinkTracking']);
+
+	 (function(){
+	 	var u="//stats.kde.org/";
+	    _paq.push(['setTrackerUrl',u+'piwik.php']);
+	    _paq.push(['setSiteId',13]);
+	    var d = document, g = d.createElement('script'),s=d.getElementsByTagName('script')[0];
+	    g.type = 'text/javascript';
+	    g.async = true;
+	    g.defer = true;
+	    g.src = u+'piwik.js';
+	    s.parentNode.insertBefore(g,s);
+	  })();
+</script> 
+<noscript><p><img src="//stats.kde.org/piwik.php?idsite=13" style="border:0;" alt="" /></p></noscript>
+
+</body>
+</html>

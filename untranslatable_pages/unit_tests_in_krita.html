@@ -1,0 +1,712 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" name="title" content="Unittests in Krita" />
+  <meta property="og:site-name" content="Krita Manual" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="en" />
+  <meta property="og:locale:alternate" content="ca" />
+  
+  <meta property="og:locale:alternate" content="fr" />
+  <meta property="og:locale:alternate" content="it" />
+  <meta property="og:locale:alternate" content="ja" />
+  <meta property="og:locale:alternate" content="ko" />
+  <meta property="og:locale:alternate" content="nl" />
+  <meta property="og:locale:alternate" content="pl" />
+  <meta property="og:locale:alternate" content="pt_PT" />
+  <meta property="og:locale:alternate" content="uk_UA" />
+  <meta property="og:locale:alternate" content="zh_CN" />
+  <meta property="og:article:modified_time" content="2021-07-19T15:33:59" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<meta content="Introduction unittests in Krita." name="description" />
+
+  
+  
+  <title>Unittests in Krita &mdash; Krita Manual 5.0.0 Beta documentation</title>
+  
+
+  
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    
+  
+  
+  
+    <link rel="canonical" href="en/untranslatable_pages/unit_tests_in_krita.html"/>
+    <meta property="og:url" content="en/untranslatable_pages/unit_tests_in_krita.html" />
+    <meta property="og:image" content="en/_static/sidebar-logo.png" />
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Resources" href="../resources_page.html" />
+    <link rel="prev" title="Triaging Bugs" href="triaging_bugs.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+       
+           <a href="../index.html" class="icon icon-home">
+
+			<img src="../_static/sidebar-logo.png" class="logo" alt="Logo"/>
+           	
+           <!--	Krita Manual -->
+
+
+          </a>
+
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-side-nav-language-selector">
+        	<p class="caption-text">
+	        	<select id="language-selector-container">
+	        		<option value="ca">Català</option>
+	        		<option value="en">English</option>
+	        		<option value="fr">français</option>
+	        		<option value="it">Italiano</option>
+	        		<option value="ja">日本語</option>
+	        		<option value="ko">한국어</option>
+	        		<option value="nl">Nederlands</option>
+	        		<option value="pl">Polski</option>
+	        		<option value="pt_PT">português</option>
+	        		<option value="uk_UA">Українська</option>
+	        		<option value="zh_CN">简体中文</option>
+	        	</select>
+        	</p>
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../user_manual.html">User Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general_concepts.html">General Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference_manual.html">Reference Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials.html">Tutorials and How-tos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../KritaFAQ.html">Krita FAQ</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../contributors_manual.html">Contributors Manual</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../contributors_manual/community.html">The Krita Community</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributors_manual/krita_manual_conventions.html">Mark-up conventions for the Krita Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributors_manual/krita_manual_readme.html">Krita Manual Contribution Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributors_manual/optimising_images.html">Images for the Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributors_manual/user_support.html">Introduction to User Support</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../untranslatable_pages.html">Technical Pages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="building_krita.html">Building Krita from Source</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cmake_settings_for_developers.html">CMake Settings for Developers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="intro_hacking_krita.html">Introduction to Hacking Krita</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kpl_defintion.html">The Krita Palette format KPL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="krita_svg_extensions.html">Krita SVG Extensions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modern_cpp_in_krita.html">Modern C++ usage guidelines for the Krita codebase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new_features.html">Developing Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="optimizing_tips_for_krita.html">Optimizing tips and tools for Krita</a></li>
+<li class="toctree-l3"><a class="reference internal" href="participating_in_gsoc.html">Google Summer of Code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="patch_review_guide.html">Advanced Merge Request Guide</a></li>
+<li class="toctree-l3"><a class="reference internal" href="python_coding.html">Python Developer Tools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quality_assurance.html">Introduction to Quality Assurance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release_krita.html">Making a release</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reporting_bugs.html">Reporting Bugs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="running_krita.html">Running Krita from Source</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strokes_documentation.html">Strokes queue</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strokes_documentation.html#strokes-public-api">Strokes public API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strokes_documentation.html#internals-of-the-freehand-tool">Internals of the freehand tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strokes_documentation.html#scheduled-undo-redo">Scheduled Undo/Redo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strokes_documentation.html#processings-framework">Processings framework</a></li>
+<li class="toctree-l3"><a class="reference internal" href="testing_strategy.html">Testing Strategy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="triaging_bugs.html">Triaging Bugs</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Unittests in Krita</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#what-is-a-unit-test-is-and-why-is-it-needed">What is a unit test is and why is it needed?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#how-to-build-and-run-tests">How to build and run tests?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#when-to-write-a-unit-test">When to write a unit test?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#what-should-unit-test-include">What should unit test include?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#how-to-write-a-unittest">How to write a unittest?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#krita-specific-testing-utils">Krita-specific testing utils</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../resources_page.html">Resources</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+	<!-- start top banner area (for fundraisers or messages)
+
+	<div style="text-align: center; background-color: #333">
+		<a href="https://krita.org/en/fundraising-2018-campaign/" target="_self" onclick="ga('send', 'event', 'frontpage', 'button', 'Fundraiser 2018');">
+			<img src="https://krita.org/wp-content/themes/krita-org-theme/images/decoration/2018-fundraiser-banner.png" style="max-width: 100%">
+		</a>
+	</div>
+	
+	 end top banner area -->
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Krita Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../contributors_manual.html">Contributors Manual</a> &raquo;</li>
+        
+          <li><a href="../untranslatable_pages.html">Technical Pages</a> &raquo;</li>
+        
+      <li>Unittests in Krita</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+          
+            <a href="../_sources/untranslatable_pages/unit_tests_in_krita.rst.txt" rel="nofollow"> 
+             
+              <img src="../_static/images/source-code.png" />
+             <!-- View page source -->
+
+          </a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="unittests-in-krita">
+<span id="id1"></span><h1><a class="toc-backref" href="#id6">Unittests in Krita</a><a class="headerlink" href="#unittests-in-krita" title="Permalink to this headline">¶</a></h1>
+<div class="contents topic" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#unittests-in-krita" id="id6">Unittests in Krita</a></p>
+<ul>
+<li><p><a class="reference internal" href="#what-is-a-unit-test-is-and-why-is-it-needed" id="id7">What is a unit test is and why is it needed?</a></p>
+<ul>
+<li><p><a class="reference internal" href="#debugging-of-new-code" id="id8">Debugging of new code</a></p></li>
+<li><p><a class="reference internal" href="#changing-refactoring-existing-code" id="id9">Changing/refactoring existing code</a></p></li>
+<li><p><a class="reference internal" href="#automated-regression-testing" id="id10">Automated regression testing</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#how-to-build-and-run-tests" id="id11">How to build and run tests?</a></p>
+<ul>
+<li><p><a class="reference internal" href="#building-the-tests" id="id12">Building the tests</a></p></li>
+<li><p><a class="reference internal" href="#run-all-the-tests" id="id13">Run all the tests</a></p></li>
+<li><p><a class="reference internal" href="#run-a-single-test" id="id14">Run a single test</a></p></li>
+<li><p><a class="reference internal" href="#environment-variables-for-running-tests" id="id15">Environment variables for running tests</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#when-to-write-a-unit-test" id="id16">When to write a unit test?</a></p></li>
+<li><p><a class="reference internal" href="#what-should-unit-test-include" id="id17">What should unit test include?</a></p></li>
+<li><p><a class="reference internal" href="#how-to-write-a-unittest" id="id18">How to write a unittest?</a></p></li>
+<li><p><a class="reference internal" href="#krita-specific-testing-utils" id="id19">Krita-specific testing utils</a></p>
+<ul>
+<li><p><a class="reference internal" href="#fetching-reference-images" id="id20">Fetching reference images</a></p></li>
+<li><p><a class="reference internal" href="#compare-test-result-against-a-reference-qimage" id="id21">Compare test result against a reference QImage</a></p></li>
+<li><p><a class="reference internal" href="#qimagebasedtest-for-complex-actions" id="id22">QImageBasedTest for complex actions</a></p></li>
+<li><p><a class="reference internal" href="#maskparent-object" id="id23">MaskParent object</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<section id="what-is-a-unit-test-is-and-why-is-it-needed">
+<h2><a class="toc-backref" href="#id7">What is a unit test is and why is it needed?</a><a class="headerlink" href="#what-is-a-unit-test-is-and-why-is-it-needed" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>Wiki:</dt><dd><p>A unit test is a piece of code that automatically checks if your class or subsystem works correctly. The goal of unit testing is to isolate each part of the program and show that the individual parts are correct. A unit test provides a strict, written contract that the piece of code must satisfy. As a result, it affords several benefits <a class="footnote-reference brackets" href="#id5" id="id2">1</a>.</p>
+</dd>
+<dt>Comment:</dt><dd><p>In other words unit testing allows the developer to verify if his initial design decisions has been implemented correctly and all the corner-cases are handled correctly.</p>
+</dd>
+</dl>
+<p>In Krita Project we use unit tests for several purposes. Not all of them work equally good, but all together they help developing a lot.</p>
+<section id="debugging-of-new-code">
+<h3><a class="toc-backref" href="#id8">Debugging of new code</a><a class="headerlink" href="#debugging-of-new-code" title="Permalink to this headline">¶</a></h3>
+<dl class="simple">
+<dt>Wiki:</dt><dd><p>Unit testing finds problems early in the development cycle. This includes both bugs in the programmer’s implementation and flaws or missing parts of the specification for the unit. The process of writing a thorough set of tests forces the author to think through inputs, outputs, and error conditions, and thus more crisply define the unit’s desired behavior. The cost of finding a bug before coding begins or when the code is first written is considerably lower than the cost of detecting, identifying, and correcting the bug later; bugs may also cause problems for the end-users of the software <a class="footnote-reference brackets" href="#id5" id="id3">1</a>.</p>
+</dd>
+<dt>Comment:</dt><dd><p>Krita is a big project and has numerous subsystems that communicate with each other in complicated ways. It makes debugging and testing new code in the application itself difficult. What is more, just compiling and running the entire application to check a one-line change in a small class is very time-consuming. So when writing a new subsystem we usually split it into smaller parts (classes) and test each of them individually. Testing a single class in isolation helps to catch all the corner-cases in the class public interface, e.g. “what happens if we pass 0 here instead of a valid pointer?” or “what if the index we just gave to this method is invalid?”</p>
+</dd>
+</dl>
+</section>
+<section id="changing-refactoring-existing-code">
+<h3><a class="toc-backref" href="#id9">Changing/refactoring existing code</a><a class="headerlink" href="#changing-refactoring-existing-code" title="Permalink to this headline">¶</a></h3>
+<dl class="simple">
+<dt>Wiki:</dt><dd><p>Unit testing allows the programmer to refactor code or upgrade system libraries at a later date, and make sure the module still works correctly (e.g., in regression testing). The procedure is to write test cases for all functions and methods so that whenever a change causes a fault, it can be quickly identified. Unit tests detect changes which may break a design contract <a class="footnote-reference brackets" href="#id5" id="id4">1</a>.</p>
+</dd>
+<dt>Comment:</dt><dd><p>Imagine someone decides to refactor the code you wrote a year ago. How would he know whether his changes didn’t break anything in the internal class structure? Even if he/she asks you, how would you know if the changes to a year-old class, whose details are already forgotten, are valid?</p>
+</dd>
+</dl>
+</section>
+<section id="automated-regression-testing">
+<h3><a class="toc-backref" href="#id10">Automated regression testing</a><a class="headerlink" href="#automated-regression-testing" title="Permalink to this headline">¶</a></h3>
+<p>Most of our unit tests are run nightly on the CI. You can see the results and coverage reports at <a class="reference external" href="https://build.kde.org/job/Extragear/job/krita/">https://build.kde.org/job/Extragear/job/krita/</a>.</p>
+<p>However, some of the unit tests are not stable enough to be run automatically and therefore are disabled. (They do straightforward
+QImage comparisons, so the test results can depend no only on version of the libraries installed,
+but also on build options and even type of CPU the tests are run on.) While the overall coverage is decent, this issue limits the ability of the unit test suite to catch regressions in several parts of the codebase. (More information on that in the respective Phabricator task: <a class="reference external" href="https://phabricator.kde.org/T11904">https://phabricator.kde.org/T11904</a>.)</p>
+</section>
+</section>
+<section id="how-to-build-and-run-tests">
+<h2><a class="toc-backref" href="#id11">How to build and run tests?</a><a class="headerlink" href="#how-to-build-and-run-tests" title="Permalink to this headline">¶</a></h2>
+<section id="building-the-tests">
+<h3><a class="toc-backref" href="#id12">Building the tests</a><a class="headerlink" href="#building-the-tests" title="Permalink to this headline">¶</a></h3>
+<p>To enable unit tests, build Krita with an additional cmake flag: <code class="docutils literal notranslate"><span class="pre">-DBUILD_TESTING=ON</span></code>.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># example build command</span>
+you@yourcomputer:~/kritadev/build&gt;cmake ../krita <span class="se">\</span>
+  -DCMAKE_INSTALL_PREFIX<span class="o">=</span><span class="nv">$HOME</span>/kritadev/install <span class="se">\</span>
+  -DCMAKE_BUILD_TYPE<span class="o">=</span>Debug <span class="se">\</span>
+  -DKRITA_DEVS<span class="o">=</span>ON <span class="se">\</span>
+  -DBUILD_TESTING<span class="o">=</span>ON
+</pre></div>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<ul class="simple">
+<li><p>If you need help with building from source, see <a class="reference internal" href="building_krita.html#building-krita"><span class="std std-ref">Building Krita from Source</span></a></p></li>
+<li><p>For more information about cmake options, please refer to <a class="reference internal" href="cmake_settings_for_developers.html#cmake-settings-for-developers"><span class="std std-ref">CMake Settings for Developers</span></a></p></li>
+</ul>
+</div>
+<p>Once built, the tests are run from the the <strong>build</strong> directory. There you can either run the whole suite at once or you can run a single test (or even a single test with a single data row for data-driven tests).</p>
+</section>
+<section id="run-all-the-tests">
+<h3><a class="toc-backref" href="#id13">Run all the tests</a><a class="headerlink" href="#run-all-the-tests" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># change to the build directory</span>
+you@yourcomputer:~/&gt; <span class="nb">cd</span> kritadev/build
+<span class="c1"># run the whole suite</span>
+you@yourcomputer:~/kritadev/build&gt; make <span class="nb">test</span>
+</pre></div>
+</div>
+</section>
+<section id="run-a-single-test">
+<h3><a class="toc-backref" href="#id14">Run a single test</a><a class="headerlink" href="#run-a-single-test" title="Permalink to this headline">¶</a></h3>
+<p>Every test class is built into a separate executable file. This executable file resides in the build directory tree. The relative path is the same as the path in source directory.</p>
+<p>To run all tests in a single test class, run the executable:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># running all tests in a test class</span>
+you@yourcomputer:~/kritadev/build&gt;./libs/ui/tests/KisSpinBoxSplineUnitConverterTest
+</pre></div>
+</div>
+<p>You can also run a single test method from the class or invoke the test method with a single test data row, if you have a data-driven test. Add the test method name (and optionally the test data row name) as an argument to the test class executable:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># the syntax for running single tests:</span>
+<span class="c1"># you@yourcomputer:~/kritadev/build&gt;./test-class-executable &quot;test method name&quot;:&quot;data row name&quot;</span>
+
+<span class="c1"># run a single method in a test class</span>
+you@yourcomputer:~/kritadev/build&gt;./libs/ui/tests/KisSpinBoxSplineUnitConverterTest testCurveCalculationTwoWay
+
+<span class="c1"># run a single method in a test class with the selected test data row</span>
+you@yourcomputer:~/kritadev/build&gt;./libs/ui/tests/KisSpinBoxSplineUnitConverterTest testCurveCalculationTwoWay:<span class="s2">&quot;0.5 in (0, 10) = 5&quot;</span>
+</pre></div>
+</div>
+</section>
+<section id="environment-variables-for-running-tests">
+<h3><a class="toc-backref" href="#id15">Environment variables for running tests</a><a class="headerlink" href="#environment-variables-for-running-tests" title="Permalink to this headline">¶</a></h3>
+<p>Prior to running the tests, you can set several environment variables to change the behavior of the tests.</p>
+<ul>
+<li><p>Suppress safe assert dialogs:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>you@yourcomputer:~/kritadev/build&gt; <span class="nb">export</span> <span class="nv">KRITA_NO_ASSERT_MSG</span><span class="o">=</span><span class="m">1</span>
+</pre></div>
+</div>
+</li>
+<li><p>Set source directory for QImage-based test data</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>you@yourcomputer:~/kritadev/build&gt; <span class="nb">export</span> <span class="nv">KRITA_UNITTESTS_DATA_DIR</span><span class="o">=</span>&lt;directory&gt;
+</pre></div>
+</div>
+</li>
+<li><p>Create reference images for QImage-based tests</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>you@yourcomputer:~/kritadev/build&gt; <span class="nb">export</span> <span class="nv">KRITA_WRITE_UNITTESTS</span><span class="o">=</span><span class="m">1</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</section>
+</section>
+<section id="when-to-write-a-unit-test">
+<h2><a class="toc-backref" href="#id16">When to write a unit test?</a><a class="headerlink" href="#when-to-write-a-unit-test" title="Permalink to this headline">¶</a></h2>
+<p>Ideally a unit test should be written for any new class that implements some logic and provides any kind of public interface. It is especially true if this public interface is going to be used more that one client-class.</p>
+</section>
+<section id="what-should-unit-test-include">
+<h2><a class="toc-backref" href="#id17">What should unit test include?</a><a class="headerlink" href="#what-should-unit-test-include" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>corner cases. E.g. what happens if we request merging of two layers, one of which has Inherit Alpha option enabled? What properties and composition mode the final layer should have? Answers to these questions should be given and tested in the unit test.</p></li>
+<li><p>non-obvious design decisions. E.g. if a paint device has a non-transparent default pixel, then its <code class="docutils literal notranslate"><span class="pre">`exactBounds()`</span></code> returns the rect, not smaller that the size of the image, even though technically the device might be empty.</p></li>
+</ul>
+</section>
+<section id="how-to-write-a-unittest">
+<h2><a class="toc-backref" href="#id18">How to write a unittest?</a><a class="headerlink" href="#how-to-write-a-unittest" title="Permalink to this headline">¶</a></h2>
+<p>Suppose you want to write a unittest for kritaimage library. You need to perform just a few steps:</p>
+<ol class="arabic">
+<li><p>Add files for the test class into <code class="docutils literal notranslate"><span class="pre">./image/tests/</span></code> directory:</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">kis_some_class_test.h</span></code></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#ifndef __KIS_SOME_CLASS_TEST_H</span>
+<span class="cp">#define __KIS_SOME_CLASS_TEST_H</span>
+
+<span class="cp">#include</span> <span class="cpf">&lt;QtTest/QtTest&gt;</span><span class="cp"></span>
+
+<span class="k">class</span> <span class="nc">KisSomeClassTest</span> <span class="o">:</span> <span class="k">public</span> <span class="n">QObject</span>
+<span class="p">{</span>
+    <span class="n">Q_OBJECT</span>
+<span class="k">private</span> <span class="nl">Q_SLOTS</span><span class="p">:</span>
+    <span class="kt">void</span> <span class="n">test</span><span class="p">();</span>
+<span class="p">};</span>
+
+<span class="cp">#endif </span><span class="cm">/* __KIS_SOME_CLASS_TEST_H */</span><span class="cp">&lt;/syntaxhighlight&gt;</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">kis_some_class_test.cpp</span></code></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;kis_some_class_test.h&quot;</span><span class="cp"></span>
+
+<span class="cp">#include</span> <span class="cpf">&lt;QTest&gt;</span><span class="cp"></span>
+
+<span class="kt">void</span> <span class="n">KisSomeClassTest</span><span class="o">::</span><span class="n">test</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="p">}</span>
+
+<span class="n">QTEST_MAIN</span><span class="p">(</span><span class="n">KisSomeClassTest</span><span class="p">,</span> <span class="n">GUI</span><span class="p">)</span><span class="o">&lt;/</span><span class="n">syntaxhighlight</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Modify ./image/tests/CMakeLists.txt to include your new test class:</p>
+<blockquote>
+<div><div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="c"># ...</span>
+<span class="c">########### next target ###############</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">kis_some_class_test_SRCS</span> <span class="s">kis_some_class_test.cpp</span> <span class="p">)</span>
+<span class="nb">ecm_add_tests</span><span class="p">(</span><span class="o">${</span><span class="nv">kis_some_class_test_SRCS</span><span class="o">}</span>
+<span class="s">NAME_PREFIX</span> <span class="s2">&quot;libs-somelib-&quot;</span>
+<span class="s">LINK_LIBRARIES</span> <span class="s">kritaimage</span> <span class="s">Qt5::Test</span><span class="p">)</span>
+<span class="c"># ...</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Write your test. You can use any macro commands provided by Qt (QVERIFY, QCOMPARE or QBENCHMARK).</p>
+<blockquote>
+<div><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">KisSomeClassTest</span><span class="o">::</span><span class="n">test</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">QString</span> <span class="n">cat</span><span class="p">(</span><span class="s">&quot;cat&quot;</span><span class="p">);</span>
+    <span class="n">QString</span> <span class="nf">dog</span><span class="p">(</span><span class="s">&quot;dog&quot;</span><span class="p">);</span>
+
+    <span class="n">QVERIFY</span><span class="p">(</span><span class="n">cat</span> <span class="o">!=</span> <span class="n">dog</span><span class="p">);</span>
+    <span class="n">QCOMPARE</span><span class="p">(</span><span class="n">cat</span><span class="p">,</span> <span class="s">&quot;cat&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Run your test by running an executable in ./image/test/ folder</p></li>
+</ol>
+</section>
+<section id="krita-specific-testing-utils">
+<h2><a class="toc-backref" href="#id19">Krita-specific testing utils</a><a class="headerlink" href="#krita-specific-testing-utils" title="Permalink to this headline">¶</a></h2>
+<section id="fetching-reference-images">
+<h3><a class="toc-backref" href="#id20">Fetching reference images</a><a class="headerlink" href="#fetching-reference-images" title="Permalink to this headline">¶</a></h3>
+<p>All the testing files/images are usually stored in the test’s data folder  (e.g. ./krita/image/tests/data/). But there are some files which are used throughout all the unit tests. These files are stored in the global folder ./krita/sdk/tests/data/. If you want to access any file, just use <code class="docutils literal notranslate"><span class="pre">TestUtil::fetchDataFileLazy</span></code>. It first searches the file in the local test’s folder and if nothing is found checks the global folder.</p>
+<p>Example:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">QImage</span> <span class="nf">refImage</span><span class="p">(</span><span class="n">TestUtil</span><span class="o">::</span><span class="n">fetchDataFileLazy</span><span class="p">(</span><span class="s">&quot;lena.png&quot;</span><span class="p">));</span>
+<span class="n">QVERIFY</span><span class="p">(</span><span class="o">!</span><span class="n">refImage</span><span class="p">.</span><span class="n">isNull</span><span class="p">());</span>
+</pre></div>
+</div>
+</section>
+<section id="compare-test-result-against-a-reference-qimage">
+<h3><a class="toc-backref" href="#id21">Compare test result against a reference QImage</a><a class="headerlink" href="#compare-test-result-against-a-reference-qimage" title="Permalink to this headline">¶</a></h3>
+<p>There are two helper functions to compare a given QImage against an image saved in the data folder.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">bool</span> <span class="n">TestUtil</span><span class="o">::</span><span class="n">checkQImage</span><span class="p">(</span><span class="k">const</span> <span class="n">QImage</span> <span class="o">&amp;</span><span class="n">image</span><span class="p">,</span> <span class="k">const</span> <span class="n">QString</span> <span class="o">&amp;</span><span class="n">testName</span><span class="p">,</span>
+                           <span class="k">const</span> <span class="n">QString</span> <span class="o">&amp;</span><span class="n">prefix</span><span class="p">,</span> <span class="k">const</span> <span class="n">QString</span> <span class="o">&amp;</span><span class="n">name</span><span class="p">,</span>
+                           <span class="kt">int</span> <span class="n">fuzzy</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="kt">int</span> <span class="n">fuzzyAlpha</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="kt">int</span> <span class="n">maxNumFailingPixels</span> <span class="o">=</span> <span class="mi">0</span><span class="p">);</span>
+<span class="kt">bool</span> <span class="n">TestUtil</span><span class="o">::</span><span class="n">checkQImageExternal</span><span class="p">(</span><span class="k">const</span> <span class="n">QImage</span> <span class="o">&amp;</span><span class="n">image</span><span class="p">,</span> <span class="k">const</span> <span class="n">QString</span> <span class="o">&amp;</span><span class="n">testName</span><span class="p">,</span>
+                                   <span class="k">const</span> <span class="n">QString</span> <span class="o">&amp;</span><span class="n">prefix</span><span class="p">,</span> <span class="k">const</span> <span class="n">QString</span> <span class="o">&amp;</span><span class="n">name</span><span class="p">,</span>
+                                   <span class="kt">int</span> <span class="n">fuzzy</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="kt">int</span> <span class="n">fuzzyAlpha</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="kt">int</span> <span class="n">maxNumFailingPixels</span> <span class="o">=</span> <span class="mi">0</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>The functions search for a PNG file with path</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">tests</span><span class="o">/</span><span class="n">data</span><span class="o">/&lt;</span><span class="n">testName</span><span class="o">&gt;/&lt;</span><span class="n">prefix</span><span class="o">&gt;/&lt;</span><span class="n">prefix</span><span class="o">&gt;</span><span class="n">_</span><span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;.</span><span class="n">png</span>
+<span class="c1"># or without a subfolder</span>
+<span class="o">./</span><span class="n">tests</span><span class="o">/</span><span class="n">data</span><span class="o">/&lt;</span><span class="n">testName</span><span class="o">&gt;/&lt;</span><span class="n">prefix</span><span class="o">&gt;</span><span class="n">_</span><span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;.</span><span class="n">png</span>
+</pre></div>
+</div>
+<p>The supplied QImage is compared against the saved PNG, and the result is returned to the caller. If the images do not coincide, two images are dumped into the current directory: one with actual result and another with what is expected.</p>
+<p>The second version of the function is different. It searches the image in “an external repository”. The point is that PNG images occupy quite a lot of space and bloat the repository size. So we decided to put all the images that are big enough (&gt;10KiB) into an external SVN repository. To configure an external test files repository on your computer, please do the following:</p>
+<ol class="arabic">
+<li><p>Checkout the data repository:</p>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># create the tests data folder and enter it</span>
+mkdir ~/testsdata
+<span class="nb">cd</span> ~/testsdata
+
+<span class="c1"># checkout the extra repository</span>
+svn checkout svn+ssh://svn@svn.kde.org/home/kde/trunk/tests/kritatests
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Add environment variable pointing to your repository to your ~/.bashrc</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">export</span> <span class="pre">KRITA_UNITTESTS_DATA_DIR=</span> <span class="pre">~/testsdata/kritatests/unittests</span></code></p>
+</div></blockquote>
+</li>
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">TestUtil::checkQImageExternal</span></code> in your unittest and it will fetch data from the external source. If an external repository is not found then the test is considered “passed”.</p></li>
+</ol>
+</section>
+<section id="qimagebasedtest-for-complex-actions">
+<h3><a class="toc-backref" href="#id22">QImageBasedTest for complex actions</a><a class="headerlink" href="#qimagebasedtest-for-complex-actions" title="Permalink to this headline">¶</a></h3>
+<p>Sometimes you need to test some complex actions like cropping or transforming the whole image. The main problem of such action is that it should work correctly with any kind of layer or mask, e.g. KisCloneLayer, KisGroupLayer or even KisSelectionMask. To facilitate such complex testing conditions, Krita provides a special class <code class="docutils literal notranslate"><span class="pre">QImageBasedTest</span></code>. It helps you to create a really complex image and check the contents of its layers. You can find the best example of its usage in <code class="docutils literal notranslate"><span class="pre">KisProcessingsTest</span></code>. Basically, to use this class, one should derive it’s own testing class from it, and call a set of callbacks, which do all the work. Let’s consider the code from KisProcessingsTest:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// override QImageBasedTest class</span>
+<span class="k">class</span> <span class="nc">BaseProcessingTest</span> <span class="o">:</span> <span class="k">public</span> <span class="n">TestUtil</span><span class="o">::</span><span class="n">QImageBasedTest</span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="n">BaseProcessingTest</span><span class="p">()</span>
+        <span class="o">:</span> <span class="n">QImageBasedTest</span><span class="p">(</span><span class="s">&quot;processings&quot;</span><span class="p">)</span>
+    <span class="p">{</span>
+    <span class="p">}</span>
+
+    <span class="c1">// The method is called by test cases. If the test fails, a set of PNG images</span>
+    <span class="c1">// is saved into working directory</span>
+    <span class="kt">void</span> <span class="n">test</span><span class="p">(</span><span class="k">const</span> <span class="n">QString</span> <span class="o">&amp;</span><span class="n">testname</span><span class="p">,</span> <span class="n">KisProcessingVisitorSP</span> <span class="n">visitor</span><span class="p">)</span> <span class="p">{</span>
+
+        <span class="c1">// create an image and regenerate its projection</span>
+        <span class="n">KisSurrogateUndoStore</span> <span class="o">*</span><span class="n">undoStore</span> <span class="o">=</span> <span class="k">new</span> <span class="n">KisSurrogateUndoStore</span><span class="p">();</span>
+        <span class="n">KisImageSP</span> <span class="n">image</span> <span class="o">=</span> <span class="n">createImage</span><span class="p">(</span><span class="n">undoStore</span><span class="p">);</span>
+        <span class="n">image</span><span class="o">-&gt;</span><span class="n">initialRefreshGraph</span><span class="p">();</span>
+
+        <span class="c1">// check if the image is correct before testing anything</span>
+        <span class="n">QVERIFY</span><span class="p">(</span><span class="n">checkLayersInitial</span><span class="p">(</span><span class="n">image</span><span class="p">));</span>
+
+        <span class="c1">// do the action we are trying to test</span>
+        <span class="n">KisProcessingApplicator</span> <span class="nf">applicator</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">image</span><span class="o">-&gt;</span><span class="n">root</span><span class="p">(),</span>
+                                        <span class="n">KisProcessingApplicator</span><span class="o">::</span><span class="n">RECURSIVE</span><span class="p">);</span>
+
+        <span class="n">applicator</span><span class="p">.</span><span class="n">applyVisitor</span><span class="p">(</span><span class="n">visitor</span><span class="p">);</span>
+        <span class="n">applicator</span><span class="p">.</span><span class="n">end</span><span class="p">();</span>
+        <span class="n">image</span><span class="o">-&gt;</span><span class="n">waitForDone</span><span class="p">();</span>
+
+        <span class="c1">// check the result, and dump images if something went wrong</span>
+        <span class="n">QVERIFY</span><span class="p">(</span><span class="n">checkLayers</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">testname</span><span class="p">));</span>
+
+        <span class="c1">// Check if undo(!) works correctly</span>
+        <span class="n">undoStore</span><span class="o">-&gt;</span><span class="n">undo</span><span class="p">();</span>
+        <span class="n">image</span><span class="o">-&gt;</span><span class="n">waitForDone</span><span class="p">();</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">checkLayersInitial</span><span class="p">(</span><span class="n">image</span><span class="p">))</span> <span class="p">{</span>
+            <span class="n">qWarning</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;NOTE: undo is not completely identical &quot;</span>
+                    <span class="o">&lt;&lt;</span> <span class="s">&quot;to the original image. Falling back to &quot;</span>
+                    <span class="o">&lt;&lt;</span><span class="s">&quot;projection comparison&quot;</span><span class="p">;</span>
+            <span class="n">QVERIFY</span><span class="p">(</span><span class="n">checkLayersInitialRootOnly</span><span class="p">(</span><span class="n">image</span><span class="p">));</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+</section>
+<section id="maskparent-object">
+<h3><a class="toc-backref" href="#id23">MaskParent object</a><a class="headerlink" href="#maskparent-object" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">TestUtil::MaskParent</span></code> is a simple class that, in its constructor, creates an RGB8 image with a single paint layer, which you can use for further testing. The image and the layer can be accessed as simple member variables.</p>
+<p>Example:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">KisMaskTest</span><span class="o">::</span><span class="n">testCreation</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="c1">// create an image and a simple layer</span>
+    <span class="n">TestUtil</span><span class="o">::</span><span class="n">MaskParent</span> <span class="n">p</span><span class="p">;</span>
+
+    <span class="c1">// create a mask and attach its selection to the created layer</span>
+    <span class="n">TestMaskSP</span> <span class="n">mask</span> <span class="o">=</span> <span class="k">new</span> <span class="n">TestMask</span><span class="p">;</span>
+    <span class="n">mask</span><span class="o">-&gt;</span><span class="n">initSelection</span><span class="p">(</span><span class="n">p</span><span class="p">.</span><span class="n">layer</span><span class="p">);</span>
+
+    <span class="n">QCOMPARE</span><span class="p">(</span><span class="n">mask</span><span class="o">-&gt;</span><span class="n">extent</span><span class="p">(),</span> <span class="n">QRect</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">512</span><span class="p">,</span><span class="mi">512</span><span class="p">));</span>
+    <span class="n">QCOMPARE</span><span class="p">(</span><span class="n">mask</span><span class="o">-&gt;</span><span class="n">exactBounds</span><span class="p">(),</span> <span class="n">QRect</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">512</span><span class="p">,</span><span class="mi">512</span><span class="p">));</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<dl class="footnote brackets">
+<dt class="label" id="id5"><span class="brackets">1</span><span class="fn-backref">(<a href="#id2">1</a>,<a href="#id3">2</a>,<a href="#id4">3</a>)</span></dt>
+<dd><p><a class="reference external" href="https://en.wikipedia.org/wiki/Unit_testing">https://en.wikipedia.org/wiki/Unit_testing</a></p>
+</dd>
+</dl>
+</section>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../resources_page.html" class="btn btn-neutral float-right" title="Resources" accesskey="n" rel="next"> <!-- Next --> <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="triaging_bugs.html" class="btn btn-neutral" title="Triaging Bugs" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- Previous  -->  </a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright licensed under the GNU Free Documentation License 1.3+ unless stated otherwise.
+      
+        <span class="commit">
+          Revision <code>7c271ce</code>.
+        </span>
+      
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a modified <a href="https://github.com/rtfd/sphinx_rtd_theme">RTD theme</a>.<br/>
+  <a href="https://krita.org" title="Krita official website.">Krita official website</a> |
+  <a href="https://invent.kde.org/documentation/docs-krita-org/" title="The Gitlab instance to edit this pages and collaborate.">Git repository for docs.krita.org </a> |
+  <a href="https://www.kde.org/community/whatiskde/impressum-en.php" title="To know more about KDE, code of conduct, privacy policy and GDPR.">KDE Impressum</a>.
+   
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'5.0.0 Beta',
+            LANGUAGE:'en',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/documentation_options.js"></script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
+      });
+  </script> 
+
+ <script type="text/javascript">
+	 var _paq=_paq||[];
+	 _paq.push(['setCookieDomain','*.krita.org']);
+	 _paq.push(['setDomains','*.krita.org']);
+	 _paq.push(['setDocumentTitle',document.domain+"/"+document.title]);
+	 _paq.push(['trackPageView']);
+	 _paq.push(['enableLinkTracking']);
+
+	 (function(){
+	 	var u="//stats.kde.org/";
+	    _paq.push(['setTrackerUrl',u+'piwik.php']);
+	    _paq.push(['setSiteId',13]);
+	    var d = document, g = d.createElement('script'),s=d.getElementsByTagName('script')[0];
+	    g.type = 'text/javascript';
+	    g.async = true;
+	    g.defer = true;
+	    g.src = u+'piwik.js';
+	    s.parentNode.insertBefore(g,s);
+	  })();
+</script> 
+<noscript><p><img src="//stats.kde.org/piwik.php?idsite=13" style="border:0;" alt="" /></p></noscript>
+
+</body>
+</html>

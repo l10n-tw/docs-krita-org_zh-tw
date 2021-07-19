@@ -1,0 +1,468 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" name="title" content="Recorder Docker" />
+  <meta property="og:site-name" content="Krita Manual" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="en" />
+  <meta property="og:locale:alternate" content="ca" />
+  
+  <meta property="og:locale:alternate" content="fr" />
+  <meta property="og:locale:alternate" content="it" />
+  <meta property="og:locale:alternate" content="ja" />
+  <meta property="og:locale:alternate" content="ko" />
+  <meta property="og:locale:alternate" content="nl" />
+  <meta property="og:locale:alternate" content="pl" />
+  <meta property="og:locale:alternate" content="pt_PT" />
+  <meta property="og:locale:alternate" content="uk_UA" />
+  <meta property="og:locale:alternate" content="zh_CN" />
+  <meta property="og:article:modified_time" content="2021-07-19T15:33:59" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<meta content="The recorder docker allows recording time lapses in Krita." name="description" property="og:description" />
+
+  
+  
+  <title>Recorder Docker &mdash; Krita Manual 5.0.0 Beta documentation</title>
+  
+
+  
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    
+  
+  
+  
+    <link rel="canonical" href="en/reference_manual/dockers/recorder_docker.html"/>
+    <meta property="og:url" content="en/reference_manual/dockers/recorder_docker.html" />
+    <meta property="og:image" content="en/_static/sidebar-logo.png" />
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Reference Images Docker" href="reference_images_docker.html" />
+    <link rel="prev" title="Patterns Docker" href="pattern_docker.html" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+       
+           <a href="../../index.html" class="icon icon-home">
+
+			<img src="../../_static/sidebar-logo.png" class="logo" alt="Logo"/>
+           	
+           <!--	Krita Manual -->
+
+
+          </a>
+
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-side-nav-language-selector">
+        	<p class="caption-text">
+	        	<select id="language-selector-container">
+	        		<option value="ca">Català</option>
+	        		<option value="en">English</option>
+	        		<option value="fr">français</option>
+	        		<option value="it">Italiano</option>
+	        		<option value="ja">日本語</option>
+	        		<option value="ko">한국어</option>
+	        		<option value="nl">Nederlands</option>
+	        		<option value="pl">Polski</option>
+	        		<option value="pt_PT">português</option>
+	        		<option value="uk_UA">Українська</option>
+	        		<option value="zh_CN">简体中文</option>
+	        	</select>
+        	</p>
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../user_manual.html">User Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../general_concepts.html">General Concepts</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../reference_manual.html">Reference Manual</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../audio_for_animation.html">Audio for Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blending_modes.html">Blending Modes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../brushes.html">Brushes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../clones_array.html">Clones Array</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_new_document.html">Create New Document</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../default_python_plugins.html">Pre-installed Python plugins</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../dockers.html">Dockers</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="add_shape.html">Add Shape</a></li>
+<li class="toctree-l3"><a class="reference internal" href="advanced_color_selector.html">Advanced Color Selector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="animation_curves.html">Animation Curves Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="animation_docker.html">Animation Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="animation_timeline.html">Animation Timeline Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="arrange.html">Arrange</a></li>
+<li class="toctree-l3"><a class="reference internal" href="artistic_color_selector.html">Artistic Color Selector Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="brush_preset_docker.html">Preset Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="channels_docker.html">Channels</a></li>
+<li class="toctree-l3"><a class="reference internal" href="color_sliders.html">Color Sliders</a></li>
+<li class="toctree-l3"><a class="reference internal" href="compositions.html">Compositions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="digital_color_mixer.html">Digital Color Mixer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gamut_mask_docker.html">Gamut Masks Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="grids_and_guides.html">Grids and Guides Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="histogram_docker.html">Histogram Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="layers.html">Layers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="log_viewer.html">Log Viewer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lut_management.html">LUT Management</a></li>
+<li class="toctree-l3"><a class="reference internal" href="onion_skin.html">Onion Skin Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="overview.html">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="palette_docker.html">Palette Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pattern_docker.html">Patterns Docker</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Recorder Docker</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#docker-options">Docker Options</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#export-options">Export Options</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#after-export">After Export</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="reference_images_docker.html">Reference Images Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="shape_properties_docker.html">Shape Properties Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="small_color_selector.html">Small Color Selector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="snapshot_docker.html">Snapshot Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="specific_color_selector.html">Specific Color Selector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="storyboard_docker.html">Storyboard Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="task_sets.html">Task Sets Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="touch_docker.html">Touch Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="undo_history.html">Undo History</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vector_library.html">Vector Library</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../dr_minw_debugger.html">Dr. MinGW Debugger</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../filters.html">Filters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hdr_display.html">HDR Display</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../image_split.html">Image Split</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../import_animation.html">Import Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../instant_preview.html">Instant Preview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../krita_4_preset_bundle.html">Krita 4 Preset Bundle Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../layers_and_masks.html">Layers and Masks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../linux_command_line.html">Linux Command Line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../list_supported_tablets.html">The List of Supported Tablets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../main_menu.html">Main Menu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../maths_input.html">Maths Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../popup-palette.html">Pop-up Palette</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preferences.html">Preferences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../render_animation.html">Render Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../resource_management.html">Resource Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../seexpr.html">SeExpr Quick Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../separate_image.html">Separate Image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sharing_krita_logs.html">Getting Krita logs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../split_layer.html">Split Layer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../stroke_selection.html">Stroke Selection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools.html">Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../welcome_screen.html">Welcome Screen</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials.html">Tutorials and How-tos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../KritaFAQ.html">Krita FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributors_manual.html">Contributors Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../resources_page.html">Resources</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+	<!-- start top banner area (for fundraisers or messages)
+
+	<div style="text-align: center; background-color: #333">
+		<a href="https://krita.org/en/fundraising-2018-campaign/" target="_self" onclick="ga('send', 'event', 'frontpage', 'button', 'Fundraiser 2018');">
+			<img src="https://krita.org/wp-content/themes/krita-org-theme/images/decoration/2018-fundraiser-banner.png" style="max-width: 100%">
+		</a>
+	</div>
+	
+	 end top banner area -->
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Krita Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../reference_manual.html">Reference Manual</a> &raquo;</li>
+        
+          <li><a href="../dockers.html">Dockers</a> &raquo;</li>
+        
+      <li>Recorder Docker</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+          
+            <a href="../../_sources/reference_manual/dockers/recorder_docker.rst.txt" rel="nofollow"> 
+             
+              <img src="../../_static/images/source-code.png" />
+             <!-- View page source -->
+
+          </a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="recorder-docker">
+<span id="index-0"></span><span id="id1"></span><h1>Recorder Docker<a class="headerlink" href="#recorder-docker" title="Permalink to this headline">¶</a></h1>
+<p>You may have seen artists show little progress movies of their work. This is called a time lapse! Normally a time lapse is recorded using outside software, like OBS, and then sped up around 16 times, and they are used to convey the whole amount of effort that went into an image. The recorder docker simplifies making a time lapse, by taking a snapshot every stroke and then letting you <a class="reference internal" href="../render_animation.html#render-animation"><span class="std std-ref">render it to a video file with ffmpeg</span></a>. Because this docker relies on FFMpeg, it cannot be used on Android.</p>
+<p>The recorder docker makes a snapshot of the canvas every few seconds, or at the end of every stroke. You can tell it’s turned on because there will be a <span class="guilabel">recording</span> symbol in the status bar, which is red when it’s making snapshots and white when it’s on standby.</p>
+<p>Because it stores the snapshots, that means you can take breaks, close the image, turn off the computer, come back a month later. However, snapshots can take up quite a bit of space, so if you are running out of space, don’t forget to check the temporary folder!</p>
+<p>At the end, you can turn the snapshots into a video file, ready for your favorite video sharing site.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Some people also call time lapses ‘speed paints’, but these are not the same thing. A speed paint is when you try to draw an image in a far shorter time than is usual for you. For example, drawing a whole landscape in 15 to 30 minutes. People like to record their speed paints, and because both speed paints and time lapses are videos, people often confuse them.</p>
+<p>Similarly, this tool should also not be confused with Macro Recording, which is when you tell the program to record all your actions into a file, and have it play those back at a later date. Krita currently does not have this functionality.</p>
+</div>
+<section id="docker-options">
+<h2>Docker Options<a class="headerlink" href="#docker-options" title="Permalink to this headline">¶</a></h2>
+<img alt="../../_images/recorder_docker.png" src="../../_images/recorder_docker.png" />
+<dl class="simple">
+<dt>Recordings Directory:</dt><dd><p>The directory where the snapshots are kept. Note the <span class="guilabel">Manage Recordings</span> button, which will assist you in selecting old recordings to remove.</p>
+</dd>
+<dt>Capture Interval:</dt><dd><p>The minimum capture interval. The recorder docker takes a picture when the image changes, but will wait for this capture interval to pass before making a new snap shot. This means quick strokes will not each require a new snapshot. Increase this if you want less snapshots to be recorded during a painting session, or if you are experiencing slowdowns.</p>
+</dd>
+<dt>Format:</dt><dd><p>The file format to use for the snap shots. <a class="reference internal" href="../../general_concepts/file_formats/file_jpeg.html#file-jpeg"><span class="std std-ref">*.jpg</span></a> is faster, but <a class="reference internal" href="../../general_concepts/file_formats/file_png.html#file-png"><span class="std std-ref">*.png</span></a> is better for very sharp images.</p>
+</dd>
+<dt>Quality:</dt><dd><p>Control the quality of the JPEG snapshots. The lower the quality, the lower the file size, but too low and you will get a messy looking recording.</p>
+</dd>
+<dt>Compression:</dt><dd><p>Control the compression of the PNG snapshots. Greater value will produce smaller files, but will take more processing power. This is recommended to be set to be between 1 and 3 for a good balance between speed and file size.</p>
+</dd>
+<dt>Resolution:</dt><dd><p>Lower the resolution of the snapshot. This can drastically reduce size without losing too much quality.</p>
+</dd>
+<dt>Record in Isolate Mode.</dt><dd><p>Record when <a class="reference internal" href="layers.html#layer-docker"><span class="std std-ref">layer isolate mode</span></a> is on. As isolate mode hides all the other layers, it can result in a lot of flickering during the resulting time lapse. Only turn this on when you are not in the habit of switching layers often when in isolate mode.</p>
+</dd>
+<dt>Record automatically</dt><dd><p>Start recording the instant an image is created or loaded. This option is useful for those who want to record each of their drawings.</p>
+</dd>
+</dl>
+<p>Finally, there’s <span class="guilabel">Record</span> and <span class="guilabel">Export</span>. The former starts and stops recording. The latter lets you render the current drawing’s timelapse.</p>
+<figure class="align-default" id="id2">
+<img alt="../../_images/recorder_docker_snapshot_manager.png" src="../../_images/recorder_docker_snapshot_manager.png" />
+<figcaption>
+<p><span class="caption-text">The recordings manager window. This is a list of recordings you have, and how much space they take. You can select recordings to delete them.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="export-options">
+<h2>Export Options<a class="headerlink" href="#export-options" title="Permalink to this headline">¶</a></h2>
+<p>Compare these options with the one on the <a class="reference internal" href="../render_animation.html#render-animation"><span class="std std-ref">Render Animation</span></a> page, as they do largely the same things.</p>
+<dl class="simple">
+<dt>Recording info:</dt><dd><p>Shows what kind of frames and how many frames are taken into account when creating the final video file. Pressing <span class="guilabel">Open Record Directory</span> will allow you to open the folder where the recordings are located in your file browser.</p>
+</dd>
+<dt>Input FPS:</dt><dd><p>How many frames per second should go in. For example, to make your time lapse twice faster, this value should be double that of the <span class="guilabel">Video fps</span>.</p>
+</dd>
+<dt>Video FPS:</dt><dd><p>The actual FPS of the video.</p>
+</dd>
+<dt>Resize:</dt><dd><p>Scale the final video.</p>
+</dd>
+<dt>FFMpeg:</dt><dd><p>The location of the ffmpeg executable.</p>
+</dd>
+<dt>Render As:</dt><dd><p>Select the render setting to use. MP4 x264 is sufficient for most drawings and will be accepted on most video sharing sites.</p>
+</dd>
+<dt>Video Location:</dt><dd><p>Where to put the resulting video.</p>
+</dd>
+<dt>Video Duration:</dt><dd><p>The final video length in seconds. This will change as you change the FPS settings.</p>
+</dd>
+</dl>
+</section>
+<section id="after-export">
+<h2>After Export<a class="headerlink" href="#after-export" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>Watch it:</dt><dd><p>This will open the resulting file in the default video player on your system.</p>
+</dd>
+<dt>Show in folder:</dt><dd><p>This will open the folder where the file is located in your file browser.</p>
+</dd>
+<dt>Remove recordings:</dt><dd><p>Remove the snapshots from your computer.</p>
+</dd>
+</dl>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="reference_images_docker.html" class="btn btn-neutral float-right" title="Reference Images Docker" accesskey="n" rel="next"> <!-- Next --> <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="pattern_docker.html" class="btn btn-neutral" title="Patterns Docker" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- Previous  -->  </a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright licensed under the GNU Free Documentation License 1.3+ unless stated otherwise.
+      
+        <span class="commit">
+          Revision <code>7c271ce</code>.
+        </span>
+      
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a modified <a href="https://github.com/rtfd/sphinx_rtd_theme">RTD theme</a>.<br/>
+  <a href="https://krita.org" title="Krita official website.">Krita official website</a> |
+  <a href="https://invent.kde.org/documentation/docs-krita-org/" title="The Gitlab instance to edit this pages and collaborate.">Git repository for docs.krita.org </a> |
+  <a href="https://www.kde.org/community/whatiskde/impressum-en.php" title="To know more about KDE, code of conduct, privacy policy and GDPR.">KDE Impressum</a>.
+   
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'5.0.0 Beta',
+            LANGUAGE:'en',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/documentation_options.js"></script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
+      });
+  </script> 
+
+ <script type="text/javascript">
+	 var _paq=_paq||[];
+	 _paq.push(['setCookieDomain','*.krita.org']);
+	 _paq.push(['setDomains','*.krita.org']);
+	 _paq.push(['setDocumentTitle',document.domain+"/"+document.title]);
+	 _paq.push(['trackPageView']);
+	 _paq.push(['enableLinkTracking']);
+
+	 (function(){
+	 	var u="//stats.kde.org/";
+	    _paq.push(['setTrackerUrl',u+'piwik.php']);
+	    _paq.push(['setSiteId',13]);
+	    var d = document, g = d.createElement('script'),s=d.getElementsByTagName('script')[0];
+	    g.type = 'text/javascript';
+	    g.async = true;
+	    g.defer = true;
+	    g.src = u+'piwik.js';
+	    s.parentNode.insertBefore(g,s);
+	  })();
+</script> 
+<noscript><p><img src="//stats.kde.org/piwik.php?idsite=13" style="border:0;" alt="" /></p></noscript>
+
+</body>
+</html>

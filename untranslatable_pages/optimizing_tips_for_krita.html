@@ -1,0 +1,502 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" name="title" content="Optimizing tips and tools for Krita" />
+  <meta property="og:site-name" content="Krita Manual" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="en" />
+  <meta property="og:locale:alternate" content="ca" />
+  
+  <meta property="og:locale:alternate" content="fr" />
+  <meta property="og:locale:alternate" content="it" />
+  <meta property="og:locale:alternate" content="ja" />
+  <meta property="og:locale:alternate" content="ko" />
+  <meta property="og:locale:alternate" content="nl" />
+  <meta property="og:locale:alternate" content="pl" />
+  <meta property="og:locale:alternate" content="pt_PT" />
+  <meta property="og:locale:alternate" content="uk_UA" />
+  <meta property="og:locale:alternate" content="zh_CN" />
+  <meta property="og:article:modified_time" content="2021-07-19T15:33:59" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<meta content="Guide for optimizing Krita." name="description" />
+
+  
+  
+  <title>Optimizing tips and tools for Krita &mdash; Krita Manual 5.0.0 Beta documentation</title>
+  
+
+  
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    
+  
+  
+  
+    <link rel="canonical" href="en/untranslatable_pages/optimizing_tips_for_krita.html"/>
+    <meta property="og:url" content="en/untranslatable_pages/optimizing_tips_for_krita.html" />
+    <meta property="og:image" content="en/_static/sidebar-logo.png" />
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Google Summer of Code" href="participating_in_gsoc.html" />
+    <link rel="prev" title="Developing Features" href="new_features.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+       
+           <a href="../index.html" class="icon icon-home">
+
+			<img src="../_static/sidebar-logo.png" class="logo" alt="Logo"/>
+           	
+           <!--	Krita Manual -->
+
+
+          </a>
+
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-side-nav-language-selector">
+        	<p class="caption-text">
+	        	<select id="language-selector-container">
+	        		<option value="ca">Català</option>
+	        		<option value="en">English</option>
+	        		<option value="fr">français</option>
+	        		<option value="it">Italiano</option>
+	        		<option value="ja">日本語</option>
+	        		<option value="ko">한국어</option>
+	        		<option value="nl">Nederlands</option>
+	        		<option value="pl">Polski</option>
+	        		<option value="pt_PT">português</option>
+	        		<option value="uk_UA">Українська</option>
+	        		<option value="zh_CN">简体中文</option>
+	        	</select>
+        	</p>
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../user_manual.html">User Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general_concepts.html">General Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference_manual.html">Reference Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials.html">Tutorials and How-tos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../KritaFAQ.html">Krita FAQ</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../contributors_manual.html">Contributors Manual</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../contributors_manual/community.html">The Krita Community</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributors_manual/krita_manual_conventions.html">Mark-up conventions for the Krita Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributors_manual/krita_manual_readme.html">Krita Manual Contribution Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributors_manual/optimising_images.html">Images for the Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributors_manual/user_support.html">Introduction to User Support</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../untranslatable_pages.html">Technical Pages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="building_krita.html">Building Krita from Source</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cmake_settings_for_developers.html">CMake Settings for Developers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="intro_hacking_krita.html">Introduction to Hacking Krita</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kpl_defintion.html">The Krita Palette format KPL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="krita_svg_extensions.html">Krita SVG Extensions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modern_cpp_in_krita.html">Modern C++ usage guidelines for the Krita codebase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new_features.html">Developing Features</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Optimizing tips and tools for Krita</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#hot-spots">Hot Spots</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tools">Tools</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#easy-optimization">Easy optimization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#vector-instructions">Vector instructions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#profile-guided-optimization">Profile guided optimization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#links">Links</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="participating_in_gsoc.html">Google Summer of Code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="patch_review_guide.html">Advanced Merge Request Guide</a></li>
+<li class="toctree-l3"><a class="reference internal" href="python_coding.html">Python Developer Tools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quality_assurance.html">Introduction to Quality Assurance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release_krita.html">Making a release</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reporting_bugs.html">Reporting Bugs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="running_krita.html">Running Krita from Source</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strokes_documentation.html">Strokes queue</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strokes_documentation.html#strokes-public-api">Strokes public API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strokes_documentation.html#internals-of-the-freehand-tool">Internals of the freehand tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strokes_documentation.html#scheduled-undo-redo">Scheduled Undo/Redo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strokes_documentation.html#processings-framework">Processings framework</a></li>
+<li class="toctree-l3"><a class="reference internal" href="testing_strategy.html">Testing Strategy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="triaging_bugs.html">Triaging Bugs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="unit_tests_in_krita.html">Unittests in Krita</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../resources_page.html">Resources</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+	<!-- start top banner area (for fundraisers or messages)
+
+	<div style="text-align: center; background-color: #333">
+		<a href="https://krita.org/en/fundraising-2018-campaign/" target="_self" onclick="ga('send', 'event', 'frontpage', 'button', 'Fundraiser 2018');">
+			<img src="https://krita.org/wp-content/themes/krita-org-theme/images/decoration/2018-fundraiser-banner.png" style="max-width: 100%">
+		</a>
+	</div>
+	
+	 end top banner area -->
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Krita Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../contributors_manual.html">Contributors Manual</a> &raquo;</li>
+        
+          <li><a href="../untranslatable_pages.html">Technical Pages</a> &raquo;</li>
+        
+      <li>Optimizing tips and tools for Krita</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+          
+            <a href="../_sources/untranslatable_pages/optimizing_tips_for_krita.rst.txt" rel="nofollow"> 
+             
+              <img src="../_static/images/source-code.png" />
+             <!-- View page source -->
+
+          </a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="optimizing-tips-and-tools-for-krita">
+<h1>Optimizing tips and tools for Krita<a class="headerlink" href="#optimizing-tips-and-tools-for-krita" title="Permalink to this headline">¶</a></h1>
+<section id="hot-spots">
+<h2>Hot Spots<a class="headerlink" href="#hot-spots" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>thumbnails are recalculated a lot</p></li>
+<li><p>the histogram docker calculates even when hidden</p></li>
+<li><p>brush outline seems slow</p></li>
+<li><p>the calculation of the mask for the autobrush is very slow and doesn’t cache anything</p></li>
+<li><p>caching a whole row or column of tiles in the h/v line iterators should speed up things a lot</p></li>
+<li><p>tile engine 1 has the BKL; tile engine 2 cannot swap yet and isn’t optimized yet</p></li>
+<li><p>projection recomposition doesn’t take the visible area into account</p></li>
+<li><p>pigment preloads all profiles (startup hit)</p></li>
+<li><p>gradients are calculated on load, instead of being associated with a PNG preview image that is cheap to load</p></li>
+</ul>
+</section>
+<section id="tools">
+<h2>Tools<a class="headerlink" href="#tools" title="Permalink to this headline">¶</a></h2>
+<section id="valgrind">
+<h3>Valgrind<a class="headerlink" href="#valgrind" title="Permalink to this headline">¶</a></h3>
+<section id="tips">
+<h4>Tips<a class="headerlink" href="#tips" title="Permalink to this headline">¶</a></h4>
+<p>You can tell callgrind to focus only on the part of the code you want to optimize. This results in cleaner data.  For example, you may want to only monitor the performance when drawing a stroke. Unless the thing you’re trying to optimize is the program startup, you can tell valgrind to run with the logging, or instrumentation, turned off at start:</p>
+<p><code class="docutils literal notranslate"><span class="pre">valgrind</span>&#160; <span class="pre">--tool=callgrind</span> <span class="pre">--instr-atstart=no</span> <span class="pre">krita</span></code></p>
+<p>Instrumentation can then be activated and deactivated with callgrind_control. To begin performance monitoring:</p>
+<p><code class="docutils literal notranslate"><span class="pre">callgrind_control</span> <span class="pre">-i</span> <span class="pre">on</span></code></p>
+<p>And then to end it:</p>
+<p><code class="docutils literal notranslate"><span class="pre">callgrind_control</span> <span class="pre">-i</span> <span class="pre">off</span></code></p>
+<p>I usually write a few aliases in my .bashrc  (or .zshrc):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">alias</span> <span class="n">callgrind</span><span class="o">=</span><span class="s2">&quot;valgrind --tool=callgrind --instr-atstart=no&quot;</span>
+<span class="n">alias</span> <span class="n">callgrind</span><span class="o">-</span><span class="n">on</span><span class="o">=</span><span class="s2">&quot;callgrind_control --instr=on&quot;</span>
+<span class="n">alias</span> <span class="n">callgrind</span><span class="o">-</span><span class="n">off</span><span class="o">=</span><span class="s2">&quot;callgrind_control --instr=off&quot;</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="sysprof">
+<h3>Sysprof<a class="headerlink" href="#sysprof" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="mutrace">
+<h3>mutrace<a class="headerlink" href="#mutrace" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="http://0pointer.de/blog/projects/mutrace.html">mutrace</a> is a tool that count how much time is spend waiting for a mutex to unlock.</p>
+</section>
+</section>
+<section id="easy-optimization">
+<h2>Easy optimization<a class="headerlink" href="#easy-optimization" title="Permalink to this headline">¶</a></h2>
+<p>As soon as you see slow code, try to have a look at the code to see if we
+aren’t creating a lot of unnecesserary objects, 90% of the time slow code is
+caused by this (the remain 10% are often caused by a lot of access to the
+tilesmanager, like with random accessor)</p>
+<p>For instance:</p>
+<p>Avoid:</p>
+<blockquote>
+<div><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="p">(</span><span class="n">whatever</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">QColor</span> <span class="n">c</span><span class="p">;</span>
+    <span class="p">...</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>Do:</p>
+<blockquote>
+<div><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">QColor</span> <span class="n">c</span><span class="p">;</span>
+<span class="k">for</span><span class="p">(</span><span class="n">whatever</span><span class="p">)</span>
+<span class="p">{</span>
+
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>It might seems insignificant, but really it’s not, on a loop of a milion of
+iterations, this is expensive as hell.</p>
+<p>An other example:</p>
+<p>Avoid:</p>
+<blockquote>
+<div><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="p">(</span><span class="n">y</span> <span class="o">=</span> <span class="mi">0</span> <span class="n">to</span> <span class="n">height</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">KisHLineIterator</span> <span class="n">it</span> <span class="o">=</span> <span class="n">dev</span><span class="o">-&gt;</span><span class="n">createHLineIterator</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">width</span><span class="p">);</span>
+    <span class="k">for</span><span class="p">(</span><span class="n">whatever</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="p">...</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>Do:</p>
+<blockquote>
+<div><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">KisHLineIterator</span> <span class="n">it</span> <span class="o">=</span> <span class="n">dev</span><span class="o">-&gt;</span><span class="n">createHLineIterator</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">width</span><span class="p">);</span>
+<span class="k">for</span><span class="p">(</span><span class="n">y</span> <span class="o">=</span> <span class="mi">0</span> <span class="n">to</span> <span class="n">height</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">for</span><span class="p">(</span><span class="n">whatever</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="p">...</span>
+    <span class="p">}</span>
+    <span class="n">it</span><span class="p">.</span><span class="n">nextRow</span><span class="p">();</span> <span class="c1">// or nextCol() if you are using a VLine iterator</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+</section>
+<section id="vector-instructions">
+<h2>Vector instructions<a class="headerlink" href="#vector-instructions" title="Permalink to this headline">¶</a></h2>
+<p>Krita takes heavy advantage of the <a class="reference external" href="https://github.com/VcDevel/Vc">Vc</a> library to speed up its brush strokes with CPU vector instructions.  If you are planning to work with that library, it is worth reading through its documentation.</p>
+<p>There are more general introductions to what vector instructions are for, and how they work here.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference external" href="http://developer.intel.com/design/archives/processors/mmx/">Reference about MMX on Intel’s website</a>.</p></li>
+<li><p><a class="reference external" href="http://www.cise.ufl.edu/~peir/cda6159/media12.pdf">Fundamentals of Media Processor Designs</a>: introduction to the use of MMX/SSE instructions.</p></li>
+<li><p><a class="reference external" href="http://www.amd.com/us-en/assets/content_type/white_papers_and_tech_docs/25112.PDF">Software Optimization Guide for AMD64</a>.</p></li>
+<li><p><a class="reference external" href="http://www.pixelglow.com/macstl/">STL like programming but using MMX/SSE{1,2,3} when available</a>.</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="profile-guided-optimization">
+<h2>Profile guided optimization<a class="headerlink" href="#profile-guided-optimization" title="Permalink to this headline">¶</a></h2>
+<p>Profile guided optimization is something else though. It is a special way of compiling and linking, that the compiler and linker use profiling information to know how best to optimize the code. So code that is used a lot is compiled with -O3 (the most optimizations), while code that is not used a lot gets -Os (to take less space), and so forth. This is a very useful technique that was not available on Linux until last year, and the news today is that Firefox now builds properly with it and there is a nice noticeable speed improvement for Linux users.</p>
+<dl class="simple">
+<dt>source:</dt><dd><p><a class="reference external" href="https://linux.slashdot.org/comments.pl?sid=2117150&amp;cid=35987784">https://linux.slashdot.org/comments.pl?sid=2117150&amp;cid=35987784</a></p>
+</dd>
+<dt>wikipedia:</dt><dd><p><a class="reference external" href="https://en.wikipedia.org/wiki/Profile-guided_optimization">https://en.wikipedia.org/wiki/Profile-guided_optimization</a></p>
+</dd>
+</dl>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">g</span><span class="o">++</span> <span class="o">-</span><span class="n">O3</span> <span class="o">-</span><span class="n">march</span><span class="o">=</span><span class="n">native</span> <span class="o">-</span><span class="n">pg</span> <span class="o">-</span><span class="n">fprofile</span><span class="o">-</span><span class="n">generate</span> <span class="p">...</span>
+<span class="c1">// run my program&#39;s benchmark</span>
+<span class="n">g</span><span class="o">++</span> <span class="o">-</span><span class="n">O3</span> <span class="o">-</span><span class="n">march</span><span class="o">=</span><span class="n">native</span> <span class="o">-</span><span class="n">fprofile</span><span class="o">-</span><span class="n">use</span> <span class="p">...</span>
+</pre></div>
+</div>
+</section>
+<section id="links">
+<h2>Links<a class="headerlink" href="#links" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://es.scribd.com/document/53483851/Design-for-Performance">Design for Performance</a>: great read about performance optimization (aimed at game developers, but many tricks apply for Krita).</p></li>
+<li><p><a class="reference external" href="http://goog-perftools.sourceforge.net/doc/tcmalloc.html">TCMalloc</a>: a malloc replacement which make faster allocation of objects by caching some reserved part of the memory.</p></li>
+<li><p><a class="reference external" href="http://www.agner.org/optimize/optimizing_cpp.pdf">Optmizing CPP</a>: extensive manual on writing optimized code.</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="participating_in_gsoc.html" class="btn btn-neutral float-right" title="Google Summer of Code" accesskey="n" rel="next"> <!-- Next --> <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="new_features.html" class="btn btn-neutral" title="Developing Features" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- Previous  -->  </a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright licensed under the GNU Free Documentation License 1.3+ unless stated otherwise.
+      
+        <span class="commit">
+          Revision <code>7c271ce</code>.
+        </span>
+      
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a modified <a href="https://github.com/rtfd/sphinx_rtd_theme">RTD theme</a>.<br/>
+  <a href="https://krita.org" title="Krita official website.">Krita official website</a> |
+  <a href="https://invent.kde.org/documentation/docs-krita-org/" title="The Gitlab instance to edit this pages and collaborate.">Git repository for docs.krita.org </a> |
+  <a href="https://www.kde.org/community/whatiskde/impressum-en.php" title="To know more about KDE, code of conduct, privacy policy and GDPR.">KDE Impressum</a>.
+   
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'5.0.0 Beta',
+            LANGUAGE:'en',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/documentation_options.js"></script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
+      });
+  </script> 
+
+ <script type="text/javascript">
+	 var _paq=_paq||[];
+	 _paq.push(['setCookieDomain','*.krita.org']);
+	 _paq.push(['setDomains','*.krita.org']);
+	 _paq.push(['setDocumentTitle',document.domain+"/"+document.title]);
+	 _paq.push(['trackPageView']);
+	 _paq.push(['enableLinkTracking']);
+
+	 (function(){
+	 	var u="//stats.kde.org/";
+	    _paq.push(['setTrackerUrl',u+'piwik.php']);
+	    _paq.push(['setSiteId',13]);
+	    var d = document, g = d.createElement('script'),s=d.getElementsByTagName('script')[0];
+	    g.type = 'text/javascript';
+	    g.async = true;
+	    g.defer = true;
+	    g.src = u+'piwik.js';
+	    s.parentNode.insertBefore(g,s);
+	  })();
+</script> 
+<noscript><p><img src="//stats.kde.org/piwik.php?idsite=13" style="border:0;" alt="" /></p></noscript>
+
+</body>
+</html>

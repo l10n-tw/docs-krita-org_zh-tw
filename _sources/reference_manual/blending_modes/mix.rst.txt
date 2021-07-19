@@ -1,0 +1,313 @@
+.. meta::
+   :description:
+        Page about the mix blending modes in Krita: Allanon, Alpha Darken, Behind, Erase, Geometric Mean, Grain Extract, Grain Merge, Greater, Hard Mix, Hard Overlay, Interpolation, Interpolation2x, Normal, Overlay, Parallel, Penumbra A, B, C and D.
+
+.. metadata-placeholder
+
+   :authors: - Wolthera van Hövell tot Westerflier <griffinvalley@gmail.com>
+             - Maria Luisac
+             - Reptorian <reptillia39@live.com>
+             - Deif Lou <ginoba@gmail.com>
+   :license: GNU free documentation license 1.3 or later.
+
+
+.. _bm_cat_mix:
+
+Mix
+---
+
+.. index:: ! Allanon
+.. _bm_allanon:
+
+Allanon
+~~~~~~~
+
+Blends the upper layer as half-transparent with the lower. (It add the two layers together and then halves the value).
+
+.. figure:: /images/blending_modes/mix/Blending_modes_Allanon_Sample_image_with_dots.png
+   :align: center
+
+   Left: **Normal**. Right: **Allanon**.
+
+.. index:: ! Interpolation
+.. _bm_interpolation:
+
+Interpolation
+~~~~~~~~~~~~~
+
+Subtract 0.5f by 1/4 of cosine of base layer subtracted by 1/4 of cosine of blend layer assuming 0-1 range.
+The result is similar to Allanon mode, but with more contrast and functional difference to 50% opacity.
+
+.. figure:: /images/blending_modes/mix/Blending_modes_Interpolation_Sample_image_with_dots.png
+   :align: center
+
+   Left: **Normal**. Right: **Interpolation**.
+   
+.. index:: ! Interpolation2x
+.. _bm_interpolation2x:
+
+Interpolation - 2X
+~~~~~~~~~~~~~~~~~~
+
+Applies Interpolation blend mode to base and blend layers, then duplicate to repeat interpolation blending.
+
+.. figure:: /images/blending_modes/mix/Blending_modes_Interpolation_X2_Sample_image_with_dots.png
+   :align: center
+
+   Left: **Normal**. Right: **Interpolation - 2X**.
+
+.. index:: ! Alpha Darken
+.. _bm_alpha_darken:
+
+Alpha Darken
+~~~~~~~~~~~~
+
+As far as I can tell this seems to premultiply the alpha, as is common in some file-formats.
+
+.. figure:: /images/blending_modes/mix/Blending_modes_Alpha_Darken_Sample_image_with_dots.png
+   :align: center
+
+   Left: **Normal**. Right: **Alpha Darken**.
+
+.. index:: ! Behind
+.. _bm_behind:
+
+Behind
+~~~~~~
+
+Does the opposite of normal, and tries to have the upper layer rendered below the lower layer.
+
+.. figure:: /images/blending_modes/mix/Blending_modes_Behind_Sample_image_with_dots.png
+   :align: center
+
+   Left: **Normal**. Right: **Behind**.
+
+.. index:: ! Erase (Blending Mode)
+.. _bm_erase:
+
+Erase
+~~~~~
+
+This subtracts the opaque pixels of the upper layer from the lower layer, effectively erasing.
+
+.. figure:: /images/blending_modes/mix/Blending_modes_Erase_Sample_image_with_dots.png
+   :align: center
+
+   Left: **Normal**. Right: **Erase**.
+
+.. index:: ! Geometric Mean
+.. _bm_geometric_mean:
+
+Geometric Mean
+~~~~~~~~~~~~~~
+
+This blending mode multiplies the top layer with the bottom, and then outputs the square root of that.
+
+.. figure:: /images/blending_modes/mix/Blending_modes_Geometric_Mean_Sample_image_with_dots.png
+   :align: center
+
+   Left: **Normal**. Right: **Geometric Mean**.
+
+.. index:: ! Grain Extract
+.. _bm_grain_extract:
+
+Grain Extract
+~~~~~~~~~~~~~
+
+Similar to subtract, the colors of the upper layer are subtracted from the colors of the lower layer, and then 50% gray is added.
+
+.. figure:: /images/blending_modes/mix/Blending_modes_Grain_Extract_Sample_image_with_dots.png
+   :align: center
+
+   Left: **Normal**. Right: **Grain Extract**.
+
+.. index:: ! Grain Merge
+.. _bm_grain_merge:
+
+Grain Merge
+~~~~~~~~~~~
+
+Similar to addition, the colors of the upper layer are added to the colors, and then 50% gray is subtracted.
+
+.. figure:: /images/blending_modes/mix/Blending_modes_Grain_Merge_Sample_image_with_dots.png
+   :align: center
+
+   Left: **Normal**. Right: **Grain Merge**.
+
+.. index:: ! Greater (Blending Mode)
+.. _bm_greater:
+
+Greater
+~~~~~~~
+
+A blending mode which checks whether the painted color is painted with a higher opacity than the existing colors. If so, it paints over them, if not, it doesn't paint at all.
+
+.. image:: /images/blending_modes/mix/Greaterblendmode.gif
+   :align: center
+
+.. index:: ! Hard Mix
+.. _bm_hard_mix:
+   
+Hard Mix
+~~~~~~~~
+
+Similar to Overlay.
+
+Mixes both Color Dodge and Burn blending modes. If the color of the upper layer is darker than 50%, the blending mode will be Burn, if not the blending mode will be Color Dodge.
+
+.. figure:: /images/blending_modes/mix/Blending_modes_Hard_Mix_Sample_image_with_dots.png
+   :figwidth: 800
+   :align: center
+   
+   Left: **Normal**. Right: **Hard Mix**.
+
+.. index:: ! Hard Mix (Photoshop)
+.. _bm_hard_mix_photoshop:
+
+Hard Mix (Photoshop)
+~~~~~~~~~~~~~~~~~~~~
+
+This is the hard mix blending mode as it is implemented in photoshop.
+
+.. figure:: /images/blending_modes/mix/Krita_4_0_hard_mix_ps.png
+   :figwidth: 800
+   :align: center
+   
+   **Left**: Dots are mixed in with the normal blending mode, on the **Right**: Dots are mixed in with hardmix.
+   
+This add the two values, and then checks if the value is above the maximum. If so it will output the maximum, otherwise the minimum.
+
+.. index:: ! Hard Mix Softer (Photoshop)
+.. _bm_hard_mix_softer_photoshop:
+
+Hard Mix Softer (Photoshop)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. versionadded:: 5.0
+
+This is the hard mix blending mode as it is implemented in photoshop for texturing brushes. It produces softer edges
+than the normal *Hard Mix (Photoshop)*.
+
+.. figure:: /images/blending_modes/mix/Blending_modes_Hard_Mix_Softer_Photoshop_Sample_image_with_dots.png
+   :figwidth: 800
+   :align: center
+   
+   **Left**: Dots are mixed in with the normal blending mode, on the **Right**: Dots are mixed in with hard mix softer.
+   
+This is like the inverse subtract mode but the two terms are scaled up to increase the contrast. This is not really a
+hard mix mode in the sense that it doesn't choose between a result or another based on a threshold, although in most
+cases the result looks like the normal *Hard Mix (Photoshop)* but with softer edges.
+
+.. index:: ! Hard Overlay
+.. _bm_hard_overlay:
+
+Hard Overlay
+~~~~~~~~~~~~
+
+.. versionadded:: 4.0
+
+Similar to Hard light but hard light use Screen when the value is above 50%. Divide gives better results than Screen, especially on floating point images.
+
+.. figure:: /images/blending_modes/mix/Blending_modes_Hard_Overlay_Sample_image_with_dots.png
+   :align: center
+
+   Left: **Normal**. Right: **Hard Overlay**.
+
+.. index:: ! Normal (Blending Mode), Source Over
+.. _bm_normal:
+
+Normal
+~~~~~~
+
+As you may have guessed this is the default Blending mode for all layers.
+
+In this mode, the computer checks on the upper layer how transparent a pixel is, which color it is, and then mixes the color of the upper layer with the lower layer proportional to the transparency.
+
+.. figure:: /images/blending_modes/mix/Blending_modes_Normal_50_Opacity_Sample_image_with_dots.png
+   :align: center
+
+   Left: **Normal** 100% Opacity. Right: **Normal** 50% Opacity.
+
+.. index:: ! Overlay (Blending Mode)
+.. _bm_overlay:
+
+Overlay
+~~~~~~~
+
+A combination of the Multiply and Screen blending modes, switching between both at a middle-lightness.
+
+Overlay checks if the color on the upperlayer has a lightness above 0.5. If so, the pixel is blended like in Screen mode, if not the pixel is blended like in Multiply mode.
+
+This is useful for deepening shadows and highlights.
+
+.. figure:: /images/blending_modes/mix/Blending_modes_Overlay_Sample_image_with_dots.png
+   :align: center
+
+   Left: **Normal**. Right: **Overlay**.
+
+.. index:: ! Parallel
+.. _bm_parallel:
+
+Parallel
+~~~~~~~~
+
+This one first takes the percentage in two decimal behind the comma for both layers.
+It then adds the two values.
+Divides 2 by the sum.
+
+.. figure:: /images/blending_modes/mix/Blending_modes_Parallel_Sample_image_with_dots.png
+   :align: center
+
+   Left: **Normal**. Right: **Parallel**.
+
+.. index:: ! Penumbra A
+.. _bm_penumbra_a:
+
+Penumbra A
+~~~~~~~~~~
+
+Creates a linear penumbra falloff. This means most tones will be in the midtone ranges.
+
+.. figure:: /images/blending_modes/mix/Blending_modes_Penumbra_A_Sample_image_with_dots.png
+   :align: center
+
+   Left: **Normal**. Right: **Penumbra A**.
+   
+.. index:: ! Penumbra B
+.. _bm_penumbra_b:
+
+Penumbra B
+~~~~~~~~~~
+
+Penumbra A with source and destination layer swapped.
+
+.. figure:: /images/blending_modes/mix/Blending_modes_Penumbra_B_Sample_image_with_dots.png
+   :align: center
+
+   Left: **Normal**. Right: **Penumbra B**.
+   
+.. index:: ! Penumbra C
+.. _bm_penumbra_c:
+
+Penumbra C
+~~~~~~~~~~
+
+Creates a penumbra-like falloff using arc-tangent formula. This means most tones will be in the midtone ranges.
+
+.. figure:: /images/blending_modes/mix/Blending_modes_Penumbra_C_Sample_image_with_dots.png
+   :align: center
+
+   Left: **Normal**. Right: **Penumbra C**.
+   
+.. index:: ! Penumbra D
+.. _bm_penumbra_d:
+
+Penumbra D
+~~~~~~~~~~
+
+Penumbra C with source and destination layer swapped.
+
+.. figure:: /images/blending_modes/mix/Blending_modes_Penumbra_D_Sample_image_with_dots.png
+   :align: center
+
+   Left: **Normal**. Right: **Penumbra D**.

@@ -1,0 +1,602 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" name="title" content="Working with Images" />
+  <meta property="og:site-name" content="Krita Manual" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="en" />
+  <meta property="og:locale:alternate" content="ca" />
+  
+  <meta property="og:locale:alternate" content="fr" />
+  <meta property="og:locale:alternate" content="it" />
+  <meta property="og:locale:alternate" content="ja" />
+  <meta property="og:locale:alternate" content="ko" />
+  <meta property="og:locale:alternate" content="nl" />
+  <meta property="og:locale:alternate" content="pl" />
+  <meta property="og:locale:alternate" content="pt_PT" />
+  <meta property="og:locale:alternate" content="uk_UA" />
+  <meta property="og:locale:alternate" content="zh_CN" />
+  <meta property="og:article:modified_time" content="2021-07-19T15:33:59" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<meta content="Detailed steps on how images work in Krita." name="description" />
+
+  
+  
+  <title>Working with Images &mdash; Krita Manual 5.0.0 Beta documentation</title>
+  
+
+  
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    
+  
+  
+  
+    <link rel="canonical" href="en/user_manual/working_with_images.html"/>
+    <meta property="og:url" content="en/user_manual/working_with_images.html" />
+    <meta property="og:image" content="en/_static/sidebar-logo.png" />
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Saving, AutoSave and Backup Files" href="autosave.html" />
+    <link rel="prev" title="Painting with Assistants" href="painting_with_assistants.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+       
+           <a href="../index.html" class="icon icon-home">
+
+			<img src="../_static/sidebar-logo.png" class="logo" alt="Logo"/>
+           	
+           <!--	Krita Manual -->
+
+
+          </a>
+
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-side-nav-language-selector">
+        	<p class="caption-text">
+	        	<select id="language-selector-container">
+	        		<option value="ca">Català</option>
+	        		<option value="en">English</option>
+	        		<option value="fr">français</option>
+	        		<option value="it">Italiano</option>
+	        		<option value="ja">日本語</option>
+	        		<option value="ko">한국어</option>
+	        		<option value="nl">Nederlands</option>
+	        		<option value="pl">Polski</option>
+	        		<option value="pt_PT">português</option>
+	        		<option value="uk_UA">Українська</option>
+	        		<option value="zh_CN">简体中文</option>
+	        	</select>
+        	</p>
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../user_manual.html">User Manual</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction_from_other_software.html">Introduction Coming From Other Software</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drawing_tablets.html">Drawing Tablets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loading_saving_brushes.html">Loading and Saving Brushes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oncanvas_brush_editor.html">On-Canvas Brush Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mirror_tools.html">Mirror Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="painting_with_assistants.html">Painting with Assistants</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Working with Images</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#what-do-images-contain">What do Images Contain?</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#raster-data">Raster Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#vector-data">Vector Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#operation-data">Operation Data</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#metadata">Metadata</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#image-size">Image size</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#dpi-ppi">DPI/PPI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#color-depth">Color depth</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#image-color-space-vs-layer-color-space-vs-conversion">Image color space vs layer color space vs conversion.</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#author-and-description">Author and Description</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#setting-the-canvas-background-color">Setting the canvas background color</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#basic-transforms">Basic transforms</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#cropping-and-resizing-the-canvas">Cropping and resizing the canvas</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#trimming">Trimming</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#resizing-the-canvas">Resizing the canvas</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#resizing-the-image">Resizing the image</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#separating-images">Separating Images</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#saving-exporting-and-opening-files">Saving, Exporting and Opening Files</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="autosave.html">Saving, AutoSave and Backup Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templates.html">Templates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="layers_and_masks.html">Introduction to Layers and Masks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="selections.html">Selections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python_scripting.html">Python Scripting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tag_management.html">Tag Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="soft_proofing.html">Soft Proofing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vector_graphics.html">Vector Graphics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="snapping.html">Snapping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="animation.html">Animation with Krita</a></li>
+<li class="toctree-l2"><a class="reference internal" href="japanese_animation_template.html">Japanese Animation Template</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gamut_masks.html">Gamut Masks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../general_concepts.html">General Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference_manual.html">Reference Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials.html">Tutorials and How-tos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../KritaFAQ.html">Krita FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributors_manual.html">Contributors Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../resources_page.html">Resources</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+	<!-- start top banner area (for fundraisers or messages)
+
+	<div style="text-align: center; background-color: #333">
+		<a href="https://krita.org/en/fundraising-2018-campaign/" target="_self" onclick="ga('send', 'event', 'frontpage', 'button', 'Fundraiser 2018');">
+			<img src="https://krita.org/wp-content/themes/krita-org-theme/images/decoration/2018-fundraiser-banner.png" style="max-width: 100%">
+		</a>
+	</div>
+	
+	 end top banner area -->
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Krita Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../user_manual.html">User Manual</a> &raquo;</li>
+        
+      <li>Working with Images</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+          
+            <a href="../_sources/user_manual/working_with_images.rst.txt" rel="nofollow"> 
+             
+              <img src="../_static/images/source-code.png" />
+             <!-- View page source -->
+
+          </a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="working-with-images">
+<span id="index-0"></span><span id="id1"></span><h1>Working with Images<a class="headerlink" href="#working-with-images" title="Permalink to this headline">¶</a></h1>
+<p>Computers work with files and as a painting program, Krita works with
+images as the type of file it creates and manipulates.</p>
+<section id="what-do-images-contain">
+<h2>What do Images Contain?<a class="headerlink" href="#what-do-images-contain" title="Permalink to this headline">¶</a></h2>
+<p>If you have a text document, it of course contains letters, strung in
+the right order, so the computer loads them as coherent sentences.</p>
+<section id="raster-data">
+<h3>Raster Data<a class="headerlink" href="#raster-data" title="Permalink to this headline">¶</a></h3>
+<p>This is the main data on the paint layers you make. So these are the
+strokes with the paint brush and look pixelated up close. A multi-layer
+file will contain several of such layers, that get overlaid on top of
+each other so make the final image.</p>
+<p>A single layer file will usually only contain raster data.</p>
+</section>
+<section id="vector-data">
+<h3>Vector Data<a class="headerlink" href="#vector-data" title="Permalink to this headline">¶</a></h3>
+<p>These are mathematical operations that tell the computer to draw pixels
+on a spot. This makes them much more scalable, because you just tell the
+operation to make the coordinates 4 times bigger to scale it up. Due to
+this vector data is much more editable, lighter, but at the same time
+it’s also much more CPU intensive.</p>
+</section>
+<section id="operation-data">
+<h3>Operation Data<a class="headerlink" href="#operation-data" title="Permalink to this headline">¶</a></h3>
+<p>Stuff like the filter layers, that tells Krita to change the colors of a
+layer, but also transparency masks, group layer and transformation masks
+are saved to multi-layer files. Being able to load these depend on the
+software that initially made the file. So Krita can load and save
+groups, transparency masks and layer effects from PSD, but not load or
+save transform masks.</p>
+</section>
+</section>
+<section id="metadata">
+<h2>Metadata<a class="headerlink" href="#metadata" title="Permalink to this headline">¶</a></h2>
+<p>Metadata is information like the creation date, author, description and
+also information like DPI.</p>
+</section>
+<section id="image-size">
+<h2>Image size<a class="headerlink" href="#image-size" title="Permalink to this headline">¶</a></h2>
+<p>The image size is the dimension and resolution of the canvas. Image size
+has direct effect file size of the Krita document. The more pixels that
+need to be remembered and the higher the bit depth of the color, the
+heavier the resulting file will be.</p>
+<section id="dpi-ppi">
+<h3>DPI/PPI<a class="headerlink" href="#dpi-ppi" title="Permalink to this headline">¶</a></h3>
+<p><strong>DPI</strong> stands for <em>Dots per Inch</em>, <strong>PPI</strong> stands for <em>Pixels per
+Inch</em>. In printing industry, suppose if your printer prints at 300
+<strong>DPI</strong>. It means it is actually putting 300 dots of colors in an area
+equal to an Inch. This means the number of pixels your artwork has in a
+relative area of an inch.</p>
+<p><strong>DPI</strong> is the concern of the printer, and artists while creating
+artwork should keep <strong>PPI</strong> in mind. According to the <strong>PPI</strong> you have
+set, the printers can decide how large your image should be on a piece
+of paper.</p>
+<p>Some standards:</p>
+<dl class="simple">
+<dt>72 PPI</dt><dd><p>This is the default PPI of monitors as assumed by all programs. It
+is not fully correct, as most monitors these days have 125 PPI or
+even 300 PPI for the retina devices. Nonetheless, when making an
+image for computer consumption, this is the default.</p>
+</dd>
+<dt>120 PPI</dt><dd><p>This is often used as a standard for low-quality posters.</p>
+</dd>
+<dt>300 PPI</dt><dd><p>This is the minimum you should use for quality prints.</p>
+</dd>
+<dt>600 PPI</dt><dd><p>The quality used for line art for comics.</p>
+</dd>
+</dl>
+</section>
+<section id="color-depth">
+<h3>Color depth<a class="headerlink" href="#color-depth" title="Permalink to this headline">¶</a></h3>
+<p>We went over color depth in the <a class="reference internal" href="../general_concepts/colors.html#general-concept-color"><span class="std std-ref">Color Management page</span></a>. What you need to
+understand is that Krita has image color spaces, and layer color spaces,
+the latter which can save memory if used right. For example, having a
+line art layer in grayscale can half the memory costs.</p>
+</section>
+<section id="image-color-space-vs-layer-color-space-vs-conversion">
+<h3>Image color space vs layer color space vs conversion.<a class="headerlink" href="#image-color-space-vs-layer-color-space-vs-conversion" title="Permalink to this headline">¶</a></h3>
+<p>Because there’s a difference between image color space and layer color
+space, you can change only the image color space in <span class="menuselection">Image ‣ Properties…</span> which will leave the layers alone. But if you want to change the color
+space of the file including all the layers you can do it by going to
+<span class="menuselection">Image ‣ Convert Image Color Space…</span> this will convert all the layers color space as well.</p>
+</section>
+</section>
+<section id="author-and-description">
+<h2>Author and Description<a class="headerlink" href="#author-and-description" title="Permalink to this headline">¶</a></h2>
+<img alt="../_images/document_information_screen.png" src="../_images/document_information_screen.png" />
+<p>Krita will automatically save who created the image into your image’s
+metadata. Along with the other data such as time and date of creation
+and modification, Krita also shows editing time of a document in the
+document information dialog, useful for professional illustrators,
+speed-painters to keep track of the time they worked on artwork for
+billing purposes. It detects when you haven’t performed actions for a
+while, and has a precision of ±60 seconds. You can empty it in the
+document info dialog and of course by unzipping you <code class="docutils literal notranslate"><span class="pre">.kra</span></code> file and
+editing the metadata there.</p>
+<p>These things can be edited in <span class="menuselection">File ‣ Document Information</span>, and for the author’s information <span class="menuselection">Settings ‣ Configure Krita… ‣ Author</span>. Profiles can be switched under <span class="menuselection">Settings ‣ Active Author Profile</span>.</p>
+<section id="setting-the-canvas-background-color">
+<h3>Setting the canvas background color<a class="headerlink" href="#setting-the-canvas-background-color" title="Permalink to this headline">¶</a></h3>
+<p>You can set the canvas background color via <span class="menuselection">Image ‣ Image Background
+Color and Transparency…</span> menu item. This allows you to turn the background color
+non-transparent and to change the color. This is also useful for certain file
+formats which force a background color instead of transparency. PNG and
+JPG export use this color as the default color to fill in transparency
+if you do not want to export transparency.</p>
+<p>If you come in from a program like <strong class="program">Paint Tool SAI</strong>, then using this
+option, or using <span class="guilabel">As canvas color</span> radio button at <span class="guilabel">Background:</span>
+section in the new file options, will allow you to work in a slightly more comfortable
+environment, where transparency isn’t depicted with checkered boxes.</p>
+</section>
+<section id="basic-transforms">
+<h3>Basic transforms<a class="headerlink" href="#basic-transforms" title="Permalink to this headline">¶</a></h3>
+<p>There are some basic transforms available in the Image menu.</p>
+<dl class="simple">
+<dt>Shear Image…</dt><dd><p>This will allow you to skew the whole image and its layers.</p>
+</dd>
+<dt>Rotate</dt><dd><p>This show a submenu that will allow you to rotate the image and all its layers quickly.</p>
+</dd>
+<dt>Mirror Image Horizontally/Vertically</dt><dd><p>This will allow you to mirror the whole image with all its layers.</p>
+</dd>
+</dl>
+<p>But there are more options than that…</p>
+</section>
+</section>
+<section id="cropping-and-resizing-the-canvas">
+<h2>Cropping and resizing the canvas<a class="headerlink" href="#cropping-and-resizing-the-canvas" title="Permalink to this headline">¶</a></h2>
+<p>You can crop and image with the
+<a class="reference internal" href="../reference_manual/tools/crop.html#crop-tool"><span class="std std-ref">Crop Tool</span></a>, to cut away extra space and improve the composition.</p>
+<section id="trimming">
+<h3>Trimming<a class="headerlink" href="#trimming" title="Permalink to this headline">¶</a></h3>
+<p>Using <span class="menuselection">Image ‣ Trim to Current Layer</span>, Krita resizes the
+image to the dimensions of the layer selected. Useful for when you paste
+a too large image into the layer and want to resize the canvas to the extent
+of this layer.</p>
+<p><span class="menuselection">Image ‣ Trim to Selection</span> is a faster cousin to the crop
+tool. This helps us to resize the canvas to the dimension of any active selection.
+This is especially useful with right-clicking the layer on the layer stack and
+choosing <span class="guilabel">Select Opaque</span>. <span class="menuselection">Image ‣ Trim to Selection</span>
+will then crop the canvas to the selection bounding box.</p>
+<p><span class="menuselection">Image ‣ Trim to Image Size</span> is actually for layers, and will trim all
+layers to the size of the image, making your files lighter by getting
+rid of invisible data.</p>
+</section>
+</section>
+<section id="resizing-the-canvas">
+<h2>Resizing the canvas<a class="headerlink" href="#resizing-the-canvas" title="Permalink to this headline">¶</a></h2>
+<p>You can also resize the canvas via <span class="menuselection">Image ‣ Resize Canvas…</span> (or
+the <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Alt</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">C</kbd></kbd> shortcut). The dialog box is shown below.</p>
+<img alt="../_images/Resize_Canvas.png" src="../_images/Resize_Canvas.png" />
+<p>In this, <span class="guilabel">Constrain proportions</span> checkbox will make sure the height and width stay
+in proportion to each other as you change them. Offset indicates
+where the new canvas space is added around the current image. You
+basically decide where the current image goes (if you press the
+left-button, it’ll go to the center left, and the new canvas space will
+be added to the right of the image).</p>
+<p>Another way to resize the canvas according to the need while drawing is
+when you scroll away from the end of the canvas, you can see a strip with
+an arrow appear. Clicking this will extend the canvas in that direction.
+You can see the arrow marked in red in the example below:</p>
+<a class="reference internal image-reference" href="../_images/Infinite-canvas.png"><img alt="../_images/Infinite-canvas.png" src="../_images/Infinite-canvas.png" style="width: 700px;" /></a>
+<section id="resizing-the-image">
+<h3>Resizing the image<a class="headerlink" href="#resizing-the-image" title="Permalink to this headline">¶</a></h3>
+<p><span class="guilabel">Scale Image to New Size…</span> allows you to resize the whole image. Also,
+importantly, this is where you can change the resolution or <em>upres</em> your
+image. So for instance, if you were initially working at 72 PPI to block
+in large shapes and colors, images, etc… And now you want to really get
+in and do some detail work at 300 or 400 PPI this is where you would make
+the change.</p>
+<p>Like all other dialogs where a chain link appears, when the chain is
+linked the aspect ratio is maintained. To disconnect the chain, just click
+on the link and the two halves will separate.</p>
+<img alt="../_images/Scale_Image_to_New_Size.png" src="../_images/Scale_Image_to_New_Size.png" />
+</section>
+<section id="separating-images">
+<h3>Separating Images<a class="headerlink" href="#separating-images" title="Permalink to this headline">¶</a></h3>
+<img alt="../_images/Separate_Image.png" src="../_images/Separate_Image.png" />
+<p>This powerful image manipulation feature lets you separate an image into
+its different components or channels.</p>
+<p>This is useful for people working in print, or people manipulating game
+textures. There’s no combine functionality, but what you can do, if
+using colored output, is to set two of the channels to the addition
+<a class="reference internal" href="../reference_manual/blending_modes.html#blending-modes"><span class="std std-ref">Blending Modes</span></a>.</p>
+<p>For grayscale images in the RGB space, you can use the Copy Red, Copy
+Green and Copy Blue blending modes, with using the red one for the red
+channel image, etc.</p>
+</section>
+</section>
+<section id="saving-exporting-and-opening-files">
+<h2>Saving, Exporting and Opening Files<a class="headerlink" href="#saving-exporting-and-opening-files" title="Permalink to this headline">¶</a></h2>
+<p>When Krita creates or opens a file, it has a copy of the file in memory,
+that it edits. This is part of the way how computers work: They make a
+copy of their file in the RAM. Thus, when saving, Krita takes its copy
+and copies it over the existing file. There’s a couple of tricks you can
+do with saving.</p>
+<dl class="simple">
+<dt>Save</dt><dd><p>Krita saves the current image in its memory to a defined place on
+the hard-drive. If the image hadn’t been saved before, Krita will
+ask you where to save it.</p>
+</dd>
+<dt>Save As…</dt><dd><p>Make a copy of your current file by saving it with a different name.
+Krita will switch to the newly made file as its active document.</p>
+</dd>
+<dt>Open…</dt><dd><p>Open a saved file. Fairly straightforward.</p>
+</dd>
+<dt>Export…</dt><dd><p>Save a file to a new location without actively opening it. Useful
+for when you are working on a layered file, but only need to save a
+flattened version of it to a certain location.</p>
+</dd>
+<dt>Open Existing Document as Untitled Document…</dt><dd><p>This is a bit of an odd one, but it opens a file, and forgets where
+you saved it to, so that when pressing ‘save’ it asks you where to
+save it. This is also called ‘import’ in other programs.</p>
+</dd>
+<dt>Create Copy from Current Image</dt><dd><p>Makes a new copy of the current image. Similar to <span class="menuselection">Open
+Existing Document as Untitled Document…</span>, but then with already
+opened files.</p>
+</dd>
+<dt>Save Incremental Version</dt><dd><p>Saves the current image as <em>‘filename’_XXX.kra</em> and switches the
+current document to it.</p>
+</dd>
+<dt>Save Incremental Backup</dt><dd><p>Copies and renames the last saved version of your file to a backup file and saves your document under the original name.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Since Krita’s file format is compressed data file, in case of a corrupt or broken file you can open it with archive managers and extract the contents of the layers. This will help you to recover as much as possible data from the file. On Windows, you will need to rename it to <em>filename.zip</em> to open it.</p>
+</div>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="autosave.html" class="btn btn-neutral float-right" title="Saving, AutoSave and Backup Files" accesskey="n" rel="next"> <!-- Next --> <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="painting_with_assistants.html" class="btn btn-neutral" title="Painting with Assistants" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- Previous  -->  </a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright licensed under the GNU Free Documentation License 1.3+ unless stated otherwise.
+      
+        <span class="commit">
+          Revision <code>7c271ce</code>.
+        </span>
+      
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a modified <a href="https://github.com/rtfd/sphinx_rtd_theme">RTD theme</a>.<br/>
+  <a href="https://krita.org" title="Krita official website.">Krita official website</a> |
+  <a href="https://invent.kde.org/documentation/docs-krita-org/" title="The Gitlab instance to edit this pages and collaborate.">Git repository for docs.krita.org </a> |
+  <a href="https://www.kde.org/community/whatiskde/impressum-en.php" title="To know more about KDE, code of conduct, privacy policy and GDPR.">KDE Impressum</a>.
+   
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'5.0.0 Beta',
+            LANGUAGE:'en',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/documentation_options.js"></script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
+      });
+  </script> 
+
+ <script type="text/javascript">
+	 var _paq=_paq||[];
+	 _paq.push(['setCookieDomain','*.krita.org']);
+	 _paq.push(['setDomains','*.krita.org']);
+	 _paq.push(['setDocumentTitle',document.domain+"/"+document.title]);
+	 _paq.push(['trackPageView']);
+	 _paq.push(['enableLinkTracking']);
+
+	 (function(){
+	 	var u="//stats.kde.org/";
+	    _paq.push(['setTrackerUrl',u+'piwik.php']);
+	    _paq.push(['setSiteId',13]);
+	    var d = document, g = d.createElement('script'),s=d.getElementsByTagName('script')[0];
+	    g.type = 'text/javascript';
+	    g.async = true;
+	    g.defer = true;
+	    g.src = u+'piwik.js';
+	    s.parentNode.insertBefore(g,s);
+	  })();
+</script> 
+<noscript><p><img src="//stats.kde.org/piwik.php?idsite=13" style="border:0;" alt="" /></p></noscript>
+
+</body>
+</html>

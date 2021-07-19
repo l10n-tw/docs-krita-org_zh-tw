@@ -1,0 +1,455 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" name="title" content="CMake Settings for Developers" />
+  <meta property="og:site-name" content="Krita Manual" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="en" />
+  <meta property="og:locale:alternate" content="ca" />
+  
+  <meta property="og:locale:alternate" content="fr" />
+  <meta property="og:locale:alternate" content="it" />
+  <meta property="og:locale:alternate" content="ja" />
+  <meta property="og:locale:alternate" content="ko" />
+  <meta property="og:locale:alternate" content="nl" />
+  <meta property="og:locale:alternate" content="pl" />
+  <meta property="og:locale:alternate" content="pt_PT" />
+  <meta property="og:locale:alternate" content="uk_UA" />
+  <meta property="og:locale:alternate" content="zh_CN" />
+  <meta property="og:article:modified_time" content="2021-07-19T15:33:59" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<meta content="CMake settings for developers." name="description" />
+
+  
+  
+  <title>CMake Settings for Developers &mdash; Krita Manual 5.0.0 Beta documentation</title>
+  
+
+  
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    
+  
+  
+  
+    <link rel="canonical" href="en/untranslatable_pages/cmake_settings_for_developers.html"/>
+    <meta property="og:url" content="en/untranslatable_pages/cmake_settings_for_developers.html" />
+    <meta property="og:image" content="en/_static/sidebar-logo.png" />
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Introduction to Hacking Krita" href="intro_hacking_krita.html" />
+    <link rel="prev" title="Building krita with Docker on Linux" href="building/build_krita_with_docker_on_linux.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+       
+           <a href="../index.html" class="icon icon-home">
+
+			<img src="../_static/sidebar-logo.png" class="logo" alt="Logo"/>
+           	
+           <!--	Krita Manual -->
+
+
+          </a>
+
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-side-nav-language-selector">
+        	<p class="caption-text">
+	        	<select id="language-selector-container">
+	        		<option value="ca">Català</option>
+	        		<option value="en">English</option>
+	        		<option value="fr">français</option>
+	        		<option value="it">Italiano</option>
+	        		<option value="ja">日本語</option>
+	        		<option value="ko">한국어</option>
+	        		<option value="nl">Nederlands</option>
+	        		<option value="pl">Polski</option>
+	        		<option value="pt_PT">português</option>
+	        		<option value="uk_UA">Українська</option>
+	        		<option value="zh_CN">简体中文</option>
+	        	</select>
+        	</p>
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../user_manual.html">User Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general_concepts.html">General Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference_manual.html">Reference Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials.html">Tutorials and How-tos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../KritaFAQ.html">Krita FAQ</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../contributors_manual.html">Contributors Manual</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../contributors_manual/community.html">The Krita Community</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributors_manual/krita_manual_conventions.html">Mark-up conventions for the Krita Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributors_manual/krita_manual_readme.html">Krita Manual Contribution Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributors_manual/optimising_images.html">Images for the Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributors_manual/user_support.html">Introduction to User Support</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../untranslatable_pages.html">Technical Pages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="building_krita.html">Building Krita from Source</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">CMake Settings for Developers</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#build-testing">BUILD_TESTING</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cmake-install-prefix">CMAKE_INSTALL_PREFIX</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cmake-build-type">CMAKE_BUILD_TYPE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cmake-prefix-path">CMAKE_PREFIX_PATH</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#hide-safe-asserts">HIDE_SAFE_ASSERTS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#krita-devs">KRITA_DEVS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyqt-sip-dir-override">PYQT_SIP_DIR_OVERRIDE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#use-lock-free-hash-table">USE_LOCK_FREE_HASH_TABLE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#foundation-build">FOUNDATION_BUILD</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#krita-enable-broken-tests">KRITA_ENABLE_BROKEN_TESTS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#limit-long-tests">LIMIT_LONG_TESTS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#enable-python-2">ENABLE_PYTHON_2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#build-krita-qt-designer-plugins">BUILD_KRITA_QT_DESIGNER_PLUGINS</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="intro_hacking_krita.html">Introduction to Hacking Krita</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kpl_defintion.html">The Krita Palette format KPL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="krita_svg_extensions.html">Krita SVG Extensions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modern_cpp_in_krita.html">Modern C++ usage guidelines for the Krita codebase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new_features.html">Developing Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="optimizing_tips_for_krita.html">Optimizing tips and tools for Krita</a></li>
+<li class="toctree-l3"><a class="reference internal" href="participating_in_gsoc.html">Google Summer of Code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="patch_review_guide.html">Advanced Merge Request Guide</a></li>
+<li class="toctree-l3"><a class="reference internal" href="python_coding.html">Python Developer Tools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quality_assurance.html">Introduction to Quality Assurance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release_krita.html">Making a release</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reporting_bugs.html">Reporting Bugs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="running_krita.html">Running Krita from Source</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strokes_documentation.html">Strokes queue</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strokes_documentation.html#strokes-public-api">Strokes public API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strokes_documentation.html#internals-of-the-freehand-tool">Internals of the freehand tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strokes_documentation.html#scheduled-undo-redo">Scheduled Undo/Redo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strokes_documentation.html#processings-framework">Processings framework</a></li>
+<li class="toctree-l3"><a class="reference internal" href="testing_strategy.html">Testing Strategy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="triaging_bugs.html">Triaging Bugs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="unit_tests_in_krita.html">Unittests in Krita</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../resources_page.html">Resources</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+	<!-- start top banner area (for fundraisers or messages)
+
+	<div style="text-align: center; background-color: #333">
+		<a href="https://krita.org/en/fundraising-2018-campaign/" target="_self" onclick="ga('send', 'event', 'frontpage', 'button', 'Fundraiser 2018');">
+			<img src="https://krita.org/wp-content/themes/krita-org-theme/images/decoration/2018-fundraiser-banner.png" style="max-width: 100%">
+		</a>
+	</div>
+	
+	 end top banner area -->
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Krita Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../contributors_manual.html">Contributors Manual</a> &raquo;</li>
+        
+          <li><a href="../untranslatable_pages.html">Technical Pages</a> &raquo;</li>
+        
+      <li>CMake Settings for Developers</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+          
+            <a href="../_sources/untranslatable_pages/cmake_settings_for_developers.rst.txt" rel="nofollow"> 
+             
+              <img src="../_static/images/source-code.png" />
+             <!-- View page source -->
+
+          </a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="cmake-settings-for-developers">
+<span id="id1"></span><h1><a class="toc-backref" href="#id2">CMake Settings for Developers</a><a class="headerlink" href="#cmake-settings-for-developers" title="Permalink to this headline">¶</a></h1>
+<p>The <a class="reference external" href="https://www.cmake.org">CMake</a> build system generators used by Krita is one of the most used build system generators in the C++ world. A build system is a system that describes how an application should be built from source code. CMake generates a build system from the information given in the CMakeLists.txt and <cite>*.cmake</cite> files. It is a complete but rather unusual language.</p>
+<p>If you start working on Krita, you will need knowledge of two things: how to run the cmake generator, and which variables are important there, and how to edit the CMakeLists.txt files. This page tells you how to run the cmake generator.</p>
+<p>The cmake generator is run like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cmake</span> <span class="o">-</span><span class="n">DSOME_CMAKE_VARIABLE</span><span class="o">=</span><span class="n">SOME_VALUE</span> <span class="o">../</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">source</span>
+</pre></div>
+</div>
+<p>That is, every option is prefixed with -D, followed by a usually uppercase variable name, the equal sign and the value. The following variables are important for Krita.</p>
+<p>You cannot build Krita inside the source directory, so you need to give the path to the source directory, where the top-level CMakeLists.txt file is found.</p>
+<div class="contents topic" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#cmake-settings-for-developers" id="id2">CMake Settings for Developers</a></p>
+<ul>
+<li><p><a class="reference internal" href="#build-testing" id="id3">BUILD_TESTING</a></p></li>
+<li><p><a class="reference internal" href="#cmake-install-prefix" id="id4">CMAKE_INSTALL_PREFIX</a></p></li>
+<li><p><a class="reference internal" href="#cmake-build-type" id="id5">CMAKE_BUILD_TYPE</a></p></li>
+<li><p><a class="reference internal" href="#cmake-prefix-path" id="id6">CMAKE_PREFIX_PATH</a></p></li>
+<li><p><a class="reference internal" href="#hide-safe-asserts" id="id7">HIDE_SAFE_ASSERTS</a></p></li>
+<li><p><a class="reference internal" href="#krita-devs" id="id8">KRITA_DEVS</a></p></li>
+<li><p><a class="reference internal" href="#pyqt-sip-dir-override" id="id9">PYQT_SIP_DIR_OVERRIDE</a></p></li>
+<li><p><a class="reference internal" href="#use-lock-free-hash-table" id="id10">USE_LOCK_FREE_HASH_TABLE</a></p></li>
+<li><p><a class="reference internal" href="#foundation-build" id="id11">FOUNDATION_BUILD</a></p></li>
+<li><p><a class="reference internal" href="#krita-enable-broken-tests" id="id12">KRITA_ENABLE_BROKEN_TESTS</a></p></li>
+<li><p><a class="reference internal" href="#limit-long-tests" id="id13">LIMIT_LONG_TESTS</a></p></li>
+<li><p><a class="reference internal" href="#enable-python-2" id="id14">ENABLE_PYTHON_2</a></p></li>
+<li><p><a class="reference internal" href="#build-krita-qt-designer-plugins" id="id15">BUILD_KRITA_QT_DESIGNER_PLUGINS</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<section id="build-testing">
+<h2><a class="toc-backref" href="#id3">BUILD_TESTING</a><a class="headerlink" href="#build-testing" title="Permalink to this headline">¶</a></h2>
+<p>If set to ON, the unittests will be built. <em>All</em> developers should have this enabled! You run the unittests with <code class="docutils literal notranslate"><span class="pre">`make</span> <span class="pre">test`</span></code>, or you can run them on their own from their location in the build tree.</p>
+</section>
+<section id="cmake-install-prefix">
+<h2><a class="toc-backref" href="#id4">CMAKE_INSTALL_PREFIX</a><a class="headerlink" href="#cmake-install-prefix" title="Permalink to this headline">¶</a></h2>
+<p>This determines where Krita will be installed to. By default this is <code class="docutils literal notranslate"><span class="pre">`/usr/local`</span></code> on Linux, which is not what you want.</p>
+</section>
+<section id="cmake-build-type">
+<h2><a class="toc-backref" href="#id5">CMAKE_BUILD_TYPE</a><a class="headerlink" href="#cmake-build-type" title="Permalink to this headline">¶</a></h2>
+<p>This has three options: Debug, RelWithDebInfo and Release. Developers should <em>always</em> use Debug, because otherwise ASSERTS will not fire, and developers should pay attention to asserts. Packagers should use RelWithDebInfo.</p>
+</section>
+<section id="cmake-prefix-path">
+<h2><a class="toc-backref" href="#id6">CMAKE_PREFIX_PATH</a><a class="headerlink" href="#cmake-prefix-path" title="Permalink to this headline">¶</a></h2>
+<p>This can be set to make the build system look for dependencies in other places than the default one.</p>
+</section>
+<section id="hide-safe-asserts">
+<h2><a class="toc-backref" href="#id7">HIDE_SAFE_ASSERTS</a><a class="headerlink" href="#hide-safe-asserts" title="Permalink to this headline">¶</a></h2>
+<p>If set to ON, Krita will not show popups whenever the code encounters a problem that developers need to know about, but users not. If set to OFF, Krita will popup a little message window telling you about the error, of OFF, it will print the information to the terminal. For developers, either is fine, at least, if you start Krita and pay attention to the terminal output. For packagers, it should be ON.</p>
+</section>
+<section id="krita-devs">
+<h2><a class="toc-backref" href="#id8">KRITA_DEVS</a><a class="headerlink" href="#krita-devs" title="Permalink to this headline">¶</a></h2>
+<p>This is to be used with the Debug CMAKE_BUILD_TYPE, to re-enable optimizations that make it possible to actually work with Krita. By default, Debug disables all compiler optimizations, and Krita needs those.</p>
+</section>
+<section id="pyqt-sip-dir-override">
+<h2><a class="toc-backref" href="#id9">PYQT_SIP_DIR_OVERRIDE</a><a class="headerlink" href="#pyqt-sip-dir-override" title="Permalink to this headline">¶</a></h2>
+<p>If you have built your own PyQt and SIP, use this to make sure Krita can find them.</p>
+</section>
+<section id="use-lock-free-hash-table">
+<h2><a class="toc-backref" href="#id10">USE_LOCK_FREE_HASH_TABLE</a><a class="headerlink" href="#use-lock-free-hash-table" title="Permalink to this headline">¶</a></h2>
+<p>This option enables the experimental lock free hash table. This is ON by default at the moment.</p>
+</section>
+<section id="foundation-build">
+<h2><a class="toc-backref" href="#id11">FOUNDATION_BUILD</a><a class="headerlink" href="#foundation-build" title="Permalink to this headline">¶</a></h2>
+<p>This option is for packaging Krita on systems that do not have the default color themes shipped by KDE Plasma.</p>
+</section>
+<section id="krita-enable-broken-tests">
+<h2><a class="toc-backref" href="#id12">KRITA_ENABLE_BROKEN_TESTS</a><a class="headerlink" href="#krita-enable-broken-tests" title="Permalink to this headline">¶</a></h2>
+<p>A number of unittests are known to be broken. They should be fixed, but in the meantime, having dozens of failing unittests hides regressions. Set this to ON to run the broken tests. These tests are always built.</p>
+</section>
+<section id="limit-long-tests">
+<h2><a class="toc-backref" href="#id13">LIMIT_LONG_TESTS</a><a class="headerlink" href="#limit-long-tests" title="Permalink to this headline">¶</a></h2>
+<p>When set to ON, the default, some unittests will be cut short. Set to OFF to test for stress conditions.</p>
+</section>
+<section id="enable-python-2">
+<h2><a class="toc-backref" href="#id14">ENABLE_PYTHON_2</a><a class="headerlink" href="#enable-python-2" title="Permalink to this headline">¶</a></h2>
+<p>Use Python 2 instead of Python 3. Only to be used when integrating Krita in a python2-based VFX pipeline.</p>
+</section>
+<section id="build-krita-qt-designer-plugins">
+<h2><a class="toc-backref" href="#id15">BUILD_KRITA_QT_DESIGNER_PLUGINS</a><a class="headerlink" href="#build-krita-qt-designer-plugins" title="Permalink to this headline">¶</a></h2>
+<p>OFF by default, enable this to build plugins for Qt Designer/Qt Creator so you can add Krita specific widgets to .ui files.</p>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="intro_hacking_krita.html" class="btn btn-neutral float-right" title="Introduction to Hacking Krita" accesskey="n" rel="next"> <!-- Next --> <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="building/build_krita_with_docker_on_linux.html" class="btn btn-neutral" title="Building krita with Docker on Linux" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- Previous  -->  </a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright licensed under the GNU Free Documentation License 1.3+ unless stated otherwise.
+      
+        <span class="commit">
+          Revision <code>7c271ce</code>.
+        </span>
+      
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a modified <a href="https://github.com/rtfd/sphinx_rtd_theme">RTD theme</a>.<br/>
+  <a href="https://krita.org" title="Krita official website.">Krita official website</a> |
+  <a href="https://invent.kde.org/documentation/docs-krita-org/" title="The Gitlab instance to edit this pages and collaborate.">Git repository for docs.krita.org </a> |
+  <a href="https://www.kde.org/community/whatiskde/impressum-en.php" title="To know more about KDE, code of conduct, privacy policy and GDPR.">KDE Impressum</a>.
+   
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'5.0.0 Beta',
+            LANGUAGE:'en',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/documentation_options.js"></script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
+      });
+  </script> 
+
+ <script type="text/javascript">
+	 var _paq=_paq||[];
+	 _paq.push(['setCookieDomain','*.krita.org']);
+	 _paq.push(['setDomains','*.krita.org']);
+	 _paq.push(['setDocumentTitle',document.domain+"/"+document.title]);
+	 _paq.push(['trackPageView']);
+	 _paq.push(['enableLinkTracking']);
+
+	 (function(){
+	 	var u="//stats.kde.org/";
+	    _paq.push(['setTrackerUrl',u+'piwik.php']);
+	    _paq.push(['setSiteId',13]);
+	    var d = document, g = d.createElement('script'),s=d.getElementsByTagName('script')[0];
+	    g.type = 'text/javascript';
+	    g.async = true;
+	    g.defer = true;
+	    g.src = u+'piwik.js';
+	    s.parentNode.insertBefore(g,s);
+	  })();
+</script> 
+<noscript><p><img src="//stats.kde.org/piwik.php?idsite=13" style="border:0;" alt="" /></p></noscript>
+
+</body>
+</html>

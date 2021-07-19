@@ -1,0 +1,702 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" name="title" content="Resources" />
+  <meta property="og:site-name" content="Krita Manual" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="en" />
+  <meta property="og:locale:alternate" content="ca" />
+  
+  <meta property="og:locale:alternate" content="fr" />
+  <meta property="og:locale:alternate" content="it" />
+  <meta property="og:locale:alternate" content="ja" />
+  <meta property="og:locale:alternate" content="ko" />
+  <meta property="og:locale:alternate" content="nl" />
+  <meta property="og:locale:alternate" content="pl" />
+  <meta property="og:locale:alternate" content="pt_PT" />
+  <meta property="og:locale:alternate" content="uk_UA" />
+  <meta property="og:locale:alternate" content="zh_CN" />
+  <meta property="og:article:modified_time" content="2021-07-19T15:33:59" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<meta content="Resource Packs for Krita." name="description" />
+
+  
+  
+  <title>Resources &mdash; Krita Manual 5.0.0 Beta documentation</title>
+  
+
+  
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    
+  
+  
+  
+    <link rel="canonical" href="en/resources_page.html"/>
+    <meta property="og:url" content="en/resources_page.html" />
+    <meta property="og:image" content="en/_static/sidebar-logo.png" />
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Unittests in Krita" href="untranslatable_pages/unit_tests_in_krita.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+       
+           <a href="index.html" class="icon icon-home">
+
+			<img src="_static/sidebar-logo.png" class="logo" alt="Logo"/>
+           	
+           <!--	Krita Manual -->
+
+
+          </a>
+
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-side-nav-language-selector">
+        	<p class="caption-text">
+	        	<select id="language-selector-container">
+	        		<option value="ca">Català</option>
+	        		<option value="en">English</option>
+	        		<option value="fr">français</option>
+	        		<option value="it">Italiano</option>
+	        		<option value="ja">日本語</option>
+	        		<option value="ko">한국어</option>
+	        		<option value="nl">Nederlands</option>
+	        		<option value="pl">Polski</option>
+	        		<option value="pt_PT">português</option>
+	        		<option value="uk_UA">Українська</option>
+	        		<option value="zh_CN">简体中文</option>
+	        	</select>
+        	</p>
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="user_manual.html">User Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="general_concepts.html">General Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reference_manual.html">Reference Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials.html">Tutorials and How-tos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="KritaFAQ.html">Krita FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributors_manual.html">Contributors Manual</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Resources</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#brush-packs">Brush Packs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#texture-packs">Texture Packs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#vector-libraries">Vector libraries</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#composition-templates">Composition templates</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#feather-icons">Feather icons</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#templates">Templates</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#storyboard-template">Storyboard template</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#user-made-python-plugins">User-made Python Plugins</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#usability">Usability</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#workflow-improvements">Workflow improvements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#file-management">File management</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#color-selectors">Color selectors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#interface">Interface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#miscellaneous">Miscellaneous</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#other-resources">Other resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#external-tutorials">External tutorials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#see-something-we-missed">See Something We Missed?</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+	<!-- start top banner area (for fundraisers or messages)
+
+	<div style="text-align: center; background-color: #333">
+		<a href="https://krita.org/en/fundraising-2018-campaign/" target="_self" onclick="ga('send', 'event', 'frontpage', 'button', 'Fundraiser 2018');">
+			<img src="https://krita.org/wp-content/themes/krita-org-theme/images/decoration/2018-fundraiser-banner.png" style="max-width: 100%">
+		</a>
+	</div>
+	
+	 end top banner area -->
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Krita Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Resources</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+          
+            <a href="_sources/resources_page.rst.txt" rel="nofollow"> 
+             
+              <img src="_static/images/source-code.png" />
+             <!-- View page source -->
+
+          </a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="resources">
+<span id="resources-page"></span><h1>Resources<a class="headerlink" href="#resources" title="Permalink to this headline">¶</a></h1>
+<section id="brush-packs">
+<h2>Brush Packs<a class="headerlink" href="#brush-packs" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><figure class="align-default" id="id1">
+<a class="reference external image-reference" href="https://drive.google.com/open?id=1hrH4xzMRwzV0SBEt2K8faqZ_YUX-AdyJ"><img alt="_images/Resources-mirandaBrushes.jpg" src="_images/Resources-mirandaBrushes.jpg" /></a>
+<figcaption>
+<p><span class="caption-text">Ramon Miranda</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+</td>
+<td><figure class="align-default" id="id2">
+<a class="reference external image-reference" href="https://drive.google.com/file/d/1sl8sW7pu7QtGxunLeZapksU1u6Uc9VF5/view?usp=sharing"><img alt="_images/Resources-conceptBrushes.jpg" src="_images/Resources-conceptBrushes.jpg" /></a>
+<figcaption>
+<p><span class="caption-text">Concept art &amp; Illustration Pack</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+</td>
+<td><figure class="align-default" id="id3">
+<a class="reference external image-reference" href="https://www.deviantart.com/al-dy/art/Aldys-Brush-Pack-for-Krita-2-3-1-196128561"><img alt="_images/Resources-aldyBrushes.jpg" src="_images/Resources-aldyBrushes.jpg" /></a>
+<figcaption>
+<p><span class="caption-text">Al-dy</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+</td>
+</tr>
+<tr class="row-even"><td><figure class="align-default" id="id4">
+<a class="reference external image-reference" href="https://vascobasque.wordpress.com/2014/02/03/modular-brushset-v4/"><img alt="_images/Resources-vascoBrushes.jpg" src="_images/Resources-vascoBrushes.jpg" /></a>
+<figcaption>
+<p><span class="caption-text">Vasco Basqué</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+</td>
+<td><figure class="align-default" id="id5">
+<a class="reference external image-reference" href="https://www.deviantart.com/stalcry/art/Krita-Custom-Brushes-350338351"><img alt="_images/Resources-stalcryBrushes.jpg" src="_images/Resources-stalcryBrushes.jpg" /></a>
+<figcaption>
+<p><span class="caption-text">Stalcry</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+</td>
+<td><figure class="align-default" id="id6">
+<a class="reference external image-reference" href="https://forum.kde.org/viewtopic.php?f=274&amp;t=125125"><img alt="_images/Resources-woltheraBrushes.jpg" src="_images/Resources-woltheraBrushes.jpg" /></a>
+<figcaption>
+<p><span class="caption-text">Wolthera</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+</td>
+</tr>
+<tr class="row-odd"><td><figure class="align-default" id="id7">
+<a class="reference external image-reference" href="https://nylnook.art/en/blog/krita-brushes-pack-v2/"><img alt="_images/Resources-nylnook.jpg" src="_images/Resources-nylnook.jpg" /></a>
+<figcaption>
+<p><span class="caption-text">Nylnook</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+</td>
+<td><figure class="align-default" id="id8">
+<a class="reference external image-reference" href="https://gitlab.com/raghukamath/krita-brush-presets/-/releases"><img alt="_images/Resources-raghukamathBrushes.png" src="_images/Resources-raghukamathBrushes.png" /></a>
+<figcaption>
+<p><span class="caption-text">Raghukamath</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+</td>
+<td><figure class="align-default" id="id9">
+<a class="reference external image-reference" href="https://github.com/GDquest/free-krita-brushes/releases/"><img alt="_images/Resources-GDQuestBrushes.jpeg" src="_images/Resources-GDQuestBrushes.jpeg" /></a>
+<figcaption>
+<p><span class="caption-text">GDQuest</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+</td>
+</tr>
+<tr class="row-even"><td><figure class="align-default" id="id10">
+<a class="reference external image-reference" href="https://www.deviantart.com/iforce73/art/Environments-2-0-759523252"><img alt="_images/Resources-iForce73Brushes.png" src="_images/Resources-iForce73Brushes.png" /></a>
+<figcaption>
+<p><span class="caption-text">IForce73</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+</td>
+<td><figure class="align-default" id="id11">
+<a class="reference external image-reference" href="https://www.deviantart.com/iforce73/art/Environments-2-0-759523252"><img alt="_images/Resources-iForce73CityscapeBrushes.png" src="_images/Resources-iForce73CityscapeBrushes.png" /></a>
+<figcaption>
+<p><span class="caption-text">IForce73</span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+</td>
+<td><figure class="align-default" id="id12">
+<a class="reference external image-reference" href="https://www.dropbox.com/s/nconrhjb6ltai8f/wont_teach_you_to_draw_brushpack_v6.0.zip?dl=1"><img alt="_images/Resources-wojtrybBrushes.png" src="_images/Resources-wojtrybBrushes.png" /></a>
+<figcaption>
+<p><span class="caption-text">wojtryb</span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+</td>
+</tr>
+<tr class="row-odd"><td><figure class="align-default" id="id13">
+<a class="reference external image-reference" href="https://github.com/Rakurri/rakurri-brush-set-for-krita"><img alt="_images/Resources-rakurribrushset.png" src="_images/Resources-rakurribrushset.png" /></a>
+<figcaption>
+<p><span class="caption-text">Rakurri</span><a class="headerlink" href="#id13" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+</td>
+<td><figure class="align-default" id="id14">
+<a class="reference external image-reference" href="https://gumroad.com/l/pPCFg"><img alt="_images/Resources-jackpackBrushes.jpg" src="_images/Resources-jackpackBrushes.jpg" /></a>
+<figcaption>
+<p><span class="caption-text">Jackpack</span><a class="headerlink" href="#id14" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+</td>
+<td><figure class="align-default" id="id15">
+<a class="reference external image-reference" href="https://razcore.gitlab.io/posts/2017/06/11/p02-rzv-krita-brushkit/"><img alt="_images/Resources-razcoreBrushes.png" src="_images/Resources-razcoreBrushes.png" /></a>
+<figcaption>
+<p><span class="caption-text">Razcore</span><a class="headerlink" href="#id15" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="texture-packs">
+<h2>Texture Packs<a class="headerlink" href="#texture-packs" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><figure class="align-default" id="id16">
+<a class="reference external image-reference" href="https://www.davidrevoy.com/article263/five-traditional-textures"><img alt="_images/Resources-deevadTextures2.jpg" src="_images/Resources-deevadTextures2.jpg" style="width: 300px;" /></a>
+<figcaption>
+<p><span class="caption-text">David Revoy</span><a class="headerlink" href="#id16" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="vector-libraries">
+<h2>Vector libraries<a class="headerlink" href="#vector-libraries" title="Permalink to this headline">¶</a></h2>
+<section id="composition-templates">
+<h3>Composition templates<a class="headerlink" href="#composition-templates" title="Permalink to this headline">¶</a></h3>
+<p>Inside the zip archive you’ll find all composition templates separate and in a form of a vector library, so all the shapes are easy to access after the import.</p>
+<p>The composition templates include: rule of thirds, golden ratio, golden spiral, golden triangle 1, golden triangle 2, harmonious triangle, film safe area template, baroque diagonal and centre.</p>
+<p>Link: <a class="reference external" href="https://gumroad.com/l/CHhlx">https://gumroad.com/l/CHhlx</a></p>
+</section>
+<section id="feather-icons">
+<h3>Feather icons<a class="headerlink" href="#feather-icons" title="Permalink to this headline">¶</a></h3>
+<p>A set of open source icons from <a class="reference external" href="https://feathericons.com">https://feathericons.com</a> but in a Vector Library form, so it can be easily accessed from inside Krita after the import. Each icon is designed on a 24x24 grid with an emphasis on simplicity, consistency, and flexibility.</p>
+<p>Link: <a class="reference external" href="https://github.com/MiAlmeida/krita-feather">https://github.com/MiAlmeida/krita-feather</a></p>
+</section>
+</section>
+<section id="templates">
+<h2>Templates<a class="headerlink" href="#templates" title="Permalink to this headline">¶</a></h2>
+<p>Templates are .kra files that you can base your new documents on. To learn more see <a class="reference internal" href="reference_manual/create_new_document.html#create-new-document-from-template"><span class="std std-ref">Templates:</span></a>.</p>
+<section id="storyboard-template">
+<h3>Storyboard template<a class="headerlink" href="#storyboard-template" title="Permalink to this headline">¶</a></h3>
+<p>The layout and layer setup is inspired by traditional Studio Ghibli storyboards, and Tony Gaddis’ storyboarding process.</p>
+<p>Link: <a class="reference external" href="https://gumroad.com/l/PtMtm">https://gumroad.com/l/PtMtm</a></p>
+</section>
+</section>
+<section id="user-made-python-plugins">
+<span id="custom-python-plugins"></span><h2>User-made Python Plugins<a class="headerlink" href="#user-made-python-plugins" title="Permalink to this headline">¶</a></h2>
+<p>This list describes only plugins that are <strong>not</strong> available in Krita, so you need to download and install the ones you’d like to use.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>If you want to check descriptions of a plugin available in Krita by default (without a need to download), see <a class="reference internal" href="reference_manual/default_python_plugins.html#default-python-plugins"><span class="std std-ref">Pre-installed Python plugins</span></a>.</p>
+</div>
+<p>To learn how to install and manage your plugins, see <a class="reference internal" href="user_manual/python_scripting/install_custom_python_plugin.html#install-custom-python-plugins"><span class="std std-ref">Managing Python plugins</span></a>.</p>
+<p>If you want to know more about an individual plugin, you can access the plugin’s manual by going to <span class="menuselection">Settings ‣ Configure Krita…</span> menu, and then choosing the <code class="docutils literal notranslate"><span class="pre">Python</span> <span class="pre">Plugin</span> <span class="pre">Manager</span></code> tab. Then you can click on a specific plugin and the manual will appear in the bottom text area.</p>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>Custom Python plugins are made by users of Krita and the Krita team does not guarantee that they work, that they are useful or that they are <em>safe</em>. Note that a Python plugin can do everything that Krita can do, which means for example access to your files. Krita team isn’t responsible for any damage you might suffer from a custom plugin, this list is informational purposes only and you install any of the custom plugins on your own risk.</p>
+<p>If you have information that any of the plugins below is dangerous for the user, please contact Krita team on <cite>kimageshop&#64;kde.org</cite>.</p>
+</div>
+<section id="usability">
+<h3>Usability<a class="headerlink" href="#usability" title="Permalink to this headline">¶</a></h3>
+<p>Direct Eraser</p>
+<blockquote>
+<div><p>Plugin to switch to an eraser preset and back using one shortcut.</p>
+<p><a class="reference external" href="https://www.mediafire.com/file/sotzc2keogz0bor/Krita+Direct+Eraser+Plugin.zip">https://www.mediafire.com/file/sotzc2keogz0bor/Krita+Direct+Eraser+Plugin.zip</a></p>
+</div></blockquote>
+<p>ThreeSlots</p>
+<blockquote>
+<div><p>This plugin creates three brushtool shortcuts that remembers last used brush preset for each slot independently from each other. It also remembers the size of the brush. One of the slots is for the eraser and it has the eraser mode permanently turned on, while the other two slots have it turned off.</p>
+<p><a class="reference external" href="https://github.com/DarkDefender/threeslots">https://github.com/DarkDefender/threeslots</a></p>
+</div></blockquote>
+<p>QuickColor</p>
+<blockquote>
+<div><p>Plugin that adds actions to switch the foreground color to a desired color from a specified palette. The number of actions, which means colors as well, is limited.</p>
+<p><a class="reference external" href="https://github.com/JonasLW/QuickColor">https://github.com/JonasLW/QuickColor</a></p>
+</div></blockquote>
+<p>BrushColorSwitch</p>
+<blockquote>
+<div><p>This plugin adds an action/shortcut to switch both a brush and foreground/background color at once.</p>
+<p><a class="reference external" href="https://github.com/rkspsm/BrushColorSwitch">https://github.com/rkspsm/BrushColorSwitch</a></p>
+</div></blockquote>
+<p>Tablet Controls Docker (TabUI)</p>
+<blockquote>
+<div><p><a class="reference external" href="https://github.com/tokyogeometry/tabui">https://github.com/tokyogeometry/tabui</a></p>
+</div></blockquote>
+<p>On-screen Canvas Shortcuts</p>
+<blockquote>
+<div><p>Plugin that adds an onscreen button bar with shortcuts for Krita.</p>
+<p><a class="reference external" href="https://github.com/qeshi/henriks-onscreen-krita-shortcut-buttons/tree/master/henriks_krita_buttons">https://github.com/qeshi/henriks-onscreen-krita-shortcut-buttons/tree/master/henriks_krita_buttons</a></p>
+</div></blockquote>
+</section>
+<section id="workflow-improvements">
+<h3>Workflow improvements<a class="headerlink" href="#workflow-improvements" title="Permalink to this headline">¶</a></h3>
+<p>AnimLayers (Animate with Layers)</p>
+<blockquote>
+<div><p>With this plugin you can animate a specific range of layers by prefixing the layer name with the same letters.
+Then in the AnimLayers dialog you can enter the prefix in the <cite>Key</cite> field.</p>
+<p><a class="reference external" href="https://github.com/thomaslynge/krita-plugins">https://github.com/thomaslynge/krita-plugins</a></p>
+</div></blockquote>
+<p>Reference Image Docker (old style)</p>
+<blockquote>
+<div><p>Docker for reference images, modeled after the old Reference Images Docker in Krita. Alternative to Reference Images Tool.</p>
+<p><a class="reference external" href="https://github.com/antoine-roux/krita-plugin-reference">https://github.com/antoine-roux/krita-plugin-reference</a></p>
+</div></blockquote>
+<p>Mirror Fix</p>
+<blockquote>
+<div><p>This plugin allows you to correct symmetry errors for example after a transformation of a part of the image.</p>
+<p><a class="reference external" href="https://github.com/EyeOdin/mirror_fix">https://github.com/EyeOdin/mirror_fix</a></p>
+</div></blockquote>
+<p>ToggleRefLayer</p>
+<blockquote>
+<div><p>This plugin lets you assign a keyboard shortcut to toggle the visibility of a reference layer named “reference”.</p>
+<p><a class="reference external" href="https://drive.google.com/file/d/11O8FiejleajsT_uHd4Q4VBrCrYX9Rh5v/view?usp=sharing">https://drive.google.com/file/d/11O8FiejleajsT_uHd4Q4VBrCrYX9Rh5v/view?usp=sharing</a></p>
+</div></blockquote>
+<p>Shotgun Toolkit Engine for Krita</p>
+<blockquote>
+<div><p>This plugin allows working in a managed way, loading/saving/publishing artwork, keeping it up to date and publishing your projects and layers into Shotgun Toolkit Engine.</p>
+<p><a class="reference external" href="https://github.com/diegogarciahuerta/tk-krita">https://github.com/diegogarciahuerta/tk-krita</a></p>
+</div></blockquote>
+<p>Photobash Images Docker</p>
+<blockquote>
+<div><p>Simple Krita Plugin that lists the images you have on a folder you specify, with the ability to filter by words in the path. After setting the references directory in <cite>Photobash Images</cite> docker you can:</p>
+<ul class="simple">
+<li><p>Filter images by words. Using multiple words like “rock marble” will show all the images that have rock OR marble in the name.</p></li>
+<li><p>Scroll the pages to access more results.</p></li>
+<li><p>Click on an image to create a layer, with the scale that you specify.</p></li>
+</ul>
+<p><a class="reference external" href="https://github.com/veryprofessionaldodo/Krita-Photobash-Images-Plugin">https://github.com/veryprofessionaldodo/Krita-Photobash-Images-Plugin</a></p>
+</div></blockquote>
+<p>Animator Reference Plugin</p>
+<blockquote>
+<div><p>This plugin allows you to load videos into Krita. You can then import frames to use as reference images.</p>
+<p><a class="reference external" href="https://github.com/scottpetrovic/animator-video-reference">https://github.com/scottpetrovic/animator-video-reference</a></p>
+</div></blockquote>
+<p>Spritesheet Plugin</p>
+<blockquote>
+<div><p>This plugin lets you export animations as spritesheets.</p>
+<p><a class="reference external" href="https://github.com/Falano/kritaSpritesheetManager">https://github.com/Falano/kritaSpritesheetManager</a></p>
+</div></blockquote>
+</section>
+<section id="file-management">
+<h3>File management<a class="headerlink" href="#file-management" title="Permalink to this headline">¶</a></h3>
+<p>Art Revision Control (using GIT)</p>
+<blockquote>
+<div><p>This plugin helps managing multiple versions of the artwork.</p>
+<p><a class="reference external" href="https://github.com/abeimler/krita-plugin-durra">https://github.com/abeimler/krita-plugin-durra</a></p>
+</div></blockquote>
+<p>Spine File Format Export</p>
+<blockquote>
+<div><p>This plugin exports the document in a format compatible with Spine. The README describes what kind of structure the document needs to have to be exported properly. Besides exported images, the plugin creates <code class="file docutils literal notranslate"><span class="pre">spine.json</span></code> file.</p>
+<p><a class="reference external" href="https://github.com/chartinger/krita-unofficial-spine-export">https://github.com/chartinger/krita-unofficial-spine-export</a></p>
+</div></blockquote>
+</section>
+<section id="color-selectors">
+<h3>Color selectors<a class="headerlink" href="#color-selectors" title="Permalink to this headline">¶</a></h3>
+<p>Pigment.O - Color Picker</p>
+<blockquote>
+<div><p>Universal advanced color picker.</p>
+<p><a class="reference external" href="https://github.com/EyeOdin/Pigment.O">https://github.com/EyeOdin/Pigment.O</a></p>
+</div></blockquote>
+</section>
+<section id="interface">
+<h3>Interface<a class="headerlink" href="#interface" title="Permalink to this headline">¶</a></h3>
+<p>UI Redesign</p>
+<blockquote>
+<div><p>Plugin that modifies the overall look and feel of the Krita UI Interface. Enables the Toolbox and Tool Options to be toggled, similarly to Blender’s UI.</p>
+<p>Features a flat theme that can be seen in the repository’s README.md section. To give feedback, either create an issue, or join the discussion the thread on Krita Artists.</p>
+<p>Krita Artists Thread: <a class="reference external" href="https://krita-artists.org/t/call-for-krita-ui-redesign-plugin-testers/9604">https://krita-artists.org/t/call-for-krita-ui-redesign-plugin-testers/9604</a></p>
+<p>Repository Link: <a class="reference external" href="https://github.com/veryprofessionaldodo/Krita-UI-Redesign">https://github.com/veryprofessionaldodo/Krita-UI-Redesign</a></p>
+</div></blockquote>
+<p>Subwindow Organizer</p>
+<blockquote>
+<div><p>Helps with handling multiple documents in subwindow mode. Introduces responsive fullscreen with other subwindows opened, dynamic snapping of subwindows to canvas borders, drag and drop switching between subwindows, and more.</p>
+<p><a class="reference external" href="https://github.com/wojtryb/kritaSubwindowOrganizer">https://github.com/wojtryb/kritaSubwindowOrganizer</a></p>
+</div></blockquote>
+<p>KanvasBuddy</p>
+<blockquote>
+<div><p>This is a small dialog that floats on top of the canvas packed with enough features to let you spend as much time in Canvas-Only mode as possible.
+The idea behind KB was to provide the 20% of tools used 80% of the time in the most out-of-the-way GUI possible.</p>
+<p>Source, main page and download link: <a class="reference external" href="https://github.com/Kapyia/KanvasBuddy">https://github.com/Kapyia/KanvasBuddy</a></p>
+<p>Krita-artists thread: <a class="reference external" href="https://krita-artists.org/t/kanvasbuddy-a-minimalist-toolbar/549">https://krita-artists.org/t/kanvasbuddy-a-minimalist-toolbar/549</a></p>
+</div></blockquote>
+</section>
+<section id="miscellaneous">
+<h3>Miscellaneous<a class="headerlink" href="#miscellaneous" title="Permalink to this headline">¶</a></h3>
+<p>Timer Watch - Time Management Tool</p>
+<blockquote>
+<div><p>This plugin adds a timer. You can start it, stop, pause when you want to take a break and restart afterwards. You can set up an alarm to remind you to take a break.</p>
+<p><a class="reference external" href="https://github.com/EyeOdin/timer_watch">https://github.com/EyeOdin/timer_watch</a></p>
+</div></blockquote>
+<p>Post images on Mastodon</p>
+<blockquote>
+<div><p>With this plugin you can post images on Mastodon from inside of Krita.</p>
+<p><a class="reference external" href="https://github.com/spaceottercode/kritatoot">https://github.com/spaceottercode/kritatoot</a></p>
+</div></blockquote>
+<p>Bash Action (works with macOS and Linux)</p>
+<blockquote>
+<div><p>Plugin that allows you execute Bash commands and programs as actions on your current Krita images.</p>
+<p><a class="reference external" href="https://github.com/juancarlospaco/krita-plugin-bashactions#krita-plugin-bashactions">https://github.com/juancarlospaco/krita-plugin-bashactions#krita-plugin-bashactions</a></p>
+</div></blockquote>
+</section>
+</section>
+<section id="other-resources">
+<h2>Other resources<a class="headerlink" href="#other-resources" title="Permalink to this headline">¶</a></h2>
+<p>Krita Plugin Generator</p>
+<blockquote>
+<div><p>An extension to VSCode that generates a Plugin Template for Krita (like <cite>Krita Script Starter</cite>, but directly in VSCode).</p>
+<p>Available here: <a class="reference external" href="https://github.com/cg-cnu/vscode-krita-plugin-generator">https://github.com/cg-cnu/vscode-krita-plugin-generator</a></p>
+</div></blockquote>
+<p>Python auto-complete for text editors</p>
+<blockquote>
+<div><p>If you have the Krita source code, you can use this Python script to generate the auto-complete file for Python. Many Python editors need a <code class="file docutils literal notranslate"><span class="pre">.py</span></code> file to read for auto-complete information. This script reads the C++ header files from Krita’s source code and creates a Python file that can be used for auto-completion.</p>
+<p>Available here: <a class="reference external" href="https://github.com/scottpetrovic/krita-python-auto-complete">https://github.com/scottpetrovic/krita-python-auto-complete</a></p>
+</div></blockquote>
+</section>
+<section id="external-tutorials">
+<h2>External tutorials<a class="headerlink" href="#external-tutorials" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><figure class="align-default" id="id17">
+<a class="reference external image-reference" href="https://www.udemy.com/learn-to-create-pixel-art-from-zero/?couponCode=OTHER_75"><img alt="_images/simon_pixel_art_course.png" src="_images/simon_pixel_art_course.png" style="width: 400px;" /></a>
+<figcaption>
+<p><span class="caption-text">Simón Sanchez’ “Learn to Create Pixel Art from Zero” course on Udemy</span><a class="headerlink" href="#id17" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="see-something-we-missed">
+<h2>See Something We Missed?<a class="headerlink" href="#see-something-we-missed" title="Permalink to this headline">¶</a></h2>
+<p>Have a resource you made and want to share it with other artists? Let us know on Krita Artists or visit our chat channel to discuss getting the resource added to here.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We have curated a list of community created resources for Krita. These resources will be hosted on external website, which is not under the control of Krita or KDE. Please report any error or corrections in the content to the Krita developers.</p>
+</div>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="untranslatable_pages/unit_tests_in_krita.html" class="btn btn-neutral" title="Unittests in Krita" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- Previous  -->  </a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright licensed under the GNU Free Documentation License 1.3+ unless stated otherwise.
+      
+        <span class="commit">
+          Revision <code>7c271ce</code>.
+        </span>
+      
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a modified <a href="https://github.com/rtfd/sphinx_rtd_theme">RTD theme</a>.<br/>
+  <a href="https://krita.org" title="Krita official website.">Krita official website</a> |
+  <a href="https://invent.kde.org/documentation/docs-krita-org/" title="The Gitlab instance to edit this pages and collaborate.">Git repository for docs.krita.org </a> |
+  <a href="https://www.kde.org/community/whatiskde/impressum-en.php" title="To know more about KDE, code of conduct, privacy policy and GDPR.">KDE Impressum</a>.
+   
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'5.0.0 Beta',
+            LANGUAGE:'en',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/documentation_options.js"></script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
+      });
+  </script> 
+
+ <script type="text/javascript">
+	 var _paq=_paq||[];
+	 _paq.push(['setCookieDomain','*.krita.org']);
+	 _paq.push(['setDomains','*.krita.org']);
+	 _paq.push(['setDocumentTitle',document.domain+"/"+document.title]);
+	 _paq.push(['trackPageView']);
+	 _paq.push(['enableLinkTracking']);
+
+	 (function(){
+	 	var u="//stats.kde.org/";
+	    _paq.push(['setTrackerUrl',u+'piwik.php']);
+	    _paq.push(['setSiteId',13]);
+	    var d = document, g = d.createElement('script'),s=d.getElementsByTagName('script')[0];
+	    g.type = 'text/javascript';
+	    g.async = true;
+	    g.defer = true;
+	    g.src = u+'piwik.js';
+	    s.parentNode.insertBefore(g,s);
+	  })();
+</script> 
+<noscript><p><img src="//stats.kde.org/piwik.php?idsite=13" style="border:0;" alt="" /></p></noscript>
+
+</body>
+</html>

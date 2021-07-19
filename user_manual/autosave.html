@@ -1,0 +1,438 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" name="title" content="Saving, AutoSave and Backup Files" />
+  <meta property="og:site-name" content="Krita Manual" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="en" />
+  <meta property="og:locale:alternate" content="ca" />
+  
+  <meta property="og:locale:alternate" content="fr" />
+  <meta property="og:locale:alternate" content="it" />
+  <meta property="og:locale:alternate" content="ja" />
+  <meta property="og:locale:alternate" content="ko" />
+  <meta property="og:locale:alternate" content="nl" />
+  <meta property="og:locale:alternate" content="pl" />
+  <meta property="og:locale:alternate" content="pt_PT" />
+  <meta property="og:locale:alternate" content="uk_UA" />
+  <meta property="og:locale:alternate" content="zh_CN" />
+  <meta property="og:article:modified_time" content="2021-07-19T15:33:59" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<meta content="How AutoSave and Backup Files Work in Krita." name="description" property="og:description" />
+
+  
+  
+  <title>Saving, AutoSave and Backup Files &mdash; Krita Manual 5.0.0 Beta documentation</title>
+  
+
+  
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    
+  
+  
+  
+    <link rel="canonical" href="en/user_manual/autosave.html"/>
+    <meta property="og:url" content="en/user_manual/autosave.html" />
+    <meta property="og:image" content="en/_static/sidebar-logo.png" />
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Templates" href="templates.html" />
+    <link rel="prev" title="Working with Images" href="working_with_images.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+       
+           <a href="../index.html" class="icon icon-home">
+
+			<img src="../_static/sidebar-logo.png" class="logo" alt="Logo"/>
+           	
+           <!--	Krita Manual -->
+
+
+          </a>
+
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-side-nav-language-selector">
+        	<p class="caption-text">
+	        	<select id="language-selector-container">
+	        		<option value="ca">Català</option>
+	        		<option value="en">English</option>
+	        		<option value="fr">français</option>
+	        		<option value="it">Italiano</option>
+	        		<option value="ja">日本語</option>
+	        		<option value="ko">한국어</option>
+	        		<option value="nl">Nederlands</option>
+	        		<option value="pl">Polski</option>
+	        		<option value="pt_PT">português</option>
+	        		<option value="uk_UA">Українська</option>
+	        		<option value="zh_CN">简体中文</option>
+	        	</select>
+        	</p>
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../user_manual.html">User Manual</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction_from_other_software.html">Introduction Coming From Other Software</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drawing_tablets.html">Drawing Tablets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loading_saving_brushes.html">Loading and Saving Brushes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oncanvas_brush_editor.html">On-Canvas Brush Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mirror_tools.html">Mirror Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="painting_with_assistants.html">Painting with Assistants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="working_with_images.html">Working with Images</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Saving, AutoSave and Backup Files</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#saving">Saving</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id1">AutoSave</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#autosave-for-unsaved-files">AutoSave for Unsaved Files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#autosave-for-saved-files">AutoSave for Saved Files</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#backup-files">Backup Files</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#ordinary-backup-files">Ordinary Backup Files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#incremental-backup-files">Incremental Backup Files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#incremental-version-files">Incremental Version Files</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="templates.html">Templates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="layers_and_masks.html">Introduction to Layers and Masks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="selections.html">Selections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python_scripting.html">Python Scripting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tag_management.html">Tag Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="soft_proofing.html">Soft Proofing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vector_graphics.html">Vector Graphics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="snapping.html">Snapping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="animation.html">Animation with Krita</a></li>
+<li class="toctree-l2"><a class="reference internal" href="japanese_animation_template.html">Japanese Animation Template</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gamut_masks.html">Gamut Masks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../general_concepts.html">General Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference_manual.html">Reference Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials.html">Tutorials and How-tos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../KritaFAQ.html">Krita FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributors_manual.html">Contributors Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../resources_page.html">Resources</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+	<!-- start top banner area (for fundraisers or messages)
+
+	<div style="text-align: center; background-color: #333">
+		<a href="https://krita.org/en/fundraising-2018-campaign/" target="_self" onclick="ga('send', 'event', 'frontpage', 'button', 'Fundraiser 2018');">
+			<img src="https://krita.org/wp-content/themes/krita-org-theme/images/decoration/2018-fundraiser-banner.png" style="max-width: 100%">
+		</a>
+	</div>
+	
+	 end top banner area -->
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Krita Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../user_manual.html">User Manual</a> &raquo;</li>
+        
+      <li>Saving, AutoSave and Backup Files</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+          
+            <a href="../_sources/user_manual/autosave.rst.txt" rel="nofollow"> 
+             
+              <img src="../_static/images/source-code.png" />
+             <!-- View page source -->
+
+          </a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="saving-autosave-and-backup-files">
+<span id="autosave"></span><span id="index-0"></span><h1>Saving, AutoSave and Backup Files<a class="headerlink" href="#saving-autosave-and-backup-files" title="Permalink to this headline">¶</a></h1>
+<p>Krita does its best to keep your work safe. But if you want to make sure that you won’t lose work, you will need to understand how Saving, AutoSave and Backup Files work in Krita.</p>
+<section id="saving">
+<h2>Saving<a class="headerlink" href="#saving" title="Permalink to this headline">¶</a></h2>
+<p>Krita does not store your images somewhere without your intervention. You need to save your work, or it will be lost, irretrievably. Krita can save your images in many formats. You should always save your work in Krita’s native format, <code class="docutils literal notranslate"><span class="pre">.kra</span></code>
+because that supports all Krita’s features.</p>
+<p>Additionally, you can export your work to other formats, for compatibility with other applications or publication on the Web or on paper. Krita will warn which aspects of your work are going to be lost when you save to another format than <code class="docutils literal notranslate"><span class="pre">.kra</span></code> and offers to make a <code class="docutils literal notranslate"><span class="pre">.kra</span></code> file for you as well.</p>
+<p>If you save your work, Krita will ask you where it should save on your computer. By default, this is the Pictures folder in your User folder: this is true for all operating systems.</p>
+<p>If you use <span class="guilabel">Save As…</span> your image will be saved under a new name. The original file under its own name will not be deleted. From now on, your file will be saved under the new name.</p>
+<p>If you use <span class="guilabel">Export…</span> using a new filename, a new file will be created with a new name. The file you have open will keep the old name, and the next time you save it, it will be saved under the old name.</p>
+<p>You can <span class="guilabel">Save</span>, <span class="guilabel">Save As…</span> and <span class="guilabel">Export…</span> to any file format.</p>
+<p>See also</p>
+<p><a class="reference internal" href="../tutorials/saving-for-the-web.html#saving-for-the-web"><span class="std std-ref">Saving for the Web</span></a></p>
+</section>
+<section id="id1">
+<h2>AutoSave<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>AutoSave is what happens when you’ve worked for a bit and not saved your work yourself: Krita will save your work for you. Autosave files are by default hidden in your file manager. You can configure Krita 4.2 and up to create autosave files that are visible in your file manager. By default, Krita autosaves every fifteen minutes; you can configure that in the File tab of the General Settings page of the <span class="guilabel">Configure Krita</span> dialog, which is in the Settings menu (Linux, Windows) or in the Application menu (macOS).</p>
+<p>If you close Krita without saving, your unsaved work is lost and cannot be retrieved. Closing Krita normally also means that autosave files are removed.</p>
+<img alt="../_images/file_config_page.png" src="../_images/file_config_page.png" />
+<p>There are two possibilities:</p>
+<ul class="simple">
+<li><p>You hadn’t saved your work at all</p></li>
+<li><p>You had saved your work already</p></li>
+</ul>
+<section id="autosave-for-unsaved-files">
+<h3>AutoSave for Unsaved Files<a class="headerlink" href="#autosave-for-unsaved-files" title="Permalink to this headline">¶</a></h3>
+<p>If you had not yet saved your work, Krita will create an unnamed AutoSave file.</p>
+<p>If you’re using Linux or macOS, the AutoSave file will be a hidden file in your home directory. If you’re using Windows, the AutoSave file will be a file in your user’s <code class="docutils literal notranslate"><span class="pre">%TEMP%</span></code> folder. In Krita 4.2 and up, you can configure Krita to make the AutoSave files visible by default.</p>
+<p>A hidden autosave file will be named like <code class="docutils literal notranslate"><span class="pre">.krita-12549-document_1-autosave.kra</span></code></p>
+<p>If Krita crashes before you had saved your file, then the next time you start Krita, you will see the file in a dialog that shows up as soon as Krita starts. You can select to restore the files, or to delete them.</p>
+<img alt="../_images/autosave_unnamed_restore.png" src="../_images/autosave_unnamed_restore.png" />
+<p>If Krita crashed, and you’re on Windows and your <code class="docutils literal notranslate"><span class="pre">%TEMP%</span></code> folder gets cleared, you will have lost your work. Windows does not clear the <code class="docutils literal notranslate"><span class="pre">%TEMP%</span></code> folder by default, but you can enable this feature in Settings. Applications like Disk Cleanup or CCleaner will also clear the <code class="docutils literal notranslate"><span class="pre">%TEMP%</span></code> folder. Again, if Krita crashes, and you haven’t saved your work, and you have something enabled that clear your <code class="docutils literal notranslate"><span class="pre">%TEMP%</span></code> folder, you will have lost your work.</p>
+<p>If Krita doesn’t crash, and you close Krita without saving your work, Krita will remove the AutoSave file: your work will be gone and cannot be retrieved.</p>
+<p>If you save your work and continue, or close Krita and do save your work, the AutoSave file will be removed.</p>
+</section>
+<section id="autosave-for-saved-files">
+<h3>AutoSave for Saved Files<a class="headerlink" href="#autosave-for-saved-files" title="Permalink to this headline">¶</a></h3>
+<p>If you had already saved your work, Krita will create a named AutoSave file.</p>
+<p>A hidden named autosave file will look like <code class="docutils literal notranslate"><span class="pre">.myimage.kra-autosave.kra</span></code>.</p>
+<p>By default, named AutoSave files are hidden. Named AutoSave files are placed in the same folder as the file you were working on.</p>
+<p>If you start Krita again after it crashed and try to open your original file, Krita will ask you whether to open the AutoSave file instead:</p>
+<img alt="../_images/autosave_named_restore.png" src="../_images/autosave_named_restore.png" />
+<p>If you choose “no”, the AutoSave file will be removed. The work that has been done since the last time you saved your file yourself will be lost and cannot be retrieved.</p>
+<p>If you choose “yes”, the AutoSave file will be opened, then removed. The file you have open will have the name of your original file. The file will be set to Modified, so the next time you try to close Krita, Krita will ask you whether you want to save the file. If you choose No, your work is irretrievably gone. It cannot be restored.</p>
+<p>If you use <span class="guilabel">Save As…</span> your image will be saved under a new name. The original file under its own name and its AutoSave file are not deleted. From now on, your file will be saved under the new name; if you save again, an AutoSave file will be created using the new filename.</p>
+<p>If you use <span class="guilabel">Export…</span> using a new filename, a new file will be created with a new name. The file you have open will keep the new name, and the next time you save it, the AutoSave file will be created from the last file saved with the current name, that is, not the name you choose for <span class="guilabel">Export…</span>.</p>
+</section>
+</section>
+<section id="backup-files">
+<h2>Backup Files<a class="headerlink" href="#backup-files" title="Permalink to this headline">¶</a></h2>
+<p>There are three kinds of Backup files</p>
+<ul class="simple">
+<li><p>Ordinary Backup files that are created when you save a file that has been opened from disk</p></li>
+<li><p>Incremental Backup files that are copies of the file as it is on disk to a numbered backup, and while your file is saved under the current name</p></li>
+<li><p>Incremental Version files that are saves of the file you are working on with a new number, leaving alone the existing files on disk.</p></li>
+</ul>
+<section id="ordinary-backup-files">
+<h3>Ordinary Backup Files<a class="headerlink" href="#ordinary-backup-files" title="Permalink to this headline">¶</a></h3>
+<p>If you have opened a file, made changes, then save it, or save a new file after the first time you’ve saved it, Krita will save a backup of your file.</p>
+<p>You can disable this mechanism in the File tab of the General Settings page of the <span class="guilabel">Configure Krita</span> dialog, which is in the Settings menu (Linux, Windows) or in the Application menu (macOS). By default, Backup files are enabled.</p>
+<img alt="../_images/file_config_page.png" src="../_images/file_config_page.png" />
+<p>By default, a Backup file will be in the same folder as your original file. You can also choose to save Backup files in the User folder or the <code class="docutils literal notranslate"><span class="pre">%TEMP%</span></code> folder; this is not as safe because if you edit two files with the same name in two different folders, their backups will overwrite each other.</p>
+<p>By default, a Backup file will have <code class="docutils literal notranslate"><span class="pre">~</span></code> as a suffix, to distinguish it from an ordinary file. If you are using Windows, you will have to enable “show file extensions” in Windows Explorer to see the extension.</p>
+<img alt="../_images/file_and_backup_file.png" src="../_images/file_and_backup_file.png" />
+<p>If you want to open the Backup file, you will have to rename it in your file manager. Make sure the extension ends with <code class="docutils literal notranslate"><span class="pre">.kra</span></code>.</p>
+<p>Every time you save your file, the last version without a <code class="docutils literal notranslate"><span class="pre">~</span></code> suffix will be copied to the version with the <code class="docutils literal notranslate"><span class="pre">~</span></code> suffix. The contents of the original file will be gone: it will not be possible to restore that version.</p>
+</section>
+<section id="incremental-backup-files">
+<h3>Incremental Backup Files<a class="headerlink" href="#incremental-backup-files" title="Permalink to this headline">¶</a></h3>
+<p>Incremental Backup files are similar to ordinary Backup files: the last saved state is copied to another file just before saving. However, instead of overwriting the Backup file, the Backup files are numbered:</p>
+<img alt="../_images/save_incremental_backup.png" src="../_images/save_incremental_backup.png" />
+<p>Use this when you want to keep various known good states of your image throughout your painting process. This takes more disk space, of course.</p>
+<p>Do not be confused: Krita does not save the current state of your work to the latest Incremental file, but copies the last saved file to the Backup file and then saves your image under the original filename.</p>
+</section>
+<section id="incremental-version-files">
+<h3>Incremental Version Files<a class="headerlink" href="#incremental-version-files" title="Permalink to this headline">¶</a></h3>
+<p>Incremental Version works a bit like Incremental Backup, but it leaves the original files alone. Instead, it will save a new file with a file number:</p>
+<img alt="../_images/save_incremental_version.png" src="../_images/save_incremental_version.png" />
+</section>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="templates.html" class="btn btn-neutral float-right" title="Templates" accesskey="n" rel="next"> <!-- Next --> <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="working_with_images.html" class="btn btn-neutral" title="Working with Images" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- Previous  -->  </a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright licensed under the GNU Free Documentation License 1.3+ unless stated otherwise.
+      
+        <span class="commit">
+          Revision <code>7c271ce</code>.
+        </span>
+      
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a modified <a href="https://github.com/rtfd/sphinx_rtd_theme">RTD theme</a>.<br/>
+  <a href="https://krita.org" title="Krita official website.">Krita official website</a> |
+  <a href="https://invent.kde.org/documentation/docs-krita-org/" title="The Gitlab instance to edit this pages and collaborate.">Git repository for docs.krita.org </a> |
+  <a href="https://www.kde.org/community/whatiskde/impressum-en.php" title="To know more about KDE, code of conduct, privacy policy and GDPR.">KDE Impressum</a>.
+   
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'5.0.0 Beta',
+            LANGUAGE:'en',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/documentation_options.js"></script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
+      });
+  </script> 
+
+ <script type="text/javascript">
+	 var _paq=_paq||[];
+	 _paq.push(['setCookieDomain','*.krita.org']);
+	 _paq.push(['setDomains','*.krita.org']);
+	 _paq.push(['setDocumentTitle',document.domain+"/"+document.title]);
+	 _paq.push(['trackPageView']);
+	 _paq.push(['enableLinkTracking']);
+
+	 (function(){
+	 	var u="//stats.kde.org/";
+	    _paq.push(['setTrackerUrl',u+'piwik.php']);
+	    _paq.push(['setSiteId',13]);
+	    var d = document, g = d.createElement('script'),s=d.getElementsByTagName('script')[0];
+	    g.type = 'text/javascript';
+	    g.async = true;
+	    g.defer = true;
+	    g.src = u+'piwik.js';
+	    s.parentNode.insertBefore(g,s);
+	  })();
+</script> 
+<noscript><p><img src="//stats.kde.org/piwik.php?idsite=13" style="border:0;" alt="" /></p></noscript>
+
+</body>
+</html>

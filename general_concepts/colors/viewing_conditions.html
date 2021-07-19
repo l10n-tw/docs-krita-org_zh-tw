@@ -1,0 +1,385 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" name="title" content="Viewing Conditions" />
+  <meta property="og:site-name" content="Krita Manual" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="en" />
+  <meta property="og:locale:alternate" content="ca" />
+  
+  <meta property="og:locale:alternate" content="fr" />
+  <meta property="og:locale:alternate" content="it" />
+  <meta property="og:locale:alternate" content="ja" />
+  <meta property="og:locale:alternate" content="ko" />
+  <meta property="og:locale:alternate" content="nl" />
+  <meta property="og:locale:alternate" content="pl" />
+  <meta property="og:locale:alternate" content="pt_PT" />
+  <meta property="og:locale:alternate" content="uk_UA" />
+  <meta property="og:locale:alternate" content="zh_CN" />
+  <meta property="og:article:modified_time" content="2021-07-19T15:33:59" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<meta content="What are viewing conditions." name="description" />
+
+  
+  
+  <title>Viewing Conditions &mdash; Krita Manual 5.0.0 Beta documentation</title>
+  
+
+  
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    
+  
+  
+  
+    <link rel="canonical" href="en/general_concepts/colors/viewing_conditions.html"/>
+    <meta property="og:url" content="en/general_concepts/colors/viewing_conditions.html" />
+    <meta property="og:image" content="en/_static/sidebar-logo.png" />
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="File Formats" href="../file_formats.html" />
+    <link rel="prev" title="Scene Linear Painting" href="scene_linear_painting.html" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+       
+           <a href="../../index.html" class="icon icon-home">
+
+			<img src="../../_static/sidebar-logo.png" class="logo" alt="Logo"/>
+           	
+           <!--	Krita Manual -->
+
+
+          </a>
+
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-side-nav-language-selector">
+        	<p class="caption-text">
+	        	<select id="language-selector-container">
+	        		<option value="ca">Català</option>
+	        		<option value="en">English</option>
+	        		<option value="fr">français</option>
+	        		<option value="it">Italiano</option>
+	        		<option value="ja">日本語</option>
+	        		<option value="ko">한국어</option>
+	        		<option value="nl">Nederlands</option>
+	        		<option value="pl">Polski</option>
+	        		<option value="pt_PT">português</option>
+	        		<option value="uk_UA">Українська</option>
+	        		<option value="zh_CN">简体中文</option>
+	        	</select>
+        	</p>
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../user_manual.html">User Manual</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../general_concepts.html">General Concepts</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../colors.html">Colors</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="bit_depth.html">Bit Depth</a></li>
+<li class="toctree-l3"><a class="reference internal" href="color_managed_workflow.html">Color Managed Workflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="color_mixing.html">Mixing Colors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="color_models.html">Color Models</a></li>
+<li class="toctree-l3"><a class="reference internal" href="color_space_size.html">Color Space Size</a></li>
+<li class="toctree-l3"><a class="reference internal" href="linear_and_gamma.html">Gamma and Linear</a></li>
+<li class="toctree-l3"><a class="reference internal" href="profiling_and_callibration.html">Profiling and Calibration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="scene_linear_painting.html">Scene Linear Painting</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Viewing Conditions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../file_formats.html">File Formats</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projection.html">Perspective Projection</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference_manual.html">Reference Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials.html">Tutorials and How-tos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../KritaFAQ.html">Krita FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributors_manual.html">Contributors Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../resources_page.html">Resources</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+	<!-- start top banner area (for fundraisers or messages)
+
+	<div style="text-align: center; background-color: #333">
+		<a href="https://krita.org/en/fundraising-2018-campaign/" target="_self" onclick="ga('send', 'event', 'frontpage', 'button', 'Fundraiser 2018');">
+			<img src="https://krita.org/wp-content/themes/krita-org-theme/images/decoration/2018-fundraiser-banner.png" style="max-width: 100%">
+		</a>
+	</div>
+	
+	 end top banner area -->
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Krita Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../general_concepts.html">General Concepts</a> &raquo;</li>
+        
+          <li><a href="../colors.html">Colors</a> &raquo;</li>
+        
+      <li>Viewing Conditions</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+          
+            <a href="../../_sources/general_concepts/colors/viewing_conditions.rst.txt" rel="nofollow"> 
+             
+              <img src="../../_static/images/source-code.png" />
+             <!-- View page source -->
+
+          </a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="viewing-conditions">
+<span id="index-0"></span><span id="id1"></span><h1>Viewing Conditions<a class="headerlink" href="#viewing-conditions" title="Permalink to this headline">¶</a></h1>
+<p>We mentioned viewing conditions before, but what does this have to do with ‘white points’?</p>
+<p>A lot actually, rather, white points describe a type of viewing condition.</p>
+<p>So, usually what we mean by viewing conditions is the lighting and decoration of the room that you are viewing the image in. Our eyes try to make sense of both the colors that you are looking at actively (the colors of the image) and the colors you aren’t looking at actively (the colors of the room), which means that both sets of colors affect how the image looks.</p>
+<figure class="align-center" id="id2" style="width: 800px">
+<img alt="../../_images/Meisje_met_de_parel_viewing.png" src="../../_images/Meisje_met_de_parel_viewing.png" />
+<figcaption>
+<p><span class="caption-text"><strong>Left</strong>: Let’s ruin Vermeer by putting a bright purple background that asks for more attention than the famous painting itself. <strong>Center</strong>: a much more neutral backdrop that an interior decorator would hate but brings out the colors. <strong>Right</strong>: The approximate color that this painting is displayed against in real life in the Maurits House, at the least, last time I was there. Original image from wikipedia commons.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>This is for example, the reason why museum exhibitioners can get really angry at the interior decorators when the walls of the museum are painted bright red or blue, because this will drastically change the way how the painting’s colors look. (Which, if we are talking about a painter known for their colors like Vermeer, could result in a really bad experience).</p>
+<figure class="align-center" style="width: 500px">
+<img alt="../../_images/Krita_example_metamerism.png" src="../../_images/Krita_example_metamerism.png" />
+</figure>
+<p>Lighting is the other component of the viewing condition which can have dramatic effects. Lighting in particular affects the way how all colors look. For example, if you were to paint an image of sunflowers and poppies, print that out, and shine a bright yellow light on it, the sunflowers would become indistinguishable from the white background, and the poppies would look orange. This is called <a class="reference external" href="https://en.wikipedia.org/wiki/Metamerism_%28color%29">metamerism</a>, and it’s generally something you want to avoid in your color management pipeline.</p>
+<p>An example where metamerism could become a problem is when you start matching colors from different sources together.</p>
+<figure class="align-center" style="width: 500px">
+<img alt="../../_images/White_point_mix_up_ex1_01.svg" src="../../_images/White_point_mix_up_ex1_01.svg" /></figure>
+<p>For example, if you are designing a print for a red t-shirt that’s not bright red, but not super grayish red either. And you want to make sure the colors of the print match the color of the t-shirt, so you make a dummy background layer that is approximately that red, as correctly as you can observe it, and paint on layers above that dummy layer. When you are done, you hide this dummy layer and sent the image with a transparent background to the press.</p>
+<figure class="align-center" style="width: 300px">
+<img alt="../../_images/White_point_mixup_ex1_02.png" src="../../_images/White_point_mixup_ex1_02.png" />
+</figure>
+<p>But when you get the t-shirt from the printer, you notice that all your colors look off, mismatched, and maybe too yellowish (and when did that T-Shirt become purple?).</p>
+<p>This is where white points come in.</p>
+<p>You probably observed the t-shirt in a white room where there were incandescent lamps shining, because as a true artist, you started your work in the middle of the night, as that is when the best art is made.
+However, incandescent lamps have a black body temperature of roughly 2300-2800K, which makes them give a yellowish light, officially called White Point A.</p>
+<p>Your computer screen on the other hand, has a black body temperature of 6500K, also known as D65. Which is a far more blueish color of light than the lamps you are hanging.</p>
+<p>What’s worse, Printers print on the basis of using a white point of D50, the color of white paper under direct sunlight.</p>
+<figure class="align-center" style="width: 500px">
+<img alt="../../_images/White_point_mix_up_ex1_03.svg" src="../../_images/White_point_mix_up_ex1_03.svg" /></figure>
+<p>So, by eye-balling your t-shirt’s color during the evening, you took its red color as transformed by the yellowish light. Had you made your observation in diffuse sunlight of an overcast (which is also roughly D65), or made it in direct sunlight light and painted your picture with a profile set to D50, the color would have been much closer, and thus your design would not be as yellowish.</p>
+<figure class="align-center" id="id3" style="width: 500px">
+<img alt="../../_images/White_point_mixup_ex1_03.png" src="../../_images/White_point_mixup_ex1_03.png" />
+<figcaption>
+<p><span class="caption-text">Applying a white balance filter will sort of match the colors to the tone as in the middle, but you would have had a much better design had you designed against the actual color to begin with.</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>Now, you could technically quickly fix this by using a white balancing filter, like the ones in G’MIC, but because this error is caught at the end of the production process, you basically limited your use of possible colors when you were designing, which is a pity.</p>
+<p>Another example where metamerism messes things up is with screen projections.</p>
+<p>We have a presentation where we mark one type of item with red, another with yellow and yet another with purple. On a computer the differences between the colors are very obvious.</p>
+<figure class="align-center" style="width: 800px">
+<img alt="../../_images/Krita_metamerism_presentation.svg" src="../../_images/Krita_metamerism_presentation.svg" /></figure>
+<p>However, when we start projecting, the lights of the room aren’t dimmed, which means that the tone scale of the colors becomes crunched, and yellow becomes near indistinguishable from white. Furthermore, because the light in the room is slightly yellowish, the purple is transformed into red, making it indistinguishable from the red. Meaning that the graphic is difficult to read.</p>
+<p>In both cases, you can use Krita’s color management a little to help you, but mostly, you just need to be ‘’aware’’ of it, as Krita can hardly fix that you are looking at colors at night, or the fact that the presentation hall owner refuses to turn off the lights.</p>
+<p>That said, unless you have a display profile that uses LUTs, such as an OCIO LUT or a cLUT ICC profile, white point won’t matter much when choosing a working space, due to weirdness in the ICC v4 workflow which always converts matrix profiles with relative colorimetric, meaning the white points are matched up.</p>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../file_formats.html" class="btn btn-neutral float-right" title="File Formats" accesskey="n" rel="next"> <!-- Next --> <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="scene_linear_painting.html" class="btn btn-neutral" title="Scene Linear Painting" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- Previous  -->  </a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright licensed under the GNU Free Documentation License 1.3+ unless stated otherwise.
+      
+        <span class="commit">
+          Revision <code>7c271ce</code>.
+        </span>
+      
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a modified <a href="https://github.com/rtfd/sphinx_rtd_theme">RTD theme</a>.<br/>
+  <a href="https://krita.org" title="Krita official website.">Krita official website</a> |
+  <a href="https://invent.kde.org/documentation/docs-krita-org/" title="The Gitlab instance to edit this pages and collaborate.">Git repository for docs.krita.org </a> |
+  <a href="https://www.kde.org/community/whatiskde/impressum-en.php" title="To know more about KDE, code of conduct, privacy policy and GDPR.">KDE Impressum</a>.
+   
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'5.0.0 Beta',
+            LANGUAGE:'en',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/documentation_options.js"></script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
+      });
+  </script> 
+
+ <script type="text/javascript">
+	 var _paq=_paq||[];
+	 _paq.push(['setCookieDomain','*.krita.org']);
+	 _paq.push(['setDomains','*.krita.org']);
+	 _paq.push(['setDocumentTitle',document.domain+"/"+document.title]);
+	 _paq.push(['trackPageView']);
+	 _paq.push(['enableLinkTracking']);
+
+	 (function(){
+	 	var u="//stats.kde.org/";
+	    _paq.push(['setTrackerUrl',u+'piwik.php']);
+	    _paq.push(['setSiteId',13]);
+	    var d = document, g = d.createElement('script'),s=d.getElementsByTagName('script')[0];
+	    g.type = 'text/javascript';
+	    g.async = true;
+	    g.defer = true;
+	    g.src = u+'piwik.js';
+	    s.parentNode.insertBefore(g,s);
+	  })();
+</script> 
+<noscript><p><img src="//stats.kde.org/piwik.php?idsite=13" style="border:0;" alt="" /></p></noscript>
+
+</body>
+</html>

@@ -1,0 +1,563 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" name="title" content="Introduction to SeExpr" />
+  <meta property="og:site-name" content="Krita Manual" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="en" />
+  <meta property="og:locale:alternate" content="ca" />
+  
+  <meta property="og:locale:alternate" content="fr" />
+  <meta property="og:locale:alternate" content="it" />
+  <meta property="og:locale:alternate" content="ja" />
+  <meta property="og:locale:alternate" content="ko" />
+  <meta property="og:locale:alternate" content="nl" />
+  <meta property="og:locale:alternate" content="pl" />
+  <meta property="og:locale:alternate" content="pt_PT" />
+  <meta property="og:locale:alternate" content="uk_UA" />
+  <meta property="og:locale:alternate" content="zh_CN" />
+  <meta property="og:article:modified_time" content="2021-07-19T15:33:59" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<meta content="Introduction to SeExpr" lang="en" name="description" xml:lang="en" />
+
+  
+  
+  <title>Introduction to SeExpr &mdash; Krita Manual 5.0.0 Beta documentation</title>
+  
+
+  
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    
+  
+  
+  
+    <link rel="canonical" href="en/tutorials/seexpr.html"/>
+    <meta property="og:url" content="en/tutorials/seexpr.html" />
+    <meta property="og:image" content="en/_static/sidebar-logo.png" />
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Krita FAQ" href="../KritaFAQ.html" />
+    <link rel="prev" title="Saving For The Web" href="saving-for-the-web.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+       
+           <a href="../index.html" class="icon icon-home">
+
+			<img src="../_static/sidebar-logo.png" class="logo" alt="Logo"/>
+           	
+           <!--	Krita Manual -->
+
+
+          </a>
+
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-side-nav-language-selector">
+        	<p class="caption-text">
+	        	<select id="language-selector-container">
+	        		<option value="ca">Català</option>
+	        		<option value="en">English</option>
+	        		<option value="fr">français</option>
+	        		<option value="it">Italiano</option>
+	        		<option value="ja">日本語</option>
+	        		<option value="ko">한국어</option>
+	        		<option value="nl">Nederlands</option>
+	        		<option value="pl">Polski</option>
+	        		<option value="pt_PT">português</option>
+	        		<option value="uk_UA">Українська</option>
+	        		<option value="zh_CN">简体中文</option>
+	        	</select>
+        	</p>
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../user_manual.html">User Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general_concepts.html">General Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference_manual.html">Reference Manual</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../tutorials.html">Tutorials and How-tos</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="clipping_masks_and_alpha_inheritance.html">Clipping Masks and Alpha Inheritance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="common_workflows.html">Common Workflows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eye_tracker.html">An Example Setup for Using Krita with an Eye Tracker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="flat-coloring.html">Flat Coloring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inking.html">Inking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="krita-brush-tips.html">Krita Brush Tips</a></li>
+<li class="toctree-l2"><a class="reference internal" href="making_an_azalea_with_the_transformation_masks.html">Making An Azalea With The Transformation Masks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="saving-for-the-web.html">Saving For The Web</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Introduction to SeExpr</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#what-is-seexpr">What is SeExpr?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#background">Background</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#writing-a-script">Writing a script</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#managing-your-script-using-widgets">Managing your script using widgets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#creating-your-first-preset">Creating your first preset</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#changing-existing-presets">Changing existing presets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bundling-your-presets">Bundling your presets</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../KritaFAQ.html">Krita FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributors_manual.html">Contributors Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../resources_page.html">Resources</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+	<!-- start top banner area (for fundraisers or messages)
+
+	<div style="text-align: center; background-color: #333">
+		<a href="https://krita.org/en/fundraising-2018-campaign/" target="_self" onclick="ga('send', 'event', 'frontpage', 'button', 'Fundraiser 2018');">
+			<img src="https://krita.org/wp-content/themes/krita-org-theme/images/decoration/2018-fundraiser-banner.png" style="max-width: 100%">
+		</a>
+	</div>
+	
+	 end top banner area -->
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Krita Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../tutorials.html">Tutorials and How-tos</a> &raquo;</li>
+        
+      <li>Introduction to SeExpr</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+          
+            <a href="../_sources/tutorials/seexpr.rst.txt" rel="nofollow"> 
+             
+              <img src="../_static/images/source-code.png" />
+             <!-- View page source -->
+
+          </a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="introduction-to-seexpr">
+<span id="seexpr-tut-intro"></span><h1>Introduction to SeExpr<a class="headerlink" href="#introduction-to-seexpr" title="Permalink to this headline">¶</a></h1>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 4.4: </span>This document will introduce you to the SeExpr expression language.</p>
+</div>
+<section id="what-is-seexpr">
+<h2>What is SeExpr?<a class="headerlink" href="#what-is-seexpr" title="Permalink to this headline">¶</a></h2>
+<p>SeExpr is an embeddable expression language, designed by Disney Animation,
+that allows host applications to render dynamically generated content.
+Pixar calls it <a class="reference external" href="https://renderman.pixar.com/resources/RenderMan_20/PxrSeExpr.html">in its documentation</a> a “scriptable pattern generator and
+combiner”.</p>
+<p>SeExpr is available within Krita as a Fill Layer.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../reference_manual/seexpr.html#seexpr"><span class="std std-ref">SeExpr Quick Reference</span></a></p></li>
+<li><p><a class="reference internal" href="../reference_manual/layers_and_masks/fill_layer_generators/seexpr.html#seexpr-fill-layer"><span class="std std-ref">SeExpr</span></a></p></li>
+<li><p><a class="reference internal" href="../reference_manual/resource_management/seexpr_scripts.html#resource-seexpr-scripts"><span class="std std-ref">SeExpr Scripts</span></a></p></li>
+<li><p><a class="reference external" href="https://krita-artists.org/t/procedural-texture-generator-example-and-wishes/7638">“Procedural texture generator (example and wishes)” on Krita Artists</a></p></li>
+<li><p><a class="reference external" href="https://iquilezles.org/www/index.htm">Inigo Quilez’s articles</a></p></li>
+<li><p><a class="reference external" href="https://thebookofshaders.com/">The Book of Shaders</a></p></li>
+</ul>
+</div>
+</section>
+<section id="background">
+<h2>Background<a class="headerlink" href="#background" title="Permalink to this headline">¶</a></h2>
+<p>To understand what SeExpr is about, we need to differentiate between two types
+of graphics, <em>raster</em> and <em>procedural</em>.</p>
+<p>The vast majority of the computer-generated stuff you see every day belong to
+the first type– images like photos, your favorite anime screenshots, memes,
+are all a multitude of tiny little dots of color, or <em>pixels</em>, arranged into a
+grid.</p>
+<p>Raster graphics have two drawbacks. First, once you create them, their
+resolution is <strong>fixed</strong>. You cannot zoom in and magically get any more detail.
+And if you need to change them, either you go back to the source and sample it
+again (which is sometimes impossible), or edit it with a raster graphics
+program, like Krita.</p>
+<p>One of the biggest problems, however, is that we are always limited by the
+<strong>space</strong> our programs can use; either secondary storage, like SD cards, or
+RAM. Unless compressed, image memory needs are <a class="reference external" href="https://blender.stackexchange.com/questions/112505/why-is-my-half-resolution-render-taking-a-quarter-of-the-time-of-the-full-one">quadratic in the size of the
+image</a>.
+For a quick example, the <a class="reference internal" href="../reference_manual/create_new_document.html#create-new-document"><span class="std std-ref">Create New Document</span></a> dialog of Krita tells
+you three bits of information: its size in pixels, the size of the pixel
+itself, and <em>the total memory needed</em>.</p>
+<img alt="../_images/Krita_newfile.png" src="../_images/Krita_newfile.png" />
+<p>Here’s a summary for square textures. Note that the memory needed
+is for <em>one layer only</em>:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 26%" />
+<col style="width: 74%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Size</p></th>
+<th class="head"><p>Memory needed</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>256</p></td>
+<td><p>256 KB</p></td>
+</tr>
+<tr class="row-odd"><td><p>512</p></td>
+<td><p>1 MB</p></td>
+</tr>
+<tr class="row-even"><td><p>1024</p></td>
+<td><p>4 MB</p></td>
+</tr>
+<tr class="row-odd"><td><p>2048</p></td>
+<td><p>16 MB</p></td>
+</tr>
+<tr class="row-even"><td><p>4096</p></td>
+<td><p>64 MB</p></td>
+</tr>
+</tbody>
+</table>
+<p>An alternative is to use <a class="reference internal" href="../user_manual/vector_graphics.html#vector-graphics"><span class="std std-ref">Vector Graphics</span></a>. Vector graphics, for instance
+SVGs, employ mathematic formulae like splines and Bézier curves to describe a
+shape. As they are mathematically defined, they can be resized to suit your
+needs without losing resolution.</p>
+<p>SeExpr belongs to a different class, <em>procedural graphics</em>. Similar to vector
+graphics, procedural graphics only need a few KBs of secondary storage for
+their definition. But they are not defined by mathematical formulae; you
+actually <em>code</em> how the color is calculated at each point of the texture.
+And, because it is not limited in its precision, you can render complex
+patterns in your layers at completely arbitrary resolution.</p>
+</section>
+<section id="writing-a-script">
+<h2>Writing a script<a class="headerlink" href="#writing-a-script" title="Permalink to this headline">¶</a></h2>
+<p>In this tutorial, we’ll show you how to write a script in SeExpr, render it to
+a layer, and then save it as a preset.</p>
+<p>We’ll start by going to the <a class="reference internal" href="../reference_manual/dockers/layers.html#layer-docker"><span class="std std-ref">Layers</span></a>, and adding a new Fill Layer.
+Then select the SeExpr generator from the list. You’ll be greeted by this
+window:</p>
+<blockquote>
+<div><img alt="../_images/SeExpr_editor.png" src="../_images/SeExpr_editor.png" />
+</div></blockquote>
+<p>The SeExpr generator dialog is divided into two tabs. For now, we’ll stay on
+<span class="guilabel">Options</span>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><a class="reference internal" href="../reference_manual/layers_and_masks/fill_layers.html#fill-layers"><span class="std std-ref">Fill Layers</span></a> describes these tabs in more detail.</p>
+</div>
+<p>Let’s start by painting a layer in light blue.</p>
+<p>First, SeExpr scripts must define an output variable, let’s call it <code class="docutils literal notranslate"><span class="pre">$color</span></code>.
+As SeExpr thinks of colors in the <a class="reference internal" href="../general_concepts/colors/color_models.html#model-rgb"><span class="std std-ref">RGB color space</span></a>,
+color variables are defined by a triplet of numbers known as a <em>vector</em>.
+We’ll start by defining the <code class="docutils literal notranslate"><span class="pre">$color</span></code> variable and giving it a value.</p>
+<p>Go to the text box, and clear it if it has any text.
+Then, define and set <code class="docutils literal notranslate"><span class="pre">$color</span></code> to something like <code class="docutils literal notranslate"><span class="pre">[0.5,</span> <span class="pre">0.5,</span> <span class="pre">1]</span></code>
+(half lit red, half lit green, fully lit blue):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$color = [0.5, 0.5, 1];
+</pre></div>
+</div>
+<p>SeExpr needs to know which variable holds the final color value. This
+is done by writing at the end, on its own line, the name of the variable:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$color
+</pre></div>
+</div>
+<p>The script should now look like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$color = [0.5, 0.5, 1];
+$color
+</pre></div>
+</div>
+<p>Click <span class="guilabel">OK</span>, and you’ll render your first script!</p>
+<blockquote>
+<div><img alt="../_images/SeExpr_first_render.png" src="../_images/SeExpr_first_render.png" />
+</div></blockquote>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>To be absolutely precise, SeExpr <strong>has no color management</strong>.
+It always renders textures as <a class="reference internal" href="../general_concepts/colors/bit_depth.html#bit-depth"><span class="std std-ref">32-bit float</span></a>,
+<a class="reference internal" href="../general_concepts/colors/linear_and_gamma.html#linear-and-gamma"><span class="std std-ref">gamma corrected</span></a>,
+sRGB images. Krita transforms them into your document’s color space
+using the sRGB-elle-V2-srgbtrc.icc profile.</p>
+<p>See <a class="reference internal" href="../general_concepts/colors/color_managed_workflow.html#color-managed-workflow"><span class="std std-ref">Color Managed Workflow</span></a> for what this means.</p>
+</div>
+</section>
+<section id="managing-your-script-using-widgets">
+<h2>Managing your script using widgets<a class="headerlink" href="#managing-your-script-using-widgets" title="Permalink to this headline">¶</a></h2>
+<p>There is also another way to define and edit your variables.
+Open the fill layer’s properties by right-clicking on <span class="guilabel">Fill Layer 1</span>,
+and selecting <span class="guilabel">Layer Properties…</span>.</p>
+<img alt="../_images/SeExpr_prop_1.png" src="../_images/SeExpr_prop_1.png" />
+<p>Notice the middle box? Once it detects a syntactically correct script,
+SeExpr enables a whole chunk of knobs to manage individual variables.
+In our example above, you can change <code class="docutils literal notranslate"><span class="pre">$color</span></code>’s in three ways:</p>
+<ul class="simple">
+<li><p>enter the red, green, or blue channel’s value in the input fields</p></li>
+<li><p>move the little colored sliders to change the respective channel</p></li>
+<li><p>click on the preview square to the left of the boxes, to select a completely new color.</p></li>
+</ul>
+<p>The last button on the middle box is always <span class="guilabel">Add new variable</span>.
+Click it and this dialog will open:</p>
+<img alt="../_images/SeExpr_add_variable.png" src="../_images/SeExpr_add_variable.png" />
+<p>This dialog shows you all the types of variables that SeExpr accepts:</p>
+<dl class="glossary">
+<dt id="term-Curve-and-Color-curve">Curve and Color curve<a class="headerlink" href="#term-Curve-and-Color-curve" title="Permalink to this term">¶</a></dt><dd><p>They are the SeExpr version of <a class="reference internal" href="../reference_manual/resource_management/resource_gradients.html#resource-gradients"><span class="std std-ref">Stop Gradients</span></a>: they interpolate a ramp given by a set of values.</p>
+<p>Curves represent 1D gradients, returning a single float at each evaluation point.</p>
+<p>Color curves represent RGB gradients, returning a Color at each point.</p>
+</dd>
+<dt id="term-Integers-and-Floats">Integers and Floats<a class="headerlink" href="#term-Integers-and-Floats" title="Permalink to this term">¶</a></dt><dd><p>Numbers.</p>
+</dd>
+<dt id="term-Vector">Vector<a class="headerlink" href="#term-Vector" title="Permalink to this term">¶</a></dt><dd><p>A triplet of floats.</p>
+</dd>
+<dt id="term-Color">Color<a class="headerlink" href="#term-Color" title="Permalink to this term">¶</a></dt><dd><p>A vector representing an RGB color.</p>
+</dd>
+<dt id="term-Swatch">Swatch<a class="headerlink" href="#term-Swatch" title="Permalink to this term">¶</a></dt><dd><p>A list of Colors.</p>
+</dd>
+<dt id="term-String">String<a class="headerlink" href="#term-String" title="Permalink to this term">¶</a></dt><dd><p>Usually single words.</p>
+</dd>
+</dl>
+<p>For instance, you could replicate <code class="docutils literal notranslate"><span class="pre">$color</span></code> in the <span class="guilabel">Vector</span> tab:</p>
+<img alt="../_images/SeExpr_add_variable_vector.png" src="../_images/SeExpr_add_variable_vector.png" />
+</section>
+<section id="creating-your-first-preset">
+<h2>Creating your first preset<a class="headerlink" href="#creating-your-first-preset" title="Permalink to this headline">¶</a></h2>
+<p>Once your script is ready, you can reuse it by making a preset.</p>
+<p>You can create one through the top bar of the <span class="guilabel">Options</span> tab:</p>
+<blockquote>
+<div><img alt="../_images/SeExpr_editor.png" src="../_images/SeExpr_editor.png" />
+</div></blockquote>
+<p>Select <span class="guilabel">Save New SeExpr Preset…</span> and the following dialog will
+open:</p>
+<blockquote>
+<div><img alt="../_images/SeExpr_save.png" src="../_images/SeExpr_save.png" />
+</div></blockquote>
+<p>You can edit the name of the preset in the top line edit box, and set a  thumbnail for easy identification.</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>The dialog will append “Copy” to the preset’s name if it is a copy of an existing one. You can change it at will.</p>
+</div>
+<p>The dialog provides the following choices for setting a thumbnail:</p>
+<dl class="glossary simple">
+<dt id="term-Load-Existing-Thumbnail">Load Existing Thumbnail<a class="headerlink" href="#term-Load-Existing-Thumbnail" title="Permalink to this term">¶</a></dt><dd><p>If the preset already has a thumbnail (for instance, if you created it from an existing preset), this button will load and apply it.</p>
+</dd>
+<dt id="term-Load-Image">Load Image<a class="headerlink" href="#term-Load-Image" title="Permalink to this term">¶</a></dt><dd><p>Applies an image from the filesystem as a thumbnail.</p>
+</dd>
+<dt id="term-Render-Script-to-Thumbnail">Render Script to Thumbnail<a class="headerlink" href="#term-Render-Script-to-Thumbnail" title="Permalink to this term">¶</a></dt><dd><p>Renders your script to a 256x256 texture, and applies the latter as a thumbnail.</p>
+</dd>
+<dt id="term-Clear-Thumbnail">Clear Thumbnail<a class="headerlink" href="#term-Clear-Thumbnail" title="Permalink to this term">¶</a></dt><dd><p>Deletes the thumbnail. Note that, if the preset is a copy of an existing one, this can be reverted by clicking <span class="guilabel">Load Existing Thumbnail</span>.</p>
+</dd>
+</dl>
+</section>
+<section id="changing-existing-presets">
+<h2>Changing existing presets<a class="headerlink" href="#changing-existing-presets" title="Permalink to this headline">¶</a></h2>
+<p>If you change a preset’s script, you will notice two new buttons in the top bar of the <span class="guilabel">Options</span> tab:</p>
+<blockquote>
+<div><img alt="../_images/SeExpr_overwrite_preset.png" src="../_images/SeExpr_overwrite_preset.png" />
+</div></blockquote>
+<p>The reload button will restore the preset to its original properties, while clicking on <span class="guilabel">Overwrite Preset</span> will save your changes.</p>
+<p>Additionally, you can edit the preset’s name by clicking on the rename button,
+entering the new name, and clicking on <span class="guilabel">Save</span>:</p>
+<blockquote>
+<div><img alt="../_images/SeExpr_rename_preset.png" src="../_images/SeExpr_rename_preset.png" />
+</div></blockquote>
+</section>
+<section id="bundling-your-presets">
+<h2>Bundling your presets<a class="headerlink" href="#bundling-your-presets" title="Permalink to this headline">¶</a></h2>
+<p>Sharing your scripts is easy! SeExpr script presets are just like any other
+resource in Krita. Follow the instructions in <a class="reference internal" href="../reference_manual/resource_management.html#resource-management"><span class="std std-ref">Resource Management</span></a> to
+create your own bundles.</p>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../KritaFAQ.html" class="btn btn-neutral float-right" title="Krita FAQ" accesskey="n" rel="next"> <!-- Next --> <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="saving-for-the-web.html" class="btn btn-neutral" title="Saving For The Web" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- Previous  -->  </a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright licensed under the GNU Free Documentation License 1.3+ unless stated otherwise.
+      
+        <span class="commit">
+          Revision <code>7c271ce</code>.
+        </span>
+      
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a modified <a href="https://github.com/rtfd/sphinx_rtd_theme">RTD theme</a>.<br/>
+  <a href="https://krita.org" title="Krita official website.">Krita official website</a> |
+  <a href="https://invent.kde.org/documentation/docs-krita-org/" title="The Gitlab instance to edit this pages and collaborate.">Git repository for docs.krita.org </a> |
+  <a href="https://www.kde.org/community/whatiskde/impressum-en.php" title="To know more about KDE, code of conduct, privacy policy and GDPR.">KDE Impressum</a>.
+   
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'5.0.0 Beta',
+            LANGUAGE:'en',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/documentation_options.js"></script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
+      });
+  </script> 
+
+ <script type="text/javascript">
+	 var _paq=_paq||[];
+	 _paq.push(['setCookieDomain','*.krita.org']);
+	 _paq.push(['setDomains','*.krita.org']);
+	 _paq.push(['setDocumentTitle',document.domain+"/"+document.title]);
+	 _paq.push(['trackPageView']);
+	 _paq.push(['enableLinkTracking']);
+
+	 (function(){
+	 	var u="//stats.kde.org/";
+	    _paq.push(['setTrackerUrl',u+'piwik.php']);
+	    _paq.push(['setSiteId',13]);
+	    var d = document, g = d.createElement('script'),s=d.getElementsByTagName('script')[0];
+	    g.type = 'text/javascript';
+	    g.async = true;
+	    g.defer = true;
+	    g.src = u+'piwik.js';
+	    s.parentNode.insertBefore(g,s);
+	  })();
+</script> 
+<noscript><p><img src="//stats.kde.org/piwik.php?idsite=13" style="border:0;" alt="" /></p></noscript>
+
+</body>
+</html>

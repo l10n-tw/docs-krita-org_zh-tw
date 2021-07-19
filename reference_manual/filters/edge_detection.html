@@ -1,0 +1,469 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" name="title" content="Edge Detection" />
+  <meta property="og:site-name" content="Krita Manual" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="en" />
+  <meta property="og:locale:alternate" content="ca" />
+  
+  <meta property="og:locale:alternate" content="fr" />
+  <meta property="og:locale:alternate" content="it" />
+  <meta property="og:locale:alternate" content="ja" />
+  <meta property="og:locale:alternate" content="ko" />
+  <meta property="og:locale:alternate" content="nl" />
+  <meta property="og:locale:alternate" content="pl" />
+  <meta property="og:locale:alternate" content="pt_PT" />
+  <meta property="og:locale:alternate" content="uk_UA" />
+  <meta property="og:locale:alternate" content="zh_CN" />
+  <meta property="og:article:modified_time" content="2021-07-19T15:33:59" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<meta content="Overview of the edge detection filters." name="description" />
+
+  
+  
+  <title>Edge Detection &mdash; Krita Manual 5.0.0 Beta documentation</title>
+  
+
+  
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    
+  
+  
+  
+    <link rel="canonical" href="en/reference_manual/filters/edge_detection.html"/>
+    <meta property="og:url" content="en/reference_manual/filters/edge_detection.html" />
+    <meta property="og:image" content="en/_static/sidebar-logo.png" />
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Emboss" href="emboss.html" />
+    <link rel="prev" title="Color" href="colors.html" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+       
+           <a href="../../index.html" class="icon icon-home">
+
+			<img src="../../_static/sidebar-logo.png" class="logo" alt="Logo"/>
+           	
+           <!--	Krita Manual -->
+
+
+          </a>
+
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-side-nav-language-selector">
+        	<p class="caption-text">
+	        	<select id="language-selector-container">
+	        		<option value="ca">Català</option>
+	        		<option value="en">English</option>
+	        		<option value="fr">français</option>
+	        		<option value="it">Italiano</option>
+	        		<option value="ja">日本語</option>
+	        		<option value="ko">한국어</option>
+	        		<option value="nl">Nederlands</option>
+	        		<option value="pl">Polski</option>
+	        		<option value="pt_PT">português</option>
+	        		<option value="uk_UA">Українська</option>
+	        		<option value="zh_CN">简体中文</option>
+	        	</select>
+        	</p>
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../user_manual.html">User Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../general_concepts.html">General Concepts</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../reference_manual.html">Reference Manual</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../audio_for_animation.html">Audio for Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blending_modes.html">Blending Modes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../brushes.html">Brushes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../clones_array.html">Clones Array</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_new_document.html">Create New Document</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../default_python_plugins.html">Pre-installed Python plugins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dockers.html">Dockers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dr_minw_debugger.html">Dr. MinGW Debugger</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../filters.html">Filters</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="adjust.html">Adjust</a></li>
+<li class="toctree-l3"><a class="reference internal" href="artistic.html">Artistic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="blur.html">Blur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="colors.html">Color</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Edge Detection</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">Edge Detection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gaussian-high-pass">Gaussian High Pass</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#height-to-normal-map">Height to Normal Map</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="emboss.html">Emboss</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enhance.html">Enhance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="map.html">Map</a></li>
+<li class="toctree-l3"><a class="reference internal" href="other.html">Other</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wavelet_decompose.html">Wavelet Decompose</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../hdr_display.html">HDR Display</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../image_split.html">Image Split</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../import_animation.html">Import Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../instant_preview.html">Instant Preview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../krita_4_preset_bundle.html">Krita 4 Preset Bundle Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../layers_and_masks.html">Layers and Masks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../linux_command_line.html">Linux Command Line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../list_supported_tablets.html">The List of Supported Tablets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../main_menu.html">Main Menu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../maths_input.html">Maths Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../popup-palette.html">Pop-up Palette</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preferences.html">Preferences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../render_animation.html">Render Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../resource_management.html">Resource Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../seexpr.html">SeExpr Quick Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../separate_image.html">Separate Image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sharing_krita_logs.html">Getting Krita logs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../split_layer.html">Split Layer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../stroke_selection.html">Stroke Selection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools.html">Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../welcome_screen.html">Welcome Screen</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials.html">Tutorials and How-tos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../KritaFAQ.html">Krita FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributors_manual.html">Contributors Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../resources_page.html">Resources</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+	<!-- start top banner area (for fundraisers or messages)
+
+	<div style="text-align: center; background-color: #333">
+		<a href="https://krita.org/en/fundraising-2018-campaign/" target="_self" onclick="ga('send', 'event', 'frontpage', 'button', 'Fundraiser 2018');">
+			<img src="https://krita.org/wp-content/themes/krita-org-theme/images/decoration/2018-fundraiser-banner.png" style="max-width: 100%">
+		</a>
+	</div>
+	
+	 end top banner area -->
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Krita Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../reference_manual.html">Reference Manual</a> &raquo;</li>
+        
+          <li><a href="../filters.html">Filters</a> &raquo;</li>
+        
+      <li>Edge Detection</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+          
+            <a href="../../_sources/reference_manual/filters/edge_detection.rst.txt" rel="nofollow"> 
+             
+              <img src="../../_static/images/source-code.png" />
+             <!-- View page source -->
+
+          </a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="edge-detection">
+<span id="edge-detection-filters"></span><span id="index-0"></span><h1>Edge Detection<a class="headerlink" href="#edge-detection" title="Permalink to this headline">¶</a></h1>
+<p>Edge detection filters focus on finding sharp contrast or border between colors in an image to create edges or lines.</p>
+<p>Since 4.0 there are only two edge detection filters.</p>
+<section id="id1">
+<h2>Edge Detection<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 4.0.</span></p>
+</div>
+<p>A general edge detection filter that encapsulates all other filters. Edge detection filters that were separate before 4.0 have been folded into this one. It is also available for filter layers and filter brushes.</p>
+<figure class="align-center" id="id2" style="width: 800px">
+<img alt="../../_images/Krita_4_0_edge_detection.png" src="../../_images/Krita_4_0_edge_detection.png" />
+<figcaption>
+<p><span class="caption-text">From left to right: Original, with Prewitt edge detection applied, with Prewitt edge detection applied and result applied to alpha channel, and finally the original with an edge detection filter layer with the same settings as 3, and the filter layer blending mode set to multiply.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<dl>
+<dt>Formula</dt><dd><p>The convolution kernel formula for the edge detection. The difference between these is subtle, but still worth experimenting with.</p>
+<dl class="simple">
+<dt>Simple</dt><dd><p>A Kernel that is not square unlike the other two, and while this makes it fast, it doesn’t take diagonal pixels into account.</p>
+</dd>
+<dt>Prewitt</dt><dd><p>A square kernel that includes the diagonal pixels just as strongly as the orthogonal pixels. Gives a very strong effect.</p>
+</dd>
+<dt>Sobel</dt><dd><p>A square kernel that includes the diagonal pixels slightly less strong than the orthogonal pixels. Gives a more subtle effect than Prewitt.</p>
+</dd>
+</dl>
+</dd>
+<dt>Output</dt><dd><p>The output.</p>
+<dl class="simple">
+<dt>All sides</dt><dd><p>Convolves the edge detection into all directions and combines the result with the Pythagorean theorem. This will be good for most uses.</p>
+</dd>
+<dt>Top Edge</dt><dd><p>This only detects changes going from top to bottom and thus only has top lines.</p>
+</dd>
+<dt>Bottom Edge</dt><dd><p>This only detects changes going from bottom to top and thus only has bottom lines.</p>
+</dd>
+<dt>Right Edge</dt><dd><p>This only detects changes going from right to left and thus only has right lines.</p>
+</dd>
+<dt>Left Edge</dt><dd><p>This only detects changes going from left to right and thus only has left lines.</p>
+</dd>
+<dt>Direction in Radians</dt><dd><p>This convolves into all directions and then tries to output the direction of the line in radians.</p>
+</dd>
+</dl>
+</dd>
+<dt>Horizontal/Vertical radius</dt><dd><p>The radius of the edge detection. Default is 1 and going higher will increase the thickness of the lines.</p>
+</dd>
+<dt>Apply result to Alpha Channel.</dt><dd><p>The edge detection will be used on a grayscale copy of the image, and the output will be onto the alpha channel of the image, meaning it will output lines only.</p>
+</dd>
+</dl>
+</section>
+<section id="gaussian-high-pass">
+<span id="index-1"></span><h2>Gaussian High Pass<a class="headerlink" href="#gaussian-high-pass" title="Permalink to this headline">¶</a></h2>
+<p>A High Pass filter is a type of edge detection filter. It is usually used to enhance contrasts, much like a sharpen filter, but within a texture editing workflow it is also used to remove local gradients.</p>
+<dl class="simple">
+<dt>Radius</dt><dd><p>The radius within the Gaussian High Pass filter is similar to the radius in the Edge Detection filter.</p>
+</dd>
+</dl>
+<p>To use this as a sharpen filter, create a filter layer with this filter, and then set the blending mode to modes like ‘soft light’, ‘overlay’, ‘hard light’, ‘linear light’. Different blending modes give different results.</p>
+<figure class="align-center" id="id3" style="width: 377px">
+<img alt="../../_images/highpass_filter_sharpen.png" src="../../_images/highpass_filter_sharpen.png" />
+<figcaption>
+<p><span class="caption-text"><strong>Top left</strong>: Original, <strong>top right</strong>: Gaussian Highpass Result with radius 3, <strong>bottom left</strong>: Gaussian High Pass Result with radius 3 blended over the original with to Linear Light, <strong>bottom right</strong>: Gaussian High Pass result with radius 3 blended over the original with Soft Light.</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>To remove local gradients from a texture, create a clone layer, and apply this filter as a filter mask. Then, put a filter layer with gaussian blur set to the full amount in between the clone layer and the original. Finally, set the clone layer to luminosity or multiply (in this case an extra filter mask needs to be added to reduce the levels so that the multiplication result will not be as strong).</p>
+<figure class="align-center" id="id4" style="width: 513px">
+<img alt="../../_images/highpass_filter_local_gradient_removal.png" src="../../_images/highpass_filter_local_gradient_removal.png" />
+<figcaption>
+<p><span class="caption-text"><strong>Left</strong>: Original, <strong>top right</strong>: Gaussian High Pass Result blended with luminosity to remove the local gradients but keep the sharp details. In this specific example the lack of local gradients removes some character, but the gaussian high pass result could also be used to create a heightmap.</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="height-to-normal-map">
+<span id="index-2"></span><h2>Height to Normal Map<a class="headerlink" href="#height-to-normal-map" title="Permalink to this headline">¶</a></h2>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 4.0.</span></p>
+</div>
+<img alt="../../_images/Krita_4_0_height_to_normal_map.png" class="align-center" src="../../_images/Krita_4_0_height_to_normal_map.png" />
+<p>A filter that converts Height maps to Normal maps through the power of edge detection. It is also available for the filter layer or filter brush.</p>
+<dl>
+<dt>Formula</dt><dd><p>The convolution kernel formula for the edge detection. The difference between these is subtle, but still worth experimenting with.</p>
+<dl class="simple">
+<dt>Simple</dt><dd><p>A Kernel that is not square unlike the other two, and while this makes it fast, it doesn’t take diagonal pixels into account.</p>
+</dd>
+<dt>Prewitt</dt><dd><p>A square kernel that includes the diagonal pixels just as strongly as the orthogonal pixels. Gives a very strong effect.</p>
+</dd>
+<dt>Sobel</dt><dd><p>A square kernel that includes the diagonal pixels slightly less strong than the orthogonal pixels. Gives a more subtle effect than Prewitt.</p>
+</dd>
+</dl>
+</dd>
+<dt>Channel</dt><dd><p>Which channel of the layer should be interpreted as the grayscale heightmap.</p>
+</dd>
+<dt>Horizontal/Vertical radius</dt><dd><p>The radius of the edge detection. Default is 1 and going higher will increase the strength of the normal map. Adjust this if the effect of the resulting normal map is too weak.</p>
+</dd>
+<dt>XYZ</dt><dd><p>An XYZ swizzle, that allows you to map Red, Green and Blue to different 3d normal vector coordinates. This is necessary mostly for the difference between MikkT-space normal maps (+X, +Y, +Z) and the OpenGL standard normal map (+X, -Y, +Z).</p>
+</dd>
+</dl>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="emboss.html" class="btn btn-neutral float-right" title="Emboss" accesskey="n" rel="next"> <!-- Next --> <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="colors.html" class="btn btn-neutral" title="Color" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- Previous  -->  </a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright licensed under the GNU Free Documentation License 1.3+ unless stated otherwise.
+      
+        <span class="commit">
+          Revision <code>7c271ce</code>.
+        </span>
+      
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a modified <a href="https://github.com/rtfd/sphinx_rtd_theme">RTD theme</a>.<br/>
+  <a href="https://krita.org" title="Krita official website.">Krita official website</a> |
+  <a href="https://invent.kde.org/documentation/docs-krita-org/" title="The Gitlab instance to edit this pages and collaborate.">Git repository for docs.krita.org </a> |
+  <a href="https://www.kde.org/community/whatiskde/impressum-en.php" title="To know more about KDE, code of conduct, privacy policy and GDPR.">KDE Impressum</a>.
+   
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'5.0.0 Beta',
+            LANGUAGE:'en',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/documentation_options.js"></script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
+      });
+  </script> 
+
+ <script type="text/javascript">
+	 var _paq=_paq||[];
+	 _paq.push(['setCookieDomain','*.krita.org']);
+	 _paq.push(['setDomains','*.krita.org']);
+	 _paq.push(['setDocumentTitle',document.domain+"/"+document.title]);
+	 _paq.push(['trackPageView']);
+	 _paq.push(['enableLinkTracking']);
+
+	 (function(){
+	 	var u="//stats.kde.org/";
+	    _paq.push(['setTrackerUrl',u+'piwik.php']);
+	    _paq.push(['setSiteId',13]);
+	    var d = document, g = d.createElement('script'),s=d.getElementsByTagName('script')[0];
+	    g.type = 'text/javascript';
+	    g.async = true;
+	    g.defer = true;
+	    g.src = u+'piwik.js';
+	    s.parentNode.insertBefore(g,s);
+	  })();
+</script> 
+<noscript><p><img src="//stats.kde.org/piwik.php?idsite=13" style="border:0;" alt="" /></p></noscript>
+
+</body>
+</html>

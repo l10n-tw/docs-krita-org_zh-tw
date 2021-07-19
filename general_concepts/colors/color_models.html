@@ -1,0 +1,742 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" name="title" content="Color Models" />
+  <meta property="og:site-name" content="Krita Manual" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="en" />
+  <meta property="og:locale:alternate" content="ca" />
+  
+  <meta property="og:locale:alternate" content="fr" />
+  <meta property="og:locale:alternate" content="it" />
+  <meta property="og:locale:alternate" content="ja" />
+  <meta property="og:locale:alternate" content="ko" />
+  <meta property="og:locale:alternate" content="nl" />
+  <meta property="og:locale:alternate" content="pl" />
+  <meta property="og:locale:alternate" content="pt_PT" />
+  <meta property="og:locale:alternate" content="uk_UA" />
+  <meta property="og:locale:alternate" content="zh_CN" />
+  <meta property="og:article:modified_time" content="2021-07-19T15:33:59" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<meta content="Color Models in Krita" name="description" />
+
+  
+  
+  <title>Color Models &mdash; Krita Manual 5.0.0 Beta documentation</title>
+  
+
+  
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    
+  
+  
+  
+    <link rel="canonical" href="en/general_concepts/colors/color_models.html"/>
+    <meta property="og:url" content="en/general_concepts/colors/color_models.html" />
+    <meta property="og:image" content="en/_static/sidebar-logo.png" />
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Color Space Size" href="color_space_size.html" />
+    <link rel="prev" title="Mixing Colors" href="color_mixing.html" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+       
+           <a href="../../index.html" class="icon icon-home">
+
+			<img src="../../_static/sidebar-logo.png" class="logo" alt="Logo"/>
+           	
+           <!--	Krita Manual -->
+
+
+          </a>
+
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-side-nav-language-selector">
+        	<p class="caption-text">
+	        	<select id="language-selector-container">
+	        		<option value="ca">Català</option>
+	        		<option value="en">English</option>
+	        		<option value="fr">français</option>
+	        		<option value="it">Italiano</option>
+	        		<option value="ja">日本語</option>
+	        		<option value="ko">한국어</option>
+	        		<option value="nl">Nederlands</option>
+	        		<option value="pl">Polski</option>
+	        		<option value="pt_PT">português</option>
+	        		<option value="uk_UA">Українська</option>
+	        		<option value="zh_CN">简体中文</option>
+	        	</select>
+        	</p>
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../user_manual.html">User Manual</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../general_concepts.html">General Concepts</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../colors.html">Colors</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="bit_depth.html">Bit Depth</a></li>
+<li class="toctree-l3"><a class="reference internal" href="color_managed_workflow.html">Color Managed Workflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="color_mixing.html">Mixing Colors</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Color Models</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#rgb">RGB</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#grayscale">Grayscale</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cmyk">CMYK</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ycrcb">YCrCb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#filters-and-blending-modes">Filters and blending modes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="color_space_size.html">Color Space Size</a></li>
+<li class="toctree-l3"><a class="reference internal" href="linear_and_gamma.html">Gamma and Linear</a></li>
+<li class="toctree-l3"><a class="reference internal" href="profiling_and_callibration.html">Profiling and Calibration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="scene_linear_painting.html">Scene Linear Painting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="viewing_conditions.html">Viewing Conditions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../file_formats.html">File Formats</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projection.html">Perspective Projection</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference_manual.html">Reference Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials.html">Tutorials and How-tos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../KritaFAQ.html">Krita FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributors_manual.html">Contributors Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../resources_page.html">Resources</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+	<!-- start top banner area (for fundraisers or messages)
+
+	<div style="text-align: center; background-color: #333">
+		<a href="https://krita.org/en/fundraising-2018-campaign/" target="_self" onclick="ga('send', 'event', 'frontpage', 'button', 'Fundraiser 2018');">
+			<img src="https://krita.org/wp-content/themes/krita-org-theme/images/decoration/2018-fundraiser-banner.png" style="max-width: 100%">
+		</a>
+	</div>
+	
+	 end top banner area -->
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Krita Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../general_concepts.html">General Concepts</a> &raquo;</li>
+        
+          <li><a href="../colors.html">Colors</a> &raquo;</li>
+        
+      <li>Color Models</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+          
+            <a href="../../_sources/general_concepts/colors/color_models.rst.txt" rel="nofollow"> 
+             
+              <img src="../../_static/images/source-code.png" />
+             <!-- View page source -->
+
+          </a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="color-models">
+<span id="index-0"></span><span id="id1"></span><h1>Color Models<a class="headerlink" href="#color-models" title="Permalink to this headline">¶</a></h1>
+<p>Krita has many different color spaces and models. Following here is a brief explanation of each, and their use-cases.</p>
+<section id="rgb">
+<span id="model-rgb"></span><h2>RGB<a class="headerlink" href="#rgb" title="Permalink to this headline">¶</a></h2>
+<p>Red, Green, Blue.</p>
+<p>These are the most efficient primaries for light-based color mixing, like computer screens. Adding Red, Green and Blue light together results in White, and is thus named the additive color wheel.</p>
+<p>RGB is used for two purposes:</p>
+<p>Images that are meant for viewing on a screen:</p>
+<ul class="simple">
+<li><p>So that could be images for the web, buttons, avatars, or just portfolio images.</p></li>
+<li><p>Or for Video games, both sprites and textures are best in RGB there.</p></li>
+<li><p>Or for 3d rendering, visual effects and cg animation.</p></li>
+</ul>
+<p>And for the working space. A working space is an RGB gamut that is really large and predictable, meaning it’s good for image manipulation. You use this next to a profiled monitor. This way you can have precise colors while also being able to view them correctly on multiple screens.</p>
+<section id="blending-modes-in-rgb">
+<h3>Blending modes in RGB<a class="headerlink" href="#blending-modes-in-rgb" title="Permalink to this headline">¶</a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 8%" />
+<col style="width: 6%" />
+<col style="width: 6%" />
+<col style="width: 6%" />
+<col style="width: 6%" />
+<col style="width: 6%" />
+<col style="width: 6%" />
+<col style="width: 6%" />
+<col style="width: 6%" />
+<col style="width: 6%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"></th>
+<th class="head" colspan="3"><p>Color 1</p></th>
+<th class="head" colspan="3"><p>Color 2</p></th>
+<th class="head" colspan="3"><p>Normal</p></th>
+<th class="head" colspan="3"><p>Multiply</p></th>
+<th class="head" colspan="3"><p>Screen</p></th>
+</tr>
+<tr class="row-even"><th class="head"></th>
+<th class="head"><p>R</p></th>
+<th class="head"><p>G</p></th>
+<th class="head"><p>B</p></th>
+<th class="head"><p>R</p></th>
+<th class="head"><p>G</p></th>
+<th class="head"><p>B</p></th>
+<th class="head"><p>R</p></th>
+<th class="head"><p>G</p></th>
+<th class="head"><p>B</p></th>
+<th class="head"><p>R</p></th>
+<th class="head"><p>G</p></th>
+<th class="head"><p>B</p></th>
+<th class="head"><p>R</p></th>
+<th class="head"><p>G</p></th>
+<th class="head"><p>B</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-odd"><td><p>R &amp; G</p></td>
+<td><p>1.0</p></td>
+<td><p>0.0</p></td>
+<td><p>0.0</p></td>
+<td><p>0.0</p></td>
+<td><p>1.0</p></td>
+<td><p>0.0</p></td>
+<td><p>0.5</p></td>
+<td><p>0.5</p></td>
+<td><p>0.0</p></td>
+<td><p>0.0</p></td>
+<td><p>0.0</p></td>
+<td><p>0.0</p></td>
+<td><p>1.0</p></td>
+<td><p>1.0</p></td>
+<td><p>0.0</p></td>
+</tr>
+<tr class="row-even"><td><p>Gray</p></td>
+<td><p>0.5</p></td>
+<td><p>0.5</p></td>
+<td><p>0.5</p></td>
+<td><p>0.5</p></td>
+<td><p>0.5</p></td>
+<td><p>0.5</p></td>
+<td><p>0.5</p></td>
+<td><p>0.5</p></td>
+<td><p>0.5</p></td>
+<td><p>0.25</p></td>
+<td><p>0.25</p></td>
+<td><p>0.25</p></td>
+<td><p>0.75</p></td>
+<td><p>0.75</p></td>
+<td><p>0.75</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="rgb-models-hsv-hsl-hsi-and-hsy">
+<h3>RGB models: HSV, HSL, HSI and HSY<a class="headerlink" href="#rgb-models-hsv-hsl-hsi-and-hsy" title="Permalink to this headline">¶</a></h3>
+<p>These are not included as their own color spaces in Krita. However, they do show up in the blending modes and color selectors, so a brief overview:</p>
+<p>–Images of relationship rgb-hsv etc.</p>
+<dl class="simple">
+<dt>Hue</dt><dd><p>The tint of a color, or, whether it’s red, yellow, green, etc. Krita’s Hue is measured in 360 degrees, with 0 being red, 120 being green and 240 being blue.</p>
+</dd>
+<dt>Saturation</dt><dd><p>How vibrant a color is. Saturation is slightly different between HSV and the others. In HSV it’s a measurement of the difference between two base colors being used and three base colors being used. In the others it’s a measurement of how close a color is to gray, and sometimes this value is called <strong>Chroma</strong>. Saturation ranges from 0 (gray) to 100 (pure color).</p>
+</dd>
+<dt>Value</dt><dd><p>Sometimes known as Brightness. Measurement of how much the pixel needs to light up. Also measured from 0 to 100.</p>
+</dd>
+<dt>Lightness</dt><dd><p>Where a color aligns between white and black. This value is non-linear, and puts all the most saturated possible colors at 50. Ranges from 0 to 100.</p>
+</dd>
+<dt>Intensity</dt><dd><p>Similar to lightness, except it acknowledges that yellow (1,1,0) is lighter than blue (0,0,1). Ranges from 0 to 100.</p>
+</dd>
+<dt>Luma (Y’)</dt><dd><p>Similar to lightness and Intensity, except it weights the red, green and blue components based real-life measurements of how much light a color reflects to determine its lightness. Ranges from 0 to 100. Luma is well known for being used in film-color spaces.</p>
+</dd>
+</dl>
+</section>
+</section>
+<section id="grayscale">
+<span id="model-gray"></span><h2>Grayscale<a class="headerlink" href="#grayscale" title="Permalink to this headline">¶</a></h2>
+<p>This color space only registers gray values.
+This is useful, because by only registering gray values, it only needs one channel of information, which in turn means the image becomes much lighter in memory consumption!</p>
+<p>This is useful for textures, but also anything else that needs to stay grayscale, like Black and White comics.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 18%" />
+<col style="width: 18%" />
+<col style="width: 16%" />
+<col style="width: 20%" />
+<col style="width: 16%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"></th>
+<th class="head"><p>Color 1</p></th>
+<th class="head"><p>Color 2</p></th>
+<th class="head"><p>Normal</p></th>
+<th class="head"><p>Multiply</p></th>
+<th class="head"><p>Screen</p></th>
+</tr>
+<tr class="row-even"><th class="head"></th>
+<th class="head"><p>G</p></th>
+<th class="head"><p>G</p></th>
+<th class="head"><p>G</p></th>
+<th class="head"><p>G</p></th>
+<th class="head"><p>G</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-odd"><td><p>Gray</p></td>
+<td><p>0.5</p></td>
+<td><p>0.5</p></td>
+<td><p>0.5</p></td>
+<td><p>0.25</p></td>
+<td><p>0.75</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="cmyk">
+<span id="model-cmyk"></span><h2>CMYK<a class="headerlink" href="#cmyk" title="Permalink to this headline">¶</a></h2>
+<p>Cyan, Magenta, Yellow, Key</p>
+<p>This is the color space of printers. Unlike computers, printers have these four colors, and adding them all adds up to black instead of white. This is thus also called a ‘subtractive’ color space.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 6%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 4%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 4%" />
+<col style="width: 5%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"></th>
+<th class="head" colspan="4"><p>Color 1</p></th>
+<th class="head" colspan="4"><p>Color 2</p></th>
+<th class="head" colspan="4"><p>Normal</p></th>
+<th class="head" colspan="4"><p>Multiply</p></th>
+<th class="head" colspan="4"><p>Screen</p></th>
+</tr>
+<tr class="row-even"><th class="head"></th>
+<th class="head"><p>C</p></th>
+<th class="head"><p>M</p></th>
+<th class="head"><p>Y</p></th>
+<th class="head"><p>K</p></th>
+<th class="head"><p>C</p></th>
+<th class="head"><p>M</p></th>
+<th class="head"><p>Y</p></th>
+<th class="head"><p>K</p></th>
+<th class="head"><p>C</p></th>
+<th class="head"><p>M</p></th>
+<th class="head"><p>Y</p></th>
+<th class="head"><p>K</p></th>
+<th class="head"><p>C</p></th>
+<th class="head"><p>M</p></th>
+<th class="head"><p>Y</p></th>
+<th class="head"><p>K</p></th>
+<th class="head"><p>C</p></th>
+<th class="head"><p>M</p></th>
+<th class="head"><p>Y</p></th>
+<th class="head"><p>K</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-odd"><td><p>R &amp; G</p></td>
+<td><p>0.0</p></td>
+<td><p>1.0</p></td>
+<td><p>1.0</p></td>
+<td><p>0.0</p></td>
+<td><p>1.0</p></td>
+<td><p>0.0</p></td>
+<td><p>1.0</p></td>
+<td><p>0.0</p></td>
+<td><p>0.5</p></td>
+<td><p>0.5</p></td>
+<td><p>1.0</p></td>
+<td><p>0.0</p></td>
+<td><p>0.25</p></td>
+<td><p>0.25</p></td>
+<td><p>1.0</p></td>
+<td><p>0.0</p></td>
+<td><p>0.75</p></td>
+<td><p>0.75</p></td>
+<td><p>1.0</p></td>
+<td><p>0.0</p></td>
+</tr>
+<tr class="row-even"><td><p>Gray</p></td>
+<td><p>0.0</p></td>
+<td><p>0.0</p></td>
+<td><p>0.0</p></td>
+<td><p>0.5</p></td>
+<td><p>0.0</p></td>
+<td><p>0.0</p></td>
+<td><p>0.0</p></td>
+<td><p>0.5</p></td>
+<td><p>0.0</p></td>
+<td><p>0.0</p></td>
+<td><p>0.0</p></td>
+<td><p>0.5</p></td>
+<td><p>0.0</p></td>
+<td><p>0.0</p></td>
+<td><p>0.0</p></td>
+<td><p>0.25</p></td>
+<td><p>0.0</p></td>
+<td><p>0.0</p></td>
+<td><p>0.0</p></td>
+<td><p>0.75</p></td>
+</tr>
+</tbody>
+</table>
+<p>There’s also a difference between ‘colored gray’ and ‘neutral gray’ depending on the profile.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 6%" />
+<col style="width: 6%" />
+<col style="width: 6%" />
+<col style="width: 6%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"></th>
+<th class="head" colspan="4"><p>25%</p></th>
+<th class="head" colspan="4"><p>50%</p></th>
+<th class="head" colspan="4"><p>75%</p></th>
+</tr>
+<tr class="row-even"><th class="head"></th>
+<th class="head"><p>C</p></th>
+<th class="head"><p>M</p></th>
+<th class="head"><p>Y</p></th>
+<th class="head"><p>K</p></th>
+<th class="head"><p>C</p></th>
+<th class="head"><p>M</p></th>
+<th class="head"><p>Y</p></th>
+<th class="head"><p>K</p></th>
+<th class="head"><p>C</p></th>
+<th class="head"><p>M</p></th>
+<th class="head"><p>Y</p></th>
+<th class="head"><p>K</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-odd"><td><p>Colored Gray</p></td>
+<td><p>0.25</p></td>
+<td><p>0.25</p></td>
+<td><p>0.25</p></td>
+<td><p>0.25</p></td>
+<td><p>0.5</p></td>
+<td><p>0.5</p></td>
+<td><p>0.5</p></td>
+<td><p>0.5</p></td>
+<td><p>0.75</p></td>
+<td><p>0.75</p></td>
+<td><p>0.75</p></td>
+<td><p>0.75</p></td>
+</tr>
+<tr class="row-even"><td><p>Neutral Gray</p></td>
+<td><p>0.0</p></td>
+<td><p>0.0</p></td>
+<td><p>0.0</p></td>
+<td><p>0.25</p></td>
+<td><p>0.0</p></td>
+<td><p>0.0</p></td>
+<td><p>0.0</p></td>
+<td><p>0.5</p></td>
+<td><p>0.0</p></td>
+<td><p>0.0</p></td>
+<td><p>0.0</p></td>
+<td><p>0.75</p></td>
+</tr>
+</tbody>
+</table>
+<figure class="align-center" id="id2" style="width: 500px">
+<img alt="../../_images/Cmyk_black_differences.png" src="../../_images/Cmyk_black_differences.png" />
+<figcaption>
+<p><span class="caption-text">In Krita, there’s also the fact that the default color is a perfect black in RGB, which then gets converted to our default CMYK in a funny manner, giving a yellow look to the strokes. Again, another good reason to work in RGB and let the conversion be done by the printing house.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>While CMYK has a smaller ‘gamut’ than RGB, however, it’s still recommended to use an RGB working space profile to do your editing in. Afterwards, you can convert it to your printer’s CMYK profile using either perceptual or relative colorimetric intent.
+Or you can just give the workspace rgb image to your printer and let them handle the work.</p>
+</section>
+<section id="ycrcb">
+<span id="model-ycrcb"></span><h2>YCrCb<a class="headerlink" href="#ycrcb" title="Permalink to this headline">¶</a></h2>
+<p>Luminosity, Red-chroma, Blue-chroma</p>
+<p>YCrCb stands for:</p>
+<dl class="simple">
+<dt>Y’/Y</dt><dd><p>Luma/Luminosity, thus, the amount of light a color reflects.</p>
+</dd>
+<dt>Cr</dt><dd><p>Red Chroma. This value measures how red a color is versus how green it is.</p>
+</dd>
+<dt>Cb</dt><dd><p>Blue Chroma. This value measures how blue a color is versus how yellow it is.</p>
+</dd>
+</dl>
+<p>This color space is often used in photography and in (correct) implementations of JPEG. As a human you’re much more sensitive to the lightness of colors, and thus JPEG tries to compress the Cr and Cb channels, and leave the Y channel in full quality.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Krita doesn’t bundle a ICC profile for YCrCb on the basis of there being no open source ICC profiles for this color space. It’s unusable without one, and also probably very untested.</p>
+</div>
+<section id="xyz">
+<span id="model-xyz"></span><h3>XYZ<a class="headerlink" href="#xyz" title="Permalink to this headline">¶</a></h3>
+<p>Back in 1931, the CIE (Institute of Color and Light), was studying human color perception.
+In doing so, they made the first color spaces, with XYZ being the one best at approximating human vision.</p>
+<p>It’s almost impossible to really explain what XYZ is.</p>
+<dl class="simple">
+<dt>Y</dt><dd><p>Is equal to green.</p>
+</dd>
+<dt>Z</dt><dd><p>Akin to blue.</p>
+</dd>
+<dt>X</dt><dd><p>Is supposed to be red.</p>
+</dd>
+</dl>
+<p>XYZ is used as a baseline reference for all other profiles and models. All color conversions are done in XYZ, and all profiles coordinates match XYZ.</p>
+</section>
+<section id="l-a-b">
+<span id="model-lab"></span><h3>L*a*b*<a class="headerlink" href="#l-a-b" title="Permalink to this headline">¶</a></h3>
+<p>Stands for:</p>
+<dl class="simple">
+<dt>L*</dt><dd><p>Lightness, similar to luminosity in this case.</p>
+</dd>
+<dt>a*</dt><dd><p>a* in this case is the measurement of how magenta a color is versus how green it is.</p>
+</dd>
+<dt>b*</dt><dd><p>b* in this case is a measurement of how yellow a color is versus how blue a color is.</p>
+</dd>
+</dl>
+<p>L*a*b* is supposed to be a more comprehensible variety of XYZ and the most ‘complete’ of all color spaces. It’s often used as an in between color space in conversion, but even more as the correct color space to do color-balancing in. It’s far easier to adjust the contrast and color tone in L*a*b*.</p>
+<p>L*a*b* is technically the same as Photoshop’s LAB. Photoshop specifically uses CIELAB d50.</p>
+</section>
+</section>
+<section id="filters-and-blending-modes">
+<h2>Filters and blending modes<a class="headerlink" href="#filters-and-blending-modes" title="Permalink to this headline">¶</a></h2>
+<p>Maybe you have noticed that blending modes in LAB don’t work like they do in RGB or CMYK. This is because the blending modes work by doing a bit of maths on the color coordinates, and because color coordinates are different per color space, the blending modes look different.</p>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="color_space_size.html" class="btn btn-neutral float-right" title="Color Space Size" accesskey="n" rel="next"> <!-- Next --> <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="color_mixing.html" class="btn btn-neutral" title="Mixing Colors" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- Previous  -->  </a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright licensed under the GNU Free Documentation License 1.3+ unless stated otherwise.
+      
+        <span class="commit">
+          Revision <code>7c271ce</code>.
+        </span>
+      
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a modified <a href="https://github.com/rtfd/sphinx_rtd_theme">RTD theme</a>.<br/>
+  <a href="https://krita.org" title="Krita official website.">Krita official website</a> |
+  <a href="https://invent.kde.org/documentation/docs-krita-org/" title="The Gitlab instance to edit this pages and collaborate.">Git repository for docs.krita.org </a> |
+  <a href="https://www.kde.org/community/whatiskde/impressum-en.php" title="To know more about KDE, code of conduct, privacy policy and GDPR.">KDE Impressum</a>.
+   
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'5.0.0 Beta',
+            LANGUAGE:'en',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/documentation_options.js"></script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
+      });
+  </script> 
+
+ <script type="text/javascript">
+	 var _paq=_paq||[];
+	 _paq.push(['setCookieDomain','*.krita.org']);
+	 _paq.push(['setDomains','*.krita.org']);
+	 _paq.push(['setDocumentTitle',document.domain+"/"+document.title]);
+	 _paq.push(['trackPageView']);
+	 _paq.push(['enableLinkTracking']);
+
+	 (function(){
+	 	var u="//stats.kde.org/";
+	    _paq.push(['setTrackerUrl',u+'piwik.php']);
+	    _paq.push(['setSiteId',13]);
+	    var d = document, g = d.createElement('script'),s=d.getElementsByTagName('script')[0];
+	    g.type = 'text/javascript';
+	    g.async = true;
+	    g.defer = true;
+	    g.src = u+'piwik.js';
+	    s.parentNode.insertBefore(g,s);
+	  })();
+</script> 
+<noscript><p><img src="//stats.kde.org/piwik.php?idsite=13" style="border:0;" alt="" /></p></noscript>
+
+</body>
+</html>
