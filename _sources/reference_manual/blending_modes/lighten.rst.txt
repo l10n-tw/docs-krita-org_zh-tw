@@ -23,6 +23,10 @@ Blending modes that lighten the image.
 Color Dodge
 ~~~~~~~~~~~
 
+.. only:: non_english
+
+   .. hint:: This blending mode is called "Color Dodge" in English.
+
 Similar to Divide.
 Inverts the top layer, and divides the lower layer by the inverted top layer.
 This results in a image with emphasized highlights, like Dodging would do in traditional darkroom photography.
@@ -38,6 +42,10 @@ This results in a image with emphasized highlights, like Dodging would do in tra
 Gamma Illumination
 ~~~~~~~~~~~~~~~~~~
 
+.. only:: non_english
+
+   .. hint:: This blending mode is called "Gamma Illumination" in English.
+
 Inverted Gamma Dark blending mode.
 
 .. figure:: /images/blending_modes/lighten/Blending_modes_Gamma_Illumination_Sample_image_with_dots.png
@@ -52,6 +60,10 @@ Inverted Gamma Dark blending mode.
 Gamma Light
 ~~~~~~~~~~~
 
+.. only:: non_english
+
+   .. hint:: This blending mode is called "Gamma Light" in English.
+
 Outputs the upper layer as power of the lower layer.
 
 .. figure:: /images/blending_modes/lighten/Blending_modes_Gamma_Light_Sample_image_with_dots.png
@@ -64,6 +76,10 @@ Outputs the upper layer as power of the lower layer.
 
 Hard Light
 ~~~~~~~~~~
+
+.. only:: non_english
+
+   .. hint:: This blending mode is called "Hard Light" in English.
 
 Similar to Overlay.
 A combination of the Multiply and Screen blending modes, switching between both at a middle-lightness.
@@ -82,6 +98,10 @@ Effectively, this decreases contrast.
 Lighten
 ~~~~~~~
 
+.. only:: non_english
+
+   .. hint:: This blending mode is called "Lighten" in English.
+
 With the darken, the upper layer's colors are checked for their lightness. Only if they are Lighter than the underlying color on the lower layer, will they be visible.
 
 .. figure:: /images/blending_modes/lighten/Blending_modes_Lighten_Sample_image_with_dots.png
@@ -94,6 +114,10 @@ With the darken, the upper layer's colors are checked for their lightness. Only 
 Lighter Color
 ~~~~~~~~~~~~~
 
+.. only:: non_english
+
+   .. hint:: This blending mode is called "Lighter Color" in English.
+
 .. figure:: /images/blending_modes/lighten/Blending_modes_Lighter_Color_Sample_image_with_dots.png
    :align: center
 
@@ -104,6 +128,10 @@ Lighter Color
 
 Linear Dodge
 ~~~~~~~~~~~~
+
+.. only:: non_english
+
+   .. hint:: This blending mode is called "Linear Dodge" in English.
 
 Exactly the same as :ref:`bm_addition`.
 
@@ -119,6 +147,10 @@ Put in for compatibility purposes.
 Easy Dodge
 ~~~~~~~~~~
 
+.. only:: non_english
+
+   .. hint:: This blending mode is called "Easy Dodge" in English.
+
 Aims to solve issues with Color Dodge blending mode by using a formula which falloff is similar to Dodge, but the falloff rate is softer. It is within the range of 0.0f and 1.0f unlike Color Dodge mode.
 
 .. figure:: /images/blending_modes/lighten/Blending_modes_Easy_Dodge_Sample_image_with_dots.png
@@ -130,6 +162,10 @@ Aims to solve issues with Color Dodge blending mode by using a formula which fal
    
 Flat Light
 ~~~~~~~~~~
+
+.. only:: non_english
+
+   .. hint:: This blending mode is called "Flat Light" in English.
 
 The spreadout variation of Vivid Light mode which range is between 0.0f and 1.0f.
 
@@ -143,6 +179,10 @@ The spreadout variation of Vivid Light mode which range is between 0.0f and 1.0f
 Fog Lighten (IFS Illusions)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. only:: non_english
+
+   .. hint:: This blending mode is called "Fog Lighten (IFS Illusions)" in English.
+
 Lightens the image in a way that there is a 'fog' in the end result. This is due to the unique property of fog lighten in which midtones combined are lighter than non-midtones blend.
 
 .. figure:: /images/blending_modes/lighten/Blending_modes_Fog_Light_Sample_image_with_dots.png
@@ -154,6 +194,10 @@ Lightens the image in a way that there is a 'fog' in the end result. This is due
 
 Linear Light
 ~~~~~~~~~~~~
+
+.. only:: non_english
+
+   .. hint:: This blending mode is called "Linear Light" in English.
 
 Similar to :ref:`bm_overlay`.
 
@@ -180,6 +224,10 @@ Combines :ref:`bm_linear_dodge` and :ref:`bm_linear_burn`. When the lightness of
 Luminosity/Shine (SAI)
 ~~~~~~~~~~~~~~~~~~~~~~
 
+.. only:: non_english
+
+   .. hint:: This blending mode is called "Luminosity/Shine (SAI)" in English.
+
 Similar to :ref:`bm_addition`.
 
 Takes the opacity of the new color (combined opacity of the layer, the brush, any used transparency masks etc.) and multiples the color by the opacity, then adds to the original/previous color.
@@ -205,6 +253,10 @@ The result of this operation is the same as combining the new pixels with a full
 P-Norm A
 ~~~~~~~~
 
+.. only:: non_english
+
+   .. hint:: This blending mode is called "P-Norm A" in English.
+
 P-Norm A is similar to Screen blending mode which slightly darken images, and the falloff is more consistent all-around in terms of outline of values. Can be used an alternative to screen blending mode at times.
 
 .. figure:: /images/blending_modes/lighten/Blending_modes_P-Norm_A_Sample_image_with_dots.png
@@ -217,6 +269,10 @@ P-Norm A is similar to Screen blending mode which slightly darken images, and th
 P-Norm B
 ~~~~~~~~
 
+.. only:: non_english
+
+   .. hint:: This blending mode is called "P-Norm B" in English.
+
 P-Norm B is similar to Screen blending mode which slightly darken images, and the falloff is more consistent all-around in terms of outline of values. The falloff is sharper in P-Norm B than in P-Norm A. Can be used an alternative to screen blending mode at times.
 
 .. figure:: /images/blending_modes/lighten/Blending_modes_P-Norm_B_Sample_image_with_dots.png
@@ -228,6 +284,10 @@ P-Norm B is similar to Screen blending mode which slightly darken images, and th
 
 Pin Light
 ~~~~~~~~~
+
+.. only:: non_english
+
+   .. hint:: This blending mode is called "Pin Light" in English.
 
 Checks which is darker the lower layer's pixel or the upper layer's double so bright.
 Then checks which is brighter of that result or the inversion of the doubled lower layer.
@@ -251,6 +311,10 @@ Then checks which is brighter of that result or the inversion of the doubled low
 
 Screen
 ~~~~~~
+
+.. only:: non_english
+
+   .. hint:: This blending mode is called "Screen" in English.
 
 Perceptually the opposite of :ref:`bm_multiply`.
 
@@ -278,6 +342,10 @@ This results in light tones being more opaque and dark tones transparent.
 Soft Light (Photoshop) & Soft Light SVG
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. only:: non_english
+
+   .. hint:: These blending modes are called "Soft Light (Photoshop)" and "Soft Light SVG" in English.
+
 These are less harsh versions of Hard Light, not resulting in full black or full white.
 
 The SVG version is slightly different to the Photoshop version in that it uses a slightly different bit of formula when the lightness of the lower pixel is lower than 25%, this prevents the strength of the brightness increase.
@@ -295,6 +363,10 @@ The SVG version is slightly different to the Photoshop version in that it uses a
 
 Soft Light (IFS Illusions) & Soft Light (Pegtop-Delphi)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. only:: non_english
+
+   .. hint:: These blending modes are called "Soft Light (IFS Illusions)" and "Soft Light (Pegtop-Delphi)" in English.
 
 These are alternative versions of standard softlight modes which are made to solve discontinuities seen with the standard blend modes. Sometimes, these modes offer subtle advantages by offering more contrast within some areas, and these advantages are more or less noticeable within different color spaces and depth. 
 
@@ -314,6 +386,10 @@ These are alternative versions of standard softlight modes which are made to sol
 Super Light
 ~~~~~~~~~~~
 
+.. only:: non_english
+
+   .. hint:: This blending mode is called "Super Light" in English.
+
 Smoother variation of Hard Light blending mode with more contrast in it.
 
 .. figure:: /images/blending_modes/lighten/Blending_modes_Super_Light_Sample_image_with_dots.png
@@ -326,6 +402,10 @@ Smoother variation of Hard Light blending mode with more contrast in it.
 Tint (IFS Illusions)
 ~~~~~~~~~~~~~~~~~~~~
 
+.. only:: non_english
+
+   .. hint:: This blending mode is called "Tint (IFS Illusions)" in English.
+
 Basically, the blending mode only ends in shades of tints. This means that it's very useful for painting light colors while still in the range of tints.
 
 .. figure:: /images/blending_modes/lighten/Blending_modes_Tint_Sample_image_with_dots.png
@@ -337,6 +417,10 @@ Basically, the blending mode only ends in shades of tints. This means that it's 
 
 Vivid Light
 ~~~~~~~~~~~
+
+.. only:: non_english
+
+   .. hint:: This blending mode is called "Vivid Light" in English.
 
 Similar to Overlay.
 

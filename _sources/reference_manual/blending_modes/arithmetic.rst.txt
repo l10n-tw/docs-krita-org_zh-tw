@@ -21,6 +21,10 @@ These blending modes are based on simple maths.
 Addition
 ~~~~~~~~
 
+.. only:: non_english
+
+   .. hint:: This blending mode is called "Addition" in English.
+
 Adds the numerical values of two colors together:
 
 Yellow(1, 1, 0) + Blue(0, 0, 1) = White(1, 1, 1)
@@ -58,6 +62,10 @@ When the result of the addition is more than 1, white is the color displayed. Th
 Divide
 ~~~~~~
 
+.. only:: non_english
+
+   .. hint:: This blending mode is called "Divide" in English.
+
 Divides the numerical value from the lower color by the upper color.
 
 Red(1, 0, 0) / Gray(0.5, 0.5, 0.5) = (2, 0, 0) → Red(1, 0, 0)
@@ -86,6 +94,10 @@ Light Blue(0.1608, 0.6274, 0.8274) / Orange(1, 0.5961, 0.0706) = (0.1608, 1.0525
 Inverse Subtract
 ~~~~~~~~~~~~~~~~
 
+.. only:: non_english
+
+   .. hint:: This blending mode is called "Inverse Subtract" in English.
+
 This inverts the lower layer before subtracting it from the upper layer.
 
 Lighter Gray(0.5, 0.5, 0.5)_(1_Darker Gray(0.4, 0.4, 0.4)) = (-0.1, -0.1, -0.1) → Black(0, 0, 0)
@@ -111,6 +123,10 @@ Orange(1, 0.5961, 0.0706)_(1_Light Blue(0.1608, 0.6274, 0.8274)) = (0.1608, 0.22
 
 Multiply
 ~~~~~~~~
+
+.. only:: non_english
+
+   .. hint:: This blending mode is called "Multiply" in English.
 
 Multiplies the two colors with each other, but does not go beyond the upper limit.
 
@@ -144,6 +160,10 @@ Light Blue(0.1608, 0.6274, 0.8274) x Orange(1, 0.5961, 0.0706) = Green(0.1608, 0
 
 Subtract
 ~~~~~~~~
+
+.. only:: non_english
+
+   .. hint:: This blending mode is called "Subtract" in English.
 
 Subtracts the top layer from the bottom layer.
 

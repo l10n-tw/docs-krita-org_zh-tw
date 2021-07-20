@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-07-20T07:50:31" />
+  <meta property="og:article:modified_time" content="2021-07-20T10:25:25" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="Page about the HSX blending modes in Krita, amongst which Hue, Color, Luminosity and Saturation." name="description" />
 
@@ -141,10 +141,10 @@
 <li class="toctree-l4 current"><a class="current reference internal" href="#">HSX</a></li>
 <li class="toctree-l4"><a class="reference internal" href="lighten.html">變亮</a></li>
 <li class="toctree-l4"><a class="reference internal" href="misc.html">其他​​</a></li>
-<li class="toctree-l4"><a class="reference internal" href="mix.html">Mix</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mix.html">混合</a></li>
 <li class="toctree-l4"><a class="reference internal" href="modulo.html">取模</a></li>
-<li class="toctree-l4"><a class="reference internal" href="negative.html">Negative</a></li>
-<li class="toctree-l4"><a class="reference internal" href="quadratic.html">平方</a></li>
+<li class="toctree-l4"><a class="reference internal" href="negative.html">負片</a></li>
+<li class="toctree-l4"><a class="reference internal" href="quadratic.html">二次方</a></li>
 </ul>
 </li>
 </ul>
@@ -295,6 +295,10 @@ Luma is based on scientific studies of how much light a color reflects in real-l
 <h2>HSX Blending Modes<a class="headerlink" href="#hsx-blending-modes" title="本標題的永久連結">¶</a></h2>
 <section id="color-hsv-hsi-hsl-hsy">
 <span id="bm-hsy-color"></span><span id="bm-hsi-color"></span><span id="bm-hsl-color"></span><span id="bm-hsv-color"></span><span id="bm-color"></span><h3>色彩 HSV、HSI、HSL、HSY<a class="headerlink" href="#color-hsv-hsi-hsl-hsy" title="本標題的永久連結">¶</a></h3>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>These blending modes are called &quot;Color&quot; in English.</p>
+</div>
 <p>This takes the Luminosity/Value/Intensity/Lightness of the colors on the lower layer, and combines them with the Saturation and Hue of the upper pixels. We refer to Color HSY as 'Color' in line with other applications.</p>
 <figure class="align-center" id="id1">
 <img alt="../../_images/Blending_modes_Color_HSI_Gray_0.4_and_Gray_0.5.png" src="../../_images/Blending_modes_Color_HSI_Gray_0.4_and_Gray_0.5.png" />
@@ -335,6 +339,10 @@ Luma is based on scientific studies of how much light a color reflects in real-l
 </section>
 <section id="hue-hsv-hsi-hsl-hsy">
 <span id="bm-hsy-hue"></span><span id="bm-hsi-hue"></span><span id="bm-hsl-hue"></span><span id="bm-hsv-hue"></span><span id="bm-hue"></span><h3>色相 HSV、HSI、HSL、HSY<a class="headerlink" href="#hue-hsv-hsi-hsl-hsy" title="本標題的永久連結">¶</a></h3>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>英文稱為「Hue」。</p>
+</div>
 <p>Takes the saturation and tone of the lower layer and combines them with the hue of the upper-layer.
 Tone in this case being either Value, Lightness, Intensity or Luminosity.</p>
 <figure class="align-center" id="id7">
@@ -364,6 +372,10 @@ Tone in this case being either Value, Lightness, Intensity or Luminosity.</p>
 </section>
 <section id="increase-value-lightness-intensity-or-luminosity">
 <span id="bm-increase-luminosity"></span><span id="bm-increase-intensity"></span><span id="bm-increase-lightness"></span><span id="bm-increase-value"></span><h3>提高明度、提高亮度、提高強度、提高光度<a class="headerlink" href="#increase-value-lightness-intensity-or-luminosity" title="本標題的永久連結">¶</a></h3>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>英文稱為「Increase Value / Lightness / Intensity / Luminosity」。</p>
+</div>
 <p>Similar to lighten, but specific to tone.
 Checks whether the upper layer's pixel has a higher tone than the lower layer's pixel. If so, the tone is increased, if not, the lower layer's tone is maintained.</p>
 <figure class="align-center" id="id11">
@@ -393,6 +405,10 @@ Checks whether the upper layer's pixel has a higher tone than the lower layer's 
 </section>
 <section id="increase-saturation-hsi-hsv-hsl-hsy">
 <span id="bm-increase-hsy-saturation"></span><span id="bm-increase-hsi-saturation"></span><span id="bm-increase-hsl-saturation"></span><span id="bm-increase-hsv-saturation"></span><span id="bm-increase-saturation"></span><h3>提高飽和度 HSI、HSV、HSL、HSY<a class="headerlink" href="#increase-saturation-hsi-hsv-hsl-hsy" title="本標題的永久連結">¶</a></h3>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>英文稱為「Increase Saturation」。</p>
+</div>
 <p>Similar to lighten, but specific to Saturation.
 Checks whether the upper layer's pixel has a higher Saturation than the lower layer's pixel. If so, the Saturation is increased, if not, the lower layer's Saturation is maintained.</p>
 <figure class="align-center" id="id15">
@@ -422,6 +438,10 @@ Checks whether the upper layer's pixel has a higher Saturation than the lower la
 </section>
 <section id="intensity">
 <span id="bm-intensity"></span><h3>強度<a class="headerlink" href="#intensity" title="本標題的永久連結">¶</a></h3>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>英文稱為「Intensity」。</p>
+</div>
 <p>Takes the Hue and Saturation of the Lower layer and outputs them with the intensity of the upper layer.</p>
 <figure class="align-center" id="id19">
 <img alt="../../_images/Blending_modes_Intensity_Sample_image_with_dots.png" src="../../_images/Blending_modes_Intensity_Sample_image_with_dots.png" />
@@ -432,6 +452,10 @@ Checks whether the upper layer's pixel has a higher Saturation than the lower la
 </section>
 <section id="value">
 <span id="bm-value"></span><h3>明度<a class="headerlink" href="#value" title="本標題的永久連結">¶</a></h3>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>英文稱為「Value」。</p>
+</div>
 <p>Takes the Hue and Saturation of the Lower layer and outputs them with the Value of the upper layer.</p>
 <figure class="align-center" id="id20">
 <img alt="../../_images/Blending_modes_Value_Sample_image_with_dots.png" src="../../_images/Blending_modes_Value_Sample_image_with_dots.png" />
@@ -442,6 +466,10 @@ Checks whether the upper layer's pixel has a higher Saturation than the lower la
 </section>
 <section id="lightness">
 <span id="bm-lightness"></span><h3>亮度<a class="headerlink" href="#lightness" title="本標題的永久連結">¶</a></h3>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>英文稱為「Lightness」。</p>
+</div>
 <p>Takes the Hue and Saturation of the Lower layer and outputs them with the Lightness of the upper layer.</p>
 <figure class="align-center" id="id21">
 <img alt="../../_images/Blending_modes_Lightness_Sample_image_with_dots.png" src="../../_images/Blending_modes_Lightness_Sample_image_with_dots.png" />
@@ -452,6 +480,10 @@ Checks whether the upper layer's pixel has a higher Saturation than the lower la
 </section>
 <section id="luminosity">
 <span id="bm-luminosity"></span><h3>光度<a class="headerlink" href="#luminosity" title="本標題的永久連結">¶</a></h3>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>英文稱為「Luminosity」。</p>
+</div>
 <p>As explained above, actually Luma, but called this way as it's in line with the terminology in other applications.
 Takes the Hue and Saturation of the Lower layer and outputs them with the Luminosity of the upper layer.
 The most preferred one of the four Tone blending modes, as this one gives fairly intuitive results for the Tone of a hue.</p>
@@ -464,6 +496,10 @@ The most preferred one of the four Tone blending modes, as this one gives fairly
 </section>
 <section id="saturation-hsi-hsv-hsl-hsy">
 <span id="bm-hsy-saturation"></span><span id="bm-hsi-saturation"></span><span id="bm-hsl-saturation"></span><span id="bm-hsv-saturation"></span><span id="bm-saturation"></span><h3>飽和度 HSI、HSV、HSL、HSY<a class="headerlink" href="#saturation-hsi-hsv-hsl-hsy" title="本標題的永久連結">¶</a></h3>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>英文稱為「Saturation」。</p>
+</div>
 <p>Takes the Intensity and Hue of the lower layer, and outputs them with the HSI saturation of the upper layer.</p>
 <figure class="align-center" id="id23">
 <img alt="../../_images/Blending_modes_Saturation_HSI_Sample_image_with_dots.png" src="../../_images/Blending_modes_Saturation_HSI_Sample_image_with_dots.png" />
@@ -492,6 +528,10 @@ The most preferred one of the four Tone blending modes, as this one gives fairly
 </section>
 <section id="decrease-value-lightness-intensity-or-luminosity">
 <span id="bm-decrease-luminosity"></span><span id="bm-decrease-intensity"></span><span id="bm-decrease-lightness"></span><span id="bm-decrease-value"></span><h3>降低明度、降低亮度、降低強度、降低光度<a class="headerlink" href="#decrease-value-lightness-intensity-or-luminosity" title="本標題的永久連結">¶</a></h3>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>英文稱為「Decrease Value / Lightness / Intensity / Luminosity」。</p>
+</div>
 <p>Similar to darken, but specific to tone.
 Checks whether the upper layer's pixel has a lower tone than the lower layer's pixel. If so, the tone is decreased, if not, the lower layer's tone is maintained.</p>
 <figure class="align-center" id="id27">
@@ -533,6 +573,10 @@ Checks whether the upper layer's pixel has a lower tone than the lower layer's p
 </section>
 <section id="decrease-saturation-hsi-hsv-hsl-hsy">
 <span id="bm-decrease-hsy-saturation"></span><span id="bm-decrease-hsi-saturation"></span><span id="bm-decrease-hsl-saturation"></span><span id="bm-decrease-hsv-saturation"></span><span id="bm-decrease-saturation"></span><h3>降低飽和度 HSI、HSV、HSL、HSY<a class="headerlink" href="#decrease-saturation-hsi-hsv-hsl-hsy" title="本標題的永久連結">¶</a></h3>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>英文稱為「Decrease Saturation」。</p>
+</div>
 <p>Similar to darken, but specific to Saturation.
 Checks whether the upper layer's pixel has a lower Saturation than the lower layer's pixel. If so, the Saturation is decreased, if not, the lower layer's Saturation is maintained.</p>
 <figure class="align-center" id="id33">
@@ -598,7 +642,7 @@ Checks whether the upper layer's pixel has a lower Saturation than the lower lay
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>12c8f81</code>
+          修訂版本 <code>cd290f4</code>
         </span>
       
 

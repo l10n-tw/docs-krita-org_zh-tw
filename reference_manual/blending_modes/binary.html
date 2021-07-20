@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-07-20T07:50:31" />
+  <meta property="og:article:modified_time" content="2021-07-20T10:25:25" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="關於 Krita 的二進位制混色模式：" name="description" />
 
@@ -141,10 +141,10 @@
 <li class="toctree-l4"><a class="reference internal" href="hsx.html">HSX</a></li>
 <li class="toctree-l4"><a class="reference internal" href="lighten.html">變亮</a></li>
 <li class="toctree-l4"><a class="reference internal" href="misc.html">其他​​</a></li>
-<li class="toctree-l4"><a class="reference internal" href="mix.html">Mix</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mix.html">混合</a></li>
 <li class="toctree-l4"><a class="reference internal" href="modulo.html">取模</a></li>
-<li class="toctree-l4"><a class="reference internal" href="negative.html">Negative</a></li>
-<li class="toctree-l4"><a class="reference internal" href="quadratic.html">平方</a></li>
+<li class="toctree-l4"><a class="reference internal" href="negative.html">負片</a></li>
+<li class="toctree-l4"><a class="reference internal" href="quadratic.html">二次方</a></li>
 </ul>
 </li>
 </ul>
@@ -275,7 +275,11 @@
 <p>Binary blending modes do not work on float images or negative numbers! So, don't report bugs about using binary modes on unsupported color space.</p>
 </div>
 <section id="and">
-<span id="bm-cat-and"></span><span id="index-1"></span><h2>AND<a class="headerlink" href="#and" title="本標題的永久連結">¶</a></h2>
+<span id="bm-cat-and"></span><span id="index-1"></span><h2>及 (AND)<a class="headerlink" href="#and" title="本標題的永久連結">¶</a></h2>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>亦稱作「與運算」。</p>
+</div>
 <p>Performs the AND operation for the base and blend layer. Similar to multiply blending mode.</p>
 <figure class="align-center" id="id1">
 <img alt="../../_images/Blend_modes_AND_map.png" src="../../_images/Blend_modes_AND_map.png" />
@@ -291,7 +295,11 @@
 </figure>
 </section>
 <section id="converse">
-<span id="bm-converse"></span><span id="index-2"></span><h2>CONVERSE<a class="headerlink" href="#converse" title="本標題的永久連結">¶</a></h2>
+<span id="bm-converse"></span><span id="index-2"></span><h2>逆蘊含 (CONVERSE)<a class="headerlink" href="#converse" title="本標題的永久連結">¶</a></h2>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>亦稱作「逆命題」。</p>
+</div>
 <p>Performs the inverse of IMPLICATION operation for the base and blend layer. Similar to screen mode with blend layer and base layer inverted.</p>
 <figure class="align-center" id="id3">
 <img alt="../../_images/Blend_modes_CONVERSE_map.png" src="../../_images/Blend_modes_CONVERSE_map.png" />
@@ -307,7 +315,11 @@
 </figure>
 </section>
 <section id="implication">
-<span id="bm-implication"></span><span id="index-3"></span><h2>IMPLICATION<a class="headerlink" href="#implication" title="本標題的永久連結">¶</a></h2>
+<span id="bm-implication"></span><span id="index-3"></span><h2>蘊含 (IMPLICATION)<a class="headerlink" href="#implication" title="本標題的永久連結">¶</a></h2>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>亦稱作「命題」。</p>
+</div>
 <p>Performs the IMPLICATION operation for the base and blend layer. Similar to screen mode with base layer inverted.</p>
 <figure class="align-center" id="id5">
 <img alt="../../_images/Blend_modes_IMPLIES_map.png" src="../../_images/Blend_modes_IMPLIES_map.png" />
@@ -323,7 +335,11 @@
 </figure>
 </section>
 <section id="nand">
-<span id="bm-nand"></span><span id="index-4"></span><h2>NAND<a class="headerlink" href="#nand" title="本標題的永久連結">¶</a></h2>
+<span id="bm-nand"></span><span id="index-4"></span><h2>反及 (NAND)<a class="headerlink" href="#nand" title="本標題的永久連結">¶</a></h2>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>亦稱作「非與運算」。</p>
+</div>
 <p>Performs the inverse of AND operation for base and blend layer. Similar to the inverted multiply mode.</p>
 <figure class="align-center" id="id7">
 <img alt="../../_images/Blend_modes_NAND_map.png" src="../../_images/Blend_modes_NAND_map.png" />
@@ -339,7 +355,11 @@
 </figure>
 </section>
 <section id="nor">
-<span id="bm-nor"></span><span id="index-5"></span><h2>NOR<a class="headerlink" href="#nor" title="本標題的永久連結">¶</a></h2>
+<span id="bm-nor"></span><span id="index-5"></span><h2>反或 (NOR)<a class="headerlink" href="#nor" title="本標題的永久連結">¶</a></h2>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>亦稱作「非或運算」。</p>
+</div>
 <p>Performs the inverse of OR operation for base and blend layer. Similar to the inverted screen mode.</p>
 <figure class="align-center" id="id9">
 <img alt="../../_images/Blend_modes_NOR_map.png" src="../../_images/Blend_modes_NOR_map.png" />
@@ -355,7 +375,11 @@
 </figure>
 </section>
 <section id="not-converse">
-<span id="bm-not-converse"></span><span id="index-6"></span><h2>NOT CONVERSE<a class="headerlink" href="#not-converse" title="本標題的永久連結">¶</a></h2>
+<span id="bm-not-converse"></span><span id="index-6"></span><h2>逆非蘊含 (NOT CONVERSE)<a class="headerlink" href="#not-converse" title="本標題的永久連結">¶</a></h2>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>亦稱作「逆否命題」。</p>
+</div>
 <p>Performs the inverse of CONVERSE operation for base and blend layer. Similar to the multiply mode with base layer and blend layer inverted.</p>
 <figure class="align-center" id="id11">
 <img alt="../../_images/Blend_modes_NOT_CONVERSE_map.png" src="../../_images/Blend_modes_NOT_CONVERSE_map.png" />
@@ -371,7 +395,11 @@
 </figure>
 </section>
 <section id="not-implication">
-<span id="bm-not-implication"></span><span id="index-7"></span><h2>NOT IMPLICATION<a class="headerlink" href="#not-implication" title="本標題的永久連結">¶</a></h2>
+<span id="bm-not-implication"></span><span id="index-7"></span><h2>非蘊含 (NOT IMPLICATION)<a class="headerlink" href="#not-implication" title="本標題的永久連結">¶</a></h2>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>亦稱作「否命題」。</p>
+</div>
 <p>Performs the inverse of IMPLICATION operation for base and blend layer. Similar to the multiply mode with the blend layer inverted.</p>
 <figure class="align-center" id="id13">
 <img alt="../../_images/Blend_modes_NOT_IMPLICATION_map.png" src="../../_images/Blend_modes_NOT_IMPLICATION_map.png" />
@@ -387,7 +415,11 @@
 </figure>
 </section>
 <section id="or">
-<span id="bm-or"></span><span id="index-8"></span><h2>OR<a class="headerlink" href="#or" title="本標題的永久連結">¶</a></h2>
+<span id="bm-or"></span><span id="index-8"></span><h2>或 (OR)<a class="headerlink" href="#or" title="本標題的永久連結">¶</a></h2>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>Krita 5.0 前稱「或運算」。</p>
+</div>
 <p>Performs the OR operation for base and blend layer. Similar to screen mode.</p>
 <figure class="align-center" id="id15">
 <img alt="../../_images/Blend_modes_OR_map.png" src="../../_images/Blend_modes_OR_map.png" />
@@ -403,7 +435,11 @@
 </figure>
 </section>
 <section id="xor">
-<span id="bm-xor"></span><span id="index-9"></span><h2>XOR<a class="headerlink" href="#xor" title="本標題的永久連結">¶</a></h2>
+<span id="bm-xor"></span><span id="index-9"></span><h2>互斥或 (XOR)<a class="headerlink" href="#xor" title="本標題的永久連結">¶</a></h2>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>亦稱作「異或運算」。</p>
+</div>
 <p>Performs the XOR operation for base and blend layer. This mode has a special property that if you duplicate the blend layer twice, you get the base layer.</p>
 <figure class="align-center" id="id17">
 <img alt="../../_images/Blend_modes_XOR_map.png" src="../../_images/Blend_modes_XOR_map.png" />
@@ -419,7 +455,11 @@
 </figure>
 </section>
 <section id="xnor">
-<span id="bm-xnor"></span><span id="index-10"></span><h2>XNOR<a class="headerlink" href="#xnor" title="本標題的永久連結">¶</a></h2>
+<span id="bm-xnor"></span><span id="index-10"></span><h2>反互斥或 (XNOR)<a class="headerlink" href="#xnor" title="本標題的永久連結">¶</a></h2>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>亦稱作「異非或運算」。</p>
+</div>
 <p>Performs the XNOR operation for base and blend layer. This mode has a special property that if you duplicate the blend layer twice, you get the base layer.</p>
 <figure class="align-center" id="id19">
 <img alt="../../_images/Blend_modes_XNOR_map.png" src="../../_images/Blend_modes_XNOR_map.png" />
@@ -459,7 +499,7 @@
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>12c8f81</code>
+          修訂版本 <code>cd290f4</code>
         </span>
       
 

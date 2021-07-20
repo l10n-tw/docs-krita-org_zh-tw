@@ -54,6 +54,10 @@ HSX Blending Modes
 Color, HSV, HSI, HSL, HSY
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
+.. only:: non_english
+
+   .. hint:: These blending modes are called "Color" in English.
+
 This takes the Luminosity/Value/Intensity/Lightness of the colors on the lower layer, and combines them with the Saturation and Hue of the upper pixels. We refer to Color HSY as 'Color' in line with other applications.
 
 .. figure:: /images/blending_modes/hsx/Blending_modes_Color_HSI_Gray_0.4_and_Gray_0.5.png
@@ -98,6 +102,10 @@ This takes the Luminosity/Value/Intensity/Lightness of the colors on the lower l
 Hue HSV, HSI, HSL, HSY
 ^^^^^^^^^^^^^^^^^^^^^^
 
+.. only:: non_english
+
+   .. hint:: These blending modes are called "Hue" in English.
+
 Takes the saturation and tone of the lower layer and combines them with the hue of the upper-layer.
 Tone in this case being either Value, Lightness, Intensity or Luminosity.
 
@@ -132,6 +140,10 @@ Tone in this case being either Value, Lightness, Intensity or Luminosity.
 
 Increase Value, Lightness, Intensity or Luminosity.
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. only:: non_english
+
+   .. hint:: These blending modes are called "Increase Value / Lightness / Intensity / Luminosity" in English.
 
 Similar to lighten, but specific to tone.
 Checks whether the upper layer's pixel has a higher tone than the lower layer's pixel. If so, the tone is increased, if not, the lower layer's tone is maintained.
@@ -169,6 +181,10 @@ Checks whether the upper layer's pixel has a higher tone than the lower layer's 
 Increase Saturation HSI, HSV, HSL, HSY
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+.. only:: non_english
+
+   .. hint:: These blending modes are called "Increase Saturation" in English.
+
 Similar to lighten, but specific to Saturation.
 Checks whether the upper layer's pixel has a higher Saturation than the lower layer's pixel. If so, the Saturation is increased, if not, the lower layer's Saturation is maintained.
 
@@ -201,6 +217,10 @@ Checks whether the upper layer's pixel has a higher Saturation than the lower la
 Intensity
 ^^^^^^^^^
 
+.. only:: non_english
+
+   .. hint:: This blending mode is called "Intensity" in English.
+
 Takes the Hue and Saturation of the Lower layer and outputs them with the intensity of the upper layer.
 
 .. figure:: /images/blending_modes/hsx/Blending_modes_Intensity_Sample_image_with_dots.png
@@ -212,6 +232,10 @@ Takes the Hue and Saturation of the Lower layer and outputs them with the intens
 
 Value
 ^^^^^
+
+.. only:: non_english
+
+   .. hint:: This blending mode is called "Value" in English.
 
 Takes the Hue and Saturation of the Lower layer and outputs them with the Value of the upper layer.
 
@@ -225,6 +249,10 @@ Takes the Hue and Saturation of the Lower layer and outputs them with the Value 
 Lightness
 ^^^^^^^^^
 
+.. only:: non_english
+
+   .. hint:: This blending mode is called "Lightness" in English.
+
 Takes the Hue and Saturation of the Lower layer and outputs them with the Lightness of the upper layer.
 
 .. figure:: /images/blending_modes/hsx/Blending_modes_Lightness_Sample_image_with_dots.png
@@ -236,6 +264,10 @@ Takes the Hue and Saturation of the Lower layer and outputs them with the Lightn
 
 Luminosity
 ^^^^^^^^^^
+
+.. only:: non_english
+
+   .. hint:: This blending mode is called "Luminosity" in English.
 
 As explained above, actually Luma, but called this way as it's in line with the terminology in other applications.
 Takes the Hue and Saturation of the Lower layer and outputs them with the Luminosity of the upper layer. 
@@ -254,6 +286,10 @@ The most preferred one of the four Tone blending modes, as this one gives fairly
 
 Saturation HSI, HSV, HSL, HSY
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. only:: non_english
+
+   .. hint:: These blending modes are called "Saturation" in English.
 
 Takes the Intensity and Hue of the lower layer, and outputs them with the HSI saturation of the upper layer.
 
@@ -287,6 +323,10 @@ Takes the Intensity and Hue of the lower layer, and outputs them with the HSI sa
 
 Decrease Value, Lightness, Intensity or Luminosity
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. only:: non_english
+
+   .. hint:: These blending modes are called "Decrease Value / Lightness / Intensity / Luminosity" in English.
 
 Similar to darken, but specific to tone.
 Checks whether the upper layer's pixel has a lower tone than the lower layer's pixel. If so, the tone is decreased, if not, the lower layer's tone is maintained.
@@ -332,6 +372,10 @@ Checks whether the upper layer's pixel has a lower tone than the lower layer's p
 
 Decrease Saturation HSI, HSV, HSL, HSY
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. only:: non_english
+
+   .. hint:: These blending modes are called "Decrease Saturation" in English.
 
 Similar to darken, but specific to Saturation.
 Checks whether the upper layer's pixel has a lower Saturation than the lower layer's pixel. If so, the Saturation is decreased, if not, the lower layer's Saturation is maintained.

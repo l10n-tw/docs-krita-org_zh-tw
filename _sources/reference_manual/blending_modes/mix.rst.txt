@@ -22,6 +22,10 @@ Mix
 Allanon
 ~~~~~~~
 
+.. only:: non_english
+
+   .. hint:: This blending mode is called "Allanon" in English.
+
 Blends the upper layer as half-transparent with the lower. (It add the two layers together and then halves the value).
 
 .. figure:: /images/blending_modes/mix/Blending_modes_Allanon_Sample_image_with_dots.png
@@ -34,6 +38,10 @@ Blends the upper layer as half-transparent with the lower. (It add the two layer
 
 Interpolation
 ~~~~~~~~~~~~~
+
+.. only:: non_english
+
+   .. hint:: This blending mode is called "Interpolation" in English.
 
 Subtract 0.5f by 1/4 of cosine of base layer subtracted by 1/4 of cosine of blend layer assuming 0-1 range.
 The result is similar to Allanon mode, but with more contrast and functional difference to 50% opacity.
@@ -49,6 +57,10 @@ The result is similar to Allanon mode, but with more contrast and functional dif
 Interpolation - 2X
 ~~~~~~~~~~~~~~~~~~
 
+.. only:: non_english
+
+   .. hint:: This blending mode is called "Interpolation - 2X" in English.
+
 Applies Interpolation blend mode to base and blend layers, then duplicate to repeat interpolation blending.
 
 .. figure:: /images/blending_modes/mix/Blending_modes_Interpolation_X2_Sample_image_with_dots.png
@@ -61,6 +73,10 @@ Applies Interpolation blend mode to base and blend layers, then duplicate to rep
 
 Alpha Darken
 ~~~~~~~~~~~~
+
+.. only:: non_english
+
+   .. hint:: This blending mode is called "Alpha Darken" in English.
 
 As far as I can tell this seems to premultiply the alpha, as is common in some file-formats.
 
@@ -75,6 +91,10 @@ As far as I can tell this seems to premultiply the alpha, as is common in some f
 Behind
 ~~~~~~
 
+.. only:: non_english
+
+   .. hint:: This blending mode is called "Behind" in English.
+
 Does the opposite of normal, and tries to have the upper layer rendered below the lower layer.
 
 .. figure:: /images/blending_modes/mix/Blending_modes_Behind_Sample_image_with_dots.png
@@ -87,6 +107,10 @@ Does the opposite of normal, and tries to have the upper layer rendered below th
 
 Erase
 ~~~~~
+
+.. only:: non_english
+
+   .. hint:: This blending mode is called "Erase" in English.
 
 This subtracts the opaque pixels of the upper layer from the lower layer, effectively erasing.
 
@@ -101,6 +125,10 @@ This subtracts the opaque pixels of the upper layer from the lower layer, effect
 Geometric Mean
 ~~~~~~~~~~~~~~
 
+.. only:: non_english
+
+   .. hint:: This blending mode is called "Geometric Mean" in English.
+
 This blending mode multiplies the top layer with the bottom, and then outputs the square root of that.
 
 .. figure:: /images/blending_modes/mix/Blending_modes_Geometric_Mean_Sample_image_with_dots.png
@@ -113,6 +141,10 @@ This blending mode multiplies the top layer with the bottom, and then outputs th
 
 Grain Extract
 ~~~~~~~~~~~~~
+
+.. only:: non_english
+
+   .. hint:: This blending mode is called "Grain Extract" in English.
 
 Similar to subtract, the colors of the upper layer are subtracted from the colors of the lower layer, and then 50% gray is added.
 
@@ -127,6 +159,10 @@ Similar to subtract, the colors of the upper layer are subtracted from the color
 Grain Merge
 ~~~~~~~~~~~
 
+.. only:: non_english
+
+   .. hint:: This blending mode is called "Grain Merge" in English.
+
 Similar to addition, the colors of the upper layer are added to the colors, and then 50% gray is subtracted.
 
 .. figure:: /images/blending_modes/mix/Blending_modes_Grain_Merge_Sample_image_with_dots.png
@@ -140,6 +176,10 @@ Similar to addition, the colors of the upper layer are added to the colors, and 
 Greater
 ~~~~~~~
 
+.. only:: non_english
+
+   .. hint:: This blending mode is called "Greater" in English.
+
 A blending mode which checks whether the painted color is painted with a higher opacity than the existing colors. If so, it paints over them, if not, it doesn't paint at all.
 
 .. image:: /images/blending_modes/mix/Greaterblendmode.gif
@@ -150,6 +190,10 @@ A blending mode which checks whether the painted color is painted with a higher 
    
 Hard Mix
 ~~~~~~~~
+
+.. only:: non_english
+
+   .. hint:: This blending mode is called "Hard Mix" in English.
 
 Similar to Overlay.
 
@@ -167,6 +211,10 @@ Mixes both Color Dodge and Burn blending modes. If the color of the upper layer 
 Hard Mix (Photoshop)
 ~~~~~~~~~~~~~~~~~~~~
 
+.. only:: non_english
+
+   .. hint:: This blending mode is called "Hard Mix (Photoshop)" in English.
+
 This is the hard mix blending mode as it is implemented in photoshop.
 
 .. figure:: /images/blending_modes/mix/Krita_4_0_hard_mix_ps.png
@@ -182,6 +230,10 @@ This add the two values, and then checks if the value is above the maximum. If s
 
 Hard Mix Softer (Photoshop)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. only:: non_english
+
+   .. hint:: This blending mode is called "Hard Mix Softer (Photoshop)" in English.
 
 .. versionadded:: 5.0
 
@@ -204,6 +256,10 @@ cases the result looks like the normal *Hard Mix (Photoshop)* but with softer ed
 Hard Overlay
 ~~~~~~~~~~~~
 
+.. only:: non_english
+
+   .. hint:: This blending mode is called "Hard Overlay" in English.
+
 .. versionadded:: 4.0
 
 Similar to Hard light but hard light use Screen when the value is above 50%. Divide gives better results than Screen, especially on floating point images.
@@ -219,6 +275,10 @@ Similar to Hard light but hard light use Screen when the value is above 50%. Div
 Normal
 ~~~~~~
 
+.. only:: non_english
+
+   .. hint:: This blending mode is called "Normal" in English.
+
 As you may have guessed this is the default Blending mode for all layers.
 
 In this mode, the computer checks on the upper layer how transparent a pixel is, which color it is, and then mixes the color of the upper layer with the lower layer proportional to the transparency.
@@ -233,6 +293,10 @@ In this mode, the computer checks on the upper layer how transparent a pixel is,
 
 Overlay
 ~~~~~~~
+
+.. only:: non_english
+
+   .. hint:: This blending mode is called "Overlay" in English.
 
 A combination of the Multiply and Screen blending modes, switching between both at a middle-lightness.
 
@@ -251,6 +315,10 @@ This is useful for deepening shadows and highlights.
 Parallel
 ~~~~~~~~
 
+.. only:: non_english
+
+   .. hint:: This blending mode is called "Parallel" in English.
+
 This one first takes the percentage in two decimal behind the comma for both layers.
 It then adds the two values.
 Divides 2 by the sum.
@@ -266,6 +334,10 @@ Divides 2 by the sum.
 Penumbra A
 ~~~~~~~~~~
 
+.. only:: non_english
+
+   .. hint:: This blending mode is called "Penumbra A" in English.
+
 Creates a linear penumbra falloff. This means most tones will be in the midtone ranges.
 
 .. figure:: /images/blending_modes/mix/Blending_modes_Penumbra_A_Sample_image_with_dots.png
@@ -278,6 +350,10 @@ Creates a linear penumbra falloff. This means most tones will be in the midtone 
 
 Penumbra B
 ~~~~~~~~~~
+
+.. only:: non_english
+
+   .. hint:: This blending mode is called "Penumbra B" in English.
 
 Penumbra A with source and destination layer swapped.
 
@@ -292,6 +368,10 @@ Penumbra A with source and destination layer swapped.
 Penumbra C
 ~~~~~~~~~~
 
+.. only:: non_english
+
+   .. hint:: This blending mode is called "Penumbra C" in English.
+
 Creates a penumbra-like falloff using arc-tangent formula. This means most tones will be in the midtone ranges.
 
 .. figure:: /images/blending_modes/mix/Blending_modes_Penumbra_C_Sample_image_with_dots.png
@@ -304,6 +384,10 @@ Creates a penumbra-like falloff using arc-tangent formula. This means most tones
 
 Penumbra D
 ~~~~~~~~~~
+
+.. only:: non_english
+
+   .. hint:: This blending mode is called "Penumbra D" in English.
 
 Penumbra C with source and destination layer swapped.
 

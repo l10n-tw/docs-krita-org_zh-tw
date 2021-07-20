@@ -6,7 +6,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta property="og:title" name="title" content="Negative" />
+  <meta property="og:title" name="title" content="負片" />
   <meta property="og:site-name" content="Krita Manual" />
   <meta property="og:type" content="article" />
   <meta property="og:locale" content="zh_TW" />
@@ -21,13 +21,13 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-07-20T07:50:31" />
+  <meta property="og:article:modified_time" content="2021-07-20T10:25:25" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="Page about the negative blending modes in Krita: Additive Subtractive, Arcus Tangent, Difference, Equivalence, Exclusion, Negation." name="description" />
 
   
   
-  <title>Negative &mdash; Krita Manual 5.0.0 Beta 說明文件</title>
+  <title>負片 &mdash; Krita Manual 5.0.0 Beta 說明文件</title>
   
 
   
@@ -60,7 +60,7 @@
     <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="搜尋" href="../../search.html" />
-    <link rel="next" title="平方" href="quadratic.html" />
+    <link rel="next" title="二次方" href="quadratic.html" />
     <link rel="prev" title="取模" href="modulo.html" /> 
 
   
@@ -141,10 +141,10 @@
 <li class="toctree-l4"><a class="reference internal" href="hsx.html">HSX</a></li>
 <li class="toctree-l4"><a class="reference internal" href="lighten.html">變亮</a></li>
 <li class="toctree-l4"><a class="reference internal" href="misc.html">其他​​</a></li>
-<li class="toctree-l4"><a class="reference internal" href="mix.html">Mix</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mix.html">混合</a></li>
 <li class="toctree-l4"><a class="reference internal" href="modulo.html">取模</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="#">Negative</a></li>
-<li class="toctree-l4"><a class="reference internal" href="quadratic.html">平方</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">負片</a></li>
+<li class="toctree-l4"><a class="reference internal" href="quadratic.html">二次方</a></li>
 </ul>
 </li>
 </ul>
@@ -242,7 +242,7 @@
         
           <li><a href="../blending_modes.html">混色模式</a> &raquo;</li>
         
-      <li>Negative</li>
+      <li>負片</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -267,10 +267,14 @@
            <div itemprop="articleBody">
             
   <section id="negative">
-<span id="bm-cat-negative"></span><span id="index-0"></span><h1>Negative<a class="headerlink" href="#negative" title="本標題的永久連結">¶</a></h1>
+<span id="bm-cat-negative"></span><span id="index-0"></span><h1>負片<a class="headerlink" href="#negative" title="本標題的永久連結">¶</a></h1>
 <p>These are all blending modes which seem to make the image go negative.</p>
 <section id="additive-subtractive">
-<span id="bm-additive-subtractive"></span><span id="index-1"></span><h2>Additive Subtractive<a class="headerlink" href="#additive-subtractive" title="本標題的永久連結">¶</a></h2>
+<span id="bm-additive-subtractive"></span><span id="index-1"></span><h2>減去平方根<a class="headerlink" href="#additive-subtractive" title="本標題的永久連結">¶</a></h2>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>Krita 5.0 前稱「減去開平方」，英文稱為「Additive Subtractive」。</p>
+</div>
 <p>Subtract the square root of the lower layer from the upper layer.</p>
 <figure class="align-center" id="id1">
 <img alt="../../_images/Blending_modes_Additive_Subtractive_Sample_image_with_dots.png" src="../../_images/Blending_modes_Additive_Subtractive_Sample_image_with_dots.png" />
@@ -280,7 +284,11 @@
 </figure>
 </section>
 <section id="arcus-tangent">
-<span id="bm-arcus-tangent"></span><span id="index-2"></span><h2>Arcus Tangent<a class="headerlink" href="#arcus-tangent" title="本標題的永久連結">¶</a></h2>
+<span id="bm-arcus-tangent"></span><span id="index-2"></span><h2>反正切值<a class="headerlink" href="#arcus-tangent" title="本標題的永久連結">¶</a></h2>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>英文稱為「Arcus Tangent」。</p>
+</div>
 <p>Divides the lower layer by the top. Then divides this by Pi.
 Then uses that in an Arc tangent function, and multiplies it by two.</p>
 <figure class="align-center" id="id2">
@@ -291,7 +299,11 @@ Then uses that in an Arc tangent function, and multiplies it by two.</p>
 </figure>
 </section>
 <section id="difference">
-<span id="bm-difference"></span><span id="index-3"></span><h2>Difference<a class="headerlink" href="#difference" title="本標題的永久連結">¶</a></h2>
+<span id="bm-difference"></span><span id="index-3"></span><h2>差值<a class="headerlink" href="#difference" title="本標題的永久連結">¶</a></h2>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>英文稱為「Difference」。</p>
+</div>
 <p>Checks per pixel of which layer the pixel-value is highest/lowest, and then subtracts the lower value from the higher-value.</p>
 <figure class="align-center" id="id3">
 <img alt="../../_images/Blending_modes_Difference_Sample_image_with_dots.png" src="../../_images/Blending_modes_Difference_Sample_image_with_dots.png" />
@@ -301,8 +313,12 @@ Then uses that in an Arc tangent function, and multiplies it by two.</p>
 </figure>
 </section>
 <section id="equivalence">
-<span id="bm-equivalence"></span><span id="index-4"></span><h2>Equivalence<a class="headerlink" href="#equivalence" title="本標題的永久連結">¶</a></h2>
-<p>Subtracts the underlying layer from the upper-layer. Then inverts that. Seems to produce the same result as <a class="reference internal" href="#bm-difference"><span class="std std-ref">Difference</span></a>.</p>
+<span id="bm-equivalence"></span><span id="index-4"></span><h2>等價<a class="headerlink" href="#equivalence" title="本標題的永久連結">¶</a></h2>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>英文稱為「Equivalence」。</p>
+</div>
+<p>Subtracts the underlying layer from the upper-layer. Then inverts that. Seems to produce the same result as <a class="reference internal" href="#bm-difference"><span class="std std-ref">差值</span></a>.</p>
 <figure class="align-center" id="id4">
 <img alt="../../_images/Blending_modes_Equivalence_Sample_image_with_dots.png" src="../../_images/Blending_modes_Equivalence_Sample_image_with_dots.png" />
 <figcaption>
@@ -311,7 +327,11 @@ Then uses that in an Arc tangent function, and multiplies it by two.</p>
 </figure>
 </section>
 <section id="exclusion">
-<span id="bm-exclusion"></span><span id="index-5"></span><h2>Exclusion<a class="headerlink" href="#exclusion" title="本標題的永久連結">¶</a></h2>
+<span id="bm-exclusion"></span><span id="index-5"></span><h2>排除<a class="headerlink" href="#exclusion" title="本標題的永久連結">¶</a></h2>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>英文稱為「Exclusion」。</p>
+</div>
 <p>This multiplies the two layers, adds the source, and then subtracts the multiple of two layers twice.</p>
 <figure class="align-center" id="id5">
 <img alt="../../_images/Blending_modes_Exclusion_Sample_image_with_dots.png" src="../../_images/Blending_modes_Exclusion_Sample_image_with_dots.png" />
@@ -321,7 +341,11 @@ Then uses that in an Arc tangent function, and multiplies it by two.</p>
 </figure>
 </section>
 <section id="negation">
-<span id="bm-negation"></span><span id="index-6"></span><h2>Negation<a class="headerlink" href="#negation" title="本標題的永久連結">¶</a></h2>
+<span id="bm-negation"></span><span id="index-6"></span><h2>求反<a class="headerlink" href="#negation" title="本標題的永久連結">¶</a></h2>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>英文稱為「Negation」。</p>
+</div>
 <p>The absolute of the 1.0f value subtracted by base subtracted by the blend layer. abs(1.0f - Base - Blend)</p>
 <figure class="align-center" id="id6">
 <img alt="../../_images/Blending_modes_Negation_Sample_image_with_dots.png" src="../../_images/Blending_modes_Negation_Sample_image_with_dots.png" />
@@ -340,7 +364,7 @@ Then uses that in an Arc tangent function, and multiplies it by two.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="quadratic.html" class="btn btn-neutral float-right" title="平方" accesskey="n" rel="next"> <!-- 下一個 --> <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="quadratic.html" class="btn btn-neutral float-right" title="二次方" accesskey="n" rel="next"> <!-- 下一個 --> <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="modulo.html" class="btn btn-neutral" title="取模" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- 上一個  -->  </a>
@@ -355,7 +379,7 @@ Then uses that in an Arc tangent function, and multiplies it by two.</p>
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>12c8f81</code>
+          修訂版本 <code>cd290f4</code>
         </span>
       
 

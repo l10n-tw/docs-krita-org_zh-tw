@@ -20,6 +20,10 @@ Misc
 Bumpmap
 ~~~~~~~
 
+.. only:: non_english
+
+   .. hint:: This blending mode is called "Bumpmap" in English.
+
 This filter seems to both multiply and respect the alpha of the input.
 
 .. index:: ! Combine Normal Map, Normal Map
@@ -29,6 +33,10 @@ This filter seems to both multiply and respect the alpha of the input.
 Combine Normal Map
 ~~~~~~~~~~~~~~~~~~
 
+.. only:: non_english
+
+   .. hint:: This blending mode is called "Combine Normal Map" in English.
+
 Mathematically robust blending mode for normal maps, using `Reoriented Normal Map Blending <https://blog.selfshadow.com/publications/blending-in-detail/>`_.
 
 .. index:: ! Copy (Blending Mode)
@@ -36,6 +44,10 @@ Mathematically robust blending mode for normal maps, using `Reoriented Normal Ma
 
 Copy
 ~~~~
+
+.. only:: non_english
+
+   .. hint:: This blending mode is called "Copy" in English.
 
 Copies the previous layer exactly.
 Useful for when using filters and filter-masks.
@@ -52,6 +64,10 @@ Useful for when using filters and filter-masks.
 
 Copy Red, Green, Blue
 ~~~~~~~~~~~~~~~~~~~~~
+
+.. only:: non_english
+
+   .. hint:: These blending modes are called "Copy Red / Green / Blue" in English.
 
 This is a blending mode that will just copy/blend a source channel to a destination channel.
 Specifically, it will take the specific channel from the upper layer and copy that over to the lower layers.
@@ -88,6 +104,10 @@ This can also be done with filter layers. So if you quickly want to flip a layer
 
 Dissolve
 ~~~~~~~~
+
+.. only:: non_english
+
+   .. hint:: This blending mode is called "Dissolve" in English.
 
 Instead of using transparency, this blending mode will use a random dithering pattern to make the transparent areas look sort of transparent.
 

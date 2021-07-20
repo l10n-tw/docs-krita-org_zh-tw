@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-07-20T07:50:31" />
+  <meta property="og:article:modified_time" content="2021-07-20T10:25:25" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="Overview of Krita's blending modes." lang="en" name="description" xml:lang="en" />
 
@@ -141,10 +141,10 @@
 <li class="toctree-l4"><a class="reference internal" href="blending_modes/hsx.html">HSX</a></li>
 <li class="toctree-l4"><a class="reference internal" href="blending_modes/lighten.html">變亮</a></li>
 <li class="toctree-l4"><a class="reference internal" href="blending_modes/misc.html">其他​​</a></li>
-<li class="toctree-l4"><a class="reference internal" href="blending_modes/mix.html">Mix</a></li>
+<li class="toctree-l4"><a class="reference internal" href="blending_modes/mix.html">混合</a></li>
 <li class="toctree-l4"><a class="reference internal" href="blending_modes/modulo.html">取模</a></li>
-<li class="toctree-l4"><a class="reference internal" href="blending_modes/negative.html">Negative</a></li>
-<li class="toctree-l4"><a class="reference internal" href="blending_modes/quadratic.html">平方</a></li>
+<li class="toctree-l4"><a class="reference internal" href="blending_modes/negative.html">負片</a></li>
+<li class="toctree-l4"><a class="reference internal" href="blending_modes/quadratic.html">二次方</a></li>
 </ul>
 </li>
 </ul>
@@ -266,7 +266,7 @@
             
   <section id="blending-modes">
 <span id="index-0"></span><span id="id1"></span><h1>混色模式<a class="headerlink" href="#blending-modes" title="本標題的永久連結">¶</a></h1>
-<p>Blending modes are a little difficult to explain. Basically, when one layer is above the other, the computer uses a bit of programming to decide how the combination of both layers will look.</p>
+<p>混色模式，或稱色彩混合模式，是個有點難解釋的概念。可以這樣說——當一個圖層在另一個圖層之上，程式會根據一些運算方式來決定兩個圖層的影像會如何合併、成像長的是甚麼樣子。</p>
 <p>Blending modes can not just apply to Layers, but also to individual strokes.</p>
 <section id="favorites">
 <h2>首選<a class="headerlink" href="#favorites" title="本標題的永久連結">¶</a></h2>
@@ -277,12 +277,12 @@
 <li><p><a class="reference internal" href="blending_modes/hsx.html#bm-color"><span class="std std-ref">色彩 HSV、HSI、HSL、HSY</span></a></p></li>
 <li><p><a class="reference internal" href="blending_modes/lighten.html#bm-color-dodge"><span class="std std-ref">加亮色彩</span></a></p></li>
 <li><p><a class="reference internal" href="blending_modes/darken.html#bm-darken"><span class="std std-ref">變暗</span></a></p></li>
-<li><p><a class="reference internal" href="blending_modes/mix.html#bm-erase"><span class="std std-ref">Erase</span></a></p></li>
+<li><p><a class="reference internal" href="blending_modes/mix.html#bm-erase"><span class="std std-ref">擦除</span></a></p></li>
 <li><p><a class="reference internal" href="blending_modes/lighten.html#bm-lighten"><span class="std std-ref">變亮</span></a></p></li>
 <li><p><a class="reference internal" href="blending_modes/hsx.html#bm-luminosity"><span class="std std-ref">光度</span></a></p></li>
 <li><p><a class="reference internal" href="blending_modes/arithmetic.html#bm-multiply"><span class="std std-ref">色彩增值（相乘）</span></a></p></li>
-<li><p><a class="reference internal" href="blending_modes/mix.html#bm-normal"><span class="std std-ref">Normal</span></a></p></li>
-<li><p><a class="reference internal" href="blending_modes/mix.html#bm-overlay"><span class="std std-ref">Overlay</span></a></p></li>
+<li><p><a class="reference internal" href="blending_modes/mix.html#bm-normal"><span class="std std-ref">正常</span></a></p></li>
+<li><p><a class="reference internal" href="blending_modes/mix.html#bm-overlay"><span class="std std-ref">覆蓋</span></a></p></li>
 <li><p><a class="reference internal" href="blending_modes/hsx.html#bm-saturation"><span class="std std-ref">飽和度 HSI、HSV、HSL、HSY</span></a></p></li>
 </ul>
 </section>
@@ -295,24 +295,24 @@
 <li><p><kbd class="kbd docutils literal notranslate">B</kbd> <a class="reference internal" href="blending_modes/darken.html#bm-color-burn"><span class="std std-ref">加深</span></a></p></li>
 <li><p><kbd class="kbd docutils literal notranslate">C</kbd> <a class="reference internal" href="blending_modes/hsx.html#bm-color"><span class="std std-ref">色彩 HSV、HSI、HSL、HSY</span></a></p></li>
 <li><p><kbd class="kbd docutils literal notranslate">D</kbd> <a class="reference internal" href="blending_modes/lighten.html#bm-color-dodge"><span class="std std-ref">加亮色彩</span></a></p></li>
-<li><p><kbd class="kbd docutils literal notranslate">E</kbd> <a class="reference internal" href="blending_modes/negative.html#bm-difference"><span class="std std-ref">Difference</span></a></p></li>
+<li><p><kbd class="kbd docutils literal notranslate">E</kbd> <a class="reference internal" href="blending_modes/negative.html#bm-difference"><span class="std std-ref">差值</span></a></p></li>
 <li><p><kbd class="kbd docutils literal notranslate">F</kbd> <a class="reference internal" href="blending_modes/lighten.html#bm-soft-light"><span class="std std-ref">柔光 (Photoshop) 與柔光 (SVG)</span></a></p></li>
 <li><p><kbd class="kbd docutils literal notranslate">G</kbd> <a class="reference internal" href="blending_modes/lighten.html#bm-lighten"><span class="std std-ref">變亮</span></a></p></li>
 <li><p><kbd class="kbd docutils literal notranslate">H</kbd> <a class="reference internal" href="blending_modes/lighten.html#bm-hard-light"><span class="std std-ref">實光</span></a></p></li>
 <li><p><kbd class="kbd docutils literal notranslate">I</kbd> <a class="reference internal" href="blending_modes/misc.html#bm-dissolve"><span class="std std-ref">溶解</span></a></p></li>
 <li><p><kbd class="kbd docutils literal notranslate">J</kbd> <a class="reference internal" href="blending_modes/lighten.html#bm-linear-light"><span class="std std-ref">線性光</span></a></p></li>
 <li><p><kbd class="kbd docutils literal notranslate">K</kbd> <a class="reference internal" href="blending_modes/darken.html#bm-darken"><span class="std std-ref">變暗</span></a></p></li>
-<li><p><kbd class="kbd docutils literal notranslate">L</kbd> <a class="reference internal" href="blending_modes/mix.html#bm-hard-mix"><span class="std std-ref">Hard Mix</span></a></p></li>
+<li><p><kbd class="kbd docutils literal notranslate">L</kbd> <a class="reference internal" href="blending_modes/mix.html#bm-hard-mix"><span class="std std-ref">實色混合</span></a></p></li>
 <li><p><kbd class="kbd docutils literal notranslate">M</kbd> <a class="reference internal" href="blending_modes/arithmetic.html#bm-multiply"><span class="std std-ref">色彩增值（相乘）</span></a></p></li>
-<li><p><kbd class="kbd docutils literal notranslate">N</kbd> <a class="reference internal" href="blending_modes/mix.html#bm-normal"><span class="std std-ref">Normal</span></a></p></li>
-<li><p><kbd class="kbd docutils literal notranslate">O</kbd> <a class="reference internal" href="blending_modes/mix.html#bm-overlay"><span class="std std-ref">Overlay</span></a></p></li>
-<li><p><kbd class="kbd docutils literal notranslate">P</kbd> <a class="reference internal" href="blending_modes/mix.html#bm-hard-overlay"><span class="std std-ref">Hard Overlay</span></a></p></li>
-<li><p><kbd class="kbd docutils literal notranslate">Q</kbd> <a class="reference internal" href="blending_modes/mix.html#bm-behind"><span class="std std-ref">Behind</span></a></p></li>
+<li><p><kbd class="kbd docutils literal notranslate">N</kbd> <a class="reference internal" href="blending_modes/mix.html#bm-normal"><span class="std std-ref">正常</span></a></p></li>
+<li><p><kbd class="kbd docutils literal notranslate">O</kbd> <a class="reference internal" href="blending_modes/mix.html#bm-overlay"><span class="std std-ref">覆蓋</span></a></p></li>
+<li><p><kbd class="kbd docutils literal notranslate">P</kbd> <a class="reference internal" href="blending_modes/mix.html#bm-hard-overlay"><span class="std std-ref">實光覆蓋</span></a></p></li>
+<li><p><kbd class="kbd docutils literal notranslate">Q</kbd> <a class="reference internal" href="blending_modes/mix.html#bm-behind"><span class="std std-ref">下置</span></a></p></li>
 <li><p><kbd class="kbd docutils literal notranslate">S</kbd> <a class="reference internal" href="blending_modes/lighten.html#bm-screen"><span class="std std-ref">濾色</span></a></p></li>
 <li><p><kbd class="kbd docutils literal notranslate">T</kbd> <a class="reference internal" href="blending_modes/hsx.html#bm-saturation"><span class="std std-ref">飽和度 HSI、HSV、HSL、HSY</span></a></p></li>
 <li><p><kbd class="kbd docutils literal notranslate">U</kbd> <a class="reference internal" href="blending_modes/hsx.html#bm-hue"><span class="std std-ref">色相 HSV、HSI、HSL、HSY</span></a></p></li>
 <li><p><kbd class="kbd docutils literal notranslate">V</kbd> <a class="reference internal" href="blending_modes/lighten.html#bm-vivid-light"><span class="std std-ref">強光源</span></a></p></li>
-<li><p><kbd class="kbd docutils literal notranslate">W</kbd> <a class="reference internal" href="blending_modes/negative.html#bm-exclusion"><span class="std std-ref">Exclusion</span></a></p></li>
+<li><p><kbd class="kbd docutils literal notranslate">W</kbd> <a class="reference internal" href="blending_modes/negative.html#bm-exclusion"><span class="std std-ref">排除</span></a></p></li>
 <li><p><kbd class="kbd docutils literal notranslate">X</kbd> <a class="reference internal" href="blending_modes/lighten.html#bm-linear-dodge"><span class="std std-ref">線性加亮</span></a></p></li>
 <li><p><kbd class="kbd docutils literal notranslate">Y</kbd> <a class="reference internal" href="blending_modes/hsx.html#bm-luminosity"><span class="std std-ref">光度</span></a></p></li>
 <li><p><kbd class="kbd docutils literal notranslate">Z</kbd> <a class="reference internal" href="blending_modes/lighten.html#bm-pin-light"><span class="std std-ref">微光源</span></a></p></li>
@@ -333,16 +333,16 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="blending_modes/binary.html">二進位制</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="blending_modes/binary.html#and">AND</a></li>
-<li class="toctree-l2"><a class="reference internal" href="blending_modes/binary.html#converse">CONVERSE</a></li>
-<li class="toctree-l2"><a class="reference internal" href="blending_modes/binary.html#implication">IMPLICATION</a></li>
-<li class="toctree-l2"><a class="reference internal" href="blending_modes/binary.html#nand">NAND</a></li>
-<li class="toctree-l2"><a class="reference internal" href="blending_modes/binary.html#nor">NOR</a></li>
-<li class="toctree-l2"><a class="reference internal" href="blending_modes/binary.html#not-converse">NOT CONVERSE</a></li>
-<li class="toctree-l2"><a class="reference internal" href="blending_modes/binary.html#not-implication">NOT IMPLICATION</a></li>
-<li class="toctree-l2"><a class="reference internal" href="blending_modes/binary.html#or">OR</a></li>
-<li class="toctree-l2"><a class="reference internal" href="blending_modes/binary.html#xor">XOR</a></li>
-<li class="toctree-l2"><a class="reference internal" href="blending_modes/binary.html#xnor">XNOR</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blending_modes/binary.html#and">及 (AND)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blending_modes/binary.html#converse">逆蘊含 (CONVERSE)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blending_modes/binary.html#implication">蘊含 (IMPLICATION)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blending_modes/binary.html#nand">反及 (NAND)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blending_modes/binary.html#nor">反或 (NOR)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blending_modes/binary.html#not-converse">逆非蘊含 (NOT CONVERSE)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blending_modes/binary.html#not-implication">非蘊含 (NOT IMPLICATION)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blending_modes/binary.html#or">或 (OR)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blending_modes/binary.html#xor">互斥或 (XOR)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blending_modes/binary.html#xnor">反互斥或 (XNOR)</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="blending_modes/darken.html">變暗</a><ul>
@@ -376,7 +376,7 @@
 <li class="toctree-l2"><a class="reference internal" href="blending_modes/lighten.html#flat-light">平光源</a></li>
 <li class="toctree-l2"><a class="reference internal" href="blending_modes/lighten.html#fog-lighten-ifs-illusions">霧化光亮 (IFS Illusions)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="blending_modes/lighten.html#linear-light">線性光</a></li>
-<li class="toctree-l2"><a class="reference internal" href="blending_modes/lighten.html#luminosity-shine-sai">發光 / Shine (SAI)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blending_modes/lighten.html#luminosity-shine-sai">發光 (SAI)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="blending_modes/lighten.html#p-norm-a">P-Norm A</a></li>
 <li class="toctree-l2"><a class="reference internal" href="blending_modes/lighten.html#p-norm-b">P-Norm B</a></li>
 <li class="toctree-l2"><a class="reference internal" href="blending_modes/lighten.html#pin-light">微光源</a></li>
@@ -396,58 +396,58 @@
 <li class="toctree-l2"><a class="reference internal" href="blending_modes/misc.html#dissolve">溶解</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="blending_modes/mix.html">Mix</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="blending_modes/mix.html#allanon">Allanon</a></li>
-<li class="toctree-l2"><a class="reference internal" href="blending_modes/mix.html#interpolation">Interpolation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="blending_modes/mix.html#interpolation-2x">Interpolation - 2X</a></li>
-<li class="toctree-l2"><a class="reference internal" href="blending_modes/mix.html#alpha-darken">Alpha Darken</a></li>
-<li class="toctree-l2"><a class="reference internal" href="blending_modes/mix.html#behind">Behind</a></li>
-<li class="toctree-l2"><a class="reference internal" href="blending_modes/mix.html#erase">Erase</a></li>
-<li class="toctree-l2"><a class="reference internal" href="blending_modes/mix.html#geometric-mean">Geometric Mean</a></li>
-<li class="toctree-l2"><a class="reference internal" href="blending_modes/mix.html#grain-extract">Grain Extract</a></li>
-<li class="toctree-l2"><a class="reference internal" href="blending_modes/mix.html#grain-merge">Grain Merge</a></li>
-<li class="toctree-l2"><a class="reference internal" href="blending_modes/mix.html#greater">Greater</a></li>
-<li class="toctree-l2"><a class="reference internal" href="blending_modes/mix.html#hard-mix">Hard Mix</a></li>
-<li class="toctree-l2"><a class="reference internal" href="blending_modes/mix.html#hard-mix-photoshop">Hard Mix (Photoshop)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="blending_modes/mix.html#hard-mix-softer-photoshop">Hard Mix Softer (Photoshop)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="blending_modes/mix.html#hard-overlay">Hard Overlay</a></li>
-<li class="toctree-l2"><a class="reference internal" href="blending_modes/mix.html#normal">Normal</a></li>
-<li class="toctree-l2"><a class="reference internal" href="blending_modes/mix.html#overlay">Overlay</a></li>
-<li class="toctree-l2"><a class="reference internal" href="blending_modes/mix.html#parallel">Parallel</a></li>
-<li class="toctree-l2"><a class="reference internal" href="blending_modes/mix.html#penumbra-a">Penumbra A</a></li>
-<li class="toctree-l2"><a class="reference internal" href="blending_modes/mix.html#penumbra-b">Penumbra B</a></li>
-<li class="toctree-l2"><a class="reference internal" href="blending_modes/mix.html#penumbra-c">Penumbra C</a></li>
-<li class="toctree-l2"><a class="reference internal" href="blending_modes/mix.html#penumbra-d">Penumbra D</a></li>
+<li class="toctree-l1"><a class="reference internal" href="blending_modes/mix.html">混合</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="blending_modes/mix.html#allanon">相加減半</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blending_modes/mix.html#interpolation">插值</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blending_modes/mix.html#interpolation-2x">插值兩次</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blending_modes/mix.html#alpha-darken">透明度變暗</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blending_modes/mix.html#behind">下置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blending_modes/mix.html#erase">擦除</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blending_modes/mix.html#geometric-mean">幾何平均</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blending_modes/mix.html#grain-extract">減去變亮</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blending_modes/mix.html#grain-merge">相加變深</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blending_modes/mix.html#greater">更不透明</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blending_modes/mix.html#hard-mix">實色混合</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blending_modes/mix.html#hard-mix-photoshop">實色混合 (Photoshop)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blending_modes/mix.html#hard-mix-softer-photoshop">實色混合、更柔和 (Photoshop)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blending_modes/mix.html#hard-overlay">實光覆蓋</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blending_modes/mix.html#normal">正常</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blending_modes/mix.html#overlay">覆蓋</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blending_modes/mix.html#parallel">平行</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blending_modes/mix.html#penumbra-a">半影 A</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blending_modes/mix.html#penumbra-b">半影 B</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blending_modes/mix.html#penumbra-c">半影 C</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blending_modes/mix.html#penumbra-d">半影 D</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="blending_modes/modulo.html">取模</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="blending_modes/modulo.html#divisive-modulo">Divisive Modulo</a></li>
-<li class="toctree-l2"><a class="reference internal" href="blending_modes/modulo.html#divisive-modulo-continuous">Divisive Modulo - Continuous</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blending_modes/modulo.html#divisive-modulo">分離模數</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blending_modes/modulo.html#divisive-modulo-continuous">分離模數 - 連續</a></li>
 <li class="toctree-l2"><a class="reference internal" href="blending_modes/modulo.html#bm-modulo">取模</a></li>
-<li class="toctree-l2"><a class="reference internal" href="blending_modes/modulo.html#modulo-continuous">Modulo - Continuous</a></li>
-<li class="toctree-l2"><a class="reference internal" href="blending_modes/modulo.html#modulo-shift">Modulo Shift</a></li>
-<li class="toctree-l2"><a class="reference internal" href="blending_modes/modulo.html#modulo-shift-continuous">Modulo Shift - Continuous</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blending_modes/modulo.html#modulo-continuous">取模 - 連續</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blending_modes/modulo.html#modulo-shift">模數偏移</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blending_modes/modulo.html#modulo-shift-continuous">模數偏移 - 連續</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="blending_modes/negative.html">Negative</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="blending_modes/negative.html#additive-subtractive">Additive Subtractive</a></li>
-<li class="toctree-l2"><a class="reference internal" href="blending_modes/negative.html#arcus-tangent">Arcus Tangent</a></li>
-<li class="toctree-l2"><a class="reference internal" href="blending_modes/negative.html#difference">Difference</a></li>
-<li class="toctree-l2"><a class="reference internal" href="blending_modes/negative.html#equivalence">Equivalence</a></li>
-<li class="toctree-l2"><a class="reference internal" href="blending_modes/negative.html#exclusion">Exclusion</a></li>
-<li class="toctree-l2"><a class="reference internal" href="blending_modes/negative.html#negation">Negation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="blending_modes/negative.html">負片</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="blending_modes/negative.html#additive-subtractive">減去平方根</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blending_modes/negative.html#arcus-tangent">反正切值</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blending_modes/negative.html#difference">差值</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blending_modes/negative.html#equivalence">等價</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blending_modes/negative.html#exclusion">排除</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blending_modes/negative.html#negation">求反</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="blending_modes/quadratic.html">平方</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="blending_modes/quadratic.html#freeze">Freeze</a></li>
-<li class="toctree-l2"><a class="reference internal" href="blending_modes/quadratic.html#freeze-reflect">Freeze-Reflect</a></li>
-<li class="toctree-l2"><a class="reference internal" href="blending_modes/quadratic.html#glow">Glow</a></li>
-<li class="toctree-l2"><a class="reference internal" href="blending_modes/quadratic.html#glow-heat">Glow-Heat</a></li>
-<li class="toctree-l2"><a class="reference internal" href="blending_modes/quadratic.html#heat">Heat</a></li>
-<li class="toctree-l2"><a class="reference internal" href="blending_modes/quadratic.html#heat-glow">Heat-Glow</a></li>
-<li class="toctree-l2"><a class="reference internal" href="blending_modes/quadratic.html#heat-glow-and-freeze-reflect-hybrid">Heat-Glow and Freeze-Reflect Hybrid</a></li>
-<li class="toctree-l2"><a class="reference internal" href="blending_modes/quadratic.html#reflect">Reflect</a></li>
-<li class="toctree-l2"><a class="reference internal" href="blending_modes/quadratic.html#reflect-freeze">Reflect-Freeze</a></li>
+<li class="toctree-l1"><a class="reference internal" href="blending_modes/quadratic.html">二次方</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="blending_modes/quadratic.html#freeze">凍結</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blending_modes/quadratic.html#freeze-reflect">凍結-反射</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blending_modes/quadratic.html#glow">發光</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blending_modes/quadratic.html#glow-heat">發光-加熱</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blending_modes/quadratic.html#heat">加熱</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blending_modes/quadratic.html#heat-glow">發光-加熱</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blending_modes/quadratic.html#heat-glow-and-freeze-reflect-hybrid">加熱-發光 與 凍結-反射混合</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blending_modes/quadratic.html#reflect">反射</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blending_modes/quadratic.html#reflect-freeze">反射-凍結</a></li>
 </ul>
 </li>
 </ul>
@@ -487,7 +487,7 @@
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>12c8f81</code>
+          修訂版本 <code>cd290f4</code>
         </span>
       
 

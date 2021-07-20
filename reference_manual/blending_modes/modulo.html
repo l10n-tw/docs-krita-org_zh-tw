@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-07-20T07:50:31" />
+  <meta property="og:article:modified_time" content="2021-07-20T10:25:25" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="關於 Krita 的取模混色模式：" name="description" />
 
@@ -60,8 +60,8 @@
     <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="搜尋" href="../../search.html" />
-    <link rel="next" title="Negative" href="negative.html" />
-    <link rel="prev" title="Mix" href="mix.html" /> 
+    <link rel="next" title="負片" href="negative.html" />
+    <link rel="prev" title="混合" href="mix.html" /> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -141,10 +141,10 @@
 <li class="toctree-l4"><a class="reference internal" href="hsx.html">HSX</a></li>
 <li class="toctree-l4"><a class="reference internal" href="lighten.html">變亮</a></li>
 <li class="toctree-l4"><a class="reference internal" href="misc.html">其他​​</a></li>
-<li class="toctree-l4"><a class="reference internal" href="mix.html">Mix</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mix.html">混合</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">取模</a></li>
-<li class="toctree-l4"><a class="reference internal" href="negative.html">Negative</a></li>
-<li class="toctree-l4"><a class="reference internal" href="quadratic.html">平方</a></li>
+<li class="toctree-l4"><a class="reference internal" href="negative.html">負片</a></li>
+<li class="toctree-l4"><a class="reference internal" href="quadratic.html">二次方</a></li>
 </ul>
 </li>
 </ul>
@@ -271,7 +271,11 @@
 <p>Modulo modes are special class of blending modes which loops values when the value of channel blend layer is less than the value of channel in base layers. All modes in modulo modes retains the absolute of the remainder if the value is greater than the maximum value or the value is less than minimum value. Continuous modes assume if the calculated value before modulo operation is within the range between a odd number to even number, then values are inverted in the end result, so values are perceived to be wave-like.</p>
 <p>Furthermore, this would imply that modulo modes are beneficial for abstract art, and manipulation of gradients.</p>
 <section id="divisive-modulo">
-<span id="bm-cat-divisive-modulo"></span><span id="index-1"></span><h2>Divisive Modulo<a class="headerlink" href="#divisive-modulo" title="本標題的永久連結">¶</a></h2>
+<span id="bm-cat-divisive-modulo"></span><span id="index-1"></span><h2>分離模數<a class="headerlink" href="#divisive-modulo" title="本標題的永久連結">¶</a></h2>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>英文稱為「Divisive Modulo」。</p>
+</div>
 <p>First, Base Layer is divided by the sum of blend layer and the minimum possible value after zero. Then, performs a modulo calculation using the value found with the sum of blend layer and the minimum possible value after zero.</p>
 <figure class="align-center" id="id2">
 <img alt="../../_images/Blending_modes_Divisive_Modulo_Gradient_Comparison.png" src="../../_images/Blending_modes_Divisive_Modulo_Gradient_Comparison.png" />
@@ -281,7 +285,11 @@
 </figure>
 </section>
 <section id="divisive-modulo-continuous">
-<span id="bm-cat-divisive-modulo-continuous"></span><span id="index-2"></span><h2>Divisive Modulo - Continuous<a class="headerlink" href="#divisive-modulo-continuous" title="本標題的永久連結">¶</a></h2>
+<span id="bm-cat-divisive-modulo-continuous"></span><span id="index-2"></span><h2>分離模數 - 連續<a class="headerlink" href="#divisive-modulo-continuous" title="本標題的永久連結">¶</a></h2>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>英文稱為「Divisive Modulo - Continuous」。</p>
+</div>
 <p>First, Base Layer is divided by the sum of blend layer and the minimum possible value after zero. Then, performs a modulo calculation using the value found with the sum of blend layer and the minimum possible value after zero. As this is a continuous mode, anything between odd to even numbers are inverted.</p>
 <figure class="align-center" id="id3">
 <img alt="../../_images/Blending_modes_Divisive_Modulo_Continuous_Gradient_Comparison.png" src="../../_images/Blending_modes_Divisive_Modulo_Continuous_Gradient_Comparison.png" />
@@ -292,6 +300,10 @@
 </section>
 <section id="bm-modulo">
 <span id="index-3"></span><span id="id1"></span><h2>取模<a class="headerlink" href="#bm-modulo" title="本標題的永久連結">¶</a></h2>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>英文稱為「Modulo」。</p>
+</div>
 <p>Performs a modulo calculation using the sum of blend layer and the minimum possible value after zero.</p>
 <figure class="align-center" id="id4">
 <img alt="../../_images/Blending_modes_Modulo_Gradient_Comparison.png" src="../../_images/Blending_modes_Modulo_Gradient_Comparison.png" />
@@ -301,7 +313,11 @@
 </figure>
 </section>
 <section id="modulo-continuous">
-<span id="bm-modulo-continuous"></span><span id="index-4"></span><h2>Modulo - Continuous<a class="headerlink" href="#modulo-continuous" title="本標題的永久連結">¶</a></h2>
+<span id="bm-modulo-continuous"></span><span id="index-4"></span><h2>取模 - 連續<a class="headerlink" href="#modulo-continuous" title="本標題的永久連結">¶</a></h2>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>英文稱為「Modulo - Continuous」。</p>
+</div>
 <p>Performs a modulo calculation using the sum of blend layer and the minimum possible value after zero. As this is a continuous mode, anything between odd to even numbers are inverted.</p>
 <figure class="align-center" id="id5">
 <img alt="../../_images/Blending_modes_Modulo_Continuous_Gradient_Comparison.png" src="../../_images/Blending_modes_Modulo_Continuous_Gradient_Comparison.png" />
@@ -311,7 +327,11 @@
 </figure>
 </section>
 <section id="modulo-shift">
-<span id="bm-modulo-shift"></span><span id="index-5"></span><h2>Modulo Shift<a class="headerlink" href="#modulo-shift" title="本標題的永久連結">¶</a></h2>
+<span id="bm-modulo-shift"></span><span id="index-5"></span><h2>模數偏移<a class="headerlink" href="#modulo-shift" title="本標題的永久連結">¶</a></h2>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>英文稱為「Modulo Shift」。</p>
+</div>
 <p>Performs a modulo calculation with the result of the sum of base and blend layer by the sum of blend layer with the minimum possible value after zero.</p>
 <figure class="align-center" id="id6">
 <img alt="../../_images/Blending_modes_Modulo_Shift_Gradient_Comparison.png" src="../../_images/Blending_modes_Modulo_Shift_Gradient_Comparison.png" />
@@ -321,7 +341,11 @@
 </figure>
 </section>
 <section id="modulo-shift-continuous">
-<span id="bm-modulo-shift-continuous"></span><span id="index-6"></span><h2>Modulo Shift - Continuous<a class="headerlink" href="#modulo-shift-continuous" title="本標題的永久連結">¶</a></h2>
+<span id="bm-modulo-shift-continuous"></span><span id="index-6"></span><h2>模數偏移 - 連續<a class="headerlink" href="#modulo-shift-continuous" title="本標題的永久連結">¶</a></h2>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>英文稱為「Modulo Shift - Continuous」。</p>
+</div>
 <p>Performs a modulo calculation with the result of the sum of base and blend layer by the sum of blend layer with the minimum possible value after zero.  As this is a continuous mode, anything between odd to even numbers are inverted.</p>
 <figure class="align-center" id="id7">
 <img alt="../../_images/Blending_modes_Modulo_Shift_Continuous_Gradient_Comparison.png" src="../../_images/Blending_modes_Modulo_Shift_Continuous_Gradient_Comparison.png" />
@@ -340,10 +364,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="negative.html" class="btn btn-neutral float-right" title="Negative" accesskey="n" rel="next"> <!-- 下一個 --> <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="negative.html" class="btn btn-neutral float-right" title="負片" accesskey="n" rel="next"> <!-- 下一個 --> <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="mix.html" class="btn btn-neutral" title="Mix" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- 上一個  -->  </a>
+        <a href="mix.html" class="btn btn-neutral" title="混合" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- 上一個  -->  </a>
       
     </div>
   
@@ -355,7 +379,7 @@
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>12c8f81</code>
+          修訂版本 <code>cd290f4</code>
         </span>
       
 

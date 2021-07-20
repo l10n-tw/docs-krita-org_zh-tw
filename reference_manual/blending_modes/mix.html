@@ -6,7 +6,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta property="og:title" name="title" content="Mix" />
+  <meta property="og:title" name="title" content="混合" />
   <meta property="og:site-name" content="Krita Manual" />
   <meta property="og:type" content="article" />
   <meta property="og:locale" content="zh_TW" />
@@ -21,13 +21,13 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-07-20T07:50:31" />
+  <meta property="og:article:modified_time" content="2021-07-20T10:25:25" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="Page about the mix blending modes in Krita: Allanon, Alpha Darken, Behind, Erase, Geometric Mean, Grain Extract, Grain Merge, Greater, Hard Mix, Hard Overlay, Interpolation, Interpolation2x, Normal, Overlay, Parallel, Penumbra A, B, C and D." name="description" />
 
   
   
-  <title>Mix &mdash; Krita Manual 5.0.0 Beta 說明文件</title>
+  <title>混合 &mdash; Krita Manual 5.0.0 Beta 說明文件</title>
   
 
   
@@ -141,10 +141,10 @@
 <li class="toctree-l4"><a class="reference internal" href="hsx.html">HSX</a></li>
 <li class="toctree-l4"><a class="reference internal" href="lighten.html">變亮</a></li>
 <li class="toctree-l4"><a class="reference internal" href="misc.html">其他​​</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="#">Mix</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">混合</a></li>
 <li class="toctree-l4"><a class="reference internal" href="modulo.html">取模</a></li>
-<li class="toctree-l4"><a class="reference internal" href="negative.html">Negative</a></li>
-<li class="toctree-l4"><a class="reference internal" href="quadratic.html">平方</a></li>
+<li class="toctree-l4"><a class="reference internal" href="negative.html">負片</a></li>
+<li class="toctree-l4"><a class="reference internal" href="quadratic.html">二次方</a></li>
 </ul>
 </li>
 </ul>
@@ -242,7 +242,7 @@
         
           <li><a href="../blending_modes.html">混色模式</a> &raquo;</li>
         
-      <li>Mix</li>
+      <li>混合</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -267,9 +267,13 @@
            <div itemprop="articleBody">
             
   <section id="mix">
-<span id="bm-cat-mix"></span><h1>Mix<a class="headerlink" href="#mix" title="本標題的永久連結">¶</a></h1>
+<span id="bm-cat-mix"></span><h1>混合<a class="headerlink" href="#mix" title="本標題的永久連結">¶</a></h1>
 <section id="allanon">
-<span id="bm-allanon"></span><span id="index-0"></span><h2>Allanon<a class="headerlink" href="#allanon" title="本標題的永久連結">¶</a></h2>
+<span id="bm-allanon"></span><span id="index-0"></span><h2>相加減半<a class="headerlink" href="#allanon" title="本標題的永久連結">¶</a></h2>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>英文稱為「Allanon」。</p>
+</div>
 <p>Blends the upper layer as half-transparent with the lower. (It add the two layers together and then halves the value).</p>
 <figure class="align-center" id="id1">
 <img alt="../../_images/Blending_modes_Allanon_Sample_image_with_dots.png" src="../../_images/Blending_modes_Allanon_Sample_image_with_dots.png" />
@@ -279,7 +283,11 @@
 </figure>
 </section>
 <section id="interpolation">
-<span id="bm-interpolation"></span><span id="index-1"></span><h2>Interpolation<a class="headerlink" href="#interpolation" title="本標題的永久連結">¶</a></h2>
+<span id="bm-interpolation"></span><span id="index-1"></span><h2>插值<a class="headerlink" href="#interpolation" title="本標題的永久連結">¶</a></h2>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>英文稱為「Interpolation」。</p>
+</div>
 <p>Subtract 0.5f by 1/4 of cosine of base layer subtracted by 1/4 of cosine of blend layer assuming 0-1 range.
 The result is similar to Allanon mode, but with more contrast and functional difference to 50% opacity.</p>
 <figure class="align-center" id="id2">
@@ -290,7 +298,11 @@ The result is similar to Allanon mode, but with more contrast and functional dif
 </figure>
 </section>
 <section id="interpolation-2x">
-<span id="bm-interpolation2x"></span><span id="index-2"></span><h2>Interpolation - 2X<a class="headerlink" href="#interpolation-2x" title="本標題的永久連結">¶</a></h2>
+<span id="bm-interpolation2x"></span><span id="index-2"></span><h2>插值兩次<a class="headerlink" href="#interpolation-2x" title="本標題的永久連結">¶</a></h2>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>Krita 5.0 前稱「插值 - 2X」，英文稱為「Interpolation - 2X」。</p>
+</div>
 <p>Applies Interpolation blend mode to base and blend layers, then duplicate to repeat interpolation blending.</p>
 <figure class="align-center" id="id3">
 <img alt="../../_images/Blending_modes_Interpolation_X2_Sample_image_with_dots.png" src="../../_images/Blending_modes_Interpolation_X2_Sample_image_with_dots.png" />
@@ -300,7 +312,11 @@ The result is similar to Allanon mode, but with more contrast and functional dif
 </figure>
 </section>
 <section id="alpha-darken">
-<span id="bm-alpha-darken"></span><span id="index-3"></span><h2>Alpha Darken<a class="headerlink" href="#alpha-darken" title="本標題的永久連結">¶</a></h2>
+<span id="bm-alpha-darken"></span><span id="index-3"></span><h2>透明度變暗<a class="headerlink" href="#alpha-darken" title="本標題的永久連結">¶</a></h2>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>英文稱為「Alpha Darken」。</p>
+</div>
 <p>As far as I can tell this seems to premultiply the alpha, as is common in some file-formats.</p>
 <figure class="align-center" id="id4">
 <img alt="../../_images/Blending_modes_Alpha_Darken_Sample_image_with_dots.png" src="../../_images/Blending_modes_Alpha_Darken_Sample_image_with_dots.png" />
@@ -310,7 +326,11 @@ The result is similar to Allanon mode, but with more contrast and functional dif
 </figure>
 </section>
 <section id="behind">
-<span id="bm-behind"></span><span id="index-4"></span><h2>Behind<a class="headerlink" href="#behind" title="本標題的永久連結">¶</a></h2>
+<span id="bm-behind"></span><span id="index-4"></span><h2>下置<a class="headerlink" href="#behind" title="本標題的永久連結">¶</a></h2>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>Krita 5.0 前稱「背後」，英文稱為「Behind」。</p>
+</div>
 <p>Does the opposite of normal, and tries to have the upper layer rendered below the lower layer.</p>
 <figure class="align-center" id="id5">
 <img alt="../../_images/Blending_modes_Behind_Sample_image_with_dots.png" src="../../_images/Blending_modes_Behind_Sample_image_with_dots.png" />
@@ -320,7 +340,11 @@ The result is similar to Allanon mode, but with more contrast and functional dif
 </figure>
 </section>
 <section id="erase">
-<span id="bm-erase"></span><span id="index-5"></span><h2>Erase<a class="headerlink" href="#erase" title="本標題的永久連結">¶</a></h2>
+<span id="bm-erase"></span><span id="index-5"></span><h2>擦除<a class="headerlink" href="#erase" title="本標題的永久連結">¶</a></h2>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>Krita 5.0 前稱「清除」，英文稱為「Erase」。</p>
+</div>
 <p>This subtracts the opaque pixels of the upper layer from the lower layer, effectively erasing.</p>
 <figure class="align-center" id="id6">
 <img alt="../../_images/Blending_modes_Erase_Sample_image_with_dots.png" src="../../_images/Blending_modes_Erase_Sample_image_with_dots.png" />
@@ -330,7 +354,11 @@ The result is similar to Allanon mode, but with more contrast and functional dif
 </figure>
 </section>
 <section id="geometric-mean">
-<span id="bm-geometric-mean"></span><span id="index-6"></span><h2>Geometric Mean<a class="headerlink" href="#geometric-mean" title="本標題的永久連結">¶</a></h2>
+<span id="bm-geometric-mean"></span><span id="index-6"></span><h2>幾何平均<a class="headerlink" href="#geometric-mean" title="本標題的永久連結">¶</a></h2>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>英文稱為「Geometric Mean」。</p>
+</div>
 <p>This blending mode multiplies the top layer with the bottom, and then outputs the square root of that.</p>
 <figure class="align-center" id="id7">
 <img alt="../../_images/Blending_modes_Geometric_Mean_Sample_image_with_dots.png" src="../../_images/Blending_modes_Geometric_Mean_Sample_image_with_dots.png" />
@@ -340,7 +368,11 @@ The result is similar to Allanon mode, but with more contrast and functional dif
 </figure>
 </section>
 <section id="grain-extract">
-<span id="bm-grain-extract"></span><span id="index-7"></span><h2>Grain Extract<a class="headerlink" href="#grain-extract" title="本標題的永久連結">¶</a></h2>
+<span id="bm-grain-extract"></span><span id="index-7"></span><h2>減去變亮<a class="headerlink" href="#grain-extract" title="本標題的永久連結">¶</a></h2>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>Krita 5.0 前稱「顆粒抽取」，英文稱為「Grain Extract」。</p>
+</div>
 <p>Similar to subtract, the colors of the upper layer are subtracted from the colors of the lower layer, and then 50% gray is added.</p>
 <figure class="align-center" id="id8">
 <img alt="../../_images/Blending_modes_Grain_Extract_Sample_image_with_dots.png" src="../../_images/Blending_modes_Grain_Extract_Sample_image_with_dots.png" />
@@ -350,7 +382,11 @@ The result is similar to Allanon mode, but with more contrast and functional dif
 </figure>
 </section>
 <section id="grain-merge">
-<span id="bm-grain-merge"></span><span id="index-8"></span><h2>Grain Merge<a class="headerlink" href="#grain-merge" title="本標題的永久連結">¶</a></h2>
+<span id="bm-grain-merge"></span><span id="index-8"></span><h2>相加變深<a class="headerlink" href="#grain-merge" title="本標題的永久連結">¶</a></h2>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>Krita 5.0 前稱「顆粒合併」，英文稱為「Grain Merge」。</p>
+</div>
 <p>Similar to addition, the colors of the upper layer are added to the colors, and then 50% gray is subtracted.</p>
 <figure class="align-center" id="id9">
 <img alt="../../_images/Blending_modes_Grain_Merge_Sample_image_with_dots.png" src="../../_images/Blending_modes_Grain_Merge_Sample_image_with_dots.png" />
@@ -360,12 +396,20 @@ The result is similar to Allanon mode, but with more contrast and functional dif
 </figure>
 </section>
 <section id="greater">
-<span id="bm-greater"></span><span id="index-9"></span><h2>Greater<a class="headerlink" href="#greater" title="本標題的永久連結">¶</a></h2>
+<span id="bm-greater"></span><span id="index-9"></span><h2>更不透明<a class="headerlink" href="#greater" title="本標題的永久連結">¶</a></h2>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>英文稱為「Greater」。</p>
+</div>
 <p>A blending mode which checks whether the painted color is painted with a higher opacity than the existing colors. If so, it paints over them, if not, it doesn't paint at all.</p>
 <img alt="../../_images/Greaterblendmode.gif" class="align-center" src="../../_images/Greaterblendmode.gif" />
 </section>
 <section id="hard-mix">
-<span id="bm-hard-mix"></span><span id="index-10"></span><h2>Hard Mix<a class="headerlink" href="#hard-mix" title="本標題的永久連結">¶</a></h2>
+<span id="bm-hard-mix"></span><span id="index-10"></span><h2>實色混合<a class="headerlink" href="#hard-mix" title="本標題的永久連結">¶</a></h2>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>英文稱為「Hard Mix」。</p>
+</div>
 <p>Similar to Overlay.</p>
 <p>Mixes both Color Dodge and Burn blending modes. If the color of the upper layer is darker than 50%, the blending mode will be Burn, if not the blending mode will be Color Dodge.</p>
 <figure class="align-center" id="id10" style="width: 800px">
@@ -376,7 +420,11 @@ The result is similar to Allanon mode, but with more contrast and functional dif
 </figure>
 </section>
 <section id="hard-mix-photoshop">
-<span id="bm-hard-mix-photoshop"></span><span id="index-11"></span><h2>Hard Mix (Photoshop)<a class="headerlink" href="#hard-mix-photoshop" title="本標題的永久連結">¶</a></h2>
+<span id="bm-hard-mix-photoshop"></span><span id="index-11"></span><h2>實色混合 (Photoshop)<a class="headerlink" href="#hard-mix-photoshop" title="本標題的永久連結">¶</a></h2>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>英文稱為「Hard Mix (Photoshop)」。</p>
+</div>
 <p>This is the hard mix blending mode as it is implemented in photoshop.</p>
 <figure class="align-center" id="id11" style="width: 800px">
 <img alt="../../_images/Krita_4_0_hard_mix_ps.png" src="../../_images/Krita_4_0_hard_mix_ps.png" />
@@ -387,7 +435,11 @@ The result is similar to Allanon mode, but with more contrast and functional dif
 <p>This add the two values, and then checks if the value is above the maximum. If so it will output the maximum, otherwise the minimum.</p>
 </section>
 <section id="hard-mix-softer-photoshop">
-<span id="bm-hard-mix-softer-photoshop"></span><span id="index-12"></span><h2>Hard Mix Softer (Photoshop)<a class="headerlink" href="#hard-mix-softer-photoshop" title="本標題的永久連結">¶</a></h2>
+<span id="bm-hard-mix-softer-photoshop"></span><span id="index-12"></span><h2>實色混合、更柔和 (Photoshop)<a class="headerlink" href="#hard-mix-softer-photoshop" title="本標題的永久連結">¶</a></h2>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>英文稱為「Hard Mix Softer (Photoshop)」。</p>
+</div>
 <div class="versionadded">
 <p><span class="versionmodified added">5.0 版新加入.</span></p>
 </div>
@@ -404,7 +456,11 @@ hard mix mode in the sense that it doesn't choose between a result or another ba
 cases the result looks like the normal <em>Hard Mix (Photoshop)</em> but with softer edges.</p>
 </section>
 <section id="hard-overlay">
-<span id="bm-hard-overlay"></span><span id="index-13"></span><h2>Hard Overlay<a class="headerlink" href="#hard-overlay" title="本標題的永久連結">¶</a></h2>
+<span id="bm-hard-overlay"></span><span id="index-13"></span><h2>實光覆蓋<a class="headerlink" href="#hard-overlay" title="本標題的永久連結">¶</a></h2>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>Krita 5.0 前稱「強疊加」，英文稱為「Hard Overlay」。</p>
+</div>
 <div class="versionadded">
 <p><span class="versionmodified added">4.0 版新加入.</span></p>
 </div>
@@ -417,7 +473,11 @@ cases the result looks like the normal <em>Hard Mix (Photoshop)</em> but with so
 </figure>
 </section>
 <section id="normal">
-<span id="bm-normal"></span><span id="index-14"></span><h2>Normal<a class="headerlink" href="#normal" title="本標題的永久連結">¶</a></h2>
+<span id="bm-normal"></span><span id="index-14"></span><h2>正常<a class="headerlink" href="#normal" title="本標題的永久連結">¶</a></h2>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>英文稱為「Normal」。</p>
+</div>
 <p>As you may have guessed this is the default Blending mode for all layers.</p>
 <p>In this mode, the computer checks on the upper layer how transparent a pixel is, which color it is, and then mixes the color of the upper layer with the lower layer proportional to the transparency.</p>
 <figure class="align-center" id="id14">
@@ -428,7 +488,11 @@ cases the result looks like the normal <em>Hard Mix (Photoshop)</em> but with so
 </figure>
 </section>
 <section id="overlay">
-<span id="bm-overlay"></span><span id="index-15"></span><h2>Overlay<a class="headerlink" href="#overlay" title="本標題的永久連結">¶</a></h2>
+<span id="bm-overlay"></span><span id="index-15"></span><h2>覆蓋<a class="headerlink" href="#overlay" title="本標題的永久連結">¶</a></h2>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>Krita 5.0 前稱「疊加」，英文稱為「Overlay」。</p>
+</div>
 <p>A combination of the Multiply and Screen blending modes, switching between both at a middle-lightness.</p>
 <p>Overlay checks if the color on the upperlayer has a lightness above 0.5. If so, the pixel is blended like in Screen mode, if not the pixel is blended like in Multiply mode.</p>
 <p>This is useful for deepening shadows and highlights.</p>
@@ -440,7 +504,11 @@ cases the result looks like the normal <em>Hard Mix (Photoshop)</em> but with so
 </figure>
 </section>
 <section id="parallel">
-<span id="bm-parallel"></span><span id="index-16"></span><h2>Parallel<a class="headerlink" href="#parallel" title="本標題的永久連結">¶</a></h2>
+<span id="bm-parallel"></span><span id="index-16"></span><h2>平行<a class="headerlink" href="#parallel" title="本標題的永久連結">¶</a></h2>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>英文稱為「Parallel」。</p>
+</div>
 <p>This one first takes the percentage in two decimal behind the comma for both layers.
 It then adds the two values.
 Divides 2 by the sum.</p>
@@ -452,7 +520,11 @@ Divides 2 by the sum.</p>
 </figure>
 </section>
 <section id="penumbra-a">
-<span id="bm-penumbra-a"></span><span id="index-17"></span><h2>Penumbra A<a class="headerlink" href="#penumbra-a" title="本標題的永久連結">¶</a></h2>
+<span id="bm-penumbra-a"></span><span id="index-17"></span><h2>半影 A<a class="headerlink" href="#penumbra-a" title="本標題的永久連結">¶</a></h2>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>英文稱為「Penumbra A」。</p>
+</div>
 <p>Creates a linear penumbra falloff. This means most tones will be in the midtone ranges.</p>
 <figure class="align-center" id="id17">
 <img alt="../../_images/Blending_modes_Penumbra_A_Sample_image_with_dots.png" src="../../_images/Blending_modes_Penumbra_A_Sample_image_with_dots.png" />
@@ -462,7 +534,11 @@ Divides 2 by the sum.</p>
 </figure>
 </section>
 <section id="penumbra-b">
-<span id="bm-penumbra-b"></span><span id="index-18"></span><h2>Penumbra B<a class="headerlink" href="#penumbra-b" title="本標題的永久連結">¶</a></h2>
+<span id="bm-penumbra-b"></span><span id="index-18"></span><h2>半影 B<a class="headerlink" href="#penumbra-b" title="本標題的永久連結">¶</a></h2>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>英文稱為「Penumbra B」。</p>
+</div>
 <p>Penumbra A with source and destination layer swapped.</p>
 <figure class="align-center" id="id18">
 <img alt="../../_images/Blending_modes_Penumbra_B_Sample_image_with_dots.png" src="../../_images/Blending_modes_Penumbra_B_Sample_image_with_dots.png" />
@@ -472,7 +548,11 @@ Divides 2 by the sum.</p>
 </figure>
 </section>
 <section id="penumbra-c">
-<span id="bm-penumbra-c"></span><span id="index-19"></span><h2>Penumbra C<a class="headerlink" href="#penumbra-c" title="本標題的永久連結">¶</a></h2>
+<span id="bm-penumbra-c"></span><span id="index-19"></span><h2>半影 C<a class="headerlink" href="#penumbra-c" title="本標題的永久連結">¶</a></h2>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>英文稱為「Penumbra C」。</p>
+</div>
 <p>Creates a penumbra-like falloff using arc-tangent formula. This means most tones will be in the midtone ranges.</p>
 <figure class="align-center" id="id19">
 <img alt="../../_images/Blending_modes_Penumbra_C_Sample_image_with_dots.png" src="../../_images/Blending_modes_Penumbra_C_Sample_image_with_dots.png" />
@@ -482,7 +562,11 @@ Divides 2 by the sum.</p>
 </figure>
 </section>
 <section id="penumbra-d">
-<span id="bm-penumbra-d"></span><span id="index-20"></span><h2>Penumbra D<a class="headerlink" href="#penumbra-d" title="本標題的永久連結">¶</a></h2>
+<span id="bm-penumbra-d"></span><span id="index-20"></span><h2>半影 D<a class="headerlink" href="#penumbra-d" title="本標題的永久連結">¶</a></h2>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>英文稱為「Penumbra D」。</p>
+</div>
 <p>Penumbra C with source and destination layer swapped.</p>
 <figure class="align-center" id="id20">
 <img alt="../../_images/Blending_modes_Penumbra_D_Sample_image_with_dots.png" src="../../_images/Blending_modes_Penumbra_D_Sample_image_with_dots.png" />
@@ -516,7 +600,7 @@ Divides 2 by the sum.</p>
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>12c8f81</code>
+          修訂版本 <code>cd290f4</code>
         </span>
       
 

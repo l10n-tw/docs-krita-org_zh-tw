@@ -22,6 +22,11 @@ These are all blending modes which seem to make the image go negative.
 
 Additive Subtractive
 ~~~~~~~~~~~~~~~~~~~~
+
+.. only:: non_english
+
+   .. hint:: This blending mode is called "Additive Subtractive" in English.
+
 Subtract the square root of the lower layer from the upper layer.
 
 .. figure:: /images/blending_modes/negative/Blending_modes_Additive_Subtractive_Sample_image_with_dots.png
@@ -34,6 +39,10 @@ Subtract the square root of the lower layer from the upper layer.
 
 Arcus Tangent
 ~~~~~~~~~~~~~
+
+.. only:: non_english
+
+   .. hint:: This blending mode is called "Arcus Tangent" in English.
 
 Divides the lower layer by the top. Then divides this by Pi.
 Then uses that in an Arc tangent function, and multiplies it by two.
@@ -49,6 +58,10 @@ Then uses that in an Arc tangent function, and multiplies it by two.
 Difference
 ~~~~~~~~~~
 
+.. only:: non_english
+
+   .. hint:: This blending mode is called "Difference" in English.
+
 Checks per pixel of which layer the pixel-value is highest/lowest, and then subtracts the lower value from the higher-value.
 
 
@@ -62,6 +75,10 @@ Checks per pixel of which layer the pixel-value is highest/lowest, and then subt
 
 Equivalence
 ~~~~~~~~~~~
+
+.. only:: non_english
+
+   .. hint:: This blending mode is called "Equivalence" in English.
 
 Subtracts the underlying layer from the upper-layer. Then inverts that. Seems to produce the same result as :ref:`bm_difference`.
 
@@ -77,6 +94,10 @@ Subtracts the underlying layer from the upper-layer. Then inverts that. Seems to
 Exclusion
 ~~~~~~~~~
 
+.. only:: non_english
+
+   .. hint:: This blending mode is called "Exclusion" in English.
+
 This multiplies the two layers, adds the source, and then subtracts the multiple of two layers twice.
 
 .. figure:: /images/blending_modes/negative/Blending_modes_Exclusion_Sample_image_with_dots.png
@@ -89,6 +110,10 @@ This multiplies the two layers, adds the source, and then subtracts the multiple
    
 Negation
 ~~~~~~~~~
+
+.. only:: non_english
+
+   .. hint:: This blending mode is called "Negation" in English.
 
 The absolute of the 1.0f value subtracted by base subtracted by the blend layer. abs(1.0f - Base - Blend)
 

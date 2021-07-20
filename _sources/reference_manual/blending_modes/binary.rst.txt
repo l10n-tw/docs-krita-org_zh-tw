@@ -27,6 +27,10 @@ To clarify on how binary modes works, convert decimal values to binary values, t
 AND
 ~~~
 
+.. only:: non_english
+
+   .. hint:: This blending mode is called "AND" in English.
+
 Performs the AND operation for the base and blend layer. Similar to multiply blending mode.
 
 .. figure:: /images/blending_modes/binary/Blend_modes_AND_map.png
@@ -44,6 +48,10 @@ Performs the AND operation for the base and blend layer. Similar to multiply ble
 
 CONVERSE
 ~~~~~~~~
+
+.. only:: non_english
+
+   .. hint:: This blending mode is called "CONVERSE" in English.
 
 Performs the inverse of IMPLICATION operation for the base and blend layer. Similar to screen mode with blend layer and base layer inverted.
 
@@ -63,6 +71,10 @@ Performs the inverse of IMPLICATION operation for the base and blend layer. Simi
 IMPLICATION
 ~~~~~~~~~~~
 
+.. only:: non_english
+
+   .. hint:: This blending mode is called "IMPLICATION" in English.
+
 Performs the IMPLICATION operation for the base and blend layer. Similar to screen mode with base layer inverted.
 
 .. figure:: /images/blending_modes/binary/Blend_modes_IMPLIES_map.png
@@ -80,6 +92,10 @@ Performs the IMPLICATION operation for the base and blend layer. Similar to scre
 
 NAND
 ~~~~
+
+.. only:: non_english
+
+   .. hint:: This blending mode is called "NAND" in English.
 
 Performs the inverse of AND operation for base and blend layer. Similar to the inverted multiply mode.
 
@@ -99,6 +115,10 @@ Performs the inverse of AND operation for base and blend layer. Similar to the i
 NOR
 ~~~
 
+.. only:: non_english
+
+   .. hint:: This blending mode is called "NOR" in English.
+
 Performs the inverse of OR operation for base and blend layer. Similar to the inverted screen mode. 
 
 .. figure:: /images/blending_modes/binary/Blend_modes_NOR_map.png
@@ -116,6 +136,10 @@ Performs the inverse of OR operation for base and blend layer. Similar to the in
 
 NOT CONVERSE
 ~~~~~~~~~~~~
+
+.. only:: non_english
+
+   .. hint:: This blending mode is called "NOT CONVERSE" in English.
 
 Performs the inverse of CONVERSE operation for base and blend layer. Similar to the multiply mode with base layer and blend layer inverted.
 
@@ -135,6 +159,10 @@ Performs the inverse of CONVERSE operation for base and blend layer. Similar to 
 NOT IMPLICATION
 ~~~~~~~~~~~~~~~
 
+.. only:: non_english
+
+   .. hint:: This blending mode is called "NOT IMPLICATION" in English.
+
 Performs the inverse of IMPLICATION operation for base and blend layer. Similar to the multiply mode with the blend layer inverted.
 
 .. figure:: /images/blending_modes/binary/Blend_modes_NOT_IMPLICATION_map.png
@@ -152,6 +180,10 @@ Performs the inverse of IMPLICATION operation for base and blend layer. Similar 
 
 OR
 ~~
+
+.. only:: non_english
+
+   .. hint:: This blending mode is called "OR" in English.
 
 Performs the OR operation for base and blend layer. Similar to screen mode.
 
@@ -171,6 +203,10 @@ Performs the OR operation for base and blend layer. Similar to screen mode.
 XOR
 ~~~
 
+.. only:: non_english
+
+   .. hint:: This blending mode is called "XOR" in English.
+
 Performs the XOR operation for base and blend layer. This mode has a special property that if you duplicate the blend layer twice, you get the base layer. 
 
 .. figure:: /images/blending_modes/binary/Blend_modes_XOR_map.png
@@ -188,6 +224,10 @@ Performs the XOR operation for base and blend layer. This mode has a special pro
 
 XNOR
 ~~~~
+
+.. only:: non_english
+
+   .. hint:: This blending mode is called "XNOR" in English.
 
 Performs the XNOR operation for base and blend layer. This mode has a special property that if you duplicate the blend layer twice, you get the base layer. 
 

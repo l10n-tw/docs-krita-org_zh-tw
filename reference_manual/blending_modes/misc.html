@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-07-20T07:50:31" />
+  <meta property="og:article:modified_time" content="2021-07-20T10:25:25" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="Page about the miscellaneous blending modes in Krita: Bumpmap, Combine Normal Map, Copy Red, Copy Green, Copy Blue, Copy and Dissolve." name="description" />
 
@@ -60,7 +60,7 @@
     <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="搜尋" href="../../search.html" />
-    <link rel="next" title="Mix" href="mix.html" />
+    <link rel="next" title="混合" href="mix.html" />
     <link rel="prev" title="變亮" href="lighten.html" /> 
 
   
@@ -141,10 +141,10 @@
 <li class="toctree-l4"><a class="reference internal" href="hsx.html">HSX</a></li>
 <li class="toctree-l4"><a class="reference internal" href="lighten.html">變亮</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">其他​​</a></li>
-<li class="toctree-l4"><a class="reference internal" href="mix.html">Mix</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mix.html">混合</a></li>
 <li class="toctree-l4"><a class="reference internal" href="modulo.html">取模</a></li>
-<li class="toctree-l4"><a class="reference internal" href="negative.html">Negative</a></li>
-<li class="toctree-l4"><a class="reference internal" href="quadratic.html">平方</a></li>
+<li class="toctree-l4"><a class="reference internal" href="negative.html">負片</a></li>
+<li class="toctree-l4"><a class="reference internal" href="quadratic.html">二次方</a></li>
 </ul>
 </li>
 </ul>
@@ -270,14 +270,26 @@
 <span id="bm-cat-misc"></span><h1>其他​​<a class="headerlink" href="#misc" title="本標題的永久連結">¶</a></h1>
 <section id="bumpmap">
 <span id="bm-bumpmap"></span><span id="index-0"></span><h2>凹凸貼圖<a class="headerlink" href="#bumpmap" title="本標題的永久連結">¶</a></h2>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>英文稱為「Bumpmap」。</p>
+</div>
 <p>This filter seems to both multiply and respect the alpha of the input.</p>
 </section>
 <section id="combine-normal-map">
 <span id="bm-combine-normal-map"></span><span id="index-1"></span><h2>合併法線貼圖<a class="headerlink" href="#combine-normal-map" title="本標題的永久連結">¶</a></h2>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>英文稱為「Combine Normal Map」。</p>
+</div>
 <p>Mathematically robust blending mode for normal maps, using <a class="reference external" href="https://blog.selfshadow.com/publications/blending-in-detail/">Reoriented Normal Map Blending</a>.</p>
 </section>
 <section id="copy">
 <span id="bm-copy"></span><span id="index-2"></span><h2>複製<a class="headerlink" href="#copy" title="本標題的永久連結">¶</a></h2>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>英文稱為「Copy」。</p>
+</div>
 <p>Copies the previous layer exactly.
 Useful for when using filters and filter-masks.</p>
 <figure class="align-center" id="id1">
@@ -289,6 +301,10 @@ Useful for when using filters and filter-masks.</p>
 </section>
 <section id="copy-red-green-blue">
 <span id="bm-copy-blue"></span><span id="bm-copy-green"></span><span id="bm-copy-red"></span><span id="index-3"></span><h2>複製紅色、綠色、藍色通道<a class="headerlink" href="#copy-red-green-blue" title="本標題的永久連結">¶</a></h2>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>英文稱為「Copy Red / Green / Blue」。</p>
+</div>
 <p>This is a blending mode that will just copy/blend a source channel to a destination channel.
 Specifically, it will take the specific channel from the upper layer and copy that over to the lower layers.</p>
 <p>So, if you want the brush to only affect the red channel, set the blending mode to 'copy red'.</p>
@@ -320,6 +336,10 @@ Specifically, it will take the specific channel from the upper layer and copy th
 </section>
 <section id="dissolve">
 <span id="bm-dissolve"></span><span id="index-4"></span><h2>溶解<a class="headerlink" href="#dissolve" title="本標題的永久連結">¶</a></h2>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>英文稱為「Dissolve」。</p>
+</div>
 <p>Instead of using transparency, this blending mode will use a random dithering pattern to make the transparent areas look sort of transparent.</p>
 <figure class="align-center" id="id6">
 <img alt="../../_images/Blending_modes_Dissolve_Sample_image_with_dots.png" src="../../_images/Blending_modes_Dissolve_Sample_image_with_dots.png" />
@@ -338,7 +358,7 @@ Specifically, it will take the specific channel from the upper layer and copy th
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="mix.html" class="btn btn-neutral float-right" title="Mix" accesskey="n" rel="next"> <!-- 下一個 --> <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="mix.html" class="btn btn-neutral float-right" title="混合" accesskey="n" rel="next"> <!-- 下一個 --> <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="lighten.html" class="btn btn-neutral" title="變亮" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- 上一個  -->  </a>
@@ -353,7 +373,7 @@ Specifically, it will take the specific channel from the upper layer and copy th
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>12c8f81</code>
+          修訂版本 <code>cd290f4</code>
         </span>
       
 

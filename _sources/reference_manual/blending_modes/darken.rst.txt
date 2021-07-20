@@ -22,6 +22,10 @@ Darken
 Burn
 ~~~~
 
+.. only:: non_english
+
+   .. hint:: This blending mode is called "Burn" in English.
+
 A variation on Divide, sometimes called 'Color Burn' in some programs.
 
 This inverts the bottom layer, then divides it by the top layer, and inverts the result.
@@ -52,6 +56,10 @@ This results in a darkened effect that takes the colors of the lower layer into 
 Easy Burn
 ~~~~~~~~~
 
+.. only:: non_english
+
+   .. hint:: This blending mode is called "Easy Burn" in English.
+
 Aims to solve issues with Color Burn blending mode by using a formula which falloff is similar to Dodge, but the falloff rate is softer. It is within the range of 0.0f and 1.0f unlike Color Burn mode.
 
 .. figure:: /images/blending_modes/darken/Blending_modes_Easy_Burn_Sample_image_with_dots.png
@@ -65,6 +73,10 @@ Aims to solve issues with Color Burn blending mode by using a formula which fall
 Fog Darken (IFS Illusions)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. only:: non_english
+
+   .. hint:: This blending mode is called "Fog Darken (IFS Illusions)" in English.
+
 Darken the image in a way that there is a 'fog' in the end result. This is due to the unique property of fog darken in which midtones combined are lighter than non-midtones blend.
 
 .. figure:: /images/blending_modes/darken/Blending_modes_Fog_Darken_Sample_image_with_dots.png
@@ -77,6 +89,10 @@ Darken the image in a way that there is a 'fog' in the end result. This is due t
 
 Darken
 ~~~~~~
+
+.. only:: non_english
+
+   .. hint:: This blending mode is called "Darken" in English.
 
 With the darken, the upper layer's colors are checked for their lightness. Only if they are darker than the underlying color on the lower layer, will they be visible.
 
@@ -105,6 +121,10 @@ Is Orange(1, 0.5961, 0.0706) darker than Light Blue(0.1608, 0.6274, 0.8274)? = (
 Darker Color
 ~~~~~~~~~~~~
 
+.. only:: non_english
+
+   .. hint:: This blending mode is called "Darker Color" in English.
+
 .. figure:: /images/blending_modes/darken/Blending_modes_Darker_Color_Sample_image_with_dots.png
    :align: center
 
@@ -115,6 +135,10 @@ Darker Color
 
 Gamma Dark
 ~~~~~~~~~~
+
+.. only:: non_english
+
+   .. hint:: This blending mode is called "Gamma Dark" in English.
 
 Divides 1 by the upper layer, and calculates the end result using that as the power of the lower layer.
 
@@ -143,6 +167,10 @@ Light Blue(0.1608, 0.6274, 0.8274)^[1 / Orange(1, 0.5961, 0.0706)] = Green(0.160
 Linear Burn
 ~~~~~~~~~~~
 
+.. only:: non_english
+
+   .. hint:: This blending mode is called "Linear Burn" in English.
+
 Adds the values of the two layers together and then subtracts 1. Seems to produce the same result as :ref:`bm_inverse_subtract`.
 
 [Darker Gray(0.4, 0.4, 0.4) + Lighter Gray(0.5, 0.5, 0.5)]_1 = (-0.1000, -0.1000, -0.1000)  → Black(0, 0, 0)
@@ -169,6 +197,10 @@ Adds the values of the two layers together and then subtracts 1. Seems to produc
 
 Shade (IFS Illusions)
 ~~~~~~~~~~~~~~~~~~~~~
+
+.. only:: non_english
+
+   .. hint:: This blending mode is called "Shade (IFS Illusions)" in English.
 
 Basically, the blending mode only ends in shades of shades. This means that it's very useful for painting shading colors while still in the range of shades.
 

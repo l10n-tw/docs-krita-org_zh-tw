@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-07-20T07:50:31" />
+  <meta property="og:article:modified_time" content="2021-07-20T10:25:25" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="Page about the lighten blending modes in Krita: Color Dodge, Gamma Illumination, Gamma Light, Easy Dodge, Flat Light, Fog Lighten, Hard Light, Lighten, Lighter Color, Linear Dodge, Linear Light, P-Norm A, P-Norm B, Pin Light, Screen, Soft Light, Tint and Vivid Light." name="description" />
 
@@ -141,10 +141,10 @@
 <li class="toctree-l4"><a class="reference internal" href="hsx.html">HSX</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">變亮</a></li>
 <li class="toctree-l4"><a class="reference internal" href="misc.html">其他​​</a></li>
-<li class="toctree-l4"><a class="reference internal" href="mix.html">Mix</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mix.html">混合</a></li>
 <li class="toctree-l4"><a class="reference internal" href="modulo.html">取模</a></li>
-<li class="toctree-l4"><a class="reference internal" href="negative.html">Negative</a></li>
-<li class="toctree-l4"><a class="reference internal" href="quadratic.html">平方</a></li>
+<li class="toctree-l4"><a class="reference internal" href="negative.html">負片</a></li>
+<li class="toctree-l4"><a class="reference internal" href="quadratic.html">二次方</a></li>
 </ul>
 </li>
 </ul>
@@ -271,6 +271,10 @@
 <p>Blending modes that lighten the image.</p>
 <section id="color-dodge">
 <span id="bm-color-dodge"></span><span id="index-0"></span><h2>加亮色彩<a class="headerlink" href="#color-dodge" title="本標題的永久連結">¶</a></h2>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>亦稱作「加亮顏色」，Krita 5.0 前稱「色彩減淡」，英文稱為「Color Dodge」。</p>
+</div>
 <p>Similar to Divide.
 Inverts the top layer, and divides the lower layer by the inverted top layer.
 This results in a image with emphasized highlights, like Dodging would do in traditional darkroom photography.</p>
@@ -283,6 +287,10 @@ This results in a image with emphasized highlights, like Dodging would do in tra
 </section>
 <section id="gamma-illumination">
 <span id="bm-gamma-illumination"></span><span id="index-1"></span><h2>Gamma 光照<a class="headerlink" href="#gamma-illumination" title="本標題的永久連結">¶</a></h2>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>英文稱為「Gamma Illumination」。</p>
+</div>
 <p>Inverted Gamma Dark blending mode.</p>
 <figure class="align-center" id="id3">
 <img alt="../../_images/Blending_modes_Gamma_Illumination_Sample_image_with_dots.png" src="../../_images/Blending_modes_Gamma_Illumination_Sample_image_with_dots.png" />
@@ -293,6 +301,10 @@ This results in a image with emphasized highlights, like Dodging would do in tra
 </section>
 <section id="gamma-light">
 <span id="bm-gamma-light"></span><span id="index-2"></span><h2>Gamma 變亮<a class="headerlink" href="#gamma-light" title="本標題的永久連結">¶</a></h2>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>英文稱為「Gamma Light」。</p>
+</div>
 <p>Outputs the upper layer as power of the lower layer.</p>
 <figure class="align-center" id="id4">
 <img alt="../../_images/Blending_modes_Gamma_Light_Sample_image_with_dots.png" src="../../_images/Blending_modes_Gamma_Light_Sample_image_with_dots.png" />
@@ -303,6 +315,10 @@ This results in a image with emphasized highlights, like Dodging would do in tra
 </section>
 <section id="hard-light">
 <span id="bm-hard-light"></span><span id="index-3"></span><h2>實光<a class="headerlink" href="#hard-light" title="本標題的永久連結">¶</a></h2>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>Krita 5.0 前稱「強光」，英文稱為「Hard Light」。</p>
+</div>
 <p>Similar to Overlay.
 A combination of the Multiply and Screen blending modes, switching between both at a middle-lightness.</p>
 <p>Hard light checks if the color on the upperlayer has a lightness above 0.5. Unlike overlay, if the pixel is lighter than 0.5, it is blended like in Multiply mode, if not the pixel is blended like in Screen mode.</p>
@@ -316,6 +332,10 @@ A combination of the Multiply and Screen blending modes, switching between both 
 </section>
 <section id="bm-lighten">
 <span id="id1"></span><h2>變亮<a class="headerlink" href="#bm-lighten" title="本標題的永久連結">¶</a></h2>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>This blending mode is called &quot;Lighten&quot; in English.</p>
+</div>
 <p>With the darken, the upper layer's colors are checked for their lightness. Only if they are Lighter than the underlying color on the lower layer, will they be visible.</p>
 <figure class="align-center" id="id6">
 <img alt="../../_images/Blending_modes_Lighten_Sample_image_with_dots.png" src="../../_images/Blending_modes_Lighten_Sample_image_with_dots.png" />
@@ -326,6 +346,10 @@ A combination of the Multiply and Screen blending modes, switching between both 
 </section>
 <section id="lighter-color">
 <span id="bm-lighter-color"></span><h2>較亮色彩<a class="headerlink" href="#lighter-color" title="本標題的永久連結">¶</a></h2>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>英文稱為「Lighter Color」。</p>
+</div>
 <figure class="align-center" id="id7">
 <img alt="../../_images/Blending_modes_Lighter_Color_Sample_image_with_dots.png" src="../../_images/Blending_modes_Lighter_Color_Sample_image_with_dots.png" />
 <figcaption>
@@ -335,6 +359,10 @@ A combination of the Multiply and Screen blending modes, switching between both 
 </section>
 <section id="linear-dodge">
 <span id="bm-linear-dodge"></span><h2>線性加亮<a class="headerlink" href="#linear-dodge" title="本標題的永久連結">¶</a></h2>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>Krita 5.0 前稱「線性減淡」英文稱為「Linear Dodge」。</p>
+</div>
 <p>Exactly the same as <a class="reference internal" href="arithmetic.html#bm-addition"><span class="std std-ref">相加</span></a>.</p>
 <p>Put in for compatibility purposes.</p>
 <figure class="align-center" id="id8">
@@ -346,6 +374,10 @@ A combination of the Multiply and Screen blending modes, switching between both 
 </section>
 <section id="easy-dodge">
 <span id="bm-easy-dodge"></span><h2>簡單加亮<a class="headerlink" href="#easy-dodge" title="本標題的永久連結">¶</a></h2>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>Krita 5.0 前稱「簡單減淡」，英文稱為「Easy Dodge」。</p>
+</div>
 <p>Aims to solve issues with Color Dodge blending mode by using a formula which falloff is similar to Dodge, but the falloff rate is softer. It is within the range of 0.0f and 1.0f unlike Color Dodge mode.</p>
 <figure class="align-center" id="id9">
 <img alt="../../_images/Blending_modes_Easy_Dodge_Sample_image_with_dots.png" src="../../_images/Blending_modes_Easy_Dodge_Sample_image_with_dots.png" />
@@ -356,6 +388,10 @@ A combination of the Multiply and Screen blending modes, switching between both 
 </section>
 <section id="flat-light">
 <span id="bm-flatlight"></span><h2>平光源<a class="headerlink" href="#flat-light" title="本標題的永久連結">¶</a></h2>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>Krita 5.0 前稱「平光」，英文稱為「Flat Light」。</p>
+</div>
 <p>The spreadout variation of Vivid Light mode which range is between 0.0f and 1.0f.</p>
 <figure class="align-center" id="id10">
 <img alt="../../_images/Blending_modes_Flat_Light_Sample_image_with_dots.png" src="../../_images/Blending_modes_Flat_Light_Sample_image_with_dots.png" />
@@ -366,6 +402,10 @@ A combination of the Multiply and Screen blending modes, switching between both 
 </section>
 <section id="fog-lighten-ifs-illusions">
 <span id="bm-fog-lighten"></span><h2>霧化光亮 (IFS Illusions)<a class="headerlink" href="#fog-lighten-ifs-illusions" title="本標題的永久連結">¶</a></h2>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>Krita 5.0 前稱「霧光 (IFS 錯覺)」，英文稱為「Fog Lighten (IFS Illusions)」。</p>
+</div>
 <p>Lightens the image in a way that there is a 'fog' in the end result. This is due to the unique property of fog lighten in which midtones combined are lighter than non-midtones blend.</p>
 <figure class="align-center" id="id11">
 <img alt="../../_images/Blending_modes_Fog_Light_Sample_image_with_dots.png" src="../../_images/Blending_modes_Fog_Light_Sample_image_with_dots.png" />
@@ -376,7 +416,11 @@ A combination of the Multiply and Screen blending modes, switching between both 
 </section>
 <section id="linear-light">
 <span id="bm-linear-light"></span><h2>線性光<a class="headerlink" href="#linear-light" title="本標題的永久連結">¶</a></h2>
-<p>Similar to <a class="reference internal" href="mix.html#bm-overlay"><span class="std std-ref">Overlay</span></a>.</p>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>英文稱為「Linear Light」。</p>
+</div>
+<p>Similar to <a class="reference internal" href="mix.html#bm-overlay"><span class="std std-ref">覆蓋</span></a>.</p>
 <p>Combines <a class="reference internal" href="#bm-linear-dodge"><span class="std std-ref">線性加亮</span></a> and <a class="reference internal" href="darken.html#bm-linear-burn"><span class="std std-ref">線性加深</span></a>. When the lightness of the upper-pixel is higher than 0.5, it uses Linear dodge, if not, Linear burn to blend the pixels.</p>
 <figure class="align-center" id="id12">
 <img alt="../../_images/Blending_modes_Linear_Light_Gray_0.4_and_Gray_0.5.png" src="../../_images/Blending_modes_Linear_Light_Gray_0.4_and_Gray_0.5.png" />
@@ -398,12 +442,16 @@ A combination of the Multiply and Screen blending modes, switching between both 
 </figure>
 </section>
 <section id="luminosity-shine-sai">
-<span id="bm-luminosity-shine-sai"></span><h2>發光 / Shine (SAI)<a class="headerlink" href="#luminosity-shine-sai" title="本標題的永久連結">¶</a></h2>
+<span id="bm-luminosity-shine-sai"></span><h2>發光 (SAI)<a class="headerlink" href="#luminosity-shine-sai" title="本標題的永久連結">¶</a></h2>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>Krita 5.0 前稱「光度 / Shine (SAI)」，英文稱為「Luminosity/Shine (SAI)」。</p>
+</div>
 <p>Similar to <a class="reference internal" href="arithmetic.html#bm-addition"><span class="std std-ref">相加</span></a>.</p>
 <p>Takes the opacity of the new color (combined opacity of the layer, the brush, any used transparency masks etc.) and multiples the color by the opacity, then adds to the original/previous color.</p>
 <div class="math notranslate nohighlight">
 \[c_{new} = c_{above}*{\alpha}_{above} + c_{below}\]</div>
-<p>The result of this operation is the same as combining the new pixels with a fully opaque black layer in a <a class="reference internal" href="mix.html#bm-normal"><span class="std std-ref">Normal</span></a> mode and then combining the result with the original layer using <a class="reference internal" href="arithmetic.html#bm-addition"><span class="std std-ref">相加</span></a> mode. It should be also the same as the results of &quot;Luminosity&quot; blending mode in SAI1 or &quot;Shine&quot; blending mode in SAI2.</p>
+<p>The result of this operation is the same as combining the new pixels with a fully opaque black layer in a <a class="reference internal" href="mix.html#bm-normal"><span class="std std-ref">正常</span></a> mode and then combining the result with the original layer using <a class="reference internal" href="arithmetic.html#bm-addition"><span class="std std-ref">相加</span></a> mode. It should be also the same as the results of &quot;Luminosity&quot; blending mode in SAI1 or &quot;Shine&quot; blending mode in SAI2.</p>
 <figure class="align-center" id="id15">
 <img alt="../../_images/Blending_modes_Luminosity_Shine_SAI_Sample_image_with_dots.png" src="../../_images/Blending_modes_Luminosity_Shine_SAI_Sample_image_with_dots.png" />
 <figcaption>
@@ -413,6 +461,10 @@ A combination of the Multiply and Screen blending modes, switching between both 
 </section>
 <section id="p-norm-a">
 <span id="bm-p-norm-a"></span><h2>P-Norm A<a class="headerlink" href="#p-norm-a" title="本標題的永久連結">¶</a></h2>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>暫無中文名稱。</p>
+</div>
 <p>P-Norm A is similar to Screen blending mode which slightly darken images, and the falloff is more consistent all-around in terms of outline of values. Can be used an alternative to screen blending mode at times.</p>
 <figure class="align-center" id="id16">
 <img alt="../../_images/Blending_modes_P-Norm_A_Sample_image_with_dots.png" src="../../_images/Blending_modes_P-Norm_A_Sample_image_with_dots.png" />
@@ -423,6 +475,10 @@ A combination of the Multiply and Screen blending modes, switching between both 
 </section>
 <section id="p-norm-b">
 <span id="bm-p-norm-b"></span><h2>P-Norm B<a class="headerlink" href="#p-norm-b" title="本標題的永久連結">¶</a></h2>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>暫無中文名稱。</p>
+</div>
 <p>P-Norm B is similar to Screen blending mode which slightly darken images, and the falloff is more consistent all-around in terms of outline of values. The falloff is sharper in P-Norm B than in P-Norm A. Can be used an alternative to screen blending mode at times.</p>
 <figure class="align-center" id="id17">
 <img alt="../../_images/Blending_modes_P-Norm_B_Sample_image_with_dots.png" src="../../_images/Blending_modes_P-Norm_B_Sample_image_with_dots.png" />
@@ -433,6 +489,10 @@ A combination of the Multiply and Screen blending modes, switching between both 
 </section>
 <section id="pin-light">
 <span id="bm-pin-light"></span><h2>微光源<a class="headerlink" href="#pin-light" title="本標題的永久連結">¶</a></h2>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>亦稱作「小光源」，Krita 5.0 前稱「點光」，英文稱為「Pin Light」。</p>
+</div>
 <p>Checks which is darker the lower layer's pixel or the upper layer's double so bright.
 Then checks which is brighter of that result or the inversion of the doubled lower layer.</p>
 <figure class="align-center" id="id18">
@@ -456,6 +516,10 @@ Then checks which is brighter of that result or the inversion of the doubled low
 </section>
 <section id="screen">
 <span id="bm-screen"></span><h2>濾色<a class="headerlink" href="#screen" title="本標題的永久連結">¶</a></h2>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>英文稱為「Screen」。</p>
+</div>
 <p>Perceptually the opposite of <a class="reference internal" href="arithmetic.html#bm-multiply"><span class="std std-ref">色彩增值（相乘）</span></a>.</p>
 <p>Mathematically, Screen takes both layers, inverts them, then multiplies them, and finally inverts them again.</p>
 <p>This results in light tones being more opaque and dark tones transparent.</p>
@@ -480,6 +544,10 @@ Then checks which is brighter of that result or the inversion of the doubled low
 </section>
 <section id="soft-light-photoshop-soft-light-svg">
 <span id="bm-soft-light"></span><h2>柔光 (Photoshop) 與柔光 (SVG)<a class="headerlink" href="#soft-light-photoshop-soft-light-svg" title="本標題的永久連結">¶</a></h2>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>英文稱為「Soft Light (Photoshop)」與「Soft Light SVG」。</p>
+</div>
 <p>These are less harsh versions of Hard Light, not resulting in full black or full white.</p>
 <p>The SVG version is slightly different to the Photoshop version in that it uses a slightly different bit of formula when the lightness of the lower pixel is lower than 25%, this prevents the strength of the brightness increase.</p>
 <figure class="align-center" id="id24">
@@ -497,6 +565,10 @@ Then checks which is brighter of that result or the inversion of the doubled low
 </section>
 <section id="soft-light-ifs-illusions-soft-light-pegtop-delphi">
 <h2>柔光 (IFS Illusions) 與柔光 (Pegtop-Delphi)<a class="headerlink" href="#soft-light-ifs-illusions-soft-light-pegtop-delphi" title="本標題的永久連結">¶</a></h2>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>英文稱為「Soft Light (IFS Illusions)」與「Soft Light (Pegtop-Delphi)」。</p>
+</div>
 <p>These are alternative versions of standard softlight modes which are made to solve discontinuities seen with the standard blend modes. Sometimes, these modes offer subtle advantages by offering more contrast within some areas, and these advantages are more or less noticeable within different color spaces and depth.</p>
 <figure class="align-center" id="id26">
 <img alt="../../_images/Blending_modes_Soft_Light_IFS_Sample_image_with_dots.png" src="../../_images/Blending_modes_Soft_Light_IFS_Sample_image_with_dots.png" />
@@ -513,6 +585,10 @@ Then checks which is brighter of that result or the inversion of the doubled low
 </section>
 <section id="super-light">
 <span id="bm-super-light"></span><h2>超光<a class="headerlink" href="#super-light" title="本標題的永久連結">¶</a></h2>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>Krita 5.0 前稱「超亮」，英文稱為「Super Light」。</p>
+</div>
 <p>Smoother variation of Hard Light blending mode with more contrast in it.</p>
 <figure class="align-center" id="id28">
 <img alt="../../_images/Blending_modes_Super_Light_Sample_image_with_dots.png" src="../../_images/Blending_modes_Super_Light_Sample_image_with_dots.png" />
@@ -523,6 +599,10 @@ Then checks which is brighter of that result or the inversion of the doubled low
 </section>
 <section id="tint-ifs-illusions">
 <span id="bm-tint"></span><h2>淡色化 (IFS Illusions)<a class="headerlink" href="#tint-ifs-illusions" title="本標題的永久連結">¶</a></h2>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>Krita 5.0 前稱「染色 (IFS 錯覺)」，英文稱為「Tint (IFS Illusions)」。</p>
+</div>
 <p>Basically, the blending mode only ends in shades of tints. This means that it's very useful for painting light colors while still in the range of tints.</p>
 <figure class="align-center" id="id29">
 <img alt="../../_images/Blending_modes_Tint_Sample_image_with_dots.png" src="../../_images/Blending_modes_Tint_Sample_image_with_dots.png" />
@@ -533,11 +613,15 @@ Then checks which is brighter of that result or the inversion of the doubled low
 </section>
 <section id="vivid-light">
 <span id="bm-vivid-light"></span><h2>強光源<a class="headerlink" href="#vivid-light" title="本標題的永久連結">¶</a></h2>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>亦稱作「强烈光源」，Krita 5.0 前稱「亮光」，英文稱為「Vivid Light」。</p>
+</div>
 <p>Similar to Overlay.</p>
 <p>Mixes both Color Dodge and Burn blending modes. If the color of the upper layer is darker than 50%, the blending mode will be Burn, if not the blending mode will be Color Dodge.</p>
 <div class="admonition warning">
 <p class="admonition-title">警告</p>
-<p>This algorithm doesn't use color dodge and burn, we don't know WHAT it does do but for Color Dodge and Burn you need to use <a class="reference internal" href="mix.html#bm-hard-mix"><span class="std std-ref">Hard Mix</span></a>.</p>
+<p>This algorithm doesn't use color dodge and burn, we don't know WHAT it does do but for Color Dodge and Burn you need to use <a class="reference internal" href="mix.html#bm-hard-mix"><span class="std std-ref">實色混合</span></a>.</p>
 </div>
 <figure class="align-center" id="id30">
 <img alt="../../_images/Blending_modes_Vivid_Light_Sample_image_with_dots.png" src="../../_images/Blending_modes_Vivid_Light_Sample_image_with_dots.png" />
@@ -571,7 +655,7 @@ Then checks which is brighter of that result or the inversion of the doubled low
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>12c8f81</code>
+          修訂版本 <code>cd290f4</code>
         </span>
       
 

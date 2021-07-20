@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-07-20T07:50:31" />
+  <meta property="og:article:modified_time" content="2021-07-20T10:25:25" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="Page about the arithmetic blending modes in Krita: Addition, Divide, Inverse Subtract, Multiply and Subtract." lang="en" name="description" xml:lang="en" />
 
@@ -141,10 +141,10 @@
 <li class="toctree-l4"><a class="reference internal" href="hsx.html">HSX</a></li>
 <li class="toctree-l4"><a class="reference internal" href="lighten.html">變亮</a></li>
 <li class="toctree-l4"><a class="reference internal" href="misc.html">其他​​</a></li>
-<li class="toctree-l4"><a class="reference internal" href="mix.html">Mix</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mix.html">混合</a></li>
 <li class="toctree-l4"><a class="reference internal" href="modulo.html">取模</a></li>
-<li class="toctree-l4"><a class="reference internal" href="negative.html">Negative</a></li>
-<li class="toctree-l4"><a class="reference internal" href="quadratic.html">平方</a></li>
+<li class="toctree-l4"><a class="reference internal" href="negative.html">負片</a></li>
+<li class="toctree-l4"><a class="reference internal" href="quadratic.html">二次方</a></li>
 </ul>
 </li>
 </ul>
@@ -271,6 +271,10 @@
 <p>These blending modes are based on simple maths.</p>
 <section id="addition">
 <span id="bm-addition"></span><span id="index-0"></span><h2>相加<a class="headerlink" href="#addition" title="本標題的永久連結">¶</a></h2>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>英文稱為「Addition」。</p>
+</div>
 <p>Adds the numerical values of two colors together:</p>
 <p>Yellow(1, 1, 0) + Blue(0, 0, 1) = White(1, 1, 1)</p>
 <p>Darker Gray(0.4, 0.4, 0.4) + Lighter Gray(0.5, 0.5, 0.5) = Even Lighter Gray (0.9, 0.9, 0.9)</p>
@@ -304,6 +308,10 @@
 </section>
 <section id="divide">
 <span id="bm-divide"></span><h2>除去<a class="headerlink" href="#divide" title="本標題的永久連結">¶</a></h2>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>英文稱為「Divide」。</p>
+</div>
 <p>Divides the numerical value from the lower color by the upper color.</p>
 <p>Red(1, 0, 0) / Gray(0.5, 0.5, 0.5) = (2, 0, 0) → Red(1, 0, 0)</p>
 <p>Darker Gray(0.4, 0.4, 0.4) / Lighter Gray(0.5, 0.5, 0.5) = Even Lighter Gray (0.8, 0.8, 0.8)</p>
@@ -329,6 +337,10 @@
 </section>
 <section id="inverse-subtract">
 <span id="bm-inverse-subtract"></span><h2>減去反轉值<a class="headerlink" href="#inverse-subtract" title="本標題的永久連結">¶</a></h2>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>英文稱為「Inverse Subtract」。</p>
+</div>
 <p>This inverts the lower layer before subtracting it from the upper layer.</p>
 <p>Lighter Gray(0.5, 0.5, 0.5)_(1_Darker Gray(0.4, 0.4, 0.4)) = (-0.1, -0.1, -0.1) → Black(0, 0, 0)</p>
 <figure class="align-center" id="id8">
@@ -353,7 +365,11 @@
 </section>
 <section id="multiply">
 <span id="bm-multiply"></span><h2>色彩增值（相乘）<a class="headerlink" href="#multiply" title="本標題的永久連結">¶</a></h2>
-<p>Krita 5.0 前稱「正片疊底」。將兩種色彩的數值相乘，但不超過上限值。</p>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>Krita 5.0 前稱「正片疊底」，英文稱為「Multiply」。</p>
+</div>
+<p>將兩種色彩的數值相乘，但不超過上限值。</p>
 <p>This is often used to color in a black and white lineart.
 One puts the black and white lineart on top, sets the layer to 'Multiply', and then draws in color on a layer beneath. Multiply will allow all the color to go through.</p>
 <p>White(1,1,1) x White(1, 1, 1) = White(1, 1, 1)</p>
@@ -381,6 +397,10 @@ One puts the black and white lineart on top, sets the layer to 'Multiply', and t
 </section>
 <section id="subtract">
 <span id="bm-subtract"></span><h2>減去<a class="headerlink" href="#subtract" title="本標題的永久連結">¶</a></h2>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>英文稱為「Subtract」。</p>
+</div>
 <p>Subtracts the top layer from the bottom layer.</p>
 <p>White(1, 1, 1)_White(1, 1, 1) = Black(0, 0, 0)</p>
 <p>White(1, 1, 1)_Gray(0.5, 0.5, 0.5) = Gray(0.5, 0.5, 0.5)</p>
@@ -430,7 +450,7 @@ One puts the black and white lineart on top, sets the layer to 'Multiply', and t
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>12c8f81</code>
+          修訂版本 <code>cd290f4</code>
         </span>
       
 
