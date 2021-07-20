@@ -183,7 +183,7 @@ Advanced Transform Tools
 
 Not just rotate and scale, but also cage, wrap, liquify and non-destructive transforms with the transform tool and masks.
 
-.. image:: /images/tools/Krita_transforms_recursive.png
+.. image:: /images/tools/Krita_transforms_liquefy.png
    :align: center
 
 More Filters and non-destructive filter layers and masks

@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-07-19T16:20:17" />
+  <meta property="og:article:modified_time" content="2021-07-20T05:28:11" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="Page about the lighten blending modes in Krita: Color Dodge, Gamma Illumination, Gamma Light, Easy Dodge, Flat Light, Fog Lighten, Hard Light, Lighten, Lighter Color, Linear Dodge, Linear Light, P-Norm A, P-Norm B, Pin Light, Screen, Soft Light, Tint and Vivid Light." name="description" />
 
@@ -158,7 +158,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../filters.html">濾鏡</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../hdr_display.html">HDR 顯示器</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../image_split.html">分割影像</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../import_animation.html">Import Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../import_animation.html">匯入動畫</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../instant_preview.html">即時預覽</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../krita_4_preset_bundle.html">Krita 4 資源包介紹</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../layers_and_masks.html">圖層及遮罩</a></li>
@@ -271,7 +271,9 @@
 <p>Blending modes that lighten the image.</p>
 <section id="color-dodge">
 <span id="bm-color-dodge"></span><span id="index-0"></span><h2>加亮色彩<a class="headerlink" href="#color-dodge" title="本標題的永久連結">¶</a></h2>
-<p>亦稱作「加亮顏色」，Krita 5.0 前稱「色彩減淡」，英文稱為「Color Dodge」。Similar to Divide. Inverts the top layer, and divides the lower layer by the inverted top layer. This results in a image with emphasized highlights, like Dodging would do in traditional darkroom photography.</p>
+<p>Similar to Divide.
+Inverts the top layer, and divides the lower layer by the inverted top layer.
+This results in a image with emphasized highlights, like Dodging would do in traditional darkroom photography.</p>
 <figure class="align-center" id="id2">
 <img alt="../../_images/Blending_modes_Color_Dodge_Sample_image_with_dots.png" src="../../_images/Blending_modes_Color_Dodge_Sample_image_with_dots.png" />
 <figcaption>
@@ -301,7 +303,8 @@
 </section>
 <section id="hard-light">
 <span id="bm-hard-light"></span><span id="index-3"></span><h2>實光<a class="headerlink" href="#hard-light" title="本標題的永久連結">¶</a></h2>
-<p>Krita 5.0 前稱「強光」。Similar to Overlay. A combination of the Multiply and Screen blending modes, switching between both at a middle-lightness.</p>
+<p>Similar to Overlay.
+A combination of the Multiply and Screen blending modes, switching between both at a middle-lightness.</p>
 <p>Hard light checks if the color on the upperlayer has a lightness above 0.5. Unlike overlay, if the pixel is lighter than 0.5, it is blended like in Multiply mode, if not the pixel is blended like in Screen mode.</p>
 <p>Effectively, this decreases contrast.</p>
 <figure class="align-center" id="id5">
@@ -332,7 +335,7 @@
 </section>
 <section id="linear-dodge">
 <span id="bm-linear-dodge"></span><h2>線性加亮<a class="headerlink" href="#linear-dodge" title="本標題的永久連結">¶</a></h2>
-<p>Krita 5.0 前稱「線性減淡」。Exactly the same as <a class="reference internal" href="arithmetic.html#bm-addition"><span class="std std-ref">相加</span></a>.</p>
+<p>Exactly the same as <a class="reference internal" href="arithmetic.html#bm-addition"><span class="std std-ref">相加</span></a>.</p>
 <p>Put in for compatibility purposes.</p>
 <figure class="align-center" id="id8">
 <img alt="../../_images/Blending_modes_Linear_Dodge_Sample_image_with_dots.png" src="../../_images/Blending_modes_Linear_Dodge_Sample_image_with_dots.png" />
@@ -343,7 +346,7 @@
 </section>
 <section id="easy-dodge">
 <span id="bm-easy-dodge"></span><h2>簡單加亮<a class="headerlink" href="#easy-dodge" title="本標題的永久連結">¶</a></h2>
-<p>Krita 5.0 前稱「簡單減淡」。Aims to solve issues with Color Dodge blending mode by using a formula which falloff is similar to Dodge, but the falloff rate is softer. It is within the range of 0.0f and 1.0f unlike Color Dodge mode.</p>
+<p>Aims to solve issues with Color Dodge blending mode by using a formula which falloff is similar to Dodge, but the falloff rate is softer. It is within the range of 0.0f and 1.0f unlike Color Dodge mode.</p>
 <figure class="align-center" id="id9">
 <img alt="../../_images/Blending_modes_Easy_Dodge_Sample_image_with_dots.png" src="../../_images/Blending_modes_Easy_Dodge_Sample_image_with_dots.png" />
 <figcaption>
@@ -353,7 +356,7 @@
 </section>
 <section id="flat-light">
 <span id="bm-flatlight"></span><h2>平光源<a class="headerlink" href="#flat-light" title="本標題的永久連結">¶</a></h2>
-<p>Krita 5.0 前稱「平光」。The spreadout variation of Vivid Light mode which range is between 0.0f and 1.0f.</p>
+<p>The spreadout variation of Vivid Light mode which range is between 0.0f and 1.0f.</p>
 <figure class="align-center" id="id10">
 <img alt="../../_images/Blending_modes_Flat_Light_Sample_image_with_dots.png" src="../../_images/Blending_modes_Flat_Light_Sample_image_with_dots.png" />
 <figcaption>
@@ -363,7 +366,7 @@
 </section>
 <section id="fog-lighten-ifs-illusions">
 <span id="bm-fog-lighten"></span><h2>霧化光亮 (IFS Illusions)<a class="headerlink" href="#fog-lighten-ifs-illusions" title="本標題的永久連結">¶</a></h2>
-<p>Krita 5.0 前稱「霧光 (IFS 錯覺)」。Lightens the image in a way that there is a 'fog' in the end result. This is due to the unique property of fog lighten in which midtones combined are lighter than non-midtones blend.</p>
+<p>Lightens the image in a way that there is a 'fog' in the end result. This is due to the unique property of fog lighten in which midtones combined are lighter than non-midtones blend.</p>
 <figure class="align-center" id="id11">
 <img alt="../../_images/Blending_modes_Fog_Light_Sample_image_with_dots.png" src="../../_images/Blending_modes_Fog_Light_Sample_image_with_dots.png" />
 <figcaption>
@@ -396,7 +399,7 @@
 </section>
 <section id="luminosity-shine-sai">
 <span id="bm-luminosity-shine-sai"></span><h2>發光 / Shine (SAI)<a class="headerlink" href="#luminosity-shine-sai" title="本標題的永久連結">¶</a></h2>
-<p>Krita 5.0 前稱「光度 / Shine (SAI)」，英文稱為「Luminosity/Shine (SAI)」。Similar to <a class="reference internal" href="arithmetic.html#bm-addition"><span class="std std-ref">相加</span></a>.</p>
+<p>Similar to <a class="reference internal" href="arithmetic.html#bm-addition"><span class="std std-ref">相加</span></a>.</p>
 <p>Takes the opacity of the new color (combined opacity of the layer, the brush, any used transparency masks etc.) and multiples the color by the opacity, then adds to the original/previous color.</p>
 <div class="math notranslate nohighlight">
 \[c_{new} = c_{above}*{\alpha}_{above} + c_{below}\]</div>
@@ -430,7 +433,8 @@
 </section>
 <section id="pin-light">
 <span id="bm-pin-light"></span><h2>微光源<a class="headerlink" href="#pin-light" title="本標題的永久連結">¶</a></h2>
-<p>亦稱作「小光源」，Krita 5.0 前稱「點光」。Checks which is darker the lower layer's pixel or the upper layer's double so bright. Then checks which is brighter of that result or the inversion of the doubled lower layer.</p>
+<p>Checks which is darker the lower layer's pixel or the upper layer's double so bright.
+Then checks which is brighter of that result or the inversion of the doubled lower layer.</p>
 <figure class="align-center" id="id18">
 <img alt="../../_images/Blending_modes_Pin_Light_Gray_0.4_and_Gray_0.5.png" src="../../_images/Blending_modes_Pin_Light_Gray_0.4_and_Gray_0.5.png" />
 <figcaption>
@@ -509,7 +513,7 @@
 </section>
 <section id="super-light">
 <span id="bm-super-light"></span><h2>超光<a class="headerlink" href="#super-light" title="本標題的永久連結">¶</a></h2>
-<p>Krita 5.0 前稱「超亮」。Smoother variation of Hard Light blending mode with more contrast in it.</p>
+<p>Smoother variation of Hard Light blending mode with more contrast in it.</p>
 <figure class="align-center" id="id28">
 <img alt="../../_images/Blending_modes_Super_Light_Sample_image_with_dots.png" src="../../_images/Blending_modes_Super_Light_Sample_image_with_dots.png" />
 <figcaption>
@@ -519,7 +523,7 @@
 </section>
 <section id="tint-ifs-illusions">
 <span id="bm-tint"></span><h2>淡色化 (IFS Illusions)<a class="headerlink" href="#tint-ifs-illusions" title="本標題的永久連結">¶</a></h2>
-<p>Krita 5.0 前稱「染色 (IFS 錯覺)」。Basically, the blending mode only ends in shades of tints. This means that it's very useful for painting light colors while still in the range of tints.</p>
+<p>Basically, the blending mode only ends in shades of tints. This means that it's very useful for painting light colors while still in the range of tints.</p>
 <figure class="align-center" id="id29">
 <img alt="../../_images/Blending_modes_Tint_Sample_image_with_dots.png" src="../../_images/Blending_modes_Tint_Sample_image_with_dots.png" />
 <figcaption>
@@ -529,7 +533,7 @@
 </section>
 <section id="vivid-light">
 <span id="bm-vivid-light"></span><h2>強光源<a class="headerlink" href="#vivid-light" title="本標題的永久連結">¶</a></h2>
-<p>亦稱作「强烈光源」，Krita 5.0 前稱「亮光」。Similar to Overlay.</p>
+<p>Similar to Overlay.</p>
 <p>Mixes both Color Dodge and Burn blending modes. If the color of the upper layer is darker than 50%, the blending mode will be Burn, if not the blending mode will be Color Dodge.</p>
 <div class="admonition warning">
 <p class="admonition-title">警告</p>
@@ -567,7 +571,7 @@
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>7c271ce</code>
+          修訂版本 <code>5d9904c</code>
         </span>
       
 
