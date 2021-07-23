@@ -21,9 +21,8 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-07-20T15:19:39" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<meta content="How to make and optimise images for use in the manual." name="description" />
+  <meta property="og:article:modified_time" content="2021-07-23T16:27:40" />
+  <meta content="How to make and optimise images for use in the manual." name="description" />
 
   
   
@@ -248,7 +247,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="images-for-the-manual">
+  <div class="section" id="images-for-the-manual">
 <span id="images-for-manual"></span><span id="index-0"></span><h1><a class="toc-backref" href="#id6">供手冊使用的影像</a><a class="headerlink" href="#images-for-the-manual" title="本標題的永久連結">¶</a></h1>
 <p>This one is a little bit an extension to <a class="reference internal" href="../tutorials/saving-for-the-web.html#saving-for-the-web"><span class="std std-ref">Saving For The Web</span></a>. In particular it deals with making images for the manual, and how to optimise images.</p>
 <div class="contents topic" id="id1">
@@ -297,15 +296,15 @@
 </li>
 </ul>
 </div>
-<section id="tools-for-making-screenshots">
+<div class="section" id="tools-for-making-screenshots">
 <h2><a class="toc-backref" href="#id7">Tools for making screenshots</a><a class="headerlink" href="#tools-for-making-screenshots" title="本標題的永久連結">¶</a></h2>
 <p>Now, if you wish to make an image of the screen with all the dockers and tools, then <a class="reference internal" href="../tutorials/saving-for-the-web.html#saving-for-the-web"><span class="std std-ref">Saving For The Web</span></a> won't be very helpful: It only saves out the canvas contents, after all!</p>
 <p>So, instead, we'll make a screenshot. Depending on your operating system, there are several screenshot utilities available.</p>
-<section id="windows">
+<div class="section" id="windows">
 <h3><a class="toc-backref" href="#id8">Windows</a><a class="headerlink" href="#windows" title="本標題的永久連結">¶</a></h3>
 <p>Windows has a build-in screenshot tool. It is by default on the <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Print</kbd> <kbd class="kbd docutils literal notranslate">Screen</kbd></kbd> key. On laptops you will sometimes need to use the <kbd class="kbd docutils literal notranslate">Fn</kbd> key.</p>
-</section>
-<section id="linux">
+</div>
+<div class="section" id="linux">
 <h3><a class="toc-backref" href="#id9">Linux</a><a class="headerlink" href="#linux" title="本標題的永久連結">¶</a></h3>
 <p>Both Gnome and KDE have decent screenshot tools showing up by default when using the <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Print</kbd> <kbd class="kbd docutils literal notranslate">Screen</kbd></kbd> key, as well do other popular desktop environments. If, for whatever reason, you have no</p>
 <dl>
@@ -320,13 +319,13 @@
 <ul class="simple">
 <li><p><a class="reference external" href="https://github.com/phw/peek">Peek</a> -- This one has an AppImage and a very easy user-interface. Like many screenrecording programs it does show trouble on Wayland.</p></li>
 </ul>
-</section>
-<section id="macos">
+</div>
+<div class="section" id="macos">
 <h3><a class="toc-backref" href="#id10">macOS</a><a class="headerlink" href="#macos" title="本標題的永久連結">¶</a></h3>
 <p>The Screenshot hotkey on macOS is <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Command</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">3</kbd></kbd>, according to <a class="reference external" href="https://support.apple.com/en-us/HT201361">the official apple documentation</a>.</p>
-</section>
-</section>
-<section id="the-appropriate-file-format-for-the-job">
+</div>
+</div>
+<div class="section" id="the-appropriate-file-format-for-the-job">
 <h2><a class="toc-backref" href="#id11">The appropriate file format for the job</a><a class="headerlink" href="#the-appropriate-file-format-for-the-job" title="本標題的永久連結">¶</a></h2>
 <p>Different file formats are better for certain types of images. In the end, we want to have images that look nice and have a low filesize, because that makes the manual easier to download or browse on the internet.</p>
 <dl class="simple">
@@ -344,18 +343,18 @@
 <p>The logic is the way how each of these saves colors. JPEG is ideal for photos and images with a lot of gradients because it <a class="reference internal" href="../general_concepts/file_formats/lossy_lossless.html#lossy-compression"><span class="std std-ref">compresses differently</span></a>. However, contrasts don't do well in JPEG. PNG does a lot better with images with sharp contrasts, while in some cases we can even have less than 256 colors, so GIF might be better.</p>
 <p>Grayscale images, even when they have a lot of gradients variation, should be PNG. The reason is that when we use full color images, we are, depending on the image, using 3 to 5 numbers to describe those values, with each of those values having a possibility to contain any of 256 values. JPEG and other 'lossy' file formats use clever psychological tricks to cut back on the amount of values an image needs to show its contents. However, when we make grayscale images, we only keep track of the lightness. The lightness is only one number, that can have 256 values, making it much easier to just use GIF or PNG, instead of JPEG which could have nasty artifacts. (And, it is also a bit smaller)</p>
 <p><strong>When in doubt, use PNG.</strong></p>
-</section>
-<section id="optimising-images-in-quality-and-size">
+</div>
+<div class="section" id="optimising-images-in-quality-and-size">
 <h2><a class="toc-backref" href="#id12">Optimising Images in quality and size</a><a class="headerlink" href="#optimising-images-in-quality-and-size" title="本標題的永久連結">¶</a></h2>
 <p>Now, while most image editors try to give good defaults on image sizes, we can often make them even smaller by using certain tools.</p>
-<section id="id2">
+<div class="section" id="id2">
 <h3><a class="toc-backref" href="#id13">Windows</a><a class="headerlink" href="#id2" title="本標題的永久連結">¶</a></h3>
 <p>The most commonly recommended tool for this on Windows is <a class="reference external" href="https://www.irfanview.com/">IrfranView</a>, but the dear writer of this document has no idea how to use it exactly.</p>
 <p>The other option is to use PNGCrush as mentioned in the linux section.</p>
-</section>
-<section id="id3">
+</div>
+<div class="section" id="id3">
 <h3><a class="toc-backref" href="#id14">Linux</a><a class="headerlink" href="#id3" title="本標題的永久連結">¶</a></h3>
-<section id="optimising-png">
+<div class="section" id="optimising-png">
 <h4><a class="toc-backref" href="#id15">Optimising PNG</a><a class="headerlink" href="#optimising-png" title="本標題的永久連結">¶</a></h4>
 <p>There is a whole laundry list of <a class="reference external" href="https://css-ig.net/png-tools-overview">PNG optimisation tools</a> available on Linux. They come in two categories: Lossy (Using psychological tricks), and Lossless (trying to compress the data more conventionally). The following are however the most recommended:</p>
 <dl>
@@ -381,46 +380,46 @@ Usage:</p>
 <p>where image is the filename. OptiPNG will then proceed to test several compression algorithms and <strong>overwrite</strong> the <em>image.png</em> file with the optimised version. You can avoid overwriting with the <code class="docutils literal notranslate"><span class="pre">--out</span> <span class="pre">imageout.png</span></code> command.</p>
 </dd>
 </dl>
-</section>
-<section id="optimising-gif">
+</div>
+<div class="section" id="optimising-gif">
 <h4><a class="toc-backref" href="#id16">Optimising GIF</a><a class="headerlink" href="#optimising-gif" title="本標題的永久連結">¶</a></h4>
 <ul class="simple">
 <li><p><a class="reference external" href="http://blog.pkh.me/p/21-high-quality-gif-with-ffmpeg.html">FFmpeg</a></p></li>
 <li><p><a class="reference external" href="https://gif.ski/">Gifski</a></p></li>
 <li><p><a class="reference external" href="https://kornel.ski/lossygif">LossyGif</a></p></li>
 </ul>
-</section>
-<section id="optimising-jpeg">
+</div>
+<div class="section" id="optimising-jpeg">
 <h4><a class="toc-backref" href="#id17">Optimising JPEG</a><a class="headerlink" href="#optimising-jpeg" title="本標題的永久連結">¶</a></h4>
 <p>Now, JPEG is really tricky to optimize properly. This is because it is a <a class="reference internal" href="../general_concepts/file_formats/lossy_lossless.html#lossy-compression"><span class="std std-ref">lossy file format</span></a>, and that means that it uses psychological tricks to store its data.</p>
 <p>However, tricks like these become very obvious when your image has a lot of contrast, like text. Furthermore, JPEGs don't do well when they are resaved over and over. Therefore, make sure that there's a lossless version of the image somewhere that you can edit, and that only the final result is in JPEG and gets compressed further.</p>
-</section>
-</section>
-<section id="id4">
+</div>
+</div>
+<div class="section" id="id4">
 <h3><a class="toc-backref" href="#id18">macOS</a><a class="headerlink" href="#id4" title="本標題的永久連結">¶</a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="https://imageoptim.com/mac">ImageOptim</a> -- A Graphical User Interface wrapper around commandline tools like PNGquant and gifski.</p></li>
 </ul>
-</section>
-</section>
-<section id="editing-the-metadata-of-a-file">
+</div>
+</div>
+<div class="section" id="editing-the-metadata-of-a-file">
 <h2><a class="toc-backref" href="#id19">Editing the metadata of a file</a><a class="headerlink" href="#editing-the-metadata-of-a-file" title="本標題的永久連結">¶</a></h2>
 <p>Sometimes, personal information gets embedded into an image file. Othertimes, we want to embed information into a file to document it better.</p>
 <p>There are no less than 3 to 4 different ways of handling metadata, and metadata has different ways of handling certain files.</p>
 <p>The most commonly used tool to edit metadata is <strong class="program">ExifTool</strong>, another is to use <strong class="program">ImageMagick</strong>.</p>
-<section id="windows-and-macos">
+<div class="section" id="windows-and-macos">
 <h3><a class="toc-backref" href="#id20">Windows and macOS</a><a class="headerlink" href="#windows-and-macos" title="本標題的永久連結">¶</a></h3>
 <p>To get exiftool, <a class="reference external" href="https://www.sno.phy.queensu.ca/~phil/exiftool/">just get it from the website</a>.</p>
-</section>
-<section id="id5">
+</div>
+<div class="section" id="id5">
 <h3><a class="toc-backref" href="#id21">Linux</a><a class="headerlink" href="#id5" title="本標題的永久連結">¶</a></h3>
 <p>On Linux, you can also install exiftool.</p>
 <dl class="simple">
 <dt>Debian/Ubuntu</dt><dd><p><code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt-get</span> <span class="pre">install</span> <span class="pre">libimage-exiftool-perl</span></code></p>
 </dd>
 </dl>
-</section>
-<section id="viewing-metadata">
+</div>
+<div class="section" id="viewing-metadata">
 <h3><a class="toc-backref" href="#id22">Viewing Metadata</a><a class="headerlink" href="#viewing-metadata" title="本標題的永久連結">¶</a></h3>
 <p>Change the directory to the folder where the image is located and type:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">exiftool</span> <span class="n">image</span>
@@ -431,8 +430,8 @@ Usage:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">identify</span> <span class="o">-</span><span class="n">verbose</span> <span class="n">image</span>
 </pre></div>
 </div>
-</section>
-<section id="stripping-metadata">
+</div>
+<div class="section" id="stripping-metadata">
 <h3><a class="toc-backref" href="#id23">Stripping Metadata</a><a class="headerlink" href="#stripping-metadata" title="本標題的永久連結">¶</a></h3>
 <p>Stripping metadata from the example <code class="docutils literal notranslate"><span class="pre">image.png</span></code> can be done as follows:</p>
 <dl>
@@ -446,8 +445,8 @@ This will strip and compress the png file.</p>
 <dt><a class="reference external" href="https://www.imagemagick.org/script/command-line-options.php#strip">ImageMagick</a></dt><dd><p><cite>convert image.png --strip</cite></p>
 </dd>
 </dl>
-</section>
-<section id="extracting-metadata">
+</div>
+<div class="section" id="extracting-metadata">
 <h3><a class="toc-backref" href="#id24">Extracting metadata</a><a class="headerlink" href="#extracting-metadata" title="本標題的永久連結">¶</a></h3>
 <p>Sometimes we want to extract metadata, like an ICC profile, before stripping everything. This is done by converting the image to the profile type:</p>
 <dl>
@@ -461,8 +460,8 @@ This will strip and compress the png file.</p>
 </div>
 </dd>
 </dl>
-</section>
-<section id="embedding-description-metadata">
+</div>
+<div class="section" id="embedding-description-metadata">
 <h3><a class="toc-backref" href="#id25">Embedding description metadata</a><a class="headerlink" href="#embedding-description-metadata" title="本標題的永久連結">¶</a></h3>
 <p>Description metadata is really useful for the purpose of helping people with screenreaders. Webbrowsers will often try to use the description metadata if there's no alt text to generate the alt-text. Another thing that you might want to embed is stuff like color space data.</p>
 <p>ExifTool</p>
@@ -477,11 +476,11 @@ This will strip and compress the png file.</p>
 </div>
 </dd>
 </dl>
-</section>
-<section id="embedding-license-metadata">
+</div>
+<div class="section" id="embedding-license-metadata">
 <h3><a class="toc-backref" href="#id26">Embedding license metadata</a><a class="headerlink" href="#embedding-license-metadata" title="本標題的永久連結">¶</a></h3>
 <p>In a certain way, embedding license metadata is really nice because it allows you to permanently mark the image as such. However, if someone then uploads it to another website, it is very likely the metadata is stripped with imagemagick.</p>
-<section id="using-properties">
+<div class="section" id="using-properties">
 <h4><a class="toc-backref" href="#id27">Using Properties</a><a class="headerlink" href="#using-properties" title="本標題的永久連結">¶</a></h4>
 <p>You can use dcterms:license for defining the document where the license is defined.</p>
 <dl>
@@ -497,8 +496,8 @@ This will strip and compress the png file.</p>
 </dd>
 </dl>
 <p>The problem with using properties is that they are a non-standard way to define a license, meaning that machines cannot do much with them.</p>
-</section>
-<section id="using-xmp">
+</div>
+<div class="section" id="using-xmp">
 <h4><a class="toc-backref" href="#id28">Using XMP</a><a class="headerlink" href="#using-xmp" title="本標題的永久連結">¶</a></h4>
 <p>The creative commons website suggest we <a class="reference external" href="https://wiki.creativecommons.org/wiki/XMP">use XMP for this</a>. You can ask the Creative Commons License choose to generate an appropriate XMP file for you when picking a license.</p>
 <p>We'll need to use the <a class="reference external" href="https://www.sno.phy.queensu.ca/~phil/exiftool/TagNames/XMP.html">XMP tags for exiftool</a>.</p>
@@ -522,10 +521,10 @@ This will strip and compress the png file.</p>
 </dd>
 </dl>
 <p>The XMP definitions per license. You can generate an XMP file for the metadata on the creative commons website.</p>
-</section>
-</section>
-</section>
-</section>
+</div>
+</div>
+</div>
+</div>
 
 
            </div>

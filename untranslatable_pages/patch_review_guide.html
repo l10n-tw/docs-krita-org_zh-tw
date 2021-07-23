@@ -21,9 +21,8 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-07-20T15:19:39" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<meta content="Guide to creating and reviewing Krita patches in gitlab." name="description" />
+  <meta property="og:article:modified_time" content="2021-07-23T16:27:40" />
+  <meta content="Guide to creating and reviewing Krita patches in gitlab." name="description" />
 
   
   
@@ -254,10 +253,10 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="advanced-merge-request-guide">
+  <div class="section" id="advanced-merge-request-guide">
 <span id="patch-review-guide"></span><h1>Advanced Merge Request Guide<a class="headerlink" href="#advanced-merge-request-guide" title="本標題的永久連結">¶</a></h1>
 <p>Since April 2019, we're using Gitlab to review merge requests and patches to the code. Check <a class="reference internal" href="intro_hacking_krita.html#forking-gitlab"><span class="std std-ref">Forking on Gitlab</span></a> on how to start with making a merge request.</p>
-<section id="when-to-make-a-merge-request">
+<div class="section" id="when-to-make-a-merge-request">
 <h2>When to make a merge request<a class="headerlink" href="#when-to-make-a-merge-request" title="本標題的永久連結">¶</a></h2>
 <p>There's three times you need to make merge requests.</p>
 <ol class="arabic simple">
@@ -265,8 +264,8 @@
 <li><p>When the change you are making is huge, like with feature development, large refactors, complex bugfixes. For these we do not fork, but instead make a branch in the main repository in the following format: <code class="docutils literal notranslate"><span class="pre">name/number-shortdescription</span></code>. Check <a class="reference internal" href="new_features.html#developing-features"><span class="std std-ref">Developing Features</span></a> for more information.</p></li>
 <li><p>When you are not sure about whether what you did is correct. It is common within the Krita community that even developers with commit access will have a weaning period in which they still make merge requests for each change as they're getting comfortable with the codebase. It is not mandatory to do so at this point, but requests are the best way for us to help one another with writing good code.</p></li>
 </ol>
-</section>
-<section id="checklist-for-review">
+</div>
+<div class="section" id="checklist-for-review">
 <h2>Checklist for review<a class="headerlink" href="#checklist-for-review" title="本標題的永久連結">¶</a></h2>
 <p>Here's a quick checklist that is gone over when reviewing patches. While some requests require specialist knowledge, these items are so universal that anyone who knows how to check them can do so and comment on them. Feel free to do this yourself on <a class="reference external" href="https://invent.kde.org/graphics/krita.git/merge_requests?scope=all&amp;utf8=%E2%9C%93&amp;state=opened">open requests</a>, we welcome it!</p>
 <p>Also check out the <a class="reference external" href="https://invent.kde.org/help/user/project/merge_requests/index.md">manual for reviewing merge requests in Gitlab</a>.</p>
@@ -290,8 +289,8 @@
 </dd>
 </dl>
 <p>Requests that need changes to them need to be labeled with <code class="docutils literal notranslate"><span class="pre">needs-changes</span></code>. Requests that are accepted should be labeled <code class="docutils literal notranslate"><span class="pre">accepted</span></code>. This is to ensure we can figure out which requests are in need of review. Requests that need to be reviewed need to lack both labels.</p>
-</section>
-</section>
+</div>
+</div>
 
 
            </div>

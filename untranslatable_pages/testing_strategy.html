@@ -21,9 +21,8 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-07-20T15:19:39" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<meta content="Testing strategy." name="description" />
+  <meta property="og:article:modified_time" content="2021-07-23T16:27:40" />
+  <meta content="Testing strategy." name="description" />
 
   
   
@@ -254,13 +253,13 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="testing-strategy">
+  <div class="section" id="testing-strategy">
 <span id="id1"></span><h1>Testing Strategy<a class="headerlink" href="#testing-strategy" title="本標題的永久連結">¶</a></h1>
-<section id="overview">
+<div class="section" id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="本標題的永久連結">¶</a></h2>
 <p>We’re always working on the next version of Krita. We fix bugs and implement new features. Every change to any software comes with a risk of introducing other issues. That's where testing comes in. The tester’s job is to uncover defects as early as possible in the development process: a bug caught early enough means easier fixing, better user experience and less load on user support.</p>
-</section>
-<section id="the-functional-test-suite">
+</div>
+<div class="section" id="the-functional-test-suite">
 <h2>The Functional Test Suite<a class="headerlink" href="#the-functional-test-suite" title="本標題的永久連結">¶</a></h2>
 <p>When testing functionality we employ multiple strategies that translate into several layers of the test suite:</p>
 <blockquote>
@@ -270,37 +269,37 @@
 <li><p>Exploratory testing experiments. Unexpected combinations, uncharted workflows.</p></li>
 </ul>
 </div></blockquote>
-<section id="test-suite-layers">
+<div class="section" id="test-suite-layers">
 <h3>Test Suite Layers<a class="headerlink" href="#test-suite-layers" title="本標題的永久連結">¶</a></h3>
-<section id="unit-tests">
+<div class="section" id="unit-tests">
 <h4>Unit Tests<a class="headerlink" href="#unit-tests" title="本標題的永久連結">¶</a></h4>
 <p>Unit tests are the base of our test suite. They are designed to ensure that every individual unit of source code (both backend and UI components) functions as expected. They are fully automated and fast to execute. They are run by developers during development. Also part of nightly testing suite.</p>
 <p>In-depth unit testing doc: <a class="reference external" href="https://docs.krita.org/en/untranslatable_pages/unit_tests_in_krita.html">https://docs.krita.org/en/untranslatable_pages/unit_tests_in_krita.html</a></p>
-</section>
-<section id="end-to-end-ui-tests">
+</div>
+<div class="section" id="end-to-end-ui-tests">
 <h4>End-to-end UI Tests<a class="headerlink" href="#end-to-end-ui-tests" title="本標題的永久連結">¶</a></h4>
 <p>Formalized high level tests performed on the running application; carried out either by a computer or by a human.</p>
 <p>End to end tests cover both the GUI and the command line interface.</p>
-</section>
-<section id="exploratory-testing">
+</div>
+<div class="section" id="exploratory-testing">
 <h4>Exploratory Testing<a class="headerlink" href="#exploratory-testing" title="本標題的永久連結">¶</a></h4>
 <p>While the other layers of the test suite are composed of carefully curated scripted tests, balancing between coverage and efficiency, exploratory testing approaches testing quite differently. It’s purpose is to allow humans to apply their unique tools: learning, creativity, intuition. There are no suites, scenarios, defined steps. Just you and Krita. Explore and experiment. Try basic workflows. Try unexpected combinations. Try to break things. Then report bugs.</p>
-</section>
-</section>
-<section id="when-do-we-test">
+</div>
+</div>
+<div class="section" id="when-do-we-test">
 <h3>When Do We Test<a class="headerlink" href="#when-do-we-test" title="本標題的永久連結">¶</a></h3>
-<section id="continuous-testing-as-part-of-continuous-integration">
+<div class="section" id="continuous-testing-as-part-of-continuous-integration">
 <h4>Continuous testing as part of continuous integration<a class="headerlink" href="#continuous-testing-as-part-of-continuous-integration" title="本標題的永久連結">¶</a></h4>
 <p>Automatic test suite is run nightly against the last nightly build.</p>
-</section>
-<section id="beta-testing">
+</div>
+<div class="section" id="beta-testing">
 <h4>Beta Testing<a class="headerlink" href="#beta-testing" title="本標題的永久連結">¶</a></h4>
 <p>Beta testing is a type of user acceptance testing, where a subgroup of target users validates the upcoming release.</p>
 <p>As a part of the release process, we collect features and bugs (mainly high impact bugs and those that benefit from testing in multiple different conditions) to test in a Phabricator task connected to the release. From that collection we create a survey on survey.kde.org and publicly release the beta version. Link to the survey is available on the welcome page of the beta release.</p>
-</section>
-</section>
-</section>
-</section>
+</div>
+</div>
+</div>
+</div>
 
 
            </div>

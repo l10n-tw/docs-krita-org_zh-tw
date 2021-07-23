@@ -21,9 +21,8 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-07-20T15:19:39" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<meta content="Krita's shape selection tool reference." name="description" />
+  <meta property="og:article:modified_time" content="2021-07-23T16:27:40" />
+  <meta content="Krita's shape selection tool reference." name="description" />
 
   
   
@@ -294,12 +293,12 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="shape-selection-tool">
+  <div class="section" id="shape-selection-tool">
 <span id="index-0"></span><span id="id1"></span><h1>Shape Selection Tool<a class="headerlink" href="#shape-selection-tool" title="本標題的永久連結">¶</a></h1>
 <p><img alt="toolshapeselection" src="../../_images/shape_select_tool.svg" /></p>
 <p>The shape selection tool used to be called the &quot;default&quot; tool. This had to do with Krita being part of an office suite once upon a time. But this is no longer the case, so we renamed it to its purpose in Krita: Selecting shapes! This tool only works on vector layers, so trying to use it on a paint layer will give a notification.</p>
 <p>After you create vector shapes, you can use this tool to select, transform, and access the shape's options in the tool options docker. There are a lot of different properties and things you can do with each vector shape.</p>
-<section id="selection">
+<div class="section" id="selection">
 <h2>Selection<a class="headerlink" href="#selection" title="本標題的永久連結">¶</a></h2>
 <p>Selecting shapes can be done by two types of actions:</p>
 <ul class="simple">
@@ -313,22 +312,18 @@
 </dl>
 </li>
 </ul>
-<figure class="align-center" id="id2">
+<div class="figure align-center" id="id2">
 <img alt="Left: Blue selection. Right: Green selection." src="../../_images/blue-and-green-selections.png" />
-<figcaption>
-<p><span class="caption-text">Blue selection: left-to-right, selects fully covered images. --  Green selection: right-to-left, selects touched shapes.</span><a class="headerlink" href="#id2" title="本圖片的永久連結">¶</a></p>
-</figcaption>
-</figure>
-</section>
-<section id="placement-scale-angle-and-distortion">
+<p class="caption"><span class="caption-text">Blue selection: left-to-right, selects fully covered images. --  Green selection: right-to-left, selects touched shapes.</span><a class="headerlink" href="#id2" title="本圖片的永久連結">¶</a></p>
+</div>
+</div>
+<div class="section" id="placement-scale-angle-and-distortion">
 <h2>Placement, Scale, Angle and Distortion<a class="headerlink" href="#placement-scale-angle-and-distortion" title="本標題的永久連結">¶</a></h2>
 <p>Once an object is selected, a dashed bounding box will appear around it. The box will also have square handles. You can use this bounding box to do adjust: placement, scale, angle and distortion of the selected object.</p>
-<figure class="align-center" id="id3">
+<div class="figure align-center" id="id3">
 <img alt="Left to right: Placement, Scale, Angle and Distortion." src="../../_images/shapes-selection-properties.png" />
-<figcaption>
-<p><span class="caption-text">Left to right: Placement, Scale, Angle and Distortion.</span><a class="headerlink" href="#id3" title="本圖片的永久連結">¶</a></p>
-</figcaption>
-</figure>
+<p class="caption"><span class="caption-text">Left to right: Placement, Scale, Angle and Distortion.</span><a class="headerlink" href="#id3" title="本圖片的永久連結">¶</a></p>
+</div>
 <dl class="simple">
 <dt>Placement</dt><dd><p><img alt="mouseleft" src="../../_images/Krita_mouse_left.png" /> and hold inside the bounding box, while holding move the shape to the desired position.</p>
 </dd>
@@ -339,11 +334,11 @@
 <dt>Distortion</dt><dd><p>Place the cursor slightly outside any of the middle handles. <img alt="mouseleft" src="../../_images/Krita_mouse_left.png" /> and drag to skew the shape.</p>
 </dd>
 </dl>
-</section>
-<section id="tool-options">
+</div>
+<div class="section" id="tool-options">
 <h2>Tool Options<a class="headerlink" href="#tool-options" title="本標題的永久連結">¶</a></h2>
 <p>The tool options of this menu are quite involved, and separated over 3 tabs.</p>
-<section id="geometry">
+<div class="section" id="geometry">
 <h3>Geometry<a class="headerlink" href="#geometry" title="本標題的永久連結">¶</a></h3>
 <a class="reference internal image-reference" href="../../_images/shape-selection-menu-geometry.png"><img alt="Tool options: Geometry tool." src="../../_images/shape-selection-menu-geometry.png" style="width: 400px;" /></a>
 <p>Geometry is the first section in the tool options. This section allows you to set precisely the 'x' and 'y' coordinates, and also the width and height of the shape.</p>
@@ -360,8 +355,8 @@
 <p class="admonition-title">警告</p>
 <p>Anchor Lock is not implemented at the moment.</p>
 </div>
-</section>
-<section id="stroke">
+</div>
+<div class="section" id="stroke">
 <h3>Stroke<a class="headerlink" href="#stroke" title="本標題的永久連結">¶</a></h3>
 <a class="reference internal image-reference" href="../../_images/shape-selection-menu-stroke.png"><img alt="Tool options: Stroke tool." src="../../_images/shape-selection-menu-stroke.png" style="width: 400px;" /></a>
 <p>The stroke tab determines how the stroke around the object should look.</p>
@@ -377,8 +372,8 @@
 <dt>Markers</dt><dd><p>Adds markers to the stroke. Markers are little figures that will appear at the start, end or all the nodes in between, depending on your configuration.</p>
 </dd>
 </dl>
-</section>
-<section id="fill">
+</div>
+<div class="section" id="fill">
 <h3>Fill<a class="headerlink" href="#fill" title="本標題的永久連結">¶</a></h3>
 <a class="reference internal image-reference" href="../../_images/shape-selection-menu-fill.png"><img alt="Tool options: Fill tool." src="../../_images/shape-selection-menu-fill.png" style="width: 400px;" /></a>
 <p>This section is about the color that fills the shape. As mentioned above in the <strong>Stroke</strong> section, the features are the same for both the fill of the stroke and the fill of the shape. Here is the explanation for both:</p>
@@ -437,34 +432,32 @@ The other way to edit gradients is editing their position on the canvas.</p>
 <p class="admonition-title">備註</p>
 <p>Mesh Gradients follow <a class="reference external" href="https://svgwg.org/svg-next/pservers.html#MeshGradients">SVG draft 2</a> for the rendering.</p>
 </div>
-<section id="creating-mesh-gradients">
+<div class="section" id="creating-mesh-gradients">
 <h4>Creating Mesh Gradients<a class="headerlink" href="#creating-mesh-gradients" title="本標題的永久連結">¶</a></h4>
 <p>When Mesh Gradients option is selected for a shape, Krita fills it with default mesh gradient, which is an alternating color (it alternates between background color and white). Changing number of rows and columns from Tool Options, will add more patches to the Mesh Gradient and corners can be changed individually.</p>
-</section>
-<section id="editing-mesh-gradients">
+</div>
+<div class="section" id="editing-mesh-gradients">
 <h4>Editing Mesh Gradients<a class="headerlink" href="#editing-mesh-gradients" title="本標題的永久連結">¶</a></h4>
 <p>The way to edit Mesh Gradients is pretty straight forward. Each curve is an individual Bezier Curve. There are two ways to change the structure, one is by dragging the corner (rectangle) and other is by dragging the handle (circle).</p>
-<figure class="align-center" id="id4">
+<div class="figure align-center" id="id4">
 <img alt="Left to right: Normal, Corner Hovered, Corner Moved and Selected." src="../../_images/MeshGradients-corner-moving.png" />
-<figcaption>
-<p><span class="caption-text">Left to right: Normal, Corner Hovered, Corner Moved and Selected.</span><a class="headerlink" href="#id4" title="本圖片的永久連結">¶</a></p>
-</figcaption>
-</figure>
+<p class="caption"><span class="caption-text">Left to right: Normal, Corner Hovered, Corner Moved and Selected.</span><a class="headerlink" href="#id4" title="本圖片的永久連結">¶</a></p>
+</div>
 <p>To change the color, a corner has to be selected and then Tool Options can be used to change the color of the selected corner.</p>
 <div class="admonition note">
 <p class="admonition-title">備註</p>
 <p>When importing from Inkscape, shapes may be grouped, which may not allow Krita to edit Mesh Gradients. To fix this, first ungroup (via <img alt="mouseright" src="../../_images/Krita_mouse_right.png" />) them.</p>
 </div>
-</section>
-</section>
-</section>
-<section id="right-click-menu">
+</div>
+</div>
+</div>
+<div class="section" id="right-click-menu">
 <h2>Right-click menu<a class="headerlink" href="#right-click-menu" title="本標題的永久連結">¶</a></h2>
 <p>The shape selection tool has a nice right click menu that gives you several features. If you have an object selected, you can perform various functions like cutting, copying, or moving the object to the front or back.</p>
 <img alt="../../_images/Vector-right-click-menu.png" src="../../_images/Vector-right-click-menu.png" />
 <p>If you have multiple objects selected you can perform &quot;Logical Operators&quot; on them, or boolean operations as they are commonly called. It will be the last item on the right-click menu. You can unite, intersect, subtract, or split the selected objects.</p>
-</section>
-</section>
+</div>
+</div>
 
 
            </div>

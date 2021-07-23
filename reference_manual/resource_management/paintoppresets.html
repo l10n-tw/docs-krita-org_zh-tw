@@ -21,9 +21,8 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-07-20T15:19:39" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<meta content="The Brush Presets resource in Krita." name="description" property="og:description" />
+  <meta property="og:article:modified_time" content="2021-07-23T16:27:40" />
+  <meta content="The Brush Presets resource in Krita." name="description" property="og:description" />
 
   
   
@@ -264,23 +263,23 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="brush-preset">
+  <div class="section" id="brush-preset">
 <span id="resource-brushes"></span><span id="index-0"></span><h1>Brush Preset<a class="headerlink" href="#brush-preset" title="本標題的永久連結">¶</a></h1>
 <p>Brush Presets, known within Krita as <code class="docutils literal notranslate"><span class="pre">paintoppresets</span></code>, store the preview thumbnail, brush-engine, the parameters, the brush tip, and, if possible, the texture. They are saved as <code class="docutils literal notranslate"><span class="pre">.kpp</span></code> files, except for <a class="reference internal" href="../brushes/brush_engines/mypaint_engine.html#mypaint-brush-engine"><span class="std std-ref">MyPaint brushes</span></a>, which are saved as <code class="docutils literal notranslate"><span class="pre">.myb</span></code> files.</p>
 <p>For information regarding the brush system, see <a class="reference internal" href="../../user_manual/loading_saving_brushes.html#loading-saving-brushes"><span class="std std-ref">Brushes</span></a>.</p>
-<section id="the-docker">
+<div class="section" id="the-docker">
 <h2>The Docker<a class="headerlink" href="#the-docker" title="本標題的永久連結">¶</a></h2>
 <p>The docker for Paint-op presets is the <a class="reference internal" href="../dockers/brush_preset_docker.html#brush-preset-docker"><span class="std std-ref">Preset Docker</span></a>. Here you can tag, add, remove and search brush presets.</p>
-</section>
-<section id="editing-the-preview-thumbnail">
+</div>
+<div class="section" id="editing-the-preview-thumbnail">
 <h2>Editing the preview thumbnail<a class="headerlink" href="#editing-the-preview-thumbnail" title="本標題的永久連結">¶</a></h2>
 <p>You can edit the preview thumbnail in the brush-scratchpad, but you can also open the <code class="docutils literal notranslate"><span class="pre">\*.kpp</span></code> file in Krita to get a 200x200 file to edit to your wishes. For <a class="reference internal" href="../brushes/brush_engines/mypaint_engine.html#mypaint-brush-engine"><span class="std std-ref">MyPaint brushes</span></a>, there is a seperate PNG file which is the same name as the <code class="docutils literal notranslate"><span class="pre">.myb</span></code> file, except with <code class="docutils literal notranslate"><span class="pre">_prev</span></code> attached.</p>
-</section>
-<section id="structure">
+</div>
+<div class="section" id="structure">
 <h2>Structure<a class="headerlink" href="#structure" title="本標題的永久連結">¶</a></h2>
 <p><a class="reference internal" href="../brushes/brush_engines/mypaint_engine.html#mypaint-brush-engine"><span class="std std-ref">MyPaint brushes</span></a> are stored as JSON files with an accompanying preview image, while <code class="docutils literal notranslate"><span class="pre">.kpp</span></code> files are PNGs which contain an annotation with the XML data for the brush engine. You can view this data when having the <code class="docutils literal notranslate"><span class="pre">.kpp</span></code> file open, via <span class="menuselection">image ‣ properties ‣ annotations</span>, or by using the <strong class="program">ImageMagick</strong> command <code class="docutils literal notranslate"><span class="pre">identify</span> <span class="pre">-verbose</span> <span class="pre">{FILENAME}</span></code> on the <code class="docutils literal notranslate"><span class="pre">.kpp</span></code>.</p>
-</section>
-</section>
+</div>
+</div>
 
 
            </div>

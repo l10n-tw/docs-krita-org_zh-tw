@@ -21,9 +21,8 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-07-20T15:19:39" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<meta content="Introduction to SeExpr" lang="en" name="description" xml:lang="en" />
+  <meta property="og:article:modified_time" content="2021-07-23T16:27:40" />
+  <meta content="Introduction to SeExpr" lang="en" name="description" xml:lang="en" />
 
   
   
@@ -235,12 +234,12 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="introduction-to-seexpr">
+  <div class="section" id="introduction-to-seexpr">
 <span id="seexpr-tut-intro"></span><h1>Introduction to SeExpr<a class="headerlink" href="#introduction-to-seexpr" title="本標題的永久連結">¶</a></h1>
 <div class="versionadded">
 <p><span class="versionmodified added">4.4 版新加入: </span>This document will introduce you to the SeExpr expression language.</p>
 </div>
-<section id="what-is-seexpr">
+<div class="section" id="what-is-seexpr">
 <h2>What is SeExpr?<a class="headerlink" href="#what-is-seexpr" title="本標題的永久連結">¶</a></h2>
 <p>SeExpr is an embeddable expression language, designed by Disney Animation,
 that allows host applications to render dynamically generated content.
@@ -258,8 +257,8 @@ combiner&quot;.</p>
 <li><p><a class="reference external" href="https://thebookofshaders.com/">The Book of Shaders</a></p></li>
 </ul>
 </div>
-</section>
-<section id="background">
+</div>
+<div class="section" id="background">
 <h2>Background<a class="headerlink" href="#background" title="本標題的永久連結">¶</a></h2>
 <p>To understand what SeExpr is about, we need to differentiate between two types
 of graphics, <em>raster</em> and <em>procedural</em>.</p>
@@ -320,8 +319,8 @@ their definition. But they are not defined by mathematical formulae; you
 actually <em>code</em> how the color is calculated at each point of the texture.
 And, because it is not limited in its precision, you can render complex
 patterns in your layers at completely arbitrary resolution.</p>
-</section>
-<section id="writing-a-script">
+</div>
+<div class="section" id="writing-a-script">
 <h2>Writing a script<a class="headerlink" href="#writing-a-script" title="本標題的永久連結">¶</a></h2>
 <p>In this tutorial, we'll show you how to write a script in SeExpr, render it to
 a layer, and then save it as a preset.</p>
@@ -371,8 +370,8 @@ sRGB images. Krita transforms them into your document's color space
 using the sRGB-elle-V2-srgbtrc.icc profile.</p>
 <p>See <a class="reference internal" href="../general_concepts/colors/color_managed_workflow.html#color-managed-workflow"><span class="std std-ref">色彩管理作業流程</span></a> for what this means.</p>
 </div>
-</section>
-<section id="managing-your-script-using-widgets">
+</div>
+<div class="section" id="managing-your-script-using-widgets">
 <h2>Managing your script using widgets<a class="headerlink" href="#managing-your-script-using-widgets" title="本標題的永久連結">¶</a></h2>
 <p>There is also another way to define and edit your variables.
 Open the fill layer's properties by right-clicking on <span class="guilabel">Fill Layer 1</span>,
@@ -408,8 +407,8 @@ Click it and this dialog will open:</p>
 </dl>
 <p>For instance, you could replicate <code class="docutils literal notranslate"><span class="pre">$color</span></code> in the <span class="guilabel">Vector</span> tab:</p>
 <img alt="../_images/SeExpr_add_variable_vector.png" src="../_images/SeExpr_add_variable_vector.png" />
-</section>
-<section id="creating-your-first-preset">
+</div>
+<div class="section" id="creating-your-first-preset">
 <h2>Creating your first preset<a class="headerlink" href="#creating-your-first-preset" title="本標題的永久連結">¶</a></h2>
 <p>Once your script is ready, you can reuse it by making a preset.</p>
 <p>You can create one through the top bar of the <span class="guilabel">Options</span> tab:</p>
@@ -437,8 +436,8 @@ open:</p>
 <dt id="term-Clear-Thumbnail">Clear Thumbnail<a class="headerlink" href="#term-Clear-Thumbnail" title="本術語的永久連結">¶</a></dt><dd><p>Deletes the thumbnail. Note that, if the preset is a copy of an existing one, this can be reverted by clicking <span class="guilabel">Load Existing Thumbnail</span>.</p>
 </dd>
 </dl>
-</section>
-<section id="changing-existing-presets">
+</div>
+<div class="section" id="changing-existing-presets">
 <h2>Changing existing presets<a class="headerlink" href="#changing-existing-presets" title="本標題的永久連結">¶</a></h2>
 <p>If you change a preset's script, you will notice two new buttons in the top bar of the <span class="guilabel">Options</span> tab:</p>
 <blockquote>
@@ -450,14 +449,14 @@ entering the new name, and clicking on <span class="guilabel">Save</span>:</p>
 <blockquote>
 <div><img alt="../_images/SeExpr_rename_preset.png" src="../_images/SeExpr_rename_preset.png" />
 </div></blockquote>
-</section>
-<section id="bundling-your-presets">
+</div>
+<div class="section" id="bundling-your-presets">
 <h2>Bundling your presets<a class="headerlink" href="#bundling-your-presets" title="本標題的永久連結">¶</a></h2>
 <p>Sharing your scripts is easy! SeExpr script presets are just like any other
 resource in Krita. Follow the instructions in <a class="reference internal" href="../reference_manual/resource_management.html#resource-management"><span class="std std-ref">資源管理</span></a> to
 create your own bundles.</p>
-</section>
-</section>
+</div>
+</div>
 
 
            </div>

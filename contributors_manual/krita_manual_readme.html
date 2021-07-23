@@ -21,9 +21,8 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-07-20T15:19:39" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<meta content="Contributor's Readme for the Krita Manual." name="description" />
+  <meta property="og:article:modified_time" content="2021-07-23T16:27:40" />
+  <meta content="Contributor's Readme for the Krita Manual." name="description" />
 
   
   
@@ -247,7 +246,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="krita-manual-contribution-guide">
+  <div class="section" id="krita-manual-contribution-guide">
 <span id="krita-manual-contributors-guide"></span><h1>Krita 手冊貢獻指南<a class="headerlink" href="#krita-manual-contribution-guide" title="本標題的永久連結">¶</a></h1>
 <p>Welcome to the Krita Manual Contribution Guide!</p>
 <p>If you're interested in contributing to Krita's documentation, you're in the right place.</p>
@@ -269,15 +268,15 @@
 <dt>FAQ</dt><dd><p>This one is already online and a merger of the different FAQs that we had. It's currently being translated and we hope to keep this one the primary one to update.</p>
 </dd>
 </dl>
-<section id="for-first-timers">
+<div class="section" id="for-first-timers">
 <h2>For first timers<a class="headerlink" href="#for-first-timers" title="本標題的永久連結">¶</a></h2>
 <p>Unlike Mediawiki, Sphinx works more like how we write code for Krita.</p>
 <p>First things first, you will want to talk to us! For this you can join us in the chatroom &quot;#krita&quot; via matrix. A introduction about Matrix is given <a class="reference external" href="https://community.kde.org/Matrix">here</a>. Create a matrix on webchat.kde.org account and join the #krita:kde.org channel. Or more importantly, make an account at <a class="reference external" href="https://identity.kde.org/">identity.kde.org</a>. The account you make at identity can be used to both access invent.kde.org as well as the <a class="reference external" href="https://phabricator.kde.org">phabricator</a>, where we organise Krita development.</p>
 <p>Sphinx works by writing simple text files with reStructuredText mark up, and then it takes those text files and turns them into the manual. We keep track of changes in the manual by putting them into a version control system called <strong class="program">Git</strong>.</p>
-<section id="making-changes">
+<div class="section" id="making-changes">
 <span id="making-changes-sphinx"></span><h3>Making changes<a class="headerlink" href="#making-changes" title="本標題的永久連結">¶</a></h3>
 <p>Because we use Git, there's only a few people who can put things into the version control system, so if you want to make changes you will need to put it up for review.</p>
-<section id="creating-merge-requests-using-edit-mode">
+<div class="section" id="creating-merge-requests-using-edit-mode">
 <span id="merge-request-edit"></span><h4>Creating merge requests using Edit mode<a class="headerlink" href="#creating-merge-requests-using-edit-mode" title="本標題的永久連結">¶</a></h4>
 <div class="admonition note">
 <p class="admonition-title">備註</p>
@@ -311,8 +310,8 @@
 </div>
 </div></blockquote>
 <a class="reference internal image-reference" href="../_images/screenshot_editmode.png"><img alt="../_images/screenshot_editmode.png" src="../_images/screenshot_editmode.png" style="width: 1000px;" /></a>
-</section>
-<section id="creating-merge-requests-using-webide">
+</div>
+<div class="section" id="creating-merge-requests-using-webide">
 <span id="merge-request-webide"></span><h4>Creating merge requests using WebIDE<a class="headerlink" href="#creating-merge-requests-using-webide" title="本標題的永久連結">¶</a></h4>
 <p>Recommended for users with a bit of knowledge about Git that want to edit multiple files at once.</p>
 <p>Not recommended when you don't know what a branch is (see <a class="reference internal" href="#merge-request-edit"><span class="std std-ref">Creating merge requests using Edit mode</span></a> instead).</p>
@@ -334,8 +333,8 @@
 <p>If you don't have a push access to the official repository, gitlab won't allow you to save your changes if you were editing the official repository by mistake (and <span class="guilabel">Create a merge request</span> won't help with that: you still need to commit your changes to your branch, but if you don't have push access, you can't do it). It will just show the message: <em>An error occurred whilst committing your changes. Please try again.</em></p>
 <p>In this case, simply copy contents of all of the files you changed, go to your fork and paste them in the fork WebIDE.</p>
 </div>
-</section>
-<section id="creating-merge-requests-using-command-line">
+</div>
+<div class="section" id="creating-merge-requests-using-command-line">
 <span id="merge-request-terminal"></span><h4>Creating merge requests using command line<a class="headerlink" href="#creating-merge-requests-using-command-line" title="本標題的永久連結">¶</a></h4>
 <p>Recommended for users that know how Git works and how to use command line.</p>
 <p>Not recommended when you don't know what a branch is (see <a class="reference internal" href="#merge-request-edit"><span class="std std-ref">Creating merge requests using Edit mode</span></a> instead).</p>
@@ -392,8 +391,8 @@ git push
 </li>
 <li><p>Finally, go to the website of the original repository, and then to Merge Requests. Select your fork and the correct branch and create a new merge request. For instruction on how to fill the fields, see <a class="reference internal" href="#new-merge-request"><span class="std std-ref">Guidelines for new merge requests</span></a>.</p></li>
 </ol>
-</section>
-<section id="guidelines-for-new-merge-requests">
+</div>
+<div class="section" id="guidelines-for-new-merge-requests">
 <span id="new-merge-request"></span><h4>Guidelines for new merge requests<a class="headerlink" href="#guidelines-for-new-merge-requests" title="本標題的永久連結">¶</a></h4>
 <ol class="arabic">
 <li><p>Your commit messages should conform to standards explained here: <a class="reference external" href="https://chris.beams.io/posts/git-commit/">How to Write a Git Commit Message</a></p></li>
@@ -420,19 +419,19 @@ git push
 <p class="admonition-title">備註</p>
 <p>At the time of writing this guide setting labels on merge requests is only possible by contributors with write access to the official repository. (If you don't know what that means, you're most probably not one of them). Because of that, when you create or change your merge request you need to get on IRC (see <a class="reference internal" href="community.html#the-krita-community"><span class="std std-ref">Krita 的社群</span></a>) and ask someone to label it for you.</p>
 </div>
-</section>
-<section id="building-the-manual-in-the-command-line">
+</div>
+<div class="section" id="building-the-manual-in-the-command-line">
 <h4>Building the manual in the command line<a class="headerlink" href="#building-the-manual-in-the-command-line" title="本標題的永久連結">¶</a></h4>
 <p>For those that first want to try out some changes before embarking on a merge
 request right away (and already know how to use git and the command line) this
 is described as part of step 5. in <a class="reference internal" href="#merge-request-terminal"><span class="std std-ref">Creating merge requests using command line</span></a>.</p>
-</section>
-</section>
-</section>
-<section id="general-philosophy">
+</div>
+</div>
+</div>
+<div class="section" id="general-philosophy">
 <h2>General philosophy<a class="headerlink" href="#general-philosophy" title="本標題的永久連結">¶</a></h2>
 <p>This is for determining what is an appropriate writing style. A writing style, whether we consider its practical or aesthetic qualities, is usually underpinned by a goal or general philosophy. What do we want to achieve with the manual, and for whom is the manual meant?</p>
-<section id="demographics-and-target-audience-s">
+<div class="section" id="demographics-and-target-audience-s">
 <h3>Demographics and target audience(s)<a class="headerlink" href="#demographics-and-target-audience-s" title="本標題的永久連結">¶</a></h3>
 <p>We cannot talk about a demographic in the sense that we know all Krita users are 55 year old men. Krita is used by a hugely different amount of people, and we are actually kind of proud that we have such a varied userbase.</p>
 <p>Despite that, we know a couple of things about our users:</p>
@@ -469,8 +468,8 @@ is described as part of step 5. in <a class="reference internal" href="#merge-re
 <li><p>two of them have no clue what they are doing and may need to be guided through the most basic of steps.</p></li>
 </ul>
 <p>From that we can get the following rules:</p>
-</section>
-<section id="general-writing">
+</div>
+<div class="section" id="general-writing">
 <h3>General Writing<a class="headerlink" href="#general-writing" title="本標題的永久連結">¶</a></h3>
 <dl class="simple">
 <dt>Use American English if possible.</dt><dd><p>We use American English in the manual, in accordance to Krita's UI being American English by default.</p>
@@ -482,16 +481,16 @@ is described as part of step 5. in <a class="reference internal" href="#merge-re
 <dt>Keep it translation compatible</dt><dd><p>This consists of using SVG for infographics, and using the appropriate markup for a given text.</p>
 </dd>
 </dl>
-</section>
-<section id="regarding-photos-and-paintings">
+</div>
+<div class="section" id="regarding-photos-and-paintings">
 <h3>Regarding photos and paintings<a class="headerlink" href="#regarding-photos-and-paintings" title="本標題的永久連結">¶</a></h3>
 <ul class="simple">
 <li><p>I would like to discourage photos and traditional paintings in the manual if they are not illustrating a concept. The reason is that it is very silly and a little dishonest to show Rembrandt's work inside the Krita GUI, when we have so many modern works that were made in Krita. All of the pepper&amp;carrot artwork was made in Krita and the original files are available, so when you do not have an image handy, start there. Photos should be avoided because Krita is a painting program. Too many photos can give the impression Krita is trying to be a solution for photo retouching, which really isn't the focus.</p></li>
 <li><p>Of course, we still want to show certain concepts in play in photos and master paintings, such as glossing or indirect light. In this case, add a caption that mentions the name of the painting or the painter, or mentions it's a photograph.</p></li>
 <li><p>Photos can still be used for photobashing and the like, but only if it's obviously used in the context of photobashing.</p></li>
 </ul>
-</section>
-<section id="regarding-images-in-general">
+</div>
+<div class="section" id="regarding-images-in-general">
 <h3>Regarding images in general<a class="headerlink" href="#regarding-images-in-general" title="本標題的永久連結">¶</a></h3>
 <ul class="simple">
 <li><p>Avoid text in the images and use the caption instead. You can do this with the figure directive.</p></li>
@@ -499,12 +498,12 @@ is described as part of step 5. in <a class="reference internal" href="#merge-re
 <li><p>Try to make your images high quality/cute. Let's give people the idea that they are using a program for drawing!</p></li>
 <li><p>Remember that the manual is licensed under GDPL 1.3, so images submitted will be licensed under that. In the case of CC-By-Sa/CC-By ensure that the file gets attributed appropriately through a figure caption. Needless to say, don't submit images that cannot be licensed under either license.</p></li>
 </ul>
-</section>
-</section>
-<section id="protocol">
+</div>
+</div>
+<div class="section" id="protocol">
 <h2>Protocol<a class="headerlink" href="#protocol" title="本標題的永久連結">¶</a></h2>
 <p>So here we line out all the boring workflows.</p>
-<section id="tagging-and-branches">
+<div class="section" id="tagging-and-branches">
 <h3>Tagging and Branches<a class="headerlink" href="#tagging-and-branches" title="本標題的永久連結">¶</a></h3>
 <p>Adding and removing text will be done in the <code class="docutils literal notranslate"><span class="pre">draft</span></code> branch.</p>
 <p>Proofreading results for old pages will be considered as bugfixes and thus will go into the <code class="docutils literal notranslate"><span class="pre">master</span></code> branch and merged into the <code class="docutils literal notranslate"><span class="pre">draft</span></code> branch as necessary.</p>
@@ -516,8 +515,8 @@ is described as part of step 5. in <a class="reference internal" href="#merge-re
 <p>The <code class="docutils literal notranslate"><span class="pre">draft</span></code> branch will not be merged until the day before a release to keep the pages intact for long enough.</p>
 <p>Each release will have a version of the epub uploaded as part of the release process.
 .. Where do we get the POT files from? Even the translated versions?</p>
-</section>
-<section id="removing-pages">
+</div>
+<div class="section" id="removing-pages">
 <h3>Removing Pages<a class="headerlink" href="#removing-pages" title="本標題的永久連結">¶</a></h3>
 <p>If a feature is removed in a certain version, the corresponding pages:</p>
 <ol class="arabic">
@@ -534,8 +533,8 @@ is described as part of step 5. in <a class="reference internal" href="#merge-re
 <li><p>Will be linked on a page called 'deprecated'</p></li>
 <li><p>If the next version rolls around, all the pages linked in the deprecated section will be removed.</p></li>
 </ol>
-</section>
-<section id="adding-pages">
+</div>
+<div class="section" id="adding-pages">
 <h3>Adding Pages<a class="headerlink" href="#adding-pages" title="本標題的永久連結">¶</a></h3>
 <ol class="arabic">
 <li><p>Ensure that it is located in the right place.</p></li>
@@ -550,8 +549,8 @@ is described as part of step 5. in <a class="reference internal" href="#merge-re
 </li>
 </ol>
 <p>As with images, don't add text that you do not have permission to add. This means that text is either written by you, or you have permission to port it from the original author. The manual is GDPL 1.3+ so the text will be relicensed under that.</p>
-</section>
-<section id="changing-pages">
+</div>
+<div class="section" id="changing-pages">
 <h3>Changing Pages<a class="headerlink" href="#changing-pages" title="本標題的永久連結">¶</a></h3>
 <p>If you fully rewrite a page, as opposed to proofreading it, the resulting page should be reviewed.</p>
 <p>If you change a page because a feature has changed, and you have commit access, the change can be pushed without review (unless you feel more comfortable with a review), but you should add:</p>
@@ -565,8 +564,8 @@ is described as part of step 5. in <a class="reference internal" href="#merge-re
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>grep -d recurse versionadded * --exclude-dir<span class="o">={</span>_build,locale<span class="o">}</span>
 </pre></div>
 </div>
-</section>
-<section id="faulty-pages">
+</div>
+<div class="section" id="faulty-pages">
 <h3>Faulty pages<a class="headerlink" href="#faulty-pages" title="本標題的永久連結">¶</a></h3>
 <p>If a page slips through the cracks, either...</p>
 <ul class="simple">
@@ -574,8 +573,8 @@ is described as part of step 5. in <a class="reference internal" href="#merge-re
 <li><p>Make a task at the <a class="reference external" href="https://phabricator.kde.org/project/view/135/">Manual Project Workboard</a>.</p></li>
 <li><p>Make a bug at <a class="reference external" href="https://bugs.kde.org/">bugzilla</a> under the project Krita in the section 'documentation'.</p></li>
 </ul>
-</section>
-<section id="proofreading">
+</div>
+<div class="section" id="proofreading">
 <h3>Proofreading<a class="headerlink" href="#proofreading" title="本標題的永久連結">¶</a></h3>
 <p>There are two types of proofreading that needs to be done.</p>
 <p>The most important one is <strong>reviewing changes people make</strong>. You can do this on <a class="reference external" href="https://invent.kde.org/">KDE_gitlab</a> in two ways:</p>
@@ -595,20 +594,20 @@ is described as part of step 5. in <a class="reference internal" href="#merge-re
 <p>In both cases, the interface consists of the difference being shown, with on the left the old version, and on the right the new version. Lines that have been added will be marked in green while lines that have been removed will be marked with red. You can click a speech bubble icon to add an 'inline' comment.</p>
 <p>The second major way the manual needs to be proofread is <strong>over the whole file</strong>. Many of the pages have only been checked for correctness but not for style and grammar.</p>
 <p>For this you will need to follow the <a class="reference internal" href="#making-changes-sphinx"><span class="std std-ref">Making changes</span></a> section, so that you can have full access to the pages and edit them.</p>
-</section>
-<section id="translating">
+</div>
+<div class="section" id="translating">
 <h3>Translating<a class="headerlink" href="#translating" title="本標題的永久連結">¶</a></h3>
 <p>Translation of the manual is handled by the <a class="reference external" href="https://l10n.kde.org/">KDE localization community</a>. To join the translation effort, go to the localization site, select the list of <a class="reference external" href="https://l10n.kde.org/teams-list.php">translation teams</a>, select the language you wish to translate for, and follow the instructions on the team page to get in contact with fellow translators.</p>
 <p>The localization team has access to the PO files for this manual, which is a file type used by translation programs like POEdit and Lokalize. A translation team is able to work together on translating these files and uploading them to the translations SVN. A special script will then take the translations from the SVN and bring them to the manual section to be incorporated on a daily basis.</p>
 <p>Images can be translated if a translation team wants to provide their own images. All images in the image folder are by default for 'en'. When you want to translate a specific image, go into that folder and add another folder with your language code to add in the translated versions of images. So Sphinx will search for a dutch version of <code class="file docutils literal notranslate"><span class="pre">/images/Pixels-brushstroke.png</span></code> at <code class="file docutils literal notranslate"><span class="pre">/images/nl/Pixels-brushstroke.png</span></code> and for a dutch version of <code class="file docutils literal notranslate"><span class="pre">/images/dockers/Krita-tutorial2-I.1-2.png</span></code> in <code class="file docutils literal notranslate"><span class="pre">/images/dockers/nl/Krita-tutorial2-I.1-2.png</span></code>.</p>
 <p>Finished translations also need to be added to the build script to show up online. Translator teams which are confident in the state of their translation should contact the main Krita team via the kimageshop mailinglist(<a class="reference external" href="mailto:kimageshop&#37;&#52;&#48;kde&#46;org">kimageshop<span>&#64;</span>kde<span>&#46;</span>org</a>), or <a class="reference external" href="mailto:foundation&#37;&#52;&#48;krita&#46;org">foundation<span>&#64;</span>krita<span>&#46;</span>org</a>, to accomplish this.</p>
-</section>
-</section>
-<section id="other">
+</div>
+</div>
+<div class="section" id="other">
 <h2>Other<a class="headerlink" href="#other" title="本標題的永久連結">¶</a></h2>
 <p>For restructured text conventions, check <a class="reference internal" href="krita_manual_conventions.html#krita-markup-conventions"><span class="std std-ref">Krita 手冊中 reStructuredText 標記格式使用慣例</span></a>.</p>
-</section>
-</section>
+</div>
+</div>
 
 
            </div>

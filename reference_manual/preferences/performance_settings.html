@@ -21,9 +21,8 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-07-20T15:19:39" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<meta content="Performance settings in Krita." name="description" />
+  <meta property="og:article:modified_time" content="2021-07-23T16:27:40" />
+  <meta content="Performance settings in Krita." name="description" />
 
   
   
@@ -271,11 +270,11 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="performance-settings">
+  <div class="section" id="performance-settings">
 <span id="index-0"></span><span id="id1"></span><h1>Performance Settings<a class="headerlink" href="#performance-settings" title="本標題的永久連結">¶</a></h1>
 <p><strong class="program">Krita</strong>, as a painting program, juggles a lot of data around, like the brushes you use, the colors you picked, but primarily, each pixel in your image. Due to this, how <strong class="program">Krita</strong> organizes where it stores all the data can really speed up <strong class="program">Krita</strong> while painting, just like having an organized artist's workplace can really speed up the painting process in real life.</p>
 <p>These preferences allow you to configure <strong class="program">Krita's</strong> organisation, but all do require you to restart <strong class="program">Krita</strong>, so it can do this organisation properly.</p>
-<section id="ram">
+<div class="section" id="ram">
 <h2>RAM<a class="headerlink" href="#ram" title="本標題的永久連結">¶</a></h2>
 <p>RAM, or Random Access Memory, is the memory your computer is immediately using. The difference between RAM and the hard drive memory can be compared to the difference between having files on your desk and having files safely stored away in an archiving room: The files on your desk as much easier to access than the ones in your archive, and it takes time to pull new files from the archive. This is the same for your computer and RAM. Files need to be loaded into RAM before the computer can really use them, and storing and removing them from RAM takes time.</p>
 <p>These settings allow you to choose how much of your virtual desk you dedicate to <strong class="program">Krita</strong>. <strong class="program">Krita</strong> will then reserve them on start-up. This does mean that if you change any of the given options, you need to restart <strong class="program">Krita</strong> so it can make this reservation.</p>
@@ -295,8 +294,8 @@
 This too needs <strong class="program">Krita</strong> to be restarted.</p>
 </dd>
 </dl>
-</section>
-<section id="swapping">
+</div>
+<div class="section" id="swapping">
 <h2>Swapping<a class="headerlink" href="#swapping" title="本標題的永久連結">¶</a></h2>
 <dl class="simple">
 <dt>File Size Limit</dt><dd><p>This determines the limit of the total space <strong class="program">Krita</strong> can take up in the virtual archive room. If <strong class="program">Krita</strong> hits the limit of both the memory limit above, and this Swap File limit, it can't do anything anymore (and will freeze).</p>
@@ -304,10 +303,10 @@ This too needs <strong class="program">Krita</strong> to be restarted.</p>
 <dt>Swap File Location</dt><dd><p>This determines where the Swap File will be stored on your hard-drive. Location can make a difference, for example, Solid State Drives (SSD) are faster than Hard Disk Drives (HDD). Some people even like to use USB-sticks for the swap file location.</p>
 </dd>
 </dl>
-</section>
-<section id="advanced">
+</div>
+<div class="section" id="advanced">
 <h2>Advanced<a class="headerlink" href="#advanced" title="本標題的永久連結">¶</a></h2>
-<section id="multithreading">
+<div class="section" id="multithreading">
 <h3>Multithreading<a class="headerlink" href="#multithreading" title="本標題的永久連結">¶</a></h3>
 <p>Since 4.0, Krita supports multithreading for the animation cache and handling the drawing of brush tips when using the pixel brush.</p>
 <dl class="simple">
@@ -316,8 +315,8 @@ This too needs <strong class="program">Krita</strong> to be restarted.</p>
 <dt>Frame Rendering Clones Limit</dt><dd><p>When rendering animations to frames, Krita multithreads by keeping a few copies of the image, with a maximum determined by the number of cores your processor has. If you have a heavy animation file and lots of cores, the copies can be quite heavy on your machine, so in that case try lowering this value.</p>
 </dd>
 </dl>
-</section>
-<section id="other">
+</div>
+<div class="section" id="other">
 <h3>Other<a class="headerlink" href="#other" title="本標題的永久連結">¶</a></h3>
 <dl>
 <dt>Limit frames per second while painting.</dt><dd><p>This makes the canvas update less often, which means Krita can spend more time calculating other things. Some people find fewer updates unnerving to watch however, hence this is configurable.</p>
@@ -334,9 +333,9 @@ This too needs <strong class="program">Krita</strong> to be restarted.</p>
 <p>So for unnamed files, this is the <code class="docutils literal notranslate"><span class="pre">$HOME</span></code> folder in Linux, and the <code class="docutils literal notranslate"><span class="pre">%TEMP%</span></code> folder in Windows.</p>
 </dd>
 </dl>
-</section>
-</section>
-<section id="animation-cache">
+</div>
+</div>
+<div class="section" id="animation-cache">
 <h2>Animation Cache<a class="headerlink" href="#animation-cache" title="本標題的永久連結">¶</a></h2>
 <div class="versionadded">
 <p><span class="versionmodified added">4.1 版新加入.</span></p>
@@ -344,7 +343,7 @@ This too needs <strong class="program">Krita</strong> to be restarted.</p>
 <p>The animation cache is the space taken up by animation frames in the memory of the computer. A cache in this sense is a cache of precalculated images.</p>
 <p>Playing back a video at 25 FPS means that the computer has to precalculate 25 images per second of video. Now, video playing software is able to do this because it really focuses on this one single task. However, Krita as a painting program also allows you to edit the pictures. Because Krita needs to be able to do this, and a dedicated video player doesn't, Krita cannot do the same kind of optimizations as a dedicated video player can.</p>
 <p>Still, an animator does need to be able to see what kind of animation they are making. To do this properly, we need to decide how Krita will regenerate the cache after the animator makes a change. There's fortunately a lot of different options how we can do this. However, the best solution really depends on what kind of computer you have and what kind of animation you are making. Therefore in this tab you can customize the way how and when the cache is generated.</p>
-<section id="cache-storage-backend">
+<div class="section" id="cache-storage-backend">
 <h3>Cache Storage Backend<a class="headerlink" href="#cache-storage-backend" title="本標題的永久連結">¶</a></h3>
 <dl>
 <dt>In-memory</dt><dd><p>Animation frame cache will be stored in RAM, completely without any limitations. This is also the way it was handled before 4.1. This is only recommended for computers with a huge amount of RAM and animations that must show full-canvas full resolution 6k at 25 fps. If you do not have a huge amount (say, 64GiB) of RAM, do <em>not</em> use this option (and scale down your projects).</p>
@@ -361,8 +360,8 @@ This too needs <strong class="program">Krita</strong> to be restarted.</p>
 <p>Since data transfer speed of the hard drive is slow, you might want to limit the <span class="guilabel">Cached Frame Size</span> to be able to play your video at 25 fps. A limit of 2500 px is usually a good choice.</p>
 </dd>
 </dl>
-</section>
-<section id="cache-generation-options">
+</div>
+<div class="section" id="cache-generation-options">
 <h3>Cache Generation Options<a class="headerlink" href="#cache-generation-options" title="本標題的永久連結">¶</a></h3>
 <dl class="simple">
 <dt>Limit Cached Frame Size</dt><dd><p>Render scaled down version of the frame if the image is bigger than the provided limit. Make sure you enable this option when using On-Disk storage backend, because On-Disk storage is a little slow. Without the limit, there's a good chance that it will not be able to render at full speed. Lower the size to play back faster at the cost of lower resolution.</p>
@@ -372,9 +371,9 @@ This too needs <strong class="program">Krita</strong> to be restarted.</p>
 <dt>Enable Background Cache Generation</dt><dd><p>This allows you to set whether the animation is cached for playback in the background (that is, when you're not using the computer). Then, when animation is cached when pressing play, this caching will take less long. However, turning off this automatic caching can save power by having your computer work less.</p>
 </dd>
 </dl>
-</section>
-</section>
-<section id="instant-preview">
+</div>
+</div>
+<div class="section" id="instant-preview">
 <span id="instant-preview-settings"></span><h2>Instant Preview<a class="headerlink" href="#instant-preview" title="本標題的永久連結">¶</a></h2>
 <dl class="simple">
 <dt>Use in-stack preview in Transform Tool</dt><dd><p>Whether to use a floating preview for the <a class="reference internal" href="../tools/transform.html#transform-tool"><span class="std std-ref">Transform Tool</span></a>, or whether to have it rendered in place.</p>
@@ -386,8 +385,8 @@ This too needs <strong class="program">Krita</strong> to be restarted.</p>
 <dt>Force instant preview in Filters</dt><dd><p>Turns on <a class="reference internal" href="../instant_preview.html#instant-preview"><span class="std std-ref">即時預覽</span></a> for the <a class="reference internal" href="../filters.html#filters"><span class="std std-ref">濾鏡</span></a> even when it's off in <span class="menuselection">View ‣ Instant preview</span>.</p>
 </dd>
 </dl>
-</section>
-</section>
+</div>
+</div>
 
 
            </div>

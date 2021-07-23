@@ -21,9 +21,8 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-07-20T15:19:39" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<meta content="Page about the HSX blending modes in Krita, amongst which Hue, Color, Luminosity and Saturation." name="description" />
+  <meta property="og:article:modified_time" content="2021-07-23T16:27:40" />
+  <meta content="Page about the HSX blending modes in Krita, amongst which Hue, Color, Luminosity and Saturation." name="description" />
 
   
   
@@ -266,78 +265,66 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="hsx">
+  <div class="section" id="hsx">
 <span id="bm-cat-hsx"></span><span id="index-0"></span><h1>HSX<a class="headerlink" href="#hsx" title="本標題的永久連結">¶</a></h1>
 <p>Krita has four different HSX coordinate systems. The difference between them is how they handle tone.</p>
-<section id="hsi">
+<div class="section" id="hsi">
 <h2>HSI<a class="headerlink" href="#hsi" title="本標題的永久連結">¶</a></h2>
 <p>HSI is a color coordinate system, using Hue, Saturation and Intensity to categorize a color.
 Hue is roughly the wavelength, whether the color is red, yellow, green, cyan, blue or purple. It is measure in 360°, with 0 being red.
 Saturation is the measurement of how close a color is to gray.
 Intensity, in this case is the tone of the color. What makes intensity special is that it recognizes yellow (rgb:1,1,0) having a higher combined rgb value than blue (rgb:0,0,1). This is a non-linear tone dimension, which means it's gamma-corrected.</p>
-</section>
-<section id="hsl">
+</div>
+<div class="section" id="hsl">
 <h2>HSL<a class="headerlink" href="#hsl" title="本標題的永久連結">¶</a></h2>
 <p>HSL is also a color coordinate system. It describes colors in Hue, Saturation and Lightness.
 Lightness specifically puts both yellow (rgb:1,1,0), blue (rgb:0,0,1) and middle gray (rgb:0.5,0.5,0.5) at the same lightness (0.5).</p>
-</section>
-<section id="hsv">
+</div>
+<div class="section" id="hsv">
 <h2>HSV<a class="headerlink" href="#hsv" title="本標題的永久連結">¶</a></h2>
 <p>HSV, occasionally called HSB, is a color coordinate system. It measures colors in Hue, Saturation, and Value (also called Brightness).
 Value or Brightness specifically refers to strength at which the pixel-lights on your monitor have to shine. It sets Yellow (rgb:1,1,0), Blue (rgb:0,0,1) and White (rgb:1,1,1) at the same Value (100%).</p>
-</section>
-<section id="hsy">
+</div>
+<div class="section" id="hsy">
 <h2>HSY<a class="headerlink" href="#hsy" title="本標題的永久連結">¶</a></h2>
 <p>HSY is a color coordinate system. It categorizes colors in Hue, Saturation and Luminosity. Well, not really, it uses Luma instead of true luminosity, the difference being that Luminosity is linear while Luma is gamma-corrected and just weights the rgb components.
 Luma is based on scientific studies of how much light a color reflects in real-life. While like intensity it acknowledges that yellow (rgb:1,1,0) is lighter than blue (rgb:0,0,1), it also acknowledges that yellow (rgb:1,1,0) is lighter than cyan (rgb:0,1,1), based on these studies.</p>
-</section>
-<section id="hsx-blending-modes">
+</div>
+<div class="section" id="hsx-blending-modes">
 <h2>HSX Blending Modes<a class="headerlink" href="#hsx-blending-modes" title="本標題的永久連結">¶</a></h2>
-<section id="color-hsv-hsi-hsl-hsy">
+<div class="section" id="color-hsv-hsi-hsl-hsy">
 <span id="bm-hsy-color"></span><span id="bm-hsi-color"></span><span id="bm-hsl-color"></span><span id="bm-hsv-color"></span><span id="bm-color"></span><h3>色彩 HSV、HSI、HSL、HSY<a class="headerlink" href="#color-hsv-hsi-hsl-hsy" title="本標題的永久連結">¶</a></h3>
 <div class="admonition hint">
 <p class="admonition-title">提示</p>
 <p>These blending modes are called &quot;Color&quot; in English.</p>
 </div>
 <p>This takes the Luminosity/Value/Intensity/Lightness of the colors on the lower layer, and combines them with the Saturation and Hue of the upper pixels. We refer to Color HSY as 'Color' in line with other applications.</p>
-<figure class="align-center" id="id1">
+<div class="figure align-center" id="id1">
 <img alt="../../_images/Blending_modes_Color_HSI_Gray_0.4_and_Gray_0.5.png" src="../../_images/Blending_modes_Color_HSI_Gray_0.4_and_Gray_0.5.png" />
-<figcaption>
-<p><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Color HSI</strong>.</span><a class="headerlink" href="#id1" title="本圖片的永久連結">¶</a></p>
-</figcaption>
-</figure>
-<figure class="align-center" id="id2">
+<p class="caption"><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Color HSI</strong>.</span><a class="headerlink" href="#id1" title="本圖片的永久連結">¶</a></p>
+</div>
+<div class="figure align-center" id="id2">
 <img alt="../../_images/Blending_modes_Color_HSI_Light_blue_and_Orange.png" src="../../_images/Blending_modes_Color_HSI_Light_blue_and_Orange.png" />
-<figcaption>
-<p><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Color HSI</strong>.</span><a class="headerlink" href="#id2" title="本圖片的永久連結">¶</a></p>
-</figcaption>
-</figure>
-<figure class="align-center" id="id3">
+<p class="caption"><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Color HSI</strong>.</span><a class="headerlink" href="#id2" title="本圖片的永久連結">¶</a></p>
+</div>
+<div class="figure align-center" id="id3">
 <img alt="../../_images/Blending_modes_Color_HSI_Sample_image_with_dots.png" src="../../_images/Blending_modes_Color_HSI_Sample_image_with_dots.png" />
-<figcaption>
-<p><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Color HSI</strong>.</span><a class="headerlink" href="#id3" title="本圖片的永久連結">¶</a></p>
-</figcaption>
-</figure>
-<figure class="align-center" id="id4">
+<p class="caption"><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Color HSI</strong>.</span><a class="headerlink" href="#id3" title="本圖片的永久連結">¶</a></p>
+</div>
+<div class="figure align-center" id="id4">
 <img alt="../../_images/Blending_modes_Color_HSL_Sample_image_with_dots.png" src="../../_images/Blending_modes_Color_HSL_Sample_image_with_dots.png" />
-<figcaption>
-<p><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Color HSL</strong>.</span><a class="headerlink" href="#id4" title="本圖片的永久連結">¶</a></p>
-</figcaption>
-</figure>
-<figure class="align-center" id="id5">
+<p class="caption"><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Color HSL</strong>.</span><a class="headerlink" href="#id4" title="本圖片的永久連結">¶</a></p>
+</div>
+<div class="figure align-center" id="id5">
 <img alt="../../_images/Blending_modes_Color_HSV_Sample_image_with_dots.png" src="../../_images/Blending_modes_Color_HSV_Sample_image_with_dots.png" />
-<figcaption>
-<p><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Color HSV</strong>.</span><a class="headerlink" href="#id5" title="本圖片的永久連結">¶</a></p>
-</figcaption>
-</figure>
-<figure class="align-center" id="id6">
+<p class="caption"><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Color HSV</strong>.</span><a class="headerlink" href="#id5" title="本圖片的永久連結">¶</a></p>
+</div>
+<div class="figure align-center" id="id6">
 <img alt="../../_images/Blending_modes_Color_Sample_image_with_dots.png" src="../../_images/Blending_modes_Color_Sample_image_with_dots.png" />
-<figcaption>
-<p><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Color</strong>.</span><a class="headerlink" href="#id6" title="本圖片的永久連結">¶</a></p>
-</figcaption>
-</figure>
-</section>
-<section id="hue-hsv-hsi-hsl-hsy">
+<p class="caption"><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Color</strong>.</span><a class="headerlink" href="#id6" title="本圖片的永久連結">¶</a></p>
+</div>
+</div>
+<div class="section" id="hue-hsv-hsi-hsl-hsy">
 <span id="bm-hsy-hue"></span><span id="bm-hsi-hue"></span><span id="bm-hsl-hue"></span><span id="bm-hsv-hue"></span><span id="bm-hue"></span><h3>色相 HSV、HSI、HSL、HSY<a class="headerlink" href="#hue-hsv-hsi-hsl-hsy" title="本標題的永久連結">¶</a></h3>
 <div class="admonition hint">
 <p class="admonition-title">提示</p>
@@ -345,32 +332,24 @@ Luma is based on scientific studies of how much light a color reflects in real-l
 </div>
 <p>Takes the saturation and tone of the lower layer and combines them with the hue of the upper-layer.
 Tone in this case being either Value, Lightness, Intensity or Luminosity.</p>
-<figure class="align-center" id="id7">
+<div class="figure align-center" id="id7">
 <img alt="../../_images/Blending_modes_Hue_HSI_Sample_image_with_dots.png" src="../../_images/Blending_modes_Hue_HSI_Sample_image_with_dots.png" />
-<figcaption>
-<p><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Hue HSI</strong>.</span><a class="headerlink" href="#id7" title="本圖片的永久連結">¶</a></p>
-</figcaption>
-</figure>
-<figure class="align-center" id="id8">
+<p class="caption"><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Hue HSI</strong>.</span><a class="headerlink" href="#id7" title="本圖片的永久連結">¶</a></p>
+</div>
+<div class="figure align-center" id="id8">
 <img alt="../../_images/Blending_modes_Hue_HSL_Sample_image_with_dots.png" src="../../_images/Blending_modes_Hue_HSL_Sample_image_with_dots.png" />
-<figcaption>
-<p><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Hue HSL</strong>.</span><a class="headerlink" href="#id8" title="本圖片的永久連結">¶</a></p>
-</figcaption>
-</figure>
-<figure class="align-center" id="id9">
+<p class="caption"><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Hue HSL</strong>.</span><a class="headerlink" href="#id8" title="本圖片的永久連結">¶</a></p>
+</div>
+<div class="figure align-center" id="id9">
 <img alt="../../_images/Blending_modes_Hue_HSV_Sample_image_with_dots.png" src="../../_images/Blending_modes_Hue_HSV_Sample_image_with_dots.png" />
-<figcaption>
-<p><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Hue HSV</strong>.</span><a class="headerlink" href="#id9" title="本圖片的永久連結">¶</a></p>
-</figcaption>
-</figure>
-<figure class="align-center" id="id10">
+<p class="caption"><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Hue HSV</strong>.</span><a class="headerlink" href="#id9" title="本圖片的永久連結">¶</a></p>
+</div>
+<div class="figure align-center" id="id10">
 <img alt="../../_images/Blending_modes_Hue_Sample_image_with_dots.png" src="../../_images/Blending_modes_Hue_Sample_image_with_dots.png" />
-<figcaption>
-<p><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Hue</strong>.</span><a class="headerlink" href="#id10" title="本圖片的永久連結">¶</a></p>
-</figcaption>
-</figure>
-</section>
-<section id="increase-value-lightness-intensity-or-luminosity">
+<p class="caption"><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Hue</strong>.</span><a class="headerlink" href="#id10" title="本圖片的永久連結">¶</a></p>
+</div>
+</div>
+<div class="section" id="increase-value-lightness-intensity-or-luminosity">
 <span id="bm-increase-luminosity"></span><span id="bm-increase-intensity"></span><span id="bm-increase-lightness"></span><span id="bm-increase-value"></span><h3>提高明度、提高亮度、提高強度、提高光度<a class="headerlink" href="#increase-value-lightness-intensity-or-luminosity" title="本標題的永久連結">¶</a></h3>
 <div class="admonition hint">
 <p class="admonition-title">提示</p>
@@ -378,32 +357,24 @@ Tone in this case being either Value, Lightness, Intensity or Luminosity.</p>
 </div>
 <p>Similar to lighten, but specific to tone.
 Checks whether the upper layer's pixel has a higher tone than the lower layer's pixel. If so, the tone is increased, if not, the lower layer's tone is maintained.</p>
-<figure class="align-center" id="id11">
+<div class="figure align-center" id="id11">
 <img alt="../../_images/Blending_modes_Increase_Intensity_Sample_image_with_dots.png" src="../../_images/Blending_modes_Increase_Intensity_Sample_image_with_dots.png" />
-<figcaption>
-<p><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Increase Intensity</strong>.</span><a class="headerlink" href="#id11" title="本圖片的永久連結">¶</a></p>
-</figcaption>
-</figure>
-<figure class="align-center" id="id12">
+<p class="caption"><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Increase Intensity</strong>.</span><a class="headerlink" href="#id11" title="本圖片的永久連結">¶</a></p>
+</div>
+<div class="figure align-center" id="id12">
 <img alt="../../_images/Blending_modes_Increase_Lightness_Sample_image_with_dots.png" src="../../_images/Blending_modes_Increase_Lightness_Sample_image_with_dots.png" />
-<figcaption>
-<p><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Increase Lightness</strong>.</span><a class="headerlink" href="#id12" title="本圖片的永久連結">¶</a></p>
-</figcaption>
-</figure>
-<figure class="align-center" id="id13">
+<p class="caption"><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Increase Lightness</strong>.</span><a class="headerlink" href="#id12" title="本圖片的永久連結">¶</a></p>
+</div>
+<div class="figure align-center" id="id13">
 <img alt="../../_images/Blending_modes_Increase_Value_Sample_image_with_dots.png" src="../../_images/Blending_modes_Increase_Value_Sample_image_with_dots.png" />
-<figcaption>
-<p><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Increase Value</strong>.</span><a class="headerlink" href="#id13" title="本圖片的永久連結">¶</a></p>
-</figcaption>
-</figure>
-<figure class="align-center" id="id14">
+<p class="caption"><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Increase Value</strong>.</span><a class="headerlink" href="#id13" title="本圖片的永久連結">¶</a></p>
+</div>
+<div class="figure align-center" id="id14">
 <img alt="../../_images/Blending_modes_Increase_Luminosity_Sample_image_with_dots.png" src="../../_images/Blending_modes_Increase_Luminosity_Sample_image_with_dots.png" />
-<figcaption>
-<p><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Increase Luminosity</strong>.</span><a class="headerlink" href="#id14" title="本圖片的永久連結">¶</a></p>
-</figcaption>
-</figure>
-</section>
-<section id="increase-saturation-hsi-hsv-hsl-hsy">
+<p class="caption"><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Increase Luminosity</strong>.</span><a class="headerlink" href="#id14" title="本圖片的永久連結">¶</a></p>
+</div>
+</div>
+<div class="section" id="increase-saturation-hsi-hsv-hsl-hsy">
 <span id="bm-increase-hsy-saturation"></span><span id="bm-increase-hsi-saturation"></span><span id="bm-increase-hsl-saturation"></span><span id="bm-increase-hsv-saturation"></span><span id="bm-increase-saturation"></span><h3>提高飽和度 HSI、HSV、HSL、HSY<a class="headerlink" href="#increase-saturation-hsi-hsv-hsl-hsy" title="本標題的永久連結">¶</a></h3>
 <div class="admonition hint">
 <p class="admonition-title">提示</p>
@@ -411,74 +382,60 @@ Checks whether the upper layer's pixel has a higher tone than the lower layer's 
 </div>
 <p>Similar to lighten, but specific to Saturation.
 Checks whether the upper layer's pixel has a higher Saturation than the lower layer's pixel. If so, the Saturation is increased, if not, the lower layer's Saturation is maintained.</p>
-<figure class="align-center" id="id15">
+<div class="figure align-center" id="id15">
 <img alt="../../_images/Blending_modes_Increase_Saturation_HSI_Sample_image_with_dots.png" src="../../_images/Blending_modes_Increase_Saturation_HSI_Sample_image_with_dots.png" />
-<figcaption>
-<p><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Increase Saturation HSI</strong>.</span><a class="headerlink" href="#id15" title="本圖片的永久連結">¶</a></p>
-</figcaption>
-</figure>
-<figure class="align-center" id="id16">
+<p class="caption"><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Increase Saturation HSI</strong>.</span><a class="headerlink" href="#id15" title="本圖片的永久連結">¶</a></p>
+</div>
+<div class="figure align-center" id="id16">
 <img alt="../../_images/Blending_modes_Increase_Saturation_HSL_Sample_image_with_dots.png" src="../../_images/Blending_modes_Increase_Saturation_HSL_Sample_image_with_dots.png" />
-<figcaption>
-<p><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Increase Saturation HSL</strong>.</span><a class="headerlink" href="#id16" title="本圖片的永久連結">¶</a></p>
-</figcaption>
-</figure>
-<figure class="align-center" id="id17">
+<p class="caption"><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Increase Saturation HSL</strong>.</span><a class="headerlink" href="#id16" title="本圖片的永久連結">¶</a></p>
+</div>
+<div class="figure align-center" id="id17">
 <img alt="../../_images/Blending_modes_Increase_Saturation_HSV_Sample_image_with_dots.png" src="../../_images/Blending_modes_Increase_Saturation_HSV_Sample_image_with_dots.png" />
-<figcaption>
-<p><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Increase Saturation HSV</strong>.</span><a class="headerlink" href="#id17" title="本圖片的永久連結">¶</a></p>
-</figcaption>
-</figure>
-<figure class="align-center" id="id18">
+<p class="caption"><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Increase Saturation HSV</strong>.</span><a class="headerlink" href="#id17" title="本圖片的永久連結">¶</a></p>
+</div>
+<div class="figure align-center" id="id18">
 <img alt="../../_images/Blending_modes_Increase_Saturation_Sample_image_with_dots.png" src="../../_images/Blending_modes_Increase_Saturation_Sample_image_with_dots.png" />
-<figcaption>
-<p><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Increase Saturation</strong>.</span><a class="headerlink" href="#id18" title="本圖片的永久連結">¶</a></p>
-</figcaption>
-</figure>
-</section>
-<section id="intensity">
+<p class="caption"><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Increase Saturation</strong>.</span><a class="headerlink" href="#id18" title="本圖片的永久連結">¶</a></p>
+</div>
+</div>
+<div class="section" id="intensity">
 <span id="bm-intensity"></span><h3>強度<a class="headerlink" href="#intensity" title="本標題的永久連結">¶</a></h3>
 <div class="admonition hint">
 <p class="admonition-title">提示</p>
 <p>英文稱為「Intensity」。</p>
 </div>
 <p>Takes the Hue and Saturation of the Lower layer and outputs them with the intensity of the upper layer.</p>
-<figure class="align-center" id="id19">
+<div class="figure align-center" id="id19">
 <img alt="../../_images/Blending_modes_Intensity_Sample_image_with_dots.png" src="../../_images/Blending_modes_Intensity_Sample_image_with_dots.png" />
-<figcaption>
-<p><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Intensity</strong>.</span><a class="headerlink" href="#id19" title="本圖片的永久連結">¶</a></p>
-</figcaption>
-</figure>
-</section>
-<section id="value">
+<p class="caption"><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Intensity</strong>.</span><a class="headerlink" href="#id19" title="本圖片的永久連結">¶</a></p>
+</div>
+</div>
+<div class="section" id="value">
 <span id="bm-value"></span><h3>明度<a class="headerlink" href="#value" title="本標題的永久連結">¶</a></h3>
 <div class="admonition hint">
 <p class="admonition-title">提示</p>
 <p>英文稱為「Value」。</p>
 </div>
 <p>Takes the Hue and Saturation of the Lower layer and outputs them with the Value of the upper layer.</p>
-<figure class="align-center" id="id20">
+<div class="figure align-center" id="id20">
 <img alt="../../_images/Blending_modes_Value_Sample_image_with_dots.png" src="../../_images/Blending_modes_Value_Sample_image_with_dots.png" />
-<figcaption>
-<p><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Value</strong>.</span><a class="headerlink" href="#id20" title="本圖片的永久連結">¶</a></p>
-</figcaption>
-</figure>
-</section>
-<section id="lightness">
+<p class="caption"><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Value</strong>.</span><a class="headerlink" href="#id20" title="本圖片的永久連結">¶</a></p>
+</div>
+</div>
+<div class="section" id="lightness">
 <span id="bm-lightness"></span><h3>亮度<a class="headerlink" href="#lightness" title="本標題的永久連結">¶</a></h3>
 <div class="admonition hint">
 <p class="admonition-title">提示</p>
 <p>英文稱為「Lightness」。</p>
 </div>
 <p>Takes the Hue and Saturation of the Lower layer and outputs them with the Lightness of the upper layer.</p>
-<figure class="align-center" id="id21">
+<div class="figure align-center" id="id21">
 <img alt="../../_images/Blending_modes_Lightness_Sample_image_with_dots.png" src="../../_images/Blending_modes_Lightness_Sample_image_with_dots.png" />
-<figcaption>
-<p><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Lightness</strong>.</span><a class="headerlink" href="#id21" title="本圖片的永久連結">¶</a></p>
-</figcaption>
-</figure>
-</section>
-<section id="luminosity">
+<p class="caption"><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Lightness</strong>.</span><a class="headerlink" href="#id21" title="本圖片的永久連結">¶</a></p>
+</div>
+</div>
+<div class="section" id="luminosity">
 <span id="bm-luminosity"></span><h3>光度<a class="headerlink" href="#luminosity" title="本標題的永久連結">¶</a></h3>
 <div class="admonition hint">
 <p class="admonition-title">提示</p>
@@ -487,46 +444,36 @@ Checks whether the upper layer's pixel has a higher Saturation than the lower la
 <p>As explained above, actually Luma, but called this way as it's in line with the terminology in other applications.
 Takes the Hue and Saturation of the Lower layer and outputs them with the Luminosity of the upper layer.
 The most preferred one of the four Tone blending modes, as this one gives fairly intuitive results for the Tone of a hue.</p>
-<figure class="align-center" id="id22">
+<div class="figure align-center" id="id22">
 <img alt="../../_images/Blending_modes_Luminosity_Sample_image_with_dots.png" src="../../_images/Blending_modes_Luminosity_Sample_image_with_dots.png" />
-<figcaption>
-<p><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Luminosity</strong>.</span><a class="headerlink" href="#id22" title="本圖片的永久連結">¶</a></p>
-</figcaption>
-</figure>
-</section>
-<section id="saturation-hsi-hsv-hsl-hsy">
+<p class="caption"><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Luminosity</strong>.</span><a class="headerlink" href="#id22" title="本圖片的永久連結">¶</a></p>
+</div>
+</div>
+<div class="section" id="saturation-hsi-hsv-hsl-hsy">
 <span id="bm-hsy-saturation"></span><span id="bm-hsi-saturation"></span><span id="bm-hsl-saturation"></span><span id="bm-hsv-saturation"></span><span id="bm-saturation"></span><h3>飽和度 HSI、HSV、HSL、HSY<a class="headerlink" href="#saturation-hsi-hsv-hsl-hsy" title="本標題的永久連結">¶</a></h3>
 <div class="admonition hint">
 <p class="admonition-title">提示</p>
 <p>英文稱為「Saturation」。</p>
 </div>
 <p>Takes the Intensity and Hue of the lower layer, and outputs them with the HSI saturation of the upper layer.</p>
-<figure class="align-center" id="id23">
+<div class="figure align-center" id="id23">
 <img alt="../../_images/Blending_modes_Saturation_HSI_Sample_image_with_dots.png" src="../../_images/Blending_modes_Saturation_HSI_Sample_image_with_dots.png" />
-<figcaption>
-<p><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Saturation HSI</strong>.</span><a class="headerlink" href="#id23" title="本圖片的永久連結">¶</a></p>
-</figcaption>
-</figure>
-<figure class="align-center" id="id24">
+<p class="caption"><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Saturation HSI</strong>.</span><a class="headerlink" href="#id23" title="本圖片的永久連結">¶</a></p>
+</div>
+<div class="figure align-center" id="id24">
 <img alt="../../_images/Blending_modes_Saturation_HSL_Sample_image_with_dots.png" src="../../_images/Blending_modes_Saturation_HSL_Sample_image_with_dots.png" />
-<figcaption>
-<p><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Saturation HSL</strong>.</span><a class="headerlink" href="#id24" title="本圖片的永久連結">¶</a></p>
-</figcaption>
-</figure>
-<figure class="align-center" id="id25">
+<p class="caption"><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Saturation HSL</strong>.</span><a class="headerlink" href="#id24" title="本圖片的永久連結">¶</a></p>
+</div>
+<div class="figure align-center" id="id25">
 <img alt="../../_images/Blending_modes_Saturation_HSV_Sample_image_with_dots.png" src="../../_images/Blending_modes_Saturation_HSV_Sample_image_with_dots.png" />
-<figcaption>
-<p><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Saturation HSV</strong>.</span><a class="headerlink" href="#id25" title="本圖片的永久連結">¶</a></p>
-</figcaption>
-</figure>
-<figure class="align-center" id="id26">
+<p class="caption"><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Saturation HSV</strong>.</span><a class="headerlink" href="#id25" title="本圖片的永久連結">¶</a></p>
+</div>
+<div class="figure align-center" id="id26">
 <img alt="../../_images/Blending_modes_Saturation_Sample_image_with_dots.png" src="../../_images/Blending_modes_Saturation_Sample_image_with_dots.png" />
-<figcaption>
-<p><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Saturation</strong>.</span><a class="headerlink" href="#id26" title="本圖片的永久連結">¶</a></p>
-</figcaption>
-</figure>
-</section>
-<section id="decrease-value-lightness-intensity-or-luminosity">
+<p class="caption"><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Saturation</strong>.</span><a class="headerlink" href="#id26" title="本圖片的永久連結">¶</a></p>
+</div>
+</div>
+<div class="section" id="decrease-value-lightness-intensity-or-luminosity">
 <span id="bm-decrease-luminosity"></span><span id="bm-decrease-intensity"></span><span id="bm-decrease-lightness"></span><span id="bm-decrease-value"></span><h3>降低明度、降低亮度、降低強度、降低光度<a class="headerlink" href="#decrease-value-lightness-intensity-or-luminosity" title="本標題的永久連結">¶</a></h3>
 <div class="admonition hint">
 <p class="admonition-title">提示</p>
@@ -534,44 +481,32 @@ The most preferred one of the four Tone blending modes, as this one gives fairly
 </div>
 <p>Similar to darken, but specific to tone.
 Checks whether the upper layer's pixel has a lower tone than the lower layer's pixel. If so, the tone is decreased, if not, the lower layer's tone is maintained.</p>
-<figure class="align-center" id="id27">
+<div class="figure align-center" id="id27">
 <img alt="../../_images/Blending_modes_Decrease_Intensity_Gray_0.4_and_Gray_0.5.png" src="../../_images/Blending_modes_Decrease_Intensity_Gray_0.4_and_Gray_0.5.png" />
-<figcaption>
-<p><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Decrease Intensity</strong>.</span><a class="headerlink" href="#id27" title="本圖片的永久連結">¶</a></p>
-</figcaption>
-</figure>
-<figure class="align-center" id="id28">
+<p class="caption"><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Decrease Intensity</strong>.</span><a class="headerlink" href="#id27" title="本圖片的永久連結">¶</a></p>
+</div>
+<div class="figure align-center" id="id28">
 <img alt="../../_images/Blending_modes_Decrease_Intensity_Light_blue_and_Orange.png" src="../../_images/Blending_modes_Decrease_Intensity_Light_blue_and_Orange.png" />
-<figcaption>
-<p><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Decrease Intensity</strong>.</span><a class="headerlink" href="#id28" title="本圖片的永久連結">¶</a></p>
-</figcaption>
-</figure>
-<figure class="align-center" id="id29">
+<p class="caption"><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Decrease Intensity</strong>.</span><a class="headerlink" href="#id28" title="本圖片的永久連結">¶</a></p>
+</div>
+<div class="figure align-center" id="id29">
 <img alt="../../_images/Blending_modes_Decrease_Intensity_Sample_image_with_dots.png" src="../../_images/Blending_modes_Decrease_Intensity_Sample_image_with_dots.png" />
-<figcaption>
-<p><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Decrease Intensity</strong>.</span><a class="headerlink" href="#id29" title="本圖片的永久連結">¶</a></p>
-</figcaption>
-</figure>
-<figure class="align-center" id="id30">
+<p class="caption"><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Decrease Intensity</strong>.</span><a class="headerlink" href="#id29" title="本圖片的永久連結">¶</a></p>
+</div>
+<div class="figure align-center" id="id30">
 <img alt="../../_images/Blending_modes_Decrease_Lightness_Sample_image_with_dots.png" src="../../_images/Blending_modes_Decrease_Lightness_Sample_image_with_dots.png" />
-<figcaption>
-<p><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Decrease Lightness</strong>.</span><a class="headerlink" href="#id30" title="本圖片的永久連結">¶</a></p>
-</figcaption>
-</figure>
-<figure class="align-center" id="id31">
+<p class="caption"><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Decrease Lightness</strong>.</span><a class="headerlink" href="#id30" title="本圖片的永久連結">¶</a></p>
+</div>
+<div class="figure align-center" id="id31">
 <img alt="../../_images/Blending_modes_Decrease_Value_Sample_image_with_dots.png" src="../../_images/Blending_modes_Decrease_Value_Sample_image_with_dots.png" />
-<figcaption>
-<p><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Decrease Value</strong>.</span><a class="headerlink" href="#id31" title="本圖片的永久連結">¶</a></p>
-</figcaption>
-</figure>
-<figure class="align-center" id="id32">
+<p class="caption"><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Decrease Value</strong>.</span><a class="headerlink" href="#id31" title="本圖片的永久連結">¶</a></p>
+</div>
+<div class="figure align-center" id="id32">
 <img alt="../../_images/Blending_modes_Decrease_Luminosity_Sample_image_with_dots.png" src="../../_images/Blending_modes_Decrease_Luminosity_Sample_image_with_dots.png" />
-<figcaption>
-<p><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Decrease Luminosity</strong>.</span><a class="headerlink" href="#id32" title="本圖片的永久連結">¶</a></p>
-</figcaption>
-</figure>
-</section>
-<section id="decrease-saturation-hsi-hsv-hsl-hsy">
+<p class="caption"><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Decrease Luminosity</strong>.</span><a class="headerlink" href="#id32" title="本圖片的永久連結">¶</a></p>
+</div>
+</div>
+<div class="section" id="decrease-saturation-hsi-hsv-hsl-hsy">
 <span id="bm-decrease-hsy-saturation"></span><span id="bm-decrease-hsi-saturation"></span><span id="bm-decrease-hsl-saturation"></span><span id="bm-decrease-hsv-saturation"></span><span id="bm-decrease-saturation"></span><h3>降低飽和度 HSI、HSV、HSL、HSY<a class="headerlink" href="#decrease-saturation-hsi-hsv-hsl-hsy" title="本標題的永久連結">¶</a></h3>
 <div class="admonition hint">
 <p class="admonition-title">提示</p>
@@ -579,45 +514,33 @@ Checks whether the upper layer's pixel has a lower tone than the lower layer's p
 </div>
 <p>Similar to darken, but specific to Saturation.
 Checks whether the upper layer's pixel has a lower Saturation than the lower layer's pixel. If so, the Saturation is decreased, if not, the lower layer's Saturation is maintained.</p>
-<figure class="align-center" id="id33">
+<div class="figure align-center" id="id33">
 <img alt="../../_images/Blending_modes_Decrease_Saturation_HSI_Gray_0.4_and_Gray_0.5.png" src="../../_images/Blending_modes_Decrease_Saturation_HSI_Gray_0.4_and_Gray_0.5.png" />
-<figcaption>
-<p><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Decrease Saturation HSI</strong>.</span><a class="headerlink" href="#id33" title="本圖片的永久連結">¶</a></p>
-</figcaption>
-</figure>
-<figure class="align-center" id="id34">
+<p class="caption"><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Decrease Saturation HSI</strong>.</span><a class="headerlink" href="#id33" title="本圖片的永久連結">¶</a></p>
+</div>
+<div class="figure align-center" id="id34">
 <img alt="../../_images/Blending_modes_Decrease_Saturation_HSI_Light_blue_and_Orange.png" src="../../_images/Blending_modes_Decrease_Saturation_HSI_Light_blue_and_Orange.png" />
-<figcaption>
-<p><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Decrease Saturation HSI</strong>.</span><a class="headerlink" href="#id34" title="本圖片的永久連結">¶</a></p>
-</figcaption>
-</figure>
-<figure class="align-center" id="id35">
+<p class="caption"><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Decrease Saturation HSI</strong>.</span><a class="headerlink" href="#id34" title="本圖片的永久連結">¶</a></p>
+</div>
+<div class="figure align-center" id="id35">
 <img alt="../../_images/Blending_modes_Decrease_Saturation_HSI_Sample_image_with_dots.png" src="../../_images/Blending_modes_Decrease_Saturation_HSI_Sample_image_with_dots.png" />
-<figcaption>
-<p><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Decrease Saturation HSI</strong>.</span><a class="headerlink" href="#id35" title="本圖片的永久連結">¶</a></p>
-</figcaption>
-</figure>
-<figure class="align-center" id="id36">
+<p class="caption"><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Decrease Saturation HSI</strong>.</span><a class="headerlink" href="#id35" title="本圖片的永久連結">¶</a></p>
+</div>
+<div class="figure align-center" id="id36">
 <img alt="../../_images/Blending_modes_Decrease_Saturation_HSL_Sample_image_with_dots.png" src="../../_images/Blending_modes_Decrease_Saturation_HSL_Sample_image_with_dots.png" />
-<figcaption>
-<p><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Decrease Saturation HSL</strong>.</span><a class="headerlink" href="#id36" title="本圖片的永久連結">¶</a></p>
-</figcaption>
-</figure>
-<figure class="align-center" id="id37">
+<p class="caption"><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Decrease Saturation HSL</strong>.</span><a class="headerlink" href="#id36" title="本圖片的永久連結">¶</a></p>
+</div>
+<div class="figure align-center" id="id37">
 <img alt="../../_images/Blending_modes_Decrease_Saturation_HSV_Sample_image_with_dots.png" src="../../_images/Blending_modes_Decrease_Saturation_HSV_Sample_image_with_dots.png" />
-<figcaption>
-<p><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Decrease Saturation HSV</strong>.</span><a class="headerlink" href="#id37" title="本圖片的永久連結">¶</a></p>
-</figcaption>
-</figure>
-<figure class="align-center" id="id38">
+<p class="caption"><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Decrease Saturation HSV</strong>.</span><a class="headerlink" href="#id37" title="本圖片的永久連結">¶</a></p>
+</div>
+<div class="figure align-center" id="id38">
 <img alt="../../_images/Blending_modes_Decrease_Saturation_Sample_image_with_dots.png" src="../../_images/Blending_modes_Decrease_Saturation_Sample_image_with_dots.png" />
-<figcaption>
-<p><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Decrease Saturation</strong>.</span><a class="headerlink" href="#id38" title="本圖片的永久連結">¶</a></p>
-</figcaption>
-</figure>
-</section>
-</section>
-</section>
+<p class="caption"><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Decrease Saturation</strong>.</span><a class="headerlink" href="#id38" title="本圖片的永久連結">¶</a></p>
+</div>
+</div>
+</div>
+</div>
 
 
            </div>

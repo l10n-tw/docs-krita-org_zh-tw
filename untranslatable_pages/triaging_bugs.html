@@ -21,9 +21,8 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-07-20T15:19:39" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<meta content="Guide to bugtriaging." name="description" />
+  <meta property="og:article:modified_time" content="2021-07-23T16:27:40" />
+  <meta content="Guide to bugtriaging." name="description" />
 
   
   
@@ -254,7 +253,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="triaging-bugs">
+  <div class="section" id="triaging-bugs">
 <span id="id1"></span><h1><a class="toc-backref" href="#id5">Triaging Bugs</a><a class="headerlink" href="#triaging-bugs" title="本標題的永久連結">¶</a></h1>
 <p>There are over 1000 bugs and 350 wishes reported against Krita per year, and that number is rising.
 The Krita developers cannot handle that stream on their own! Please consider helping out by triaging bugs. This document gives some simple guidelines to get started, and some common cases that can often be answered with a standard text.</p>
@@ -289,10 +288,10 @@ The Krita developers cannot handle that stream on their own! Please consider hel
 </li>
 </ul>
 </div>
-<section id="status-flow">
+<div class="section" id="status-flow">
 <h2><a class="toc-backref" href="#id6">Status flow</a><a class="headerlink" href="#status-flow" title="本標題的永久連結">¶</a></h2>
 <p>A bug begins as <code class="docutils literal notranslate"><span class="pre">UNCONFIRMED</span></code>. When triaging, only <code class="docutils literal notranslate"><span class="pre">UNCONFIRMED</span></code> bugs are still relevant.</p>
-<section id="platform">
+<div class="section" id="platform">
 <h3><a class="toc-backref" href="#id7">Platform</a><a class="headerlink" href="#platform" title="本標題的永久連結">¶</a></h3>
 <p>If the user has not entered the Platform correctly (i.e., it is &quot;unspecified/Linux&quot;), then ask which platform they are using. Mark the bug as <code class="docutils literal notranslate"><span class="pre">NEEDDINFO/WAITINFORINFO</span></code>.</p>
 <div class="admonition-tell-the-user admonition">
@@ -300,23 +299,23 @@ The Krita developers cannot handle that stream on their own! Please consider hel
 <p>Please indicate your operating system correctly. For Linux, select the distribution, AppImage or compiled from sources and Linux, for Windows, select MS Windows/MS Windows, for macOS or macOS, select macports, disk images or homebrew and macOS.</p>
 </div>
 <p>If the user has selected Windows CE for platform, set it to MS Windows without asking them.</p>
-</section>
-<section id="version">
+</div>
+<div class="section" id="version">
 <h3><a class="toc-backref" href="#id8">Version</a><a class="headerlink" href="#version" title="本標題的永久連結">¶</a></h3>
 <p>If the user has not entered the version (i.e., the version is unspecified), ask them for the version and mark the bug as <code class="docutils literal notranslate"><span class="pre">NEEDDINFO/WAITINFORINFO</span></code>.</p>
 <div class="admonition-tell-the-user admonition">
 <p class="admonition-title">Tell the user:</p>
 <p>Please select the version of Krita you are using. You can find the version in Help/About Krita.</p>
 </div>
-</section>
-<section id="can-reproduce">
+</div>
+<div class="section" id="can-reproduce">
 <h3><a class="toc-backref" href="#id9">Can Reproduce</a><a class="headerlink" href="#can-reproduce" title="本標題的永久連結">¶</a></h3>
 <ul class="simple">
 <li><p>If you can reproduce the bug, add a comment indicating you can reproduce it, maybe with clearer steps to reproduce and anything pertinent that you observed. If you have a backtrace, also add it. Set the bug status to <code class="docutils literal notranslate"><span class="pre">CONFIRMED</span></code> and add the <code class="docutils literal notranslate"><span class="pre">triaged</span></code> keyword to the keywords.</p></li>
 <li><p>If you can reproduce the bug, and want to go the extra mile, use an older version of Krita to see whether you could reproduce it there as well. If you couldn't, it's a <em>regression</em>, so add the regression keyword to the keywords and mark which version of Krita the latest was that did not have the bug.</p></li>
 </ul>
-</section>
-<section id="cannot-reproduce">
+</div>
+<div class="section" id="cannot-reproduce">
 <h3><a class="toc-backref" href="#id10">Cannot Reproduce</a><a class="headerlink" href="#cannot-reproduce" title="本標題的永久連結">¶</a></h3>
 <ul>
 <li><p>If you cannot reproduce, the user either has not given enough information or the bug is specific to their system.</p></li>
@@ -345,8 +344,8 @@ The Krita developers cannot handle that stream on their own! Please consider hel
 </div></blockquote>
 </li>
 </ul>
-</section>
-<section id="importance">
+</div>
+<div class="section" id="importance">
 <h3><a class="toc-backref" href="#id11">Importance</a><a class="headerlink" href="#importance" title="本標題的永久連結">¶</a></h3>
 <p>Importance is a tool for developers, not for bug reports. It's developers and triagers who decide what the importance is. If a bug reporter complains about a change in importance, use this text:</p>
 <div class="admonition-tell-the-user admonition">
@@ -375,8 +374,8 @@ The Krita developers cannot handle that stream on their own! Please consider hel
 <p>The main difference is between Wish and the rest: Wishes are feature requests, and don't need immediate triaging. A wish bug is a bug that asks whether some functionality can be added to Krita, or complains that some functionality is missing.</p>
 <p>The rest are bugs, that is, problems in Krita that can be fixed by changing Krita's code.</p>
 <p>However, we also get many reports that are not bugs and not wishes: reports that are basically users asking for help because they do not understand Krita or their computer, or what a file is, or that Krita isn't the same application as Photoshop. Those reports need to be weeded out, and the status set to <code class="docutils literal notranslate"><span class="pre">INVALID</span></code>.</p>
-</section>
-<section id="guidance-for-using-importance">
+</div>
+<div class="section" id="guidance-for-using-importance">
 <h3><a class="toc-backref" href="#id12">Guidance for using Importance</a><a class="headerlink" href="#guidance-for-using-importance" title="本標題的永久連結">¶</a></h3>
 <ul class="simple">
 <li><p>If you encounter a bug that reports dataloss when loading a saved file, set it to critical.</p></li>
@@ -384,8 +383,8 @@ The Krita developers cannot handle that stream on their own! Please consider hel
 <li><p>If you encounter a report that asks for functionality that is not currently present, set it to wish.</p></li>
 <li><p>If you encounter a report that is a user request, check whether you can reply with a link to the faq (<a class="reference external" href="https://docs.krita.org/en/KritaFAQ.html">https://docs.krita.org/en/KritaFAQ.html</a>), and maybe a canned answer, and change the status of the bug to <code class="docutils literal notranslate"><span class="pre">INVALID</span></code>.</p></li>
 </ul>
-</section>
-<section id="asserts-and-crashes">
+</div>
+<div class="section" id="asserts-and-crashes">
 <h3><a class="toc-backref" href="#id13">Asserts and Crashes</a><a class="headerlink" href="#asserts-and-crashes" title="本標題的永久連結">¶</a></h3>
 <dl class="footnote brackets">
 <dt class="label" id="id4"><span class="brackets"><a class="fn-backref" href="#id3">1</a></span></dt>
@@ -399,9 +398,9 @@ The Krita developers cannot handle that stream on their own! Please consider hel
 <p>Or another mention of assert, Q_ASSERT or similar, it's an assert, not a crash.</p>
 </dd>
 </dl>
-</section>
-</section>
-<section id="canned-answers-and-recognizing-common-reports">
+</div>
+</div>
+<div class="section" id="canned-answers-and-recognizing-common-reports">
 <h2><a class="toc-backref" href="#id14">Canned Answers and Recognizing Common Reports</a><a class="headerlink" href="#canned-answers-and-recognizing-common-reports" title="本標題的永久連結">¶</a></h2>
 <p>We get a lot of duplicate bug reports. Sometimes it's clear that it's a duplicate, and you can mark it a such. In all cases, we want to give the reporter useful information so they can solve their problems. Of course, (almost) all solutions are also in the FAQ, but just pointing people to the FAQ is often considered impolite.</p>
 <p>So, do never reply to a bug report with:</p>
@@ -409,7 +408,7 @@ The Krita developers cannot handle that stream on their own! Please consider hel
 <div><p>&quot;Just read the FAQ.&quot;</p>
 </div></blockquote>
 <p>It takes a bit of experience to recognize a bug from an often incomplete description. Here are a couple of common cases:</p>
-<section id="cannot-save">
+<div class="section" id="cannot-save">
 <h3><a class="toc-backref" href="#id15">Cannot Save</a><a class="headerlink" href="#cannot-save" title="本標題的永久連結">¶</a></h3>
 <p>For instance:
 &quot;I cannot save/my file doesn't get saved/it says it cannot copy the file&quot;</p>
@@ -419,16 +418,16 @@ The Krita developers cannot handle that stream on their own! Please consider hel
 <p>Are you using Windows? If so, do you have any non-standard security software installed such as Total Defender, Sandboxie or XXX? Please make an exception for Krita in the settings, or uninstall this software. Since Windows 10, it is no longer necessary to have any security software installed other than what comes with Windows.</p>
 </div>
 <p>If the user replies that they are using extra security software, close the bug as <code class="docutils literal notranslate"><span class="pre">RESOLVED/INVALID</span></code>.</p>
-</section>
-<section id="broken-canvas">
+</div>
+<div class="section" id="broken-canvas">
 <h3><a class="toc-backref" href="#id16">Broken Canvas</a><a class="headerlink" href="#broken-canvas" title="本標題的永久連結">¶</a></h3>
 <p>This happens on Windows. Symptoms will be: the canvas is black, the canvas stays blank, the canvas only updates when the user clicks outside the canvas. Mark the bug as a duplicate of <a class="reference external" href="https://bugs.kde.org/show_bug.cgi?id=360601">https://bugs.kde.org/show_bug.cgi?id=360601</a>, and add the following text:</p>
 <div class="admonition-tell-the-user admonition">
 <p class="admonition-title">Tell the user:</p>
 <p>You probably are using a Windows system with an Intel display chip. Please update to Krita 3.3.3, which enables the Direct3D (Angle) renderer by default. If you do not want to update, check <a class="reference external" href="https://docs.krita.org/en/KritaFAQ.html#krita-starts-with-an-empty-canvas-and-nothing-changes-when-you-try-to-draw-or-krita-shows-a-black-or-blank-screen-or-krita-crashes-when-creating-a-document-or-krita-s-menubar-is-hidden-on-a-windows-system-with-an-intel-gpu">https://docs.krita.org/en/KritaFAQ.html#krita-starts-with-an-empty-canvas-and-nothing-changes-when-you-try-to-draw-or-krita-shows-a-black-or-blank-screen-or-krita-crashes-when-creating-a-document-or-krita-s-menubar-is-hidden-on-a-windows-system-with-an-intel-gpu</a></p>
 </div>
-</section>
-<section id="my-stylus-has-an-offset">
+</div>
+<div class="section" id="my-stylus-has-an-offset">
 <h3><a class="toc-backref" href="#id17">My stylus has an offset</a><a class="headerlink" href="#my-stylus-has-an-offset" title="本標題的永久連結">¶</a></h3>
 <p>This happens on Windows. Symptoms will be: the user reports that the stylus cursor has an offset or moves the cursor on another screen. Usually, the user will have a misconfigured multi-monitor system. Mark the bug as <code class="docutils literal notranslate"><span class="pre">NEEDSINFO/WAITINGFORINFO</span></code> and ask the user:</p>
 <div class="admonition-ask-the-user admonition">
@@ -436,16 +435,16 @@ The Krita developers cannot handle that stream on their own! Please consider hel
 <p>Do you have a multi-monitor setup? If so, this is a configuration issue. Please reset your tablet driver's configuration and Krita's configuration (<a class="reference external" href="https://docs.krita.org/en/KritaFAQ.html#resetting-krita-configuration">https://docs.krita.org/en/KritaFAQ.html#resetting-krita-configuration</a>). If you have a single-monitor setup, then please calibrate your tablet.</p>
 </div>
 <p>If the user checks back and tells us the problems are solved, mark the bug as <code class="docutils literal notranslate"><span class="pre">RESOLVED/UPSTREAM</span></code>.</p>
-</section>
-<section id="other-tablet-issues">
+</div>
+<div class="section" id="other-tablet-issues">
 <h3><a class="toc-backref" href="#id18">Other tablet issues</a><a class="headerlink" href="#other-tablet-issues" title="本標題的永久連結">¶</a></h3>
 <p>Often, the user will tell you that their tablet will work perfectly with another application. This is not relevant.</p>
 <div class="admonition-tell-the-user admonition">
 <p class="admonition-title">Tell the user:</p>
 <p>Windows tablet drivers often have a special code for different applications. Whether an application works or not depends on whether the programmers have tested their driver with an application or not. Tablet issues are almost always caused by the drivers being broken.</p>
 </div>
-</section>
-<section id="krita-lags">
+</div>
+<div class="section" id="krita-lags">
 <h3><a class="toc-backref" href="#id19">Krita lags</a><a class="headerlink" href="#krita-lags" title="本標題的永久連結">¶</a></h3>
 <p>The word &quot;lag&quot; is meaningless. Complaints about &quot;lag&quot; are not bug reports. However, we should help the complainer.</p>
 <p>Mark the bug as <code class="docutils literal notranslate"><span class="pre">NEEDSINFO/WAITINGFORINFO</span></code> and ask the user:</p>
@@ -453,17 +452,17 @@ The Krita developers cannot handle that stream on their own! Please consider hel
 <p class="admonition-title">Ask the user:</p>
 <p>Have you enabled the stabilizer? Check the tool options panel for the freehand tool. Also check the other possibilities mentioned here: <a class="reference external" href="https://docs.krita.org/en/KritaFAQ.html#krita-is-slow">https://docs.krita.org/en/KritaFAQ.html#krita-is-slow</a></p>
 </div>
-</section>
-<section id="i-cannot-paint-at-all-in-a-particular-document">
+</div>
+<div class="section" id="i-cannot-paint-at-all-in-a-particular-document">
 <h3><a class="toc-backref" href="#id20">I cannot paint at all, in a particular document</a><a class="headerlink" href="#i-cannot-paint-at-all-in-a-particular-document" title="本標題的永久連結">¶</a></h3>
 <p>The user probably created, accidentally, a tiny selection, and saved that with the document. Mark as <code class="docutils literal notranslate"><span class="pre">NEEDSINFO/WAITINGFORINFO</span></code> and ask them:</p>
 <div class="admonition-ask-the-user admonition">
 <p class="admonition-title">Ask the user:</p>
 <p>Do you have a selection saved with that document? Use select/deselect on your image and check whether you can paint again. If not, please attach the <code class="docutils literal notranslate"><span class="pre">.kra</span></code> document to this bug report or make it available.</p>
 </div>
-</section>
-</section>
-</section>
+</div>
+</div>
+</div>
 
 
            </div>

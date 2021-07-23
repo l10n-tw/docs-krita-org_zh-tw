@@ -21,9 +21,8 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-07-20T15:19:39" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<meta content="Split Alpha: how to work with color and alpha channels of the layer separately." name="description" />
+  <meta property="og:article:modified_time" content="2021-07-23T16:27:40" />
+  <meta content="Split Alpha: how to work with color and alpha channels of the layer separately." name="description" />
 
   
   
@@ -268,10 +267,10 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="split-alpha">
+  <div class="section" id="split-alpha">
 <span id="index-0"></span><span id="id1"></span><h1>分割透明度<a class="headerlink" href="#split-alpha" title="本標題的永久連結">¶</a></h1>
 <p>Sometimes especially in the field of game development, artists need to work with the alpha channel of the texture separately. To assist such workflow, Krita has a special functionality called <span class="menuselection">Split Alpha</span>. It allows splitting alpha channel of a paint layer into a separate <a class="reference internal" href="transparency_masks.html#transparency-masks"><span class="std std-ref">Transparency Masks</span></a>. The artist can work on the transparency mask in an isolated environment and merge it back when he has finished working.</p>
-<section id="how-to-work-with-alpha-channel-of-the-layer">
+<div class="section" id="how-to-work-with-alpha-channel-of-the-layer">
 <h2>How to work with alpha channel of the layer<a class="headerlink" href="#how-to-work-with-alpha-channel-of-the-layer" title="本標題的永久連結">¶</a></h2>
 <ol class="arabic simple">
 <li><p><img alt="mouseright" src="../../_images/Krita_mouse_right.png" /> the paint layer in the layers docker.</p></li>
@@ -280,8 +279,8 @@
 <li><p>If you would like to isolate alpha channel, enter Isolated Mode by <img alt="mouseright" src="../../_images/Krita_mouse_right.png" /> + <span class="menuselection">Isolate Layer</span> (or the <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Alt</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="mouseleft" src="../../_images/Krita_mouse_left.png" /> shortcut).</p></li>
 <li><p>When finished editing the Transparency Mask, <img alt="mouseright" src="../../_images/Krita_mouse_right.png" /> on it and select <span class="menuselection">Split Alpha ‣ Write as Alpha</span>.</p></li>
 </ol>
-</section>
-<section id="how-to-save-a-png-texture-and-keep-color-values-in-fully-transparent-areas">
+</div>
+<div class="section" id="how-to-save-a-png-texture-and-keep-color-values-in-fully-transparent-areas">
 <h2>How to save a PNG texture and keep color values in fully transparent areas<a class="headerlink" href="#how-to-save-a-png-texture-and-keep-color-values-in-fully-transparent-areas" title="本標題的永久連結">¶</a></h2>
 <p>Normally, when saving an image to a file, all fully transparent areas of the image are filled with black color. It happens because when composing the layers of the image, Krita drop color data of fully transparent pixels for efficiency reason. To avoid this of color data loss you can either avoid compositing of the image i.e. limit image to only one layer without any masks or effects, or use the following method:</p>
 <ol class="arabic simple">
@@ -289,8 +288,8 @@
 <li><p>Choose <span class="menuselection">Split Alpha ‣ Alpha into Mask</span>.</p></li>
 <li><p><img alt="mouseright" src="../../_images/Krita_mouse_right.png" /> on the created mask and select <span class="menuselection">Split Alpha ‣ Save Merged...</span>.</p></li>
 </ol>
-</section>
-</section>
+</div>
+</div>
 
 
            </div>

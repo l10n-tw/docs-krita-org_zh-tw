@@ -21,9 +21,8 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-07-20T15:19:39" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<meta content="Scene Linear painting in Krita" name="description" />
+  <meta property="og:article:modified_time" content="2021-07-23T16:27:40" />
+  <meta content="Scene Linear painting in Krita" name="description" />
 
   
   
@@ -238,7 +237,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="scene-linear-painting">
+  <div class="section" id="scene-linear-painting">
 <span id="index-0"></span><span id="id1"></span><h1>場景線性作畫<a class="headerlink" href="#scene-linear-painting" title="本標題的永久連結">¶</a></h1>
 <p>Previously referred to as HDR painting and Scene Referred painting, Scene Linear Painting is doing digital painting in a peculiar type of colorspace. It is painting in a color space that is...</p>
 <ol class="arabic simple">
@@ -255,14 +254,12 @@
 <p>This is also why it needs to be Linear. Gamma and Tone-mapped color spaces are already choosing which contrast is the most important to you. But for that, they too need to choose what is white or black. Linear doesn’t make such assumptions, so much better for when you want to choose yourself. You will eventually want to stick your image through some tone-mapping or gamma correction, but only at the end after you have applied filters and mixed colors!</p>
 <p>In fact, there’s always a non-destructive sort of transform going on while you are working on your image which includes the tone-mapping. This is called a display or view transform, and they provide a sort of set of binoculars into the world of your image. Without it, your computer cannot show these colors properly; it doesn’t know how to interpret it properly, often making the image too dark. Providing such a transform and allowing you to configure it is the prime function of color management.</p>
 <p>Between different view and display transforms, there’s also a difference in types. Some are really naive, others are more sophisticated, and some need to be used in a certain manner to work properly. The ICC color management can only give a certain type of view transforms, while OCIO color management in the LUT docker can give much more complex transforms easily configurable and custom settings that can be shared between programs.</p>
-<figure class="align-center" id="id2" style="width: 800px">
+<div class="figure align-center" id="id2" style="width: 800px">
 <img alt="../../_images/Krita_scenelinear_cat_01.png" src="../../_images/Krita_scenelinear_cat_01.png" />
-<figcaption>
-<p><span class="caption-text">Above, an example of the more naive transform provided by going from scene-linear sRGB to regular sRGB, and to the right a more sophisticated transform coming from the filmic blender OCIO configuration. Look at the difference between the paws. Image by Wolthera van Hövell tot Westerflier, License: CC-BY-SA</span><a class="headerlink" href="#id2" title="本圖片的永久連結">¶</a></p>
-</figcaption>
-</figure>
+<p class="caption"><span class="caption-text">Above, an example of the more naive transform provided by going from scene-linear sRGB to regular sRGB, and to the right a more sophisticated transform coming from the filmic blender OCIO configuration. Look at the difference between the paws. Image by Wolthera van Hövell tot Westerflier, License: CC-BY-SA</span><a class="headerlink" href="#id2" title="本圖片的永久連結">¶</a></p>
+</div>
 <p>Conversely, transforming and interpreting your image’s colors is the only thing OCIO can do, and it can do it with really complex transforms, really fast. It doesn’t understand what your image’s color space is originally, doesn’t understand what CMYK is, and there’s also no such thing as a OCIO color profile. Therefore you will need to switch to an ICC workflow if you wish to prepare for print.</p>
-<section id="yes-but-what-is-the-point">
+<div class="section" id="yes-but-what-is-the-point">
 <h2>Yes, but what is the point?<a class="headerlink" href="#yes-but-what-is-the-point" title="本標題的永久連結">¶</a></h2>
 <p>The point is making things easier in the long run:</p>
 <ol class="arabic simple">
@@ -273,8 +270,8 @@
 <li><p>Combining painting with other image results such as photography and physically based rendering is much easier as they too work in such a type of colorspace. So you could use such images as a reference with little qualms, or make textures that play nice with such a renderer.</p></li>
 </ol>
 <p>So the advantages are prettier colors, cooler filter results, more control and easier interchange with other methods.</p>
-</section>
-<section id="okay-but-why-isnt-this-all-the-rage-then">
+</div>
+<div class="section" id="okay-but-why-isnt-this-all-the-rage-then">
 <h2>Okay, but why isn’t this all the rage then?<a class="headerlink" href="#okay-but-why-isnt-this-all-the-rage-then" title="本標題的永久連結">¶</a></h2>
 <p>Simply put, because while it’s easier in the long run, you will also have to drop tools and change habits...</p>
 <p>In particular, there are many tools in a digital painter’s toolbox that have <strong>hard-coded assumptions about black and white</strong>.</p>
@@ -313,22 +310,22 @@
 <p>Finally, there’s the <strong>issue of size</strong>.</p>
 <p>16 bit float per channel images are big. 32 bit float per channel images are bigger. This means that they will eat RAM and that painting and filtering will be slower. This is something that will fix itself over the years, but not many people have such a high-end PC yet, so it can be a blocker.</p>
 <p>So the issues are tools, expectations and size.</p>
-<section id="in-summary">
+<div class="section" id="in-summary">
 <h3>In Summary<a class="headerlink" href="#in-summary" title="本標題的永久連結">¶</a></h3>
 <p>Scene Linear Painting is painting an image in a color space that is linear and has a floating point bit depth. This does not assume anything about the values of black and white, so you can only use tools that don’t assume anything about the values of black and white. It has the advantage of having nicer filter results and better color mixtures as well as better interoperability with other scene-linear output.</p>
 <p>To be able to view such an image you use a view transform, also called a display conversion. Which means that if you wish to finalize your image for the web, you make a copy of the image that goes through a display conversion or view transform that then gets saved to PNG, JPEG or TIFF.</p>
-</section>
-</section>
-<section id="getting-to-actual-painting">
+</div>
+</div>
+<div class="section" id="getting-to-actual-painting">
 <h2>Getting to actual painting<a class="headerlink" href="#getting-to-actual-painting" title="本標題的永久連結">¶</a></h2>
 <p>Now we’ve covered the theory, let us look at a workflow for painting scene linear.</p>
-<section id="setting-up-the-canvas">
+<div class="section" id="setting-up-the-canvas">
 <h3>Setting up the Canvas<a class="headerlink" href="#setting-up-the-canvas" title="本標題的永久連結">¶</a></h3>
 <p>Select either a 16bit or 32bit image. By default Krita will select a linear sRGB profile. If you want to create images for HDR display, you will need to make sure that the profile selected is the <span class="guilabel">Rec2020-elle-V4-g10.icc</span> profile. HDR images are standardised to use the Rec. 2020 gamut, which is much larger than sRGB in size, so this ensures you've got access to all the colors.</p>
 <p>If you're working on a non-HDR enabled monitor, you should enable OCIO in the LUT docker.</p>
 <p>Keep in mind everything mentioned above. Not all filters and not all blending modes work. This will improve in the future. Other than that, everything else is the same.</p>
-</section>
-<section id="picking-really-bright-colors">
+</div>
+<div class="section" id="picking-really-bright-colors">
 <h3>Picking really bright colors<a class="headerlink" href="#picking-really-bright-colors" title="本標題的永久連結">¶</a></h3>
 <p>Picking regular colors is easy, but how do we pick the really bright colors? There are three ways of getting access to the really bright colors in Krita:</p>
 <ol class="arabic simple">
@@ -338,28 +335,26 @@
 <li><p>And finally by picking a really bright color from an image that has such values.</p></li>
 </ol>
 <p>Then paint. It’s recommended to make a bunch of swatches in the corner, at the least, until Krita’s new Palette docker allows you to save the values properly.</p>
-</section>
-<section id="lighting-based-workflow">
+</div>
+<div class="section" id="lighting-based-workflow">
 <h3>Lighting based workflow<a class="headerlink" href="#lighting-based-workflow" title="本標題的永久連結">¶</a></h3>
 <p>So, we have our typical value based workflow, where we only paint the grays of the image so that we can focus on the values of the image. We can do something similar with Scene Linear Painting.</p>
 <p>Where with the value based workflow you paint the image as if it were a grayscale of what you intended to paint, with a lighting based workflow you paint as if all the objects are white. The effect of the color of an object can be determined by multiplying its base color with the color of the light. So you could paint objects as if they were white, paint the colors on a separate layer and just use the Multiply blending mode to get the right colors.</p>
-<figure class="align-center" id="id3" style="width: 800px">
+<div class="figure align-center" id="id3" style="width: 800px">
 <img alt="../../_images/Krita_scenelinear_cat_02.png" src="../../_images/Krita_scenelinear_cat_02.png" />
-<figcaption>
-<p><span class="caption-text">The leftmost image is both the lighting based one and the color layer separate, the middle with the two layers multiplied and the right a luminosity based view. This cat is a nice example as it demonstrates why having textures and lighting separate could be interesting.</span><a class="headerlink" href="#id3" title="本圖片的永久連結">¶</a></p>
-</figcaption>
-</figure>
+<p class="caption"><span class="caption-text">The leftmost image is both the lighting based one and the color layer separate, the middle with the two layers multiplied and the right a luminosity based view. This cat is a nice example as it demonstrates why having textures and lighting separate could be interesting.</span><a class="headerlink" href="#id3" title="本圖片的永久連結">¶</a></p>
+</div>
 <p>You can even combine this with a value based workflow by opening a new view and setting the component to luminosity. That way you can see both the grayscale as well as the lighting based version of the image next to one another.</p>
 <p>The keen minded will notice that a lighting based workflow kind of resembles the idea of a light pass and a color pass in 3d rendering. And indeed, it is basically the same, so you can use lighting passes from 3d renders here, just save them as EXR and import them as a layer. One of the examples where scene linear painting simplifies combining methods.</p>
-</section>
-<section id="finishing-up">
+</div>
+<div class="section" id="finishing-up">
 <h3>Finishing up<a class="headerlink" href="#finishing-up" title="本標題的永久連結">¶</a></h3>
 <p>When you are done, you will want to apply the view transform you have been using to the image (at the least, if you want to post the end result on the Internet)... This is called LUT baking and not possible yet in Krita. Therefore you will have to save out your image in EXR and open it in either Blender or Natron. Then, in Blender it is enough to just use the same OCIO config, select the right values and save the result as a PNG.</p>
 <p>For saving HDR images, check the <a class="reference internal" href="../../reference_manual/hdr_display.html#hdr-display"><span class="std std-ref">HDR 顯示器</span></a> page.</p>
 <p>You can even use some of Blender’s or Natron’s filters at this stage, and when working with others, you would save out in EXR so that others can use those.</p>
-</section>
-</section>
-</section>
+</div>
+</div>
+</div>
 
 
            </div>

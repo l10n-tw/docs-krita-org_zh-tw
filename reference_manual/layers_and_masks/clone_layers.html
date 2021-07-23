@@ -21,9 +21,8 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-07-20T15:19:39" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<meta content="How to use clone layers." name="description" />
+  <meta property="og:article:modified_time" content="2021-07-23T16:27:40" />
+  <meta content="How to use clone layers." name="description" />
 
   
   
@@ -268,10 +267,10 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="clone-layers">
+  <div class="section" id="clone-layers">
 <span id="index-0"></span><span id="id1"></span><h1>Clone Layers<a class="headerlink" href="#clone-layers" title="本標題的永久連結">¶</a></h1>
 <p>A clone layer is a layer that keeps an up-to-date copy of another layer. You cannot draw or paint on it directly, but it can be used to create effects by applying different types of layers and masks (e.g. filter layers or masks).</p>
-<section id="example-uses-of-clone-layers">
+<div class="section" id="example-uses-of-clone-layers">
 <h2>Example uses of Clone Layers<a class="headerlink" href="#example-uses-of-clone-layers" title="本標題的永久連結">¶</a></h2>
 <p>For example, if you were painting a picture of some magic person and wanted to create a glow around them that was updated as you updated your character, you could:</p>
 <ol class="arabic simple">
@@ -281,8 +280,8 @@
 <li><p>Apply a blur filter mask to the clone layer so it looks like a &quot;glow&quot;.</p></li>
 </ol>
 <p>As you keep painting and adding details, erasing on the first layer, Krita will automatically update the clone layer, making your &quot;glow&quot; apply to every change you make.</p>
-</section>
-<section id="changing-the-source-of-clone-layers">
+</div>
+<div class="section" id="changing-the-source-of-clone-layers">
 <h2>Changing the source of Clone Layers<a class="headerlink" href="#changing-the-source-of-clone-layers" title="本標題的永久連結">¶</a></h2>
 <p>You can change the source of one or more Clone Layers in the Layers Docker. To do so, select one or more Clone Layers in the docker (hold <kbd class="kbd docutils literal notranslate">Ctrl</kbd> or <kbd class="kbd docutils literal notranslate">Shift</kbd> and left-click the layers). Then, right-click on any selected layer. In the context menu, there is an action named <span class="guilabel">Set Copy From</span>. Click it. A dialog will pop up and there is a drop-down menu with all possible layers to be set as the source of all selected Clone Layers. If the current source of them consists of multiple layers, the default activated selection in the drop-down menu will be blank. Otherwise, it would be the common source of selected Clone Layers.</p>
 <p>Possible target layers are determined through the following criteria:</p>
@@ -292,8 +291,8 @@
 <li><p>All other layers are valid.</p></li>
 </ol>
 <p>If you select one layer in the drop-down menu, a preview of the canvas will be shown. Click <span class="guilabel">OK</span> to apply the changes. Click <span class="guilabel">Cancel</span> to discard the changes. If you make changes to the image outside the dialog, the changes will be applied and the dialog will be automatically closed.</p>
-</section>
-</section>
+</div>
+</div>
 
 
            </div>

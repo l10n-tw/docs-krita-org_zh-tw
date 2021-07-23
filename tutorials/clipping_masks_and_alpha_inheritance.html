@@ -21,9 +21,8 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-07-20T15:19:39" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<meta content="An introduction for using clipping masks in Krita." lang="en" name="description" xml:lang="en" />
+  <meta property="og:article:modified_time" content="2021-07-23T16:27:40" />
+  <meta content="An introduction for using clipping masks in Krita." lang="en" name="description" xml:lang="en" />
 
   
   
@@ -226,7 +225,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="clipping-masks-and-alpha-inheritance">
+  <div class="section" id="clipping-masks-and-alpha-inheritance">
 <span id="index-0"></span><span id="id1"></span><h1>Clipping Masks and Alpha Inheritance<a class="headerlink" href="#clipping-masks-and-alpha-inheritance" title="本標題的永久連結">¶</a></h1>
 <p>Krita doesn't have clipping mask functionality in the manner that Photoshop and programs that mimic Photoshop's functionality have. That's because in Krita, unlike such software, a group layer is not an arbitrary collection of layers.
 Rather, in Krita, group layers are composited separately from the rest of the stack, and then the result is added into the stack. In other words, in Krita group layers are in effect distinct images inside your image.</p>
@@ -252,7 +251,7 @@ To get a clipping mask working, you first need to put layers into a group. You c
 Above, the lower image is exactly the same as the upper one, except with the erase-layer hidden. Filters can also affect the alpha inheritance:</p>
 <a class="reference internal image-reference" href="../_images/Tut_clip_blur.gif"><img alt="Filter layers and alpha inheritance." src="../_images/Tut_clip_blur.gif" style="width: 800px;" /></a>
 <p>Above, the blur filter layer gives different results when in different places, due to different parts being blurred.</p>
-</section>
+</div>
 
 
            </div>

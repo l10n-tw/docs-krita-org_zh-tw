@@ -21,9 +21,8 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-07-20T15:19:39" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<meta content="How to use group layers in Krita." name="description" />
+  <meta property="og:article:modified_time" content="2021-07-23T16:27:40" />
+  <meta content="How to use group layers in Krita." name="description" />
 
   
   
@@ -264,11 +263,11 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="group-layers">
+  <div class="section" id="group-layers">
 <span id="index-0"></span><span id="id1"></span><h1>Group Layers<a class="headerlink" href="#group-layers" title="本標題的永久連結">¶</a></h1>
 <p>While working on complex artwork you'll often find the need to group some layers or portions and elements of the artwork as one unit. Group layers come in handy for this: They allow you to segregate some layers so you can hide these quickly, or so you can recursively transform the content of the group, or so you can apply a mask to all the layers inside this group as if they are one (e.g. by dragging an existing mask to to a group layer), etc.. You can quickly create a group layer by selecting the layers that should be grouped together and then pressing the <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">G</kbd></kbd> shortcut.</p>
 <p>A thing to note is that the layers inside a group layer are considered separately from the outside when the group layer gets composited: All layers inside are combined first, and then this intermediate result is used on the outside for compositing the rest of the image. In Photoshop on the contrary, groups have something called pass-through mode which makes the layers behave as if they are not in a group and get composited along with other layers of the stack. Recent versions of Krita offer a pass-through mode as well, which can be enabled in order to get similar behavior.</p>
-</section>
+</div>
 
 
            </div>

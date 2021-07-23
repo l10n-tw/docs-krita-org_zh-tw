@@ -21,9 +21,8 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-07-20T15:19:39" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<meta content="The color management settings in Krita." name="description" property="og:description" />
+  <meta property="og:article:modified_time" content="2021-07-23T16:27:40" />
+  <meta content="The color management settings in Krita." name="description" property="og:description" />
 
   
   
@@ -269,18 +268,18 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="color-management-settings">
+  <div class="section" id="color-management-settings">
 <span id="index-0"></span><span id="id1"></span><h1>Color Management Settings<a class="headerlink" href="#color-management-settings" title="本標題的永久連結">¶</a></h1>
 <img alt="../../_images/Krita_Preferences_Color_Management.png" src="../../_images/Krita_Preferences_Color_Management.png" />
 <p>Krita offers extensive functionality for color management, utilising <a class="reference external" href="http://www.littlecms.com/">Little CMS</a>
 We describe Color Management in a more overall level here: <a class="reference internal" href="../../general_concepts/colors/color_managed_workflow.html#color-managed-workflow"><span class="std std-ref">色彩管理作業流程</span></a>.</p>
-<section id="general">
+<div class="section" id="general">
 <h2>General<a class="headerlink" href="#general" title="本標題的永久連結">¶</a></h2>
-<section id="default-color-model-for-new-images">
+<div class="section" id="default-color-model-for-new-images">
 <h3>Default Color Model For New Images<a class="headerlink" href="#default-color-model-for-new-images" title="本標題的永久連結">¶</a></h3>
 <p>Choose the default model you prefer for all your images.</p>
-</section>
-<section id="when-pasting-into-krita-from-other-applications">
+</div>
+<div class="section" id="when-pasting-into-krita-from-other-applications">
 <h3>When Pasting Into Krita From Other Applications<a class="headerlink" href="#when-pasting-into-krita-from-other-applications" title="本標題的永久連結">¶</a></h3>
 <p>The user can define what kind of conversion, if any, Krita will do to an image that is copied from other applications i.e. Browser, GIMP, etc.</p>
 <dl class="simple">
@@ -295,28 +294,28 @@ We describe Color Management in a more overall level here: <a class="reference i
 <p class="admonition-title">備註</p>
 <p>When copying and pasting in Krita color information is always preserved.</p>
 </div>
-</section>
-<section id="use-blackpoint-compensation">
+</div>
+<div class="section" id="use-blackpoint-compensation">
 <h3>Use Blackpoint Compensation<a class="headerlink" href="#use-blackpoint-compensation" title="本標題的永久連結">¶</a></h3>
 <p>This option will turn on Blackpoint Compensation for the conversion. BPC is explained by the maintainer of LCMS as following:</p>
 <div class="line-block">
 <div class="line">BPC is a sort of &quot;poor man's&quot; gamut mapping. It basically adjust contrast of images in a way that darkest tone of source device gets mapped to darkest tone of destination device. If you have an image that is adjusted to be displayed on a monitor, and want to print it on a large format printer, you should realize printer can render black significantly darker that the screen. So BPC can do the adjustment for you. It only makes sense on Relative colorimetric intent. Perceptual and Saturation does have an implicit BPC.</div>
 </div>
-</section>
-<section id="allow-littlecms-optimizations">
+</div>
+<div class="section" id="allow-littlecms-optimizations">
 <h3>Allow LittleCMS optimizations<a class="headerlink" href="#allow-littlecms-optimizations" title="本標題的永久連結">¶</a></h3>
 <p>Uncheck this option to turn off optimizations. Sometimes, in case of working with linear colorspaces, the optimizations Little CMS does will not give the best results.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">5.0 版更變: </span>Since Krita 5.0, we ship the <a class="reference external" href="https://www.littlecms.com/plugin/">fast-float plugin for LittleCMS</a>. Turning this option off will also turn off the fast float plugin.</p>
 </div>
-</section>
-<section id="enforce-palette-colors-always-select-the-nearest-color-from-the-active-palette">
+</div>
+<div class="section" id="enforce-palette-colors-always-select-the-nearest-color-from-the-active-palette">
 <h3>Enforce palette colors: always select the nearest color from the active palette<a class="headerlink" href="#enforce-palette-colors-always-select-the-nearest-color-from-the-active-palette" title="本標題的永久連結">¶</a></h3>
 <p>By default, palette selection widgets take the current foreground color, compare it to the swatches in its active palette and highlight the swatch that is nearest to the current foreground color.</p>
 <p>When <span class="guilabel">Enforce palette colors</span> option is checked, it switches the internal color selector into a mode in which, instead of just highlighting the swatch, the current foreground color is replaced with the color of the nearest swatch.</p>
-</section>
-</section>
-<section id="display">
+</div>
+</div>
+<div class="section" id="display">
 <h2>Display<a class="headerlink" href="#display" title="本標題的永久連結">¶</a></h2>
 <dl class="simple">
 <dt>Use System Monitor Profile</dt><dd><p>This option when selected will tell Krita to use the ICC profile selected in your system preferences.</p>
@@ -326,13 +325,13 @@ We describe Color Management in a more overall level here: <a class="reference i
 <dt>Rendering Intent</dt><dd><p>Your choice of rendering intents is a way of telling Littlecms how you want colors mapped from one color space to another. There are four options available, all are explained on the <a class="reference internal" href="../../general_concepts/colors/color_managed_workflow.html#icc-profiles"><span class="std std-ref">ICC profiles</span></a> manual page.</p>
 </dd>
 </dl>
-</section>
-<section id="softproofing-options">
+</div>
+<div class="section" id="softproofing-options">
 <h2>Softproofing options<a class="headerlink" href="#softproofing-options" title="本標題的永久連結">¶</a></h2>
 <p>These allow you to configure the <em>default</em> softproofing options. To configure the actual softproofing for the current image, go to <span class="menuselection">Image ‣ Image Properties ‣ Softproofing</span> .</p>
 <p>For indepth details about how to use softproofing, check out <a class="reference internal" href="../../user_manual/soft_proofing.html#soft-proofing"><span class="std std-ref">the page on softproofing</span></a>.</p>
-</section>
-</section>
+</div>
+</div>
 
 
            </div>

@@ -21,9 +21,8 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-07-20T15:19:39" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<meta content="Krita's smart patch tool reference." name="description" />
+  <meta property="og:article:modified_time" content="2021-07-23T16:27:40" />
+  <meta content="Krita's smart patch tool reference." name="description" />
 
   
   
@@ -292,22 +291,22 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="smart-patch-tool">
+  <div class="section" id="smart-patch-tool">
 <span id="index-0"></span><span id="id1"></span><h1>Smart Patch Tool<a class="headerlink" href="#smart-patch-tool" title="本標題的永久連結">¶</a></h1>
 <p><img alt="toolsmartpatch" src="../../_images/smart_patch_tool.svg" /></p>
 <p>The smart patch tool allows you to seamlessly remove elements from the image. It does this by letting you draw the area which has the element you wish to remove, and then it will attempt to use patterns already existing in the image to fill the blank.</p>
 <p>You can see it as a smarter version of the clone brush.</p>
 <img alt="../../_images/Smart-patch.gif" src="../../_images/Smart-patch.gif" />
 <p>The smart patch tool has the following tool options:</p>
-<section id="accuracy">
+<div class="section" id="accuracy">
 <h2>Accuracy<a class="headerlink" href="#accuracy" title="本標題的永久連結">¶</a></h2>
 <p>Accuracy indicates how many samples, and thus how often the algorithm is run. A low accuracy will do few samples, but will also run the algorithm fewer times, making it faster. Higher accuracy will do many samples, making the algorithm run more often and give more precise results, but because it has to do more work, it is slower.</p>
-</section>
-<section id="patch-size">
+</div>
+<div class="section" id="patch-size">
 <h2>Patch size<a class="headerlink" href="#patch-size" title="本標題的永久連結">¶</a></h2>
 <p>Patch size determines how big the size of the pattern to choose is. This will be best explained with some testing, but if the surrounding image has mostly small elements, like branches, a small patch size will give better results, while a big patch size will be better for images with big elements, so they get reused as a whole.</p>
-</section>
-</section>
+</div>
+</div>
 
 
            </div>

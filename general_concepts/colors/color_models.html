@@ -21,9 +21,8 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-07-20T15:19:39" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<meta content="Color Models in Krita" name="description" />
+  <meta property="og:article:modified_time" content="2021-07-23T16:27:40" />
+  <meta content="Color Models in Krita" name="description" />
 
   
   
@@ -240,10 +239,10 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="color-models">
+  <div class="section" id="color-models">
 <span id="index-0"></span><span id="id1"></span><h1>色彩模型<a class="headerlink" href="#color-models" title="本標題的永久連結">¶</a></h1>
 <p>Krita has many different color spaces and models. Following here is a brief explanation of each, and their use-cases.</p>
-<section id="rgb">
+<div class="section" id="rgb">
 <span id="model-rgb"></span><h2>RGB<a class="headerlink" href="#rgb" title="本標題的永久連結">¶</a></h2>
 <p>Red, Green, Blue.</p>
 <p>These are the most efficient primaries for light-based color mixing, like computer screens. Adding Red, Green and Blue light together results in White, and is thus named the additive color wheel.</p>
@@ -255,7 +254,7 @@
 <li><p>Or for 3d rendering, visual effects and cg animation.</p></li>
 </ul>
 <p>And for the working space. A working space is an RGB gamut that is really large and predictable, meaning it's good for image manipulation. You use this next to a profiled monitor. This way you can have precise colors while also being able to view them correctly on multiple screens.</p>
-<section id="blending-modes-in-rgb">
+<div class="section" id="blending-modes-in-rgb">
 <h3>Blending modes in RGB<a class="headerlink" href="#blending-modes-in-rgb" title="本標題的永久連結">¶</a></h3>
 <table class="docutils align-default">
 <colgroup>
@@ -339,8 +338,8 @@
 </tr>
 </tbody>
 </table>
-</section>
-<section id="rgb-models-hsv-hsl-hsi-and-hsy">
+</div>
+<div class="section" id="rgb-models-hsv-hsl-hsi-and-hsy">
 <h3>RGB models: HSV, HSL, HSI and HSY<a class="headerlink" href="#rgb-models-hsv-hsl-hsi-and-hsy" title="本標題的永久連結">¶</a></h3>
 <p>These are not included as their own color spaces in Krita. However, they do show up in the blending modes and color selectors, so a brief overview:</p>
 <p>--Images of relationship rgb-hsv etc.</p>
@@ -358,9 +357,9 @@
 <dt>Luma (Y')</dt><dd><p>Similar to lightness and Intensity, except it weights the red, green and blue components based real-life measurements of how much light a color reflects to determine its lightness. Ranges from 0 to 100. Luma is well known for being used in film-color spaces.</p>
 </dd>
 </dl>
-</section>
-</section>
-<section id="grayscale">
+</div>
+</div>
+<div class="section" id="grayscale">
 <span id="model-gray"></span><h2>Grayscale<a class="headerlink" href="#grayscale" title="本標題的永久連結">¶</a></h2>
 <p>This color space only registers gray values.
 This is useful, because by only registering gray values, it only needs one channel of information, which in turn means the image becomes much lighter in memory consumption!</p>
@@ -400,8 +399,8 @@ This is useful, because by only registering gray values, it only needs one chann
 </tr>
 </tbody>
 </table>
-</section>
-<section id="cmyk">
+</div>
+<div class="section" id="cmyk">
 <span id="model-cmyk"></span><h2>CMYK<a class="headerlink" href="#cmyk" title="本標題的永久連結">¶</a></h2>
 <p>Cyan, Magenta, Yellow, Key</p>
 <p>This is the color space of printers. Unlike computers, printers have these four colors, and adding them all adds up to black instead of white. This is thus also called a 'subtractive' color space.</p>
@@ -576,16 +575,14 @@ This is useful, because by only registering gray values, it only needs one chann
 </tr>
 </tbody>
 </table>
-<figure class="align-center" id="id2" style="width: 500px">
+<div class="figure align-center" id="id2" style="width: 500px">
 <img alt="../../_images/Cmyk_black_differences.png" src="../../_images/Cmyk_black_differences.png" />
-<figcaption>
-<p><span class="caption-text">In Krita, there's also the fact that the default color is a perfect black in RGB, which then gets converted to our default CMYK in a funny manner, giving a yellow look to the strokes. Again, another good reason to work in RGB and let the conversion be done by the printing house.</span><a class="headerlink" href="#id2" title="本圖片的永久連結">¶</a></p>
-</figcaption>
-</figure>
+<p class="caption"><span class="caption-text">In Krita, there's also the fact that the default color is a perfect black in RGB, which then gets converted to our default CMYK in a funny manner, giving a yellow look to the strokes. Again, another good reason to work in RGB and let the conversion be done by the printing house.</span><a class="headerlink" href="#id2" title="本圖片的永久連結">¶</a></p>
+</div>
 <p>While CMYK has a smaller 'gamut' than RGB, however, it's still recommended to use an RGB working space profile to do your editing in. Afterwards, you can convert it to your printer's CMYK profile using either perceptual or relative colorimetric intent.
 Or you can just give the workspace rgb image to your printer and let them handle the work.</p>
-</section>
-<section id="ycrcb">
+</div>
+<div class="section" id="ycrcb">
 <span id="model-ycrcb"></span><h2>YCrCb<a class="headerlink" href="#ycrcb" title="本標題的永久連結">¶</a></h2>
 <p>Luminosity, Red-chroma, Blue-chroma</p>
 <p>YCrCb stands for:</p>
@@ -602,7 +599,7 @@ Or you can just give the workspace rgb image to your printer and let them handle
 <p class="admonition-title">警告</p>
 <p>Krita doesn't bundle a ICC profile for YCrCb on the basis of there being no open source ICC profiles for this color space. It's unusable without one, and also probably very untested.</p>
 </div>
-<section id="xyz">
+<div class="section" id="xyz">
 <span id="model-xyz"></span><h3>XYZ<a class="headerlink" href="#xyz" title="本標題的永久連結">¶</a></h3>
 <p>Back in 1931, the CIE (Institute of Color and Light), was studying human color perception.
 In doing so, they made the first color spaces, with XYZ being the one best at approximating human vision.</p>
@@ -616,8 +613,8 @@ In doing so, they made the first color spaces, with XYZ being the one best at ap
 </dd>
 </dl>
 <p>XYZ is used as a baseline reference for all other profiles and models. All color conversions are done in XYZ, and all profiles coordinates match XYZ.</p>
-</section>
-<section id="l-a-b">
+</div>
+<div class="section" id="l-a-b">
 <span id="model-lab"></span><h3>L*a*b*<a class="headerlink" href="#l-a-b" title="本標題的永久連結">¶</a></h3>
 <p>Stands for:</p>
 <dl class="simple">
@@ -630,13 +627,13 @@ In doing so, they made the first color spaces, with XYZ being the one best at ap
 </dl>
 <p>L*a*b* is supposed to be a more comprehensible variety of XYZ and the most 'complete' of all color spaces. It's often used as an in between color space in conversion, but even more as the correct color space to do color-balancing in. It's far easier to adjust the contrast and color tone in L*a*b*.</p>
 <p>L*a*b* is technically the same as Photoshop's LAB. Photoshop specifically uses CIELAB d50.</p>
-</section>
-</section>
-<section id="filters-and-blending-modes">
+</div>
+</div>
+<div class="section" id="filters-and-blending-modes">
 <h2>Filters and blending modes<a class="headerlink" href="#filters-and-blending-modes" title="本標題的永久連結">¶</a></h2>
 <p>Maybe you have noticed that blending modes in LAB don't work like they do in RGB or CMYK. This is because the blending modes work by doing a bit of maths on the color coordinates, and because color coordinates are different per color space, the blending modes look different.</p>
-</section>
-</section>
+</div>
+</div>
 
 
            </div>

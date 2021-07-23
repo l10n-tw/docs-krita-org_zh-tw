@@ -21,9 +21,8 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-07-20T15:19:39" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<meta content="The Krita Raster Archive file format." name="description" property="og:description" />
+  <meta property="og:article:modified_time" content="2021-07-23T16:27:40" />
+  <meta content="The Krita Raster Archive file format." name="description" property="og:description" />
 
   
   
@@ -248,13 +247,13 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="kra">
+  <div class="section" id="kra">
 <span id="file-kra"></span><span id="index-0"></span><h1>*.kra<a class="headerlink" href="#kra" title="本標題的永久連結">¶</a></h1>
 <p><code class="docutils literal notranslate"><span class="pre">.kra</span></code> is Krita's internal file-format, which means that it is the file format that saves all of the features Krita can handle. It's construction is vaguely based on the open document standard, which means that you can rename your <code class="docutils literal notranslate"><span class="pre">.kra</span></code> file to a <code class="docutils literal notranslate"><span class="pre">.zip</span></code> file and open it up to look at the insides. In Krita's settings dialog you can enable compression; with compression enabled the files will be smaller, but saving will take longer.</p>
 <p>Other applications mostly cannot open <code class="docutils literal notranslate"><span class="pre">.kra</span></code>  files, and you cannot upload <code class="docutils literal notranslate"><span class="pre">.kra</span></code> as images on websites like twitter or deviantArt.</p>
 <p>A <code class="docutils literal notranslate"><span class="pre">.kra</span></code> file contains a file names <code class="docutils literal notranslate"><span class="pre">mergedimage.png</span></code> which is contains the rendered image as you see it on your canvas. Some applications, like Scribus, can use the <code class="docutils literal notranslate"><span class="pre">mergedimage.png</span></code> file to open <code class="docutils literal notranslate"><span class="pre">.kra</span></code> files. This file is always in the RGBA color model, or grayscale for files that are originally grayscale.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">.krz</span></code> file format is a <code class="docutils literal notranslate"><span class="pre">.kra</span></code> file without <code class="docutils literal notranslate"><span class="pre">mergedimage.png</span></code> and with compression always enabled. You can use this format if you want to save disk space and do not care about interchange with those applications that load the <code class="docutils literal notranslate"><span class="pre">mergedimage.png</span></code> file.</p>
-</section>
+</div>
 
 
            </div>

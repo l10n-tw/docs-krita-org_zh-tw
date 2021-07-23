@@ -21,9 +21,8 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-07-20T15:19:39" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<meta content="How to get a backtrace in Krita using the dr. MinGW debugger." name="description" />
+  <meta property="og:article:modified_time" content="2021-07-23T16:27:40" />
+  <meta content="How to get a backtrace in Krita using the dr. MinGW debugger." name="description" />
 
   
   
@@ -251,14 +250,14 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="dr-mingw-debugger">
+  <div class="section" id="dr-mingw-debugger">
 <span id="dr-minw"></span><span id="index-0"></span><h1>Dr. MinGW 除錯工具<a class="headerlink" href="#dr-mingw-debugger" title="本標題的永久連結">¶</a></h1>
 <div class="admonition note">
 <p class="admonition-title">備註</p>
 <p>The information on this page applies only to the Windows release of Krita. Usually, the %LOCALAPPDATA%kritacrash.log log file will contain enough information for the developers to get an idea of why Krita crashed. Using the debug package is
 only needed when more precise information is needed.</p>
 </div>
-<section id="using-the-debug-package">
+<div class="section" id="using-the-debug-package">
 <h2>使用偵錯符號封裝<a class="headerlink" href="#using-the-debug-package" title="本標題的永久連結">¶</a></h2>
 <p>If you have your Krita version installed and you want to get a backtrace, it's best to download a portable version
 (either the latest release, or the one that someone told you to try, for example Krita Next or Krita Plus package).
@@ -276,17 +275,15 @@ you download Krita. You can see which is which by checking the end of the name o
 </li>
 <li><p>After extracting the files, check the <code class="docutils literal notranslate"><span class="pre">bin</span></code> dir and make sure you see the <code class="docutils literal notranslate"><span class="pre">.debug</span></code> dir inside. If you don't see it, you probably extracted to the wrong place.</p></li>
 </ul>
-</section>
-<section id="getting-a-backtrace">
+</div>
+<div class="section" id="getting-a-backtrace">
 <h2>取得 Backtrace<a class="headerlink" href="#getting-a-backtrace" title="本標題的永久連結">¶</a></h2>
 <ol class="arabic">
 <li><p>When there is a crash, Krita might appear to be unresponsive for a short time, ranging from a few seconds to a few minutes, before the crash dialog appears.</p>
-<figure class="align-default" id="id1">
+<div class="figure align-default" id="id1">
 <img alt="../_images/Mingw-crash-screen.png" src="../_images/Mingw-crash-screen.png" />
-<figcaption>
-<p><span class="caption-text">An example of the crash dialog.</span><a class="headerlink" href="#id1" title="本圖片的永久連結">¶</a></p>
-</figcaption>
-</figure>
+<p class="caption"><span class="caption-text">An example of the crash dialog.</span><a class="headerlink" href="#id1" title="本圖片的永久連結">¶</a></p>
+</div>
 <ul class="simple">
 <li><p>If Krita keeps on being unresponsive for more than a few minutes, it might actually be locked up, which may not give a backtrace. In that situation, you have to close Krita manually. Continue to follow the following instructions to check whether it was a crash or not.</p></li>
 </ul>
@@ -299,19 +296,15 @@ you download Krita. You can see which is which by checking the end of the name o
 <li><p>Find the file <code class="docutils literal notranslate"><span class="pre">kritacrash.log</span></code> (it might appear as simply <code class="docutils literal notranslate"><span class="pre">kritacrash</span></code> depending on your settings.)</p></li>
 <li><p>Open the file with Notepad and scroll to the bottom, then scroll up to the first occurrence of “Error occurred on &lt;time&gt;” or the dashes.</p>
 <blockquote>
-<div><figure class="align-default" id="id2">
+<div><div class="figure align-default" id="id2">
 <img alt="../_images/Mingw-crash-log-start.png" src="../_images/Mingw-crash-log-start.png" />
-<figcaption>
-<p><span class="caption-text">Start of backtrace.</span><a class="headerlink" href="#id2" title="本圖片的永久連結">¶</a></p>
-</figcaption>
-</figure>
+<p class="caption"><span class="caption-text">Start of backtrace.</span><a class="headerlink" href="#id2" title="本圖片的永久連結">¶</a></p>
+</div>
 <p>Check the time and make sure it matches the time of the crash.</p>
-<figure class="align-default" id="id3">
+<div class="figure align-default" id="id3">
 <img alt="../_images/Mingw-crash-log-end.png" src="../_images/Mingw-crash-log-end.png" />
-<figcaption>
-<p><span class="caption-text">End of backtrace.</span><a class="headerlink" href="#id3" title="本圖片的永久連結">¶</a></p>
-</figcaption>
-</figure>
+<p class="caption"><span class="caption-text">End of backtrace.</span><a class="headerlink" href="#id3" title="本圖片的永久連結">¶</a></p>
+</div>
 <p>The text starting from this line to the end of the file is the most recent backtrace.</p>
 <ul class="simple">
 <li><p>If <code class="docutils literal notranslate"><span class="pre">kritacrash.log</span></code> does not exist, or a backtrace with a matching time does not exist, then you don’t have a backtrace. This means Krita was very likely locked up, and a crash didn’t actually happen. In this case, make a bug report too.</p></li>
@@ -320,8 +313,8 @@ you download Krita. You can see which is which by checking the end of the name o
 </div></blockquote>
 </li>
 </ol>
-</section>
-</section>
+</div>
+</div>
 
 
            </div>

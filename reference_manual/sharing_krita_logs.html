@@ -21,9 +21,8 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-07-20T15:19:39" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<meta content="How to get a Krita Usage Log, Krita's backtrace or Krita's text output." name="description" />
+  <meta property="og:article:modified_time" content="2021-07-23T16:27:40" />
+  <meta content="How to get a Krita Usage Log, Krita's backtrace or Krita's text output." name="description" />
 
   
   
@@ -272,7 +271,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="getting-krita-logs">
+  <div class="section" id="getting-krita-logs">
 <span id="sharing-logs"></span><span id="index-0"></span><h1>獲取紀錄檔<a class="headerlink" href="#getting-krita-logs" title="本標題的永久連結">¶</a></h1>
 <p>There are three different kinds of logs that Krita can produce. Depending on the issue, you might be asked for a specific one or for all of them. This page will tell you how to gather the necessary information to give to Krita developers or user supporters.</p>
 <ol class="arabic simple">
@@ -281,7 +280,7 @@
 <li><p><a class="reference internal" href="#getting-backtrace"><span class="std std-ref">Crash log/backtrace</span></a> -- this log is created when Krita closes incorrectly because of an internal issue. This log is often necessary to get the issue fixed if developers cannot reproduce issue (repeat steps to get the crash).</p></li>
 <li><p><a class="reference internal" href="#krita-console-debugview"><span class="std std-ref">Krita console output/Log Viewer output/DebugView output</span></a> -- this log contains anything random that Krita felt the need to report. It often contains some useful additional information that can help solving the issue.</p></li>
 </ol>
-<section id="quick-access">
+<div class="section" id="quick-access">
 <h2>快速連結<a class="headerlink" href="#quick-access" title="本標題的永久連結">¶</a></h2>
 <ul>
 <li><p>Windows</p>
@@ -315,14 +314,14 @@
 </div></blockquote>
 </li>
 </ul>
-</section>
-<section id="krita-usage-log">
+</div>
+<div class="section" id="krita-usage-log">
 <span id="id1"></span><h2>Krita Usage Log<a class="headerlink" href="#krita-usage-log" title="本標題的永久連結">¶</a></h2>
-<section id="through-gui">
+<div class="section" id="through-gui">
 <h3>經由使用者介面<a class="headerlink" href="#through-gui" title="本標題的永久連結">¶</a></h3>
 <p>The easiest way to get Krita Usage Log is through Krita's GUI. Go to  <span class="menuselection">Help ‣ Show Krita Log for bug reports</span>. A new dialog will open, showing the content of the log.</p>
-</section>
-<section id="from-the-file-system">
+</div>
+<div class="section" id="from-the-file-system">
 <h3>從檔案<a class="headerlink" href="#from-the-file-system" title="本標題的永久連結">¶</a></h3>
 <p>Sometimes however it is not possible to use Krita's GUI, for example when it doesn't even open. Since logs are regular text files, you can get them from your file system by yourself.</p>
 <p>The file is called <code class="file docutils literal notranslate"><span class="pre">krita.log</span></code>. Location of the file:</p>
@@ -340,15 +339,15 @@
 <p class="admonition-title">備註</p>
 <p>In Windows you can simply paste this path into the Windows Explorer's search box, on the top bar, and it will find the file for you.</p>
 </div>
-</section>
-</section>
-<section id="system-information-related-to-krita">
+</div>
+</div>
+<div class="section" id="system-information-related-to-krita">
 <span id="getting-system-information"></span><h2>與 Krita 有關的系統資訊<a class="headerlink" href="#system-information-related-to-krita" title="本標題的永久連結">¶</a></h2>
-<section id="id2">
+<div class="section" id="id2">
 <h3>經由使用者介面<a class="headerlink" href="#id2" title="本標題的永久連結">¶</a></h3>
 <p>The easiest way to get system information related to Krita is through Krita's GUI. Go to  <span class="menuselection">Help ‣ Show system information for bug reports</span>. A new dialog will open, showing the content.</p>
-</section>
-<section id="id3">
+</div>
+<div class="section" id="id3">
 <h3>從檔案<a class="headerlink" href="#id3" title="本標題的永久連結">¶</a></h3>
 <p>Sometimes however it is not possible to use Krita's GUI, for example when it doesn't even open. Since logs are regular text files, you can get them from your file system by yourself.</p>
 <p>The file is called <code class="file docutils literal notranslate"><span class="pre">krita-sysinfo.log</span></code>. Location of the file:</p>
@@ -366,17 +365,17 @@
 <p class="admonition-title">備註</p>
 <p>In Windows you can simply paste this path into the file browser textbox on the top bar and it will find you the file.</p>
 </div>
-</section>
-</section>
-<section id="crash-log-and-backtrace">
+</div>
+</div>
+<div class="section" id="crash-log-and-backtrace">
 <span id="getting-backtrace"></span><h2>當機紀錄及 Backtrace<a class="headerlink" href="#crash-log-and-backtrace" title="本標題的永久連結">¶</a></h2>
 <p>Location and the way to get a backtrace is different on all systems.</p>
-<section id="windows">
+<div class="section" id="windows">
 <span id="getting-backtrace-windows"></span><h3>Windows<a class="headerlink" href="#windows" title="本標題的永久連結">¶</a></h3>
 <p>Usually, it is sufficient to share the content of <span class="menuselection">Help ‣ Show Krita Log for bug reports</span> as it contains the backtrace.</p>
 <p>If you cannot open Krita because it crashes on startup, please provide the <code class="file docutils literal notranslate"><span class="pre">%LOCALAPPDATA%\kritacrash.log</span></code>. Sometimes more detailed information is needed, then you will be asked to closely follow <a class="reference internal" href="dr_minw_debugger.html#dr-minw"><span class="std std-ref">Dr. Mingw debugger</span></a> guide.</p>
-</section>
-<section id="linux">
+</div>
+<div class="section" id="linux">
 <span id="getting-backtrace-linux"></span><h3>Linux<a class="headerlink" href="#linux" title="本標題的永久連結">¶</a></h3>
 <p>On Linux, there are five ways of installing Krita.</p>
 <blockquote>
@@ -437,8 +436,8 @@ gdb path/to/krita
 </div></blockquote>
 </li>
 </ol>
-</section>
-<section id="macos">
+</div>
+<div class="section" id="macos">
 <span id="getting-backtrace-mac"></span><h3>macOS<a class="headerlink" href="#macos" title="本標題的永久連結">¶</a></h3>
 <p>On macOS it's recommended to use <code class="docutils literal notranslate"><span class="pre">lldb</span></code>.</p>
 <ol class="arabic">
@@ -473,12 +472,12 @@ gdb path/to/krita
 </div></blockquote>
 </li>
 </ol>
-</section>
-</section>
-<section id="krita-s-text-output">
+</div>
+</div>
+<div class="section" id="krita-s-text-output">
 <span id="krita-console-debugview"></span><h2>Krita 的文字紀錄輸出<a class="headerlink" href="#krita-s-text-output" title="本標題的永久連結">¶</a></h2>
 <p>Most of Krita's text output can be gathered using <span class="guilabel">Log Viewer</span>. The only exception are messages from when Krita is starting up, so there is no GUI yet, or when it closes or crashes so no user interaction is possible after the event.</p>
-<section id="krita-text-output-logviewer">
+<div class="section" id="krita-text-output-logviewer">
 <span id="id4"></span><h3>經由使用者介面<a class="headerlink" href="#krita-text-output-logviewer" title="本標題的永久連結">¶</a></h3>
 <ol class="arabic simple">
 <li><p>Go to <span class="menuselection">Settings ‣ Dockers ‣ Log Viewer</span>.</p></li>
@@ -487,8 +486,8 @@ gdb path/to/krita
 <li><p>Use the third button (tooltip says: <em>Save the log</em>) to save the log to a file.</p></li>
 <li><p>Attach the file to the bug report.</p></li>
 </ol>
-</section>
-<section id="from-the-console">
+</div>
+<div class="section" id="from-the-console">
 <span id="krita-text-output-console"></span><h3>經由主控台視窗<a class="headerlink" href="#from-the-console" title="本標題的永久連結">¶</a></h3>
 <p>Using the console is the most reliable way to get Krita's text output. This way is similar on macOS and Linux.</p>
 <blockquote>
@@ -528,8 +527,8 @@ path/to/krita
 <li><p>Do the thing you want to get the output of.</p></li>
 <li><p>Copy the content, save to a file and attach to the bug report.</p></li>
 </ol>
-</section>
-<section id="from-the-debugview">
+</div>
+<div class="section" id="from-the-debugview">
 <span id="using-debug-view"></span><h3>經由 DebugView<a class="headerlink" href="#from-the-debugview" title="本標題的永久連結">¶</a></h3>
 <p>To get the text output of Krita on Windows using the graphical program, you need an external program called <code class="docutils literal notranslate"><span class="pre">DebugView</span></code>. Compared to using the console, DebugView has the benefit of including timestamps to the log entries.</p>
 <ol class="arabic simple">
@@ -540,9 +539,9 @@ path/to/krita
 <li><p>Do things you want to get output of.</p></li>
 <li><p>切換到 DebugView 並複製當中的內容，然後將其儲存為檔案附加到錯誤報之內。</p></li>
 </ol>
-</section>
-</section>
-</section>
+</div>
+</div>
+</div>
 
 
            </div>

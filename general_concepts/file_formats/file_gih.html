@@ -21,9 +21,8 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-07-20T15:19:39" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<meta content="The GIMP Image Hose file format in Krita." name="description" />
+  <meta property="og:article:modified_time" content="2021-07-23T16:27:40" />
+  <meta content="The GIMP Image Hose file format in Krita." name="description" />
 
   
   
@@ -248,26 +247,24 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="gih">
+  <div class="section" id="gih">
 <span id="file-gih"></span><span id="index-0"></span><h1>*.gih<a class="headerlink" href="#gih" title="本標題的永久連結">¶</a></h1>
 <p>The GIMP image hose format. Krita can open and save these, as well as import via the <a class="reference internal" href="../../reference_manual/brushes/brush_settings/brush_tips.html#predefined-brush-tip"><span class="std std-ref">predefined brush tab</span></a>.</p>
 <p>Image Hose means that this file format allows you to store multiple images and then set some options to make it specify how to output the multiple images.</p>
-<figure class="align-center" id="id1" style="width: 640px">
+<div class="figure align-center" id="id1" style="width: 640px">
 <img alt="../../_images/Gih-examples.png" src="../../_images/Gih-examples.png" />
-<figcaption>
-<p><span class="caption-text">From top to bottom: Incremental, Pressure and Random</span><a class="headerlink" href="#id1" title="本圖片的永久連結">¶</a></p>
-</figcaption>
-</figure>
-<section id="dimension-and-ranks">
+<p class="caption"><span class="caption-text">From top to bottom: Incremental, Pressure and Random</span><a class="headerlink" href="#id1" title="本圖片的永久連結">¶</a></p>
+</div>
+<div class="section" id="dimension-and-ranks">
 <h2>Dimension and ranks.<a class="headerlink" href="#dimension-and-ranks" title="本標題的永久連結">¶</a></h2>
 <p>The GIMP image hose format allows multiple dimensions for a given brush. You could for example have a dimension that updates incrementally, and one that updates on pressure, or updates randomly. Upon export, Krita will use the ranks to subdivide the layers per dimension. If you have a 24 layer image and three ranks, and the first dimension is set to 2, the second to 4 and the third to 3, then Krita will divide 24 into 2 groups of 12, each of which have unique images for the 2 parts of the first dimension. Then those 2 groups of 12 get divided into 8 groups of 4, each of which have unique brush tips for the four parts of the second dimension, and finally, the grouped three images have each a unique brush for the final dimension.</p>
 <p>So, the following image has a table where dimension 1 is unique in one of 4 numbers, while dimension 2 is unique in one of 3 shapes. So our ranks for dimension 1 and dimension 2 need to be 4 and 3 respectively. Now, to order the layers, you need to subdivide the table first by the first dimension, and then by the second. So we end up with three layers each for a shape in the second dimension but for the first number, then another three layers, each for a shape, but then for the second number, and so forth.</p>
-<figure class="align-center" style="width: 800px">
+<div class="figure align-center" style="width: 800px">
 <img alt="../../_images/gih_multi_dimension_explaination.png" src="../../_images/gih_multi_dimension_explaination.png" />
-</figure>
+</div>
 <p>See <a class="reference external" href="https://docs.gimp.org/2.8/en/gimp-using-animated-brushes.html">the GIMP documentation</a> for a more thorough explanation.</p>
-</section>
-<section id="gimp-image-hose-format-options">
+</div>
+<div class="section" id="gimp-image-hose-format-options">
 <h2>GIMP image hose format options:<a class="headerlink" href="#gimp-image-hose-format-options" title="本標題的永久連結">¶</a></h2>
 <dl class="simple">
 <dt>Constant</dt><dd><p>This'll use the first image, no matter what.</p>
@@ -287,8 +284,8 @@
 </dd>
 </dl>
 <p>We have a <a class="reference internal" href="../../tutorials/krita-brush-tips/animated_brushes.html#brush-tip-animated-brush"><span class="std std-ref">Krita Brush tip page</span></a> on how to create your own GIH brush.</p>
-</section>
-</section>
+</div>
+</div>
 
 
            </div>

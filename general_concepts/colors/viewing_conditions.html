@@ -21,9 +21,8 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-07-20T15:19:39" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<meta content="What are viewing conditions." name="description" />
+  <meta property="og:article:modified_time" content="2021-07-23T16:27:40" />
+  <meta content="What are viewing conditions." name="description" />
 
   
   
@@ -233,53 +232,49 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="viewing-conditions">
+  <div class="section" id="viewing-conditions">
 <span id="index-0"></span><span id="id1"></span><h1>觀察時狀況<a class="headerlink" href="#viewing-conditions" title="本標題的永久連結">¶</a></h1>
 <p>We mentioned viewing conditions before, but what does this have to do with 'white points'?</p>
 <p>A lot actually, rather, white points describe a type of viewing condition.</p>
 <p>So, usually what we mean by viewing conditions is the lighting and decoration of the room that you are viewing the image in. Our eyes try to make sense of both the colors that you are looking at actively (the colors of the image) and the colors you aren't looking at actively (the colors of the room), which means that both sets of colors affect how the image looks.</p>
-<figure class="align-center" id="id2" style="width: 800px">
+<div class="figure align-center" id="id2" style="width: 800px">
 <img alt="../../_images/Meisje_met_de_parel_viewing.png" src="../../_images/Meisje_met_de_parel_viewing.png" />
-<figcaption>
-<p><span class="caption-text"><strong>Left</strong>: Let's ruin Vermeer by putting a bright purple background that asks for more attention than the famous painting itself. <strong>Center</strong>: a much more neutral backdrop that an interior decorator would hate but brings out the colors. <strong>Right</strong>: The approximate color that this painting is displayed against in real life in the Maurits House, at the least, last time I was there. Original image from wikipedia commons.</span><a class="headerlink" href="#id2" title="本圖片的永久連結">¶</a></p>
-</figcaption>
-</figure>
+<p class="caption"><span class="caption-text"><strong>Left</strong>: Let's ruin Vermeer by putting a bright purple background that asks for more attention than the famous painting itself. <strong>Center</strong>: a much more neutral backdrop that an interior decorator would hate but brings out the colors. <strong>Right</strong>: The approximate color that this painting is displayed against in real life in the Maurits House, at the least, last time I was there. Original image from wikipedia commons.</span><a class="headerlink" href="#id2" title="本圖片的永久連結">¶</a></p>
+</div>
 <p>This is for example, the reason why museum exhibitioners can get really angry at the interior decorators when the walls of the museum are painted bright red or blue, because this will drastically change the way how the painting's colors look. (Which, if we are talking about a painter known for their colors like Vermeer, could result in a really bad experience).</p>
-<figure class="align-center" style="width: 500px">
+<div class="figure align-center" style="width: 500px">
 <img alt="../../_images/Krita_example_metamerism.png" src="../../_images/Krita_example_metamerism.png" />
-</figure>
+</div>
 <p>Lighting is the other component of the viewing condition which can have dramatic effects. Lighting in particular affects the way how all colors look. For example, if you were to paint an image of sunflowers and poppies, print that out, and shine a bright yellow light on it, the sunflowers would become indistinguishable from the white background, and the poppies would look orange. This is called <a class="reference external" href="https://en.wikipedia.org/wiki/Metamerism_%28color%29">metamerism</a>, and it's generally something you want to avoid in your color management pipeline.</p>
 <p>An example where metamerism could become a problem is when you start matching colors from different sources together.</p>
-<figure class="align-center" style="width: 500px">
-<img alt="../../_images/White_point_mix_up_ex1_01.svg" src="../../_images/White_point_mix_up_ex1_01.svg" /></figure>
+<div class="figure align-center" style="width: 500px">
+<img alt="../../_images/White_point_mix_up_ex1_01.svg" src="../../_images/White_point_mix_up_ex1_01.svg" /></div>
 <p>For example, if you are designing a print for a red t-shirt that's not bright red, but not super grayish red either. And you want to make sure the colors of the print match the color of the t-shirt, so you make a dummy background layer that is approximately that red, as correctly as you can observe it, and paint on layers above that dummy layer. When you are done, you hide this dummy layer and sent the image with a transparent background to the press.</p>
-<figure class="align-center" style="width: 300px">
+<div class="figure align-center" style="width: 300px">
 <img alt="../../_images/White_point_mixup_ex1_02.png" src="../../_images/White_point_mixup_ex1_02.png" />
-</figure>
+</div>
 <p>But when you get the t-shirt from the printer, you notice that all your colors look off, mismatched, and maybe too yellowish (and when did that T-Shirt become purple?).</p>
 <p>This is where white points come in.</p>
 <p>You probably observed the t-shirt in a white room where there were incandescent lamps shining, because as a true artist, you started your work in the middle of the night, as that is when the best art is made.
 However, incandescent lamps have a black body temperature of roughly 2300-2800K, which makes them give a yellowish light, officially called White Point A.</p>
 <p>Your computer screen on the other hand, has a black body temperature of 6500K, also known as D65. Which is a far more blueish color of light than the lamps you are hanging.</p>
 <p>What's worse, Printers print on the basis of using a white point of D50, the color of white paper under direct sunlight.</p>
-<figure class="align-center" style="width: 500px">
-<img alt="../../_images/White_point_mix_up_ex1_03.svg" src="../../_images/White_point_mix_up_ex1_03.svg" /></figure>
+<div class="figure align-center" style="width: 500px">
+<img alt="../../_images/White_point_mix_up_ex1_03.svg" src="../../_images/White_point_mix_up_ex1_03.svg" /></div>
 <p>So, by eye-balling your t-shirt's color during the evening, you took its red color as transformed by the yellowish light. Had you made your observation in diffuse sunlight of an overcast (which is also roughly D65), or made it in direct sunlight light and painted your picture with a profile set to D50, the color would have been much closer, and thus your design would not be as yellowish.</p>
-<figure class="align-center" id="id3" style="width: 500px">
+<div class="figure align-center" id="id3" style="width: 500px">
 <img alt="../../_images/White_point_mixup_ex1_03.png" src="../../_images/White_point_mixup_ex1_03.png" />
-<figcaption>
-<p><span class="caption-text">Applying a white balance filter will sort of match the colors to the tone as in the middle, but you would have had a much better design had you designed against the actual color to begin with.</span><a class="headerlink" href="#id3" title="本圖片的永久連結">¶</a></p>
-</figcaption>
-</figure>
+<p class="caption"><span class="caption-text">Applying a white balance filter will sort of match the colors to the tone as in the middle, but you would have had a much better design had you designed against the actual color to begin with.</span><a class="headerlink" href="#id3" title="本圖片的永久連結">¶</a></p>
+</div>
 <p>Now, you could technically quickly fix this by using a white balancing filter, like the ones in G'MIC, but because this error is caught at the end of the production process, you basically limited your use of possible colors when you were designing, which is a pity.</p>
 <p>Another example where metamerism messes things up is with screen projections.</p>
 <p>We have a presentation where we mark one type of item with red, another with yellow and yet another with purple. On a computer the differences between the colors are very obvious.</p>
-<figure class="align-center" style="width: 800px">
-<img alt="../../_images/Krita_metamerism_presentation.svg" src="../../_images/Krita_metamerism_presentation.svg" /></figure>
+<div class="figure align-center" style="width: 800px">
+<img alt="../../_images/Krita_metamerism_presentation.svg" src="../../_images/Krita_metamerism_presentation.svg" /></div>
 <p>However, when we start projecting, the lights of the room aren't dimmed, which means that the tone scale of the colors becomes crunched, and yellow becomes near indistinguishable from white. Furthermore, because the light in the room is slightly yellowish, the purple is transformed into red, making it indistinguishable from the red. Meaning that the graphic is difficult to read.</p>
 <p>In both cases, you can use Krita's color management a little to help you, but mostly, you just need to be ''aware'' of it, as Krita can hardly fix that you are looking at colors at night, or the fact that the presentation hall owner refuses to turn off the lights.</p>
 <p>That said, unless you have a display profile that uses LUTs, such as an OCIO LUT or a cLUT ICC profile, white point won't matter much when choosing a working space, due to weirdness in the ICC v4 workflow which always converts matrix profiles with relative colorimetric, meaning the white points are matched up.</p>
-</section>
+</div>
 
 
            </div>

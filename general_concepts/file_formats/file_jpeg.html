@@ -21,9 +21,8 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-07-20T15:19:39" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<meta content="The JPEG file format as exported by Krita." name="description" />
+  <meta property="og:article:modified_time" content="2021-07-23T16:27:40" />
+  <meta content="The JPEG file format as exported by Krita." name="description" />
 
   
   
@@ -248,14 +247,14 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="jpg">
+  <div class="section" id="jpg">
 <span id="file-jpeg"></span><span id="file-jpg"></span><span id="index-0"></span><h1>*.jpg<a class="headerlink" href="#jpg" title="本標題的永久連結">¶</a></h1>
 <p><code class="docutils literal notranslate"><span class="pre">.jpg</span></code>, <code class="docutils literal notranslate"><span class="pre">.jpeg</span></code> or <code class="docutils literal notranslate"><span class="pre">.jpeg2000</span></code> are a family of file-formats designed to encode photographs.</p>
 <p>Photographs have the problem that they have a lot of little gradients, which means that you cannot index the file like you can with <a class="reference internal" href="file_gif.html#file-gif"><span class="std std-ref">*.gif</span></a> and expect the result to look good. What JPEG instead does is that it converts the file to a perceptual color space (<a class="reference internal" href="../colors/color_models.html#model-ycrcb"><span class="std std-ref">YCrCb</span></a>), and then compresses the channels that encode the colors, while keeping the channel that holds information about the relative lightness uncompressed. This works really well because human eye-sight is not as sensitive to colorfulness as it is to relative lightness. JPEG also uses other <a class="reference internal" href="lossy_lossless.html#lossy-compression"><span class="std std-ref">lossy</span></a> compression techniques, like using cosine waves to describe image contrasts.</p>
 <p>However, it does mean that JPEG should be used in certain cases. For images with a lot of gradients, like full scale paintings, JPEG performs better than <a class="reference internal" href="file_png.html#file-png"><span class="std std-ref">*.png</span></a> and <a class="reference internal" href="file_gif.html#file-gif"><span class="std std-ref">*.gif</span></a>.</p>
 <p>But for images with a lot of sharp contrasts, like text and comic book styles, PNG is a much better choice despite a larger file size. For grayscale images, <a class="reference internal" href="file_png.html#file-png"><span class="std std-ref">*.png</span></a> and <a class="reference internal" href="file_gif.html#file-gif"><span class="std std-ref">*.gif</span></a> will definitely be more efficient.</p>
 <p>Because JPEG uses lossy compression, it is not advised to save over the same JPEG multiple times. The lossy compression will cause the file to reduce in quality each time you save it. This is a fundamental problem with lossy compression methods. Instead use a lossless file format, or a working file format while you are working on the image.</p>
-</section>
+</div>
 
 
            </div>

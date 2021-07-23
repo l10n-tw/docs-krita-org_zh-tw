@@ -21,9 +21,8 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-07-20T15:19:39" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<meta content="The HEIF and AVIF file formats in Krita." name="description" property="og:description" />
+  <meta property="og:article:modified_time" content="2021-07-23T16:27:40" />
+  <meta content="The HEIF and AVIF file formats in Krita." name="description" property="og:description" />
 
   
   
@@ -248,12 +247,12 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="heif-and-avif">
+  <div class="section" id="heif-and-avif">
 <span id="file-avif"></span><span id="file-heif"></span><span id="index-0"></span><h1>*.heif and *.avif<a class="headerlink" href="#heif-and-avif" title="本標題的永久連結">¶</a></h1>
 <p>The High Efficiency Image Format (<code class="docutils literal notranslate"><span class="pre">*.heif</span></code>, <code class="docutils literal notranslate"><span class="pre">*.heic</span></code>), and it's cousin, AV1 Image Format (<code class="docutils literal notranslate"><span class="pre">*.avif</span></code>) are formats which use video codecs (<code class="docutils literal notranslate"><span class="pre">H264</span></code>, <code class="docutils literal notranslate"><span class="pre">H265</span></code> and <code class="docutils literal notranslate"><span class="pre">AV1</span></code>) to store their data. They are more and more popular with mobile phones as their default image file format, and <code class="docutils literal notranslate"><span class="pre">*.avif</span></code> is to be natively supported by all web browsers within the next few years.</p>
 <p>Krita supports saving <a class="reference internal" href="../colors/color_models.html#model-gray"><span class="std std-ref">Grayscale</span></a> and <a class="reference internal" href="../colors/color_models.html#model-rgb"><span class="std std-ref">RGB</span></a> images to these formats. Furthermore, it can save 8 bit, will save 16 bit integer as 12 bit, and can save 16 and 32 bit float as 12 bit, with an HDR color space.</p>
 <p>Compared to <a class="reference internal" href="file_png.html#file-png"><span class="std std-ref">*.png</span></a> and <a class="reference internal" href="file_jpeg.html#file-jpeg"><span class="std std-ref">*.jpg</span></a>, these formats tend to smooth out textures to make them easier to compress, and therefore great for sharp images with a lot of smooth gradients. Images with a lot of texture or fine details may lose said detail (for example, cat whiskers seem to get lost), and thus <a class="reference internal" href="file_jpeg.html#file-jpeg"><span class="std std-ref">*.jpg</span></a> might be better suited.</p>
-<section id="import-options">
+<div class="section" id="import-options">
 <h2>Import Options<a class="headerlink" href="#import-options" title="本標題的永久連結">¶</a></h2>
 <p>Krita supports all the color spaces that these formats can handle, and will convert in the case of the few formats it cannot handle. This has been automated for the most part, with Krita selecting or generating the appropriate ICC profile where necessary.</p>
 <p>Images that are HDR images, so the ones that have the Perceptual Quantizer, Hybrid Log Gamma or SMPTE ST 428 transfer functions, will be converted to a linear 32 bit floating point version of that color space.</p>
@@ -266,8 +265,8 @@
 <dt>Brightness</dt><dd><p>Maximum display brightness. Default value is 10.000 cd/m² for conversion to PQ.</p>
 </dd>
 </dl>
-</section>
-<section id="export-options">
+</div>
+<div class="section" id="export-options">
 <h2>Export Options<a class="headerlink" href="#export-options" title="本標題的永久連結">¶</a></h2>
 <dl>
 <dt>Lossless</dt><dd><p>Use the lossless encoding options. Disables the <span class="guilabel">Lossy Advanced Settings</span>.</p>
@@ -288,7 +287,7 @@
 </dl>
 </dd>
 </dl>
-<section id="conversion-settings">
+<div class="section" id="conversion-settings">
 <h3>Conversion Settings<a class="headerlink" href="#conversion-settings" title="本標題的永久連結">¶</a></h3>
 <p>These only appear on floating point images, and are used to store the images with values above 1.0 as HDR images by encoding them with a specific transfer function.</p>
 <dl>
@@ -334,9 +333,9 @@
 </dd>
 </dl>
 </div>
-</section>
-</section>
-</section>
+</div>
+</div>
+</div>
 
 
            </div>

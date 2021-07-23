@@ -21,9 +21,8 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-07-20T15:19:39" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<meta content="How to use gradient map brush tips for loading multiple colors onto a brush." name="description" property="og:description" />
+  <meta property="og:article:modified_time" content="2021-07-23T16:27:40" />
+  <meta content="How to use gradient map brush tips for loading multiple colors onto a brush." name="description" property="og:description" />
 
   
   
@@ -240,16 +239,14 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="gradient-map-brush-tips">
+  <div class="section" id="gradient-map-brush-tips">
 <span id="gradient-brush-tips"></span><span id="index-0"></span><h1>Gradient Map Brush Tips<a class="headerlink" href="#gradient-map-brush-tips" title="本標題的永久連結">¶</a></h1>
 <p>Used in Rosemåling and single-stroke flower paintings, the technique of loading two separate colors can be emulated in Krita with <a class="reference internal" href="../../reference_manual/brushes/brush_settings/brush_tips.html#predefined-brush-tip"><span class="std std-ref">gradient-mapped brush tips</span></a>.</p>
 <p>Gradient mapped tips work much in the same way as the gradient map filter does: The grey-values of each pixel in the brush is mapped to the gradient color. As gradients can have some of their colors be assigned to be the fore or background color, you can effectively make dual-loaded brush tips this way.</p>
-<figure class="align-default" id="id1">
+<div class="figure align-default" id="id1">
 <a class="reference internal image-reference" href="../../_images/gradient_map_example.svg"><img alt="Graphic demonstrating how gradients map to grayscale values." src="../../_images/gradient_map_example.svg" width="800" /></a>
-<figcaption>
-<p><span class="caption-text">If we imagine a continuous color gradient mapping to a grayscale gradient, we can imagine how grayscale colors can be transformed to the colors of the gradient. This is called gradient mapping, because you are mapping a grayscale to a gradient.</span><a class="headerlink" href="#id1" title="本圖片的永久連結">¶</a></p>
-</figcaption>
-</figure>
+<p class="caption"><span class="caption-text">If we imagine a continuous color gradient mapping to a grayscale gradient, we can imagine how grayscale colors can be transformed to the colors of the gradient. This is called gradient mapping, because you are mapping a grayscale to a gradient.</span><a class="headerlink" href="#id1" title="本圖片的永久連結">¶</a></p>
+</div>
 <p>Making such a tip is actually quite easy:</p>
 <ol class="arabic simple">
 <li><p>Make a tip that's black on one side and white on the other</p></li>
@@ -260,21 +257,19 @@
 <li><p>Then select the new brush tip. Set <span class="guilabel">Brush mode</span> to <span class="guilabel">Gradient Map</span>, and adjust other brush settings like <span class="guilabel">Spacing</span>.</p></li>
 <li><p>Draw with you brush. Switching the active gradient in the toolbar allows you to use different colors. The <span class="guilabel">Fore to Background</span> gradient is especially useful here, as it always uses the currently selected fore and background color.</p></li>
 </ol>
-<figure class="align-default" id="id2">
+<div class="figure align-default" id="id2">
 <img alt="A selection of different brush tips and their gradient map results." src="../../_images/gradient_map_tips.png" />
-<figcaption>
-<p><span class="caption-text">Different brush tips lead to different kinds of strokes. The last stroke in the above examples was done using the <span class="guilabel">Lightness Map</span> brush mode, which only uses the current foreground color.</span><a class="headerlink" href="#id2" title="本圖片的永久連結">¶</a></p>
-</figcaption>
-</figure>
+<p class="caption"><span class="caption-text">Different brush tips lead to different kinds of strokes. The last stroke in the above examples was done using the <span class="guilabel">Lightness Map</span> brush mode, which only uses the current foreground color.</span><a class="headerlink" href="#id2" title="本圖片的永久連結">¶</a></p>
+</div>
 <p>With <span class="guilabel">Rotation</span> to mapped to <span class="guilabel">Drawing angle</span>, you can easily create effects like Rosemåling, while you'll need a tilt-enabled tablet for single stroke brushes.</p>
-<figure class="align-default">
+<div class="figure align-default">
 <img alt="An example of Rosemåling, the drawing of curly decorative plant motives with gradiated strokes using the gradient map tips." src="../../_images/gradient_map_brush_tip_rosemaling.png" />
-</figure>
-<figure class="align-default">
+</div>
+<div class="figure align-default">
 <img alt="Example showing both gradient map on the brush tip and on the pattern." src="../../_images/gradient_map_brush_tip_flowers_patterned.png" />
-</figure>
+</div>
 <p>The texture option also has the ability to map it's greys to a texture. Combining both these gradient map functions together with the strength parameter to switch between either, and you can make cool results like the above.</p>
-</section>
+</div>
 
 
            </div>

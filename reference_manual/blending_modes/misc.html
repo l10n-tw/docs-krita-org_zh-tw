@@ -21,9 +21,8 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-07-20T15:19:39" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<meta content="Page about the miscellaneous blending modes in Krita: Bumpmap, Combine Normal Map, Copy Red, Copy Green, Copy Blue, Copy and Dissolve." name="description" />
+  <meta property="og:article:modified_time" content="2021-07-23T16:27:40" />
+  <meta content="Page about the miscellaneous blending modes in Krita: Bumpmap, Combine Normal Map, Copy Red, Copy Green, Copy Blue, Copy and Dissolve." name="description" />
 
   
   
@@ -266,25 +265,25 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="misc">
+  <div class="section" id="misc">
 <span id="bm-cat-misc"></span><h1>其他​​<a class="headerlink" href="#misc" title="本標題的永久連結">¶</a></h1>
-<section id="bumpmap">
+<div class="section" id="bumpmap">
 <span id="bm-bumpmap"></span><span id="index-0"></span><h2>凹凸貼圖<a class="headerlink" href="#bumpmap" title="本標題的永久連結">¶</a></h2>
 <div class="admonition hint">
 <p class="admonition-title">提示</p>
 <p>英文稱為「Bumpmap」。</p>
 </div>
 <p>This filter seems to both multiply and respect the alpha of the input.</p>
-</section>
-<section id="combine-normal-map">
+</div>
+<div class="section" id="combine-normal-map">
 <span id="bm-combine-normal-map"></span><span id="index-1"></span><h2>合併法線貼圖<a class="headerlink" href="#combine-normal-map" title="本標題的永久連結">¶</a></h2>
 <div class="admonition hint">
 <p class="admonition-title">提示</p>
 <p>英文稱為「Combine Normal Map」。</p>
 </div>
 <p>Mathematically robust blending mode for normal maps, using <a class="reference external" href="https://blog.selfshadow.com/publications/blending-in-detail/">Reoriented Normal Map Blending</a>.</p>
-</section>
-<section id="copy">
+</div>
+<div class="section" id="copy">
 <span id="bm-copy"></span><span id="index-2"></span><h2>複製<a class="headerlink" href="#copy" title="本標題的永久連結">¶</a></h2>
 <div class="admonition hint">
 <p class="admonition-title">提示</p>
@@ -292,14 +291,12 @@
 </div>
 <p>Copies the previous layer exactly.
 Useful for when using filters and filter-masks.</p>
-<figure class="align-center" id="id1">
+<div class="figure align-center" id="id1">
 <img alt="../../_images/Blending_modes_Copy_Sample_image_with_dots.png" src="../../_images/Blending_modes_Copy_Sample_image_with_dots.png" />
-<figcaption>
-<p><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Copy</strong>.</span><a class="headerlink" href="#id1" title="本圖片的永久連結">¶</a></p>
-</figcaption>
-</figure>
-</section>
-<section id="copy-red-green-blue">
+<p class="caption"><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Copy</strong>.</span><a class="headerlink" href="#id1" title="本圖片的永久連結">¶</a></p>
+</div>
+</div>
+<div class="section" id="copy-red-green-blue">
 <span id="bm-copy-blue"></span><span id="bm-copy-green"></span><span id="bm-copy-red"></span><span id="index-3"></span><h2>複製紅色、綠色、藍色通道<a class="headerlink" href="#copy-red-green-blue" title="本標題的永久連結">¶</a></h2>
 <div class="admonition hint">
 <p class="admonition-title">提示</p>
@@ -308,47 +305,37 @@ Useful for when using filters and filter-masks.</p>
 <p>This is a blending mode that will just copy/blend a source channel to a destination channel.
 Specifically, it will take the specific channel from the upper layer and copy that over to the lower layers.</p>
 <p>So, if you want the brush to only affect the red channel, set the blending mode to 'copy red'.</p>
-<figure class="align-center" id="id2" style="width: 500px">
+<div class="figure align-center" id="id2" style="width: 500px">
 <img alt="../../_images/Krita_Filter_layer_invert_greenchannel.png" src="../../_images/Krita_Filter_layer_invert_greenchannel.png" />
-<figcaption>
-<p><span class="caption-text">The copy red, green and blue blending modes also work on filter-layers.</span><a class="headerlink" href="#id2" title="本圖片的永久連結">¶</a></p>
-</figcaption>
-</figure>
+<p class="caption"><span class="caption-text">The copy red, green and blue blending modes also work on filter-layers.</span><a class="headerlink" href="#id2" title="本圖片的永久連結">¶</a></p>
+</div>
 <p>This can also be done with filter layers. So if you quickly want to flip a layer's green channel, make an invert filter layer with 'copy green' above it.</p>
-<figure class="align-center" id="id3">
+<div class="figure align-center" id="id3">
 <img alt="../../_images/Blending_modes_Copy_Red_Sample_image_with_dots.png" src="../../_images/Blending_modes_Copy_Red_Sample_image_with_dots.png" />
-<figcaption>
-<p><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Copy Red</strong>.</span><a class="headerlink" href="#id3" title="本圖片的永久連結">¶</a></p>
-</figcaption>
-</figure>
-<figure class="align-center" id="id4">
+<p class="caption"><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Copy Red</strong>.</span><a class="headerlink" href="#id3" title="本圖片的永久連結">¶</a></p>
+</div>
+<div class="figure align-center" id="id4">
 <img alt="../../_images/Blending_modes_Copy_Green_Sample_image_with_dots.png" src="../../_images/Blending_modes_Copy_Green_Sample_image_with_dots.png" />
-<figcaption>
-<p><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Copy Green</strong>.</span><a class="headerlink" href="#id4" title="本圖片的永久連結">¶</a></p>
-</figcaption>
-</figure>
-<figure class="align-center" id="id5">
+<p class="caption"><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Copy Green</strong>.</span><a class="headerlink" href="#id4" title="本圖片的永久連結">¶</a></p>
+</div>
+<div class="figure align-center" id="id5">
 <img alt="../../_images/Blending_modes_Copy_Blue_Sample_image_with_dots.png" src="../../_images/Blending_modes_Copy_Blue_Sample_image_with_dots.png" />
-<figcaption>
-<p><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Copy Blue</strong>.</span><a class="headerlink" href="#id5" title="本圖片的永久連結">¶</a></p>
-</figcaption>
-</figure>
-</section>
-<section id="dissolve">
+<p class="caption"><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Copy Blue</strong>.</span><a class="headerlink" href="#id5" title="本圖片的永久連結">¶</a></p>
+</div>
+</div>
+<div class="section" id="dissolve">
 <span id="bm-dissolve"></span><span id="index-4"></span><h2>溶解<a class="headerlink" href="#dissolve" title="本標題的永久連結">¶</a></h2>
 <div class="admonition hint">
 <p class="admonition-title">提示</p>
 <p>英文稱為「Dissolve」。</p>
 </div>
 <p>Instead of using transparency, this blending mode will use a random dithering pattern to make the transparent areas look sort of transparent.</p>
-<figure class="align-center" id="id6">
+<div class="figure align-center" id="id6">
 <img alt="../../_images/Blending_modes_Dissolve_Sample_image_with_dots.png" src="../../_images/Blending_modes_Dissolve_Sample_image_with_dots.png" />
-<figcaption>
-<p><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Dissolve</strong>.</span><a class="headerlink" href="#id6" title="本圖片的永久連結">¶</a></p>
-</figcaption>
-</figure>
-</section>
-</section>
+<p class="caption"><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Dissolve</strong>.</span><a class="headerlink" href="#id6" title="本圖片的永久連結">¶</a></p>
+</div>
+</div>
+</div>
 
 
            </div>

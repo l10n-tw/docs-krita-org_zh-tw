@@ -21,9 +21,8 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-07-20T15:19:39" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<meta content="Overview of the Animation Curves docker." name="description" />
+  <meta property="og:article:modified_time" content="2021-07-23T16:27:40" />
+  <meta content="Overview of the Animation Curves docker." name="description" />
 
   
   
@@ -290,13 +289,13 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="animation-curves-docker">
+  <div class="section" id="animation-curves-docker">
 <span id="index-0"></span><span id="id1"></span><h1>Animation Curves Docker<a class="headerlink" href="#animation-curves-docker" title="本標題的永久連結">¶</a></h1>
 <p><strong class="program">Krita</strong>'s <em class="dfn">Animation Curves Docker</em> allows artists to animate the values of some properties over time.</p>
 <p>When animating a complex cut, it's not unusual to want to animate things that would be difficult or inefficient to do through drawing alone. In traditional pen-and-paper animation dating back to the 1920s, special lighting rigs and purpose-built devices like multiplane cameras were used to pull off special effects that changed animation forever! Likewise, Krita's Animation Curves docker allows us to animate more than just the lines on your canvas, such as a layer's opacity or the position, rotation and scale of a <a class="reference internal" href="../layers_and_masks/transformation_masks.html#transformation-masks"><span class="std std-ref">Transform Mask</span></a>.</p>
 <p>Because most things can be boiled down to numeric values (for example, opacity as a percentage or the position of a Transform Mask), and because computers are great with maths and automation, we can plot and visualize the change in values over time on a simple 2D graph. What's more, we can also draw lines and curves that show the computer how we want it to calculate the values in between each of our plotted keyframe values; a technique known as interpolation or <em class="dfn">tweening</em>.</p>
 <img alt="../../_images/Animation_Curves_Docker.png" src="../../_images/Animation_Curves_Docker.png" />
-<section id="overview">
+<div class="section" id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="本標題的永久連結">¶</a></h2>
 <p>As shown in the image above, Krita's Animation Curves Docker can be thought of as different sections:</p>
 <ol class="upperalpha simple">
@@ -305,8 +304,8 @@
 <li><p><em class="dfn">Channels List</em> -- This area shows the various channels of the current layer that are currently being animated within the Animation Curves Docker. Each independent channel is associated with a unique color and its visibility within the graph view can be toggled by clicking on the eyeball icon.</p></li>
 <li><p><em class="dfn">Graph View</em> -- Last but not least is the <em class="dfn">graph view</em>, the big graph of values and times that we use to animate the value of parameters over time. When a <a class="reference internal" href="animation_timeline.html#term-Keyframe"><span class="xref std std-term">keyframe</span></a> is added to the current channel at the current time it will appear as a colored circle within the graph view. After clicking on the keyframe to select it, you can change the value by dragging the circle vertically or by entering a specific value into the value box on the toolbar. Similarly, you can change the time of the selected frame by dragging it horizontally. Finally, when the select keyframe is using <span class="guilabel">bezier curve interpolation</span>, selecting it will cause one or more <em class="dfn">curve handles</em> to appear, which can be used to change the shape of the interpolation curve over time.</p></li>
 </ol>
-</section>
-<section id="animating-opacity">
+</div>
+<div class="section" id="animating-opacity">
 <h2>Animating Opacity<a class="headerlink" href="#animating-opacity" title="本標題的永久連結">¶</a></h2>
 <p>Starting with <strong class="program">Krita 5</strong>, we can use the Animation Curves Docker to animate a layer's <a class="reference internal" href="layers.html#term-Opacity"><span class="xref std std-term">opacity</span></a> and, with the help of a <a class="reference internal" href="../layers_and_masks/transformation_masks.html#transformation-masks"><span class="std std-ref">Transform Mask</span></a>, its <em class="dfn">position</em>, <em class="dfn">rotation</em>, <em class="dfn">scale</em> and <em class="dfn">shear</em>.</p>
 <div class="admonition warning">
@@ -338,8 +337,8 @@
 </div>
 </div></blockquote>
 <p><em>Ok, it's a bit tough to put in writing...</em> But it's not so bad once you get the hang of it!</p>
-</section>
-<section id="animating-transform-masks">
+</div>
+<div class="section" id="animating-transform-masks">
 <h2>Animating Transform Masks<a class="headerlink" href="#animating-transform-masks" title="本標題的永久連結">¶</a></h2>
 <p>Now let's talk a bit about how we can use a <a class="reference internal" href="../layers_and_masks/transformation_masks.html#transformation-masks"><span class="std std-ref">Transformation Masks</span></a> to <em>animate our layer's position, rotation, scale and shear</em> for <em class="dfn">&quot;tweening&quot;</em> effects:</p>
 <p>Animating a transform mask is a lot like animating opacity, but first we need to <em>add a Transform Mask</em>. (You can do this by <img alt="mouseright" src="../../_images/Krita_mouse_right.png" /> on the layer that you want to animate, and then <span class="menuselection">Add ‣ Transform Mask</span>.)</p>
@@ -364,8 +363,8 @@
 </div></blockquote>
 <p>Finally, click or scrub to a different frame time, add another keyframe, and use the Transform Tool on the same Transform Mask again.</p>
 <p>Press the <span class="guilabel">play button</span> and (after a little bit of caching) there you have it, a layer with an animated Transform Mask!</p>
-</section>
-<section id="controls">
+</div>
+<div class="section" id="controls">
 <h2>Controls<a class="headerlink" href="#controls" title="本標題的永久連結">¶</a></h2>
 <ol class="arabic">
 <li><p><em class="dfn">Channels List</em></p>
@@ -406,8 +405,8 @@
 </div></blockquote>
 </li>
 </ol>
-</section>
-</section>
+</div>
+</div>
 
 
            </div>

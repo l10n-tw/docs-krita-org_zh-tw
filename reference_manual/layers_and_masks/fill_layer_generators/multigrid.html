@@ -21,9 +21,8 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-07-20T15:19:39" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<meta content="How to use the Multigrid generation in Krita." name="description" />
+  <meta property="og:article:modified_time" content="2021-07-23T16:27:40" />
+  <meta content="How to use the Multigrid generation in Krita." name="description" />
 
   
   
@@ -275,7 +274,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="multigrid">
+  <div class="section" id="multigrid">
 <span id="multigrid-fill"></span><span id="index-0"></span><h1>Multigrid<a class="headerlink" href="#multigrid" title="本標題的永久連結">¶</a></h1>
 <p>A fill layer based on de Bruijn's 1981 multigrid method to generate <a class="reference external" href="https://en.wikipedia.org/wiki/Penrose_tiling">Penrose Tilings</a> . This generator projects a hyperdimensional grid lattice onto a 2d plane, giving some pretty cool patterns. Besides looking cool, there's a few interesting and potentially useful features the resulting patterns have:</p>
 <ol class="arabic simple">
@@ -284,31 +283,27 @@
 <li><p>The results do repeat symmetrically around the center. The amount of symmetric repetitions is the same as the amount of dimensions projected.</p></li>
 </ol>
 <p>The resulting patterns are also known to show up in nature as quasicrystals.</p>
-<section id="shapes">
+<div class="section" id="shapes">
 <h2>Shapes<a class="headerlink" href="#shapes" title="本標題的永久連結">¶</a></h2>
 <p>The meat of the algorithm. The default values for this produce the Star Penrose tiling.</p>
 <dl>
 <dt>Dimensions</dt><dd><p>The amount of dimensions the hyperlattice has. 3 is a lattice of cubes, 4 is a lattice of tesseracts, 5 is a lattice of penteracts, and so forth.</p>
-<figure class="align-default" id="id1">
+<div class="figure align-default" id="id1">
 <img alt="../../../_images/multigrid-dimension-example.png" src="../../../_images/multigrid-dimension-example.png" />
-<figcaption>
-<p><span class="caption-text">Multigrid with different dimensions, starting at 3 and ending at 12. 3d, 4d and 6d are colored with the intersect color factor while the rest uses ratio exclusively. In 3d, 4d and 6d, all the rhombs have the same ratio.</span><a class="headerlink" href="#id1" title="本圖片的永久連結">¶</a></p>
-</figcaption>
-</figure>
+<p class="caption"><span class="caption-text">Multigrid with different dimensions, starting at 3 and ending at 12. 3d, 4d and 6d are colored with the intersect color factor while the rest uses ratio exclusively. In 3d, 4d and 6d, all the rhombs have the same ratio.</span><a class="headerlink" href="#id1" title="本圖片的永久連結">¶</a></p>
+</div>
 </dd>
 <dt>Divisions</dt><dd><p>Effectively a zoom-out. This is the subdivisions of the length of the width between the center and the corner of the image. This is then used to determine how many lines are projected for each dimension.</p>
 </dd>
 <dt>Offset</dt><dd><p>This controls how much each set of lines is offset from the center of the image. Changing this value changes the pattern within the same dimension significantly.</p>
-<figure class="align-default" id="id2">
+<div class="figure align-default" id="id2">
 <img alt="../../../_images/multigrid-offset-examples.png" src="../../../_images/multigrid-offset-examples.png" />
-<figcaption>
-<p><span class="caption-text">Multigrid with 5 dimensions and 20 divisions. The offsets from left to right are: 0.3, 0.1, 0.2 (Star Penrose tiling), 0.3, 0.4 (Sun Penrose Tiling), 0.48.</span><a class="headerlink" href="#id2" title="本圖片的永久連結">¶</a></p>
-</figcaption>
-</figure>
+<p class="caption"><span class="caption-text">Multigrid with 5 dimensions and 20 divisions. The offsets from left to right are: 0.3, 0.1, 0.2 (Star Penrose tiling), 0.3, 0.4 (Sun Penrose Tiling), 0.48.</span><a class="headerlink" href="#id2" title="本圖片的永久連結">¶</a></p>
+</div>
 </dd>
 </dl>
-</section>
-<section id="lines">
+</div>
+<div class="section" id="lines">
 <h2>Lines<a class="headerlink" href="#lines" title="本標題的永久連結">¶</a></h2>
 <dl>
 <dt>Line Width</dt><dd><p>The width of the outlines of the rhombs in image pixels. Due to the way the rhombs are drawn, there is still a hairfine line visible at 0 px.</p>
@@ -324,15 +319,13 @@
 </dl>
 </dd>
 </dl>
-</section>
-<section id="colors">
+</div>
+<div class="section" id="colors">
 <h2>Colors<a class="headerlink" href="#colors" title="本標題的永久連結">¶</a></h2>
-<figure class="align-default" id="id3">
+<div class="figure align-default" id="id3">
 <img alt="../../../_images/multigrid-color-examples.png" src="../../../_images/multigrid-color-examples.png" />
-<figcaption>
-<p><span class="caption-text">Image showing the Star Penrose Tiling with 29 divisions and connector lines at the acute angles. The complex gradient and the combination of ratio and index to color the image results in some of the more impressive results that can be gotten from this fill layer.</span><a class="headerlink" href="#id3" title="本圖片的永久連結">¶</a></p>
-</figcaption>
-</figure>
+<p class="caption"><span class="caption-text">Image showing the Star Penrose Tiling with 29 divisions and connector lines at the acute angles. The complex gradient and the combination of ratio and index to color the image results in some of the more impressive results that can be gotten from this fill layer.</span><a class="headerlink" href="#id3" title="本圖片的永久連結">¶</a></p>
+</div>
 <p>This section controls all the colors, all grouped together because Krita's color buttons allow drag and dropping colors to one another. You can change the color for the outlines and the connector lines, and there is a gradient for coloring the individual rhombs.</p>
 <p>The color factors determine which properties of each rhomb is used to determine its coloring. This value is used as a multiplier, to finally result in a value that can be used to get the value from the gradient.</p>
 <dl class="simple">
@@ -343,8 +336,8 @@
 <dt>Index</dt><dd><p>This colors the rhombs based on the index of the intersecting lines from the center. In effect, rhombs closer to the center will have a lower value, while rhombs further from the center will have a higher value.</p>
 </dd>
 </dl>
-</section>
-</section>
+</div>
+</div>
 
 
            </div>

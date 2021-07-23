@@ -21,9 +21,8 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-07-20T15:19:39" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<meta content="Overview of the artistic color selector docker." name="description" />
+  <meta property="og:article:modified_time" content="2021-07-23T16:27:40" />
+  <meta content="Overview of the artistic color selector docker." name="description" />
 
   
   
@@ -290,34 +289,30 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="artistic-color-selector-docker">
+  <div class="section" id="artistic-color-selector-docker">
 <span id="index-0"></span><span id="id1"></span><h1>Artistic Color Selector Docker<a class="headerlink" href="#artistic-color-selector-docker" title="本標題的永久連結">¶</a></h1>
 <p>A color selector inspired by traditional color wheel and workflows.</p>
-<section id="usage">
+<div class="section" id="usage">
 <h2>Usage<a class="headerlink" href="#usage" title="本標題的永久連結">¶</a></h2>
-<figure class="align-default" id="id2">
+<div class="figure align-default" id="id2">
 <img alt="../../_images/Krita_Artistic_Color_Selector_Docker.png" src="../../_images/Krita_Artistic_Color_Selector_Docker.png" />
-<figcaption>
-<p><span class="caption-text">Artistic color selector with a gamut mask.</span><a class="headerlink" href="#id2" title="本圖片的永久連結">¶</a></p>
-</figcaption>
-</figure>
+<p class="caption"><span class="caption-text">Artistic color selector with a gamut mask.</span><a class="headerlink" href="#id2" title="本圖片的永久連結">¶</a></p>
+</div>
 <p>Select hue and saturation on the wheel (5) and value on the value scale (4). <img alt="mouseleft" src="../../_images/Krita_mouse_left.png" /> changes foreground color (6). <img alt="mouseright" src="../../_images/Krita_mouse_right.png" /> changes background color (7).</p>
 <p>The blip shows the position of current foreground color on the wheel (black&amp;white circle) and on the value scale (black&amp;white line). Last selected swatches are outlined.</p>
 <p>Parameters of the wheel can be set in <a class="reference internal" href="#artistic-color-selector-docker-wheel-preferences"><span class="std std-ref">Color wheel preferences</span></a> menu (2). Selector settings are found under <a class="reference internal" href="#artistic-color-selector-docker-selector-settings"><span class="std std-ref">Selector settings</span></a> menu (3).</p>
-<section id="gamut-masking">
+<div class="section" id="gamut-masking">
 <h3>Gamut Masking<a class="headerlink" href="#gamut-masking" title="本標題的永久連結">¶</a></h3>
 <p>You can select and manage your gamut masks in the <a class="reference internal" href="gamut_mask_docker.html#gamut-mask-docker"><span class="std std-ref">色域遮罩工具面板</span></a>.</p>
 <p>In the gamut masking toolbar (1) you can toggle the selected mask off and on (left button). You can also rotate the mask with the rotation slider (right).</p>
-</section>
-</section>
-<section id="color-wheel-preferences">
+</div>
+</div>
+<div class="section" id="color-wheel-preferences">
 <span id="artistic-color-selector-docker-wheel-preferences"></span><h2>Color wheel preferences<a class="headerlink" href="#color-wheel-preferences" title="本標題的永久連結">¶</a></h2>
-<figure class="align-default" id="id3">
+<div class="figure align-default" id="id3">
 <span id="artistic-color-selector-docker-fig-wheel-preferences"></span><img alt="../../_images/Krita_Artistic_Color_Selector_Docker_3.png" src="../../_images/Krita_Artistic_Color_Selector_Docker_3.png" />
-<figcaption>
-<p><span class="caption-text">Color wheel preferences.</span><a class="headerlink" href="#id3" title="本圖片的永久連結">¶</a></p>
-</figcaption>
-</figure>
+<p class="caption"><span class="caption-text">Color wheel preferences.</span><a class="headerlink" href="#id3" title="本圖片的永久連結">¶</a></p>
+</div>
 <dl class="simple">
 <dt>Sliders 1, 2, and 3</dt><dd><p>Adjust the number of steps of the value scale, number of hue sectors and saturation rings on the wheel, respectively.</p>
 </dd>
@@ -328,15 +323,13 @@
 <dt>Reset to default (5)</dt><dd><p>Loads default values for the sliders 1, 2, and 3. These default values are configured in selector settings.</p>
 </dd>
 </dl>
-</section>
-<section id="selector-settings">
+</div>
+<div class="section" id="selector-settings">
 <span id="artistic-color-selector-docker-selector-settings"></span><h2>Selector settings<a class="headerlink" href="#selector-settings" title="本標題的永久連結">¶</a></h2>
-<figure class="align-default" id="id4">
+<div class="figure align-default" id="id4">
 <img alt="../../_images/Krita_Artistic_Color_Selector_Docker_2.png" src="../../_images/Krita_Artistic_Color_Selector_Docker_2.png" />
-<figcaption>
-<p><span class="caption-text">Selector settings menu.</span><a class="headerlink" href="#id4" title="本圖片的永久連結">¶</a></p>
-</figcaption>
-</figure>
+<p class="caption"><span class="caption-text">Selector settings menu.</span><a class="headerlink" href="#id4" title="本圖片的永久連結">¶</a></p>
+</div>
 <dl>
 <dt>Selector Appearance (1)</dt><dd><dl class="simple">
 <dt>Show background color indicator</dt><dd><p>Toggles the bottom-right triangle with current background color.</p>
@@ -356,15 +349,15 @@
 <dt>Default Selector Steps Settings</dt><dd><p>Values the color wheel and value scale will be reset to default when the <span class="guilabel">Reset to default</span> button in <a class="reference internal" href="#artistic-color-selector-docker-wheel-preferences"><span class="std std-ref">Color wheel preferences</span></a> is pressed.</p>
 </dd>
 </dl>
-</section>
-<section id="external-info">
+</div>
+<div class="section" id="external-info">
 <h2>External Info<a class="headerlink" href="#external-info" title="本標題的永久連結">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://wolthera.info/?p=726">HSI and HSY for Krita’s advanced colour selector by Wolthera van Hövell tot Westerflier</a>.</p></li>
 <li><p><a class="reference external" href="https://gurneyjourney.blogspot.com/2010/02/color-wheel-part-7.html">The Color Wheel, Part 7 by James Gurney</a>.</p></li>
 </ul>
-</section>
-</section>
+</div>
+</div>
 
 
            </div>

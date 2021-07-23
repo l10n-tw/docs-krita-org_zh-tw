@@ -21,9 +21,8 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-07-20T15:19:39" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<meta content="使用者支援入門介紹。" name="description" />
+  <meta property="og:article:modified_time" content="2021-07-23T16:27:40" />
+  <meta content="使用者支援入門介紹。" name="description" />
 
   
   
@@ -237,7 +236,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="introduction-to-user-support">
+  <div class="section" id="introduction-to-user-support">
 <span id="intro-user-support"></span><h1><a class="toc-backref" href="#id4">使用者支援入門介紹</a><a class="headerlink" href="#introduction-to-user-support" title="本標題的永久連結">¶</a></h1>
 <div class="contents topic" id="id1">
 <p class="topic-title">目錄</p>
@@ -261,10 +260,10 @@
 </li>
 </ul>
 </div>
-<section id="tablet-support">
+<div class="section" id="tablet-support">
 <h2><a class="toc-backref" href="#id5">繪圖板、數位板支援</a><a class="headerlink" href="#tablet-support" title="本標題的永久連結">¶</a></h2>
 <p>The majority of help requests are about pen pressure and tablet support in general.</p>
-<section id="quick-solutions">
+<div class="section" id="quick-solutions">
 <h3><a class="toc-backref" href="#id6">Quick solutions</a><a class="headerlink" href="#quick-solutions" title="本標題的永久連結">¶</a></h3>
 <div class="admonition note">
 <p class="admonition-title">備註</p>
@@ -287,8 +286,8 @@
 <li><p><em>Wacom tablets:</em> if you get straight lines at the beginnings of the strokes, first try to update your driver: it should be fixed in 6.3.34-3. If it doesn't work, disable/minimize &quot;double-click distance&quot; in Wacom settings.</p></li>
 <li><p><em>XP-Pen tablets, pressure being uneven:</em> either switch to Windows 8+ Pointer (Windows Ink) in <span class="menuselection">Configure Krita ‣ Tablet Settings</span>, or disable Windows Ink in XP-Pen settings.</p></li>
 </ol>
-</section>
-<section id="gathering-information">
+</div>
+<div class="section" id="gathering-information">
 <h3><a class="toc-backref" href="#id7">Gathering information</a><a class="headerlink" href="#gathering-information" title="本標題的永久連結">¶</a></h3>
 <ol class="arabic">
 <li><p>Which OS do you use?</p></li>
@@ -310,8 +309,8 @@
 </div></blockquote>
 </li>
 </ol>
-</section>
-<section id="additional-information-for-supporters">
+</div>
+<div class="section" id="additional-information-for-supporters">
 <h3><a class="toc-backref" href="#id8">Additional information for supporters</a><a class="headerlink" href="#additional-information-for-supporters" title="本標題的永久連結">¶</a></h3>
 <ol class="arabic simple">
 <li><p>Except for the issue with beginnings of the strokes, Wacom tablets usually work no matter the OS.</p></li>
@@ -320,9 +319,9 @@
 <li><p>If someone asks about a tablet to buy, generally a cheaper Wacom or a Huion are the best options as of 2019, if they want to work with Krita. <a class="reference internal" href="../reference_manual/list_supported_tablets.html#list-supported-tablets"><span class="std std-ref">支援的繪圖板、數位板</span></a>.</p></li>
 <li><p><a class="reference external" href="https://www.reddit.com/r/krita/comments/btzh72/xppen_artist_12s_issue_with_krita_how_to_fix_it/">Possibly useful instruction in case of XP-Pen tablet issues</a>.</p></li>
 </ol>
-</section>
-</section>
-<section id="animation">
+</div>
+</div>
+<div class="section" id="animation">
 <h2><a class="toc-backref" href="#id9">Animation</a><a class="headerlink" href="#animation" title="本標題的永久連結">¶</a></h2>
 <p>Issues with rendering animation can be of various shapes and colors. First thing to find out is whether the issue happens on Krita's or FFmpeg's side (Krita saves all the frames, then FFmpeg is used to render a video using this sequence of images). To learn that, instruct the user to render as &quot;Image Sequence&quot;. If the image sequence is correct, FFmpeg (or more often: render options) are at fault. If the image sequence is incorrect, either the options are wrong (if for example not every frame got rendered), or it's a bug in Krita.</p>
 <div class="admonition note">
@@ -330,12 +329,12 @@
 <p>If the user opens the Log Viewer docker, turns on logging and then tries to render a video, Krita will print out the whole ffmpeg command to Log Viewer so it can be easily investigated.</p>
 </div>
 <p>There is a log file called <em>log_encode.log</em> in the directory that user tries to render to. It can contain information useful to investigation of the issue (sharing files: <a class="reference internal" href="#intro-user-support-sharing-files"><span class="std std-ref">How to share a file</span></a>).</p>
-</section>
-<section id="onion-skin-issues">
+</div>
+<div class="section" id="onion-skin-issues">
 <h2><a class="toc-backref" href="#id10">Onion skin issues</a><a class="headerlink" href="#onion-skin-issues" title="本標題的永久連結">¶</a></h2>
 <p>The great majority of issues with onion skin are just user errors, not bugs. Nonetheless, you need to find out why it happens and direct the user how to use onion skin properly.</p>
-</section>
-<section id="crash">
+</div>
+<div class="section" id="crash">
 <h2><a class="toc-backref" href="#id11">Crash</a><a class="headerlink" href="#crash" title="本標題的永久連結">¶</a></h2>
 <p>In case of crash try to determine if the problem is known, if not, instruct user to create a bug report (or create it yourself) with following information:</p>
 <ol class="arabic simple">
@@ -343,8 +342,8 @@
 <li><p>Is it possible to reproduce (repeat)? If yes, provide a step-by-step instruction to get the crash.</p></li>
 <li><p>Backtrace (crashlog) -- the instruction for Windows is here: <a class="reference internal" href="../reference_manual/dr_minw_debugger.html#dr-minw"><span class="std std-ref">Dr. MinGW 除錯工具</span></a>, and the debug symbols can be found in the annoucement of the version of Krita that the user has. But it could be easier to just point the user to <a class="reference external" href="https://download.kde.org/stable/krita">https://download.kde.org/stable/krita</a>.</p></li>
 </ol>
-</section>
-<section id="other-possible-questions-with-quick-solutions">
+</div>
+<div class="section" id="other-possible-questions-with-quick-solutions">
 <h2><a class="toc-backref" href="#id12">Other possible questions with quick solutions</a><a class="headerlink" href="#other-possible-questions-with-quick-solutions" title="本標題的永久連結">¶</a></h2>
 <ol class="arabic">
 <li><p>When the user has any weird issue, something you've never heard about, ask them to reset the configuration: <a class="reference internal" href="../KritaFAQ.html#faq-reset-krita-configuration"><span class="std std-ref">重設 Krita 的設定選項</span></a>.</p></li>
@@ -357,8 +356,8 @@
 </div></blockquote>
 </li>
 </ol>
-</section>
-<section id="advices-for-supporters">
+</div>
+<div class="section" id="advices-for-supporters">
 <h2><a class="toc-backref" href="#id13">Advices for supporters</a><a class="headerlink" href="#advices-for-supporters" title="本標題的永久連結">¶</a></h2>
 <ol class="arabic simple">
 <li><p>If you don't understand the question, ask for clarification -- asking for a screen recording or a screenshot is perfectly fine.</p></li>
@@ -369,8 +368,8 @@
 <li><p>If you ask for an image, mention usage of <a class="reference external" href="https://imgur.com">Imgur</a> or <a class="reference external" href="https://pasteboard.co">Pasteboard</a> (<a class="reference internal" href="#intro-user-support-sharing-files"><span class="std std-ref">How to share a file</span></a>), otherwise Reddit users might create a new post with this image instead of including it to the old conversation.</p></li>
 <li><p>If you want to quickly answer someone, just link to the appropriate place in this manual page -- you can click on the little link icon next to the section or subsection title and give the link to the user so they for example know what information about their tablet issue you need.</p></li>
 </ol>
-</section>
-<section id="how-to-share-a-file">
+</div>
+<div class="section" id="how-to-share-a-file">
 <span id="intro-user-support-sharing-files"></span><h2><a class="toc-backref" href="#id14">How to share a file</a><a class="headerlink" href="#how-to-share-a-file" title="本標題的永久連結">¶</a></h2>
 <ul>
 <li><p>Images (e.g. screenshots): <a class="reference external" href="https://imgur.com">Imgur</a> [*], <a class="reference external" href="https://pasteboard.co">Pasteboard</a></p></li>
@@ -386,8 +385,8 @@
 </div>
 </li>
 </ul>
-</section>
-</section>
+</div>
+</div>
 
 
            </div>

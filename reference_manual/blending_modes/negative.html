@@ -21,9 +21,8 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-07-20T15:19:39" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<meta content="Page about the negative blending modes in Krita: Additive Subtractive, Arcus Tangent, Difference, Equivalence, Exclusion, Negation." name="description" />
+  <meta property="og:article:modified_time" content="2021-07-23T16:27:40" />
+  <meta content="Page about the negative blending modes in Krita: Additive Subtractive, Arcus Tangent, Difference, Equivalence, Exclusion, Negation." name="description" />
 
   
   
@@ -266,24 +265,22 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="negative">
+  <div class="section" id="negative">
 <span id="bm-cat-negative"></span><span id="index-0"></span><h1>負片<a class="headerlink" href="#negative" title="本標題的永久連結">¶</a></h1>
 <p>These are all blending modes which seem to make the image go negative.</p>
-<section id="additive-subtractive">
+<div class="section" id="additive-subtractive">
 <span id="bm-additive-subtractive"></span><span id="index-1"></span><h2>減去平方根<a class="headerlink" href="#additive-subtractive" title="本標題的永久連結">¶</a></h2>
 <div class="admonition hint">
 <p class="admonition-title">提示</p>
 <p>Krita 5.0 前稱「減去開平方」，英文稱為「Additive Subtractive」。</p>
 </div>
 <p>Subtract the square root of the lower layer from the upper layer.</p>
-<figure class="align-center" id="id1">
+<div class="figure align-center" id="id1">
 <img alt="../../_images/Blending_modes_Additive_Subtractive_Sample_image_with_dots.png" src="../../_images/Blending_modes_Additive_Subtractive_Sample_image_with_dots.png" />
-<figcaption>
-<p><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Additive Subtractive</strong>.</span><a class="headerlink" href="#id1" title="本圖片的永久連結">¶</a></p>
-</figcaption>
-</figure>
-</section>
-<section id="arcus-tangent">
+<p class="caption"><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Additive Subtractive</strong>.</span><a class="headerlink" href="#id1" title="本圖片的永久連結">¶</a></p>
+</div>
+</div>
+<div class="section" id="arcus-tangent">
 <span id="bm-arcus-tangent"></span><span id="index-2"></span><h2>反正切值<a class="headerlink" href="#arcus-tangent" title="本標題的永久連結">¶</a></h2>
 <div class="admonition hint">
 <p class="admonition-title">提示</p>
@@ -291,70 +288,60 @@
 </div>
 <p>Divides the lower layer by the top. Then divides this by Pi.
 Then uses that in an Arc tangent function, and multiplies it by two.</p>
-<figure class="align-center" id="id2">
+<div class="figure align-center" id="id2">
 <img alt="../../_images/Blending_modes_Arcus_Tangent_Sample_image_with_dots.png" src="../../_images/Blending_modes_Arcus_Tangent_Sample_image_with_dots.png" />
-<figcaption>
-<p><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Arcus Tangent</strong>.</span><a class="headerlink" href="#id2" title="本圖片的永久連結">¶</a></p>
-</figcaption>
-</figure>
-</section>
-<section id="difference">
+<p class="caption"><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Arcus Tangent</strong>.</span><a class="headerlink" href="#id2" title="本圖片的永久連結">¶</a></p>
+</div>
+</div>
+<div class="section" id="difference">
 <span id="bm-difference"></span><span id="index-3"></span><h2>差值<a class="headerlink" href="#difference" title="本標題的永久連結">¶</a></h2>
 <div class="admonition hint">
 <p class="admonition-title">提示</p>
 <p>英文稱為「Difference」。</p>
 </div>
 <p>Checks per pixel of which layer the pixel-value is highest/lowest, and then subtracts the lower value from the higher-value.</p>
-<figure class="align-center" id="id3">
+<div class="figure align-center" id="id3">
 <img alt="../../_images/Blending_modes_Difference_Sample_image_with_dots.png" src="../../_images/Blending_modes_Difference_Sample_image_with_dots.png" />
-<figcaption>
-<p><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Difference</strong>.</span><a class="headerlink" href="#id3" title="本圖片的永久連結">¶</a></p>
-</figcaption>
-</figure>
-</section>
-<section id="equivalence">
+<p class="caption"><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Difference</strong>.</span><a class="headerlink" href="#id3" title="本圖片的永久連結">¶</a></p>
+</div>
+</div>
+<div class="section" id="equivalence">
 <span id="bm-equivalence"></span><span id="index-4"></span><h2>等價<a class="headerlink" href="#equivalence" title="本標題的永久連結">¶</a></h2>
 <div class="admonition hint">
 <p class="admonition-title">提示</p>
 <p>英文稱為「Equivalence」。</p>
 </div>
 <p>Subtracts the underlying layer from the upper-layer. Then inverts that. Seems to produce the same result as <a class="reference internal" href="#bm-difference"><span class="std std-ref">差值</span></a>.</p>
-<figure class="align-center" id="id4">
+<div class="figure align-center" id="id4">
 <img alt="../../_images/Blending_modes_Equivalence_Sample_image_with_dots.png" src="../../_images/Blending_modes_Equivalence_Sample_image_with_dots.png" />
-<figcaption>
-<p><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Equivalence</strong>.</span><a class="headerlink" href="#id4" title="本圖片的永久連結">¶</a></p>
-</figcaption>
-</figure>
-</section>
-<section id="exclusion">
+<p class="caption"><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Equivalence</strong>.</span><a class="headerlink" href="#id4" title="本圖片的永久連結">¶</a></p>
+</div>
+</div>
+<div class="section" id="exclusion">
 <span id="bm-exclusion"></span><span id="index-5"></span><h2>排除<a class="headerlink" href="#exclusion" title="本標題的永久連結">¶</a></h2>
 <div class="admonition hint">
 <p class="admonition-title">提示</p>
 <p>英文稱為「Exclusion」。</p>
 </div>
 <p>This multiplies the two layers, adds the source, and then subtracts the multiple of two layers twice.</p>
-<figure class="align-center" id="id5">
+<div class="figure align-center" id="id5">
 <img alt="../../_images/Blending_modes_Exclusion_Sample_image_with_dots.png" src="../../_images/Blending_modes_Exclusion_Sample_image_with_dots.png" />
-<figcaption>
-<p><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Exclusion</strong>.</span><a class="headerlink" href="#id5" title="本圖片的永久連結">¶</a></p>
-</figcaption>
-</figure>
-</section>
-<section id="negation">
+<p class="caption"><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Exclusion</strong>.</span><a class="headerlink" href="#id5" title="本圖片的永久連結">¶</a></p>
+</div>
+</div>
+<div class="section" id="negation">
 <span id="bm-negation"></span><span id="index-6"></span><h2>求反<a class="headerlink" href="#negation" title="本標題的永久連結">¶</a></h2>
 <div class="admonition hint">
 <p class="admonition-title">提示</p>
 <p>英文稱為「Negation」。</p>
 </div>
 <p>The absolute of the 1.0f value subtracted by base subtracted by the blend layer. abs(1.0f - Base - Blend)</p>
-<figure class="align-center" id="id6">
+<div class="figure align-center" id="id6">
 <img alt="../../_images/Blending_modes_Negation_Sample_image_with_dots.png" src="../../_images/Blending_modes_Negation_Sample_image_with_dots.png" />
-<figcaption>
-<p><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Negation</strong>.</span><a class="headerlink" href="#id6" title="本圖片的永久連結">¶</a></p>
-</figcaption>
-</figure>
-</section>
-</section>
+<p class="caption"><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Negation</strong>.</span><a class="headerlink" href="#id6" title="本圖片的永久連結">¶</a></p>
+</div>
+</div>
+</div>
 
 
            </div>

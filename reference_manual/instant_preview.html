@@ -21,9 +21,8 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-07-20T15:19:39" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<meta content="How the Instant Preview technology in Krita works." name="description" />
+  <meta property="og:article:modified_time" content="2021-07-23T16:27:40" />
+  <meta content="How the Instant Preview technology in Krita works." name="description" />
 
   
   
@@ -251,21 +250,19 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="instant-preview">
+  <div class="section" id="instant-preview">
 <span id="index-0"></span><span id="id1"></span><h1>即時預覽<a class="headerlink" href="#instant-preview" title="本標題的永久連結">¶</a></h1>
 <p>Instant Preview (previously known under the code name Level Of Detail/LOD strokes) is Krita's special speed-up mechanism that was funded by the 2015 Kickstarter. Krita slows down with really large images due to the large amount of data it's crunching in painting these images. Instant Preview works by taking a smaller version of the canvas, and drawing the feedback on there while Krita calculates the real stroke in the background. This means that if you have a 4k screen and are working on a 4k image at 100% zoom, you won't feel any speed up.</p>
-<section id="activating-instant-preview">
+<div class="section" id="activating-instant-preview">
 <h2>啟用即時預覽<a class="headerlink" href="#activating-instant-preview" title="本標題的永久連結">¶</a></h2>
 <div class="admonition warning">
 <p class="admonition-title">警告</p>
 <p>Instant Preview requires OpenGL 3.0 support at minimum. So if you don't have <span class="guilabel">high-quality</span> scaling available in <span class="menuselection">Settings ‣ Configure Krita... ‣ Display ‣ Display scaling filter</span>, then you won't be able to use Instant Preview either.</p>
 </div>
-<figure class="align-right" id="id2">
+<div class="figure align-right" id="id2">
 <img alt="../_images/Lod_position.png" src="../_images/Lod_position.png" />
-<figcaption>
-<p><span class="caption-text">The Global Instant Preview toggle is under the view menu.</span><a class="headerlink" href="#id2" title="本圖片的永久連結">¶</a></p>
-</figcaption>
-</figure>
+<p class="caption"><span class="caption-text">The Global Instant Preview toggle is under the view menu.</span><a class="headerlink" href="#id2" title="本圖片的永久連結">¶</a></p>
+</div>
 <p>Instant Preview is activated in two places: The view menu (<kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">L</kbd></kbd> shortcut), and the settings of the given paintop by default. This is because Instant Preview has different limitations with different paint operations.</p>
 <p>For example, the overlay mode in the color smudge brush will disable the ability to have Instant Preview on the brush, so does using 'fade' sensor for size.</p>
 <p>Similarly, the auto-spacing, fuzzy sensor in size, use of density in brush-tip and the use of texture paintops will make it more difficult to determine a stroke, and thus will give a feeling of 'popping' when the stroke is finished.</p>
@@ -273,14 +270,12 @@
 <div class="versionadded">
 <p><span class="versionmodified added">4.0 版新加入: </span><img alt="mouseleft" src="../_images/Krita_mouse_left.png" /> this pop-up will give a slider, which can be used to determine the threshold size at which instant preview activates. By default this 100px. This is useful for brushes that are optimised to work on small sizes.</p>
 </div>
-<figure class="align-center" id="id3" style="width: 500px">
+<div class="figure align-center" id="id3" style="width: 500px">
 <img alt="../_images/Lod_position2.png" src="../_images/Lod_position2.png" />
-<figcaption>
-<p><span class="caption-text">The Instant Preview checkbox at the bottom of the brush settings editor will give you feedback when there's settings active that can't be previewed right. Hover over it to get more detail. In this case, the issue is that auto-spacing is on.</span><a class="headerlink" href="#id3" title="本圖片的永久連結">¶</a></p>
-</figcaption>
-</figure>
-</section>
-<section id="tools-that-benefit-from-instant-preview">
+<p class="caption"><span class="caption-text">The Instant Preview checkbox at the bottom of the brush settings editor will give you feedback when there's settings active that can't be previewed right. Hover over it to get more detail. In this case, the issue is that auto-spacing is on.</span><a class="headerlink" href="#id3" title="本圖片的永久連結">¶</a></p>
+</div>
+</div>
+<div class="section" id="tools-that-benefit-from-instant-preview">
 <h2>可受惠於即時預覽的工具<a class="headerlink" href="#tools-that-benefit-from-instant-preview" title="本標題的永久連結">¶</a></h2>
 <p>The following tools benefit from Instant Preview:</p>
 <ul class="simple">
@@ -290,8 +285,8 @@
 <li><p>The Filters.</p></li>
 <li><p>Animation.</p></li>
 </ul>
-</section>
-</section>
+</div>
+</div>
 
 
            </div>

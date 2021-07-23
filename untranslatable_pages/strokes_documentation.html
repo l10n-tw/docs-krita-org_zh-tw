@@ -21,9 +21,8 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-07-20T15:19:39" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<meta content="Strokes documentation" name="description" />
+  <meta property="og:article:modified_time" content="2021-07-23T16:27:40" />
+  <meta content="Strokes documentation" name="description" />
 
   
   
@@ -279,11 +278,11 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="strokes-queue">
+  <div class="section" id="strokes-queue">
 <span id="strokes-documentation"></span><h1>Strokes queue<a class="headerlink" href="#strokes-queue" title="本標題的永久連結">¶</a></h1>
-<section id="strokes-jobs-what-it-is-all-about-theory">
+<div class="section" id="strokes-jobs-what-it-is-all-about-theory">
 <h2>Strokes, jobs… What it is all about? (theory)<a class="headerlink" href="#strokes-jobs-what-it-is-all-about-theory" title="本標題的永久連結">¶</a></h2>
-<section id="structure-of-a-stroke">
+<div class="section" id="structure-of-a-stroke">
 <h3>Structure of a stroke<a class="headerlink" href="#structure-of-a-stroke" title="本標題的永久連結">¶</a></h3>
 <p>An abstraction of a <em>stroke</em> represents a complete action performed by a
 user. This action can be canceled when it has not been finished yet, or
@@ -339,8 +338,8 @@ all the updates are finished. So it runs as a barrier job. See
 Exclusive property makes the job to be executed on the scheduler
 exclusively. It means that there will be no other jobs (strokes or
 updates) executed in parallel to this one.</p>
-</section>
-<section id="the-queue-of-strokes">
+</div>
+<div class="section" id="the-queue-of-strokes">
 <h3>The queue of strokes<a class="headerlink" href="#the-queue-of-strokes" title="本標題的永久連結">¶</a></h3>
 <p>The strokes themselves are stored in a queue and executed one by one.
 This is important to know that any two jobs owned by different strokes
@@ -354,18 +353,16 @@ The stroke can be defined <em>exclusive</em>. The meaning of this resembles the
 behavior of stroke job's exclusive property. <em>Exclusive stroke</em> is a
 stroke that executes its jobs with all the updates blocked. The
 execution of updates will start only after the stroke is finished.</p>
-</section>
-</section>
-<section id="implementation-practice">
+</div>
+</div>
+<div class="section" id="implementation-practice">
 <h2>Implementation (practice)<a class="headerlink" href="#implementation-practice" title="本標題的永久連結">¶</a></h2>
-<section id="implementation-of-a-stroke">
+<div class="section" id="implementation-of-a-stroke">
 <h3>Implementation of a stroke<a class="headerlink" href="#implementation-of-a-stroke" title="本標題的永久連結">¶</a></h3>
-<figure class="align-default" id="id1">
+<div class="figure align-default" id="id1">
 <img alt="Overview of stroke classes" src="../_images/strokes_queue_internals.png" />
-<figcaption>
-<p><span class="caption-text">Overview of stroke classes</span><a class="headerlink" href="#id1" title="本圖片的永久連結">¶</a></p>
-</figcaption>
-</figure>
+<p class="caption"><span class="caption-text">Overview of stroke classes</span><a class="headerlink" href="#id1" title="本圖片的永久連結">¶</a></p>
+</div>
 <p>Each stroke is represented by a <code class="docutils literal notranslate"><span class="pre">KisStroke</span></code> object. It has all the
 basic manipulating methods like: <code class="docutils literal notranslate"><span class="pre">addJob()</span></code>, <code class="docutils literal notranslate"><span class="pre">endStroke()</span></code> and
 <code class="docutils literal notranslate"><span class="pre">cancelStroke()</span></code>. The behavior of a stroke is defined by a <em>stroke
@@ -397,8 +394,8 @@ as: <code class="docutils literal notranslate"><span class="pre">node</span></co
 <p>Other information that is common to the whole stroke like names of the
 paintOp, compositeOp are passed directly to the constructor of the
 stroke strategy.</p>
-</section>
-<section id="execution-of-strokes-by-kisstrokesqueue">
+</div>
+<div class="section" id="execution-of-strokes-by-kisstrokesqueue">
 <h3>Execution of strokes by <code class="docutils literal notranslate"><span class="pre">KisStrokesQueue</span></code><a class="headerlink" href="#execution-of-strokes-by-kisstrokesqueue" title="本標題的永久連結">¶</a></h3>
 <p>The key class of the strokes' execution is <code class="docutils literal notranslate"><span class="pre">KisStrokesQueue</span></code>. The most
 important method that is responsible for applying all the rules about
@@ -407,8 +404,8 @@ interleaving of jobs mentioned above is
 scheduler each time a free thread appears. First it gets the number of
 merge and stroke jobs currently executing in the updater context. Then
 it checks all the rules one by one.</p>
-</section>
-<section id="canceling-and-undo-information-trick">
+</div>
+<div class="section" id="canceling-and-undo-information-trick">
 <h3>Canceling and undo information trick<a class="headerlink" href="#canceling-and-undo-information-trick" title="本標題的永久連結">¶</a></h3>
 <p>It was stated above that a stroke can be canceled in each moment of
 time. That happens when a user calls <code class="docutils literal notranslate"><span class="pre">KisStroke::cancelStroke()</span></code>
@@ -428,8 +425,8 @@ special wrapper that puts them into the stack without calling <code class="docut
 and controls their threaded <code class="docutils literal notranslate"><span class="pre">undo()</span></code> and <code class="docutils literal notranslate"><span class="pre">redo()</span></code> operations. See
 information about <code class="docutils literal notranslate"><span class="pre">KisPostExecutionUndoAdapter</span></code> in a separate
 document.</p>
-</section>
-<section id="queues-balancing">
+</div>
+<div class="section" id="queues-balancing">
 <h3>Queues balancing<a class="headerlink" href="#queues-balancing" title="本標題的永久連結">¶</a></h3>
 <p>So we ended up with a solution where our scheduler has two queues that
 it should spread between limited amount of threads. Of course there
@@ -441,8 +438,8 @@ simple:</p>
 <p><code class="docutils literal notranslate"><span class="pre">strokesMetric</span> <span class="pre">=</span> <span class="pre">&lt;number</span> <span class="pre">of</span> <span class="pre">strokes&gt;</span> <span class="pre">*</span> <span class="pre">&lt;jobs</span> <span class="pre">in</span> <span class="pre">the</span> <span class="pre">first</span> <span class="pre">stroke&gt;</span></code></p>
 <p>Balancing formula:</p>
 <p><code class="docutils literal notranslate"><span class="pre">balancingRatio</span> <span class="pre">=</span> <span class="pre">&lt;updatesMetric&gt;</span> <span class="pre">/</span> <span class="pre">&lt;strokesMetric&gt;</span></code></p>
-</section>
-<section id="starting-a-stroke">
+</div>
+<div class="section" id="starting-a-stroke">
 <h3>Starting a stroke<a class="headerlink" href="#starting-a-stroke" title="本標題的永久連結">¶</a></h3>
 <p>The main entry point to strokes for the user is <code class="docutils literal notranslate"><span class="pre">KisStrokesFacade</span></code>
 interface. This interfaces provides four methods: <code class="docutils literal notranslate"><span class="pre">startStroke()</span></code>,
@@ -477,12 +474,12 @@ finished.</p>
 <p><code class="docutils literal notranslate"><span class="pre">strokesFacade-&gt;cancelStroke(strokeId);</span></code></p>
 </li>
 </ol>
-</section>
-</section>
-</section>
-<section id="strokes-public-api">
+</div>
+</div>
+</div>
+<div class="section" id="strokes-public-api">
 <h1>Strokes public API<a class="headerlink" href="#strokes-public-api" title="本標題的永久連結">¶</a></h1>
-<section id="simplified-stroke-classes">
+<div class="section" id="simplified-stroke-classes">
 <h2>Simplified stroke classes<a class="headerlink" href="#simplified-stroke-classes" title="本標題的永久連結">¶</a></h2>
 <p>As you might noticed the internal strokes API is quite complex. If you
 decide to create your own stroke you need to create at least six new
@@ -496,12 +493,10 @@ classes:</p>
 adapter that simplifies all these stuff. The class is called
 <code class="docutils literal notranslate"><span class="pre">KisSimpleStrokeStrategy</span></code>. It allows you to define all the jobs you
 need in a single class.</p>
-<figure class="align-default" id="id2">
+<div class="figure align-default" id="id2">
 <img alt="Simple stroke classes" src="../_images/strokes_simplified_api.png" />
-<figcaption>
-<p><span class="caption-text">Simple stroke classes</span><a class="headerlink" href="#id2" title="本圖片的永久連結">¶</a></p>
-</figcaption>
-</figure>
+<p class="caption"><span class="caption-text">Simple stroke classes</span><a class="headerlink" href="#id2" title="本圖片的永久連結">¶</a></p>
+</div>
 <p>This class has four virtual methods those you can use as callbacks. When
 you need to use one of them just override it in your own class and add
 activation of the corresponding callback to the constructor of your
@@ -541,12 +536,12 @@ callbacks of the parental class.</p>
 <em>sequential</em> and <em>non-exclusive</em>. That is done intentionally to simplify
 the API. At the same time that is a limitation of the API. But
 currently, this is perfectly enough for us.</p>
-</section>
-<section id="unit-testing-of-the-strokes">
+</div>
+<div class="section" id="unit-testing-of-the-strokes">
 <h2>Unit-testing of the strokes<a class="headerlink" href="#unit-testing-of-the-strokes" title="本標題的永久連結">¶</a></h2>
 <p>One of the benefits of using the strokes is that you are able to test
 them separately from the UI using a common infrastructure.</p>
-<section id="utils-stroketester-class">
+<div class="section" id="utils-stroketester-class">
 <h3><code class="docutils literal notranslate"><span class="pre">utils::StrokeTester</span></code> class<a class="headerlink" href="#utils-stroketester-class" title="本標題的永久連結">¶</a></h3>
 <p>That is a really simple class that you can use to test your own stroke.
 It test the following aspects of your stroke:</p>
@@ -558,8 +553,8 @@ It test the following aspects of your stroke:</p>
 </ul>
 <p>The result of the execution is compared against the reference png files
 those you create manually while writing your test.</p>
-</section>
-<section id="how-to-write-your-own-test">
+</div>
+<div class="section" id="how-to-write-your-own-test">
 <h3>How to write your own test<a class="headerlink" href="#how-to-write-your-own-test" title="本標題的永久連結">¶</a></h3>
 <p>You can check examples in <code class="docutils literal notranslate"><span class="pre">MoveStrokeTest</span></code> and <code class="docutils literal notranslate"><span class="pre">FreehandStrokeTest</span></code>
 tests.</p>
@@ -607,11 +602,11 @@ against these very files. That means it'll catch all the changes in
 the work of your stroke, so you'll be able to catch all the
 regressions automatically.</p></li>
 </ol>
-</section>
-</section>
-<section id="predefined-classes-for-usage-as-base-classes">
+</div>
+</div>
+<div class="section" id="predefined-classes-for-usage-as-base-classes">
 <h2>Predefined classes for usage as base classes<a class="headerlink" href="#predefined-classes-for-usage-as-base-classes" title="本標題的永久連結">¶</a></h2>
-<section id="kispainterbasedstrokestrategy">
+<div class="section" id="kispainterbasedstrokestrategy">
 <h3><code class="docutils literal notranslate"><span class="pre">KisPainterBasedStrokeStrategy</span></code><a class="headerlink" href="#kispainterbasedstrokestrategy" title="本標題的永久連結">¶</a></h3>
 <p>This class can be used for the strokes those work with the node using a
 painter (or painters like in <code class="docutils literal notranslate"><span class="pre">KisToolMultihand</span></code>). This class accepts
@@ -620,8 +615,8 @@ Initialization, finishing and canceling callbacks of this class do all
 the work for dealing with indirect painting support, creation of
 transaction, reverting the stroke on canceling. This base class is used
 for <code class="docutils literal notranslate"><span class="pre">FreehandStroke</span></code> mostly.</p>
-</section>
-<section id="kisstrokestrategyundocommandbased">
+</div>
+<div class="section" id="kisstrokestrategyundocommandbased">
 <h3><code class="docutils literal notranslate"><span class="pre">KisStrokeStrategyUndoCommandBased</span></code><a class="headerlink" href="#kisstrokestrategyundocommandbased" title="本標題的永久連結">¶</a></h3>
 <p>It is obvious from the name of the class that it works with undo
 commands. In constructor you define which method of undo command should
@@ -629,9 +624,9 @@ be used undo() or redo(). Afterwards, you just add commands to the
 stroke and they are executed with any the sequentiality constraints.
 This stroke strategy does all the work for adding the commands to the
 undo adapter and for canceling them if needed.</p>
-</section>
-</section>
-<section id="example-classes">
+</div>
+</div>
+<div class="section" id="example-classes">
 <h2>Example classes<a class="headerlink" href="#example-classes" title="本標題的永久連結">¶</a></h2>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">KisPainterBasedStrokeStrategy</span></code></p></li>
@@ -639,24 +634,22 @@ undo adapter and for canceling them if needed.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">KisStrokeStrategyUndoCommandBased</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">MoveStrokeStrategy</span></code></p></li>
 </ul>
-</section>
-</section>
-<section id="internals-of-the-freehand-tool">
+</div>
+</div>
+<div class="section" id="internals-of-the-freehand-tool">
 <h1>Internals of the freehand tool<a class="headerlink" href="#internals-of-the-freehand-tool" title="本標題的永久連結">¶</a></h1>
-<figure class="align-default" id="id3">
+<div class="figure align-default" id="id3">
 <img alt="Freehand tool classes" src="../_images/freehand_tool_internals.png" />
-<figcaption>
-<p><span class="caption-text">Freehand tool classes</span><a class="headerlink" href="#id3" title="本圖片的永久連結">¶</a></p>
-</figcaption>
-</figure>
-<section id="motivation-for-so-many-classes">
+<p class="caption"><span class="caption-text">Freehand tool classes</span><a class="headerlink" href="#id3" title="本圖片的永久連結">¶</a></p>
+</div>
+<div class="section" id="motivation-for-so-many-classes">
 <h2>Motivation for so many classes<a class="headerlink" href="#motivation-for-so-many-classes" title="本標題的永久連結">¶</a></h2>
 <p>We need to share the codebase between at least four classes:
 <code class="docutils literal notranslate"><span class="pre">KisToolFreehand</span></code>, <code class="docutils literal notranslate"><span class="pre">KisToolMultihand</span></code>, <code class="docutils literal notranslate"><span class="pre">KisScratchPad</span></code>. All these
 classes paint on a canvas with <code class="docutils literal notranslate"><span class="pre">KisPainter</span></code>, so they share quite much
 common code.</p>
-</section>
-<section id="kisresourcessnapshot">
+</div>
+<div class="section" id="kisresourcessnapshot">
 <h2>KisResourcesSnapshot<a class="headerlink" href="#kisresourcessnapshot" title="本標題的永久連結">¶</a></h2>
 <p>After we introduced the strokes, the moments of time when user paints
 with mouse and when the line is actually painted on the canvas do not
@@ -687,8 +680,8 @@ to the painter when needed.</p>
 <code class="docutils literal notranslate"><span class="pre">KisToolFreehandHelper</span></code> and passed to the
 <code class="docutils literal notranslate"><span class="pre">KisPainterBasedStrokeStrategy</span></code> class. The latter one creates painters
 and initializes them using <code class="docutils literal notranslate"><span class="pre">setupPainter()</span></code>.</p>
-</section>
-<section id="kistoolfreehand-and-kisscratchpad">
+</div>
+<div class="section" id="kistoolfreehand-and-kisscratchpad">
 <h2><code class="docutils literal notranslate"><span class="pre">KisToolFreehand</span></code> and <code class="docutils literal notranslate"><span class="pre">KisScratchPad</span></code><a class="headerlink" href="#kistoolfreehand-and-kisscratchpad" title="本標題的永久連結">¶</a></h2>
 <p>The freehand tool is split into four classes:</p>
 <dl class="simple">
@@ -724,19 +717,19 @@ former one in a way that it supports painting assistants
 with <code class="docutils literal notranslate"><span class="pre">KisCoordinatesConverter</span></code> (<code class="docutils literal notranslate"><span class="pre">documentToImage()</span></code> method) and
 perspective painting (<code class="docutils literal notranslate"><span class="pre">calculatePerspective()</span></code> method). The rest of
 the code is shared.</p>
-</section>
-<section id="kistoolmultihand">
+</div>
+<div class="section" id="kistoolmultihand">
 <h2><code class="docutils literal notranslate"><span class="pre">KisToolMultihand</span></code><a class="headerlink" href="#kistoolmultihand" title="本標題的永久連結">¶</a></h2>
 <p>Multihand tool uses the same classes. The only difference, it has a
 couple of modifications in its helper (<code class="docutils literal notranslate"><span class="pre">KisToolMultihandHelper</span></code>),
 those allow it to have several painters at the same time. The tool's
 class inherits the freehand tool's class and just substitutes the helper
 with its own (with <code class="docutils literal notranslate"><span class="pre">resetHelper()</span></code> method).</p>
-</section>
-</section>
-<section id="scheduled-undo-redo">
+</div>
+</div>
+<div class="section" id="scheduled-undo-redo">
 <h1>Scheduled Undo/Redo<a class="headerlink" href="#scheduled-undo-redo" title="本標題的永久連結">¶</a></h1>
-<section id="two-ways-of-working-with-undo-commands">
+<div class="section" id="two-ways-of-working-with-undo-commands">
 <h2>Two ways of working with undo commands<a class="headerlink" href="#two-ways-of-working-with-undo-commands" title="本標題的永久連結">¶</a></h2>
 <p>The key problem of designing the undo system for strokes was that there
 are two ways of working with undo commands. That is we have two types of
@@ -780,14 +773,12 @@ barrier, exclusive).</p></li>
 redo and runs undo()/redo() of an internal command in a separate stroke.
 We have <code class="docutils literal notranslate"><span class="pre">KisSavedMacroCommand</span></code> as well to save the contents of the
 whole stroke.</p>
-<figure class="align-default" id="id4">
+<div class="figure align-default" id="id4">
 <img alt="Scheduled commands" src="../_images/scheduled_undo_redo.png" />
-<figcaption>
-<p><span class="caption-text">Scheduled commands</span><a class="headerlink" href="#id4" title="本圖片的永久連結">¶</a></p>
-</figcaption>
-</figure>
-</section>
-<section id="new-undo-adapters">
+<p class="caption"><span class="caption-text">Scheduled commands</span><a class="headerlink" href="#id4" title="本圖片的永久連結">¶</a></p>
+</div>
+</div>
+<div class="section" id="new-undo-adapters">
 <h2>New Undo Adapters<a class="headerlink" href="#new-undo-adapters" title="本標題的永久連結">¶</a></h2>
 <p>Well, it would be quite insane to ask all the users of strokes to wrap
 their commands into wrapper, so we introduced a separate undo adapter
@@ -814,8 +805,8 @@ undo()/redo() slots virtual. After that we overridden the stack with our
 own, and changed these methods to block the strokes while undo()/redo()
 is happening. We use <code class="docutils literal notranslate"><span class="pre">tryBarrierLock()</span></code> there, because it is easier to
 cancel the undo than to wait until all the strokes are finished.</p>
-</section>
-<section id="undo-adapters-and-undo-stores">
+</div>
+<div class="section" id="undo-adapters-and-undo-stores">
 <h2>Undo Adapters and Undo Stores<a class="headerlink" href="#undo-adapters-and-undo-stores" title="本標題的永久連結">¶</a></h2>
 <p>Well, we have two types of undo adapters now (not counting
 <code class="docutils literal notranslate"><span class="pre">KisSurrrogateUndoAdapter</span></code>). It's obvious that they should share some
@@ -824,17 +815,15 @@ separate class <code class="docutils literal notranslate"><span class="pre">KisU
 store the undo data&quot;, and undo adapter defines &quot;how to adapt krita's
 commands to qt's stack&quot;. There are additional types of store classes for
 using in tests and for special purposes.</p>
-<figure class="align-default" id="id5">
+<div class="figure align-default" id="id5">
 <img alt="Undo Adapter vs Undo Store" src="../_images/undo_adapters.png" />
-<figcaption>
-<p><span class="caption-text">Undo Adapter vs Undo Store</span><a class="headerlink" href="#id5" title="本圖片的永久連結">¶</a></p>
-</figcaption>
-</figure>
-</section>
-</section>
-<section id="processings-framework">
+<p class="caption"><span class="caption-text">Undo Adapter vs Undo Store</span><a class="headerlink" href="#id5" title="本圖片的永久連結">¶</a></p>
+</div>
+</div>
+</div>
+<div class="section" id="processings-framework">
 <h1>Processings framework<a class="headerlink" href="#processings-framework" title="本標題的永久連結">¶</a></h1>
-<section id="motivation">
+<div class="section" id="motivation">
 <h2>Motivation<a class="headerlink" href="#motivation" title="本標題的永久連結">¶</a></h2>
 <p>In Krita we have many actions which have common structure of execution.
 Take a look at actions like Scale Image, Rotate Image, Change Color
@@ -862,15 +851,13 @@ implemented inside the visitor itself and, second, emitting signals is
 put into visitors as well. These two limitations prevent the code to be
 shared between actions. That is why we introduced new shiny
 <code class="docutils literal notranslate"><span class="pre">KisProcessingVisitor</span></code> and a separate framework for them.</p>
-</section>
-<section id="processing-visitors">
+</div>
+<div class="section" id="processing-visitors">
 <h2>Processing visitors<a class="headerlink" href="#processing-visitors" title="本標題的永久連結">¶</a></h2>
-<figure class="align-default" id="id6">
+<div class="figure align-default" id="id6">
 <img alt="Processing framework" src="../_images/processings_framework.png" />
-<figcaption>
-<p><span class="caption-text">Processing framework</span><a class="headerlink" href="#id6" title="本圖片的永久連結">¶</a></p>
-</figcaption>
-</figure>
+<p class="caption"><span class="caption-text">Processing framework</span><a class="headerlink" href="#id6" title="本圖片的永久連結">¶</a></p>
+</div>
 <p>The key class of the processing framework is <code class="docutils literal notranslate"><span class="pre">KisProcessingVisitor</span></code>.
 Its main difference from the old visitor is that it is extremely simple.
 It performs one task only, it processes one node. And that is all. It
@@ -933,8 +920,8 @@ a <em>thread-safe</em> way. In line (6) we apply a command sequentially, it
 means that it'll be executed right after <em>all</em> the threads with visitors
 has finished. Line (7) closes the stroke an tells it to perform all the
 updates and emit all the signals.</p>
-</section>
-<section id="implementation-of-kisprocessingapplicator">
+</div>
+<div class="section" id="implementation-of-kisprocessingapplicator">
 <h2>Implementation of <code class="docutils literal notranslate"><span class="pre">KisProcessingApplicator</span></code><a class="headerlink" href="#implementation-of-kisprocessingapplicator" title="本標題的永久連結">¶</a></h2>
 <p>The applicator is based on the &quot;undo command&quot;-based stroke
 (<code class="docutils literal notranslate"><span class="pre">KisStrokeStrategyUndoCommandBased</span></code>). It starts the stroke in the
@@ -953,8 +940,8 @@ to the beginning and to the end of every stroke, so that they can be
 executed in the end of both undo and redo operations. The parameter
 <code class="docutils literal notranslate"><span class="pre">finalUpdate</span></code> controls whether the command is executed during its
 redo() or undo() operation.</p>
-</section>
-<section id="emission-of-signals-trick">
+</div>
+<div class="section" id="emission-of-signals-trick">
 <h2>Emission of signals trick<a class="headerlink" href="#emission-of-signals-trick" title="本標題的永久連結">¶</a></h2>
 <p>After actions have been moved to separate threads, problems with image
 signals appeared. When everything was executed in a single thread the
@@ -970,8 +957,8 @@ when using <code class="docutils literal notranslate"><span class="pre">Qt::Bloc
 introduce <code class="docutils literal notranslate"><span class="pre">KisImageSignalRouter</span></code>. This class checks which thread emits
 the signal and emits it either using <code class="docutils literal notranslate"><span class="pre">Qt::DirectConnection</span></code> or
 <code class="docutils literal notranslate"><span class="pre">Qt::BlockingQueuedConnection</span></code>. So no deadlocks are possible.</p>
-</section>
-<section id="progress-reporting">
+</div>
+<div class="section" id="progress-reporting">
 <h2>Progress reporting<a class="headerlink" href="#progress-reporting" title="本標題的永久連結">¶</a></h2>
 <p>The fact that a processing visitor does a really simple task (processes
 a single node) that is very easy to report progress using progress bars
@@ -981,8 +968,8 @@ an even easier way of doing this. You just need to instantiate a
 <code class="docutils literal notranslate"><span class="pre">ProgressHelper</span></code> object and ask it to create a <code class="docutils literal notranslate"><span class="pre">KoUpdater</span></code> object
 for you. And all is done. You can see an example in
 <code class="docutils literal notranslate"><span class="pre">KisTransformProcessingVisitor</span></code> class.</p>
-</section>
-<section id="testing">
+</div>
+<div class="section" id="testing">
 <h2>Testing<a class="headerlink" href="#testing" title="本標題的永久連結">¶</a></h2>
 <p>Usage of a common framework makes testing really simple. There is a
 separate unittest in image's tests folder: <code class="docutils literal notranslate"><span class="pre">KisProcessingsTest</span></code>. To
@@ -991,8 +978,8 @@ is done by <code class="docutils literal notranslate"><span class="pre">BaseProc
 processing and compare results against reference png files those are
 stored in data folder. If there are some problems found, it'll dump
 result files to the current directory.</p>
-</section>
-</section>
+</div>
+</div>
 
 
            </div>

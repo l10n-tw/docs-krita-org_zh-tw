@@ -21,9 +21,8 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-07-20T15:19:39" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<meta content="Overview of the advanced color selector docker." name="description" />
+  <meta property="og:article:modified_time" content="2021-07-23T16:27:40" />
+  <meta content="Overview of the advanced color selector docker." name="description" />
 
   
   
@@ -292,18 +291,18 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="advanced-color-selector">
+  <div class="section" id="advanced-color-selector">
 <span id="advanced-color-selector-docker"></span><span id="index-0"></span><h1>Advanced Color Selector<a class="headerlink" href="#advanced-color-selector" title="本標題的永久連結">¶</a></h1>
 <img alt="../../_images/advanced-color-selector.png" src="../../_images/advanced-color-selector.png" />
 <p>As compared to other color selectors in Krita, Advanced color selector provides more control and options to the user. To open Advanced color selector choose <span class="menuselection">Settings ‣ Dockers ‣ Advanced Color Selector</span>. You can configure this docker by clicking on the little settings icon on the top left corner of the docker. Clicking on the settings icon will open a popup window with following tabs and options:</p>
-<section id="color-selector">
+<div class="section" id="color-selector">
 <h2>Color Selector<a class="headerlink" href="#color-selector" title="本標題的永久連結">¶</a></h2>
 <p>Here you configure the main selector.</p>
 <p>Show Color Selector</p>
 <div class="versionadded">
 <p><span class="versionmodified added">4.2 版新加入: </span>This allows you to configure whether to show or hide the main color selector.</p>
 </div>
-<section id="type-and-shape">
+<div class="section" id="type-and-shape">
 <h3>Type and Shape<a class="headerlink" href="#type-and-shape" title="本標題的永久連結">¶</a></h3>
 <img alt="../../_images/Krita_Color_Selector_Types.png" src="../../_images/Krita_Color_Selector_Types.png" />
 <p>Here you can pick the hsx model you'll be using.
@@ -323,8 +322,8 @@ There's a small blurb explaining the characteristic of each model, but let's go 
 <p class="admonition-title">備註</p>
 <p>Triangle is in all color models because to a certain extent, it is a wildcard shape: All color models look the same in an equilateral triangle selector.</p>
 </div>
-</section>
-<section id="luma-coefficients">
+</div>
+<div class="section" id="luma-coefficients">
 <h3>Luma Coefficients<a class="headerlink" href="#luma-coefficients" title="本標題的永久連結">¶</a></h3>
 <p>This allows you to edit the Luma coefficients for the HSY model selectors to your leisure. Want to use <a class="reference external" href="https://en.wikipedia.org/wiki/Rec._601">Rec. 601</a> instead of Rec. 709? These boxes allow you to do that!</p>
 <p>By default, the Luma coefficients should add up to 1 at maximum.</p>
@@ -332,19 +331,19 @@ There's a small blurb explaining the characteristic of each model, but let's go 
 <dt>Gamma</dt><dd><p>The HSY selector is linearised, this setting allows you to choose how much gamma is applied to the Luminosity for the gui element. 1.0 is fully linear, 2.2 is the default.</p>
 </dd>
 </dl>
-</section>
-<section id="color-space">
+</div>
+<div class="section" id="color-space">
 <h3>Color Space<a class="headerlink" href="#color-space" title="本標題的永久連結">¶</a></h3>
 <p>This allows you to set the overall color space for the Advanced Color Selector.</p>
 <div class="admonition warning">
 <p class="admonition-title">警告</p>
 <p>You can pick only sRGB colors in advanced color selector regardless of the color space of advanced color selector. This is a bug.</p>
 </div>
-</section>
-</section>
-<section id="behavior">
+</div>
+</div>
+<div class="section" id="behavior">
 <h2>Behavior<a class="headerlink" href="#behavior" title="本標題的永久連結">¶</a></h2>
-<section id="when-docker-resizes">
+<div class="section" id="when-docker-resizes">
 <h3>When docker resizes<a class="headerlink" href="#when-docker-resizes" title="本標題的永久連結">¶</a></h3>
 <p>This determines the behavior of the widget as it becomes smaller.</p>
 <dl class="simple">
@@ -355,8 +354,8 @@ There's a small blurb explaining the characteristic of each model, but let's go 
 <dt>Do nothing</dt><dd><p>Does nothing, just resizes.</p>
 </dd>
 </dl>
-</section>
-<section id="zoom-selector-ui">
+</div>
+<div class="section" id="zoom-selector-ui">
 <h3>Zoom selector UI<a class="headerlink" href="#zoom-selector-ui" title="本標題的永久連結">¶</a></h3>
 <p>If your have set the docker size considerably smaller to save space, this option might be helpful to you. This allows you to set whether or not the selector will give a zoomed view of the selector in a size specified by you, you have these options for the zoom selector:</p>
 <ul class="simple">
@@ -369,27 +368,27 @@ There's a small blurb explaining the characteristic of each model, but let's go 
 <dt>Hide Pop-up on click</dt><dd><p>This allows you to let the pop-up selectors called with the above hotkeys to disappear upon clicking them instead of having to leave the pop-up boundary. This is useful for faster working.</p>
 </dd>
 </dl>
-</section>
-</section>
-<section id="shade-selector">
+</div>
+</div>
+<div class="section" id="shade-selector">
 <h2>Shade selector<a class="headerlink" href="#shade-selector" title="本標題的永久連結">¶</a></h2>
 <p>Shade selector options.
 The shade selectors are useful to decide upon new shades of color.</p>
-<section id="update-selector">
+<div class="section" id="update-selector">
 <h3>Update Selector<a class="headerlink" href="#update-selector" title="本標題的永久連結">¶</a></h3>
 <p>This allows you to determine when the shade selector updates.</p>
-</section>
-<section id="mypaint-shade-selector">
+</div>
+<div class="section" id="mypaint-shade-selector">
 <h3>MyPaint Shade Selector<a class="headerlink" href="#mypaint-shade-selector" title="本標題的永久連結">¶</a></h3>
 <p>Ported from MyPaint, and extended with all color models.
 Default hotkey is <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">M</kbd></kbd>.</p>
-</section>
-<section id="simple-shade-selector">
+</div>
+<div class="section" id="simple-shade-selector">
 <h3>Simple Shade Selector<a class="headerlink" href="#simple-shade-selector" title="本標題的永久連結">¶</a></h3>
 <p>This allows you to configure the simple shade selector in detail.</p>
-</section>
-</section>
-<section id="color-patches">
+</div>
+</div>
+<div class="section" id="color-patches">
 <h2>Color Patches<a class="headerlink" href="#color-patches" title="本標題的永久連結">¶</a></h2>
 <p>This sets the options of the color patches.</p>
 <p>Both Color History and Colors From the Image have similar options which will be explained below.</p>
@@ -409,16 +408,16 @@ Default hotkey is <kbd class="kbd compound docutils literal notranslate"><kbd cl
 <dt>Update After Every Stroke</dt><dd><p>This is only available for Colors From the Image and tells the docker whether to update the section after every stroke or not, as after each stroke the colors will change in the image.</p>
 </dd>
 </dl>
-<section id="history-patches">
+<div class="section" id="history-patches">
 <h3>History patches<a class="headerlink" href="#history-patches" title="本標題的永久連結">¶</a></h3>
 <p>The history patches remember which colors you've drawn on canvas with. They can be quickly called with the <kbd class="kbd docutils literal notranslate">H</kbd> key.</p>
-</section>
-<section id="common-patches">
+</div>
+<div class="section" id="common-patches">
 <h3>Common Patches<a class="headerlink" href="#common-patches" title="本標題的永久連結">¶</a></h3>
 <p>The common patches are generated from the image, and are the most common color in the image. The hotkey for them on canvas is the <kbd class="kbd docutils literal notranslate">U</kbd> key.</p>
-</section>
-</section>
-<section id="gamut-masking">
+</div>
+</div>
+<div class="section" id="gamut-masking">
 <h2>Gamut masking<a class="headerlink" href="#gamut-masking" title="本標題的永久連結">¶</a></h2>
 <div class="versionadded">
 <p><span class="versionmodified added">4.2 版新加入.</span></p>
@@ -429,12 +428,12 @@ Default hotkey is <kbd class="kbd compound docutils literal notranslate"><kbd cl
 </div>
 <p>You can select and manage your gamut masks in the <a class="reference internal" href="gamut_mask_docker.html#gamut-mask-docker"><span class="std std-ref">色域遮罩工具面板</span></a>.</p>
 <p>In the gamut masking toolbar at the top of the selector you can toggle the selected mask off and on (left button). You can also rotate the mask with the rotation slider (right).</p>
-</section>
-<section id="external-info">
+</div>
+<div class="section" id="external-info">
 <h2>External Info<a class="headerlink" href="#external-info" title="本標題的永久連結">¶</a></h2>
 <p><a class="reference external" href="https://wolthera.info/?p=726">HSI and HSY for Krita’s advanced color selector</a>.</p>
-</section>
-</section>
+</div>
+</div>
 
 
            </div>

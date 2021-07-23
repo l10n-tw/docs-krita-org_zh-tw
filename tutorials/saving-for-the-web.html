@@ -21,9 +21,8 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-07-20T15:19:39" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<meta content="Tutorial for saving images for the web." lang="en" name="description" xml:lang="en" />
+  <meta property="og:article:modified_time" content="2021-07-23T16:27:40" />
+  <meta content="Tutorial for saving images for the web." lang="en" name="description" xml:lang="en" />
 
   
   
@@ -234,7 +233,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="saving-for-the-web">
+  <div class="section" id="saving-for-the-web">
 <span id="id1"></span><h1>Saving For The Web<a class="headerlink" href="#saving-for-the-web" title="本標題的永久連結">¶</a></h1>
 <p>Krita's default saving format is the <a class="reference internal" href="../general_concepts/file_formats/file_kra.html#file-kra"><span class="std std-ref">*.kra</span></a> format. This format saves everything Krita can manipulate about an image: Layers, Filters, Assistants, Masks, Color spaces, etc. However, that's a lot of data, so <code class="docutils literal notranslate"><span class="pre">*.kra</span></code> files are pretty big. This doesn't make them very good for uploading to the internet. Imagine how many people's data-plans hit the limit if they only could look at <code class="docutils literal notranslate"><span class="pre">*.kra</span></code> files! So instead, we optimise our images for the web.</p>
 <p>There are a few steps involved:</p>
@@ -246,25 +245,25 @@
 <li><p>Sharpen the image a little. This is especially necessary for social media. Social media websites often scale and convert your image in such a way that it gets a little blurry, because they optimize towards photos and not paintings. To have your images stay sharp, it is worth it to run a sharpen filter beforehand. Because the sharpen filter is quite powerful, you are best off adding a sharpen filter mask on top of the stack and lowering its opacity till you feel the sharpness is appropriate.</p></li>
 <li><p>Save as a web-safe image format. There's three that are especially recommended:</p></li>
 </ol>
-<section id="jpg">
+<div class="section" id="jpg">
 <h2>JPG<a class="headerlink" href="#jpg" title="本標題的永久連結">¶</a></h2>
 <p>Use this for images with a lot of different colors, like paintings.</p>
-</section>
-<section id="png">
+</div>
+<div class="section" id="png">
 <h2>PNG<a class="headerlink" href="#png" title="本標題的永久連結">¶</a></h2>
 <p>Use this for images with few colors or which are black and white, like comics and pixel-art. Select <span class="guilabel">Save as indexed PNG, if possible</span> to optimise even more.</p>
-</section>
-<section id="gif">
+</div>
+<div class="section" id="gif">
 <h2>GIF<a class="headerlink" href="#gif" title="本標題的永久連結">¶</a></h2>
 <p>Only use this for animation (will be supported this year) or images with a super low color count, because they will get indexed.</p>
-<section id="saving-with-transparency">
+<div class="section" id="saving-with-transparency">
 <h3>Saving with Transparency<a class="headerlink" href="#saving-with-transparency" title="本標題的永久連結">¶</a></h3>
 <img alt="../_images/Save_with_transparency.png" src="../_images/Save_with_transparency.png" />
 <p>Saving with transparency is only possible with GIF and PNG. First, make sure you see the transparency checkers (this can be done by simply hiding the bottom layers, changing the projection color in <span class="menuselection">Image ‣ Image Background Color and Transparency...</span>, or by using <span class="menuselection">Filters ‣ Colors ‣ Color to Alpha...</span>). Then, save as PNG and tick <strong>Store alpha channel (transparency)</strong></p>
 <p>Save your image, upload, and show it off!</p>
-</section>
-</section>
-</section>
+</div>
+</div>
+</div>
 
 
            </div>

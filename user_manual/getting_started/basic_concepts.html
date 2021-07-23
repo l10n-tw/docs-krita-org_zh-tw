@@ -21,9 +21,8 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-07-20T15:19:39" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<meta content="An overview of the basic concepts of Krita." lang="en" name="description" xml:lang="en" />
+  <meta property="og:article:modified_time" content="2021-07-23T16:27:40" />
+  <meta content="An overview of the basic concepts of Krita." lang="en" name="description" xml:lang="en" />
 
   
   
@@ -260,7 +259,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="basic-concepts">
+  <div class="section" id="basic-concepts">
 <span id="index-0"></span><span id="id1"></span><h1><a class="toc-backref" href="#id10">基本概念</a><a class="headerlink" href="#basic-concepts" title="本標題的永久連結">¶</a></h1>
 <p>If this is your first foray into digital painting, this page should give you a brief introduction to the basic but important concepts required for getting started with digital painting in Krita.</p>
 <p>Although very lengthy, this page tries to give a brief overview of some of the Krita's most important functionality; it tries to help you grasp the functions of various menu and buttons in Krita without going into minute details.</p>
@@ -308,17 +307,17 @@
 </li>
 </ul>
 </div>
-<section id="raster-and-vector">
+<div class="section" id="raster-and-vector">
 <h2><a class="toc-backref" href="#id11">點陣與向量</a><a class="headerlink" href="#raster-and-vector" title="本標題的永久連結">¶</a></h2>
 <p>Even though Krita is regarded primarily a raster based application, it has some vector editing capabilities as well. If you are new to digital painting medium, it is necessary that you first get yourself acquainted with the concepts of raster and <a class="reference internal" href="../vector_graphics.html#vector-graphics"><span class="std std-ref">Vector</span></a> based images.</p>
 <p>In digital imaging, a pixel (Picture Element) is a basic and lowest element of an Image. It is basically a grid of points each displaying specific color. Raster editing is manipulating and editing these pixels. For example when you take a 1-pixel brush which is colored black and painting on the white canvas in Krita you are actually changing the color of the pixel beneath your brush from white to black. When you zoom in and see a brush stroke you can notice many small squares with colors, these are pixels:</p>
 <img alt="../../_images/Pixels-brushstroke.png" class="align-center" src="../../_images/Pixels-brushstroke.png" />
 <p>In contrast to raster images, vector graphic images are based on mathematical expressions. They are independent of the pixels. For example, when you draw a rectangle on a <a class="reference internal" href="../../reference_manual/layers_and_masks/vector_layers.html#vector-layers"><span class="std std-ref">vector layer</span></a> in Krita you are actually drawing paths passing through points that are called nodes, which are located on specific coordinates on the 'x' and 'y' axes. When you re-size or move these points the computer calculates and redraws the path and displays the newly formed shape to you. Hence, you can re-size the vector shape to any extent without any loss in quality. In Krita, everything which is not on a vector layer is raster based.</p>
-</section>
-<section id="images-views-and-windows">
+</div>
+<div class="section" id="images-views-and-windows">
 <h2><a class="toc-backref" href="#id12">影像、檢視與視窗</a><a class="headerlink" href="#images-views-and-windows" title="本標題的永久連結">¶</a></h2>
 <p>In a painting program, there are three major containers that make up your work-space.</p>
-<section id="image">
+<div class="section" id="image">
 <h3><a class="toc-backref" href="#id13">影像</a><a class="headerlink" href="#image" title="本標題的永久連結">¶</a></h3>
 <p>The most important one is the <strong>Image</strong>.</p>
 <p>This is an individual copy of the image that you can open or create via the file dialog. Krita allows you to open the file as a new copy via the <span class="guilabel">File</span> menu, or to save it as a new file, or make an incremental copy.</p>
@@ -338,42 +337,40 @@
 </dl>
 <p>These options are great for people doing production work, who need to switch between files quickly or have backup files in case they do something extreme. Krita also has a file backup system in the form of auto-saves, backup files and crash recovery. You can configure the option for these features in the general settings.</p>
 <p>You view the image via a <strong>View</strong>.</p>
-</section>
-<section id="view">
+</div>
+<div class="section" id="view">
 <h3><a class="toc-backref" href="#id14">檢視</a><a class="headerlink" href="#view" title="本標題的永久連結">¶</a></h3>
 <p>A view is a window onto your image. Krita allows you to have multiple views, and you can manipulate the view to zoom, rotate and mirror and modify the color of the way you see an image without editing the image itself. This is very useful for artists, as changing the way they view the image is a common way to diagnose some common mistakes, like a drawing which is skewed towards one side. Mirroring with the <kbd class="kbd docutils literal notranslate">M</kbd> key makes such skewing easy to identify.</p>
 <p>If you have trouble drawing certain curves you will enjoy using rotation for drawing, and of course, there is zooming in and out for precision and rough work.</p>
-<figure class="align-center" id="id3">
+<div class="figure align-center" id="id3">
 <img alt="../../_images/Krita_multiple_views.png" src="../../_images/Krita_multiple_views.png" />
-<figcaption>
-<p><span class="caption-text">Multiple views of the same image in Krita</span><a class="headerlink" href="#id3" title="本圖片的永久連結">¶</a></p>
-</figcaption>
-</figure>
+<p class="caption"><span class="caption-text">Multiple views of the same image in Krita</span><a class="headerlink" href="#id3" title="本圖片的永久連結">¶</a></p>
+</div>
 <p>Multiple views are possible in Krita via <span class="menuselection">Window ‣ New view ‣ image name</span>. You can switch between them via the <span class="guilabel">Window</span> menu, or the <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Tab</kbd></kbd> shortcut, or keep them in the same area when <strong>subwindow</strong> mode is active in the <a class="reference internal" href="../../reference_manual/preferences/general_settings.html#general-settings"><span class="std std-ref">settings</span></a>, via <span class="menuselection">Window ‣ Tile</span>.</p>
-</section>
-<section id="dockers">
+</div>
+<div class="section" id="dockers">
 <h3><a class="toc-backref" href="#id15">工具面板</a><a class="headerlink" href="#dockers" title="本標題的永久連結">¶</a></h3>
 <p>Dockers are little subwindows in <a class="reference internal" href="navigation.html#navigation"><span class="std std-ref">Krita's interface</span></a>. They contain useful tools, like the color selector, layer stack, tool options, et cetera.</p>
 <img alt="../../_images/Dockers.png" class="align-center" src="../../_images/Dockers.png" />
 <p>The image above shows some of the dockers in Krita.</p>
 <p>All the views and the dockers are held inside <strong>Windows</strong>.</p>
-</section>
-<section id="window">
+</div>
+<div class="section" id="window">
 <h3><a class="toc-backref" href="#id16">視窗</a><a class="headerlink" href="#window" title="本標題的永久連結">¶</a></h3>
 <p>If you've used a computer before, you know what windows are: They are big containers for your computer programs.</p>
 <p>Krita allows you to have multiple windows via <span class="menuselection">Window ‣ New Window</span>.  You can then drag this to another monitor for multi-monitor use.</p>
 <p>The image below shows an example of multiple windows in Krita.</p>
 <img alt="../../_images/Multi-window.png" class="align-center" src="../../_images/Multi-window.png" />
-</section>
-</section>
-<section id="canvas-in-krita">
+</div>
+</div>
+<div class="section" id="canvas-in-krita">
 <h2><a class="toc-backref" href="#id17">Krita 的畫布</a><a class="headerlink" href="#canvas-in-krita" title="本標題的永久連結">¶</a></h2>
 <p>When you create a new document in Krita for the first time you will see a rectangular white area. This is called a canvas. You can see it in the image below. The area marked by a red rectangle is a canvas.</p>
 <img alt="../../_images/Canvas-krita.png" class="align-center" src="../../_images/Canvas-krita.png" />
 <p>When you save the painting as JPG, PNG et cetera or take a print out of the painting, only the content inside this area is taken into consideration. Anything beyond it is ignored. Krita does store information beyond this area, you just won't be able to see it.
 This data is stored in the <strong>Layers</strong>.</p>
-</section>
-<section id="layers-and-compositing">
+</div>
+<div class="section" id="layers-and-compositing">
 <h2><a class="toc-backref" href="#id18">圖層與合成</a><a class="headerlink" href="#layers-and-compositing" title="本標題的永久連結">¶</a></h2>
 <p>Like a landscape painter will first paint the sky and then the furthest away elements before slowly working his way to the foreground elements, computers will do the same with all the things you tell them to draw. So, if you tell them to draw a circle after a square on the same spot, the circle will always be drawn later. This is called the <strong>Drawing Order</strong>.</p>
 <p>The layer stack is a way for you to separate elements of a drawing and manipulate the drawing order by showing you which layers are drawn when and allowing you to change the order they are drawn in and also apply all sorts of other effects. This is called <strong>Compositing</strong>.</p>
@@ -396,8 +393,8 @@ This data is stored in the <strong>Layers</strong>.</p>
 </dd>
 </dl>
 <p>You can manipulate the content of the layers with <strong>Tools</strong>.</p>
-</section>
-<section id="tools">
+</div>
+<div class="section" id="tools">
 <h2><a class="toc-backref" href="#id19">工具</a><a class="headerlink" href="#tools" title="本標題的永久連結">¶</a></h2>
 <p>Tools help you manipulate the image data. The most common one is of course, the freehand brush, which is the default when you open Krita. There are roughly five types of tools in Krita:</p>
 <dl class="simple">
@@ -413,51 +410,45 @@ This data is stored in the <strong>Layers</strong>.</p>
 </dd>
 </dl>
 <p>All tools can be found in the toolbox, and information about individual tools can be found in the <a class="reference internal" href="../../reference_manual/tools.html#cat-tools"><span class="std std-ref">tools</span></a> section of the manual.</p>
-</section>
-<section id="brush-engines">
+</div>
+<div class="section" id="brush-engines">
 <h2><a class="toc-backref" href="#id20">筆刷引擎</a><a class="headerlink" href="#brush-engines" title="本標題的永久連結">¶</a></h2>
 <p>Brush engines, as mentioned before, take a path and tablet information and add effects to it, making a stroke.</p>
 <p>Engine is a term Krita developers use to describe a complex interacting set of code, that is the core for certain functionality and is highly configurable. In short, like the engine of your car drives your car, and the type of engine and its configuration affects how you use your car, the brush engine drives the look and feel of the brush, and different brush engines have different results.</p>
 <p>Krita has <a class="reference internal" href="../../reference_manual/brushes/brush_engines.html#category-brush-engines"><span class="std std-ref">a LOT of different brush engines</span></a>, all with different effects.</p>
-<figure class="align-center" id="id4">
+<div class="figure align-center" id="id4">
 <img alt="../../_images/Krita_example_differentbrushengines.png" src="../../_images/Krita_example_differentbrushengines.png" />
-<figcaption>
-<p><span class="caption-text"><strong>Left:</strong> pixel brush, <strong>Center:</strong> color smudge brush, <strong>Right:</strong> sketch brush.</span><a class="headerlink" href="#id4" title="本圖片的永久連結">¶</a></p>
-</figcaption>
-</figure>
+<p class="caption"><span class="caption-text"><strong>Left:</strong> pixel brush, <strong>Center:</strong> color smudge brush, <strong>Right:</strong> sketch brush.</span><a class="headerlink" href="#id4" title="本圖片的永久連結">¶</a></p>
+</div>
 <p>For example, the pixel-brush engine is simple and allows you to do most of your basic work, but if you do a lot of painting, the color smudge brush engine might be more useful. Even though it's slower to use than the Pixel Brush engine, its mixing of colors allows you to work faster when you need to blend and mix colors.</p>
 <p>If you want something totally different from that, the sketch brush engine helps with making messy lines, and the shape brush engine allows you to make big flats quickly. There are a lot of cool effects inside Krita's brush engines, so try them all out, and be sure to check the chapters on each.</p>
 <p>You can configure these effects via the Brush Settings drop-down, which can be quickly accessed via the <kbd class="kbd docutils literal notranslate">F5</kbd> key. These configurations can then be saved into presets, which you can quickly access with the <kbd class="kbd docutils literal notranslate">F6</kbd> key or the Brush Presets docker.</p>
 <p>Brushes draw with colors, but how do computers understand colors?</p>
-</section>
-<section id="colors">
+</div>
+<div class="section" id="colors">
 <h2><a class="toc-backref" href="#id21">色彩</a><a class="headerlink" href="#colors" title="本標題的永久連結">¶</a></h2>
 <p>Humans can see a few million colors, which are combinations of electromagnetic waves (light) bouncing off a surface, where the surface absorbs some of it.</p>
-<figure class="align-center" id="id5">
+<div class="figure align-center" id="id5">
 <img alt="../../_images/Krita_basics_primaries.png" src="../../_images/Krita_basics_primaries.png" />
-<figcaption>
-<p><span class="caption-text">Subtractive CMY colors on the left and additive RGB colors on the right.  This difference means that printers benefit from color conversion before printing.</span><a class="headerlink" href="#id5" title="本圖片的永久連結">¶</a></p>
-</figcaption>
-</figure>
+<p class="caption"><span class="caption-text">Subtractive CMY colors on the left and additive RGB colors on the right.  This difference means that printers benefit from color conversion before printing.</span><a class="headerlink" href="#id5" title="本圖片的永久連結">¶</a></p>
+</div>
 <p>When painting traditionally, we use pigments which also absorb the right light-waves for the color we want it to have, but the more pigments you combine, the more light is absorbed, leading to a kind of murky black. This is why we call the mixing of paints <strong>subtractive</strong>, as it subtracts light the more pigments you put together. Because of that, in traditional pigment mixing, our most efficient primaries are three fairly light colors: Cyan blue and Magenta red and Yellow (CMY).</p>
 <p>A computer also uses three primaries and uses a specific amount of each primary in a color as the way it stores color. However, a computer is a screen that emits light. So it makes more light, which means it needs to do <strong>additive</strong> mixing, where adding more and more colored lights result in white. This is why the three most efficient primaries, as used by computers are Red, Green and Blue (RGB).</p>
 <p>Per pixel, a computer then stores the value of each of these primaries, with the maximum depending on the bit-depth. These are called the <strong>components</strong> or <strong>channels</strong> depending on whom you talk to.</p>
-<figure class="align-left" id="id6">
+<div class="figure align-left" id="id6">
 <img alt="../../_images/Krita_basic_channel_rose.png" src="../../_images/Krita_basic_channel_rose.png" />
-<figcaption>
-<p><span class="caption-text">This is the red-channel of an image of a red rose. As you can see, the petals are white here, indicating that those areas contain full red. The leaves are much darker, indicating a lack of red, which is to be expected, as they are green.</span><a class="headerlink" href="#id6" title="本圖片的永久連結">¶</a></p>
-</figcaption>
-</figure>
+<p class="caption"><span class="caption-text">This is the red-channel of an image of a red rose. As you can see, the petals are white here, indicating that those areas contain full red. The leaves are much darker, indicating a lack of red, which is to be expected, as they are green.</span><a class="headerlink" href="#id6" title="本圖片的永久連結">¶</a></p>
+</div>
 <p>Though by default computers use RGB, they can also convert to CMYK (the subtractive model), or a perceptual model like LAB. In all cases this is just a different way of indicating how the colors relate to each other, and each time it usually has 3 components. The exception here is grayscale, because the computer only needs to remember how white a color is. This is why grayscale is more efficient memory-wise.</p>
 <p>In fact, if you look at each channel separately, they also look like grayscale images, but instead white just means how much Red, Green or Blue there is.</p>
 <p>Krita has a very complex color management system, which you can read more about <a class="reference internal" href="../../general_concepts/colors.html#general-concept-color"><span class="std std-ref">here</span></a>.</p>
-<section id="transparency">
+<div class="section" id="transparency">
 <h3><a class="toc-backref" href="#id22">透明度</a><a class="headerlink" href="#transparency" title="本標題的永久連結">¶</a></h3>
 <p>Just like Red, Green and Blue, the computer can also store how transparent a pixel is. This is important for <strong>compositing</strong> as mentioned before. After all, there's no point in having multiple layers if you can't have transparency.</p>
 <p>Transparency is stored in the same way as colors, meaning that it's also a channel. We usually call this channel the <strong>alpha channel</strong> or <strong>alpha</strong> for short. The reason behind this is that the letter 'α' is used to represent it in programming.</p>
 <p>Some older programs don't always have transparency by default. Krita is the opposite: it doesn't understand images that don't track transparency, and will always add a transparency channel to images. When a given pixel is completely transparent on all layers, Krita will instead show a checkerboard pattern, like the rose image shown above.</p>
-</section>
-<section id="blending-modes">
+</div>
+<div class="section" id="blending-modes">
 <h3><a class="toc-backref" href="#id23">混色模式</a><a class="headerlink" href="#blending-modes" title="本標題的永久連結">¶</a></h3>
 <p>Because colors are stored as numbers you can do math with them. We call this <strong>Blending Modes</strong> or <strong>Compositing Modes</strong>.</p>
 <p>Blending modes can be done per layer or per brush stroke, and thus are also part of the compositing of layers.</p>
@@ -474,9 +465,9 @@ which multiplies the components, leading to darker colors. This allows you to si
 </dl>
 <p>Krita has 76 blending modes, each doing slightly different things. Head over to the <a class="reference internal" href="../../reference_manual/blending_modes.html#blending-modes"><span class="std std-ref">混色模式</span></a> to learn more.</p>
 <p>Because we can see channels as grayscale images, we can convert grayscale images into channels. Like for example, we can use a grayscale image for the transparency. We call these <strong>Masks</strong>.</p>
-</section>
-</section>
-<section id="masks">
+</div>
+</div>
+<div class="section" id="masks">
 <h2><a class="toc-backref" href="#id24">遮罩</a><a class="headerlink" href="#masks" title="本標題的永久連結">¶</a></h2>
 <p>Masks are a type of sub-effect applied to a layer, usually driven by a grayscale image.</p>
 <p>The primary types of mask are <a class="reference internal" href="../../reference_manual/layers_and_masks/transparency_masks.html#transparency-masks"><span class="std std-ref">Transparency Masks</span></a>, which allow you to use a grayscale image to determine transparency, where black makes everything transparent and white makes the pixel fully opaque.</p>
@@ -488,8 +479,8 @@ We right-click the layer and add a transparency mask. Then, we select that mask 
 <img alt="../../_images/Krita_ghostlady_2.png" class="align-center" src="../../_images/Krita_ghostlady_2.png" />
 <p>Wherever the black is, there the lady now becomes transparent, turning her into a real ghost!</p>
 <p>The name mask comes from traditional masking fluid and film. You may recall the earlier comparison of selections to traditional masking fluid. Selections too are stored internally as grayscale images, and you can save them as a local selection which is kind of like a mask, or convert them to a transparency mask.</p>
-</section>
-<section id="filters">
+</div>
+<div class="section" id="filters">
 <h2><a class="toc-backref" href="#id25">濾鏡</a><a class="headerlink" href="#filters" title="本標題的永久連結">¶</a></h2>
 <p>We mentioned earlier that you can do math with colors. But you can also do math with pixels, or groups of pixels or whole layers. In fact, you can make Krita do all sorts of little operations on layers. We call these operations <strong>Filters</strong>.</p>
 <p>Examples of such operations are:</p>
@@ -503,66 +494,60 @@ We right-click the layer and add a transparency mask. Then, we select that mask 
 <dt>Color to Alpha</dt><dd><p>A popular filter which makes all of the chosen color transparent.</p>
 </dd>
 </dl>
-<figure class="align-right" id="id7">
+<div class="figure align-right" id="id7">
 <img alt="../../_images/Krita_basic_filter_brush.png" src="../../_images/Krita_basic_filter_brush.png" />
-<figcaption>
-<p><span class="caption-text">Different filter brushes being used on different parts of the image.</span><a class="headerlink" href="#id7" title="本圖片的永久連結">¶</a></p>
-</figcaption>
-</figure>
+<p class="caption"><span class="caption-text">Different filter brushes being used on different parts of the image.</span><a class="headerlink" href="#id7" title="本圖片的永久連結">¶</a></p>
+</div>
 <p>Krita has many more filters available: you can read about them <a class="reference internal" href="../../reference_manual/filters.html#filters"><span class="std std-ref">here</span></a>.</p>
-<section id="filter-brush-engine">
+<div class="section" id="filter-brush-engine">
 <h3><a class="toc-backref" href="#id26"><a class="reference internal" href="../../reference_manual/brushes/brush_engines/filter_brush_engine.html#filter-brush-engine"><span class="std std-ref">Filter Brush Engine</span></a></a><a class="headerlink" href="#filter-brush-engine" title="本標題的永久連結">¶</a></h3>
 <p>Because many of these operations are per pixel, Krita allows you to use the filter as part of the <a class="reference internal" href="../../reference_manual/brushes/brush_engines/filter_brush_engine.html#filter-brush-engine"><span class="std std-ref">Filter Brush Engine</span></a>.</p>
 <p>In most image manipulation software, these are separate tools, but Krita has it as a brush engine, allowing much more customization than usual.</p>
 <p>This means you can make a brush that desaturates pixels, or a brush that changes the hue of the pixels underneath.</p>
-</section>
-<section id="filter-layers-filter-masks-and-layer-styles">
+</div>
+<div class="section" id="filter-layers-filter-masks-and-layer-styles">
 <h3><a class="toc-backref" href="#id27">濾鏡圖層、濾鏡遮罩與圖層樣式</a><a class="headerlink" href="#filter-layers-filter-masks-and-layer-styles" title="本標題的永久連結">¶</a></h3>
 <p>Krita also allows you to let the Filters be part of the layer stack, via <a class="reference internal" href="../../reference_manual/layers_and_masks/filter_layers.html#filter-layers"><span class="std std-ref">Filter Layer</span></a> and <a class="reference internal" href="../../reference_manual/layers_and_masks/filter_masks.html#filter-masks"><span class="std std-ref">Filter Masks</span></a>. Filter Layers affect all the layers underneath it in the same hierarchy. Transparency and transparency masks on Filter Layers affect where the layer is applied.</p>
 <p>Masks, on the other hand, can affect one single layer and are driven by a grayscale image. They will also affect all layers in a group, much like a transparency mask.</p>
 <p>We can use these filters to make our ghost lady look even more ethereal, by selecting the ghost lady's layer, and then creating a clone layer. We then right-click and add a filter mask and use Gaussian blur set to 10 or so pixels.  The clone layer is then put behind the original layer, and set to the blending mode '<strong>Color Dodge</strong>', giving her a definite spooky glow. You can keep on painting on the original layer and everything will get updated automatically!</p>
 <img alt="../../_images/Krita_ghostlady_3.png" class="align-center" src="../../_images/Krita_ghostlady_3.png" />
 <p>Layer Effects or Layer Styles are filter masks popularized by <strong class="program">Photoshop's</strong> that are a little faster than regular masks, but not as versatile. They are available by right-clicking a layer and selecting 'layer style'.</p>
-</section>
-</section>
-<section id="transformations">
+</div>
+</div>
+<div class="section" id="transformations">
 <h2><a class="toc-backref" href="#id28">變形</a><a class="headerlink" href="#transformations" title="本標題的永久連結">¶</a></h2>
 <p><strong>Transformations</strong> are kind of like filters, in that these are operations done on the pixels of an image. We have a regular image and layer wide transformations in the image and layer top menus, so that you may resize, flip and rotate the whole image.</p>
 <p>We also have the <a class="reference internal" href="../../reference_manual/tools/crop.html#crop-tool"><span class="std std-ref">Crop Tool</span></a>, which only affects the canvas size, and the <a class="reference internal" href="../../reference_manual/tools/move.html#move-tool"><span class="std std-ref">Move Tool</span></a> which only moves a given layer.
 However, if you want more control, Krita offers a <a class="reference internal" href="../../reference_manual/tools/transform.html#transform-tool"><span class="std std-ref">Transform Tool</span></a>.</p>
 <img alt="../../_images/Krita_transforms_free.png" class="align-center" src="../../_images/Krita_transforms_free.png" />
 <p>With this tool you can rotate and resize on the canvas, or put it in perspective. Or you can use advanced transform tools, like the warp, cage and liquify, which allow you to transform by drawing custom points or even by pretending it's a transforming brush.</p>
-<section id="deform-brush-engine">
+<div class="section" id="deform-brush-engine">
 <h3><a class="toc-backref" href="#id29"><a class="reference internal" href="../../reference_manual/brushes/brush_engines/deform_brush_engine.html#deform-brush-engine"><span class="std std-ref">Deform Brush Engine</span></a></a><a class="headerlink" href="#deform-brush-engine" title="本標題的永久連結">¶</a></h3>
 <p>Like the filter brush engine, Krita also has a Deform Brush Engine, which allows you to transform with a brush. The deform is like a much faster version of the Liquify transform tool mode, but in exchange, its results are of much lower quality.</p>
-<figure class="align-center" id="id8">
+<div class="figure align-center" id="id8">
 <img alt="../../_images/Krita_transforms_deformvsliquefy.png" src="../../_images/Krita_transforms_deformvsliquefy.png" />
-<figcaption>
-<p><span class="caption-text">Apple transformed into a pear with liquify on the left and deform brush on the right.</span><a class="headerlink" href="#id8" title="本圖片的永久連結">¶</a></p>
-</figcaption>
-</figure>
+<p class="caption"><span class="caption-text">Apple transformed into a pear with liquify on the left and deform brush on the right.</span><a class="headerlink" href="#id8" title="本圖片的永久連結">¶</a></p>
+</div>
 <p>Furthermore, you can't apply the deform brush as a non-destructive mask.</p>
-</section>
-<section id="transformation-masks">
+</div>
+<div class="section" id="transformation-masks">
 <h3><a class="toc-backref" href="#id30"><a class="reference internal" href="../../reference_manual/layers_and_masks/transformation_masks.html#transformation-masks"><span class="std std-ref">Transformation Masks</span></a></a><a class="headerlink" href="#transformation-masks" title="本標題的永久連結">¶</a></h3>
 <p>Like filters, transforms can be applied as a non-destructive operation that is part of the layer stack. Unlike filter and transparency masks however, transform masks can't be driven by a grayscale image, for technical reasons.
 You can use transform masks to deform clone and file layers as well.</p>
-</section>
-</section>
-<section id="animation">
+</div>
+</div>
+<div class="section" id="animation">
 <h2><a class="toc-backref" href="#id31"><a class="reference internal" href="../animation.html#animation"><span class="std std-ref">用 Krita 製作動畫</span></a></a><a class="headerlink" href="#animation" title="本標題的永久連結">¶</a></h2>
 <img alt="../../_images/Introduction_to_animation_walkcycle_02.gif" class="align-center" src="../../_images/Introduction_to_animation_walkcycle_02.gif" />
 <p>From version 3.0 onwards, Krita got raster animation support. You can use the timeline, animation and onionskin dockers, plus Krita's amazing variety of brushes to do raster based animations, export those, and then turn them into movies or GIFs.</p>
-</section>
-<section id="assistants-grids-and-guides">
+</div>
+<div class="section" id="assistants-grids-and-guides">
 <h2><a class="toc-backref" href="#id32">輔助尺、網格與參考線</a><a class="headerlink" href="#assistants-grids-and-guides" title="本標題的永久連結">¶</a></h2>
 <p>With all this technical stuff, you might forget that Krita is a painting program. Like how when working with traditional medium, as an illustrator, you can have all sorts of equipment to make drawing easier, Krita also offers a variety of tools:</p>
-<figure class="align-center" id="id9">
+<div class="figure align-center" id="id9">
 <img alt="../../_images/Krita_basic_assistants.png" src="../../_images/Krita_basic_assistants.png" />
-<figcaption>
-<p><span class="caption-text">Krita's vanishing point assistants in action.</span><a class="headerlink" href="#id9" title="本圖片的永久連結">¶</a></p>
-</figcaption>
-</figure>
+<p class="caption"><span class="caption-text">Krita's vanishing point assistants in action.</span><a class="headerlink" href="#id9" title="本圖片的永久連結">¶</a></p>
+</div>
 <dl class="simple">
 <dt><a class="reference internal" href="../../reference_manual/dockers/grids_and_guides.html#grids-and-guides-docker"><span class="std std-ref">Grids and Guides Docker</span></a></dt><dd><p>A very straightforward guiding tool which shows grids or guiding lines that can be configured.</p>
 </dd>
@@ -572,14 +557,14 @@ You can use transform masks to deform clone and file layers as well.</p>
 </dd>
 </dl>
 <p>These guides are saved into Krita's native format, which means you can pick up your work easily afterward.</p>
-</section>
-<section id="customization">
+</div>
+<div class="section" id="customization">
 <h2><a class="toc-backref" href="#id33">自訂介面</a><a class="headerlink" href="#customization" title="本標題的永久連結">¶</a></h2>
 <p>This leads to the final concept: customization.</p>
 <p>In addition to rearranging the dockers according to your preferences, Krita provides and saves your configurations as <a class="reference internal" href="../../reference_manual/resource_management/resource_workspace.html#resource-workspaces"><span class="std std-ref">Workspaces</span></a>. This is the button at the top right.</p>
 <p>You can also configure the toolbar via <span class="menuselection">Settings ‣ Configure Toolbars...</span>, as well as the shortcuts under both <span class="menuselection">Settings ‣ Configure Krita... ‣ Shortcuts</span> and <span class="menuselection">Settings ‣ Configure Krita... ‣ Canvas Input Settings</span>.</p>
-</section>
-</section>
+</div>
+</div>
 
 
            </div>
