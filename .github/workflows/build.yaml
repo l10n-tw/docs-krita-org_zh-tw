@@ -21,7 +21,7 @@ jobs:
         git clone -b master --depth 1 https://invent.kde.org/documentation/docs-krita-org.git docs
     - name: Place new zh_TW PO catalogs
       run: |
-        rsync -vr -f '+ *.po' -f '+ **/' -f '- *'  --prune-empty-dirs --del ./ ~/docs/locale/zh_TW/LC_MESSAGES/
+        rsync -vr -f '+ *.po' -f '+ **/' -f '- *'  --prune-empty-dirs --del ./locale/zh_TW/ ~/docs/locale/zh_TW/LC_MESSAGES/
     - name: Build HTML docs
       run: |
         cd ~/docs
