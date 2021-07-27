@@ -132,6 +132,9 @@ This is specifically about support on Windows, not Linux or macOS.
    * - Gaomon 
      - P1560
      - ✔️ Supposed to work
+   * - Gaomon 
+     - PD2200
+     - ✔️ Supposed to work
    * - Genius 
      - EasyPen
      - ❓ Unknown
