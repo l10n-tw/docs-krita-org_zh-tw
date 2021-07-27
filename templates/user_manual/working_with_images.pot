@@ -1,0 +1,366 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) licensed under the GNU Free Documentation License 1.3+ unless stated otherwise
+# This file is distributed under the same license as the Krita Manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Krita Manual 5.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-07-27 21:21+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../user_manual/working_with_images.rst:1
+msgid "Detailed steps on how images work in Krita."
+msgstr ""
+
+#: ../../user_manual/working_with_images.rst:17
+msgid "Working with Images"
+msgstr ""
+
+#: ../../user_manual/working_with_images.rst:19
+msgid "Computers work with files and as a painting program, Krita works with images as the type of file it creates and manipulates."
+msgstr ""
+
+#: ../../user_manual/working_with_images.rst:23
+msgid "What do Images Contain?"
+msgstr ""
+
+#: ../../user_manual/working_with_images.rst:25
+msgid "If you have a text document, it of course contains letters, strung in the right order, so the computer loads them as coherent sentences."
+msgstr ""
+
+#: ../../user_manual/working_with_images.rst:29
+msgid "Raster Data"
+msgstr ""
+
+#: ../../user_manual/working_with_images.rst:31
+msgid "This is the main data on the paint layers you make. So these are the strokes with the paint brush and look pixelated up close. A multi-layer file will contain several of such layers, that get overlaid on top of each other so make the final image."
+msgstr ""
+
+#: ../../user_manual/working_with_images.rst:36
+msgid "A single layer file will usually only contain raster data."
+msgstr ""
+
+#: ../../user_manual/working_with_images.rst:39
+msgid "Vector Data"
+msgstr ""
+
+#: ../../user_manual/working_with_images.rst:41
+msgid "These are mathematical operations that tell the computer to draw pixels on a spot. This makes them much more scalable, because you just tell the operation to make the coordinates 4 times bigger to scale it up. Due to this vector data is much more editable, lighter, but at the same time it's also much more CPU intensive."
+msgstr ""
+
+#: ../../user_manual/working_with_images.rst:48
+msgid "Operation Data"
+msgstr ""
+
+#: ../../user_manual/working_with_images.rst:50
+msgid "Stuff like the filter layers, that tells Krita to change the colors of a layer, but also transparency masks, group layer and transformation masks are saved to multi-layer files. Being able to load these depend on the software that initially made the file. So Krita can load and save groups, transparency masks and layer effects from PSD, but not load or save transform masks."
+msgstr ""
+
+#: ../../user_manual/working_with_images.rst:58
+#: ../../user_manual/working_with_images.rst:12
+msgid "Metadata"
+msgstr ""
+
+#: ../../user_manual/working_with_images.rst:60
+msgid "Metadata is information like the creation date, author, description and also information like DPI."
+msgstr ""
+
+#: ../../user_manual/working_with_images.rst:64
+msgid "Image size"
+msgstr ""
+
+#: ../../user_manual/working_with_images.rst:66
+msgid "The image size is the dimension and resolution of the canvas. Image size has direct effect file size of the Krita document. The more pixels that need to be remembered and the higher the bit depth of the color, the heavier the resulting file will be."
+msgstr ""
+
+#: ../../user_manual/working_with_images.rst:72
+msgid "DPI/PPI"
+msgstr ""
+
+#: ../../user_manual/working_with_images.rst:74
+msgid "**DPI** stands for *Dots per Inch*, **PPI** stands for *Pixels per Inch*. In printing industry, suppose if your printer prints at 300 **DPI**. It means it is actually putting 300 dots of colors in an area equal to an Inch. This means the number of pixels your artwork has in a relative area of an inch."
+msgstr ""
+
+#: ../../user_manual/working_with_images.rst:80
+msgid "**DPI** is the concern of the printer, and artists while creating artwork should keep **PPI** in mind. According to the **PPI** you have set, the printers can decide how large your image should be on a piece of paper."
+msgstr ""
+
+#: ../../user_manual/working_with_images.rst:85
+msgid "Some standards:"
+msgstr ""
+
+#: ../../user_manual/working_with_images.rst:90
+msgid "72 PPI"
+msgstr ""
+
+#: ../../user_manual/working_with_images.rst:88
+msgid "This is the default PPI of monitors as assumed by all programs. It is not fully correct, as most monitors these days have 125 PPI or even 300 PPI for the retina devices. Nonetheless, when making an image for computer consumption, this is the default."
+msgstr ""
+
+#: ../../user_manual/working_with_images.rst:92
+msgid "120 PPI"
+msgstr ""
+
+#: ../../user_manual/working_with_images.rst:93
+msgid "This is often used as a standard for low-quality posters."
+msgstr ""
+
+#: ../../user_manual/working_with_images.rst:94
+msgid "300 PPI"
+msgstr ""
+
+#: ../../user_manual/working_with_images.rst:95
+msgid "This is the minimum you should use for quality prints."
+msgstr ""
+
+#: ../../user_manual/working_with_images.rst:97
+msgid "600 PPI"
+msgstr ""
+
+#: ../../user_manual/working_with_images.rst:97
+msgid "The quality used for line art for comics."
+msgstr ""
+
+#: ../../user_manual/working_with_images.rst:100
+msgid "Color depth"
+msgstr ""
+
+#: ../../user_manual/working_with_images.rst:102
+msgid "We went over color depth in the :ref:`Color Management page <general_concept_color>`. What you need to understand is that Krita has image color spaces, and layer color spaces, the latter which can save memory if used right. For example, having a line art layer in grayscale can half the memory costs."
+msgstr ""
+
+#: ../../user_manual/working_with_images.rst:108
+msgid "Image color space vs layer color space vs conversion."
+msgstr ""
+
+#: ../../user_manual/working_with_images.rst:110
+msgid "Because there's a difference between image color space and layer color space, you can change only the image color space in :menuselection:`Image --> Properties...` which will leave the layers alone. But if you want to change the color space of the file including all the layers you can do it by going to :menuselection:`Image --> Convert Image Color Space...` this will convert all the layers color space as well."
+msgstr ""
+
+#: ../../user_manual/working_with_images.rst:116
+msgid "Author and Description"
+msgstr ""
+
+#: ../../user_manual/working_with_images.rst:120
+msgid "Krita will automatically save who created the image into your image's metadata. Along with the other data such as time and date of creation and modification, Krita also shows editing time of a document in the document information dialog, useful for professional illustrators, speed-painters to keep track of the time they worked on artwork for billing purposes. It detects when you haven’t performed actions for a while, and has a precision of ±60 seconds. You can empty it in the document info dialog and of course by unzipping you ``.kra`` file and editing the metadata there."
+msgstr ""
+
+#: ../../user_manual/working_with_images.rst:130
+msgid "These things can be edited in :menuselection:`File --> Document Information`, and for the author's information :menuselection:`Settings --> Configure Krita... --> Author`. Profiles can be switched under :menuselection:`Settings --> Active Author Profile`."
+msgstr ""
+
+#: ../../user_manual/working_with_images.rst:133
+msgid "Setting the canvas background color"
+msgstr ""
+
+#: ../../user_manual/working_with_images.rst:135
+msgid "You can set the canvas background color via :menuselection:`Image --> Image Background Color and Transparency...` menu item. This allows you to turn the background color non-transparent and to change the color. This is also useful for certain file formats which force a background color instead of transparency. PNG and JPG export use this color as the default color to fill in transparency if you do not want to export transparency."
+msgstr ""
+
+#: ../../user_manual/working_with_images.rst:142
+msgid "If you come in from a program like :program:`Paint Tool SAI`, then using this option, or using :guilabel:`As canvas color` radio button at :guilabel:`Background:` section in the new file options, will allow you to work in a slightly more comfortable environment, where transparency isn't depicted with checkered boxes."
+msgstr ""
+
+#: ../../user_manual/working_with_images.rst:148
+msgid "Basic transforms"
+msgstr ""
+
+#: ../../user_manual/working_with_images.rst:150
+msgid "There are some basic transforms available in the Image menu."
+msgstr ""
+
+#: ../../user_manual/working_with_images.rst:152
+msgid "Shear Image..."
+msgstr ""
+
+#: ../../user_manual/working_with_images.rst:153
+msgid "This will allow you to skew the whole image and its layers."
+msgstr ""
+
+#: ../../user_manual/working_with_images.rst:154
+msgid "Rotate"
+msgstr ""
+
+#: ../../user_manual/working_with_images.rst:155
+msgid "This show a submenu that will allow you to rotate the image and all its layers quickly."
+msgstr ""
+
+#: ../../user_manual/working_with_images.rst:157
+msgid "Mirror Image Horizontally/Vertically"
+msgstr ""
+
+#: ../../user_manual/working_with_images.rst:157
+msgid "This will allow you to mirror the whole image with all its layers."
+msgstr ""
+
+#: ../../user_manual/working_with_images.rst:159
+msgid "But there are more options than that..."
+msgstr ""
+
+#: ../../user_manual/working_with_images.rst:162
+msgid "Cropping and resizing the canvas"
+msgstr ""
+
+#: ../../user_manual/working_with_images.rst:164
+msgid "You can crop and image with the :ref:`crop_tool`, to cut away extra space and improve the composition."
+msgstr ""
+
+#: ../../user_manual/working_with_images.rst:168
+msgid "Trimming"
+msgstr ""
+
+#: ../../user_manual/working_with_images.rst:170
+msgid "Using :menuselection:`Image --> Trim to Current Layer`, Krita resizes the image to the dimensions of the layer selected. Useful for when you paste a too large image into the layer and want to resize the canvas to the extent of this layer."
+msgstr ""
+
+#: ../../user_manual/working_with_images.rst:175
+msgid ":menuselection:`Image --> Trim to Selection` is a faster cousin to the crop tool. This helps us to resize the canvas to the dimension of any active selection. This is especially useful with right-clicking the layer on the layer stack and choosing :guilabel:`Select Opaque`. :menuselection:`Image --> Trim to Selection` will then crop the canvas to the selection bounding box."
+msgstr ""
+
+#: ../../user_manual/working_with_images.rst:181
+msgid ":menuselection:`Image --> Trim to Image Size` is actually for layers, and will trim all layers to the size of the image, making your files lighter by getting rid of invisible data."
+msgstr ""
+
+#: ../../user_manual/working_with_images.rst:186
+msgid "Resizing the canvas"
+msgstr ""
+
+#: ../../user_manual/working_with_images.rst:188
+msgid "You can also resize the canvas via :menuselection:`Image --> Resize Canvas...` (or the :kbd:`Ctrl + Alt + C` shortcut). The dialog box is shown below."
+msgstr ""
+
+#: ../../user_manual/working_with_images.rst:193
+msgid "In this, :guilabel:`Constrain proportions` checkbox will make sure the height and width stay in proportion to each other as you change them. Offset indicates where the new canvas space is added around the current image. You basically decide where the current image goes (if you press the left-button, it'll go to the center left, and the new canvas space will be added to the right of the image)."
+msgstr ""
+
+#: ../../user_manual/working_with_images.rst:200
+msgid "Another way to resize the canvas according to the need while drawing is when you scroll away from the end of the canvas, you can see a strip with an arrow appear. Clicking this will extend the canvas in that direction. You can see the arrow marked in red in the example below:"
+msgstr ""
+
+#: ../../user_manual/working_with_images.rst:210
+msgid "Resizing the image"
+msgstr ""
+
+#: ../../user_manual/working_with_images.rst:212
+msgid ":guilabel:`Scale Image to New Size...` allows you to resize the whole image. Also, importantly, this is where you can change the resolution or *upres* your image. So for instance, if you were initially working at 72 PPI to block in large shapes and colors, images, etc... And now you want to really get in and do some detail work at 300 or 400 PPI this is where you would make the change."
+msgstr ""
+
+#: ../../user_manual/working_with_images.rst:219
+msgid "Like all other dialogs where a chain link appears, when the chain is linked the aspect ratio is maintained. To disconnect the chain, just click on the link and the two halves will separate."
+msgstr ""
+
+#: ../../user_manual/working_with_images.rst:227
+msgid "Separating Images"
+msgstr ""
+
+#: ../../user_manual/working_with_images.rst:231
+msgid "This powerful image manipulation feature lets you separate an image into its different components or channels."
+msgstr ""
+
+#: ../../user_manual/working_with_images.rst:234
+msgid "This is useful for people working in print, or people manipulating game textures. There's no combine functionality, but what you can do, if using colored output, is to set two of the channels to the addition :ref:`blending_modes`."
+msgstr ""
+
+#: ../../user_manual/working_with_images.rst:239
+msgid "For grayscale images in the RGB space, you can use the Copy Red, Copy Green and Copy Blue blending modes, with using the red one for the red channel image, etc."
+msgstr ""
+
+#: ../../user_manual/working_with_images.rst:244
+msgid "Saving, Exporting and Opening Files"
+msgstr ""
+
+#: ../../user_manual/working_with_images.rst:246
+msgid "When Krita creates or opens a file, it has a copy of the file in memory, that it edits. This is part of the way how computers work: They make a copy of their file in the RAM. Thus, when saving, Krita takes its copy and copies it over the existing file. There's a couple of tricks you can do with saving."
+msgstr ""
+
+#: ../../user_manual/working_with_images.rst:254
+msgid "Save"
+msgstr ""
+
+#: ../../user_manual/working_with_images.rst:253
+msgid "Krita saves the current image in its memory to a defined place on the hard-drive. If the image hadn't been saved before, Krita will ask you where to save it."
+msgstr ""
+
+#: ../../user_manual/working_with_images.rst:257
+msgid "Save As..."
+msgstr ""
+
+#: ../../user_manual/working_with_images.rst:257
+msgid "Make a copy of your current file by saving it with a different name. Krita will switch to the newly made file as its active document."
+msgstr ""
+
+#: ../../user_manual/working_with_images.rst:259
+msgid "Open..."
+msgstr ""
+
+#: ../../user_manual/working_with_images.rst:260
+msgid "Open a saved file. Fairly straightforward."
+msgstr ""
+
+#: ../../user_manual/working_with_images.rst:263
+msgid "Export..."
+msgstr ""
+
+#: ../../user_manual/working_with_images.rst:262
+msgid "Save a file to a new location without actively opening it. Useful for when you are working on a layered file, but only need to save a flattened version of it to a certain location."
+msgstr ""
+
+#: ../../user_manual/working_with_images.rst:267
+msgid "Open Existing Document as Untitled Document..."
+msgstr ""
+
+#: ../../user_manual/working_with_images.rst:266
+msgid "This is a bit of an odd one, but it opens a file, and forgets where you saved it to, so that when pressing 'save' it asks you where to save it. This is also called 'import' in other programs."
+msgstr ""
+
+#: ../../user_manual/working_with_images.rst:271
+msgid "Create Copy from Current Image"
+msgstr ""
+
+#: ../../user_manual/working_with_images.rst:270
+msgid "Makes a new copy of the current image. Similar to :menuselection:`Open Existing Document as Untitled Document...`, but then with already opened files."
+msgstr ""
+
+#: ../../user_manual/working_with_images.rst:274
+msgid "Save Incremental Version"
+msgstr ""
+
+#: ../../user_manual/working_with_images.rst:274
+msgid "Saves the current image as *'filename'\\_XXX.kra* and switches the current document to it."
+msgstr ""
+
+#: ../../user_manual/working_with_images.rst:278
+msgid "Save Incremental Backup"
+msgstr ""
+
+#: ../../user_manual/working_with_images.rst:277
+msgid "Copies and renames the last saved version of your file to a backup file and saves your document under the original name."
+msgstr ""
+
+#: ../../user_manual/working_with_images.rst:281
+msgid "Since Krita's file format is compressed data file, in case of a corrupt or broken file you can open it with archive managers and extract the contents of the layers. This will help you to recover as much as possible data from the file. On Windows, you will need to rename it to *filename.zip* to open it."
+msgstr ""
+
+#: ../../user_manual/working_with_images.rst:12
+msgid "Image"
+msgstr ""
+
+#: ../../user_manual/working_with_images.rst:12
+msgid "Document"
+msgstr ""
+
+#: ../../user_manual/working_with_images.rst:12
+msgid "Raster"
+msgstr ""
+
+#: ../../user_manual/working_with_images.rst:12
+msgid "Vector"
+msgstr ""

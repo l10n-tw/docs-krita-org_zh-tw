@@ -1,0 +1,254 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) licensed under the GNU Free Documentation License 1.3+ unless stated otherwise
+# This file is distributed under the same license as the Krita Manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Krita Manual 5.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-07-27 21:21+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../reference_manual/brushes/brush_engines/bristle_engine.rst:1
+msgid "The Bristle Brush Engine manual page."
+msgstr ""
+
+#: ../../reference_manual/brushes/brush_engines/bristle_engine.rst:18
+#: ../../reference_manual/brushes/brush_engines/bristle_engine.rst:13
+msgid "Bristle Brush Engine"
+msgstr ""
+
+#: ../../reference_manual/brushes/brush_engines/bristle_engine.rst:22
+msgid "A brush intended to mimic real-life brushes by drawing the trails of their lines or bristles."
+msgstr ""
+
+#: ../../reference_manual/brushes/brush_engines/bristle_engine.rst:25
+msgid "Brush Tip"
+msgstr ""
+
+#: ../../reference_manual/brushes/brush_engines/bristle_engine.rst:27
+msgid "Simply put:"
+msgstr ""
+
+#: ../../reference_manual/brushes/brush_engines/bristle_engine.rst:29
+msgid "The brush tip defines the areas with bristles in them."
+msgstr ""
+
+#: ../../reference_manual/brushes/brush_engines/bristle_engine.rst:30
+msgid "Lower opacity areas have lower-opacity bristles. With this brush, this may give the illusion that lower-opacity areas have fewer bristles."
+msgstr ""
+
+#: ../../reference_manual/brushes/brush_engines/bristle_engine.rst:31
+msgid "The :ref:`option_size` and :ref:`option_rotation` dynamics affect the brush tip, not the bristles."
+msgstr ""
+
+#: ../../reference_manual/brushes/brush_engines/bristle_engine.rst:33
+msgid "You can:"
+msgstr ""
+
+#: ../../reference_manual/brushes/brush_engines/bristle_engine.rst:35
+msgid "Use different shapes for different effects. Be aware that complex brush shapes will draw more slowly though, while the effects aren't always visible (since in the end, you're passing over an area with a certain number of bristles)."
+msgstr ""
+
+#: ../../reference_manual/brushes/brush_engines/bristle_engine.rst:36
+msgid "To decrease bristle density, you can also just use an autobrush and decrease the brush tip's density, or increase its randomness."
+msgstr ""
+
+#: ../../reference_manual/brushes/brush_engines/bristle_engine.rst:41
+msgid "Bristle Options"
+msgstr ""
+
+#: ../../reference_manual/brushes/brush_engines/bristle_engine.rst:43
+msgid "The core of this particular brush-engine."
+msgstr ""
+
+#: ../../reference_manual/brushes/brush_engines/bristle_engine.rst:50
+msgid "Scale"
+msgstr ""
+
+#: ../../reference_manual/brushes/brush_engines/bristle_engine.rst:46
+msgid "Think of it as pressing down on a brush to make the bristles further apart."
+msgstr ""
+
+#: ../../reference_manual/brushes/brush_engines/bristle_engine.rst:48
+msgid "Larger values basically give you larger brushes and larger bristle spacing. For example, a value of 4 will multiply your base brush size by 4, but the bristles will be 4 times more spaced apart."
+msgstr ""
+
+#: ../../reference_manual/brushes/brush_engines/bristle_engine.rst:49
+msgid "Use smaller values if you want a \"dense\" brush, i.e. you don't want to see so many bristles within the center."
+msgstr ""
+
+#: ../../reference_manual/brushes/brush_engines/bristle_engine.rst:50
+msgid "Negative values have the same effect as corresponding positive values: -1.00 will look like 1.00, etc."
+msgstr ""
+
+#: ../../reference_manual/brushes/brush_engines/bristle_engine.rst:56
+msgid "Random Offset"
+msgstr ""
+
+#: ../../reference_manual/brushes/brush_engines/bristle_engine.rst:53
+msgid "Adds a jaggy look to the trailing lines."
+msgstr ""
+
+#: ../../reference_manual/brushes/brush_engines/bristle_engine.rst:55
+msgid "At 0.00, all the bristles basically remain completely parallel."
+msgstr ""
+
+#: ../../reference_manual/brushes/brush_engines/bristle_engine.rst:56
+msgid "At other values, the bristles are offset randomly. Large values will increase the brush size a bit because of the bristles spreading around, but not by much."
+msgstr ""
+
+#: ../../reference_manual/brushes/brush_engines/bristle_engine.rst:57
+msgid "Negative values have the same effect as corresponding positive values."
+msgstr ""
+
+#: ../../reference_manual/brushes/brush_engines/bristle_engine.rst:58
+msgid "Shear"
+msgstr ""
+
+#: ../../reference_manual/brushes/brush_engines/bristle_engine.rst:59
+msgid "Shear introduces an angle to your brush, as though you're drawing with an oval brush (or the side of a round brush)."
+msgstr ""
+
+#: ../../reference_manual/brushes/brush_engines/bristle_engine.rst:61
+msgid "Density"
+msgstr ""
+
+#: ../../reference_manual/brushes/brush_engines/bristle_engine.rst:61
+msgid "This controls the density of bristles. Scale takes a number of bristles and expands or compresses them into a denser area, whereas density takes a fixed area and determines the number of bristles in it. See the difference?"
+msgstr ""
+
+#: ../../reference_manual/brushes/brush_engines/bristle_engine.rst:68
+msgid "Mouse Pressure"
+msgstr ""
+
+#: ../../reference_manual/brushes/brush_engines/bristle_engine.rst:66
+msgid "This one maps \"Scale\" to mouse speed, thus simulating pressure with a graphics tablet!"
+msgstr ""
+
+#: ../../reference_manual/brushes/brush_engines/bristle_engine.rst:68
+msgid "Rather, it uses the \"distance between two events\" to determine scale. Faster drawing, larger distances."
+msgstr ""
+
+#: ../../reference_manual/brushes/brush_engines/bristle_engine.rst:69
+msgid "This doesn't influence the \"pressure\" input for anything else (size, opacity, rotation etc.) so you still have to map those independently to something else."
+msgstr ""
+
+#: ../../reference_manual/brushes/brush_engines/bristle_engine.rst:70
+msgid "Threshold"
+msgstr ""
+
+#: ../../reference_manual/brushes/brush_engines/bristle_engine.rst:71
+msgid "This is a tablet feature. When you turn this on, only bristles that are able to \"touch the canvas\" will be painted."
+msgstr ""
+
+#: ../../reference_manual/brushes/brush_engines/bristle_engine.rst:72
+msgid "Connect Hairs"
+msgstr ""
+
+#: ../../reference_manual/brushes/brush_engines/bristle_engine.rst:73
+msgid "The bristles get connected. See for yourself."
+msgstr ""
+
+#: ../../reference_manual/brushes/brush_engines/bristle_engine.rst:74
+msgid "Anti-Aliasing"
+msgstr ""
+
+#: ../../reference_manual/brushes/brush_engines/bristle_engine.rst:75
+msgid "This will decrease the jaggy-ness of the lines."
+msgstr ""
+
+#: ../../reference_manual/brushes/brush_engines/bristle_engine.rst:77
+msgid "Composite Bristles"
+msgstr ""
+
+#: ../../reference_manual/brushes/brush_engines/bristle_engine.rst:77
+msgid "This \"composes the bristle colors within one dab,\" but explains that the effect is \"probably subtle\"."
+msgstr ""
+
+#: ../../reference_manual/brushes/brush_engines/bristle_engine.rst:82
+msgid "Ink Depletion"
+msgstr ""
+
+#: ../../reference_manual/brushes/brush_engines/bristle_engine.rst:84
+msgid "This simulated ink depletion over drawing time. The value dictates how long it will take. The curve dictates the speed."
+msgstr ""
+
+#: ../../reference_manual/brushes/brush_engines/bristle_engine.rst:86
+msgid "Opacity"
+msgstr ""
+
+#: ../../reference_manual/brushes/brush_engines/bristle_engine.rst:87
+msgid "The brush will go transparent to simulate ink-depletion."
+msgstr ""
+
+#: ../../reference_manual/brushes/brush_engines/bristle_engine.rst:91
+msgid "Saturation"
+msgstr ""
+
+#: ../../reference_manual/brushes/brush_engines/bristle_engine.rst:89
+msgid "The brush will be desaturated to simulate ink-depletion."
+msgstr ""
+
+#: ../../reference_manual/brushes/brush_engines/bristle_engine.rst:104
+msgid "Soak Ink"
+msgstr ""
+
+#: ../../reference_manual/brushes/brush_engines/bristle_engine.rst:94
+msgid "The brush will pick up colors from other brushes. You don't need to have :guilabel:`Ink depletion` checked to activate this option, you just have to check :guilabel:`Soak ink`. What this does is cause the bristles of the brush to take on the colors of the first area they touch. Since the Bristle brush is made up of independent bristles, you can basically take on several colors at the same time."
+msgstr ""
+
+#: ../../reference_manual/brushes/brush_engines/bristle_engine.rst:98
+msgid "It will only take colors in the unscaled area of the brush, so if you're using a brush with 4.00 scale for example, it will only take the colors in the 1/4 area closest to the center."
+msgstr ""
+
+#: ../../reference_manual/brushes/brush_engines/bristle_engine.rst:99
+msgid "When the source is transparent, the bristles take black color."
+msgstr ""
+
+#: ../../reference_manual/brushes/brush_engines/bristle_engine.rst:104
+msgid "Be aware that this feature is a bit buggy though. It's supposed to take the color from the current layer, but some buggy behavior causes it to often use the last layer you've painted on (with a non-Bristle brush?) as source. To avoid these weird behaviors, stick to just one layer, or paint something on the current active layer first with another brush (such as a Pixel brush)."
+msgstr ""
+
+#: ../../reference_manual/brushes/brush_engines/bristle_engine.rst:114
+msgid "Weighted saturation"
+msgstr ""
+
+#: ../../reference_manual/brushes/brush_engines/bristle_engine.rst:107
+msgid "Works by modifying the saturation with the following:"
+msgstr ""
+
+#: ../../reference_manual/brushes/brush_engines/bristle_engine.rst:109
+msgid "Pressure weight"
+msgstr ""
+
+#: ../../reference_manual/brushes/brush_engines/bristle_engine.rst:110
+msgid "Bristle length weight"
+msgstr ""
+
+#: ../../reference_manual/brushes/brush_engines/bristle_engine.rst:111
+msgid "Bristle ink amount weight"
+msgstr ""
+
+#: ../../reference_manual/brushes/brush_engines/bristle_engine.rst:112
+msgid "Ink depletion curve weight"
+msgstr ""
+
+#: ../../reference_manual/brushes/brush_engines/bristle_engine.rst:13
+msgid "Brush Engine"
+msgstr ""
+
+#: ../../reference_manual/brushes/brush_engines/bristle_engine.rst:13
+msgid "Hairy Brush Engine"
+msgstr ""
+
+#: ../../reference_manual/brushes/brush_engines/bristle_engine.rst:13
+msgid "Sumi-e"
+msgstr ""

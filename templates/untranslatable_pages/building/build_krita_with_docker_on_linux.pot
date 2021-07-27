@@ -1,0 +1,345 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) licensed under the GNU Free Documentation License 1.3+ unless stated otherwise
+# This file is distributed under the same license as the Krita Manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Krita Manual 5.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-07-19 22:30+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../untranslatable_pages/building/build_krita_with_docker_on_linux.rst:1
+msgid "Guide to building Krita with docker on Linux."
+msgstr ""
+
+#: ../../untranslatable_pages/building/build_krita_with_docker_on_linux.rst:14
+msgid "Building krita with Docker on Linux"
+msgstr ""
+
+#: ../../untranslatable_pages/building/build_krita_with_docker_on_linux.rst:16
+msgid "This guide is useful when you are an advanced developer and want to build krita with the same patched dependencies that are used for the AppImages. If you just want to hack on Krita, read the Build Krita from Source guide."
+msgstr ""
+
+#: ../../untranslatable_pages/building/build_krita_with_docker_on_linux.rst:18
+msgid "The *Dockerfile* is based on the official KDE build environment that is used on KDE CI for building official AppImage packages. This guide is valid for Ubuntu and Ubuntu-based Linux distributions."
+msgstr ""
+
+#: ../../untranslatable_pages/building/build_krita_with_docker_on_linux.rst:21
+msgid "Contents"
+msgstr ""
+
+#: ../../untranslatable_pages/building/build_krita_with_docker_on_linux.rst:24
+msgid "Prerequisites"
+msgstr ""
+
+#: ../../untranslatable_pages/building/build_krita_with_docker_on_linux.rst:26
+msgid "First make sure you have Docker installed"
+msgstr ""
+
+#: ../../untranslatable_pages/building/build_krita_with_docker_on_linux.rst:28
+msgid "sudo apt install docker docker.io"
+msgstr ""
+
+#: ../../untranslatable_pages/building/build_krita_with_docker_on_linux.rst:32
+msgid "Decide where you want to store your Docker images. All the docker images and containers are by default stored in a special docker-daemon controlled folder under */var* directory. You might not have enough space there for building Krita (it needs about 10 GiB). In such a case it is recommended to move the docker images folder into another location, where there is enough space."
+msgstr ""
+
+#: ../../untranslatable_pages/building/build_krita_with_docker_on_linux.rst:35
+msgid "Stop docker service"
+msgstr ""
+
+#: ../../untranslatable_pages/building/build_krita_with_docker_on_linux.rst:37
+msgid "sudo systemctl stop docker"
+msgstr ""
+
+#: ../../untranslatable_pages/building/build_krita_with_docker_on_linux.rst:41
+msgid "Edit the config file:"
+msgstr ""
+
+#: ../../untranslatable_pages/building/build_krita_with_docker_on_linux.rst:43
+msgid "On newer systems, like Ubuntu 18.04 and higher you need to open file */etc/docker/daemon.json* and add the following json config options:"
+msgstr ""
+
+#: ../../untranslatable_pages/building/build_krita_with_docker_on_linux.rst:45
+msgid "{\n"
+"    \"data-root\" : \"/path/where/you/want/to/store/docker/images/\"\n"
+"}"
+msgstr ""
+
+#: ../../untranslatable_pages/building/build_krita_with_docker_on_linux.rst:51
+msgid "If you have older version of Ubuntu, e.g. Ubuntu 16.04, then you need to do the following:"
+msgstr ""
+
+#: ../../untranslatable_pages/building/build_krita_with_docker_on_linux.rst:53
+msgid "echo 'DOCKER_OPTS=\"-g /path/where/you/want/to/store/docker/images/\"' >> /etc/default/docker"
+msgstr ""
+
+#: ../../untranslatable_pages/building/build_krita_with_docker_on_linux.rst:57
+msgid "Restart the docker service"
+msgstr ""
+
+#: ../../untranslatable_pages/building/build_krita_with_docker_on_linux.rst:59
+msgid "sudo systemctl start docker"
+msgstr ""
+
+#: ../../untranslatable_pages/building/build_krita_with_docker_on_linux.rst:64
+msgid "Then you need to download deps and Krita source tree. These steps are not included into the *Dockerfile* to save internal bandwidth"
+msgstr ""
+
+#: ../../untranslatable_pages/building/build_krita_with_docker_on_linux.rst:66
+msgid "# create directory structure for container control directory\n"
+"git clone https://invent.kde.org/dkazakov/krita-docker-env krita-auto-1\n"
+"\n"
+"cd krita-auto-1\n"
+"mkdir persistent\n"
+"\n"
+"# copy/checkout Krita sources to 'persistent/krita'\n"
+"cp -r /path/to/sources/krita ./persistent/krita\n"
+"\n"
+"## or ...\n"
+"# git clone kde:krita persistent/krita\n"
+"\n"
+"# download the deps archive\n"
+"./bin/bootstrap-deps.sh"
+msgstr ""
+
+#: ../../untranslatable_pages/building/build_krita_with_docker_on_linux.rst:85
+msgid "Build the docker image and run the container"
+msgstr ""
+
+#: ../../untranslatable_pages/building/build_krita_with_docker_on_linux.rst:87
+msgid "./bin/build_image krita-deps\n"
+"./bin/run_container krita-deps krita-auto-1"
+msgstr ""
+
+#: ../../untranslatable_pages/building/build_krita_with_docker_on_linux.rst:94
+msgid "Enter the container and build Krita"
+msgstr ""
+
+#: ../../untranslatable_pages/building/build_krita_with_docker_on_linux.rst:96
+msgid "# enter the docker container (the name will be\n"
+"# fetched automatically from '.container_name' file)\n"
+"\n"
+"./bin/enter"
+msgstr ""
+
+#: ../../untranslatable_pages/building/build_krita_with_docker_on_linux.rst:103
+msgid "... now you are inside the container with all the deps prepared ..."
+msgstr ""
+
+#: ../../untranslatable_pages/building/build_krita_with_docker_on_linux.rst:105
+msgid "# build Krita as usual\n"
+"# you should be in ~/appimage-workspace/krita-build/\n"
+"~/bin/run_cmake.sh ~/persistent/krita\n"
+"make -j8 install\n"
+"\n"
+"# start Krita\n"
+"../appimage-workspace/krita.appdir/usr/bin/krita"
+msgstr ""
+
+#: ../../untranslatable_pages/building/build_krita_with_docker_on_linux.rst:117
+msgid "Building AppImage package for your version of Krita"
+msgstr ""
+
+#: ../../untranslatable_pages/building/build_krita_with_docker_on_linux.rst:119
+msgid "If you want to build a portable package for your version of Krita, just enter the container and type:"
+msgstr ""
+
+#: ../../untranslatable_pages/building/build_krita_with_docker_on_linux.rst:122
+msgid "~/bin/build_krita_appimage.sh"
+msgstr ""
+
+#: ../../untranslatable_pages/building/build_krita_with_docker_on_linux.rst:126
+msgid "The built package will be copied to *./persistent/* folder."
+msgstr ""
+
+#: ../../untranslatable_pages/building/build_krita_with_docker_on_linux.rst:128
+msgid "By default, the package will be built in release mode. If you want to add debugging information, add *--debug* option to the command line:"
+msgstr ""
+
+#: ../../untranslatable_pages/building/build_krita_with_docker_on_linux.rst:131
+msgid "~/bin/build_krita_appimage.sh --debug"
+msgstr ""
+
+#: ../../untranslatable_pages/building/build_krita_with_docker_on_linux.rst:136
+msgid "Creating a full clone of the container"
+msgstr ""
+
+#: ../../untranslatable_pages/building/build_krita_with_docker_on_linux.rst:138
+msgid "It is possible to copy the container with the entire environment, sources, build directory and QtCreator installation and configuration. After cloning, no rebuild of Krita is needed!"
+msgstr ""
+
+#: ../../untranslatable_pages/building/build_krita_with_docker_on_linux.rst:142
+msgid "To copy container to *../krita-auto-2*, just type in the host system"
+msgstr ""
+
+#: ../../untranslatable_pages/building/build_krita_with_docker_on_linux.rst:144
+msgid "./bin/spawn-clone -d ../krita-auto-2"
+msgstr ""
+
+#: ../../untranslatable_pages/building/build_krita_with_docker_on_linux.rst:148
+msgid "*spawn-clone* will make an image from the current container and create a new one out of it. This image will be cached for further usages. If you need to flush the cache, pass *-f* option to *spawn-clone*:"
+msgstr ""
+
+#: ../../untranslatable_pages/building/build_krita_with_docker_on_linux.rst:152
+msgid "./bin/spawn-clone -f -d ../krita-auto-2"
+msgstr ""
+
+#: ../../untranslatable_pages/building/build_krita_with_docker_on_linux.rst:156
+msgid "You can start several instances of *spawn-clone* on the same container concurrently (e.g. for building multiple merge requests). It has internal locking mechanism for resolving concurrency problems"
+msgstr ""
+
+#: ../../untranslatable_pages/building/build_krita_with_docker_on_linux.rst:161
+msgid "Testing merge requests using container clones"
+msgstr ""
+
+#: ../../untranslatable_pages/building/build_krita_with_docker_on_linux.rst:163
+msgid "To quickly build a merge request '123' basing on the current state of the container type in the host system"
+msgstr ""
+
+#: ../../untranslatable_pages/building/build_krita_with_docker_on_linux.rst:166
+msgid "./bin/spawn-clone -m 123 -be"
+msgstr ""
+
+#: ../../untranslatable_pages/building/build_krita_with_docker_on_linux.rst:170
+msgid "The script will clone the container, checkout the merge request branch, build it and provide you a terminal for running Krita. The container will be created at *./clones/clone-mr-123* subfolder of the current container."
+msgstr ""
+
+#: ../../untranslatable_pages/building/build_krita_with_docker_on_linux.rst:174
+msgid "If you also want to build an AppImage, add *--release-appimage* option:"
+msgstr ""
+
+#: ../../untranslatable_pages/building/build_krita_with_docker_on_linux.rst:176
+msgid "./bin/spawn-clone -m 123 --release-appimage -be"
+msgstr ""
+
+#: ../../untranslatable_pages/building/build_krita_with_docker_on_linux.rst:180
+msgid "AppImage will be places at *./persistent* subfolder of the clone. When finished with testing the merge request, you can remove the clone completely by running"
+msgstr ""
+
+#: ../../untranslatable_pages/building/build_krita_with_docker_on_linux.rst:184
+msgid "./bin/discard-clone /clones/clone-mr-123"
+msgstr ""
+
+#: ../../untranslatable_pages/building/build_krita_with_docker_on_linux.rst:188
+msgid "You can build multiple merge requests at once!"
+msgstr ""
+
+#: ../../untranslatable_pages/building/build_krita_with_docker_on_linux.rst:192
+msgid "Updating dependencies in the docker"
+msgstr ""
+
+#: ../../untranslatable_pages/building/build_krita_with_docker_on_linux.rst:194
+msgid "Sometimes dependencies in Krita change and building Krita or making the AppImage fails. To fix that, you need to update the dependencies."
+msgstr ""
+
+#: ../../untranslatable_pages/building/build_krita_with_docker_on_linux.rst:198
+msgid "This method is slow, because you need to rebuild the whole docker, which includes rebuilding whole Krita."
+msgstr ""
+
+#: ../../untranslatable_pages/building/build_krita_with_docker_on_linux.rst:200
+msgid "Run those commands in the console in the host system. If you want to update the dependencies in a clone docker, just go to the clone directory where you see ``bin`` and ``persistent`` directories and run those commands there."
+msgstr ""
+
+#: ../../untranslatable_pages/building/build_krita_with_docker_on_linux.rst:202
+msgid "# remove old dependencies\n"
+"rm ./persistent/krita-appimage-deps.tar\n"
+"\n"
+"# download new deps\n"
+"./bin/bootstrap-deps.sh\n"
+"\n"
+"# build image\n"
+"./bin/build_image krita-deps\n"
+"\n"
+"# remove the current container\n"
+"./bin/remove_container krita-auto-1\n"
+"\n"
+"# run the container (it will create one)\n"
+"./bin/run_container krita-deps krita-auto-1"
+msgstr ""
+
+#: ../../untranslatable_pages/building/build_krita_with_docker_on_linux.rst:219
+msgid "After that you need to build Krita in the docker as usual."
+msgstr ""
+
+#: ../../untranslatable_pages/building/build_krita_with_docker_on_linux.rst:223
+msgid "Extra developer tools"
+msgstr ""
+
+#: ../../untranslatable_pages/building/build_krita_with_docker_on_linux.rst:225
+msgid "To install QtCreator, enter the container and start the installer, downloaded while fetching dependencies. Make sure you install it into '~/qtcreator' directory without any version suffixes, then you will be able to use the script below:"
+msgstr ""
+
+#: ../../untranslatable_pages/building/build_krita_with_docker_on_linux.rst:227
+msgid "# inside the container\n"
+"./persistent/qt-creator-opensource-linux-x86_64.run"
+msgstr ""
+
+#: ../../untranslatable_pages/building/build_krita_with_docker_on_linux.rst:233
+msgid "To start QtCreator:"
+msgstr ""
+
+#: ../../untranslatable_pages/building/build_krita_with_docker_on_linux.rst:235
+msgid "# from the host\n"
+"./bin/qtcreator"
+msgstr ""
+
+#: ../../untranslatable_pages/building/build_krita_with_docker_on_linux.rst:242
+msgid "Stopping the container and cleaning up"
+msgstr ""
+
+#: ../../untranslatable_pages/building/build_krita_with_docker_on_linux.rst:244
+msgid "When not in use you can stop the container. All your filesystem state is saved, but all the currently running processes are killed (just ensure you logout from all the terminals before stopping)."
+msgstr ""
+
+#: ../../untranslatable_pages/building/build_krita_with_docker_on_linux.rst:246
+msgid "# stop the container\n"
+"./bin/stop\n"
+"\n"
+"# start the container\n"
+"./bin/start"
+msgstr ""
+
+#: ../../untranslatable_pages/building/build_krita_with_docker_on_linux.rst:255
+msgid "If you don't need your container/image anymore, you can delete them from the docker"
+msgstr ""
+
+#: ../../untranslatable_pages/building/build_krita_with_docker_on_linux.rst:257
+msgid "# remove the container\n"
+"sudo docker rm krita-auto-1\n"
+"\n"
+"# remove the image\n"
+"sudo docker rmi krita-deps"
+msgstr ""
+
+#: ../../untranslatable_pages/building/build_krita_with_docker_on_linux.rst:267
+msgid "Troubleshooting"
+msgstr ""
+
+#: ../../untranslatable_pages/building/build_krita_with_docker_on_linux.rst:270
+msgid "Krita binary is not found after the first build"
+msgstr ""
+
+#: ../../untranslatable_pages/building/build_krita_with_docker_on_linux.rst:272
+msgid "Either relogin to the container or just execute `source ~/.devenv.inc`"
+msgstr ""
+
+#: ../../untranslatable_pages/building/build_krita_with_docker_on_linux.rst:275
+msgid "OpenGL doesn't work on NVidia GPU with proprietary drivers"
+msgstr ""
+
+#: ../../untranslatable_pages/building/build_krita_with_docker_on_linux.rst:277
+msgid "The docker run script automatically forwards the GPU devices into the container, but it doesn't install the drivers for the GPU. You should install exactly the same version of the driver that is installed on your host system. Just run the following script when you are on host:"
+msgstr ""
+
+#: ../../untranslatable_pages/building/build_krita_with_docker_on_linux.rst:279
+msgid "./bin/install_nvidia_drivers.sh"
+msgstr ""

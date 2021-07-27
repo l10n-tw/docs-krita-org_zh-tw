@@ -1,0 +1,466 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) licensed under the GNU Free Documentation License 1.3+ unless stated otherwise
+# This file is distributed under the same license as the Krita Manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Krita Manual 5.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-07-19 22:30+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../untranslatable_pages/unit_tests_in_krita.rst:1
+msgid "Introduction unittests in Krita."
+msgstr ""
+
+#: ../../untranslatable_pages/unit_tests_in_krita.rst:17
+msgid "Unittests in Krita"
+msgstr ""
+
+#: ../../untranslatable_pages/unit_tests_in_krita.rst:19
+msgid "Contents"
+msgstr ""
+
+#: ../../untranslatable_pages/unit_tests_in_krita.rst:22
+msgid "What is a unit test is and why is it needed?"
+msgstr ""
+
+#: ../../untranslatable_pages/unit_tests_in_krita.rst:25
+#: ../../untranslatable_pages/unit_tests_in_krita.rst:36
+#: ../../untranslatable_pages/unit_tests_in_krita.rst:45
+msgid "Wiki:"
+msgstr ""
+
+#: ../../untranslatable_pages/unit_tests_in_krita.rst:25
+msgid "A unit test is a piece of code that automatically checks if your class or subsystem works correctly. The goal of unit testing is to isolate each part of the program and show that the individual parts are correct. A unit test provides a strict, written contract that the piece of code must satisfy. As a result, it affords several benefits [1]_."
+msgstr ""
+
+#: ../../untranslatable_pages/unit_tests_in_krita.rst:28
+#: ../../untranslatable_pages/unit_tests_in_krita.rst:39
+#: ../../untranslatable_pages/unit_tests_in_krita.rst:48
+msgid "Comment:"
+msgstr ""
+
+#: ../../untranslatable_pages/unit_tests_in_krita.rst:28
+msgid "In other words unit testing allows the developer to verify if his initial design decisions has been implemented correctly and all the corner-cases are handled correctly."
+msgstr ""
+
+#: ../../untranslatable_pages/unit_tests_in_krita.rst:30
+msgid "In Krita Project we use unit tests for several purposes. Not all of them work equally good, but all together they help developing a lot."
+msgstr ""
+
+#: ../../untranslatable_pages/unit_tests_in_krita.rst:33
+msgid "Debugging of new code"
+msgstr ""
+
+#: ../../untranslatable_pages/unit_tests_in_krita.rst:36
+msgid "Unit testing finds problems early in the development cycle. This includes both bugs in the programmer's implementation and flaws or missing parts of the specification for the unit. The process of writing a thorough set of tests forces the author to think through inputs, outputs, and error conditions, and thus more crisply define the unit's desired behavior. The cost of finding a bug before coding begins or when the code is first written is considerably lower than the cost of detecting, identifying, and correcting the bug later; bugs may also cause problems for the end-users of the software [1]_."
+msgstr ""
+
+#: ../../untranslatable_pages/unit_tests_in_krita.rst:39
+msgid "Krita is a big project and has numerous subsystems that communicate with each other in complicated ways. It makes debugging and testing new code in the application itself difficult. What is more, just compiling and running the entire application to check a one-line change in a small class is very time-consuming. So when writing a new subsystem we usually split it into smaller parts (classes) and test each of them individually. Testing a single class in isolation helps to catch all the corner-cases in the class public interface, e.g. \"what happens if we pass 0 here instead of a valid pointer?\" or \"what if the index we just gave to this method is invalid?\""
+msgstr ""
+
+#: ../../untranslatable_pages/unit_tests_in_krita.rst:42
+msgid "Changing/refactoring existing code"
+msgstr ""
+
+#: ../../untranslatable_pages/unit_tests_in_krita.rst:45
+msgid "Unit testing allows the programmer to refactor code or upgrade system libraries at a later date, and make sure the module still works correctly (e.g., in regression testing). The procedure is to write test cases for all functions and methods so that whenever a change causes a fault, it can be quickly identified. Unit tests detect changes which may break a design contract [1]_."
+msgstr ""
+
+#: ../../untranslatable_pages/unit_tests_in_krita.rst:48
+msgid "Imagine someone decides to refactor the code you wrote a year ago. How would he know whether his changes didn't break anything in the internal class structure? Even if he/she asks you, how would you know if the changes to a year-old class, whose details are already forgotten, are valid?"
+msgstr ""
+
+#: ../../untranslatable_pages/unit_tests_in_krita.rst:51
+msgid "Automated regression testing"
+msgstr ""
+
+#: ../../untranslatable_pages/unit_tests_in_krita.rst:53
+msgid "Most of our unit tests are run nightly on the CI. You can see the results and coverage reports at https://build.kde.org/job/Extragear/job/krita/."
+msgstr ""
+
+#: ../../untranslatable_pages/unit_tests_in_krita.rst:55
+msgid "However, some of the unit tests are not stable enough to be run automatically and therefore are disabled. (They do straightforward QImage comparisons, so the test results can depend no only on version of the libraries installed, but also on build options and even type of CPU the tests are run on.) While the overall coverage is decent, this issue limits the ability of the unit test suite to catch regressions in several parts of the codebase. (More information on that in the respective Phabricator task: https://phabricator.kde.org/T11904.)"
+msgstr ""
+
+#: ../../untranslatable_pages/unit_tests_in_krita.rst:60
+msgid "How to build and run tests?"
+msgstr ""
+
+#: ../../untranslatable_pages/unit_tests_in_krita.rst:63
+msgid "Building the tests"
+msgstr ""
+
+#: ../../untranslatable_pages/unit_tests_in_krita.rst:65
+msgid "To enable unit tests, build Krita with an additional cmake flag: ``-DBUILD_TESTING=ON``."
+msgstr ""
+
+#: ../../untranslatable_pages/unit_tests_in_krita.rst:67
+msgid "# example build command\n"
+"you@yourcomputer:~/kritadev/build>cmake ../krita \\\n"
+"  -DCMAKE_INSTALL_PREFIX=$HOME/kritadev/install \\\n"
+"  -DCMAKE_BUILD_TYPE=Debug \\\n"
+"  -DKRITA_DEVS=ON \\\n"
+"  -DBUILD_TESTING=ON"
+msgstr ""
+
+#: ../../untranslatable_pages/unit_tests_in_krita.rst:78
+msgid "If you need help with building from source, see :ref:`building_krita`"
+msgstr ""
+
+#: ../../untranslatable_pages/unit_tests_in_krita.rst:79
+msgid "For more information about cmake options, please refer to :ref:`cmake_settings_for_developers`"
+msgstr ""
+
+#: ../../untranslatable_pages/unit_tests_in_krita.rst:81
+msgid "Once built, the tests are run from the the **build** directory. There you can either run the whole suite at once or you can run a single test (or even a single test with a single data row for data-driven tests)."
+msgstr ""
+
+#: ../../untranslatable_pages/unit_tests_in_krita.rst:84
+msgid "Run all the tests"
+msgstr ""
+
+#: ../../untranslatable_pages/unit_tests_in_krita.rst:86
+msgid "# change to the build directory\n"
+"you@yourcomputer:~/> cd kritadev/build\n"
+"# run the whole suite\n"
+"you@yourcomputer:~/kritadev/build> make test"
+msgstr ""
+
+#: ../../untranslatable_pages/unit_tests_in_krita.rst:95
+msgid "Run a single test"
+msgstr ""
+
+#: ../../untranslatable_pages/unit_tests_in_krita.rst:97
+msgid "Every test class is built into a separate executable file. This executable file resides in the build directory tree. The relative path is the same as the path in source directory."
+msgstr ""
+
+#: ../../untranslatable_pages/unit_tests_in_krita.rst:99
+msgid "To run all tests in a single test class, run the executable:"
+msgstr ""
+
+#: ../../untranslatable_pages/unit_tests_in_krita.rst:102
+msgid "# running all tests in a test class\n"
+"you@yourcomputer:~/kritadev/build>./libs/ui/tests/KisSpinBoxSplineUnitConverterTest"
+msgstr ""
+
+#: ../../untranslatable_pages/unit_tests_in_krita.rst:107
+msgid "You can also run a single test method from the class or invoke the test method with a single test data row, if you have a data-driven test. Add the test method name (and optionally the test data row name) as an argument to the test class executable:"
+msgstr ""
+
+#: ../../untranslatable_pages/unit_tests_in_krita.rst:109
+msgid "# the syntax for running single tests:\n"
+"# you@yourcomputer:~/kritadev/build>./test-class-executable \"test method name\":\"data row name\"\n"
+"\n"
+"# run a single method in a test class\n"
+"you@yourcomputer:~/kritadev/build>./libs/ui/tests/KisSpinBoxSplineUnitConverterTest testCurveCalculationTwoWay\n"
+"\n"
+"# run a single method in a test class with the selected test data row\n"
+"you@yourcomputer:~/kritadev/build>./libs/ui/tests/KisSpinBoxSplineUnitConverterTest testCurveCalculationTwoWay:\"0.5 in (0, 10) = 5\""
+msgstr ""
+
+#: ../../untranslatable_pages/unit_tests_in_krita.rst:121
+msgid "Environment variables for running tests"
+msgstr ""
+
+#: ../../untranslatable_pages/unit_tests_in_krita.rst:124
+msgid "Prior to running the tests, you can set several environment variables to change the behavior of the tests."
+msgstr ""
+
+#: ../../untranslatable_pages/unit_tests_in_krita.rst:126
+msgid "Suppress safe assert dialogs:"
+msgstr ""
+
+#: ../../untranslatable_pages/unit_tests_in_krita.rst:128
+msgid "you@yourcomputer:~/kritadev/build> export KRITA_NO_ASSERT_MSG=1"
+msgstr ""
+
+#: ../../untranslatable_pages/unit_tests_in_krita.rst:132
+msgid "Set source directory for QImage-based test data"
+msgstr ""
+
+#: ../../untranslatable_pages/unit_tests_in_krita.rst:134
+msgid "you@yourcomputer:~/kritadev/build> export KRITA_UNITTESTS_DATA_DIR=<directory>"
+msgstr ""
+
+#: ../../untranslatable_pages/unit_tests_in_krita.rst:139
+msgid "Create reference images for QImage-based tests"
+msgstr ""
+
+#: ../../untranslatable_pages/unit_tests_in_krita.rst:141
+msgid "you@yourcomputer:~/kritadev/build> export KRITA_WRITE_UNITTESTS=1"
+msgstr ""
+
+#: ../../untranslatable_pages/unit_tests_in_krita.rst:148
+msgid "When to write a unit test?"
+msgstr ""
+
+#: ../../untranslatable_pages/unit_tests_in_krita.rst:150
+msgid "Ideally a unit test should be written for any new class that implements some logic and provides any kind of public interface. It is especially true if this public interface is going to be used more that one client-class."
+msgstr ""
+
+#: ../../untranslatable_pages/unit_tests_in_krita.rst:153
+msgid "What should unit test include?"
+msgstr ""
+
+#: ../../untranslatable_pages/unit_tests_in_krita.rst:155
+msgid "corner cases. E.g. what happens if we request merging of two layers, one of which has Inherit Alpha option enabled? What properties and composition mode the final layer should have? Answers to these questions should be given and tested in the unit test."
+msgstr ""
+
+#: ../../untranslatable_pages/unit_tests_in_krita.rst:157
+msgid "non-obvious design decisions. E.g. if a paint device has a non-transparent default pixel, then its ```exactBounds()``` returns the rect, not smaller that the size of the image, even though technically the device might be empty."
+msgstr ""
+
+#: ../../untranslatable_pages/unit_tests_in_krita.rst:160
+msgid "How to write a unittest?"
+msgstr ""
+
+#: ../../untranslatable_pages/unit_tests_in_krita.rst:162
+msgid "Suppose you want to write a unittest for kritaimage library. You need to perform just a few steps:"
+msgstr ""
+
+#: ../../untranslatable_pages/unit_tests_in_krita.rst:165
+msgid "Add files for the test class into ``./image/tests/`` directory:"
+msgstr ""
+
+#: ../../untranslatable_pages/unit_tests_in_krita.rst:167
+msgid "``kis_some_class_test.h``"
+msgstr ""
+
+#: ../../untranslatable_pages/unit_tests_in_krita.rst:169
+msgid "#ifndef __KIS_SOME_CLASS_TEST_H\n"
+"#define __KIS_SOME_CLASS_TEST_H\n"
+"\n"
+"#include <QtTest/QtTest>\n"
+"\n"
+"class KisSomeClassTest : public QObject\n"
+"{\n"
+"    Q_OBJECT\n"
+"private Q_SLOTS:\n"
+"    void test();\n"
+"};\n"
+"\n"
+"#endif /* __KIS_SOME_CLASS_TEST_H */</syntaxhighlight>"
+msgstr ""
+
+#: ../../untranslatable_pages/unit_tests_in_krita.rst:185
+msgid "``kis_some_class_test.cpp``"
+msgstr ""
+
+#: ../../untranslatable_pages/unit_tests_in_krita.rst:187
+msgid "#include \"kis_some_class_test.h\"\n"
+"\n"
+"#include <QTest>\n"
+"\n"
+"void KisSomeClassTest::test()\n"
+"{\n"
+"}\n"
+"\n"
+"QTEST_MAIN(KisSomeClassTest, GUI)</syntaxhighlight>"
+msgstr ""
+
+#: ../../untranslatable_pages/unit_tests_in_krita.rst:199
+msgid "Modify ./image/tests/CMakeLists.txt to include your new test class:"
+msgstr ""
+
+#: ../../untranslatable_pages/unit_tests_in_krita.rst:201
+msgid "# ...\n"
+"########### next target ###############\n"
+"set(kis_some_class_test_SRCS kis_some_class_test.cpp )\n"
+"ecm_add_tests(${kis_some_class_test_SRCS}\n"
+"NAME_PREFIX \"libs-somelib-\"\n"
+"LINK_LIBRARIES kritaimage Qt5::Test)\n"
+"# ..."
+msgstr ""
+
+#: ../../untranslatable_pages/unit_tests_in_krita.rst:211
+msgid "Write your test. You can use any macro commands provided by Qt (QVERIFY, QCOMPARE or QBENCHMARK)."
+msgstr ""
+
+#: ../../untranslatable_pages/unit_tests_in_krita.rst:213
+msgid "void KisSomeClassTest::test()\n"
+"{\n"
+"    QString cat(\"cat\");\n"
+"    QString dog(\"dog\");\n"
+"\n"
+"    QVERIFY(cat != dog);\n"
+"    QCOMPARE(cat, \"cat\");\n"
+"}"
+msgstr ""
+
+#: ../../untranslatable_pages/unit_tests_in_krita.rst:224
+msgid "Run your test by running an executable in ./image/test/ folder"
+msgstr ""
+
+#: ../../untranslatable_pages/unit_tests_in_krita.rst:227
+msgid "Krita-specific testing utils"
+msgstr ""
+
+#: ../../untranslatable_pages/unit_tests_in_krita.rst:230
+msgid "Fetching reference images"
+msgstr ""
+
+#: ../../untranslatable_pages/unit_tests_in_krita.rst:232
+msgid "All the testing files/images are usually stored in the test's data folder  (e.g. ./krita/image/tests/data/). But there are some files which are used throughout all the unit tests. These files are stored in the global folder ./krita/sdk/tests/data/. If you want to access any file, just use ``TestUtil::fetchDataFileLazy``. It first searches the file in the local test's folder and if nothing is found checks the global folder."
+msgstr ""
+
+#: ../../untranslatable_pages/unit_tests_in_krita.rst:234
+#: ../../untranslatable_pages/unit_tests_in_krita.rst:342
+msgid "Example:"
+msgstr ""
+
+#: ../../untranslatable_pages/unit_tests_in_krita.rst:236
+msgid "QImage refImage(TestUtil::fetchDataFileLazy(\"lena.png\"));\n"
+"QVERIFY(!refImage.isNull());"
+msgstr ""
+
+#: ../../untranslatable_pages/unit_tests_in_krita.rst:242
+msgid "Compare test result against a reference QImage"
+msgstr ""
+
+#: ../../untranslatable_pages/unit_tests_in_krita.rst:244
+msgid "There are two helper functions to compare a given QImage against an image saved in the data folder."
+msgstr ""
+
+#: ../../untranslatable_pages/unit_tests_in_krita.rst:246
+msgid "bool TestUtil::checkQImage(const QImage &image, const QString &testName,\n"
+"                           const QString &prefix, const QString &name,\n"
+"                           int fuzzy = 0, int fuzzyAlpha = -1, int maxNumFailingPixels = 0);\n"
+"bool TestUtil::checkQImageExternal(const QImage &image, const QString &testName,\n"
+"                                   const QString &prefix, const QString &name,\n"
+"                                   int fuzzy = 0, int fuzzyAlpha = -1, int maxNumFailingPixels = 0);"
+msgstr ""
+
+#: ../../untranslatable_pages/unit_tests_in_krita.rst:255
+msgid "The functions search for a PNG file with path"
+msgstr ""
+
+#: ../../untranslatable_pages/unit_tests_in_krita.rst:257
+msgid "./tests/data/<testName>/<prefix>/<prefix>_<name>.png\n"
+"# or without a subfolder\n"
+"./tests/data/<testName>/<prefix>_<name>.png"
+msgstr ""
+
+#: ../../untranslatable_pages/unit_tests_in_krita.rst:263
+msgid "The supplied QImage is compared against the saved PNG, and the result is returned to the caller. If the images do not coincide, two images are dumped into the current directory: one with actual result and another with what is expected."
+msgstr ""
+
+#: ../../untranslatable_pages/unit_tests_in_krita.rst:265
+msgid "The second version of the function is different. It searches the image in \"an external repository\". The point is that PNG images occupy quite a lot of space and bloat the repository size. So we decided to put all the images that are big enough (>10KiB) into an external SVN repository. To configure an external test files repository on your computer, please do the following:"
+msgstr ""
+
+#: ../../untranslatable_pages/unit_tests_in_krita.rst:268
+msgid "Checkout the data repository:"
+msgstr ""
+
+#: ../../untranslatable_pages/unit_tests_in_krita.rst:270
+msgid "# create the tests data folder and enter it\n"
+"mkdir ~/testsdata\n"
+"cd ~/testsdata\n"
+"\n"
+"# checkout the extra repository\n"
+"svn checkout svn+ssh://svn@svn.kde.org/home/kde/trunk/tests/kritatests"
+msgstr ""
+
+#: ../../untranslatable_pages/unit_tests_in_krita.rst:279
+msgid "Add environment variable pointing to your repository to your ~/.bashrc"
+msgstr ""
+
+#: ../../untranslatable_pages/unit_tests_in_krita.rst:281
+msgid "``export KRITA_UNITTESTS_DATA_DIR= ~/testsdata/kritatests/unittests``"
+msgstr ""
+
+#: ../../untranslatable_pages/unit_tests_in_krita.rst:283
+msgid "Use ``TestUtil::checkQImageExternal`` in your unittest and it will fetch data from the external source. If an external repository is not found then the test is considered \"passed\"."
+msgstr ""
+
+#: ../../untranslatable_pages/unit_tests_in_krita.rst:286
+msgid "QImageBasedTest for complex actions"
+msgstr ""
+
+#: ../../untranslatable_pages/unit_tests_in_krita.rst:288
+msgid "Sometimes you need to test some complex actions like cropping or transforming the whole image. The main problem of such action is that it should work correctly with any kind of layer or mask, e.g. KisCloneLayer, KisGroupLayer or even KisSelectionMask. To facilitate such complex testing conditions, Krita provides a special class ``QImageBasedTest``. It helps you to create a really complex image and check the contents of its layers. You can find the best example of its usage in ``KisProcessingsTest``. Basically, to use this class, one should derive it's own testing class from it, and call a set of callbacks, which do all the work. Let's consider the code from KisProcessingsTest:"
+msgstr ""
+
+#: ../../untranslatable_pages/unit_tests_in_krita.rst:290
+msgid "// override QImageBasedTest class\n"
+"class BaseProcessingTest : public TestUtil::QImageBasedTest\n"
+"{\n"
+"public:\n"
+"    BaseProcessingTest()\n"
+"        : QImageBasedTest(\"processings\")\n"
+"    {\n"
+"    }\n"
+"\n"
+"    // The method is called by test cases. If the test fails, a set of PNG images\n"
+"    // is saved into working directory\n"
+"    void test(const QString &testname, KisProcessingVisitorSP visitor) {\n"
+"\n"
+"        // create an image and regenerate its projection\n"
+"        KisSurrogateUndoStore *undoStore = new KisSurrogateUndoStore();\n"
+"        KisImageSP image = createImage(undoStore);\n"
+"        image->initialRefreshGraph();\n"
+"\n"
+"        // check if the image is correct before testing anything\n"
+"        QVERIFY(checkLayersInitial(image));\n"
+"\n"
+"        // do the action we are trying to test\n"
+"        KisProcessingApplicator applicator(image, image->root(),\n"
+"                                        KisProcessingApplicator::RECURSIVE);\n"
+"\n"
+"        applicator.applyVisitor(visitor);\n"
+"        applicator.end();\n"
+"        image->waitForDone();\n"
+"\n"
+"        // check the result, and dump images if something went wrong\n"
+"        QVERIFY(checkLayers(image, testname));\n"
+"\n"
+"        // Check if undo(!) works correctly\n"
+"        undoStore->undo();\n"
+"        image->waitForDone();\n"
+"\n"
+"        if (!checkLayersInitial(image)) {\n"
+"            qWarning() << \"NOTE: undo is not completely identical \"\n"
+"                    << \"to the original image. Falling back to \"\n"
+"                    <<\"projection comparison\";\n"
+"            QVERIFY(checkLayersInitialRootOnly(image));\n"
+"        }\n"
+"    }\n"
+"};"
+msgstr ""
+
+#: ../../untranslatable_pages/unit_tests_in_krita.rst:338
+msgid "MaskParent object"
+msgstr ""
+
+#: ../../untranslatable_pages/unit_tests_in_krita.rst:340
+msgid "``TestUtil::MaskParent`` is a simple class that, in its constructor, creates an RGB8 image with a single paint layer, which you can use for further testing. The image and the layer can be accessed as simple member variables."
+msgstr ""
+
+#: ../../untranslatable_pages/unit_tests_in_krita.rst:344
+msgid "void KisMaskTest::testCreation()\n"
+"{\n"
+"    // create an image and a simple layer\n"
+"    TestUtil::MaskParent p;\n"
+"\n"
+"    // create a mask and attach its selection to the created layer\n"
+"    TestMaskSP mask = new TestMask;\n"
+"    mask->initSelection(p.layer);\n"
+"\n"
+"    QCOMPARE(mask->extent(), QRect(0,0,512,512));\n"
+"    QCOMPARE(mask->exactBounds(), QRect(0,0,512,512));\n"
+"}"
+msgstr ""
+
+#: ../../untranslatable_pages/unit_tests_in_krita.rst:360
+msgid "https://en.wikipedia.org/wiki/Unit_testing"
+msgstr ""

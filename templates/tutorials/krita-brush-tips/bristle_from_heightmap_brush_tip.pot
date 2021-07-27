@@ -1,0 +1,178 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) licensed under the GNU Free Documentation License 1.3+ unless stated otherwise
+# This file is distributed under the same license as the Krita Manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Krita Manual 5.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-07-27 21:21+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../tutorials/krita-brush-tips/bristle_from_heightmap_brush_tip.rst:1
+msgid "Tutorial on how to create a presure sensitive brush with a bristle effect."
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/bristle_from_heightmap_brush_tip.rst:15
+msgid "Heightmap Bristle Brush Tips"
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/bristle_from_heightmap_brush_tip.rst:17
+msgid "When looking at oil paintings, especially the impressionistic ones, it is hard not to be in awe of the effect the visible brush strokes have on the the painting. While a digital painting program is a fundamentally different medium from the oil paint one, we can utilize some tricks to get visible brush strokes."
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/bristle_from_heightmap_brush_tip.rst:19
+msgid "The simplest way to get a visible brush stroke is to select a :ref:`predefined brush <predefined_brush_tip>`. If you select one with several separate dots, and lower the spacing to 0.02, you can get a sort of brush stroke effect. But we can do better, for example, how about a brush which gives more coverage, the harder you press?"
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/bristle_from_heightmap_brush_tip.rst:None
+msgid "Image showing a simple bristle-like stroke."
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/bristle_from_heightmap_brush_tip.rst:25
+msgid "Using the sharpness option."
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/bristle_from_heightmap_brush_tip.rst:27
+msgid "We can achieve that effect with the sharpness option. Consider the following brush tip. We've used the gradient tool to draw two concentric foreground-to-transparent gradients side by side on a white-filled layer. Then we used the elliptical selection tool with :menuselection:`Edit --> Copy Merged` to cut out an ellipse shape, and then used the clipboard option in the predfined brush chooser to create a new brush."
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/bristle_from_heightmap_brush_tip.rst:None
+msgid "Simple brush with many gradients as a stroke."
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/bristle_from_heightmap_brush_tip.rst:33
+msgid "By default this isn't a very interesting brush. But when selecting the :guilabel:`Sharpness` option available in the pixel brush engine, it gives a totally different result:"
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/bristle_from_heightmap_brush_tip.rst:None
+msgid "Image as above but then with sharpness option enabled."
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/bristle_from_heightmap_brush_tip.rst:38
+msgid "The darker areas of the brush will be drawn first, and the lightest areas of the brush only at very high pressure. By adding more soft dots to the whole, we can get an even more interesting brush:"
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/bristle_from_heightmap_brush_tip.rst:None
+msgid "Image as above but then with a complexer main image."
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/bristle_from_heightmap_brush_tip.rst:43
+msgid "In effect, we are creating a kind of heightmap here. With the darkest dots representing the longest hairs, and the lightest pixels the shortest. With some effort, you can represent a ton of different brushes this way:"
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/bristle_from_heightmap_brush_tip.rst:48
+msgid "A collection of potential bristle brushes with a little image of the kind of brush that is being simulated."
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/bristle_from_heightmap_brush_tip.rst:48
+msgid "By putting the darkest spot into different locations, we can get a variety of strokes."
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/bristle_from_heightmap_brush_tip.rst:50
+msgid "But we can go even further. For example, how about making this a lightness brush? This can be done by..."
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/bristle_from_heightmap_brush_tip.rst:52
+msgid "Opening the brush in Krita."
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/bristle_from_heightmap_brush_tip.rst:53
+msgid "Inverting via :menuselection:`Filter --> Adjust --> Invert`"
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/bristle_from_heightmap_brush_tip.rst:54
+msgid "Duplicating the layer."
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/bristle_from_heightmap_brush_tip.rst:55
+msgid "Then using :menuselection:`Filter --> Map --> Phongbump Map` on the topmost layer."
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/bristle_from_heightmap_brush_tip.rst:56
+msgid "Then select the lowest layer. |mouseright| for the context menu, then select :menuselection:`convert --> to transparency mask`."
+msgstr ""
+
+#: ../../<rst_epilog>:4
+#: ../../<rst_epilog>:4
+msgid "mouseright"
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/bristle_from_heightmap_brush_tip.rst:57
+msgid "Finally, to soften the result, you can merge the layer and apply a bit of motion blur. Especially when using together with rotation set to drawing angle or tilt, some plain horizontal motion blur will reduce stray pixel artifacts."
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/bristle_from_heightmap_brush_tip.rst:59
+msgid "Then select all, copy, and use the clipboard function in the predefined brushes menu, and make sure to make sure to **untick** :guilabel:`Create Mask From Color`. What we're effectively doing here is ensuring that the transparency is being used for the sharpness, while having the color be using for the lightness map."
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/bristle_from_heightmap_brush_tip.rst:61
+msgid "Now select the brush and set the :guilabel:`Brush mode` to :guilabel:`Lightness Map`, and draw with a color that isn't black for the best effect."
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/bristle_from_heightmap_brush_tip.rst:66
+msgid "Image showing various lightnes map strokes."
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/bristle_from_heightmap_brush_tip.rst:66
+msgid "A variety of brushes made with the lightness method. You can adjust the brush by changing the neutral tone, brightness and contrast in the brush settings, or by adjusting these before hand while making the brush. A good lightness brush has both a bit of darkness and brightness."
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/bristle_from_heightmap_brush_tip.rst:70
+msgid "For Step 4 you can also use the edge detection filter (with modes set to 'top edge' or 'bottom edge') or the emboss filters."
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/bristle_from_heightmap_brush_tip.rst:72
+msgid "We can also do similar things for the :ref:`gradient brush tip <gradient_brush_tips>`:"
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/bristle_from_heightmap_brush_tip.rst:77
+msgid "Image showing various gradient strokes."
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/bristle_from_heightmap_brush_tip.rst:77
+msgid "The above effect is all achieved with the same brush tip set to :guilabel:`Gradient Map`. By increasing the contrast or changing the neutral tone, the center point of the gradient is adjusted, giving different options in the same brush."
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/bristle_from_heightmap_brush_tip.rst:79
+msgid "However, this sharpness option is not available for the color smudge brush, so what to do there?"
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/bristle_from_heightmap_brush_tip.rst:82
+msgid "Animated pressure brush"
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/bristle_from_heightmap_brush_tip.rst:84
+msgid "You can make brush tips that are :ref:`animated <animated_brush_tips>`."
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/bristle_from_heightmap_brush_tip.rst:86
+msgid "If we take our example brush, and duplicate that layer 16 times or so."
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/bristle_from_heightmap_brush_tip.rst:88
+msgid "Now, for each layer, start at the top, going to the bottom, you will want to apply the :menuselection:`Filter --> Adjust --> Threshold`, with different values. Starting from 255, and then each time, decrease the value by 16. So, the topmost layer should be at 255, next layer 240, the layer after that 224 and so forth. Eventually you should have each layer have less coverage that the one above that. Now, go to the predefined brushes tab, and select :guilabel:`Stamp`. There select :guilabel:`Animated` for :guilabel:`Style` and :guilabel:`Pressure` for :guilabel:`Selection Mode`."
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/bristle_from_heightmap_brush_tip.rst:90
+msgid "If everything went right, you now have a brush-tip that can be used with the color smudge brush. For a brush that uses the gradient map, or the lightness mode, a similar principle applies, except you first |mouseright| for the context menu, then select :menuselection:`Split Alpha --> Alpha into Mask`, and then only apply the threshold to the transparency mask. A softer result can be made by using the :menuselection:`Filter --> Adjust --> Levels` or :menuselection:`Filter --> Adjust --> Curves` to isolate the pixels for the given amount of pressure."
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/bristle_from_heightmap_brush_tip.rst:10
+msgid "Sharpness"
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/bristle_from_heightmap_brush_tip.rst:10
+msgid "Bristle brushes"
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/bristle_from_heightmap_brush_tip.rst:10
+msgid "Lightness Map"
+msgstr ""

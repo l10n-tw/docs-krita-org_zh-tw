@@ -1,0 +1,289 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) licensed under the GNU Free Documentation License 1.3+ unless stated otherwise
+# This file is distributed under the same license as the Krita Manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Krita Manual 5.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-07-27 21:21+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../reference_manual/preferences/display_settings.rst:1
+msgid "Display settings in Krita."
+msgstr ""
+
+#: ../../reference_manual/preferences/display_settings.rst:17
+msgid "Display Settings"
+msgstr ""
+
+#: ../../reference_manual/preferences/display_settings.rst:21
+msgid "Here various settings for the rendering of Krita can be edited."
+msgstr ""
+
+#: ../../reference_manual/preferences/display_settings.rst:24
+#: ../../reference_manual/preferences/display_settings.rst:12
+msgid "OpenGL"
+msgstr ""
+
+#: ../../reference_manual/preferences/display_settings.rst:26
+msgid "**For Krita 3.3 or later: Reworded as \"*Canvas Graphics Acceleration*\"**"
+msgstr ""
+
+#: ../../reference_manual/preferences/display_settings.rst:28
+msgid "OpenGL is a bit of code especially for graphics cards. Graphics cards a dedicate piece of hardware for helping your computer out with graphics calculations, which Krita uses a lot. All modern computer have graphics cards."
+msgstr ""
+
+#: ../../reference_manual/preferences/display_settings.rst:30
+msgid "**For Krita 3.3 or later:** On Windows, Krita also supports using Direct3D instead with the help of the ANGLE library. ANGLE works by converting the OpenGL functions that Krita makes use of to the equivalent in Direct3D. It may (or may not) be slower than native OpenGL, but it has better compatibility with typical Windows graphics drivers."
+msgstr ""
+
+#: ../../reference_manual/preferences/display_settings.rst:32
+msgid "Enable OpenGL **(For Krita 3.3 or later: Reworded as *Canvas Graphics Acceleration*)**"
+msgstr ""
+
+#: ../../reference_manual/preferences/display_settings.rst:33
+msgid "Selecting this checkbox will enable the OpenGL / ANGLE canvas drawing mode. With a decent graphics card this should give faster feedback on brushes and tools. Also the canvas operations like Rotate, Zoom and Pan should be considerably faster."
+msgstr ""
+
+#: ../../reference_manual/preferences/display_settings.rst:35
+msgid "For Krita 3.3 or later:"
+msgstr ""
+
+#: ../../reference_manual/preferences/display_settings.rst:35
+msgid "Renderer"
+msgstr ""
+
+#: ../../reference_manual/preferences/display_settings.rst:36
+msgid "*On Windows:* You can switch between native OpenGL or ANGLE Direct3D 11 rendering. The usual recommendation is to leave it as \"Auto\", which Krita will decide the best to use based on some internal compatibility checking. Changes to this option require a restart of Krita to take effect."
+msgstr ""
+
+#: ../../reference_manual/preferences/display_settings.rst:37
+msgid "Use Texture Buffer"
+msgstr ""
+
+#: ../../reference_manual/preferences/display_settings.rst:38
+msgid "This setting utilizes the graphics card's buffering capabilities to speed things up a bit. Although for now, this feature may be broken on some AMD/Radeon cards and may work fine on some Intel graphics cards."
+msgstr ""
+
+#: ../../reference_manual/preferences/display_settings.rst:49
+msgid "Scaling Mode"
+msgstr ""
+
+#: ../../reference_manual/preferences/display_settings.rst:40
+msgid "The user can choose which scaling mode to use while zooming the canvas. The choice here only affects the way the image is displayed during canvas operations and has no effect on how Krita scales an image when a transformation is applied."
+msgstr ""
+
+#: ../../reference_manual/preferences/display_settings.rst:42
+msgid "Nearest Neighbour"
+msgstr ""
+
+#: ../../reference_manual/preferences/display_settings.rst:43
+msgid "This is the fastest and crudest filtering method. While fast, this results in a large number of artifacts - 'blockiness' during magnification, and aliasing and shimmering during minification."
+msgstr ""
+
+#: ../../reference_manual/preferences/display_settings.rst:44
+msgid "Bilinear Filtering"
+msgstr ""
+
+#: ../../reference_manual/preferences/display_settings.rst:45
+msgid "This is the next step up. This removes the 'blockiness' seen during magnification and gives a smooth looking result. For most purposes this should be a good trade-off between speed and quality."
+msgstr ""
+
+#: ../../reference_manual/preferences/display_settings.rst:46
+msgid "Trilinear Filtering"
+msgstr ""
+
+#: ../../reference_manual/preferences/display_settings.rst:47
+msgid "This should give a little better result than Bilinear Filtering."
+msgstr ""
+
+#: ../../reference_manual/preferences/display_settings.rst:49
+msgid "High Quality Filtering"
+msgstr ""
+
+#: ../../reference_manual/preferences/display_settings.rst:49
+msgid "Only available when your graphics card supports OpenGL 3.0. As the name suggests, this setting provides the best looking image during canvas operations."
+msgstr ""
+
+#: ../../reference_manual/preferences/display_settings.rst:54
+msgid "HDR"
+msgstr ""
+
+#: ../../reference_manual/preferences/display_settings.rst:58
+msgid "These settings are only available when using Windows."
+msgstr ""
+
+#: ../../reference_manual/preferences/display_settings.rst:60
+msgid "Since 4.2 Krita can not just edit floating point images, but also render them on screen in a way that an HDR capable setup can show them as HDR images."
+msgstr ""
+
+#: ../../reference_manual/preferences/display_settings.rst:62
+msgid "The HDR settings will show you the display format that Krita can handle, and the current output format. You will want to set the preferred output format to the one closest to what your display can handle to make full use of it."
+msgstr ""
+
+#: ../../reference_manual/preferences/display_settings.rst:64
+msgid "Display Format"
+msgstr ""
+
+#: ../../reference_manual/preferences/display_settings.rst:65
+msgid "The format your display is in by default. If this isn't higher than 8bit, there's a good chance your monitor is not an HDR monitor as far as Krita can tell. This can be a hardware issue, but also a graphics driver issue. Check if other HDR applications, or the system HDR settings are configured correctly."
+msgstr ""
+
+#: ../../reference_manual/preferences/display_settings.rst:66
+msgid "Current Output format"
+msgstr ""
+
+#: ../../reference_manual/preferences/display_settings.rst:67
+msgid "What Krita is rendering the canvas to currently."
+msgstr ""
+
+#: ../../reference_manual/preferences/display_settings.rst:69
+msgid "Preferred Output Format"
+msgstr ""
+
+#: ../../reference_manual/preferences/display_settings.rst:69
+msgid "Which surface type you prefer. This should be ideally the closest to the display format, but perhaps due to driver issues you might want to try other formats. This requires a restart."
+msgstr ""
+
+#: ../../reference_manual/preferences/display_settings.rst:72
+msgid "Transparency Checkerboard"
+msgstr ""
+
+#: ../../reference_manual/preferences/display_settings.rst:74
+msgid "Krita supports layer transparency. Of course, the nasty thing is that transparency can't be seen. So to indicate transparency at the lowest layer, we use a checker pattern. This part allows you to configure it."
+msgstr ""
+
+#: ../../reference_manual/preferences/display_settings.rst:76
+msgid "Size"
+msgstr ""
+
+#: ../../reference_manual/preferences/display_settings.rst:77
+msgid "This sets the size of the checkers which show up in transparent parts of an image."
+msgstr ""
+
+#: ../../reference_manual/preferences/display_settings.rst:78
+#: ../../reference_manual/preferences/display_settings.rst:86
+#: ../../reference_manual/preferences/display_settings.rst:98
+msgid "Color"
+msgstr ""
+
+#: ../../reference_manual/preferences/display_settings.rst:79
+msgid "The user can set the colors for the checkers over here."
+msgstr ""
+
+#: ../../reference_manual/preferences/display_settings.rst:81
+msgid "Move Checkers When Scrolling"
+msgstr ""
+
+#: ../../reference_manual/preferences/display_settings.rst:81
+msgid "When selected the checkers will move along with opaque elements of an image during canvas Panning, Zooming, etc.  Otherwise the checkers remain stationary and only the opaque parts of an image will move."
+msgstr ""
+
+#: ../../reference_manual/preferences/display_settings.rst:84
+#: ../../reference_manual/preferences/display_settings.rst:12
+msgid "Canvas Border"
+msgstr ""
+
+#: ../../reference_manual/preferences/display_settings.rst:87
+msgid "The user can select the color for the canvas i.e. the space beyond a document's boundaries."
+msgstr ""
+
+#: ../../reference_manual/preferences/display_settings.rst:89
+msgid "Hide Scrollbars"
+msgstr ""
+
+#: ../../reference_manual/preferences/display_settings.rst:89
+msgid "Selecting this will hide the scrollbars in all view modes."
+msgstr ""
+
+#: ../../reference_manual/preferences/display_settings.rst:92
+msgid "Pixel Grid"
+msgstr ""
+
+#: ../../reference_manual/preferences/display_settings.rst:96
+msgid "This allows configuring an automatic pixel-by-pixel grid, which is very useful for doing pixel art."
+msgstr ""
+
+#: ../../reference_manual/preferences/display_settings.rst:99
+msgid "The color of the grid."
+msgstr ""
+
+#: ../../reference_manual/preferences/display_settings.rst:101
+msgid "Start Showing at"
+msgstr ""
+
+#: ../../reference_manual/preferences/display_settings.rst:101
+msgid "This determines the zoom level at which the pixel grid starts showing, as showing it when the image is zoomed out a lot will make the grid overwhelm the image, and is thus counter productive."
+msgstr ""
+
+#: ../../reference_manual/preferences/display_settings.rst:104
+msgid "Miscellaneous"
+msgstr ""
+
+#: ../../reference_manual/preferences/display_settings.rst:106
+msgid "Color Channels in Color"
+msgstr ""
+
+#: ../../reference_manual/preferences/display_settings.rst:107
+msgid "This is supposed to determine what to do when only a single channel is selected in the channels docker, but it doesn't seem to work."
+msgstr ""
+
+#: ../../reference_manual/preferences/display_settings.rst:108
+msgid "Enable Curve Anti-Aliasing"
+msgstr ""
+
+#: ../../reference_manual/preferences/display_settings.rst:109
+msgid "This allows anti-aliasing on previewing curves, like the ones for the circle tool, or the path tool."
+msgstr ""
+
+#: ../../reference_manual/preferences/display_settings.rst:110
+msgid "Enable Selection Outline Anti-Aliasing"
+msgstr ""
+
+#: ../../reference_manual/preferences/display_settings.rst:111
+msgid "This allows automatic anti-aliasing on selection. It makes the selection feel less jaggy and more precise."
+msgstr ""
+
+#: ../../reference_manual/preferences/display_settings.rst:112
+msgid "Hide window scrollbars."
+msgstr ""
+
+#: ../../reference_manual/preferences/display_settings.rst:113
+msgid "Hides the scrollbars on the canvas."
+msgstr ""
+
+#: ../../reference_manual/preferences/display_settings.rst:116
+msgid "Hide Layer thumbnail popup"
+msgstr ""
+
+#: ../../reference_manual/preferences/display_settings.rst:115
+msgid "This disables the thumbnail that you get when hovering over a layer."
+msgstr ""
+
+#: ../../reference_manual/preferences/display_settings.rst:12
+msgid "Preferences"
+msgstr ""
+
+#: ../../reference_manual/preferences/display_settings.rst:12
+msgid "Settings"
+msgstr ""
+
+#: ../../reference_manual/preferences/display_settings.rst:12
+msgid "Transparency Checkers"
+msgstr ""
+
+#: ../../reference_manual/preferences/display_settings.rst:12
+msgid "Canvas Graphics Acceleration"
+msgstr ""
+
+#: ../../reference_manual/preferences/display_settings.rst:12
+msgid "Display"
+msgstr ""

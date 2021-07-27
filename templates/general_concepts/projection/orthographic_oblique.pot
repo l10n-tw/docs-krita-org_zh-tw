@@ -1,0 +1,178 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) licensed under the GNU Free Documentation License 1.3+ unless stated otherwise
+# This file is distributed under the same license as the Krita Manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Krita Manual 5.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-07-27 21:21+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../general_concepts/projection/orthographic_oblique.rst:1
+msgid "Orthographics and oblique projection."
+msgstr ""
+
+#: ../../general_concepts/projection/orthographic_oblique.rst:10
+msgid "So let's start with the basics..."
+msgstr ""
+
+#: ../../general_concepts/projection/orthographic_oblique.rst:16
+#: ../../general_concepts/projection/orthographic_oblique.rst:12
+msgid "Orthographic"
+msgstr ""
+
+#: ../../general_concepts/projection/orthographic_oblique.rst:18
+msgid "Despite the fancy name, you probably know what orthographic is. It is a schematic representation of an object, draw undeformed. Like the following example:"
+msgstr ""
+
+#: ../../general_concepts/projection/orthographic_oblique.rst:23
+msgid "This is a rectangle. We have a front, top and side view. Put into perspective it should look somewhat like this:"
+msgstr ""
+
+#: ../../general_concepts/projection/orthographic_oblique.rst:28
+msgid "While orthographic representations are kinda boring, they're also a good basis to start with when you find yourself in trouble with a pose. But we'll get to that in a bit."
+msgstr ""
+
+#: ../../general_concepts/projection/orthographic_oblique.rst:33
+msgid "Oblique"
+msgstr ""
+
+#: ../../general_concepts/projection/orthographic_oblique.rst:35
+msgid "So, if we can say that the front view is the viewer looking at the front, and the side view is the viewer directly looking at the side. (The perpendicular line being the view plane it is projected on)"
+msgstr ""
+
+#: ../../general_concepts/projection/orthographic_oblique.rst:40
+msgid "Then we can get a half-way view from looking from an angle, no?"
+msgstr ""
+
+#: ../../general_concepts/projection/orthographic_oblique.rst:45
+msgid "If we do that for a lot of different sides…"
+msgstr ""
+
+#: ../../general_concepts/projection/orthographic_oblique.rst:50
+msgid "And we line up the sides we get a…"
+msgstr ""
+
+#: ../../general_concepts/projection/orthographic_oblique.rst:55
+msgid "But cubes are boring. I am suspecting that projection is so ignored because no tutorial applies it to an object where you actually might NEED projection. Like a face."
+msgstr ""
+
+#: ../../general_concepts/projection/orthographic_oblique.rst:57
+msgid "First, let's prepare our front and side views:"
+msgstr ""
+
+#: ../../general_concepts/projection/orthographic_oblique.rst:62
+msgid "I always start with the side, and then extrapolate the front view from it. Because you are using Krita, set up two parallel rulers, one vertical and the other horizontal. To snap them perfectly, drag one of the nodes after you have made the ruler, and press the :kbd:`Shift` key to snap it horizontal or vertical. In 3.0, you can also snap them to the image borders if you have :menuselection:`Snap Image Bounds` active via the :kbd:`Shift + S` shortcut."
+msgstr ""
+
+#: ../../general_concepts/projection/orthographic_oblique.rst:64
+msgid "Then, by moving the mirror to the left, you can design a front view from the side view, while the parallel preview line helps you with aligning the eyes (which in the above screenshot are too low)."
+msgstr ""
+
+#: ../../general_concepts/projection/orthographic_oblique.rst:66
+msgid "Eventually, you should have something like this:"
+msgstr ""
+
+#: ../../general_concepts/projection/orthographic_oblique.rst:71
+msgid "And of course, let us not forget the top, it's pretty important:"
+msgstr ""
+
+#: ../../general_concepts/projection/orthographic_oblique.rst:78
+msgid "When you are using Krita, you can just use transform masks to rotate the side view for drawing the top view."
+msgstr ""
+
+#: ../../general_concepts/projection/orthographic_oblique.rst:80
+msgid "The top view works as a method for debugging your orthos as well. If we take the red line to figure out the orthographics from, we see that our eyes are obviously too inset. Let's move them a bit more forward, to around the nose."
+msgstr ""
+
+#: ../../general_concepts/projection/orthographic_oblique.rst:85
+msgid "If you want to do precision position moving in the tool options docker, just select 'position' and the input box for the X. Pressing down then moves the transformed selection left. With Krita 3.0 you can just use the move tool for this and the arrow keys. Using transform here can be more convenient if you also have to squash and stretch an eye."
+msgstr ""
+
+#: ../../general_concepts/projection/orthographic_oblique.rst:90
+msgid "We fix the top view now. Much better."
+msgstr ""
+
+#: ../../general_concepts/projection/orthographic_oblique.rst:92
+msgid "For faces, the multiple slices are actually pretty important. So important even, that I have decided we should have these slices on separate layers. Thankfully, I chose to color them, so all we need to do is go to :menuselection:`Layer --> Split Layer`."
+msgstr ""
+
+#: ../../general_concepts/projection/orthographic_oblique.rst:97
+msgid "This'll give you a few awkwardly named layers… rename them by selecting all and mass changing the name in the properties editor:"
+msgstr ""
+
+#: ../../general_concepts/projection/orthographic_oblique.rst:102
+msgid "So, after some cleanup, we should have the following:"
+msgstr ""
+
+#: ../../general_concepts/projection/orthographic_oblique.rst:107
+msgid "Okay, now we're gonna use animation for the next bit."
+msgstr ""
+
+#: ../../general_concepts/projection/orthographic_oblique.rst:109
+msgid "Set it up as follows:"
+msgstr ""
+
+#: ../../general_concepts/projection/orthographic_oblique.rst:114
+msgid "Both front view and side view are set up as 'visible in timeline' so we can always see them."
+msgstr ""
+
+#: ../../general_concepts/projection/orthographic_oblique.rst:115
+msgid "Front view has its visible frame on frame 0 and an empty frame on frame 23."
+msgstr ""
+
+#: ../../general_concepts/projection/orthographic_oblique.rst:116
+msgid "Side view has its visible frame on frame 23 and an empty view on frame 0."
+msgstr ""
+
+#: ../../general_concepts/projection/orthographic_oblique.rst:117
+msgid "The end of the animation is set to 23."
+msgstr ""
+
+#: ../../general_concepts/projection/orthographic_oblique.rst:122
+msgid "Krita can't animate a transformation on multiple layers on multiple frames yet, so let's just only transform the top layer. Add a semi-transparent layer where we draw the guidelines."
+msgstr ""
+
+#: ../../general_concepts/projection/orthographic_oblique.rst:124
+msgid "Now, select frame 11 (halfway), add new frames from front view, side view and the guidelines. And turn on the onion skin by toggling the lamp symbols. We copy the frame for the top view and use the transform tool to rotate it 45°."
+msgstr ""
+
+#: ../../general_concepts/projection/orthographic_oblique.rst:129
+msgid "So, we draw our vertical guides again and determine a in-between..."
+msgstr ""
+
+#: ../../general_concepts/projection/orthographic_oblique.rst:134
+msgid "This is about how far you can get with only the main slice, so rotate the rest as well."
+msgstr ""
+
+#: ../../general_concepts/projection/orthographic_oblique.rst:139
+msgid "And just like with the cube, we do this for all slices…"
+msgstr ""
+
+#: ../../general_concepts/projection/orthographic_oblique.rst:144
+msgid "Eventually, if you have the top slices rotate every frame with 15°, you should be able to make a turn table, like this:"
+msgstr ""
+
+#: ../../general_concepts/projection/orthographic_oblique.rst:149
+msgid "Because our boy here is fully symmetrical, you can just animate one side and flip the frames for the other half."
+msgstr ""
+
+#: ../../general_concepts/projection/orthographic_oblique.rst:151
+msgid "While it is not necessary to follow all the steps in the theory section to understand the tutorial, I do recommend making a turn table sometime. It teaches you a lot about drawing 3/4th faces."
+msgstr ""
+
+#: ../../general_concepts/projection/orthographic_oblique.rst:153
+msgid "How about… we introduce the top view into the drawing itself?"
+msgstr ""
+
+#: ../../general_concepts/projection/orthographic_oblique.rst:12
+msgid "Projection"
+msgstr ""

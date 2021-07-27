@@ -1,0 +1,61 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) licensed under the GNU Free Documentation License 1.3+ unless stated otherwise
+# This file is distributed under the same license as the Krita Manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Krita Manual 5.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-07-19 22:30+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../general_concepts/file_formats/file_jpeg.rst:1
+msgid "The JPEG file format as exported by Krita."
+msgstr ""
+
+#: ../../general_concepts/file_formats/file_jpeg.rst:16
+msgid "\\*.jpg"
+msgstr ""
+
+#: ../../general_concepts/file_formats/file_jpeg.rst:18
+msgid "``.jpg``, ``.jpeg`` or ``.jpeg2000`` are a family of file-formats designed to encode photographs."
+msgstr ""
+
+#: ../../general_concepts/file_formats/file_jpeg.rst:20
+msgid "Photographs have the problem that they have a lot of little gradients, which means that you cannot index the file like you can with :ref:`file_gif` and expect the result to look good. What JPEG instead does is that it converts the file to a perceptual color space (:ref:`YCrCb <model_ycrcb>`), and then compresses the channels that encode the colors, while keeping the channel that holds information about the relative lightness uncompressed. This works really well because human eye-sight is not as sensitive to colorfulness as it is to relative lightness. JPEG also uses other :ref:`lossy <lossy_compression>` compression techniques, like using cosine waves to describe image contrasts."
+msgstr ""
+
+#: ../../general_concepts/file_formats/file_jpeg.rst:22
+msgid "However, it does mean that JPEG should be used in certain cases. For images with a lot of gradients, like full scale paintings, JPEG performs better than :ref:`file_png` and :ref:`file_gif`."
+msgstr ""
+
+#: ../../general_concepts/file_formats/file_jpeg.rst:24
+msgid "But for images with a lot of sharp contrasts, like text and comic book styles, PNG is a much better choice despite a larger file size. For grayscale images, :ref:`file_png` and :ref:`file_gif` will definitely be more efficient."
+msgstr ""
+
+#: ../../general_concepts/file_formats/file_jpeg.rst:26
+msgid "Because JPEG uses lossy compression, it is not advised to save over the same JPEG multiple times. The lossy compression will cause the file to reduce in quality each time you save it. This is a fundamental problem with lossy compression methods. Instead use a lossless file format, or a working file format while you are working on the image."
+msgstr ""
+
+#: ../../general_concepts/file_formats/file_jpeg.rst:10
+msgid "*.jpg"
+msgstr ""
+
+#: ../../general_concepts/file_formats/file_jpeg.rst:10
+msgid "*.jpeg"
+msgstr ""
+
+#: ../../general_concepts/file_formats/file_jpeg.rst:10
+msgid "JPG"
+msgstr ""
+
+#: ../../general_concepts/file_formats/file_jpeg.rst:10
+msgid "JPEG"
+msgstr ""

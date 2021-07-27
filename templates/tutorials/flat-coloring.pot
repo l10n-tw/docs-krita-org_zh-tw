@@ -1,0 +1,552 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) licensed under the GNU Free Documentation License 1.3+ unless stated otherwise
+# This file is distributed under the same license as the Krita Manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Krita Manual 5.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-07-27 21:21+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../tutorials/flat-coloring.rst:1
+msgid "Common workflows used in Krita."
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:13
+msgid "Flat Coloring"
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:15
+msgid "So you've got a cool black on white drawing, and now you want to color it! The thing we’ll aim for in this tutorial is to get your line art colored in with flat colors. So no shading just yet. We’ll be going through some techniques for preparing the line art, and we’ll be using the layer docker to put each color on a separate layer, so we can easily access each color when we add shading."
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:17
+msgid "This tutorial is adapted from this `tutorial <http://theratutorial.tumblr.com/post/66584924501/flat-colouring-in-the-kingdom-of-2d-layers-are>`_ by the original author."
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:20
+msgid "Understanding Layers"
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:22
+msgid "To fill line art comfortably, it's best to take advantage of the layerstack. The layer stack is pretty awesome, and it's one of those features that make digital art super-convenient."
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:24
+msgid "In traditional art, it is not uncommon to first draw the full background before drawing the subject. Or to first draw a line art and then color it in. Computers have a similar way of working."
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:26
+msgid "In programming, if you tell a computer to draw a red circle, and then afterwards tell it to draw a smaller yellow circle, you will see the small yellow circle overlap the red circle. Switch the commands around, and you will not see the yellow circle at all: it was drawn before the red circle and thus ‘behind’ it."
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:28
+msgid "This is referred to as the “drawing order”. So like the traditional artist, the computer will first draw the images that are behind everything, and layer the subject and foreground on top of it. The layer docker is a way for you to control the drawing order of multiple images, so for example, you can have your line art drawn later than your colors, meaning that the lines will be drawn over the colors, making it easier to make it neat!"
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:30
+msgid "Other things that a layer stack can do are blending the colors of different layers differently with blending modes, using a filter in the layer stack, or using a mask that allows you to make parts transparent."
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:32
+msgid "Programmers talk about transparency as ''Alpha'', which is because the 'a' symbol is used to present transparency in the algorithms for painting one color on top of another. Usually when you see the word ''Alpha'' in a graphics program, just think of it as affecting the transparency."
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:35
+msgid "Preparing your line art"
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:37
+msgid "Put the new layer underneath the layer containing the line art (drag and drop or use the up/down arrows for that), and draw on it."
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:None
+msgid "Layer structure for flatting in krita."
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:42
+msgid "…And notice nothing happening. This is because the white isn’t transparent. You wouldn’t really want it to either, how else would you make convincing highlights? So what we first need to do to color in our drawing is prepare our line art. There’s several methods of doing so, each with varying qualities."
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:45
+msgid "The Multiply Blending Mode"
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:47
+msgid "So, typically, to get a black and white line art usable for coloring, you can set the blending mode of the line art layer to Multiply. You do this by selecting the layer and going to the drop-down that says **Normal** and setting that to **Multiply**."
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:None
+msgid "Blend mode setup of line art flat coloring."
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:52
+msgid "And then you should be able to see your colors!"
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:54
+msgid "Multiply is not a perfect solution however. For example, if through some image editing magic I make the line art blue, it results into this:"
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:None
+msgid "Effects of multiply blend mode."
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:59
+msgid "This is because multiply literally multiplies the colors. So it uses maths!"
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:61
+msgid "What it first does is take the values of the RGB channels, then divides them by the max (because we're in 8bit, this is 255), a process we call normalising. Then it multiplies the normalized values. Finally, it takes the result and multiplies it with 255 again to get the result values."
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:67
+msgid "Pink"
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:68
+msgid "Pink (normalized)"
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:69
+#: ../../tutorials/flat-coloring.rst:87
+msgid "Blue"
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:70
+msgid "Blue (normalized)"
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:71
+msgid "Normalized, multiplied"
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:72
+msgid "Result"
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:73
+msgid "Red"
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:74
+msgid "222"
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:75
+msgid "0.8705"
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:76
+msgid "92"
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:77
+msgid "0.3607"
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:78
+msgid "0.3139"
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:79
+msgid "80"
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:80
+msgid "Green"
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:81
+msgid "144"
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:82
+msgid "0.5647"
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:83
+msgid "176"
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:84
+msgid "0.6902"
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:85
+msgid "0.3897"
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:86
+msgid "99"
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:88
+msgid "123"
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:89
+msgid "0.4823"
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:90
+msgid "215"
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:91
+msgid "0.8431"
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:92
+msgid "0.4066"
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:93
+msgid "103"
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:95
+msgid "This isn't completely undesirable, and a lot of artists use this effect to add a little richness to their colors."
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:98
+#: ../../tutorials/flat-coloring.rst:127
+#: ../../tutorials/flat-coloring.rst:154
+#: ../../tutorials/flat-coloring.rst:173
+#: ../../tutorials/flat-coloring.rst:210
+#: ../../tutorials/flat-coloring.rst:247
+#: ../../tutorials/flat-coloring.rst:275
+#: ../../tutorials/flat-coloring.rst:313
+msgid "Advantages"
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:100
+msgid "Easy, can work to your benefit even with colored lines by softening the look of the lines while keeping nice contrast."
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:103
+#: ../../tutorials/flat-coloring.rst:132
+#: ../../tutorials/flat-coloring.rst:159
+#: ../../tutorials/flat-coloring.rst:178
+#: ../../tutorials/flat-coloring.rst:215
+#: ../../tutorials/flat-coloring.rst:252
+#: ../../tutorials/flat-coloring.rst:280
+#: ../../tutorials/flat-coloring.rst:318
+msgid "Disadvantages"
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:105
+msgid "Not actually transparent. Is a little funny with colored lines."
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:108
+msgid "Using Selections"
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:110
+msgid "The second method is one where we'll make it actually transparent. In other programs this would be done via the channel docker, but Krita doesn't do custom channels, instead it uses Selection Masks to store custom selections."
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:112
+msgid "Duplicate your line art layer."
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:114
+msgid "Convert the duplicate to a selection mask. |mouseright| the layer, then :menuselection:`Convert --> to Selection Mask`."
+msgstr ""
+
+#: ../../<rst_epilog>:4
+#: ../../<rst_epilog>:4
+#: ../../<rst_epilog>:4
+#: ../../<rst_epilog>:4
+msgid "mouseright"
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:118
+msgid "Invert the selection mask. :menuselection:`Select --> Invert Selection`."
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:120
+msgid "Make a new layer, and do :menuselection:`Edit --> Fill with Foreground Color`."
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:124
+msgid "And you should now have the line art on a separate layer."
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:129
+msgid "Actual transparency."
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:134
+msgid "Doesn't work when the line art is colored."
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:137
+msgid "Using Masks"
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:139
+msgid "This is a simpler variation of the above."
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:141
+msgid "Make a filled layer underneath the line art layer."
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:145
+msgid "Convert the line art layer to a transparency mask |mouseright| the layer, then :menuselection:`Convert --> to Transparency Mask`."
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:149
+msgid "Invert the transparency mask by going to :menuselection:`Filter --> Adjust --> Invert`."
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:156
+msgid "Actual transparency. You can also very easily doodle a pattern on the filled layer where the mask is on without affecting the transparency."
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:161
+msgid "Doesn't work when the line art is colored already. We can still get faster."
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:164
+msgid "Using Color to Alpha"
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:166
+msgid "By far the fastest way to get transparent line art."
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:168
+msgid "Select the line art layer and apply the :guilabel:`Filter: Color to Alpha` dialog under :menuselection:`Filters --> Colors --> Color to Alpha...` menu item. The default values should be sufficient for line art."
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:175
+msgid "Actual transparency. Works with colored line art as well, because it removes the white specifically."
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:180
+msgid "You'll have to lock the layer transparency or separate out the alpha via the right-click menu if you want to easily color it."
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:184
+msgid "Coloring the image"
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:186
+msgid "Much like preparing the line art, there are many different ways of coloring a layer."
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:188
+msgid "You could for example fill in everything by hand, but while that is very precise it also takes a lot of work. Let's take a look at the other options, shall we?"
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:191
+msgid "Fill Tool"
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:None
+msgid "Fill-tool icon."
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:196
+msgid "In most cases the fill-tool can’t deal with the anti-aliasing (the soft edge in your line art to make it more smooth when zoomed out) In Krita you have the grow-shrink option. Setting that to say… 2 expands the color two pixels."
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:198
+msgid "Threshold decides when the fill-tool should consider a different color pixel to be a border. And the feathering adds an extra soft border to the fill."
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:200
+msgid "Now, if you click on a gapless-part of the image with your preferred color… (Remember to set the opacity to 1.0!)"
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:202
+msgid "Depending on your line art, you can do flats pretty quickly. But setting the threshold low can result in little artifacts around where lines meet:"
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:None
+msgid "Colors filled with fill tool."
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:207
+msgid "However, setting the threshold high can end with the fill not recognizing some of the lighter lines. Besides these little artifacts can be removed with the brush easily."
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:212
+msgid "Pretty darn quick depending on the available settings."
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:217
+msgid "Again, not great with gaps or details. And it works best with aliased line art."
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:220
+msgid "Selections"
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:222
+msgid "Selections work using the selection tools."
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:None
+msgid "Selecting with selection tools for filling color."
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:227
+msgid "For example with the :ref:`bezier_curve_selection_tool` you can easily select a curved area, and the with :kbd:`Shift +` |mouseleft| (not |mouseleft| :kbd:`+ Shift`, there's a difference!) you can easily add to an existing selection."
+msgstr ""
+
+#: ../../<rst_epilog>:2
+#: ../../<rst_epilog>:2
+msgid "mouseleft"
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:None
+msgid "Selection mask in Krita."
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:232
+msgid "You can also edit the selection if you have :menuselection:`Select --> Show Global Selection Mask` turned on. Then you can select the global selection mask, and paint on it. (Above with the alternative selection mode, activated in the lower-left corner of the stats bar)"
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:234
+msgid "When done, select the color you want to fill it with and press the :kbd:`Shift + Backspace` shortcut."
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:None
+msgid "Filling color in selection."
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:239
+msgid "You can save selections in selection masks by |mouseright| a layer, and then going to :menuselection:`Add --> Local Selection`. You first need to deactivate a selection by pressing the circle before adding a new selection."
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:241
+msgid "This can serve as an alternative way to split out different parts of the image, which is good for more painterly pieces:"
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:None
+msgid "Result of coloring made with the help of selection tools."
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:249
+msgid "A bit more precise than filling."
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:254
+msgid "Previewing your color isn't as easy."
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:257
+msgid "Geometric tools"
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:259
+msgid "So you have a tool for making rectangles or circles. And in the case of Krita, a tool for bezier curves. Select the path tool (|path tool|), and set the tool options to fill=foreground and outline=none. Make sure that your opacity is set to 1.00 (fully opaque)."
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:262
+msgid "path tool"
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:264
+msgid "By clicking and holding, you can influence how curvy a line draw with the path tool is going to be. Letting go of the mouse button confirms the action, and then you’re free to draw the next point."
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:None
+msgid "Filling color in line art using path tool."
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:269
+msgid "You can also erase with a geometric tool. Just press the :kbd:`E` key or the eraser button."
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:None
+msgid "Erasing with path tool."
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:277
+msgid "Quicker than using the brush or selections. Also decent with line art that contains gaps."
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:282
+msgid "Fiddly details aren’t easy to fill in with this. So I recommend skipping those and filling them in later with a brush."
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:285
+msgid "Colorize Mask"
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:287
+msgid "So it works like this:"
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:289
+msgid "Select the colorize mask tool."
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:290
+msgid "Tick the layer you're using."
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:291
+msgid "Paint the colors you want to use on the colorize mask."
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:292
+msgid "Click update to see the results:"
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:None
+msgid "Coloring with colorize mask."
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:297
+msgid "When you are satisfied, |mouseright| the colorize mask, and go to :menuselection:`Convert --> Paint Layer`. This will turn the colorize mask to a generic paint layer. Then, you can fix the last issues by making the line art semi-transparent and painting the flaws away with a pixel art brush."
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:None
+msgid "Result from the colorize mask."
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:302
+msgid "Then, when you are done, split the layers via :menuselection:`Layer --> Split --> Split Layer`. There are a few options you can choose, but the following should be fine:"
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:None
+msgid "Slitting colors into islands."
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:307
+msgid "Finally, press **Ok** and you should get the following. Each color patch it on a different layer, named by the palette in the menu and alpha locked, so you can start painting right away!"
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:None
+msgid "Resulting color islands from split layers."
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:315
+msgid "Works with anti-aliased line art. Really quick to get the base work done. Can auto-close gaps."
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:320
+msgid "No anti-aliasing of its own. You have to choose between getting details right or the gaps auto-closed."
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:323
+msgid "Conclusion"
+msgstr ""
+
+#: ../../tutorials/flat-coloring.rst:325
+msgid "I hope this has given you a good idea of how to fill in flats using the various techniques, as well as getting a hand of different Krita features. Remember that a good flat filled line art is better than a badly shaded one, so keep practicing to get the best out of these techniques!"
+msgstr ""

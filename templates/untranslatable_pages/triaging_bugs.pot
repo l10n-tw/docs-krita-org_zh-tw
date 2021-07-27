@@ -1,0 +1,379 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) licensed under the GNU Free Documentation License 1.3+ unless stated otherwise
+# This file is distributed under the same license as the Krita Manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Krita Manual 5.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-07-19 22:30+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../untranslatable_pages/triaging_bugs.rst:1
+msgid "Guide to bugtriaging."
+msgstr ""
+
+#: ../../untranslatable_pages/triaging_bugs.rst:14
+msgid "Triaging Bugs"
+msgstr ""
+
+#: ../../untranslatable_pages/triaging_bugs.rst:16
+msgid "There are over 1000 bugs and 350 wishes reported against Krita per year, and that number is rising. The Krita developers cannot handle that stream on their own! Please consider helping out by triaging bugs. This document gives some simple guidelines to get started, and some common cases that can often be answered with a standard text."
+msgstr ""
+
+#: ../../untranslatable_pages/triaging_bugs.rst:19
+msgid "For more details, see also https://community.kde.org/Guidelines_and_HOWTOs/Bug_triaging"
+msgstr ""
+
+#: ../../untranslatable_pages/triaging_bugs.rst:21
+msgid "Contents"
+msgstr ""
+
+#: ../../untranslatable_pages/triaging_bugs.rst:24
+msgid "Status flow"
+msgstr ""
+
+#: ../../untranslatable_pages/triaging_bugs.rst:26
+msgid "A bug begins as ``UNCONFIRMED``. When triaging, only ``UNCONFIRMED`` bugs are still relevant."
+msgstr ""
+
+#: ../../untranslatable_pages/triaging_bugs.rst:29
+msgid "Platform"
+msgstr ""
+
+#: ../../untranslatable_pages/triaging_bugs.rst:31
+msgid "If the user has not entered the Platform correctly (i.e., it is \"unspecified/Linux\"), then ask which platform they are using. Mark the bug as ``NEEDDINFO/WAITINFORINFO``."
+msgstr ""
+
+#: ../../untranslatable_pages/triaging_bugs.rst:33
+#: ../../untranslatable_pages/triaging_bugs.rst:43
+#: ../../untranslatable_pages/triaging_bugs.rst:68
+#: ../../untranslatable_pages/triaging_bugs.rst:78
+#: ../../untranslatable_pages/triaging_bugs.rst:161
+#: ../../untranslatable_pages/triaging_bugs.rst:181
+msgid "Tell the user:"
+msgstr ""
+
+#: ../../untranslatable_pages/triaging_bugs.rst:35
+msgid "Please indicate your operating system correctly. For Linux, select the distribution, AppImage or compiled from sources and Linux, for Windows, select MS Windows/MS Windows, for macOS or macOS, select macports, disk images or homebrew and macOS."
+msgstr ""
+
+#: ../../untranslatable_pages/triaging_bugs.rst:37
+msgid "If the user has selected Windows CE for platform, set it to MS Windows without asking them."
+msgstr ""
+
+#: ../../untranslatable_pages/triaging_bugs.rst:40
+msgid "Version"
+msgstr ""
+
+#: ../../untranslatable_pages/triaging_bugs.rst:41
+msgid "If the user has not entered the version (i.e., the version is unspecified), ask them for the version and mark the bug as ``NEEDDINFO/WAITINFORINFO``."
+msgstr ""
+
+#: ../../untranslatable_pages/triaging_bugs.rst:45
+msgid "Please select the version of Krita you are using. You can find the version in Help/About Krita."
+msgstr ""
+
+#: ../../untranslatable_pages/triaging_bugs.rst:49
+msgid "Can Reproduce"
+msgstr ""
+
+#: ../../untranslatable_pages/triaging_bugs.rst:51
+msgid "If you can reproduce the bug, add a comment indicating you can reproduce it, maybe with clearer steps to reproduce and anything pertinent that you observed. If you have a backtrace, also add it. Set the bug status to ``CONFIRMED`` and add the ``triaged`` keyword to the keywords."
+msgstr ""
+
+#: ../../untranslatable_pages/triaging_bugs.rst:52
+msgid "If you can reproduce the bug, and want to go the extra mile, use an older version of Krita to see whether you could reproduce it there as well. If you couldn't, it's a *regression*, so add the regression keyword to the keywords and mark which version of Krita the latest was that did not have the bug."
+msgstr ""
+
+#: ../../untranslatable_pages/triaging_bugs.rst:55
+msgid "Cannot Reproduce"
+msgstr ""
+
+#: ../../untranslatable_pages/triaging_bugs.rst:57
+msgid "If you cannot reproduce, the user either has not given enough information or the bug is specific to their system."
+msgstr ""
+
+#: ../../untranslatable_pages/triaging_bugs.rst:59
+msgid "If there is not enough information, ask for more information. Depending on the report, the steps to reproduce might need to be described more clearly and/or a screenshot, a screen recording or the original files might be necessary. Set text (ask for what you think is needed):"
+msgstr ""
+
+#: ../../untranslatable_pages/triaging_bugs.rst:61
+#: ../../untranslatable_pages/triaging_bugs.rst:149
+#: ../../untranslatable_pages/triaging_bugs.rst:170
+#: ../../untranslatable_pages/triaging_bugs.rst:192
+#: ../../untranslatable_pages/triaging_bugs.rst:201
+msgid "Ask the user:"
+msgstr ""
+
+#: ../../untranslatable_pages/triaging_bugs.rst:63
+msgid "I am sorry, I cannot reproduce your issue. Could you specify the steps to reproduce more clearly, and maybe add a screen recording/screenshot/original file"
+msgstr ""
+
+#: ../../untranslatable_pages/triaging_bugs.rst:65
+#: ../../untranslatable_pages/triaging_bugs.rst:72
+msgid "Mark the bug as ``NEEDINFO/WAITINGFORINFO``."
+msgstr ""
+
+#: ../../untranslatable_pages/triaging_bugs.rst:66
+msgid "If the issue seems to be specific to the user's system, ask for the output of help/System information for bug reports as well. Set text:"
+msgstr ""
+
+#: ../../untranslatable_pages/triaging_bugs.rst:70
+msgid "I am sorry, but I cannot reproduce the bug on my system. Please add the output of help/System Information for Bug reports as well."
+msgstr ""
+
+#: ../../untranslatable_pages/triaging_bugs.rst:75
+msgid "Importance"
+msgstr ""
+
+#: ../../untranslatable_pages/triaging_bugs.rst:76
+msgid "Importance is a tool for developers, not for bug reports. It's developers and triagers who decide what the importance is. If a bug reporter complains about a change in importance, use this text:"
+msgstr ""
+
+#: ../../untranslatable_pages/triaging_bugs.rst:80
+msgid "I am sorry, but the importance field is a tool for the developers to work with. Please do not change the importance back."
+msgstr ""
+
+#: ../../untranslatable_pages/triaging_bugs.rst:82
+msgid "There are the following Importances:"
+msgstr ""
+
+#: ../../untranslatable_pages/triaging_bugs.rst:84
+msgid "Critical:"
+msgstr ""
+
+#: ../../untranslatable_pages/triaging_bugs.rst:85
+msgid "the bug leads to immediate dataloss. Example: a saved file cannot be opened in Krita"
+msgstr ""
+
+#: ../../untranslatable_pages/triaging_bugs.rst:86
+msgid "Grave:"
+msgstr ""
+
+#: ../../untranslatable_pages/triaging_bugs.rst:87
+msgid "shouldn't be used, it doesn't mean a thing"
+msgstr ""
+
+#: ../../untranslatable_pages/triaging_bugs.rst:88
+msgid "Major:"
+msgstr ""
+
+#: ../../untranslatable_pages/triaging_bugs.rst:89
+msgid "it's a bug, but it's kinda important."
+msgstr ""
+
+#: ../../untranslatable_pages/triaging_bugs.rst:90
+msgid "Crash:"
+msgstr ""
+
+#: ../../untranslatable_pages/triaging_bugs.rst:91
+msgid "the bug is about a crash or an assert [1]_"
+msgstr ""
+
+#: ../../untranslatable_pages/triaging_bugs.rst:92
+msgid "Normal:"
+msgstr ""
+
+#: ../../untranslatable_pages/triaging_bugs.rst:93
+msgid "it's a bug"
+msgstr ""
+
+#: ../../untranslatable_pages/triaging_bugs.rst:94
+msgid "Minor:"
+msgstr ""
+
+#: ../../untranslatable_pages/triaging_bugs.rst:95
+msgid "it's a bug, but it's kinda unimportant"
+msgstr ""
+
+#: ../../untranslatable_pages/triaging_bugs.rst:96
+msgid "Wish:"
+msgstr ""
+
+#: ../../untranslatable_pages/triaging_bugs.rst:97
+msgid "it's a feature request"
+msgstr ""
+
+#: ../../untranslatable_pages/triaging_bugs.rst:99
+msgid "Task:"
+msgstr ""
+
+#: ../../untranslatable_pages/triaging_bugs.rst:99
+msgid "not used."
+msgstr ""
+
+#: ../../untranslatable_pages/triaging_bugs.rst:101
+msgid "The main difference is between Wish and the rest: Wishes are feature requests, and don't need immediate triaging. A wish bug is a bug that asks whether some functionality can be added to Krita, or complains that some functionality is missing."
+msgstr ""
+
+#: ../../untranslatable_pages/triaging_bugs.rst:103
+msgid "The rest are bugs, that is, problems in Krita that can be fixed by changing Krita's code."
+msgstr ""
+
+#: ../../untranslatable_pages/triaging_bugs.rst:105
+msgid "However, we also get many reports that are not bugs and not wishes: reports that are basically users asking for help because they do not understand Krita or their computer, or what a file is, or that Krita isn't the same application as Photoshop. Those reports need to be weeded out, and the status set to ``INVALID``."
+msgstr ""
+
+#: ../../untranslatable_pages/triaging_bugs.rst:108
+msgid "Guidance for using Importance"
+msgstr ""
+
+#: ../../untranslatable_pages/triaging_bugs.rst:110
+msgid "If you encounter a bug that reports dataloss when loading a saved file, set it to critical."
+msgstr ""
+
+#: ../../untranslatable_pages/triaging_bugs.rst:111
+msgid "If you encounter a bug that reports a crash or an assert but is not set to crash, set it to crash."
+msgstr ""
+
+#: ../../untranslatable_pages/triaging_bugs.rst:112
+msgid "If you encounter a report that asks for functionality that is not currently present, set it to wish."
+msgstr ""
+
+#: ../../untranslatable_pages/triaging_bugs.rst:113
+msgid "If you encounter a report that is a user request, check whether you can reply with a link to the faq (https://docs.krita.org/en/KritaFAQ.html), and maybe a canned answer, and change the status of the bug to ``INVALID``."
+msgstr ""
+
+#: ../../untranslatable_pages/triaging_bugs.rst:116
+msgid "Asserts and Crashes"
+msgstr ""
+
+#: ../../untranslatable_pages/triaging_bugs.rst:118
+msgid "**Crash or assert.**"
+msgstr ""
+
+#: ../../untranslatable_pages/triaging_bugs.rst:120
+msgid "These are different things. A crash happens when Krita spontaneously stops working *or* hangs. An assert happens when Krita stops working because we, developers, have added some code to detect an invalid state."
+msgstr ""
+
+#: ../../untranslatable_pages/triaging_bugs.rst:122
+msgid "Asserts are printed to the terminal or shown in a popup window. You can identify an assert by asking for terminal output, debugview output or by checking the backtrace, if there is one."
+msgstr ""
+
+#: ../../untranslatable_pages/triaging_bugs.rst:124
+msgid "If the backtrace contains a line like::"
+msgstr ""
+
+#: ../../untranslatable_pages/triaging_bugs.rst:126
+msgid "> SAFE ASSERT (krita): \"!sanityCheckPointer.isValid()\" in file /tmp/nix-build-krita-4.0.0-pre2c.drv-0/krita-1b1695a/libs/ui/KisDocument.cpp, line 490"
+msgstr ""
+
+#: ../../untranslatable_pages/triaging_bugs.rst:128
+msgid "Or another mention of assert, Q_ASSERT or similar, it's an assert, not a crash."
+msgstr ""
+
+#: ../../untranslatable_pages/triaging_bugs.rst:131
+msgid "Canned Answers and Recognizing Common Reports"
+msgstr ""
+
+#: ../../untranslatable_pages/triaging_bugs.rst:133
+msgid "We get a lot of duplicate bug reports. Sometimes it's clear that it's a duplicate, and you can mark it a such. In all cases, we want to give the reporter useful information so they can solve their problems. Of course, (almost) all solutions are also in the FAQ, but just pointing people to the FAQ is often considered impolite."
+msgstr ""
+
+#: ../../untranslatable_pages/triaging_bugs.rst:135
+msgid "So, do never reply to a bug report with:"
+msgstr ""
+
+#: ../../untranslatable_pages/triaging_bugs.rst:137
+msgid "\"Just read the FAQ.\""
+msgstr ""
+
+#: ../../untranslatable_pages/triaging_bugs.rst:139
+msgid "It takes a bit of experience to recognize a bug from an often incomplete description. Here are a couple of common cases:"
+msgstr ""
+
+#: ../../untranslatable_pages/triaging_bugs.rst:142
+msgid "Cannot Save"
+msgstr ""
+
+#: ../../untranslatable_pages/triaging_bugs.rst:144
+msgid "For instance: \"I cannot save/my file doesn't get saved/it says it cannot copy the file\""
+msgstr ""
+
+#: ../../untranslatable_pages/triaging_bugs.rst:147
+msgid "This happens most often on Windows, if the user has got any security software installed that doesn't come with Windows. Examples are Sandboxie, Totaldefender, or others. Mark the bug as ``NEEDSINFO/WAITINGFORINFO`` and add this text:"
+msgstr ""
+
+#: ../../untranslatable_pages/triaging_bugs.rst:151
+msgid "Are you using Windows? If so, do you have any non-standard security software installed such as Total Defender, Sandboxie or XXX? Please make an exception for Krita in the settings, or uninstall this software. Since Windows 10, it is no longer necessary to have any security software installed other than what comes with Windows."
+msgstr ""
+
+#: ../../untranslatable_pages/triaging_bugs.rst:153
+msgid "If the user replies that they are using extra security software, close the bug as ``RESOLVED/INVALID``."
+msgstr ""
+
+#: ../../untranslatable_pages/triaging_bugs.rst:156
+msgid "Broken Canvas"
+msgstr ""
+
+#: ../../untranslatable_pages/triaging_bugs.rst:159
+msgid "This happens on Windows. Symptoms will be: the canvas is black, the canvas stays blank, the canvas only updates when the user clicks outside the canvas. Mark the bug as a duplicate of https://bugs.kde.org/show_bug.cgi?id=360601, and add the following text:"
+msgstr ""
+
+#: ../../untranslatable_pages/triaging_bugs.rst:163
+msgid "You probably are using a Windows system with an Intel display chip. Please update to Krita 3.3.3, which enables the Direct3D (Angle) renderer by default. If you do not want to update, check https://docs.krita.org/en/KritaFAQ.html#krita-starts-with-an-empty-canvas-and-nothing-changes-when-you-try-to-draw-or-krita-shows-a-black-or-blank-screen-or-krita-crashes-when-creating-a-document-or-krita-s-menubar-is-hidden-on-a-windows-system-with-an-intel-gpu"
+msgstr ""
+
+#: ../../untranslatable_pages/triaging_bugs.rst:166
+msgid "My stylus has an offset"
+msgstr ""
+
+#: ../../untranslatable_pages/triaging_bugs.rst:168
+msgid "This happens on Windows. Symptoms will be: the user reports that the stylus cursor has an offset or moves the cursor on another screen. Usually, the user will have a misconfigured multi-monitor system. Mark the bug as ``NEEDSINFO/WAITINGFORINFO`` and ask the user:"
+msgstr ""
+
+#: ../../untranslatable_pages/triaging_bugs.rst:172
+msgid "Do you have a multi-monitor setup? If so, this is a configuration issue. Please reset your tablet driver's configuration and Krita's configuration (https://docs.krita.org/en/KritaFAQ.html#resetting-krita-configuration). If you have a single-monitor setup, then please calibrate your tablet."
+msgstr ""
+
+#: ../../untranslatable_pages/triaging_bugs.rst:174
+msgid "If the user checks back and tells us the problems are solved, mark the bug as ``RESOLVED/UPSTREAM``."
+msgstr ""
+
+#: ../../untranslatable_pages/triaging_bugs.rst:177
+msgid "Other tablet issues"
+msgstr ""
+
+#: ../../untranslatable_pages/triaging_bugs.rst:179
+msgid "Often, the user will tell you that their tablet will work perfectly with another application. This is not relevant."
+msgstr ""
+
+#: ../../untranslatable_pages/triaging_bugs.rst:183
+msgid "Windows tablet drivers often have a special code for different applications. Whether an application works or not depends on whether the programmers have tested their driver with an application or not. Tablet issues are almost always caused by the drivers being broken."
+msgstr ""
+
+#: ../../untranslatable_pages/triaging_bugs.rst:186
+msgid "Krita lags"
+msgstr ""
+
+#: ../../untranslatable_pages/triaging_bugs.rst:188
+msgid "The word \"lag\" is meaningless. Complaints about \"lag\" are not bug reports. However, we should help the complainer."
+msgstr ""
+
+#: ../../untranslatable_pages/triaging_bugs.rst:190
+msgid "Mark the bug as ``NEEDSINFO/WAITINGFORINFO`` and ask the user:"
+msgstr ""
+
+#: ../../untranslatable_pages/triaging_bugs.rst:194
+msgid "Have you enabled the stabilizer? Check the tool options panel for the freehand tool. Also check the other possibilities mentioned here: https://docs.krita.org/en/KritaFAQ.html#krita-is-slow"
+msgstr ""
+
+#: ../../untranslatable_pages/triaging_bugs.rst:197
+msgid "I cannot paint at all, in a particular document"
+msgstr ""
+
+#: ../../untranslatable_pages/triaging_bugs.rst:199
+msgid "The user probably created, accidentally, a tiny selection, and saved that with the document. Mark as ``NEEDSINFO/WAITINGFORINFO`` and ask them:"
+msgstr ""
+
+#: ../../untranslatable_pages/triaging_bugs.rst:203
+msgid "Do you have a selection saved with that document? Use select/deselect on your image and check whether you can paint again. If not, please attach the ``.kra`` document to this bug report or make it available."
+msgstr ""

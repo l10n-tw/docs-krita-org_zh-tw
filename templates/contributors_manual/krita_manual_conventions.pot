@@ -1,0 +1,979 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) licensed under the GNU Free Documentation License 1.3+ unless stated otherwise
+# This file is distributed under the same license as the Krita Manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Krita Manual 5.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-07-27 21:21+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../contributors_manual/krita_manual_conventions.rst:1
+msgid "reStructuredText conventions for the Krita Manual."
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:16
+msgid "Mark-up conventions for the Krita Manual"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:18
+msgid "This details the style conventions for using restructured text for the Krita Manual."
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:20
+msgid "It's recommended to look over the `official specification <http://docutils.sourceforge.net/rst.html>`_ for reStructuredText, and given it lives on sourceforge, to save a copy to your harddrive (sourceforge has, at this time of writing, some issues with server uptime):"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:24
+msgid "User Manual:"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:23
+msgid "`Primer <http://docutils.sourceforge.net/docs/user/rst/quickstart.html>`_"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:24
+msgid "`Quick Ref <http://docutils.sourceforge.net/docs/user/rst/quickref.html>`_"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:25
+msgid "`Text Cheatsheet <http://docutils.sourceforge.net/docs/user/rst/cheatsheet.txt>`_"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:29
+msgid "Reference Documentation:"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:27
+msgid "`Introduction <http://docutils.sourceforge.net/docs/ref/rst/introduction.html>`_"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:28
+msgid "`Markup <http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html>`_"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:29
+msgid "`Directives <http://docutils.sourceforge.net/docs/ref/rst/directives.html>`_"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:30
+msgid "`Roles <http://docutils.sourceforge.net/docs/ref/rst/roles.html>`_"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:32
+msgid "Sphinx specific docs:"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:32
+msgid "`Sphinx' page on restructured text <https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html>`_ -- This is useful for the specific sphinx directives and roles it uses to generate for example table of contents."
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:34
+msgid "There are differences between the official reStructuredText and the sphinx docs multiple ways to do things. This document specifies the suggested conventions to go with."
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:36
+msgid "Contents"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:39
+msgid "Meta data"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:41
+msgid "Each page should start with the following three things:"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:49
+msgid "A meta description"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:44
+msgid "This is a general description of the page. It will be converted to an html meta tag which will be used by search engines::"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:46
+msgid ".. meta::\n"
+"    :description:\n"
+"        Description."
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:58
+msgid "A list of authors and a license."
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:52
+msgid "This is just to keep track of who edited the page and to give credit. It should be in a comment so that it will not end up being easily readable by machines. The license of the whole manual is GDL 1.3 and should also be mentioned here::"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:54
+msgid ".. metadata-placeholder\n"
+"\n"
+"   :authors: - Author 1\n"
+"             - Author 2\n"
+"   :license: GNU free documentation license 1.3 or later."
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:63
+msgid "Indexing terms."
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:61
+msgid "These are comma-separated terms under which the page will be indexed in :ref:`genindex`. The generated index is quite useful for both PDF as well as people who are not sure what the exact name is of the term they are looking for. They are defined as follows::"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:63
+msgid ".. index:: Keyword, Keyword with Spaces, ! Main Definition Keyword"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:71
+msgid "A label."
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:66
+msgid "This is so we can easily link to the page using ``:ref:`label_name```. Try to make this a nice variable name::"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:68
+msgid ".. _label_name:"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:70
+msgid "After the label you will need to add a heading, as ``:ref:`label_name``` will refer to the heading to fill out its link-text."
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:74
+msgid "Headings"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:76
+msgid "Headings will be done in the following order::"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:78
+msgid "############\n"
+"Part/Section\n"
+"############\n"
+"\n"
+"For pages that have a lot of subpages.\n"
+"\n"
+"=========\n"
+"Heading 1\n"
+"=========\n"
+"\n"
+"Start most manual pages with this.\n"
+"\n"
+"Heading 2\n"
+"---------\n"
+"\n"
+"Heading 3\n"
+"~~~~~~~~~\n"
+"\n"
+"Heading 4\n"
+"^^^^^^^^^\n"
+"\n"
+"Heading 5\n"
+"'''''''''\n"
+"\n"
+"Heading 6\n"
+"\"\"\"\"\"\"\"\"\""
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:105
+msgid "These conventions were more or less decided by `Pandoc <https://pandoc.org/>`_'s mediawiki to reStructuredText conversion. If you need more than 4 headings, ask yourself first if the page hasn't gotten too complicated and needs splitting up."
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:107
+msgid "Sometimes you need to link to a subsection of a page, add a label above the heading in that case."
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:109
+msgid "Headers should not end with punctuation, as the header will be used as the link name when linking to a label."
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:112
+msgid "Linking"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:114
+msgid "Linking is done with ``:ref:`label_name```. When you need an alternative link text, you use ``:ref:`actual text shown <label_name>```."
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:116
+msgid "Linking to external pages is done with ```url`_`` and ```link name <url>`_``, which'll become `link name <url>`_."
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:118
+msgid "`Pandoc <https://pandoc.org/>`_ likes to turn these into ```link name`__`` and then add ``.. __ :url`` at the end of the document. This is a so-called 'anonymous hyperlink', meaning that depending on the order of the links appearing in the text the order of the links at the end of the text are associated with one another. If this sounds confusing and difficult, it is because it is. That is also the exact reason why we'd like to avoid links like these."
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:121
+msgid "Footnotes and further reading"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:123
+msgid "Footnotes can be made in 3 ways, the most common one is with autonumbering, as per reference:"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:125
+msgid "[#]_ is a reference to footnote 1, and [#]_ is a reference to footnote 2."
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:128
+msgid "This is footnote 1."
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:129
+msgid "This is footnote 2."
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:130
+msgid "This is footnote 3."
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:132
+msgid "[#]_ is a reference to footnote 3."
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:134
+msgid "Here is a citation reference: [CIT2002]_ ."
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:136
+msgid "This is the citation.  It's just like a footnote, except the label is textual."
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:139
+msgid "Citation can also be referenced with ```citation <CIT2002>`_``."
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:141
+msgid "We don't actually use footnotes in the manual due to the fact that it is a little bit too academical for our readers. However, we do collect documents and links that give a little bit more information on a topic at the end of a page. Sphinx has the ``.. seealso::`` directive for linking to external links, while reStructuredText suggests to use ``.. rubic:: Footnotes`` for specifically collecting footnotes as that plays nice with LaTeX."
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:145
+msgid "Images"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:147
+msgid "Use the image directive for images without captions::"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:149
+msgid ".. image:: /images/sample.png\n"
+"   :width: 800\n"
+"   :align: center\n"
+"   :alt: an image."
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:154
+msgid "And figure directives for images with captions::"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:156
+msgid ".. figure:: /images/sample.png\n"
+"   :figwidth: 800\n"
+"   :align: center\n"
+"   :alt: an image.\n"
+"\n"
+"   A caption --  notice how the first letter is aligned with the :figwidth: option."
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:163
+msgid "The latter gives:"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:0
+msgid "an image."
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:170
+msgid "A caption --  notice how the first letter of the caption in the directive is aligned with the :figwidth: option."
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:172
+msgid "Images should go into the ``/images`` folder. By using ``/images`` instead of ``images``, sphinx will know the filepath isn't relative."
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:175
+msgid "In-text Markup"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:177
+msgid "You can make text *emphasized* and **strong** with a single asterisk and double respectively::"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:179
+msgid "*emphasize*\n"
+"**strong**"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:182
+msgid "You cannot do both ***emphasized and strong***, so take a pick."
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:184
+msgid "You can :sub:`subscript text` and :sup:`superscript text` by using ``:sub:`text``` and ``:sup:`text```."
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:186
+msgid "However, use these super-sparingly! It is preferred to use the existing semantic markup in sphinx in any case, because that makes it easier for translators to make decisions about the nature of the text::"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:188
+msgid ":menuselection:`Settings --> Configure Krita...`\n"
+":guilabel:`File`\n"
+":kbd:`Ctrl + Z`\n"
+":program:`Krita`"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:193
+msgid "Avoid randomly bolding words. It does *not* make the text easier or friendlier to read."
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:196
+msgid "Substitution References"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:198
+msgid "You can create a sort of shorthand for a piece of text or an image by doing::"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:200
+msgid ".. |shorthand| replace:: something or the other."
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:202
+msgid "which means that if you use ``|shorthand|``, in the text, it'll be replaced with 'something or the other'. This is useful for images and text that needs to be formatted in a complicated way, like in the case of \"LaTeX\"."
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:204
+msgid "The krita documentation has ``|mouseleft|``, ``|mousemiddle|``, ``|mousescroll|`` and ``|mouseright|``, which'll turn into |mouseleft|, |mousemiddle|, |mousescroll| and |mouseright| respectively. These are defined in the sphinx conf.py, and are appended to each rst file."
+msgstr ""
+
+#: ../../<rst_epilog>:2
+msgid "mouseleft"
+msgstr ""
+
+#: ../../<rst_epilog>:6
+msgid "mousemiddle"
+msgstr ""
+
+#: ../../<rst_epilog>:8
+msgid "mousescroll"
+msgstr ""
+
+#: ../../<rst_epilog>:4
+msgid "mouseright"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:206
+msgid "For links, if you reuse the same link over and over, you can write something like the following at the end of the file::"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:208
+msgid ".. _bugzilla: https://bugs.kde.org/\n"
+".. _Krita Manual: https://docs.krita.org/"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:211
+msgid "Then, when typing a link, you can just use ```bugzilla`_`` to link to bugzilla with \"bugzilla\" used as the text of the link. ```Krita Manual`_`` will in turn link to docs.krita.org with the text \"Krita Manual\"."
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:214
+msgid "Lists"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:217
+msgid "Ordinated lists"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:219
+msgid "Apple"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:220
+msgid "Pear"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:221
+msgid "Banana"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:223
+msgid "Or..."
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:225
+msgid "Table"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:226
+msgid "Chair"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:227
+msgid "Wardrobe."
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:229
+msgid "Augustus"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:230
+msgid "Nero"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:231
+msgid "Caligula"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:232
+msgid "Trajan"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:234
+msgid "They can be defined as follows::"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:236
+msgid "1. Apple\n"
+"2. Pear\n"
+"3. Banana\n"
+"\n"
+"#. Apple\n"
+"#. Pear\n"
+"#. Banana\n"
+"\n"
+"A. Table\n"
+"B. Chair\n"
+"C. Wardrobe\n"
+"\n"
+"A. Table\n"
+"#. Chair\n"
+"#. Wardrobe\n"
+"\n"
+"I. Augustus\n"
+"#. Nero\n"
+"#. Caligula\n"
+"#. Trajan"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:258
+msgid "Unordered lists"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:260
+msgid "red"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:261
+msgid "yellow"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:269
+msgid "green"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:263
+msgid "seagreen"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:264
+msgid "verdigris"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:265
+msgid "teal"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:266
+msgid "viridian"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:269
+msgid "emerald"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:268
+msgid "dark emerald"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:269
+msgid "light emerald"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:270
+msgid "very light emerald."
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:271
+msgid "blue"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:273
+msgid "Defined as such::"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:275
+msgid "- red\n"
+"- yellow\n"
+"- green\n"
+"    - seagreen\n"
+"    - verdigris\n"
+"    - teal\n"
+"    - viridian\n"
+"    - emerald\n"
+"        - dark emerald\n"
+"        - light emerald\n"
+"            - very light emerald.\n"
+"- blue"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:289
+msgid "Definition Lists"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:291
+msgid "A favourite! Definition lists are especially useful when dealing with enumerating all the options in a docker and trying to add a simple explanation behind them."
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:293
+msgid "Definition"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:294
+#: ../../contributors_manual/krita_manual_conventions.rst:296
+msgid "Explanation."
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:296
+msgid "Another option"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:304
+msgid "To make them."
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:299
+msgid "You can make them like this::"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:301
+msgid "Definition\n"
+"    Explanation.\n"
+"Another option\n"
+"    Explanation."
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:307
+msgid "Tables"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:310
+msgid "Purpose"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:310
+msgid "Table type"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:312
+msgid "listing shortcuts"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:312
+msgid "Simple table"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:313
+msgid "lots of colspans"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:313
+msgid "Grid table"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:314
+msgid "Simple but long"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:314
+msgid "List Table"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:317
+msgid "Done as follows::"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:319
+msgid "================== ============\n"
+"Purpose            Table type\n"
+"================== ============\n"
+"listing shortcuts  Simple table\n"
+"lots of colspans   Grid table\n"
+"Simple but long    List Table\n"
+"================== ============\n"
+"\n"
+"+-----------------+------------+\n"
+"|Purpose          |Table Type  |\n"
+"+=================+============+\n"
+"|listing shortcuts|Simple table|\n"
+"+-----------------+------------+\n"
+"|lots of colspans |Grid table  |\n"
+"+-----------------+------------+\n"
+"|Simple but long  |List table  |\n"
+"+-----------------+------------+\n"
+"\n"
+".. list-table::\n"
+"   :header-rows: 1\n"
+"\n"
+"   - * Purpose\n"
+"     * Table Type\n"
+"   - * listing shortcuts\n"
+"     * simple table\n"
+"   - * lots of colspans\n"
+"     * grid table\n"
+"   - * simple but long\n"
+"     * list table"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:349
+msgid "Full grid tables are best for when you need all features like complex column and row spans, but they're tricky to make. For that reason, small tables are best off being done with the simple syntax, while really long tables are best done with a list directive because that is just much easier to write and maintain."
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:352
+msgid "Admonishments and asides"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:356
+msgid "Admonishments are sort of like a separate section that the reader needs to pay attention to."
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:358
+msgid "Admonishments that can be used are the following (in order of seriousness):"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:362
+msgid "Hints are useful to give a little bit more information on a topic than is useful in the main text. Like, \"These packages are named differently in openSuse versus Debian\"."
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:366
+msgid "Extra information on how to do something, like, \"You can make a template of your favourite document setup\", or \"Use m to mirror the canvas and see errors more easily in your drawing\"."
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:370
+msgid "Something that is important to note, but is not necessarily negative."
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:374
+msgid "This is in general when something is negative."
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:378
+msgid "General attention grabber. Use this when the subject is more important than warning, but not as important that is could get a dataloss."
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:382
+msgid "This is for things that could cause dataloss, like forgetting to save, or that Python currently has no undo functionality."
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:386
+msgid "This should be for things that are dangerous for the computer in general, this includes things that can cause out of memory style freezes."
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:390
+msgid "This one is probably not relevant for a manual. Sphinx can create these manually given some situations, but our configuration does not do so by default."
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:392
+msgid "Generic admonition that can have any text"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:394
+msgid "Text."
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:396
+msgid "You can make it like this::"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:398
+msgid ".. admonition:: Generic admonition that can have any text\n"
+"\n"
+"    Text."
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:404
+msgid "Sphinx also adds::"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:406
+msgid ".. seealso::\n"
+"\n"
+"    Which is useful to collect external links and references."
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:None
+msgid "Horizontal Rulers"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:414
+msgid "Horizontal rulers are usually used when the topic switches rather directly. This is very common in more narrative based writing, such as history or fiction. The Krita manual is more instruction and reference style writing, that is to say, we don't usually tell a long story to indicate how different elements come together, but rather long stories are there to motivate why certain steps are taken in a certain manner. Topic changes then usually happen because we go into a new section, rather than switching to a related section. It is therefore better to use headings or the ``.. Topic::`` directive. Headings also make it easier to read."
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:418
+msgid "That said, horizontal rulers can be made with ``----``."
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:421
+msgid "The rubric directive"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:422
+msgid "The rubric directive is a heading directive that at first glance looks like \"topic\", but where the topic is over several paragraphs, rubric itself only deals with the header, like so::"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:424
+msgid ".. rubric:: The rubric directive"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:428
+msgid "So, when to use these?"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:429
+msgid "Only use them when you think the subject is too minor to have a proper heading."
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:431
+msgid "Topic"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:432
+msgid "When the text is separated from the flow, so it goes into a different subject than the text itself is naturally going to."
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:433
+msgid "Rubric"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:434
+msgid "When the text isn't separated from the flow, but it does not need a header either."
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:436
+msgid "Admonishments"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:436
+msgid "Only when they fit semantically. This is especially necessary for the danger and warning admonishments, as seeing them too often can make users blind to them."
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:439
+msgid "Code Snippets"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:441
+msgid "``Inline code snippets`` are done with ````backticks````."
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:443
+msgid "Multi-line code snippets are done by ending the previous section with ``::``, which'll look like this::"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:445
+msgid "This is a paragraph, and we define a preformated snippet like so::\n"
+"\n"
+"    Be sure to add a white space and a tab afterwards before starting the snippet."
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:449
+msgid "You can also use the ``.. code::`` directive. If you add the language name after it, it'll do the appropriate syntax highlighting::"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:451
+msgid ".. code:: python\n"
+"\n"
+"    # Python comment\n"
+"    def my_function():\n"
+"        alist = []\n"
+"        alist.append(1)\n"
+"        string = \"hello world\""
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:459
+msgid "Becomes"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:461
+msgid "# Python comment\n"
+"def my_function():\n"
+"    alist = []\n"
+"    alist.append(1)\n"
+"    string = \"hello world\""
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:469
+msgid "some more..."
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:471
+msgid "// C++ comment\n"
+"int myFunction(int i) {\n"
+"    i += 1;\n"
+"\n"
+"    // Check if more than 12\n"
+"    if (i>12) {\n"
+"        i = 0;\n"
+"    }\n"
+"    return i;\n"
+"}"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:484
+msgid "/* CSS comment */\n"
+"body {\n"
+"    margin: 0 auto;\n"
+"    /* is 800 still sensible? */\n"
+"    max-width:800px;\n"
+"    font-size:16px;\n"
+"    color:#333;\n"
+"    background-color: #eee;\n"
+"    padding:1em;\n"
+"    font-family:serif;\n"
+"    line-height: 1.4;\n"
+"}"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:499
+msgid "<p>this <span style=\"font-style:italic\">is</span> <!-- a HTML comment --> a paragraph.</p>"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:504
+msgid "Other preformatted text"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:507
+msgid "One can"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:508
+msgid "preformat"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:509
+msgid "text by"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:510
+msgid "prepending"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:511
+msgid "each line"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:512
+msgid "with a pipe"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:513
+msgid "symbol"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:515
+msgid "Like so::"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:517
+msgid "| One can\n"
+"| preformat\n"
+"| text by\n"
+"| prepending\n"
+"| each line\n"
+"| with a pipe\n"
+"| symbol"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:525
+msgid "This is generally not used in the manual, and should only be used where it is absolutely required to represent content that needs exact formatting, but never merely for aesthetic reasons."
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:530
+msgid "Glossaries, Terms and Index"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:532
+msgid "These are sphinx features."
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:534
+msgid "Index is used in the top section, right now only single index entries are used."
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:536
+msgid "Glossaries are used for some of the menu entry sections, but not all of them."
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:539
+msgid "Quotes"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:541
+msgid "Quotes are done like this::"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:543
+msgid "I am not sure why you'd need quotes in a user manual...\n"
+"\n"
+"-- Wolthera"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:547
+msgid "This becomes a blockquote."
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:549
+msgid "I am not sure why you'd need quotes in a user manual..."
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:554
+msgid "Wolthera"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:553
+msgid "We do actually use quotes in some places. Try to add a link to the name to define where it came from."
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:556
+msgid "Notes for Translators"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:558
+msgid "If you are translating the manual for a language that does not usually use whitespaces around words (e.g. Chinese and Japanese), you can use an escaped whitespace to separate markup and words. This is particularly useful for page links, like this::"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:563
+msgid "床前\\ `明月 <https://krita.org/>`_\\ 光"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:565
+msgid "Note that when translating from a PO file, you should escape the backslash with another backslash::"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:568
+msgid "床前\\\\ `明月 <https://krita.org/>`_\\\\ 光"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:570
+msgid "The above produces \"床前\\ `明月 <https://krita.org/>`_\\ 光\", instead of \"床前 `明月 <https://krita.org/>`_ 光\"."
+msgstr ""

@@ -1,0 +1,250 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) licensed under the GNU Free Documentation License 1.3+ unless stated otherwise
+# This file is distributed under the same license as the Krita Manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Krita Manual 5.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-07-19 22:30+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../untranslatable_pages/building/auto_build_script.rst:1
+msgid "Guide to building Krita using a half-automatic script on Windows."
+msgstr ""
+
+#: ../../untranslatable_pages/building/auto_build_script.rst:14
+msgid "Half-automatic building script on Windows"
+msgstr ""
+
+#: ../../untranslatable_pages/building/auto_build_script.rst:16
+msgid "This guide is aimed at those who want to develop on Windows but are not willing to build the dependencies themselves. It is, admittedly, a pain to prepare all these dependencies all by yourself. Therefore we will use the pre-built dependencies instead."
+msgstr ""
+
+#: ../../untranslatable_pages/building/auto_build_script.rst:20
+msgid "For simplicity, this guide assumes that you are on a 64-bit Windows system. If you are on a 32-bit system, you may need to adapt the packages to the corresponding 32-bit versions."
+msgstr ""
+
+#: ../../untranslatable_pages/building/auto_build_script.rst:23
+msgid "The script"
+msgstr ""
+
+#: ../../untranslatable_pages/building/auto_build_script.rst:25
+msgid "The building script lies at `https://github.com/tusooa/scripts/blob/servant/bin/krita-build.perl <https://github.com/tusooa/scripts/blob/servant/bin/krita-build.perl>`_. To run this script you will need a Perl interpreter. If you do not have one yet on your computer, one simple way is to install it through `MSys <https://www.msys2.org/>`_. Msys is not needed for the building process. If you are using the Msys installer, it is advised to install MinGW with it. If you do not want to install Msys, you can just install `MinGW <http://www.mingw.org/>`_."
+msgstr ""
+
+#: ../../untranslatable_pages/building/auto_build_script.rst:27
+msgid "In this article we assume that you have installed MSys."
+msgstr ""
+
+#: ../../untranslatable_pages/building/auto_build_script.rst:30
+msgid "Dependencies"
+msgstr ""
+
+#: ../../untranslatable_pages/building/auto_build_script.rst:32
+msgid "Most of the dependencies you will need to build Krita is available at `the KDE binary factory <https://binary-factory.kde.org/job/Krita_Nightly_Windows_Dependency_Build/>`_. You will get a zip archive from that link. After downloading, unpack the archive to a place you like."
+msgstr ""
+
+#: ../../untranslatable_pages/building/auto_build_script.rst:34
+msgid "Besides the dependencies you get from the binary factory, you will also need CMake, Python 3.8, and Boost (if your GCC version is not 7.3 -- it is highly probably the case if you have just downloaded installed MinGW)."
+msgstr ""
+
+#: ../../untranslatable_pages/building/auto_build_script.rst:36
+msgid "To install CMake and Boost, open Msys shell and enter ``pacman -S mingw-w64-x86_64-cmake mingw-w64-x86_64-boost``."
+msgstr ""
+
+#: ../../untranslatable_pages/building/auto_build_script.rst:38
+msgid "The Python installer can be downloaded from `its official website <https://www.python.org/downloads/release/python-383/>`_. It is important to use Python 3.8 and not 3.5 or 3.7 or 3.9 or other versions."
+msgstr ""
+
+#: ../../untranslatable_pages/building/auto_build_script.rst:41
+msgid "Fetch the sources"
+msgstr ""
+
+#: ../../untranslatable_pages/building/auto_build_script.rst:43
+msgid "It is recommended to fetch the source code using Git. Under Msys, you may install Git through the command ``pacman -S git``."
+msgstr ""
+
+#: ../../untranslatable_pages/building/auto_build_script.rst:45
+msgid "You need to choose a directory to store Krita's source code, and switch to that directory. For example, if we choose ``C:/Home/Code`` as the storing directory, we do:"
+msgstr ""
+
+#: ../../untranslatable_pages/building/auto_build_script.rst:47
+msgid "mkdir -pv C:/Home/Code && cd C:/Home/Code"
+msgstr ""
+
+#: ../../untranslatable_pages/building/auto_build_script.rst:51
+msgid "Then clone the git repository:"
+msgstr ""
+
+#: ../../untranslatable_pages/building/auto_build_script.rst:53
+msgid "git clone https://invent.kde.org/graphics/krita.git.git"
+msgstr ""
+
+#: ../../untranslatable_pages/building/auto_build_script.rst:57
+msgid "Or:"
+msgstr ""
+
+#: ../../untranslatable_pages/building/auto_build_script.rst:59
+msgid "git clone git://anongit.kde.org/krita.git"
+msgstr ""
+
+#: ../../untranslatable_pages/building/auto_build_script.rst:63
+msgid "From now on you will have a ``krita`` directory under ``C:/Home/Code``. We shall then call ``C:/Home/Code/krita`` the *source code directory*."
+msgstr ""
+
+#: ../../untranslatable_pages/building/auto_build_script.rst:65
+msgid "It is suggested to create a separate build directory for CMake projects. For example, we chose ``C:/Home/Code/krita-build``, so we create and switch to it using:"
+msgstr ""
+
+#: ../../untranslatable_pages/building/auto_build_script.rst:67
+msgid "mkdir -pv C:/Home/Code/krita-build && cd C:/Home/Code/krita-build"
+msgstr ""
+
+#: ../../untranslatable_pages/building/auto_build_script.rst:71
+msgid "We call ``C:/Home/Code/krita-build`` the *build directory*."
+msgstr ""
+
+#: ../../untranslatable_pages/building/auto_build_script.rst:74
+msgid "Invoke the script"
+msgstr ""
+
+#: ../../untranslatable_pages/building/auto_build_script.rst:76
+msgid "Before you invoke the script, it is necessary to edit the configuration part and change the variables there to fit your needs. It is marked in the script by ``Config Part -- change as needed``. The following needs to be set up in this manner:"
+msgstr ""
+
+#: ../../untranslatable_pages/building/auto_build_script.rst:78
+msgid "depsDir -- The absolute path to ``deps-install`` directory you have extracted from ``krita-deps.zip``."
+msgstr ""
+
+#: ../../untranslatable_pages/building/auto_build_script.rst:79
+msgid "mingwDir -- The path to MinGW installation. It is usually the ``mingw64`` directory under your Msys installation path."
+msgstr ""
+
+#: ../../untranslatable_pages/building/auto_build_script.rst:80
+msgid "pythonDir -- The path to your Python 3.8."
+msgstr ""
+
+#: ../../untranslatable_pages/building/auto_build_script.rst:81
+msgid "kritaInstallDir -- Where you want to install Krita."
+msgstr ""
+
+#: ../../untranslatable_pages/building/auto_build_script.rst:82
+msgid "kritaSrcDir -- The source code directory we have set up before."
+msgstr ""
+
+#: ../../untranslatable_pages/building/auto_build_script.rst:83
+msgid "kritaBuildDir -- The build directory we have set up before."
+msgstr ""
+
+#: ../../untranslatable_pages/building/auto_build_script.rst:84
+msgid "jobs -- The maximum number of parallel jobs running through ``make``. It is suggested to use (number of processors) + 1 if you want the maximum compiling speed, or (number of processors) - 1 if you want to do other things when building Krita."
+msgstr ""
+
+#: ../../untranslatable_pages/building/auto_build_script.rst:85
+msgid "tests -- Whether you want to build tests. On Windows many of them are broken, so you can disable tests by setting this variable to 0."
+msgstr ""
+
+#: ../../untranslatable_pages/building/auto_build_script.rst:87
+msgid "It is suggested to run the script outside the Msys environment. For example, you can use the Command Prompt. The Perl interpreter is located at ``<msysDir>/usr/bin/perl.exe``, where ``<msysDir>`` is the directory where Msys is installed."
+msgstr ""
+
+#: ../../untranslatable_pages/building/auto_build_script.rst:89
+msgid "Invoke the script under the command prompt using:"
+msgstr ""
+
+#: ../../untranslatable_pages/building/auto_build_script.rst:91
+msgid "<msysDir>/usr/bin/perl.exe <absolute path of your krita-build.perl>"
+msgstr ""
+
+#: ../../untranslatable_pages/building/auto_build_script.rst:95
+msgid "For simplicity, we shall now call the line above ``<krita-build>``."
+msgstr ""
+
+#: ../../untranslatable_pages/building/auto_build_script.rst:99
+msgid "Prepare the dependencies for building"
+msgstr ""
+
+#: ../../untranslatable_pages/building/auto_build_script.rst:101
+msgid "After extracting, the dependencies cannot be used directly for the build because it contains hard-coded paths. You will need to run the following command once:"
+msgstr ""
+
+#: ../../untranslatable_pages/building/auto_build_script.rst:103
+msgid "<krita-build> prepare"
+msgstr ""
+
+#: ../../untranslatable_pages/building/auto_build_script.rst:107
+msgid "How this works will not be covered here for readability reasons. For more information on how this works, please refer to the comments in the script."
+msgstr ""
+
+#: ../../untranslatable_pages/building/auto_build_script.rst:110
+msgid "Run CMake on the source"
+msgstr ""
+
+#: ../../untranslatable_pages/building/auto_build_script.rst:112
+msgid "Switch to the build directory under the Command Prompt, then run cmake:"
+msgstr ""
+
+#: ../../untranslatable_pages/building/auto_build_script.rst:114
+msgid "cd C:\\Home\\Code\\krita-build\n"
+"<krita-build> cmake"
+msgstr ""
+
+#: ../../untranslatable_pages/building/auto_build_script.rst:120
+msgid "Compile and install Krita"
+msgstr ""
+
+#: ../../untranslatable_pages/building/auto_build_script.rst:123
+msgid "Use an IDE to assist in compilation"
+msgstr ""
+
+#: ../../untranslatable_pages/building/auto_build_script.rst:125
+msgid "You may want to use an IDE for development purposes. KDevelop and QtCreator are suggested for developing Krita."
+msgstr ""
+
+#: ../../untranslatable_pages/building/auto_build_script.rst:127
+msgid "If you use KDevelop, just open the source directory through :guilabel:`Project -> Open/Import Project...` and then choose the build directory that we have set up before. Then, go to :guilabel:`Project -> Open Configuration... -> Make` and choose the ``mingw32-make.exe`` executable as :guilabel:`Make executable`. It is located in ``<mingwDir>/bin/mingw32-make.exe``. Then click :guilabel:`Build` on the toolbar."
+msgstr ""
+
+#: ../../untranslatable_pages/building/auto_build_script.rst:130
+msgid "Compile on the command line"
+msgstr ""
+
+#: ../../untranslatable_pages/building/auto_build_script.rst:132
+msgid "Alternatively, you can manually invoke the script from the command line to build and install Krita."
+msgstr ""
+
+#: ../../untranslatable_pages/building/auto_build_script.rst:134
+msgid "<krita-build> install"
+msgstr ""
+
+#: ../../untranslatable_pages/building/auto_build_script.rst:139
+msgid "Run Krita"
+msgstr ""
+
+#: ../../untranslatable_pages/building/auto_build_script.rst:141
+msgid "Before running, you need to link the dependencies to Krita's installation directory. You may need to start a Command Prompt as Administrator to do so:"
+msgstr ""
+
+#: ../../untranslatable_pages/building/auto_build_script.rst:143
+msgid "<krita-build> link-deps"
+msgstr ""
+
+#: ../../untranslatable_pages/building/auto_build_script.rst:147
+msgid "This is needed only once, after you have firstly installed Krita. Then you can invoke it using (this does not need Administrator):"
+msgstr ""
+
+#: ../../untranslatable_pages/building/auto_build_script.rst:149
+msgid "<krita-build> run"
+msgstr ""
+
+#: ../../untranslatable_pages/building/auto_build_script.rst:153
+msgid "Unless you delete the installation directory and perform a ``<krita-build> install`` again, you will not need to ``link-deps`` again."
+msgstr ""

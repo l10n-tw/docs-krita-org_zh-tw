@@ -1,0 +1,401 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) licensed under the GNU Free Documentation License 1.3+ unless stated otherwise
+# This file is distributed under the same license as the Krita Manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Krita Manual 5.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-07-19 22:30+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../untranslatable_pages/kpl_defintion.rst:1
+msgid "A Technical description of the Krita Palette format."
+msgstr ""
+
+#: ../../untranslatable_pages/kpl_defintion.rst:14
+msgid "The Krita Palette format KPL"
+msgstr ""
+
+#: ../../untranslatable_pages/kpl_defintion.rst:16
+msgid "There's been a number of color swatch definitions over the years. To ensure we can store color managed color, as well as store other metadata we use, Krita has it's own color palette format, KPL."
+msgstr ""
+
+#: ../../untranslatable_pages/kpl_defintion.rst:18
+msgid "This document is a technical description of the format."
+msgstr ""
+
+#: ../../untranslatable_pages/kpl_defintion.rst:21
+msgid "Basic Structure"
+msgstr ""
+
+#: ../../untranslatable_pages/kpl_defintion.rst:23
+msgid "KPL files are zip files containing the following files:"
+msgstr ""
+
+#: ../../untranslatable_pages/kpl_defintion.rst:25
+msgid "mimetype"
+msgstr ""
+
+#: ../../untranslatable_pages/kpl_defintion.rst:26
+msgid "A text file containing the mimetype, to differentiate it from a regular zip. ``application/x-krita-palette``"
+msgstr ""
+
+#: ../../untranslatable_pages/kpl_defintion.rst:27
+#: ../../untranslatable_pages/kpl_defintion.rst:48
+msgid "colorset.xml"
+msgstr ""
+
+#: ../../untranslatable_pages/kpl_defintion.rst:28
+msgid "The main color definition file."
+msgstr ""
+
+#: ../../untranslatable_pages/kpl_defintion.rst:29
+#: ../../untranslatable_pages/kpl_defintion.rst:35
+msgid "profiles.xml"
+msgstr ""
+
+#: ../../untranslatable_pages/kpl_defintion.rst:30
+msgid "This is a manifest of the icc profiles that are inside the zip file. We wanted to have no ambiguity in regards to which icc files were bundled."
+msgstr ""
+
+#: ../../untranslatable_pages/kpl_defintion.rst:32
+msgid "A number of icc files."
+msgstr ""
+
+#: ../../untranslatable_pages/kpl_defintion.rst:32
+msgid "These are the necessary icc profiles for interpreting the values in colorset.xml"
+msgstr ""
+
+#: ../../untranslatable_pages/kpl_defintion.rst:36
+msgid "A manifest of the icc profiles that are inside the zip file. We wanted to have no ambiguity in regards to which icc files were bundled."
+msgstr ""
+
+#: ../../untranslatable_pages/kpl_defintion.rst:38
+msgid "<Profiles>\n"
+"   <Profile name=\"sRGB-elle-V2-g10.icc\" filename=\"sRGB-elle-V2-g10.icc\" colorModelId=\"RGBA\" colorDepthId=\"F32\"/>\n"
+"</Profiles>"
+msgstr ""
+
+#: ../../untranslatable_pages/kpl_defintion.rst:45
+msgid "Krita doesn't store every profile it uses. XYZ and LAB are colorspaces that only have one real space definition, and therefore it doesn't make sense to embed these files."
+msgstr ""
+
+#: ../../untranslatable_pages/kpl_defintion.rst:49
+msgid "This is the main palette definition. It can handle comments, groups and more."
+msgstr ""
+
+#: ../../untranslatable_pages/kpl_defintion.rst:51
+msgid "The top level element is a ``Colorset`` element, it's children can either be ``ColorSetEntry`` elements, or ``Group`` elements. ``ColorSetEntry`` s that are direct children of ``Colorset`` are the ungrouped colors, and are, inside Krita, referred to as the \"default\" group."
+msgstr ""
+
+#: ../../untranslatable_pages/kpl_defintion.rst:53
+msgid "<Colorset name=\"Scene Linear Swatches\" comment=\"This is a palette for easy access to some swatches ready for scene-linear painting.\" columns=\"9\" rows=\"1\" readonly=\"false\" version=\"1.0\">"
+msgstr ""
+
+#: ../../untranslatable_pages/kpl_defintion.rst:58
+#: ../../untranslatable_pages/kpl_defintion.rst:81
+#: ../../untranslatable_pages/kpl_defintion.rst:97
+msgid "name"
+msgstr ""
+
+#: ../../untranslatable_pages/kpl_defintion.rst:59
+msgid "The human friendly name of the color palette."
+msgstr ""
+
+#: ../../untranslatable_pages/kpl_defintion.rst:60
+msgid "comment"
+msgstr ""
+
+#: ../../untranslatable_pages/kpl_defintion.rst:61
+msgid "The description for the palette."
+msgstr ""
+
+#: ../../untranslatable_pages/kpl_defintion.rst:62
+msgid "columns"
+msgstr ""
+
+#: ../../untranslatable_pages/kpl_defintion.rst:63
+msgid "The amount of columns in the palette in total. This is the same for all groups."
+msgstr ""
+
+#: ../../untranslatable_pages/kpl_defintion.rst:64
+#: ../../untranslatable_pages/kpl_defintion.rst:84
+msgid "rows"
+msgstr ""
+
+#: ../../untranslatable_pages/kpl_defintion.rst:65
+msgid "The rows of the default group, see group for more info."
+msgstr ""
+
+#: ../../untranslatable_pages/kpl_defintion.rst:66
+msgid "readonly"
+msgstr ""
+
+#: ../../untranslatable_pages/kpl_defintion.rst:67
+msgid "Whether the file can be edited."
+msgstr ""
+
+#: ../../untranslatable_pages/kpl_defintion.rst:69
+msgid "version"
+msgstr ""
+
+#: ../../untranslatable_pages/kpl_defintion.rst:69
+msgid "The version of the file."
+msgstr ""
+
+#: ../../untranslatable_pages/kpl_defintion.rst:72
+msgid "Group"
+msgstr ""
+
+#: ../../untranslatable_pages/kpl_defintion.rst:74
+msgid "``Group`` elements can only have ``ColorSetEntry`` s as children. ``Group`` s are shown in the UI as a grid where the cells can be empty or contain a ``ColorSetEntry``."
+msgstr ""
+
+#: ../../untranslatable_pages/kpl_defintion.rst:76
+msgid "<Group name=\"Hot Colors\" rows=\"5\">\n"
+"</Group>"
+msgstr ""
+
+#: ../../untranslatable_pages/kpl_defintion.rst:82
+msgid "The name of the group."
+msgstr ""
+
+#: ../../untranslatable_pages/kpl_defintion.rst:84
+msgid "The total amount of rows this group takes up, this, together with the column value in the toplevel ``Colorset`` element, determines the grid size."
+msgstr ""
+
+#: ../../untranslatable_pages/kpl_defintion.rst:87
+msgid "ColorSetEntry"
+msgstr ""
+
+#: ../../untranslatable_pages/kpl_defintion.rst:89
+msgid "<ColorSetEntry name=\"Noon daylight at 0 EV\" id=\"SI-D65-0EV\" bitdepth=\"F32\" spot=\"false\">\n"
+"  <XYZ space=\"XYZ identity built-in\" x=\"0.17107713223\" y=\"0.18000000715\" z=\"0.17107713223\"  />\n"
+"  <Position row=\"0\" column=\"0\"/>\n"
+"</ColorSetEntry>"
+msgstr ""
+
+#: ../../untranslatable_pages/kpl_defintion.rst:98
+msgid "The name of the color. Unlike the create swatches, we don't support translated color names."
+msgstr ""
+
+#: ../../untranslatable_pages/kpl_defintion.rst:99
+msgid "id"
+msgstr ""
+
+#: ../../untranslatable_pages/kpl_defintion.rst:100
+msgid "The id value. This is for complex colorsets where there is a human friendly name, and a name that uniquely identifies the color in the swatch database. In the above example, which encodes the D65 standard illuminant at 0 stops, ``SI-D65-0EV`` is a clear unambiguous id, but \"Noon daylight at 0 EV\" is a much more human friendly way to refer to it. Often, the ID is used for referencing spot colors inside files."
+msgstr ""
+
+#: ../../untranslatable_pages/kpl_defintion.rst:101
+msgid "bitdepth"
+msgstr ""
+
+#: ../../untranslatable_pages/kpl_defintion.rst:102
+msgid "The bitdepth at which the color should be loaded. This is largely for our own convenience. Values are `U8` (Unassigned 8bit integer), `U16` (Unassigned 16bit integer), `F16` (16 bit Floating Point), and `F32` (32 bit Floating Point). Lab and CMYK don't support `F16`, and for CMYK `F32` is not recommended because it doesn't deserialize the same way as the integer colorspaces."
+msgstr ""
+
+#: ../../untranslatable_pages/kpl_defintion.rst:104
+msgid "spot"
+msgstr ""
+
+#: ../../untranslatable_pages/kpl_defintion.rst:104
+msgid "Whether or not the color is a spot color. This is currently not used elsewhere in Krita, but the intend is to use it for encoding spot colors as only the id."
+msgstr ""
+
+#: ../../untranslatable_pages/kpl_defintion.rst:106
+msgid "``ColorSetEntry`` s have two children:"
+msgstr ""
+
+#: ../../untranslatable_pages/kpl_defintion.rst:108
+msgid "The ``Position`` element is the position of the swatch inside the parent group grid. Krita doesn't store empty swatches."
+msgstr ""
+
+#: ../../untranslatable_pages/kpl_defintion.rst:110
+msgid "The other child element is a Create Swatch defintion. Krita supports `Gray`, `sRGB`, `RGB`, `XYZ`, `CMYK`, `Lab` and in theory `YCrCb`. Note that Krita supports unbounded colors as long as the bitdepth is F32."
+msgstr ""
+
+#: ../../untranslatable_pages/kpl_defintion.rst:113
+msgid "Color swatch definition from the Create Wiki:"
+msgstr ""
+
+#: ../../untranslatable_pages/kpl_defintion.rst:115
+msgid "The following is the Color Swatch definition from the `old create wiki <https://web.archive.org/web/20110826002520/http://create.freedesktop.org/wiki/Swatches_-_colour_file_format/Draft>`_ . Krita largely uses this definition. Because the Create wiki is down, it's contents are reproduced here. It is for reference only."
+msgstr ""
+
+#: ../../untranslatable_pages/kpl_defintion.rst:117
+msgid "<colors xmlns:xlink=\"http://www.w3.org/1999/xlink\">\n"
+"    <color name=\"blue\">\n"
+"        <label lang=\"en\">Blue</label>\n"
+"        <label lang=\"es\">Azul</label>\n"
+"        <label lang=\"en_US_SoCal\">glassy</label>\n"
+"        <CMYK space=\"2ndFloorCMYK\" c=\"0.8703\" m=\"0.6172\" y=\"0\" k=\"0\"/>\n"
+"        <Lab space=\"mine\" L=\"34.67\" a=\"54.1289\" b=\"-103.3359\"/>\n"
+"        <HSV space=\"prof01\" h=\"240\" s=\"1\" v=\"1\"/>\n"
+"        <HLS space=\"prof02\" h=\"240\" l=\"0.5\" s=\"1\"/>\n"
+"        <Luv space=\"prof03\" L=\"34.6701\" u=\"-15.0121\" v=\"-124.7986\"/>\n"
+"        <XYZ space=\"prof04\" x=\"0.1566\" y=\"0.0833\" z=\"0.7196\"/>\n"
+"        <Yxy space=\"prof05\" Y=\"0.0833\" x=\"0.1632\" y=\"0.0869\"/>\n"
+"        <Gray space=\"prof06\" g=\"0.2515\"/>\n"
+"        <sRGB r=\"0\" g=\"0\" b=\"1.0\"/>\n"
+"        <RGB space=\"lcd\" r=\"0.1608\" g=\"-0.1518\" b=\"1.0753\"/>\n"
+"    </color>\n"
+"\n"
+"    <color name=\"red\">\n"
+"        <label lang=\"en\">Red</label>\n"
+"        <CMYK space=\"2ndFloorCMYK\" c=\"0.0011\" m=\"0.7992\" y=\"0.9405\" k=\"0.0038\"/>\n"
+"        <sRGB r=\"1.0\" g=\"0\" b=\"0\"/>\n"
+"    </color>\n"
+"\n"
+"    <colorspace name=\"2ndFloorCMYK\" xlink:href=\"2nd_floor.icm\"/>\n"
+"    <colorspace name=\"mine\" xlink:href=\"sample.icm\"/>\n"
+"    <colorspace name=\"lcd\" xlink:href=\"generic_lcd.icm\"/>\n"
+"</colors>"
+msgstr ""
+
+#: ../../untranslatable_pages/kpl_defintion.rst:151
+msgid "Relax-NG for the swatches"
+msgstr ""
+
+#: ../../untranslatable_pages/kpl_defintion.rst:153
+msgid "namespace xlink = \"http://www.w3.org/1999/xlink\"\n"
+"grammar {\n"
+"start = element colors {\n"
+"color+, colorSpace*\n"
+"}\n"
+"color = element color {\n"
+"attribute name { text },\n"
+"label *,\n"
+"(RGB ? & sRGB ? & CMYK ? & Lab ? & HSV ? & HLS ? & Luv ? & XYZ ? & Yxy ? & Gray ? & YCbCr ?)\n"
+"}\n"
+"label = element label {\n"
+"attribute lang { text } ?,\n"
+"text\n"
+"}\n"
+"spaceAttribute = attribute space { text }\n"
+"RGBAttributes =\n"
+"attribute r { xsd:float },\n"
+"attribute g { xsd:float },\n"
+"attribute b { xsd:float }\n"
+"RGB = element RGB {\n"
+"spaceAttribute,\n"
+"RGBAttributes\n"
+"}\n"
+"sRGB = element sRGB {\n"
+"RGBAttributes\n"
+"}\n"
+"CMYK = element CMYK {\n"
+"spaceAttribute,\n"
+"attribute c { xsd:float },\n"
+"attribute m { xsd:float },\n"
+"attribute y { xsd:float },\n"
+"attribute k { xsd:float }\n"
+"}\n"
+"Lab = element Lab {\n"
+"spaceAttribute,\n"
+"attribute L { xsd:float },\n"
+"attribute a { xsd:float },\n"
+"attribute b { xsd:float }\n"
+"}\n"
+"HSV = element HSV {\n"
+"spaceAttribute,\n"
+"attribute h { xsd:float },\n"
+"attribute s { xsd:float },\n"
+"attribute v { xsd:float }\n"
+"}\n"
+"HLS = element HLS {\n"
+"spaceAttribute,\n"
+"attribute h { xsd:float },\n"
+"attribute l { xsd:float },\n"
+"attribute s { xsd:float }\n"
+"}\n"
+"Luv = element Luv {\n"
+"spaceAttribute,\n"
+"attribute L { xsd:float },\n"
+"attribute u { xsd:float },\n"
+"attribute v { xsd:float }\n"
+"}\n"
+"XYZ = element XYZ {\n"
+"spaceAttribute,\n"
+"attribute x { xsd:float },\n"
+"attribute y { xsd:float },\n"
+"attribute z { xsd:float }\n"
+"}\n"
+"Yxy = element Yxy {\n"
+"spaceAttribute,\n"
+"attribute Y { xsd:float },\n"
+"attribute x { xsd:float },\n"
+"attribute y { xsd:float }\n"
+"}\n"
+"YCbCr = element YCbCr {\n"
+"spaceAttribute,\n"
+"attribute Y { xsd:float },\n"
+"attribute Cb { xsd:float },\n"
+"attribute Cr { xsd:float }\n"
+"}\n"
+"Gray = element Gray {\n"
+"spaceAttribute,\n"
+"attribute g { xsd:float }\n"
+"}\n"
+"colorSpace = element colorspace {\n"
+"attribute name { text },\n"
+"attribute xlink:href { xsd:anyURI }\n"
+"}\n"
+"}"
+msgstr ""
+
+#: ../../untranslatable_pages/kpl_defintion.rst:242
+msgid "Using for validating"
+msgstr ""
+
+#: ../../untranslatable_pages/kpl_defintion.rst:243
+msgid "To use the above RelaxNG compact schema to validate a swatch you can use:"
+msgstr ""
+
+#: ../../untranslatable_pages/kpl_defintion.rst:245
+msgid "trang -I rnc -O rng colors.rnc colors.rng\n"
+"xmllint --relaxng colors.rng colors.xml"
+msgstr ""
+
+#: ../../untranslatable_pages/kpl_defintion.rst:252
+msgid "Color Grouping Proposal"
+msgstr ""
+
+#: ../../untranslatable_pages/kpl_defintion.rst:254
+msgid "Krita doesn't use this."
+msgstr ""
+
+#: ../../untranslatable_pages/kpl_defintion.rst:256
+msgid "<group>\n"
+"    <label lang='en'>One group</label>\n"
+"    <color name='red'>\n"
+"        <label lang='en'>Red</label>\n"
+"        <sRGB r=\"1.0\" g=\"0\" b=\"0\"/>\n"
+"    </color>\n"
+"    <group>\n"
+"        <label lang='en'>Nested group</label>\n"
+"        ...\n"
+"    </group>\n"
+"    </group>\n"
+"<group>"
+msgstr ""
+
+#: ../../untranslatable_pages/kpl_defintion.rst:10
+msgid "*.kpl"
+msgstr ""
+
+#: ../../untranslatable_pages/kpl_defintion.rst:10
+msgid "KPL"
+msgstr ""
+
+#: ../../untranslatable_pages/kpl_defintion.rst:10
+msgid "Krita Palette"
+msgstr ""

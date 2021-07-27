@@ -1,0 +1,93 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) licensed under the GNU Free Documentation License 1.3+ unless stated otherwise
+# This file is distributed under the same license as the Krita Manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Krita Manual 5.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-07-27 21:21+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../tutorials/saving-for-the-web.rst:1
+msgid "Tutorial for saving images for the web."
+msgstr ""
+
+#: ../../tutorials/saving-for-the-web.rst:13
+msgid "Saving For The Web"
+msgstr ""
+
+#: ../../tutorials/saving-for-the-web.rst:15
+msgid "Krita's default saving format is the :ref:`file_kra` format. This format saves everything Krita can manipulate about an image: Layers, Filters, Assistants, Masks, Color spaces, etc. However, that's a lot of data, so ``*.kra`` files are pretty big. This doesn't make them very good for uploading to the internet. Imagine how many people's data-plans hit the limit if they only could look at ``*.kra`` files! So instead, we optimise our images for the web."
+msgstr ""
+
+#: ../../tutorials/saving-for-the-web.rst:17
+msgid "There are a few steps involved:"
+msgstr ""
+
+#: ../../tutorials/saving-for-the-web.rst:19
+msgid "Save as a ``.kra``. This is your working file and serves as a backup if you make any mistakes."
+msgstr ""
+
+#: ../../tutorials/saving-for-the-web.rst:21
+msgid "Flatten all layers. This turns all your layers into a single one. Just go to :menuselection:`Layer --> Flatten Image` or press the :kbd:`Ctrl + Shift + E` shortcut. Flattening can take a while, so if you have a big image, don't be scared if Krita freezes for a few seconds. It'll become responsive soon enough."
+msgstr ""
+
+#: ../../tutorials/saving-for-the-web.rst:23
+msgid "Convert the color space to 8bit sRGB (if it isn't yet). This is important to lower the filesize, and PNG for example can't take higher than 16bit. :menuselection:`Image --> Convert Image Color Space...` and set the options to **RGB**, **8bit** and **sRGB-elle-v2-srgbtrc.icc** respectively. If you are coming from a linear space, uncheck **little CMS** optimisations"
+msgstr ""
+
+#: ../../tutorials/saving-for-the-web.rst:25
+msgid "Resize! Go to :menuselection:`Image --> Scale Image To New Size...` or use the :kbd:`Ctrl + Alt + I` shortcut. This calls up the resize menu. A good rule of thumb for resizing is that you try to get both sizes to be less than 1200 pixels. (This being the size of HD formats). You can easily get there by setting the **Resolution** under **Print Size** to **72** dots per inch. Then press **OK** to have everything resized."
+msgstr ""
+
+#: ../../tutorials/saving-for-the-web.rst:27
+msgid "Sharpen the image a little. This is especially necessary for social media. Social media websites often scale and convert your image in such a way that it gets a little blurry, because they optimize towards photos and not paintings. To have your images stay sharp, it is worth it to run a sharpen filter beforehand. Because the sharpen filter is quite powerful, you are best off adding a sharpen filter mask on top of the stack and lowering its opacity till you feel the sharpness is appropriate."
+msgstr ""
+
+#: ../../tutorials/saving-for-the-web.rst:29
+msgid "Save as a web-safe image format. There's three that are especially recommended:"
+msgstr ""
+
+#: ../../tutorials/saving-for-the-web.rst:32
+msgid "JPG"
+msgstr ""
+
+#: ../../tutorials/saving-for-the-web.rst:34
+msgid "Use this for images with a lot of different colors, like paintings."
+msgstr ""
+
+#: ../../tutorials/saving-for-the-web.rst:37
+msgid "PNG"
+msgstr ""
+
+#: ../../tutorials/saving-for-the-web.rst:39
+msgid "Use this for images with few colors or which are black and white, like comics and pixel-art. Select :guilabel:`Save as indexed PNG, if possible` to optimise even more."
+msgstr ""
+
+#: ../../tutorials/saving-for-the-web.rst:42
+msgid "GIF"
+msgstr ""
+
+#: ../../tutorials/saving-for-the-web.rst:44
+msgid "Only use this for animation (will be supported this year) or images with a super low color count, because they will get indexed."
+msgstr ""
+
+#: ../../tutorials/saving-for-the-web.rst:47
+msgid "Saving with Transparency"
+msgstr ""
+
+#: ../../tutorials/saving-for-the-web.rst:51
+msgid "Saving with transparency is only possible with GIF and PNG. First, make sure you see the transparency checkers (this can be done by simply hiding the bottom layers, changing the projection color in :menuselection:`Image --> Image Background Color and Transparency...`, or by using :menuselection:`Filters --> Colors --> Color to Alpha...`). Then, save as PNG and tick **Store alpha channel (transparency)**"
+msgstr ""
+
+#: ../../tutorials/saving-for-the-web.rst:53
+msgid "Save your image, upload, and show it off!"
+msgstr ""

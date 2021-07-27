@@ -1,0 +1,97 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) licensed under the GNU Free Documentation License 1.3+ unless stated otherwise
+# This file is distributed under the same license as the Krita Manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Krita Manual 5.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-07-27 21:21+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../tutorials/krita-brush-tips/fur.rst:1
+msgid "A tutorial about creating fur in Krita."
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/fur.rst:13
+msgid "Painting fur"
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/fur.rst:16
+msgid "Question"
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/fur.rst:18
+msgid "What brushes are best for fur textures?"
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/fur.rst:None
+msgid "Some example of furs and hair."
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/fur.rst:23
+msgid "So typically, you see the same logic applied on fur as on regular :ref:`hair`."
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/fur.rst:25
+msgid "However, you can make a brush a little easier by using the Gradient, Mix and HSV options in the :ref:`pixel and color smudge brushes <pixel_brush_engine>`. Basically, what we want to do is have a stroke start dark and then become lighter as we draw with it, to simulate how hair-tips catch more light and look lighter due to being thinner at the ends, while at the base they are frequently more dark."
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/fur.rst:29
+msgid "This tutorial contains outdated screenshots, but you should be able to follow along if you ignore a bit different look of the brush editor. Originally it also used brush preset and brush tip from the older resources set (:guilabel:`ink_brush_25` and :guilabel:`A - 2 Dirty Brush`), but you should be able to get similar results with brush preset :guilabel:`b) Basic-5 Size` and brush tip :guilabel:`sparkle` or other similar brush preset (based on Pixel Engine) and similar brush tip (multiple dots)."
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/fur.rst:None
+msgid "Brush setting dialog for fur brush."
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/fur.rst:35
+msgid "Take the :guilabel:`b) Basic-5 Size` and choose under :menuselection:`Brush Tip --> Predefined “sparkle”`. Set the spacing to :guilabel:`Auto` and right-click the spacing bar to type in a value between 0.25 and 0.4. Also turn on the :guilabel:`Enable Pen Settings` on flow. Replicate the pressure curve above on the size option. We don’t want the hairs to collapse to a point, hence why the curve starts so high."
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/fur.rst:None
+msgid "Brush setting dialog for fur."
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/fur.rst:40
+msgid "Then activate value and reproduce this curve with the :guilabel:`Distance` or :guilabel:`Fade` sensor. Like how the pressure sensor changes a value (like size) with the amount of pressure you put on the stylus, the distance sensor measures how many pixels your stroke is, and can change an option depending on that. For the HSV sensors: If the curve goes beneath the middle, it’ll become remove from that adjustment, and above the vertical middle it’ll add to that adjustment. So in this case, for the first 100px the brush dab will go from a darkened version of the active paint color, to the active paint color, and then for 100px+ it’ll go from the active color to a lightened version. The curve is an inverse S-curve, because we want to give a lot of room to the mid-tones."
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/fur.rst:None
+msgid "Brush setting dialog showing color gradation."
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/fur.rst:45
+msgid "We do the same thing for saturation, so that the darkened color is also slightly desaturated. Notice how the curve is close to the middle: This means its effect is much less strong than the value adjustment. The result should look somewhat like the fifth one from the left on the first row of this:"
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/fur.rst:None
+msgid "Result of the brush that we made."
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/fur.rst:50
+msgid "The others are done with the smudge brush engine, but a similar setup, though using color rate on distance instead. Do note that it’s very hard to shade realistic fur, so keep a good eye on your form shadow. You can also use this with grass, feathers and other vegetation:"
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/fur.rst:None
+msgid "Using the fur brush to make grass and hair."
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/fur.rst:55
+msgid "For example, if you use the mix option in the pixel brush, it’ll mix between the fore and background color. You can even attach a gradient to the color smudge brush and the pixel brush. For color smudge, this is just the :guilabel:`Gradient` option, and it’ll use the active gradient. For the pixel brush, set the color-source to :guilabel:`Gradient` and use the mix option."
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/fur.rst:None
+msgid "Fur brush with the color source to gradient and mix option."
+msgstr ""
+
+#: ../../tutorials/krita-brush-tips/fur.rst:60
+msgid "You can also combine this with the lighter color blending mode and wraparound mode to make making grass-textures really easy!"
+msgstr ""
