@@ -552,6 +552,18 @@ This becomes a blockquote.
 
 We do actually use quotes in some places. Try to add a link to the name to define where it came from.
 
+Text for Non-English Translations Only
+--------------------------------------
+
+You can use the following to include text that only makes sense for non-English
+translations of the manual, for example to provide non-English readers with
+the English names of an item for reference::
+
+    .. only:: non_english
+
+        This content is hidden for the English version, but translatable and
+        shows up in non-English versions.
+
 Notes for Translators
 ---------------------
 
