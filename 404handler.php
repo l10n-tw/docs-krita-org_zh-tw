@@ -351,9 +351,26 @@ function determine_appropriate_language( $request, $browser_languages, $supporte
         $components = explode(";", $language);
         $language = $components[0];
 
-        // Browsers use dashes to seperate language variants
-        // But KDE translation systems use underscores for this so ensure we are consistent here
-        $language = str_replace("-", "_", $language);
+        if( preg_match( '/^zh(-han[ts])?(-[a-z]{2})?$/i', $language, $result, PREG_UNMATCHED_AS_NULL ) ) {
+            // Handle Chinese as a special case. Chinese lang tags may carry
+            // a `Hant` or `Hans` script subtag, and/or a region subtag.
+            // As long as a translation for `zh_HK` isn't available, this
+            // matching is sufficient.
+            if( strcasecmp($result[1], "-hant") === 0 ) {
+                $language = "zh_TW";
+            } else if( strcasecmp($result[1], "-hans") === 0 ) {
+                $language = "zh_CN";
+            } else if( strcasecmp($result[2], "-tw") === 0 || strcasecmp($result[2], "-hk") === 0 || strcasecmp($result[2], "-mo") === 0 ) {
+                $language = "zh_TW";
+            } else {
+                // Note this also matches `zh` without script or region subtag.
+                $language = "zh_CN";
+            }
+        } else {
+            // Browsers use dashes to seperate language variants
+            // But KDE translation systems use underscores for this so ensure we are consistent here
+            $language = str_replace("-", "_", $language);
+        }
 
         // Is this one of our supported languages?
         if( in_array($language, $supported_languages) ) {
