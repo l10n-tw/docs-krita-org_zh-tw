@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-08-01T06:02:32" />
+  <meta property="og:article:modified_time" content="2021-08-02T06:12:37" />
   <meta content="Split Alpha: how to work with color and alpha channels of the layer separately." name="description" />
 
   
@@ -273,20 +273,20 @@
 <div class="section" id="how-to-work-with-alpha-channel-of-the-layer">
 <h2>How to work with alpha channel of the layer<a class="headerlink" href="#how-to-work-with-alpha-channel-of-the-layer" title="本標題的永久連結">¶</a></h2>
 <ol class="arabic simple">
-<li><p><img alt="mouseright" src="../../_images/Krita_mouse_right.png" /> the paint layer in the layers docker.</p></li>
+<li><p><img alt="滑鼠右鍵" src="../../_images/Krita_mouse_right.png" /> the paint layer in the layers docker.</p></li>
 <li><p>Choose <span class="menuselection">Split Alpha ‣ Alpha into Mask</span>.</p></li>
 <li><p>Use your preferred paint tool to paint on the Transparency Mask. Black paints transparency (see-through), white paints opacity (visible). Gray values paint semi-transparency.</p></li>
-<li><p>If you would like to isolate alpha channel, enter Isolated Mode by <img alt="mouseright" src="../../_images/Krita_mouse_right.png" /> + <span class="menuselection">Isolate Layer</span> (or the <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Alt</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="mouseleft" src="../../_images/Krita_mouse_left.png" /> shortcut).</p></li>
-<li><p>When finished editing the Transparency Mask, <img alt="mouseright" src="../../_images/Krita_mouse_right.png" /> on it and select <span class="menuselection">Split Alpha ‣ Write as Alpha</span>.</p></li>
+<li><p>If you would like to isolate alpha channel, enter Isolated Mode by <img alt="滑鼠右鍵" src="../../_images/Krita_mouse_right.png" /> + <span class="menuselection">Isolate Layer</span> (or the <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Alt</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> shortcut).</p></li>
+<li><p>When finished editing the Transparency Mask, <img alt="滑鼠右鍵" src="../../_images/Krita_mouse_right.png" /> on it and select <span class="menuselection">Split Alpha ‣ Write as Alpha</span>.</p></li>
 </ol>
 </div>
 <div class="section" id="how-to-save-a-png-texture-and-keep-color-values-in-fully-transparent-areas">
 <h2>How to save a PNG texture and keep color values in fully transparent areas<a class="headerlink" href="#how-to-save-a-png-texture-and-keep-color-values-in-fully-transparent-areas" title="本標題的永久連結">¶</a></h2>
 <p>Normally, when saving an image to a file, all fully transparent areas of the image are filled with black color. It happens because when composing the layers of the image, Krita drop color data of fully transparent pixels for efficiency reason. To avoid this of color data loss you can either avoid compositing of the image i.e. limit image to only one layer without any masks or effects, or use the following method:</p>
 <ol class="arabic simple">
-<li><p><img alt="mouseright" src="../../_images/Krita_mouse_right.png" /> the layer in the layers docker.</p></li>
+<li><p><img alt="滑鼠右鍵" src="../../_images/Krita_mouse_right.png" /> the layer in the layers docker.</p></li>
 <li><p>Choose <span class="menuselection">Split Alpha ‣ Alpha into Mask</span>.</p></li>
-<li><p><img alt="mouseright" src="../../_images/Krita_mouse_right.png" /> on the created mask and select <span class="menuselection">Split Alpha ‣ Save Merged...</span>.</p></li>
+<li><p><img alt="滑鼠右鍵" src="../../_images/Krita_mouse_right.png" /> on the created mask and select <span class="menuselection">Split Alpha ‣ Save Merged...</span>.</p></li>
 </ol>
 </div>
 </div>

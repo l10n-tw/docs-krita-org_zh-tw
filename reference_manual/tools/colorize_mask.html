@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-08-01T06:02:32" />
+  <meta property="og:article:modified_time" content="2021-08-02T06:12:37" />
   <meta content="How to use the colorize mask in Krita." name="description" />
 
   
@@ -303,8 +303,8 @@
 <p>For this example, we'll be using the ghost lady also used to explain masks on <a class="reference internal" href="../../user_manual/getting_started/basic_concepts.html#basic-concepts"><span class="std std-ref">the basic concepts page</span></a>.</p>
 <a class="reference internal image-reference" href="../../_images/Krita_4_0_colorize_mask_usage_01.png"><img alt="../../_images/Krita_4_0_colorize_mask_usage_01.png" class="align-center" src="../../_images/Krita_4_0_colorize_mask_usage_01.png" style="width: 800px;" /></a>
 <p>This image has the line art for the lady separated from the background, and what's more, the background is made up of two layers: one main and one for the details.</p>
-<p>First, select the colorize mask editing tool while having the line art layer selected. <img alt="mouseleft" src="../../_images/Krita_mouse_left.png" /> the canvas will add a colorize mask to the layer.
-You can also <img alt="mouseright" src="../../_images/Krita_mouse_right.png" /> the line art layer, and then <span class="menuselection">Add ‣ Colorize Mask</span>. The line art will suddenly become really weird, this is the prefiltering which are filters through which we put the line art to make the algorithm easier to use. The tool options overview below shows which options control that.</p>
+<p>First, select the colorize mask editing tool while having the line art layer selected. <img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> the canvas will add a colorize mask to the layer.
+You can also <img alt="滑鼠右鍵" src="../../_images/Krita_mouse_right.png" /> the line art layer, and then <span class="menuselection">Add ‣ Colorize Mask</span>. The line art will suddenly become really weird, this is the prefiltering which are filters through which we put the line art to make the algorithm easier to use. The tool options overview below shows which options control that.</p>
 <a class="reference internal image-reference" href="../../_images/Krita_4_0_colorize_mask_usage_02.png"><img alt="../../_images/Krita_4_0_colorize_mask_usage_02.png" class="align-center" src="../../_images/Krita_4_0_colorize_mask_usage_02.png" style="width: 800px;" /></a>
 <p>Now, you make strokes with brush colors, press <span class="guilabel">Update</span> in the tool options, or tick the last icon of the colorize mask properties. In the layer docker, you will be able to see a little progress bar appear on the colorize mask indicating how long it takes. The bigger your file, the longer it will take.</p>
 <a class="reference internal image-reference" href="../../_images/Krita_4_0_colorize_mask_usage_03.png"><img alt="../../_images/Krita_4_0_colorize_mask_usage_03.png" class="align-center" src="../../_images/Krita_4_0_colorize_mask_usage_03.png" style="width: 800px;" /></a>
@@ -318,14 +318,14 @@ You can also <img alt="mouseright" src="../../_images/Krita_mouse_right.png" /> 
 <a class="reference internal image-reference" href="../../_images/Krita_4_0_colorize_mask_usage_07.png"><img alt="../../_images/Krita_4_0_colorize_mask_usage_07.png" class="align-center" src="../../_images/Krita_4_0_colorize_mask_usage_07.png" style="width: 800px;" /></a>
 <p>If you want to edit the strokes again, re-enable <span class="guilabel">Edit Key Strokes</span>.</p>
 <p>Now, the colorize mask, being a mask, can also be added to a group of line art layers. It will then use the composition of the whole group as the line art. This is perfect for our background which has two separate line art layers. It also means that the colorize mask will be disabled when added to a group with pass-through enabled, because those have no final composition. You can recognize a disabled colorize mask because its name is stricken through.</p>
-<p>To add a colorize mask to a group, select the group and <img alt="mouseleft" src="../../_images/Krita_mouse_left.png" /> the canvas with the Colorize Mask editing tool, or <img alt="mouseright" src="../../_images/Krita_mouse_right.png" /> the layer to <span class="menuselection">Add ‣ Colorize Mask</span>.</p>
+<p>To add a colorize mask to a group, select the group and <img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> the canvas with the Colorize Mask editing tool, or <img alt="滑鼠右鍵" src="../../_images/Krita_mouse_right.png" /> the layer to <span class="menuselection">Add ‣ Colorize Mask</span>.</p>
 <a class="reference internal image-reference" href="../../_images/Krita_4_0_colorize_mask_usage_08.png"><img alt="../../_images/Krita_4_0_colorize_mask_usage_08.png" class="align-center" src="../../_images/Krita_4_0_colorize_mask_usage_08.png" style="width: 800px;" /></a>
 <p>Now, we add strokes to the background quickly. We do not need to use the <span class="menuselection">Limit to Layer Bounds</span> because the background covers the whole image.</p>
 <a class="reference internal image-reference" href="../../_images/Krita_4_0_colorize_mask_usage_09.png"><img alt="../../_images/Krita_4_0_colorize_mask_usage_09.png" class="align-center" src="../../_images/Krita_4_0_colorize_mask_usage_09.png" style="width: 800px;" /></a>
 <p>For the record, you can use other brushes and tools also work on the colorize mask as long as they can draw. The Colorize Mask Editing tool is just the most convenient because you can get to the algorithm options.</p>
 <p>Out final result looks like this:</p>
 <a class="reference internal image-reference" href="../../_images/Krita_4_0_colorize_mask_usage_10.png"><img alt="../../_images/Krita_4_0_colorize_mask_usage_10.png" class="align-center" src="../../_images/Krita_4_0_colorize_mask_usage_10.png" style="width: 800px;" /></a>
-<p>Now we are done, <img alt="mouseright" src="../../_images/Krita_mouse_right.png" /> the colorize mask and <span class="menuselection">Convert ‣ to Paint Layer</span>. Then, <span class="menuselection">Layer ‣ Split ‣ Split Layer</span>. This will give separate color islands that you can easily edit:</p>
+<p>Now we are done, <img alt="滑鼠右鍵" src="../../_images/Krita_mouse_right.png" /> the colorize mask and <span class="menuselection">Convert ‣ to Paint Layer</span>. Then, <span class="menuselection">Layer ‣ Split ‣ Split Layer</span>. This will give separate color islands that you can easily edit:</p>
 <a class="reference internal image-reference" href="../../_images/Krita_4_0_colorize_mask_usage_11.png"><img alt="../../_images/Krita_4_0_colorize_mask_usage_11.png" class="align-center" src="../../_images/Krita_4_0_colorize_mask_usage_11.png" style="width: 800px;" /></a>
 <p>This way we can very quickly paint the image. Due to the colorize mask going from the first image to the following took only 30 minutes, and would've taken quite a bit longer.</p>
 <a class="reference internal image-reference" href="../../_images/Krita_4_0_colorize_mask_usage_12.png"><img alt="../../_images/Krita_4_0_colorize_mask_usage_12.png" class="align-center" src="../../_images/Krita_4_0_colorize_mask_usage_12.png" style="width: 800px;" /></a>
@@ -361,7 +361,7 @@ You can also <img alt="mouseright" src="../../_images/Krita_mouse_right.png" /> 
 <dt>Clean up</dt><dd><p>This will attempt to handle messy strokes that overlap the line art where they shouldn't. At 0 no clean up is done, at 100% the clean-up is most aggressive.</p>
 <a class="reference internal image-reference" href="../../_images/Krita_4_0_colorize_mask_clean_up.png"><img alt="../../_images/Krita_4_0_colorize_mask_clean_up.png" class="align-center" src="../../_images/Krita_4_0_colorize_mask_clean_up.png" style="width: 800px;" /></a>
 </dd>
-<dt>Key strokes</dt><dd><p>This palette keeps track of the colors used by the strokes. This is useful so you can switch back to colors easily. You can increase the swatch size by hovering over it with the mouse, and doing <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="mousescroll" src="../../_images/Krita_mouse_scroll.png" />.</p>
+<dt>Key strokes</dt><dd><p>This palette keeps track of the colors used by the strokes. This is useful so you can switch back to colors easily. You can increase the swatch size by hovering over it with the mouse, and doing <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="滑鼠滾輸" src="../../_images/Krita_mouse_scroll.png" />.</p>
 </dd>
 <dt>Transparent</dt><dd><p>This button is under the keystrokes palette, you can mark the selected color to be interpreted a 'transparent' with this. In the clean-up screenshot above, cyan had been marked as transparent.</p>
 </dd>

@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-08-01T06:02:32" />
+  <meta property="og:article:modified_time" content="2021-08-02T06:12:37" />
   <meta content="Tutorial on how to create a presure sensitive brush with a bristle effect." name="description" property="og:description" />
 
   
@@ -275,7 +275,7 @@
 <li><p>Inverting via <span class="menuselection">Filter ‣ Adjust ‣ Invert</span></p></li>
 <li><p>Duplicating the layer.</p></li>
 <li><p>Then using <span class="menuselection">Filter ‣ Map ‣ Phongbump Map</span> on the topmost layer.</p></li>
-<li><p>Then select the lowest layer. <img alt="mouseright" src="../../_images/Krita_mouse_right.png" /> for the context menu, then select <span class="menuselection">convert ‣ to transparency mask</span>.</p></li>
+<li><p>Then select the lowest layer. <img alt="滑鼠右鍵" src="../../_images/Krita_mouse_right.png" /> for the context menu, then select <span class="menuselection">convert ‣ to transparency mask</span>.</p></li>
 <li><p>Finally, to soften the result, you can merge the layer and apply a bit of motion blur. Especially when using together with rotation set to drawing angle or tilt, some plain horizontal motion blur will reduce stray pixel artifacts.</p></li>
 </ol>
 <p>Then select all, copy, and use the clipboard function in the predefined brushes menu, and make sure to make sure to <strong>untick</strong> <span class="guilabel">Create Mask From Color</span>. What we're effectively doing here is ensuring that the transparency is being used for the sharpness, while having the color be using for the lightness map.</p>
@@ -300,7 +300,7 @@
 <p>You can make brush tips that are <a class="reference internal" href="animated_brushes.html#animated-brush-tips"><span class="std std-ref">animated</span></a>.</p>
 <p>If we take our example brush, and duplicate that layer 16 times or so.</p>
 <p>Now, for each layer, start at the top, going to the bottom, you will want to apply the <span class="menuselection">Filter ‣ Adjust ‣ Threshold</span>, with different values. Starting from 255, and then each time, decrease the value by 16. So, the topmost layer should be at 255, next layer 240, the layer after that 224 and so forth. Eventually you should have each layer have less coverage that the one above that. Now, go to the predefined brushes tab, and select <span class="guilabel">Stamp</span>. There select <span class="guilabel">Animated</span> for <span class="guilabel">Style</span> and <span class="guilabel">Pressure</span> for <span class="guilabel">Selection Mode</span>.</p>
-<p>If everything went right, you now have a brush-tip that can be used with the color smudge brush. For a brush that uses the gradient map, or the lightness mode, a similar principle applies, except you first <img alt="mouseright" src="../../_images/Krita_mouse_right.png" /> for the context menu, then select <span class="menuselection">Split Alpha ‣ Alpha into Mask</span>, and then only apply the threshold to the transparency mask. A softer result can be made by using the <span class="menuselection">Filter ‣ Adjust ‣ Levels</span> or <span class="menuselection">Filter ‣ Adjust ‣ Curves</span> to isolate the pixels for the given amount of pressure.</p>
+<p>If everything went right, you now have a brush-tip that can be used with the color smudge brush. For a brush that uses the gradient map, or the lightness mode, a similar principle applies, except you first <img alt="滑鼠右鍵" src="../../_images/Krita_mouse_right.png" /> for the context menu, then select <span class="menuselection">Split Alpha ‣ Alpha into Mask</span>, and then only apply the threshold to the transparency mask. A softer result can be made by using the <span class="menuselection">Filter ‣ Adjust ‣ Levels</span> or <span class="menuselection">Filter ‣ Adjust ‣ Curves</span> to isolate the pixels for the given amount of pressure.</p>
 </div>
 </div>
 
