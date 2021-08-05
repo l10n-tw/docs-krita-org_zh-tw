@@ -21,8 +21,8 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-08-03T10:45:31" />
-  <meta content="Detailed steps on how images work in Krita." name="description" />
+  <meta property="og:article:modified_time" content="2021-08-05T09:40:07" />
+  <meta content="Detailed steps on how images work in Krita." name="description" property="og:description" />
 
   
   
@@ -313,13 +313,13 @@ need to be remembered and the higher the bit depth of the color, the
 heavier the resulting file will be.</p>
 <div class="section" id="dpi-ppi">
 <h3>DPI、PPI<a class="headerlink" href="#dpi-ppi" title="本標題的永久連結">¶</a></h3>
-<p><strong>DPI</strong> stands for <em>Dots per Inch</em>, <strong>PPI</strong> stands for <em>Pixels per
+<p><code class="docutils literal notranslate"><span class="pre">DPI</span></code> stands for <em class="dfn">Dots per Inch</em>, <code class="docutils literal notranslate"><span class="pre">PPI</span></code> stands for <em class="dfn">Pixels per
 Inch</em>. In printing industry, suppose if your printer prints at 300
-<strong>DPI</strong>. It means it is actually putting 300 dots of colors in an area
+<code class="docutils literal notranslate"><span class="pre">DPI</span></code>. It means it is actually putting 300 dots of colors in an area
 equal to an Inch. This means the number of pixels your artwork has in a
 relative area of an inch.</p>
-<p><strong>DPI</strong> is the concern of the printer, and artists while creating
-artwork should keep <strong>PPI</strong> in mind. According to the <strong>PPI</strong> you have
+<p><code class="docutils literal notranslate"><span class="pre">DPI</span></code> is the concern of the printer, and artists while creating
+artwork should keep <code class="docutils literal notranslate"><span class="pre">PPI</span></code> in mind. According to the <code class="docutils literal notranslate"><span class="pre">PPI</span></code> you have
 set, the printers can decide how large your image should be on a piece
 of paper.</p>
 <p>Some standards:</p>
@@ -346,10 +346,7 @@ line art layer in grayscale can half the memory costs.</p>
 </div>
 <div class="section" id="image-color-space-vs-layer-color-space-vs-conversion">
 <h3>影像色彩空間、圖曾色彩空間以及其轉換操作<a class="headerlink" href="#image-color-space-vs-layer-color-space-vs-conversion" title="本標題的永久連結">¶</a></h3>
-<p>Because there's a difference between image color space and layer color
-space, you can change only the image color space in <span class="menuselection">Image ‣ Properties...</span> which will leave the layers alone. But if you want to change the color
-space of the file including all the layers you can do it by going to
-<span class="menuselection">Image ‣ Convert Image Color Space...</span> this will convert all the layers color space as well.</p>
+<p>Because there's a difference between image color space and layer color space, you can change only the image color space in <span class="menuselection">Image ‣ Properties...</span> which will leave the layers alone. But if you want to change the color space of the file including all the layers you can do it by going to <span class="menuselection">Image ‣ Convert Image Color Space...</span> this will convert all the layers color space as well.</p>
 </div>
 </div>
 <div class="section" id="author-and-description">
@@ -431,7 +428,7 @@ You can see the arrow marked in red in the example below:</p>
 <div class="section" id="resizing-the-image">
 <h3>調整影像大小<a class="headerlink" href="#resizing-the-image" title="本標題的永久連結">¶</a></h3>
 <p><span class="guilabel">Scale Image to New Size...</span> allows you to resize the whole image. Also,
-importantly, this is where you can change the resolution or <em>upres</em> your
+importantly, this is where you can change the resolution or ;dfn:<cite>upres</cite> your
 image. So for instance, if you were initially working at 72 PPI to block
 in large shapes and colors, images, etc... And now you want to really get
 in and do some detail work at 300 or 400 PPI this is where you would make
@@ -484,7 +481,7 @@ save it. This is also called 'import' in other programs.</p>
 Existing Document as Untitled Document...</span>, but then with already
 opened files.</p>
 </dd>
-<dt>儲存增量版本</dt><dd><p>Saves the current image as <em>'filename'_XXX.kra</em> and switches the
+<dt>儲存增量版本</dt><dd><p>Saves the current image as <code class="file docutils literal notranslate"><span class="pre">filename'_XXX.kra</span></code> and switches the
 current document to it.</p>
 </dd>
 <dt>儲存增量備份</dt><dd><p>Copies and renames the last saved version of your file to a backup file and saves your document under the original name.</p>
@@ -492,7 +489,7 @@ current document to it.</p>
 </dl>
 <div class="admonition note">
 <p class="admonition-title">備註</p>
-<p>Since Krita's file format is compressed data file, in case of a corrupt or broken file you can open it with archive managers and extract the contents of the layers. This will help you to recover as much as possible data from the file. On Windows, you will need to rename it to <em>filename.zip</em> to open it.</p>
+<p>Since Krita's file format is compressed data file, in case of a corrupt or broken file you can open it with archive managers and extract the contents of the layers. This will help you to recover as much as possible data from the file. On Windows, you will need to rename it to <code class="file docutils literal notranslate"><span class="pre">filename.zip</span></code> to open it.</p>
 </div>
 </div>
 </div>
@@ -520,7 +517,7 @@ current document to it.</p>
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>d0d5ca5</code>
+          修訂版本 <code>565a324</code>
         </span>
       
 

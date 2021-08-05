@@ -1,5 +1,5 @@
 .. meta::
-   :description:
+   :description property=og\:description:
         Guide on all the specifics of creating Krita python plugins.
 
 .. metadata-placeholder
@@ -27,9 +27,9 @@ These mini-tutorials are written for people with a basic understanding of python
 Getting Krita to recognize your plugin
 --------------------------------------
 
-A script in Krita has two components - the script directory (holding your script's Python files) and a ".desktop" file that Krita uses to load and register your script. For Krita to load your script both of these must put be in the pykrita subdirectory of your Krita resources folder (on Linux  ~/.local/share/krita/pykrita). To find your resources folder start Krita and click the :menuselection:`Settings --> Manage Resources...` menu item. This will open a dialog box. Click the :guilabel:`Open Resources Folder` button. This should open a file manager on your system at your Krita resources folder. See the `API <https://api.kde.org/extragear-api/graphics-apidocs/krita/libs/libkis/html/index.html>`_ docs under "Auto starting scripts".  If there is no pykrita subfolder in the Krita resources directory use your file manager to create one.
+A script in Krita has two components -- the script directory (holding your script's Python files) and a ".desktop" file that Krita uses to load and register your script. For Krita to load your script both of these must put be in the :file:`pykrita` subdirectory of your Krita resources folder (See :ref:`resource_management` for the paths per operating system). To find your resources folder start Krita and click the :menuselection:`Settings --> Manage Resources...` menu item. This will open a dialog box. Click the :guilabel:`Open Resources Folder` button. This should open a file manager on your system at your Krita resources folder. See the `API <https://api.kde.org/extragear-api/graphics-apidocs/krita/libs/libkis/html/index.html>`_ docs under "Auto starting scripts". If there is no :file:`pykrita` subfolder in the Krita resources directory use your file manager to create one.
 
-Scripts are identified by a file that ends in a .desktop extension that contain information about the script itself.
+Scripts are identified by a file that ends in a ``.desktop`` extension that contain information about the script itself.
 
 Therefore, for each proper plugin you will need to create a folder, and a desktop file.
 
@@ -47,7 +47,7 @@ The desktop file should look as follows::
 Type
  This should always be service.
 ServiceTypes
- This should always be Krita/PythonPlugin for python plugins.
+ This should always be ``Krita/PythonPlugin`` for python plugins.
 X-KDE-Library
  This should be the name of the plugin folder you just created.
 X-Python-2-Compatible
@@ -59,7 +59,7 @@ Name
 Comment
  The description that will show up in the Python Plugin Manager.
 
-Krita python plugins need to be python modules, so make sure there's an __init__.py script, containing something like...
+Krita python plugins need to be python modules, so make sure there's an ``__init__.py`` script, containing something like...
 
 .. code:: python
 
@@ -73,15 +73,15 @@ Where .myplugin is the name of the main file of your plugin. If you restart Krit
 Summary
 ^^^^^^^
 
-In summary, if you want to create a script called *myplugin*:
+In summary, if you want to create a script called ``myplugin``:
 
-- in your Krita *resources/pykrita* directory create
-    - a folder called *myplugin*
-    - a file called *myplugin.desktop*
-- in the *myplugin* folder create
-    - a file called *__init__.py*
-    - a file called *myplugin.py*
-- in the *__init__.py* file put this code:
+- in your Krita :file:`resources/pykrita` directory create
+    - a folder called :file:`myplugin`
+    - a file called :file:`myplugin.desktop`
+- in the :file:`myplugin` folder create
+    - a file called :file:`__init__.py`
+    - a file called :file:`myplugin.py`
+- in the :file:`__init__.py` file put this code:
 
 .. code:: python
 
@@ -97,7 +97,7 @@ In summary, if you want to create a script called *myplugin*:
     Name=My Own Plugin
     Comment=Our very own plugin.
 
-- write your script in the ''myplugin/myplugin.py'' file.
+- write your script in the :file:`myplugin/myplugin.py` file.
 
 Creating an extension
 ---------------------
@@ -136,9 +136,9 @@ So...
 
 
 "myAction"
- This should be replaced with a unique id that Krita will use to find the action.
+ This should be replaced with a unique ID that Krita will use to find the action.
 "My Script"
- This is what will be visible in the tools menu.
+ This is what will be visible in the :ref:`tools_menu`.
 
 If you now restart Krita, you will have an action called "My Script". It still doesn't do anything, because we haven't connected it to a script.
 
@@ -183,7 +183,7 @@ Creating configurable keyboard shortcuts
 
 Now, your new action doesn't show up in :menuselection:`Settings --> Configure Krita --> Keyboard Shortcuts`.
 
-Krita, for various reasons, only adds actions to the shortcuts menu when they are present in an .action file. The action file to get our action to be added to shortcuts should look like this:
+Krita, for various reasons, only adds actions to the :ref:`shortcut_settings` when they are present in an ``.action`` file. The action file to get our action to be added to the shortcuts should look like this:
 
 .. code:: xml
 
@@ -211,9 +211,9 @@ Krita, for various reasons, only adds actions to the shortcuts menu when they ar
 <text>My Scripts</text>
  This will create a sub-category under scripts called "My Scripts" to add your shortcuts to.
 name
- This should be the unique id you made for your action when creating it in the setup of the extension.
+ This should be the unique ID you made for your action when creating it in the setup of the extension.
 icon
- the name of a possible icon. These will only show up on KDE plasma, because Gnome and Windows users complained they look ugly.
+ The name of a possible icon. These will only show up on KDE plasma, because Gnome and Windows users complained they look ugly.
 text
  The text that it will show in the shortcut editor.
 whatsThis
@@ -233,7 +233,7 @@ isCheckable
 statusTip
  The status tip that is displayed on a status bar.
 
-Save this file as "myplugin.action" where myplugin is the name of your plugin. The action file should be saved, not in the pykrita resources folder, but rather in a resources folder named "actions". (So, share/pykrita is where the python plugins and desktop files go, and share/actions is where the action files go) Restart Krita. The shortcut should now show up in the shortcut action list.
+Save this file as ``myplugin.action`` where myplugin is the name of your plugin. The action file should be saved, not in the pykrita resources folder, but rather in a resources folder named "actions". (So, ``share/pykrita`` is where the python plugins and desktop files go, and ``share/actions`` is where the action files go) Restart Krita. The shortcut should now show up in the shortcut action list.
 
 Creating a docker
 -----------------
@@ -261,9 +261,9 @@ The window title is how it will appear in the docker list in Krita. canvasChange
 For the addDockWidgetFactory...
 
 "myDocker"
- Replace this with an unique ID for your docker that Krita uses to keep track of it.
+ Replace this with a unique ID for your docker that Krita uses to keep track of it.
 DockWidgetFactoryBase.DockRight
- The location. These can be DockTornOff, DockTop, DockBottom, DockRight, DockLeft, or DockMinimized
+ The location. These can be ``DockTornOff``, ``DockTop``, ``DockBottom``, ``DockRight``, ``DockLeft``, or ``DockMinimized``
 MyDocker
  Replace this with the class name of the docker you want to add.
 
@@ -271,7 +271,7 @@ So, if we add our export document function we created in the extension section t
 
 By default, Krita uses PyQt, but its documentation is pretty bad, mostly because the regular Qt documentation is really good, and you'll often find that the PyQt documentation of a class, say, `QWidget <https://www.riverbankcomputing.com/static/Docs/PyQt5/api/qtwidgets/qwidget.html>`_ is like a weird copy of the regular `Qt documentation <https://doc.qt.io/qt-5/qwidget.html>`_ for that class.
 
-Anyway, what we need to do first is that we need to create a QWidget, it's not very complicated, under setWindowTitle, add:
+Anyway, what we need to do first is that we need to create a ``QWidget``, it's not very complicated, under ``setWindowTitle``, add:
 
 .. code:: python
 
@@ -292,7 +292,7 @@ Now, to connect the button to our function, we'll need to look at the signals in
 
 If we now restart Krita, we'll have a new docker and in that docker there's a button. Clicking on the button will call up the export function.
 
-However, the button looks aligned a bit oddly. That's because our mainWidget has no layout. Let's quickly do that:
+However, the button looks aligned a bit oddly. That's because our ``mainWidget`` has no layout. Let's quickly do that:
 
 .. code:: python
 
@@ -306,10 +306,10 @@ Restart Krita and the button should now be laid out nicely.
 PyQt Signals and Slots
 ----------------------
 
-We've already been using PyQt signals and slots already, but there are times where you want to create your own signals and slots.
+We've already been using PyQt signals and slots already, but there are times when you want to create your own signals and slots.
 `As PyQt's documentation is pretty difficult to understand <https://www.riverbankcomputing.com/static/Docs/PyQt5/signals_slots.html>`_, and the way how signals and slots are created is very different from C++ Qt, we're explaining it here:
 
-All python functions you make in PyQt can be understood as slots, meaning that they can be connected to signals like Action.triggered or QPushButton.clicked. However, QCheckBox has a signal for toggled, which sends a boolean. How do we get our function to accept that boolean?
+All python functions you make in PyQt can be understood as slots, meaning that they can be connected to signals like ``Action.triggered`` or ``QPushButton.clicked``. However, ``QCheckBox`` has a signal for toggled, which sends a boolean. How do we get our function to accept that boolean?
 
 First, make sure you have the right import for making custom slots:
 

@@ -21,8 +21,8 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-08-03T10:45:31" />
-  <meta content="How to use the snapping functionality in Krita." name="description" />
+  <meta property="og:article:modified_time" content="2021-08-05T09:40:07" />
+  <meta content="How to use the snapping functionality in Krita." name="description" property="og:description" />
 
   
   
@@ -238,38 +238,21 @@
             
   <div class="section" id="snapping">
 <span id="index-0"></span><span id="id1"></span><h1>吸附<a class="headerlink" href="#snapping" title="本標題的永久連結">¶</a></h1>
-<p>In Krita 3.0, we now have functionality for Grids and Guides, but of
-course, this functionality is by itself not that interesting without
-snapping.</p>
-<p>Snapping is the ability to have Krita automatically align a selection or
-shape to the grids and guides, document center and document edges. For
-Vector layers, this goes even a step further, and we can let you snap to
-bounding boxes, intersections, extrapolated lines and more.</p>
-<p>All of these can be toggled using the snap pop-up menu which is assigned
-to <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">S</kbd></kbd> shortcut.</p>
+<p>In Krita 3.0, we now have functionality for Grids and Guides, but of course, this functionality is by itself not that interesting without snapping.</p>
+<p>Snapping is the ability to have Krita automatically align a selection or shape to the grids and guides, document center and document edges. For Vector layers, this goes even a step further, and we can let you snap to bounding boxes, intersections, extrapolated lines and more.</p>
+<p>All of these can be toggled using the snap pop-up menu which is assigned to <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">S</kbd></kbd> shortcut.</p>
 <p>Now, let us go over what each option means:</p>
 <dl class="simple">
-<dt>Grids</dt><dd><p>This will snap the cursor to the current grid, as configured in the
-grid docker. This doesn’t need the grid to be visible. Grids are
-saved per document, making this useful for aligning your art work to
-grids, as is the case for game sprites and grid-based designs.</p>
+<dt>Grids</dt><dd><p>This will snap the cursor to the current grid, as configured in the grid docker. This doesn’t need the grid to be visible. Grids are saved per document, making this useful for aligning your art work to grids, as is the case for game sprites and grid-based designs.</p>
 </dd>
-<dt>Pixel</dt><dd><p>This allows to snap to every pixel under the cursor. Similar to Grid
-Snapping but with a grid having spacing = 1px and offset = 0px.</p>
+<dt>Pixel</dt><dd><p>This allows to snap to every pixel under the cursor. Similar to Grid Snapping but with a grid having spacing = 1px and offset = 0px.</p>
 </dd>
-<dt>Guides</dt><dd><p>This allows you to snap to guides, which can be dragged out from the
-ruler. Guides do not need to be visible for this, and are saved per
-document. This is useful for comic panels and similar print-layouts,
-though we recommend Scribus for more intensive work.</p>
+<dt>Guides</dt><dd><p>This allows you to snap to guides, which can be dragged out from the ruler. Guides do not need to be visible for this, and are saved per document. This is useful for comic panels and similar print-layouts, though we recommend Scribus for more intensive work.</p>
 </dd>
 </dl>
 <img alt="../_images/Snap-orthogonal.png" src="../_images/Snap-orthogonal.png" />
 <dl class="simple">
-<dt>Orthogonal (Vector Only)</dt><dd><p>This allows you to snap to a horizontal or vertical line from
-existing vector objects’s nodes (Unless dealing with resizing the
-height or width only, in which case you can drag the cursor over the
-path). This is useful for aligning object horizontally or
-vertically, like with comic panels.</p>
+<dt>Orthogonal (Vector Only)</dt><dd><p>This allows you to snap to a horizontal or vertical line from existing vector objects' nodes (Unless dealing with resizing the height or width only, in which case you can drag the cursor over the path). This is useful for aligning object horizontally or vertically, like with comic panels.</p>
 </dd>
 </dl>
 <img alt="../_images/Snap-node.png" src="../_images/Snap-node.png" />
@@ -279,10 +262,7 @@ vertically, like with comic panels.</p>
 </dl>
 <img alt="../_images/Snap-extension.png" src="../_images/Snap-extension.png" />
 <dl class="simple">
-<dt>Extension (Vector Only)</dt><dd><p>When we draw an open path, the last nodes on either side can be
-mathematically extended. This option allows you to snap to that. The
-direction of the node depends on its side handles in path editing
-mode.</p>
+<dt>Extension (Vector Only)</dt><dd><p>When we draw an open path, the last nodes on either side can be mathematically extended. This option allows you to snap to that. The direction of the node depends on its side handles in path editing mode.</p>
 </dd>
 </dl>
 <img alt="../_images/Snap-intersection.png" src="../_images/Snap-intersection.png" />
@@ -291,11 +271,9 @@ mode.</p>
 </dd>
 <dt>Bounding box (Vector Only)</dt><dd><p>This allows you to snap to the bounding box of a vector shape.</p>
 </dd>
-<dt>Image bounds</dt><dd><p>Allows you to snap to the vertical and horizontal borders of an
-image.</p>
+<dt>Image bounds</dt><dd><p>Allows you to snap to the vertical and horizontal borders of an image.</p>
 </dd>
-<dt>Image center</dt><dd><p>Allows you to snap to the horizontal and vertical center of an
-image.</p>
+<dt>Image center</dt><dd><p>Allows you to snap to the horizontal and vertical center of an image.</p>
 </dd>
 </dl>
 <p>The snap works for the following tools:</p>
@@ -311,9 +289,7 @@ image.</p>
 <li><p>Shape Handling tool</p></li>
 <li><p>The Text-tool</p></li>
 <li><p>Assistant editing tools</p></li>
-<li><p>The move tool (note that it snaps to the cursor position and not the
-bounding box of the layer, selection or whatever you are trying to
-move)</p></li>
+<li><p>The move tool (note that it snaps to the cursor position and not the bounding box of the layer, selection or whatever you are trying to move)</p></li>
 <li><p>The Transform tool</p></li>
 <li><p>Rectangle select</p></li>
 <li><p>Elliptical select</p></li>
@@ -321,8 +297,7 @@ move)</p></li>
 <li><p>Path select</p></li>
 <li><p>Guides themselves can be snapped to grids and vectors</p></li>
 </ol>
-<p>Snapping doesn’t have a sensitivity yet, and by default is set to 10
-screen pixels.</p>
+<p>Snapping doesn’t have a sensitivity yet, and by default is set to 10 screen pixels.</p>
 </div>
 
 
@@ -348,7 +323,7 @@ screen pixels.</p>
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>d0d5ca5</code>
+          修訂版本 <code>565a324</code>
         </span>
       
 

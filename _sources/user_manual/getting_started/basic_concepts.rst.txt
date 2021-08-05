@@ -1,5 +1,5 @@
 .. meta::
-   :description lang=en:
+   :description property=og\:description:
         An overview of the basic concepts of Krita.
 
 .. metadata-placeholder
@@ -91,7 +91,7 @@ Dockers are little subwindows in :ref:`Krita's interface <navigation>`. They con
 .. image:: /images/dockers/Dockers.png
    :align: center
 
-The image above shows some of the dockers in Krita.
+The image above shows some dockers in Krita.
 
 All the views and the dockers are held inside **Windows**.
 
@@ -194,7 +194,7 @@ Humans can see a few million colors, which are combinations of electromagnetic w
 .. figure:: /images/Krita_basics_primaries.png
    :align: center
 
-   Subtractive CMY colors on the left and additive RGB colors on the right.  This difference means that printers benefit from color conversion before printing.
+   Subtractive CMY colors on the left and additive RGB colors on the right. This difference means that printers benefit from color conversion before printing.
 
 When painting traditionally, we use pigments which also absorb the right light-waves for the color we want it to have, but the more pigments you combine, the more light is absorbed, leading to a kind of murky black. This is why we call the mixing of paints **subtractive**, as it subtracts light the more pigments you put together. Because of that, in traditional pigment mixing, our most efficient primaries are three fairly light colors: Cyan blue and Magenta red and Yellow (CMY).
 
@@ -290,8 +290,8 @@ Color to Alpha
 
 Krita has many more filters available: you can read about them :ref:`here <filters>`.
 
-:ref:`filter_brush_engine`
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+Filter Brush Engine
+~~~~~~~~~~~~~~~~~~~
 
 Because many of these operations are per pixel, Krita allows you to use the filter as part of the :ref:`filter_brush_engine`.
 
@@ -326,31 +326,30 @@ However, if you want more control, Krita offers a :ref:`transform_tool`.
 
 With this tool you can rotate and resize on the canvas, or put it in perspective. Or you can use advanced transform tools, like the warp, cage and liquify, which allow you to transform by drawing custom points or even by pretending it's a transforming brush.
 
-:ref:`deform_brush_engine`
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+Deform Brush Engine
+~~~~~~~~~~~~~~~~~~~
 
-Like the filter brush engine, Krita also has a Deform Brush Engine, which allows you to transform with a brush. The deform is like a much faster version of the Liquify transform tool mode, but in exchange, its results are of much lower quality.
+Like the filter brush engine, Krita also has a Deform Brush Engine, which allows you to transform with a brush. This deform is like a much faster version of the Liquefy transform tool mode, but in exchange, its results are of much lower quality.
 
 .. figure:: /images/tools/Krita_transforms_deformvsliquefy.png
    :align: center
 
-   Apple transformed into a pear with liquify on the left and deform brush on the right.
+   Apple transformed into a pear with liquefy on the left and Deform brush on the right.
 
 Furthermore, you can't apply the deform brush as a non-destructive mask.
 
-:ref:`transformation_masks`
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Transform Masks
+~~~~~~~~~~~~~~~
 
-Like filters, transforms can be applied as a non-destructive operation that is part of the layer stack. Unlike filter and transparency masks however, transform masks can't be driven by a grayscale image, for technical reasons. 
-You can use transform masks to deform clone and file layers as well.
+Like filters, transforms can be applied as a non-destructive operation that is part of the layer stack. Unlike filter and transparency masks however, :ref:`transformation_masks` can't be driven by a grayscale image, for technical reasons. You can use transform masks to deform clone and file layers as well.
 
-:ref:`animation`
-----------------
+Animation
+---------
 
 .. image:: /images/animation/Introduction_to_animation_walkcycle_02.gif
    :align: center
 
-From version 3.0 onwards, Krita got raster animation support. You can use the timeline, animation and onionskin dockers, plus Krita's amazing variety of brushes to do raster based animations, export those, and then turn them into movies or GIFs.
+From version 3.0 onwards, Krita got raster :ref:`animation <animation>` support. You can use the timeline, animation and onionskin dockers, plus Krita's amazing variety of brushes to do raster based animations, export those, and then turn them into movies or GIFs.
 
 Assistants, Grids and Guides
 ----------------------------

@@ -1,5 +1,5 @@
 .. meta::
-   :description:
+   :description property=og\:description:
         Detailed steps on how images work in Krita.
 
 .. metadata-placeholder
@@ -71,14 +71,14 @@ heavier the resulting file will be.
 DPI/PPI
 ~~~~~~~
 
-**DPI** stands for *Dots per Inch*, **PPI** stands for *Pixels per
-Inch*. In printing industry, suppose if your printer prints at 300
-**DPI**. It means it is actually putting 300 dots of colors in an area
+``DPI`` stands for :dfn:`Dots per Inch`, ``PPI`` stands for :dfn:`Pixels per
+Inch`. In printing industry, suppose if your printer prints at 300
+``DPI``. It means it is actually putting 300 dots of colors in an area
 equal to an Inch. This means the number of pixels your artwork has in a
 relative area of an inch.
 
-**DPI** is the concern of the printer, and artists while creating
-artwork should keep **PPI** in mind. According to the **PPI** you have
+``DPI`` is the concern of the printer, and artists while creating
+artwork should keep ``PPI`` in mind. According to the ``PPI`` you have
 set, the printers can decide how large your image should be on a piece
 of paper.
 
@@ -107,10 +107,7 @@ line art layer in grayscale can half the memory costs.
 Image color space vs layer color space vs conversion.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Because there's a difference between image color space and layer color
-space, you can change only the image color space in :menuselection:`Image --> Properties...` which will leave the layers alone. But if you want to change the color
-space of the file including all the layers you can do it by going to
-:menuselection:`Image --> Convert Image Color Space...` this will convert all the layers color space as well.
+Because there's a difference between image color space and layer color space, you can change only the image color space in :menuselection:`Image --> Properties...` which will leave the layers alone. But if you want to change the color space of the file including all the layers you can do it by going to :menuselection:`Image --> Convert Image Color Space...` this will convert all the layers color space as well.
 
 Author and Description
 ----------------------
@@ -210,7 +207,7 @@ Resizing the image
 ~~~~~~~~~~~~~~~~~~
 
 :guilabel:`Scale Image to New Size...` allows you to resize the whole image. Also,
-importantly, this is where you can change the resolution or *upres* your
+importantly, this is where you can change the resolution or ;dfn:`upres` your
 image. So for instance, if you were initially working at 72 PPI to block
 in large shapes and colors, images, etc... And now you want to really get
 in and do some detail work at 300 or 400 PPI this is where you would make
@@ -271,11 +268,11 @@ Create Copy from Current Image
     Existing Document as Untitled Document...`, but then with already
     opened files.
 Save Incremental Version
-    Saves the current image as *'filename'\_XXX.kra* and switches the
+    Saves the current image as :file:`filename'\_XXX.kra` and switches the
     current document to it.
 Save Incremental Backup
     Copies and renames the last saved version of your file to a backup file and saves your document under the original name.
     
 
 .. note::
-    Since Krita's file format is compressed data file, in case of a corrupt or broken file you can open it with archive managers and extract the contents of the layers. This will help you to recover as much as possible data from the file. On Windows, you will need to rename it to *filename.zip* to open it.
+    Since Krita's file format is compressed data file, in case of a corrupt or broken file you can open it with archive managers and extract the contents of the layers. This will help you to recover as much as possible data from the file. On Windows, you will need to rename it to :file:`filename.zip` to open it.

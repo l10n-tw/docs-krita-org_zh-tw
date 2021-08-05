@@ -37,7 +37,7 @@ In traditional animation workflow, what you do is that you make :term:`Keyframes
 
 For this workflow, there are three important dockers:
 
-#. The :ref:`timeline_docker`. View and control all of the frames in your animation. The timeline docker also contains functions to manage your layers. The layers that are created in the timeline docker also appear on the normal Layer docker.
+#. The :ref:`timeline_docker`. View and control all the frames in your animation. The timeline docker also contains functions to manage your layers. The layers that are created in the timeline docker also appear on the normal Layer docker.
 #. The :ref:`onion_skin_docker`. This docker controls the look of the onion skin, which in turn is useful for seeing the previous frame.
 #. The :ref:`animation_curves_docker`. This docker allows you to do minor tweening for animation curves.
 #. The :ref:`storyboard_docker`. This docker helps you create and keep track of storyboards.
@@ -50,7 +50,7 @@ Furthermore, especially when you want to do a big animation, that is, any animat
 
 Typically, most animation projects start with a script or at the very least an outline of actions that will happen. You can do this in any kind of text editor you like. The next step is to create a :ref:`storyboard <storyboard_docker>`. They are sketches of the basic composition of each scene, with some extra notes on what is going to move, like camera movement, character movement, notes on audio, notes on color. These seem closer to a comic than an animation, but the key difference between the two is that in comics the composition is made to help the reader move their eyes over the page, while in animation the viewer's eyes will stay in relatively the same spot, so consecutive storyboard frames will have their most important elements in relatively the same place. If that seems a little abstract, don't worry. You can make a story board by using the animation functions, but the key here is that you use as little frames as possible. Export the story board using the render animation option.
 
-Then, the next step is to make an :dfn:`Animatic`. An animatic is basically the storyboard, but then animated. You are best off doing this in a video editor like `KDENLive <http://kdenlive.org/>`_, `Openshot <https://www.openshot.org/>`_, `Olive <https://olivevideoeditor.org/index.php>`_, or even Windows Movie Maker. *If you want to put everything together into one big animation you will need to learn how to use such a program to begin with, as Krita doesn't have extensive video and audio montage functions.*
+Then, the next step is to make an :dfn:`Animatic`. An animatic is basically the storyboard, but then animated. You are best off doing this in a video editor like `Kdenlive <http://kdenlive.org/>`_, `OpenShot <https://www.openshot.org/>`_, `Olive <https://olivevideoeditor.org/index.php>`_, or even Windows Movie Maker. *If you want to put everything together into one big animation you will need to learn how to use such a program to begin with, as Krita doesn't have extensive video and audio montage functions.*
 
 Doing the animatic will allow you to see how the animation can be subdivided into small clips. If you are just starting out, you are best off limiting yourself to 12 frames per second. Then, a 10-second clip would be 120 frames. Try to figure out if you can subdivide your animation idea into clips of 10 seconds or shorter. You can import the story board frames associated with a specific clip by going to :menuselection:`File --> Import Animation Frames`. From there, slowly start building up your animation. During the sketching phase it may also help to work on a low resolution, like 800×450 pixels. High resolution only starts mattering when you are doing line art, after all. And it will be hard to get to that point if you don't even have a rough outline.
 
@@ -69,7 +69,7 @@ Another thing you will want to do is make a ton of backups. Every time you hit a
 
    And while we're at it, whenever you've hit a milestone, don't forget to take a break as well! Doing big projects like animations take a lot of effort and concentration, so taking breaks is important to recharge yourself.
 
-When you are done, you will want to use :guilabel:`Render Animation` again. Now either export a frame sequence or a small video file, and then compose all of the frame sequences and video files together in the video editor. Then you can render it to ``WebM``, and upload it to your favorite video hosting website.
+When you are done, you will want to use :guilabel:`Render Animation` again. Now either export a frame sequence or a small video file, and then compose all the frame sequences and video files together in the video editor. Then you can render it to ``WebM``, and upload it to your favorite video hosting website.
 
 This may all seem a little complicated, but if your computer doesn't have a lot of resources, you have got to be resourceful yourself!
 
@@ -101,7 +101,7 @@ Which should result in this:
 Animating
 ~~~~~~~~~
 
-Make sure there's two transparent layers setup in the layer docker. You can add a new layer by pressing the :guilabel:`+` or by pressing :kbd:`ins`. Let's name the bottom one 'environment' and the top 'walkcycle' by double-clicking their names in the layer docker.
+Make sure there's two transparent layers setup in the layer docker. You can add a new layer by pressing the :guilabel:`+` or by pressing :kbd:`ins`. Let's name the bottom one 'environment' and the top ``walkcycle`` by double-clicking their names in the layer docker.
 
 .. figure:: /images/animation/Introduction_to_animation_02.png
    :alt: Layout of the layer stack.
@@ -111,12 +111,12 @@ Use the :ref:`line_tool` to draw a single horizontal line. This is the ground.
 .. image:: /images/animation/Introduction_to_animation_03.png
    :alt: Our simple environment, consisting of a single horizon.
 
-Then, select the 'walkcycle' layer and draw a head and torso (you can use any brush for this).
+Then, select the ``walkcycle`` layer and draw a head and torso (you can use any brush for this).
 
 .. image:: /images/animation/Introduction_to_animation_04.png
    :alt: A head and torso.
 
-Now, selecting a new frame will not make a new frame automatically. Krita doesn't actually see the 'walkcycle' layer as an animated layer at all!
+Now, selecting a new frame will not make a new frame automatically. Krita doesn't actually see the ``walkcycle`` layer as an animated layer at all!
 
 We can make it an animated layer by adding a frame to the timeline. A frame in the timeline to get a context menu. Select :guilabel:`Create Duplicate Frame` (|duplicateframe|).
 
@@ -157,7 +157,7 @@ Now, we're going to draw the two extremes of the walk cycle. These are the pose 
    The above image shows our two extremes: legs far apart, and one leg straight while the other is bent, as it's taking a step. This also shows the power of onion skins, as we can see both extremes at once.
    Notice also how the legs have been made semi-transparent. This isn't necessary with a stick figure, but useful in this case when we start copying.
 
-let's copy these two. You can do this by doing |mouseright| on the frame, and then selecting :guilabel:`Copy Keyframes`. Then select the new position in the time line, |mouseright| again, and :guilabel:`Paste Keyframes`.
+Let's copy these two. You can do this by doing |mouseright| on the frame, and then selecting :guilabel:`Copy Keyframes`. Then select the new position in the time line, |mouseright| again, and :guilabel:`Paste Keyframes`.
 
 Now then...
 
@@ -183,10 +183,10 @@ Now then...
 Expanding upon your rough walk cycle
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. image:: /images/animation/Introduction_to_animation_14.png
+.. image:: /images/animation/Introduction_to_animation_13.png
 
 You can quickly make some space by the :kbd:`Alt + drag` shortcut on any frame. This'll move that frame and all others after it
-in one go. More efficient for us, however, is to select all frames, |mouseright| them, and then select :menuselection:`Holdframes --> Insert Hold Frame`, which will insert an empty space or :dfn:`Hold Frame` in between each :dfn:`Keyframe`.
+in one go. More efficient for us, however, is to select all frames, |mouseright| them, and then select :menuselection:`Hold frames --> Insert Hold Frame`, which will insert an empty space or :dfn:`Hold Frame` in between each :dfn:`Keyframe`.
 
 Make new frames in between each keyframe, and try to interpolate, or inbetween each frame you add.
 
@@ -252,7 +252,7 @@ Animating with transform masks
 
 .. versionadded:: 5.0
 
-If you want to move your walkcycle, you may use :ref:`transformation_masks` to move the frames from left to right without editing the pixels themselves.
+If you want to move your walk cycle, you may use :ref:`transformation_masks` to move the frames from left to right without editing the pixels themselves.
 
 First, open up the :ref:`animation_curves_docker` if it has not been opened yet, under :menuselection:`Settings --> Dockers --> Animation Curves`.
 
@@ -262,23 +262,23 @@ Then, go into the animation docker, select the first frame, and select :guilabel
 
 Now select the :ref:`transform_tool`, press the screen and move the group to the start point. Press :kbd:`Enter` to confirm. Select the last frame in the docker, and then press the screen again, now move everything to the end point. Press :guilabel:`Zoom view to fit channel range` to view the whole frame.
 
-Now, when you press play, you will see the layer contents move. However, it is probably moving too fast. There's two things to reduce that problem: The first is to copy and paste the walk cycle frames so it repeats 3-4 times, then move the scalar frame to the last frame.
+Now, when you press play, you will see the layer contents move. However, it is probably moving too fast. There are two things to reduce that problem: The first is to copy and paste the walk cycle frames, so it repeats 3-4 times, then move the scalar frame to the last frame.
 
 .. image:: /images/animation/Introduction_to_animation_19.png
 
 .. image:: /images/animation/introduction_to_animation_walkcycle_03_simple_tween.gif
 
-This still doesn't sync the walk cycle directly to the speed it's moving at. The best method, if a little labourious, is to go to the first frame where one of the feet touches the ground, and then mark that section (for example, using :ref:`guides <grids_and_guides_docker>`), then, in subsequent frames, use the Transform Tool on each frame to move it so that the foot stays in the same place as long as it's touching the ground. Do the same for the next bit where a foot touches the ground, and the next, and so on.
+This still doesn't sync the walk cycle directly to the speed it's moving at. The best method, if a little laborious, is to go to the first frame where one of the feet touches the ground, and then mark that section (for example, using :ref:`guides <grids_and_guides_docker>`), then, in subsequent frames, use the Transform Tool on each frame to move it so that the foot stays in the same place as long as it's touching the ground. Do the same for the next bit where a foot touches the ground, and the next, and so on.
 
 .. figure:: /images/animation/Introduction_to_animation_20a.png
 
-   Each place where a foot touches the ground is marked using vertical guides, which allows us to adjust each frame so the foot stays in place.
+   Each place where a foot touches the ground is marked using vertical guides, which allows us to adjust each frame, so the foot stays in place.
 
 .. image:: /images/animation/Introduction_to_animation_20b.png
 
 .. figure:: /images/animation/Introduction_to_animation_20c.png
 
-   The animation curve docker after adjusting each frame to be in the right spot. Krita can do curved interpolation (so you can create an ease-in and ease-out type curves), but for a situation like this, per-frame adjustment is quicker.
+   The animation curve docker after adjusting each frame to be in the right spot. Krita can do curve interpolation (so you can create an ease-in and ease-out type curves), but for a situation like this, per-frame adjustment is quicker.
 
 After having done all that, you will end up with a smoothly moving walk cycle:
 

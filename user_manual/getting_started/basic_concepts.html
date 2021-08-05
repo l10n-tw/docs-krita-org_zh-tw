@@ -21,8 +21,8 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-08-03T10:45:31" />
-  <meta content="An overview of the basic concepts of Krita." lang="en" name="description" xml:lang="en" />
+  <meta property="og:article:modified_time" content="2021-08-05T09:40:07" />
+  <meta content="An overview of the basic concepts of Krita." name="description" property="og:description" />
 
   
   
@@ -141,7 +141,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#masks">遮罩</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#filters">濾鏡</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#transformations">變形</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#animation"><span class="xref std std-ref">animation</span></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#animation">Animation</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#assistants-grids-and-guides">輔助尺、網格與參考線</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#customization">自訂介面</a></li>
 </ul>
@@ -290,17 +290,17 @@
 <li><p><a class="reference internal" href="#masks" id="id24">遮罩</a></p></li>
 <li><p><a class="reference internal" href="#filters" id="id25">濾鏡</a></p>
 <ul>
-<li><p><a class="reference internal" href="#filter-brush-engine" id="id26"><a class="reference internal" href="../../reference_manual/brushes/brush_engines/filter_brush_engine.html#filter-brush-engine"><span class="std std-ref">Filter Brush Engine</span></a></a></p></li>
+<li><p><a class="reference internal" href="#filter-brush-engine" id="id26">Filter Brush Engine</a></p></li>
 <li><p><a class="reference internal" href="#filter-layers-filter-masks-and-layer-styles" id="id27">濾鏡圖層、濾鏡遮罩與圖層樣式</a></p></li>
 </ul>
 </li>
 <li><p><a class="reference internal" href="#transformations" id="id28">變形</a></p>
 <ul>
-<li><p><a class="reference internal" href="#deform-brush-engine" id="id29"><a class="reference internal" href="../../reference_manual/brushes/brush_engines/deform_brush_engine.html#deform-brush-engine"><span class="std std-ref">Deform Brush Engine</span></a></a></p></li>
-<li><p><a class="reference internal" href="#transformation-masks" id="id30"><a class="reference internal" href="../../reference_manual/layers_and_masks/transformation_masks.html#transformation-masks"><span class="std std-ref">Transform Masks</span></a></a></p></li>
+<li><p><a class="reference internal" href="#deform-brush-engine" id="id29">Deform Brush Engine</a></p></li>
+<li><p><a class="reference internal" href="#transform-masks" id="id30">Transform Masks</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#animation" id="id31"><a class="reference internal" href="../animation.html#animation"><span class="std std-ref">用 Krita 製作動畫</span></a></a></p></li>
+<li><p><a class="reference internal" href="#animation" id="id31">Animation</a></p></li>
 <li><p><a class="reference internal" href="#assistants-grids-and-guides" id="id32">輔助尺、網格與參考線</a></p></li>
 <li><p><a class="reference internal" href="#customization" id="id33">自訂介面</a></p></li>
 </ul>
@@ -352,7 +352,7 @@
 <h3><a class="toc-backref" href="#id15">工具面板</a><a class="headerlink" href="#dockers" title="本標題的永久連結">¶</a></h3>
 <p>Dockers are little subwindows in <a class="reference internal" href="navigation.html#navigation"><span class="std std-ref">Krita's interface</span></a>. They contain useful tools, like the color selector, layer stack, tool options, et cetera.</p>
 <img alt="../../_images/Dockers.png" class="align-center" src="../../_images/Dockers.png" />
-<p>The image above shows some of the dockers in Krita.</p>
+<p>The image above shows some dockers in Krita.</p>
 <p>All the views and the dockers are held inside <strong>Windows</strong>.</p>
 </div>
 <div class="section" id="window">
@@ -430,7 +430,7 @@ This data is stored in the <strong>Layers</strong>.</p>
 <p>Humans can see a few million colors, which are combinations of electromagnetic waves (light) bouncing off a surface, where the surface absorbs some of it.</p>
 <div class="figure align-center" id="id5">
 <img alt="../../_images/Krita_basics_primaries.png" src="../../_images/Krita_basics_primaries.png" />
-<p class="caption"><span class="caption-text">Subtractive CMY colors on the left and additive RGB colors on the right.  This difference means that printers benefit from color conversion before printing.</span><a class="headerlink" href="#id5" title="本圖片的永久連結">¶</a></p>
+<p class="caption"><span class="caption-text">Subtractive CMY colors on the left and additive RGB colors on the right. This difference means that printers benefit from color conversion before printing.</span><a class="headerlink" href="#id5" title="本圖片的永久連結">¶</a></p>
 </div>
 <p>When painting traditionally, we use pigments which also absorb the right light-waves for the color we want it to have, but the more pigments you combine, the more light is absorbed, leading to a kind of murky black. This is why we call the mixing of paints <strong>subtractive</strong>, as it subtracts light the more pigments you put together. Because of that, in traditional pigment mixing, our most efficient primaries are three fairly light colors: Cyan blue and Magenta red and Yellow (CMY).</p>
 <p>A computer also uses three primaries and uses a specific amount of each primary in a color as the way it stores color. However, a computer is a screen that emits light. So it makes more light, which means it needs to do <strong>additive</strong> mixing, where adding more and more colored lights result in white. This is why the three most efficient primaries, as used by computers are Red, Green and Blue (RGB).</p>
@@ -500,7 +500,7 @@ We right-click the layer and add a transparency mask. Then, we select that mask 
 </div>
 <p>Krita has many more filters available: you can read about them <a class="reference internal" href="../../reference_manual/filters.html#filters"><span class="std std-ref">here</span></a>.</p>
 <div class="section" id="filter-brush-engine">
-<h3><a class="toc-backref" href="#id26"><a class="reference internal" href="../../reference_manual/brushes/brush_engines/filter_brush_engine.html#filter-brush-engine"><span class="std std-ref">Filter Brush Engine</span></a></a><a class="headerlink" href="#filter-brush-engine" title="本標題的永久連結">¶</a></h3>
+<h3><a class="toc-backref" href="#id26">Filter Brush Engine</a><a class="headerlink" href="#filter-brush-engine" title="本標題的永久連結">¶</a></h3>
 <p>Because many of these operations are per pixel, Krita allows you to use the filter as part of the <a class="reference internal" href="../../reference_manual/brushes/brush_engines/filter_brush_engine.html#filter-brush-engine"><span class="std std-ref">Filter Brush Engine</span></a>.</p>
 <p>In most image manipulation software, these are separate tools, but Krita has it as a brush engine, allowing much more customization than usual.</p>
 <p>This means you can make a brush that desaturates pixels, or a brush that changes the hue of the pixels underneath.</p>
@@ -522,24 +522,23 @@ However, if you want more control, Krita offers a <a class="reference internal" 
 <img alt="../../_images/Krita_transforms_free.png" class="align-center" src="../../_images/Krita_transforms_free.png" />
 <p>With this tool you can rotate and resize on the canvas, or put it in perspective. Or you can use advanced transform tools, like the warp, cage and liquify, which allow you to transform by drawing custom points or even by pretending it's a transforming brush.</p>
 <div class="section" id="deform-brush-engine">
-<h3><a class="toc-backref" href="#id29"><a class="reference internal" href="../../reference_manual/brushes/brush_engines/deform_brush_engine.html#deform-brush-engine"><span class="std std-ref">Deform Brush Engine</span></a></a><a class="headerlink" href="#deform-brush-engine" title="本標題的永久連結">¶</a></h3>
-<p>Like the filter brush engine, Krita also has a Deform Brush Engine, which allows you to transform with a brush. The deform is like a much faster version of the Liquify transform tool mode, but in exchange, its results are of much lower quality.</p>
+<h3><a class="toc-backref" href="#id29">Deform Brush Engine</a><a class="headerlink" href="#deform-brush-engine" title="本標題的永久連結">¶</a></h3>
+<p>Like the filter brush engine, Krita also has a Deform Brush Engine, which allows you to transform with a brush. This deform is like a much faster version of the Liquefy transform tool mode, but in exchange, its results are of much lower quality.</p>
 <div class="figure align-center" id="id8">
 <img alt="../../_images/Krita_transforms_deformvsliquefy.png" src="../../_images/Krita_transforms_deformvsliquefy.png" />
-<p class="caption"><span class="caption-text">Apple transformed into a pear with liquify on the left and deform brush on the right.</span><a class="headerlink" href="#id8" title="本圖片的永久連結">¶</a></p>
+<p class="caption"><span class="caption-text">Apple transformed into a pear with liquefy on the left and Deform brush on the right.</span><a class="headerlink" href="#id8" title="本圖片的永久連結">¶</a></p>
 </div>
 <p>Furthermore, you can't apply the deform brush as a non-destructive mask.</p>
 </div>
-<div class="section" id="transformation-masks">
-<h3><a class="toc-backref" href="#id30"><a class="reference internal" href="../../reference_manual/layers_and_masks/transformation_masks.html#transformation-masks"><span class="std std-ref">Transform Masks</span></a></a><a class="headerlink" href="#transformation-masks" title="本標題的永久連結">¶</a></h3>
-<p>Like filters, transforms can be applied as a non-destructive operation that is part of the layer stack. Unlike filter and transparency masks however, transform masks can't be driven by a grayscale image, for technical reasons.
-You can use transform masks to deform clone and file layers as well.</p>
+<div class="section" id="transform-masks">
+<h3><a class="toc-backref" href="#id30">Transform Masks</a><a class="headerlink" href="#transform-masks" title="本標題的永久連結">¶</a></h3>
+<p>Like filters, transforms can be applied as a non-destructive operation that is part of the layer stack. Unlike filter and transparency masks however, <a class="reference internal" href="../../reference_manual/layers_and_masks/transformation_masks.html#transformation-masks"><span class="std std-ref">Transform Masks</span></a> can't be driven by a grayscale image, for technical reasons. You can use transform masks to deform clone and file layers as well.</p>
 </div>
 </div>
 <div class="section" id="animation">
-<h2><a class="toc-backref" href="#id31"><a class="reference internal" href="../animation.html#animation"><span class="std std-ref">用 Krita 製作動畫</span></a></a><a class="headerlink" href="#animation" title="本標題的永久連結">¶</a></h2>
+<h2><a class="toc-backref" href="#id31">Animation</a><a class="headerlink" href="#animation" title="本標題的永久連結">¶</a></h2>
 <img alt="../../_images/Introduction_to_animation_walkcycle_02.gif" class="align-center" src="../../_images/Introduction_to_animation_walkcycle_02.gif" />
-<p>From version 3.0 onwards, Krita got raster animation support. You can use the timeline, animation and onionskin dockers, plus Krita's amazing variety of brushes to do raster based animations, export those, and then turn them into movies or GIFs.</p>
+<p>From version 3.0 onwards, Krita got raster <a class="reference internal" href="../animation.html#animation"><span class="std std-ref">animation</span></a> support. You can use the timeline, animation and onionskin dockers, plus Krita's amazing variety of brushes to do raster based animations, export those, and then turn them into movies or GIFs.</p>
 </div>
 <div class="section" id="assistants-grids-and-guides">
 <h2><a class="toc-backref" href="#id32">輔助尺、網格與參考線</a><a class="headerlink" href="#assistants-grids-and-guides" title="本標題的永久連結">¶</a></h2>
@@ -589,7 +588,7 @@ You can use transform masks to deform clone and file layers as well.</p>
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>d0d5ca5</code>
+          修訂版本 <code>565a324</code>
         </span>
       
 

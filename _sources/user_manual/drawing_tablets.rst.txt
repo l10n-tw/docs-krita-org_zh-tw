@@ -1,5 +1,5 @@
 .. meta::
-   :description:
+   :description property=og\:description:
         Basic page describing drawing tablets, how to set them up for Krita and how to troubleshoot common tablet issues.
 
 .. metadata-placeholder
@@ -77,7 +77,7 @@ The base principle of all of these systems is the same though. You would
 like to run programs like Krita, called software, on your computer, and
 you want Krita to be able to communicate with the hardware, like your
 drawing tablet. But to have those two communicate can be really
-difficult - so the operating system, works as a glue between the two.
+difficult -- so the operating system, works as a glue between the two.
 
 Whenever you start Krita, Krita will first make connections with the
 operating system, so it can ask it for a lot of these things: It would
@@ -105,11 +105,11 @@ Surface Pro tablets need two drivers
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Certain tablets using n-trig, like the Surface Pro, have two types of
-drivers. One is native, n-trig and the other one is called Wintab.
+drivers. One is native, n-trig and the other one is called WinTab.
 Since 3.3, Krita can use Windows Ink style drivers, just go to 
 :menuselection:`Settings --> Configure Krita... --> Tablet Settings` and
 toggle the :guilabel:`Windows 8+ Pointer Input (Windows Ink)` there. You
-don't need to install the Wintab drivers anymore for n-trig based pens.
+don't need to install the WinTab drivers anymore for n-trig based pens.
 
 Windows 10 updates
 ~~~~~~~~~~~~~~~~~~
@@ -133,7 +133,7 @@ or, on the other hand, make it the secondary screen. Double check in the Wacom
 settings utility that the tablet in the Cintiq is associated with the Cintiq
 screen.
 
-The third is that if you have a display tablet like a Cintiq and a Wacom ExpressKeys remote, and you have disabled Windows Ink in the calibration page of the stylus settings dialog, so you have the full set of Wintab features, the Cintiq needs to be the first item in Wacom's desktop application list. Otherwise, you will have an offset between stylus and mouse that will get worse the more displays there are to the left of the Cintiq display.
+The third is that if you have a display tablet like a Cintiq and a Wacom ExpressKeys remote, and you have disabled Windows Ink in the calibration page of the stylus settings dialog, so you have the full set of WinTab features, the Cintiq needs to be the first item in Wacom's desktop application list. Otherwise, you will have an offset between stylus and mouse that will get worse the more displays there are to the left of the Cintiq display.
 
 
 Broken Drivers
@@ -149,7 +149,7 @@ drivers.
 Conflicting Drivers
 ~~~~~~~~~~~~~~~~~~~
 
-On Windows, you can only have a single Wintab-style driver installed at
+On Windows, you can only have a single WinTab-style driver installed at
 a time. So be sure to uninstall the previous driver before installing
 the one that comes with the tablet you want to use. Other operating
 systems are a bit better about this, but even Linux, where the drivers
@@ -173,7 +173,7 @@ to Krita:
 
 #. Sandboxie
 #. Razer mouse utilities
-#. AMD Catalyst:sup:`TM` “game mode” (this broke the right click for someone)
+#. AMD Catalyst TM “game mode” (this broke the right click for someone)
 
 Flicks (Wait circle showing up and then calling the popup palette)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

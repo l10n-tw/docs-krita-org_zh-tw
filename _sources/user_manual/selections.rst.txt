@@ -1,5 +1,5 @@
 .. meta::
-   :description:
+   :description property=og\:description:
         How selections work in Krita.
 
 .. metadata-placeholder
@@ -17,7 +17,7 @@
 Selections
 ==========
 
-Selections allow you to pick a specific area of your artwork to change. This is useful when you want to move a section of the painting, transform it, or paint on it without affecting the other sections. There are many selection tools available that select in different ways. Once an area is selected, most tools will stay inside that area. On that area you can draw or use gradients to quickly get colored and/or shaded shapes with hard edges. The selections in Krita are not limited to the canvas boundary, so you can also selection portions of the painting that are beyond the canvas boundary.
+Selections allow you to pick a specific area of your artwork to change. This is useful when you want to move a section of the painting, transform it, or paint on it without affecting the other sections. There are many selection tools available that select in different ways. Once an area is selected, most tools will stay inside that area. On that area you can draw or use gradients to quickly get colored and/or shaded shapes with hard edges. The selections in Krita are not limited to the canvas boundary, so you can also select portions of the painting that are beyond the canvas boundary.
 
 Creating Selections
 -------------------

@@ -1,5 +1,5 @@
 .. meta::
-   :description:
+   :description property=og\:description:
         Overview of vector graphics in Krita.
 
 .. metadata-placeholder
@@ -31,9 +31,9 @@ On one hand, this makes vector graphics great for logos and banners. On the othe
 Tools for making shapes
 -----------------------
 
-You can start making vector graphics by first making a vector layer (press the arrow button next to the :guilabel:`+` in the layer docker to get extra layer types). Then, all the usual drawing tools outside of the freehand, dynamic and the multibrush tool can be used to draw shapes.
+You can start making vector graphics by first making a vector layer (press the arrow button next to the :guilabel:`+` in the layer docker to get extra layer types). Then, all the usual drawing tools outside the Freehand, Dynamic and the Multibrush tool can be used to draw shapes.
 
-The path and polyline tool are the tools you used most often on a vector layer, as they allow you to make the most dynamic of shapes.
+The Path and Polyline tool are the tools you used most often on a vector layer, as they allow you to make the most dynamic of shapes.
 
 On the other hand, the :guilabel:`Ellipse` and :guilabel:`Rectangle` tools allow you to draw special shapes, which then can be edited to make special pie shapes, or for easy rounded rectangles.
 
@@ -81,16 +81,16 @@ Shapes can be moved with the :guilabel:`Select Shapes` tool, and in the tool opt
 Editing nodes and special parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you have a shape selected, you can double click it to get to the appropriate tool to edit it. Usually this is the :guilabel:`Edit Shape` tool, but for text this is the :guilabel:`Text` tool.
+If you have a shape selected, you can double-click it to get to the appropriate tool to edit it. Usually this is the :guilabel:`Edit Shape` tool, but for text this is the :guilabel:`Text` tool.
 
 In the :guilabel:`Edit Shape` tool, you can move around nodes on the canvas for regular paths. For special paths, like the ellipse and the rectangle, you can move nodes and edit the specific parameters in the :guilabel:`Tool Options` docker.
 
 Working together with other programs
 ------------------------------------
 
-One of the big things Krita 4.0 brought was moving from ODG to SVG. What this means is that Krita saves as SVG inside KRA files, and that means we can open SVGs just fine. This is important as SVG is the most popular vector format.
+One of the big things Krita 4.0 brought was moving from ``ODG`` to ``SVG``. What this means is that Krita saves as ``SVG`` inside ``KRA`` files, and that means Krita can open ``SVG`` just fine. This is important as ``SVG`` is the most popular vector format.
 
 Inkscape
 ~~~~~~~~
 
-You can copy and paste vectors from Krita to Inkscape, or from Inkscape to Krita. Only the SVG 1.1 features are supported, so don't be surprised if a mesh gradient doesn't cross over very well.
+You can copy and paste vectors from Krita to Inkscape, or from Inkscape to Krita. Only the ``SVG 1.1`` features are supported, with exception of smaller features like the mesh gradients.

@@ -21,8 +21,8 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-08-03T10:45:31" />
-  <meta content="Introduction to using Krita's python plugin API." name="description" />
+  <meta property="og:article:modified_time" content="2021-08-05T09:40:07" />
+  <meta content="Introduction to using Krita's python plugin API." name="description" property="og:description" />
 
   
   
@@ -275,7 +275,7 @@ hello world
 </div>
 <div class="section" id="running-basic-krita-commands">
 <h3>執行基本 Krita 命令<a class="headerlink" href="#running-basic-krita-commands" title="本標題的永久連結">¶</a></h3>
-<p>To allow Python to communicate with Krita, we will use the Krita module. At the top of every script, we will write: <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">krita</span> <span class="pre">import</span> <span class="pre">*</span></code></p>
+<p>To allow Python to communicate with Krita, we will use the Krita module. At the top of every script, we will write <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">krita</span> <span class="pre">import</span> <span class="pre">*</span></code>.</p>
 <p>This allows us to talk to Krita through <code class="docutils literal notranslate"><span class="pre">Krita.instance()</span></code>. Let's try to double our coding abilities with Python.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">krita</span> <span class="kn">import</span> <span class="o">*</span>
 
@@ -300,8 +300,8 @@ hello world
 <li><p><a class="reference external" href="https://api.kde.org/extragear-api/graphics-apidocs/krita/libs/libkis/html/classKrita.html">Krita class documentation</a></p></li>
 </ul>
 <p>Those pages may look like a lot of jargon at first. This is because Krita's API documentation comes from the underlying C++ language that Krita is written in. The magic happens because of a Python tool called SIP, which makes it possible for python speak in C++ and talk to Krita. The end result is that when we <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">krita</span></code> and call functions, we're actually using the C++ methods listed in that documentation.</p>
-<p>Let's see how this stuff works in more detail. Let's take a look at the second link, the <a class="reference external" href="https://api.kde.org/extragear-api/graphics-apidocs/krita/libs/libkis/html/classKrita.html#aa55507903d088013ced2df8c74f28a63">Krita class reference</a>. There we can see all the functions available to the Krita instance. If you type dir(Krita.instance()) in Python, it should match this page very closely - you can view the documentation of the functions createDocument(), activeWindow(), and action() which we used above.</p>
-<p>One of the more confusing things is seeing all the C++ classes that Krita uses, including the Qt classes that start with Q. But here is the beauty of SIP: it tries to make the translation from these classes into Python as simple and straightforward as possible. For example, you can see that the function filters() returns a QStringList. However, SIP converts those QStringLists into regular python list of strings!</p>
+<p>Let's see how this stuff works in more detail. Let's take a look at the second link, the <a class="reference external" href="https://api.kde.org/extragear-api/graphics-apidocs/krita/libs/libkis/html/classKrita.html#aa55507903d088013ced2df8c74f28a63">Krita class reference</a>. There we can see all the functions available to the Krita instance. If you type <code class="docutils literal notranslate"><span class="pre">dir(Krita.instance())</span></code> in Python, it should match this page very closely - you can view the documentation of the functions <code class="docutils literal notranslate"><span class="pre">createDocument()</span></code>, <code class="docutils literal notranslate"><span class="pre">activeWindow()</span></code>, and <code class="docutils literal notranslate"><span class="pre">action()</span></code> which we used above.</p>
+<p>One of the more confusing things is seeing all the C++ classes that Krita uses, including the Qt classes that start with Q. But here is the beauty of SIP: it tries to make the translation from these classes into Python as simple and straightforward as possible. For example, you can see that the function <code class="docutils literal notranslate"><span class="pre">filters()</span></code> returns a <code class="docutils literal notranslate"><span class="pre">QStringList</span></code>. However, SIP converts those <code class="docutils literal notranslate"><span class="pre">QStringLists</span></code> into regular python list of strings!</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">krita</span> <span class="kn">import</span> <span class="o">*</span>
 
 <span class="k">print</span><span class="p">(</span><span class="n">Krita</span><span class="o">.</span><span class="n">instance</span><span class="p">()</span><span class="o">.</span><span class="n">filters</span><span class="p">())</span>
@@ -348,7 +348,7 @@ Blue morning
 </pre></div>
 </div>
 <p>Hopefully this will give you an idea of how to navigate the API docs now.</p>
-<p>Krita's API has many more classes, you can get to them by going to the top-left class list, or just clicking their names to get to their API docs. The functions print() or dir() are your friends here as well. This line will print out a list of all the actions in Krita - you could swap in one of these commands instead of 'python_scripter' in the example above.</p>
+<p>Krita's API has many more classes, you can get to them by going to the top-left class list, or just clicking their names to get to their API docs. The functions <code class="docutils literal notranslate"><span class="pre">print()</span></code> or <code class="docutils literal notranslate"><span class="pre">dir()</span></code> are your friends here as well. This line will print out a list of all the actions in Krita -- you could swap in one of these commands instead of 'python_scripter' in the example above.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="k">print</span><span class="p">([</span><span class="n">a</span><span class="o">.</span><span class="n">objectName</span><span class="p">(),</span> <span class="n">a</span><span class="o">.</span><span class="n">text</span><span class="p">()])</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">Krita</span><span class="o">.</span><span class="n">instance</span><span class="p">()</span><span class="o">.</span><span class="n">actions</span><span class="p">()]</span>
 </pre></div>
 </div>
@@ -371,8 +371,8 @@ Blue morning
 </div>
 <div class="section" id="python-2-and-3">
 <h3>Python 2 與 Python 3<a class="headerlink" href="#python-2-and-3" title="本標題的永久連結">¶</a></h3>
-<p>By default Krita is compiled for python 3.</p>
-<p>However, it is possible to compile it with python 2. To do so, you will need to add the following to the cmake configuration line:</p>
+<p>By default, Krita is compiled for python 3.</p>
+<p>However, it is possible to compile it with python 2. To do so, you will need to add the following to the <strong class="program">cmake</strong> configuration line:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="n">DENABLE_PYTHON_2</span><span class="o">=</span><span class="n">ON</span>
 </pre></div>
 </div>
@@ -403,7 +403,7 @@ Blue morning
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>d0d5ca5</code>
+          修訂版本 <code>565a324</code>
         </span>
       
 

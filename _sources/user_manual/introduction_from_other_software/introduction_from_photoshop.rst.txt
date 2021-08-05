@@ -1,6 +1,6 @@
 .. meta::
-   :description:
-        This is a introduction to Krita for users coming from Photoshop.
+   :description property=og\:description:
+        This is an introduction to Krita for users coming from Photoshop.
 
 .. metadata-placeholder
    :authors: - David Revoy, davidrevoy@gmail.com
@@ -97,7 +97,7 @@ Or hold:
 Some other tips:
 
 * If you want to convert a layer to a selection (to select the visible pixels), right-click on the layer docker, and choose :guilabel:`Select Opaque`. 
-* If you use a polygonal selection tool, or a selection which needs to be ‘closed’, you will be able to do it or by using a double-click, or by using a :kbd:`Shift +` |mouseleft| shortcut.
+* If you use a polygonal selection tool, or a selection which needs to be ‘closed’, you will be able to do it or by doing double-click, or by using a :kbd:`Shift +` |mouseleft| shortcut.
 
 You can scale selection. To do this, choose :menuselection:`Select --> Scale`.
 
@@ -132,12 +132,12 @@ Groups and Blending Mode (Composite Mode):
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The group blending mode in Krita has priority over child layers and overrides it. This can be surprising for Photoshop users. On Photoshop you can use groups to just clean your layer stack and keep blending mode of your layer compositing through all the stack.  In Krita the compositing will happen at first level inside the group, then taking into account the blending mode of the group itself.
-Both systems have pros and cons. Krita’s way is more predictable according to some artists,  compositing-wise. The PS way leads to a cleaner and better ordered layer stack visually wise. 
+Both systems have pros and cons. Krita’s way is more predictable according to some artists, compositing-wise. The PS way leads to a cleaner and better ordered layer stack visually wise. 
 
 Multi Layer Transform or Move
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-You can select multiple layers on the stack by holding down the :kbd:`Shift` key as in PS, and if you move the layer inside a group you can move or transform the whole group - including doing selection on the group and cut all the sub layers inside on the fly.  You can not apply filters to group to affect multiple layers. 
+You can select multiple layers on the stack by holding down the :kbd:`Shift` key as in PS, and if you move the layer inside a group you can move or transform the whole group -- including doing selection on the group and cut all the sub layers inside on the fly.  You can not apply filters to group to affect multiple layers. 
 
 Clipping Masks
 ^^^^^^^^^^^^^^
@@ -185,7 +185,7 @@ This is Krita's strong point. There are many paint tools, and they have a lot of
 Tools
 ^^^^^
 
-In Krita, there is a totally different paradigm for defining what ‘tools’ are compared to PS. Unlike in PS, you will not find the brush, eraser, clone, blur tool, etc. Instead, you will find a *way to trace* your strokes on the canvas: freehand, line, rectangle, circle, multiple brush, etc. When you have selected the ‘way to trace’ you can choose the *way to paint*: erasing / cloning / blurring, etc are all part of  *way it paint* managed by the brush-engines options. These brush engine options are saved into so-called *presets*, which you can find on :guilabel:`Brush presets`.  You can fine tune, and build your own presets using the :guilabel:`Edit Brush Settings` icon on the top toolbar. 
+In Krita, there is a totally different paradigm for defining what ‘tools’ are compared to PS. Unlike in PS, you will not find the brush, eraser, clone, blur tool, etc. Instead, you will find a *way to trace* your strokes on the canvas: freehand, line, rectangle, circle, multiple brush, etc. When you have selected the ‘way to trace’ you can choose the *way to paint*: erasing / cloning / blurring, etc are all part of *way to paint* managed by the brush-engines options. These brush engine options are saved into so-called *presets*, which you can find on :guilabel:`Brush presets`.  You can fine tune, and build your own presets using the :guilabel:`Edit Brush Settings` icon on the top toolbar. 
 
 Erasing
 ^^^^^^^
@@ -195,7 +195,7 @@ In Krita, the eraser is not its own tool; it is a Blending mode (or Composite mo
 Useful shortcuts
 ^^^^^^^^^^^^^^^^
 
-* :kbd:`Shift`:  Grow or Shrink the brush size (or the :kbd:`[` and :kbd:`]` keys).
+* :kbd:`Shift`: Grow or Shrink the brush size (or the :kbd:`[` and :kbd:`]` keys).
 * :kbd:`/`: Switch last preset selected and current (ex: a pencil preset, and an eraser preset).
 * :kbd:`K` and :kbd:`L`: Increment Darker and Lighter value of the active color.
 * :kbd:`I` and :kbd:`O`: Increment opacity plus or minus.
@@ -210,7 +210,7 @@ Useful shortcuts
 Stabilization / Path Smoothing
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Using the freehand ‘paint with brush’ tool that you can find on the Tool Options, more settings for smoothing the path and stabilization of  your brush strokes are available.
+Using the freehand ‘paint with brush’ tool that you can find on the Tool Options, more settings for smoothing the path and stabilization of your brush strokes are available.
 
 Global pressure curve
 ^^^^^^^^^^^^^^^^^^^^^
@@ -244,15 +244,15 @@ As mentioned in the introduction, Krita is a specialized paint application. Thus
 Brush Engines
 ~~~~~~~~~~~~~
 
-Krita has a lot of different so-called brush engines. These brush engines define various methods on how the pixels end up on your canvas. Brush engines with names like Grid, Particles, Sketch and others will bring you new experiences on how the  brushes work and a new landscape of possible results. You can start customizing brushes by using the brush-settings editor, which is accessible via the toolbar, but it's much easier to just press the :kbd:`F5` key.
+Krita has a lot of different so-called brush engines. These brush engines define various methods on how the pixels end up on your canvas. Brush engines with names like Grid, Particles, Sketch and others will bring you new experiences on how the brushes work and a new landscape of possible results. You can start customizing brushes by using the brush-settings editor, which is accessible via the toolbar, but it's much easier to just press the :kbd:`F5` key.
 
 Tags for brush presets
 ~~~~~~~~~~~~~~~~~~~~~~
 
 This is a very useful way to configure brush presets. Each brush can have any amount of tags and be in any group. You can make tag for blending brushes, for texture brushes, for effect brushes, favorites etc.
 
-Settings curves
-~~~~~~~~~~~~~~~
+Settings curve
+~~~~~~~~~~~~~~
 
 You can set setting to pressure (speed/distance/tilt/random/etc.) relation for each brush setting.
 
@@ -282,7 +282,7 @@ Furthermore, you can use transformation masks to apply transforms non-destructiv
 Incremental Save
 ~~~~~~~~~~~~~~~~
 
-You can save your artwork with the pattern : *myartworksname_001.kra*, *myartworksname_002.kra*, *myartworksname_003.kra* etc., by pressing a single key on the keyboard. Krita will increment the final number if the pattern "_XXX" is recognized at the end of the file's name.
+You can save your artwork with the pattern : ``myartworksname_001.kra``, ``myartworksname_002.kra``, ``myartworksname_003.kra`` etc., by pressing a single key on the keyboard. Krita will increment the final number if the pattern "_XXX" is recognized at the end of the file's name.
 
 .. image:: /images/Krita-incremental-saves.png
    :align: center

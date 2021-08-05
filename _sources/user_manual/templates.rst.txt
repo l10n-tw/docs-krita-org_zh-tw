@@ -1,5 +1,5 @@
 .. meta::
-   :description:
+   :description property=og\:description:
         How to use document templates in Krita.
 
 .. metadata-placeholder

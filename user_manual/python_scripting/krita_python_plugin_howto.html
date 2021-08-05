@@ -21,8 +21,8 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-08-03T10:45:31" />
-  <meta content="Guide on all the specifics of creating Krita python plugins." name="description" />
+  <meta property="og:article:modified_time" content="2021-08-05T09:40:07" />
+  <meta content="Guide on all the specifics of creating Krita python plugins." name="description" property="og:description" />
 
   
   
@@ -259,8 +259,8 @@
 <p>These mini-tutorials are written for people with a basic understanding of python, and in such a way to encourage experimentation instead of plainly copy and pasting code, so read the text carefully.</p>
 <div class="section" id="getting-krita-to-recognize-your-plugin">
 <h2>使 Krita 找到你的外掛程式<a class="headerlink" href="#getting-krita-to-recognize-your-plugin" title="本標題的永久連結">¶</a></h2>
-<p>A script in Krita has two components - the script directory (holding your script's Python files) and a &quot;.desktop&quot; file that Krita uses to load and register your script. For Krita to load your script both of these must put be in the pykrita subdirectory of your Krita resources folder (on Linux  ~/.local/share/krita/pykrita). To find your resources folder start Krita and click the <span class="menuselection">Settings ‣ Manage Resources...</span> menu item. This will open a dialog box. Click the <span class="guilabel">Open Resources Folder</span> button. This should open a file manager on your system at your Krita resources folder. See the <a class="reference external" href="https://api.kde.org/extragear-api/graphics-apidocs/krita/libs/libkis/html/index.html">API</a> docs under &quot;Auto starting scripts&quot;.  If there is no pykrita subfolder in the Krita resources directory use your file manager to create one.</p>
-<p>Scripts are identified by a file that ends in a .desktop extension that contain information about the script itself.</p>
+<p>A script in Krita has two components -- the script directory (holding your script's Python files) and a &quot;.desktop&quot; file that Krita uses to load and register your script. For Krita to load your script both of these must put be in the <code class="file docutils literal notranslate"><span class="pre">pykrita</span></code> subdirectory of your Krita resources folder (See <a class="reference internal" href="../../reference_manual/resource_management.html#resource-management"><span class="std std-ref">資源管理</span></a> for the paths per operating system). To find your resources folder start Krita and click the <span class="menuselection">Settings ‣ Manage Resources...</span> menu item. This will open a dialog box. Click the <span class="guilabel">Open Resources Folder</span> button. This should open a file manager on your system at your Krita resources folder. See the <a class="reference external" href="https://api.kde.org/extragear-api/graphics-apidocs/krita/libs/libkis/html/index.html">API</a> docs under &quot;Auto starting scripts&quot;. If there is no <code class="file docutils literal notranslate"><span class="pre">pykrita</span></code> subfolder in the Krita resources directory use your file manager to create one.</p>
+<p>Scripts are identified by a file that ends in a <code class="docutils literal notranslate"><span class="pre">.desktop</span></code> extension that contain information about the script itself.</p>
 <p>Therefore, for each proper plugin you will need to create a folder, and a desktop file.</p>
 <p>The desktop file should look as follows:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">Desktop</span> <span class="n">Entry</span><span class="p">]</span>
@@ -276,7 +276,7 @@
 <dl class="simple">
 <dt>Type</dt><dd><p>This should always be service.</p>
 </dd>
-<dt>ServiceTypes</dt><dd><p>This should always be Krita/PythonPlugin for python plugins.</p>
+<dt>ServiceTypes</dt><dd><p>This should always be <code class="docutils literal notranslate"><span class="pre">Krita/PythonPlugin</span></code> for python plugins.</p>
 </dd>
 <dt>X-KDE-Library</dt><dd><p>This should be the name of the plugin folder you just created.</p>
 </dd>
@@ -289,7 +289,7 @@
 <dt>Comment</dt><dd><p>The description that will show up in the Python Plugin Manager.</p>
 </dd>
 </dl>
-<p>Krita python plugins need to be python modules, so make sure there's an __init__.py script, containing something like...</p>
+<p>Krita python plugins need to be python modules, so make sure there's an <code class="docutils literal notranslate"><span class="pre">__init__.py</span></code> script, containing something like...</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">.myplugin</span> <span class="kn">import</span> <span class="o">*</span>
 </pre></div>
 </div>
@@ -300,25 +300,25 @@
 </div>
 <div class="section" id="summary">
 <h3>小結<a class="headerlink" href="#summary" title="本標題的永久連結">¶</a></h3>
-<p>In summary, if you want to create a script called <em>myplugin</em>:</p>
+<p>In summary, if you want to create a script called <code class="docutils literal notranslate"><span class="pre">myplugin</span></code>:</p>
 <ul class="simple">
 <li><dl class="simple">
-<dt>in your Krita <em>resources/pykrita</em> directory create</dt><dd><ul>
-<li><p>a folder called <em>myplugin</em></p></li>
-<li><p>a file called <em>myplugin.desktop</em></p></li>
+<dt>in your Krita <code class="file docutils literal notranslate"><span class="pre">resources/pykrita</span></code> directory create</dt><dd><ul>
+<li><p>a folder called <code class="file docutils literal notranslate"><span class="pre">myplugin</span></code></p></li>
+<li><p>a file called <code class="file docutils literal notranslate"><span class="pre">myplugin.desktop</span></code></p></li>
 </ul>
 </dd>
 </dl>
 </li>
 <li><dl class="simple">
-<dt>in the <em>myplugin</em> folder create</dt><dd><ul>
-<li><p>a file called <em>__init__.py</em></p></li>
-<li><p>a file called <em>myplugin.py</em></p></li>
+<dt>in the <code class="file docutils literal notranslate"><span class="pre">myplugin</span></code> folder create</dt><dd><ul>
+<li><p>a file called <code class="file docutils literal notranslate"><span class="pre">__init__.py</span></code></p></li>
+<li><p>a file called <code class="file docutils literal notranslate"><span class="pre">myplugin.py</span></code></p></li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><p>in the <em>__init__.py</em> file put this code:</p></li>
+<li><p>in the <code class="file docutils literal notranslate"><span class="pre">__init__.py</span></code> file put this code:</p></li>
 </ul>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">.myplugin</span> <span class="kn">import</span> <span class="o">*</span>
 </pre></div>
@@ -335,7 +335,7 @@
 </pre></div>
 </div>
 </li>
-<li><p>write your script in the ''myplugin/myplugin.py'' file.</p></li>
+<li><p>write your script in the <code class="file docutils literal notranslate"><span class="pre">myplugin/myplugin.py</span></code> file.</p></li>
 </ul>
 </div>
 </div>
@@ -368,9 +368,9 @@
 </pre></div>
 </div>
 <dl class="simple">
-<dt>&quot;myAction&quot;</dt><dd><p>This should be replaced with a unique id that Krita will use to find the action.</p>
+<dt>&quot;myAction&quot;</dt><dd><p>This should be replaced with a unique ID that Krita will use to find the action.</p>
 </dd>
-<dt>&quot;My Script&quot;</dt><dd><p>This is what will be visible in the tools menu.</p>
+<dt>&quot;My Script&quot;</dt><dd><p>This is what will be visible in the <a class="reference internal" href="../../reference_manual/main_menu/tools_menu.html#tools-menu"><span class="std std-ref">Tools Menu</span></a>.</p>
 </dd>
 </dl>
 <p>If you now restart Krita, you will have an action called &quot;My Script&quot;. It still doesn't do anything, because we haven't connected it to a script.</p>
@@ -404,7 +404,7 @@
 <div class="section" id="creating-configurable-keyboard-shortcuts">
 <h2>加入可設定的鍵盤快捷鍵<a class="headerlink" href="#creating-configurable-keyboard-shortcuts" title="本標題的永久連結">¶</a></h2>
 <p>Now, your new action doesn't show up in <span class="menuselection">Settings ‣ Configure Krita ‣ Keyboard Shortcuts</span>.</p>
-<p>Krita, for various reasons, only adds actions to the shortcuts menu when they are present in an .action file. The action file to get our action to be added to shortcuts should look like this:</p>
+<p>Krita, for various reasons, only adds actions to the <a class="reference internal" href="../../reference_manual/preferences/shortcut_settings.html#shortcut-settings"><span class="std std-ref">Shortcut Settings</span></a> when they are present in an <code class="docutils literal notranslate"><span class="pre">.action</span></code> file. The action file to get our action to be added to the shortcuts should look like this:</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
 <span class="nt">&lt;ActionCollection</span> <span class="na">version=</span><span class="s">&quot;2&quot;</span> <span class="na">name=</span><span class="s">&quot;Scripts&quot;</span><span class="nt">&gt;</span>
     <span class="nt">&lt;Actions</span> <span class="na">category=</span><span class="s">&quot;Scripts&quot;</span><span class="nt">&gt;</span>
@@ -429,9 +429,9 @@
 <dl class="simple">
 <dt>&lt;text&gt;My Scripts&lt;/text&gt;</dt><dd><p>This will create a sub-category under scripts called &quot;My Scripts&quot; to add your shortcuts to.</p>
 </dd>
-<dt>name</dt><dd><p>This should be the unique id you made for your action when creating it in the setup of the extension.</p>
+<dt>name</dt><dd><p>This should be the unique ID you made for your action when creating it in the setup of the extension.</p>
 </dd>
-<dt>icon</dt><dd><p>the name of a possible icon. These will only show up on KDE plasma, because Gnome and Windows users complained they look ugly.</p>
+<dt>icon</dt><dd><p>The name of a possible icon. These will only show up on KDE plasma, because Gnome and Windows users complained they look ugly.</p>
 </dd>
 <dt>text</dt><dd><p>The text that it will show in the shortcut editor.</p>
 </dd>
@@ -452,7 +452,7 @@
 <dt>statusTip</dt><dd><p>The status tip that is displayed on a status bar.</p>
 </dd>
 </dl>
-<p>Save this file as &quot;myplugin.action&quot; where myplugin is the name of your plugin. The action file should be saved, not in the pykrita resources folder, but rather in a resources folder named &quot;actions&quot;. (So, share/pykrita is where the python plugins and desktop files go, and share/actions is where the action files go) Restart Krita. The shortcut should now show up in the shortcut action list.</p>
+<p>Save this file as <code class="docutils literal notranslate"><span class="pre">myplugin.action</span></code> where myplugin is the name of your plugin. The action file should be saved, not in the pykrita resources folder, but rather in a resources folder named &quot;actions&quot;. (So, <code class="docutils literal notranslate"><span class="pre">share/pykrita</span></code> is where the python plugins and desktop files go, and <code class="docutils literal notranslate"><span class="pre">share/actions</span></code> is where the action files go) Restart Krita. The shortcut should now show up in the shortcut action list.</p>
 </div>
 <div class="section" id="creating-a-docker">
 <h2>製作一個工具面板<a class="headerlink" href="#creating-a-docker" title="本標題的永久連結">¶</a></h2>
@@ -475,16 +475,16 @@
 <p>The window title is how it will appear in the docker list in Krita. canvasChanged always needs to be present, but you don't have to do anything with it, so hence just 'pass'.</p>
 <p>For the addDockWidgetFactory...</p>
 <dl class="simple">
-<dt>&quot;myDocker&quot;</dt><dd><p>Replace this with an unique ID for your docker that Krita uses to keep track of it.</p>
+<dt>&quot;myDocker&quot;</dt><dd><p>Replace this with a unique ID for your docker that Krita uses to keep track of it.</p>
 </dd>
-<dt>DockWidgetFactoryBase.DockRight</dt><dd><p>The location. These can be DockTornOff, DockTop, DockBottom, DockRight, DockLeft, or DockMinimized</p>
+<dt>DockWidgetFactoryBase.DockRight</dt><dd><p>The location. These can be <code class="docutils literal notranslate"><span class="pre">DockTornOff</span></code>, <code class="docutils literal notranslate"><span class="pre">DockTop</span></code>, <code class="docutils literal notranslate"><span class="pre">DockBottom</span></code>, <code class="docutils literal notranslate"><span class="pre">DockRight</span></code>, <code class="docutils literal notranslate"><span class="pre">DockLeft</span></code>, or <code class="docutils literal notranslate"><span class="pre">DockMinimized</span></code></p>
 </dd>
 <dt>MyDocker</dt><dd><p>Replace this with the class name of the docker you want to add.</p>
 </dd>
 </dl>
 <p>So, if we add our export document function we created in the extension section to this docker code, how do we allow the user to activate it? First, we'll need to do some Qt GUI coding: Let's add a button!</p>
 <p>By default, Krita uses PyQt, but its documentation is pretty bad, mostly because the regular Qt documentation is really good, and you'll often find that the PyQt documentation of a class, say, <a class="reference external" href="https://www.riverbankcomputing.com/static/Docs/PyQt5/api/qtwidgets/qwidget.html">QWidget</a> is like a weird copy of the regular <a class="reference external" href="https://doc.qt.io/qt-5/qwidget.html">Qt documentation</a> for that class.</p>
-<p>Anyway, what we need to do first is that we need to create a QWidget, it's not very complicated, under setWindowTitle, add:</p>
+<p>Anyway, what we need to do first is that we need to create a <code class="docutils literal notranslate"><span class="pre">QWidget</span></code>, it's not very complicated, under <code class="docutils literal notranslate"><span class="pre">setWindowTitle</span></code>, add:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mainWidget</span> <span class="o">=</span> <span class="n">QWidget</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
 <span class="bp">self</span><span class="o">.</span><span class="n">setWidget</span><span class="p">(</span><span class="n">mainWidget</span><span class="p">)</span>
 </pre></div>
@@ -498,7 +498,7 @@
 </pre></div>
 </div>
 <p>If we now restart Krita, we'll have a new docker and in that docker there's a button. Clicking on the button will call up the export function.</p>
-<p>However, the button looks aligned a bit oddly. That's because our mainWidget has no layout. Let's quickly do that:</p>
+<p>However, the button looks aligned a bit oddly. That's because our <code class="docutils literal notranslate"><span class="pre">mainWidget</span></code> has no layout. Let's quickly do that:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mainWidget</span><span class="o">.</span><span class="n">setLayout</span><span class="p">(</span><span class="n">QVBoxLayout</span><span class="p">())</span>
 <span class="n">mainWidget</span><span class="o">.</span><span class="n">layout</span><span class="p">()</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">buttonExportDocument</span><span class="p">)</span>
 </pre></div>
@@ -508,9 +508,9 @@
 </div>
 <div class="section" id="pyqt-signals-and-slots">
 <h2>PyQt 的 Signal、Slot（訊號與訊號槽）<a class="headerlink" href="#pyqt-signals-and-slots" title="本標題的永久連結">¶</a></h2>
-<p>We've already been using PyQt signals and slots already, but there are times where you want to create your own signals and slots.
+<p>We've already been using PyQt signals and slots already, but there are times when you want to create your own signals and slots.
 <a class="reference external" href="https://www.riverbankcomputing.com/static/Docs/PyQt5/signals_slots.html">As PyQt's documentation is pretty difficult to understand</a>, and the way how signals and slots are created is very different from C++ Qt, we're explaining it here:</p>
-<p>All python functions you make in PyQt can be understood as slots, meaning that they can be connected to signals like Action.triggered or QPushButton.clicked. However, QCheckBox has a signal for toggled, which sends a boolean. How do we get our function to accept that boolean?</p>
+<p>All python functions you make in PyQt can be understood as slots, meaning that they can be connected to signals like <code class="docutils literal notranslate"><span class="pre">Action.triggered</span></code> or <code class="docutils literal notranslate"><span class="pre">QPushButton.clicked</span></code>. However, <code class="docutils literal notranslate"><span class="pre">QCheckBox</span></code> has a signal for toggled, which sends a boolean. How do we get our function to accept that boolean?</p>
 <p>First, make sure you have the right import for making custom slots:</p>
 <p><code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">PyQt5.QtCore</span> <span class="pre">import</span> <span class="pre">pyqtSlot</span></code></p>
 <p>(If there's <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">PyQt5.QtCore</span> <span class="pre">import</span> <span class="pre">*</span></code> already in the list of imports, then you won't have to do this, of course.)</p>
@@ -571,7 +571,7 @@
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>d0d5ca5</code>
+          修訂版本 <code>565a324</code>
         </span>
       
 

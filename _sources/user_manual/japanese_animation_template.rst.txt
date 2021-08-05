@@ -1,5 +1,5 @@
 .. meta::
-   :description:
+   :description property=og\:description:
         Detailed explanation on how to use the animation template.
 
 .. metadata-placeholder
@@ -69,14 +69,13 @@ This is due difference between 24 drawing per second, which is used in Full Anim
 
 .. image:: /images/animation/24_12_and_8_drawing_per_sec.png
 
-This is correspondence between Timeline and Time sheet. "Black" layer is to draw main line art which are used ordinary line art, "Red" layer is to draw red auxiliary linearts which are used to specify highlights, "Blue" layer is to draw blue auxiliary linearts which are used to specify shadows, and "Shadow" layer is to draw light green auxiliary line art which are used to specify darker shadows. However, probably you have to increase or decrease these layers according to your work. 
+This is correspondence between Timeline and Time sheet. "Black" layer is to draw main line art which are used ordinary line art, "Red" layer is to draw red auxiliary line art which are used to specify highlights, "Blue" layer is to draw blue auxiliary line art which are used to specify shadows, and "Shadow" layer is to draw light green auxiliary line art which are used to specify darker shadows. However, probably you have to increase or decrease these layers according to your work. 
 
 .. image:: /images/animation/Time_sheet_1.png
 
 Finished keys, you will begin to draw the inbetweens. If you feel Krita is becoming slow, I recommend you to merge key drafts and keys, as well as to remove any unnecessary layers.
 
-After finalizing keys and cleaning up unnecessary layers, add
-inbetweenings, using Time sheet and inbetweening drafts as reference.
+After finalizing keys and cleaning up unnecessary layers, add inbetweens, using Time sheet and inbetween drafts as reference.
 
 This is its correspondence with Time sheet.
 

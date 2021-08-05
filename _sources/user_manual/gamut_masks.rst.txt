@@ -1,5 +1,5 @@
 .. meta::
-   :description:
+   :description property=og\:description:
         Basics of using gamut masks in Krita.
 
 .. metadata-placeholder

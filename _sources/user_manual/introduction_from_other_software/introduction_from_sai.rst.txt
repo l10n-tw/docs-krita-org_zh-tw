@@ -1,6 +1,6 @@
 .. meta::
-   :description:
-        This is a introduction to Krita for users coming from Paint Tool Sai. 
+   :description property=og\:description:
+        This is an introduction to Krita for users coming from Paint Tool Sai. 
 
 .. metadata-placeholder
 
@@ -90,7 +90,7 @@ Erasing is a blending mode in Krita, much like the transparency mode of Paint To
 Blending Modes
 ~~~~~~~~~~~~~~
 
-Krita has a lot of Blending modes, and thankfully all of Paint Tool SAI's are amongst them except binary. To manage the blending modes, each of them has a little check-box that you can tick to add them to the favorites.
+Krita has a lot of Blending modes, and thankfully all of Paint Tool Sai's are amongst them except binary. To manage the blending modes, each of them has a little check-box that you can tick to add them to the favorites.
 
 Multiple, Screen, Overlay and Normal are amongst the favorites.
 Krita's Luminosity is actually slightly different from Paint Tool SAI's, and it replaces the relative brightness of color with the relative brightness of the color of the layer.
@@ -163,17 +163,17 @@ The painting assistants can help you to set up a perspective, or a concentric ci
 Locking the Layer
 ~~~~~~~~~~~~~~~~~
 
-Lock the layer with the padlock so you don't draw on it.
+Lock the layer with the padlock, so you don't draw on it.
 
 Quick Layer select
 ~~~~~~~~~~~~~~~~~~
 
-If you hold the :kbd:`R` key and press a spot on your drawing, Krita will select the layer underneath the cursor. Really useful when dealing with a large number of layers.
+If you hold the :kbd:`R` key and press a spot on your drawing, Krita will select the layer underneath the cursor. Really useful when dealing with many layers.
 
 Color Management
 ~~~~~~~~~~~~~~~~
 
-This allows you to prepare your work for print, or to do tricks with the LUT docker so you can diagnose your image better. For example, using the LUT docker to turn the colors grayscale in a separate view, so you can see the values instantly.
+This allows you to prepare your work for print, or to do tricks with the LUT docker, so you can diagnose your image better. For example, using the LUT docker to turn the colors grayscale in a separate view, so you can see the values instantly.
 
 .. image:: /images/Krita-view-dependant-lut-management.png
    :align: center

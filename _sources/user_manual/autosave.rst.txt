@@ -58,7 +58,7 @@ AutoSave for Unsaved Files
 
 If you had not yet saved your work, Krita will create an unnamed AutoSave file. 
 
-If you're using Linux or macOS, the AutoSave file will be a hidden file in your home directory. If you're using Windows, the AutoSave file will be a file in your user's ``%TEMP%`` folder. In Krita 4.2 and up, you can configure Krita to make the AutoSave files visible by default.
+When you're using Linux or macOS, the AutoSave file will be a hidden file in your home directory. If you're using Windows, the AutoSave file will be a file in your user's ``%TEMP%`` folder. In Krita 4.2 and up, you can configure Krita to make the AutoSave files visible by default.
 
 A hidden autosave file will be named like ``.krita-12549-document_1-autosave.kra``
 

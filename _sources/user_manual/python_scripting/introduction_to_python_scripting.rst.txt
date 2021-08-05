@@ -1,5 +1,5 @@
 .. meta::
-   :description:
+   :description property=og\:description:
         Introduction to using Krita's python plugin API.
 
 .. metadata-placeholder
@@ -55,7 +55,7 @@ Now we have a console that can run functions like print() from the Python enviro
 Running basic Krita commands
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To allow Python to communicate with Krita, we will use the Krita module. At the top of every script, we will write: ``from krita import *``
+To allow Python to communicate with Krita, we will use the Krita module. At the top of every script, we will write ``from krita import *``.
 
 This allows us to talk to Krita through ``Krita.instance()``. Let's try to double our coding abilities with Python.
 
@@ -88,9 +88,9 @@ Krita's API
 
 Those pages may look like a lot of jargon at first. This is because Krita's API documentation comes from the underlying C++ language that Krita is written in. The magic happens because of a Python tool called SIP, which makes it possible for python speak in C++ and talk to Krita. The end result is that when we ``import krita`` and call functions, we're actually using the C++ methods listed in that documentation. 
 
-Let's see how this stuff works in more detail. Let's take a look at the second link, the `Krita class reference <https://api.kde.org/extragear-api/graphics-apidocs/krita/libs/libkis/html/classKrita.html#aa55507903d088013ced2df8c74f28a63>`_. There we can see all the functions available to the Krita instance. If you type dir(Krita.instance()) in Python, it should match this page very closely - you can view the documentation of the functions createDocument(), activeWindow(), and action() which we used above. 
+Let's see how this stuff works in more detail. Let's take a look at the second link, the `Krita class reference <https://api.kde.org/extragear-api/graphics-apidocs/krita/libs/libkis/html/classKrita.html#aa55507903d088013ced2df8c74f28a63>`_. There we can see all the functions available to the Krita instance. If you type ``dir(Krita.instance())`` in Python, it should match this page very closely - you can view the documentation of the functions ``createDocument()``, ``activeWindow()``, and ``action()`` which we used above. 
 
-One of the more confusing things is seeing all the C++ classes that Krita uses, including the Qt classes that start with Q. But here is the beauty of SIP: it tries to make the translation from these classes into Python as simple and straightforward as possible. For example, you can see that the function filters() returns a QStringList. However, SIP converts those QStringLists into regular python list of strings!
+One of the more confusing things is seeing all the C++ classes that Krita uses, including the Qt classes that start with Q. But here is the beauty of SIP: it tries to make the translation from these classes into Python as simple and straightforward as possible. For example, you can see that the function ``filters()`` returns a ``QStringList``. However, SIP converts those ``QStringLists`` into regular python list of strings!
 
 .. code:: python
 
@@ -146,7 +146,7 @@ We get an output like::
 
 Hopefully this will give you an idea of how to navigate the API docs now.
 
-Krita's API has many more classes, you can get to them by going to the top-left class list, or just clicking their names to get to their API docs. The functions print() or dir() are your friends here as well. This line will print out a list of all the actions in Krita - you could swap in one of these commands instead of 'python_scripter' in the example above.
+Krita's API has many more classes, you can get to them by going to the top-left class list, or just clicking their names to get to their API docs. The functions ``print()`` or ``dir()`` are your friends here as well. This line will print out a list of all the actions in Krita -- you could swap in one of these commands instead of 'python_scripter' in the example above.
 
 .. code:: python
 
@@ -181,8 +181,8 @@ To get Python scripting working on Windows 7/8/8.1, you will need to install the
 Python 2 and 3
 ~~~~~~~~~~~~~~
 
-By default Krita is compiled for python 3.
+By default, Krita is compiled for python 3.
 
-However, it is possible to compile it with python 2. To do so, you will need to add the following to the cmake configuration line::
+However, it is possible to compile it with python 2. To do so, you will need to add the following to the :program:`cmake` configuration line::
 
     -DENABLE_PYTHON_2=ON
