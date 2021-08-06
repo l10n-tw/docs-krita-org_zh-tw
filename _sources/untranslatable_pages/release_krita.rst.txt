@@ -54,7 +54,12 @@ Update version in source code
 
     * packaging/android/apk/AndroidManifest.xml 
     * packaging/android/apk/build.gradle
-10. When releasing beta-version double-check that you updated to "beta1", not just plain "beta". Only "alpha" versions can be made without a number, because they are built nightly.
+    
+10. Update Windows Store package version and maxTestedVersion tag
+
+    * packaging/windows/msix/manifest.xml
+    
+11. When releasing beta-version double-check that you updated to "beta1", not just plain "beta". Only "alpha" versions can be made without a number, because they are built nightly.
 
 Update versions in the stable branch to avoid XMLGUI conflicts
 --------------------------------------------------------------
