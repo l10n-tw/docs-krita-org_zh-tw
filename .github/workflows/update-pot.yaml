@@ -38,7 +38,7 @@ jobs:
         git commit -m "temp: test update POT"
     - name: Create new PO catalogs from POT templates
       run: |
-        bash create_new_po_from_pot.sh
+        bash create_new_po_from_pot.sh ./templates/ ./locale/zh_TW/
         git add -A
         if [[ -z $(git status -s) ]]; then
           echo "No changes to commit."
