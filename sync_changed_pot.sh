@@ -17,6 +17,9 @@ pot_diff_unchanged() {
 
 pushd "$dir_from" > /dev/null
 for p in **/*.pot; do
+    if [[ $p =~ ^untranslatable_pages ]]; then
+        continue
+    fi
     newname=${p//\//___}
     newname=docs_krita_org_$newname
     if [[ -f "$dir_to/$newname" ]] && pot_diff_unchanged "$p" "$dir_to/$newname"; then
