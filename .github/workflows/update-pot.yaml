@@ -20,6 +20,7 @@ jobs:
     - name: Build POT templates
       run: |
         cd ~/docs
+        patch -p1 < "${{ github.workspace }}/exclude_image_target.patch"
         make gettext
     - name: Update modified POT templates
       run: |
