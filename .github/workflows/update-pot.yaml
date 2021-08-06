@@ -1,0 +1,33 @@
+name: Update POT
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build_pot:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Install Sphinx and Jieba
+      run: |
+        python3 -m pip install git+https://github.com/alvinhochun/sphinx.git@gettext-no-subst-defs 'docutils<0.17' jieba
+    - name: Clone docs
+      run: |
+        cd ~
+        git clone -b master --depth 1 https://invent.kde.org/documentation/docs-krita-org.git docs
+    - name: Build POT templates
+      run: |
+        cd ~/docs
+        make gettext
+    - name: Update modified POT templates
+        bash sync_changed_pot.sh ~/docs/_build/gettext/ ./templates/
+    - name: Push test result
+      run: |
+        git config --local user.name github-actions[bot]
+        git config --local user.email 41898282+github-actions[bot]@users.noreply.github.com
+        git checkout -b temp/$(date '+%Y%m%d%H%M%S')
+        git add -A
+        git commit -m "temp: test update POT"
+        git push origin HEAD
