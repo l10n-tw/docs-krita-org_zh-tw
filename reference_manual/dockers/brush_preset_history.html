@@ -6,7 +6,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta property="og:title" name="title" content="紀錄檢視器" />
+  <meta property="og:title" name="title" content="Brush Preset History Docker" />
   <meta property="og:site-name" content="Krita Manual" />
   <meta property="og:type" content="article" />
   <meta property="og:locale" content="zh_TW" />
@@ -22,11 +22,11 @@
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
   <meta property="og:article:modified_time" content="2021-08-09T10:07:28" />
-  <meta content="Overview of the log viewer docker." name="description" />
+  <meta content="The Brush Preset History Docker in Krita." name="description" property="og:description" />
 
   
   
-  <title>紀錄檢視器 &mdash; Krita Manual 5.0.0 Beta 說明文件</title>
+  <title>Brush Preset History Docker &mdash; Krita Manual 5.0.0 Beta 說明文件</title>
   
 
   
@@ -39,8 +39,8 @@
   
   
   
-    <link rel="canonical" href="zh_TW/reference_manual/dockers/log_viewer.html"/>
-    <meta property="og:url" content="zh_TW/reference_manual/dockers/log_viewer.html" />
+    <link rel="canonical" href="zh_TW/reference_manual/dockers/brush_preset_history.html"/>
+    <meta property="og:url" content="zh_TW/reference_manual/dockers/brush_preset_history.html" />
     <meta property="og:image" content="zh_TW/_static/sidebar-logo.png" />
   
 
@@ -59,8 +59,8 @@
     <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="搜尋" href="../../search.html" />
-    <link rel="next" title="LUT Management" href="lut_management.html" />
-    <link rel="prev" title="圖層" href="layers.html" /> 
+    <link rel="next" title="Channels" href="channels_docker.html" />
+    <link rel="prev" title="Preset Docker" href="brush_preset_docker.html" /> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -144,7 +144,10 @@
 <li class="toctree-l3"><a class="reference internal" href="arrange.html">向量圖形排列</a></li>
 <li class="toctree-l3"><a class="reference internal" href="artistic_color_selector.html">Artistic Color Selector Docker</a></li>
 <li class="toctree-l3"><a class="reference internal" href="brush_preset_docker.html">Preset Docker</a></li>
-<li class="toctree-l3"><a class="reference internal" href="brush_preset_history.html">Brush Preset History Docker</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Brush Preset History Docker</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#options">Options</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="channels_docker.html">Channels</a></li>
 <li class="toctree-l3"><a class="reference internal" href="color_sliders.html">Color Sliders</a></li>
 <li class="toctree-l3"><a class="reference internal" href="compositions.html">Compositions</a></li>
@@ -153,11 +156,7 @@
 <li class="toctree-l3"><a class="reference internal" href="grids_and_guides.html">Grids and Guides Docker</a></li>
 <li class="toctree-l3"><a class="reference internal" href="histogram_docker.html">Histogram Docker</a></li>
 <li class="toctree-l3"><a class="reference internal" href="layers.html">圖層</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">紀錄檢視器</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#log-output-area">Log Output Area</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#options">Options</a></li>
-</ul>
-</li>
+<li class="toctree-l3"><a class="reference internal" href="log_viewer.html">紀錄檢視器</a></li>
 <li class="toctree-l3"><a class="reference internal" href="lut_management.html">LUT Management</a></li>
 <li class="toctree-l3"><a class="reference internal" href="onion_skin.html">Onion Skin Docker</a></li>
 <li class="toctree-l3"><a class="reference internal" href="overview.html">Overview</a></li>
@@ -264,14 +263,14 @@
         
           <li><a href="../dockers.html">工具面板</a> &raquo;</li>
         
-      <li>紀錄檢視器</li>
+      <li>Brush Preset History Docker</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
           
           
-            <a href="../../_sources/reference_manual/dockers/log_viewer.rst.txt" rel="nofollow"> 
+            <a href="../../_sources/reference_manual/dockers/brush_preset_history.rst.txt" rel="nofollow"> 
              
               <img src="../../_static/images/source-code.png" />
              <!-- 檢視頁面原始碼 -->
@@ -288,61 +287,26 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="log-viewer">
-<span id="log-viewer-docker"></span><span id="index-0"></span><span id="id1"></span><h1>紀錄檢視器<a class="headerlink" href="#log-viewer" title="本標題的永久連結">¶</a></h1>
-<p>The log viewer docker allows you to see debug output without access to a terminal. This is useful when trying to get a tablet log or to figure out if Krita is spitting out errors while a certain thing is happening.</p>
-<p>The log docker is used by pressing the <span class="guilabel">enable logging</span> button at the bottom.</p>
-<div class="admonition warning">
-<p class="admonition-title">警告</p>
-<p>When enabling logging, this output will not show up in the terminal. If you are missing debug output in the terminal, check that you didn't have the log docker enabled.</p>
-</div>
-<p>The docker is composed of a log area which shows the debug output, and four buttons at the bottom.</p>
-<div class="section" id="log-output-area">
-<h2>Log Output Area<a class="headerlink" href="#log-output-area" title="本標題的永久連結">¶</a></h2>
-<p>The log output is formatted as follows:</p>
-<dl class="simple">
-<dt>White</dt><dd><p>This is just a regular debug message.</p>
-</dd>
-<dt>Yellow</dt><dd><p>This is a info output.</p>
-</dd>
-<dt>Orange</dt><dd><p>This is a warning output.</p>
-</dd>
-<dt>Red</dt><dd><p>This is a critical error. When this is bolded, it is a fatal error.</p>
-</dd>
-</dl>
-</div>
+  <div class="section" id="brush-preset-history-docker">
+<span id="brush-preset-history"></span><span id="index-0"></span><h1>Brush Preset History Docker<a class="headerlink" href="#brush-preset-history-docker" title="本標題的永久連結">¶</a></h1>
+<p>The brush preset history docker keeps track of the last used presets.</p>
 <div class="section" id="options">
 <h2>Options<a class="headerlink" href="#options" title="本標題的永久連結">¶</a></h2>
-<p>There's four buttons at the bottom:</p>
+<p>You can access several features when <img alt="mouseright" src="../../_images/Krita_mouse_right.png" /> on a preset.</p>
+<dl>
+<dt>Forget &quot;Preset Name&quot;</dt><dd><p>Remove this preset from the list.</p>
+</dd>
+<dt>Clear History</dt><dd><p>Clears the list.</p>
+</dd>
+<dt>History Behaviour</dt><dd><p>Change how the history behaves:</p>
 <dl class="simple">
-<dt>Enable Logging</dt><dd><p>Enable the docker to start logging. This caries over between sessions.</p>
+<dt>Static Position</dt><dd><p>All presets keep their positions.</p>
 </dd>
-<dt>Clear the Log</dt><dd><p>This empties the log output area.</p>
+<dt>Move to Top on Use</dt><dd><p>Move the last used preset to the top.</p>
 </dd>
-<dt>Save the Log</dt><dd><p>Save the log to a text file.</p>
+<dt>Bubble Up on Repeated Use</dt><dd><p>Move presets to the top depending on how often you use them.</p>
 </dd>
-<dt>Configure Logging</dt><dd><p>Configure which kind of debug is added. By default only warnings and simple debug statements are logged. You can enable the special debug messages for each area here.</p>
-<ul class="simple">
-<li><p>一般</p></li>
-<li><p>Resource Management</p></li>
-<li><p>Image Core</p></li>
-<li><p>Registries</p></li>
-<li><p>工具</p></li>
-<li><p>Tile Engine</p></li>
-<li><p>Filters</p></li>
-<li><p>Plugin Management</p></li>
-<li><p>User Interface</p></li>
-<li><p>File Loading and Saving</p></li>
-<li><p>Mathematics and Calculations</p></li>
-<li><p>Image Rendering</p></li>
-<li><p>Scripting</p></li>
-<li><p>Input Handling</p></li>
-<li><p>Actions</p></li>
-<li><p>Tablet Handing</p></li>
-<li><p>GPU Canvas</p></li>
-<li><p>Metadata</p></li>
-<li><p>Color Management</p></li>
-</ul>
+</dl>
 </dd>
 </dl>
 </div>
@@ -356,10 +320,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="lut_management.html" class="btn btn-neutral float-right" title="LUT Management" accesskey="n" rel="next"> <!-- 下一個 --> <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="channels_docker.html" class="btn btn-neutral float-right" title="Channels" accesskey="n" rel="next"> <!-- 下一個 --> <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="layers.html" class="btn btn-neutral" title="圖層" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- 上一個  -->  </a>
+        <a href="brush_preset_docker.html" class="btn btn-neutral" title="Preset Docker" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- 上一個  -->  </a>
       
     </div>
   

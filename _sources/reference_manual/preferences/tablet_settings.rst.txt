@@ -1,5 +1,5 @@
 .. meta::
-   :description:
+   :description property=og\:description:
         Configuring the tablet in Krita.
 
 .. metadata-placeholder
@@ -24,6 +24,11 @@ Use Mouse Events for Right and Middle clicks.
     Some tablet devices don't tell us whether the side buttons on a stylus. If you have such a device, you can try activate this workaround. Krita will try to read right and middle-button clicks as if they were coming from a mouse instead of a tablet. It may or may not work on your device (depends on the tablet driver implementation). After changing this option Krita should be restarted.
     
     .. versionadded:: 4.2
+
+Use Tablet Driver Stamps For Brush Speed
+    This changes the way freehand brush smoothing works in Krita by using the driver's timestamps instead of a timer-based one.
+    
+    .. versionadded:: 5.0
     
 For Krita 3.3 or later:Tablet Input API
     On Windows 8 or above only.

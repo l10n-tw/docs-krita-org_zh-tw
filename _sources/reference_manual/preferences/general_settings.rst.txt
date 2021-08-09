@@ -295,11 +295,6 @@ Font DPI Workaround
     
     .. versionadded:: 5.0
 
-Use Tablet Driver Stamps For Brush Speed
-    This changes the way freehand brush smoothing works in Krita by using the driver's timestamps instead of a timer-based one.
-    
-    .. versionadded:: 5.0
-
 .. _resource_settings:
 
 Resources
