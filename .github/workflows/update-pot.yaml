@@ -25,17 +25,15 @@ jobs:
     - name: Update modified POT templates
       run: |
         bash sync_changed_pot.sh ~/docs/_build/gettext/ ./templates/
-    - name: Commit POT changes test result
-      run: |
         git config --local user.name github-actions[bot]
         git config --local user.email 41898282+github-actions[bot]@users.noreply.github.com
-        git checkout -b temp/$(date '+%Y%m%d%H%M%S')
+        git checkout -b update-pot/$(date '+%Y%m%d-%H%M%S')
         git add -A
         if [[ -z $(git status -s) ]]; then
           echo "No changes to commit."
           exit
         fi
-        git commit -m "temp: test update POT"
+        git commit -m "action: Update POT templates"
     - name: Create new PO catalogs from POT templates
       run: |
         bash create_new_po_from_pot.sh ./templates/ ./locale/zh_TW/
@@ -44,7 +42,7 @@ jobs:
           echo "No changes to commit."
           exit
         fi
-        git commit -m "temp: test create new PO catalogs"
+        git commit -m "action: Create new PO catalogs"
     - name: Push changes
       run: |
         git push origin HEAD
