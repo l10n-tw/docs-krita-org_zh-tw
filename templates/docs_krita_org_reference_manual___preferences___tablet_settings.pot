@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 5.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-27 21:21+0800\n"
+"POT-Creation-Date: 2021-08-13 10:38+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -41,131 +41,139 @@ msgstr ""
 msgid "Some tablet devices don't tell us whether the side buttons on a stylus. If you have such a device, you can try activate this workaround. Krita will try to read right and middle-button clicks as if they were coming from a mouse instead of a tablet. It may or may not work on your device (depends on the tablet driver implementation). After changing this option Krita should be restarted."
 msgstr ""
 
-#: ../../reference_manual/preferences/tablet_settings.rst:34
-msgid "For Krita 3.3 or later:Tablet Input API"
+#: ../../reference_manual/preferences/tablet_settings.rst:31
+msgid "Use Tablet Driver Stamps For Brush Speed"
 msgstr ""
 
 #: ../../reference_manual/preferences/tablet_settings.rst:29
+msgid "This changes the way freehand brush smoothing works in Krita by using the driver's timestamps instead of a timer-based one."
+msgstr ""
+
+#: ../../reference_manual/preferences/tablet_settings.rst:39
+msgid "For Krita 3.3 or later:Tablet Input API"
+msgstr ""
+
+#: ../../reference_manual/preferences/tablet_settings.rst:34
 msgid "On Windows 8 or above only."
 msgstr ""
 
-#: ../../reference_manual/preferences/tablet_settings.rst:31
+#: ../../reference_manual/preferences/tablet_settings.rst:36
 msgid "WinTab"
 msgstr ""
 
-#: ../../reference_manual/preferences/tablet_settings.rst:32
+#: ../../reference_manual/preferences/tablet_settings.rst:37
 msgid "Use the WinTab API to receive tablet pen input. This is the API being used before Krita 3.3. This option is recommended for most Wacom tablets."
 msgstr ""
 
-#: ../../reference_manual/preferences/tablet_settings.rst:34
+#: ../../reference_manual/preferences/tablet_settings.rst:39
 msgid "Windows 8+ Pointer Input"
 msgstr ""
 
-#: ../../reference_manual/preferences/tablet_settings.rst:34
+#: ../../reference_manual/preferences/tablet_settings.rst:39
 msgid "Use the Pointer Input messages to receive tablet pen input. This option depends on Windows Ink support from the tablet driver. This is a relatively new addition so it's still considered to be experimental, but it should work well enough for painting. You should try this if you are using an N-Trig device (e.g. recent Microsoft Surface devices) or if your tablet does not work well with WinTab."
 msgstr ""
 
-#: ../../reference_manual/preferences/tablet_settings.rst:37
+#: ../../reference_manual/preferences/tablet_settings.rst:42
 msgid "Advanced Tablet Settings for WinTab"
 msgstr ""
 
-#: ../../reference_manual/preferences/tablet_settings.rst:42
+#: ../../reference_manual/preferences/tablet_settings.rst:47
 msgid "When using multiple monitors or using a tablet that is also a screen, Krita will get conflicting information about how big your screen is, and sometimes if it has to choose itself, there will be a tablet offset. This window allows you to select the appropriate screen resolution."
 msgstr ""
 
-#: ../../reference_manual/preferences/tablet_settings.rst:44
+#: ../../reference_manual/preferences/tablet_settings.rst:49
 msgid "Use Information Provided by Tablet"
 msgstr ""
 
-#: ../../reference_manual/preferences/tablet_settings.rst:45
+#: ../../reference_manual/preferences/tablet_settings.rst:50
 msgid "Use the information as given by the tablet."
 msgstr ""
 
-#: ../../reference_manual/preferences/tablet_settings.rst:46
+#: ../../reference_manual/preferences/tablet_settings.rst:51
 msgid "Map to entire virtual screen"
 msgstr ""
 
-#: ../../reference_manual/preferences/tablet_settings.rst:47
+#: ../../reference_manual/preferences/tablet_settings.rst:52
 msgid "Use the information as given by Windows."
 msgstr ""
 
-#: ../../reference_manual/preferences/tablet_settings.rst:51
+#: ../../reference_manual/preferences/tablet_settings.rst:56
 msgid "Map to Custom Area"
 msgstr ""
 
-#: ../../reference_manual/preferences/tablet_settings.rst:49
+#: ../../reference_manual/preferences/tablet_settings.rst:54
 msgid "Type in the numbers manually. Use this when you have tried the other options. You might even need to do trial and error if that is the case, but at the least you can configure it."
 msgstr ""
 
-#: ../../reference_manual/preferences/tablet_settings.rst:51
+#: ../../reference_manual/preferences/tablet_settings.rst:56
 msgid "If you have a dual monitor setup and only the top half of the screen is reachable, you might have to enter the total width of both screens plus the double height of your monitor in this field."
 msgstr ""
 
-#: ../../reference_manual/preferences/tablet_settings.rst:55
+#: ../../reference_manual/preferences/tablet_settings.rst:60
 msgid "To access this dialog in Krita versions older than 4.2, you had to do the following:"
 msgstr ""
 
-#: ../../reference_manual/preferences/tablet_settings.rst:57
+#: ../../reference_manual/preferences/tablet_settings.rst:62
 msgid "Put your stylus away from the tablet."
 msgstr ""
 
-#: ../../reference_manual/preferences/tablet_settings.rst:58
+#: ../../reference_manual/preferences/tablet_settings.rst:63
 msgid "Start Krita without using a stylus, that is using a mouse or a keyboard."
 msgstr ""
 
-#: ../../reference_manual/preferences/tablet_settings.rst:59
+#: ../../reference_manual/preferences/tablet_settings.rst:64
 msgid "Press the :kbd:`Shift` key and hold it."
 msgstr ""
 
-#: ../../reference_manual/preferences/tablet_settings.rst:60
+#: ../../reference_manual/preferences/tablet_settings.rst:65
 msgid "Touch a tablet with your stylus so Krita would recognize it."
 msgstr ""
 
-#: ../../reference_manual/preferences/tablet_settings.rst:62
+#: ../../reference_manual/preferences/tablet_settings.rst:67
 msgid "If adjusting this doesn't work, and if you have a Wacom tablet, an offset in the canvas can be caused by a faulty Wacom preference file which is not removed or replaced by reinstalling the drivers."
 msgstr ""
 
-#: ../../reference_manual/preferences/tablet_settings.rst:64
+#: ../../reference_manual/preferences/tablet_settings.rst:69
 msgid "To fix it, use the “Wacom Tablet Preference File Utility” to clear all the preferences. This should allow Krita to detect the correct settings automatically."
 msgstr ""
 
-#: ../../reference_manual/preferences/tablet_settings.rst:67
+#: ../../reference_manual/preferences/tablet_settings.rst:72
 msgid "Clearing all wacom preferences will reset your tablet's configuration, thus you will need to recalibrate/reconfigure it."
 msgstr ""
 
-#: ../../reference_manual/preferences/tablet_settings.rst:70
+#: ../../reference_manual/preferences/tablet_settings.rst:75
 msgid "Tablet Tester"
 msgstr ""
 
-#: ../../reference_manual/preferences/tablet_settings.rst:74
+#: ../../reference_manual/preferences/tablet_settings.rst:79
 msgid "This is a special feature for debugging tablet input. When you click on it, it will open a window with two sections. The left section is the **Drawing Area** and the right is the **Text Output**."
 msgstr ""
 
-#: ../../reference_manual/preferences/tablet_settings.rst:76
+#: ../../reference_manual/preferences/tablet_settings.rst:81
 msgid "If you draw over the Drawing Area, you will see a line appear. If your tablet is working it should be both a red and blue line."
 msgstr ""
 
-#: ../../reference_manual/preferences/tablet_settings.rst:78
+#: ../../reference_manual/preferences/tablet_settings.rst:83
 msgid "The red line represents mouse events. Mouse events are the most basic events that Krita can pick up. However, mouse events have crude coordinates and have no pressure sensitivity."
 msgstr ""
 
-#: ../../reference_manual/preferences/tablet_settings.rst:80
+#: ../../reference_manual/preferences/tablet_settings.rst:85
 msgid "The blue line represents the tablet events. The tablet events only show up when Krita can access your tablet. These have more precise coordinates and access to sensors like pressure sensitivity."
 msgstr ""
 
-#: ../../reference_manual/preferences/tablet_settings.rst:84
+#: ../../reference_manual/preferences/tablet_settings.rst:89
 msgid "If you have no blue line when drawing on the lefthand drawing area, Krita cannot access your tablet. Check out the :ref:`page on drawing tablets <drawing_tablets>` for suggestions on what is causing this."
 msgstr ""
 
-#: ../../reference_manual/preferences/tablet_settings.rst:86
+#: ../../reference_manual/preferences/tablet_settings.rst:91
 msgid "When you draw a line, the output on the right will show all sorts of text output. This text output can be attached to a help request or a bug report to figure out what is going on."
 msgstr ""
 
-#: ../../reference_manual/preferences/tablet_settings.rst:89
+#: ../../reference_manual/preferences/tablet_settings.rst:94
 msgid "External Links"
 msgstr ""
 
-#: ../../reference_manual/preferences/tablet_settings.rst:91
+#: ../../reference_manual/preferences/tablet_settings.rst:96
 msgid "`David Revoy wrote an indepth guide on using this feature to maximum advantage <https://www.davidrevoy.com/article182/calibrating-wacom-stylus-pressure-on-krita>`_."
 msgstr ""
 
