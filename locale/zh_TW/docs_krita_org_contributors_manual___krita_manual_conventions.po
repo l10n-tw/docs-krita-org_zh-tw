@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 4.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-27 21:21+0800\n"
+"POT-Creation-Date: 2021-08-13 10:38+0000\n"
 "PO-Revision-Date: 2021-08-02 06:10+0000\n"
 "Last-Translator: Alvin Wong <alvin@alvinhc.com>\n"
 "Language-Team: Chinese <zh-l10n@lists.linux.org.tw>\n"
@@ -1135,10 +1135,29 @@ msgid ""
 msgstr ""
 
 #: ../../contributors_manual/krita_manual_conventions.rst:556
-msgid "Notes for Translators"
+msgid "Text for Non-English Translations Only"
 msgstr ""
 
 #: ../../contributors_manual/krita_manual_conventions.rst:558
+msgid ""
+"You can use the following to include text that only makes sense for non-"
+"English translations of the manual, for example to provide non-English "
+"readers with the English names of an item for reference::"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:562
+msgid ""
+".. only:: non_english\n"
+"\n"
+"    This content is hidden for the English version, but translatable and\n"
+"    shows up in non-English versions."
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:568
+msgid "Notes for Translators"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_conventions.rst:570
 msgid ""
 "If you are translating the manual for a language that does not usually use "
 "whitespaces around words (e.g. Chinese and Japanese), you can use an escaped "
@@ -1146,21 +1165,21 @@ msgid ""
 "page links, like this::"
 msgstr ""
 
-#: ../../contributors_manual/krita_manual_conventions.rst:563
+#: ../../contributors_manual/krita_manual_conventions.rst:575
 msgid "床前\\ `明月 <https://krita.org/>`_\\ 光"
 msgstr ""
 
-#: ../../contributors_manual/krita_manual_conventions.rst:565
+#: ../../contributors_manual/krita_manual_conventions.rst:577
 msgid ""
 "Note that when translating from a PO file, you should escape the backslash "
 "with another backslash::"
 msgstr ""
 
-#: ../../contributors_manual/krita_manual_conventions.rst:568
+#: ../../contributors_manual/krita_manual_conventions.rst:580
 msgid "床前\\\\ `明月 <https://krita.org/>`_\\\\ 光"
 msgstr ""
 
-#: ../../contributors_manual/krita_manual_conventions.rst:570
+#: ../../contributors_manual/krita_manual_conventions.rst:582
 msgid ""
 "The above produces \"床前\\ `明月 <https://krita.org/>`_\\ 光\", instead of "
 "\"床前 `明月 <https://krita.org/>`_ 光\"."
