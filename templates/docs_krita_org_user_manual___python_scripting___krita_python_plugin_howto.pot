@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 5.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-19 22:30+0800\n"
+"POT-Creation-Date: 2021-08-13 10:38+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -41,11 +41,11 @@ msgid "Getting Krita to recognize your plugin"
 msgstr ""
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:30
-msgid "A script in Krita has two components - the script directory (holding your script's Python files) and a \".desktop\" file that Krita uses to load and register your script. For Krita to load your script both of these must put be in the pykrita subdirectory of your Krita resources folder (on Linux  ~/.local/share/krita/pykrita). To find your resources folder start Krita and click the :menuselection:`Settings --> Manage Resources...` menu item. This will open a dialog box. Click the :guilabel:`Open Resources Folder` button. This should open a file manager on your system at your Krita resources folder. See the `API <https://api.kde.org/extragear-api/graphics-apidocs/krita/libs/libkis/html/index.html>`_ docs under \"Auto starting scripts\".  If there is no pykrita subfolder in the Krita resources directory use your file manager to create one."
+msgid "A script in Krita has two components -- the script directory (holding your script's Python files) and a \".desktop\" file that Krita uses to load and register your script. For Krita to load your script both of these must put be in the :file:`pykrita` subdirectory of your Krita resources folder (See :ref:`resource_management` for the paths per operating system). To find your resources folder start Krita and click the :menuselection:`Settings --> Manage Resources...` menu item. This will open a dialog box. Click the :guilabel:`Open Resources Folder` button. This should open a file manager on your system at your Krita resources folder. See the `API <https://api.kde.org/extragear-api/graphics-apidocs/krita/libs/libkis/html/index.html>`_ docs under \"Auto starting scripts\". If there is no :file:`pykrita` subfolder in the Krita resources directory use your file manager to create one."
 msgstr ""
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:32
-msgid "Scripts are identified by a file that ends in a .desktop extension that contain information about the script itself."
+msgid "Scripts are identified by a file that ends in a ``.desktop`` extension that contain information about the script itself."
 msgstr ""
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:34
@@ -80,7 +80,7 @@ msgid "ServiceTypes"
 msgstr ""
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:50
-msgid "This should always be Krita/PythonPlugin for python plugins."
+msgid "This should always be ``Krita/PythonPlugin`` for python plugins."
 msgstr ""
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:51
@@ -124,7 +124,7 @@ msgid "The description that will show up in the Python Plugin Manager."
 msgstr ""
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:62
-msgid "Krita python plugins need to be python modules, so make sure there's an __init__.py script, containing something like..."
+msgid "Krita python plugins need to be python modules, so make sure there's an ``__init__.py`` script, containing something like..."
 msgstr ""
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:64
@@ -145,35 +145,35 @@ msgid "Summary"
 msgstr ""
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:76
-msgid "In summary, if you want to create a script called *myplugin*:"
+msgid "In summary, if you want to create a script called ``myplugin``:"
 msgstr ""
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:79
-msgid "in your Krita *resources/pykrita* directory create"
+msgid "in your Krita :file:`resources/pykrita` directory create"
 msgstr ""
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:79
-msgid "a folder called *myplugin*"
+msgid "a folder called :file:`myplugin`"
 msgstr ""
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:80
-msgid "a file called *myplugin.desktop*"
+msgid "a file called :file:`myplugin.desktop`"
 msgstr ""
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:82
-msgid "in the *myplugin* folder create"
+msgid "in the :file:`myplugin` folder create"
 msgstr ""
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:82
-msgid "a file called *__init__.py*"
+msgid "a file called :file:`__init__.py`"
 msgstr ""
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:83
-msgid "a file called *myplugin.py*"
+msgid "a file called :file:`myplugin.py`"
 msgstr ""
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:84
-msgid "in the *__init__.py* file put this code:"
+msgid "in the :file:`__init__.py` file put this code:"
 msgstr ""
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:90
@@ -191,7 +191,7 @@ msgid "[Desktop Entry]\n"
 msgstr ""
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:100
-msgid "write your script in the ''myplugin/myplugin.py'' file."
+msgid "write your script in the :file:`myplugin/myplugin.py` file."
 msgstr ""
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:103
@@ -243,7 +243,7 @@ msgid "\"myAction\""
 msgstr ""
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:139
-msgid "This should be replaced with a unique id that Krita will use to find the action."
+msgid "This should be replaced with a unique ID that Krita will use to find the action."
 msgstr ""
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:141
@@ -251,7 +251,7 @@ msgid "\"My Script\""
 msgstr ""
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:141
-msgid "This is what will be visible in the tools menu."
+msgid "This is what will be visible in the :ref:`tools_menu`."
 msgstr ""
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:143
@@ -311,7 +311,7 @@ msgid "Now, your new action doesn't show up in :menuselection:`Settings --> Conf
 msgstr ""
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:186
-msgid "Krita, for various reasons, only adds actions to the shortcuts menu when they are present in an .action file. The action file to get our action to be added to shortcuts should look like this:"
+msgid "Krita, for various reasons, only adds actions to the :ref:`shortcut_settings` when they are present in an ``.action`` file. The action file to get our action to be added to the shortcuts should look like this:"
 msgstr ""
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:188
@@ -349,7 +349,7 @@ msgid "name"
 msgstr ""
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:214
-msgid "This should be the unique id you made for your action when creating it in the setup of the extension."
+msgid "This should be the unique ID you made for your action when creating it in the setup of the extension."
 msgstr ""
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:215
@@ -357,7 +357,7 @@ msgid "icon"
 msgstr ""
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:216
-msgid "the name of a possible icon. These will only show up on KDE plasma, because Gnome and Windows users complained they look ugly."
+msgid "The name of a possible icon. These will only show up on KDE plasma, because Gnome and Windows users complained they look ugly."
 msgstr ""
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:217
@@ -433,7 +433,7 @@ msgid "The status tip that is displayed on a status bar."
 msgstr ""
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:236
-msgid "Save this file as \"myplugin.action\" where myplugin is the name of your plugin. The action file should be saved, not in the pykrita resources folder, but rather in a resources folder named \"actions\". (So, share/pykrita is where the python plugins and desktop files go, and share/actions is where the action files go) Restart Krita. The shortcut should now show up in the shortcut action list."
+msgid "Save this file as ``myplugin.action`` where myplugin is the name of your plugin. The action file should be saved, not in the pykrita resources folder, but rather in a resources folder named \"actions\". (So, ``share/pykrita`` is where the python plugins and desktop files go, and ``share/actions`` is where the action files go) Restart Krita. The shortcut should now show up in the shortcut action list."
 msgstr ""
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:239
@@ -473,7 +473,7 @@ msgid "\"myDocker\""
 msgstr ""
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:264
-msgid "Replace this with an unique ID for your docker that Krita uses to keep track of it."
+msgid "Replace this with a unique ID for your docker that Krita uses to keep track of it."
 msgstr ""
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:265
@@ -481,7 +481,7 @@ msgid "DockWidgetFactoryBase.DockRight"
 msgstr ""
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:266
-msgid "The location. These can be DockTornOff, DockTop, DockBottom, DockRight, DockLeft, or DockMinimized"
+msgid "The location. These can be ``DockTornOff``, ``DockTop``, ``DockBottom``, ``DockRight``, ``DockLeft``, or ``DockMinimized``"
 msgstr ""
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:268
@@ -501,7 +501,7 @@ msgid "By default, Krita uses PyQt, but its documentation is pretty bad, mostly 
 msgstr ""
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:274
-msgid "Anyway, what we need to do first is that we need to create a QWidget, it's not very complicated, under setWindowTitle, add:"
+msgid "Anyway, what we need to do first is that we need to create a ``QWidget``, it's not very complicated, under ``setWindowTitle``, add:"
 msgstr ""
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:276
@@ -530,7 +530,7 @@ msgid "If we now restart Krita, we'll have a new docker and in that docker there
 msgstr ""
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:295
-msgid "However, the button looks aligned a bit oddly. That's because our mainWidget has no layout. Let's quickly do that:"
+msgid "However, the button looks aligned a bit oddly. That's because our ``mainWidget`` has no layout. Let's quickly do that:"
 msgstr ""
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:297
@@ -551,11 +551,11 @@ msgid "PyQt Signals and Slots"
 msgstr ""
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:309
-msgid "We've already been using PyQt signals and slots already, but there are times where you want to create your own signals and slots. `As PyQt's documentation is pretty difficult to understand <https://www.riverbankcomputing.com/static/Docs/PyQt5/signals_slots.html>`_, and the way how signals and slots are created is very different from C++ Qt, we're explaining it here:"
+msgid "We've already been using PyQt signals and slots already, but there are times when you want to create your own signals and slots. `As PyQt's documentation is pretty difficult to understand <https://www.riverbankcomputing.com/static/Docs/PyQt5/signals_slots.html>`_, and the way how signals and slots are created is very different from C++ Qt, we're explaining it here:"
 msgstr ""
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:312
-msgid "All python functions you make in PyQt can be understood as slots, meaning that they can be connected to signals like Action.triggered or QPushButton.clicked. However, QCheckBox has a signal for toggled, which sends a boolean. How do we get our function to accept that boolean?"
+msgid "All python functions you make in PyQt can be understood as slots, meaning that they can be connected to signals like ``Action.triggered`` or ``QPushButton.clicked``. However, ``QCheckBox`` has a signal for toggled, which sends a boolean. How do we get our function to accept that boolean?"
 msgstr ""
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:314

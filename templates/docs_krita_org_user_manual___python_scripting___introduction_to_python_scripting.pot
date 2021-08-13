@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 5.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-19 22:30+0800\n"
+"POT-Creation-Date: 2021-08-13 10:38+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -82,7 +82,7 @@ msgid "Running basic Krita commands"
 msgstr ""
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:58
-msgid "To allow Python to communicate with Krita, we will use the Krita module. At the top of every script, we will write: ``from krita import *``"
+msgid "To allow Python to communicate with Krita, we will use the Krita module. At the top of every script, we will write ``from krita import *``."
 msgstr ""
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:60
@@ -135,11 +135,11 @@ msgid "Those pages may look like a lot of jargon at first. This is because Krita
 msgstr ""
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:91
-msgid "Let's see how this stuff works in more detail. Let's take a look at the second link, the `Krita class reference <https://api.kde.org/extragear-api/graphics-apidocs/krita/libs/libkis/html/classKrita.html#aa55507903d088013ced2df8c74f28a63>`_. There we can see all the functions available to the Krita instance. If you type dir(Krita.instance()) in Python, it should match this page very closely - you can view the documentation of the functions createDocument(), activeWindow(), and action() which we used above."
+msgid "Let's see how this stuff works in more detail. Let's take a look at the second link, the `Krita class reference <https://api.kde.org/extragear-api/graphics-apidocs/krita/libs/libkis/html/classKrita.html#aa55507903d088013ced2df8c74f28a63>`_. There we can see all the functions available to the Krita instance. If you type ``dir(Krita.instance())`` in Python, it should match this page very closely - you can view the documentation of the functions ``createDocument()``, ``activeWindow()``, and ``action()`` which we used above."
 msgstr ""
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:93
-msgid "One of the more confusing things is seeing all the C++ classes that Krita uses, including the Qt classes that start with Q. But here is the beauty of SIP: it tries to make the translation from these classes into Python as simple and straightforward as possible. For example, you can see that the function filters() returns a QStringList. However, SIP converts those QStringLists into regular python list of strings!"
+msgid "One of the more confusing things is seeing all the C++ classes that Krita uses, including the Qt classes that start with Q. But here is the beauty of SIP: it tries to make the translation from these classes into Python as simple and straightforward as possible. For example, you can see that the function ``filters()`` returns a ``QStringList``. However, SIP converts those ``QStringLists`` into regular python list of strings!"
 msgstr ""
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:95
@@ -213,7 +213,7 @@ msgid "Hopefully this will give you an idea of how to navigate the API docs now.
 msgstr ""
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:149
-msgid "Krita's API has many more classes, you can get to them by going to the top-left class list, or just clicking their names to get to their API docs. The functions print() or dir() are your friends here as well. This line will print out a list of all the actions in Krita - you could swap in one of these commands instead of 'python_scripter' in the example above."
+msgid "Krita's API has many more classes, you can get to them by going to the top-left class list, or just clicking their names to get to their API docs. The functions ``print()`` or ``dir()`` are your friends here as well. This line will print out a list of all the actions in Krita -- you could swap in one of these commands instead of 'python_scripter' in the example above."
 msgstr ""
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:151
@@ -253,11 +253,11 @@ msgid "Python 2 and 3"
 msgstr ""
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:184
-msgid "By default Krita is compiled for python 3."
+msgid "By default, Krita is compiled for python 3."
 msgstr ""
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:186
-msgid "However, it is possible to compile it with python 2. To do so, you will need to add the following to the cmake configuration line::"
+msgid "However, it is possible to compile it with python 2. To do so, you will need to add the following to the :program:`cmake` configuration line::"
 msgstr ""
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:188
