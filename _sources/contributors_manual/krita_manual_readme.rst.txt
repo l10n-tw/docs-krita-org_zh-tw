@@ -40,7 +40,7 @@ General concept tutorials.
 
     We also have found that certain concepts, such as color management and layer handling are far more advanced in Krita than the average artist is used to. Krita is free and many of its users will not have formal training in digital artwork. So there is no pre-existing artist-focused knowledge on how to use color management or filter layers.
 
-    In addition there are systems that are unique to Krita, for example the brush system, the transform masks, the alpha inheritance and the perspective assistants. Finally, there are users who aren't familiar with even standard painting workflows, and are not flexible enough to understand how to port a tutorial for Sai or Photoshop to Krita.
+    In addition there are systems that are unique to Krita, for example the brush system, the transform masks, the alpha inheritance and the perspective assistants. Finally, there are users who aren't familiar with even standard painting workflows, and are not flexible enough to understand how to port a tutorial for SAI or Photoshop to Krita.
 A list of known tutorials and video tutorials
     Apparently, one of the great things about Krita's team is how we connect with artists and acknowledge that they're doing cool stuff. The same should count for tutorials, especially because there are ways of using Krita and ways of approaching painting that are unique and we should encourage people to share their knowledge.
 Contributors' Manual
@@ -282,7 +282,7 @@ Therefore, the implicit goal of each page would be to get the feature used for p
 
 Other than that, we've observed the following groups:
 
-* High-school and college students trying out drawing software for illustrations. These usually have some previous experience with drawing software, like Painttool Sai or Photoshop, but need to be introduced to possibilities in :program:`Krita`. This group's strength is that they share a lot of information with each other like tips and tricks and tutorials.
+* High-school and college students trying out drawing software for illustrations. These usually have some previous experience with drawing software, like Paint Tool SAI or Photoshop, but need to be introduced to possibilities in :program:`Krita`. This group's strength is that they share a lot of information with each other like tips and tricks and tutorials.
 * Professionals, people who earn their money with digital drawing software. The strength of this group is that they have a lot of know-how and are willing to donate to improve the program. These come in two types:
 
     * Non technical professionals. These are people who do not really grasp the more mathematical bits of a piece of software, but have developed solid workflows over the years and work with software using their finely honed instincts. These tend to be illustrators, painters and people working with print.

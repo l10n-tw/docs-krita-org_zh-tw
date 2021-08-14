@@ -117,7 +117,7 @@ Window Settings
 ---------------
 
 Multiple Document Mode
-    This can be either tabbed like :program:`GIMP` or :program:`Paint Tool Sai`, or sub windows, like :program:`Photoshop`.
+    This can be either tabbed like :program:`GIMP` or :program:`Paint Tool SAI`, or sub windows, like :program:`Photoshop`.
 Background image
     Allows you to set a picture background for sub window mode.
 Window Background

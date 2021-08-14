@@ -1,6 +1,6 @@
 .. meta::
    :description property=og\:description:
-        This is an introduction to Krita for users coming from Paint Tool Sai. 
+        This is an introduction to Krita for users coming from Paint Tool SAI. 
 
 .. metadata-placeholder
 
@@ -9,7 +9,7 @@
              - Halla Rempt <boud@valdyas.org>
    :license: GNU free documentation license 1.3 or later.
 
-.. index:: Sai, Painttool Sai
+.. index:: SAI, PaintTool SAI
 .. _introduction_from_sai:
 
 ================================================
@@ -54,7 +54,7 @@ You can actually set this in :menuselection:`Settings --> Configure Krita... -->
 
 .. note::
 
-    Krita 3.0 actually has a Paint-tool SAI-compatible input sheet shipped by default. Combine these with the shortcut sheet for Paint tool SAI to get most of the functionality on familiar hotkeys.
+    Krita 3.0 actually has a Paint Tool SAI-compatible input sheet shipped by default. Combine these with the shortcut sheet for Paint Tool SAI to get most of the functionality on familiar hotkeys.
 
 Stabilizer
 ~~~~~~~~~~
@@ -90,7 +90,7 @@ Erasing is a blending mode in Krita, much like the transparency mode of Paint To
 Blending Modes
 ~~~~~~~~~~~~~~
 
-Krita has a lot of Blending modes, and thankfully all of Paint Tool Sai's are amongst them except binary. To manage the blending modes, each of them has a little check-box that you can tick to add them to the favorites.
+Krita has a lot of Blending modes, and thankfully all of Paint Tool SAI's are amongst them except binary. To manage the blending modes, each of them has a little check-box that you can tick to add them to the favorites.
 
 Multiple, Screen, Overlay and Normal are amongst the favorites.
 Krita's Luminosity is actually slightly different from Paint Tool SAI's, and it replaces the relative brightness of color with the relative brightness of the color of the layer.

@@ -38,3 +38,7 @@ If you have issues downloading the update through the plugin, you can also do it
 
 Load up the G'Mic plugin and press the refresh button for the version to update.
 
+.. deprecated:: 5.0
+
+   G'Mic is now included into Krita itself, and thus does not need to be configured separately anymore.
+

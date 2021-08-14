@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-08-13T11:00:07" />
+  <meta property="og:article:modified_time" content="2021-08-14T15:04:36" />
   <meta content="How a color managed workflow works." name="description" />
 
   
@@ -455,7 +455,7 @@ Set the LUT docker to use the OCIO engine, and select the config from the above 
 <dt>Output</dt><dd><p>sRGB, ICC version 2, sRGB TRC for the internet, and a specialized CMYK profile from the printing house for the printed images.</p>
 </dd>
 </dl>
-<p>Use the sRGB-elle-V2-srgbtrc.icc for going between Inkscape, Photoshop, Painttool Sai, Illustrator, Gimp, Manga Studio, Paintstorm Studio, MyPaint, Artrage, Scribus, etc. and Krita.</p>
+<p>Use the sRGB-elle-V2-srgbtrc.icc for going between Inkscape, Photoshop, Paint Tool SAI, Illustrator, Gimp, Manga Studio, Paintstorm Studio, MyPaint, Artrage, Scribus, etc. and Krita.</p>
 <p>If you are using a larger space via ICC, you will only be able to interchange it between Krita, Photoshop, Illustrator, Gimp 2.9, Manga Studio and Scribus. All others assume sRGB for your space, no matter what, because they don't have color management.</p>
 <p>If you are going between Krita and Blender, Nuke or Natron, use OCIO and set the input space to 'sRGB', but make sure to select the sRGB profile for ICC when creating a new file.</p>
 <p>For the final for the web, convert the image to sRGB 8bit, 'srgbtrc', do not embed the ICC profile. Then, if using PNG, put it through something like 'pngcrush' or other PNG optimizers. sRGB in this case is chosen because you can assume the vast majority of your audience hasn't profiled their screen, nor do they have screens that are advanced enough for the wide gamut stuff. So hence why we convert to the screen default for the internet, sRGB.</p>
@@ -526,7 +526,7 @@ Set the LUT docker to use the OCIO engine, and select the config from the above 
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>cbf8308</code>
+          修訂版本 <code>226e906</code>
         </span>
       
 

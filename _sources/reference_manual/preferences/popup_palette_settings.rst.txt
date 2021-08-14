@@ -1,5 +1,5 @@
 .. meta::
-   :description:
+   :description property=og\:description:
         Pop-up Palette settings in Krita.
 
 .. metadata-placeholder
@@ -37,3 +37,9 @@ Color Selector
             Furthermore, unlike the :guilabel:`sRGB Triangle Selector`, this selector currently lacks automatic gamut limitation, so it will show (and select) colors out of gamut for CMYK.
 Selector Size
     The size of the color selector in the center of the palette.
+Dynamically Adjust Slot Count
+    When having a tag with less presets than there are slots, the slot count will be adjusted automatically. Some people prefer this, while others prefer the slot count to be static.
+Show Color History Ring
+    Enables the color history ring around the color selector in the pop-up palette.
+Show Rotation Ring
+    Enables the canvas rotation ring on the pop-up palette.

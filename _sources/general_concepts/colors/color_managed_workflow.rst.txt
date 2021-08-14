@@ -321,7 +321,7 @@ Workingspace
 Output
     sRGB, ICC version 2, sRGB TRC for the internet, and a specialized CMYK profile from the printing house for the printed images.
 
-Use the sRGB-elle-V2-srgbtrc.icc for going between Inkscape, Photoshop, Painttool Sai, Illustrator, Gimp, Manga Studio, Paintstorm Studio, MyPaint, Artrage, Scribus, etc. and Krita.
+Use the sRGB-elle-V2-srgbtrc.icc for going between Inkscape, Photoshop, Paint Tool SAI, Illustrator, Gimp, Manga Studio, Paintstorm Studio, MyPaint, Artrage, Scribus, etc. and Krita.
 
 If you are using a larger space via ICC, you will only be able to interchange it between Krita, Photoshop, Illustrator, Gimp 2.9, Manga Studio and Scribus. All others assume sRGB for your space, no matter what, because they don't have color management.
 
