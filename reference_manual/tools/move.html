@@ -6,7 +6,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta property="og:title" name="title" content="Move Tool" />
+  <meta property="og:title" name="title" content="移動工具" />
   <meta property="og:site-name" content="Krita Manual" />
   <meta property="og:type" content="article" />
   <meta property="og:locale" content="zh_TW" />
@@ -21,12 +21,12 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-08-14T15:04:36" />
-  <meta content="Krita's move tool reference." name="description" />
+  <meta property="og:article:modified_time" content="2021-08-15T08:28:53" />
+  <meta content="Krita 的移動工具參考。" name="description" />
 
   
   
-  <title>Move Tool &mdash; Krita Manual 5.0.0 Beta 說明文件</title>
+  <title>移動工具 &mdash; Krita Manual 5.0.0 Beta 說明文件</title>
   
 
   
@@ -175,7 +175,7 @@
 <li class="toctree-l3"><a class="reference internal" href="dyna.html">Dynamic Brush Tool</a></li>
 <li class="toctree-l3"><a class="reference internal" href="multibrush.html">Multibrush Tool</a></li>
 <li class="toctree-l3"><a class="reference internal" href="crop.html">Crop Tool</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Move Tool</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">移動工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="transform.html">Transform Tool</a></li>
 <li class="toctree-l3"><a class="reference internal" href="fill.html">Fill Tool</a></li>
 <li class="toctree-l3"><a class="reference internal" href="gradient_draw.html">Gradient Tool</a></li>
@@ -263,7 +263,7 @@
         
           <li><a href="../tools.html">工具</a> &raquo;</li>
         
-      <li>Move Tool</li>
+      <li>移動工具</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -288,26 +288,26 @@
            <div itemprop="articleBody">
             
   <div class="section" id="move-tool">
-<span id="index-0"></span><span id="id1"></span><h1>Move Tool<a class="headerlink" href="#move-tool" title="本標題的永久連結">¶</a></h1>
+<span id="index-0"></span><span id="id1"></span><h1>移動工具<a class="headerlink" href="#move-tool" title="本標題的永久連結">¶</a></h1>
 <p><img alt="toolmove" src="../../_images/move_tool.svg" /></p>
-<p>With this tool, you can move the current layer or selection by dragging the mouse.</p>
+<p>透過這個工具，你可以拖動滑鼠來移動當前圖層或選擇區域。</p>
 <dl>
-<dt>Move current layer</dt><dd><p>Anything that is on the selected layer will be moved.</p>
+<dt>移動所選圖層</dt><dd><p>所選圖層的一切都會被移動。</p>
 </dd>
-<dt>Move layer with content</dt><dd><p>Any content contained on the layer that is resting under the four-headed Move cursor will be moved.</p>
+<dt>移動有內容的圖層</dt><dd><p>圖層中移動游標下的所有內容都會被移動。</p>
 </dd>
-<dt>Move the whole group</dt><dd><p>All content on all layers will move.  Depending on the number of layers this might result in slow and, sometimes, jerky movements. Use this option sparingly or only when necessary.</p>
+<dt>Move the whole group</dt><dd><p>所有圖層的所有內容都會移動。移動的圖層越多，運行的速度會越慢，有時還會抽搐。謹慎地或是只在必要的時候使用這個功能。</p>
 </dd>
-<dt>Shortcut move distance (3.0+)</dt><dd><p>This allows you to set how much, and in which units, the <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Left</kbd> <kbd class="kbd docutils literal notranslate">Arrow</kbd></kbd>, <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Up</kbd> <kbd class="kbd docutils literal notranslate">Arrow</kbd></kbd>, <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Right</kbd> <kbd class="kbd docutils literal notranslate">Arrow</kbd></kbd> and <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Down</kbd> <kbd class="kbd docutils literal notranslate">Arrow</kbd></kbd> cursor key actions will move the layer.</p>
+<dt>Shortcut move distance (3.0+)</dt><dd><p>這功能能讓你設定移動多少距離和設定移動距離的單位， 左方向鍵，上方向鍵，右方向鍵和下方向鍵能讓你移動圖層。</p>
 </dd>
 <dt>Large Move Scale (3.0+)</dt><dd><p>Allows you to multiply the movement of the Shortcut Move Distance when pressing the <kbd class="kbd docutils literal notranslate">Shift</kbd> key before pressing a direction key.</p>
 </dd>
-<dt>Show coordinates</dt><dd><p>When toggled will show the coordinates of the top-left pixel of the moved layer in a floating window.</p>
+<dt>顯示坐標</dt><dd><p>開啟時會在移動圖層的浮動視窗顯示左上角像素的坐標。</p>
 </dd>
-<dt>Constrained movement</dt><dd><p>If you click, then press the <kbd class="kbd docutils literal notranslate">Shift</kbd> key, then move the layer, movement is constrained to the horizontal and vertical directions. If you press the <kbd class="kbd docutils literal notranslate">Shift</kbd> key, then click, then move, all layers will be moved, with the movement constrained to the horizontal and vertical directions.</p>
+<dt>約束移動</dt><dd><p>If you click, then press the <kbd class="kbd docutils literal notranslate">Shift</kbd> key, then move the layer, movement is constrained to the horizontal and vertical directions. If you press the <kbd class="kbd docutils literal notranslate">Shift</kbd> key, then click, then move, all layers will be moved, with the movement constrained to the horizontal and vertical directions.</p>
 <img alt="../../_images/Movetool_coordinates.png" src="../../_images/Movetool_coordinates.png" />
 </dd>
-<dt>Position</dt><dd><p>Gives the top-left coordinate of the layer, can also be manually edited.</p>
+<dt>位置</dt><dd><p>給予圖層左上角坐標的數值，可以手動調整。</p>
 </dd>
 </dl>
 </div>
