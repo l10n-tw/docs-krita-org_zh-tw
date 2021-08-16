@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-08-16T12:29:15" />
+  <meta property="og:article:modified_time" content="2021-08-16T22:29:00" />
   <meta content="The Split Layer functionality in Krita." name="description" />
 
   
@@ -251,9 +251,9 @@
 <p>Splits a layer according to color. This is useful in combination with the <a class="reference internal" href="tools/colorize_mask.html#colorize-mask"><span class="std std-ref">Colorize Mask</span></a> and the <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">R</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="滑鼠左鍵" src="../_images/Krita_mouse_left.png" /> shortcut to select layers at the cursor.</p>
 <p>At the top, of the dialog there is a dropdown, here you can choose between...</p>
 <dl>
-<dt>Split Into Layers</dt><dd><p>The image's colors is split into paint layers. Fantastic for artwork that works more with flats, such as the cel-shaded look.</p>
+<dt>分割圖層</dt><dd><p>The image's colors is split into paint layers. Fantastic for artwork that works more with flats, such as the cel-shaded look.</p>
 </dd>
-<dt>Split Into Local Selection Masks</dt><dd><div class="versionadded">
+<dt>分割透明度通道</dt><dd><div class="versionadded">
 <p><span class="versionmodified added">4.2.9 版新加入.</span></p>
 </div>
 <p>The image's colors are outlined as a selection, and a <a class="reference internal" href="layers_and_masks/selection_masks.html#selection-masks"><span class="std std-ref">Selection Masks</span></a> is made. This is useful for artwork that has a more painterly look, with the selection masks making it easy to select several areas at once. Because selection masks are not paint layers, several of the options below are unavailable.</p>
@@ -261,21 +261,21 @@
 </dl>
 <p>The other options are:</p>
 <dl class="simple">
-<dt>Put all new layers in a group layer</dt><dd><p>Put all the result layers into a new group.</p>
+<dt>將所有新圖層放進一個圖層群組</dt><dd><p>將所有分割後的圖層放進一個新的群組。</p>
 </dd>
-<dt>Put every layer in its own, separate group layer</dt><dd><p>Put each layer into its own group.</p>
+<dt>將每個圖層放進各自獨立的圖層群組</dt><dd><p>將每個圖層放進屬於它自己的圖層群組。</p>
 </dd>
-<dt>Alpha-lock every new layer</dt><dd><p>Enable the alpha-lock for each layer so it is easier to color.</p>
+<dt>鎖定每個新圖層的透明度</dt><dd><p>Enable the alpha-lock for each layer so it is easier to color.</p>
 </dd>
-<dt>Hide the original layer</dt><dd><p>Turns off the visibility on the original layer so you won't get confused.</p>
+<dt>隱藏原始圖層</dt><dd><p>隱藏原始圖層以避免混淆。</p>
 </dd>
-<dt>Sort layers by amount of non-transparent pixels</dt><dd><p>This ensures that the layers with large color swathes will end up at the top.</p>
+<dt>按不透明像素數量排列圖層</dt><dd><p>確保含有大面積色彩的圖層會被排在上方。</p>
 </dd>
-<dt>Disregard opacity</dt><dd><p>Whether to take into account transparency of a color.</p>
+<dt>忽略不透明度</dt><dd><p>是否要考慮色彩的透明度。</p>
 </dd>
-<dt>Fuzziness</dt><dd><p>How precise the algorithm should be. The larger the fuzziness, the less precise the algorithm will be. This is necessary for splitting layers with anti-aliasing, because otherwise you would end up with a separate layer for each tiny pixel.</p>
+<dt>模糊度</dt><dd><p>How precise the algorithm should be. The larger the fuzziness, the less precise the algorithm will be. This is necessary for splitting layers with anti-aliasing, because otherwise you would end up with a separate layer for each tiny pixel.</p>
 </dd>
-<dt>Palette to use for naming the layers</dt><dd><p>Select the palette to use for naming. Krita will compare the main color of a layer to each color in the palette to get the most appropriate name for it.</p>
+<dt>用於命名圖層的調色板</dt><dd><p>Select the palette to use for naming. Krita will compare the main color of a layer to each color in the palette to get the most appropriate name for it.</p>
 </dd>
 </dl>
 </div>
