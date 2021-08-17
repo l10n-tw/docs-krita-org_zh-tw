@@ -169,7 +169,7 @@ Paint Thickness
 
 .. versionadded:: 5.0
 
-This affects how strong the :ref:`lightness modes <brush_mode>` affect the current color. Because the :dfn:`Color Smudge Brush` smudges, what actually happens is that the lightness part is painted into a separate height map, which prevents the shadows and highlights of the current lightness brush tip are mixed into the smudge, which would have resulted in all smudges becoming white or black. The height map is discarded when switching brush engines, layers or tools. Because this heightmap only exists for the layer currently being edited, lightness brushes and paint thickness cannot be used together with :ref:`option_overlay`.
+This affects how strong the :ref:`lightness modes <brush_mode>` affect the current color. Because the :dfn:`Color Smudge Brush` smudges, what actually happens is that the lightness part is painted into a separate height map. This prevents the shadows and highlights of the current lightness brush tip from being mixed into the smudge, which would have resulted in all smudges becoming white or black. The height map is discarded when switching brush engines, layers or tools. Because this heightmap only exists for the layer currently being edited, lightness brushes and paint thickness cannot be used together with :ref:`option_overlay`.
 
 .. figure:: /images/brushes/colorsmudge/brushengine_paint_thickness_strength.png
 

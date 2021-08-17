@@ -165,6 +165,10 @@ Switch Control/Alt Selection Modifiers
 Enable Touch painting
     This allows finger painting with capacitive screens. Some devices have both capacitive touch and a stylus, and then this can interfere. In that case, just toggle this.
 
+    .. versionchanged:: 5.0
+    
+        When this is disabled, panning the canvas can be done with by dragging a single finger over the canvas, while when enabled, panning will only be done by dragging three fingers.
+
 Activate transform tool after pasting
     .. versionadded:: 4.2 A convenience feature. When enabling this, the transform tool will activate after pasting for quick moving or rotating.
 
