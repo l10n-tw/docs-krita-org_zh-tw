@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-08-20T17:29:20" />
+  <meta property="og:article:modified_time" content="2021-08-21T03:29:21" />
   <meta content="Krita 說明文件中的 reStructuredText 標記格式使用慣例 。" name="description" />
 
   
@@ -59,7 +59,7 @@
     <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜尋" href="../search.html" />
-    <link rel="next" title="Krita 手冊貢獻指南" href="krita_manual_readme.html" />
+    <link rel="next" title="Krita 說明文件貢獻指南" href="krita_manual_readme.html" />
     <link rel="prev" title="Krita 的社群" href="community.html" /> 
 
   
@@ -134,33 +134,33 @@
 <li class="toctree-l1 current"><a class="reference internal" href="../contributors_manual.html">貢獻者手冊</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="community.html">Krita 的社群</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Krita 說明文件標記格式使用慣例</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#meta-data">Meta data</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#headings">Headings</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#linking">Linking</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#footnotes-and-further-reading">Footnotes and further reading</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#meta-data">中繼資料</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#headings">標題</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#linking">參照及連結</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#footnotes-and-further-reading">註腳與延伸閱讀</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#images">Images</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#in-text-markup">In-text Markup</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#substitution-references">Substitution References</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#lists">Lists</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#ordinated-lists">Ordinated lists</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#unordered-lists">Unordered lists</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#definition-lists">Definition Lists</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#images">影像</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#in-text-markup">內文格式標記</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#substitution-references">替代文字參照</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#lists">清單</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#ordinated-lists">有序清單</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#unordered-lists">無序清單</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#definition-lists">定義清單</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#tables">Tables</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#admonishments-and-asides">Admonishments and asides</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#code-snippets">Code Snippets</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#other-preformatted-text">Other preformatted text</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#glossaries-terms-and-index">Glossaries, Terms and Index</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#quotes">Quotes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#text-for-non-english-translations-only">Text for Non-English Translations Only</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#notes-for-translators">Notes for Translators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tables">表格</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#admonishments-and-asides">警告和提示框</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#code-snippets">程式碼片段</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#other-preformatted-text">其他要手動斷行的文字</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#glossaries-terms-and-index">詞彙表、術語和索引</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#quotes">引文</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#text-for-non-english-translations-only">只供英文版以外的翻譯使用的內容</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#notes-for-translators">致翻譯者的備註</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="krita_manual_readme.html">Krita 手冊貢獻指南</a></li>
-<li class="toctree-l2"><a class="reference internal" href="optimising_images.html">供手冊使用的影像</a></li>
+<li class="toctree-l2"><a class="reference internal" href="krita_manual_readme.html">Krita 說明文件貢獻指南</a></li>
+<li class="toctree-l2"><a class="reference internal" href="optimising_images.html">供說明文件使用的影像</a></li>
 <li class="toctree-l2"><a class="reference internal" href="user_support.html">使用者支援入門介紹</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../untranslatable_pages.html">Technical Pages</a></li>
 </ul>
@@ -249,24 +249,24 @@
             
   <div class="section" id="mark-up-conventions-for-the-krita-manual">
 <span id="krita-markup-conventions"></span><h1><a class="toc-backref" href="#id13">Krita 說明文件標記格式使用慣例</a><a class="headerlink" href="#mark-up-conventions-for-the-krita-manual" title="本標題的永久連結">¶</a></h1>
-<p>這頁將詳細說明在 Krita 說抈文件中使用 reStructuredText 標記格式的慣例。</p>
-<p>It's recommended to look over the <a class="reference external" href="http://docutils.sourceforge.net/rst.html">official specification</a> for reStructuredText, and given it lives on sourceforge, to save a copy to your harddrive (sourceforge has, at this time of writing, some issues with server uptime):</p>
+<p>這頁將詳細說明在 Krita 說明文件中使用 reStructuredText 標記格式的慣例。</p>
+<p>我們建議先翻閱 reStructuredText 的<a class="reference external" href="http://docutils.sourceforge.net/rst.html">官方格式規格文件</a>。我們亦建議下載一份複本，以便在連線出問題時可於本機查閱。</p>
 <dl class="simple">
-<dt>User Manual:</dt><dd><ul class="simple">
-<li><p><a class="reference external" href="http://docutils.sourceforge.net/docs/user/rst/quickstart.html">Primer</a></p></li>
-<li><p><a class="reference external" href="http://docutils.sourceforge.net/docs/user/rst/quickref.html">Quick Ref</a></p></li>
-<li><p><a class="reference external" href="http://docutils.sourceforge.net/docs/user/rst/cheatsheet.txt">Text Cheatsheet</a></p></li>
+<dt>手冊：</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="http://docutils.sourceforge.net/docs/user/rst/quickstart.html">入門資料</a></p></li>
+<li><p><a class="reference external" href="http://docutils.sourceforge.net/docs/user/rst/quickref.html">快速參考</a></p></li>
+<li><p><a class="reference external" href="http://docutils.sourceforge.net/docs/user/rst/cheatsheet.txt">純文字備忘表</a></p></li>
 </ul>
 </dd>
-<dt>Reference Documentation:</dt><dd><ul class="simple">
-<li><p><a class="reference external" href="http://docutils.sourceforge.net/docs/ref/rst/introduction.html">Introduction</a></p></li>
-<li><p><a class="reference external" href="http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html">Markup</a></p></li>
-<li><p><a class="reference external" href="http://docutils.sourceforge.net/docs/ref/rst/directives.html">Directives</a></p></li>
-<li><p><a class="reference external" href="http://docutils.sourceforge.net/docs/ref/rst/roles.html">Roles</a></p></li>
+<dt>參考文件：</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="http://docutils.sourceforge.net/docs/ref/rst/introduction.html">介紹</a></p></li>
+<li><p><a class="reference external" href="http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html">標記</a></p></li>
+<li><p><a class="reference external" href="http://docutils.sourceforge.net/docs/ref/rst/directives.html">指示</a></p></li>
+<li><p><a class="reference external" href="http://docutils.sourceforge.net/docs/ref/rst/roles.html">文字角色</a></p></li>
 </ul>
 </dd>
-<dt>Sphinx specific docs:</dt><dd><ul class="simple">
-<li><p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html">Sphinx' page on restructured text</a> -- This is useful for the specific sphinx directives and roles it uses to generate for example table of contents.</p></li>
+<dt>Sphinx 特有功能相關文件：</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html">Sphinx 文件內講解 reStructureText 標記的內容</a> —— 這些頁面介紹了 Sphinx 專用的指示標記和角色標記，例如是用來產生目錄部份的標記。</p></li>
 </ul>
 </dd>
 </dl>
@@ -276,37 +276,37 @@
 <ul class="simple">
 <li><p><a class="reference internal" href="#mark-up-conventions-for-the-krita-manual" id="id13">Krita 說明文件標記格式使用慣例</a></p>
 <ul>
-<li><p><a class="reference internal" href="#meta-data" id="id14">Meta data</a></p></li>
-<li><p><a class="reference internal" href="#headings" id="id15">Headings</a></p></li>
-<li><p><a class="reference internal" href="#linking" id="id16">Linking</a></p>
+<li><p><a class="reference internal" href="#meta-data" id="id14">中繼資料</a></p></li>
+<li><p><a class="reference internal" href="#headings" id="id15">標題</a></p></li>
+<li><p><a class="reference internal" href="#linking" id="id16">參照及連結</a></p>
 <ul>
-<li><p><a class="reference internal" href="#footnotes-and-further-reading" id="id17">Footnotes and further reading</a></p></li>
+<li><p><a class="reference internal" href="#footnotes-and-further-reading" id="id17">註腳與延伸閱讀</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#images" id="id18">Images</a></p></li>
-<li><p><a class="reference internal" href="#in-text-markup" id="id19">In-text Markup</a></p></li>
-<li><p><a class="reference internal" href="#substitution-references" id="id20">Substitution References</a></p></li>
-<li><p><a class="reference internal" href="#lists" id="id21">Lists</a></p>
+<li><p><a class="reference internal" href="#images" id="id18">影像</a></p></li>
+<li><p><a class="reference internal" href="#in-text-markup" id="id19">內文格式標記</a></p></li>
+<li><p><a class="reference internal" href="#substitution-references" id="id20">替代文字參照</a></p></li>
+<li><p><a class="reference internal" href="#lists" id="id21">清單</a></p>
 <ul>
-<li><p><a class="reference internal" href="#ordinated-lists" id="id22">Ordinated lists</a></p></li>
-<li><p><a class="reference internal" href="#unordered-lists" id="id23">Unordered lists</a></p></li>
-<li><p><a class="reference internal" href="#definition-lists" id="id24">Definition Lists</a></p></li>
+<li><p><a class="reference internal" href="#ordinated-lists" id="id22">有序清單</a></p></li>
+<li><p><a class="reference internal" href="#unordered-lists" id="id23">無序清單</a></p></li>
+<li><p><a class="reference internal" href="#definition-lists" id="id24">定義清單</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#tables" id="id25">Tables</a></p></li>
-<li><p><a class="reference internal" href="#admonishments-and-asides" id="id26">Admonishments and asides</a></p></li>
-<li><p><a class="reference internal" href="#code-snippets" id="id27">Code Snippets</a></p></li>
-<li><p><a class="reference internal" href="#other-preformatted-text" id="id28">Other preformatted text</a></p></li>
-<li><p><a class="reference internal" href="#glossaries-terms-and-index" id="id29">Glossaries, Terms and Index</a></p></li>
-<li><p><a class="reference internal" href="#quotes" id="id30">Quotes</a></p></li>
-<li><p><a class="reference internal" href="#text-for-non-english-translations-only" id="id31">Text for Non-English Translations Only</a></p></li>
-<li><p><a class="reference internal" href="#notes-for-translators" id="id32">Notes for Translators</a></p></li>
+<li><p><a class="reference internal" href="#tables" id="id25">表格</a></p></li>
+<li><p><a class="reference internal" href="#admonishments-and-asides" id="id26">警告和提示框</a></p></li>
+<li><p><a class="reference internal" href="#code-snippets" id="id27">程式碼片段</a></p></li>
+<li><p><a class="reference internal" href="#other-preformatted-text" id="id28">其他要手動斷行的文字</a></p></li>
+<li><p><a class="reference internal" href="#glossaries-terms-and-index" id="id29">詞彙表、術語和索引</a></p></li>
+<li><p><a class="reference internal" href="#quotes" id="id30">引文</a></p></li>
+<li><p><a class="reference internal" href="#text-for-non-english-translations-only" id="id31">只供英文版以外的翻譯使用的內容</a></p></li>
+<li><p><a class="reference internal" href="#notes-for-translators" id="id32">致翻譯者的備註</a></p></li>
 </ul>
 </li>
 </ul>
 </div>
 <div class="section" id="meta-data">
-<h2><a class="toc-backref" href="#id14">Meta data</a><a class="headerlink" href="#meta-data" title="本標題的永久連結">¶</a></h2>
+<h2><a class="toc-backref" href="#id14">中繼資料</a><a class="headerlink" href="#meta-data" title="本標題的永久連結">¶</a></h2>
 <p>Each page should start with the following three things:</p>
 <ol class="arabic">
 <li><dl>
@@ -351,7 +351,7 @@
 </ol>
 </div>
 <div class="section" id="headings">
-<h2><a class="toc-backref" href="#id15">Headings</a><a class="headerlink" href="#headings" title="本標題的永久連結">¶</a></h2>
+<h2><a class="toc-backref" href="#id15">標題</a><a class="headerlink" href="#headings" title="本標題的永久連結">¶</a></h2>
 <p>Headings will be done in the following order:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">############</span>
 <span class="n">Part</span><span class="o">/</span><span class="n">Section</span>
@@ -386,12 +386,12 @@
 <p>Headers should not end with punctuation, as the header will be used as the link name when linking to a label.</p>
 </div>
 <div class="section" id="linking">
-<h2><a class="toc-backref" href="#id16">Linking</a><a class="headerlink" href="#linking" title="本標題的永久連結">¶</a></h2>
+<h2><a class="toc-backref" href="#id16">參照及連結</a><a class="headerlink" href="#linking" title="本標題的永久連結">¶</a></h2>
 <p>Linking is done with <code class="docutils literal notranslate"><span class="pre">:ref:`label_name`</span></code>. When you need an alternative link text, you use <code class="docutils literal notranslate"><span class="pre">:ref:`actual</span> <span class="pre">text</span> <span class="pre">shown</span> <span class="pre">&lt;label_name&gt;`</span></code>.</p>
 <p>Linking to external pages is done with <code class="docutils literal notranslate"><span class="pre">`url`_</span></code> and <code class="docutils literal notranslate"><span class="pre">`link</span> <span class="pre">name</span> <span class="pre">&lt;url&gt;`_</span></code>, which'll become <a class="reference external" href="url">link name</a>.</p>
 <p><a class="reference external" href="https://pandoc.org/">Pandoc</a> likes to turn these into <code class="docutils literal notranslate"><span class="pre">`link</span> <span class="pre">name`__</span></code> and then add <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">__</span> <span class="pre">:url</span></code> at the end of the document. This is a so-called 'anonymous hyperlink', meaning that depending on the order of the links appearing in the text the order of the links at the end of the text are associated with one another. If this sounds confusing and difficult, it is because it is. That is also the exact reason why we'd like to avoid links like these.</p>
 <div class="section" id="footnotes-and-further-reading">
-<h3><a class="toc-backref" href="#id17">Footnotes and further reading</a><a class="headerlink" href="#footnotes-and-further-reading" title="本標題的永久連結">¶</a></h3>
+<h3><a class="toc-backref" href="#id17">註腳與延伸閱讀</a><a class="headerlink" href="#footnotes-and-further-reading" title="本標題的永久連結">¶</a></h3>
 <p>Footnotes can be made in 3 ways, the most common one is with autonumbering, as per reference:</p>
 <p><a class="footnote-reference brackets" href="#id5" id="id3">1</a> is a reference to footnote 1, and <a class="footnote-reference brackets" href="#id6" id="id4">2</a> is a reference to
 footnote 2.</p>
@@ -419,7 +419,7 @@ except the label is textual.</p>
 </div>
 </div>
 <div class="section" id="images">
-<h2><a class="toc-backref" href="#id18">Images</a><a class="headerlink" href="#images" title="本標題的永久連結">¶</a></h2>
+<h2><a class="toc-backref" href="#id18">影像</a><a class="headerlink" href="#images" title="本標題的永久連結">¶</a></h2>
 <p>Use the image directive for images without captions:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">image</span><span class="p">::</span> <span class="o">/</span><span class="n">images</span><span class="o">/</span><span class="n">sample</span><span class="o">.</span><span class="n">png</span>
    <span class="p">:</span><span class="n">width</span><span class="p">:</span> <span class="mi">800</span>
@@ -446,7 +446,7 @@ except the label is textual.</p>
 <p>Images should go into the <code class="docutils literal notranslate"><span class="pre">/images</span></code> folder. By using <code class="docutils literal notranslate"><span class="pre">/images</span></code> instead of <code class="docutils literal notranslate"><span class="pre">images</span></code>, sphinx will know the filepath isn't relative.</p>
 </div>
 <div class="section" id="in-text-markup">
-<h2><a class="toc-backref" href="#id19">In-text Markup</a><a class="headerlink" href="#in-text-markup" title="本標題的永久連結">¶</a></h2>
+<h2><a class="toc-backref" href="#id19">內文格式標記</a><a class="headerlink" href="#in-text-markup" title="本標題的永久連結">¶</a></h2>
 <p>You can make text <em>emphasized</em> and <strong>strong</strong> with a single asterisk and double respectively:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span><span class="n">emphasize</span><span class="o">*</span>
 <span class="o">**</span><span class="n">strong</span><span class="o">**</span>
@@ -464,7 +464,7 @@ except the label is textual.</p>
 <p>Avoid randomly bolding words. It does <em>not</em> make the text easier or friendlier to read.</p>
 </div>
 <div class="section" id="substitution-references">
-<h2><a class="toc-backref" href="#id20">Substitution References</a><a class="headerlink" href="#substitution-references" title="本標題的永久連結">¶</a></h2>
+<h2><a class="toc-backref" href="#id20">替代文字參照</a><a class="headerlink" href="#substitution-references" title="本標題的永久連結">¶</a></h2>
 <p>You can create a sort of shorthand for a piece of text or an image by doing:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="o">|</span><span class="n">shorthand</span><span class="o">|</span> <span class="n">replace</span><span class="p">::</span> <span class="n">something</span> <span class="ow">or</span> <span class="n">the</span> <span class="n">other</span><span class="o">.</span>
 </pre></div>
@@ -479,9 +479,9 @@ except the label is textual.</p>
 <p>Then, when typing a link, you can just use <code class="docutils literal notranslate"><span class="pre">`bugzilla`_</span></code> to link to bugzilla with &quot;bugzilla&quot; used as the text of the link. <code class="docutils literal notranslate"><span class="pre">`Krita</span> <span class="pre">Manual`_</span></code> will in turn link to docs.krita.org with the text &quot;Krita Manual&quot;.</p>
 </div>
 <div class="section" id="lists">
-<h2><a class="toc-backref" href="#id21">Lists</a><a class="headerlink" href="#lists" title="本標題的永久連結">¶</a></h2>
+<h2><a class="toc-backref" href="#id21">清單</a><a class="headerlink" href="#lists" title="本標題的永久連結">¶</a></h2>
 <div class="section" id="ordinated-lists">
-<h3><a class="toc-backref" href="#id22">Ordinated lists</a><a class="headerlink" href="#ordinated-lists" title="本標題的永久連結">¶</a></h3>
+<h3><a class="toc-backref" href="#id22">有序清單</a><a class="headerlink" href="#ordinated-lists" title="本標題的永久連結">¶</a></h3>
 <ol class="arabic simple">
 <li><p>Apple</p></li>
 <li><p>Pear</p></li>
@@ -524,7 +524,7 @@ except the label is textual.</p>
 </div>
 </div>
 <div class="section" id="unordered-lists">
-<h3><a class="toc-backref" href="#id23">Unordered lists</a><a class="headerlink" href="#unordered-lists" title="本標題的永久連結">¶</a></h3>
+<h3><a class="toc-backref" href="#id23">無序清單</a><a class="headerlink" href="#unordered-lists" title="本標題的永久連結">¶</a></h3>
 <ul class="simple">
 <li><p>red</p></li>
 <li><p>yellow</p></li>
@@ -571,7 +571,7 @@ except the label is textual.</p>
 </div>
 </div>
 <div class="section" id="definition-lists">
-<h3><a class="toc-backref" href="#id24">Definition Lists</a><a class="headerlink" href="#definition-lists" title="本標題的永久連結">¶</a></h3>
+<h3><a class="toc-backref" href="#id24">定義清單</a><a class="headerlink" href="#definition-lists" title="本標題的永久連結">¶</a></h3>
 <p>A favourite! Definition lists are especially useful when dealing with enumerating all the options in a docker and trying to add a simple explanation behind them.</p>
 <dl>
 <dt>Definition</dt><dd><p>Explanation.</p>
@@ -590,7 +590,7 @@ except the label is textual.</p>
 </div>
 </div>
 <div class="section" id="tables">
-<h2><a class="toc-backref" href="#id25">Tables</a><a class="headerlink" href="#tables" title="本標題的永久連結">¶</a></h2>
+<h2><a class="toc-backref" href="#id25">表格</a><a class="headerlink" href="#tables" title="本標題的永久連結">¶</a></h2>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 60%" />
@@ -648,7 +648,7 @@ except the label is textual.</p>
 <p>Full grid tables are best for when you need all features like complex column and row spans, but they're tricky to make. For that reason, small tables are best off being done with the simple syntax, while really long tables are best done with a list directive because that is just much easier to write and maintain.</p>
 </div>
 <div class="section" id="admonishments-and-asides">
-<h2><a class="toc-backref" href="#id26">Admonishments and asides</a><a class="headerlink" href="#admonishments-and-asides" title="本標題的永久連結">¶</a></h2>
+<h2><a class="toc-backref" href="#id26">警告和提示框</a><a class="headerlink" href="#admonishments-and-asides" title="本標題的永久連結">¶</a></h2>
 <div class="admonition note">
 <p class="admonition-title">備註</p>
 <p>Admonishments are sort of like a separate section that the reader needs to pay attention to.</p>
@@ -725,7 +725,7 @@ except the label is textual.</p>
 </dl>
 </div>
 <div class="section" id="code-snippets">
-<h2><a class="toc-backref" href="#id27">Code Snippets</a><a class="headerlink" href="#code-snippets" title="本標題的永久連結">¶</a></h2>
+<h2><a class="toc-backref" href="#id27">程式碼片段</a><a class="headerlink" href="#code-snippets" title="本標題的永久連結">¶</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">Inline</span> <span class="pre">code</span> <span class="pre">snippets</span></code> are done with <code class="docutils literal notranslate"><span class="pre">``backticks``</span></code>.</p>
 <p>Multi-line code snippets are done by ending the previous section with <code class="docutils literal notranslate"><span class="pre">::</span></code>, which'll look like this:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">This</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">paragraph</span><span class="p">,</span> <span class="ow">and</span> <span class="n">we</span> <span class="n">define</span> <span class="n">a</span> <span class="n">preformated</span> <span class="n">snippet</span> <span class="n">like</span> <span class="n">so</span><span class="p">::</span>
@@ -783,7 +783,7 @@ except the label is textual.</p>
 </div>
 </div>
 <div class="section" id="other-preformatted-text">
-<h2><a class="toc-backref" href="#id28">Other preformatted text</a><a class="headerlink" href="#other-preformatted-text" title="本標題的永久連結">¶</a></h2>
+<h2><a class="toc-backref" href="#id28">其他要手動斷行的文字</a><a class="headerlink" href="#other-preformatted-text" title="本標題的永久連結">¶</a></h2>
 <div class="line-block">
 <div class="line">One can</div>
 <div class="line">preformat</div>
@@ -808,13 +808,13 @@ absolutely required to represent content that needs exact formatting, but never
 merely for aesthetic reasons.</p>
 </div>
 <div class="section" id="glossaries-terms-and-index">
-<h2><a class="toc-backref" href="#id29">Glossaries, Terms and Index</a><a class="headerlink" href="#glossaries-terms-and-index" title="本標題的永久連結">¶</a></h2>
+<h2><a class="toc-backref" href="#id29">詞彙表、術語和索引</a><a class="headerlink" href="#glossaries-terms-and-index" title="本標題的永久連結">¶</a></h2>
 <p>These are sphinx features.</p>
 <p>Index is used in the top section, right now only single index entries are used.</p>
 <p>Glossaries are used for some of the menu entry sections, but not all of them.</p>
 </div>
 <div class="section" id="quotes">
-<h2><a class="toc-backref" href="#id30">Quotes</a><a class="headerlink" href="#quotes" title="本標題的永久連結">¶</a></h2>
+<h2><a class="toc-backref" href="#id30">引文</a><a class="headerlink" href="#quotes" title="本標題的永久連結">¶</a></h2>
 <p>Quotes are done like this:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">I</span> <span class="n">am</span> <span class="ow">not</span> <span class="n">sure</span> <span class="n">why</span> <span class="n">you</span><span class="s1">&#39;d need quotes in a user manual...</span>
 
@@ -829,7 +829,7 @@ merely for aesthetic reasons.</p>
 <p>We do actually use quotes in some places. Try to add a link to the name to define where it came from.</p>
 </div>
 <div class="section" id="text-for-non-english-translations-only">
-<h2><a class="toc-backref" href="#id31">Text for Non-English Translations Only</a><a class="headerlink" href="#text-for-non-english-translations-only" title="本標題的永久連結">¶</a></h2>
+<h2><a class="toc-backref" href="#id31">只供英文版以外的翻譯使用的內容</a><a class="headerlink" href="#text-for-non-english-translations-only" title="本標題的永久連結">¶</a></h2>
 <p>You can use the following to include text that only makes sense for non-English
 translations of the manual, for example to provide non-English readers with
 the English names of an item for reference:</p>
@@ -841,7 +841,7 @@ the English names of an item for reference:</p>
 </div>
 </div>
 <div class="section" id="notes-for-translators">
-<h2><a class="toc-backref" href="#id32">Notes for Translators</a><a class="headerlink" href="#notes-for-translators" title="本標題的永久連結">¶</a></h2>
+<h2><a class="toc-backref" href="#id32">致翻譯者的備註</a><a class="headerlink" href="#notes-for-translators" title="本標題的永久連結">¶</a></h2>
 <p>If you are translating the manual for a language that does not usually use
 whitespaces around words (e.g. Chinese and Japanese), you can use an escaped
 whitespace to separate markup and words. This is particularly useful for page
@@ -867,7 +867,7 @@ another backslash:</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="krita_manual_readme.html" class="btn btn-neutral float-right" title="Krita 手冊貢獻指南" accesskey="n" rel="next"> <!-- 下一個 --> <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="krita_manual_readme.html" class="btn btn-neutral float-right" title="Krita 說明文件貢獻指南" accesskey="n" rel="next"> <!-- 下一個 --> <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="community.html" class="btn btn-neutral" title="Krita 的社群" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- 上一個  -->  </a>

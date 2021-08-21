@@ -6,7 +6,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta property="og:title" name="title" content="Krita 手冊貢獻指南" />
+  <meta property="og:title" name="title" content="Krita 說明文件貢獻指南" />
   <meta property="og:site-name" content="Krita Manual" />
   <meta property="og:type" content="article" />
   <meta property="og:locale" content="zh_TW" />
@@ -21,12 +21,12 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-08-20T17:29:20" />
+  <meta property="og:article:modified_time" content="2021-08-21T03:29:21" />
   <meta content="Contributor's Readme for the Krita Manual." name="description" />
 
   
   
-  <title>Krita 手冊貢獻指南 &mdash; Krita Manual 5.0.0 說明文件</title>
+  <title>Krita 說明文件貢獻指南 &mdash; Krita Manual 5.0.0 說明文件</title>
   
 
   
@@ -59,7 +59,7 @@
     <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜尋" href="../search.html" />
-    <link rel="next" title="供手冊使用的影像" href="optimising_images.html" />
+    <link rel="next" title="供說明文件使用的影像" href="optimising_images.html" />
     <link rel="prev" title="Krita 說明文件標記格式使用慣例" href="krita_manual_conventions.html" /> 
 
   
@@ -134,7 +134,7 @@
 <li class="toctree-l1 current"><a class="reference internal" href="../contributors_manual.html">貢獻者手冊</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="community.html">Krita 的社群</a></li>
 <li class="toctree-l2"><a class="reference internal" href="krita_manual_conventions.html">Krita 說明文件標記格式使用慣例</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Krita 手冊貢獻指南</a><ul>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Krita 說明文件貢獻指南</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#for-first-timers">For first timers</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#making-changes">Making changes</a></li>
 </ul>
@@ -159,7 +159,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#other">Other</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="optimising_images.html">供手冊使用的影像</a></li>
+<li class="toctree-l2"><a class="reference internal" href="optimising_images.html">供說明文件使用的影像</a></li>
 <li class="toctree-l2"><a class="reference internal" href="user_support.html">使用者支援入門介紹</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../untranslatable_pages.html">Technical Pages</a></li>
 </ul>
@@ -222,7 +222,7 @@
         
           <li><a href="../contributors_manual.html">貢獻者手冊</a> &raquo;</li>
         
-      <li>Krita 手冊貢獻指南</li>
+      <li>Krita 說明文件貢獻指南</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -247,7 +247,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="krita-manual-contribution-guide">
-<span id="krita-manual-contributors-guide"></span><h1>Krita 手冊貢獻指南<a class="headerlink" href="#krita-manual-contribution-guide" title="本標題的永久連結">¶</a></h1>
+<span id="krita-manual-contributors-guide"></span><h1>Krita 說明文件貢獻指南<a class="headerlink" href="#krita-manual-contribution-guide" title="本標題的永久連結">¶</a></h1>
 <p>Welcome to the Krita Manual Contribution Guide!</p>
 <p>If you're interested in contributing to Krita's documentation, you're in the right place.</p>
 <p>Krita is (free) open source software, which effectively makes us a community project with dozens of volunteers pitching in to make it better. This, of course, requires we keep track of manuals and how-to's for new volunteers to come in and help us. The various places we’ve done this have been rather spread out, so the contributors' manual is an attempt to consolidate all the information. It is therefore very technical in places.</p>
@@ -402,7 +402,7 @@ git push
 <li><p>Make sure you checked <span class="guilabel">Allow commits from members who can merge to the target branch.</span> -- it is often needed for technical reasons that merge request is rebased on master, which technically changes the merge request, but it doesn't change the actual content of it. Rebase can be done by you or by the reviewer -- if you don't want to be bothered later too much, better check this checkbox so the reviewer can do it themselves with only a few clicks.</p></li>
 <li><p>You can safely check <span class="guilabel">Delete source branch when merge request is accepted</span> in most cases.</p></li>
 <li><p>Unless your reviewers tell you otherwise, check <span class="guilabel">Squash commits when merge request is accepted</span>. The first line of the commit message will come from the <span class="guilabel">Title</span> of your merge request and the rest of it will be taken from the <span class="guilabel">Description</span> of the merge request.</p></li>
-<li><p>When you finish creating your merge request, go to IRC (see <a class="reference internal" href="community.html#internet-relay-chat"><span class="std std-ref">Internet Relay Chat</span></a>) and ask someone with push access to add the <code class="docutils literal notranslate"><span class="pre">Needs</span> <span class="pre">Review</span></code> label on your merge request.</p></li>
+<li><p>When you finish creating your merge request, go to IRC (see <a class="reference internal" href="community.html#internet-relay-chat"><span class="std std-ref">IRC 聊天室</span></a>) and ask someone with push access to add the <code class="docutils literal notranslate"><span class="pre">Needs</span> <span class="pre">Review</span></code> label on your merge request.</p></li>
 <li><p>You might get feedback on your merge request if it has mistakes. Just fix the mistakes in your branch in one of the following ways.</p>
 <blockquote>
 <div><ul class="simple">
@@ -617,7 +617,7 @@ is described as part of step 5. in <a class="reference internal" href="#merge-re
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="optimising_images.html" class="btn btn-neutral float-right" title="供手冊使用的影像" accesskey="n" rel="next"> <!-- 下一個 --> <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="optimising_images.html" class="btn btn-neutral float-right" title="供說明文件使用的影像" accesskey="n" rel="next"> <!-- 下一個 --> <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="krita_manual_conventions.html" class="btn btn-neutral" title="Krita 說明文件標記格式使用慣例" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- 上一個  -->  </a>
