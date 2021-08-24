@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Krita Manual 4.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-13 10:38+0000\n"
-"PO-Revision-Date: 2021-08-21 07:13+0000\n"
+"PO-Revision-Date: 2021-08-21 19:27+0000\n"
 "Last-Translator: Alvin Wong <alvin@alvinhc.com>\n"
 "Language-Team: Chinese (Traditional) <http://weblate.slat.org/projects/"
 "krita-docs/5-contributors_manual___krita_manual_conventions/zh_Hant/>\n"
@@ -43,7 +43,7 @@ msgid ""
 "of writing, some issues with server uptime):"
 msgstr ""
 "我們建議先翻閱 reStructuredText 的\\ `官方格式規格文件 <http://docutils.sourceforge.net/rst."
-"html>`_\\ 。我們亦建議下載一份複本，以便在連線出問題時可於本機查閱。"
+"html>`_\\ 。我們亦建議下載整份規格文件，以便在連線出問題時可於本機查閱。"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:24
 msgid "User Manual:"
@@ -113,6 +113,8 @@ msgid ""
 "docs multiple ways to do things. This document specifies the suggested "
 "conventions to go with."
 msgstr ""
+"官方的 reStructuredText 規格與 Sphinx "
+"使用的格式有些不同之處，可能有多種方法達到同一個目的。本文說明了我們建議貢獻者們跟隨的慣例。"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:36
 msgid "Contents"
@@ -124,17 +126,17 @@ msgstr "中繼資料"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:41
 msgid "Each page should start with the following three things:"
-msgstr ""
+msgstr "每頁應以下列三項開首："
 
 #: ../../contributors_manual/krita_manual_conventions.rst:49
 msgid "A meta description"
-msgstr ""
+msgstr "中繼描述 (meta description)"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:44
 msgid ""
 "This is a general description of the page. It will be converted to an html "
 "meta tag which will be used by search engines::"
-msgstr ""
+msgstr "這是一項簡單概括整頁的描述。這會被化為 HTML 的 meta 標籤供網頁傁尋引擎使用："
 
 #: ../../contributors_manual/krita_manual_conventions.rst:46
 msgid ""
@@ -142,10 +144,13 @@ msgid ""
 "    :description:\n"
 "        Description."
 msgstr ""
+".. meta::\n"
+"    :description:\n"
+"        描述。"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:58
 msgid "A list of authors and a license."
-msgstr ""
+msgstr "作者清單及授權。"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:52
 msgid ""
@@ -163,10 +168,15 @@ msgid ""
 "             - Author 2\n"
 "   :license: GNU free documentation license 1.3 or later."
 msgstr ""
+".. metadata-placeholder\n"
+"\n"
+"   :authors: - 作者甲\n"
+"             - 作者乙\n"
+"   :license: GNU free documentation license 1.3 or later."
 
 #: ../../contributors_manual/krita_manual_conventions.rst:63
 msgid "Indexing terms."
-msgstr ""
+msgstr "索引關鍵字詞。"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:61
 msgid ""
@@ -178,11 +188,11 @@ msgstr ""
 
 #: ../../contributors_manual/krita_manual_conventions.rst:63
 msgid ".. index:: Keyword, Keyword with Spaces, ! Main Definition Keyword"
-msgstr ""
+msgstr ".. index:: 關鍵字, 帶 空格 關鍵字, ! 主定義關鍵字"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:71
 msgid "A label."
-msgstr ""
+msgstr "參照標籤。"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:66
 msgid ""
@@ -191,8 +201,9 @@ msgid ""
 msgstr ""
 
 #: ../../contributors_manual/krita_manual_conventions.rst:68
+#, fuzzy
 msgid ".. _label_name:"
-msgstr ""
+msgstr ".. _label_name:"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:70
 msgid ""
@@ -237,6 +248,32 @@ msgid ""
 "Heading 6\n"
 "\"\"\"\"\"\"\"\"\""
 msgstr ""
+"############\n"
+"分類版面\n"
+"############\n"
+"\n"
+"含大量子頁面的頁面。\n"
+"\n"
+"=========\n"
+"主標題\n"
+"=========\n"
+"\n"
+"大部分頁面都應由此項開始。\n"
+"\n"
+"副標題\n"
+"---------\n"
+"\n"
+"第三層級標題\n"
+"~~~~~~~~~\n"
+"\n"
+"第四層級標題\n"
+"^^^^^^^^^\n"
+"\n"
+"第五層級標題\n"
+"'''''''''\n"
+"\n"
+"第六層級標題\n"
+"\"\"\"\"\"\"\"\"\""
 
 #: ../../contributors_manual/krita_manual_conventions.rst:105
 msgid ""
