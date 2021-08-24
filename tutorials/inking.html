@@ -21,8 +21,9 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-08-24T09:25:20" />
-  <meta content="Tips and tricks for inking in Krita." lang="en" name="description" xml:lang="en" />
+  <meta property="og:article:modified_time" content="2021-08-24T21:25:49" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<meta content="Tips and tricks for inking in Krita." lang="en" name="description" xml:lang="en" />
 
   
   
@@ -60,7 +61,7 @@
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜尋" href="../search.html" />
     <link rel="next" title="Krita Brush Tips" href="krita-brush-tips.html" />
-    <link rel="prev" title="Flat Coloring" href="flat-coloring.html" /> 
+    <link rel="prev" title="平塗著色" href="flat-coloring.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -130,10 +131,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../general_concepts.html">通用概念</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../reference_manual.html">參考文件</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../tutorials.html">教學及指南</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="clipping_masks_and_alpha_inheritance.html">Clipping Masks and Alpha Inheritance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="clipping_masks_and_alpha_inheritance.html">遮罩與 Alpha 繼承</a></li>
 <li class="toctree-l2"><a class="reference internal" href="common_workflows.html">常用工作流程</a></li>
 <li class="toctree-l2"><a class="reference internal" href="eye_tracker.html">設定 Krita 以使用眼球追蹤技術的示例</a></li>
-<li class="toctree-l2"><a class="reference internal" href="flat-coloring.html">Flat Coloring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="flat-coloring.html">平塗著色</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Inking</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#pose">Pose</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#stroke-smoothing">Stroke smoothing</a></li>
@@ -243,12 +244,12 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="inking">
+  <section id="inking">
 <span id="id1"></span><h1>Inking<a class="headerlink" href="#inking" title="本標題的永久連結">¶</a></h1>
 <p>The first thing to realize about inking is that unlike anatomy, perspective, composition or color theory, you cannot compensate for lack of practice with study or reasoning. This is because all the magic in drawing lines happens from your shoulder to your fingers, very little of it happens in your head, and your lines improve with practice.</p>
 <p>On the other hand, this can be a blessing. You don’t need to worry about whether you are smart enough, or are creative enough to be a good inker. Just dedicated. Doubtlessly, inking is the Hufflepuff of drawing disciplines.</p>
 <p>That said, there are a few tips to make life easy:</p>
-<div class="section" id="pose">
+<section id="pose">
 <h2>Pose<a class="headerlink" href="#pose" title="本標題的永久連結">¶</a></h2>
 <p>Notice how I mentioned up there that the magic happens between your shoulders and fingers? A bit weird, not? But perhaps, you have heard of people talking about adopting a different pose for drawing.</p>
 <p>You can in fact, make different strokes depending on which muscles and joints you use to make the movement: The Fingers, the wrist and lower-arm muscles, the elbow and upper-arm muscles or the shoulder and back muscles.</p>
@@ -260,20 +261,22 @@
 <p>Your shoulders and elbows on the other hand are actually quite good at handling stress, and if you use your whole hand you will be able to make long strokes far more easily. People who do calligraphy need shoulder based strokes to make those lovely flourishes (personally, I can recommend improving your handwriting as a way to improve inking), and train their arms so they can do both big and small strokes with the full arm.</p>
 <p>To control pressure in this state effectively, you should press your pinky against the tablet surface as you make your stroke. This will allow you to precisely judge how far the pen is removed from the tablet surface while leaving the position up to your shoulders. The pressure should then be put by your elbow.</p>
 <p>So, there are not any secret rules to inking, but if there is one, it would be the following: <em>The longer your stroke, the more of your arms you need to use to make the stroke</em>.</p>
-</div>
-<div class="section" id="stroke-smoothing">
+</section>
+<section id="stroke-smoothing">
 <h2>Stroke smoothing<a class="headerlink" href="#stroke-smoothing" title="本標題的永久連結">¶</a></h2>
 <p>So, if the above is the secret to drawing long strokes, that would be why people having been inking lovely drawings for years without any smoothing? Then, surely, it is decadence to use something like stroke smoothing, a short-cut for the lazy?</p>
-<div class="figure align-default" id="id2">
+<figure class="align-default" id="id2">
 <img alt="Rigger brush demonstration." src="../_images/Stroke_rigger.gif" />
-<p class="caption"><span class="caption-text">Example of how a rigger brush can smooth the original movement (here in red)</span><a class="headerlink" href="#id2" title="本圖片的永久連結">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">Example of how a rigger brush can smooth the original movement (here in red)</span><a class="headerlink" href="#id2" title="本圖片的永久連結">¶</a></p>
+</figcaption>
+</figure>
 <p>Not really. To both, actually. Inkers have had a real-life tool that made it easier to ink, it’s called a rigger-brush, which is a brush with very long hairs. Due to this length it sorta smooths out shakiness, and thus a favoured brush when inking at three in the morning.</p>
 <p>With some tablet brands, the position events being sent aren’t very precise, which is why we having basic smoothing to apply the tiniest bit of smoothing on tablet strokes.</p>
 <p>On the other hand, doing too much smoothing during the whole drawing can make your strokes very mechanical in the worst way. Having no jitter or tiny bumps removes certain humanity from your drawings, and it can make it impossible to represent fabric properly.</p>
 <p>Therefore, it’s wise to train your inking hand, yet not to be too hard on yourself and refuse to use smoothing at all, as we all get tired, cold or have a bad day once in a while. Stabilizer set to 50 or so should provide a little comfort while keeping the little irregularities.</p>
-</div>
-<div class="section" id="bezier-curves-and-other-tools">
+</section>
+<section id="bezier-curves-and-other-tools">
 <h2>Bezier curves and other tools<a class="headerlink" href="#bezier-curves-and-other-tools" title="本標題的永久連結">¶</a></h2>
 <p>So, you may have heard of a French curve. If not, it’s a piece of plastic representing a stencil. These curves are used to make perfectly smooth curves on the basis of a sketch.</p>
 <p>In digital painting, we don’t have the luxury of being able to use two hands, so you can’t hold a ruler with one hand and adjust it while inking with the other. For this purpose, we have instead Bezier curves, which can be made with the <a class="reference internal" href="../reference_manual/tools/path.html#path-tool"><span class="std std-ref">Bezier Curve Tool</span></a>.</p>
@@ -281,60 +284,70 @@
 <p>The downside of these is that they cannot have line-variation, making them a bit robotic.</p>
 <p>You can also make small bezier curves with the <a class="reference internal" href="../reference_manual/tools/assistant.html#assistant-tool"><span class="std std-ref">Assistant Tool</span></a>, amongst the other tools there.</p>
 <p>Then, in the freehand brush tool options, you can tick <span class="guilabel">Snap to Assistants</span> and start a line that snaps to this assistant.</p>
-</div>
-<div class="section" id="presets">
+</section>
+<section id="presets">
 <h2>Presets<a class="headerlink" href="#presets" title="本標題的永久連結">¶</a></h2>
 <p>So here are some things to consider with the brush-presets that you use:</p>
-<div class="section" id="anti-aliasing-versus-jagged-pixels">
+<section id="anti-aliasing-versus-jagged-pixels">
 <h3>Anti-aliasing versus jagged pixels<a class="headerlink" href="#anti-aliasing-versus-jagged-pixels" title="本標題的永久連結">¶</a></h3>
 <p>A starting inker might be inclined to always want to use anti-aliased brushes, after all, they look so smooth on the screen. However, while these look good on screen, they might become fuzzy when printing them. Therefore, Krita comes with two default types. Anti-aliased brushes like ink_brush_25 and slightly aliased brushes like ink_tilt, with the latter giving better print results. If you are trying to prepare for both, it might be an idea to consider making the inking page 600dpi and the color page 300dpi, so that the inking page has a higher resolution and the ‘jaggies’ aren’t as visible. You can turn any pixel brush into an aliased brush, by going the <kbd class="kbd docutils literal notranslate">F5</kbd> key and ticking <strong>Sharpness</strong>.</p>
-</div>
-<div class="section" id="texture">
+</section>
+<section id="texture">
 <h3>Texture<a class="headerlink" href="#texture" title="本標題的永久連結">¶</a></h3>
 <p>Do you make smooth ‘wet’ strokes? Or do you make textured ones? For the longest time, smooth strokes were preferred, as that would be less of a headache when entering the coloring phase. Within Krita there are several methods to color these easily, the colorize mask being the prime example, so textured becomes a viable option even for the lazy amongst us.</p>
-<div class="figure align-default" id="id3">
+<figure class="align-default" id="id3">
 <img alt="Type of strokes." src="../_images/Inking_patterned.png" />
-<p class="caption"><span class="caption-text">Left: No texture, Center: Textured, Right: Predefined Brush tip.</span><a class="headerlink" href="#id3" title="本圖片的永久連結">¶</a></p>
-</div>
-</div>
-<div class="section" id="pressure-curve">
+<figcaption>
+<p><span class="caption-text">Left: No texture, Center: Textured, Right: Predefined Brush tip.</span><a class="headerlink" href="#id3" title="本圖片的永久連結">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="pressure-curve">
 <h3>Pressure curve<a class="headerlink" href="#pressure-curve" title="本標題的永久連結">¶</a></h3>
 <p>Of course, the nicest lines are made with pressure sensitivity, so they dynamically change from thick to thin. However, different types of curves on the pressure give different results. The typical example is a slightly concave line to create a brush that more easily makes thin lines.</p>
-<div class="figure align-default" id="id4">
+<figure class="align-default" id="id4">
 <img alt="Pressure curve for Ink Gpen preset brush." src="../_images/Ink_gpen.png" />
-<p class="caption"><span class="caption-text">Ink_Gpen_25 is a good example of a brush with a concave pressure curve. This curve makes it easier to make thin lines.</span><a class="headerlink" href="#id4" title="本圖片的永久連結">¶</a></p>
-</div>
-<div class="figure align-default" id="id5">
+<figcaption>
+<p><span class="caption-text">Ink_Gpen_25 is a good example of a brush with a concave pressure curve. This curve makes it easier to make thin lines.</span><a class="headerlink" href="#id4" title="本圖片的永久連結">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id5">
 <img alt="Convex inking brush." src="../_images/Ink_convex.png" />
-<p class="caption"><span class="caption-text">Conversely, here's a convex brush. The strokes are much rounder.</span><a class="headerlink" href="#id5" title="本圖片的永久連結">¶</a></p>
-</div>
-<div class="figure align-default" id="id6">
+<figcaption>
+<p><span class="caption-text">Conversely, here's a convex brush. The strokes are much rounder.</span><a class="headerlink" href="#id5" title="本圖片的永久連結">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id6">
 <img alt="Ink fill circle preset brush." src="../_images/Ink_fill_circle.png" />
-<p class="caption"><span class="caption-text">Fill_circle combines both into an s-curve, this allows for very dynamic brush strokes.</span><a class="headerlink" href="#id6" title="本圖片的永久連結">¶</a></p>
-</div>
-<div class="figure align-default" id="id7">
+<figcaption>
+<p><span class="caption-text">Fill_circle combines both into an s-curve, this allows for very dynamic brush strokes.</span><a class="headerlink" href="#id6" title="本圖片的永久連結">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id7">
 <img alt="Inverse convex to speed parameter." src="../_images/Ink_speed.png" />
-<p class="caption"><span class="caption-text">Pressure isn't the only thing you can do interesting things with, adding an inverse convex curve to speed can add a nice touch to your strokes.</span><a class="headerlink" href="#id7" title="本圖片的永久連結">¶</a></p>
-</div>
-</div>
-</div>
-<div class="section" id="preparing-sketches-for-inking">
+<figcaption>
+<p><span class="caption-text">Pressure isn't the only thing you can do interesting things with, adding an inverse convex curve to speed can add a nice touch to your strokes.</span><a class="headerlink" href="#id7" title="本圖片的永久連結">¶</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+<section id="preparing-sketches-for-inking">
 <h2>Preparing sketches for inking<a class="headerlink" href="#preparing-sketches-for-inking" title="本標題的永久連結">¶</a></h2>
 <p>So, you have a sketch and you wish to start inking it. Assuming you’ve scanned it in, or drew it, you can try the following things to make it easier to ink.</p>
-<div class="section" id="opacity-down-to-10">
+<section id="opacity-down-to-10">
 <h3>Opacity down to 10%<a class="headerlink" href="#opacity-down-to-10" title="本標題的永久連結">¶</a></h3>
 <p>Put a white (just press the <kbd class="kbd docutils literal notranslate">Backspace</kbd> key) layer underneath the sketch. Turn down the opacity of the sketch to a really low number and put a layer above it for inking.</p>
-</div>
-<div class="section" id="make-the-sketch-colored">
+</section>
+<section id="make-the-sketch-colored">
 <h3>Make the sketch colored<a class="headerlink" href="#make-the-sketch-colored" title="本標題的永久連結">¶</a></h3>
 <p>Put a layer filled with a color you like between the inking and sketch layer. Then set that layer to ‘screen’ or ‘addition’, this will turn all the black lines into the color! If you have a transparent background, or put this layer into a group, be sure to tick the alpha-inherit symbol!</p>
-</div>
-<div class="section" id="make-the-sketch-colored-alternative-version">
+</section>
+<section id="make-the-sketch-colored-alternative-version">
 <h3>Make the sketch colored, alternative version<a class="headerlink" href="#make-the-sketch-colored-alternative-version" title="本標題的永久連結">¶</a></h3>
 <p>Or, <img alt="滑鼠右鍵" src="../_images/Krita_mouse_right.png" /> on the layer, go to layer properties, and untick ‘blue’. This works easier with a single layer sketch, while the above works best with multi-layer sketches.</p>
-</div>
-</div>
-<div class="section" id="super-thin-lines">
+</section>
+</section>
+<section id="super-thin-lines">
 <h2>Super-thin lines<a class="headerlink" href="#super-thin-lines" title="本標題的永久連結">¶</a></h2>
 <p>If you are interested in super-thin lines, it might be better to make your ink at double or even triple the size you usually work at, and, only use an aliased pixel brush. Then, when the ink is finished, use the fill tool to fill in flats on a separate layer, split the layer via <span class="menuselection">Layer ‣ Split ‣ Layer Split</span>, and then resize to the original size.</p>
 <img alt="Aliased resize." src="../_images/Inking_aliasresize.png" />
@@ -343,8 +356,8 @@
 <p class="admonition-title">小訣竅</p>
 <p>David Revoy made a set of his own inking tips for Krita and explains them in this <a class="reference external" href="https://www.youtube.com/watch?v=xvQ5l0edsq4">youtube video</a>.</p>
 </div>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
@@ -357,7 +370,7 @@
         <a href="krita-brush-tips.html" class="btn btn-neutral float-right" title="Krita Brush Tips" accesskey="n" rel="next"> <!-- 下一個 --> <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="flat-coloring.html" class="btn btn-neutral" title="Flat Coloring" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- 上一個  -->  </a>
+        <a href="flat-coloring.html" class="btn btn-neutral" title="平塗著色" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- 上一個  -->  </a>
       
     </div>
   
@@ -369,7 +382,7 @@
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>a039fd4</code>
+          修訂版本 <code>6a98b9d</code>
         </span>
       
 

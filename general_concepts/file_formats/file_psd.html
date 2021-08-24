@@ -21,8 +21,9 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-08-24T09:25:20" />
-  <meta content="The Photoshop file format as exported by Krita." name="description" />
+  <meta property="og:article:modified_time" content="2021-08-24T21:25:49" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<meta content="The Photoshop file format as exported by Krita." name="description" />
 
   
   
@@ -247,7 +248,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="psd">
+  <section id="psd">
 <span id="file-psd"></span><span id="index-0"></span><h1>*.psd<a class="headerlink" href="#psd" title="本標題的永久連結">¶</a></h1>
 <p><code class="docutils literal notranslate"><span class="pre">.psd</span></code> is Photoshop's internal file format. For some reason, people like to use it as an interchange format, even though it is not designed for this.</p>
 <p><code class="docutils literal notranslate"><span class="pre">.psd</span></code>, unlike actual interchange formats like <a class="reference internal" href="file_pdf.html#file-pdf"><span class="std std-ref">*.pdf</span></a>, <a class="reference internal" href="file_tif.html#file-tif"><span class="std std-ref">*.tiff</span></a>, <a class="reference internal" href="file_exr.html#file-exr"><span class="std std-ref">*.exr</span></a>, <a class="reference internal" href="file_ora.html#file-ora"><span class="std std-ref">*.ora</span></a> and <a class="reference internal" href="file_svg.html#file-svg"><span class="std std-ref">*.svg</span></a> doesn't have an official spec online. Which means that it needs to be reverse engineered. Furthermore, as an internal file format, it doesn't have much of a philosophy to its structure, as it's only purpose is to save what Photoshop is busy with, or rather, what all the past versions of Photoshop have been busy with. This means that the inside of a PSD looks somewhat like Photoshop's virtual brains, and PSD is in general a very disliked file-format.</p>
@@ -255,7 +256,7 @@
 <p>Krita supports loading and saving raster layers, blending modes, layerstyles, layer groups, and transparency masks from PSD. It will likely never support vector and text layers, as these are just too difficult to program properly.</p>
 <p>We recommend using any other file format instead of PSD if possible, with a strong preference towards <a class="reference internal" href="file_ora.html#file-ora"><span class="std std-ref">*.ora</span></a> or <a class="reference internal" href="file_tif.html#file-tif"><span class="std std-ref">*.tiff</span></a>.</p>
 <p>As a working file format, PSDs can be expected to become very heavy and most websites won't accept them.</p>
-</div>
+</section>
 
 
            </div>
@@ -280,7 +281,7 @@
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>a039fd4</code>
+          修訂版本 <code>6a98b9d</code>
         </span>
       
 

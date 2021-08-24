@@ -21,8 +21,9 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-08-24T09:25:20" />
-  <meta content="An introduction guide to how layers and masks work inside Krita." name="description" property="og:description" />
+  <meta property="og:article:modified_time" content="2021-08-24T21:25:49" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<meta content="An introduction guide to how layers and masks work inside Krita." name="description" property="og:description" />
 
   
   
@@ -243,14 +244,14 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="introduction-to-layers-and-masks">
+  <section id="introduction-to-layers-and-masks">
 <span id="layers-and-masks"></span><span id="index-0"></span><h1>圖層及遮罩的入門<a class="headerlink" href="#introduction-to-layers-and-masks" title="本標題的永久連結">¶</a></h1>
 <p>Krita supports layers which help to better control parts and elements of your painting.</p>
 <p>Think of an artwork or collage made with various stacks of papers with some papers cut such that they show the paper beneath them while some hide what's beneath them. If you want to replace an element in the artwork, you replace that piece of paper instead of drawing the entire thing. In Krita instead of papers we use <em class="dfn">Layers</em>. Layers are part of the document which may or may not be transparent, they may be smaller or bigger than the document itself, they can arrange one above other, named and grouped.</p>
 <p>Layers can give better control over your artwork for example you can re-color an entire artwork just by working on the separate color layer and thereby not destroying the line art which will reside above this color layer.</p>
 <p>You can edit individual layers, you can even add special effects to them, like Layer styles, blending modes, transparency, filters and transforms. Krita takes all these layers in its layer stack, including the special effects and combines or composites together a final image. This is just one of the many digital image manipulation tricks that <strong class="program">Krita</strong> has up its sleeve!</p>
 <p>Usually, when you put one paint layer on top of another, the upper paint layer will be fully visible, while the layer behind it will either be obscured, occluded or only partially visible.</p>
-<div class="section" id="managing-layers">
+<section id="managing-layers">
 <h2>管理圖層<a class="headerlink" href="#managing-layers" title="本標題的永久連結">¶</a></h2>
 <p>Some artists draw with limited number of layers, but some prefer to have different elements of the artwork on separate layer. Krita has some good layer management features which make the layer management task easy.</p>
 <p>You can <a class="reference internal" href="../reference_manual/layers_and_masks/group_layers.html#group-layers"><span class="std std-ref">group layers</span></a> and organize the elements of your artwork.</p>
@@ -263,22 +264,22 @@
 <div class="versionadded">
 <p><span class="versionmodified added">5.0 版新加入: </span>You can also use this dropdown to filter the layers by layer name.</p>
 </div>
-</div>
-<div class="section" id="types-of-layers">
+</section>
+<section id="types-of-layers">
 <h2>圖層類型<a class="headerlink" href="#types-of-layers" title="本標題的永久連結">¶</a></h2>
 <a class="reference internal image-reference" href="../_images/500px-Krita-types-of-layers.png"><img alt="../_images/500px-Krita-types-of-layers.png" src="../_images/500px-Krita-types-of-layers.png" style="width: 600px;" /></a>
 <p>The image above shows the various types of layers in <a class="reference internal" href="../reference_manual/dockers/layers.html#layer-docker"><span class="std std-ref">圖層</span></a>. Each layer type has a different purpose for example all the vector elements can be only placed on a vector layer and similarly normal raster elements are mostly on the paint layer, <a class="reference internal" href="../reference_manual/layers_and_masks.html#cat-layers-and-masks"><span class="std std-ref">圖層及遮罩</span></a> page contains more information about these types layers.</p>
 <p>Now Let us see how these layers are composited in Krita.</p>
-</div>
-<div class="section" id="how-are-layers-composited-in-krita">
+</section>
+<section id="how-are-layers-composited-in-krita">
 <h2>Krita 內圖層是如何合成？<a class="headerlink" href="#how-are-layers-composited-in-krita" title="本標題的永久連結">¶</a></h2>
 <p>In Krita, the visible layers form a composite image which is shown on the canvas. The order in which Krita composites the layers is from bottom to top, much like the stack of papers we discussed above. As we continue adding layers, the image we see changes, according to the properties of the newly added layers on top.</p>
 <p>Group Layers composite separately from the other layers in the stack, except when pass through mode is activated. The layers inside a group form a composite image first and then this composite is taken into consideration while the layer stack is composited to form a whole image. If the pass through mode is activated by pressing the icon similar to bricked wall, the layers within the group are considered as if they are outside that particular group in the layer stack, however, the visibility of the layers in a group depends on the visibility of the group.</p>
 <img alt="../_images/Passthrough-mode_.png" src="../_images/Passthrough-mode_.png" />
 <img alt="../_images/Layer-composite.png" src="../_images/Layer-composite.png" />
 <p>The groups in a PSD file saved from Photoshop have pass-through mode on by default unless they are specifically set with other blending modes.</p>
-</div>
-<div class="section" id="inherit-alpha-or-clipping-layers">
+</section>
+<section id="inherit-alpha-or-clipping-layers">
 <span id="index-1"></span><h2>繼承透明度（或作剪裁遮色片）<a class="headerlink" href="#inherit-alpha-or-clipping-layers" title="本標題的永久連結">¶</a></h2>
 <p>There is a clipping feature in Krita called inherit alpha. It is denoted by an alpha icon in the layer stack.</p>
 <img alt="../_images/Inherit-alpha-02.png" src="../_images/Inherit-alpha-02.png" />
@@ -286,8 +287,8 @@
 <img alt="../_images/Inherit-alpha-krita.jpg" src="../_images/Inherit-alpha-krita.jpg" />
 <img alt="../_images/Krita-tutorial2-I.1-2.png" src="../_images/Krita-tutorial2-I.1-2.png" />
 <p>You can also enable alpha inheritance to a group layer.</p>
-</div>
-<div class="section" id="masks-and-filters">
+</section>
+<section id="masks-and-filters">
 <h2>遮罩與濾鏡<a class="headerlink" href="#masks-and-filters" title="本標題的永久連結">¶</a></h2>
 <p>Krita supports non-destructive editing of the content of the layer. Non-destructive editing means editing or changing a layer or image without actually changing the original source image permanently, the changes are just added as filters or masks over the original image while keeping it intact, this helps a lot when your workflow requires constant back and forth. You can go back to original image with a click of a button. Just hide the filter or mask you have your initial image.</p>
 <p>You can add various filters to a layer with Filter mask, or add Filter layer which will affect the whole image. Layers can also be transformed non-destructively with the transformation masks, and even have portions temporarily hidden with a Transparent Mask. Non-destructive effects like these are very useful when you change your mind later, or need to make a set of variations of a given image.</p>
@@ -302,8 +303,8 @@ clicking on the <span class="guilabel">Create Filter Mask</span> button.</p>
 <img alt="../_images/Filtermask-button.png" src="../_images/Filtermask-button.png" />
 <p>All the filters and masks can also be applied over a group too, thus making it easy to non-destructively edit multiple layers at once. In the <a class="reference internal" href="../reference_manual/layers_and_masks.html#cat-layers-and-masks"><span class="std std-ref">category Layers and masks</span></a> you can read more about the individual types of layers and masks.</p>
 <p><a class="reference internal" href="../reference_manual/dockers/layers.html#layer-docker"><span class="std std-ref">Layer Docker</span></a> has more information about the shortcuts and other layer management workflows.</p>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
@@ -328,7 +329,7 @@ clicking on the <span class="guilabel">Create Filter Mask</span> button.</p>
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>a039fd4</code>
+          修訂版本 <code>6a98b9d</code>
         </span>
       
 

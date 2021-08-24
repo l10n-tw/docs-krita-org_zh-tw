@@ -6,7 +6,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta property="og:title" name="title" content="Clipping Masks and Alpha Inheritance" />
+  <meta property="og:title" name="title" content="遮罩與 Alpha 繼承" />
   <meta property="og:site-name" content="Krita Manual" />
   <meta property="og:type" content="article" />
   <meta property="og:locale" content="zh_TW" />
@@ -21,12 +21,13 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-08-24T09:25:20" />
-  <meta content="An introduction for using clipping masks in Krita." lang="en" name="description" xml:lang="en" />
+  <meta property="og:article:modified_time" content="2021-08-24T21:25:49" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<meta content="An introduction for using clipping masks in Krita." lang="en" name="description" xml:lang="en" />
 
   
   
-  <title>Clipping Masks and Alpha Inheritance &mdash; Krita Manual 5.0.0 說明文件</title>
+  <title>遮罩與 Alpha 繼承 &mdash; Krita Manual 5.0.0 說明文件</title>
   
 
   
@@ -130,10 +131,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../general_concepts.html">通用概念</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../reference_manual.html">參考文件</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../tutorials.html">教學及指南</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Clipping Masks and Alpha Inheritance</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">遮罩與 Alpha 繼承</a></li>
 <li class="toctree-l2"><a class="reference internal" href="common_workflows.html">常用工作流程</a></li>
 <li class="toctree-l2"><a class="reference internal" href="eye_tracker.html">設定 Krita 以使用眼球追蹤技術的示例</a></li>
-<li class="toctree-l2"><a class="reference internal" href="flat-coloring.html">Flat Coloring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="flat-coloring.html">平塗著色</a></li>
 <li class="toctree-l2"><a class="reference internal" href="inking.html">Inking</a></li>
 <li class="toctree-l2"><a class="reference internal" href="krita-brush-tips.html">Krita Brush Tips</a></li>
 <li class="toctree-l2"><a class="reference internal" href="making_an_azalea_with_the_transformation_masks.html">Making An Azalea With The Transformation Masks</a></li>
@@ -201,7 +202,7 @@
         
           <li><a href="../tutorials.html">教學及指南</a> &raquo;</li>
         
-      <li>Clipping Masks and Alpha Inheritance</li>
+      <li>遮罩與 Alpha 繼承</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -225,8 +226,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="clipping-masks-and-alpha-inheritance">
-<span id="index-0"></span><span id="id1"></span><h1>Clipping Masks and Alpha Inheritance<a class="headerlink" href="#clipping-masks-and-alpha-inheritance" title="本標題的永久連結">¶</a></h1>
+  <section id="clipping-masks-and-alpha-inheritance">
+<span id="index-0"></span><span id="id1"></span><h1>遮罩與 Alpha 繼承<a class="headerlink" href="#clipping-masks-and-alpha-inheritance" title="本標題的永久連結">¶</a></h1>
 <p>Krita doesn't have clipping mask functionality in the manner that Photoshop and programs that mimic Photoshop's functionality have. That's because in Krita, unlike such software, a group layer is not an arbitrary collection of layers.
 Rather, in Krita, group layers are composited separately from the rest of the stack, and then the result is added into the stack. In other words, in Krita group layers are in effect distinct images inside your image.</p>
 <a class="reference internal image-reference" href="../_images/Composition_animation.gif"><img alt="Animation showing that groups are composed before the rest of composition takes place." src="../_images/Composition_animation.gif" style="width: 800px;" /></a>
@@ -251,7 +252,7 @@ To get a clipping mask working, you first need to put layers into a group. You c
 Above, the lower image is exactly the same as the upper one, except with the erase-layer hidden. Filters can also affect the alpha inheritance:</p>
 <a class="reference internal image-reference" href="../_images/Tut_clip_blur.gif"><img alt="Filter layers and alpha inheritance." src="../_images/Tut_clip_blur.gif" style="width: 800px;" /></a>
 <p>Above, the blur filter layer gives different results when in different places, due to different parts being blurred.</p>
-</div>
+</section>
 
 
            </div>
@@ -276,7 +277,7 @@ Above, the lower image is exactly the same as the upper one, except with the era
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>a039fd4</code>
+          修訂版本 <code>6a98b9d</code>
         </span>
       
 

@@ -21,8 +21,9 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-08-24T09:25:20" />
-  <meta content="Page about the darken blending modes in Krita: Darken, Burn, Easy Burn, Fog Darken, Darker Color, Gamma Dark, Linear Burn and Shade." name="description" />
+  <meta property="og:article:modified_time" content="2021-08-24T21:25:49" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<meta content="Page about the darken blending modes in Krita: Darken, Burn, Easy Burn, Fog Darken, Darker Color, Gamma Dark, Linear Burn and Shade." name="description" />
 
   
   
@@ -265,9 +266,9 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="darken">
+  <section id="darken">
 <span id="bm-cat-darken"></span><h1>變暗<a class="headerlink" href="#darken" title="本標題的永久連結">¶</a></h1>
-<div class="section" id="burn">
+<section id="burn">
 <span id="bm-color-burn"></span><span id="bm-burn"></span><span id="index-0"></span><h2>加深<a class="headerlink" href="#burn" title="本標題的永久連結">¶</a></h2>
 <div class="admonition hint">
 <p class="admonition-title">提示</p>
@@ -277,45 +278,55 @@
 <p>This inverts the bottom layer, then divides it by the top layer, and inverts the result.
 This results in a darkened effect that takes the colors of the lower layer into account, similar to the burn technique used in traditional darkroom photography.</p>
 <p>1_{[1_Darker Gray(0.4, 0.4, 0.4)] / Lighter Gray(0.5, 0.5, 0.5)} = (-0.2, -0.2, -0.2) → Black(0, 0, 0)</p>
-<div class="figure align-center" id="id2">
+<figure class="align-center" id="id2">
 <img alt="../../_images/Blending_modes_Burn_Gray_0.4_and_Gray_0.5_n.png" src="../../_images/Blending_modes_Burn_Gray_0.4_and_Gray_0.5_n.png" />
-<p class="caption"><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Burn</strong>.</span><a class="headerlink" href="#id2" title="本圖片的永久連結">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Burn</strong>.</span><a class="headerlink" href="#id2" title="本圖片的永久連結">¶</a></p>
+</figcaption>
+</figure>
 <p>1_{[1_Light Blue(0.1608, 0.6274, 0.8274)] / Orange(1, 0.5961, 0.0706)} = (0.1608, 0.3749, -1.4448) → Green(0.1608, 0.3749, 0)</p>
-<div class="figure align-center" id="id3">
+<figure class="align-center" id="id3">
 <img alt="../../_images/Blending_modes_Burn_Light_blue_and_Orange.png" src="../../_images/Blending_modes_Burn_Light_blue_and_Orange.png" />
-<p class="caption"><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Burn</strong>.</span><a class="headerlink" href="#id3" title="本圖片的永久連結">¶</a></p>
-</div>
-<div class="figure align-center" id="id4">
+<figcaption>
+<p><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Burn</strong>.</span><a class="headerlink" href="#id3" title="本圖片的永久連結">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id4">
 <img alt="../../_images/Blending_modes_Burn_Sample_image_with_dots.png" src="../../_images/Blending_modes_Burn_Sample_image_with_dots.png" />
-<p class="caption"><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Burn</strong>.</span><a class="headerlink" href="#id4" title="本圖片的永久連結">¶</a></p>
-</div>
-</div>
-<div class="section" id="easy-burn">
+<figcaption>
+<p><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Burn</strong>.</span><a class="headerlink" href="#id4" title="本圖片的永久連結">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="easy-burn">
 <span id="bm-easy-burn"></span><span id="index-1"></span><h2>簡單加深<a class="headerlink" href="#easy-burn" title="本標題的永久連結">¶</a></h2>
 <div class="admonition hint">
 <p class="admonition-title">提示</p>
 <p>英文稱為「Easy Burn」。</p>
 </div>
 <p>Aims to solve issues with Color Burn blending mode by using a formula which falloff is similar to Dodge, but the falloff rate is softer. It is within the range of 0.0f and 1.0f unlike Color Burn mode.</p>
-<div class="figure align-center" id="id5">
+<figure class="align-center" id="id5">
 <img alt="../../_images/Blending_modes_Easy_Burn_Sample_image_with_dots.png" src="../../_images/Blending_modes_Easy_Burn_Sample_image_with_dots.png" />
-<p class="caption"><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Easy Burn</strong>.</span><a class="headerlink" href="#id5" title="本圖片的永久連結">¶</a></p>
-</div>
-</div>
-<div class="section" id="fog-darken-ifs-illusions">
+<figcaption>
+<p><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Easy Burn</strong>.</span><a class="headerlink" href="#id5" title="本圖片的永久連結">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="fog-darken-ifs-illusions">
 <span id="bm-fog-darken"></span><span id="index-2"></span><h2>霧化暗淡 (IFS Illusions)<a class="headerlink" href="#fog-darken-ifs-illusions" title="本標題的永久連結">¶</a></h2>
 <div class="admonition hint">
 <p class="admonition-title">提示</p>
 <p>Krita 5.0 前稱「霧暗（IFS 錯覺）」，英文稱為「Fog Darken (IFS Illusions)」。</p>
 </div>
 <p>用某種方法將影像變暗，令結果感覺上好似有一層霧。這是由於「霧化暗淡」的獨特屬性——中間色調的合併會比非中間色調混合來得更淺色。</p>
-<div class="figure align-center" id="id6">
+<figure class="align-center" id="id6">
 <img alt="../../_images/Blending_modes_Fog_Darken_Sample_image_with_dots.png" src="../../_images/Blending_modes_Fog_Darken_Sample_image_with_dots.png" />
-<p class="caption"><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Fog Darken</strong> (exactly the same as Addition).</span><a class="headerlink" href="#id6" title="本圖片的永久連結">¶</a></p>
-</div>
-</div>
-<div class="section" id="bm-darken">
+<figcaption>
+<p><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Fog Darken</strong> (exactly the same as Addition).</span><a class="headerlink" href="#id6" title="本圖片的永久連結">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="bm-darken">
 <span id="index-3"></span><span id="id1"></span><h2>變暗<a class="headerlink" href="#bm-darken" title="本標題的永久連結">¶</a></h2>
 <div class="admonition hint">
 <p class="admonition-title">提示</p>
@@ -323,32 +334,40 @@ This results in a darkened effect that takes the colors of the lower layer into 
 </div>
 <p>With the darken, the upper layer's colors are checked for their lightness. Only if they are darker than the underlying color on the lower layer, will they be visible.</p>
 <p>Is Lighter Gray(0.5, 0.5, 0.5) darker than Darker Gray(0.4, 0.4, 0.4)? = (no, no, no) → Darker Gray(0.4, 0.4, 0.4)</p>
-<div class="figure align-center" id="id7">
+<figure class="align-center" id="id7">
 <img alt="../../_images/Blending_modes_Darken_Gray_0.4_and_Gray_0.5_n.png" src="../../_images/Blending_modes_Darken_Gray_0.4_and_Gray_0.5_n.png" />
-<p class="caption"><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Darken</strong>.</span><a class="headerlink" href="#id7" title="本圖片的永久連結">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Darken</strong>.</span><a class="headerlink" href="#id7" title="本圖片的永久連結">¶</a></p>
+</figcaption>
+</figure>
 <p>Is Orange(1, 0.5961, 0.0706) darker than Light Blue(0.1608, 0.6274, 0.8274)? = (no, yes, yes) → Green(0.1608, 0.5961, 0.0706)</p>
-<div class="figure align-center" id="id8">
+<figure class="align-center" id="id8">
 <img alt="../../_images/Blending_modes_Darken_Light_blue_and_Orange.png" src="../../_images/Blending_modes_Darken_Light_blue_and_Orange.png" />
-<p class="caption"><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Darken</strong>.</span><a class="headerlink" href="#id8" title="本圖片的永久連結">¶</a></p>
-</div>
-<div class="figure align-center" id="id9">
+<figcaption>
+<p><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Darken</strong>.</span><a class="headerlink" href="#id8" title="本圖片的永久連結">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id9">
 <img alt="../../_images/Blending_modes_Darken_Sample_image_with_dots.png" src="../../_images/Blending_modes_Darken_Sample_image_with_dots.png" />
-<p class="caption"><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Darken</strong>.</span><a class="headerlink" href="#id9" title="本圖片的永久連結">¶</a></p>
-</div>
-</div>
-<div class="section" id="darker-color">
+<figcaption>
+<p><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Darken</strong>.</span><a class="headerlink" href="#id9" title="本圖片的永久連結">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="darker-color">
 <span id="bm-darker-color"></span><span id="index-4"></span><h2>較暗色彩<a class="headerlink" href="#darker-color" title="本標題的永久連結">¶</a></h2>
 <div class="admonition hint">
 <p class="admonition-title">提示</p>
 <p>英文稱為「Darker Color」。</p>
 </div>
-<div class="figure align-center" id="id10">
+<figure class="align-center" id="id10">
 <img alt="../../_images/Blending_modes_Darker_Color_Sample_image_with_dots.png" src="../../_images/Blending_modes_Darker_Color_Sample_image_with_dots.png" />
-<p class="caption"><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Darker Color</strong>.</span><a class="headerlink" href="#id10" title="本圖片的永久連結">¶</a></p>
-</div>
-</div>
-<div class="section" id="gamma-dark">
+<figcaption>
+<p><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Darker Color</strong>.</span><a class="headerlink" href="#id10" title="本圖片的永久連結">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="gamma-dark">
 <span id="bm-gamma-dark"></span><span id="index-5"></span><h2>Gamma 變暗<a class="headerlink" href="#gamma-dark" title="本標題的永久連結">¶</a></h2>
 <div class="admonition hint">
 <p class="admonition-title">提示</p>
@@ -356,21 +375,27 @@ This results in a darkened effect that takes the colors of the lower layer into 
 </div>
 <p>Divides 1 by the upper layer, and calculates the end result using that as the power of the lower layer.</p>
 <p>Darker Gray(0.4, 0.4, 0.4)^[1 / Lighter Gray(0.5, 0.5, 0.5)] = Even Darker Gray(0.1600, 0.1600, 0.1600)</p>
-<div class="figure align-center" id="id11">
+<figure class="align-center" id="id11">
 <img alt="../../_images/Blending_modes_Gamma_Dark_Gray_0.4_and_Gray_0.5_n.png" src="../../_images/Blending_modes_Gamma_Dark_Gray_0.4_and_Gray_0.5_n.png" />
-<p class="caption"><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Gamma Dark</strong>.</span><a class="headerlink" href="#id11" title="本圖片的永久連結">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Gamma Dark</strong>.</span><a class="headerlink" href="#id11" title="本圖片的永久連結">¶</a></p>
+</figcaption>
+</figure>
 <p>Light Blue(0.1608, 0.6274, 0.8274)^[1 / Orange(1, 0.5961, 0.0706)] = Green(0.1608, 0.4575, 0.0683)</p>
-<div class="figure align-center" id="id12">
+<figure class="align-center" id="id12">
 <img alt="../../_images/Blending_modes_Gamma_Dark_Light_blue_and_Orange.png" src="../../_images/Blending_modes_Gamma_Dark_Light_blue_and_Orange.png" />
-<p class="caption"><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Gamma Dark</strong>.</span><a class="headerlink" href="#id12" title="本圖片的永久連結">¶</a></p>
-</div>
-<div class="figure align-center" id="id13">
+<figcaption>
+<p><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Gamma Dark</strong>.</span><a class="headerlink" href="#id12" title="本圖片的永久連結">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id13">
 <img alt="../../_images/Blending_modes_Gamma_Dark_Sample_image_with_dots.png" src="../../_images/Blending_modes_Gamma_Dark_Sample_image_with_dots.png" />
-<p class="caption"><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Gamma Dark</strong>.</span><a class="headerlink" href="#id13" title="本圖片的永久連結">¶</a></p>
-</div>
-</div>
-<div class="section" id="linear-burn">
+<figcaption>
+<p><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Gamma Dark</strong>.</span><a class="headerlink" href="#id13" title="本圖片的永久連結">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="linear-burn">
 <span id="bm-linear-burn"></span><span id="index-6"></span><h2>線性加深<a class="headerlink" href="#linear-burn" title="本標題的永久連結">¶</a></h2>
 <div class="admonition hint">
 <p class="admonition-title">提示</p>
@@ -378,33 +403,41 @@ This results in a darkened effect that takes the colors of the lower layer into 
 </div>
 <p>Adds the values of the two layers together and then subtracts 1. Seems to produce the same result as <a class="reference internal" href="arithmetic.html#bm-inverse-subtract"><span class="std std-ref">減去反轉值</span></a>.</p>
 <p>[Darker Gray(0.4, 0.4, 0.4) + Lighter Gray(0.5, 0.5, 0.5)]_1 = (-0.1000, -0.1000, -0.1000)  → Black(0, 0, 0)</p>
-<div class="figure align-center" id="id14">
+<figure class="align-center" id="id14">
 <img alt="../../_images/Blending_modes_Linear_Burn_Gray_0.4_and_Gray_0.5.png" src="../../_images/Blending_modes_Linear_Burn_Gray_0.4_and_Gray_0.5.png" />
-<p class="caption"><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Linear Burn</strong>.</span><a class="headerlink" href="#id14" title="本圖片的永久連結">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Linear Burn</strong>.</span><a class="headerlink" href="#id14" title="本圖片的永久連結">¶</a></p>
+</figcaption>
+</figure>
 <p>[Light Blue(0.1608, 0.6274, 0.8274) + Orange(1, 0.5961, 0.0706)]_1 = (0.1608, 0.2235, -0.1020) → Dark Green(0.1608, 0.2235, 0)</p>
-<div class="figure align-center" id="id15">
+<figure class="align-center" id="id15">
 <img alt="../../_images/Blending_modes_Linear_Burn_Light_blue_and_Orange.png" src="../../_images/Blending_modes_Linear_Burn_Light_blue_and_Orange.png" />
-<p class="caption"><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Linear Burn</strong>.</span><a class="headerlink" href="#id15" title="本圖片的永久連結">¶</a></p>
-</div>
-<div class="figure align-center" id="id16">
+<figcaption>
+<p><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Linear Burn</strong>.</span><a class="headerlink" href="#id15" title="本圖片的永久連結">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id16">
 <img alt="../../_images/Blending_modes_Linear_Burn_Sample_image_with_dots.png" src="../../_images/Blending_modes_Linear_Burn_Sample_image_with_dots.png" />
-<p class="caption"><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Linear Burn</strong>.</span><a class="headerlink" href="#id16" title="本圖片的永久連結">¶</a></p>
-</div>
-</div>
-<div class="section" id="shade-ifs-illusions">
+<figcaption>
+<p><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Linear Burn</strong>.</span><a class="headerlink" href="#id16" title="本圖片的永久連結">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="shade-ifs-illusions">
 <span id="bm-shade"></span><span id="index-7"></span><h2>陰影化 (IFS Illusions)<a class="headerlink" href="#shade-ifs-illusions" title="本標題的永久連結">¶</a></h2>
 <div class="admonition hint">
 <p class="admonition-title">提示</p>
 <p>Krita 5.0 前稱「調子（IFS 錯覺）」，英文稱為「Shade (IFS Illusions)」。</p>
 </div>
 <p>Basically, the blending mode only ends in shades of shades. This means that it's very useful for painting shading colors while still in the range of shades.</p>
-<div class="figure align-center" id="id17">
+<figure class="align-center" id="id17">
 <img alt="../../_images/Blending_modes_Shade_Sample_image_with_dots.png" src="../../_images/Blending_modes_Shade_Sample_image_with_dots.png" />
-<p class="caption"><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Shade</strong>.</span><a class="headerlink" href="#id17" title="本圖片的永久連結">¶</a></p>
-</div>
-</div>
-</div>
+<figcaption>
+<p><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Shade</strong>.</span><a class="headerlink" href="#id17" title="本圖片的永久連結">¶</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
 
 
            </div>
@@ -429,7 +462,7 @@ This results in a darkened effect that takes the colors of the lower layer into 
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>a039fd4</code>
+          修訂版本 <code>6a98b9d</code>
         </span>
       
 

@@ -21,8 +21,9 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-08-24T09:25:20" />
-  <meta content="A Technical description of the Krita Palette format." name="description" property="og:description" />
+  <meta property="og:article:modified_time" content="2021-08-24T21:25:49" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<meta content="A Technical description of the Krita Palette format." name="description" property="og:description" />
 
   
   
@@ -260,11 +261,11 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="the-krita-palette-format-kpl">
+  <section id="the-krita-palette-format-kpl">
 <span id="kpl-format-definition"></span><span id="index-0"></span><h1>The Krita Palette format KPL<a class="headerlink" href="#the-krita-palette-format-kpl" title="本標題的永久連結">¶</a></h1>
 <p>There's been a number of color swatch definitions over the years. To ensure we can store color managed color, as well as store other metadata we use, Krita has it's own color palette format, KPL.</p>
 <p>This document is a technical description of the format.</p>
-<div class="section" id="basic-structure">
+<section id="basic-structure">
 <h2>Basic Structure<a class="headerlink" href="#basic-structure" title="本標題的永久連結">¶</a></h2>
 <p>KPL files are zip files containing the following files:</p>
 <dl class="simple">
@@ -277,8 +278,8 @@
 <dt>A number of icc files.</dt><dd><p>These are the necessary icc profiles for interpreting the values in colorset.xml</p>
 </dd>
 </dl>
-</div>
-<div class="section" id="profiles-xml">
+</section>
+<section id="profiles-xml">
 <h2>profiles.xml<a class="headerlink" href="#profiles-xml" title="本標題的永久連結">¶</a></h2>
 <p>A manifest of the icc profiles that are inside the zip file. We wanted to have no ambiguity in regards to which icc files were bundled.</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;Profiles&gt;</span>
@@ -287,8 +288,8 @@
 </pre></div>
 </div>
 <p>Krita doesn't store every profile it uses. XYZ and LAB are colorspaces that only have one real space definition, and therefore it doesn't make sense to embed these files.</p>
-</div>
-<div class="section" id="colorset-xml">
+</section>
+<section id="colorset-xml">
 <h2>colorset.xml<a class="headerlink" href="#colorset-xml" title="本標題的永久連結">¶</a></h2>
 <p>This is the main palette definition. It can handle comments, groups and more.</p>
 <p>The top level element is a <code class="docutils literal notranslate"><span class="pre">Colorset</span></code> element, it's children can either be <code class="docutils literal notranslate"><span class="pre">ColorSetEntry</span></code> elements, or <code class="docutils literal notranslate"><span class="pre">Group</span></code> elements. <code class="docutils literal notranslate"><span class="pre">ColorSetEntry</span></code> s that are direct children of <code class="docutils literal notranslate"><span class="pre">Colorset</span></code> are the ungrouped colors, and are, inside Krita, referred to as the &quot;default&quot; group.</p>
@@ -309,8 +310,8 @@
 <dt>version</dt><dd><p>The version of the file.</p>
 </dd>
 </dl>
-</div>
-<div class="section" id="group">
+</section>
+<section id="group">
 <h2>Group<a class="headerlink" href="#group" title="本標題的永久連結">¶</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">Group</span></code> elements can only have <code class="docutils literal notranslate"><span class="pre">ColorSetEntry</span></code> s as children. <code class="docutils literal notranslate"><span class="pre">Group</span></code> s are shown in the UI as a grid where the cells can be empty or contain a <code class="docutils literal notranslate"><span class="pre">ColorSetEntry</span></code>.</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;Group</span> <span class="na">name=</span><span class="s">&quot;Hot Colors&quot;</span> <span class="na">rows=</span><span class="s">&quot;5&quot;</span><span class="nt">&gt;</span>
@@ -323,8 +324,8 @@
 <dt>rows</dt><dd><p>The total amount of rows this group takes up, this, together with the column value in the toplevel <code class="docutils literal notranslate"><span class="pre">Colorset</span></code> element, determines the grid size.</p>
 </dd>
 </dl>
-</div>
-<div class="section" id="colorsetentry">
+</section>
+<section id="colorsetentry">
 <h2>ColorSetEntry<a class="headerlink" href="#colorsetentry" title="本標題的永久連結">¶</a></h2>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;ColorSetEntry</span> <span class="na">name=</span><span class="s">&quot;Noon daylight at 0 EV&quot;</span> <span class="na">id=</span><span class="s">&quot;SI-D65-0EV&quot;</span> <span class="na">bitdepth=</span><span class="s">&quot;F32&quot;</span> <span class="na">spot=</span><span class="s">&quot;false&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;XYZ</span> <span class="na">space=</span><span class="s">&quot;XYZ identity built-in&quot;</span> <span class="na">x=</span><span class="s">&quot;0.17107713223&quot;</span> <span class="na">y=</span><span class="s">&quot;0.18000000715&quot;</span> <span class="na">z=</span><span class="s">&quot;0.17107713223&quot;</span>  <span class="nt">/&gt;</span>
@@ -345,8 +346,8 @@
 <p><code class="docutils literal notranslate"><span class="pre">ColorSetEntry</span></code> s have two children:</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">Position</span></code> element is the position of the swatch inside the parent group grid. Krita doesn't store empty swatches.</p>
 <p>The other child element is a Create Swatch defintion. Krita supports <cite>Gray</cite>, <cite>sRGB</cite>, <cite>RGB</cite>, <cite>XYZ</cite>, <cite>CMYK</cite>, <cite>Lab</cite> and in theory <cite>YCrCb</cite>. Note that Krita supports unbounded colors as long as the bitdepth is F32.</p>
-</div>
-<div class="section" id="color-swatch-definition-from-the-create-wiki">
+</section>
+<section id="color-swatch-definition-from-the-create-wiki">
 <h2>Color swatch definition from the Create Wiki:<a class="headerlink" href="#color-swatch-definition-from-the-create-wiki" title="本標題的永久連結">¶</a></h2>
 <p>The following is the Color Swatch definition from the <a class="reference external" href="https://web.archive.org/web/20110826002520/http://create.freedesktop.org/wiki/Swatches_-_colour_file_format/Draft">old create wiki</a> . Krita largely uses this definition. Because the Create wiki is down, it's contents are reproduced here. It is for reference only.</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;colors</span> <span class="na">xmlns:xlink=</span><span class="s">&quot;http://www.w3.org/1999/xlink&quot;</span><span class="nt">&gt;</span>
@@ -378,7 +379,7 @@
 <span class="nt">&lt;/colors&gt;</span>
 </pre></div>
 </div>
-<div class="section" id="relax-ng-for-the-swatches">
+<section id="relax-ng-for-the-swatches">
 <h3>Relax-NG for the swatches<a class="headerlink" href="#relax-ng-for-the-swatches" title="本標題的永久連結">¶</a></h3>
 <div class="highlight-rnc notranslate"><div class="highlight"><pre><span></span><span class="kn">namespace</span> xlink <span class="o">=</span> <span class="s2">&quot;http://www.w3.org/1999/xlink&quot;</span>
 grammar <span class="p">{</span>
@@ -466,17 +467,17 @@ colorSpace <span class="o">=</span> <span class="kd">element</span><span class="
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="using-for-validating">
+</section>
+</section>
+<section id="using-for-validating">
 <h2>Using for validating<a class="headerlink" href="#using-for-validating" title="本標題的永久連結">¶</a></h2>
 <p>To use the above RelaxNG compact schema to validate a swatch you can use:</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>trang -I rnc -O rng colors.rnc colors.rng
 xmllint --relaxng colors.rng colors.xml
 </pre></div>
 </div>
-</div>
-<div class="section" id="color-grouping-proposal">
+</section>
+<section id="color-grouping-proposal">
 <h2>Color Grouping Proposal<a class="headerlink" href="#color-grouping-proposal" title="本標題的永久連結">¶</a></h2>
 <p>Krita doesn't use this.</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;group&gt;</span>
@@ -493,8 +494,8 @@ xmllint --relaxng colors.rng colors.xml
 <span class="nt">&lt;group&gt;</span>
 </pre></div>
 </div>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
@@ -519,7 +520,7 @@ xmllint --relaxng colors.rng colors.xml
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>a039fd4</code>
+          修訂版本 <code>6a98b9d</code>
         </span>
       
 

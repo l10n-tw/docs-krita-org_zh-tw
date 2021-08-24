@@ -21,8 +21,9 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-08-24T09:25:20" />
-  <meta content="Krita選取區域操作" name="description" property="og:description" />
+  <meta property="og:article:modified_time" content="2021-08-24T21:25:49" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<meta content="Krita選取區域操作。" name="description" property="og:description" />
 
   
   
@@ -246,10 +247,10 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="selections">
+  <section id="selections">
 <span id="selections-basics"></span><span id="index-0"></span><h1>選取區域<a class="headerlink" href="#selections" title="本標題的永久連結">¶</a></h1>
 <p>選取區域用於選取圖稿的指定區域進行變更，依不同使用需求挑選使用不同的選取工具，它可以用於進行局部移動、變形或在特定區域內繪製而不影響其他區域。Krita的選取區域不限於畫布邊界內,還可以選擇邊界外的部份,當建立選取區域後所有工具只在範圍內執行作動。在區域內可以繪製或使用漸變快速著色及輪廓分明的陰影形狀。</p>
-<div class="section" id="creating-selections">
+<section id="creating-selections">
 <h2>建立選取區域<a class="headerlink" href="#creating-selections" title="本標題的永久連結">¶</a></h2>
 <p>常見的選取區域工具位於工具箱底部。每個工具框選的方式略有不同,將游標移到工具的圖示上停留會有更詳細的描述說明。</p>
 <table class="docutils align-default">
@@ -259,16 +260,16 @@
 <col style="width: 33%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><span class="xref std std-ref">矩形選擇工具</span></p></td>
-<td><p><a href="#id1"><span class="problematic" id="id2">|選取區域工具|</span></a></p></td>
-<td><p>Select the shape of a square.</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../reference_manual/tools/rectangular_select.html#rectangle-selection-tool"><span class="std std-ref">Rectangular Selection Tool</span></a></p></td>
+<td><p><img alt="區域選取工具" src="../_images/rectangular_select_tool.svg" /></p></td>
+<td><p>選取矩形區域。</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="../reference_manual/tools/elliptical_select.html#ellipse-selection-tool"><span class="std std-ref">Elliptical Selection Tool</span></a></p></td>
-<td><p><img alt="toolselectellipse" src="../_images/elliptical_select_tool.svg" /></p></td>
-<td><p>Select the shape of a circle.</p></td>
+<td><p><img alt="橢圓選取工具" src="../_images/elliptical_select_tool.svg" /></p></td>
+<td><p>選取橢圓區域。</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="../reference_manual/tools/polygonal_select.html#polygonal-selection-tool"><span class="std std-ref">Polygonal Selection Tool</span></a></p></td>
-<td><p><img alt="toolselectpolygon" src="../_images/polygonal_select_tool.svg" /></p></td>
+<td><p><img alt="多邊形選取工具" src="../_images/polygonal_select_tool.svg" /></p></td>
 <td><p>Click where you want each point of the Polygon to be. Double click to end your polygon and finalize your selection area. Use the <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Z</kbd></kbd> shortcut to undo last point.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="../reference_manual/tools/freehand_select.html#freehand-selection-tool"><span class="std std-ref">Freehand Selection Tool</span></a></p></td>
@@ -297,8 +298,8 @@
 <p class="admonition-title">備註</p>
 <p>You can also use the transform tools on your selection, a great way to try different proportions on parts of your image.</p>
 </div>
-</div>
-<div class="section" id="editing-selections">
+</section>
+<section id="editing-selections">
 <h2>修改選取區域<a class="headerlink" href="#editing-selections" title="本標題的永久連結">¶</a></h2>
 <p>The tool options for each selection tool gives you the ability to modify
 your selection.</p>
@@ -346,13 +347,13 @@ do not overlap.</p></td>
 </table>
 <p>You can change this in <a class="reference internal" href="../reference_manual/preferences/general_settings.html#tool-options-settings"><span class="std std-ref">Tools Settings</span></a>.</p>
 <p>If you hover over a selection with a selection tool and no selection is activated, you can move it. To quickly go into transform mode, <img alt="滑鼠右鍵" src="../_images/Krita_mouse_right.png" /> and select <span class="guilabel">Edit Selection</span>.</p>
-</div>
-<div class="section" id="removing-selections">
+</section>
+<section id="removing-selections">
 <h2>取消選取<a class="headerlink" href="#removing-selections" title="本標題的永久連結">¶</a></h2>
 <p>If you want to delete the entire selection, the easiest way is to deselect everything. <span class="menuselection">Select ‣ Deselect</span>. Shortcut <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">A</kbd></kbd>.
 When you have one of the selection tool active, and the mode of selection is in intersect, replace or symmetric difference then you can also deselect by just <img alt="滑鼠左鍵" src="../_images/Krita_mouse_left.png" /> anywhere on the canvas.</p>
-</div>
-<div class="section" id="display-modes">
+</section>
+<section id="display-modes">
 <h2>顯示模式<a class="headerlink" href="#display-modes" title="本標題的永久連結">¶</a></h2>
 <p>In the bottom left-hand corner of the status bar there is a button to toggle how the selection is displayed. The two display modes are the following: (Marching) Ants and Mask. The red color with Mask can be changed in the preferences. You can edit the color under <span class="menuselection">Settings ‣ Configure Krita... ‣ Display ‣ Selection Overlay</span>. If there is no selection,
 this button will not do anything.</p>
@@ -363,24 +364,24 @@ this button will not do anything.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">4.2 版更變: </span>Mask mode is activated as well when a selection mask is the active layer so you can see the different selection levels.</p>
 </div>
-</div>
-<div class="section" id="global-selection-mask-painting-a-selection">
+</section>
+<section id="global-selection-mask-painting-a-selection">
 <h2>全域選取區域遮罩（繪畫出選取區域）<a class="headerlink" href="#global-selection-mask-painting-a-selection" title="本標題的永久連結">¶</a></h2>
 <p>The global Selection Mask is your selection that appears on the layers docker. By default, this is hidden, so you will need to make it visible via <span class="menuselection">Select ‣ Show Global Selection Mask</span>.</p>
 <img alt="../_images/Global-selection-mask.jpg" src="../_images/Global-selection-mask.jpg" />
 <p>Once the global Selection Mask is shown, you will need to create a selection. The benefit of using this is that you can paint your
 selection using any of the normal painting tools, including the transform and move. The information is saved as grayscale.</p>
 <p>You can enter the global selection mask mode quickly from the selection tools by doing <img alt="滑鼠右鍵" src="../_images/Krita_mouse_right.png" /> and select <span class="guilabel">Edit Selection</span>.</p>
-</div>
-<div class="section" id="selection-from-layer-transparency">
+</section>
+<section id="selection-from-layer-transparency">
 <h2>自圖層透明度產生選取區域<a class="headerlink" href="#selection-from-layer-transparency" title="本標題的永久連結">¶</a></h2>
 <p>You can create a selection based on a layer's transparency by right-clicking on the layer in the layer docker and selecting <span class="guilabel">Select Opaque</span> from the context menu.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">4.2 版新加入: </span>You can also do this for adding, subtracting and intersecting by going to <span class="menuselection">Select ‣ Select Opaque</span>, where you can find specific actions for each.</p>
 <p>If you want to quickly select parts of layers, you can hold the <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="滑鼠左鍵" src="../_images/Krita_mouse_left.png" /> shortcut on the layer <em>thumbnail</em>. To add a selection do <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="滑鼠左鍵" src="../_images/Krita_mouse_left.png" />, to remove <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Alt</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="滑鼠左鍵" src="../_images/Krita_mouse_left.png" /> and to intersect <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Alt</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="滑鼠左鍵" src="../_images/Krita_mouse_left.png" />. This works with any mask that has pixel or vector data (so everything but transform masks).</p>
 </div>
-</div>
-<div class="section" id="pixel-and-vector-selection-types">
+</section>
+<section id="pixel-and-vector-selection-types">
 <span id="pixel-vector-selection"></span><h2>像素及向量選取區域類型<a class="headerlink" href="#pixel-and-vector-selection-types" title="本標題的永久連結">¶</a></h2>
 <p>Vector selections allow you to modify your selection with vector anchor tools. Pixel selections allow you to modify selections with pixel information. They both have their benefits and disadvantages. You can convert one type of selection to another.</p>
 <img alt="../_images/Vector-pixel-selections.jpg" src="../_images/Vector-pixel-selections.jpg" />
@@ -393,8 +394,8 @@ vector selection to get these benefits. Go to <span class="menuselection">Select
 <p class="admonition-title">備註</p>
 <p>If you have multiple levels of transparency when you convert a selection to vector, you will lose the semi-transparent values.</p>
 </div>
-</div>
-<div class="section" id="common-shortcuts-while-using-selections">
+</section>
+<section id="common-shortcuts-while-using-selections">
 <h2>選取區域作業的通用快捷鍵<a class="headerlink" href="#common-shortcuts-while-using-selections" title="本標題的永久連結">¶</a></h2>
 <ul class="simple">
 <li><p>Copy -- <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">C</kbd></kbd> or <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Ins</kbd></kbd></p></li>
@@ -409,8 +410,8 @@ vector selection to get these benefits. Go to <span class="menuselection">Select
 <li><p>Select Opaque (Subtract) -- <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Alt</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="滑鼠左鍵" src="../_images/Krita_mouse_left.png" /> on layer thumbnail.</p></li>
 <li><p>Select Opaque (Intersect) -- <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Alt</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="滑鼠左鍵" src="../_images/Krita_mouse_left.png" /> on layer thumbnail.</p></li>
 </ul>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
@@ -435,7 +436,7 @@ vector selection to get these benefits. Go to <span class="menuselection">Select
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>a039fd4</code>
+          修訂版本 <code>6a98b9d</code>
         </span>
       
 

@@ -21,8 +21,9 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-08-24T09:25:20" />
-  
+  <meta property="og:article:modified_time" content="2021-08-24T21:25:49" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   
   
   <title>Modern C++ usage guidelines for the Krita codebase &mdash; Krita Manual 5.0.0 說明文件</title>
@@ -261,7 +262,7 @@
 </dl>
 </dd>
 </dl>
-<div class="section" id="modern-c-usage-guidelines-for-the-krita-codebase">
+<section id="modern-c-usage-guidelines-for-the-krita-codebase">
 <span id="modern-cpp-in-krita"></span><h1><a class="toc-backref" href="#id3">Modern C++ usage guidelines for the Krita codebase</a><a class="headerlink" href="#modern-c-usage-guidelines-for-the-krita-codebase" title="本標題的永久連結">¶</a></h1>
 <div class="contents topic" id="id1">
 <p class="topic-title">目錄</p>
@@ -296,7 +297,7 @@
 </li>
 </ul>
 </div>
-<div class="section" id="general-links-about-using-modern-c-in-qt">
+<section id="general-links-about-using-modern-c-in-qt">
 <h2><a class="toc-backref" href="#id4">General links about using Modern C++ in Qt</a><a class="headerlink" href="#general-links-about-using-modern-c-in-qt" title="本標題的永久連結">¶</a></h2>
 <p>There have been a few links discussing mixing C++11 with Qt, and starting with Qt 5.6 C++11 support will be default. <em>Note:</em> there is a lot of hype about C++11, and although many of its new features are quite welcome, often the trade-offs from these changes get neglected.</p>
 <ul class="simple">
@@ -315,11 +316,11 @@
 <ul class="simple">
 <li><p><a class="reference external" href="https://wiki.qt.io/API_Design_Principles">https://wiki.qt.io/API_Design_Principles</a></p></li>
 </ul>
-</div>
-<div class="section" id="particular-features">
+</section>
+<section id="particular-features">
 <h2><a class="toc-backref" href="#id5">Particular Features</a><a class="headerlink" href="#particular-features" title="本標題的永久連結">¶</a></h2>
 <p>Under &quot;drawbacks,&quot; every item should list: &quot;Programmers will face another feature they must learn about.&quot;</p>
-<div class="section" id="type-inference-auto">
+<section id="type-inference-auto">
 <h3><a class="toc-backref" href="#id6">Type Inference (auto)</a><a class="headerlink" href="#type-inference-auto" title="本標題的永久連結">¶</a></h3>
 <dl>
 <dt>Motivation:</dt><dd><p>If a function <code class="docutils literal notranslate"><span class="pre">f</span></code> has a return type Type, it is redundant to write a local variable <code class="docutils literal notranslate"><span class="pre">Type</span> <span class="pre">x</span> <span class="pre">=</span> <span class="pre">f(y).</span></code>  Using auto declarations is a simplification in two ways scenarios.  First, it allows the programmer to write code without worrying about doing the manual type deduction, for example:</p>
@@ -342,8 +343,8 @@
 <dt>Recommendation:</dt><dd><p>Do not use auto, except, maybe, in loops, where there can be no confusion about the type of what is looped. But even there, hesitate.</p>
 </dd>
 </dl>
-</div>
-<div class="section" id="range-based-for-loop">
+</section>
+<section id="range-based-for-loop">
 <h3><a class="toc-backref" href="#id7">Range-based for loop</a><a class="headerlink" href="#range-based-for-loop" title="本標題的永久連結">¶</a></h3>
 <dl>
 <dt>Motivation:</dt><dd><p>This is something a long time coming in C++.  It is a standardized replacement for Qt's foreach() construct, which works not only with Qt objects but all iterable C++ types.</p>
@@ -364,8 +365,8 @@
 <p>Qt's recommendation on the other hand is to use foreach() for Qt iterators, and range-based for on STL containers, because you always know what you're getting, and you always keep your syntax easy to read.  In my opinion is the most meaningful new feature without any sort of clear answer, and quite interesting to think about.</p>
 </dd>
 </dl>
-</div>
-<div class="section" id="general-initializer-lists">
+</section>
+<section id="general-initializer-lists">
 <h3><a class="toc-backref" href="#id8">General Initializer Lists</a><a class="headerlink" href="#general-initializer-lists" title="本標題的永久連結">¶</a></h3>
 <dl>
 <dt>Motivation:</dt><dd><p>Initializer lists are intended to work in many different places to simplify the syntax for complicated initialization.  For example, a list of strings could be initialized <code class="docutils literal notranslate"><span class="pre">const</span> <span class="pre">QStringList</span> <span class="pre">x</span> <span class="pre">=</span> <span class="pre">{&quot;abc&quot;,</span> <span class="pre">&quot;def&quot;,</span> <span class="pre">&quot;xyz&quot;</span>&#160; <span class="pre">};</span></code> and if you later changed the type to <code class="docutils literal notranslate"><span class="pre">QVector&lt;QString&gt;</span></code>, or even <code class="docutils literal notranslate"><span class="pre">std::list&lt;std::string&gt;</span></code>, you wouldn't have to make any change to the right hand side.</p>
@@ -385,8 +386,8 @@
 <dt>Recommendation:</dt><dd><p>Yes!</p>
 </dd>
 </dl>
-</div>
-<div class="section" id="lambdas-and-new-style-signals-slots">
+</section>
+<section id="lambdas-and-new-style-signals-slots">
 <h3><a class="toc-backref" href="#id9">Lambdas, and new-style signals/slots</a><a class="headerlink" href="#lambdas-and-new-style-signals-slots" title="本標題的永久連結">¶</a></h3>
 <dl>
 <dt>Motivation:</dt><dd><blockquote>
@@ -416,8 +417,8 @@
 <p>Overall, the Qt wiki gives a good overview, and I agree with its suggestions, which is to permit a small amount of mixing of the different syntax.  Their recommendation is to use new-style signals and slots when possible, which is the vast majority of the time, to fall back on the old macros when one needs to use a default argument, and to use lambdas very rarely, only in cases when one needs to create a signal that is not bound to a particular object.  The latter sort of case is not something that C++ newcomers would want to be touching anyway.</p>
 </dd>
 </dl>
-</div>
-<div class="section" id="constexpr">
+</section>
+<section id="constexpr">
 <h3><a class="toc-backref" href="#id10">constexpr</a><a class="headerlink" href="#constexpr" title="本標題的永久連結">¶</a></h3>
 <dl class="simple">
 <dt>Motivation:</dt><dd><p>Performing calculations at compile time can speed things up at runtime.  <a class="reference external" href="https://www.kdab.com/wp-content/uploads/stories/slides/DD12/mutz-dd-speed-up-your-qt-5-programs-using-c++11.pdf">KDAB: speed up your Qt 5 programs using C++11</a></p>
@@ -427,8 +428,8 @@
 <dt>Recommendation:</dt><dd><p>This could be useful in specific places, like KoCompositeOpRegistry.  Overall it is not something most programmers will run into.</p>
 </dd>
 </dl>
-</div>
-<div class="section" id="algorithm">
+</section>
+<section id="algorithm">
 <h3><a class="toc-backref" href="#id11">&lt;algorithm&gt;</a><a class="headerlink" href="#algorithm" title="本標題的永久連結">¶</a></h3>
 <dl>
 <dt>Motivation:</dt><dd><p>A handwritten loop that looks for occurences of the number 20 and replaces it with 99 is routine, and will take several lines to write, including defining local variables. Instead, something like</p>
@@ -442,8 +443,8 @@
 <dt>Recommendation:</dt><dd><p>Encourage the use of &lt;algorithm&gt; when it improves code clarity.  Speed not a big problem most of the time, don't make changes which are hard to understand just for a tiny hypothetical speed boost.  However, moving to &lt;algorithm&gt; and away from Qt foreach() inside hot paths could prove useful in the future.</p>
 </dd>
 </dl>
-</div>
-<div class="section" id="enum-class">
+</section>
+<section id="enum-class">
 <h3><a class="toc-backref" href="#id12">enum class</a><a class="headerlink" href="#enum-class" title="本標題的永久連結">¶</a></h3>
 <dl>
 <dt>Motivation:</dt><dd><p>These are a type-safe version of enums, and allows the programmer to associate several different types of data with an enum, such as a character.  This gives stricter type safety, for example, when it might be possible to accidentally convert a variable into a numeric type.  For example:</p>
@@ -461,8 +462,8 @@
 <dt>Recommendation:</dt><dd><p>Use freely.</p>
 </dd>
 </dl>
-</div>
-<div class="section" id="local-type-definitions-i-e-using">
+</section>
+<section id="local-type-definitions-i-e-using">
 <h3><a class="toc-backref" href="#id13">Local type definitions (i.e. using)</a><a class="headerlink" href="#local-type-definitions-i-e-using" title="本標題的永久連結">¶</a></h3>
 <dl class="simple">
 <dt>Motivation:</dt><dd><p>An easier and localized way to use typedefs. Can be at the namespace, class, or function level.  Allows you to rewrite a typedef so that the new name occurs on the left hand side of the equals sign, which is easier to read.  They allow you to place typedefs closer to where they're used. They are particularly nice inside templates.</p>
@@ -472,8 +473,8 @@
 <dt>Recommendation:</dt><dd><p>Go for it.</p>
 </dd>
 </dl>
-</div>
-<div class="section" id="nullptr">
+</section>
+<section id="nullptr">
 <h3><a class="toc-backref" href="#id14">nullptr</a><a class="headerlink" href="#nullptr" title="本標題的永久連結">¶</a></h3>
 <dl>
 <dt>Motivation:</dt><dd><p>The use of nullptr as a default pointer initializer is a very small change in C++11, and mostly an aesthetic one. Technically, there are only a few things it prevents : it cannot be converted to a numeric type like <code class="docutils literal notranslate"><span class="pre">int</span> <span class="pre">x</span> <span class="pre">=</span> <span class="pre">nullptr;</span></code>, and it cannot be used as a class type in a template, so the following is a compiler error:</p>
@@ -488,8 +489,8 @@
 <dt>Recommendation:</dt><dd><p>We do not use nullptr in Krita. Not in new code, and we don't refactor old code to use it. Also not Q_NULLPTR.</p>
 </dd>
 </dl>
-</div>
-<div class="section" id="deleted-default-override-final">
+</section>
+<section id="deleted-default-override-final">
 <h3><a class="toc-backref" href="#id15">Deleted, default, override, final</a><a class="headerlink" href="#deleted-default-override-final" title="本標題的永久連結">¶</a></h3>
 <dl class="simple">
 <dt>Motivation:</dt><dd><p>These are keywords used for designing inheritance patterns. They are useful for preventing accidental copy construction.</p>
@@ -499,8 +500,8 @@
 <dt>Recommendation:</dt><dd><p>No reason to hold back from these features if they seem useful. They are well named and fairly self-explanatory, especially for developers with a Java or C# background.  If you apply them correctly, you can prevent other coders from making mistakes when they use your classes.  For others, these definitions can be ignored until they cause a compile error, which tell you that you're doing something the wrong way.</p>
 </dd>
 </dl>
-</div>
-<div class="section" id="unique-ptr-qscopedpointer">
+</section>
+<section id="unique-ptr-qscopedpointer">
 <h3><a class="toc-backref" href="#id16">unique_ptr/QScopedPointer</a><a class="headerlink" href="#unique-ptr-qscopedpointer" title="本標題的永久連結">¶</a></h3>
 <dl class="simple">
 <dt>Motivation:</dt><dd><p><a class="reference external" href="https://www.drdobbs.com/cpp/c11-uniqueptr/240002708">Here is a glowing review of unique_ptr</a>. This is really about a philosophy of C++ memory management, not just a particular smart pointer type.  The idea is that whenever you create an object on the heap, you should <em>always</em> house it inside a smart pointer.  The reason this philosophy is considered new to C++11 is that unique_ptr is the first time they 'got it right' designing a very nice smart pointer class. Most importantly, the class uses negligible overhead. In particular: <code class="docutils literal notranslate"><span class="pre">sizeof(unique_ptr&lt;T*&gt;)</span> <span class="pre">=</span> <span class="pre">size_t</span></code>, it can be passed as a function argument without copying, and dereferencing is inline.</p>
@@ -520,8 +521,8 @@
 <dt>Recommendation:</dt><dd><p>Smart pointers are already prevalent in the codebase with the KisSP family, but more use of them should be encouraged.   d_ptrs should be wrapped in a QScopedPointer. The rule is: first Krita's shared pointers, then Qt's, do not use the std smart pointers.</p>
 </dd>
 </dl>
-</div>
-<div class="section" id="performance-related-rvalues">
+</section>
+<section id="performance-related-rvalues">
 <h3><a class="toc-backref" href="#id17">Performance-related (rvalues)</a><a class="headerlink" href="#performance-related-rvalues" title="本標題的永久連結">¶</a></h3>
 <p>Using move constructors and rvalues are very subtle and advanced features, but widely celebrated as successes of C++11.  The point of these features is to save on costs of copying memory when passing function arguments. The idea is that if one is OK allowing a function to steal, alter or destroy its argument, then that function can be called slightly faster if the argument is not copied at all, but instead simply performing an ownership transfer.  C++ programmers should already be aware that writing performant code where data gets shuffled around sometimes requires opening a can of ampersands.  These features will naturally stay confined to the corners of the codebase behind the scenes where they belong, and should be introduced when they are useful.</p>
 <ul class="simple">
@@ -529,22 +530,22 @@
 <li><p><a class="reference external" href="https://www.kdab.com/wp-content/uploads/stories/slides/DD12/mutz-dd-speed-up-your-qt-5-programs-using-c++11.pdf">KDAB: speed up your Qt 5 programs using C++11</a></p></li>
 <li><p><a class="reference external" href="http://wiki.hsr.ch/PeterSommerlad/files/MeetingCPP2013_SimpleC++.pdf">Slide 37 describes lvalue/rvalue types in exact detail</a>  Also explains the terms &quot;xvalue&quot; and &quot;prvalue&quot; sometimes seen as well.</p></li>
 </ul>
-<div class="section" id="move-constructors">
+<section id="move-constructors">
 <h4><a class="toc-backref" href="#id18">Move Constructors</a><a class="headerlink" href="#move-constructors" title="本標題的永久連結">¶</a></h4>
 <dl class="simple">
 <dt>Recommendation:</dt><dd><p>Use whenever it aids performance.</p>
 </dd>
 </dl>
-</div>
-<div class="section" id="reference-qualifiers-rvalue-references">
+</section>
+<section id="reference-qualifiers-rvalue-references">
 <h4><a class="toc-backref" href="#id19">Reference Qualifiers (rvalue references)</a><a class="headerlink" href="#reference-qualifiers-rvalue-references" title="本標題的永久連結">¶</a></h4>
 <dl class="simple">
 <dt>Recommendation:</dt><dd><p>Use whenever it aids performance.</p>
 </dd>
 </dl>
-</div>
-</div>
-<div class="section" id="c-11-features-mostly-for-template-programming">
+</section>
+</section>
+<section id="c-11-features-mostly-for-template-programming">
 <h3><a class="toc-backref" href="#id20">C++11 features mostly for template programming</a><a class="headerlink" href="#c-11-features-mostly-for-template-programming" title="本標題的永久連結">¶</a></h3>
 <p>Krita makes very light use of templates.  These features are useful, coming across them in the code base will add complexity for new learners, and have not been necessary so far.</p>
 <ul class="simple">
@@ -552,8 +553,8 @@
 <li><p>static_assert</p></li>
 <li><p>variadic templates</p></li>
 </ul>
-</div>
-<div class="section" id="other-c-11-features-that-will-not-be-useful">
+</section>
+<section id="other-c-11-features-that-will-not-be-useful">
 <h3><a class="toc-backref" href="#id21">Other C++11 features that will not be useful</a><a class="headerlink" href="#other-c-11-features-that-will-not-be-useful" title="本標題的永久連結">¶</a></h3>
 <ul class="simple">
 <li><p>Threading support (Relies on C++ threading model; use Qt threading instead)</p></li>
@@ -561,9 +562,9 @@
 <li><p>New literal types (already have QString/ki18n)</p></li>
 <li><p>Extended Unions (already have QVariant)</p></li>
 </ul>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
            </div>
@@ -588,7 +589,7 @@
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>a039fd4</code>
+          修訂版本 <code>6a98b9d</code>
         </span>
       
 

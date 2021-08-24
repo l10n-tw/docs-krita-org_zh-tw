@@ -21,8 +21,9 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-08-24T09:25:20" />
-  <meta content="Setting up Krita to use with an eye tracker. " name="description" />
+  <meta property="og:article:modified_time" content="2021-08-24T21:25:49" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<meta content="Setting up Krita to use with an eye tracker. " name="description" />
 <meta content="- H. Turgut Uyar &lt;hturgut&#64;uyar.info&gt; " name="authors" />
 <meta content="GNU free documentation license 1.3 or later." name="license" />
 
@@ -61,7 +62,7 @@
     <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜尋" href="../search.html" />
-    <link rel="next" title="Flat Coloring" href="flat-coloring.html" />
+    <link rel="next" title="平塗著色" href="flat-coloring.html" />
     <link rel="prev" title="常用工作流程" href="common_workflows.html" /> 
 
   
@@ -132,16 +133,16 @@
 <li class="toctree-l1"><a class="reference internal" href="../general_concepts.html">通用概念</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../reference_manual.html">參考文件</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../tutorials.html">教學及指南</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="clipping_masks_and_alpha_inheritance.html">Clipping Masks and Alpha Inheritance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="clipping_masks_and_alpha_inheritance.html">遮罩與 Alpha 繼承</a></li>
 <li class="toctree-l2"><a class="reference internal" href="common_workflows.html">常用工作流程</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">設定 Krita 以使用眼球追蹤技術的示例</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#requirements">Requirements</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#starting-krita">Starting Krita</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#layout">Layout</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#summary">Summary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#requirements">要求</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#starting-krita">啟動 Krita</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#layout">排版</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#summary">概括</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="flat-coloring.html">Flat Coloring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="flat-coloring.html">平塗著色</a></li>
 <li class="toctree-l2"><a class="reference internal" href="inking.html">Inking</a></li>
 <li class="toctree-l2"><a class="reference internal" href="krita-brush-tips.html">Krita Brush Tips</a></li>
 <li class="toctree-l2"><a class="reference internal" href="making_an_azalea_with_the_transformation_masks.html">Making An Azalea With The Transformation Masks</a></li>
@@ -233,7 +234,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="an-example-setup-for-using-krita-with-an-eye-tracker">
+  <section id="an-example-setup-for-using-krita-with-an-eye-tracker">
 <h1>設定 Krita 以使用眼球追蹤技術的示例<a class="headerlink" href="#an-example-setup-for-using-krita-with-an-eye-tracker" title="本標題的永久連結">¶</a></h1>
 <div class="admonition attention">
 <p class="admonition-title">注意</p>
@@ -268,8 +269,8 @@ then dwell on the icon for the application to activate the double click.
 Adjusting the dwell time is an important tradeoff: shorter dwell times allow
 for faster work but are also more error-prone.</p></li>
 </ul>
-<div class="section" id="requirements">
-<h2>Requirements<a class="headerlink" href="#requirements" title="本標題的永久連結">¶</a></h2>
+<section id="requirements">
+<h2>要求<a class="headerlink" href="#requirements" title="本標題的永久連結">¶</a></h2>
 <p>Besides the <em>obvious</em> requirement of having an eye tracker device, you will
 also need a control program that will let you interact with the device. When
 you obtain the device, such a program will most probably be provided to you
@@ -285,9 +286,9 @@ applications like e-mail agents and browsers, but for Krita you need
 the drag and drop mode to be able to draw. If the provided control software
 doesn't support this mode (usually called &quot;mouse emulation&quot;), you can contact
 the manufacturer of the device for assistance, or look for open source options.</p>
-</div>
-<div class="section" id="starting-krita">
-<h2>Starting Krita<a class="headerlink" href="#starting-krita" title="本標題的永久連結">¶</a></h2>
+</section>
+<section id="starting-krita">
+<h2>啟動 Krita<a class="headerlink" href="#starting-krita" title="本標題的永久連結">¶</a></h2>
 <p>Basically, setting the control program to left double click mode and
 dwelling on the Krita icon on the desktop would be enough to start up Krita
 but there are some issues with this:</p>
@@ -332,9 +333,9 @@ to the foreground, Krita might start up partially visible behind that window.</p
 <p>To prevent these problems, it will help if the users train themselves
 to look at some harmless spot (like an empty space on the desktop)
 until Krita is loaded.</p>
-</div>
-<div class="section" id="layout">
-<h2>Layout<a class="headerlink" href="#layout" title="本標題的永久連結">¶</a></h2>
+</section>
+<section id="layout">
+<h2>排版<a class="headerlink" href="#layout" title="本標題的永久連結">¶</a></h2>
 <p>Since the interface elements need to be large, you have to use the screen area
 economically. Running in full-screen mode and getting rid of unused menus
 and toolbars are the first steps that you can take. Here's the screenshot
@@ -364,10 +365,10 @@ in the <code class="file docutils literal notranslate"><span class="pre">kritarc
 to figure out where to place it when it's collapsed. Put it somewhere where
 it will be easily accessible but where it will not interfere with Krita.
 On the screenshot you can see it at the left edge of the screen.</p>
-</div>
-<div class="section" id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="本標題的永久連結">¶</a></h2>
-<p>In summary, we work as explained below.</p>
+</section>
+<section id="summary">
+<h2>概括<a class="headerlink" href="#summary" title="本標題的永久連結">¶</a></h2>
+<p>概略的工作流程如下所敘述。</p>
 <p>To start Krita:</p>
 <ol class="arabic simple">
 <li><p>On the desktop, pull up the hovering mouse menu and select left double
@@ -395,8 +396,8 @@ from the mouse button).</p></li>
 <li><p>Click on the button for closing the window.</p></li>
 <li><p>When warned about unsaved changes, click the button for saving the file.</p></li>
 </ol>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
@@ -406,7 +407,7 @@ from the mouse button).</p></li>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="flat-coloring.html" class="btn btn-neutral float-right" title="Flat Coloring" accesskey="n" rel="next"> <!-- 下一個 --> <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="flat-coloring.html" class="btn btn-neutral float-right" title="平塗著色" accesskey="n" rel="next"> <!-- 下一個 --> <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="common_workflows.html" class="btn btn-neutral" title="常用工作流程" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- 上一個  -->  </a>
@@ -421,7 +422,7 @@ from the mouse button).</p></li>
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>a039fd4</code>
+          修訂版本 <code>6a98b9d</code>
         </span>
       
 

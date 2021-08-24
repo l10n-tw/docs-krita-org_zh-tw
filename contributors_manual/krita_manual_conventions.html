@@ -21,8 +21,9 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-08-24T09:25:20" />
-  <meta content="Krita 說明文件中的 reStructuredText 標記格式使用慣例 。" name="description" />
+  <meta property="og:article:modified_time" content="2021-08-24T21:25:49" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<meta content="Krita 說明文件中的 reStructuredText 標記格式使用慣例 。" name="description" />
 
   
   
@@ -247,7 +248,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="mark-up-conventions-for-the-krita-manual">
+  <section id="mark-up-conventions-for-the-krita-manual">
 <span id="krita-markup-conventions"></span><h1><a class="toc-backref" href="#id13">Krita 說明文件標記格式使用慣例</a><a class="headerlink" href="#mark-up-conventions-for-the-krita-manual" title="本標題的永久連結">¶</a></h1>
 <p>這頁將詳細說明在 Krita 說明文件中使用 reStructuredText 標記格式的慣例。</p>
 <p>我們建議先翻閱 reStructuredText 的<a class="reference external" href="http://docutils.sourceforge.net/rst.html">官方格式規格文件</a>。我們亦建議下載整份規格文件，以便在連線出問題時可於本機查閱。</p>
@@ -305,7 +306,7 @@
 </li>
 </ul>
 </div>
-<div class="section" id="meta-data">
+<section id="meta-data">
 <h2><a class="toc-backref" href="#id14">中繼資料</a><a class="headerlink" href="#meta-data" title="本標題的永久連結">¶</a></h2>
 <p>每頁應以下列三項開首：</p>
 <ol class="arabic">
@@ -349,8 +350,8 @@
 </dl>
 </li>
 </ol>
-</div>
-<div class="section" id="headings">
+</section>
+<section id="headings">
 <h2><a class="toc-backref" href="#id15">標題</a><a class="headerlink" href="#headings" title="本標題的永久連結">¶</a></h2>
 <p>Headings will be done in the following order:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>############
@@ -384,13 +385,13 @@
 <p>These conventions were more or less decided by <a class="reference external" href="https://pandoc.org/">Pandoc</a>'s mediawiki to reStructuredText conversion. If you need more than 4 headings, ask yourself first if the page hasn't gotten too complicated and needs splitting up.</p>
 <p>Sometimes you need to link to a subsection of a page, add a label above the heading in that case.</p>
 <p>Headers should not end with punctuation, as the header will be used as the link name when linking to a label.</p>
-</div>
-<div class="section" id="linking">
+</section>
+<section id="linking">
 <h2><a class="toc-backref" href="#id16">參照及連結</a><a class="headerlink" href="#linking" title="本標題的永久連結">¶</a></h2>
 <p>Linking is done with <code class="docutils literal notranslate"><span class="pre">:ref:`label_name`</span></code>. When you need an alternative link text, you use <code class="docutils literal notranslate"><span class="pre">:ref:`actual</span> <span class="pre">text</span> <span class="pre">shown</span> <span class="pre">&lt;label_name&gt;`</span></code>.</p>
 <p>Linking to external pages is done with <code class="docutils literal notranslate"><span class="pre">`url`_</span></code> and <code class="docutils literal notranslate"><span class="pre">`link</span> <span class="pre">name</span> <span class="pre">&lt;url&gt;`_</span></code>, which'll become <a class="reference external" href="url">link name</a>.</p>
 <p><a class="reference external" href="https://pandoc.org/">Pandoc</a> likes to turn these into <code class="docutils literal notranslate"><span class="pre">`link</span> <span class="pre">name`__</span></code> and then add <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">__</span> <span class="pre">:url</span></code> at the end of the document. This is a so-called 'anonymous hyperlink', meaning that depending on the order of the links appearing in the text the order of the links at the end of the text are associated with one another. If this sounds confusing and difficult, it is because it is. That is also the exact reason why we'd like to avoid links like these.</p>
-<div class="section" id="footnotes-and-further-reading">
+<section id="footnotes-and-further-reading">
 <h3><a class="toc-backref" href="#id17">註腳與延伸閱讀</a><a class="headerlink" href="#footnotes-and-further-reading" title="本標題的永久連結">¶</a></h3>
 <p>Footnotes can be made in 3 ways, the most common one is with autonumbering, as per reference:</p>
 <p><a class="footnote-reference brackets" href="#id5" id="id3">1</a> is a reference to footnote 1, and <a class="footnote-reference brackets" href="#id6" id="id4">2</a> is a reference to
@@ -416,9 +417,9 @@ except the label is textual.</p>
 </dl>
 <p>Citation can also be referenced with <code class="docutils literal notranslate"><span class="pre">`citation</span> <span class="pre">&lt;CIT2002&gt;`_</span></code>.</p>
 <p>We don't actually use footnotes in the manual due to the fact that it is a little bit too academical for our readers. However, we do collect documents and links that give a little bit more information on a topic at the end of a page. Sphinx has the <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">seealso::</span></code> directive for linking to external links, while reStructuredText suggests to use <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">rubic::</span> <span class="pre">Footnotes</span></code> for specifically collecting footnotes as that plays nice with LaTeX.</p>
-</div>
-</div>
-<div class="section" id="images">
+</section>
+</section>
+<section id="images">
 <h2><a class="toc-backref" href="#id18">影像</a><a class="headerlink" href="#images" title="本標題的永久連結">¶</a></h2>
 <p>Use the image directive for images without captions:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">image</span><span class="p">::</span> <span class="o">/</span><span class="n">images</span><span class="o">/</span><span class="n">sample</span><span class="o">.</span><span class="n">png</span>
@@ -438,14 +439,16 @@ except the label is textual.</p>
 </div>
 <p>The latter gives:</p>
 <blockquote>
-<div><div class="figure align-center" id="id12" style="width: 800px">
+<div><figure class="align-center" id="id12" style="width: 800px">
 <img alt="an image." src="../_images/sample.png" />
-<p class="caption"><span class="caption-text">A caption --  notice how the first letter of the caption in the directive is aligned with the :figwidth: option.</span><a class="headerlink" href="#id12" title="本圖片的永久連結">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">A caption --  notice how the first letter of the caption in the directive is aligned with the :figwidth: option.</span><a class="headerlink" href="#id12" title="本圖片的永久連結">¶</a></p>
+</figcaption>
+</figure>
 </div></blockquote>
 <p>Images should go into the <code class="docutils literal notranslate"><span class="pre">/images</span></code> folder. By using <code class="docutils literal notranslate"><span class="pre">/images</span></code> instead of <code class="docutils literal notranslate"><span class="pre">images</span></code>, sphinx will know the filepath isn't relative.</p>
-</div>
-<div class="section" id="in-text-markup">
+</section>
+<section id="in-text-markup">
 <h2><a class="toc-backref" href="#id19">內文格式標記</a><a class="headerlink" href="#in-text-markup" title="本標題的永久連結">¶</a></h2>
 <p>You can make text <em>emphasized</em> and <strong>strong</strong> with a single asterisk and double respectively:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span><span class="n">emphasize</span><span class="o">*</span>
@@ -462,8 +465,8 @@ except the label is textual.</p>
 </pre></div>
 </div>
 <p>Avoid randomly bolding words. It does <em>not</em> make the text easier or friendlier to read.</p>
-</div>
-<div class="section" id="substitution-references">
+</section>
+<section id="substitution-references">
 <h2><a class="toc-backref" href="#id20">替代文字參照</a><a class="headerlink" href="#substitution-references" title="本標題的永久連結">¶</a></h2>
 <p>You can create a sort of shorthand for a piece of text or an image by doing:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="o">|</span><span class="n">shorthand</span><span class="o">|</span> <span class="n">replace</span><span class="p">::</span> <span class="n">something</span> <span class="ow">or</span> <span class="n">the</span> <span class="n">other</span><span class="o">.</span>
@@ -477,10 +480,10 @@ except the label is textual.</p>
 </pre></div>
 </div>
 <p>Then, when typing a link, you can just use <code class="docutils literal notranslate"><span class="pre">`bugzilla`_</span></code> to link to bugzilla with &quot;bugzilla&quot; used as the text of the link. <code class="docutils literal notranslate"><span class="pre">`Krita</span> <span class="pre">Manual`_</span></code> will in turn link to docs.krita.org with the text &quot;Krita Manual&quot;.</p>
-</div>
-<div class="section" id="lists">
+</section>
+<section id="lists">
 <h2><a class="toc-backref" href="#id21">清單</a><a class="headerlink" href="#lists" title="本標題的永久連結">¶</a></h2>
-<div class="section" id="ordinated-lists">
+<section id="ordinated-lists">
 <h3><a class="toc-backref" href="#id22">有序清單</a><a class="headerlink" href="#ordinated-lists" title="本標題的永久連結">¶</a></h3>
 <ol class="arabic simple">
 <li><p>Apple</p></li>
@@ -522,8 +525,8 @@ except the label is textual.</p>
 <span class="c1">#. Trajan</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="unordered-lists">
+</section>
+<section id="unordered-lists">
 <h3><a class="toc-backref" href="#id23">無序清單</a><a class="headerlink" href="#unordered-lists" title="本標題的永久連結">¶</a></h3>
 <ul class="simple">
 <li><p>red</p></li>
@@ -569,8 +572,8 @@ except the label is textual.</p>
 <span class="o">-</span> <span class="n">blue</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="definition-lists">
+</section>
+<section id="definition-lists">
 <h3><a class="toc-backref" href="#id24">定義清單</a><a class="headerlink" href="#definition-lists" title="本標題的永久連結">¶</a></h3>
 <p>A favourite! Definition lists are especially useful when dealing with enumerating all the options in a docker and trying to add a simple explanation behind them.</p>
 <dl>
@@ -587,9 +590,9 @@ except the label is textual.</p>
 </div>
 </dd>
 </dl>
-</div>
-</div>
-<div class="section" id="tables">
+</section>
+</section>
+<section id="tables">
 <h2><a class="toc-backref" href="#id25">表格</a><a class="headerlink" href="#tables" title="本標題的永久連結">¶</a></h2>
 <table class="docutils align-default">
 <colgroup>
@@ -646,8 +649,8 @@ except the label is textual.</p>
 </pre></div>
 </div>
 <p>Full grid tables are best for when you need all features like complex column and row spans, but they're tricky to make. For that reason, small tables are best off being done with the simple syntax, while really long tables are best done with a list directive because that is just much easier to write and maintain.</p>
-</div>
-<div class="section" id="admonishments-and-asides">
+</section>
+<section id="admonishments-and-asides">
 <h2><a class="toc-backref" href="#id26">警告和提示框</a><a class="headerlink" href="#admonishments-and-asides" title="本標題的永久連結">¶</a></h2>
 <div class="admonition note">
 <p class="admonition-title">備註</p>
@@ -723,8 +726,8 @@ except the label is textual.</p>
 <dt>Admonishments</dt><dd><p>Only when they fit semantically. This is especially necessary for the danger and warning admonishments, as seeing them too often can make users blind to them.</p>
 </dd>
 </dl>
-</div>
-<div class="section" id="code-snippets">
+</section>
+<section id="code-snippets">
 <h2><a class="toc-backref" href="#id27">程式碼片段</a><a class="headerlink" href="#code-snippets" title="本標題的永久連結">¶</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">Inline</span> <span class="pre">code</span> <span class="pre">snippets</span></code> are done with <code class="docutils literal notranslate"><span class="pre">``backticks``</span></code>.</p>
 <p>Multi-line code snippets are done by ending the previous section with <code class="docutils literal notranslate"><span class="pre">::</span></code>, which'll look like this:</p>
@@ -781,8 +784,8 @@ except the label is textual.</p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>this <span class="p">&lt;</span><span class="nt">span</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;font-style:italic&quot;</span><span class="p">&gt;</span>is<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span> <span class="c">&lt;!-- a HTML comment --&gt;</span> a paragraph.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="other-preformatted-text">
+</section>
+<section id="other-preformatted-text">
 <h2><a class="toc-backref" href="#id28">其他要手動斷行的文字</a><a class="headerlink" href="#other-preformatted-text" title="本標題的永久連結">¶</a></h2>
 <div class="line-block">
 <div class="line">One can</div>
@@ -806,14 +809,14 @@ except the label is textual.</p>
 <p>This is generally not used in the manual, and should only be used where it is
 absolutely required to represent content that needs exact formatting, but never
 merely for aesthetic reasons.</p>
-</div>
-<div class="section" id="glossaries-terms-and-index">
+</section>
+<section id="glossaries-terms-and-index">
 <h2><a class="toc-backref" href="#id29">詞彙表、術語和索引</a><a class="headerlink" href="#glossaries-terms-and-index" title="本標題的永久連結">¶</a></h2>
 <p>These are sphinx features.</p>
 <p>Index is used in the top section, right now only single index entries are used.</p>
 <p>Glossaries are used for some of the menu entry sections, but not all of them.</p>
-</div>
-<div class="section" id="quotes">
+</section>
+<section id="quotes">
 <h2><a class="toc-backref" href="#id30">引文</a><a class="headerlink" href="#quotes" title="本標題的永久連結">¶</a></h2>
 <p>Quotes are done like this:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">I</span> <span class="n">am</span> <span class="ow">not</span> <span class="n">sure</span> <span class="n">why</span> <span class="n">you</span><span class="s1">&#39;d need quotes in a user manual...</span>
@@ -827,8 +830,8 @@ merely for aesthetic reasons.</p>
 <p class="attribution">—Wolthera</p>
 </div></blockquote>
 <p>We do actually use quotes in some places. Try to add a link to the name to define where it came from.</p>
-</div>
-<div class="section" id="text-for-non-english-translations-only">
+</section>
+<section id="text-for-non-english-translations-only">
 <h2><a class="toc-backref" href="#id31">只供英文版以外翻譯使用的內容</a><a class="headerlink" href="#text-for-non-english-translations-only" title="本標題的永久連結">¶</a></h2>
 <p>You can use the following to include text that only makes sense for non-English
 translations of the manual, for example to provide non-English readers with
@@ -839,8 +842,8 @@ the English names of an item for reference:</p>
     <span class="n">shows</span> <span class="n">up</span> <span class="ow">in</span> <span class="n">non</span><span class="o">-</span><span class="n">English</span> <span class="n">versions</span><span class="o">.</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="notes-for-translators">
+</section>
+<section id="notes-for-translators">
 <h2><a class="toc-backref" href="#id32">致翻譯者的提示</a><a class="headerlink" href="#notes-for-translators" title="本標題的永久連結">¶</a></h2>
 <p>If you are translating the manual for a language that does not usually use
 whitespaces around words (e.g. Chinese and Japanese), you can use an escaped
@@ -856,8 +859,8 @@ another backslash:</p>
 </div>
 <p>The above produces &quot;床前<a class="reference external" href="https://krita.org/">明月</a>光&quot;, instead of
 &quot;床前 <a class="reference external" href="https://krita.org/">明月</a> 光&quot;.</p>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
@@ -882,7 +885,7 @@ another backslash:</p>
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>a039fd4</code>
+          修訂版本 <code>6a98b9d</code>
         </span>
       
 

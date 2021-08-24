@@ -21,8 +21,9 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-08-24T09:25:20" />
-  <meta content="Introduction to hacking Krita." name="description" />
+  <meta property="og:article:modified_time" content="2021-08-24T21:25:49" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<meta content="Introduction to hacking Krita." name="description" />
 
   
   
@@ -258,7 +259,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="introduction-to-hacking-krita">
+  <section id="introduction-to-hacking-krita">
 <span id="intro-hacking-krita"></span><h1><a class="toc-backref" href="#id2">Introduction to Hacking Krita</a><a class="headerlink" href="#introduction-to-hacking-krita" title="本標題的永久連結">¶</a></h1>
 <div class="contents topic" id="id1">
 <p class="topic-title">目錄</p>
@@ -290,12 +291,12 @@
 </li>
 </ul>
 </div>
-<div class="section" id="getting-started-with-kde-software">
+<section id="getting-started-with-kde-software">
 <h2><a class="toc-backref" href="#id3">Getting started with KDE Software</a><a class="headerlink" href="#getting-started-with-kde-software" title="本標題的永久連結">¶</a></h2>
 <p>Krita is a great place to start even if you are brand new to KDE development. We'd love to have you join! You'll be able to work on one of the coolest and fastest-growing open source painting programs out there. Krita also benefits from a modular architecture and the use of the KDE Frameworks and Qt libraries, which makes it easier to focus on new features instead of reinventing the wheel. And it makes coding fun! To work on Krita, you have to use C++ and Qt. It's a good way to learn both, actually!</p>
 <p>KDE has undergone big changes since a major <a class="reference external" href="https://www.kde.org/announcements/kde-frameworks-5.0.php">2014 reorganization</a>. As a result, working with KDE software has never been easier.  Unfortunately, since the changes were so widespread, the documentation has not caught up at all.  If you are embarking on this journey, it would be very generous to share your discoveries with others and update pages.  (=</p>
-</div>
-<div class="section" id="getting-started">
+</section>
+<section id="getting-started">
 <h2><a class="toc-backref" href="#id4">Getting Started</a><a class="headerlink" href="#getting-started" title="本標題的永久連結">¶</a></h2>
 <p>Here's some links to get your started.</p>
 <ol class="arabic">
@@ -316,13 +317,13 @@
 <li><p>Find a few bugs to fix in <a class="reference external" href="https://bugs.kde.org/">KDE's Bugtracking system</a>. It's often a good idea to get some experience with the code through fixing bugs, to get familiar with the development process without being overwhelmed. Though there's nothing against working on that cool feature that scratches your itch!</p></li>
 <li><p>If you intend to be a regular contributor to Krita, even just for bugreports and feature discussion, the first thing you will want to do is register for a <a class="reference external" href="https://identity.kde.org/">KDE Identity account</a>.  This serves as your mostly-universal login to KDE code repositories and websites.</p></li>
 </ol>
-</div>
-<div class="section" id="building-krita">
+</section>
+<section id="building-krita">
 <h2><a class="toc-backref" href="#id5">Building Krita</a><a class="headerlink" href="#building-krita" title="本標題的永久連結">¶</a></h2>
 <img alt="../_images/Krita-building_for-cats_intro_by-deevad.jpg" src="../_images/Krita-building_for-cats_intro_by-deevad.jpg" />
 <p>To get started, all you need to do is get a copy of Krita and build it! This is not all that much much different from building something off GitHub... except that Krita is very large compared to most software.  There are <a class="reference internal" href="building_krita.html#building-krita"><span class="std std-ref">build guides</span></a> to get you going on various platforms, but of course Linux is easiest.</p>
-</div>
-<div class="section" id="working-with-the-krita-codebase">
+</section>
+<section id="working-with-the-krita-codebase">
 <h2><a class="toc-backref" href="#id6">Working with the Krita codebase</a><a class="headerlink" href="#working-with-the-krita-codebase" title="本標題的永久連結">¶</a></h2>
 <p>Here's some pointers for working with our codebase.</p>
 <dl>
@@ -340,7 +341,7 @@
 </div></blockquote>
 </dd>
 </dl>
-<div class="section" id="debugging">
+<section id="debugging">
 <h3><a class="toc-backref" href="#id7">Debugging</a><a class="headerlink" href="#debugging" title="本標題的永久連結">¶</a></h3>
 <p>There are large and small problems. For small problems the debugger in Qt Creator (run external application) or adding qDebug messages to the code is fine. If the problem is difficult, the first step should always be to write a unit test. A small bit of code that follows a set pattern and exercises the faulty code and shows the problem. That helps so much figuring out a fix and keeping it fixed.</p>
 <p>When you run a debug build of Krita, you may be surprised how little debug output you see. This is because most of Krita's debugging information is turned off by default.  The debug statements are grouped into categories such as <code class="docutils literal notranslate"><span class="pre">dbgUI</span></code>, <code class="docutils literal notranslate"><span class="pre">dbgKrita</span></code> and so on.  The output categories are controlled by an environment variable <code class="docutils literal notranslate"><span class="pre">QT_LOGGING_RULES</span></code>.</p>
@@ -348,8 +349,8 @@
 <p>As an example, to enable most of Krita's debug output, you can run the following:</p>
 <p><code class="docutils literal notranslate"><span class="pre">export</span> <span class="pre">QT_LOGGING_RULES=&quot;krita*=true&quot;;</span> <span class="pre">krita</span></code></p>
 <p>Using the rule <code class="docutils literal notranslate"><span class="pre">*=true</span></code> will produce a firehose, if you want it.</p>
-</div>
-<div class="section" id="tips-when-tackling-issues">
+</section>
+<section id="tips-when-tackling-issues">
 <h3><a class="toc-backref" href="#id8">Tips when Tackling Issues</a><a class="headerlink" href="#tips-when-tackling-issues" title="本標題的永久連結">¶</a></h3>
 <dl class="simple">
 <dt>Features and Refactorings</dt><dd><p>Sometimes you just know that a lot of work is going to be needed to reach a particular goal. These will go in separate feature branches off 'master'.</p>
@@ -361,27 +362,27 @@
 <dt>Blockers</dt><dd><p>If you are helping with Krita and your progress is being blocked by something - let us know! Talk with us on the <a class="reference external" href="https://krita.org/irc/">Krita developer IRC</a> and we will see what we can do to help!</p>
 </dd>
 </dl>
-</div>
-<div class="section" id="calligra-and-krita">
+</section>
+<section id="calligra-and-krita">
 <h3><a class="toc-backref" href="#id9">Calligra and Krita</a><a class="headerlink" href="#calligra-and-krita" title="本標題的永久連結">¶</a></h3>
 <p>In October 2015, the Krita project separated from the rest of the Calligra office suite.  The new repository still clearly contains this history. Most source code files will have one of two prefixes. &quot;Ko&quot; stands for KOffice, the original name of Calligra office suite.  These files mostly comprise basic, lower-level libraries.  &quot;Kis&quot; stands for KImageShop, the original name of Krita. These files are where most of the painting-specific functionality is maintained.</p>
 <p>Krita 2.9 stable is built from the Calligra repo.  Krita 3.x and above is built from the Krita repo.</p>
-</div>
-<div class="section" id="style-guidelines">
+</section>
+<section id="style-guidelines">
 <h3><a class="toc-backref" href="#id10">Style guidelines</a><a class="headerlink" href="#style-guidelines" title="本標題的永久連結">¶</a></h3>
 <p>See <code class="docutils literal notranslate"><span class="pre">HACKING</span></code> in the codebase.</p>
-</div>
-<div class="section" id="development-philosophy">
+</section>
+<section id="development-philosophy">
 <h3><a class="toc-backref" href="#id11">Development Philosophy</a><a class="headerlink" href="#development-philosophy" title="本標題的永久連結">¶</a></h3>
 <p>Krita is nearly ten years old, consists of something like a million lines of code, and has had many individual contributors throughout the years. If you run into something in the code that doesn't make sense to you, it may very well not make sense to anyone.  Developing a codebase this large is an art form, you should feel confident in making risky changes even if you're not sure they'll work, you can always go back with <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">checkout</span> <span class="pre">--</span> <span class="pre">*</span></code> if you mess it up!</p>
-</div>
-</div>
-<div class="section" id="getting-in-touch">
+</section>
+</section>
+<section id="getting-in-touch">
 <h2><a class="toc-backref" href="#id12">Getting in Touch</a><a class="headerlink" href="#getting-in-touch" title="本標題的永久連結">¶</a></h2>
 <p>If you're working on a bug fix, or maybe a bit of GUI polish, you might get stumped. The best thing to do then is to get in touch with the rest of the Krita team. Part of the fun of working on an open source application is the community, after all! Join us on <code class="docutils literal notranslate"><span class="pre">#krita</span> <span class="pre">on</span> <span class="pre">Libera.Chat</span></code> (keep in mind that most people are in Europe or India) and just ask your question. Stay around, especially if you don't get an answer immediately. Some of the developers have their irc client open permanently and will often answer questions hours later!</p>
 <p>You can also send mail to the mailinglist: <code class="docutils literal notranslate"><span class="pre">kimageshop&#64;kde.org</span></code>. It's better not to send mail to individual developers directly, you might accidentally pick someone who hasn't got the answer, and miss the chance of getting your question answered by another Krita developer.</p>
-</div>
-<div class="section" id="contributing-patches">
+</section>
+<section id="contributing-patches">
 <h2><a class="toc-backref" href="#id13">Contributing Patches</a><a class="headerlink" href="#contributing-patches" title="本標題的永久連結">¶</a></h2>
 <p>Patch review and development tracking happens on <a class="reference external" href="https://invent.kde.org">gitlab</a>. To log in, enter your KDE Identity in the LDAP login field. You can join the <a class="reference external" href="https://phabricator.kde.org/project/profile/8/">Krita: Next</a>. If you are used to Github, <a class="reference external" href="https://invent.kde.org/help/#new-to-git-and-gitlab">the transition to gitlab is not difficult</a>, but it is slightly different.</p>
 <p>To push to invent.kde.org, you will not need to have SSH access setup, but you do KDE identity account. If several of your merge requests are accepted, you can get a commiter's account, which will allow you to push directly to the repositories.  You can read more about that here: <a class="reference external" href="https://community.kde.org/Infrastructure/Get_a_Developer_Account">Getting a developer account</a></p>
@@ -390,7 +391,7 @@
 <p>Since moving to the gitlab instance, we don't use <code class="docutils literal notranslate"><span class="pre">git&#64;git.kde.org:krita</span></code> but rather <code class="docutils literal notranslate"><span class="pre">git&#64;invent.kde.org:graphics/krita</span></code>. Gitlab will not be able to see your commits if you push to the former. You can use <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">remote</span> <span class="pre">set-url</span> <span class="pre">origin</span> <span class="pre">git&#64;invent.kde.org:graphics/krita</span></code> to get everything pointing correctly.</p>
 </div>
 <p>So then, how does an aspiring contributor submit patches?</p>
-<div class="section" id="forking-on-gitlab">
+<section id="forking-on-gitlab">
 <span id="forking-gitlab"></span><h3><a class="toc-backref" href="#id14">Forking on Gitlab</a><a class="headerlink" href="#forking-on-gitlab" title="本標題的永久連結">¶</a></h3>
 <ol class="arabic simple">
 <li><p>Forking on gitlab is done by going to the <a class="reference external" href="https://invent.kde.org/graphics/krita.git">repository</a> and pressing <span class="guilabel">fork</span>. You will then make a personal fork of the repository.</p></li>
@@ -467,8 +468,8 @@ git push
 </li>
 </ol>
 <p>The Krita developers will be notified of new merge requests, and they will try to review your request as soon as possible. If you suspect your patch slipped through the cracks, don't hesitate to contact us through the means described above.</p>
-</div>
-<div class="section" id="update-the-master-branch-in-your-fork">
+</section>
+<section id="update-the-master-branch-in-your-fork">
 <h3><a class="toc-backref" href="#id15">Update the master branch in your fork</a><a class="headerlink" href="#update-the-master-branch-in-your-fork" title="本標題的永久連結">¶</a></h3>
 <p>After working for some time, you may want to update the master branch of your fork to be in sync with the master branch of the official repository.</p>
 <ol class="arabic">
@@ -495,8 +496,8 @@ git push
 </div></blockquote>
 </li>
 </ol>
-</div>
-<div class="section" id="label-workflow">
+</section>
+<section id="label-workflow">
 <h3><a class="toc-backref" href="#id16">Label workflow</a><a class="headerlink" href="#label-workflow" title="本標題的永久連結">¶</a></h3>
 <p>Make sure the state of your merge request is labeled correctly. The picture below shows the basic label workflow that your merge request should go through:</p>
 <a class="reference internal image-reference" href="../_images/Merge_Request_Label_Workflow.png"><img alt="../_images/Merge_Request_Label_Workflow.png" src="../_images/Merge_Request_Label_Workflow.png" style="width: 1000px;" /></a>
@@ -529,8 +530,8 @@ git push
 <p class="admonition-title">備註</p>
 <p>In time of writing, setting labels on merge requests were only possible by contributors with write access to the official repository. (If you don't know what that means, that probably means you're not one of them). Because of that, when you create or change your merge request you need you get on IRC (see <a class="reference internal" href="../contributors_manual/community.html#the-krita-community"><span class="std std-ref">Krita 的社群</span></a>) and ask someone to label it for you.</p>
 </div>
-</div>
-<div class="section" id="how-to-prepare-your-commits-for-a-merge-request">
+</section>
+<section id="how-to-prepare-your-commits-for-a-merge-request">
 <h3><a class="toc-backref" href="#id17">How to prepare your commits for a merge request</a><a class="headerlink" href="#how-to-prepare-your-commits-for-a-merge-request" title="本標題的永久連結">¶</a></h3>
 <p>After merging to master, your commits should fit nicely in the Krita git history.</p>
 <ul>
@@ -566,9 +567,9 @@ git commit --amend
 <li><p>Your work should go to a new branch, instead of master.</p></li>
 <li><p>Your commits will be rebased and put in master using fast-forward merge. If you need a manual merge (if, for example, you're working on a big feature) and you don't have the commit access, please contact a Krita developer.</p></li>
 </ul>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
            </div>
@@ -593,7 +594,7 @@ git commit --amend
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>a039fd4</code>
+          修訂版本 <code>6a98b9d</code>
         </span>
       
 

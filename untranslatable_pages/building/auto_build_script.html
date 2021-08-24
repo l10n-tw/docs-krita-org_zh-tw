@@ -21,8 +21,9 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-08-24T09:25:20" />
-  <meta content="Guide to building Krita using a half-automatic script on Windows." name="description" />
+  <meta property="og:article:modified_time" content="2021-08-24T21:25:49" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<meta content="Guide to building Krita using a half-automatic script on Windows." name="description" />
 
   
   
@@ -259,26 +260,26 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="half-automatic-building-script-on-windows">
+  <section id="half-automatic-building-script-on-windows">
 <span id="auto-build-script"></span><h1>Half-automatic building script on Windows<a class="headerlink" href="#half-automatic-building-script-on-windows" title="本標題的永久連結">¶</a></h1>
 <p>This guide is aimed at those who want to develop on Windows but are not willing to build the dependencies themselves. It is, admittedly, a pain to prepare all these dependencies all by yourself. Therefore we will use the pre-built dependencies instead.</p>
 <div class="admonition note">
 <p class="admonition-title">備註</p>
 <p>For simplicity, this guide assumes that you are on a 64-bit Windows system. If you are on a 32-bit system, you may need to adapt the packages to the corresponding 32-bit versions.</p>
 </div>
-<div class="section" id="the-script">
+<section id="the-script">
 <h2>The script<a class="headerlink" href="#the-script" title="本標題的永久連結">¶</a></h2>
 <p>The building script lies at <a class="reference external" href="https://github.com/tusooa/scripts/blob/servant/bin/krita-build.perl">https://github.com/tusooa/scripts/blob/servant/bin/krita-build.perl</a>. To run this script you will need a Perl interpreter. If you do not have one yet on your computer, one simple way is to install it through <a class="reference external" href="https://www.msys2.org/">MSys</a>. Msys is not needed for the building process. If you are using the Msys installer, it is advised to install MinGW with it. If you do not want to install Msys, you can just install <a class="reference external" href="http://www.mingw.org/">MinGW</a>.</p>
 <p>In this article we assume that you have installed MSys.</p>
-</div>
-<div class="section" id="dependencies">
+</section>
+<section id="dependencies">
 <h2>Dependencies<a class="headerlink" href="#dependencies" title="本標題的永久連結">¶</a></h2>
 <p>Most of the dependencies you will need to build Krita is available at <a class="reference external" href="https://binary-factory.kde.org/job/Krita_Nightly_Windows_Dependency_Build/">the KDE binary factory</a>. You will get a zip archive from that link. After downloading, unpack the archive to a place you like.</p>
 <p>Besides the dependencies you get from the binary factory, you will also need CMake, Python 3.8, and Boost (if your GCC version is not 7.3 -- it is highly probably the case if you have just downloaded installed MinGW).</p>
 <p>To install CMake and Boost, open Msys shell and enter <code class="docutils literal notranslate"><span class="pre">pacman</span> <span class="pre">-S</span> <span class="pre">mingw-w64-x86_64-cmake</span> <span class="pre">mingw-w64-x86_64-boost</span></code>.</p>
 <p>The Python installer can be downloaded from <a class="reference external" href="https://www.python.org/downloads/release/python-383/">its official website</a>. It is important to use Python 3.8 and not 3.5 or 3.7 or 3.9 or other versions.</p>
-</div>
-<div class="section" id="fetch-the-sources">
+</section>
+<section id="fetch-the-sources">
 <h2>Fetch the sources<a class="headerlink" href="#fetch-the-sources" title="本標題的永久連結">¶</a></h2>
 <p>It is recommended to fetch the source code using Git. Under Msys, you may install Git through the command <code class="docutils literal notranslate"><span class="pre">pacman</span> <span class="pre">-S</span> <span class="pre">git</span></code>.</p>
 <p>You need to choose a directory to store Krita's source code, and switch to that directory. For example, if we choose <code class="docutils literal notranslate"><span class="pre">C:/Home/Code</span></code> as the storing directory, we do:</p>
@@ -299,8 +300,8 @@
 </pre></div>
 </div>
 <p>We call <code class="docutils literal notranslate"><span class="pre">C:/Home/Code/krita-build</span></code> the <em>build directory</em>.</p>
-</div>
-<div class="section" id="invoke-the-script">
+</section>
+<section id="invoke-the-script">
 <h2>Invoke the script<a class="headerlink" href="#invoke-the-script" title="本標題的永久連結">¶</a></h2>
 <p>Before you invoke the script, it is necessary to edit the configuration part and change the variables there to fit your needs. It is marked in the script by <code class="docutils literal notranslate"><span class="pre">Config</span> <span class="pre">Part</span> <span class="pre">--</span> <span class="pre">change</span> <span class="pre">as</span> <span class="pre">needed</span></code>. The following needs to be set up in this manner:</p>
 <ul class="simple">
@@ -319,39 +320,39 @@
 </pre></div>
 </div>
 <p>For simplicity, we shall now call the line above <code class="docutils literal notranslate"><span class="pre">&lt;krita-build&gt;</span></code>.</p>
-</div>
-<div class="section" id="prepare-the-dependencies-for-building">
+</section>
+<section id="prepare-the-dependencies-for-building">
 <h2>Prepare the dependencies for building<a class="headerlink" href="#prepare-the-dependencies-for-building" title="本標題的永久連結">¶</a></h2>
 <p>After extracting, the dependencies cannot be used directly for the build because it contains hard-coded paths. You will need to run the following command once:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&lt;krita-build&gt; prepare</span>
 </pre></div>
 </div>
 <p>How this works will not be covered here for readability reasons. For more information on how this works, please refer to the comments in the script.</p>
-</div>
-<div class="section" id="run-cmake-on-the-source">
+</section>
+<section id="run-cmake-on-the-source">
 <h2>Run CMake on the source<a class="headerlink" href="#run-cmake-on-the-source" title="本標題的永久連結">¶</a></h2>
 <p>Switch to the build directory under the Command Prompt, then run cmake:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">cd C:\Home\Code\krita-build</span>
 <span class="go">&lt;krita-build&gt; cmake</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="compile-and-install-krita">
+</section>
+<section id="compile-and-install-krita">
 <h2>Compile and install Krita<a class="headerlink" href="#compile-and-install-krita" title="本標題的永久連結">¶</a></h2>
-<div class="section" id="use-an-ide-to-assist-in-compilation">
+<section id="use-an-ide-to-assist-in-compilation">
 <h3>Use an IDE to assist in compilation<a class="headerlink" href="#use-an-ide-to-assist-in-compilation" title="本標題的永久連結">¶</a></h3>
 <p>You may want to use an IDE for development purposes. KDevelop and QtCreator are suggested for developing Krita.</p>
 <p>If you use KDevelop, just open the source directory through <span class="guilabel">Project -&gt; Open/Import Project...</span> and then choose the build directory that we have set up before. Then, go to <span class="guilabel">Project -&gt; Open Configuration... -&gt; Make</span> and choose the <code class="docutils literal notranslate"><span class="pre">mingw32-make.exe</span></code> executable as <span class="guilabel">Make executable</span>. It is located in <code class="docutils literal notranslate"><span class="pre">&lt;mingwDir&gt;/bin/mingw32-make.exe</span></code>. Then click <span class="guilabel">Build</span> on the toolbar.</p>
-</div>
-<div class="section" id="compile-on-the-command-line">
+</section>
+<section id="compile-on-the-command-line">
 <h3>Compile on the command line<a class="headerlink" href="#compile-on-the-command-line" title="本標題的永久連結">¶</a></h3>
 <p>Alternatively, you can manually invoke the script from the command line to build and install Krita.</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&lt;krita-build&gt; install</span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="run-krita">
+</section>
+</section>
+<section id="run-krita">
 <h2>Run Krita<a class="headerlink" href="#run-krita" title="本標題的永久連結">¶</a></h2>
 <p>Before running, you need to link the dependencies to Krita's installation directory. You may need to start a Command Prompt as Administrator to do so:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&lt;krita-build&gt; link-deps</span>
@@ -362,8 +363,8 @@
 </pre></div>
 </div>
 <p>Unless you delete the installation directory and perform a <code class="docutils literal notranslate"><span class="pre">&lt;krita-build&gt;</span> <span class="pre">install</span></code> again, you will not need to <code class="docutils literal notranslate"><span class="pre">link-deps</span></code> again.</p>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
@@ -388,7 +389,7 @@
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>a039fd4</code>
+          修訂版本 <code>6a98b9d</code>
         </span>
       
 

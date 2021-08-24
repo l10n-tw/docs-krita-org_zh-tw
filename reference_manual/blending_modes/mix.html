@@ -21,8 +21,9 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-08-24T09:25:20" />
-  <meta content="Page about the mix blending modes in Krita: Allanon, Alpha Darken, Behind, Erase, Geometric Mean, Grain Extract, Grain Merge, Greater, Hard Mix, Hard Overlay, Interpolation, Interpolation2x, Normal, Overlay, Parallel, Penumbra A, B, C and D." name="description" />
+  <meta property="og:article:modified_time" content="2021-08-24T21:25:49" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<meta content="Page about the mix blending modes in Krita: Allanon, Alpha Darken, Behind, Erase, Geometric Mean, Grain Extract, Grain Merge, Greater, Hard Mix, Hard Overlay, Interpolation, Interpolation2x, Normal, Overlay, Parallel, Penumbra A, B, C and D." name="description" />
 
   
   
@@ -265,21 +266,23 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="mix">
+  <section id="mix">
 <span id="bm-cat-mix"></span><h1>混合<a class="headerlink" href="#mix" title="本標題的永久連結">¶</a></h1>
-<div class="section" id="allanon">
+<section id="allanon">
 <span id="bm-allanon"></span><span id="index-0"></span><h2>相加減半<a class="headerlink" href="#allanon" title="本標題的永久連結">¶</a></h2>
 <div class="admonition hint">
 <p class="admonition-title">提示</p>
 <p>英文稱為「Allanon」。</p>
 </div>
 <p>Blends the upper layer as half-transparent with the lower. (It add the two layers together and then halves the value).</p>
-<div class="figure align-center" id="id1">
+<figure class="align-center" id="id1">
 <img alt="../../_images/Blending_modes_Allanon_Sample_image_with_dots.png" src="../../_images/Blending_modes_Allanon_Sample_image_with_dots.png" />
-<p class="caption"><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Allanon</strong>.</span><a class="headerlink" href="#id1" title="本圖片的永久連結">¶</a></p>
-</div>
-</div>
-<div class="section" id="interpolation">
+<figcaption>
+<p><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Allanon</strong>.</span><a class="headerlink" href="#id1" title="本圖片的永久連結">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="interpolation">
 <span id="bm-interpolation"></span><span id="index-1"></span><h2>插值<a class="headerlink" href="#interpolation" title="本標題的永久連結">¶</a></h2>
 <div class="admonition hint">
 <p class="admonition-title">提示</p>
@@ -287,96 +290,112 @@
 </div>
 <p>Subtract 0.5f by 1/4 of cosine of base layer subtracted by 1/4 of cosine of blend layer assuming 0-1 range.
 The result is similar to Allanon mode, but with more contrast and functional difference to 50% opacity.</p>
-<div class="figure align-center" id="id2">
+<figure class="align-center" id="id2">
 <img alt="../../_images/Blending_modes_Interpolation_Sample_image_with_dots.png" src="../../_images/Blending_modes_Interpolation_Sample_image_with_dots.png" />
-<p class="caption"><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Interpolation</strong>.</span><a class="headerlink" href="#id2" title="本圖片的永久連結">¶</a></p>
-</div>
-</div>
-<div class="section" id="interpolation-2x">
+<figcaption>
+<p><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Interpolation</strong>.</span><a class="headerlink" href="#id2" title="本圖片的永久連結">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="interpolation-2x">
 <span id="bm-interpolation2x"></span><span id="index-2"></span><h2>插值兩次<a class="headerlink" href="#interpolation-2x" title="本標題的永久連結">¶</a></h2>
 <div class="admonition hint">
 <p class="admonition-title">提示</p>
 <p>Krita 5.0 前稱「插值 - 2X」，英文稱為「Interpolation - 2X」。</p>
 </div>
 <p>Applies Interpolation blend mode to base and blend layers, then duplicate to repeat interpolation blending.</p>
-<div class="figure align-center" id="id3">
+<figure class="align-center" id="id3">
 <img alt="../../_images/Blending_modes_Interpolation_X2_Sample_image_with_dots.png" src="../../_images/Blending_modes_Interpolation_X2_Sample_image_with_dots.png" />
-<p class="caption"><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Interpolation - 2X</strong>.</span><a class="headerlink" href="#id3" title="本圖片的永久連結">¶</a></p>
-</div>
-</div>
-<div class="section" id="alpha-darken">
+<figcaption>
+<p><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Interpolation - 2X</strong>.</span><a class="headerlink" href="#id3" title="本圖片的永久連結">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="alpha-darken">
 <span id="bm-alpha-darken"></span><span id="index-3"></span><h2>Alpha 變暗<a class="headerlink" href="#alpha-darken" title="本標題的永久連結">¶</a></h2>
 <div class="admonition hint">
 <p class="admonition-title">提示</p>
 <p>Krita 5.0 前稱「透明度變暗」，英文稱為「Alpha Darken」。</p>
 </div>
 <p>As far as I can tell this seems to premultiply the alpha, as is common in some file-formats.</p>
-<div class="figure align-center" id="id4">
+<figure class="align-center" id="id4">
 <img alt="../../_images/Blending_modes_Alpha_Darken_Sample_image_with_dots.png" src="../../_images/Blending_modes_Alpha_Darken_Sample_image_with_dots.png" />
-<p class="caption"><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Alpha Darken</strong>.</span><a class="headerlink" href="#id4" title="本圖片的永久連結">¶</a></p>
-</div>
-</div>
-<div class="section" id="behind">
+<figcaption>
+<p><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Alpha Darken</strong>.</span><a class="headerlink" href="#id4" title="本圖片的永久連結">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="behind">
 <span id="bm-behind"></span><span id="index-4"></span><h2>下置<a class="headerlink" href="#behind" title="本標題的永久連結">¶</a></h2>
 <div class="admonition hint">
 <p class="admonition-title">提示</p>
 <p>Krita 5.0 前稱「背後」，英文稱為「Behind」。</p>
 </div>
 <p>Does the opposite of normal, and tries to have the upper layer rendered below the lower layer.</p>
-<div class="figure align-center" id="id5">
+<figure class="align-center" id="id5">
 <img alt="../../_images/Blending_modes_Behind_Sample_image_with_dots.png" src="../../_images/Blending_modes_Behind_Sample_image_with_dots.png" />
-<p class="caption"><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Behind</strong>.</span><a class="headerlink" href="#id5" title="本圖片的永久連結">¶</a></p>
-</div>
-</div>
-<div class="section" id="erase">
+<figcaption>
+<p><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Behind</strong>.</span><a class="headerlink" href="#id5" title="本圖片的永久連結">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="erase">
 <span id="bm-erase"></span><span id="index-5"></span><h2>擦除<a class="headerlink" href="#erase" title="本標題的永久連結">¶</a></h2>
 <div class="admonition hint">
 <p class="admonition-title">提示</p>
 <p>Krita 5.0 前稱「清除」，英文稱為「Erase」。</p>
 </div>
 <p>This subtracts the opaque pixels of the upper layer from the lower layer, effectively erasing.</p>
-<div class="figure align-center" id="id6">
+<figure class="align-center" id="id6">
 <img alt="../../_images/Blending_modes_Erase_Sample_image_with_dots.png" src="../../_images/Blending_modes_Erase_Sample_image_with_dots.png" />
-<p class="caption"><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Erase</strong>.</span><a class="headerlink" href="#id6" title="本圖片的永久連結">¶</a></p>
-</div>
-</div>
-<div class="section" id="geometric-mean">
+<figcaption>
+<p><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Erase</strong>.</span><a class="headerlink" href="#id6" title="本圖片的永久連結">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="geometric-mean">
 <span id="bm-geometric-mean"></span><span id="index-6"></span><h2>幾何平均<a class="headerlink" href="#geometric-mean" title="本標題的永久連結">¶</a></h2>
 <div class="admonition hint">
 <p class="admonition-title">提示</p>
 <p>英文稱為「Geometric Mean」。</p>
 </div>
 <p>This blending mode multiplies the top layer with the bottom, and then outputs the square root of that.</p>
-<div class="figure align-center" id="id7">
+<figure class="align-center" id="id7">
 <img alt="../../_images/Blending_modes_Geometric_Mean_Sample_image_with_dots.png" src="../../_images/Blending_modes_Geometric_Mean_Sample_image_with_dots.png" />
-<p class="caption"><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Geometric Mean</strong>.</span><a class="headerlink" href="#id7" title="本圖片的永久連結">¶</a></p>
-</div>
-</div>
-<div class="section" id="grain-extract">
+<figcaption>
+<p><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Geometric Mean</strong>.</span><a class="headerlink" href="#id7" title="本圖片的永久連結">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="grain-extract">
 <span id="bm-grain-extract"></span><span id="index-7"></span><h2>減去變亮<a class="headerlink" href="#grain-extract" title="本標題的永久連結">¶</a></h2>
 <div class="admonition hint">
 <p class="admonition-title">提示</p>
 <p>Krita 5.0 前稱「顆粒抽取」，英文稱為「Grain Extract」。</p>
 </div>
 <p>Similar to subtract, the colors of the upper layer are subtracted from the colors of the lower layer, and then 50% gray is added.</p>
-<div class="figure align-center" id="id8">
+<figure class="align-center" id="id8">
 <img alt="../../_images/Blending_modes_Grain_Extract_Sample_image_with_dots.png" src="../../_images/Blending_modes_Grain_Extract_Sample_image_with_dots.png" />
-<p class="caption"><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Grain Extract</strong>.</span><a class="headerlink" href="#id8" title="本圖片的永久連結">¶</a></p>
-</div>
-</div>
-<div class="section" id="grain-merge">
+<figcaption>
+<p><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Grain Extract</strong>.</span><a class="headerlink" href="#id8" title="本圖片的永久連結">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="grain-merge">
 <span id="bm-grain-merge"></span><span id="index-8"></span><h2>相加變深<a class="headerlink" href="#grain-merge" title="本標題的永久連結">¶</a></h2>
 <div class="admonition hint">
 <p class="admonition-title">提示</p>
 <p>Krita 5.0 前稱「顆粒合併」，英文稱為「Grain Merge」。</p>
 </div>
 <p>Similar to addition, the colors of the upper layer are added to the colors, and then 50% gray is subtracted.</p>
-<div class="figure align-center" id="id9">
+<figure class="align-center" id="id9">
 <img alt="../../_images/Blending_modes_Grain_Merge_Sample_image_with_dots.png" src="../../_images/Blending_modes_Grain_Merge_Sample_image_with_dots.png" />
-<p class="caption"><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Grain Merge</strong>.</span><a class="headerlink" href="#id9" title="本圖片的永久連結">¶</a></p>
-</div>
-</div>
-<div class="section" id="greater">
+<figcaption>
+<p><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Grain Merge</strong>.</span><a class="headerlink" href="#id9" title="本圖片的永久連結">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="greater">
 <span id="bm-greater"></span><span id="index-9"></span><h2>更不透明<a class="headerlink" href="#greater" title="本標題的永久連結">¶</a></h2>
 <div class="admonition hint">
 <p class="admonition-title">提示</p>
@@ -384,8 +403,8 @@ The result is similar to Allanon mode, but with more contrast and functional dif
 </div>
 <p>A blending mode which checks whether the painted color is painted with a higher opacity than the existing colors. If so, it paints over them, if not, it doesn't paint at all.</p>
 <img alt="../../_images/Greaterblendmode.gif" class="align-center" src="../../_images/Greaterblendmode.gif" />
-</div>
-<div class="section" id="hard-mix">
+</section>
+<section id="hard-mix">
 <span id="bm-hard-mix"></span><span id="index-10"></span><h2>實色混合<a class="headerlink" href="#hard-mix" title="本標題的永久連結">¶</a></h2>
 <div class="admonition hint">
 <p class="admonition-title">提示</p>
@@ -393,25 +412,29 @@ The result is similar to Allanon mode, but with more contrast and functional dif
 </div>
 <p>Similar to Overlay.</p>
 <p>Mixes both Color Dodge and Burn blending modes. If the color of the upper layer is darker than 50%, the blending mode will be Burn, if not the blending mode will be Color Dodge.</p>
-<div class="figure align-center" id="id10" style="width: 800px">
+<figure class="align-center" id="id10" style="width: 800px">
 <img alt="../../_images/Blending_modes_Hard_Mix_Sample_image_with_dots.png" src="../../_images/Blending_modes_Hard_Mix_Sample_image_with_dots.png" />
-<p class="caption"><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Hard Mix</strong>.</span><a class="headerlink" href="#id10" title="本圖片的永久連結">¶</a></p>
-</div>
-</div>
-<div class="section" id="hard-mix-photoshop">
+<figcaption>
+<p><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Hard Mix</strong>.</span><a class="headerlink" href="#id10" title="本圖片的永久連結">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="hard-mix-photoshop">
 <span id="bm-hard-mix-photoshop"></span><span id="index-11"></span><h2>實色混合 (Photoshop)<a class="headerlink" href="#hard-mix-photoshop" title="本標題的永久連結">¶</a></h2>
 <div class="admonition hint">
 <p class="admonition-title">提示</p>
 <p>英文稱為「Hard Mix (Photoshop)」。</p>
 </div>
 <p>This is the hard mix blending mode as it is implemented in photoshop.</p>
-<div class="figure align-center" id="id11" style="width: 800px">
+<figure class="align-center" id="id11" style="width: 800px">
 <img alt="../../_images/Krita_4_0_hard_mix_ps.png" src="../../_images/Krita_4_0_hard_mix_ps.png" />
-<p class="caption"><span class="caption-text"><strong>Left</strong>: Dots are mixed in with the normal blending mode, on the <strong>Right</strong>: Dots are mixed in with hardmix.</span><a class="headerlink" href="#id11" title="本圖片的永久連結">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text"><strong>Left</strong>: Dots are mixed in with the normal blending mode, on the <strong>Right</strong>: Dots are mixed in with hardmix.</span><a class="headerlink" href="#id11" title="本圖片的永久連結">¶</a></p>
+</figcaption>
+</figure>
 <p>This add the two values, and then checks if the value is above the maximum. If so it will output the maximum, otherwise the minimum.</p>
-</div>
-<div class="section" id="hard-mix-softer-photoshop">
+</section>
+<section id="hard-mix-softer-photoshop">
 <span id="bm-hard-mix-softer-photoshop"></span><span id="index-12"></span><h2>實色混合、更柔和 (Photoshop)<a class="headerlink" href="#hard-mix-softer-photoshop" title="本標題的永久連結">¶</a></h2>
 <div class="admonition hint">
 <p class="admonition-title">提示</p>
@@ -422,15 +445,17 @@ The result is similar to Allanon mode, but with more contrast and functional dif
 </div>
 <p>This is the hard mix blending mode as it is implemented in photoshop for texturing brushes. It produces softer edges
 than the normal <em>Hard Mix (Photoshop)</em>.</p>
-<div class="figure align-center" id="id12" style="width: 800px">
+<figure class="align-center" id="id12" style="width: 800px">
 <img alt="../../_images/Blending_modes_Hard_Mix_Softer_Photoshop_Sample_image_with_dots.png" src="../../_images/Blending_modes_Hard_Mix_Softer_Photoshop_Sample_image_with_dots.png" />
-<p class="caption"><span class="caption-text"><strong>Left</strong>: Dots are mixed in with the normal blending mode, on the <strong>Right</strong>: Dots are mixed in with hard mix softer.</span><a class="headerlink" href="#id12" title="本圖片的永久連結">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text"><strong>Left</strong>: Dots are mixed in with the normal blending mode, on the <strong>Right</strong>: Dots are mixed in with hard mix softer.</span><a class="headerlink" href="#id12" title="本圖片的永久連結">¶</a></p>
+</figcaption>
+</figure>
 <p>This is like the inverse subtract mode but the two terms are scaled up to increase the contrast. This is not really a
 hard mix mode in the sense that it doesn't choose between a result or another based on a threshold, although in most
 cases the result looks like the normal <em>Hard Mix (Photoshop)</em> but with softer edges.</p>
-</div>
-<div class="section" id="hard-overlay">
+</section>
+<section id="hard-overlay">
 <span id="bm-hard-overlay"></span><span id="index-13"></span><h2>實光覆蓋<a class="headerlink" href="#hard-overlay" title="本標題的永久連結">¶</a></h2>
 <div class="admonition hint">
 <p class="admonition-title">提示</p>
@@ -440,12 +465,14 @@ cases the result looks like the normal <em>Hard Mix (Photoshop)</em> but with so
 <p><span class="versionmodified added">4.0 版新加入.</span></p>
 </div>
 <p>Similar to Hard light but hard light use Screen when the value is above 50%. Divide gives better results than Screen, especially on floating point images.</p>
-<div class="figure align-center" id="id13">
+<figure class="align-center" id="id13">
 <img alt="../../_images/Blending_modes_Hard_Overlay_Sample_image_with_dots.png" src="../../_images/Blending_modes_Hard_Overlay_Sample_image_with_dots.png" />
-<p class="caption"><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Hard Overlay</strong>.</span><a class="headerlink" href="#id13" title="本圖片的永久連結">¶</a></p>
-</div>
-</div>
-<div class="section" id="normal">
+<figcaption>
+<p><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Hard Overlay</strong>.</span><a class="headerlink" href="#id13" title="本圖片的永久連結">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="normal">
 <span id="bm-normal"></span><span id="index-14"></span><h2>正常<a class="headerlink" href="#normal" title="本標題的永久連結">¶</a></h2>
 <div class="admonition hint">
 <p class="admonition-title">提示</p>
@@ -453,12 +480,14 @@ cases the result looks like the normal <em>Hard Mix (Photoshop)</em> but with so
 </div>
 <p>As you may have guessed this is the default Blending mode for all layers.</p>
 <p>In this mode, the computer checks on the upper layer how transparent a pixel is, which color it is, and then mixes the color of the upper layer with the lower layer proportional to the transparency.</p>
-<div class="figure align-center" id="id14">
+<figure class="align-center" id="id14">
 <img alt="../../_images/Blending_modes_Normal_50_Opacity_Sample_image_with_dots.png" src="../../_images/Blending_modes_Normal_50_Opacity_Sample_image_with_dots.png" />
-<p class="caption"><span class="caption-text">Left: <strong>Normal</strong> 100% Opacity. Right: <strong>Normal</strong> 50% Opacity.</span><a class="headerlink" href="#id14" title="本圖片的永久連結">¶</a></p>
-</div>
-</div>
-<div class="section" id="overlay">
+<figcaption>
+<p><span class="caption-text">Left: <strong>Normal</strong> 100% Opacity. Right: <strong>Normal</strong> 50% Opacity.</span><a class="headerlink" href="#id14" title="本圖片的永久連結">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="overlay">
 <span id="bm-overlay"></span><span id="index-15"></span><h2>覆蓋<a class="headerlink" href="#overlay" title="本標題的永久連結">¶</a></h2>
 <div class="admonition hint">
 <p class="admonition-title">提示</p>
@@ -467,12 +496,14 @@ cases the result looks like the normal <em>Hard Mix (Photoshop)</em> but with so
 <p>A combination of the Multiply and Screen blending modes, switching between both at a middle-lightness.</p>
 <p>Overlay checks if the color on the upperlayer has a lightness above 0.5. If so, the pixel is blended like in Screen mode, if not the pixel is blended like in Multiply mode.</p>
 <p>This is useful for deepening shadows and highlights.</p>
-<div class="figure align-center" id="id15">
+<figure class="align-center" id="id15">
 <img alt="../../_images/Blending_modes_Overlay_Sample_image_with_dots.png" src="../../_images/Blending_modes_Overlay_Sample_image_with_dots.png" />
-<p class="caption"><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Overlay</strong>.</span><a class="headerlink" href="#id15" title="本圖片的永久連結">¶</a></p>
-</div>
-</div>
-<div class="section" id="parallel">
+<figcaption>
+<p><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Overlay</strong>.</span><a class="headerlink" href="#id15" title="本圖片的永久連結">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="parallel">
 <span id="bm-parallel"></span><span id="index-16"></span><h2>平行<a class="headerlink" href="#parallel" title="本標題的永久連結">¶</a></h2>
 <div class="admonition hint">
 <p class="admonition-title">提示</p>
@@ -481,60 +512,70 @@ cases the result looks like the normal <em>Hard Mix (Photoshop)</em> but with so
 <p>This one first takes the percentage in two decimal behind the comma for both layers.
 It then adds the two values.
 Divides 2 by the sum.</p>
-<div class="figure align-center" id="id16">
+<figure class="align-center" id="id16">
 <img alt="../../_images/Blending_modes_Parallel_Sample_image_with_dots.png" src="../../_images/Blending_modes_Parallel_Sample_image_with_dots.png" />
-<p class="caption"><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Parallel</strong>.</span><a class="headerlink" href="#id16" title="本圖片的永久連結">¶</a></p>
-</div>
-</div>
-<div class="section" id="penumbra-a">
+<figcaption>
+<p><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Parallel</strong>.</span><a class="headerlink" href="#id16" title="本圖片的永久連結">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="penumbra-a">
 <span id="bm-penumbra-a"></span><span id="index-17"></span><h2>半影 A<a class="headerlink" href="#penumbra-a" title="本標題的永久連結">¶</a></h2>
 <div class="admonition hint">
 <p class="admonition-title">提示</p>
 <p>英文稱為「Penumbra A」。</p>
 </div>
 <p>Creates a linear penumbra falloff. This means most tones will be in the midtone ranges.</p>
-<div class="figure align-center" id="id17">
+<figure class="align-center" id="id17">
 <img alt="../../_images/Blending_modes_Penumbra_A_Sample_image_with_dots.png" src="../../_images/Blending_modes_Penumbra_A_Sample_image_with_dots.png" />
-<p class="caption"><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Penumbra A</strong>.</span><a class="headerlink" href="#id17" title="本圖片的永久連結">¶</a></p>
-</div>
-</div>
-<div class="section" id="penumbra-b">
+<figcaption>
+<p><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Penumbra A</strong>.</span><a class="headerlink" href="#id17" title="本圖片的永久連結">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="penumbra-b">
 <span id="bm-penumbra-b"></span><span id="index-18"></span><h2>半影 B<a class="headerlink" href="#penumbra-b" title="本標題的永久連結">¶</a></h2>
 <div class="admonition hint">
 <p class="admonition-title">提示</p>
 <p>英文稱為「Penumbra B」。</p>
 </div>
 <p>Penumbra A with source and destination layer swapped.</p>
-<div class="figure align-center" id="id18">
+<figure class="align-center" id="id18">
 <img alt="../../_images/Blending_modes_Penumbra_B_Sample_image_with_dots.png" src="../../_images/Blending_modes_Penumbra_B_Sample_image_with_dots.png" />
-<p class="caption"><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Penumbra B</strong>.</span><a class="headerlink" href="#id18" title="本圖片的永久連結">¶</a></p>
-</div>
-</div>
-<div class="section" id="penumbra-c">
+<figcaption>
+<p><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Penumbra B</strong>.</span><a class="headerlink" href="#id18" title="本圖片的永久連結">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="penumbra-c">
 <span id="bm-penumbra-c"></span><span id="index-19"></span><h2>半影 C<a class="headerlink" href="#penumbra-c" title="本標題的永久連結">¶</a></h2>
 <div class="admonition hint">
 <p class="admonition-title">提示</p>
 <p>英文稱為「Penumbra C」。</p>
 </div>
 <p>Creates a penumbra-like falloff using arc-tangent formula. This means most tones will be in the midtone ranges.</p>
-<div class="figure align-center" id="id19">
+<figure class="align-center" id="id19">
 <img alt="../../_images/Blending_modes_Penumbra_C_Sample_image_with_dots.png" src="../../_images/Blending_modes_Penumbra_C_Sample_image_with_dots.png" />
-<p class="caption"><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Penumbra C</strong>.</span><a class="headerlink" href="#id19" title="本圖片的永久連結">¶</a></p>
-</div>
-</div>
-<div class="section" id="penumbra-d">
+<figcaption>
+<p><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Penumbra C</strong>.</span><a class="headerlink" href="#id19" title="本圖片的永久連結">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="penumbra-d">
 <span id="bm-penumbra-d"></span><span id="index-20"></span><h2>半影 D<a class="headerlink" href="#penumbra-d" title="本標題的永久連結">¶</a></h2>
 <div class="admonition hint">
 <p class="admonition-title">提示</p>
 <p>英文稱為「Penumbra D」。</p>
 </div>
 <p>Penumbra C with source and destination layer swapped.</p>
-<div class="figure align-center" id="id20">
+<figure class="align-center" id="id20">
 <img alt="../../_images/Blending_modes_Penumbra_D_Sample_image_with_dots.png" src="../../_images/Blending_modes_Penumbra_D_Sample_image_with_dots.png" />
-<p class="caption"><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Penumbra D</strong>.</span><a class="headerlink" href="#id20" title="本圖片的永久連結">¶</a></p>
-</div>
-</div>
-</div>
+<figcaption>
+<p><span class="caption-text">Left: <strong>Normal</strong>. Right: <strong>Penumbra D</strong>.</span><a class="headerlink" href="#id20" title="本圖片的永久連結">¶</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
 
 
            </div>
@@ -559,7 +600,7 @@ Divides 2 by the sum.</p>
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>a039fd4</code>
+          修訂版本 <code>6a98b9d</code>
         </span>
       
 

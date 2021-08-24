@@ -21,8 +21,9 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-08-24T09:25:20" />
-  <meta content="Krita 動畫工作流程的詳細指南。" name="description" property="og:description" />
+  <meta property="og:article:modified_time" content="2021-08-24T21:25:49" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<meta content="Krita 動畫工作流程的詳細指南。" name="description" property="og:description" />
 
   
   
@@ -248,11 +249,11 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <span class="target" id="index-0"></span><div class="section" id="animation-with-krita">
+  <span class="target" id="index-0"></span><section id="animation-with-krita">
 <span id="animation"></span><h1>用 Krita 製作動畫<a class="headerlink" href="#animation-with-krita" title="本標題的永久連結">¶</a></h1>
 <p>Thanks to the 2015 Kickstarter, <strong class="program">Krita</strong> has animation. In specific, <strong class="program">Krita</strong> has frame-by-frame raster animation.</p>
 <p>To access the animation features, the easiest way is to change your workspace to Animation. This will make the animation dockers and workflow appear.</p>
-<div class="section" id="workflow">
+<section id="workflow">
 <h2>Workflow<a class="headerlink" href="#workflow" title="本標題的永久連結">¶</a></h2>
 <p>In traditional animation workflow, what you do is that you make <a class="reference internal" href="../reference_manual/dockers/animation_timeline.html#term-Keyframe"><span class="xref std std-term">Keyframes</span></a>, which contain the important poses, and then draw frames in between (<em class="dfn">tweening</em> in highly sophisticated animator's jargon).</p>
 <p>For this workflow, there are three important dockers:</p>
@@ -263,10 +264,12 @@
 <li><p>The <a class="reference internal" href="../reference_manual/dockers/storyboard_docker.html#storyboard-docker"><span class="std std-ref">Storyboard Docker</span></a>. This docker helps you create and keep track of storyboards.</p></li>
 </ol>
 <p>Furthermore, especially when you want to do a big animation, that is, any animation longer than 3 seconds, you will need to think about how you are going to approach this. Krita is specialized in <em class="dfn">frame by frame animation</em>, and because of this Krita keeps all the frames in memory. This means that animation files will eat up all of your computer's working memory (RAM). If you don't know what working memory is, you probably have too little to do a long sequence in Krita. Therefore, you need to take a page from professional animation and do some planning!</p>
-<div class="figure align-default" id="id1">
+<figure class="align-default" id="id1">
 <img alt="../_images/Storyboard_thumbnailonly_view.png" src="../_images/Storyboard_thumbnailonly_view.png" />
-<p class="caption"><span class="caption-text">The storyboard docker can help you plan out the shots of a scene.</span><a class="headerlink" href="#id1" title="本圖片的永久連結">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">The storyboard docker can help you plan out the shots of a scene.</span><a class="headerlink" href="#id1" title="本圖片的永久連結">¶</a></p>
+</figcaption>
+</figure>
 <p>Typically, most animation projects start with a script or at the very least an outline of actions that will happen. You can do this in any kind of text editor you like. The next step is to create a <a class="reference internal" href="../reference_manual/dockers/storyboard_docker.html#storyboard-docker"><span class="std std-ref">storyboard</span></a>. They are sketches of the basic composition of each scene, with some extra notes on what is going to move, like camera movement, character movement, notes on audio, notes on color. These seem closer to a comic than an animation, but the key difference between the two is that in comics the composition is made to help the reader move their eyes over the page, while in animation the viewer's eyes will stay in relatively the same spot, so consecutive storyboard frames will have their most important elements in relatively the same place. If that seems a little abstract, don't worry. You can make a story board by using the animation functions, but the key here is that you use as little frames as possible. Export the story board using the render animation option.</p>
 <p>Then, the next step is to make an <em class="dfn">Animatic</em>. An animatic is basically the storyboard, but then animated. You are best off doing this in a video editor like <a class="reference external" href="http://kdenlive.org/">Kdenlive</a>, <a class="reference external" href="https://www.openshot.org/">OpenShot</a>, <a class="reference external" href="https://olivevideoeditor.org/index.php">Olive</a>, or even Windows Movie Maker. <em>If you want to put everything together into one big animation you will need to learn how to use such a program to begin with, as Krita doesn't have extensive video and audio montage functions.</em></p>
 <p>Doing the animatic will allow you to see how the animation can be subdivided into small clips. If you are just starting out, you are best off limiting yourself to 12 frames per second. Then, a 10-second clip would be 120 frames. Try to figure out if you can subdivide your animation idea into clips of 10 seconds or shorter. You can import the story board frames associated with a specific clip by going to <span class="menuselection">File ‣ Import Animation Frames</span>. From there, slowly start building up your animation. During the sketching phase it may also help to work on a low resolution, like 800×450 pixels. High resolution only starts mattering when you are doing line art, after all. And it will be hard to get to that point if you don't even have a rough outline.</p>
@@ -285,11 +288,11 @@
 </div>
 <p>When you are done, you will want to use <span class="guilabel">Render Animation</span> again. Now either export a frame sequence or a small video file, and then compose all the frame sequences and video files together in the video editor. Then you can render it to <code class="docutils literal notranslate"><span class="pre">WebM</span></code>, and upload it to your favorite video hosting website.</p>
 <p>This may all seem a little complicated, but if your computer doesn't have a lot of resources, you have got to be resourceful yourself!</p>
-</div>
-<div class="section" id="introduction-to-animation-how-to-make-a-walk-cycle">
+</section>
+<section id="introduction-to-animation-how-to-make-a-walk-cycle">
 <h2>Introduction to animation: How to make a walk cycle<a class="headerlink" href="#introduction-to-animation-how-to-make-a-walk-cycle" title="本標題的永久連結">¶</a></h2>
 <p>The best way to get to understand all these different parts is to actually use them. Walk cycles are considered the most basic form of a full animation, because of all the different parts involved with them. Therefore, going over how one makes a walk cycle should serve as a good introduction.</p>
-<div class="section" id="setup">
+<section id="setup">
 <h3>Setup<a class="headerlink" href="#setup" title="本標題的永久連結">¶</a></h3>
 <p>First, we make a new file. On the first tab, we type in a nice ratio like 1280×1024, set the dpi to 72 (we're making this for screens after all) and title the document 'walk cycle'.</p>
 <p>In the second tab, we choose a nice background color, and set the background to canvas-color. This means that Krita will automatically fill in any transparent bits with the background color. You can change this in <span class="menuselection">Image ‣ Image Properties</span>. This is very useful for animation, as the layer you do animation on <strong>must</strong> be semi-transparent to get <em class="dfn">onion skinning</em> working.</p>
@@ -300,17 +303,19 @@
 <p>Then hit <span class="guilabel">Create</span>!</p>
 <p>Then, to get all the necessary tools for animation, select the animation workspace in <span class="menuselection"><span class="accelerator">W</span>indow ‣ Wor<span class="accelerator">k</span>space ‣ Animation</span></p>
 <p>Which should result in this:</p>
-<div class="figure align-default" id="id2">
+<figure class="align-default" id="id2">
 <img alt="../_images/Introduction_to_animation_01.png" src="../_images/Introduction_to_animation_01.png" />
-<p class="caption"><span class="caption-text">The animation workspace adds the <a class="reference internal" href="../reference_manual/dockers/animation_timeline.html#timeline-docker"><span class="std std-ref">Animation Timeline Docker</span></a> at the bottom.</span><a class="headerlink" href="#id2" title="本圖片的永久連結">¶</a></p>
-</div>
-</div>
-<div class="section" id="animating">
+<figcaption>
+<p><span class="caption-text">The animation workspace adds the <a class="reference internal" href="../reference_manual/dockers/animation_timeline.html#timeline-docker"><span class="std std-ref">Animation Timeline Docker</span></a> at the bottom.</span><a class="headerlink" href="#id2" title="本圖片的永久連結">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="animating">
 <h3>Animating<a class="headerlink" href="#animating" title="本標題的永久連結">¶</a></h3>
 <p>Make sure there's two transparent layers setup in the layer docker. You can add a new layer by pressing the <span class="guilabel">+</span> or by pressing <kbd class="kbd docutils literal notranslate">ins</kbd>. Let's name the bottom one 'environment' and the top <code class="docutils literal notranslate"><span class="pre">walkcycle</span></code> by double-clicking their names in the layer docker.</p>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="Layout of the layer stack." src="../_images/Introduction_to_animation_02.png" />
-</div>
+</figure>
 <p>Use the <a class="reference internal" href="../reference_manual/tools/line.html#line-tool"><span class="std std-ref">Straight Line Tool</span></a> to draw a single horizontal line. This is the ground.</p>
 <img alt="Our simple environment, consisting of a single horizon." src="../_images/Introduction_to_animation_03.png" />
 <p>Then, select the <code class="docutils literal notranslate"><span class="pre">walkcycle</span></code> layer and draw a head and torso (you can use any brush for this).</p>
@@ -325,53 +330,55 @@
 <p>You can see it has become an animated layer because of the onion skin icon (<img alt="onionon" src="../_images/onionOn.svg" />) showing up in the timeline docker.</p>
 <p>Use the <span class="guilabel">Create Duplicate Frame</span> button to copy the first frame onto the second. Then, use the <a class="reference internal" href="../reference_manual/tools/move.html#move-tool"><span class="std std-ref">移動工具</span></a> (switch to it using the <kbd class="kbd docutils literal notranslate">T</kbd> shortcut) with the <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">↑</kbd></kbd> shortcut to move the frame contents up.</p>
 <p>We can see the difference by turning on the onion skinning (press the <img alt="onionoff" src="../_images/onionOff.svg" />, so it becomes <img alt="onionon" src="../_images/onionOn.svg" />):</p>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="Onion skin is turned on." src="../_images/Introduction_to_animation_06.png" />
-</div>
-<div class="figure align-default">
+</figure>
+<figure class="align-default">
 <img alt="The current frame in black and the silhouette of the previous frame in red." src="../_images/Introduction_to_animation_07.png" />
-</div>
+</figure>
 <p>Now, you should see the previous frame as red.</p>
 <div class="admonition warning">
 <p class="admonition-title">警告</p>
 <p>Krita sees white as a color, not as transparent, so make sure the animation layer you are working on is transparent in the bits where there's no drawing. You can fix the situation by use the <a class="reference internal" href="../reference_manual/filters/colors.html#filter-color-to-alpha"><span class="std std-ref">Color to Alpha</span></a> filter, but prevention is best.</p>
 </div>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="Current frame is black and silhouette of the future frame is green." src="../_images/Introduction_to_animation_08.png" />
-</div>
+</figure>
 <p>Future frames are drawn in green, and both colors can be configured in the onion skin docker.</p>
 <p>Now, we're going to draw the two extremes of the walk cycle. These are the pose where both legs are as far apart as possible, and the pose where one leg is full stretched and the other pulled in, ready to take the next step.</p>
-<div class="figure align-default" id="id3">
+<figure class="align-default" id="id3">
 <img alt="../_images/Introduction_to_animation_09.png" src="../_images/Introduction_to_animation_09.png" />
-<p class="caption"><span class="caption-text">The above image shows our two extremes: legs far apart, and one leg straight while the other is bent, as it's taking a step. This also shows the power of onion skins, as we can see both extremes at once.
+<figcaption>
+<p><span class="caption-text">The above image shows our two extremes: legs far apart, and one leg straight while the other is bent, as it's taking a step. This also shows the power of onion skins, as we can see both extremes at once.
 Notice also how the legs have been made semi-transparent. This isn't necessary with a stick figure, but useful in this case when we start copying.</span><a class="headerlink" href="#id3" title="本圖片的永久連結">¶</a></p>
-</div>
+</figcaption>
+</figure>
 <p>Let's copy these two. You can do this by doing <img alt="滑鼠右鍵" src="../_images/Krita_mouse_right.png" /> on the frame, and then selecting <span class="guilabel">Copy Keyframes</span>. Then select the new position in the time line, <img alt="滑鼠右鍵" src="../_images/Krita_mouse_right.png" /> again, and <span class="guilabel">Paste Keyframes</span>.</p>
 <p>Now then...</p>
 <ol class="arabic">
 <li><p>Copy frame 0 to frame 2.</p></li>
 <li><p>Copy frame 1 to frame 3.</p></li>
 <li><p>Erase the semi transparent lines to make it obvious which leg is in front of the other. In 0 and 1, we have the closer leg to the right, then bend, and in 2 and 3, we have the further leg to the right and then bend.</p>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../_images/Introduction_to_animation_10.png" src="../_images/Introduction_to_animation_10.png" />
-</div>
+</figure>
 </li>
 <li><p>In the animation settings, set the frame-rate to 4</p>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../_images/Introduction_to_animation_11.png" src="../_images/Introduction_to_animation_11.png" />
-</div>
+</figure>
 </li>
 <li><p>Select all frames in the timeline docker by dragging-selecting them.</p>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../_images/Introduction_to_animation_12.png" src="../_images/Introduction_to_animation_12.png" />
-</div>
+</figure>
 </li>
 <li><p>Press play in the header.</p></li>
 <li><p>Enjoy your first animation!</p></li>
 </ol>
 <img alt="../_images/animation_walkcycle_2021_4_frames.gif" src="../_images/animation_walkcycle_2021_4_frames.gif" />
-</div>
-<div class="section" id="expanding-upon-your-rough-walk-cycle">
+</section>
+<section id="expanding-upon-your-rough-walk-cycle">
 <h3>Expanding upon your rough walk cycle<a class="headerlink" href="#expanding-upon-your-rough-walk-cycle" title="本標題的永久連結">¶</a></h3>
 <img alt="../_images/Introduction_to_animation_13.png" src="../_images/Introduction_to_animation_13.png" />
 <p>You can quickly make some space by the <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Alt</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">drag</kbd></kbd> shortcut on any frame. This'll move that frame and all others after it
@@ -385,19 +392,23 @@ in one go. More efficient for us, however, is to select all frames, <img alt="�
 <img alt="../_images/Introduction_to_animation_14.png" src="../_images/Introduction_to_animation_14.png" />
 <img alt="../_images/Introduction_to_animation_13.png" src="../_images/Introduction_to_animation_13.png" />
 <p>You'll find that the more frames you add, the more difficult it becomes to keep track of the animation. There are two things you can do here. The first is to color label frames, you can do <img alt="滑鼠右鍵" src="../_images/Krita_mouse_right.png" /> on the keyframes, and select any of the colors on the bottom.</p>
-<div class="figure align-default" id="id4">
+<figure class="align-default" id="id4">
 <img alt="../_images/Introduction_to_animation_13b.png" src="../_images/Introduction_to_animation_13b.png" />
-<p class="caption"><span class="caption-text">In this example, the extremes are blue, the first inbetweens green and the less important inbetweens in yellow and orange.</span><a class="headerlink" href="#id4" title="本圖片的永久連結">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">In this example, the extremes are blue, the first inbetweens green and the less important inbetweens in yellow and orange.</span><a class="headerlink" href="#id4" title="本圖片的永久連結">¶</a></p>
+</figcaption>
+</figure>
 <p>Another thing you can do is to adjust the onion skins.</p>
 <p>You can modify the onion skin by using the <a class="reference internal" href="../reference_manual/dockers/onion_skin.html#onion-skin-docker"><span class="std std-ref">Onion Skin Docker</span></a>, where you can change how many frames are visible at once, by toggling them on the top row. The bottom row is for controlling transparency, while below there you can modify the colors and intensity of the coloring.</p>
 <img alt="../_images/Introduction_to_animation_15.png" src="../_images/Introduction_to_animation_15.png" />
-<div class="figure align-default" id="id5">
+<figure class="align-default" id="id5">
 <img alt="../_images/Introduction_to_animation_14b.png" src="../_images/Introduction_to_animation_14b.png" />
-<p class="caption"><span class="caption-text">Here we've turned off all onion skinned frames except the next and previous ones.</span><a class="headerlink" href="#id5" title="本圖片的永久連結">¶</a></p>
-</div>
-</div>
-<div class="section" id="animating-with-multiple-layers">
+<figcaption>
+<p><span class="caption-text">Here we've turned off all onion skinned frames except the next and previous ones.</span><a class="headerlink" href="#id5" title="本圖片的永久連結">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="animating-with-multiple-layers">
 <h3>Animating with multiple layers<a class="headerlink" href="#animating-with-multiple-layers" title="本標題的永久連結">¶</a></h3>
 <p>Okay, our walk cycle is missing some hands, let's add them on a separate
 layer. So we make a new layer, and name it hands and...</p>
@@ -412,14 +423,14 @@ animator might want to remove the layers they're not working on from the timelin
 timeline by clicking the <img alt="pintimeline" src="../_images/reference_images_tool.svg" /> icon while having the layer you want pinned selected in the <a class="reference internal" href="../reference_manual/dockers/layers.html#layer-docker"><span class="std std-ref">layer docker</span></a>. We recommend pinning any layers that you're currently animating on.</p>
 <img alt="../_images/Introduction_to_animation_17.png" src="../_images/Introduction_to_animation_17.png" />
 <img alt="../_images/Introduction_to_animation_18.png" src="../_images/Introduction_to_animation_18.png" />
-</div>
-<div class="section" id="exporting">
+</section>
+<section id="exporting">
 <h3>Exporting<a class="headerlink" href="#exporting" title="本標題的永久連結">¶</a></h3>
 <p>When you are done, select <span class="menuselection">File ‣ Render Animation</span>. To render to a video file, you'll need a program called <strong class="program">FFmpeg</strong>. To learn more, please read <a class="reference internal" href="../reference_manual/render_animation.html#render-animation"><span class="std std-ref">繪製動畫</span></a>.</p>
 <p>Enjoy your walk cycle!</p>
 <img alt="../_images/Introduction_to_animation_walkcycle_02.gif" src="../_images/Introduction_to_animation_walkcycle_02.gif" />
-</div>
-<div class="section" id="animating-with-transform-masks">
+</section>
+<section id="animating-with-transform-masks">
 <h3>Animating with transform masks<a class="headerlink" href="#animating-with-transform-masks" title="本標題的永久連結">¶</a></h3>
 <div class="versionadded">
 <p><span class="versionmodified added">5.0 版新加入.</span></p>
@@ -433,15 +444,19 @@ timeline by clicking the <img alt="pintimeline" src="../_images/reference_images
 <img alt="../_images/Introduction_to_animation_19.png" src="../_images/Introduction_to_animation_19.png" />
 <img alt="../_images/introduction_to_animation_walkcycle_03_simple_tween.gif" src="../_images/introduction_to_animation_walkcycle_03_simple_tween.gif" />
 <p>This still doesn't sync the walk cycle directly to the speed it's moving at. The best method, if a little laborious, is to go to the first frame where one of the feet touches the ground, and then mark that section (for example, using <a class="reference internal" href="../reference_manual/dockers/grids_and_guides.html#grids-and-guides-docker"><span class="std std-ref">guides</span></a>), then, in subsequent frames, use the Transform Tool on each frame to move it so that the foot stays in the same place as long as it's touching the ground. Do the same for the next bit where a foot touches the ground, and the next, and so on.</p>
-<div class="figure align-default" id="id6">
+<figure class="align-default" id="id6">
 <img alt="../_images/Introduction_to_animation_20a.png" src="../_images/Introduction_to_animation_20a.png" />
-<p class="caption"><span class="caption-text">Each place where a foot touches the ground is marked using vertical guides, which allows us to adjust each frame, so the foot stays in place.</span><a class="headerlink" href="#id6" title="本圖片的永久連結">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">Each place where a foot touches the ground is marked using vertical guides, which allows us to adjust each frame, so the foot stays in place.</span><a class="headerlink" href="#id6" title="本圖片的永久連結">¶</a></p>
+</figcaption>
+</figure>
 <img alt="../_images/Introduction_to_animation_20b.png" src="../_images/Introduction_to_animation_20b.png" />
-<div class="figure align-default" id="id7">
+<figure class="align-default" id="id7">
 <img alt="../_images/Introduction_to_animation_20c.png" src="../_images/Introduction_to_animation_20c.png" />
-<p class="caption"><span class="caption-text">The animation curve docker after adjusting each frame to be in the right spot. Krita can do curve interpolation (so you can create an ease-in and ease-out type curves), but for a situation like this, per-frame adjustment is quicker.</span><a class="headerlink" href="#id7" title="本圖片的永久連結">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">The animation curve docker after adjusting each frame to be in the right spot. Krita can do curve interpolation (so you can create an ease-in and ease-out type curves), but for a situation like this, per-frame adjustment is quicker.</span><a class="headerlink" href="#id7" title="本圖片的永久連結">¶</a></p>
+</figcaption>
+</figure>
 <p>After having done all that, you will end up with a smoothly moving walk cycle:</p>
 <img alt="../_images/introduction_to_animation_walkcycle_03_adjusted_tween.gif" src="../_images/introduction_to_animation_walkcycle_03_adjusted_tween.gif" />
 <div class="admonition seealso">
@@ -457,9 +472,9 @@ timeline by clicking the <img alt="pintimeline" src="../_images/reference_images
 <li><p><a class="reference internal" href="japanese_animation_template.html#japanese-animation-template"><span class="std std-ref">日本動畫範本</span></a></p></li>
 </ul>
 </div>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
            </div>
@@ -484,7 +499,7 @@ timeline by clicking the <img alt="pintimeline" src="../_images/reference_images
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>a039fd4</code>
+          修訂版本 <code>6a98b9d</code>
         </span>
       
 

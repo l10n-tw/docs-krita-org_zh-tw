@@ -21,8 +21,9 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-08-24T09:25:20" />
-  <meta content="Basic page describing drawing tablets, how to set them up for Krita and how to troubleshoot common tablet issues." name="description" property="og:description" />
+  <meta property="og:article:modified_time" content="2021-08-24T21:25:49" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<meta content="Basic page describing drawing tablets, how to set them up for Krita and how to troubleshoot common tablet issues." name="description" property="og:description" />
 
   
   
@@ -255,11 +256,11 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="drawing-tablets">
+  <section id="drawing-tablets">
 <span id="index-0"></span><span id="id1"></span><h1>數位繪圖板<a class="headerlink" href="#drawing-tablets" title="本標題的永久連結">¶</a></h1>
 <p>This page is about drawing tablets, what they are, how they work, and
 where things can go wrong.</p>
-<div class="section" id="what-are-tablets">
+<section id="what-are-tablets">
 <h2>甚麼是繪圖板、數位板？<a class="headerlink" href="#what-are-tablets" title="本標題的永久連結">¶</a></h2>
 <p>Drawing with a mouse can be unintuitive and difficult compared to pencil
 and paper. Even worse, extended mouse use can result in carpal tunnel
@@ -281,13 +282,13 @@ more interesting strokes.</p>
 <p>Sometimes, people confuse finger-touch styluses with a proper tablet. You can tell the difference because a drawing tablet stylus usually has a pointy nib, while a stylus made for finger-touch has a big rubbery round nib, like a finger. These tablets may not give good results and a pressure-sensitive tablet is recommended.</p>
 <img alt="../_images/Krita_tablet_stylus.png" src="../_images/Krita_tablet_stylus.png" />
 </div>
-</div>
-<div class="section" id="supported-tablets">
+</section>
+<section id="supported-tablets">
 <h2>支援的繪圖板<a class="headerlink" href="#supported-tablets" title="本標題的永久連結">¶</a></h2>
 <p>Supported tablets are owned by Krita developers themselves, so they can reliably diagnose and fix bugs. <a class="reference internal" href="../reference_manual/list_supported_tablets.html#list-supported-tablets"><span class="std std-ref">We maintain a list of those here</span></a>.</p>
 <p>If you're looking for information about iPad or Android tablets, <a class="reference internal" href="../KritaFAQ.html#krita-android"><span class="std std-ref">look here</span></a>.</p>
-</div>
-<div class="section" id="drivers-and-pressure-sensitivity">
+</section>
+<section id="drivers-and-pressure-sensitivity">
 <h2>驅動程式與筆壓感應<a class="headerlink" href="#drivers-and-pressure-sensitivity" title="本標題的永久連結">¶</a></h2>
 <p>So you have bought a tablet, a real drawing tablet. And you want to get it
 to work with Krita! So you plug in the USB cable, start up Krita and...
@@ -321,12 +322,12 @@ to write a proper driver for each operating system.</p>
 <p class="admonition-title">警告</p>
 <p>Because drivers modify the operating system a little, you will always need to restart your computer when installing or uninstalling a driver, so don’t forget to do this! Conversely, because Krita isn’t a driver, you don’t need to even uninstall it to reset the configuration, just rename or delete the configuration file.</p>
 </div>
-</div>
-<div class="section" id="where-it-can-go-wrong-windows">
+</section>
+<section id="where-it-can-go-wrong-windows">
 <h2>在 Windows 上可能出現的問題<a class="headerlink" href="#where-it-can-go-wrong-windows" title="本標題的永久連結">¶</a></h2>
 <p>Krita automatically connects to your tablet if the drivers are
 installed. When things go wrong, usually the problem isn't with Krita.</p>
-<div class="section" id="surface-pro-tablets-need-two-drivers">
+<section id="surface-pro-tablets-need-two-drivers">
 <h3>Surface Pro 平板電腦的數位板驅動程式<a class="headerlink" href="#surface-pro-tablets-need-two-drivers" title="本標題的永久連結">¶</a></h3>
 <p>Certain tablets using n-trig, like the Surface Pro, have two types of
 drivers. One is native, n-trig and the other one is called WinTab.
@@ -334,14 +335,14 @@ Since 3.3, Krita can use Windows Ink style drivers, just go to
 <span class="menuselection">Settings ‣ Configure Krita... ‣ Tablet Settings</span> and
 toggle the <span class="guilabel">Windows 8+ Pointer Input (Windows Ink)</span> there. You
 don't need to install the WinTab drivers anymore for n-trig based pens.</p>
-</div>
-<div class="section" id="windows-10-updates">
+</section>
+<section id="windows-10-updates">
 <h3>Windows 10 更新<a class="headerlink" href="#windows-10-updates" title="本標題的永久連結">¶</a></h3>
 <p>Sometimes a Windows 10 update can mess up tablet drivers. In that case,
 reinstalling the drivers should work.</p>
-</div>
-</div>
-<div class="section" id="wacom-tablets">
+</section>
+</section>
+<section id="wacom-tablets">
 <h2>Wacom 繪圖板<a class="headerlink" href="#wacom-tablets" title="本標題的永久連結">¶</a></h2>
 <p>There are three known problems with Wacom tablets and Windows.</p>
 <p>The first is that if you have customized the driver settings, then sometimes,
@@ -354,7 +355,7 @@ or, on the other hand, make it the secondary screen. Double check in the Wacom
 settings utility that the tablet in the Cintiq is associated with the Cintiq
 screen.</p>
 <p>The third is that if you have a display tablet like a Cintiq and a Wacom ExpressKeys remote, and you have disabled Windows Ink in the calibration page of the stylus settings dialog, so you have the full set of WinTab features, the Cintiq needs to be the first item in Wacom's desktop application list. Otherwise, you will have an offset between stylus and mouse that will get worse the more displays there are to the left of the Cintiq display.</p>
-<div class="section" id="broken-drivers">
+<section id="broken-drivers">
 <h3>出問題的驅動程式<a class="headerlink" href="#broken-drivers" title="本標題的永久連結">¶</a></h3>
 <p>Tablet drivers need to be made by the manufacturer. Sometimes, with
 really cheap tablets, the hardware is fine, but the driver is badly
@@ -362,8 +363,8 @@ written, which means that the driver just doesn’t work well. We cannot
 do anything about this, sadly. You will have to send a complaint to the
 manufacturer for this, or buy a better tablet with better quality
 drivers.</p>
-</div>
-<div class="section" id="conflicting-drivers">
+</section>
+<section id="conflicting-drivers">
 <h3>互相衝突的驅動程式<a class="headerlink" href="#conflicting-drivers" title="本標題的永久連結">¶</a></h3>
 <p>On Windows, you can only have a single WinTab-style driver installed at
 a time. So be sure to uninstall the previous driver before installing
@@ -371,8 +372,8 @@ the one that comes with the tablet you want to use. Other operating
 systems are a bit better about this, but even Linux, where the drivers
 are often preinstalled, can't run two tablets with different drivers at
 once.</p>
-</div>
-<div class="section" id="interfering-software">
+</section>
+<section id="interfering-software">
 <h3>造成干擾的軟體<a class="headerlink" href="#interfering-software" title="本標題的永久連結">¶</a></h3>
 <p>Sometimes, there's software that tries to make a security layer between
 Krita and the operating system. Sandboxie is an example of this.
@@ -389,8 +390,8 @@ to Krita:</p>
 <li><p>Razer mouse utilities</p></li>
 <li><p>AMD Catalyst TM “game mode” (this broke the right click for someone)</p></li>
 </ol>
-</div>
-<div class="section" id="flicks-wait-circle-showing-up-and-then-calling-the-popup-palette">
+</section>
+<section id="flicks-wait-circle-showing-up-and-then-calling-the-popup-palette">
 <h3>筆觸動作（繪畫時出現白色圓圈後彈出浮動畫具板）<a class="headerlink" href="#flicks-wait-circle-showing-up-and-then-calling-the-popup-palette" title="本標題的永久連結">¶</a></h3>
 <p>If you have a situation where trying to draw keeps bringing up the
 pop-up palette on Windows, then the problem might be flicks. These are a
@@ -399,22 +400,22 @@ a motion to serve as a keyboard shortcut. Windows automatically turns
 these on when you install tablet drivers, because the people who made
 this part of Windows forgot that people also draw with computers. So you
 will need to turn it off in the Windows flicks configuration.</p>
-</div>
-<div class="section" id="wacom-double-click-sensitivity-straight-starts-of-lines">
+</section>
+<section id="wacom-double-click-sensitivity-straight-starts-of-lines">
 <h3>Wacom 「雙響間距」（起筆時出現直線線段）<a class="headerlink" href="#wacom-double-click-sensitivity-straight-starts-of-lines" title="本標題的永久連結">¶</a></h3>
 <p>If you experience an issue where the start of the stroke is straight,
 and have a Wacom tablet, it could be caused by the Wacom driver
 double-click detection.</p>
 <p>To fix this, go to the Wacom settings utility and lower the double click
 sensitivity.</p>
-</div>
-</div>
-<div class="section" id="id2">
+</section>
+</section>
+<section id="id2">
 <h2>支援的繪圖板<a class="headerlink" href="#id2" title="本標題的永久連結">¶</a></h2>
 <p>Supported tablets are the ones of which Krita developers have a version
 themselves, so they can reliably fix bugs with them. <a class="reference internal" href="../reference_manual/list_supported_tablets.html#list-supported-tablets"><span class="std std-ref">We maintain a list of those here</span></a>.</p>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
@@ -439,7 +440,7 @@ themselves, so they can reliably fix bugs with them. <a class="reference interna
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>a039fd4</code>
+          修訂版本 <code>6a98b9d</code>
         </span>
       
 

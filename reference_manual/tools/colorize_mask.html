@@ -21,8 +21,9 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-08-24T09:25:20" />
-  <meta content="How to use the colorize mask in Krita." name="description" />
+  <meta property="og:article:modified_time" content="2021-08-24T21:25:49" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<meta content="How to use the colorize mask in Krita." name="description" />
 
   
   
@@ -292,12 +293,12 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="colorize-mask">
+  <section id="colorize-mask">
 <span id="index-0"></span><span id="id1"></span><h1>Colorize Mask<a class="headerlink" href="#colorize-mask" title="本標題的永久連結">¶</a></h1>
 <p><img alt="toolcolorizemask" src="../../_images/colorizemask_tool.svg" /></p>
 <p>A tool for quickly coloring line art, the Colorize Mask Editing tool can be found next to the gradient tool on your toolbox.</p>
 <p>This feature is technically already in 3.1, but disabled by default because we had not optimized the filling algorithm for production use yet. To enable it, find your krita configuration file, open it in notepad, and add &quot;disableColorizeMaskFeature=false&quot; to the top. Then restart Krita. Its official incarnation is in 4.0.</p>
-<div class="section" id="usage">
+<section id="usage">
 <h2>Usage<a class="headerlink" href="#usage" title="本標題的永久連結">¶</a></h2>
 <p>This tool works in conjunction with the colorize mask, and the usage is as follows:</p>
 <p>For this example, we'll be using the ghost lady also used to explain masks on <a class="reference internal" href="../../user_manual/getting_started/basic_concepts.html#basic-concepts"><span class="std std-ref">the basic concepts page</span></a>.</p>
@@ -330,8 +331,8 @@ You can also <img alt="滑鼠右鍵" src="../../_images/Krita_mouse_right.png" /
 <p>This way we can very quickly paint the image. Due to the colorize mask going from the first image to the following took only 30 minutes, and would've taken quite a bit longer.</p>
 <a class="reference internal image-reference" href="../../_images/Krita_4_0_colorize_mask_usage_12.png"><img alt="../../_images/Krita_4_0_colorize_mask_usage_12.png" class="align-center" src="../../_images/Krita_4_0_colorize_mask_usage_12.png" style="width: 800px;" /></a>
 <p>The colorize masks are saved to the <code class="docutils literal notranslate"><span class="pre">.kra</span></code> file, so as long as you don't save and open to a different file format, nor convert the colorize mask to a paintlayer, you can keep working adjust the results.</p>
-</div>
-<div class="section" id="tool-options">
+</section>
+<section id="tool-options">
 <h2>Tool Options<a class="headerlink" href="#tool-options" title="本標題的永久連結">¶</a></h2>
 <dl>
 <dt>Update</dt><dd><p>Run the colorize mask algorithm. The progress bar for updates on a colorize mask shows only in the layer docker.</p>
@@ -339,24 +340,30 @@ You can also <img alt="滑鼠右鍵" src="../../_images/Krita_mouse_right.png" /
 <dt>Edit key strokes</dt><dd><p>Put the mask into edit mode. In edit mode, it will also show the 'prefiltering' on the line art, which is for example a blur filter for gap closing.</p>
 </dd>
 <dt>Show output</dt><dd><p>Show the output of the colorize mask. If <span class="guilabel">Edit key strokes</span> is active, this will be shown semi-transparently, so it will be easy to recognize the difference between the strokes and the output.</p>
-<div class="figure align-center" id="id2">
+<figure class="align-center" id="id2">
 <a class="reference internal image-reference" href="../../_images/Krita_4_0_colorize_mask_show_output_edit_strokes.png"><img alt="../../_images/Krita_4_0_colorize_mask_show_output_edit_strokes.png" src="../../_images/Krita_4_0_colorize_mask_show_output_edit_strokes.png" style="width: 800px;" /></a>
-<p class="caption"><span class="caption-text">On the <strong>Left</strong>: <span class="guilabel">Show Output</span> is on, <span class="guilabel">Edit Key Strokes</span> is off. In the <strong>Middle</strong>: <span class="guilabel">Show Output</span> and <span class="guilabel">Edit Key Strokes</span> are on. On the <strong>Right</strong>: <span class="guilabel">Show Output</span> is off and <span class="guilabel">Edit Key Strokes</span> is on.</span><a class="headerlink" href="#id2" title="本圖片的永久連結">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">On the <strong>Left</strong>: <span class="guilabel">Show Output</span> is on, <span class="guilabel">Edit Key Strokes</span> is off. In the <strong>Middle</strong>: <span class="guilabel">Show Output</span> and <span class="guilabel">Edit Key Strokes</span> are on. On the <strong>Right</strong>: <span class="guilabel">Show Output</span> is off and <span class="guilabel">Edit Key Strokes</span> is on.</span><a class="headerlink" href="#id2" title="本圖片的永久連結">¶</a></p>
+</figcaption>
+</figure>
 </dd>
 <dt>Limit to layer bounds</dt><dd><p>Limit the colorize mask to the combined layer bounds of the strokes and the line art it is filling. This can speed up the use of the mask on complicated compositions, such as comic pages.</p>
 </dd>
 <dt>Edge detection</dt><dd><p>Activate this for line art with large solid areas, for example shadows on an object. For the best use, set the value to the thinnest lines on the image. In the image below, note how edge detection affects the big black areas:</p>
-<div class="figure align-center" id="id3">
+<figure class="align-center" id="id3">
 <a class="reference internal image-reference" href="../../_images/Krita_4_0_colorize_mask_edge_detection.png"><img alt="../../_images/Krita_4_0_colorize_mask_edge_detection.png" src="../../_images/Krita_4_0_colorize_mask_edge_detection.png" style="width: 800px;" /></a>
-<p class="caption"><span class="caption-text">From left to right: an example with big black shadows on an object but no edge detection, the same example without the edit key strokes enabled. Then the same example with edge detection enabled and set to 2px, and that same example without edit key strokes enabled.</span><a class="headerlink" href="#id3" title="本圖片的永久連結">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">From left to right: an example with big black shadows on an object but no edge detection, the same example without the edit key strokes enabled. Then the same example with edge detection enabled and set to 2px, and that same example without edit key strokes enabled.</span><a class="headerlink" href="#id3" title="本圖片的永久連結">¶</a></p>
+</figcaption>
+</figure>
 </dd>
 <dt>Gap close hint</dt><dd><p>While the algorithm is pretty good against gaps in contours, this will improve the gap recognition. The higher this value is, the bigger the gaps it will try to close, but a too high value can lead to other errors. Note how the prefiltered line art (that's the blurry haze) affects the color patches.</p>
-<div class="figure align-center" id="id4">
+<figure class="align-center" id="id4">
 <a class="reference internal image-reference" href="../../_images/Krita_4_0_colorize_mask_gap_close_hint.png"><img alt="../../_images/Krita_4_0_colorize_mask_gap_close_hint.png" src="../../_images/Krita_4_0_colorize_mask_gap_close_hint.png" style="width: 800px;" /></a>
-<p class="caption"><span class="caption-text">On the <strong>Left</strong>: <span class="guilabel">Gap close hint</span> is 0px. In the <strong>Middle</strong>: <span class="guilabel">Gap close hint</span> is 15px (the lines are 10px). On the <strong>Right</strong>: <span class="guilabel">Gap close hint</span> is 275px.</span><a class="headerlink" href="#id4" title="本圖片的永久連結">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">On the <strong>Left</strong>: <span class="guilabel">Gap close hint</span> is 0px. In the <strong>Middle</strong>: <span class="guilabel">Gap close hint</span> is 15px (the lines are 10px). On the <strong>Right</strong>: <span class="guilabel">Gap close hint</span> is 275px.</span><a class="headerlink" href="#id4" title="本圖片的永久連結">¶</a></p>
+</figcaption>
+</figure>
 </dd>
 <dt>Clean up</dt><dd><p>This will attempt to handle messy strokes that overlap the line art where they shouldn't. At 0 no clean up is done, at 100% the clean-up is most aggressive.</p>
 <a class="reference internal image-reference" href="../../_images/Krita_4_0_colorize_mask_clean_up.png"><img alt="../../_images/Krita_4_0_colorize_mask_clean_up.png" class="align-center" src="../../_images/Krita_4_0_colorize_mask_clean_up.png" style="width: 800px;" /></a>
@@ -366,8 +373,8 @@ You can also <img alt="滑鼠右鍵" src="../../_images/Krita_mouse_right.png" /
 <dt>Transparent</dt><dd><p>This button is under the keystrokes palette, you can mark the selected color to be interpreted a 'transparent' with this. In the clean-up screenshot above, cyan had been marked as transparent.</p>
 </dd>
 </dl>
-</div>
-<div class="section" id="layer-properties">
+</section>
+<section id="layer-properties">
 <h2>Layer properties<a class="headerlink" href="#layer-properties" title="本標題的永久連結">¶</a></h2>
 <p>The colorize mask layer has four properties. They are all the buttons on the right side of the colorize mask layer:</p>
 <dl class="simple">
@@ -384,8 +391,8 @@ You can also <img alt="滑鼠右鍵" src="../../_images/Krita_mouse_right.png" /
 <p class="admonition-title">備註</p>
 <p>Colorize masks cannot be animated.</p>
 </div>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
@@ -410,7 +417,7 @@ You can also <img alt="滑鼠右鍵" src="../../_images/Krita_mouse_right.png" /
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>a039fd4</code>
+          修訂版本 <code>6a98b9d</code>
         </span>
       
 

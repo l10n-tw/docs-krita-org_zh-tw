@@ -21,8 +21,9 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-08-24T09:25:20" />
-  <meta content="Overview of the map filters." name="description" />
+  <meta property="og:article:modified_time" content="2021-08-24T21:25:49" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<meta content="Overview of the map filters." name="description" />
 
   
   
@@ -268,75 +269,75 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="map">
+  <section id="map">
 <span id="map-filters"></span><span id="index-0"></span><h1>Map<a class="headerlink" href="#map" title="本標題的永久連結">¶</a></h1>
 <p>Filters that are signified by them mapping the input image.</p>
-<div class="section" id="small-tiles">
+<section id="small-tiles">
 <span id="index-1"></span><h2>Small Tiles<a class="headerlink" href="#small-tiles" title="本標題的永久連結">¶</a></h2>
 <p>Tiles the input image, using its own layer as output.</p>
-</div>
-<div class="section" id="phong-bumpmap">
+</section>
+<section id="phong-bumpmap">
 <span id="index-2"></span><h2>Phong Bumpmap<a class="headerlink" href="#phong-bumpmap" title="本標題的永久連結">¶</a></h2>
 <img alt="../../_images/Krita-normals-tutoria_4.png" src="../../_images/Krita-normals-tutoria_4.png" />
 <p>Uses the input image as a height-map to output a 3d something, using the phong-lambert shading model. Useful for checking one's height maps during game texturing. Checking the <span class="guilabel">Normal Map</span> box will make it use all channels and interpret them as a normal map.</p>
-</div>
-<div class="section" id="round-corners">
+</section>
+<section id="round-corners">
 <h2>Round Corners<a class="headerlink" href="#round-corners" title="本標題的永久連結">¶</a></h2>
 <p>Adds little corners to the input image.</p>
-</div>
-<div class="section" id="normalize">
+</section>
+<section id="normalize">
 <span id="index-3"></span><h2>Normalize<a class="headerlink" href="#normalize" title="本標題的永久連結">¶</a></h2>
 <p>This filter takes the input pixels, puts them into a 3d vector, and then normalizes (makes the vector size exactly 1) the values. This is helpful for normal maps and some minor image-editing functions.</p>
-</div>
-<div class="section" id="gradient-map">
+</section>
+<section id="gradient-map">
 <span id="index-4"></span><h2>Gradient Map<a class="headerlink" href="#gradient-map" title="本標題的永久連結">¶</a></h2>
 <img alt="../../_images/Krita_filter_gradient_map.png" src="../../_images/Krita_filter_gradient_map.png" />
 <p>Maps the lightness of the input to the selected gradient. Useful for fancy artistic effects.</p>
 <p>In 3.x you could only select predefined gradients. In 4.0, you can select gradients and change them on the fly, as well as use the gradient map filter as a filter layer or filter brush.</p>
-<div class="section" id="color-modes">
+<section id="color-modes">
 <h3>Color Modes<a class="headerlink" href="#color-modes" title="本標題的永久連結">¶</a></h3>
 <ul class="simple">
 <li><p><strong>Blend:</strong> smoothly blend colors between stops</p></li>
 <li><p><strong>Nearest:</strong> selects color from nearest stops</p></li>
 <li><p><strong>Dither:</strong> dithers between stop colors as per <a class="reference internal" href="#dithering-threshold-modes">Dithering Threshold Modes</a>.</p></li>
 </ul>
-</div>
-</div>
-<div class="section" id="palettize">
+</section>
+</section>
+<section id="palettize">
 <span id="index-5"></span><h2>Palettize<a class="headerlink" href="#palettize" title="本標題的永久連結">¶</a></h2>
 <p>Maps the color of the input to the nearest color in the selected palette. Useful for limiting color in pixel art and for artistic effects.</p>
 <p>Optional dithering may be applied with the covered value range controlled by the spread value.</p>
-<div class="section" id="colorspace-modes">
+<section id="colorspace-modes">
 <h3>Colorspace Modes<a class="headerlink" href="#colorspace-modes" title="本標題的永久連結">¶</a></h3>
 <ul class="simple">
 <li><p><strong>Lab:</strong> finds nearest colors in Lab colorspace</p></li>
 <li><p><strong>RGB:</strong> finds nearest colors in RGB colorspace</p></li>
 </ul>
-</div>
-<div class="section" id="dithering-threshold-modes">
+</section>
+<section id="dithering-threshold-modes">
 <h3>Dithering Threshold Modes<a class="headerlink" href="#dithering-threshold-modes" title="本標題的永久連結">¶</a></h3>
 <ul class="simple">
 <li><p><strong>Pattern:</strong> uses the lightness or alpha value of the selected pattern to threshold the input color between palette colors</p></li>
 <li><p><strong>Noise:</strong> uses a randomly generated value per pixel to threshold the input color between palette colors</p></li>
 </ul>
-</div>
-<div class="section" id="dithering-color-modes">
+</section>
+<section id="dithering-color-modes">
 <h3>Dithering Color Modes<a class="headerlink" href="#dithering-color-modes" title="本標題的永久連結">¶</a></h3>
 <ul class="simple">
 <li><p><strong>Per-Component Offset:</strong> independently offsets each color channel by the threshold amount, scaled by the offset scale value</p></li>
 <li><p><strong>Nearest Colors:</strong> finds the two nearest colors then applies the threshold amount to the relative distances of the two color to find the resulting color</p></li>
 </ul>
-</div>
-<div class="section" id="dithering-alpha-modes">
+</section>
+<section id="dithering-alpha-modes">
 <h3>Dithering Alpha Modes<a class="headerlink" href="#dithering-alpha-modes" title="本標題的永久連結">¶</a></h3>
 <ul class="simple">
 <li><p><strong>Clip:</strong> thresholds alpha at the clip position</p></li>
 <li><p><strong>Index:</strong> uses the selected palette index as the transparent color</p></li>
 <li><p><strong>Dither:</strong> applies dither to the alpha value as per <a class="reference internal" href="#dithering-threshold-modes">Dithering Threshold Modes</a></p></li>
 </ul>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
            </div>
@@ -361,7 +362,7 @@
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>a039fd4</code>
+          修訂版本 <code>6a98b9d</code>
         </span>
       
 

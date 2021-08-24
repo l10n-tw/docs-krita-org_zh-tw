@@ -21,8 +21,9 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-08-24T09:25:20" />
-  <meta content="Importing video frames." name="description" property="og:description" />
+  <meta property="og:article:modified_time" content="2021-08-24T21:25:49" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<meta content="Importing video frames." name="description" property="og:description" />
 
   
   
@@ -259,10 +260,10 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="import-animation">
+  <section id="import-animation">
 <span id="index-0"></span><span id="id1"></span><h1>匯入動畫<a class="headerlink" href="#import-animation" title="本標題的永久連結">¶</a></h1>
 <p>Krita has several options for allowing you to import an animation.</p>
-<div class="section" id="import-frames">
+<section id="import-frames">
 <span id="id2"></span><h2>匯入影格<a class="headerlink" href="#import-frames" title="本標題的永久連結">¶</a></h2>
 <p>Frame import will import a list of images into an animation layer. This is a format that most other animation software can export, and thus very useful for interchange.</p>
 <p>First let us take a sprite sheet from Open Game Art. (This is the Libre Pixel Cup male walkcycle <a class="footnote-reference brackets" href="#id4" id="id3">1</a>).</p>
@@ -285,7 +286,7 @@ ordered. You can set the ordering with the top-left two drop-down boxes.</p>
 <dt>Add hold frames automatically.</dt><dd><p>If a frame sequence has gaps, such as a sequence that has frames 1, 2 and 5, ticking this option will input empty frames at 3 and 4.</p>
 </dd>
 </dl>
-<div class="section" id="order">
+<section id="order">
 <h3>排序<a class="headerlink" href="#order" title="本標題的永久連結">¶</a></h3>
 <dl class="simple">
 <dt>Ascending vs Descending</dt><dd><p>Whether it will import the frames in order from lowest to highest (ascending), or from highest to lowest (descending).</p>
@@ -293,8 +294,8 @@ ordered. You can set the ordering with the top-left two drop-down boxes.</p>
 <dt>Numerical vs Alphabetical</dt><dd><p>Whether it will use numbers or Alphabetical ordering for the frames.</p>
 </dd>
 </dl>
-</div>
-<div class="section" id="timing">
+</section>
+<section id="timing">
 <h3>時序<a class="headerlink" href="#timing" title="本標題的永久連結">¶</a></h3>
 <dl class="simple">
 <dt>Start at</dt><dd><p>The frame number to import at. Importing at 3 will have the resulting animation start at frame 3 within Krita.</p>
@@ -304,9 +305,9 @@ ordered. You can set the ordering with the top-left two drop-down boxes.</p>
 <dt>Source FPS</dt><dd><p>This displays what Krita thinks the fps of the input is with the current timing settings. You can use this to make sure that the input you made is correct with the FPS of your document.</p>
 </dd>
 </dl>
-</div>
-</div>
-<div class="section" id="import-video-file">
+</section>
+</section>
+<section id="import-video-file">
 <span id="import-video-animation"></span><h2>匯入影片檔案<a class="headerlink" href="#import-video-file" title="本標題的永久連結">¶</a></h2>
 <p>Video import allows you to import a sample of a video file as an animated paint layer.</p>
 <img alt="../_images/import_video.png" src="../_images/import_video.png" />
@@ -322,7 +323,7 @@ ordered. You can set the ordering with the top-left two drop-down boxes.</p>
 <dt>Frame Switcher</dt><dd><p>Two buttons to switch per frame.</p>
 </dd>
 </dl>
-<div class="section" id="video-file-info">
+<section id="video-file-info">
 <h3>影片檔案資訊<a class="headerlink" href="#video-file-info" title="本標題的永久連結">¶</a></h3>
 <dl class="simple">
 <dt>Width</dt><dd><p>The width of the current file.</p>
@@ -340,8 +341,8 @@ ordered. You can set the ordering with the top-left two drop-down boxes.</p>
 <dt>Color Transfer</dt><dd><p>The name of the color space trc that Krita has found. This too will be used for the color profile. Only shows up on files where this data is detected.</p>
 </dd>
 </dl>
-</div>
-<div class="section" id="import-options">
+</section>
+<section id="import-options">
 <h3>匯入選項<a class="headerlink" href="#import-options" title="本標題的永久連結">¶</a></h3>
 <dl class="simple">
 <dt>FPS</dt><dd><p>The FPS to import at. Importing 2 seconds of footage at 24 fps will import 48 frames, and at 60 fps, 120 frames will be imported.</p>
@@ -359,10 +360,10 @@ ordered. You can set the ordering with the top-left two drop-down boxes.</p>
 <p class="admonition-title">警告</p>
 <p>Videos, because you usually only play them in a media player, are compressed in special ways. Because Krita is designed to allow you to draw each individual frame, this data gets uncompressed. What this means is that even though you can watch a video file on your computer, you likely cannot import all the frames into Krita. A warning will be displayed and inform you how many frames you can import with your current setup.</p>
 </div>
-</div>
-<div class="section" id="options">
+</section>
+<section id="options">
 <h3>選項<a class="headerlink" href="#options" title="本標題的永久連結">¶</a></h3>
-<div class="section" id="document-options">
+<section id="document-options">
 <h4>Document Options<a class="headerlink" href="#document-options" title="本標題的永久連結">¶</a></h4>
 <p>Only enabled when the import is into a new document.</p>
 <dl class="simple">
@@ -371,8 +372,8 @@ ordered. You can set the ordering with the top-left two drop-down boxes.</p>
 <dt>Height</dt><dd><p>Height of the new document.</p>
 </dd>
 </dl>
-</div>
-<div class="section" id="import-video-scale">
+</section>
+<section id="import-video-scale">
 <h4>Import Video Scale<a class="headerlink" href="#import-video-scale" title="本標題的永久連結">¶</a></h4>
 <dl class="simple">
 <dt>Width</dt><dd><p>The desired width in pixels</p>
@@ -382,8 +383,8 @@ ordered. You can set the ordering with the top-left two drop-down boxes.</p>
 <dt>Filter</dt><dd><p>The filter to use for the resizing.</p>
 </dd>
 </dl>
-</div>
-<div class="section" id="ffmpeg">
+</section>
+<section id="ffmpeg">
 <h4>FFMpeg<a class="headerlink" href="#ffmpeg" title="本標題的永久連結">¶</a></h4>
 <dl class="simple">
 <dt>FFMpeg Path</dt><dd><p>Path to the ffmpeg executable, necessary for importing the video data.</p>
@@ -399,10 +400,10 @@ ordered. You can set the ordering with the top-left two drop-down boxes.</p>
 </dd>
 </dl>
 </div>
-</div>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
+</section>
 
 
            </div>
@@ -427,7 +428,7 @@ ordered. You can set the ordering with the top-left two drop-down boxes.</p>
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>a039fd4</code>
+          修訂版本 <code>6a98b9d</code>
         </span>
       
 

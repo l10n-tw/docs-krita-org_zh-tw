@@ -21,8 +21,9 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-08-24T09:25:20" />
-  <meta content="透視格點筆刷的手冊頁。" name="description" />
+  <meta property="og:article:modified_time" content="2021-08-24T21:25:49" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<meta content="透視格點筆刷的手冊頁。" name="description" />
 
   
   
@@ -274,7 +275,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="tangent-normal-brush-engine">
+  <section id="tangent-normal-brush-engine">
 <span id="tangent-brush-engine"></span><span id="index-0"></span><h1>透視格點筆刷工具<a class="headerlink" href="#tangent-normal-brush-engine" title="本標題的永久連結">¶</a></h1>
 <img alt="../../../_images/tangentnormal.svg" src="../../../_images/tangentnormal.svg" /><p>The Tangent Normal Brush Engine is an engine that is specifically designed for drawing normal maps, of the tangent variety. These are in turn used in 3d programs and game engines to do all sorts of lightning trickery. Common uses of normal maps include faking detail where there is none, and to drive transformations (Flow Maps).</p>
 <p>A Normal map is an image that holds information for vectors. In particular, they hold information for Normal Vectors, which is the information for how the light bends on a surface. Because Normal Vectors are made up of 3 coordinates, just like colors, we can store and see this information as colors.</p>
@@ -282,23 +283,23 @@
 <p>In short, you will be able to paint with surfaces instead of colors.</p>
 <p>The following options are available to the tangent normal brush engine:</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="../brush_settings/brush_tips.html#option-brush-tip"><span class="std std-ref">Brush Tips</span></a></p></li>
+<li><p><a class="reference internal" href="../brush_settings/brush_tips.html#option-brush-tip"><span class="std std-ref">筆尖</span></a></p></li>
 <li><p><a class="reference internal" href="../../blending_modes.html#blending-modes"><span class="std std-ref">混色模式</span></a></p></li>
 <li><p><a class="reference internal" href="../brush_settings/opacity_and_flow.html#option-opacity-n-flow"><span class="std std-ref">Opacity and Flow</span></a></p></li>
-<li><p><a class="reference internal" href="../brush_settings/options.html#option-size"><span class="std std-ref">Size</span></a></p></li>
+<li><p><a class="reference internal" href="../brush_settings/options.html#option-size"><span class="std std-ref">大小</span></a></p></li>
 <li><p><a class="reference internal" href="../brush_settings/options.html#option-ratio"><span class="std std-ref">Ratio</span></a></p></li>
 <li><p><a class="reference internal" href="../brush_settings/options.html#option-spacing"><span class="std std-ref">Spacing</span></a></p></li>
-<li><p><a class="reference internal" href="../brush_settings/options.html#option-mirror"><span class="std std-ref">Mirror</span></a></p></li>
-<li><p><a class="reference internal" href="../brush_settings/options.html#option-softness"><span class="std std-ref">Softness</span></a></p></li>
-<li><p><a class="reference internal" href="../brush_settings/options.html#option-sharpness"><span class="std std-ref">Sharpness</span></a></p></li>
-<li><p><a class="reference internal" href="../brush_settings/options.html#option-rotation"><span class="std std-ref">Rotation</span></a></p></li>
-<li><p><a class="reference internal" href="../brush_settings/options.html#option-scatter"><span class="std std-ref">Scatter</span></a></p></li>
-<li><p><a class="reference internal" href="../brush_settings/options.html#option-airbrush"><span class="std std-ref">Airbrush</span></a></p></li>
-<li><p><a class="reference internal" href="../brush_settings/texture.html#option-texture"><span class="std std-ref">Texture</span></a></p></li>
+<li><p><a class="reference internal" href="../brush_settings/options.html#option-mirror"><span class="std std-ref">鏡射</span></a></p></li>
+<li><p><a class="reference internal" href="../brush_settings/options.html#option-softness"><span class="std std-ref">柔和度</span></a></p></li>
+<li><p><a class="reference internal" href="../brush_settings/options.html#option-sharpness"><span class="std std-ref">銳利度</span></a></p></li>
+<li><p><a class="reference internal" href="../brush_settings/options.html#option-rotation"><span class="std std-ref">旋轉</span></a></p></li>
+<li><p><a class="reference internal" href="../brush_settings/options.html#option-scatter"><span class="std std-ref">分散</span></a></p></li>
+<li><p><a class="reference internal" href="../brush_settings/options.html#option-airbrush"><span class="std std-ref">噴槍</span></a></p></li>
+<li><p><a class="reference internal" href="../brush_settings/texture.html#option-texture"><span class="std std-ref">紋理</span></a></p></li>
 </ul>
-<div class="section" id="specific-parameters-to-the-tangent-normal-brush-engine">
+<section id="specific-parameters-to-the-tangent-normal-brush-engine">
 <h2>Specific Parameters to the Tangent Normal Brush Engine<a class="headerlink" href="#specific-parameters-to-the-tangent-normal-brush-engine" title="本標題的永久連結">¶</a></h2>
-<div class="section" id="tangent-tilt">
+<section id="tangent-tilt">
 <h3>Tangent Tilt<a class="headerlink" href="#tangent-tilt" title="本標題的永久連結">¶</a></h3>
 <p>These are the options that determine how the normals are calculated from tablet input.</p>
 <dl class="simple">
@@ -315,67 +316,77 @@
 <dt>Elevation Sensitivity</dt><dd><p>Allows you to change the range of the normal that are outputted. At 0 it will only paint the default normal, at 1 it will paint all the normals in a full hemisphere.</p>
 </dd>
 </dl>
-</div>
-</div>
-<div class="section" id="usage">
+</section>
+</section>
+<section id="usage">
 <h2>Usage<a class="headerlink" href="#usage" title="本標題的永久連結">¶</a></h2>
 <p>The Tangent Normal Map Brush Engine is best used with the Tilt Cursor, which can be set in <span class="menuselection">Settings ‣ Configure Krita ‣ General ‣ Outline Shape ‣ Tilt Outline</span>.</p>
-<div class="section" id="normal-map-authoring-workflow">
+<section id="normal-map-authoring-workflow">
 <h3>Normal Map authoring workflow<a class="headerlink" href="#normal-map-authoring-workflow" title="本標題的永久連結">¶</a></h3>
 <ol class="arabic">
 <li><p>Create an image with a background color of (128, 128, 255) blue/purple.</p>
 <blockquote>
-<div><div class="figure align-default" id="id1" style="width: 500px">
+<div><figure class="align-default" id="id1" style="width: 500px">
 <img alt="../../../_images/Krita-normals-tutorial_1.png" src="../../../_images/Krita-normals-tutorial_1.png" />
-<p class="caption"><span class="caption-text">Setting up a background with the default color.</span><a class="headerlink" href="#id1" title="本圖片的永久連結">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">Setting up a background with the default color.</span><a class="headerlink" href="#id1" title="本圖片的永久連結">¶</a></p>
+</figcaption>
+</figure>
 </div></blockquote>
 </li>
 <li><p>Set up group with a <span class="guilabel">Phong Bumpmap</span> filter mask. Use the <span class="guilabel">Use Normal map</span> checkbox on the filter to make it use normals.</p>
 <blockquote>
-<div><div class="figure align-default" id="id2" style="width: 500px">
+<div><figure class="align-default" id="id2" style="width: 500px">
 <img alt="../../../_images/Krita-normals-tutorial_2.png" src="../../../_images/Krita-normals-tutorial_2.png" />
-<p class="caption"><span class="caption-text">Creating a phong bump map filter layer, make sure to check 'Use Normal map'.</span><a class="headerlink" href="#id2" title="本圖片的永久連結">¶</a></p>
-</div>
-<div class="figure align-default" id="id3" style="width: 500px">
+<figcaption>
+<p><span class="caption-text">Creating a phong bump map filter layer, make sure to check 'Use Normal map'.</span><a class="headerlink" href="#id2" title="本圖片的永久連結">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id3" style="width: 500px">
 <img alt="../../../_images/Krita-normals-tutorial_3.png" src="../../../_images/Krita-normals-tutorial_3.png" />
-<p class="caption"><span class="caption-text">These settings give a nice daylight-esque lighting setup, with light 1 being the sun, light 3 being the light from the sky, and light 2 being the light from the ground.</span><a class="headerlink" href="#id3" title="本圖片的永久連結">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">These settings give a nice daylight-esque lighting setup, with light 1 being the sun, light 3 being the light from the sky, and light 2 being the light from the ground.</span><a class="headerlink" href="#id3" title="本圖片的永久連結">¶</a></p>
+</figcaption>
+</figure>
 </div></blockquote>
 </li>
 <li><p>Make a <span class="guilabel">Normalize</span> filter layer or mask to normalize the normal map before feeding it into the Phong bumpmap filter for the best results.</p></li>
 <li><p>Then, paint on layers in the group to get direct feedback.</p>
 <blockquote>
-<div><div class="figure align-default" id="id4" style="width: 500px">
+<div><figure class="align-default" id="id4" style="width: 500px">
 <img alt="../../../_images/Krita-normals-tutoria_4.png" src="../../../_images/Krita-normals-tutoria_4.png" />
-<p class="caption"><span class="caption-text">Paint on the layer beneath the filters with the tangent normal brush to have them be converted in real time.</span><a class="headerlink" href="#id4" title="本圖片的永久連結">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">Paint on the layer beneath the filters with the tangent normal brush to have them be converted in real time.</span><a class="headerlink" href="#id4" title="本圖片的永久連結">¶</a></p>
+</figcaption>
+</figure>
 </div></blockquote>
 </li>
 <li><p>Finally, when done, hide the Phong bumpmap filter layer (but keep the Normalize filter layer!), and export the normal map for use in 3d programs.</p></li>
 </ol>
-</div>
-<div class="section" id="drawing-direction-maps">
+</section>
+<section id="drawing-direction-maps">
 <h3>Drawing Direction Maps<a class="headerlink" href="#drawing-direction-maps" title="本標題的永久連結">¶</a></h3>
 <p>Direction maps are made with the <span class="guilabel">Direction</span> option in the <span class="guilabel">Tangent Tilt</span> options. These normal maps are used to distort textures in a 3d program (to simulate for example, the flow of water) or to create maps that indicate how hair and brushed metal is brushed. Krita can't currently give feedback on how a given direction map will influence a distortion or shader, but these maps are a little easier to read.</p>
 <p>Just set the <span class="guilabel">Tangent Tilt</span> option to <span class="guilabel">Direction</span>, and draw. The direction your brush draws in will be the direction that is encoded in the colors.</p>
-</div>
-<div class="section" id="only-editing-a-single-channel">
+</section>
+<section id="only-editing-a-single-channel">
 <h3>Only editing a single channel<a class="headerlink" href="#only-editing-a-single-channel" title="本標題的永久連結">¶</a></h3>
 <p>Sometimes you only want to edit a single channel. In that case set the blending mode of the brush to <span class="guilabel">Copy &lt;channel&gt;</span>, with &lt;channel&gt; replaced with red, green or blue. These are under the <span class="guilabel">Misc</span> section of the blending modes.</p>
 <p>So, if you want the brush to only affect the red channel, set the blending mode to <span class="guilabel">Copy Red</span>.</p>
-<div class="figure align-default" id="id5" style="width: 500px">
+<figure class="align-default" id="id5" style="width: 500px">
 <img alt="../../../_images/Krita_Filter_layer_invert_greenchannel1.png" src="../../../_images/Krita_Filter_layer_invert_greenchannel1.png" />
-<p class="caption"><span class="caption-text">The copy red, green and blue blending modes also work on filter-layers.</span><a class="headerlink" href="#id5" title="本圖片的永久連結">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">The copy red, green and blue blending modes also work on filter-layers.</span><a class="headerlink" href="#id5" title="本圖片的永久連結">¶</a></p>
+</figcaption>
+</figure>
 <p>This can also be done with filter layers. So if you quickly want to flip a layer's green channel, make an invert filter layer with <span class="guilabel">Copy Green</span> above it.</p>
-</div>
-<div class="section" id="mixing-normal-maps">
+</section>
+<section id="mixing-normal-maps">
 <h3>Mixing Normal Maps<a class="headerlink" href="#mixing-normal-maps" title="本標題的永久連結">¶</a></h3>
 <p>For mixing two normal maps, Krita has the <span class="guilabel">Combine Normal Map</span> blending mode under <span class="guilabel">Misc</span>.</p>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
            </div>
@@ -400,7 +411,7 @@
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>a039fd4</code>
+          修訂版本 <code>6a98b9d</code>
         </span>
       
 

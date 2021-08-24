@@ -21,8 +21,9 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-08-24T09:25:20" />
-  <meta content="SeExpr Quick Reference for Krita" name="description" />
+  <meta property="og:article:modified_time" content="2021-08-24T21:25:49" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<meta content="SeExpr Quick Reference for Krita" name="description" />
 
   
   
@@ -267,7 +268,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="seexpr-quick-reference">
+  <section id="seexpr-quick-reference">
 <span id="seexpr"></span><span id="index-0"></span><h1><a class="toc-backref" href="#id2">SeExpr 快速參考</a><a class="headerlink" href="#seexpr-quick-reference" title="本標題的永久連結">¶</a></h1>
 <p>This page details all the available variables, functions, and operators in SeExpr.
 It is a heavily edited version of the official <a class="reference external" href="https://wdas.github.io/SeExpr/doxygen/userdoc.html">user documentation</a>, adapted for usage with Krita.</p>
@@ -318,9 +319,9 @@ It is a heavily edited version of the official <a class="reference external" hre
 </li>
 </ul>
 </div>
-<div class="section" id="variables">
+<section id="variables">
 <h2><a class="toc-backref" href="#id3">Variables</a><a class="headerlink" href="#variables" title="本標題的永久連結">¶</a></h2>
-<div class="section" id="external-variables">
+<section id="external-variables">
 <h3><a class="toc-backref" href="#id4">External variables</a><a class="headerlink" href="#external-variables" title="本標題的永久連結">¶</a></h3>
 <p>These variables are provided by host applications, in this case Krita.
 They are registered with SeExpr's autocomplete help, which can be
@@ -331,8 +332,8 @@ accessed by <kbd class="kbd compound docutils literal notranslate"><kbd class="k
 <dt id="term-w-h">$w, $h<a class="headerlink" href="#term-w-h" title="本術語的永久連結">¶</a></dt><dd><p>Image's width and height in pixels.</p>
 </dd>
 </dl>
-</div>
-<div class="section" id="local-variables">
+</section>
+<section id="local-variables">
 <h3><a class="toc-backref" href="#id5">Local Variables</a><a class="headerlink" href="#local-variables" title="本標題的永久連結">¶</a></h3>
 <p>Local variables can be defined at the start of the expression:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$a = noise($P);
@@ -349,9 +350,9 @@ fbm(vnoise($P) + $P/4)
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$A::a = $u * 10;
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="control-structures">
+</section>
+</section>
+<section id="control-structures">
 <h2><a class="toc-backref" href="#id6">Control Structures</a><a class="headerlink" href="#control-structures" title="本標題的永久連結">¶</a></h2>
 <p>SeExpr provides the well-known <cite>if</cite> conditional structure:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>if ($ u &gt; 0.5) {
@@ -389,8 +390,8 @@ else {
 $color
 </pre></div>
 </div>
-</div>
-<div class="section" id="operators-listed-in-decreasing-precedence">
+</section>
+<section id="operators-listed-in-decreasing-precedence">
 <h2><a class="toc-backref" href="#id7">Operators (listed in decreasing precedence)</a><a class="headerlink" href="#operators-listed-in-decreasing-precedence" title="本標題的永久連結">¶</a></h2>
 <dl class="glossary">
 <dt id="term-a-b-c">[a,b,c]<a class="headerlink" href="#term-a-b-c" title="本術語的永久連結">¶</a></dt><dd><p>vector constructor</p>
@@ -464,8 +465,8 @@ $u-&gt;hsi(20,1.2,1,$Cs-&gt;gamma(1.2))
 </div>
 </dd>
 </dl>
-</div>
-<div class="section" id="assignment-operators">
+</section>
+<section id="assignment-operators">
 <h2><a class="toc-backref" href="#id8">Assignment Operators</a><a class="headerlink" href="#assignment-operators" title="本標題的永久連結">¶</a></h2>
 <p>Besides the basic assignment statement:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$foo = $bar
@@ -488,8 +489,8 @@ $u-&gt;hsi(20,1.2,1,$Cs-&gt;gamma(1.2))
 <li><p><code class="docutils literal notranslate"><span class="pre">*=</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">^=</span></code></p></li>
 </ul>
-</div>
-<div class="section" id="comments">
+</section>
+<section id="comments">
 <h2><a class="toc-backref" href="#id9">Comments</a><a class="headerlink" href="#comments" title="本標題的永久連結">¶</a></h2>
 <p>You can add comments to your script by using the <code class="docutils literal notranslate"><span class="pre">#</span></code> character.
 SeExpr will then skip the rest of the line for rendering purposes.
@@ -519,8 +520,8 @@ $color = [0.5, 0, 0] # 0.000, 1.000
 <p>In all cases, if not specified, the associated widgets' range will go from 0 to 1.</p>
 </div>
 <p>For a multi-line expression, each line may have its own comment.</p>
-</div>
-<div class="section" id="logging-functions">
+</section>
+<section id="logging-functions">
 <h2><a class="toc-backref" href="#id10">Logging Functions</a><a class="headerlink" href="#logging-functions" title="本標題的永久連結">¶</a></h2>
 <dl class="glossary">
 <dt id="term-float-printf-string-format-param0-param1-...">float <strong>printf</strong> ( string format, [param0, param1, ...] )<a class="headerlink" href="#term-float-printf-string-format-param0-param1-..." title="本術語的永久連結">¶</a></dt><dd><p>Prints a string to stdout that is formatted as given. Formatting
@@ -541,8 +542,8 @@ argument) or <code class="docutils literal notranslate"><span class="pre">%v</sp
 <dt id="term-string-sprintf-string-format-double-string-double-string-...">string <strong>sprintf</strong> ( string format, [double|string, double|string, ...] )<a class="headerlink" href="#term-string-sprintf-string-format-double-string-double-string-..." title="本術語的永久連結">¶</a></dt><dd><p>Returns a string formatted from the given values.  See <code class="docutils literal notranslate"><span class="pre">man</span> <span class="pre">sprintf</span></code> for format details.</p>
 </dd>
 </dl>
-</div>
-<div class="section" id="color-masking-and-remapping-functions">
+</section>
+<section id="color-masking-and-remapping-functions">
 <h2><a class="toc-backref" href="#id11">Color, Masking, and Remapping Functions</a><a class="headerlink" href="#color-masking-and-remapping-functions" title="本標題的永久連結">¶</a></h2>
 <dl class="glossary">
 <dt id="term-float-bias-float-x-float-b">float <strong>bias</strong> ( float x, float b)<a class="headerlink" href="#term-float-bias-float-x-float-b" title="本術語的永久連結">¶</a></dt><dd><p>Variation of gamma where control parameter goes from <code class="docutils literal notranslate"><span class="pre">0</span></code> to <code class="docutils literal notranslate"><span class="pre">1</span></code> with
@@ -612,8 +613,8 @@ the result is one. The result falls to zero beyond that range over
 </div>
 </dd>
 </dl>
-</div>
-<div class="section" id="noise-functions">
+</section>
+<section id="noise-functions">
 <h2><a class="toc-backref" href="#id12">Noise Functions</a><a class="headerlink" href="#noise-functions" title="本標題的永久連結">¶</a></h2>
 <dl class="glossary">
 <dt id="term-float-cellnoise-vector-v">float <strong>cellnoise</strong> ( vector v )<a class="headerlink" href="#term-float-cellnoise-vector-v" title="本術語的永久連結">¶</a></dt><dt id="term-float-cellnoise1-float-x">float <strong>cellnoise1</strong> ( float x )<a class="headerlink" href="#term-float-cellnoise1-float-x" title="本術語的永久連結">¶</a></dt><dt id="term-float-cellnoise2-float-x-float-y">float <strong>cellnoise2</strong> ( float x, float y )<a class="headerlink" href="#term-float-cellnoise2-float-x-float-y" title="本術語的永久連結">¶</a></dt><dt id="term-float-cellnoise3-float-x-float-y-float-z">float <strong>cellnoise3</strong> ( float x, float y, float z )<a class="headerlink" href="#term-float-cellnoise3-float-x-float-y-float-z" title="本術語的永久連結">¶</a></dt><dt id="term-color-ccellnoise-vector-v">color <strong>ccellnoise</strong> ( vector v )<a class="headerlink" href="#term-color-ccellnoise-vector-v" title="本術語的永久連結">¶</a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">cellnoise</span></code> generates a field of constant colored cubes based on the
@@ -677,8 +678,8 @@ as for the <code class="docutils literal notranslate"><span class="pre">fbm</spa
 </div>
 </dd>
 </dl>
-</div>
-<div class="section" id="selection-functions">
+</section>
+<section id="selection-functions">
 <h2><a class="toc-backref" href="#id13">Selection Functions</a><a class="headerlink" href="#selection-functions" title="本標題的永久連結">¶</a></h2>
 <dl class="glossary simple">
 <dt id="term-float-choose-float-index-float-choice1-float-choice2-...">float <strong>choose</strong> ( float index, float choice1, float choice2, [...] )<a class="headerlink" href="#term-float-choose-float-index-float-choice1-float-choice2-..." title="本術語的永久連結">¶</a></dt><dd><p>Chooses one of the supplied choices based on the index (assumed to be
@@ -714,8 +715,8 @@ respectively as compared to the other values (3-10):</p>
 </pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="general-mathematical-constants-and-functions">
+</section>
+<section id="general-mathematical-constants-and-functions">
 <h2><a class="toc-backref" href="#id14">General Mathematical Constants and Functions</a><a class="headerlink" href="#general-mathematical-constants-and-functions" title="本標題的永久連結">¶</a></h2>
 <dl class="glossary">
 <dt id="term-float-PI">float <strong>PI</strong><a class="headerlink" href="#term-float-PI" title="本術語的永久連結">¶</a></dt><dd><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">float</span> <span class="n">PI</span> <span class="o">=</span> <span class="mf">3.14159</span><span class="o">...</span>
@@ -765,8 +766,8 @@ respectively as compared to the other values (3-10):</p>
 <dt id="term-float-trunc-float-x">float <strong>trunc</strong> ( float x )<a class="headerlink" href="#term-float-trunc-float-x" title="本術語的永久連結">¶</a></dt><dd><p>Nearest integer towards zero.</p>
 </dd>
 </dl>
-</div>
-<div class="section" id="trigonometry-functions">
+</section>
+<section id="trigonometry-functions">
 <h2><a class="toc-backref" href="#id15">Trigonometry Functions</a><a class="headerlink" href="#trigonometry-functions" title="本標題的永久連結">¶</a></h2>
 <dl class="glossary simple">
 <dt id="term-float-acos-float-x">float <strong>acos</strong> ( float x )<a class="headerlink" href="#term-float-acos-float-x" title="本術語的永久連結">¶</a></dt><dd><p>Arc cosine.</p>
@@ -816,8 +817,8 @@ respectively as compared to the other values (3-10):</p>
 <dt id="term-float-tanh-float-x">float <strong>tanh</strong> ( float x )<a class="headerlink" href="#term-float-tanh-float-x" title="本術語的永久連結">¶</a></dt><dd><p>Hyperbolic tangent.</p>
 </dd>
 </dl>
-</div>
-<div class="section" id="vector-functions">
+</section>
+<section id="vector-functions">
 <h2><a class="toc-backref" href="#id16">Vector Functions</a><a class="headerlink" href="#vector-functions" title="本標題的永久連結">¶</a></h2>
 <dl class="glossary simple">
 <dt id="term-float-angle-vector-a-vector-b">float angle ( vector a, vector b )<a class="headerlink" href="#term-float-angle-vector-a-vector-b" title="本術語的永久連結">¶</a></dt><dd><p>Angle between two vectors (in radians).</p>
@@ -839,8 +840,8 @@ respectively as compared to the other values (3-10):</p>
 <dt id="term-vector-up-vector-v-vector-up">vector <strong>up</strong> ( vector v, vector up )<a class="headerlink" href="#term-vector-up-vector-v-vector-up" title="本術語的永久連結">¶</a></dt><dd><p>Rotates <code class="docutils literal notranslate"><span class="pre">v</span></code> such that the Y axis points in the given <code class="docutils literal notranslate"><span class="pre">up</span></code> direction.</p>
 </dd>
 </dl>
-</div>
-<div class="section" id="vector-support">
+</section>
+<section id="vector-support">
 <h2><a class="toc-backref" href="#id17">Vector Support</a><a class="headerlink" href="#vector-support" title="本標題的永久連結">¶</a></h2>
 <p><em>Vectors</em> (points, colors, or 3D vectors) may be intermixed with <em>scalars</em>
 (simple floating point values). If a scalar is used in a vector context, it is
@@ -853,8 +854,8 @@ with vectors.</p>
 <p>Arithmetic operators such as <code class="docutils literal notranslate"><span class="pre">+</span></code>, <code class="docutils literal notranslate"><span class="pre">*</span></code>, etc., and scalar functions are
 applied component-wise to vectors. For example, applying the <code class="docutils literal notranslate"><span class="pre">gamma</span></code>
 function to a map adjusts the gamma of all three color channels.</p>
-</div>
-<div class="section" id="curve-functions">
+</section>
+<section id="curve-functions">
 <h2><a class="toc-backref" href="#id18">Curve Functions</a><a class="headerlink" href="#curve-functions" title="本標題的永久連結">¶</a></h2>
 <p>Interpolation of parameter values to a set of control points is governed
 by the following functions.</p>
@@ -893,16 +894,16 @@ points are specified by triples of parameters <code class="docutils literal notr
 <code class="docutils literal notranslate"><span class="pre">y1</span></code>, ..., <code class="docutils literal notranslate"><span class="pre">yn</span></code> are distributed evenly from <code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">1]</span></code>.</p>
 </dd>
 </dl>
-</div>
-<div class="section" id="custom-plugins">
+</section>
+<section id="custom-plugins">
 <h2><a class="toc-backref" href="#id19">Custom Plugins</a><a class="headerlink" href="#custom-plugins" title="本標題的永久連結">¶</a></h2>
 <p>Custom functions may be written in C++ and loaded as one or more dynamic plugins.  See <a class="reference external" href="https://wdas.github.io/SeExpr/doxygen/plugins.html">Writing Custom Expression Plugins</a> for more details.</p>
 <div class="admonition warning">
 <p class="admonition-title">警告</p>
 <p>This functionality is not supported in Krita.</p>
 </div>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
@@ -927,7 +928,7 @@ points are specified by triples of parameters <code class="docutils literal notr
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>a039fd4</code>
+          修訂版本 <code>6a98b9d</code>
         </span>
       
 

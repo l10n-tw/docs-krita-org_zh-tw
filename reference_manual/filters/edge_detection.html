@@ -21,8 +21,9 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-08-24T09:25:20" />
-  <meta content="Overview of the edge detection filters." name="description" />
+  <meta property="og:article:modified_time" content="2021-08-24T21:25:49" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<meta content="Overview of the edge detection filters." name="description" />
 
   
   
@@ -265,20 +266,22 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="edge-detection">
+  <section id="edge-detection">
 <span id="edge-detection-filters"></span><span id="index-0"></span><h1>Edge Detection<a class="headerlink" href="#edge-detection" title="本標題的永久連結">¶</a></h1>
 <p>Edge detection filters focus on finding sharp contrast or border between colors in an image to create edges or lines.</p>
 <p>Since 4.0 there are only two edge detection filters.</p>
-<div class="section" id="id1">
+<section id="id1">
 <h2>Edge Detection<a class="headerlink" href="#id1" title="本標題的永久連結">¶</a></h2>
 <div class="versionadded">
 <p><span class="versionmodified added">4.0 版新加入.</span></p>
 </div>
 <p>A general edge detection filter that encapsulates all other filters. Edge detection filters that were separate before 4.0 have been folded into this one. It is also available for filter layers and filter brushes.</p>
-<div class="figure align-center" id="id2" style="width: 800px">
+<figure class="align-center" id="id2" style="width: 800px">
 <img alt="../../_images/Krita_4_0_edge_detection.png" src="../../_images/Krita_4_0_edge_detection.png" />
-<p class="caption"><span class="caption-text">From left to right: Original, with Prewitt edge detection applied, with Prewitt edge detection applied and result applied to alpha channel, and finally the original with an edge detection filter layer with the same settings as 3, and the filter layer blending mode set to multiply.</span><a class="headerlink" href="#id2" title="本圖片的永久連結">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">From left to right: Original, with Prewitt edge detection applied, with Prewitt edge detection applied and result applied to alpha channel, and finally the original with an edge detection filter layer with the same settings as 3, and the filter layer blending mode set to multiply.</span><a class="headerlink" href="#id2" title="本圖片的永久連結">¶</a></p>
+</figcaption>
+</figure>
 <dl>
 <dt>Formula</dt><dd><p>The convolution kernel formula for the edge detection. The difference between these is subtle, but still worth experimenting with.</p>
 <dl class="simple">
@@ -311,8 +314,8 @@
 <dt>Apply result to Alpha Channel.</dt><dd><p>The edge detection will be used on a grayscale copy of the image, and the output will be onto the alpha channel of the image, meaning it will output lines only.</p>
 </dd>
 </dl>
-</div>
-<div class="section" id="gaussian-high-pass">
+</section>
+<section id="gaussian-high-pass">
 <span id="index-1"></span><h2>Gaussian High Pass<a class="headerlink" href="#gaussian-high-pass" title="本標題的永久連結">¶</a></h2>
 <p>A High Pass filter is a type of edge detection filter. It is usually used to enhance contrasts, much like a sharpen filter, but within a texture editing workflow it is also used to remove local gradients.</p>
 <dl class="simple">
@@ -320,17 +323,21 @@
 </dd>
 </dl>
 <p>To use this as a sharpen filter, create a filter layer with this filter, and then set the blending mode to modes like 'soft light', 'overlay', 'hard light', 'linear light'. Different blending modes give different results.</p>
-<div class="figure align-center" id="id3" style="width: 377px">
+<figure class="align-center" id="id3" style="width: 377px">
 <img alt="../../_images/highpass_filter_sharpen.png" src="../../_images/highpass_filter_sharpen.png" />
-<p class="caption"><span class="caption-text"><strong>Top left</strong>: Original, <strong>top right</strong>: Gaussian Highpass Result with radius 3, <strong>bottom left</strong>: Gaussian High Pass Result with radius 3 blended over the original with to Linear Light, <strong>bottom right</strong>: Gaussian High Pass result with radius 3 blended over the original with Soft Light.</span><a class="headerlink" href="#id3" title="本圖片的永久連結">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text"><strong>Top left</strong>: Original, <strong>top right</strong>: Gaussian Highpass Result with radius 3, <strong>bottom left</strong>: Gaussian High Pass Result with radius 3 blended over the original with to Linear Light, <strong>bottom right</strong>: Gaussian High Pass result with radius 3 blended over the original with Soft Light.</span><a class="headerlink" href="#id3" title="本圖片的永久連結">¶</a></p>
+</figcaption>
+</figure>
 <p>To remove local gradients from a texture, create a clone layer, and apply this filter as a filter mask. Then, put a filter layer with gaussian blur set to the full amount in between the clone layer and the original. Finally, set the clone layer to luminosity or multiply (in this case an extra filter mask needs to be added to reduce the levels so that the multiplication result will not be as strong).</p>
-<div class="figure align-center" id="id4" style="width: 513px">
+<figure class="align-center" id="id4" style="width: 513px">
 <img alt="../../_images/highpass_filter_local_gradient_removal.png" src="../../_images/highpass_filter_local_gradient_removal.png" />
-<p class="caption"><span class="caption-text"><strong>Left</strong>: Original, <strong>top right</strong>: Gaussian High Pass Result blended with luminosity to remove the local gradients but keep the sharp details. In this specific example the lack of local gradients removes some character, but the gaussian high pass result could also be used to create a heightmap.</span><a class="headerlink" href="#id4" title="本圖片的永久連結">¶</a></p>
-</div>
-</div>
-<div class="section" id="height-to-normal-map">
+<figcaption>
+<p><span class="caption-text"><strong>Left</strong>: Original, <strong>top right</strong>: Gaussian High Pass Result blended with luminosity to remove the local gradients but keep the sharp details. In this specific example the lack of local gradients removes some character, but the gaussian high pass result could also be used to create a heightmap.</span><a class="headerlink" href="#id4" title="本圖片的永久連結">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="height-to-normal-map">
 <span id="index-2"></span><h2>Height to Normal Map<a class="headerlink" href="#height-to-normal-map" title="本標題的永久連結">¶</a></h2>
 <div class="versionadded">
 <p><span class="versionmodified added">4.0 版新加入.</span></p>
@@ -355,8 +362,8 @@
 <dt>XYZ</dt><dd><p>An XYZ swizzle, that allows you to map Red, Green and Blue to different 3d normal vector coordinates. This is necessary mostly for the difference between MikkT-space normal maps (+X, +Y, +Z) and the OpenGL standard normal map (+X, -Y, +Z).</p>
 </dd>
 </dl>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
@@ -381,7 +388,7 @@
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>a039fd4</code>
+          修訂版本 <code>6a98b9d</code>
         </span>
       
 

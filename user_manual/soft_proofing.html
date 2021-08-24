@@ -21,8 +21,9 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-08-24T09:25:20" />
-  <meta content="How to use soft proofing in Krita." name="description" property="og:description" />
+  <meta property="og:article:modified_time" content="2021-08-24T21:25:49" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<meta content="How to use soft proofing in Krita." name="description" property="og:description" />
 
   
   
@@ -239,7 +240,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="soft-proofing">
+  <section id="soft-proofing">
 <span id="index-0"></span><span id="id1"></span><h1>螢幕校樣<a class="headerlink" href="#soft-proofing" title="本標題的永久連結">¶</a></h1>
 <p>When we make an image in Krita, and print that out with a printer, the image tends to look different. The colors are darker, or less dark than expected, maybe the reds are more aggressive, maybe contrast is lost. For simple documents, this isn’t much of a problem, but for professional prints, this can be very sad, as it can change the look and feel of an image drastically.</p>
 <p>The reason this happens is simply because the printer uses a different color model (CMYK) and it has often access to a lower range of colors (called a gamut).</p>
@@ -250,20 +251,24 @@
 <li><p>Finally, working in that specific CMYK space means that the image is stuck to that space. If you are preparing your work for different a CMYK profile, due to the paper, printer or ink being different, you might have a bigger gamut with more bright colors that you would like to take advantage of.</p></li>
 </ul>
 <p>So ideally, you would do the image in RGB, and use all your favorite RGB tools, and let the computer do a conversion to a given CMYK space on the fly, just for preview. This is possible, and is what we call ''Soft Proofing''.</p>
-<div class="figure align-center" id="id2" style="width: 800px">
+<figure class="align-center" id="id2" style="width: 800px">
 <img alt="../_images/Softproofing_regularsoftproof.png" src="../_images/Softproofing_regularsoftproof.png" />
-<p class="caption"><span class="caption-text">On the left, the original, on the right, a view where soft proofing is turned on. The difference is subtle due to the lack of really bright colors, but the soft proofed version is slightly less blueish in the whites of the flowers and slightly less saturated in the greens of the leaves.</span><a class="headerlink" href="#id2" title="本圖片的永久連結">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">On the left, the original, on the right, a view where soft proofing is turned on. The difference is subtle due to the lack of really bright colors, but the soft proofed version is slightly less blueish in the whites of the flowers and slightly less saturated in the greens of the leaves.</span><a class="headerlink" href="#id2" title="本圖片的永久連結">¶</a></p>
+</figcaption>
+</figure>
 <p>You can toggle soft proofing on any image using the <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Y</kbd></kbd> shortcut. Unlike other programs, this is per-view, so that you can look at your image non-proofed and proofed, side by side. The settings are also per image, and saved into the <code class="docutils literal notranslate"><span class="pre">.kra</span></code> file. You can set the proofing options in <span class="menuselection">Image ‣ Image Properties ‣ Soft Proofing</span>.</p>
 <p>There you can set the following options:</p>
 <dl>
 <dt>Profile, Depth, Space</dt><dd><p>Of these, only the profile is really important. This will serve as the profile you are proofing to. In a professional print workflow, this profile should be determined by the printing house.</p>
 </dd>
 <dt>Intent</dt><dd><p>Set the proofing Intent. It uses the same intents as the intents mentioned in the <a class="reference internal" href="../general_concepts/colors/color_managed_workflow.html#color-managed-workflow"><span class="std std-ref">color managed workflow</span></a>.</p>
-<div class="figure align-center" id="id3" style="width: 800px">
+<figure class="align-center" id="id3" style="width: 800px">
 <img alt="../_images/Softproofing_adaptationstate.png" src="../_images/Softproofing_adaptationstate.png" />
-<p class="caption"><span class="caption-text">Left: Soft proofed image with Adaptation state slider set to max. Right: Soft proofed image with Adaptation State set to minimum.</span><a class="headerlink" href="#id3" title="本圖片的永久連結">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">Left: Soft proofed image with Adaptation state slider set to max. Right: Soft proofed image with Adaptation State set to minimum.</span><a class="headerlink" href="#id3" title="本圖片的永久連結">¶</a></p>
+</figcaption>
+</figure>
 </dd>
 <dt>Adaptation State</dt><dd><p>A feature which allows you to set whether <span class="guilabel">Absolute Colorimetric</span> will make the white in the image screen-white during proofing (the slider set to max), or whether it will use the white point of the profile (the slider set to minimum). Often CMYK profiles have a different white as the screen, or amongst one another due to the paper color being different.</p>
 </dd>
@@ -274,14 +279,16 @@
 </dl>
 <p>You can set the defaults that Krita uses in <span class="menuselection">Settings ‣ Configure Krita... ‣ Color Management</span>.</p>
 <p>To configure this properly, it's recommended to make a test image to print (and that is printed by a properly set-up printer) and compare against, and then approximate in the proofing options how the image looks compared to the real-life copy you have made.</p>
-<div class="section" id="out-of-gamut-warning">
+<section id="out-of-gamut-warning">
 <h2>超出色域警告<a class="headerlink" href="#out-of-gamut-warning" title="本標題的永久連結">¶</a></h2>
 <p>The out of gamut warning, or gamut alarm, is an extra option on top of Soft-Proofing: It allows you to see which colors are being clipped, by replacing the resulting color with the set alarm color.</p>
 <p>This can be useful to determine where certain contrasts are being lost, and to allow you to change it slowly to a less contrasted image.</p>
-<div class="figure align-center" id="id4" style="width: 800px">
+<figure class="align-center" id="id4" style="width: 800px">
 <img alt="../_images/Softproofing_gamutwarnings.png" src="../_images/Softproofing_gamutwarnings.png" />
-<p class="caption"><span class="caption-text">Left: View with original image, Right: View with soft proofing and gamut warnings turned on. Krita will save the gamut warning color alongside the proofing options into the KRA file, so pick a color that you think will stand out for your current image.</span><a class="headerlink" href="#id4" title="本圖片的永久連結">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">Left: View with original image, Right: View with soft proofing and gamut warnings turned on. Krita will save the gamut warning color alongside the proofing options into the KRA file, so pick a color that you think will stand out for your current image.</span><a class="headerlink" href="#id4" title="本圖片的永久連結">¶</a></p>
+</figcaption>
+</figure>
 <p>You can activate Gamut Warnings with the <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Y</kbd></kbd> shortcut, but it needs soft proofing activated to work fully.</p>
 <div class="admonition note">
 <p class="admonition-title">備註</p>
@@ -291,8 +298,8 @@
 <p class="admonition-title">警告</p>
 <p>Gamut Warnings sometimes give odd warnings for linear profiles in the shadows. This is a bug in LittleCMS, see <a class="reference external" href="https://ninedegreesbelow.com/bug-reports/soft-proofing-problems.html">here</a> for more info.</p>
 </div>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
@@ -317,7 +324,7 @@
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>a039fd4</code>
+          修訂版本 <code>6a98b9d</code>
         </span>
       
 

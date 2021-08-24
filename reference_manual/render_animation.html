@@ -21,8 +21,9 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-08-24T09:25:20" />
-  <meta content="How to use the render animation command in Krita." name="description" />
+  <meta property="og:article:modified_time" content="2021-08-24T21:25:49" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<meta content="How to use the render animation command in Krita." name="description" />
 
   
   
@@ -256,12 +257,12 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="render-animation">
+  <section id="render-animation">
 <span id="index-0"></span><span id="id1"></span><h1>繪製動畫<a class="headerlink" href="#render-animation" title="本標題的永久連結">¶</a></h1>
 <p>Render animation allows you to render your animation to an image sequence, <code class="docutils literal notranslate"><span class="pre">.gif</span></code>, <code class="docutils literal notranslate"><span class="pre">.mp4</span></code>, <code class="docutils literal notranslate"><span class="pre">.mkv</span></code>, or <code class="docutils literal notranslate"><span class="pre">.ogg</span></code> file. It replaces <span class="guilabel">Export Animation</span>.</p>
 <p>For rendering to an animated file format, Krita will first render to a PNG sequence and then use FFmpeg, which is really good at encoding into video files, to render that sequence to an animated file format. The reason for this two-step process is that animation files can be really complex and really big, and this is the best way to allow you to keep control over the export process. For example, if your computer has a hiccup, and one frame saves out weird, first saving the image sequence allows you to only resave that one weird frame before rendering.</p>
 <p>This means that you will need to find a good place to stick your frames before you can start rendering. If you only do throwaway animations, you can use a spot on your hard-drive with enough room and select <span class="guilabel">Delete Sequence After Rendering</span>.</p>
-<div class="section" id="image-sequence">
+<section id="image-sequence">
 <h2>影像序列<a class="headerlink" href="#image-sequence" title="本標題的永久連結">¶</a></h2>
 <dl class="simple">
 <dt>Base Name</dt><dd><p>The base name of your image sequence. This will get suffixed with a number depending on the frame.</p>
@@ -277,8 +278,8 @@
 <dt>Naming Sequence starts with</dt><dd><p>The frames are named by using <span class="guilabel">Base Name</span>  above and adding a number for the frame. This allows you to set where the frame number starts, so rendering from 8 to 10 with starting point 3 will give you images named 11 and 15. Useful for programs that don't understand sequences starting with 0, or for precision output.</p>
 </dd>
 </dl>
-</div>
-<div class="section" id="id2">
+</section>
+<section id="id2">
 <h2>繪製動畫<a class="headerlink" href="#id2" title="本標題的永久連結">¶</a></h2>
 <dl class="simple">
 <dt>Render As</dt><dd><p>The file format to render to. All except GIF have extra options that can be manipulated via <span class="guilabel">...</span>.</p>
@@ -294,13 +295,13 @@
 <p class="admonition-title">警告</p>
 <p>Krita currently does not support rendering video with transparent elements, and will instead render them as black. To combat this, you can add in a fully colored, opaque layer at the bottom of the file before rendering.</p>
 </div>
-</div>
-<div class="section" id="setting-up-krita-for-exporting-animations">
+</section>
+<section id="setting-up-krita-for-exporting-animations">
 <h2>Setting Up Krita for Exporting Animations<a class="headerlink" href="#setting-up-krita-for-exporting-animations" title="本標題的永久連結">¶</a></h2>
 <p>You will need to download an extra application and link it in Krita for it to work. The application is pretty big (50MB), so the Krita developers didn't want to bundle it with the normal application. The software that we will use is free and called FFmpeg. The following instructions will explain how to get it and set it up. The setup is a one-time thing so you won't have to do it again.</p>
-<div class="section" id="step-1-downloading-ffmpeg">
+<section id="step-1-downloading-ffmpeg">
 <h3>Step 1 - Downloading FFmpeg<a class="headerlink" href="#step-1-downloading-ffmpeg" title="本標題的永久連結">¶</a></h3>
-<div class="section" id="for-windows">
+<section id="for-windows">
 <h4>For Windows<a class="headerlink" href="#for-windows" title="本標題的永久連結">¶</a></h4>
 <p>Open the FFmpeg <a class="reference external" href="https://www.gyan.dev/ffmpeg/builds/">download page.</a></p>
 <p>Go to <span class="guilabel">release</span> section and choose the download link that says <code class="docutils literal notranslate"><span class="pre">ffmpeg-release-essentials.zip</span></code>.</p>
@@ -309,20 +310,20 @@
 <p><strong>Don't</strong> download the file which filename contains the word <code class="docutils literal notranslate"><span class="pre">shared</span></code>. It won't work with Krita.</p>
 <p>If the filename ends with <code class="docutils literal notranslate"><span class="pre">.7z</span></code>, you can still use it, but then you need to have a program that can open 7zip archives (for example <a class="reference external" href="https://www.gyan.dev/ffmpeg/builds/">7zip itself</a>). In case of a <code class="docutils literal notranslate"><span class="pre">.zip</span></code> file, you can open it just using the Windows file browser.</p>
 </div>
-</div>
-<div class="section" id="for-macos">
+</section>
+<section id="for-macos">
 <h4>For macOS<a class="headerlink" href="#for-macos" title="本標題的永久連結">¶</a></h4>
 <p>Please see the section above. However, FFmpeg is obtained from <a class="reference external" href="https://evermeet.cx/ffmpeg/">here</a> instead. Just pick the big green button on the left under the FFmpeg heading. You will also need an archiving utility that supports .7z, since FFmpeg provides their macOS builds in .7z format. If you don't have one, try something like <a class="reference external" href="https://www.kekaosx.com">Keka</a>.</p>
 <p>Alternatively you can find the smaller text under the big green button that says <span class="guilabel">Download as ZIP</span>. Then you should be able to extract it just using Finder.</p>
-</div>
-<div class="section" id="for-linux">
+</section>
+<section id="for-linux">
 <h4>For Linux<a class="headerlink" href="#for-linux" title="本標題的永久連結">¶</a></h4>
 <p>FFmpeg can be installed from the repositories on most Linux systems. Version 2.6 is required for proper GIF support, as we use the palettegen functionality.</p>
-</div>
-</div>
-<div class="section" id="step-2-unzipping-and-linking-to-krita">
+</section>
+</section>
+<section id="step-2-unzipping-and-linking-to-krita">
 <h3>Step 2 - Unzipping and Linking to Krita<a class="headerlink" href="#step-2-unzipping-and-linking-to-krita" title="本標題的永久連結">¶</a></h3>
-<div class="section" id="id3">
+<section id="id3">
 <h4>For Windows<a class="headerlink" href="#id3" title="本標題的永久連結">¶</a></h4>
 <p>Once you've downloaded, go to the file location. Right click on the FFmpeg file, and select <code class="docutils literal notranslate"><span class="pre">Extract</span> <span class="pre">All...</span></code>. Select the file destination, and rename the file to 'ffmpeg'.</p>
 <div class="admonition-hint admonition">
@@ -335,17 +336,17 @@
 <p class="admonition-title">Tip</p>
 <p>If you have saved FFmpeg to a different location, choose <code class="docutils literal notranslate"><span class="pre">&lt;ffmpeg</span> <span class="pre">location&gt;/ffmpeg/bin/ffmpeg.exe</span></code>.</p>
 </div>
-</div>
-<div class="section" id="id4">
+</section>
+<section id="id4">
 <h4>For macOS<a class="headerlink" href="#id4" title="本標題的永久連結">¶</a></h4>
 <p>After downloading FFmpeg, you just need to extract it and then simply point to it in the FFmpeg location in Krita like <code class="docutils literal notranslate"><span class="pre">/Users/user/Downloads/ffmpeg</span></code> (assuming you downloaded and extracted the .7z file to /Users/user/Downloads).</p>
-</div>
-<div class="section" id="id5">
+</section>
+<section id="id5">
 <h4>For Linux<a class="headerlink" href="#id5" title="本標題的永久連結">¶</a></h4>
 <p>FFmpeg is, if installed from the repositories, usually found in <code class="docutils literal notranslate"><span class="pre">/usr/bin/ffmpeg</span></code>.</p>
-</div>
-</div>
-<div class="section" id="step-3-testing-out-an-animation">
+</section>
+</section>
+<section id="step-3-testing-out-an-animation">
 <h3>Step 3 - Testing out an animation<a class="headerlink" href="#step-3-testing-out-an-animation" title="本標題的永久連結">¶</a></h3>
 <p>ffmpeg.exe is what Krita uses to do all of its animation export magic. Now that it is hooked up, let us test it out.</p>
 <p>Let's make an animated GIF. In the Render Animation dialog, change the <span class="guilabel">Render As</span>  field to &quot;GIF image&quot;. Choose the file location where it will save with the &quot;File&quot; menu below. I just saved it to my desktop and called it &quot;<em>export.gif</em>&quot;. When it is done, you should be able to open it up and see the animation.</p>
@@ -357,9 +358,9 @@
 <p class="admonition-title">備註</p>
 <p>macOS does not come with any software to play MP4 and MKV files. If you use Chrome for your web browser, you can drag the video file into that and the video should play. Otherwise you will need to get a program like VLC to see the video.</p>
 </div>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
            </div>
@@ -384,7 +385,7 @@
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>a039fd4</code>
+          修訂版本 <code>6a98b9d</code>
         </span>
       
 

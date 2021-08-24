@@ -21,8 +21,9 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-08-24T09:25:20" />
-  <meta content="如何在 Krita 中使用遮罩筆刷功能。 此功能與 photoshop 的 dual brush 選項不同。" name="description" />
+  <meta property="og:article:modified_time" content="2021-08-24T21:25:49" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<meta content="如何在 Krita 中使用遮罩筆刷功能。 此功能與 photoshop 的 dual brush 選項不同。" name="description" />
 
   
   
@@ -60,7 +61,7 @@
     <link rel="index" title="索引" href="../../../genindex.html" />
     <link rel="search" title="搜尋" href="../../../search.html" />
     <link rel="next" title="Opacity and Flow" href="opacity_and_flow.html" />
-    <link rel="prev" title="Locked Brush Settings" href="locked_brush_settings.html" /> 
+    <link rel="prev" title="鎖定筆刷設定" href="locked_brush_settings.html" /> 
 
   
   <script src="../../../_static/js/modernizr.min.js"></script>
@@ -134,13 +135,13 @@
 <li class="toctree-l2 current"><a class="reference internal" href="../../brushes.html">筆刷</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../brush_engines.html">筆刷引擎</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="../brush_settings.html">筆刷設定</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="brush_tips.html">Brush Tips</a></li>
-<li class="toctree-l4"><a class="reference internal" href="locked_brush_settings.html">Locked Brush Settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="brush_tips.html">筆尖</a></li>
+<li class="toctree-l4"><a class="reference internal" href="locked_brush_settings.html">鎖定筆刷設定</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">遮罩筆刷</a></li>
 <li class="toctree-l4"><a class="reference internal" href="opacity_and_flow.html">Opacity and Flow</a></li>
-<li class="toctree-l4"><a class="reference internal" href="options.html">Options</a></li>
+<li class="toctree-l4"><a class="reference internal" href="options.html">選項</a></li>
 <li class="toctree-l4"><a class="reference internal" href="tablet_sensors.html">Sensors</a></li>
-<li class="toctree-l4"><a class="reference internal" href="texture.html">Texture</a></li>
+<li class="toctree-l4"><a class="reference internal" href="texture.html">紋理</a></li>
 </ul>
 </li>
 </ul>
@@ -263,39 +264,39 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="masked-brush">
+  <section id="masked-brush">
 <span id="option-masked-brush"></span><span id="index-0"></span><h1>遮罩筆刷<a class="headerlink" href="#masked-brush" title="本標題的永久連結">¶</a></h1>
 <div class="versionadded">
 <p><span class="versionmodified added">4.0 版新加入.</span></p>
 </div>
-<p>Masked brush is new feature that is only available in the <a class="reference internal" href="../brush_engines/pixel_brush_engine.html#pixel-brush-engine"><span class="std std-ref">像素筆刷工具</span></a>. They are additional settings you will see in the brush editor. Masked brushes allow you to combine two brush tips in one stroke. One brush tip will be a mask for your primary brush tip. A masked brush is a good alternative to texture for creating expressive and textured brushes.</p>
+<p>遮罩筆刷是只在 <a class="reference internal" href="../brush_engines/pixel_brush_engine.html#pixel-brush-engine"><span class="std std-ref">像素筆刷工具</span></a> 中可用的新功能。可在筆刷編輯器的選項列表裡找到它。遮罩筆刷可將兩個筆尖融合為一。另一個筆尖將作為主要筆尖的遮罩。遮罩筆刷可以替單純的紋理畫出表現力更豐富的帶紋理筆刷。</p>
 <img alt="../../../_images/Masking-brush1.jpg" class="align-center" src="../../../_images/Masking-brush1.jpg" />
 <div class="admonition note">
 <p class="admonition-title">備註</p>
 <p>Due to technological constraints, the masked brush only works in the wash painting mode. However, do remember that flow works as opacity does in the build-up painting mode.</p>
 </div>
 <dl>
-<dt><a class="reference internal" href="brush_tips.html#option-brush-tip"><span class="std std-ref">Brush Tips</span></a></dt><dd><p>Like with normal brush tip you can choose any brush tip and change it size, spacing, and rotation. Masking brush size is relative to main brush size. This means when you change your brush size masking tip will be changed to keep the ratio.</p>
+<dt><a class="reference internal" href="brush_tips.html#option-brush-tip"><span class="std std-ref">筆尖</span></a></dt><dd><p>Like with normal brush tip you can choose any brush tip and change it size, spacing, and rotation. Masking brush size is relative to main brush size. This means when you change your brush size masking tip will be changed to keep the ratio.</p>
 <dl class="simple">
-<dt><a class="reference internal" href="../../blending_modes.html#blending-modes"><span class="std std-ref">Blending mode (drop-down inside Brush tip)</span></a>:</dt><dd><p>Blending modes changes how tips are combined.</p>
+<dt><a class="reference internal" href="../../blending_modes.html#blending-modes"><span class="std std-ref">Blending mode (drop-down inside Brush tip)</span></a>:</dt><dd><p>混色模式控制主副筆尖的融合方式。</p>
 </dd>
 </dl>
 <img alt="../../../_images/Masking-brush2.jpg" class="align-center" src="../../../_images/Masking-brush2.jpg" />
 </dd>
-<dt><a class="reference internal" href="options.html#option-size"><span class="std std-ref">Size</span></a></dt><dd><p>The size sensor option of the second tip.</p>
+<dt><a class="reference internal" href="options.html#option-size"><span class="std std-ref">大小</span></a></dt><dd><p>副筆尖的大小感應器選項。</p>
 </dd>
 <dt><a class="reference internal" href="opacity_and_flow.html#option-opacity-n-flow"><span class="std std-ref">Opacity and Flow</span></a></dt><dd><p>The opacity and flow of the second tip. This is mapped to a sensor by default. Flow can be quite aggressive on subtract mode, so it might be an idea to turn it off there.</p>
 </dd>
 <dt><a class="reference internal" href="options.html#option-ratio"><span class="std std-ref">Ratio</span></a></dt><dd><p>This affects the brush ratio on a given brush.</p>
 </dd>
-<dt><a class="reference internal" href="options.html#option-mirror"><span class="std std-ref">Mirror</span></a></dt><dd><p>The Mirror option of the second tip.</p>
+<dt><a class="reference internal" href="options.html#option-mirror"><span class="std std-ref">鏡射</span></a></dt><dd><p>The Mirror option of the second tip.</p>
 </dd>
-<dt><a class="reference internal" href="options.html#option-rotation"><span class="std std-ref">Rotation</span></a></dt><dd><p>The rotation option of the second tip. Best set to &quot;fuzzy dab&quot;.</p>
+<dt><a class="reference internal" href="options.html#option-rotation"><span class="std std-ref">旋轉</span></a></dt><dd><p>The rotation option of the second tip. Best set to &quot;fuzzy dab&quot;.</p>
 </dd>
-<dt><a class="reference internal" href="options.html#option-scatter"><span class="std std-ref">Scatter</span></a></dt><dd><p>The scatter option. The default is quite high, so don't forget to turn it lower.</p>
+<dt><a class="reference internal" href="options.html#option-scatter"><span class="std std-ref">分散</span></a></dt><dd><p>The scatter option. The default is quite high, so don't forget to turn it lower.</p>
 </dd>
 </dl>
-<p>Difference from <a class="reference internal" href="texture.html#option-texture"><span class="std std-ref">Texture</span></a>:</p>
+<p>與 <a class="reference internal" href="texture.html#option-texture"><span class="std std-ref">紋理</span></a> 的區別：</p>
 <blockquote>
 <div><ul class="simple">
 <li><p>You don’t need seamless texture to make cool looking brush.</p></li>
@@ -304,7 +305,7 @@
 <li><p>Easier to fill some areas with solid color but harder to make it hard textured.</p></li>
 </ul>
 </div></blockquote>
-</div>
+</section>
 
 
            </div>
@@ -317,7 +318,7 @@
         <a href="opacity_and_flow.html" class="btn btn-neutral float-right" title="Opacity and Flow" accesskey="n" rel="next"> <!-- 下一個 --> <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="locked_brush_settings.html" class="btn btn-neutral" title="Locked Brush Settings" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- 上一個  -->  </a>
+        <a href="locked_brush_settings.html" class="btn btn-neutral" title="鎖定筆刷設定" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- 上一個  -->  </a>
       
     </div>
   
@@ -329,7 +330,7 @@
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>a039fd4</code>
+          修訂版本 <code>6a98b9d</code>
         </span>
       
 

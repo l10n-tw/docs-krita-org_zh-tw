@@ -21,8 +21,9 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-08-24T09:25:20" />
-  <meta content="Guide to the development of new features." name="description" />
+  <meta property="og:article:modified_time" content="2021-08-24T21:25:49" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<meta content="Guide to the development of new features." name="description" />
 
   
   
@@ -257,10 +258,10 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="developing-features">
+  <section id="developing-features">
 <span id="id1"></span><h1>Developing Features<a class="headerlink" href="#developing-features" title="本標題的永久連結">¶</a></h1>
 <p>There's several stages to making a feature request become reality. The first section of this page goes over a set of common issues with making feature requests and gives hints on how to make a simple feature request into a proper proposal. The rest documents how a feature goes from a proposal to an actual reality.</p>
-<div class="section" id="step-1-making-a-proposal">
+<section id="step-1-making-a-proposal">
 <h2>Step 1: Making a proposal<a class="headerlink" href="#step-1-making-a-proposal" title="本標題的永久連結">¶</a></h2>
 <p><em>“vOpenBlackCanvasMischiefPhotoPaintStormToolKaikai has a frobdinger tool! Krita will never amount to a row of beans unless Krita gets a frobdinger tool, too!”</em></p>
 <p>The cool thing about open source is that you can add features yourself, and even if you cannot code, you talk directly with the developers about the features you need in your workflow. Try that with closed-source proprietary software! But, often, the communication goes awry, leaving both users with bright ideas and developers with itchy coding fingers unsatisfied.</p>
@@ -315,8 +316,8 @@
 <li><p>and then it’s time to find time to implement it!</p></li>
 <li><p>and then you need to test the result.</p></li>
 </ul>
-</div>
-<div class="section" id="step-2-triaging-the-proposal">
+</section>
+<section id="step-2-triaging-the-proposal">
 <h2>Step 2: Triaging the proposal<a class="headerlink" href="#step-2-triaging-the-proposal" title="本標題的永久連結">¶</a></h2>
 <p>This is strictly a developer task. What is done is that we identify how much work a proposal would need to be implemented. Since 2016 we use these groups to categorize wishbugs so we can plan them into a current release or select them for a fundraiser.</p>
 <p>To fulfill this step, we need to have a full list which consolidated the ideas and requirements. A good feature request from step one will have these lined out.</p>
@@ -336,29 +337,29 @@
 <dt>WISHGROUP: Needs proposal and design</dt><dd><p>needs discussion among artists to define scope first. A good proposal doesn't need this.</p>
 </dd>
 </dl>
-</div>
-<div class="section" id="step-3-discussing-in-irc-phab">
+</section>
+<section id="step-3-discussing-in-irc-phab">
 <h2>Step 3: Discussing in irc/phab<a class="headerlink" href="#step-3-discussing-in-irc-phab" title="本標題的永久連結">¶</a></h2>
 <p>Again, strictly a developer task. While nothing stops an adventurous programmer from just going in and implementing something, it helps to go to the #krita irc on Libera.Chat and tell us you're working on it. Not because you need permission(Krita is open source after all), but we do want to be able to help you in your endeavours. Such help can include technical help, like where things are in the code, but also interface design help.</p>
 <p>Some features, such as new frame types for animation, or multithreading on some part or the other also needs careful discussion so we know what is going to need changes.</p>
 <p>Eventually, a phabricator task will be made to track the issue as well as including mockups. Branch progress is also discussed during the weekly meeting in the irc.</p>
-</div>
-<div class="section" id="step-4-work-in-a-feature-branch">
+</section>
+<section id="step-4-work-in-a-feature-branch">
 <h2>Step 4: Work in a feature branch<a class="headerlink" href="#step-4-work-in-a-feature-branch" title="本標題的永久連結">¶</a></h2>
 <p>New feature branches are called 'name/number-shortdescription'. Examples: &quot;rempt/T379-resource-management&quot;, &quot;kazakov/hdr-support&quot;, &quot;wolthera/edgedetectionfilter&quot;, &quot;jounip/T8764-clone-frames&quot;.</p>
 <p>Originally this was lastname only, but some users have an endlessly long last name while others prefer using their kde identity name. The main purpose is to identify who is responsible for the work in the branch.</p>
 <p>Work in a feature branch continues till all major elements are done. A <a class="reference internal" href="patch_review_guide.html#patch-review-guide"><span class="std std-ref">review request</span></a> is done over the whole branch. Sometimes, for UI purposes, people check out the branch to test it.</p>
 <p>When the review is accepted, the branch is merged into master for further testing. When such a branch is merged, a mail needs to be sent to <a class="reference external" href="mailto:kimageshop&#37;&#52;&#48;kde&#46;org">kimageshop<span>&#64;</span>kde<span>&#46;</span>org</a> to notify everyone about this, you can do this automatically by adding 'CCMAIL:kimageshop&#64;kde.org' to your merge commit.</p>
 <p>As Krita's nightlies are based on master that means a binary will be compiled for the master branch with the new feature in at most 24 hours.</p>
-</div>
-<div class="section" id="step-5-documentation-and-demonstration">
+</section>
+<section id="step-5-documentation-and-demonstration">
 <h2>Step 5: Documentation and demonstration<a class="headerlink" href="#step-5-documentation-and-demonstration" title="本標題的永久連結">¶</a></h2>
 <p>When a feature hits the master branch, an entry will be written for the draft branch of this very manual. In particular a reference manual entry will be written to ensure some documentation, some bigger features that interact with one another might also receive a tutorial.</p>
 <p>The people who programmed or designed the feature are encouraged to help with this documentation process(as they know it best), but it is not mandatory. What is appreciated is that the issue or task is assigned to the manual team.</p>
 <p>Similarly, demonstration videos or images are welcome, as they will be used for the release notes. The release notes for the next big version are <a class="reference external" href="https://krita.org/en/krita-4-2-release-notes/">available here</a>, come help us with making the page look good!</p>
 <p>Finally, upon release a stable branch is created for the master branch (often named Krita/versionnumber), and a release is made with the new feature.</p>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
@@ -383,7 +384,7 @@
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>a039fd4</code>
+          修訂版本 <code>6a98b9d</code>
         </span>
       
 

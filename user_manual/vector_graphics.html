@@ -21,8 +21,9 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-08-24T09:25:20" />
-  <meta content="Overview of vector graphics in Krita." name="description" property="og:description" />
+  <meta property="og:article:modified_time" content="2021-08-24T21:25:49" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<meta content="Overview of vector graphics in Krita." name="description" property="og:description" />
 
   
   
@@ -252,17 +253,17 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="vector-graphics">
+  <section id="vector-graphics">
 <span id="index-0"></span><span id="id1"></span><h1>向量圖形<a class="headerlink" href="#vector-graphics" title="本標題的永久連結">¶</a></h1>
 <p>Krita 4.0 has had a massive rewrite of the vector tools. So here's a page explaining the vector tools:</p>
-<div class="section" id="what-are-vector-graphics">
+<section id="what-are-vector-graphics">
 <h2>甚麼是向量圖形？<a class="headerlink" href="#what-are-vector-graphics" title="本標題的永久連結">¶</a></h2>
 <p>Krita is primarily a raster graphics editing tool, which means that most of the editing changes the values of the pixels on the raster that makes up the image.</p>
 <img alt="../_images/Pixels-brushstroke.png" src="../_images/Pixels-brushstroke.png" />
 <p>Vector graphics on the other hand use mathematics to describe a shape. Because it uses a formula, vector graphics can be resized to any size.</p>
 <p>On one hand, this makes vector graphics great for logos and banners. On the other hand, raster graphics are much easier to edit, so vectors tend to be the domain of deliberate design, using a lot of precision.</p>
-</div>
-<div class="section" id="tools-for-making-shapes">
+</section>
+<section id="tools-for-making-shapes">
 <h2>製作圖形的工具<a class="headerlink" href="#tools-for-making-shapes" title="本標題的永久連結">¶</a></h2>
 <p>You can start making vector graphics by first making a vector layer (press the arrow button next to the <span class="guilabel">+</span> in the layer docker to get extra layer types). Then, all the usual drawing tools outside the Freehand, Dynamic and the Multibrush tool can be used to draw shapes.</p>
 <p>The Path and Polyline tool are the tools you used most often on a vector layer, as they allow you to make the most dynamic of shapes.</p>
@@ -270,46 +271,46 @@
 <p>The calligraphy and text tool also make special vectors. The calligraphy tool is for producing strokes that are similar to brush strokes, while the text tool makes a text object that can be edited afterwards.</p>
 <p>All of these will use the current brush size to determine stroke thickness, as well as the current foreground and background color.</p>
 <p>There is one last way to make vectors: the <span class="guilabel">Vector Image</span> tool.  It allows you to add shapes that have been defined in an SVG file as symbols. Unlike the other tools, these have their own fill and stroke.</p>
-</div>
-<div class="section" id="arranging-shapes">
+</section>
+<section id="arranging-shapes">
 <h2>排列圖形<a class="headerlink" href="#arranging-shapes" title="本標題的永久連結">¶</a></h2>
 <p>A vector layer has its own hierarchy of shapes, much like how the whole image has a hierarchy of layers. So shapes can be in front of one another. This can be modified with the arrange docker, or with the <span class="guilabel">Select Shapes</span> tool.</p>
 <p>The arrange docker also allows you to group and ungroup shapes. It also allows you to precisely align shapes, for example, have them aligned to the center, or have an even spacing between all the shapes.</p>
-</div>
-<div class="section" id="editing-shapes">
+</section>
+<section id="editing-shapes">
 <h2>編輯圖形<a class="headerlink" href="#editing-shapes" title="本標題的永久連結">¶</a></h2>
 <p>Editing of vector shapes is done with the <span class="guilabel">Select Shapes</span> tool and the <span class="guilabel">Edit Shapes</span> tool.</p>
 <p>The <span class="guilabel">Select Shapes</span> tool can be used to select vector shapes, to group them (via <img alt="滑鼠右鍵" src="../_images/Krita_mouse_right.png" />), ungroup them, to use booleans to combine or subtract shapes from one another (via <img alt="滑鼠右鍵" src="../_images/Krita_mouse_right.png" />), to move them up and down, or to do quick transforms.</p>
-<div class="section" id="fill">
+<section id="fill">
 <h3>填充<a class="headerlink" href="#fill" title="本標題的永久連結">¶</a></h3>
 <p>You can change the fill of a shape by selecting it and changing the active foreground color.</p>
 <p>You can also change it by going into the tool options of the <span class="guilabel">Select Shapes</span> tool and going to the <span class="guilabel">Fill</span> tab.</p>
 <p>Vector shapes can be filled with a solid color, a gradient or a pattern.</p>
-</div>
-<div class="section" id="stroke">
+</section>
+<section id="stroke">
 <h3>描邊<a class="headerlink" href="#stroke" title="本標題的永久連結">¶</a></h3>
 <p>Strokes can be filled with the same things as fills.</p>
 <p>However, they can also be further changed. For example, you can add dashes and markers to the line.</p>
-</div>
-<div class="section" id="coordinates">
+</section>
+<section id="coordinates">
 <h3>坐標<a class="headerlink" href="#coordinates" title="本標題的永久連結">¶</a></h3>
 <p>Shapes can be moved with the <span class="guilabel">Select Shapes</span> tool, and in the tool options you can specify the exact coordinates.</p>
-</div>
-<div class="section" id="editing-nodes-and-special-parameters">
+</section>
+<section id="editing-nodes-and-special-parameters">
 <h3>編輯節點及特殊參數<a class="headerlink" href="#editing-nodes-and-special-parameters" title="本標題的永久連結">¶</a></h3>
 <p>If you have a shape selected, you can double-click it to get to the appropriate tool to edit it. Usually this is the <span class="guilabel">Edit Shape</span> tool, but for text this is the <span class="guilabel">Text</span> tool.</p>
 <p>In the <span class="guilabel">Edit Shape</span> tool, you can move around nodes on the canvas for regular paths. For special paths, like the ellipse and the rectangle, you can move nodes and edit the specific parameters in the <span class="guilabel">Tool Options</span> docker.</p>
-</div>
-</div>
-<div class="section" id="working-together-with-other-programs">
+</section>
+</section>
+<section id="working-together-with-other-programs">
 <h2>與其他軟體共同作業<a class="headerlink" href="#working-together-with-other-programs" title="本標題的永久連結">¶</a></h2>
 <p>One of the big things Krita 4.0 brought was moving from <code class="docutils literal notranslate"><span class="pre">ODG</span></code> to <code class="docutils literal notranslate"><span class="pre">SVG</span></code>. What this means is that Krita saves as <code class="docutils literal notranslate"><span class="pre">SVG</span></code> inside <code class="docutils literal notranslate"><span class="pre">KRA</span></code> files, and that means Krita can open <code class="docutils literal notranslate"><span class="pre">SVG</span></code> just fine. This is important as <code class="docutils literal notranslate"><span class="pre">SVG</span></code> is the most popular vector format.</p>
-<div class="section" id="inkscape">
+<section id="inkscape">
 <h3>Inkscape<a class="headerlink" href="#inkscape" title="本標題的永久連結">¶</a></h3>
 <p>You can copy and paste vectors from Krita to Inkscape, or from Inkscape to Krita. Only the <code class="docutils literal notranslate"><span class="pre">SVG</span> <span class="pre">1.1</span></code> features are supported, with exception of smaller features like the mesh gradients.</p>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
            </div>
@@ -334,7 +335,7 @@
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>a039fd4</code>
+          修訂版本 <code>6a98b9d</code>
         </span>
       
 
