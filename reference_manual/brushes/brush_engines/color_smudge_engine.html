@@ -6,7 +6,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta property="og:title" name="title" content="Color Smudge Brush Engine" />
+  <meta property="og:title" name="title" content="混色筆刷工具" />
   <meta property="og:site-name" content="Krita Manual" />
   <meta property="og:type" content="article" />
   <meta property="og:locale" content="zh_TW" />
@@ -21,12 +21,12 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-08-23T13:29:21" />
-  <meta content="The Color Smudge Brush Engine manual page." name="description" property="og:description" />
+  <meta property="og:article:modified_time" content="2021-08-24T00:30:04" />
+  <meta content="混色筆刷工具的手冊頁。" name="description" property="og:description" />
 
   
   
-  <title>Color Smudge Brush Engine &mdash; Krita Manual 5.0.0 說明文件</title>
+  <title>混色筆刷工具 &mdash; Krita Manual 5.0.0 說明文件</title>
   
 
   
@@ -59,8 +59,8 @@
     <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
     <link rel="index" title="索引" href="../../../genindex.html" />
     <link rel="search" title="搜尋" href="../../../search.html" />
-    <link rel="next" title="Curve Brush Engine" href="curve_engine.html" />
-    <link rel="prev" title="Clone Brush Engine" href="clone_engine.html" /> 
+    <link rel="next" title="貝茲筆刷工具" href="curve_engine.html" />
+    <link rel="prev" title="再製筆刷工具" href="clone_engine.html" /> 
 
   
   <script src="../../../_static/js/modernizr.min.js"></script>
@@ -133,24 +133,24 @@
 <li class="toctree-l2"><a class="reference internal" href="../../blending_modes.html">混色模式</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../../brushes.html">筆刷</a><ul class="current">
 <li class="toctree-l3 current"><a class="reference internal" href="../brush_engines.html">筆刷引擎</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="bristle_engine.html">鬃毛刷引擎</a></li>
-<li class="toctree-l4"><a class="reference internal" href="chalk_engine.html">粉筆筆刷引擎</a></li>
-<li class="toctree-l4"><a class="reference internal" href="clone_engine.html">Clone Brush Engine</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="#">Color Smudge Brush Engine</a></li>
-<li class="toctree-l4"><a class="reference internal" href="curve_engine.html">Curve Brush Engine</a></li>
-<li class="toctree-l4"><a class="reference internal" href="deform_brush_engine.html">Deform Brush Engine</a></li>
-<li class="toctree-l4"><a class="reference internal" href="dyna_brush_engine.html">Dyna Brush Engine</a></li>
-<li class="toctree-l4"><a class="reference internal" href="filter_brush_engine.html">Filter Brush Engine</a></li>
-<li class="toctree-l4"><a class="reference internal" href="grid_brush_engine.html">Grid Brush Engine</a></li>
-<li class="toctree-l4"><a class="reference internal" href="hatching_brush_engine.html">Hatching Brush Engine</a></li>
-<li class="toctree-l4"><a class="reference internal" href="mypaint_engine.html">MyPaint Brush Engine</a></li>
-<li class="toctree-l4"><a class="reference internal" href="particle_brush_engine.html">Particle Brush Engine</a></li>
-<li class="toctree-l4"><a class="reference internal" href="pixel_brush_engine.html">Pixel Brush Engine</a></li>
-<li class="toctree-l4"><a class="reference internal" href="quick_brush_engine.html">Quick Brush Engine</a></li>
-<li class="toctree-l4"><a class="reference internal" href="shape_brush_engine.html">Shape Brush Engine</a></li>
-<li class="toctree-l4"><a class="reference internal" href="sketch_brush_engine.html">Sketch Brush Engine</a></li>
-<li class="toctree-l4"><a class="reference internal" href="spray_brush_engine.html">Spray Brush Engine</a></li>
-<li class="toctree-l4"><a class="reference internal" href="tangen_normal_brush_engine.html">Tangent Normal Brush Engine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bristle_engine.html">鬃毛刷工具</a></li>
+<li class="toctree-l4"><a class="reference internal" href="chalk_engine.html">粉筆筆刷工具</a></li>
+<li class="toctree-l4"><a class="reference internal" href="clone_engine.html">再製筆刷工具</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">混色筆刷工具</a></li>
+<li class="toctree-l4"><a class="reference internal" href="curve_engine.html">貝茲筆刷工具</a></li>
+<li class="toctree-l4"><a class="reference internal" href="deform_brush_engine.html">扭曲筆刷工具</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dyna_brush_engine.html">動態筆刷工具</a></li>
+<li class="toctree-l4"><a class="reference internal" href="filter_brush_engine.html">濾鏡筆刷工具</a></li>
+<li class="toctree-l4"><a class="reference internal" href="grid_brush_engine.html">網格筆刷工具</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hatching_brush_engine.html">排線筆刷工具</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mypaint_engine.html">自訂筆刷工具</a></li>
+<li class="toctree-l4"><a class="reference internal" href="particle_brush_engine.html">粒子筆刷工具</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pixel_brush_engine.html">像素筆刷工具</a></li>
+<li class="toctree-l4"><a class="reference internal" href="quick_brush_engine.html">快速筆刷工具</a></li>
+<li class="toctree-l4"><a class="reference internal" href="shape_brush_engine.html">形狀筆刷工具</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sketch_brush_engine.html">速繪筆刷工具</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spray_brush_engine.html">噴槍工具</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tangen_normal_brush_engine.html">透視格點筆刷工具</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../brush_settings.html">筆刷設定</a></li>
@@ -250,7 +250,7 @@
         
           <li><a href="../brush_engines.html">筆刷引擎</a> &raquo;</li>
         
-      <li>Color Smudge Brush Engine</li>
+      <li>混色筆刷工具</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -275,7 +275,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="color-smudge-brush-engine">
-<span id="index-0"></span><span id="id1"></span><h1>Color Smudge Brush Engine<a class="headerlink" href="#color-smudge-brush-engine" title="本標題的永久連結">¶</a></h1>
+<span id="index-0"></span><span id="id1"></span><h1>混色筆刷工具<a class="headerlink" href="#color-smudge-brush-engine" title="本標題的永久連結">¶</a></h1>
 <img alt="../../../_images/colorsmudge.svg" src="../../../_images/colorsmudge.svg" /><p>The Color Smudge Brush is a brush engine that allows you to mix colors by smearing or dulling. A very powerful brush engine to the painter.</p>
 <div class="section" id="options">
 <h2>Options<a class="headerlink" href="#options" title="本標題的永久連結">¶</a></h2>
@@ -312,7 +312,7 @@
 <div class="figure align-default" id="id3">
 <img alt="../../../_images/brushengine_color_rate_dulling.svg" src="../../../_images/brushengine_color_rate_dulling.svg" /><p class="caption"><span class="caption-text">Same as figure above, but then in <em class="dfn">Dulling Mode</em>.</span><a class="headerlink" href="#id3" title="本圖片的永久連結">¶</a></p>
 </div>
-<p>Using the new algorithm, turning off the smudge length is all that's needed to make a brush that is similar to the <a class="reference internal" href="pixel_brush_engine.html#pixel-brush-engine"><span class="std std-ref">Pixel Brush Engine</span></a>. This is useful as a starting point for brushes that only need a little smudge.</p>
+<p>Using the new algorithm, turning off the smudge length is all that's needed to make a brush that is similar to the <a class="reference internal" href="pixel_brush_engine.html#pixel-brush-engine"><span class="std std-ref">像素筆刷工具</span></a>. This is useful as a starting point for brushes that only need a little smudge.</p>
 <p>When using the <a class="reference internal" href="../brush_settings/brush_tips.html#brush-mode"><span class="std std-ref">gradient mode</span></a>, the <em class="dfn">Color Rate</em> will control the colored brush tip instead of a flat color.</p>
 <p>Blending modes are applied when the color part is composed onto the smudge part. This effectively means that color smudge brushes with a blending mode other than <a class="reference internal" href="../../blending_modes/mix.html#bm-normal"><span class="std std-ref">正常</span></a> will be greatly affected by <em class="dfn">Color Rate</em> in addition to <a class="reference internal" href="../brush_settings/options.html#option-spacing"><span class="std std-ref">Spacing</span></a> and <a class="reference internal" href="../brush_settings/opacity_and_flow.html#option-opacity-n-flow"><span class="std std-ref">opacity</span></a>.</p>
 </div>
@@ -422,13 +422,13 @@
 </div>
 <div class="section" id="brush-tips">
 <h3>Brush tips<a class="headerlink" href="#brush-tips" title="本標題的永久連結">¶</a></h3>
-<p>The <em class="dfn">Color Smudge Brush</em> has all the same <a class="reference internal" href="../brush_settings/brush_tips.html#option-brush-tip"><span class="std std-ref">Brush Tips</span></a> as the <a class="reference internal" href="pixel_brush_engine.html#pixel-brush-engine"><span class="std std-ref">Pixel Brush Engine</span></a>!</p>
+<p>The <em class="dfn">Color Smudge Brush</em> has all the same <a class="reference internal" href="../brush_settings/brush_tips.html#option-brush-tip"><span class="std std-ref">Brush Tips</span></a> as the <a class="reference internal" href="pixel_brush_engine.html#pixel-brush-engine"><span class="std std-ref">像素筆刷工具</span></a>!</p>
 <img alt="../../../_images/Krita-tutorial5-I.4.png" src="../../../_images/Krita-tutorial5-I.4.png" />
 <p>Just remember that the smudge effects are weaker when a brush tip's opacity is lower, so for low-opacity brush tips, increase the opacity and smudge/color rates.</p>
 </div>
 <div class="section" id="scatter-and-other-shape-dynamics">
 <h3>Scatter and other shape dynamics<a class="headerlink" href="#scatter-and-other-shape-dynamics" title="本標題的永久連結">¶</a></h3>
-<p>The <em class="dfn">Color Smudge Brush</em> shares a number of options with the <a class="reference internal" href="pixel_brush_engine.html#pixel-brush-engine"><span class="std std-ref">Pixel Brush Engine</span></a>.</p>
+<p>The <em class="dfn">Color Smudge Brush</em> shares a number of options with the <a class="reference internal" href="pixel_brush_engine.html#pixel-brush-engine"><span class="std std-ref">像素筆刷工具</span></a>.</p>
 <p>However, because of the Smudge effects, the outcome will be different from the Pixel Brush. In particular, the Scatter option becomes much more significant.</p>
 <img alt="../../../_images/Krita-tutorial5-I.5-1.png" src="../../../_images/Krita-tutorial5-I.5-1.png" />
 <p>A few things to note:</p>
@@ -616,10 +616,10 @@ This is mainly achieved with the Smearing mode on. Basically:</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="curve_engine.html" class="btn btn-neutral float-right" title="Curve Brush Engine" accesskey="n" rel="next"> <!-- 下一個 --> <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="curve_engine.html" class="btn btn-neutral float-right" title="貝茲筆刷工具" accesskey="n" rel="next"> <!-- 下一個 --> <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="clone_engine.html" class="btn btn-neutral" title="Clone Brush Engine" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- 上一個  -->  </a>
+        <a href="clone_engine.html" class="btn btn-neutral" title="再製筆刷工具" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- 上一個  -->  </a>
       
     </div>
   

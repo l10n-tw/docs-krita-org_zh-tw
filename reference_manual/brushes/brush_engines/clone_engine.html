@@ -6,7 +6,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta property="og:title" name="title" content="Clone Brush Engine" />
+  <meta property="og:title" name="title" content="再製筆刷工具" />
   <meta property="og:site-name" content="Krita Manual" />
   <meta property="og:type" content="article" />
   <meta property="og:locale" content="zh_TW" />
@@ -21,13 +21,13 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-08-23T13:29:21" />
-  <meta content="印章筆刷使用教學。" name="description" />
-<meta content="印章筆刷使用教學。" lang="en" name="description" xml:lang="en" />
+  <meta property="og:article:modified_time" content="2021-08-24T00:30:04" />
+  <meta content="再製筆刷工具的手冊頁。" name="description" />
+<meta content="再製筆刷工具的手冊頁。" lang="en" name="description" xml:lang="en" />
 
   
   
-  <title>Clone Brush Engine &mdash; Krita Manual 5.0.0 說明文件</title>
+  <title>再製筆刷工具 &mdash; Krita Manual 5.0.0 說明文件</title>
   
 
   
@@ -60,8 +60,8 @@
     <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
     <link rel="index" title="索引" href="../../../genindex.html" />
     <link rel="search" title="搜尋" href="../../../search.html" />
-    <link rel="next" title="Color Smudge Brush Engine" href="color_smudge_engine.html" />
-    <link rel="prev" title="粉筆筆刷引擎" href="chalk_engine.html" /> 
+    <link rel="next" title="混色筆刷工具" href="color_smudge_engine.html" />
+    <link rel="prev" title="粉筆筆刷工具" href="chalk_engine.html" /> 
 
   
   <script src="../../../_static/js/modernizr.min.js"></script>
@@ -134,24 +134,24 @@
 <li class="toctree-l2"><a class="reference internal" href="../../blending_modes.html">混色模式</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../../brushes.html">筆刷</a><ul class="current">
 <li class="toctree-l3 current"><a class="reference internal" href="../brush_engines.html">筆刷引擎</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="bristle_engine.html">鬃毛刷引擎</a></li>
-<li class="toctree-l4"><a class="reference internal" href="chalk_engine.html">粉筆筆刷引擎</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="#">Clone Brush Engine</a></li>
-<li class="toctree-l4"><a class="reference internal" href="color_smudge_engine.html">Color Smudge Brush Engine</a></li>
-<li class="toctree-l4"><a class="reference internal" href="curve_engine.html">Curve Brush Engine</a></li>
-<li class="toctree-l4"><a class="reference internal" href="deform_brush_engine.html">Deform Brush Engine</a></li>
-<li class="toctree-l4"><a class="reference internal" href="dyna_brush_engine.html">Dyna Brush Engine</a></li>
-<li class="toctree-l4"><a class="reference internal" href="filter_brush_engine.html">Filter Brush Engine</a></li>
-<li class="toctree-l4"><a class="reference internal" href="grid_brush_engine.html">Grid Brush Engine</a></li>
-<li class="toctree-l4"><a class="reference internal" href="hatching_brush_engine.html">Hatching Brush Engine</a></li>
-<li class="toctree-l4"><a class="reference internal" href="mypaint_engine.html">MyPaint Brush Engine</a></li>
-<li class="toctree-l4"><a class="reference internal" href="particle_brush_engine.html">Particle Brush Engine</a></li>
-<li class="toctree-l4"><a class="reference internal" href="pixel_brush_engine.html">Pixel Brush Engine</a></li>
-<li class="toctree-l4"><a class="reference internal" href="quick_brush_engine.html">Quick Brush Engine</a></li>
-<li class="toctree-l4"><a class="reference internal" href="shape_brush_engine.html">Shape Brush Engine</a></li>
-<li class="toctree-l4"><a class="reference internal" href="sketch_brush_engine.html">Sketch Brush Engine</a></li>
-<li class="toctree-l4"><a class="reference internal" href="spray_brush_engine.html">Spray Brush Engine</a></li>
-<li class="toctree-l4"><a class="reference internal" href="tangen_normal_brush_engine.html">Tangent Normal Brush Engine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bristle_engine.html">鬃毛刷工具</a></li>
+<li class="toctree-l4"><a class="reference internal" href="chalk_engine.html">粉筆筆刷工具</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">再製筆刷工具</a></li>
+<li class="toctree-l4"><a class="reference internal" href="color_smudge_engine.html">混色筆刷工具</a></li>
+<li class="toctree-l4"><a class="reference internal" href="curve_engine.html">貝茲筆刷工具</a></li>
+<li class="toctree-l4"><a class="reference internal" href="deform_brush_engine.html">扭曲筆刷工具</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dyna_brush_engine.html">動態筆刷工具</a></li>
+<li class="toctree-l4"><a class="reference internal" href="filter_brush_engine.html">濾鏡筆刷工具</a></li>
+<li class="toctree-l4"><a class="reference internal" href="grid_brush_engine.html">網格筆刷工具</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hatching_brush_engine.html">排線筆刷工具</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mypaint_engine.html">自訂筆刷工具</a></li>
+<li class="toctree-l4"><a class="reference internal" href="particle_brush_engine.html">粒子筆刷工具</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pixel_brush_engine.html">像素筆刷工具</a></li>
+<li class="toctree-l4"><a class="reference internal" href="quick_brush_engine.html">快速筆刷工具</a></li>
+<li class="toctree-l4"><a class="reference internal" href="shape_brush_engine.html">形狀筆刷工具</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sketch_brush_engine.html">速繪筆刷工具</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spray_brush_engine.html">噴槍工具</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tangen_normal_brush_engine.html">透視格點筆刷工具</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../brush_settings.html">筆刷設定</a></li>
@@ -251,7 +251,7 @@
         
           <li><a href="../brush_engines.html">筆刷引擎</a> &raquo;</li>
         
-      <li>Clone Brush Engine</li>
+      <li>再製筆刷工具</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -276,7 +276,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="clone-brush-engine">
-<span id="index-0"></span><span id="id1"></span><h1>Clone Brush Engine<a class="headerlink" href="#clone-brush-engine" title="本標題的永久連結">¶</a></h1>
+<span id="index-0"></span><span id="id1"></span><h1>再製筆刷工具<a class="headerlink" href="#clone-brush-engine" title="本標題的永久連結">¶</a></h1>
 <img alt="../../../_images/clonebrush.svg" src="../../../_images/clonebrush.svg" /><p>The clone brush is a brush engine that allows you to paint with a duplication of a section of a paint-layer. This is useful in manipulation of photos and textures. You have to select a source and then you can paint to copy or clone the source to a different area. Other applications normally have a separate tool for this, Krita has a brush engine for this.</p>
 <div class="section" id="usage-and-hotkeys">
 <h2>Usage and Hotkeys<a class="headerlink" href="#usage-and-hotkeys" title="本標題的永久連結">¶</a></h2>
@@ -324,10 +324,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="color_smudge_engine.html" class="btn btn-neutral float-right" title="Color Smudge Brush Engine" accesskey="n" rel="next"> <!-- 下一個 --> <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="color_smudge_engine.html" class="btn btn-neutral float-right" title="混色筆刷工具" accesskey="n" rel="next"> <!-- 下一個 --> <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="chalk_engine.html" class="btn btn-neutral" title="粉筆筆刷引擎" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- 上一個  -->  </a>
+        <a href="chalk_engine.html" class="btn btn-neutral" title="粉筆筆刷工具" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- 上一個  -->  </a>
       
     </div>
   

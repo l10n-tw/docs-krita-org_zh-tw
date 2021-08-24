@@ -6,7 +6,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta property="og:title" name="title" content="Tangent Normal Brush Engine" />
+  <meta property="og:title" name="title" content="透視格點筆刷工具" />
   <meta property="og:site-name" content="Krita Manual" />
   <meta property="og:type" content="article" />
   <meta property="og:locale" content="zh_TW" />
@@ -21,12 +21,12 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-08-23T13:29:21" />
-  <meta content="The Tangent Normal Brush Engine manual page." name="description" />
+  <meta property="og:article:modified_time" content="2021-08-24T00:30:04" />
+  <meta content="透視格點筆刷的手冊頁。" name="description" />
 
   
   
-  <title>Tangent Normal Brush Engine &mdash; Krita Manual 5.0.0 說明文件</title>
+  <title>透視格點筆刷工具 &mdash; Krita Manual 5.0.0 說明文件</title>
   
 
   
@@ -60,7 +60,7 @@
     <link rel="index" title="索引" href="../../../genindex.html" />
     <link rel="search" title="搜尋" href="../../../search.html" />
     <link rel="next" title="筆刷設定" href="../brush_settings.html" />
-    <link rel="prev" title="Spray Brush Engine" href="spray_brush_engine.html" /> 
+    <link rel="prev" title="噴槍工具" href="spray_brush_engine.html" /> 
 
   
   <script src="../../../_static/js/modernizr.min.js"></script>
@@ -133,24 +133,24 @@
 <li class="toctree-l2"><a class="reference internal" href="../../blending_modes.html">混色模式</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../../brushes.html">筆刷</a><ul class="current">
 <li class="toctree-l3 current"><a class="reference internal" href="../brush_engines.html">筆刷引擎</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="bristle_engine.html">鬃毛刷引擎</a></li>
-<li class="toctree-l4"><a class="reference internal" href="chalk_engine.html">粉筆筆刷引擎</a></li>
-<li class="toctree-l4"><a class="reference internal" href="clone_engine.html">Clone Brush Engine</a></li>
-<li class="toctree-l4"><a class="reference internal" href="color_smudge_engine.html">Color Smudge Brush Engine</a></li>
-<li class="toctree-l4"><a class="reference internal" href="curve_engine.html">Curve Brush Engine</a></li>
-<li class="toctree-l4"><a class="reference internal" href="deform_brush_engine.html">Deform Brush Engine</a></li>
-<li class="toctree-l4"><a class="reference internal" href="dyna_brush_engine.html">Dyna Brush Engine</a></li>
-<li class="toctree-l4"><a class="reference internal" href="filter_brush_engine.html">Filter Brush Engine</a></li>
-<li class="toctree-l4"><a class="reference internal" href="grid_brush_engine.html">Grid Brush Engine</a></li>
-<li class="toctree-l4"><a class="reference internal" href="hatching_brush_engine.html">Hatching Brush Engine</a></li>
-<li class="toctree-l4"><a class="reference internal" href="mypaint_engine.html">MyPaint Brush Engine</a></li>
-<li class="toctree-l4"><a class="reference internal" href="particle_brush_engine.html">Particle Brush Engine</a></li>
-<li class="toctree-l4"><a class="reference internal" href="pixel_brush_engine.html">Pixel Brush Engine</a></li>
-<li class="toctree-l4"><a class="reference internal" href="quick_brush_engine.html">Quick Brush Engine</a></li>
-<li class="toctree-l4"><a class="reference internal" href="shape_brush_engine.html">Shape Brush Engine</a></li>
-<li class="toctree-l4"><a class="reference internal" href="sketch_brush_engine.html">Sketch Brush Engine</a></li>
-<li class="toctree-l4"><a class="reference internal" href="spray_brush_engine.html">Spray Brush Engine</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="#">Tangent Normal Brush Engine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bristle_engine.html">鬃毛刷工具</a></li>
+<li class="toctree-l4"><a class="reference internal" href="chalk_engine.html">粉筆筆刷工具</a></li>
+<li class="toctree-l4"><a class="reference internal" href="clone_engine.html">再製筆刷工具</a></li>
+<li class="toctree-l4"><a class="reference internal" href="color_smudge_engine.html">混色筆刷工具</a></li>
+<li class="toctree-l4"><a class="reference internal" href="curve_engine.html">貝茲筆刷工具</a></li>
+<li class="toctree-l4"><a class="reference internal" href="deform_brush_engine.html">扭曲筆刷工具</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dyna_brush_engine.html">動態筆刷工具</a></li>
+<li class="toctree-l4"><a class="reference internal" href="filter_brush_engine.html">濾鏡筆刷工具</a></li>
+<li class="toctree-l4"><a class="reference internal" href="grid_brush_engine.html">網格筆刷工具</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hatching_brush_engine.html">排線筆刷工具</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mypaint_engine.html">自訂筆刷工具</a></li>
+<li class="toctree-l4"><a class="reference internal" href="particle_brush_engine.html">粒子筆刷工具</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pixel_brush_engine.html">像素筆刷工具</a></li>
+<li class="toctree-l4"><a class="reference internal" href="quick_brush_engine.html">快速筆刷工具</a></li>
+<li class="toctree-l4"><a class="reference internal" href="shape_brush_engine.html">形狀筆刷工具</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sketch_brush_engine.html">速繪筆刷工具</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spray_brush_engine.html">噴槍工具</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">透視格點筆刷工具</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../brush_settings.html">筆刷設定</a></li>
@@ -250,7 +250,7 @@
         
           <li><a href="../brush_engines.html">筆刷引擎</a> &raquo;</li>
         
-      <li>Tangent Normal Brush Engine</li>
+      <li>透視格點筆刷工具</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -275,7 +275,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="tangent-normal-brush-engine">
-<span id="tangent-brush-engine"></span><span id="index-0"></span><h1>Tangent Normal Brush Engine<a class="headerlink" href="#tangent-normal-brush-engine" title="本標題的永久連結">¶</a></h1>
+<span id="tangent-brush-engine"></span><span id="index-0"></span><h1>透視格點筆刷工具<a class="headerlink" href="#tangent-normal-brush-engine" title="本標題的永久連結">¶</a></h1>
 <img alt="../../../_images/tangentnormal.svg" src="../../../_images/tangentnormal.svg" /><p>The Tangent Normal Brush Engine is an engine that is specifically designed for drawing normal maps, of the tangent variety. These are in turn used in 3d programs and game engines to do all sorts of lightning trickery. Common uses of normal maps include faking detail where there is none, and to drive transformations (Flow Maps).</p>
 <p>A Normal map is an image that holds information for vectors. In particular, they hold information for Normal Vectors, which is the information for how the light bends on a surface. Because Normal Vectors are made up of 3 coordinates, just like colors, we can store and see this information as colors.</p>
 <p>Normals can be seen similar to the stylus on your tablet. Therefore, we can use the tilt-sensors that are available to some tablets to generate the color of the normals, which can then be used by a 3d program to do lighting effects.</p>
@@ -388,7 +388,7 @@
         <a href="../brush_settings.html" class="btn btn-neutral float-right" title="筆刷設定" accesskey="n" rel="next"> <!-- 下一個 --> <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="spray_brush_engine.html" class="btn btn-neutral" title="Spray Brush Engine" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- 上一個  -->  </a>
+        <a href="spray_brush_engine.html" class="btn btn-neutral" title="噴槍工具" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- 上一個  -->  </a>
       
     </div>
   
