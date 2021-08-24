@@ -10,13 +10,13 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Install Sphinx and Jieba
+    - name: Install Sphinx
       run: |
-        python3 -m pip install git+https://github.com/alvinhochun/sphinx.git@gettext-no-subst-defs 'docutils<0.17' jieba
+        python3 -m pip install git+https://github.com/alvinhochun/sphinx.git@gettext-no-subst-defs
     - name: Clone docs
       run: |
         cd ~
-        git clone -b master --depth 1 https://invent.kde.org/documentation/docs-krita-org.git docs
+        git clone -b krita/5.0 --depth 1 https://invent.kde.org/documentation/docs-krita-org.git docs
     - name: Build POT templates
       run: |
         cd ~/docs
