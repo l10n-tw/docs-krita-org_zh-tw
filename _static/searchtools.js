@@ -4,7 +4,7 @@
  *
  * Sphinx JavaScript utilities for the full-text search.
  *
- * :copyright: Copyright 2007-2018 by the Sphinx team, see AUTHORS.
+ * :copyright: Copyright 2007-2021 by the Sphinx team, see AUTHORS.
  * :license: BSD, see LICENSE for details.
  *
  */
@@ -335,6 +335,19 @@ var Search = {
   _queued_query : null,
   _pulse_status : -1,
 
+  htmlToText : function(htmlString) {
+      var virtualDocument = document.implementation.createHTMLDocument('virtual');
+      var htmlElement = $(htmlString, virtualDocument);
+      htmlElement.find('.headerlink').remove();
+      docContent = htmlElement.find('[role=main]')[0];
+      if(docContent === undefined) {
+          console.warn("Content block not found. Sphinx search tries to obtain it " +
+                       "via '[role=main]'. Could you check your theme or template.");
+          return "";
+      }
+      return docContent.textContent || docContent.innerText;
+  },
+
   init : function() {
       var params = $.getQueryParameters();
       if (params.q) {
@@ -413,6 +426,41 @@ var Search = {
   },
 
   /**
+   * Split the search term according to available terms in the search index.
+   * For example, "笔刷预设介绍" will get split into "笔刷", "预设" and "介绍"
+   * assuming these three terms all exist in the search index.
+   * "笔刷预设道路", however, would not be split assuming that "道路" is not a
+   * valid term in the search index.
+   */
+  trySplitChineseTerm : function(term) {
+    var termExists = function(t) {
+      return this._index.terms.hasOwnProperty(t) || this._index.titleterms.hasOwnProperty(t);
+    }.bind(this);
+    if (termExists(term)) {
+      console.log("Term exists:", term);
+      return [ term ];
+    } else {
+      // XXX: This isn't really correct with non-BMP codepoints, but good enough for our use case.
+      var partIdx = term.length - 1;
+      while (partIdx >= 1) {
+        var partA = term.substring(0, partIdx);
+        var partB = term.substring(partIdx);
+        if (termExists(partA)) {
+          var remaining = this.trySplitChineseTerm(partB);
+          if (remaining) {
+            remaining.unshift(partA);
+            console.log("Split into", remaining);
+            return remaining;
+          }
+        }
+        partIdx--;
+      }
+      console.log("Couldn't split term", term);
+      return null;
+    }
+  },
+
+  /**
    * execute search (requires search index to be loaded)
    */
   query : function(query) {
@@ -456,6 +504,23 @@ var Search = {
       if (!$u.contains(toAppend, word))
         toAppend.push(word);
     }
+
+    if (DOCUMENTATION_OPTIONS.LANGUAGE === "ja" || DOCUMENTATION_OPTIONS.LANGUAGE.startsWith("zh_")) {
+      // Attempt to further split terms for Chinese and Japanese.
+      // We don't touch hlterms because I feel that keeping the original hlterms
+      // can be more helpful.
+      var origTerms = searchterms;
+      searchterms = [];
+      for (i = 0; i < origTerms.length; i++) {
+        var trySplitResult = this.trySplitChineseTerm(origTerms[i]);
+        if (trySplitResult) {
+          searchterms = searchterms.concat(trySplitResult);
+        } else {
+          searchterms.push(origTerms[i]);
+        }
+      }
+    }
+
     var highlightstring = '?highlight=' + $.urlencode(hlterms.join(" "));
 
     // console.debug('SEARCH: searching for:');
@@ -523,7 +588,9 @@ var Search = {
 
         
         var listItem = $('<li style="display:none"></li>');
-        if (DOCUMENTATION_OPTIONS.FILE_SUFFIX === '') {
+        var requestUrl = "";
+        var linkUrl = "";
+        if (DOCUMENTATION_OPTIONS.BUILDER === 'dirhtml') {
           // dirhtml builder
           var dirname = item[0] + '/';
           if (dirname.match(/\/index\/$/)) {
@@ -531,15 +598,16 @@ var Search = {
           } else if (dirname == 'index/') {
             dirname = '';
           }
-          listItem.append($('<a/>').attr('href',
-            DOCUMENTATION_OPTIONS.URL_ROOT + dirname +
-            highlightstring + item[2]).html(item[1]));
+          requestUrl = DOCUMENTATION_OPTIONS.URL_ROOT + dirname;
+          linkUrl = requestUrl;
         } else {
           // normal html builders
-          listItem.append($('<a/>').attr('href',
-            item[0] + DOCUMENTATION_OPTIONS.FILE_SUFFIX +
-            highlightstring + item[2]).html(item[1]));
+          requestUrl = DOCUMENTATION_OPTIONS.URL_ROOT + item[0] + DOCUMENTATION_OPTIONS.FILE_SUFFIX;
+          linkUrl = item[0] + DOCUMENTATION_OPTIONS.LINK_SUFFIX;
         }
+        listItem.append($('<a/>').attr('href',
+            linkUrl +
+            highlightstring + item[2]).html(item[1]));
         if (item[3]) {
           listItem.append($('<span> (' + item[3] + ')</span>'));
           Search.output.append(listItem);
@@ -547,16 +615,15 @@ var Search = {
             displayNextItem();
           });
         } else if (DOCUMENTATION_OPTIONS.HAS_SOURCE) {
-          var suffix = DOCUMENTATION_OPTIONS.SOURCELINK_SUFFIX;
-          if (suffix === undefined) {
-            suffix = '.txt';
-          }
-          $.ajax({url: DOCUMENTATION_OPTIONS.URL_ROOT + '_sources/' + item[5] + (item[5].slice(-suffix.length) === suffix ? '' : suffix),
+          $.ajax({url: requestUrl,
                   dataType: "text",
                   complete: function(jqxhr, textstatus) {
                     var data = jqxhr.responseText;
                     if (data !== '' && data !== undefined) {
-                      listItem.append(Search.makeSearchSummary(data, searchterms, hlterms));
+                      var summary = Search.makeSearchSummary(data, searchterms, hlterms);
+                      if (summary) {
+                        listItem.append(summary);
+                      }
                     }
                     Search.output.append(listItem);
                     listItem.slideDown(5, function() {
@@ -744,7 +811,11 @@ var Search = {
    * words. the first one is used to find the occurrence, the
    * latter for highlighting it.
    */
-  makeSearchSummary : function(text, keywords, hlwords) {
+  makeSearchSummary : function(htmlText, keywords, hlwords) {
+    var text = Search.htmlToText(htmlText);
+    if (text == "") {
+      return null;
+    }
     var textLower = text.toLowerCase();
     var start = 0;
     $.each(keywords, function() {
