@@ -44,3 +44,12 @@ jobs:
         git add -A
         git commit -m "Action \`build\`: Deploy build of ${GITHUB_SHA::7}"
         git push
+    - name: Send notification to Discord
+      env:
+        WEBHOOK_URL: ${{ secrets.KRITA_L10N_DISCORD_NOTIFY_WEBHOOK_URL }}
+      run : |
+        last_commit_timestr="$(LANG=zh_TW.UTF-8 LC_TIME=zh_TW.UTF-8 TZ=Asia/Taipei date -d "$(git log -1 --format=%cI)")"
+        curl \
+          -H "Content-Type: application/json" \
+          -d '{"username": "通知", "content": "已建置翻譯更動預覽到 http://l10n.tw/docs-krita-org_zh-tw/\n最後翻譯更動：'"$last_commit_timestr"'\n建置事件：'"https://github.com/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"'"}' \
+          "$WEBHOOK_URL"
