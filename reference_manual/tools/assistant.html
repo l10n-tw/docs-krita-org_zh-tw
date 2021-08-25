@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-08-25T14:28:47" />
+  <meta property="og:article:modified_time" content="2021-08-25T16:36:53" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="Krita 的輔助尺工具參考。" name="description" property="og:description" />
 
@@ -184,7 +184,7 @@
 <li class="toctree-l3"><a class="reference internal" href="colorize_mask.html">Colorize Mask</a></li>
 <li class="toctree-l3"><a class="reference internal" href="smart_patch.html">Smart Patch Tool</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">輔助尺工具</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#tool-options">Tool Options</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tool-options">工具選項</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="reference_images_tool.html">Reference Images Tool</a></li>
@@ -294,23 +294,23 @@
   <section id="assistant-tool">
 <span id="index-0"></span><span id="id1"></span><h1>輔助尺工具<a class="headerlink" href="#assistant-tool" title="本標題的永久連結">¶</a></h1>
 <p><img alt="輔助尺工具" src="../../_images/assistant_tool.svg" /></p>
-<p>能夠在畫布上建立，修改及移除輔助尺。在這個工具裡有多種輔助尺可供使用。而工具選項可以建立新的輔助尺，並進行儲存及讀取。要新增一個輔助尺，在工具選項裡選一種輔助尺，然後點在畫布上。每種輔助尺的建立方式都有點不同。既存的輔助尺還會有控制選項用來移動及刪除。</p>
-<p>The set of assistants on the current canvas can be saved to a &quot;*.paintingassistant&quot; file using the <span class="guilabel">Save</span> button in the tool options. These assistants can then be loaded onto a different canvas using the Open button. This functionality is also useful for creating copies of the same drawing assistant(s) on the current canvas.</p>
-<p>Check <a class="reference internal" href="../../user_manual/painting_with_assistants.html#painting-with-assistants"><span class="std std-ref">使用輔助尺來繪畫</span></a> for more information.</p>
+<p>能夠在畫布上建立，修改及移除輔助尺。在這個工具裡有多種輔助尺可供使用。而工具選項可以建立新的輔助尺，並進行儲存及讀取。要新增一個輔助尺，在工具選項裡選一種輔助尺，然後點在畫布上。每種輔助尺的建立方式都有點不同。既存的輔助尺還會有用來移動及刪除的控制選項。</p>
+<p>當前畫布的輔助尺能夠在工具選項中儲存在「*.paintingassistant」檔案裡。而這些輔助尺能在其他畫布中讀取，這個功能也能在當前畫布中建立輔助尺的副本。</p>
+<p>在<a class="reference internal" href="../../user_manual/painting_with_assistants.html#painting-with-assistants"><span class="std std-ref">使用輔助尺來繪畫</span></a>取得更多資訊。</p>
 <section id="tool-options">
-<h2>Tool Options<a class="headerlink" href="#tool-options" title="本標題的永久連結">¶</a></h2>
+<h2>工具選項<a class="headerlink" href="#tool-options" title="本標題的永久連結">¶</a></h2>
 <div class="versionadded">
 <p><span class="versionmodified added">4.0 版新加入.</span></p>
 </div>
 <dl class="simple">
-<dt>Global Color:</dt><dd><p>Global color allows you to set the color and opacity of all assistants at once.</p>
+<dt>全域色彩：</dt><dd><p>全域色彩能一次設定所有輔助尺的色彩和不透明度。</p>
 </dd>
 </dl>
 <div class="versionadded">
 <p><span class="versionmodified added">4.1 版新加入.</span></p>
 </div>
 <dl class="simple">
-<dt>Custom Color:</dt><dd><p>Custom color allows you to set a color and opacity per assistant, allowing for different colors on an assistant. To use this functionality, first 'select' an assistant by tapping its move widget. Then go to the tool options docker to see the <span class="guilabel">Custom Color</span> check box. Check that, and then use the opacity and color buttons to pick either for this particular assistant.</p>
+<dt>自訂色彩：</dt><dd><p>自訂色彩能單獨設定輔助尺的色彩和不透明度，能在同一個輔助尺設定不同顏色。要使用這個功能，先選擇一個輔助尺，然後在工具選項面板裡勾選「自訂色彩」，透過不透明度按鈕和色彩按鈕調整輔助尺。</p>
 </dd>
 </dl>
 <div class="versionadded">
@@ -321,10 +321,10 @@
 <div><figure class="align-default" id="id2">
 <img alt="../../_images/Assistants_2_pointperspective_03.png" src="../../_images/Assistants_2_pointperspective_03.png" />
 <figcaption>
-<p><span class="caption-text">In the above image, two extra vanishing points have been added to a 2 point assistant, limiting the area in which the grid is drawn and the brush will snap.</span><a class="headerlink" href="#id2" title="本圖片的永久連結">¶</a></p>
+<p><span class="caption-text">見上圖，兩個控制柄已經追加在兩點透視的輔助尺裡，限制著輔助尺的繪製範圍和筆刷的吸附範圍。</span><a class="headerlink" href="#id2" title="本圖片的永久連結">¶</a></p>
 </figcaption>
 </figure>
-<p>This option adds two extra handles to every assistant, for drawing a rectangle which will limit the assistant. This is very useful for comic pages, which may need multiple assistants per page, and will otherwise become very crowded.</p>
+<p>這個選項會在輔助尺新增兩個控制柄，用於繪製一個限制輔助尺範圍的矩形。這在繪製漫畫中有所幫助，這解決了使用多個輔助尺時畫面過於擁擠的問題。</p>
 </div></blockquote>
 </section>
 </section>
@@ -352,7 +352,7 @@
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>2d63f23</code>
+          修訂版本 <code>f8dfe32</code>
         </span>
       
 

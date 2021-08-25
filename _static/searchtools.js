@@ -507,14 +507,16 @@ var Search = {
 
     if (DOCUMENTATION_OPTIONS.LANGUAGE === "ja" || DOCUMENTATION_OPTIONS.LANGUAGE.startsWith("zh_")) {
       // Attempt to further split terms for Chinese and Japanese.
-      // We don't touch hlterms because I feel that keeping the original hlterms
-      // can be more helpful.
       var origTerms = searchterms;
       searchterms = [];
       for (i = 0; i < origTerms.length; i++) {
         var trySplitResult = this.trySplitChineseTerm(origTerms[i]);
         if (trySplitResult) {
           searchterms = searchterms.concat(trySplitResult);
+          if (trySplitResult.length > 1) {
+            // Also add the split terms for highlight.
+            hlterms = hlterms.concat(trySplitResult);
+          }
         } else {
           searchterms.push(origTerms[i]);
         }
