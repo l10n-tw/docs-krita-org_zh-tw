@@ -6,7 +6,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta property="og:title" name="title" content="Opacity and Flow" />
+  <meta property="og:title" name="title" content="不透明度和流量" />
   <meta property="og:site-name" content="Krita Manual" />
   <meta property="og:type" content="article" />
   <meta property="og:locale" content="zh_TW" />
@@ -21,13 +21,13 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-08-24T21:25:49" />
+  <meta property="og:article:modified_time" content="2021-08-25T06:54:38" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<meta content="Opacity and flow in Krita." name="description" />
+<meta content="Krita 中的不透明度和流量。" name="description" />
 
   
   
-  <title>Opacity and Flow &mdash; Krita Manual 5.0.0 說明文件</title>
+  <title>不透明度和流量 &mdash; Krita Manual 5.0.0 說明文件</title>
   
 
   
@@ -138,9 +138,9 @@
 <li class="toctree-l4"><a class="reference internal" href="brush_tips.html">筆尖</a></li>
 <li class="toctree-l4"><a class="reference internal" href="locked_brush_settings.html">鎖定筆刷設定</a></li>
 <li class="toctree-l4"><a class="reference internal" href="masked_brush.html">遮罩筆刷</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="#">Opacity and Flow</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">不透明度和流量</a></li>
 <li class="toctree-l4"><a class="reference internal" href="options.html">選項</a></li>
-<li class="toctree-l4"><a class="reference internal" href="tablet_sensors.html">Sensors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tablet_sensors.html">感測器</a></li>
 <li class="toctree-l4"><a class="reference internal" href="texture.html">紋理</a></li>
 </ul>
 </li>
@@ -240,7 +240,7 @@
         
           <li><a href="../brush_settings.html">筆刷設定</a> &raquo;</li>
         
-      <li>Opacity and Flow</li>
+      <li>不透明度和流量</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -265,36 +265,36 @@
            <div itemprop="articleBody">
             
   <section id="opacity-and-flow">
-<span id="option-opacity-n-flow"></span><span id="index-0"></span><h1>Opacity and Flow<a class="headerlink" href="#opacity-and-flow" title="本標題的永久連結">¶</a></h1>
-<p>Opacity and flow are parameters for the transparency of a brush.</p>
+<span id="option-opacity-n-flow"></span><span id="index-0"></span><h1>不透明度和流量<a class="headerlink" href="#opacity-and-flow" title="本標題的永久連結">¶</a></h1>
+<p>不透明度和流量都是用來控制筆刷透明度的參數。</p>
 <img alt="../../../_images/Krita_Pixel_Brush_Settings_Flow.png" src="../../../_images/Krita_Pixel_Brush_Settings_Flow.png" />
-<p>They are interlinked with the painting mode setting.</p>
+<p>它們與繪畫模式設定相互關聯。</p>
 <img alt="../../../_images/Krita_2_9_brushengine_opacity-flow_02.png" src="../../../_images/Krita_2_9_brushengine_opacity-flow_02.png" />
 <dl class="simple">
-<dt>Opacity</dt><dd><p>The transparency of a stroke.</p>
+<dt>不透明度 (Opacity)</dt><dd><p>調整筆劃的透明度。</p>
 </dd>
-<dt>Flow</dt><dd><p>The transparency of separate dabs. Finally separated from Opacity in 2.9.</p>
+<dt>流量 (Flow)</dt><dd><p>調整筆畫中每次筆尖印跡的透明度。自 2.9 版起從不透明度分離出來。</p>
 </dd>
 </dl>
 <img alt="../../../_images/Krita_4_2_brushengine_opacity-flow_01.svg" src="../../../_images/Krita_4_2_brushengine_opacity-flow_01.svg" /><div class="versionchanged">
-<p><span class="versionmodified changed">4.2 版更變: </span>In Krita 4.1 and below, the flow and opacity when combined with brush sensors would add up to one another, being only limited by the maximum opacity. This was unexpected compared to all other painting applications, so in 4.2 this finally got corrected to the flow and opacity multiplying, resulting in much more subtle strokes. This change can be switched back in the <a class="reference internal" href="../../preferences/general_settings.html#tool-options-settings"><span class="std std-ref">Tools Settings</span></a>, but we will be deprecating the old way in future versions.</p>
-<p>The old behavior can be simulated in the new system by...</p>
+<p><span class="versionmodified changed">4.2 版更變: </span>在 Krita 4.1 版之前，流量和不透明度的效果在指定給壓感筆感測器時會相互疊加，只有不透明度的最大值對其起限制作用。這與所有其他數位繪圖軟體的行為不同。因此從 4.2 版起我們對此做出了調整，流量和不透明度的效果不再發生疊加，可以更微妙地控制筆畫的繪制效果。你可以在<a class="reference internal" href="../../preferences/general_settings.html#tool-options-settings"><span class="std std-ref">Tools Settings</span></a>中啟用舊版的工作方式，但我們會在將來的版本中廢棄舊版的工作方式。</p>
+<p>舊版的工作方式可以在新版中通過以下方式進行模擬…</p>
 <ol class="arabic simple">
-<li><p>Deactivating the sensors on opacity.</p></li>
-<li><p>Set the maximum value on flow to 0.5.</p></li>
-<li><p>Adjusting the pressure curve to be concave.</p></li>
+<li><p>禁用不透明度參數的感測器。</p></li>
+<li><p>設定流量的最大值為 0.5。</p></li>
+<li><p>調整壓力曲線為凹形。</p></li>
 </ol>
 <img alt="../../../_images/flow_opacity_adapt_flow_preset.gif" src="../../../_images/flow_opacity_adapt_flow_preset.gif" /></div>
 <section id="painting-mode">
-<h2>Painting mode<a class="headerlink" href="#painting-mode" title="本標題的永久連結">¶</a></h2>
+<h2>繪畫模式<a class="headerlink" href="#painting-mode" title="本標題的永久連結">¶</a></h2>
 <dl class="simple">
-<dt>Build-up</dt><dd><p>Will treat opacity as if it were the same as flow.</p>
+<dt>堆疊</dt><dd><p>將不透明度視為與流量相同。</p>
 </dd>
-<dt>Wash</dt><dd><p>Will treat opacity as stroke transparency instead of dab-transparency.</p>
+<dt>沖刷</dt><dd><p>將不透明度視為筆劃透明度而不是印跡透明度。</p>
 </dd>
 </dl>
 <img alt="../../../_images/Krita_2_9_brushengine_opacity-flow_03.png" src="../../../_images/Krita_2_9_brushengine_opacity-flow_03.png" />
-<p>Where the other images of this page had all three strokes set to painting mode: wash, this one is set to build-up.</p>
+<p>上圖展示了繪畫模式為「堆疊」時，不透明度為 0.5、流量為 0.5、兩者同為 0.5 時的筆畫效果區別。</p>
 </section>
 </section>
 
@@ -321,7 +321,7 @@
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>6a98b9d</code>
+          修訂版本 <code>c60a466</code>
         </span>
       
 

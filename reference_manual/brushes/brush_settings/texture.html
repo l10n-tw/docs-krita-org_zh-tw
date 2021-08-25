@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-08-24T21:25:49" />
+  <meta property="og:article:modified_time" content="2021-08-25T06:54:38" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="Krita 中的紋理筆刷設定選項。" name="description" />
 
@@ -61,7 +61,7 @@
     <link rel="index" title="索引" href="../../../genindex.html" />
     <link rel="search" title="搜尋" href="../../../search.html" />
     <link rel="next" title="再製陣列" href="../../clones_array.html" />
-    <link rel="prev" title="Sensors" href="tablet_sensors.html" /> 
+    <link rel="prev" title="感測器" href="tablet_sensors.html" /> 
 
   
   <script src="../../../_static/js/modernizr.min.js"></script>
@@ -138,9 +138,9 @@
 <li class="toctree-l4"><a class="reference internal" href="brush_tips.html">筆尖</a></li>
 <li class="toctree-l4"><a class="reference internal" href="locked_brush_settings.html">鎖定筆刷設定</a></li>
 <li class="toctree-l4"><a class="reference internal" href="masked_brush.html">遮罩筆刷</a></li>
-<li class="toctree-l4"><a class="reference internal" href="opacity_and_flow.html">Opacity and Flow</a></li>
+<li class="toctree-l4"><a class="reference internal" href="opacity_and_flow.html">不透明度和流量</a></li>
 <li class="toctree-l4"><a class="reference internal" href="options.html">選項</a></li>
-<li class="toctree-l4"><a class="reference internal" href="tablet_sensors.html">Sensors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tablet_sensors.html">感測器</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">紋理</a></li>
 </ul>
 </li>
@@ -270,9 +270,9 @@
 <section id="id1">
 <h2>紋理<a class="headerlink" href="#id1" title="本標題的永久連結">¶</a></h2>
 <dl>
-<dt>Pattern</dt><dd><p>Which pattern you'll be using.</p>
+<dt>樣式</dt><dd><p>Which pattern you'll be using.</p>
 </dd>
-<dt>Scale</dt><dd><p>The size of the pattern. 1.0 is 100%.</p>
+<dt>縮放</dt><dd><p>The size of the pattern. 1.0 is 100%.</p>
 <img alt="../../../_images/Krita_2_9_brushengine_texture_05.png" src="../../../_images/Krita_2_9_brushengine_texture_05.png" />
 </dd>
 <dt>Horizontal Offset &amp; Vertical Offset</dt><dd><p>How much a brush is offset, random offset sets a new per stroke.</p>
@@ -286,73 +286,73 @@ affect the color channels.</p>
 right side. The top stroke uses a hard brush tip and the bottom one a soft brush tip. On the left side of the
 strokes there are two non-textured dots, just for comparison sake.</p>
 <dl>
-<dt>Multiply</dt><dd><p>Uses alpha multiplication to determine the effect of the texture. Has a soft feel.</p>
+<dt>色彩增值 (相乘)</dt><dd><p>Uses alpha multiplication to determine the effect of the texture. Has a soft feel.</p>
 <img alt="../../../_images/multiply.png" src="../../../_images/multiply.png" />
 </dd>
-<dt>Subtract</dt><dd><p>Uses subtraction to determine the effect of the texture. Has a harsher, more texture feel.</p>
+<dt>減去</dt><dd><p>Uses subtraction to determine the effect of the texture. Has a harsher, more texture feel.</p>
 <img alt="../../../_images/subtract.png" src="../../../_images/subtract.png" />
 </dd>
-<dt>Lightness Map</dt><dd><div class="versionadded">
+<dt>亮度映射</dt><dd><div class="versionadded">
 <p><span class="versionmodified added">4.4 版新加入.</span></p>
 </div>
 <p>Applies lightness values of the texture to the paint.  Can be used to simulate paper/canvas, or for painting a texture, like reptile skin or tree bark.</p>
 <img alt="../../../_images/lightness_map.png" src="../../../_images/lightness_map.png" />
 </dd>
-<dt>Gradient Map</dt><dd><div class="versionadded">
+<dt>漸變映射</dt><dd><div class="versionadded">
 <p><span class="versionmodified added">4.4 版新加入.</span></p>
 </div>
 <p>Maps gray/lightness values of the texture to the currently selected gradient.  Useful for painting textures with multiple colors, like reptile skin, tree bark, stars, etc.</p>
 <img alt="../../../_images/gradient_map.png" src="../../../_images/gradient_map.png" />
 </dd>
-<dt>Darken</dt><dd><div class="versionadded">
+<dt>變暗</dt><dd><div class="versionadded">
 <p><span class="versionmodified added">5.0 版新加入.</span></p>
 </div>
 <p>This mode chooses the minimum alpha value between the brush tip and the texture. The effect is as if the texture
 made holes in the opaque areas of the brush tip.</p>
 <img alt="../../../_images/darken.png" src="../../../_images/darken.png" />
 </dd>
-<dt>Overlay</dt><dd><div class="versionadded">
+<dt>覆蓋</dt><dd><div class="versionadded">
 <p><span class="versionmodified added">5.0 版新加入.</span></p>
 </div>
 <p>The texture is softly applied to the semi-transparent areas of the brush tip.
 This mode produces a result similar to <em>multiply</em> but allowing for full coverage when high strength values are used.</p>
 <img alt="../../../_images/overlay.png" src="../../../_images/overlay.png" />
 </dd>
-<dt>Color Dodge</dt><dd><div class="versionadded">
+<dt>加亮色彩 (減淡)</dt><dd><div class="versionadded">
 <p><span class="versionmodified added">5.0 版新加入.</span></p>
 </div>
 <p>This mode produces features with somewhat hard edges on the brush tip by making it more opaque where the texture
 values are brighter.</p>
 <img alt="../../../_images/color_dodge.png" src="../../../_images/color_dodge.png" />
 </dd>
-<dt>Burn</dt><dd><div class="versionadded">
+<dt>加深</dt><dd><div class="versionadded">
 <p><span class="versionmodified added">5.0 版新加入.</span></p>
 </div>
 <p>This mode produces holes with somewhat hard edges on the brush tip by making it more transparent where the texture
 values are darker.</p>
 <img alt="../../../_images/color_burn.png" src="../../../_images/color_burn.png" />
 </dd>
-<dt>Linear Dodge</dt><dd><div class="versionadded">
+<dt>線性加亮 (減淡)</dt><dd><div class="versionadded">
 <p><span class="versionmodified added">5.0 版新加入.</span></p>
 </div>
 <p>Similar to <em>color dodge</em> but the opacity of the brush tip is increased even more.</p>
 <img alt="../../../_images/linear_dodge.png" src="../../../_images/linear_dodge.png" />
 </dd>
-<dt>Linear Burn</dt><dd><div class="versionadded">
+<dt>線性加深</dt><dd><div class="versionadded">
 <p><span class="versionmodified added">5.0 版新加入.</span></p>
 </div>
 <p>The result is similar to <em>burn</em> but with the opacity decreased a bit more. It also is similar to the <em>subtract</em>
 mode but with the texture inverted.</p>
 <img alt="../../../_images/linear_burn.png" src="../../../_images/linear_burn.png" />
 </dd>
-<dt>Hard Mix (Photoshop)</dt><dd><div class="versionadded">
+<dt>實色混合 (Photoshop)</dt><dd><div class="versionadded">
 <p><span class="versionmodified added">5.0 版新加入.</span></p>
 </div>
 <p>This mode produces a result similar to <em>burn</em> or <em>linear burn</em> and allows to obtain full coverage when high strength values
 are used. The resulting edges are very hard (in fact, aliased).</p>
 <img alt="../../../_images/hard_mix_ps.png" src="../../../_images/hard_mix_ps.png" />
 </dd>
-<dt>Hard Mix Softer (Photoshop)</dt><dd><div class="versionadded">
+<dt>實色混合、更柔和 (Photoshop)</dt><dd><div class="versionadded">
 <p><span class="versionmodified added">5.0 版新加入.</span></p>
 </div>
 <p>This mode tries to emulate <em>hard mix (photoshop)</em> while producing softer, antialiased, edges.</p>
@@ -365,7 +365,7 @@ are used. The resulting edges are very hard (in fact, aliased).</p>
 Contrary to <em>subtract</em>, it allows to achieve full coverage with one stroke.</p>
 <img alt="../../../_images/height.png" src="../../../_images/height.png" />
 </dd>
-<dt>Linear Height</dt><dd><div class="versionadded">
+<dt>線性高度</dt><dd><div class="versionadded">
 <p><span class="versionmodified added">5.0 版新加入.</span></p>
 </div>
 <p>Same as <em>height</em> but combined with <em>multiply</em> to achieve softer transitions.</p>
@@ -393,7 +393,7 @@ mode with a strength of 1.</p>
 <dl class="simple">
 <dt>Disabled</dt><dd><p>Doesn't cut off. Full range will be used.</p>
 </dd>
-<dt>Pattern</dt><dd><p>Cuts the pattern off.</p>
+<dt>樣式</dt><dd><p>Cuts the pattern off.</p>
 </dd>
 <dt>Brush</dt><dd><p>Cuts the brush tip off.</p>
 </dd>
@@ -403,7 +403,7 @@ mode with a strength of 1.</p>
 <dt>Cutoff</dt><dd><p>Cutoff is... the grayscale range that you can limit the texture to. This also affects the limit takes by the strength. In the below example, we move from the right arrow moved close to the left one, resulting in only the darkest values being drawn. After that, three images with larger range, and underneath that, three ranges with the left arrow moved, result in the darkest values being cut away, leaving only the lightest. The last example is the pattern without cutoff.</p>
 <img alt="../../../_images/Krita_2_9_brushengine_texture_07.png" src="../../../_images/Krita_2_9_brushengine_texture_07.png" />
 </dd>
-<dt>Invert Pattern</dt><dd><p>Invert the pattern.</p>
+<dt>圖案反轉</dt><dd><p>反轉圖案。</p>
 <img alt="../../../_images/Krita_2_9_brushengine_texture_06.png" src="../../../_images/Krita_2_9_brushengine_texture_06.png" />
 </dd>
 </dl>
@@ -420,7 +420,7 @@ mode with a strength of 1.</p>
 </dl>
 </section>
 <section id="strength">
-<h2>Strength<a class="headerlink" href="#strength" title="本標題的永久連結">¶</a></h2>
+<h2>強度<a class="headerlink" href="#strength" title="本標題的永久連結">¶</a></h2>
 <p>This allows you to set the texture to Sensors. It will use the cutoff to continuously draw lighter values of the texture (making the result darker).</p>
 <div class="versionadded">
 <p><span class="versionmodified added">4.4 版新加入: </span>For Lightness Map and Gradient Map modes, <span class="guilabel">Strength</span> controls how much of the texture is applied compared to how much of the selected paint color comes through.</p>
@@ -444,7 +444,7 @@ mode with a strength of 1.</p>
         <a href="../../clones_array.html" class="btn btn-neutral float-right" title="再製陣列" accesskey="n" rel="next"> <!-- 下一個 --> <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="tablet_sensors.html" class="btn btn-neutral" title="Sensors" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- 上一個  -->  </a>
+        <a href="tablet_sensors.html" class="btn btn-neutral" title="感測器" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- 上一個  -->  </a>
       
     </div>
   
@@ -456,7 +456,7 @@ mode with a strength of 1.</p>
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>6a98b9d</code>
+          修訂版本 <code>c60a466</code>
         </span>
       
 
