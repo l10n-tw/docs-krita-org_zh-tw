@@ -53,12 +53,14 @@ jobs:
         echo "最後翻譯更動：$last_commit_timestr" >> /tmp/discord-msg-content.txt
         echo "建置事件：https://github.com/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID" >> /tmp/discord-msg-content.txt
         if [[ -f /tmp/sphinx-build-warnings.log ]]; then
-          echo "警告數目：$(wc -l /tmp/sphinx-build-warnings.log)" >> /tmp/discord-msg-content.txt
-          echo '```' >> /tmp/discord-msg-content.txt
-          cat /tmp/sphinx-build-warnings.log >> /tmp/discord-msg-content.txt
-          echo '```' >> /tmp/discord-msg-content.txt
+          echo "警告數目：$(</tmp/sphinx-build-warnings.log wc -l)" >> /tmp/discord-msg-content.txt
+          if [[ -s /tmp/sphinx-build-warnings.log ]]; then
+            echo '```' >> /tmp/discord-msg-content.txt
+            cat /tmp/sphinx-build-warnings.log >> /tmp/discord-msg-content.txt
+            echo '```' >> /tmp/discord-msg-content.txt
+          fi
         fi
         curl \
           -H "Content-Type: application/json" \
-          -d '{"username": "通知", "content": '"$(</tmp/discord-msg-content.txt jq -Rs)"'}' \
+          -d '{ "username": "通知", "content": '"$(</tmp/discord-msg-content.txt jq -Rs)"', "embeds": [] }' \
           "$WEBHOOK_URL"
