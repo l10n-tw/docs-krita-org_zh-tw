@@ -48,7 +48,7 @@ jobs:
       env:
         WEBHOOK_URL: ${{ secrets.KRITA_L10N_DISCORD_NOTIFY_WEBHOOK_URL }}
       run : |
-        last_commit_timestr="$(TZ=Asia/Taipei date -d "$(git log -1 --format=%cI "+%Y年%m月%d日 %H:%M")")"
+        last_commit_timestr="$(TZ=Asia/Taipei date -d "$(git log -1 --format=%cI)" "+%Y年%m月%d日 %H:%M")"
         curl \
           -H "Content-Type: application/json" \
           -d '{"username": "通知", "content": "已建置翻譯更新預覽到 http://l10n.tw/docs-krita-org_zh-tw/ \n最後翻譯更動：'"$last_commit_timestr"'\n建置事件：'"https://github.com/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"'"}' \
