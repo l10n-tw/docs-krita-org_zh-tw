@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-08-26T11:25:24" />
+  <meta property="og:article:modified_time" content="2021-08-26T14:26:20" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="Detailed guide on the brush settings dialog in Krita as well as how to make your own brushes and how to share them." name="description" property="og:description" />
 
@@ -270,7 +270,7 @@
 <a class="reference internal image-reference" href="../_images/Krita_4_0_Brush_Settings_Layout.svg"><img alt="../_images/Krita_4_0_Brush_Settings_Layout.svg" src="../_images/Krita_4_0_Brush_Settings_Layout.svg" width="800" /></a>
 <p>The brush settings drop-down is divided into six areas,</p>
 <section id="section-a-general-information">
-<h4>Section A -- General Information<a class="headerlink" href="#section-a-general-information" title="本標題的永久連結">¶</a></h4>
+<h4>A 區——基本資訊<a class="headerlink" href="#section-a-general-information" title="本標題的永久連結">¶</a></h4>
 <p>This contains the <em class="dfn">Preset Icon</em>, <em class="dfn">Live Brush Preview</em>, the <em class="dfn">Preset Name</em>, the <em class="dfn">Engine</em> name, and several buttons for saving, renaming, and reloading.</p>
 <p>Krita's brush settings are stored into the metadata of a 200×200 PNG (the <code class="docutils literal notranslate"><span class="pre">KPP</span></code> file), where the image in the PNG file becomes the preset icon. This icon is used everywhere in Krita, and is useful for differentiating brushes in ways that the live preview cannot.</p>
 <p>The live preview shows a stroke of the current brush as a little s-curve wiggle, with the pressure being non-existent on the left, and increasing to full pressure as it goes to the right. It can thus show the effect of the Pressure, Drawing Angle, Distance, Fade and Fuzzy Dab sensors, but none of the others. For some brush engines it cannot show anything. For the color smudge, filter brush and clone tool, it shows an alternating line pattern because these brush engines use the pixels already on canvas to change their effect.</p>
@@ -323,7 +323,7 @@ making it much better for quick adjustments.</p>
 </section>
 </section>
 <section id="section-b-the-preset-chooser">
-<h4>Section B -- The Preset Chooser<a class="headerlink" href="#section-b-the-preset-chooser" title="本標題的永久連結">¶</a></h4>
+<h4>B 區——筆刷預設選擇器<a class="headerlink" href="#section-b-the-preset-chooser" title="本標題的永久連結">¶</a></h4>
 <p>The preset chooser is much the same as the preset docker and the preset drop-down on the <kbd class="kbd docutils literal notranslate">F6</kbd> key. It's unique in that it allows you to filter by engine and this is also where you can create brushes for an engine from scratch.</p>
 <p>It is by default collapsed, so you will need to press the arrow at the top left of the brush engine to show it.</p>
 <p>The top drop-down is set to “all” by default, which means it shows all engines. It then shows a tag section where you can select the tags, the preset list and the search bar.</p>
@@ -331,7 +331,7 @@ making it much better for quick adjustments.</p>
 <p>The trashcan icon does the same as it does in the preset docker: delete, or rather, <a class="reference internal" href="../reference_manual/resource_management.html#deactivating-resources"><span class="std std-ref">deactivate a preset</span></a>, so it won't show up in the list.</p>
 </section>
 <section id="section-c-the-scratch-pad">
-<h4>Section C -- The Scratch pad<a class="headerlink" href="#section-c-the-scratch-pad" title="本標題的永久連結">¶</a></h4>
+<h4>C 區——繪圖區<a class="headerlink" href="#section-c-the-scratch-pad" title="本標題的永久連結">¶</a></h4>
 <p>When you tweak your brushes, you want to be able to check what each setting does. That's why, to the right of the settings drop-down, there is a scratch pad.</p>
 <p>It is by default collapsed, so you will have to press the arrow at the top right of the brush settings to show it.</p>
 <p>When saving a new preset, you can choose to get the icon from the scratch pad, this will load the dash area into the mini scratch pad of the <span class="guilabel">Save New Brush Preset</span> dialog.</p>
@@ -345,13 +345,13 @@ making it much better for quick adjustments.</p>
 </ol>
 </section>
 <section id="section-d-the-options-list">
-<h4>Section D -- The Options List<a class="headerlink" href="#section-d-the-options-list" title="本標題的永久連結">¶</a></h4>
+<h4>D 區——選項清單<a class="headerlink" href="#section-d-the-options-list" title="本標題的永久連結">¶</a></h4>
 <p>The options, as stated above, are different per brush engine. These represent the different parameters, toggles and knobs that you can turn to make a brush preset unique. For a couple of options, the main things to change are sliders and checkboxes, but for a lot of them, they use curves instead.</p>
 <p>Some options can be toggled, as noted by the little checkboxes next to them, but others, like flow and opacity are so fundamental to how the brush works, that they are always on.</p>
 <p>The little padlock icon next to the options is for locking the brush. This has its own page.</p>
 </section>
 <section id="section-e-option-configuration-widget">
-<h4>Section E -- Option Configuration Widget<a class="headerlink" href="#section-e-option-configuration-widget" title="本標題的永久連結">¶</a></h4>
+<h4>E 區—— 選項設定工具<a class="headerlink" href="#section-e-option-configuration-widget" title="本標題的永久連結">¶</a></h4>
 <p>Where section D is the list of options, section E is the widget where you can change things.</p>
 <section id="using-sensor-curves">
 <h5>Using sensor curves<a class="headerlink" href="#using-sensor-curves" title="本標題的永久連結">¶</a></h5>
@@ -398,7 +398,7 @@ with the smallest of the values.</p></li>
 </section>
 </section>
 <section id="section-f-miscellaneous-options">
-<h4>Section F -- Miscellaneous options<a class="headerlink" href="#section-f-miscellaneous-options" title="本標題的永久連結">¶</a></h4>
+<h4>F 區——其他選項<a class="headerlink" href="#section-f-miscellaneous-options" title="本標題的永久連結">¶</a></h4>
 <dl>
 <dt>Eraser switch size</dt><dd><p>This switches the brush to a separately stored size when using the <kbd class="kbd docutils literal notranslate">E</kbd> key.</p>
 </dd>
