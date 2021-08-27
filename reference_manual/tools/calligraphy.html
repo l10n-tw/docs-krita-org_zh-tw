@@ -6,7 +6,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta property="og:title" name="title" content="Calligraphy Tool" />
+  <meta property="og:title" name="title" content="西文書法工具" />
   <meta property="og:site-name" content="Krita Manual" />
   <meta property="og:type" content="article" />
   <meta property="og:locale" content="zh_TW" />
@@ -21,13 +21,13 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-08-27T10:26:04" />
+  <meta property="og:article:modified_time" content="2021-08-27T22:25:53" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<meta content="Krita's calligraphy tool reference." lang="en" name="description" xml:lang="en" />
+<meta content="Krita 的西文書法工具參考。" lang="en" name="description" xml:lang="en" />
 
   
   
-  <title>Calligraphy Tool &mdash; Krita Manual 5.0.0 說明文件</title>
+  <title>西文書法工具 &mdash; Krita Manual 5.0.0 說明文件</title>
   
 
   
@@ -164,8 +164,8 @@
 <li class="toctree-l3"><a class="reference internal" href="text.html">Text Tool</a></li>
 <li class="toctree-l3"><a class="reference internal" href="gradient_edit.html">Gradient Editing Tool</a></li>
 <li class="toctree-l3"><a class="reference internal" href="pattern_edit.html">Pattern Editing Tool</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Calligraphy Tool</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#tool-options">Tool Options</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">西文書法工具</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#tool-options">工具選項</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="freehand_brush.html">Freehand Brush Tool</a></li>
@@ -267,7 +267,7 @@
         
           <li><a href="../tools.html">工具</a> &raquo;</li>
         
-      <li>Calligraphy Tool</li>
+      <li>西文書法工具</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -292,41 +292,41 @@
            <div itemprop="articleBody">
             
   <section id="calligraphy-tool">
-<span id="index-0"></span><span id="id1"></span><h1>Calligraphy Tool<a class="headerlink" href="#calligraphy-tool" title="本標題的永久連結">¶</a></h1>
-<p><img alt="toolcalligraphy" src="../../_images/calligraphy_tool.svg" /></p>
+<span id="index-0"></span><span id="id1"></span><h1>西文書法工具<a class="headerlink" href="#calligraphy-tool" title="本標題的永久連結">¶</a></h1>
+<p><img alt="西文書法工具" src="../../_images/calligraphy_tool.svg" /></p>
 <p>The Calligraphy tool allows for variable width lines, with input managed by the tablet.
 Press down with the stylus/left mouse button on the canvas to make a line, lifting the stylus/mouse button ends the stroke.</p>
 <section id="tool-options">
-<h2>Tool Options<a class="headerlink" href="#tool-options" title="本標題的永久連結">¶</a></h2>
-<p><strong>Fill</strong></p>
-<p>Doesn't actually do anything.</p>
-<p><strong>Calligraphy</strong></p>
-<p>The drop-down menu holds your saved presets, the <span class="guilabel">Save</span> button next to it allows you to save presets.</p>
+<h2>工具選項<a class="headerlink" href="#tool-options" title="本標題的永久連結">¶</a></h2>
+<p><strong>填充</strong></p>
+<p>實際上沒有任何用處。</p>
+<p><strong>西文書法</strong></p>
+<p>工具選項中的下拉式選單儲存著設定檔，而右邊的<span class="guilabel">儲存</span>按鈕能儲存目前的設定。</p>
 <dl class="simple">
-<dt>Follow Selected Path</dt><dd><p>If a stroke has been selected with the default tool, the calligraphy tool will follow this path.</p>
+<dt>跟隨選取的路徑</dt><dd><p>如已選取一條路徑，西文書法工具會跟隨路徑繪製。</p>
 </dd>
 <dt>Use Tablet Pressure</dt><dd><p>Uses tablet pressure to control the stroke width.</p>
 </dd>
-<dt>Thinning</dt><dd><p>This allows you to set how much thinner a line becomes when speeding up the stroke. Using a negative value makes it thicker.</p>
+<dt>變細</dt><dd><p>能夠設定快速劃線時線條寬度減少的程度。數值為負時會使寬度增加。</p>
 </dd>
-<dt>Width</dt><dd><p>Base width for the stroke.</p>
+<dt>寬度</dt><dd><p>線條的基礎寬度。</p>
 </dd>
 <dt>Use Tablet Angle</dt><dd><p>Allows you to use the tablet angle to control the stroke, only works for tablets supporting it.</p>
 </dd>
-<dt>Angle</dt><dd><p>The angle of the dab.</p>
+<dt>角度</dt><dd><p>設定印跡的角度。</p>
 </dd>
-<dt>Fixation</dt><dd><p>The ratio of the dab. 1 is thin, 0 is round.</p>
+<dt>固定</dt><dd><p>設定印跡轉彎時角度改變的程度。數值為 1 時保持不變，而 0 時會跟隨動筆方向。</p>
 </dd>
-<dt>Caps</dt><dd><p>Whether or not an stroke will end with a rounding or flat.</p>
+<dt>線頭</dt><dd><p>設定線條首端的圓度。</p>
 </dd>
-<dt>Mass</dt><dd><p>How much weight the stroke has. With drag set to 0, high mass increases the 'orbit'.</p>
+<dt>重量</dt><dd><p>設定線條的重量。如果把拽引設定為 0 時，較高的重量會產生「軌道」。</p>
 </dd>
-<dt>Drag</dt><dd><p>How much the stroke follows the cursor, when set to 0 the stroke will orbit around the cursor path.</p>
+<dt>拽引</dt><dd><p>設定線條跟隨滑鼠的程度，設定為 0 時會產生圍繞滑鼠路徑的軌道。</p>
 </dd>
 </dl>
 <div class="admonition note">
 <p class="admonition-title">備註</p>
-<p>The calligraphy tool can be edited by the edit-line tool, but currently you can't add or remove nodes without converting it to a normal path.</p>
+<p>西文書法工具產生的線條可以被形狀編輯工具編輯，但是目前除了轉成路徑，你是不可以增加或移除節點的。</p>
 </div>
 </section>
 </section>

@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-08-27T10:26:04" />
+  <meta property="og:article:modified_time" content="2021-08-27T22:25:53" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="如何在 Krita 中使用筆尖。" name="description" property="og:description" />
 
@@ -295,14 +295,14 @@
 </dd>
 <dt>淡化</dt><dd><p>this sets the softness of the brush. You can click the chain-symbol to lock and unlock these settings. Fade has a different effect per mask-type, so don't be alarmed if it looks strange, perhaps you have the wrong mask-type.</p>
 <img alt="../../../_images/Krita_2_9_brushengine_brushtips_default2b.png" src="../../../_images/Krita_2_9_brushengine_brushtips_default2b.png" />
-<p>With fade locked.</p>
+<p>淡化鎖定 (水平 = 垂直)。</p>
 <img alt="../../../_images/Krita_2_9_brushengine_brushtips_default_3.png" src="../../../_images/Krita_2_9_brushengine_brushtips_default_3.png" />
-<p>With fade separately horizontal and vertical.</p>
+<p>水平和垂直分別淡化。</p>
 </dd>
-<dt>角度</dt><dd><p>This changes the angle a which the brush is at.</p>
+<dt>角度</dt><dd><p>這會改變筆刷的角度 。</p>
 <img alt="../../../_images/Krita_2_9_brushengine_brushtips_angle.png" src="../../../_images/Krita_2_9_brushengine_brushtips_angle.png" />
 </dd>
-<dt>尖刺</dt><dd><p>This gives the amount of tips related to the ratio.</p>
+<dt>尖峰</dt><dd><p>尖峰數量，它的效果與長寬比有關。</p>
 <img alt="../../../_images/Krita_2_9_brushengine_brushtips_spikes.png" src="../../../_images/Krita_2_9_brushengine_brushtips_spikes.png" />
 </dd>
 <dt>密度</dt><dd><p>This determines how much area the brush-covers over its size: It makes it noisy. In the example below, the brush is set with density 0%, 50% and 100% respectively.</p>
@@ -339,9 +339,9 @@ You'd want an inking brush to have a precision of 5 at all times, but a big fill
 <img alt="../../../_images/Krita_Predefined_Brushes.png" src="../../../_images/Krita_Predefined_Brushes.png" />
 <p>If you have used other applications like <strong class="program">GIMP</strong> or <strong class="program">Photoshop</strong>, you will have used this kind of brush. <strong class="program">Krita</strong> is (mostly) compatible with the brush tip definitions files of these applications:</p>
 <dl class="simple">
-<dt>abr</dt><dd><p>Gimp autobrush tip definitions.</p>
+<dt>abr</dt><dd><p>Gimp 自動筆尖定義。</p>
 </dd>
-<dt><a class="reference internal" href="../../../general_concepts/file_formats/file_gbr.html#file-gbr"><span class="std std-ref">*.gbr</span></a></dt><dd><p>Gimp single bitmap brush tip. Can be black and white or colored.</p>
+<dt><a class="reference internal" href="../../../general_concepts/file_formats/file_gbr.html#file-gbr"><span class="std std-ref">*.gbr</span></a></dt><dd><p>Gimp 單個點陣圖筆尖。可以是黑白或彩色。</p>
 </dd>
 <dt><a class="reference internal" href="../../../general_concepts/file_formats/file_gih.html#file-gih"><span class="std std-ref">*.gih</span></a></dt><dd><p>Gimp Image Hose brush tip: contains a series of brush tips that are painted randomly or in order after each other. Can be black and white or colored. <strong class="program">Krita</strong> does not yet support all the parameters yet.</p>
 </dd>
@@ -355,13 +355,13 @@ You'd want an inking brush to have a precision of 5 at all times, but a big fill
 </dd>
 <dt>旋轉</dt><dd><p>筆尖的初始旋轉方向。</p>
 </dd>
-<dt>間距</dt><dd><p>Distance between the brush tip impressions.</p>
+<dt>間距</dt><dd><p>筆尖印痕的間距。</p>
 </dd>
 </dl>
 <section id="brush-mode">
 <span id="id1"></span><h4>筆刷模式<a class="headerlink" href="#brush-mode" title="本標題的永久連結">¶</a></h4>
 <figure class="align-default" id="id2">
-<img alt="the different modes demonstrated." src="../../../_images/brush_tip_modes.png" />
+<img alt="不同的模式顯示不同的筆尖。" src="../../../_images/brush_tip_modes.png" />
 <figcaption>
 <p><span class="caption-text">Different modes shown with different brush tips.</span><a class="headerlink" href="#id2" title="本圖片的永久連結">¶</a></p>
 </figcaption>
@@ -369,7 +369,7 @@ You'd want an inking brush to have a precision of 5 at all times, but a big fill
 <dl>
 <dt>透明度遮罩</dt><dd><p>For colored brushes, don't paint the actual colors, but make a grayscale brush tip that will be colored by your selected foreground/background color. Lighter areas will be interpreted as more transparent.</p>
 </dd>
-<dt>為影像上色</dt><dd><p>Use the brush tip image exactly as it is.  Especially useful for image stamps.</p>
+<dt>為影像上色</dt><dd><p>完全按原樣使用筆尖圖像本身。特別適用於圖像印章。</p>
 </dd>
 <dt>亮度映射</dt><dd><div class="versionadded">
 <p><span class="versionmodified added">4.3 版新加入: </span>Combines the features of Alpha Mask and Image Stamp modes. Transparency is preserved as it is in Image Stamp mode, but colors or gray tones in the brush are replaced by the foreground color.  The Lightness values of the brush tip image (if thinking in HSL mode) are preserved, so dark parts of the image are dark, and bright parts are bright.  This allows image stamps where you can choose the color, but preserve highlights and shadows, and can even create an effect of thick paint in a brush stroke by simulating the highlights and shadows caused by the texture of the paint and brush stroke (sometimes called an &quot;impasto&quot; effect).</p>
