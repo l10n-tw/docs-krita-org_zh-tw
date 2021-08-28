@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-08-27T22:25:53" />
+  <meta property="og:article:modified_time" content="2021-08-28T12:25:57" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="如何在 Krita 中使用筆尖。" name="description" property="og:description" />
 
@@ -271,7 +271,7 @@
 <span id="auto-brush-tip"></span><h2>自動筆刷<a class="headerlink" href="#auto-brush" title="本標題的永久連結">¶</a></h2>
 <p>筆尖基本是圓形或方形。這種筆尖是 Krita 根據特定參數生成。</p>
 <section id="types">
-<h3>類型<a class="headerlink" href="#types" title="本標題的永久連結">¶</a></h3>
+<h3>遮罩類型<a class="headerlink" href="#types" title="本標題的永久連結">¶</a></h3>
 <p>筆刷有三種遮罩，圓形和方形筆尖均適用：</p>
 <dl>
 <dt>預設</dt><dd><p>這是最常見的類型。淡化參數呈現出下列效果。在三種自動筆尖中，處理的速度最快。</p>
@@ -293,7 +293,7 @@
 <dt>長寬比</dt><dd><p>筆刷的外形縱橫比。</p>
 <img alt="../../../_images/Krita_2_9_brushengine_brushtips_ratio.png" src="../../../_images/Krita_2_9_brushengine_brushtips_ratio.png" />
 </dd>
-<dt>淡化</dt><dd><p>this sets the softness of the brush. You can click the chain-symbol to lock and unlock these settings. Fade has a different effect per mask-type, so don't be alarmed if it looks strange, perhaps you have the wrong mask-type.</p>
+<dt>淡化</dt><dd><p>這設定了畫刷的柔軟度。 您可以單擊鎖鏈符號來鎖定和解鎖這些設定。 淡化每種遮罩類型都有不同的效果，所以如果它看起來很奇怪，請不要驚慌，也許您的遮罩類型有誤。</p>
 <img alt="../../../_images/Krita_2_9_brushengine_brushtips_default2b.png" src="../../../_images/Krita_2_9_brushengine_brushtips_default2b.png" />
 <p>淡化鎖定 (水平 = 垂直)。</p>
 <img alt="../../../_images/Krita_2_9_brushengine_brushtips_default_3.png" src="../../../_images/Krita_2_9_brushengine_brushtips_default_3.png" />
@@ -305,15 +305,15 @@
 <dt>尖峰</dt><dd><p>尖峰數量，它的效果與長寬比有關。</p>
 <img alt="../../../_images/Krita_2_9_brushengine_brushtips_spikes.png" src="../../../_images/Krita_2_9_brushengine_brushtips_spikes.png" />
 </dd>
-<dt>密度</dt><dd><p>This determines how much area the brush-covers over its size: It makes it noisy. In the example below, the brush is set with density 0%, 50% and 100% respectively.</p>
+<dt>密度</dt><dd><p>此參數調整筆刷填充的濃密度，會有雜訊效果。下圖密度分別為 0%、50%、100% 。</p>
 <img alt="../../../_images/Krita_2_9_brushengine_brushtips_density.png" src="../../../_images/Krita_2_9_brushengine_brushtips_density.png" />
 </dd>
-<dt>隨機度</dt><dd><p>This changes the randomness of the density. In the example below, the brush is set with randomness 0%, 50% and 100% respectively.</p>
+<dt>隨機度</dt><dd><p>此參數調整密度的隨機程度。下圖隨機度分別為 0%、50%、100% 。</p>
 <img alt="../../../_images/Krita_2_9_brushengine_brushtips_randomness.png" src="../../../_images/Krita_2_9_brushengine_brushtips_randomness.png" />
 </dd>
-<dt>間距</dt><dd><p>This affects how far brushes are spaced apart. In the below picture, the three examples on the left are with spacing 0, 1 and 5.</p>
+<dt>間距</dt><dd><p>此參數調整筆尖在畫布上留下筆跡的間距。下圖間距分別為 0、1、5 。</p>
 </dd>
-<dt>自動 (間距)</dt><dd><p>Ticking this will set the brush-spacing to a different (quadratic) algorithm. The result is fine control over the spacing. In the below picture, the three examples on right are with auto spacing, 0, 1 and 5 respectively.</p>
+<dt>自動 (間距)</dt><dd><p>勾選此項後筆刷間距將會使用一種不同的算法 (平方)，可以對間距進行更細致的控制。下圖右側三張圖是自動模式下間距分別為 0、1、5 。</p>
 <img alt="../../../_images/Krita_2_9_brushengine_brushtips_spacing.png" src="../../../_images/Krita_2_9_brushengine_brushtips_spacing.png" />
 </dd>
 <dt>平滑線</dt><dd><p>This toggles the super-smooth anti-aliasing. In the below example, both strokes are drawn with a default brush with fade set to 0. On the left without smooth lines, and the right with. Very useful for inking brushes. This option is best used in combination with Auto Spacing.</p>
@@ -363,7 +363,7 @@ You'd want an inking brush to have a precision of 5 at all times, but a big fill
 <figure class="align-default" id="id2">
 <img alt="不同的模式顯示不同的筆尖。" src="../../../_images/brush_tip_modes.png" />
 <figcaption>
-<p><span class="caption-text">Different modes shown with different brush tips.</span><a class="headerlink" href="#id2" title="本圖片的永久連結">¶</a></p>
+<p><span class="caption-text">不同的模式顯示不同的筆尖。</span><a class="headerlink" href="#id2" title="本圖片的永久連結">¶</a></p>
 </figcaption>
 </figure>
 <dl>
@@ -378,9 +378,9 @@ You'd want an inking brush to have a precision of 5 at all times, but a big fill
 <dl class="simple">
 <dt>中性點</dt><dd><p>This is the lightness level that will be the same as your current foreground color. Higher values than this will be lighter versions of the current foreground color, and lower, darker versions of the current color.</p>
 </dd>
-<dt>亮度</dt><dd><p>Makes the tip as a whole brighter or darker.</p>
+<dt>亮度</dt><dd><p>使整個筆尖更亮或更暗。</p>
 </dd>
-<dt>對比</dt><dd><p>Increase the contrast between dark and light areas in the tip.</p>
+<dt>對比</dt><dd><p>增加筆尖暗區和亮區之間的對比度。</p>
 </dd>
 </dl>
 </dd>
@@ -417,7 +417,7 @@ You'd want an inking brush to have a precision of 5 at all times, but a big fill
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>b50f368</code>
+          修訂版本 <code>ffb3816</code>
         </span>
       
 
