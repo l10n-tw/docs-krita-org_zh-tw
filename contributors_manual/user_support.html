@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-08-28T12:25:57" />
+  <meta property="og:article:modified_time" content="2021-08-28T21:26:13" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="使用者支援入門介紹。" name="description" />
 
@@ -339,20 +339,20 @@
 <h2><a class="toc-backref" href="#id11">軟體崩潰</a><a class="headerlink" href="#crash" title="本標題的永久連結">¶</a></h2>
 <p>如遇到程式強制終止的情況，應嘗試判斷這是否已知的問題。假如不是，應指示使用者到 Bugzilla 建立一個缺陷報告，或者由支援者代為建立。缺陷報告內應含以下資訊：</p>
 <ol class="arabic simple">
-<li><p>What happened, what was being done just before the crash.</p></li>
-<li><p>Is it possible to reproduce (repeat)? If yes, provide a step-by-step instruction to get the crash.</p></li>
-<li><p>Backtrace (crashlog) -- the instruction for Windows is here: <a class="reference internal" href="../reference_manual/dr_minw_debugger.html#dr-minw"><span class="std std-ref">Dr. MinGW 除錯工具</span></a>, and the debug symbols can be found in the annoucement of the version of Krita that the user has. But it could be easier to just point the user to <a class="reference external" href="https://download.kde.org/stable/krita">https://download.kde.org/stable/krita</a>.</p></li>
+<li><p>發生了甚麼事？程式強制終止前那一刻在做甚麼？</p></li>
+<li><p>能夠重現這個問題（使其重複發生）嗎？如可，請提供一系列可以重現這個問題的步驟。</p></li>
+<li><p>Backtrace（當機紀錄）——給 Windows 使用者的指示在這裡：<a class="reference internal" href="../reference_manual/dr_minw_debugger.html#dr-minw"><span class="std std-ref">Dr. MinGW 除錯工具</span></a>，而偵錯符號封裝的下載連結可在該版本的發佈新聞內找到，亦可直接在 <a class="reference external" href="https://download.kde.org/stable/krita">https://download.kde.org/stable/krita</a> 裡面找到。</p></li>
 </ol>
 </section>
 <section id="other-possible-questions-with-quick-solutions">
 <h2><a class="toc-backref" href="#id12">其他可能有快捷解決方法的問題</a><a class="headerlink" href="#other-possible-questions-with-quick-solutions" title="本標題的永久連結">¶</a></h2>
 <ol class="arabic">
-<li><p>When the user has any weird issue, something you've never heard about, ask them to reset the configuration: <a class="reference internal" href="../KritaFAQ.html#faq-reset-krita-configuration"><span class="std std-ref">重設 Krita 的設定選項</span></a>.</p></li>
-<li><p>When the user on Windows has trouble with anything related to preview or display, ask them to change <span class="guilabel">Canvas Graphics Acceleration</span> in <span class="menuselection">Settings ‣ Configure Krita ‣ Display</span>.</p>
+<li><p>如使用者遇到任何未聽聞過的奇怪的問題，請要求該使用者先嘗試<a class="reference internal" href="../KritaFAQ.html#faq-reset-krita-configuration"><span class="std std-ref">重設 Krita 的設定選項</span></a>。</p></li>
+<li><p>如有 Windows 的使用者遇到任何與畫布顯示有關的問題，請要求該使用者嘗試更改<span class="menuselection">設定 ‣ 設定 Krita… ‣ 顯示`內:guilabel:`畫布圖形加速</span>的<span class="guilabel">繪製器</span>設定。</p>
 <blockquote>
 <div><div class="admonition note">
 <p class="admonition-title">備註</p>
-<p>Telling people to disable canvas acceleration to get better performance is something we shouldn't do, ever.</p>
+<p>在任何情況下都不應建議使用者停用「畫布圖形加速」來改善效能。</p>
 </div>
 </div></blockquote>
 </li>
@@ -361,7 +361,7 @@
 <section id="advices-for-supporters">
 <h2><a class="toc-backref" href="#id13">給支援者的忠告</a><a class="headerlink" href="#advices-for-supporters" title="本標題的永久連結">¶</a></h2>
 <ol class="arabic simple">
-<li><p>If you don't understand the question, ask for clarification -- asking for a screen recording or a screenshot is perfectly fine.</p></li>
+<li><p>如果未能清楚理解求助者的提問，應請求闡明一下。要求畫面截圖或錄影是不錯的做法。</p></li>
 <li><p>If you don't know the solution but you know what information will be needed to investigate the issue further, don't hesitate to ask. Other supporters may know the answer, but have too little time to move the user through the whole process, so you're helping a lot just by asking for additional information. This is very much true in case of tablet issues, for example.</p></li>
 <li><p>If you don't know the answer/solution and the question looks abandoned by other supporters, you can always ask for help on Krita IRC channel. It's #krita on Libera.Chat: <a class="reference internal" href="community.html#the-krita-community"><span class="std std-ref">Krita 的社群</span></a>.</p></li>
 <li><p>Explain steps the user needs to make clearly, for example if you need them to change something in settings, clearly state the whole path of buttons and tabs to get there.</p></li>
