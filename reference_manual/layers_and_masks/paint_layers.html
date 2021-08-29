@@ -6,7 +6,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta property="og:title" name="title" content="Paint Layers" />
+  <meta property="og:title" name="title" content="顏料塗層" />
   <meta property="og:site-name" content="Krita Manual" />
   <meta property="og:type" content="article" />
   <meta property="og:locale" content="zh_TW" />
@@ -21,13 +21,13 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-08-29T07:17:44" />
+  <meta property="og:article:modified_time" content="2021-08-29T16:26:08" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="How to use paint layers in Krita." name="description" />
 
   
   
-  <title>Paint Layers &mdash; Krita Manual 5.0.0 說明文件</title>
+  <title>顏料塗層 &mdash; Krita Manual 5.0.0 說明文件</title>
   
 
   
@@ -60,8 +60,8 @@
     <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="搜尋" href="../../search.html" />
-    <link rel="next" title="Selection Masks" href="selection_masks.html" />
-    <link rel="prev" title="Layer Styles" href="layer_styles.html" /> 
+    <link rel="next" title="局部選取區域" href="selection_masks.html" />
+    <link rel="prev" title="圖層樣式" href="layer_styles.html" /> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -147,14 +147,14 @@
 <li class="toctree-l2 current"><a class="reference internal" href="../layers_and_masks.html">圖層及遮罩</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="clone_layers.html">Clone Layers</a></li>
 <li class="toctree-l3"><a class="reference internal" href="file_layers.html">File Layers</a></li>
-<li class="toctree-l3"><a class="reference internal" href="fill_layers.html">Fill Layers</a></li>
-<li class="toctree-l3"><a class="reference internal" href="filter_layers.html">Filter Layer</a></li>
-<li class="toctree-l3"><a class="reference internal" href="filter_masks.html">Filter Masks</a></li>
-<li class="toctree-l3"><a class="reference internal" href="group_layers.html">Group Layers</a></li>
-<li class="toctree-l3"><a class="reference internal" href="layer_styles.html">Layer Styles</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Paint Layers</a></li>
-<li class="toctree-l3"><a class="reference internal" href="selection_masks.html">Selection Masks</a></li>
-<li class="toctree-l3"><a class="reference internal" href="split_alpha.html">分割透明度</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fill_layers.html">填充圖層</a></li>
+<li class="toctree-l3"><a class="reference internal" href="filter_layers.html">濾鏡圖層</a></li>
+<li class="toctree-l3"><a class="reference internal" href="filter_masks.html">濾鏡遮罩</a></li>
+<li class="toctree-l3"><a class="reference internal" href="group_layers.html">群組圖層</a></li>
+<li class="toctree-l3"><a class="reference internal" href="layer_styles.html">圖層樣式</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">顏料塗層</a></li>
+<li class="toctree-l3"><a class="reference internal" href="selection_masks.html">局部選取區域</a></li>
+<li class="toctree-l3"><a class="reference internal" href="split_alpha.html">分割 Alpha ( 透明度 )</a></li>
 <li class="toctree-l3"><a class="reference internal" href="transformation_masks.html">Transform Masks</a></li>
 <li class="toctree-l3"><a class="reference internal" href="transparency_masks.html">Transparency Masks</a></li>
 <li class="toctree-l3"><a class="reference internal" href="vector_layers.html">Vector Layers</a></li>
@@ -240,7 +240,7 @@
         
           <li><a href="../layers_and_masks.html">圖層及遮罩</a> &raquo;</li>
         
-      <li>Paint Layers</li>
+      <li>顏料塗層</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -265,7 +265,7 @@
            <div itemprop="articleBody">
             
   <section id="paint-layers">
-<span id="index-0"></span><span id="id1"></span><h1>Paint Layers<a class="headerlink" href="#paint-layers" title="本標題的永久連結">¶</a></h1>
+<span id="index-0"></span><span id="id1"></span><h1>顏料塗層<a class="headerlink" href="#paint-layers" title="本標題的永久連結">¶</a></h1>
 <p>Paint layers are the most commonly used type of layers used in digital paint or image manipulation software like Krita. If you've ever used layers in <strong class="program">Photoshop</strong> or the <strong class="program">Gimp</strong>, you'll be used to how they work. In short, a paint layer, also called a pixel, bitmap or raster layer, is a bitmap image (an image made up of many points of color).</p>
 <p>Paint layers let you apply many advanced effects such as smearing, smudging and distorting. This makes them the most flexible type of layer. However,  paint layers don't scale well when enlarged (they pixelate), and any effects that have been applied can't be edited.</p>
 <p>To deal with these two drawbacks, digital artists will typically work at higher Pixel Per Inch (PPI) counts.  It is not unusual to see PPI settings of 400 to 600 PPI for a canvas with a good amount of detail.  To combat the issue of applied effects that cannot be edited it is best to take advantage of the non-destructive layer capabilities of filter, transparency and transform masks.</p>
@@ -281,10 +281,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="selection_masks.html" class="btn btn-neutral float-right" title="Selection Masks" accesskey="n" rel="next"> <!-- 下一個 --> <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="selection_masks.html" class="btn btn-neutral float-right" title="局部選取區域" accesskey="n" rel="next"> <!-- 下一個 --> <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="layer_styles.html" class="btn btn-neutral" title="Layer Styles" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- 上一個  -->  </a>
+        <a href="layer_styles.html" class="btn btn-neutral" title="圖層樣式" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- 上一個  -->  </a>
       
     </div>
   

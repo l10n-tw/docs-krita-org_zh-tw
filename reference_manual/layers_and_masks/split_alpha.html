@@ -6,7 +6,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta property="og:title" name="title" content="分割透明度" />
+  <meta property="og:title" name="title" content="分割 Alpha ( 透明度 )" />
   <meta property="og:site-name" content="Krita Manual" />
   <meta property="og:type" content="article" />
   <meta property="og:locale" content="zh_TW" />
@@ -21,13 +21,13 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-08-29T07:17:44" />
+  <meta property="og:article:modified_time" content="2021-08-29T16:26:08" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="Split Alpha: how to work with color and alpha channels of the layer separately." name="description" />
 
   
   
-  <title>分割透明度 &mdash; Krita Manual 5.0.0 說明文件</title>
+  <title>分割 Alpha ( 透明度 ) &mdash; Krita Manual 5.0.0 說明文件</title>
   
 
   
@@ -61,7 +61,7 @@
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="搜尋" href="../../search.html" />
     <link rel="next" title="Transform Masks" href="transformation_masks.html" />
-    <link rel="prev" title="Selection Masks" href="selection_masks.html" /> 
+    <link rel="prev" title="局部選取區域" href="selection_masks.html" /> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -147,16 +147,16 @@
 <li class="toctree-l2 current"><a class="reference internal" href="../layers_and_masks.html">圖層及遮罩</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="clone_layers.html">Clone Layers</a></li>
 <li class="toctree-l3"><a class="reference internal" href="file_layers.html">File Layers</a></li>
-<li class="toctree-l3"><a class="reference internal" href="fill_layers.html">Fill Layers</a></li>
-<li class="toctree-l3"><a class="reference internal" href="filter_layers.html">Filter Layer</a></li>
-<li class="toctree-l3"><a class="reference internal" href="filter_masks.html">Filter Masks</a></li>
-<li class="toctree-l3"><a class="reference internal" href="group_layers.html">Group Layers</a></li>
-<li class="toctree-l3"><a class="reference internal" href="layer_styles.html">Layer Styles</a></li>
-<li class="toctree-l3"><a class="reference internal" href="paint_layers.html">Paint Layers</a></li>
-<li class="toctree-l3"><a class="reference internal" href="selection_masks.html">Selection Masks</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">分割透明度</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#how-to-work-with-alpha-channel-of-the-layer">How to work with alpha channel of the layer</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#how-to-save-a-png-texture-and-keep-color-values-in-fully-transparent-areas">How to save a PNG texture and keep color values in fully transparent areas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fill_layers.html">填充圖層</a></li>
+<li class="toctree-l3"><a class="reference internal" href="filter_layers.html">濾鏡圖層</a></li>
+<li class="toctree-l3"><a class="reference internal" href="filter_masks.html">濾鏡遮罩</a></li>
+<li class="toctree-l3"><a class="reference internal" href="group_layers.html">群組圖層</a></li>
+<li class="toctree-l3"><a class="reference internal" href="layer_styles.html">圖層樣式</a></li>
+<li class="toctree-l3"><a class="reference internal" href="paint_layers.html">顏料塗層</a></li>
+<li class="toctree-l3"><a class="reference internal" href="selection_masks.html">局部選取區域</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">分割 Alpha ( 透明度 )</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#how-to-work-with-alpha-channel-of-the-layer">如何使用圖層的 alpha 通道</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#how-to-save-a-png-texture-and-keep-color-values-in-fully-transparent-areas">儲存PNG 紋理時將顏色值保留在完全透明的區域中</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="transformation_masks.html">Transform Masks</a></li>
@@ -244,7 +244,7 @@
         
           <li><a href="../layers_and_masks.html">圖層及遮罩</a> &raquo;</li>
         
-      <li>分割透明度</li>
+      <li>分割 Alpha ( 透明度 )</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -269,10 +269,10 @@
            <div itemprop="articleBody">
             
   <section id="split-alpha">
-<span id="index-0"></span><span id="id1"></span><h1>分割透明度<a class="headerlink" href="#split-alpha" title="本標題的永久連結">¶</a></h1>
+<span id="index-0"></span><span id="id1"></span><h1>分割 Alpha ( 透明度 )<a class="headerlink" href="#split-alpha" title="本標題的永久連結">¶</a></h1>
 <p>Sometimes especially in the field of game development, artists need to work with the alpha channel of the texture separately. To assist such workflow, Krita has a special functionality called <span class="menuselection">Split Alpha</span>. It allows splitting alpha channel of a paint layer into a separate <a class="reference internal" href="transparency_masks.html#transparency-masks"><span class="std std-ref">Transparency Masks</span></a>. The artist can work on the transparency mask in an isolated environment and merge it back when he has finished working.</p>
 <section id="how-to-work-with-alpha-channel-of-the-layer">
-<h2>How to work with alpha channel of the layer<a class="headerlink" href="#how-to-work-with-alpha-channel-of-the-layer" title="本標題的永久連結">¶</a></h2>
+<h2>如何使用圖層的 alpha 通道<a class="headerlink" href="#how-to-work-with-alpha-channel-of-the-layer" title="本標題的永久連結">¶</a></h2>
 <ol class="arabic simple">
 <li><p><img alt="滑鼠右鍵" src="../../_images/Krita_mouse_right.png" /> the paint layer in the layers docker.</p></li>
 <li><p>Choose <span class="menuselection">Split Alpha ‣ Alpha into Mask</span>.</p></li>
@@ -282,7 +282,7 @@
 </ol>
 </section>
 <section id="how-to-save-a-png-texture-and-keep-color-values-in-fully-transparent-areas">
-<h2>How to save a PNG texture and keep color values in fully transparent areas<a class="headerlink" href="#how-to-save-a-png-texture-and-keep-color-values-in-fully-transparent-areas" title="本標題的永久連結">¶</a></h2>
+<h2>儲存PNG 紋理時將顏色值保留在完全透明的區域中<a class="headerlink" href="#how-to-save-a-png-texture-and-keep-color-values-in-fully-transparent-areas" title="本標題的永久連結">¶</a></h2>
 <p>Normally, when saving an image to a file, all fully transparent areas of the image are filled with black color. It happens because when composing the layers of the image, Krita drop color data of fully transparent pixels for efficiency reason. To avoid this of color data loss you can either avoid compositing of the image i.e. limit image to only one layer without any masks or effects, or use the following method:</p>
 <ol class="arabic simple">
 <li><p><img alt="滑鼠右鍵" src="../../_images/Krita_mouse_right.png" /> the layer in the layers docker.</p></li>
@@ -303,7 +303,7 @@
         <a href="transformation_masks.html" class="btn btn-neutral float-right" title="Transform Masks" accesskey="n" rel="next"> <!-- 下一個 --> <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="selection_masks.html" class="btn btn-neutral" title="Selection Masks" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- 上一個  -->  </a>
+        <a href="selection_masks.html" class="btn btn-neutral" title="局部選取區域" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- 上一個  -->  </a>
       
     </div>
   

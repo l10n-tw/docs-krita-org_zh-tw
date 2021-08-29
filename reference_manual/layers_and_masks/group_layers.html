@@ -6,7 +6,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta property="og:title" name="title" content="Group Layers" />
+  <meta property="og:title" name="title" content="群組圖層" />
   <meta property="og:site-name" content="Krita Manual" />
   <meta property="og:type" content="article" />
   <meta property="og:locale" content="zh_TW" />
@@ -21,13 +21,13 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-08-29T07:17:44" />
+  <meta property="og:article:modified_time" content="2021-08-29T16:26:08" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="How to use group layers in Krita." name="description" />
 
   
   
-  <title>Group Layers &mdash; Krita Manual 5.0.0 說明文件</title>
+  <title>群組圖層 &mdash; Krita Manual 5.0.0 說明文件</title>
   
 
   
@@ -60,8 +60,8 @@
     <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="搜尋" href="../../search.html" />
-    <link rel="next" title="Layer Styles" href="layer_styles.html" />
-    <link rel="prev" title="Filter Masks" href="filter_masks.html" /> 
+    <link rel="next" title="圖層樣式" href="layer_styles.html" />
+    <link rel="prev" title="濾鏡遮罩" href="filter_masks.html" /> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -147,14 +147,14 @@
 <li class="toctree-l2 current"><a class="reference internal" href="../layers_and_masks.html">圖層及遮罩</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="clone_layers.html">Clone Layers</a></li>
 <li class="toctree-l3"><a class="reference internal" href="file_layers.html">File Layers</a></li>
-<li class="toctree-l3"><a class="reference internal" href="fill_layers.html">Fill Layers</a></li>
-<li class="toctree-l3"><a class="reference internal" href="filter_layers.html">Filter Layer</a></li>
-<li class="toctree-l3"><a class="reference internal" href="filter_masks.html">Filter Masks</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Group Layers</a></li>
-<li class="toctree-l3"><a class="reference internal" href="layer_styles.html">Layer Styles</a></li>
-<li class="toctree-l3"><a class="reference internal" href="paint_layers.html">Paint Layers</a></li>
-<li class="toctree-l3"><a class="reference internal" href="selection_masks.html">Selection Masks</a></li>
-<li class="toctree-l3"><a class="reference internal" href="split_alpha.html">分割透明度</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fill_layers.html">填充圖層</a></li>
+<li class="toctree-l3"><a class="reference internal" href="filter_layers.html">濾鏡圖層</a></li>
+<li class="toctree-l3"><a class="reference internal" href="filter_masks.html">濾鏡遮罩</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">群組圖層</a></li>
+<li class="toctree-l3"><a class="reference internal" href="layer_styles.html">圖層樣式</a></li>
+<li class="toctree-l3"><a class="reference internal" href="paint_layers.html">顏料塗層</a></li>
+<li class="toctree-l3"><a class="reference internal" href="selection_masks.html">局部選取區域</a></li>
+<li class="toctree-l3"><a class="reference internal" href="split_alpha.html">分割 Alpha ( 透明度 )</a></li>
 <li class="toctree-l3"><a class="reference internal" href="transformation_masks.html">Transform Masks</a></li>
 <li class="toctree-l3"><a class="reference internal" href="transparency_masks.html">Transparency Masks</a></li>
 <li class="toctree-l3"><a class="reference internal" href="vector_layers.html">Vector Layers</a></li>
@@ -240,7 +240,7 @@
         
           <li><a href="../layers_and_masks.html">圖層及遮罩</a> &raquo;</li>
         
-      <li>Group Layers</li>
+      <li>群組圖層</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -265,7 +265,7 @@
            <div itemprop="articleBody">
             
   <section id="group-layers">
-<span id="index-0"></span><span id="id1"></span><h1>Group Layers<a class="headerlink" href="#group-layers" title="本標題的永久連結">¶</a></h1>
+<span id="index-0"></span><span id="id1"></span><h1>群組圖層<a class="headerlink" href="#group-layers" title="本標題的永久連結">¶</a></h1>
 <p>While working on complex artwork you'll often find the need to group some layers or portions and elements of the artwork as one unit. Group layers come in handy for this: They allow you to segregate some layers so you can hide these quickly, or so you can recursively transform the content of the group, or so you can apply a mask to all the layers inside this group as if they are one (e.g. by dragging an existing mask to to a group layer), etc.. You can quickly create a group layer by selecting the layers that should be grouped together and then pressing the <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">G</kbd></kbd> shortcut.</p>
 <p>A thing to note is that the layers inside a group layer are considered separately from the outside when the group layer gets composited: All layers inside are combined first, and then this intermediate result is used on the outside for compositing the rest of the image. In Photoshop on the contrary, groups have something called pass-through mode which makes the layers behave as if they are not in a group and get composited along with other layers of the stack. Recent versions of Krita offer a pass-through mode as well, which can be enabled in order to get similar behavior.</p>
 </section>
@@ -278,10 +278,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="layer_styles.html" class="btn btn-neutral float-right" title="Layer Styles" accesskey="n" rel="next"> <!-- 下一個 --> <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="layer_styles.html" class="btn btn-neutral float-right" title="圖層樣式" accesskey="n" rel="next"> <!-- 下一個 --> <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="filter_masks.html" class="btn btn-neutral" title="Filter Masks" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- 上一個  -->  </a>
+        <a href="filter_masks.html" class="btn btn-neutral" title="濾鏡遮罩" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- 上一個  -->  </a>
       
     </div>
   

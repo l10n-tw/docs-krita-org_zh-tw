@@ -6,7 +6,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta property="og:title" name="title" content="Saving For The Web" />
+  <meta property="og:title" name="title" content="轉存成通用的網路傳播格式" />
   <meta property="og:site-name" content="Krita Manual" />
   <meta property="og:type" content="article" />
   <meta property="og:locale" content="zh_TW" />
@@ -21,13 +21,13 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-08-29T07:17:44" />
+  <meta property="og:article:modified_time" content="2021-08-29T16:26:08" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="Tutorial for saving images for the web." lang="en" name="description" xml:lang="en" />
 
   
   
-  <title>Saving For The Web &mdash; Krita Manual 5.0.0 說明文件</title>
+  <title>轉存成通用的網路傳播格式 &mdash; Krita Manual 5.0.0 說明文件</title>
   
 
   
@@ -61,7 +61,7 @@
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜尋" href="../search.html" />
     <link rel="next" title="SeExpr 介紹" href="seexpr.html" />
-    <link rel="prev" title="Making An Azalea With The Transformation Masks" href="making_an_azalea_with_the_transformation_masks.html" /> 
+    <link rel="prev" title="使用變形遮罩來製作杜鵑花" href="making_an_azalea_with_the_transformation_masks.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -136,13 +136,13 @@
 <li class="toctree-l2"><a class="reference internal" href="eye_tracker.html">設定 Krita 以使用眼球追蹤技術的示例</a></li>
 <li class="toctree-l2"><a class="reference internal" href="flat-coloring.html">平塗著色</a></li>
 <li class="toctree-l2"><a class="reference internal" href="inking.html">上墨線</a></li>
-<li class="toctree-l2"><a class="reference internal" href="krita-brush-tips.html">Krita Brush Tips</a></li>
-<li class="toctree-l2"><a class="reference internal" href="making_an_azalea_with_the_transformation_masks.html">Making An Azalea With The Transformation Masks</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Saving For The Web</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="krita-brush-tips.html">Krita 筆刷技巧</a></li>
+<li class="toctree-l2"><a class="reference internal" href="making_an_azalea_with_the_transformation_masks.html">使用變形遮罩來製作杜鵑花</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">轉存成通用的網路傳播格式</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#jpg">JPG</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#png">PNG</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#gif">GIF</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#saving-with-transparency">Saving with Transparency</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#saving-with-transparency">保存透明度</a></li>
 </ul>
 </li>
 </ul>
@@ -210,7 +210,7 @@
         
           <li><a href="../tutorials.html">教學及指南</a> &raquo;</li>
         
-      <li>Saving For The Web</li>
+      <li>轉存成通用的網路傳播格式</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -235,7 +235,7 @@
            <div itemprop="articleBody">
             
   <section id="saving-for-the-web">
-<span id="id1"></span><h1>Saving For The Web<a class="headerlink" href="#saving-for-the-web" title="本標題的永久連結">¶</a></h1>
+<span id="id1"></span><h1>轉存成通用的網路傳播格式<a class="headerlink" href="#saving-for-the-web" title="本標題的永久連結">¶</a></h1>
 <p>Krita's default saving format is the <a class="reference internal" href="../general_concepts/file_formats/file_kra.html#file-kra"><span class="std std-ref">*.kra</span></a> format. This format saves everything Krita can manipulate about an image: Layers, Filters, Assistants, Masks, Color spaces, etc. However, that's a lot of data, so <code class="docutils literal notranslate"><span class="pre">*.kra</span></code> files are pretty big. This doesn't make them very good for uploading to the internet. Imagine how many people's data-plans hit the limit if they only could look at <code class="docutils literal notranslate"><span class="pre">*.kra</span></code> files! So instead, we optimise our images for the web.</p>
 <p>There are a few steps involved:</p>
 <ol class="arabic simple">
@@ -258,7 +258,7 @@
 <h2>GIF<a class="headerlink" href="#gif" title="本標題的永久連結">¶</a></h2>
 <p>Only use this for animation (will be supported this year) or images with a super low color count, because they will get indexed.</p>
 <section id="saving-with-transparency">
-<h3>Saving with Transparency<a class="headerlink" href="#saving-with-transparency" title="本標題的永久連結">¶</a></h3>
+<h3>保存透明度<a class="headerlink" href="#saving-with-transparency" title="本標題的永久連結">¶</a></h3>
 <img alt="../_images/Save_with_transparency.png" src="../_images/Save_with_transparency.png" />
 <p>Saving with transparency is only possible with GIF and PNG. First, make sure you see the transparency checkers (this can be done by simply hiding the bottom layers, changing the projection color in <span class="menuselection">Image ‣ Image Background Color and Transparency...</span>, or by using <span class="menuselection">Filters ‣ Colors ‣ Color to Alpha...</span>). Then, save as PNG and tick <strong>Store alpha channel (transparency)</strong></p>
 <p>Save your image, upload, and show it off!</p>
@@ -277,7 +277,7 @@
         <a href="seexpr.html" class="btn btn-neutral float-right" title="SeExpr 介紹" accesskey="n" rel="next"> <!-- 下一個 --> <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="making_an_azalea_with_the_transformation_masks.html" class="btn btn-neutral" title="Making An Azalea With The Transformation Masks" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- 上一個  -->  </a>
+        <a href="making_an_azalea_with_the_transformation_masks.html" class="btn btn-neutral" title="使用變形遮罩來製作杜鵑花" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- 上一個  -->  </a>
       
     </div>
   

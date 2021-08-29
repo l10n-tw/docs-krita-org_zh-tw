@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-08-29T07:17:44" />
+  <meta property="og:article:modified_time" content="2021-08-29T16:26:08" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="An overview of the basic concepts of Krita." name="description" property="og:description" />
 
@@ -380,19 +380,19 @@ This data is stored in the <strong>Layers</strong>.</p>
 <p>This allows you to have line art above the colors, or trees before the mountains, and edit each without affecting the other.</p>
 <p>Krita has many layer-types, each layer type is unique and has its own use case:</p>
 <dl class="simple">
-<dt><a class="reference internal" href="../../reference_manual/layers_and_masks/paint_layers.html#paint-layers"><span class="std std-ref">Paint Layers</span></a></dt><dd><p>These are raster layers, and the most common and default layer type in Krita, you will be painting on these.</p>
+<dt><a class="reference internal" href="../../reference_manual/layers_and_masks/paint_layers.html#paint-layers"><span class="std std-ref">顏料塗層</span></a></dt><dd><p>These are raster layers, and the most common and default layer type in Krita, you will be painting on these.</p>
 </dd>
 <dt><a class="reference internal" href="../../reference_manual/layers_and_masks/vector_layers.html#vector-layers"><span class="std std-ref">Vector Layers</span></a></dt><dd><p>This is a layer type on which you draw vector graphics. Vector graphics are typically more simple than raster graphics and with the benefit that you can deform them with less blurriness.</p>
 </dd>
-<dt><a class="reference internal" href="../../reference_manual/layers_and_masks/group_layers.html#group-layers"><span class="std std-ref">Group Layers</span></a></dt><dd><p>These allow you to group several layers via drag and drop, so you can organize, move, apply masks and perform other actions on them together.</p>
+<dt><a class="reference internal" href="../../reference_manual/layers_and_masks/group_layers.html#group-layers"><span class="std std-ref">群組圖層</span></a></dt><dd><p>These allow you to group several layers via drag and drop, so you can organize, move, apply masks and perform other actions on them together.</p>
 </dd>
 <dt><a class="reference internal" href="../../reference_manual/layers_and_masks/clone_layers.html#clone-layers"><span class="std std-ref">Clone Layers</span></a></dt><dd><p>These are copies of the layer you selected when making them. They get updated automatically when changing the original.</p>
 </dd>
 <dt><a class="reference internal" href="../../reference_manual/layers_and_masks/file_layers.html#file-layers"><span class="std std-ref">File Layers</span></a></dt><dd><p>These refer to an existing image outside Krita and update as soon as the outside image updates. Useful for logos and emblems that change a lot.</p>
 </dd>
-<dt><a class="reference internal" href="../../reference_manual/layers_and_masks/fill_layers.html#fill-layers"><span class="std std-ref">Fill Layers</span></a></dt><dd><p>These layers are filled with something that Krita can make up on the fly, like colors or patterns.</p>
+<dt><a class="reference internal" href="../../reference_manual/layers_and_masks/fill_layers.html#fill-layers"><span class="std std-ref">填充圖層</span></a></dt><dd><p>These layers are filled with something that Krita can make up on the fly, like colors or patterns.</p>
 </dd>
-<dt><a class="reference internal" href="../../reference_manual/layers_and_masks/filter_layers.html#filter-layers"><span class="std std-ref">Filter Layer</span></a></dt><dd><p>These layers help us to apply some filters which will affect a composite image made from all the layers beneath them.</p>
+<dt><a class="reference internal" href="../../reference_manual/layers_and_masks/filter_layers.html#filter-layers"><span class="std std-ref">濾鏡圖層</span></a></dt><dd><p>These layers help us to apply some filters which will affect a composite image made from all the layers beneath them.</p>
 </dd>
 </dl>
 <p>You can manipulate the content of the layers with <strong>Tools</strong>.</p>
@@ -518,7 +518,7 @@ We right-click the layer and add a transparency mask. Then, we select that mask 
 </section>
 <section id="filter-layers-filter-masks-and-layer-styles">
 <h3><a class="toc-backref" href="#id27">濾鏡圖層、濾鏡遮罩與圖層樣式</a><a class="headerlink" href="#filter-layers-filter-masks-and-layer-styles" title="本標題的永久連結">¶</a></h3>
-<p>Krita also allows you to let the Filters be part of the layer stack, via <a class="reference internal" href="../../reference_manual/layers_and_masks/filter_layers.html#filter-layers"><span class="std std-ref">Filter Layer</span></a> and <a class="reference internal" href="../../reference_manual/layers_and_masks/filter_masks.html#filter-masks"><span class="std std-ref">Filter Masks</span></a>. Filter Layers affect all the layers underneath it in the same hierarchy. Transparency and transparency masks on Filter Layers affect where the layer is applied.</p>
+<p>Krita also allows you to let the Filters be part of the layer stack, via <a class="reference internal" href="../../reference_manual/layers_and_masks/filter_layers.html#filter-layers"><span class="std std-ref">濾鏡圖層</span></a> and <a class="reference internal" href="../../reference_manual/layers_and_masks/filter_masks.html#filter-masks"><span class="std std-ref">濾鏡遮罩</span></a>. Filter Layers affect all the layers underneath it in the same hierarchy. Transparency and transparency masks on Filter Layers affect where the layer is applied.</p>
 <p>Masks, on the other hand, can affect one single layer and are driven by a grayscale image. They will also affect all layers in a group, much like a transparency mask.</p>
 <p>We can use these filters to make our ghost lady look even more ethereal, by selecting the ghost lady's layer, and then creating a clone layer. We then right-click and add a filter mask and use Gaussian blur set to 10 or so pixels.  The clone layer is then put behind the original layer, and set to the blending mode '<strong>Color Dodge</strong>', giving her a definite spooky glow. You can keep on painting on the original layer and everything will get updated automatically!</p>
 <img alt="../../_images/Krita_ghostlady_3.png" class="align-center" src="../../_images/Krita_ghostlady_3.png" />

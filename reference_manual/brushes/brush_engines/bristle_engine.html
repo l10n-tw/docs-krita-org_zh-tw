@@ -6,7 +6,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta property="og:title" name="title" content="鬃毛刷工具" />
+  <meta property="og:title" name="title" content="鬃毛刷工具引擎" />
   <meta property="og:site-name" content="Krita Manual" />
   <meta property="og:type" content="article" />
   <meta property="og:locale" content="zh_TW" />
@@ -21,13 +21,13 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-08-29T07:17:44" />
+  <meta property="og:article:modified_time" content="2021-08-29T16:26:08" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<meta content="鬃毛刷工具的手冊頁。" name="description" />
+<meta content="鬃毛刷工具引擎的手冊頁。" name="description" />
 
   
   
-  <title>鬃毛刷工具 &mdash; Krita Manual 5.0.0 說明文件</title>
+  <title>鬃毛刷工具引擎 &mdash; Krita Manual 5.0.0 說明文件</title>
   
 
   
@@ -60,7 +60,7 @@
     <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
     <link rel="index" title="索引" href="../../../genindex.html" />
     <link rel="search" title="搜尋" href="../../../search.html" />
-    <link rel="next" title="粉筆筆刷工具" href="chalk_engine.html" />
+    <link rel="next" title="粉筆筆刷工具引擎" href="chalk_engine.html" />
     <link rel="prev" title="筆刷引擎" href="../brush_engines.html" /> 
 
   
@@ -134,8 +134,8 @@
 <li class="toctree-l2"><a class="reference internal" href="../../blending_modes.html">混色模式</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../../brushes.html">筆刷</a><ul class="current">
 <li class="toctree-l3 current"><a class="reference internal" href="../brush_engines.html">筆刷引擎</a><ul class="current">
-<li class="toctree-l4 current"><a class="current reference internal" href="#">鬃毛刷工具</a></li>
-<li class="toctree-l4"><a class="reference internal" href="chalk_engine.html">粉筆筆刷工具</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">鬃毛刷工具引擎</a></li>
+<li class="toctree-l4"><a class="reference internal" href="chalk_engine.html">粉筆筆刷工具引擎</a></li>
 <li class="toctree-l4"><a class="reference internal" href="clone_engine.html">仿製筆刷工具</a></li>
 <li class="toctree-l4"><a class="reference internal" href="color_smudge_engine.html">混色筆刷工具</a></li>
 <li class="toctree-l4"><a class="reference internal" href="curve_engine.html">貝茲筆刷工具</a></li>
@@ -251,7 +251,7 @@
         
           <li><a href="../brush_engines.html">筆刷引擎</a> &raquo;</li>
         
-      <li>鬃毛刷工具</li>
+      <li>鬃毛刷工具引擎</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -276,75 +276,75 @@
            <div itemprop="articleBody">
             
   <section id="bristle-brush-engine">
-<span id="index-0"></span><span id="id1"></span><h1>鬃毛刷工具<a class="headerlink" href="#bristle-brush-engine" title="本標題的永久連結">¶</a></h1>
-<img alt="../../../_images/bristlebrush.svg" src="../../../_images/bristlebrush.svg" /><p>A brush intended to mimic real-life brushes by drawing the trails of their lines or bristles.</p>
+<span id="index-0"></span><span id="id1"></span><h1>鬃毛刷工具引擎<a class="headerlink" href="#bristle-brush-engine" title="本標題的永久連結">¶</a></h1>
+<img alt="../../../_images/bristlebrush.svg" src="../../../_images/bristlebrush.svg" /><p>一種畫筆，旨在通過繪製線條或刷毛的軌跡來模仿現實生活中的畫筆。</p>
 <section id="brush-tip">
-<h2>Brush Tip<a class="headerlink" href="#brush-tip" title="本標題的永久連結">¶</a></h2>
-<p>Simply put:</p>
+<h2>刷頭<a class="headerlink" href="#brush-tip" title="本標題的永久連結">¶</a></h2>
+<p>簡介：</p>
 <ul class="simple">
-<li><p>The brush tip defines the areas with bristles in them.</p></li>
-<li><p>Lower opacity areas have lower-opacity bristles. With this brush, this may give the illusion that lower-opacity areas have fewer bristles.</p></li>
-<li><p>The <a class="reference internal" href="../brush_settings/options.html#option-size"><span class="std std-ref">大小</span></a> and <a class="reference internal" href="../brush_settings/options.html#option-rotation"><span class="std std-ref">旋轉</span></a> dynamics affect the brush tip, not the bristles.</p></li>
+<li><p>刷頭限定了其中有刷毛的區域。</p></li>
+<li><p>較低不透明度區域具有較低不透明度的刷毛。使用這種畫筆，可能會產生一種錯覺，即低不透明度區域的刷毛較少。</p></li>
+<li><p>大小與旋轉的動態影響的是刷尖，而不是刷毛。</p></li>
 </ul>
-<p>You can:</p>
+<p>你可以：</p>
 <ul class="simple">
 <li><p>Use different shapes for different effects. Be aware that complex brush shapes will draw more slowly though, while the effects aren't always visible (since in the end, you're passing over an area with a certain number of bristles).</p></li>
-<li><p>To decrease bristle density, you can also just use an autobrush and decrease the brush tip's density, or increase its randomness.</p></li>
+<li><p>要降低刷毛密度，您也可以只使用自動筆刷並降低刷頭的密度，或增加其隨機性。</p></li>
 </ul>
 <img alt="../../../_images/Krita-tutorial7-B.I.1.png" src="../../../_images/Krita-tutorial7-B.I.1.png" />
 </section>
 <section id="bristle-options">
-<h2>Bristle Options<a class="headerlink" href="#bristle-options" title="本標題的永久連結">¶</a></h2>
+<h2>刷毛選項<a class="headerlink" href="#bristle-options" title="本標題的永久連結">¶</a></h2>
 <p>The core of this particular brush-engine.</p>
 <dl class="simple">
-<dt>Scale</dt><dd><p>Think of it as pressing down on a brush to make the bristles further apart.</p>
+<dt>變形</dt><dd><p>把它想像成下壓刷子使刷毛岔開。</p>
 <ul class="simple">
-<li><p>Larger values basically give you larger brushes and larger bristle spacing. For example, a value of 4 will multiply your base brush size by 4, but the bristles will be 4 times more spaced apart.</p></li>
-<li><p>Use smaller values if you want a &quot;dense&quot; brush, i.e. you don't want to see so many bristles within the center.</p></li>
-<li><p>Negative values have the same effect as corresponding positive values: -1.00 will look like 1.00, etc.</p></li>
+<li><p>較大的值基本上會給你更大的刷子和更大的刷毛間距。舉例來說，值為 4 將使您的基礎畫筆大小乘以 4，但刷毛的間距將增加 4 倍。</p></li>
+<li><p>如果您想要一個“密集”的筆刷，也就是說，不想在中心看到太多刷毛，請使用較小的值。</p></li>
+<li><p>負值與相應的正值具有相同的效果：-1.00 看起來像 1.00，等等。</p></li>
 </ul>
 </dd>
-<dt>Random Offset</dt><dd><p>Adds a jaggy look to the trailing lines.</p>
+<dt>隨機偏移</dt><dd><p>為拖尾線條添加鋸齒狀外觀。</p>
 <ul class="simple">
-<li><p>At 0.00, all the bristles basically remain completely parallel.</p></li>
-<li><p>At other values, the bristles are offset randomly. Large values will increase the brush size a bit because of the bristles spreading around, but not by much.</p></li>
-<li><p>Negative values have the same effect as corresponding positive values.</p></li>
+<li><p>在 0.00 時，所有刷毛基本保持完全平行。</p></li>
+<li><p>在其他值下，刷毛隨機偏移。由於刷毛四處散佈，較大的值會稍微增加畫筆大小，但不會增加太多。</p></li>
+<li><p>負值與相應的正值具有相同的效果。</p></li>
 </ul>
 </dd>
-<dt>Shear</dt><dd><p>Shear introduces an angle to your brush, as though you're drawing with an oval brush (or the side of a round brush).</p>
+<dt>切變</dt><dd><p>Shear introduces an angle to your brush, as though you're drawing with an oval brush (or the side of a round brush).</p>
 </dd>
-<dt>Density</dt><dd><p>This controls the density of bristles. Scale takes a number of bristles and expands or compresses them into a denser area, whereas density takes a fixed area and determines the number of bristles in it. See the difference?</p>
+<dt>密度</dt><dd><p>這控制了刷毛的密度。縮放取一定數量的刷毛並將它們擴展或壓縮成一個更密集的區域，而密度取一個固定區域並決定其中的刷毛數量。看到差異觸了嗎？</p>
 </dd>
 </dl>
 <img alt="../../../_images/Krita-tutorial7-B.I.2-1.png" src="../../../_images/Krita-tutorial7-B.I.2-1.png" />
 <dl class="simple">
-<dt>Mouse Pressure</dt><dd><p>This one maps &quot;Scale&quot; to mouse speed, thus simulating pressure with a graphics tablet!</p>
+<dt>鼠標壓力</dt><dd><p>這個將“縮放”映射到鼠標速度，從而使用圖形輸入板模擬壓力！</p>
 <ul class="simple">
-<li><p>Rather, it uses the &quot;distance between two events&quot; to determine scale. Faster drawing, larger distances.</p></li>
-<li><p>This doesn't influence the &quot;pressure&quot; input for anything else (size, opacity, rotation etc.) so you still have to map those independently to something else.</p></li>
+<li><p>相反，它使用「兩個事件之間的距離」來確定規模。繪圖速度更快，距離更大。</p></li>
+<li><p>這不會影響其他任何東西（大小、不透明度、旋轉等）的「壓力」輸入，因此您仍然必須將它們獨立地映射到其他東西。</p></li>
 </ul>
 </dd>
-<dt>Threshold</dt><dd><p>This is a tablet feature. When you turn this on, only bristles that are able to &quot;touch the canvas&quot; will be painted.</p>
+<dt>閾值</dt><dd><p>這是平板電腦的功能。當您打開此功能時，只會繪製能夠“觸摸畫布”的刷毛。</p>
 </dd>
-<dt>Connect Hairs</dt><dd><p>The bristles get connected. See for yourself.</p>
+<dt>鬃毛黏連</dt><dd><p>連結鬃毛。自己觀察。</p>
 </dd>
-<dt>Anti-Aliasing</dt><dd><p>This will decrease the jaggy-ness of the lines.</p>
+<dt>反鋸齒</dt><dd><p>這將減少線條的鋸齒狀。</p>
 </dd>
-<dt>Composite Bristles</dt><dd><p>This &quot;composes the bristle colors within one dab,&quot; but explains that the effect is &quot;probably subtle&quot;.</p>
+<dt>複合鬃毛</dt><dd><p>這「輕輕一抹造成了鬃毛色澤」，但這種效果「可能很細微」。</p>
 </dd>
 </dl>
 <img alt="../../../_images/Krita-tutorial7-B.I.2-2.png" src="../../../_images/Krita-tutorial7-B.I.2-2.png" />
 </section>
 <section id="ink-depletion">
-<h2>Ink Depletion<a class="headerlink" href="#ink-depletion" title="本標題的永久連結">¶</a></h2>
-<p>This simulated ink depletion over drawing time. The value dictates how long it will take. The curve dictates the speed.</p>
+<h2>墨水耗盡<a class="headerlink" href="#ink-depletion" title="本標題的永久連結">¶</a></h2>
+<p>這模擬了繪圖時間的墨水消耗。該值決定了需要多長時間。曲線決定了速度。</p>
 <dl>
-<dt>Opacity</dt><dd><p>The brush will go transparent to simulate ink-depletion.</p>
+<dt>透明度</dt><dd><p>筆刷將變為透明以模擬墨水耗盡。</p>
 </dd>
-<dt>Saturation</dt><dd><p>The brush will be desaturated to simulate ink-depletion.</p>
+<dt>飽和度</dt><dd><p>筆刷將去除飽和度以模擬墨水耗盡。</p>
 <img alt="../../../_images/Krita-tutorial7-B.I.3-1.png" src="../../../_images/Krita-tutorial7-B.I.3-1.png" />
 </dd>
-<dt>Soak Ink</dt><dd><p>The brush will pick up colors from other brushes. You don't need to have <span class="guilabel">Ink depletion</span> checked to activate this option, you just have to check <span class="guilabel">Soak ink</span>. What this does is cause the bristles of the brush to take on the colors of the first area they touch. Since the Bristle brush is made up of independent bristles, you can basically take on several colors at the same time.</p>
+<dt>浸墨</dt><dd><p>The brush will pick up colors from other brushes. You don't need to have <span class="guilabel">Ink depletion</span> checked to activate this option, you just have to check <span class="guilabel">Soak ink</span>. What this does is cause the bristles of the brush to take on the colors of the first area they touch. Since the Bristle brush is made up of independent bristles, you can basically take on several colors at the same time.</p>
 <div class="admonition note">
 <p class="admonition-title">備註</p>
 <ul class="simple">
@@ -378,7 +378,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="chalk_engine.html" class="btn btn-neutral float-right" title="粉筆筆刷工具" accesskey="n" rel="next"> <!-- 下一個 --> <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="chalk_engine.html" class="btn btn-neutral float-right" title="粉筆筆刷工具引擎" accesskey="n" rel="next"> <!-- 下一個 --> <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="../brush_engines.html" class="btn btn-neutral" title="筆刷引擎" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- 上一個  -->  </a>

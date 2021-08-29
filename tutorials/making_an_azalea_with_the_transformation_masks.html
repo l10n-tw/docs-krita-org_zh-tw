@@ -6,7 +6,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta property="og:title" name="title" content="Making An Azalea With The Transformation Masks" />
+  <meta property="og:title" name="title" content="使用變形遮罩來製作杜鵑花" />
   <meta property="og:site-name" content="Krita Manual" />
   <meta property="og:type" content="article" />
   <meta property="og:locale" content="zh_TW" />
@@ -21,13 +21,13 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-08-29T07:17:44" />
+  <meta property="og:article:modified_time" content="2021-08-29T16:26:08" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="Tutorial for making azalea with the help of transform masks." lang="en" name="description" xml:lang="en" />
 
   
   
-  <title>Making An Azalea With The Transformation Masks &mdash; Krita Manual 5.0.0 說明文件</title>
+  <title>使用變形遮罩來製作杜鵑花 &mdash; Krita Manual 5.0.0 說明文件</title>
   
 
   
@@ -60,8 +60,8 @@
     <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜尋" href="../search.html" />
-    <link rel="next" title="Saving For The Web" href="saving-for-the-web.html" />
-    <link rel="prev" title="Brush-tips:Sculpt-paint-brush" href="krita-brush-tips/sculpt-paint-brush.html" /> 
+    <link rel="next" title="轉存成通用的網路傳播格式" href="saving-for-the-web.html" />
+    <link rel="prev" title="筆刷技巧 : 雕刻家(Sinix )筆刷" href="krita-brush-tips/sculpt-paint-brush.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -136,14 +136,14 @@
 <li class="toctree-l2"><a class="reference internal" href="eye_tracker.html">設定 Krita 以使用眼球追蹤技術的示例</a></li>
 <li class="toctree-l2"><a class="reference internal" href="flat-coloring.html">平塗著色</a></li>
 <li class="toctree-l2"><a class="reference internal" href="inking.html">上墨線</a></li>
-<li class="toctree-l2"><a class="reference internal" href="krita-brush-tips.html">Krita Brush Tips</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Making An Azalea With The Transformation Masks</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#lets-get-to-drawing">Let’s get to drawing!</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#clone-layers">Clone Layers</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#enter-transform-masks">Enter Transform Masks!</a></li>
+<li class="toctree-l2"><a class="reference internal" href="krita-brush-tips.html">Krita 筆刷技巧</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">使用變形遮罩來製作杜鵑花</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#lets-get-to-drawing">開始畫吧 !</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#clone-layers">再製圖層 ( 注意 ! 再製不是複製 )</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#enter-transform-masks">使用變形遮罩 !</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="saving-for-the-web.html">Saving For The Web</a></li>
+<li class="toctree-l2"><a class="reference internal" href="saving-for-the-web.html">轉存成通用的網路傳播格式</a></li>
 <li class="toctree-l2"><a class="reference internal" href="seexpr.html">SeExpr 介紹</a></li>
 </ul>
 </li>
@@ -207,7 +207,7 @@
         
           <li><a href="../tutorials.html">教學及指南</a> &raquo;</li>
         
-      <li>Making An Azalea With The Transformation Masks</li>
+      <li>使用變形遮罩來製作杜鵑花</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -232,7 +232,7 @@
            <div itemprop="articleBody">
             
   <section id="making-an-azalea-with-the-transformation-masks">
-<span id="id1"></span><h1>Making An Azalea With The Transformation Masks<a class="headerlink" href="#making-an-azalea-with-the-transformation-masks" title="本標題的永久連結">¶</a></h1>
+<span id="id1"></span><h1>使用變形遮罩來製作杜鵑花<a class="headerlink" href="#making-an-azalea-with-the-transformation-masks" title="本標題的永久連結">¶</a></h1>
 <img alt="Making azalea with transform masks." src="../_images/Krita-screencast-azaleas.png" />
 <div class="admonition note">
 <p class="admonition-title">備註</p>
@@ -245,7 +245,7 @@
 <p>Then, if you didn’t have a new canvas make one. I made an A5 300dpi canvas. This is not very big, but we’re only practicing. I also have the background color set to a yellow-grayish color (#CAC5B3), partly because it reminds me of paper, and partly because bright screen white can strain the eyes and make it difficult to focus on values and colors while painting. Also, due to the lack of strain on the eyes, you’ll find yourself soothed a bit. Other artists use #c0c0c0, or even more different values.</p>
 <p>So, if you go to <span class="menuselection">Window ‣ Tile</span>, you will find that now your reference image and your working canvas are side by side. The reason I am using this instead of the docker is because I am lazy and don’t feel like saving the wikipedia image. We’re not going to touch the image much.</p>
 <section id="lets-get-to-drawing">
-<h2>Let’s get to drawing!<a class="headerlink" href="#lets-get-to-drawing" title="本標題的永久連結">¶</a></h2>
+<h2>開始畫吧 !<a class="headerlink" href="#lets-get-to-drawing" title="本標題的永久連結">¶</a></h2>
 <img alt="Starting with the trunk and reference image." src="../_images/Azelea_01_trunk-.png" />
 <p>First we make a bunch of branches. I picked a slightly darker color here than usual, because I know that I’ll be painting over these branches with the lighter colors later on. Look at the reference how branches are formed.</p>
 <img alt="Making the outline of the flowers." src="../_images/Azelea_02_drawing-flowers.png" />
@@ -256,13 +256,13 @@
 <p>Now, we’ll put the flowers in the upper left corner, and group them. You can group by making a group layer, and selecting the flower layers in your docker with the <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="滑鼠左鍵" src="../_images/Krita_mouse_left.png" /> shortcut and dragging them into the group. The reason why we’re putting them in the upper left corner is because we’ll be selecting them a lot, and Krita allows you to select layers with the <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">R</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="滑鼠左鍵" src="../_images/Krita_mouse_left.png" /> shortcut on the canvas quickly. Just hold the <kbd class="kbd docutils literal notranslate">R</kbd> key and <img alt="滑鼠左鍵" src="../_images/Krita_mouse_left.png" /> the pixels belonging to the layer you want, and Krita will select the layer in the Layer docker.</p>
 </section>
 <section id="clone-layers">
-<h2>Clone Layers<a class="headerlink" href="#clone-layers" title="本標題的永久連結">¶</a></h2>
+<h2>再製圖層 ( 注意 ! 再製不是複製 )<a class="headerlink" href="#clone-layers" title="本標題的永久連結">¶</a></h2>
 <p>Now, we will make clusters. What we’ll be doing is that we select a given flower and then make a new clone layer. A clone layer is a layer that is literally a clone of the original. They can’t be edited themselves, but edit the original and the clone layer will follow suit. Clone Layers, and File layers, are our greatest friends when it comes to transform masks, and you’ll see why in a moment.</p>
 <img alt="Create clone layers of the flowers." src="../_images/Azelea_05_clonelayer.png" />
 <p>You’ll quickly notice that our flowers are not good enough for a cluster: we need far more angles on the profile for example. If only there was a way to transform them… but we can’t do that with clone layers. Or can we?</p>
 </section>
 <section id="enter-transform-masks">
-<h2>Enter Transform Masks!<a class="headerlink" href="#enter-transform-masks" title="本標題的永久連結">¶</a></h2>
+<h2>使用變形遮罩 !<a class="headerlink" href="#enter-transform-masks" title="本標題的永久連結">¶</a></h2>
 <p>Transform Masks are a really powerful feature introduced in 2.9. They are in fact so powerful, that when you first use them, you can’t even begin to grasp where to use them.</p>
 <p>Transform masks allow us to do a transform operation onto a layer, any given layer, and have it be completely dynamic! This includes our clone layer flowers!</p>
 <p>How to use them:</p>
@@ -307,10 +307,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="saving-for-the-web.html" class="btn btn-neutral float-right" title="Saving For The Web" accesskey="n" rel="next"> <!-- 下一個 --> <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="saving-for-the-web.html" class="btn btn-neutral float-right" title="轉存成通用的網路傳播格式" accesskey="n" rel="next"> <!-- 下一個 --> <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="krita-brush-tips/sculpt-paint-brush.html" class="btn btn-neutral" title="Brush-tips:Sculpt-paint-brush" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- 上一個  -->  </a>
+        <a href="krita-brush-tips/sculpt-paint-brush.html" class="btn btn-neutral" title="筆刷技巧 : 雕刻家(Sinix )筆刷" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- 上一個  -->  </a>
       
     </div>
   

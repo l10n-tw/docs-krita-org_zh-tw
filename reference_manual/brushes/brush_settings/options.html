@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-08-29T07:17:44" />
+  <meta property="og:article:modified_time" content="2021-08-29T16:26:08" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="Krita 的筆刷引擎選項概覽。" name="description" />
 
@@ -308,11 +308,11 @@
 </section>
 <section id="scatter">
 <span id="option-scatter"></span><h2>分散<a class="headerlink" href="#scatter" title="本標題的永久連結">¶</a></h2>
-<p>This parameter allows you to set the random placing of a brush-dab. You can affect them with Sensors.</p>
+<p>此參數設定筆刷印跡的隨機分散程度。您可以使用感測器。</p>
 <dl class="simple">
-<dt>X</dt><dd><p>The scattering on the angle you are drawing from.</p>
+<dt>X</dt><dd><p>朝您繪畫筆跡的方向分散。</p>
 </dd>
-<dt>Y</dt><dd><p>The scattering, perpendicular to the drawing angle (has the most effect).</p>
+<dt>Y</dt><dd><p>垂直於繪製方向分散（影響最大）。</p>
 </dd>
 </dl>
 <img alt="../../../_images/Krita_2_9_brushengine_scatter.png" src="../../../_images/Krita_2_9_brushengine_scatter.png" />
@@ -352,57 +352,57 @@
 <dl class="simple">
 <dt>純色</dt><dd><p>目前前景色</p>
 </dd>
-<dt>Gradient</dt><dd><p>Picks active gradient.</p>
+<dt>漸變</dt><dd><p>選取當前的漸變。</p>
 </dd>
 <dt>筆尖隨機</dt><dd><p>為每個筆刷印跡賦予隨機顏色。</p>
 </dd>
 <dt>筆畫隨機</dt><dd><p>Random noise pattern is now painted.</p>
 </dd>
-<dt>Pattern</dt><dd><p>Uses active pattern, but alignment is different per stroke.</p>
+<dt>圖案</dt><dd><p>使用當前的圖案，但圖案的對齊每筆不同。</p>
 </dd>
-<dt>Locked Pattern</dt><dd><p>Locks the pattern to the brushdab.</p>
+<dt>鎖定圖案</dt><dd><p>將圖案鎖定到筆刷印跡。</p>
 </dd>
 </dl>
 </section>
 <section id="mix">
-<span id="option-mix"></span><h2>Mix<a class="headerlink" href="#mix" title="本標題的永久連結">¶</a></h2>
+<span id="option-mix"></span><h2>混合<a class="headerlink" href="#mix" title="本標題的永久連結">¶</a></h2>
 <p>Allows you to affect the mix of the <a class="reference internal" href="#option-source"><span class="std std-ref">來源</span></a> color with Sensors. It will work with Plain Color and Gradient as source. If Plain Color is selected as source, it will mix between the currently selected foreground and background color. If Gradient is selected, it chooses a point on the gradient to use as painting color according to the sensors selected.</p>
 <img alt="../../../_images/Krita_2_9_brushengine_mix_01.png" src="../../../_images/Krita_2_9_brushengine_mix_01.png" />
 <section id="uses">
 <h3>Uses<a class="headerlink" href="#uses" title="本標題的永久連結">¶</a></h3>
 <img alt="../../../_images/Krita_2_9_brushengine_mix_02.png" src="../../../_images/Krita_2_9_brushengine_mix_02.png" />
 <dl class="simple">
-<dt>Flow map</dt><dd><p>The above example uses a <strong class="program">Krita</strong> painted flowmap in the 3D program <strong class="program">Blender</strong>.
+<dt>流向貼圖</dt><dd><p>The above example uses a <strong class="program">Krita</strong> painted flowmap in the 3D program <strong class="program">Blender</strong>.
 A brush was set to <span class="menuselection">Source ‣ Gradient</span> and <span class="menuselection">Mix ‣ Drawing angle</span>. The gradient in question contained the 360° for normal map colors. Flow maps are used in several Shaders, such as brushed metal, hair and certain river-shaders.</p>
 </dd>
 </dl>
 </section>
 <section id="gradient">
-<span id="option-gradient"></span><h3>Gradient<a class="headerlink" href="#gradient" title="本標題的永久連結">¶</a></h3>
+<span id="option-gradient"></span><h3>漸變<a class="headerlink" href="#gradient" title="本標題的永久連結">¶</a></h3>
 <p>Exactly the same as using <span class="menuselection">Source ‣ Gradient</span> with <span class="guilabel">Mix</span>, but only available for the Color Smudge Brush.</p>
 <img alt="../../../_images/Krita-tutorial5-I.6-1.png" src="../../../_images/Krita-tutorial5-I.6-1.png" />
-<p>You can either:</p>
+<p>您可以：</p>
 <ul class="simple">
 <li><p>Leave the default <span class="menuselection">Foreground ‣ Background gradient</span> setting, and just change the foreground and background colors</p></li>
-<li><p>Select a more specific gradient</p></li>
-<li><p>Or make custom gradients.</p></li>
+<li><p>選擇更具體的漸變</p></li>
+<li><p>或製作自定義漸變。</p></li>
 </ul>
 </section>
 </section>
 <section id="spacing">
 <span id="option-spacing"></span><span id="index-2"></span><h2>間距<a class="headerlink" href="#spacing" title="本標題的永久連結">¶</a></h2>
 <img alt="../../../_images/Krita_Pixel_Brush_Settings_Spacing.png" src="../../../_images/Krita_Pixel_Brush_Settings_Spacing.png" />
-<p>This allows you to affect <a class="reference internal" href="brush_tips.html#option-brush-tip"><span class="std std-ref">筆尖</span></a> with <a class="reference internal" href="tablet_sensors.html#sensors"><span class="std std-ref">感測器</span></a>.</p>
+<p>這允許您使用<a class="reference internal" href="brush_tips.html#option-brush-tip"><span class="std std-ref">筆尖</span></a>影響<a class="reference internal" href="tablet_sensors.html#sensors"><span class="std std-ref">感測器</span></a>。</p>
 <img alt="../../../_images/Krita_2_9_brushengine_spacing_02.png" src="../../../_images/Krita_2_9_brushengine_spacing_02.png" />
 <dl class="simple">
-<dt>Isotropic spacing</dt><dd><p>Instead of the spacing being related to the ratio of the brush, it will be on diameter only.</p>
+<dt>各向同性間距</dt><dd><p>計算間距時不考慮筆刷的長寬比，只考慮筆刷的直徑。</p>
 </dd>
 </dl>
 <img alt="../../../_images/Krita_2_9_brushengine_spacing_01.png" src="../../../_images/Krita_2_9_brushengine_spacing_01.png" />
 </section>
 <section id="ratio">
-<span id="option-ratio"></span><span id="index-3"></span><h2>Ratio<a class="headerlink" href="#ratio" title="本標題的永久連結">¶</a></h2>
-<p>Allows you to change the ratio of the brush and bind it to parameters. This also works for predefined brushes.</p>
+<span id="option-ratio"></span><span id="index-3"></span><h2>長寬比<a class="headerlink" href="#ratio" title="本標題的永久連結">¶</a></h2>
+<p>允許您更改筆刷的比例並將其綁定到參數。這也適用於預定義的筆刷。</p>
 <img alt="../../../_images/Krita_3_0_1_Brush_engine_ratio.png" src="../../../_images/Krita_3_0_1_Brush_engine_ratio.png" />
 </section>
 </section>

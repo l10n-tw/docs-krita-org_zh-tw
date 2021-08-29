@@ -6,7 +6,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta property="og:title" name="title" content="Selection Masks" />
+  <meta property="og:title" name="title" content="局部選取區域" />
   <meta property="og:site-name" content="Krita Manual" />
   <meta property="og:type" content="article" />
   <meta property="og:locale" content="zh_TW" />
@@ -21,13 +21,13 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-08-29T07:17:44" />
+  <meta property="og:article:modified_time" content="2021-08-29T16:26:08" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="How to use selection masks in Krita." name="description" />
 
   
   
-  <title>Selection Masks &mdash; Krita Manual 5.0.0 說明文件</title>
+  <title>局部選取區域 &mdash; Krita Manual 5.0.0 說明文件</title>
   
 
   
@@ -60,8 +60,8 @@
     <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="搜尋" href="../../search.html" />
-    <link rel="next" title="分割透明度" href="split_alpha.html" />
-    <link rel="prev" title="Paint Layers" href="paint_layers.html" /> 
+    <link rel="next" title="分割 Alpha ( 透明度 )" href="split_alpha.html" />
+    <link rel="prev" title="顏料塗層" href="paint_layers.html" /> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -147,17 +147,17 @@
 <li class="toctree-l2 current"><a class="reference internal" href="../layers_and_masks.html">圖層及遮罩</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="clone_layers.html">Clone Layers</a></li>
 <li class="toctree-l3"><a class="reference internal" href="file_layers.html">File Layers</a></li>
-<li class="toctree-l3"><a class="reference internal" href="fill_layers.html">Fill Layers</a></li>
-<li class="toctree-l3"><a class="reference internal" href="filter_layers.html">Filter Layer</a></li>
-<li class="toctree-l3"><a class="reference internal" href="filter_masks.html">Filter Masks</a></li>
-<li class="toctree-l3"><a class="reference internal" href="group_layers.html">Group Layers</a></li>
-<li class="toctree-l3"><a class="reference internal" href="layer_styles.html">Layer Styles</a></li>
-<li class="toctree-l3"><a class="reference internal" href="paint_layers.html">Paint Layers</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Selection Masks</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#global-selection">Global Selection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fill_layers.html">填充圖層</a></li>
+<li class="toctree-l3"><a class="reference internal" href="filter_layers.html">濾鏡圖層</a></li>
+<li class="toctree-l3"><a class="reference internal" href="filter_masks.html">濾鏡遮罩</a></li>
+<li class="toctree-l3"><a class="reference internal" href="group_layers.html">群組圖層</a></li>
+<li class="toctree-l3"><a class="reference internal" href="layer_styles.html">圖層樣式</a></li>
+<li class="toctree-l3"><a class="reference internal" href="paint_layers.html">顏料塗層</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">局部選取區域</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#global-selection">全局選取區域</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="split_alpha.html">分割透明度</a></li>
+<li class="toctree-l3"><a class="reference internal" href="split_alpha.html">分割 Alpha ( 透明度 )</a></li>
 <li class="toctree-l3"><a class="reference internal" href="transformation_masks.html">Transform Masks</a></li>
 <li class="toctree-l3"><a class="reference internal" href="transparency_masks.html">Transparency Masks</a></li>
 <li class="toctree-l3"><a class="reference internal" href="vector_layers.html">Vector Layers</a></li>
@@ -243,7 +243,7 @@
         
           <li><a href="../layers_and_masks.html">圖層及遮罩</a> &raquo;</li>
         
-      <li>Selection Masks</li>
+      <li>局部選取區域</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -268,7 +268,7 @@
            <div itemprop="articleBody">
             
   <section id="selection-masks">
-<span id="index-0"></span><span id="id1"></span><h1>Selection Masks<a class="headerlink" href="#selection-masks" title="本標題的永久連結">¶</a></h1>
+<span id="index-0"></span><span id="id1"></span><h1>局部選取區域<a class="headerlink" href="#selection-masks" title="本標題的永久連結">¶</a></h1>
 <p>Local Selection masks let you remember and recall edit a selection on a layer. They work in a similar way to extra channels in other image editing programs. One difference is <strong class="program">Krita's</strong> ability to assign them to specific layers and activate a selection with a single click on the layer. Just click the round icon with the dotted outline on the local selection layer in the Layers docker.</p>
 <p>To create a Local Selection Mask, you must first create a selection, then <img alt="滑鼠右鍵" src="../../_images/Krita_mouse_right.png" /> on the desired layer and select <span class="menuselection">Local Selection</span>.</p>
 <p>When isolating a selection mask with the <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Alt</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> shortcut, you can perform transformation, deformation and paint operations on the selection layer, modifying the selection.</p>
@@ -276,7 +276,7 @@
 <p>The example below shows three LSM items all attached (under) Layer1. Any of these can be activated and used at any time.</p>
 <img alt="../../_images/local-selection-mask.png" src="../../_images/local-selection-mask.png" />
 <section id="global-selection">
-<h2>Global Selection<a class="headerlink" href="#global-selection" title="本標題的永久連結">¶</a></h2>
+<h2>全局選取區域<a class="headerlink" href="#global-selection" title="本標題的永久連結">¶</a></h2>
 <p>You can modify the global selection the same way you can with a local-selection.
 To do so, you first need to activate the global selection as a layer node. To do so, go into <span class="menuselection">Select ‣ Show Global Selection Mask</span>. The global selection, if you have anything selected, will now appear on the top of the layer stack as a selection mask.</p>
 </section>
@@ -290,10 +290,10 @@ To do so, you first need to activate the global selection as a layer node. To do
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="split_alpha.html" class="btn btn-neutral float-right" title="分割透明度" accesskey="n" rel="next"> <!-- 下一個 --> <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="split_alpha.html" class="btn btn-neutral float-right" title="分割 Alpha ( 透明度 )" accesskey="n" rel="next"> <!-- 下一個 --> <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="paint_layers.html" class="btn btn-neutral" title="Paint Layers" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- 上一個  -->  </a>
+        <a href="paint_layers.html" class="btn btn-neutral" title="顏料塗層" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- 上一個  -->  </a>
       
     </div>
   

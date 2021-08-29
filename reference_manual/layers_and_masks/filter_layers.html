@@ -6,7 +6,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta property="og:title" name="title" content="Filter Layer" />
+  <meta property="og:title" name="title" content="濾鏡圖層" />
   <meta property="og:site-name" content="Krita Manual" />
   <meta property="og:type" content="article" />
   <meta property="og:locale" content="zh_TW" />
@@ -21,13 +21,13 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-08-29T07:17:44" />
+  <meta property="og:article:modified_time" content="2021-08-29T16:26:08" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="How to use filter layers in Krita." name="description" />
 
   
   
-  <title>Filter Layer &mdash; Krita Manual 5.0.0 說明文件</title>
+  <title>濾鏡圖層 &mdash; Krita Manual 5.0.0 說明文件</title>
   
 
   
@@ -60,7 +60,7 @@
     <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="搜尋" href="../../search.html" />
-    <link rel="next" title="Filter Masks" href="filter_masks.html" />
+    <link rel="next" title="濾鏡遮罩" href="filter_masks.html" />
     <link rel="prev" title="Simplex Noise" href="fill_layer_generators/simplex_noise.html" /> 
 
   
@@ -147,14 +147,14 @@
 <li class="toctree-l2 current"><a class="reference internal" href="../layers_and_masks.html">圖層及遮罩</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="clone_layers.html">Clone Layers</a></li>
 <li class="toctree-l3"><a class="reference internal" href="file_layers.html">File Layers</a></li>
-<li class="toctree-l3"><a class="reference internal" href="fill_layers.html">Fill Layers</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Filter Layer</a></li>
-<li class="toctree-l3"><a class="reference internal" href="filter_masks.html">Filter Masks</a></li>
-<li class="toctree-l3"><a class="reference internal" href="group_layers.html">Group Layers</a></li>
-<li class="toctree-l3"><a class="reference internal" href="layer_styles.html">Layer Styles</a></li>
-<li class="toctree-l3"><a class="reference internal" href="paint_layers.html">Paint Layers</a></li>
-<li class="toctree-l3"><a class="reference internal" href="selection_masks.html">Selection Masks</a></li>
-<li class="toctree-l3"><a class="reference internal" href="split_alpha.html">分割透明度</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fill_layers.html">填充圖層</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">濾鏡圖層</a></li>
+<li class="toctree-l3"><a class="reference internal" href="filter_masks.html">濾鏡遮罩</a></li>
+<li class="toctree-l3"><a class="reference internal" href="group_layers.html">群組圖層</a></li>
+<li class="toctree-l3"><a class="reference internal" href="layer_styles.html">圖層樣式</a></li>
+<li class="toctree-l3"><a class="reference internal" href="paint_layers.html">顏料塗層</a></li>
+<li class="toctree-l3"><a class="reference internal" href="selection_masks.html">局部選取區域</a></li>
+<li class="toctree-l3"><a class="reference internal" href="split_alpha.html">分割 Alpha ( 透明度 )</a></li>
 <li class="toctree-l3"><a class="reference internal" href="transformation_masks.html">Transform Masks</a></li>
 <li class="toctree-l3"><a class="reference internal" href="transparency_masks.html">Transparency Masks</a></li>
 <li class="toctree-l3"><a class="reference internal" href="vector_layers.html">Vector Layers</a></li>
@@ -240,7 +240,7 @@
         
           <li><a href="../layers_and_masks.html">圖層及遮罩</a> &raquo;</li>
         
-      <li>Filter Layer</li>
+      <li>濾鏡圖層</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -265,7 +265,7 @@
            <div itemprop="articleBody">
             
   <section id="filter-layer">
-<span id="filter-layers"></span><span id="index-0"></span><h1>Filter Layer<a class="headerlink" href="#filter-layer" title="本標題的永久連結">¶</a></h1>
+<span id="filter-layers"></span><span id="index-0"></span><h1>濾鏡圖層<a class="headerlink" href="#filter-layer" title="本標題的永久連結">¶</a></h1>
 <p>Filter layers show whatever layers are underneath them, but with a filter such as Layer Styles, Blur, Levels, Brightness / Contrast. For example, if you add a <strong>Filter Layer</strong>, and choose the Blur filter, you will see every layer under your filter layer blurred.</p>
 <p>Unlike applying a filter directly on to a section of a Paint Layer, Filter Layers do not actually alter the original image in the Paint Layers below them. Once again, non-destructive editing! You can tweak the filter at any time, and the changes can always be altered or removed.</p>
 <p>Unlike Filter Masks though, Filter Layers apply to the entire canvas for the layers beneath. If you wish to apply a filter layer to only <em>some</em> layers, then you can utilize the Group Layer feature and add those layers into a group with the filter layer on top of the stack.</p>
@@ -284,7 +284,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="filter_masks.html" class="btn btn-neutral float-right" title="Filter Masks" accesskey="n" rel="next"> <!-- 下一個 --> <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="filter_masks.html" class="btn btn-neutral float-right" title="濾鏡遮罩" accesskey="n" rel="next"> <!-- 下一個 --> <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="fill_layer_generators/simplex_noise.html" class="btn btn-neutral" title="Simplex Noise" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- 上一個  -->  </a>

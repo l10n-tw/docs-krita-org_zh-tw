@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-08-29T07:17:44" />
+  <meta property="og:article:modified_time" content="2021-08-29T16:26:08" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="SeExpr 介紹" lang="en" name="description" xml:lang="en" />
 
@@ -61,7 +61,7 @@
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜尋" href="../search.html" />
     <link rel="next" title="Krita 常見問題" href="../KritaFAQ.html" />
-    <link rel="prev" title="Saving For The Web" href="saving-for-the-web.html" /> 
+    <link rel="prev" title="轉存成通用的網路傳播格式" href="saving-for-the-web.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -136,17 +136,17 @@
 <li class="toctree-l2"><a class="reference internal" href="eye_tracker.html">設定 Krita 以使用眼球追蹤技術的示例</a></li>
 <li class="toctree-l2"><a class="reference internal" href="flat-coloring.html">平塗著色</a></li>
 <li class="toctree-l2"><a class="reference internal" href="inking.html">上墨線</a></li>
-<li class="toctree-l2"><a class="reference internal" href="krita-brush-tips.html">Krita Brush Tips</a></li>
-<li class="toctree-l2"><a class="reference internal" href="making_an_azalea_with_the_transformation_masks.html">Making An Azalea With The Transformation Masks</a></li>
-<li class="toctree-l2"><a class="reference internal" href="saving-for-the-web.html">Saving For The Web</a></li>
+<li class="toctree-l2"><a class="reference internal" href="krita-brush-tips.html">Krita 筆刷技巧</a></li>
+<li class="toctree-l2"><a class="reference internal" href="making_an_azalea_with_the_transformation_masks.html">使用變形遮罩來製作杜鵑花</a></li>
+<li class="toctree-l2"><a class="reference internal" href="saving-for-the-web.html">轉存成通用的網路傳播格式</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">SeExpr 介紹</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#what-is-seexpr">What is SeExpr?</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#background">Background</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#writing-a-script">Writing a script</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#managing-your-script-using-widgets">Managing your script using widgets</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#creating-your-first-preset">Creating your first preset</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#changing-existing-presets">Changing existing presets</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#bundling-your-presets">Bundling your presets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#what-is-seexpr">什麼是 SeExpr ?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#background">SeExpr 的背景</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#writing-a-script">編寫程式腳本</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#managing-your-script-using-widgets">使用小工具管理程式腳本</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#creating-your-first-preset">創建第一個預設</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#changing-existing-presets">更改現有預設</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bundling-your-presets">綁定你的預設</a></li>
 </ul>
 </li>
 </ul>
@@ -241,7 +241,7 @@
 <p><span class="versionmodified added">4.4 版新加入: </span>This document will introduce you to the SeExpr expression language.</p>
 </div>
 <section id="what-is-seexpr">
-<h2>What is SeExpr?<a class="headerlink" href="#what-is-seexpr" title="本標題的永久連結">¶</a></h2>
+<h2>什麼是 SeExpr ?<a class="headerlink" href="#what-is-seexpr" title="本標題的永久連結">¶</a></h2>
 <p>SeExpr is an embeddable expression language, designed by Disney Animation,
 that allows host applications to render dynamically generated content.
 Pixar calls it <a class="reference external" href="https://renderman.pixar.com/resources/RenderMan_20/PxrSeExpr.html">in its documentation</a> a &quot;scriptable pattern generator and
@@ -260,7 +260,7 @@ combiner&quot;.</p>
 </div>
 </section>
 <section id="background">
-<h2>Background<a class="headerlink" href="#background" title="本標題的永久連結">¶</a></h2>
+<h2>SeExpr 的背景<a class="headerlink" href="#background" title="本標題的永久連結">¶</a></h2>
 <p>To understand what SeExpr is about, we need to differentiate between two types
 of graphics, <em>raster</em> and <em>procedural</em>.</p>
 <p>The vast majority of the computer-generated stuff you see every day belong to
@@ -322,7 +322,7 @@ And, because it is not limited in its precision, you can render complex
 patterns in your layers at completely arbitrary resolution.</p>
 </section>
 <section id="writing-a-script">
-<h2>Writing a script<a class="headerlink" href="#writing-a-script" title="本標題的永久連結">¶</a></h2>
+<h2>編寫程式腳本<a class="headerlink" href="#writing-a-script" title="本標題的永久連結">¶</a></h2>
 <p>In this tutorial, we'll show you how to write a script in SeExpr, render it to
 a layer, and then save it as a preset.</p>
 <p>We'll start by going to the <a class="reference internal" href="../reference_manual/dockers/layers.html#layer-docker"><span class="std std-ref">圖層</span></a>, and adding a new Fill Layer.
@@ -335,7 +335,7 @@ window:</p>
 <span class="guilabel">Options</span>.</p>
 <div class="admonition note">
 <p class="admonition-title">備註</p>
-<p><a class="reference internal" href="../reference_manual/layers_and_masks/fill_layers.html#fill-layers"><span class="std std-ref">Fill Layers</span></a> describes these tabs in more detail.</p>
+<p><a class="reference internal" href="../reference_manual/layers_and_masks/fill_layers.html#fill-layers"><span class="std std-ref">填充圖層</span></a> describes these tabs in more detail.</p>
 </div>
 <p>Let's start by painting a layer in light blue.</p>
 <p>First, SeExpr scripts must define an output variable, let's call it <code class="docutils literal notranslate"><span class="pre">$color</span></code>.
@@ -373,7 +373,7 @@ using the sRGB-elle-V2-srgbtrc.icc profile.</p>
 </div>
 </section>
 <section id="managing-your-script-using-widgets">
-<h2>Managing your script using widgets<a class="headerlink" href="#managing-your-script-using-widgets" title="本標題的永久連結">¶</a></h2>
+<h2>使用小工具管理程式腳本<a class="headerlink" href="#managing-your-script-using-widgets" title="本標題的永久連結">¶</a></h2>
 <p>There is also another way to define and edit your variables.
 Open the fill layer's properties by right-clicking on <span class="guilabel">Fill Layer 1</span>,
 and selecting <span class="guilabel">Layer Properties...</span>.</p>
@@ -410,7 +410,7 @@ Click it and this dialog will open:</p>
 <img alt="../_images/SeExpr_add_variable_vector.png" src="../_images/SeExpr_add_variable_vector.png" />
 </section>
 <section id="creating-your-first-preset">
-<h2>Creating your first preset<a class="headerlink" href="#creating-your-first-preset" title="本標題的永久連結">¶</a></h2>
+<h2>創建第一個預設<a class="headerlink" href="#creating-your-first-preset" title="本標題的永久連結">¶</a></h2>
 <p>Once your script is ready, you can reuse it by making a preset.</p>
 <p>You can create one through the top bar of the <span class="guilabel">Options</span> tab:</p>
 <blockquote>
@@ -439,7 +439,7 @@ open:</p>
 </dl>
 </section>
 <section id="changing-existing-presets">
-<h2>Changing existing presets<a class="headerlink" href="#changing-existing-presets" title="本標題的永久連結">¶</a></h2>
+<h2>更改現有預設<a class="headerlink" href="#changing-existing-presets" title="本標題的永久連結">¶</a></h2>
 <p>If you change a preset's script, you will notice two new buttons in the top bar of the <span class="guilabel">Options</span> tab:</p>
 <blockquote>
 <div><img alt="../_images/SeExpr_overwrite_preset.png" src="../_images/SeExpr_overwrite_preset.png" />
@@ -452,7 +452,7 @@ entering the new name, and clicking on <span class="guilabel">Save</span>:</p>
 </div></blockquote>
 </section>
 <section id="bundling-your-presets">
-<h2>Bundling your presets<a class="headerlink" href="#bundling-your-presets" title="本標題的永久連結">¶</a></h2>
+<h2>綁定你的預設<a class="headerlink" href="#bundling-your-presets" title="本標題的永久連結">¶</a></h2>
 <p>Sharing your scripts is easy! SeExpr script presets are just like any other
 resource in Krita. Follow the instructions in <a class="reference internal" href="../reference_manual/resource_management.html#resource-management"><span class="std std-ref">資源管理</span></a> to
 create your own bundles.</p>
@@ -470,7 +470,7 @@ create your own bundles.</p>
         <a href="../KritaFAQ.html" class="btn btn-neutral float-right" title="Krita 常見問題" accesskey="n" rel="next"> <!-- 下一個 --> <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="saving-for-the-web.html" class="btn btn-neutral" title="Saving For The Web" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- 上一個  -->  </a>
+        <a href="saving-for-the-web.html" class="btn btn-neutral" title="轉存成通用的網路傳播格式" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- 上一個  -->  </a>
       
     </div>
   

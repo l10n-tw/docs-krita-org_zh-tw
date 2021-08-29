@@ -6,7 +6,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta property="og:title" name="title" content="Layer Styles" />
+  <meta property="og:title" name="title" content="圖層樣式" />
   <meta property="og:site-name" content="Krita Manual" />
   <meta property="og:type" content="article" />
   <meta property="og:locale" content="zh_TW" />
@@ -21,13 +21,13 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-08-29T07:17:44" />
+  <meta property="og:article:modified_time" content="2021-08-29T16:26:08" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="How to use layer styles in Krita." name="description" property="og:description" />
 
   
   
-  <title>Layer Styles &mdash; Krita Manual 5.0.0 說明文件</title>
+  <title>圖層樣式 &mdash; Krita Manual 5.0.0 說明文件</title>
   
 
   
@@ -60,8 +60,8 @@
     <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="搜尋" href="../../search.html" />
-    <link rel="next" title="Paint Layers" href="paint_layers.html" />
-    <link rel="prev" title="Group Layers" href="group_layers.html" /> 
+    <link rel="next" title="顏料塗層" href="paint_layers.html" />
+    <link rel="prev" title="群組圖層" href="group_layers.html" /> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -147,17 +147,17 @@
 <li class="toctree-l2 current"><a class="reference internal" href="../layers_and_masks.html">圖層及遮罩</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="clone_layers.html">Clone Layers</a></li>
 <li class="toctree-l3"><a class="reference internal" href="file_layers.html">File Layers</a></li>
-<li class="toctree-l3"><a class="reference internal" href="fill_layers.html">Fill Layers</a></li>
-<li class="toctree-l3"><a class="reference internal" href="filter_layers.html">Filter Layer</a></li>
-<li class="toctree-l3"><a class="reference internal" href="filter_masks.html">Filter Masks</a></li>
-<li class="toctree-l3"><a class="reference internal" href="group_layers.html">Group Layers</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Layer Styles</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#layer-style-presets">Layer Style Presets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fill_layers.html">填充圖層</a></li>
+<li class="toctree-l3"><a class="reference internal" href="filter_layers.html">濾鏡圖層</a></li>
+<li class="toctree-l3"><a class="reference internal" href="filter_masks.html">濾鏡遮罩</a></li>
+<li class="toctree-l3"><a class="reference internal" href="group_layers.html">群組圖層</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">圖層樣式</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#layer-style-presets">預設圖層樣式</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="paint_layers.html">Paint Layers</a></li>
-<li class="toctree-l3"><a class="reference internal" href="selection_masks.html">Selection Masks</a></li>
-<li class="toctree-l3"><a class="reference internal" href="split_alpha.html">分割透明度</a></li>
+<li class="toctree-l3"><a class="reference internal" href="paint_layers.html">顏料塗層</a></li>
+<li class="toctree-l3"><a class="reference internal" href="selection_masks.html">局部選取區域</a></li>
+<li class="toctree-l3"><a class="reference internal" href="split_alpha.html">分割 Alpha ( 透明度 )</a></li>
 <li class="toctree-l3"><a class="reference internal" href="transformation_masks.html">Transform Masks</a></li>
 <li class="toctree-l3"><a class="reference internal" href="transparency_masks.html">Transparency Masks</a></li>
 <li class="toctree-l3"><a class="reference internal" href="vector_layers.html">Vector Layers</a></li>
@@ -243,7 +243,7 @@
         
           <li><a href="../layers_and_masks.html">圖層及遮罩</a> &raquo;</li>
         
-      <li>Layer Styles</li>
+      <li>圖層樣式</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -268,7 +268,7 @@
            <div itemprop="articleBody">
             
   <section id="layer-styles">
-<span id="layer-style"></span><span id="index-0"></span><h1>Layer Styles<a class="headerlink" href="#layer-styles" title="本標題的永久連結">¶</a></h1>
+<span id="layer-style"></span><span id="index-0"></span><h1>圖層樣式<a class="headerlink" href="#layer-styles" title="本標題的永久連結">¶</a></h1>
 <p>Layer styles are effects that are added on top of your layer. They are editable and can easily be toggled on and off. To add a layer style to a layer go to <span class="menuselection">Layer ‣ Layer Style</span>. You can also right-click a layer to access the layer styles.</p>
 <p>When you have the layer styles window up, make sure that the <span class="guilabel">Enable Effects</span> item is checked.</p>
 <p>There are a variety of effects and styles you can apply to a layer. When you add a style, your layer docker will show an extra &quot;Fx&quot; icon. This allows you to toggle the layer style effects on and off.</p>
@@ -277,7 +277,7 @@
 <p>This feature was added to increase support for <strong class="program">Adobe Photoshop</strong>. The features that are included mirror what that application supports.</p>
 </div>
 <section id="layer-style-presets">
-<h2>Layer Style Presets<a class="headerlink" href="#layer-style-presets" title="本標題的永久連結">¶</a></h2>
+<h2>預設圖層樣式<a class="headerlink" href="#layer-style-presets" title="本標題的永久連結">¶</a></h2>
 <div class="versionadded">
 <p><span class="versionmodified added">5.0 版新加入.</span></p>
 </div>
@@ -293,10 +293,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="paint_layers.html" class="btn btn-neutral float-right" title="Paint Layers" accesskey="n" rel="next"> <!-- 下一個 --> <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="paint_layers.html" class="btn btn-neutral float-right" title="顏料塗層" accesskey="n" rel="next"> <!-- 下一個 --> <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="group_layers.html" class="btn btn-neutral" title="Group Layers" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- 上一個  -->  </a>
+        <a href="group_layers.html" class="btn btn-neutral" title="群組圖層" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- 上一個  -->  </a>
       
     </div>
   
