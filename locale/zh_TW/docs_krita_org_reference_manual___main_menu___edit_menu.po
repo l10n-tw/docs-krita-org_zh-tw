@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Krita Manual 4.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-19 22:30+0800\n"
-"PO-Revision-Date: 2021-08-24 21:23+0000\n"
+"PO-Revision-Date: 2021-08-27 10:23+0000\n"
 "Last-Translator: BiseChen <bise.chen@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <http://weblate.slat.org/projects/"
 "krita-docs/3-reference_manual___main_menu___edit_menu/zh_Hant/>\n"
@@ -73,7 +73,7 @@ msgstr "剪下（銳利）"
 msgid ""
 "This prevents semi-transparent areas from appearing on your cut pixels, "
 "making them either fully opaque or fully transparent."
-msgstr "這個功能可以防止剪切下來的邊緣出現半透明狀態，讓用來貼上的只有不透明和完全透明。"
+msgstr "這個功能可以防止剪切區域的邊緣出現半透明狀態，讓貼上的只有不透明和完全透明。"
 
 #: ../../reference_manual/main_menu/edit_menu.rst:34
 msgid "Copy (Sharp)"
@@ -81,7 +81,7 @@ msgstr "複製（銳利）"
 
 #: ../../reference_manual/main_menu/edit_menu.rst:36
 msgid "Same as :term:`Cut (Sharp)` but then copying instead."
-msgstr "與 :term:`Cut (Sharp)` 類似，但只做複製而不會剪下內容。"
+msgstr "與「\\ :term:`剪下（銳利）`\\ 」功能類似，但只做複製而不會剪下內容。"
 
 #: ../../reference_manual/main_menu/edit_menu.rst:37
 msgid "Copy Merged"
@@ -100,7 +100,7 @@ msgstr "貼上"
 msgid ""
 "Pastes the copied buffer into the image as a new layer. Shortcut: :kbd:`Ctrl "
 "+ V`"
-msgstr "將剪貼簿內容貼到目前影像檔的新圖層中。快捷鍵：\\ :kbd:`Ctrl + V`"
+msgstr "將複製到剪貼簿之內容貼上到當前影像檔的新圖層中。快捷鍵：\\ :kbd:`Ctrl + V`"
 
 #: ../../reference_manual/main_menu/edit_menu.rst:43
 msgid "Paste at Cursor"
@@ -110,7 +110,7 @@ msgstr "在游標處貼上"
 msgid ""
 "Same as :term:`Paste`, but aligns the image to the cursor. Shortcut: :kbd:"
 "`Ctrl + Alt + V`"
-msgstr "與 :term:`Paste` 類似，但會對齊游標位置貼上。快捷鍵：\\ :kbd:`Ctrl + Alt + V`"
+msgstr "與「\\ :term:`貼上`\\ 」功能類似，但會對齊游標位置貼上。快捷鍵：\\ :kbd:`Ctrl + Alt + V`"
 
 #: ../../reference_manual/main_menu/edit_menu.rst:46
 msgid "Paste into Active Layer"
@@ -118,7 +118,7 @@ msgstr "貼上到使用中圖層內"
 
 #: ../../reference_manual/main_menu/edit_menu.rst:48
 msgid "Pastes the copied buffer into the current layer as a new selection."
-msgstr ""
+msgstr "將複製到剪貼簿的內容貼上在當前選中的圖層。"
 
 #: ../../reference_manual/main_menu/edit_menu.rst:51
 msgid "Paste into New Image"
@@ -127,7 +127,7 @@ msgstr "貼上為新影像"
 #: ../../reference_manual/main_menu/edit_menu.rst:53
 msgid ""
 "Pastes the copied buffer into a new image. Shortcut: :kbd:`Ctrl + Shift + N`"
-msgstr ""
+msgstr "將複製到剪貼簿的內容貼上為新的影像。快捷鍵：\\ :kbd:`Ctrl + Shift + N`"
 
 #: ../../reference_manual/main_menu/edit_menu.rst:54
 msgid "Paste as Reference Image"
@@ -136,7 +136,7 @@ msgstr "做為參考圖貼上"
 #: ../../reference_manual/main_menu/edit_menu.rst:56
 msgid ""
 "Pastes the selection as a new :ref:`Reference Image <reference_images_tool>`."
-msgstr ""
+msgstr "將選擇貼上新的\\ :ref:`\\ 參考影像 <reference_images_tool>`。"
 
 #: ../../reference_manual/main_menu/edit_menu.rst:57
 msgid "Paste Shape Style"
@@ -147,6 +147,8 @@ msgid ""
 "Used with :ref:`shape_selection_tool`, this allows you to copy the style "
 "(the fill, outline and markers) of one vector shape to another."
 msgstr ""
+"配合「\\ :ref:`shape_selection_tool`\\ "
+"」使用，允許複製向量形狀所包含之樣式（例如填充、輪廓和特徵），然後以此功能將樣式貼在另一個向量形狀中。"
 
 #: ../../reference_manual/main_menu/edit_menu.rst:62
 msgid "Clear"
@@ -154,7 +156,7 @@ msgstr "清空"
 
 #: ../../reference_manual/main_menu/edit_menu.rst:64
 msgid "Empty the currently selected area or layer. Shortcut: :kbd:`Del`"
-msgstr ""
+msgstr "將當前選取的範圍刪除，或清空當前圖層的內容用以恢復為空白狀態。快捷鍵：:kbd:`Del`"
 
 #: ../../reference_manual/main_menu/edit_menu.rst:65
 msgid "Fill with Foreground Color"
@@ -164,7 +166,7 @@ msgstr "用前景色填充"
 msgid ""
 "Fills the layer or selection with the foreground color without taking into "
 "account blending modes or opacity. Shortcut: :kbd:`Shift + Backspace`"
-msgstr ""
+msgstr "使用前景色填充圖層或選取區，但這不包含混合模式或不透明度。快捷鍵：\\ :kbd:`Shift + Backspace`"
 
 #: ../../reference_manual/main_menu/edit_menu.rst:68
 msgid "Fill with Background Color"
@@ -174,7 +176,7 @@ msgstr "用背景色填充"
 msgid ""
 "Fills the layer or selection with the background color without taking into "
 "account blending modes or opacity. Shortcut: :kbd:`Backspace`"
-msgstr ""
+msgstr "使用背景色填充圖層或選取區，但這不包含混合模式或不透明度。快捷鍵：\\ :kbd:`Backspace`"
 
 #: ../../reference_manual/main_menu/edit_menu.rst:71
 msgid "Fill with Pattern"
@@ -184,7 +186,7 @@ msgstr "用圖案填充"
 msgid ""
 "Fills the layer or selection with the active pattern without taking into "
 "account blending modes or opacity."
-msgstr ""
+msgstr "以當前選用的圖案填充圖層或選取區，但這不包含混合模式或不透明度。"
 
 #: ../../reference_manual/main_menu/edit_menu.rst:74
 msgid "Fill with Foreground Color (Opacity)"
@@ -194,7 +196,7 @@ msgstr "填充前景色（含不透明度）"
 msgid ""
 "Fills the layer or selection with the foreground color, taking blending "
 "modes and opacity into account. Shortcut: :kbd:`Ctrl + Shift + Backspace`"
-msgstr ""
+msgstr "使用前景色填充圖層或選取區，包含混合模式或不透明度。快捷鍵：\\ :kbd:`Ctrl + Shift + Backspace`"
 
 #: ../../reference_manual/main_menu/edit_menu.rst:77
 msgid "Fill with Background Color (Opacity)"
@@ -204,7 +206,7 @@ msgstr "填充背景色（含不透明度）"
 msgid ""
 "Fills the layer or selection with the background color, taking blending "
 "modes and opacity into account. Shortcut: :kbd:`Ctrl + Backspace`"
-msgstr ""
+msgstr "使用背景色填充圖層或選取區，包含混合模式或不透明度。快捷鍵：\\ :kbd:`Ctrl + Backspace`"
 
 #: ../../reference_manual/main_menu/edit_menu.rst:80
 msgid "Fill with Pattern (Opacity)"
@@ -214,7 +216,7 @@ msgstr "填充圖案（含不透明度）"
 msgid ""
 "Fills the layer or selection with the active pattern, taking blending modes "
 "and opacity into account."
-msgstr ""
+msgstr "以當前選用的圖案填充圖層或選取區，包含混合模式或不透明度。"
 
 #: ../../reference_manual/main_menu/edit_menu.rst:83
 msgid "Stroke Selected Shapes"
@@ -224,7 +226,7 @@ msgstr "對選取形狀描邊"
 msgid ""
 "Strokes the selected vector shape with the selected brush, will create a new "
 "layer."
-msgstr ""
+msgstr "這個功能可以另外建立新圖層以當前選用的筆刷對向量形狀進行描邊。"
 
 #: ../../reference_manual/main_menu/edit_menu.rst:86
 msgid "Stroke Selection"
@@ -232,7 +234,7 @@ msgstr "對選取區域描邊"
 
 #: ../../reference_manual/main_menu/edit_menu.rst:88
 msgid "Strokes the active selection using the menu."
-msgstr ""
+msgstr "使用這個選單項目對選取區域進行描邊。"
 
 #: ../../reference_manual/main_menu/edit_menu.rst:11
 msgid "Edit"
