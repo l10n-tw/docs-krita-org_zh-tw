@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: Krita Manual 4.2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-19 22:30+0800\n"
-"PO-Revision-Date: 2021-08-23 13:27+0000\n"
+"PO-Revision-Date: 2021-08-28 21:23+0000\n"
 "Last-Translator: Alvin Wong <alvin@alvinhc.com>\n"
 "Language-Team: Chinese (Traditional) <http://weblate.slat.org/projects/"
 "krita-docs/5-contributors_manual___user_support/zh_Hant/>\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.7.2\n"
+"X-Generator: Weblate 4.8\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../../contributors_manual/user_support.rst:1
@@ -44,7 +44,7 @@ msgstr "繪圖板、數位板支援"
 msgid ""
 "The majority of help requests are about pen pressure and tablet support in "
 "general."
-msgstr ""
+msgstr "最常見的使用者求助個案是關於數位板筆壓感應與其他數位板問題。"
 
 #: ../../contributors_manual/user_support.rst:44
 msgid "Quick solutions"
@@ -54,17 +54,17 @@ msgstr "快捷解決方法"
 msgid ""
 "With every change mentioned below you might need to restart your PC to see "
 "the effect."
-msgstr ""
+msgstr "套用以下提到的變更操作之後，可能需要重新啟動電腦才會生效。"
 
 #: ../../contributors_manual/user_support.rst:50
 msgid "*For Windows, all devices:*"
-msgstr ""
+msgstr "*針對所有運行 Windows 的裝置：*"
 
 #: ../../contributors_manual/user_support.rst:52
 msgid ""
 "Change API in :menuselection:`Settings --> Configure Krita... --> Tablet "
 "Settings`."
-msgstr ""
+msgstr "到 :menuselection:`設定 --> 設定 Krita… --> 數位板設定` 版面更改數位板輸入 API。"
 
 #: ../../contributors_manual/user_support.rst:54
 msgid ""
@@ -73,6 +73,8 @@ msgid ""
 "in-1 devices by default use Windows Ink, you can get a Wintab driver but you "
 "need to install it separately."
 msgstr ""
+"WinTab：舊式數位板 API 標準。它支援多於一個數位筆按鍵和較高的筆壓等級數目。如果這能正常運作，沒有特殊理由的話不應切換到 Windows "
+"Ink。二合一平板電腦預設使用 Windows Ink。部分硬體廠商有提供 WinTab 驅動程式，但一般要手動安裝。"
 
 #: ../../contributors_manual/user_support.rst:56
 msgid ""
@@ -80,16 +82,18 @@ msgid ""
 "levels to 1024. It is more suitable for 2-in-1 devices like Surface Pro and "
 "Yoga. Some less known brands might not have this standard implemented."
 msgstr ""
+"Windows 8+ 指標輸入 (Windows Ink)：較新的 API 標準。這個 API 只支援 1024 級筆壓。這比較適用於二合一平板電腦。"
+"某些較稀有的數位板品牌可能未有實作這個 API。"
 
 #: ../../contributors_manual/user_support.rst:58
 msgid "*For Windows, tablet/digitizer devices (not convertible/2-in-1 ones):*"
-msgstr ""
+msgstr "*針對在 Windows 使用外接式數位板裝置（非二合一平板電腦）：*"
 
 #: ../../contributors_manual/user_support.rst:60
 msgid ""
 "Reinstall your driver (Windows Update often breaks tablet driver settings, "
 "reinstallation helps)."
-msgstr ""
+msgstr "重新安裝驅動程式（Windows Update 經常會損壞數位板驅動程式的設定，重新安裝會有幫助）。"
 
 #: ../../contributors_manual/user_support.rst:62
 msgid ""
@@ -97,6 +101,8 @@ msgid ""
 "first try to update your driver: it should be fixed in 6.3.34-3. If it "
 "doesn't work, disable/minimize \"double-click distance\" in Wacom settings."
 msgstr ""
+"*Wacom 數位板：*\\ 如果在起筆時出現直線線段，請先嘗試更新驅動程式。這個問題應該已在驅動程式版本 6.3.34-3 中修正。如果這沒有解決問題，"
+"請到 Wacom 數位板設定中停用「雙響間距」。"
 
 #: ../../contributors_manual/user_support.rst:64
 msgid ""
@@ -104,6 +110,8 @@ msgid ""
 "(Windows Ink) in :menuselection:`Configure Krita --> Tablet Settings`, or "
 "disable Windows Ink in XP-Pen settings."
 msgstr ""
+"*XP-Pen 數位板筆壓不平均：*\\ 可嘗試在\\ :menuselection:`設定 Krita… --> 數位板設定`\\ 中切換至「"
+"Windows 8+ 指標輸入 (Windows Ink)」，或到 XP-Pen 驅動程式設定中停用「Windows Ink」。"
 
 #: ../../contributors_manual/user_support.rst:68
 msgid "Gathering information"
@@ -111,15 +119,15 @@ msgstr "收集資料"
 
 #: ../../contributors_manual/user_support.rst:70
 msgid "Which OS do you use?"
-msgstr ""
+msgstr "你使用哪個作業系統？"
 
 #: ../../contributors_manual/user_support.rst:72
 msgid "Which tablet do you have?"
-msgstr ""
+msgstr "你使用甚麼品牌和型號的數位板？"
 
 #: ../../contributors_manual/user_support.rst:74
 msgid "What is the version of the tablet driver?"
-msgstr ""
+msgstr "你裝有的數位板驅動程式是甚麼版本？"
 
 #: ../../contributors_manual/user_support.rst:76
 msgid ""
@@ -127,54 +135,56 @@ msgid ""
 "Settings --> Tablet Tester``) text output and share it: :ref:"
 "`intro_user_support_sharing_files`."
 msgstr ""
+"請收集數位板測試器（\\ :menuselection:`設定 Krita… --> 數位板設定 --> 開啟數位板測試器`\\ "
+"）中的文字輸出並提供予支援者：\\ :ref:`intro_user_support_sharing_files`\\ 。"
 
 #: ../../contributors_manual/user_support.rst:78
 msgid "More detailed Tablet Events log:"
-msgstr ""
+msgstr "收集更詳細的數位板事件紀錄："
 
 #: ../../contributors_manual/user_support.rst:80
 msgid ""
 "Go to :menuselection:`Settings --> Dockers --> Log Viewer` docker, make sure "
 "it's checked."
-msgstr ""
+msgstr "開啟\\ :menuselection:`設定 --> 工具面板 --> 紀錄檢視器`\\ 工具面板，確認已勾選該選項。"
 
 #: ../../contributors_manual/user_support.rst:82
 msgid ""
 "In the Log Viewer docker, make sure the first button is pressed (which means "
 "the logging is turned on)."
-msgstr ""
+msgstr "在「紀錄檢視器」工具面板中，確認第一個開關按鈕「啟用紀錄」處於按下狀態（即已啟用記錄事件）。"
 
 #: ../../contributors_manual/user_support.rst:84
 msgid "Press :kbd:`Ctrl + Shift + T` to turn on tablet events logging."
-msgstr ""
+msgstr "按下 :kbd:`Ctrl + Shift + T` 以啟用數位板事件紀錄。"
 
 #: ../../contributors_manual/user_support.rst:86
 msgid ""
 "Make a few strokes (depending on the situation, the user supporter or "
 "developer can ask you for specific series of strokes)."
-msgstr ""
+msgstr "畫出數道筆跡（按情況需求，支援者或開發者可要求作出特定的筆跡動作）。"
 
 #: ../../contributors_manual/user_support.rst:88
 msgid ""
 "Press :kbd:`Ctrl + Shift + T` to turn off the logging of the tablet events."
-msgstr ""
+msgstr "按下 :kbd:`Ctrl + Shift + T` 以停用數位板事件紀錄。"
 
 #: ../../contributors_manual/user_support.rst:90
 msgid ""
 "Press the third button in the Log Viewer to save the output into a file."
-msgstr ""
+msgstr "在「紀錄檢視器」工具面板中點選第三個按鈕以儲存紀錄到檔案。"
 
 #: ../../contributors_manual/user_support.rst:92
 msgid ""
 "Share the file or share the content of the file: :ref:"
 "`intro_user_support_sharing_files`."
-msgstr ""
+msgstr "將檔案或檔案內容提供予支援者：\\ :ref:`intro_user_support_sharing_files`\\ 。"
 
 #: ../../contributors_manual/user_support.rst:94
 msgid ""
 "On Linux, you can just use a console instead of Log Viewer -- then you'd "
 "only need to enable tablet events logging, not logging in general."
-msgstr ""
+msgstr "使用 Linux 的話可以直接從主控台視窗取得紀錄內容。這樣只需要啟用數位板事件紀錄，可以跳過「紀錄檢視器」工具面板。"
 
 #: ../../contributors_manual/user_support.rst:100
 msgid "Additional information for supporters"
@@ -184,19 +194,19 @@ msgstr "給支援者的額外資訊"
 msgid ""
 "Except for the issue with beginnings of the strokes, Wacom tablets usually "
 "work no matter the OS."
-msgstr ""
+msgstr "除了起筆時出現直線線段的問題之外，Wacom 數位板通常都能在各個作業系統上正常運作。"
 
 #: ../../contributors_manual/user_support.rst:104
 msgid ""
 "Huion tablets should work on Windows and on Linux, on macOS there might be "
 "issues."
-msgstr ""
+msgstr "繪王 (Huion) 數位板在 Windows 和 Linux 上應該能正常運作，但在 macOS 上可能會有問題。"
 
 #: ../../contributors_manual/user_support.rst:106
 msgid ""
 "XP-Pen tablets and the rest of brands can have issues everywhere (on all "
 "systems)."
-msgstr ""
+msgstr "XP-Pen 以及其他品牌的數位板在各個作業系統上都可能會有各種問題。"
 
 #: ../../contributors_manual/user_support.rst:108
 msgid ""
@@ -204,6 +214,8 @@ msgid ""
 "are the best options as of 2019, if they want to work with Krita. :ref:"
 "`list_supported_tablets`."
 msgstr ""
+"有關選擇數位板的建議，針對與 Krita 使用的話，一般來說一塊較便宜的 Wacom 或 Huion 數位板會是較好的選擇（2019 年計）。可參見\\ "
+":ref:`list_supported_tablets`\\ 。"
 
 #: ../../contributors_manual/user_support.rst:110
 msgid ""
@@ -211,6 +223,8 @@ msgid ""
 "reddit.com/r/krita/comments/btzh72/"
 "xppen_artist_12s_issue_with_krita_how_to_fix_it/>`_."
 msgstr ""
+"`對於 XP-Pen 數位板出現的問題，這裡的指示可能會有幫助 <https://www.reddit.com/r/krita/comments/"
+"btzh72/xppen_artist_12s_issue_with_krita_how_to_fix_it/>`_\\ 。"
 
 #: ../../contributors_manual/user_support.rst:114
 msgid "Animation"
@@ -227,6 +241,9 @@ msgid ""
 "options are wrong (if for example not every frame got rendered), or it's a "
 "bug in Krita."
 msgstr ""
+"與動畫繪製輸出相關的問題可以是各式各樣的。首要步驟是查出問題根源是在 Krita 內部還是 FFmpeg 方面（Krita 先輸出所有影格，然後 "
+"FFmpeg 用這影像序列產生影片檔案）。為找出答案，請指示使用者將動畫繪製匯出為「影像序列」。如影像序列輸出正確無誤，這表示是 FFmpeg "
+"或者繪製選項（後者較常見）出現問題。如影像序列輸出不正確，有機會是一般選項出錯（例如沒有繪製所有影格），又或者是 Krita 有程式錯誤。"
 
 #: ../../contributors_manual/user_support.rst:120
 msgid ""
@@ -234,6 +251,7 @@ msgid ""
 "render a video, Krita will print out the whole ffmpeg command to Log Viewer "
 "so it can be easily investigated."
 msgstr ""
+"如使用者開啟「紀錄檢視器」工具面板並啟用紀錄，然後嘗試繪製動畫影片輸出，Krita 會將整句 ffmpeg 命令列輸出到「紀錄檢視器」之內供調查用。"
 
 #: ../../contributors_manual/user_support.rst:122
 msgid ""
@@ -241,6 +259,8 @@ msgid ""
 "to render to. It can contain information useful to investigation of the "
 "issue (sharing files: :ref:`intro_user_support_sharing_files`)."
 msgstr ""
+"在繪製動畫的輸出目錄內會有一個名為「log_encode.log」的紀錄檔。這個檔案包含了對調查問題有幫肋的資訊（請參見\\ "
+":ref:`intro_user_support_sharing_files`\\ ）。"
 
 #: ../../contributors_manual/user_support.rst:125
 msgid "Onion skin issues"
@@ -252,6 +272,7 @@ msgid ""
 "Nonetheless, you need to find out why it happens and direct the user how to "
 "use onion skin properly."
 msgstr ""
+"絕大部份與洋蔥皮相關的問題都是使用者操作不當，而不是程式的問題。儘管如此，找出問題發生的原因，還有是指導使用者正確使用洋蔥皮，都是提供技術支援要做的工作。"
 
 #: ../../contributors_manual/user_support.rst:131
 msgid "Crash"
@@ -263,16 +284,18 @@ msgid ""
 "user to create a bug report (or create it yourself) with following "
 "information:"
 msgstr ""
+"如遇到程式強制終止的情況，應嘗試判斷這是否已知的問題。假如不是，應指示使用者到 Bugzilla "
+"建立一個缺陷報告，或者由支援者代為建立。缺陷報告內應含以下資訊："
 
 #: ../../contributors_manual/user_support.rst:135
 msgid "What happened, what was being done just before the crash."
-msgstr ""
+msgstr "發生了甚麼事？程式強制終止前那一刻在做甚麼？"
 
 #: ../../contributors_manual/user_support.rst:137
 msgid ""
 "Is it possible to reproduce (repeat)? If yes, provide a step-by-step "
 "instruction to get the crash."
-msgstr ""
+msgstr "能夠重現這個問題（使其重複發生）嗎？如可，請提供一系列可以重現這個問題的步驟。"
 
 #: ../../contributors_manual/user_support.rst:139
 msgid ""
@@ -282,6 +305,9 @@ msgid ""
 "`https://download.kde.org/stable/krita <https://download.kde.org/stable/"
 "krita>`_."
 msgstr ""
+"Backtrace（當機紀錄）——給 Windows 使用者的指示在這裡：\\ :ref:`dr_minw`\\ "
+"，而偵錯符號封裝的下載連結可在該版本的發佈新聞內找到，亦可直接在 `https://download.kde.org/stable/krita "
+"<https://download.kde.org/stable/krita>`_ 裡面找到。"
 
 #: ../../contributors_manual/user_support.rst:143
 msgid "Other possible questions with quick solutions"
@@ -292,6 +318,8 @@ msgid ""
 "When the user has any weird issue, something you've never heard about, ask "
 "them to reset the configuration: :ref:`faq_reset_krita_configuration`."
 msgstr ""
+"如使用者遇到任何未聽聞過的奇怪的問題，請要求該使用者先嘗試\\ :ref:`重設 Krita 的設定選項 "
+"<faq_reset_krita_configuration>`\\ 。"
 
 #: ../../contributors_manual/user_support.rst:147
 msgid ""
@@ -299,12 +327,14 @@ msgid ""
 "display, ask them to change :guilabel:`Canvas Graphics Acceleration` in :"
 "menuselection:`Settings --> Configure Krita --> Display`."
 msgstr ""
+"如有 Windows 的使用者遇到任何與畫布顯示有關的問題，請要求該使用者嘗試更改\\ :menuselection:`設定 --> 設定 Krita… "
+"--> 顯示`內\\ :guilabel:`畫布圖形加速`\\ 的\\ :guilabel:`繪製器`\\ 設定。"
 
 #: ../../contributors_manual/user_support.rst:151
 msgid ""
 "Telling people to disable canvas acceleration to get better performance is "
 "something we shouldn't do, ever."
-msgstr ""
+msgstr "在任何情況下都不應建議使用者停用「畫布圖形加速」來改善效能。"
 
 #: ../../contributors_manual/user_support.rst:155
 msgid "Advices for supporters"
@@ -314,16 +344,17 @@ msgstr "給支援者的忠告"
 msgid ""
 "If you don't understand the question, ask for clarification -- asking for a "
 "screen recording or a screenshot is perfectly fine."
-msgstr ""
+msgstr "如果未能清楚理解求助者的提問，應請求闡明一下。要求畫面截圖或錄影是不錯的做法。"
 
 #: ../../contributors_manual/user_support.rst:159
+#, fuzzy
 msgid ""
 "If you don't know the solution but you know what information will be needed "
 "to investigate the issue further, don't hesitate to ask. Other supporters "
 "may know the answer, but have too little time to move the user through the "
 "whole process, so you're helping a lot just by asking for additional "
 "information. This is very much true in case of tablet issues, for example."
-msgstr ""
+msgstr "如果不知道解決方法，但知道調查問題需要甚麼額外資訊的話，可以先向求助者查詢。這樣可以幫助其他知道解決方法的支援者更快能夠提供進一步支援。"
 
 #: ../../contributors_manual/user_support.rst:161
 msgid ""
