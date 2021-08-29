@@ -6,7 +6,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta property="og:title" name="title" content="Inking" />
+  <meta property="og:title" name="title" content="上墨線" />
   <meta property="og:site-name" content="Krita Manual" />
   <meta property="og:type" content="article" />
   <meta property="og:locale" content="zh_TW" />
@@ -21,13 +21,13 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-08-28T21:26:13" />
+  <meta property="og:article:modified_time" content="2021-08-29T07:08:07" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="Tips and tricks for inking in Krita." lang="en" name="description" xml:lang="en" />
 
   
   
-  <title>Inking &mdash; Krita Manual 5.0.0 說明文件</title>
+  <title>上墨線 &mdash; Krita Manual 5.0.0 說明文件</title>
   
 
   
@@ -135,20 +135,20 @@
 <li class="toctree-l2"><a class="reference internal" href="common_workflows.html">常用工作流程</a></li>
 <li class="toctree-l2"><a class="reference internal" href="eye_tracker.html">設定 Krita 以使用眼球追蹤技術的示例</a></li>
 <li class="toctree-l2"><a class="reference internal" href="flat-coloring.html">平塗著色</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Inking</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#pose">Pose</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#stroke-smoothing">Stroke smoothing</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#bezier-curves-and-other-tools">Bezier curves and other tools</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#presets">Presets</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#anti-aliasing-versus-jagged-pixels">Anti-aliasing versus jagged pixels</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#texture">Texture</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#pressure-curve">Pressure curve</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">上墨線</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pose">姿勢</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#stroke-smoothing">平順的筆畫</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bezier-curves-and-other-tools">貝茲曲線和其他工具</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#presets">初步預設</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#anti-aliasing-versus-jagged-pixels">反鋸齒與鋸齒像素關係</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#texture">紋理</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pressure-curve">感壓曲線</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#preparing-sketches-for-inking">Preparing sketches for inking</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#opacity-down-to-10">Opacity down to 10%</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#make-the-sketch-colored">Make the sketch colored</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#make-the-sketch-colored-alternative-version">Make the sketch colored, alternative version</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#preparing-sketches-for-inking">準備草圖來上墨線</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#opacity-down-to-10">降低不透明度到 10%</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#make-the-sketch-colored">著色草圖</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#make-the-sketch-colored-alternative-version">著色草圖 (另一個替代方案)</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#super-thin-lines">Super-thin lines</a></li>
@@ -220,7 +220,7 @@
         
           <li><a href="../tutorials.html">教學及指南</a> &raquo;</li>
         
-      <li>Inking</li>
+      <li>上墨線</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -245,12 +245,12 @@
            <div itemprop="articleBody">
             
   <section id="inking">
-<span id="id1"></span><h1>Inking<a class="headerlink" href="#inking" title="本標題的永久連結">¶</a></h1>
+<span id="id1"></span><h1>上墨線<a class="headerlink" href="#inking" title="本標題的永久連結">¶</a></h1>
 <p>The first thing to realize about inking is that unlike anatomy, perspective, composition or color theory, you cannot compensate for lack of practice with study or reasoning. This is because all the magic in drawing lines happens from your shoulder to your fingers, very little of it happens in your head, and your lines improve with practice.</p>
 <p>On the other hand, this can be a blessing. You don’t need to worry about whether you are smart enough, or are creative enough to be a good inker. Just dedicated. Doubtlessly, inking is the Hufflepuff of drawing disciplines.</p>
 <p>That said, there are a few tips to make life easy:</p>
 <section id="pose">
-<h2>Pose<a class="headerlink" href="#pose" title="本標題的永久連結">¶</a></h2>
+<h2>姿勢<a class="headerlink" href="#pose" title="本標題的永久連結">¶</a></h2>
 <p>Notice how I mentioned up there that the magic happens between your shoulders and fingers? A bit weird, not? But perhaps, you have heard of people talking about adopting a different pose for drawing.</p>
 <p>You can in fact, make different strokes depending on which muscles and joints you use to make the movement: The Fingers, the wrist and lower-arm muscles, the elbow and upper-arm muscles or the shoulder and back muscles.</p>
 <img alt="Finger movement." src="../_images/Stroke_fingers.gif" />
@@ -263,7 +263,7 @@
 <p>So, there are not any secret rules to inking, but if there is one, it would be the following: <em>The longer your stroke, the more of your arms you need to use to make the stroke</em>.</p>
 </section>
 <section id="stroke-smoothing">
-<h2>Stroke smoothing<a class="headerlink" href="#stroke-smoothing" title="本標題的永久連結">¶</a></h2>
+<h2>平順的筆畫<a class="headerlink" href="#stroke-smoothing" title="本標題的永久連結">¶</a></h2>
 <p>So, if the above is the secret to drawing long strokes, that would be why people having been inking lovely drawings for years without any smoothing? Then, surely, it is decadence to use something like stroke smoothing, a short-cut for the lazy?</p>
 <figure class="align-default" id="id2">
 <img alt="Rigger brush demonstration." src="../_images/Stroke_rigger.gif" />
@@ -277,7 +277,7 @@
 <p>Therefore, it’s wise to train your inking hand, yet not to be too hard on yourself and refuse to use smoothing at all, as we all get tired, cold or have a bad day once in a while. Stabilizer set to 50 or so should provide a little comfort while keeping the little irregularities.</p>
 </section>
 <section id="bezier-curves-and-other-tools">
-<h2>Bezier curves and other tools<a class="headerlink" href="#bezier-curves-and-other-tools" title="本標題的永久連結">¶</a></h2>
+<h2>貝茲曲線和其他工具<a class="headerlink" href="#bezier-curves-and-other-tools" title="本標題的永久連結">¶</a></h2>
 <p>So, you may have heard of a French curve. If not, it’s a piece of plastic representing a stencil. These curves are used to make perfectly smooth curves on the basis of a sketch.</p>
 <p>In digital painting, we don’t have the luxury of being able to use two hands, so you can’t hold a ruler with one hand and adjust it while inking with the other. For this purpose, we have instead Bezier curves, which can be made with the <a class="reference internal" href="../reference_manual/tools/path.html#path-tool"><span class="std std-ref">Bezier Curve Tool</span></a>.</p>
 <p>You can even make these on a vector layer, so they can be modified on the fly.</p>
@@ -286,14 +286,14 @@
 <p>Then, in the freehand brush tool options, you can tick <span class="guilabel">Snap to Assistants</span> and start a line that snaps to this assistant.</p>
 </section>
 <section id="presets">
-<h2>Presets<a class="headerlink" href="#presets" title="本標題的永久連結">¶</a></h2>
+<h2>初步預設<a class="headerlink" href="#presets" title="本標題的永久連結">¶</a></h2>
 <p>So here are some things to consider with the brush-presets that you use:</p>
 <section id="anti-aliasing-versus-jagged-pixels">
-<h3>Anti-aliasing versus jagged pixels<a class="headerlink" href="#anti-aliasing-versus-jagged-pixels" title="本標題的永久連結">¶</a></h3>
+<h3>反鋸齒與鋸齒像素關係<a class="headerlink" href="#anti-aliasing-versus-jagged-pixels" title="本標題的永久連結">¶</a></h3>
 <p>A starting inker might be inclined to always want to use anti-aliased brushes, after all, they look so smooth on the screen. However, while these look good on screen, they might become fuzzy when printing them. Therefore, Krita comes with two default types. Anti-aliased brushes like ink_brush_25 and slightly aliased brushes like ink_tilt, with the latter giving better print results. If you are trying to prepare for both, it might be an idea to consider making the inking page 600dpi and the color page 300dpi, so that the inking page has a higher resolution and the ‘jaggies’ aren’t as visible. You can turn any pixel brush into an aliased brush, by going the <kbd class="kbd docutils literal notranslate">F5</kbd> key and ticking <strong>Sharpness</strong>.</p>
 </section>
 <section id="texture">
-<h3>Texture<a class="headerlink" href="#texture" title="本標題的永久連結">¶</a></h3>
+<h3>紋理<a class="headerlink" href="#texture" title="本標題的永久連結">¶</a></h3>
 <p>Do you make smooth ‘wet’ strokes? Or do you make textured ones? For the longest time, smooth strokes were preferred, as that would be less of a headache when entering the coloring phase. Within Krita there are several methods to color these easily, the colorize mask being the prime example, so textured becomes a viable option even for the lazy amongst us.</p>
 <figure class="align-default" id="id3">
 <img alt="Type of strokes." src="../_images/Inking_patterned.png" />
@@ -303,7 +303,7 @@
 </figure>
 </section>
 <section id="pressure-curve">
-<h3>Pressure curve<a class="headerlink" href="#pressure-curve" title="本標題的永久連結">¶</a></h3>
+<h3>感壓曲線<a class="headerlink" href="#pressure-curve" title="本標題的永久連結">¶</a></h3>
 <p>Of course, the nicest lines are made with pressure sensitivity, so they dynamically change from thick to thin. However, different types of curves on the pressure give different results. The typical example is a slightly concave line to create a brush that more easily makes thin lines.</p>
 <figure class="align-default" id="id4">
 <img alt="Pressure curve for Ink Gpen preset brush." src="../_images/Ink_gpen.png" />
@@ -332,18 +332,18 @@
 </section>
 </section>
 <section id="preparing-sketches-for-inking">
-<h2>Preparing sketches for inking<a class="headerlink" href="#preparing-sketches-for-inking" title="本標題的永久連結">¶</a></h2>
+<h2>準備草圖來上墨線<a class="headerlink" href="#preparing-sketches-for-inking" title="本標題的永久連結">¶</a></h2>
 <p>So, you have a sketch and you wish to start inking it. Assuming you’ve scanned it in, or drew it, you can try the following things to make it easier to ink.</p>
 <section id="opacity-down-to-10">
-<h3>Opacity down to 10%<a class="headerlink" href="#opacity-down-to-10" title="本標題的永久連結">¶</a></h3>
+<h3>降低不透明度到 10%<a class="headerlink" href="#opacity-down-to-10" title="本標題的永久連結">¶</a></h3>
 <p>Put a white (just press the <kbd class="kbd docutils literal notranslate">Backspace</kbd> key) layer underneath the sketch. Turn down the opacity of the sketch to a really low number and put a layer above it for inking.</p>
 </section>
 <section id="make-the-sketch-colored">
-<h3>Make the sketch colored<a class="headerlink" href="#make-the-sketch-colored" title="本標題的永久連結">¶</a></h3>
+<h3>著色草圖<a class="headerlink" href="#make-the-sketch-colored" title="本標題的永久連結">¶</a></h3>
 <p>Put a layer filled with a color you like between the inking and sketch layer. Then set that layer to ‘screen’ or ‘addition’, this will turn all the black lines into the color! If you have a transparent background, or put this layer into a group, be sure to tick the alpha-inherit symbol!</p>
 </section>
 <section id="make-the-sketch-colored-alternative-version">
-<h3>Make the sketch colored, alternative version<a class="headerlink" href="#make-the-sketch-colored-alternative-version" title="本標題的永久連結">¶</a></h3>
+<h3>著色草圖 (另一個替代方案)<a class="headerlink" href="#make-the-sketch-colored-alternative-version" title="本標題的永久連結">¶</a></h3>
 <p>Or, <img alt="滑鼠右鍵" src="../_images/Krita_mouse_right.png" /> on the layer, go to layer properties, and untick ‘blue’. This works easier with a single layer sketch, while the above works best with multi-layer sketches.</p>
 </section>
 </section>
@@ -382,7 +382,7 @@
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>ffb3816</code>
+          修訂版本 <code>09c3c88</code>
         </span>
       
 

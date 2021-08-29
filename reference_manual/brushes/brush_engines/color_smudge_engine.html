@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-08-28T21:26:13" />
+  <meta property="og:article:modified_time" content="2021-08-29T07:08:07" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="混色筆刷工具的手冊頁。" name="description" property="og:description" />
 
@@ -61,7 +61,7 @@
     <link rel="index" title="索引" href="../../../genindex.html" />
     <link rel="search" title="搜尋" href="../../../search.html" />
     <link rel="next" title="貝茲筆刷工具" href="curve_engine.html" />
-    <link rel="prev" title="再製筆刷工具" href="clone_engine.html" /> 
+    <link rel="prev" title="仿製筆刷工具" href="clone_engine.html" /> 
 
   
   <script src="../../../_static/js/modernizr.min.js"></script>
@@ -136,7 +136,7 @@
 <li class="toctree-l3 current"><a class="reference internal" href="../brush_engines.html">筆刷引擎</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="bristle_engine.html">鬃毛刷工具</a></li>
 <li class="toctree-l4"><a class="reference internal" href="chalk_engine.html">粉筆筆刷工具</a></li>
-<li class="toctree-l4"><a class="reference internal" href="clone_engine.html">再製筆刷工具</a></li>
+<li class="toctree-l4"><a class="reference internal" href="clone_engine.html">仿製筆刷工具</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">混色筆刷工具</a></li>
 <li class="toctree-l4"><a class="reference internal" href="curve_engine.html">貝茲筆刷工具</a></li>
 <li class="toctree-l4"><a class="reference internal" href="deform_brush_engine.html">扭曲筆刷工具</a></li>
@@ -286,7 +286,7 @@
 <li><p><a class="reference internal" href="../brush_settings/opacity_and_flow.html#option-opacity-n-flow"><span class="std std-ref">不透明度和流量</span></a></p></li>
 <li><p><a class="reference internal" href="../brush_settings/options.html#option-size"><span class="std std-ref">大小</span></a></p></li>
 <li><p><a class="reference internal" href="../brush_settings/options.html#option-ratio"><span class="std std-ref">Ratio</span></a></p></li>
-<li><p><a class="reference internal" href="../brush_settings/options.html#option-spacing"><span class="std std-ref">Spacing</span></a></p></li>
+<li><p><a class="reference internal" href="../brush_settings/options.html#option-spacing"><span class="std std-ref">間距</span></a></p></li>
 <li><p><a class="reference internal" href="#option-paint-thickness"><span class="std std-ref">Paint Thickness</span></a></p></li>
 <li><p><a class="reference internal" href="../brush_settings/options.html#option-mirror"><span class="std std-ref">鏡射</span></a></p></li>
 <li><p><a class="reference internal" href="../brush_settings/options.html#option-rotation"><span class="std std-ref">旋轉</span></a></p></li>
@@ -319,11 +319,11 @@
 </figure>
 <p>Using the new algorithm, turning off the smudge length is all that's needed to make a brush that is similar to the <a class="reference internal" href="pixel_brush_engine.html#pixel-brush-engine"><span class="std std-ref">像素筆刷工具</span></a>. This is useful as a starting point for brushes that only need a little smudge.</p>
 <p>When using the <a class="reference internal" href="../brush_settings/brush_tips.html#brush-mode"><span class="std std-ref">gradient mode</span></a>, the <em class="dfn">Color Rate</em> will control the colored brush tip instead of a flat color.</p>
-<p>Blending modes are applied when the color part is composed onto the smudge part. This effectively means that color smudge brushes with a blending mode other than <a class="reference internal" href="../../blending_modes/mix.html#bm-normal"><span class="std std-ref">正常</span></a> will be greatly affected by <em class="dfn">Color Rate</em> in addition to <a class="reference internal" href="../brush_settings/options.html#option-spacing"><span class="std std-ref">Spacing</span></a> and <a class="reference internal" href="../brush_settings/opacity_and_flow.html#option-opacity-n-flow"><span class="std std-ref">opacity</span></a>.</p>
+<p>Blending modes are applied when the color part is composed onto the smudge part. This effectively means that color smudge brushes with a blending mode other than <a class="reference internal" href="../../blending_modes/mix.html#bm-normal"><span class="std std-ref">正常</span></a> will be greatly affected by <em class="dfn">Color Rate</em> in addition to <a class="reference internal" href="../brush_settings/options.html#option-spacing"><span class="std std-ref">間距</span></a> and <a class="reference internal" href="../brush_settings/opacity_and_flow.html#option-opacity-n-flow"><span class="std std-ref">opacity</span></a>.</p>
 </section>
 <section id="smudge-length">
 <span id="option-smudge-length"></span><h3>Smudge Length<a class="headerlink" href="#smudge-length" title="本標題的永久連結">¶</a></h3>
-<p>Affects smudging and allows you to set it to Sensors. Smudging is greatly affected by <a class="reference internal" href="../brush_settings/options.html#option-spacing"><span class="std std-ref">Spacing</span></a> as well as <a class="reference internal" href="../brush_settings/opacity_and_flow.html#option-opacity-n-flow"><span class="std std-ref">Opacity</span></a>. The former controls how many dabs are placed, and thus how many samples are made. This results in a smoother result for <em class="dfn">Smear Mode</em>, and a more opaque result for <em class="dfn">Dulling Mode</em>.</p>
+<p>Affects smudging and allows you to set it to Sensors. Smudging is greatly affected by <a class="reference internal" href="../brush_settings/options.html#option-spacing"><span class="std std-ref">間距</span></a> as well as <a class="reference internal" href="../brush_settings/opacity_and_flow.html#option-opacity-n-flow"><span class="std std-ref">Opacity</span></a>. The former controls how many dabs are placed, and thus how many samples are made. This results in a smoother result for <em class="dfn">Smear Mode</em>, and a more opaque result for <em class="dfn">Dulling Mode</em>.</p>
 <p>There are two major types:</p>
 <dl>
 <dt>Smearing</dt><dd><p>Copies the area underneath the previous position of the brush onto the new position, taking opacity into account. This tends to result in a smear-effect.</p>
@@ -342,7 +342,7 @@
 </figcaption>
 </figure>
 </dd>
-<dt>Strength</dt><dd><p>Affects how much the smudge length takes from the previous dab its sampling. This means that smudge length at 100% will never decrease, but smudge lengths under that will decrease based on <a class="reference internal" href="../brush_settings/options.html#option-spacing"><span class="std std-ref">Spacing</span></a> and <a class="reference internal" href="../brush_settings/opacity_and_flow.html#option-opacity-n-flow"><span class="std std-ref">Opacity</span></a>.</p>
+<dt>Strength</dt><dd><p>Affects how much the smudge length takes from the previous dab its sampling. This means that smudge length at 100% will never decrease, but smudge lengths under that will decrease based on <a class="reference internal" href="../brush_settings/options.html#option-spacing"><span class="std std-ref">間距</span></a> and <a class="reference internal" href="../brush_settings/opacity_and_flow.html#option-opacity-n-flow"><span class="std std-ref">Opacity</span></a>.</p>
 </dd>
 <dt>Smear Alpha</dt><dd><p>Controls whether the transparency of the smeared pixels is taken into account when painting. This can be helpful to get a more opaque effect, as if laying down thick layers of paint, without losing the smudge effect.</p>
 <figure class="align-default" id="id6">
@@ -638,7 +638,7 @@ This is mainly achieved with the Smearing mode on. Basically:</p>
         <a href="curve_engine.html" class="btn btn-neutral float-right" title="貝茲筆刷工具" accesskey="n" rel="next"> <!-- 下一個 --> <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="clone_engine.html" class="btn btn-neutral" title="再製筆刷工具" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- 上一個  -->  </a>
+        <a href="clone_engine.html" class="btn btn-neutral" title="仿製筆刷工具" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- 上一個  -->  </a>
       
     </div>
   
@@ -650,7 +650,7 @@ This is mainly achieved with the Smearing mode on. Basically:</p>
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>ffb3816</code>
+          修訂版本 <code>09c3c88</code>
         </span>
       
 
