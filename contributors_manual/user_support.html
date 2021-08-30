@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-08-30T11:26:26" />
+  <meta property="og:article:modified_time" content="2021-08-30T20:25:54" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="使用者支援入門介紹。" name="description" />
 
@@ -272,11 +272,11 @@
 </div>
 <p><em>針對所有運行 Windows 的裝置：</em></p>
 <ol class="arabic">
-<li><p>到 <span class="menuselection">設定 ‣ 設定 Krita… ‣ 數位板設定</span> 版面更改數位板輸入 API。</p>
+<li><p>到<span class="menuselection">設定 ‣ 設定 Krita… ‣ 數位板設定</span>版面更改數位板輸入 API。</p>
 <blockquote>
 <div><ol class="arabic simple">
 <li><p>WinTab：舊式數位板 API 標準。它支援多於一個數位筆按鍵和較高的筆壓等級數目。如果這能正常運作，沒有特殊理由的話不應切換到 Windows Ink。二合一平板電腦預設使用 Windows Ink。部分硬體廠商有提供 WinTab 驅動程式，但一般要手動安裝。</p></li>
-<li><p>Windows 8+ 指標輸入 (Windows Ink)：較新的 API 標準。這個 API 只支援 1024 級筆壓。這比較適用於二合一平板電腦。某些較稀有的數位板品牌可能未有實作這個 API。</p></li>
+<li><p>Windows 8+ 指標輸入 (Windows Ink)：較新的 API 標準。這個 API 只支援 1024 級筆壓。這比較適用於二合一平板電腦。某些較冷門的數位板品牌可能未有提供這個 API。</p></li>
 </ol>
 </div></blockquote>
 </li>
@@ -293,7 +293,7 @@
 <ol class="arabic">
 <li><p>你使用哪個作業系統？</p></li>
 <li><p>你使用甚麼品牌和型號的數位板？</p></li>
-<li><p>你裝有的數位板驅動程式是甚麼版本？</p></li>
+<li><p>你裝有的數位板驅動程式版本編號是甚麼？</p></li>
 <li><p>請收集數位板測試器（<span class="menuselection">設定 Krita… ‣ 數位板設定 ‣ 開啟數位板測試器</span>）中的文字輸出並提供予支援者：<a class="reference internal" href="#intro-user-support-sharing-files"><span class="std std-ref">如何分享檔案</span></a>。</p></li>
 <li><p>收集更詳細的數位板事件紀錄：</p>
 <blockquote>
@@ -362,20 +362,20 @@
 <h2><a class="toc-backref" href="#id13">給支援者的忠告</a><a class="headerlink" href="#advices-for-supporters" title="本標題的永久連結">¶</a></h2>
 <ol class="arabic simple">
 <li><p>如果未能清楚理解求助者的提問，應請求闡明一下。要求提供畫面截圖或錄影是不錯的做法。</p></li>
-<li><p>If you don't know the solution but you know what information will be needed to investigate the issue further, don't hesitate to ask. Other supporters may know the answer, but have too little time to move the user through the whole process, so you're helping a lot just by asking for additional information. This is very much true in case of tablet issues, for example.</p></li>
+<li><p>如果不知道解決方法，但知道調查問題需要甚麼額外資訊的話，可以先向求助者查詢。這樣可以幫助其他知道解決方法的支援者更快能夠提供進一步支援。這尤其適用於與數位板有關的問題。</p></li>
 <li><p>如果不知道答案或解決方法而問題看來被其他支援者忽視，不妨到 Krita 的 IRC 聊天室提問（Libera.Chat 上的 #krita）：<a class="reference internal" href="community.html#the-krita-community"><span class="std std-ref">Krita 的社群</span></a>。</p></li>
 <li><p>向使用者清楚解釋他應採取的步驟。例如要修改某項設定的話，應完整列出每個步驟要點選的按鈕、選單與分頁。</p></li>
-<li><p>Instead of <span class="menuselection">Settings ‣ Configure Krita...</span> use just <span class="menuselection">Configure Krita</span> -- it's easy enough to find and macOS users (where you need to select <span class="menuselection">Krita ‣ Preferences...</span>) won't get confused.</p></li>
-<li><p>If you ask for an image, mention usage of <a class="reference external" href="https://imgur.com">Imgur</a> or <a class="reference external" href="https://pasteboard.co">Pasteboard</a> (<a class="reference internal" href="#intro-user-support-sharing-files"><span class="std std-ref">如何分享檔案</span></a>), otherwise Reddit users might create a new post with this image instead of including it to the old conversation.</p></li>
+<li><p>不要寫<span class="menuselection">設定 ‣ 設定 Krita…</span>，只需要寫<span class="menuselection">設定 Krita</span>——這個選單項目容易找到，而且這樣寫不會使 macOS 使用者產生混淆（因為在 macOS 上要經由<span class="menuselection">Krita ‣ 偏好設定...</span>才能開啟設定）。</p></li>
+<li><p>如要求求助者提供影像，可建議 <a class="reference external" href="https://imgur.com">Imgur</a> 或 <a class="reference external" href="https://pasteboard.co">Pasteboard</a>（<a class="reference internal" href="#intro-user-support-sharing-files"><span class="std std-ref">如何分享檔案</span></a>），否則 Reddit 使用者可能會用該影像發表一篇新貼文而非從原本的討論串連結到該影像。</p></li>
 <li><p>If you want to quickly answer someone, just link to the appropriate place in this manual page -- you can click on the little link icon next to the section or subsection title and give the link to the user so they for example know what information about their tablet issue you need.</p></li>
 </ol>
 </section>
 <section id="how-to-share-a-file">
 <span id="intro-user-support-sharing-files"></span><h2><a class="toc-backref" href="#id14">如何分享檔案</a><a class="headerlink" href="#how-to-share-a-file" title="本標題的永久連結">¶</a></h2>
 <ul>
-<li><p>Images (e.g. screenshots): <a class="reference external" href="https://imgur.com">Imgur</a> [*], <a class="reference external" href="https://pasteboard.co">Pasteboard</a></p></li>
-<li><p>Text only: <a class="reference external" href="https://pastebin.com">Pastebin</a> [*], <a class="reference external" href="https://bpaste.net">BPaste</a>, <a class="reference external" href="https://paste.ubuntu.org.cn">paste.ubuntu.org.cn</a>, <a class="reference external" href="https://paste.centos.org/">CentOS's Pastebin Service</a> or <a class="reference external" href="https://invent.kde.org/dashboard/snippets">KDE Snippets (needs KDE Identity)</a>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">.kra</span></code> and other formats: by mail? Or encode the file using <em>base64</em> command on Linux, send by mail or on Pastebin, then decode using the same command.</p>
+<li><p>影像（例如畫面截圖）：<a class="reference external" href="https://imgur.com">Imgur</a> [*]、<a class="reference external" href="https://pasteboard.co">Pasteboard</a></p></li>
+<li><p>純文字：<a class="reference external" href="https://pastebin.com">Pastebin</a> [*]、<a class="reference external" href="https://bpaste.net">BPaste</a>、<a class="reference external" href="https://paste.ubuntu.org.cn">paste.ubuntu.org.cn</a>、<a class="reference external" href="https://paste.centos.org/">CentOS 的 Pastebin 服務</a>、<a class="reference external" href="https://invent.kde.org/dashboard/snippets">KDE Snippets（需要 KDE Identity）</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.kra</span></code> 以及其他檔案格式：電子郵件。或可以經 Linux 提供的 <em>base64</em> 命令列工具編碼並放到純文字分享服務，然後用相同的工具解碼。</p>
 <div class="admonition attention">
 <p class="admonition-title">注意</p>
 <p>If you ask user to store their log or other data on a website, make sure it stays there long enough for you to get it -- for example bpaste.net stores files by default only for a day! And you can extend it only to one week.</p>
