@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-08-29T16:26:08" />
+  <meta property="og:article:modified_time" content="2021-08-30T01:26:43" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="An overview of the basic concepts of Krita." name="description" property="og:description" />
 
@@ -382,7 +382,7 @@ This data is stored in the <strong>Layers</strong>.</p>
 <dl class="simple">
 <dt><a class="reference internal" href="../../reference_manual/layers_and_masks/paint_layers.html#paint-layers"><span class="std std-ref">顏料塗層</span></a></dt><dd><p>These are raster layers, and the most common and default layer type in Krita, you will be painting on these.</p>
 </dd>
-<dt><a class="reference internal" href="../../reference_manual/layers_and_masks/vector_layers.html#vector-layers"><span class="std std-ref">Vector Layers</span></a></dt><dd><p>This is a layer type on which you draw vector graphics. Vector graphics are typically more simple than raster graphics and with the benefit that you can deform them with less blurriness.</p>
+<dt><a class="reference internal" href="../../reference_manual/layers_and_masks/vector_layers.html#vector-layers"><span class="std std-ref">向量圖層</span></a></dt><dd><p>This is a layer type on which you draw vector graphics. Vector graphics are typically more simple than raster graphics and with the benefit that you can deform them with less blurriness.</p>
 </dd>
 <dt><a class="reference internal" href="../../reference_manual/layers_and_masks/group_layers.html#group-layers"><span class="std std-ref">群組圖層</span></a></dt><dd><p>These allow you to group several layers via drag and drop, so you can organize, move, apply masks and perform other actions on them together.</p>
 </dd>
@@ -479,7 +479,7 @@ which multiplies the components, leading to darker colors. This allows you to si
 <section id="masks">
 <h2><a class="toc-backref" href="#id24">遮罩</a><a class="headerlink" href="#masks" title="本標題的永久連結">¶</a></h2>
 <p>Masks are a type of sub-effect applied to a layer, usually driven by a grayscale image.</p>
-<p>The primary types of mask are <a class="reference internal" href="../../reference_manual/layers_and_masks/transparency_masks.html#transparency-masks"><span class="std std-ref">Transparency Masks</span></a>, which allow you to use a grayscale image to determine transparency, where black makes everything transparent and white makes the pixel fully opaque.</p>
+<p>The primary types of mask are <a class="reference internal" href="../../reference_manual/layers_and_masks/transparency_masks.html#transparency-masks"><span class="std std-ref">透明度遮罩</span></a>, which allow you to use a grayscale image to determine transparency, where black makes everything transparent and white makes the pixel fully opaque.</p>
 <p>You can paint on masks with any of the brushes, or convert a normal paint-layer to a mask. The big benefit of masks is that you can make things transparent without removing the underlying pixels. Furthermore, you can use masks to reveal or hide a whole group layer at once!</p>
 <p>For example, we have a white ghost lady here:</p>
 <img alt="../../_images/Krita_ghostlady_1.png" class="align-center" src="../../_images/Krita_ghostlady_1.png" />
@@ -545,7 +545,7 @@ However, if you want more control, Krita offers a <a class="reference internal" 
 </section>
 <section id="transform-masks">
 <h3><a class="toc-backref" href="#id30">Transform Masks</a><a class="headerlink" href="#transform-masks" title="本標題的永久連結">¶</a></h3>
-<p>Like filters, transforms can be applied as a non-destructive operation that is part of the layer stack. Unlike filter and transparency masks however, <a class="reference internal" href="../../reference_manual/layers_and_masks/transformation_masks.html#transformation-masks"><span class="std std-ref">Transform Masks</span></a> can't be driven by a grayscale image, for technical reasons. You can use transform masks to deform clone and file layers as well.</p>
+<p>Like filters, transforms can be applied as a non-destructive operation that is part of the layer stack. Unlike filter and transparency masks however, <a class="reference internal" href="../../reference_manual/layers_and_masks/transformation_masks.html#transformation-masks"><span class="std std-ref">變形遮罩</span></a> can't be driven by a grayscale image, for technical reasons. You can use transform masks to deform clone and file layers as well.</p>
 </section>
 </section>
 <section id="animation">
@@ -603,7 +603,7 @@ However, if you want more control, Krita offers a <a class="reference internal" 
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>09c3c88</code>
+          修訂版本 <code>4bc9e9f</code>
         </span>
       
 
