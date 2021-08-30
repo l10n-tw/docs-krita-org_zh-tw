@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-08-30T01:26:43" />
+  <meta property="og:article:modified_time" content="2021-08-30T11:26:26" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="如何在 Krita 中使用筆尖。" name="description" property="og:description" />
 
@@ -316,14 +316,13 @@
 <dt>自動 (間距)</dt><dd><p>勾選此項後筆刷間距將會使用一種不同的算法 (平方)，可以對間距進行更細致的控制。下圖右側三張圖是自動模式下間距分別為 0、1、5 。</p>
 <img alt="../../../_images/Krita_2_9_brushengine_brushtips_spacing.png" src="../../../_images/Krita_2_9_brushengine_brushtips_spacing.png" />
 </dd>
-<dt>平滑線</dt><dd><p>This toggles the super-smooth anti-aliasing. In the below example, both strokes are drawn with a default brush with fade set to 0. On the left without smooth lines, and the right with. Very useful for inking brushes. This option is best used in combination with Auto Spacing.</p>
+<dt>平滑線</dt><dd><p>勾選此項後會啟用抗鋸齒超平滑功能。下圖兩個筆刷都是使用淡化設定為 0 的預設筆刷繪製的。左側沒有啟用平滑線，右側有。對於線稿筆刷非常有用。此選項最好與自動間距結合使用。</p>
 <img alt="../../../_images/Krita_2_9_brushengine_brushtips_default_2.png" src="../../../_images/Krita_2_9_brushengine_brushtips_default_2.png" />
 </dd>
-<dt>精度</dt><dd><p>This changes how smooth the brush is rendered. The lower, the faster the brush, but the worse the rendering looks.
-You'd want an inking brush to have a precision of 5 at all times, but a big filling brush for painting doesn't require such precision, and can be easily sped up by setting precision to 1.</p>
+<dt>精度</dt><dd><p>這會改變筆刷繪製的平滑程度。精度越低則越快，但繪製效果越差。使用線搞筆刷的精度最好為 5，而大面積填色則不需要這樣的精度，可將精度設定為 1 來加快速度。</p>
 </dd>
-<dt>自動 (精度)</dt><dd><p>This allows you to set the precision linked to the size. The first value is the brush size at which precision is at last 5, and the second is the size-difference at which the precision will decrease.</p>
-<p>For example: A brush with ''starting brush size'' 10 and ''delta'' 4, will have...</p>
+<dt>自動 (精度)</dt><dd><p>筆刷精度按照筆刷大小自動調整。舉例如下的第一個值是不同筆刷大小對應的精度，第二個值是最大精度為 5 的筆刷大小。</p>
+<p>例如：「起始畫筆大小」為 10 和「增量」為 4 的筆刷將具有…</p>
 <ul class="simple">
 <li><p>筆刷大小為 10 則精度為 5</p></li>
 <li><p>筆刷大小為 14 則精度為 4</p></li>
@@ -337,21 +336,21 @@ You'd want an inking brush to have a precision of 5 at all times, but a big fill
 <section id="predefined-brushes">
 <span id="predefined-brush-tip"></span><h3>預製筆刷<a class="headerlink" href="#predefined-brushes" title="本標題的永久連結">¶</a></h3>
 <img alt="../../../_images/Krita_Predefined_Brushes.png" src="../../../_images/Krita_Predefined_Brushes.png" />
-<p>If you have used other applications like <strong class="program">GIMP</strong> or <strong class="program">Photoshop</strong>, you will have used this kind of brush. <strong class="program">Krita</strong> is (mostly) compatible with the brush tip definitions files of these applications:</p>
+<p>如果您使用過其他應用程式，例如 <strong class="program">GIMP</strong> 或 <strong class="program">Photoshop</strong>，您就會使用這種筆刷。 :program:<a href="#id1"><span class="problematic" id="id2">`</span></a>Krita`（大部分）與這些程式的筆尖定義檔兼容：</p>
 <dl class="simple">
 <dt>abr</dt><dd><p>Gimp 自動筆尖定義。</p>
 </dd>
 <dt><a class="reference internal" href="../../../general_concepts/file_formats/file_gbr.html#file-gbr"><span class="std std-ref">*.gbr</span></a></dt><dd><p>Gimp 單個點陣圖筆尖。可以是黑白或彩色。</p>
 </dd>
-<dt><a class="reference internal" href="../../../general_concepts/file_formats/file_gih.html#file-gih"><span class="std std-ref">*.gih</span></a></dt><dd><p>Gimp Image Hose brush tip: contains a series of brush tips that are painted randomly or in order after each other. Can be black and white or colored. <strong class="program">Krita</strong> does not yet support all the parameters yet.</p>
+<dt><a class="reference internal" href="../../../general_concepts/file_formats/file_gih.html#file-gih"><span class="std std-ref">*.gih</span></a></dt><dd><p>Gimp 影像軟管筆刷：包含一系列隨機或依次繪製的筆尖。可以是黑白的，也可以是彩色的。 <strong class="program">Krita</strong> 尚不支持所有參數。</p>
 </dd>
-<dt>abr</dt><dd><p>Photoshop brush tip collections. We support many of the features of these brush files, though some advanced features are not supported yet.</p>
+<dt>abr</dt><dd><p>Photoshop 筆刷集合。我們支持這種筆刷的大部分功能，但尚未支持一些高級功能。</p>
 </dd>
 </dl>
-<p>Note that the definition of ABR brushes has been reverse engineered since Adobe does not make the specification public. We strongly recommend every <strong class="program">Krita</strong> user to share brush tips in GBR and GIH format and more complex brushes as <strong class="program">Krita</strong> presets.</p>
-<p>All predefined brush tips are shown in one selector. There are four more options that influence the initial bitmap brush tip you start painting with:</p>
+<p>注意，由於 Adobe 未公開規範，因此 ABR 筆刷的定義已進行逆向工程。我們強烈建議每個 <strong class="program">Krita</strong> 用戶分享 GBR 和 GIH 格式分享筆尖。如果筆刷比較復雜，可把筆刷預設作為 <strong class="program">Krita</strong> 資源包導出分享。</p>
+<p>所有預定義的筆尖都顯示在一個選擇器中。有四個選項會影響您的初始點陣圖筆尖：</p>
 <dl class="simple">
-<dt>縮放</dt><dd><p>Scales the brush tip. 1.0 is the native size of the brush tip. This can be fairly large! When painting with variable size (for instance governed by pressure), this is the base for the calculations.</p>
+<dt>縮放</dt><dd><p>縮放筆尖。 1.0 是筆尖的原始大小。這可能相當大！當繪畫大小不同（例如受壓力控制）時，這將作為計算的基準點。</p>
 </dd>
 <dt>旋轉</dt><dd><p>筆尖的初始旋轉方向。</p>
 </dd>
@@ -367,16 +366,16 @@ You'd want an inking brush to have a precision of 5 at all times, but a big fill
 </figcaption>
 </figure>
 <dl>
-<dt>透明度遮罩</dt><dd><p>For colored brushes, don't paint the actual colors, but make a grayscale brush tip that will be colored by your selected foreground/background color. Lighter areas will be interpreted as more transparent.</p>
+<dt>透明度遮罩</dt><dd><p>對於彩色畫筆，不要繪製實際顏色，而是製作一個灰度筆尖，該筆尖將根據您選擇的前景色／背景色著色。較亮的區域將被視為高透明度。</p>
 </dd>
 <dt>為影像上色</dt><dd><p>完全按原樣使用筆尖圖像本身。特別適用於圖像印章。</p>
 </dd>
 <dt>亮度映射</dt><dd><div class="versionadded">
 <p><span class="versionmodified added">4.3 版新加入: </span>Combines the features of Alpha Mask and Image Stamp modes. Transparency is preserved as it is in Image Stamp mode, but colors or gray tones in the brush are replaced by the foreground color.  The Lightness values of the brush tip image (if thinking in HSL mode) are preserved, so dark parts of the image are dark, and bright parts are bright.  This allows image stamps where you can choose the color, but preserve highlights and shadows, and can even create an effect of thick paint in a brush stroke by simulating the highlights and shadows caused by the texture of the paint and brush stroke (sometimes called an &quot;impasto&quot; effect).</p>
 </div>
-<p>There are three sliders here, to control the exact feel of the current brush tip in Lightness or Gradient mode:</p>
+<p>有 3 個滑動條，用於在亮度或漸變模式下控制當前筆尖的確切感覺：</p>
 <dl class="simple">
-<dt>中性點</dt><dd><p>This is the lightness level that will be the same as your current foreground color. Higher values than this will be lighter versions of the current foreground color, and lower, darker versions of the current color.</p>
+<dt>中性點</dt><dd><p>與當前的前景色相同的亮度級別。高於此值的將是當前前景色的較亮版本，以及當前顏色的較低、較暗版本。</p>
 </dd>
 <dt>亮度</dt><dd><p>使整個筆尖更亮或更暗。</p>
 </dd>
@@ -385,7 +384,7 @@ You'd want an inking brush to have a precision of 5 at all times, but a big fill
 </dl>
 </dd>
 <dt>漸變映射</dt><dd><div class="versionadded">
-<p><span class="versionmodified added">4.4 版新加入: </span>Use the lightness values of the brush tip image as a map to a gradient.  Black maps to the left side of the gradient, and white to the right side of the gradient.  The gradient used is the currently selected gradient in the main window, so you can change the gradient quickly and easily while painting.  This mode allows image stamps with multiple colors that can be changed (great for flowers or other colorful vegetation), and can allow paint brushes that have multiple colors.  Image adjustment sliders for Lightness Map mode can be used for this mode too. A tutorial for this mode is here: <a class="reference internal" href="../../../tutorials/krita-brush-tips/gradient_map_brush_tip.html#gradient-brush-tips"><span class="std std-ref">漸層貼圖筆刷技巧</span></a> .</p>
+<p><span class="versionmodified added">4.4 版新加入: </span>使用筆尖影像的亮度值作為漸變映射。黑色映射到漸變的左側，白色映射到漸變的右側。使用的漸變是主視窗中當前選擇的漸變，因此您可以在繪畫時快速輕鬆地更改漸變。此模式允許使用可以更改的多種顏色的影像圖章（非常適合花卉或其他五顏六色的植物），並且可以允許使用多種顏色的畫筆。亮度貼圖模式的影像調整滑動條也可用於此模式。此模式的教程在這裡：<a class="reference internal" href="../../../tutorials/krita-brush-tips/gradient_map_brush_tip.html#gradient-brush-tips"><span class="std std-ref">漸層貼圖筆刷技巧</span></a> 。</p>
 </div>
 </dd>
 </dl>

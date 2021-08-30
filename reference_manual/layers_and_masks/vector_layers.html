@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-08-30T01:26:43" />
+  <meta property="og:article:modified_time" content="2021-08-30T11:26:26" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="How to use vector layers in Krita." name="description" />
 
@@ -159,10 +159,10 @@
 <li class="toctree-l3"><a class="reference internal" href="transparency_masks.html">透明度遮罩</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">向量圖層</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#what-is-a-vector-layer">什麼是向量圖層 ?</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#creating-a-vector-layer">Creating a vector layer</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#editing-shapes-on-a-vector-layer">Editing Shapes on a Vector Layer</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#point-and-curve-shape-manipulation">Point and Curve Shape Manipulation</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#stroke-and-fill">Stroke and Fill</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#creating-a-vector-layer">新增一個向量圖層</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#editing-shapes-on-a-vector-layer">在向量圖層中編輯形狀</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#point-and-curve-shape-manipulation">形狀的節點與線條操作</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#stroke-and-fill">邊線與填充色</a></li>
 </ul>
 </li>
 </ul>
@@ -285,39 +285,39 @@
 <p>It shows the vector contents of the layer on the left side. The icon showing the page with the red bookmark denotes that it is a vector layer. To the right of that is the layer name. Next are the layer visibility and accessibility icons. Clicking the &quot;eye&quot; will toggle visibility. Clicking the lock into a closed position will lock the content and editing will no longer be allowed until it is clicked again and the lock on the layer is released.</p>
 </section>
 <section id="creating-a-vector-layer">
-<h2>Creating a vector layer<a class="headerlink" href="#creating-a-vector-layer" title="本標題的永久連結">¶</a></h2>
+<h2>新增一個向量圖層<a class="headerlink" href="#creating-a-vector-layer" title="本標題的永久連結">¶</a></h2>
 <p>You can create a vector layer in two ways. Using the extra options from the &quot;Add Layer&quot; button you can click the &quot;Vector Layer&quot; item and it will create a new vector layer. You can also drag a rectangle or ellipse from the <strong>Add shape</strong> dock onto an active Paint Layer.  If the active layer is a Vector Layer then the shape will be added directly to it.</p>
 </section>
 <section id="editing-shapes-on-a-vector-layer">
-<h2>Editing Shapes on a Vector Layer<a class="headerlink" href="#editing-shapes-on-a-vector-layer" title="本標題的永久連結">¶</a></h2>
+<h2>在向量圖層中編輯形狀<a class="headerlink" href="#editing-shapes-on-a-vector-layer" title="本標題的永久連結">¶</a></h2>
 <div class="admonition warning">
 <p class="admonition-title">警告</p>
 <p>There's currently a bug with the vector layers that they will always consider themselves to be at 72dpi, regardless of the actual pixel-size. This can make manipulating shapes a little difficult, as the precise input will not allow cm or inch, even though the vector layer coordinate system uses those as a basis.</p>
 </div>
 <section id="basic-shape-manipulation">
-<h3>Basic Shape Manipulation<a class="headerlink" href="#basic-shape-manipulation" title="本標題的永久連結">¶</a></h3>
+<h3>基本形狀操作<a class="headerlink" href="#basic-shape-manipulation" title="本標題的永久連結">¶</a></h3>
 <p>To edit the shape and colors of your vector element, you will need to use the basic shape manipulation tool.</p>
 <p>Once you have selected this tool, click on the element you want to manipulate and you will see guides appear around your shape.</p>
 <img alt="../../_images/Vectorguides.png" src="../../_images/Vectorguides.png" />
 <p>There are four ways to manipulate your image using this tool and the guides on your shape.</p>
 </section>
 <section id="transform-move">
-<h3>Transform/Move<a class="headerlink" href="#transform-move" title="本標題的永久連結">¶</a></h3>
+<h3>變形 / 移動<a class="headerlink" href="#transform-move" title="本標題的永久連結">¶</a></h3>
 <img alt="../../_images/Transform.png" src="../../_images/Transform.png" />
 <p>This feature of the tool allows you to move your object by clicking and dragging your shape around the canvas. Holding the <kbd class="kbd docutils literal notranslate">Ctrl</kbd> key will lock your moves to one axis.</p>
 </section>
 <section id="size-stretch">
-<h3>Size/Stretch<a class="headerlink" href="#size-stretch" title="本標題的永久連結">¶</a></h3>
+<h3>縮放大小 / 縮放拉神<a class="headerlink" href="#size-stretch" title="本標題的永久連結">¶</a></h3>
 <img alt="../../_images/Resize.png" src="../../_images/Resize.png" />
 <p>This feature of the tool allows you to stretch your shape.  Selecting a midpoint will allow stretching along one axis. Selecting a corner point will allow stretching across both axis. Holding the <kbd class="kbd docutils literal notranslate">Shift</kbd> key will allow you to scale your object. Holding the <kbd class="kbd docutils literal notranslate">Ctrl</kbd> key will cause your manipulation to be mirrored across your object.</p>
 </section>
 <section id="rotate">
-<h3>Rotate<a class="headerlink" href="#rotate" title="本標題的永久連結">¶</a></h3>
+<h3>旋轉<a class="headerlink" href="#rotate" title="本標題的永久連結">¶</a></h3>
 <img alt="../../_images/Rotatevector.png" src="../../_images/Rotatevector.png" />
 <p>This feature of the tool will allow you to rotate your object around its center. Holding the <kbd class="kbd docutils literal notranslate">Ctrl</kbd> key will cause your rotation to lock to 45 degree angles.</p>
 </section>
 <section id="skew">
-<h3>Skew<a class="headerlink" href="#skew" title="本標題的永久連結">¶</a></h3>
+<h3>傾斜變形<a class="headerlink" href="#skew" title="本標題的永久連結">¶</a></h3>
 <img alt="../../_images/Skew.png" src="../../_images/Skew.png" />
 <p>This feature of the tool will allow you to skew your object.</p>
 <div class="admonition note">
@@ -327,26 +327,26 @@
 </section>
 </section>
 <section id="point-and-curve-shape-manipulation">
-<h2>Point and Curve Shape Manipulation<a class="headerlink" href="#point-and-curve-shape-manipulation" title="本標題的永久連結">¶</a></h2>
+<h2>形狀的節點與線條操作<a class="headerlink" href="#point-and-curve-shape-manipulation" title="本標題的永久連結">¶</a></h2>
 <p>Double-click on a vector object to edit the specific points or curves which make up the shape. Click and drag a point to move it around the canvas. Click and drag along a line to curve it between two points. Holding the <kbd class="kbd docutils literal notranslate">Ctrl</kbd> key will lock your moves to one axis.</p>
 <img alt="../../_images/Pointcurvemanip.png" src="../../_images/Pointcurvemanip.png" />
 </section>
 <section id="stroke-and-fill">
-<h2>Stroke and Fill<a class="headerlink" href="#stroke-and-fill" title="本標題的永久連結">¶</a></h2>
+<h2>邊線與填充色<a class="headerlink" href="#stroke-and-fill" title="本標題的永久連結">¶</a></h2>
 <p>In addition to being defined by points and curves, a shape also has two defining properties: <strong>Fill</strong> and <strong>Stroke</strong>. <strong>Fill</strong> defines the color, gradient, or pattern that fills the space inside of the shape object. '<strong>Stroke</strong>' defines the color, gradient, pattern, and thickness of the border along the edge of the shape. These two can be edited using the <strong>Stroke and Fill</strong> dock. The dock has two modes. One for stroke and one for fill. You can change modes by clicking in the dock on the filled square or the black line. The active mode will be shown by which is on top of the other.</p>
 <p>Here is the dock with the fill element active. Notice the red line across the solid white square. This tells us that there is no fill assigned therefore the inside of the shape will be transparent.</p>
 <img alt="../../_images/Strokeandfill.png" src="../../_images/Strokeandfill.png" />
 <p>Here is the dock with the stroke element active.</p>
 <img alt="../../_images/Strokeandfillstroke.png" src="../../_images/Strokeandfillstroke.png" />
 <section id="editing-stroke-properties">
-<h3>Editing Stroke Properties<a class="headerlink" href="#editing-stroke-properties" title="本標題的永久連結">¶</a></h3>
+<h3>調整邊線屬性<a class="headerlink" href="#editing-stroke-properties" title="本標題的永久連結">¶</a></h3>
 <p>The stroke properties dock will allow you to edit a different aspect of how the outline of your vector shape looks.</p>
 <img alt="../../_images/Strokeprops.png" src="../../_images/Strokeprops.png" />
 <p>The style selector allows you to choose different patterns and line styles. The width option changes the thickness of the outline on your vector shape. The cap option changes how line endings appear. The join option changes how corners appear.</p>
 <p>The Miter limit controls how harsh the corners of your object will display. The higher the number the more the corners will be allowed to stretch out past the points. Lower numbers will restrict the stroke to shorter and less sharp corners.</p>
 </section>
 <section id="editing-fill-properties">
-<h3>Editing Fill Properties<a class="headerlink" href="#editing-fill-properties" title="本標題的永久連結">¶</a></h3>
+<h3>編輯填充屬性<a class="headerlink" href="#editing-fill-properties" title="本標題的永久連結">¶</a></h3>
 <p>All of the fill properties are contained in the <strong>Stroke and Fill</strong> dock.</p>
 <img alt="../../_images/Strokeandfill.png" src="../../_images/Strokeandfill.png" />
 <p>The large red <strong>X</strong> button will set the fill to none causing the area inside of the vector shape to be transparent.</p>
