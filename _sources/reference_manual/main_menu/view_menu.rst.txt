@@ -20,7 +20,7 @@ Show Canvas Only
 Full Screen mode
     This will hide the system bar. Shortcut :kbd:`Ctrl + Shift + F`
 Detach Canvas
-    This will pop-out the canvas into it's own window, which is very useful for multi-monitor setups.
+    This will pop-out the canvas into its own window, which is very useful for multi-monitor setups.
 Wrap Around Mode
     This will show the image as if tiled orthographically. Very useful for tiling 3d textures.
 Instant Preview Mode

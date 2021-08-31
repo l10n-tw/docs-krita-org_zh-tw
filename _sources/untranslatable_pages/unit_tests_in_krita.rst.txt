@@ -285,7 +285,7 @@ The second version of the function is different. It searches the image in "an ex
 QImageBasedTest for complex actions
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Sometimes you need to test some complex actions like cropping or transforming the whole image. The main problem of such action is that it should work correctly with any kind of layer or mask, e.g. KisCloneLayer, KisGroupLayer or even KisSelectionMask. To facilitate such complex testing conditions, Krita provides a special class ``QImageBasedTest``. It helps you to create a really complex image and check the contents of its layers. You can find the best example of its usage in ``KisProcessingsTest``. Basically, to use this class, one should derive it's own testing class from it, and call a set of callbacks, which do all the work. Let's consider the code from KisProcessingsTest:
+Sometimes you need to test some complex actions like cropping or transforming the whole image. The main problem of such action is that it should work correctly with any kind of layer or mask, e.g. KisCloneLayer, KisGroupLayer or even KisSelectionMask. To facilitate such complex testing conditions, Krita provides a special class ``QImageBasedTest``. It helps you to create a really complex image and check the contents of its layers. You can find the best example of its usage in ``KisProcessingsTest``. Basically, to use this class, one should derive its own testing class from it, and call a set of callbacks, which do all the work. Let's consider the code from KisProcessingsTest:
 
 .. code:: cpp
 

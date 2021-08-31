@@ -51,7 +51,7 @@ Export
 Comment
     A drop down menu which consists of a list of comments for storyboard items which includes a 
     `Delete Comment` button and an `Add Comment` button. You can add comment sections to all entries, 
-    remove comment sections, or change their visiblity from the drop down menu. The order
+    remove comment sections, or change their visibility from the drop down menu. The order
     of comments can be changed using drag-and-drop. Actions within this menu will apply to
     every entry within the storyboard docker.
 
@@ -77,7 +77,7 @@ A storyboard scene represents an individual scene in a larger production. There 
 the duration of a single scene, with the thumbnail representing the first keyframe of a given scene. Each 
 scene has a header with editable fields -- such as scene names and durations. Storyboard scenes can be inserted before or 
 after any other scene. The order of scenes can be changed at any time using drag-and-drop. Changing the order of 
-scenes will be reflected appropriately in the timeline, where keyframes will be reordered to accomodate the new 
+scenes will be reflected appropriately in the timeline, where keyframes will be reordered to accommodate the new 
 desired scene order.
 
 Frame Number
@@ -88,7 +88,7 @@ Name
 Duration in Seconds
     A spin-box. This will set the duration of the scene in seconds.
 Duration in Frames
-    A spin-box. This will set the duration of the scene in frames. Frames represent the division of seconds, which is dependant on the users' desired `Frame Rate` setting.
+    A spin-box. This will set the duration of the scene in frames. Frames represent the division of seconds, which is dependent on the users' desired `Frame Rate` setting.
 Thumbnail
     A thumbnail representing the contents of a scene. Unlike the comments, it cannot be edited inside the docker directly. Instead, changes must be made within the canvas after selection.
 Add Item
@@ -135,7 +135,7 @@ Mode
 
         .. image:: /images/dockers/Storyboard_column_mode.png
 
-    * Grid : Scenes are arranged in a grid. In this mode, if you change the size of the docker, the grid is rearranged to accomodate more scenes in the docker.
+    * Grid : Scenes are arranged in a grid. In this mode, if you change the size of the docker, the grid is rearranged to accommodate more scenes in the docker.
 
         .. image:: /images/dockers/Storyboard_grid_mode.png
 
@@ -169,7 +169,7 @@ Managing Comment Fields
     
     * To make a new comment field, go to :ref:`Comment menu <storyboard_comment_menu>` and click on the plus button at the bottom-left. A new comment field will be added to the menu. Change its name and press :kbd:`Enter`. Every scene will now have the new comment field available to edit.
     * To delete a comment field, select it and press the Delete button at the bottom-right corner of the :ref:`Comment menu <storyboard_comment_menu>`.
-    * To toggle visiblity of a comment field click on the eye icon.
+    * To toggle visibility of a comment field click on the eye icon.
     * To rearrange the order of comment fields use drag and drop in the :ref:`Comment menu <storyboard_comment_menu>`.
 
 Adding Comments

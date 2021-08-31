@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-08-30T20:25:54" />
+  <meta property="og:article:modified_time" content="2021-08-31T10:25:52" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="Krita 中的紋理筆刷設定選項。" name="description" />
 
@@ -270,108 +270,98 @@
 <section id="id1">
 <h2>紋理<a class="headerlink" href="#id1" title="本標題的永久連結">¶</a></h2>
 <dl>
-<dt>樣式</dt><dd><p>Which pattern you'll be using.</p>
+<dt>圖案</dt><dd><p>選擇筆刷使用的圖案。</p>
 </dd>
-<dt>縮放</dt><dd><p>The size of the pattern. 1.0 is 100%.</p>
+<dt>縮放</dt><dd><p>圖案的縮放比例，1.0 為 100%。</p>
 <img alt="../../../_images/Krita_2_9_brushengine_texture_05.png" src="../../../_images/Krita_2_9_brushengine_texture_05.png" />
 </dd>
-<dt>Horizontal Offset &amp; Vertical Offset</dt><dd><p>How much a brush is offset, random offset sets a new per stroke.</p>
+<dt>水平和垂直偏移</dt><dd><p>筆刷的偏移量，每筆畫皆是新的隨機偏移量。</p>
 <img alt="../../../_images/Krita_2_9_brushengine_texture_04.png" src="../../../_images/Krita_2_9_brushengine_texture_04.png" />
 </dd>
-<dt>紋理模式</dt><dd><p>All texture modes affect the alpha channel, with the exception of <em>lightness map</em> and <em>gradient map</em>, which
-affect the color channels.</p>
+<dt>紋理模式</dt><dd><p>所有紋理模式都會影響透明度通道，只有*亮度映射*和*漸變映射*例外，它們影響顏色通道。</p>
 <img alt="../../../_images/Krita_2_9_brushengine_texture_01.png" src="../../../_images/Krita_2_9_brushengine_texture_01.png" />
 <img alt="../../../_images/Krita_4_4_brushengine_texture_lightness_gradient_demo.png" src="../../../_images/Krita_4_4_brushengine_texture_lightness_gradient_demo.png" />
-<p>In the following explanations, the sample strokes go from low strength on the left side to high strength on the
-right side. The top stroke uses a hard brush tip and the bottom one a soft brush tip. On the left side of the
-strokes there are two non-textured dots, just for comparison sake.</p>
+<p>下圖說明中，示例筆畫從左側的低強度到右側的高強度繪制 。上圖使用硬筆尖，下圖使用軟筆尖。在筆畫的左側有兩個無紋理的點，僅供比較。</p>
 <dl>
-<dt>色彩增值 (相乘)</dt><dd><p>Uses alpha multiplication to determine the effect of the texture. Has a soft feel.</p>
+<dt>色彩增值 (相乘)</dt><dd><p>對透明度進行相乘計算來決定紋理的效果。具有柔和的感覺。</p>
 <img alt="../../../_images/multiply.png" src="../../../_images/multiply.png" />
 </dd>
-<dt>減去</dt><dd><p>Uses subtraction to determine the effect of the texture. Has a harsher, more texture feel.</p>
+<dt>減去</dt><dd><p>使用減法來決定紋理的效果。具有更粗糙、更質感的感覺。</p>
 <img alt="../../../_images/subtract.png" src="../../../_images/subtract.png" />
 </dd>
 <dt>亮度映射</dt><dd><div class="versionadded">
 <p><span class="versionmodified added">4.4 版新加入.</span></p>
 </div>
-<p>Applies lightness values of the texture to the paint.  Can be used to simulate paper/canvas, or for painting a texture, like reptile skin or tree bark.</p>
+<p>紋理影像的亮度值將影響筆畫顏色的亮度值。它可以用來模擬包括紙張、畫布，或用於如爬行動物皮膚或樹皮等繪製紋理的效果。</p>
 <img alt="../../../_images/lightness_map.png" src="../../../_images/lightness_map.png" />
 </dd>
 <dt>漸變映射</dt><dd><div class="versionadded">
 <p><span class="versionmodified added">4.4 版新加入.</span></p>
 </div>
-<p>Maps gray/lightness values of the texture to the currently selected gradient.  Useful for painting textures with multiple colors, like reptile skin, tree bark, stars, etc.</p>
+<p>將紋理的灰階或者亮度值映射到當前選定的漸變。用於繪製多種顏色的紋理，如爬行動物的皮膚、樹皮、星星等。</p>
 <img alt="../../../_images/gradient_map.png" src="../../../_images/gradient_map.png" />
 </dd>
 <dt>變暗</dt><dd><div class="versionadded">
 <p><span class="versionmodified added">5.0 版新加入.</span></p>
 </div>
-<p>This mode chooses the minimum alpha value between the brush tip and the texture. The effect is as if the texture
-made holes in the opaque areas of the brush tip.</p>
+<p>此模式會在筆尖和紋理之間選擇透明度最小的值。其效果彷彿在筆尖的不透明區域打孔一樣。</p>
 <img alt="../../../_images/darken.png" src="../../../_images/darken.png" />
 </dd>
 <dt>覆蓋</dt><dd><div class="versionadded">
 <p><span class="versionmodified added">5.0 版新加入.</span></p>
 </div>
-<p>The texture is softly applied to the semi-transparent areas of the brush tip.
-This mode produces a result similar to <em>multiply</em> but allowing for full coverage when high strength values are used.</p>
+<p>紋理會被柔和應用到筆尖的半透明區域。此模式類似於*色彩增值*的效果，但能夠在效果強度較高時填滿筆畫的全部區域。</p>
 <img alt="../../../_images/overlay.png" src="../../../_images/overlay.png" />
 </dd>
 <dt>加亮色彩 (減淡)</dt><dd><div class="versionadded">
 <p><span class="versionmodified added">5.0 版新加入.</span></p>
 </div>
-<p>This mode produces features with somewhat hard edges on the brush tip by making it more opaque where the texture
-values are brighter.</p>
+<p>此模式通過在紋理值更亮的地方使其更不透明，而在筆尖上產生帶有一些硬邊的特徵。</p>
 <img alt="../../../_images/color_dodge.png" src="../../../_images/color_dodge.png" />
 </dd>
 <dt>加深</dt><dd><div class="versionadded">
 <p><span class="versionmodified added">5.0 版新加入.</span></p>
 </div>
-<p>This mode produces holes with somewhat hard edges on the brush tip by making it more transparent where the texture
-values are darker.</p>
+<p>此模式通過在紋理值較暗的地方使其更透明，從而在筆尖上產生邊緣較硬的孔。</p>
 <img alt="../../../_images/color_burn.png" src="../../../_images/color_burn.png" />
 </dd>
 <dt>線性加亮 (減淡)</dt><dd><div class="versionadded">
 <p><span class="versionmodified added">5.0 版新加入.</span></p>
 </div>
-<p>Similar to <em>color dodge</em> but the opacity of the brush tip is increased even more.</p>
+<p>類似於*加亮色彩*，但筆尖的不透明度進一步提高。</p>
 <img alt="../../../_images/linear_dodge.png" src="../../../_images/linear_dodge.png" />
 </dd>
 <dt>線性加深</dt><dd><div class="versionadded">
 <p><span class="versionmodified added">5.0 版新加入.</span></p>
 </div>
-<p>The result is similar to <em>burn</em> but with the opacity decreased a bit more. It also is similar to the <em>subtract</em>
-mode but with the texture inverted.</p>
+<p>效果類似於*加深*模式，但不透明度進一步降低。它的效果也類似於紋理顏色反相後的*減去*模式。</p>
 <img alt="../../../_images/linear_burn.png" src="../../../_images/linear_burn.png" />
 </dd>
 <dt>實色混合 (Photoshop)</dt><dd><div class="versionadded">
 <p><span class="versionmodified added">5.0 版新加入.</span></p>
 </div>
-<p>This mode produces a result similar to <em>burn</em> or <em>linear burn</em> and allows to obtain full coverage when high strength values
-are used. The resulting edges are very hard (in fact, aliased).</p>
+<p>此模式的效果類似於 加深 和 線性加深 ，且在效果強度數值較高時能完全填滿筆尖。它的筆畫邊緣較硬 (實際上是鋸齒狀的)。</p>
 <img alt="../../../_images/hard_mix_ps.png" src="../../../_images/hard_mix_ps.png" />
 </dd>
 <dt>實色混合、更柔和 (Photoshop)</dt><dd><div class="versionadded">
 <p><span class="versionmodified added">5.0 版新加入.</span></p>
 </div>
-<p>This mode tries to emulate <em>hard mix (photoshop)</em> while producing softer, antialiased, edges.</p>
+<p>此模式嘗試模擬*實色混合 (Photoshop)*，同時產生更柔和、抗鋸齒的邊緣。</p>
 <img alt="../../../_images/hard_mix_softer_ps.png" src="../../../_images/hard_mix_softer_ps.png" />
 </dd>
-<dt>Height</dt><dd><div class="versionadded">
+<dt>高度</dt><dd><div class="versionadded">
 <p><span class="versionmodified added">5.0 版新加入.</span></p>
 </div>
-<p>This mode is similar to the <em>subtract</em> mode but with a higher range of possibilities when applying the strength.
-Contrary to <em>subtract</em>, it allows to achieve full coverage with one stroke.</p>
+<p>此模式類似於*減去*模式，但效果強度數值導致的筆尖變化范圍更加豐富。與*減去*模式不同，它單筆即可達到完全填滿筆尖的效果。</p>
 <img alt="../../../_images/height.png" src="../../../_images/height.png" />
 </dd>
 <dt>線性高度</dt><dd><div class="versionadded">
 <p><span class="versionmodified added">5.0 版新加入.</span></p>
 </div>
-<p>Same as <em>height</em> but combined with <em>multiply</em> to achieve softer transitions.</p>
+<p>與*高度*模式相同，但結合了*色彩增值*模式的特性以實現更柔和的過渡。</p>
 <img alt="../../../_images/linear_height.png" src="../../../_images/linear_height.png" />
 </dd>
-<dt>Height (Photoshop)</dt><dd><div class="versionadded">
+<dt>高度 (Photoshop)</dt><dd><div class="versionadded">
 <p><span class="versionmodified added">5.0 版新加入.</span></p>
 </div>
 <p>As the <em>height</em> mode, this mode is similar to the <em>subtract</em> mode but with a higher range of possibilities when applying
@@ -381,21 +371,21 @@ is mapped in the algorithm. When using a strength value of 0.1 the results are a
 mode with a strength of 1.</p>
 <img alt="../../../_images/height_ps.png" src="../../../_images/height_ps.png" />
 </dd>
-<dt>Linear Height (Photoshop)</dt><dd><div class="versionadded">
+<dt>線性高度 (Photoshop)</dt><dd><div class="versionadded">
 <p><span class="versionmodified added">5.0 版新加入.</span></p>
 </div>
-<p>Same as <em>height (photoshop)</em> but combined with <em>multiply</em> to achieve softer transitions.</p>
+<p>與*高度 (Photoshop)*相同，但結合*色彩增值*以實現更柔和的過渡。</p>
 <img alt="../../../_images/linear_height_ps.png" src="../../../_images/linear_height_ps.png" />
 </dd>
 </dl>
 </dd>
-<dt>截斷策略</dt><dd><p>Cutoff policy will determine what range and where the strength will affect the textured outcome.</p>
+<dt>截斷策略</dt><dd><p>截斷策略將確定強度效果在什麼範圍、位置影響紋理結果。</p>
 <dl class="simple">
-<dt>Disabled</dt><dd><p>Doesn't cut off. Full range will be used.</p>
+<dt>禁用</dt><dd><p>不進行截斷，將使用完整的範圍。</p>
 </dd>
-<dt>樣式</dt><dd><p>Cuts the pattern off.</p>
+<dt>圖案</dt><dd><p>依圖案的深淺範圍進行截斷。</p>
 </dd>
-<dt>Brush</dt><dd><p>Cuts the brush tip off.</p>
+<dt>筆刷</dt><dd><p>對筆尖的不透明度范圍進行截斷。</p>
 </dd>
 </dl>
 <img alt="../../../_images/Krita_2_9_brushengine_texture_02.png" src="../../../_images/Krita_2_9_brushengine_texture_02.png" />
@@ -407,12 +397,12 @@ mode with a strength of 1.</p>
 <img alt="../../../_images/Krita_2_9_brushengine_texture_06.png" src="../../../_images/Krita_2_9_brushengine_texture_06.png" />
 </dd>
 </dl>
-<p>Brightness and Contrast</p>
+<p>亮度和對比度</p>
 <div class="versionadded">
 <p><span class="versionmodified added">3.3.1 版新加入: </span>Adjust the pattern with a simple brightness/contrast filter to make it easier to use. Because Subtract and Multiply work differently, it's recommended to use different values with each:</p>
 <img alt="../../../_images/Krita_3_1_brushengine_texture_07.png" src="../../../_images/Krita_3_1_brushengine_texture_07.png" /></div>
 <div class="versionadded">
-<p><span class="versionmodified added">4.4 版新加入: </span>Neutral Point adjustment:</p>
+<p><span class="versionmodified added">4.4 版新加入: </span>中性點調整：</p>
 </div>
 <dl class="simple">
 <dt>中性點</dt><dd><p>Adjust the gray value that is considered neutral in the texture.  0.5 keeps the texture as is; higher values make the texture darker, and lower values make the texture lighter.  Works a bit differently from the brightness option, and is mostly useful to adjust existing textures to work well with Lightness Map and Gradient Map modes (though it can have applications with the other two modes).</p>
@@ -428,7 +418,7 @@ mode with a strength of 1.</p>
 <img alt="../../../_images/Krita_2_9_brushengine_texture_03.png" src="../../../_images/Krita_2_9_brushengine_texture_03.png" />
 <div class="admonition seealso">
 <p class="admonition-title">也參考</p>
-<p><a class="reference external" href="https://www.davidrevoy.com/article107/textured-brush-in-floss-digital-painting">David Revoy describing the texture feature (old)</a>.</p>
+<p><a class="reference external" href="https://www.davidrevoy.com/article107/textured-brush-in-floss-digital-painting">David Revoy 對紋理功能的介紹 (舊版)</a>。</p>
 </div>
 </section>
 </section>
@@ -456,7 +446,7 @@ mode with a strength of 1.</p>
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>4bc9e9f</code>
+          修訂版本 <code>1c46744</code>
         </span>
       
 

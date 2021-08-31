@@ -35,7 +35,7 @@ Applies to
     Canvas
         Crops only the canvas, all layers and frames are left alone.
     Layer
-        Crops only the current layer and it's animation frames.
+        Crops only the current layer and its animation frames.
     Frame
         Crops only the current animation frame.
 

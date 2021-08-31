@@ -33,7 +33,7 @@ Change the brush-tip to ‘Bokeh’ and check ‘overlay’ (you will want to pl
 .. image:: /images/brush-tips/Krita-brushtips-bokeh_03.png
     :alt: Choosing the brush tip for the bokeh effect.
 
-Then make a new layer over your drawing, set that to ‘lighter color’ (it’s under lighter category) and painter over it with you brush.
+Then make a new layer over your drawing, set that to ‘lighter color’ (it’s under lighter category) and painter over it with your brush.
 
 .. image:: /images/brush-tips/Krita-brushtips-bokeh_04.png
     :alt: Paint the bokeh circles on the background.

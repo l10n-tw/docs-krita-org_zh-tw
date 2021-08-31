@@ -33,7 +33,7 @@ Making such a tip is actually quite easy:
 4. :kbd:`f5` to call up the brush settings. There, go to the :menuselection:`Brush tip --> Predefined` tab, and select :guilabel:`Clipboard`.
 5. In the popup, give it any name you want, and then make sure to **untick** :guilabel:`Create Mask From Color` (as that would make the lighter colors transparent). Press ok.
 6. Then select the new brush tip. Set :guilabel:`Brush mode` to :guilabel:`Gradient Map`, and adjust other brush settings like :guilabel:`Spacing`.
-7. Draw with you brush. Switching the active gradient in the toolbar allows you to use different colors. The :guilabel:`Fore to Background` gradient is especially useful here, as it always uses the currently selected fore and background color.
+7. Draw with your brush. Switching the active gradient in the toolbar allows you to use different colors. The :guilabel:`Fore to Background` gradient is especially useful here, as it always uses the currently selected fore and background color.
 
 .. figure:: /images/brush-tips/gradient_map_tips.png
    :alt: A selection of different brush tips and their gradient map results.
@@ -48,4 +48,4 @@ With :guilabel:`Rotation` to mapped to :guilabel:`Drawing angle`, you can easily
 .. figure:: /images/brush-tips/gradient_map_brush_tip_flowers_patterned.png
    :alt: Example showing both gradient map on the brush tip and on the pattern.
 
-The texture option also has the ability to map it's greys to a texture. Combining both these gradient map functions together with the strength parameter to switch between either, and you can make cool results like the above.
+The texture option also has the ability to map its greys to a texture. Combining both these gradient map functions together with the strength parameter to switch between either, and you can make cool results like the above.

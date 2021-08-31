@@ -134,7 +134,7 @@ Show on-canvas popup messages
 Enable Hi-DPI support
     Attempt to use the Hi-DPI support. It is an option because we are still experiencing bugs on Windows.
 (Hi-DPI) Enable fractional scale factor
-    .. versionadded:: 5.0 Allow the Hi-DPI support to use fractional (not multiples of 100%) display scaling. If you uses a fractional display scaling, this option can make the interface of Krita match the interface size of the rest of your system, but it may cause some visual artifacts.
+    .. versionadded:: 5.0 Allow the Hi-DPI support to use fractional (not multiples of 100%) display scaling. If you use a fractional display scaling, this option can make the interface of Krita match the interface size of the rest of your system, but it may cause some visual artifacts.
 
 Allow only one instance of Krita
     An instance is a single entry in your system's task manager. Turning this option makes sure that Krita will check if there's an instance of Krita open already when you instruct it to open new documents, and then have your documents opened in that single instance. There's some obscure uses to allowing multiple instances, but if you can't think of any, just keep this option on.

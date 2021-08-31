@@ -15,7 +15,7 @@
 \*.heif and \*.avif
 ===================
 
-The High Efficiency Image Format (``*.heif``, ``*.heic``), and it's cousin, AV1 Image Format (``*.avif``) are formats which use video codecs (``H264``, ``H265`` and ``AV1``) to store their data. They are more and more popular with mobile phones as their default image file format, and ``*.avif`` is to be natively supported by all web browsers within the next few years.
+The High Efficiency Image Format (``*.heif``, ``*.heic``), and its cousin, AV1 Image Format (``*.avif``) are formats which use video codecs (``H264``, ``H265`` and ``AV1``) to store their data. They are more and more popular with mobile phones as their default image file format, and ``*.avif`` is to be natively supported by all web browsers within the next few years.
 
 Krita supports saving :ref:`model_gray` and :ref:`model_rgb` images to these formats. Furthermore, it can save 8 bit, will save 16 bit integer as 12 bit, and can save 16 and 32 bit float as 12 bit, with an HDR color space.
 
@@ -31,7 +31,7 @@ Images that are HDR images, so the ones that have the Perceptual Quantizer, Hybr
 However, Hybrid Log Gamma needs an extra conversion step inbetween, as Krita currently does not support sending HLG data to the display. For this :dfn:`Scene Linear to Display Linear` conversion, it would need to know your :dfn:`display gamma` and :dfn:`maximum brightness`. The default brightness and gamma values are the ones used for a HLG to PQ conversion, and probably your best bet when your monitor is able to display Krita's HDR. When exporting this image with HLG, it's recommended to reuse the same values for the reverse OOTF there.
 
 Apply Hybrid Log Gamma OOTF
-    Whether to apply the extra conversion step. This will convert scene linear values to display linear, and thus it's necessity is completely dependant on your HDR workflow. If in doubt, apply.
+    Whether to apply the extra conversion step. This will convert scene linear values to display linear, and thus it's necessity is completely dependent on your HDR workflow. If in doubt, apply.
 Gamma
     Approximate display gamma. Default value is 1.2 for conversion to PQ.
 Brightness
@@ -46,7 +46,7 @@ Lossy Advanced Settings
     Quality
         Determines how much the encoder should prioritize quality over compression. Higher values look better, but lower values have a lower file size.
 Chroma
-    Chroma Subsampling settings. Humans are more sensitive to the brightness of an image than it's colorfulness, so halving the colors of an image can be a very useful way to compress an image. This is best used with images that have few sharp contrasts, as that is where the reduced resolution is most obvious.
+    Chroma Subsampling settings. Humans are more sensitive to the brightness of an image than its colorfulness, so halving the colors of an image can be a very useful way to compress an image. This is best used with images that have few sharp contrasts, as that is where the reduced resolution is most obvious.
 
     420
         The brightness of the image will be at full resolution, while the colorfulness will be halved in both dimensions.
@@ -78,7 +78,7 @@ Space:
     No Changes, Clip
         The image will be converted plainly to 12bit integer, and values that are out of bounds are clipped, the ICC profile will be embedded.
 Apply reverse Hybrid Log Gamma OOTF
-    Whether to apply the extra conversion step. It's necessity is completely dependant on your HDR workflow. If in doubt, apply, always apply when you've imported an image with OOTF option enabled.
+    Whether to apply the extra conversion step. It's necessity is completely dependent on your HDR workflow. If in doubt, apply, always apply when you've imported an image with OOTF option enabled.
 Gamma
     Approximate display gamma. Default value is 1.2 for conversion to PQ.
 Brightness

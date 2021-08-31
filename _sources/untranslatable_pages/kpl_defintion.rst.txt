@@ -13,7 +13,7 @@
 The Krita Palette format KPL
 ============================
 
-There's been a number of color swatch definitions over the years. To ensure we can store color managed color, as well as store other metadata we use, Krita has it's own color palette format, KPL.
+There's been a number of color swatch definitions over the years. To ensure we can store color managed color, as well as store other metadata we use, Krita has its own color palette format, KPL.
 
 This document is a technical description of the format.
 

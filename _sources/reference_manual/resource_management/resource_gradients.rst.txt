@@ -75,7 +75,7 @@ Creating stop gradients is very straight forward. Following is a breakdown of th
    * Use the |mousescroll| or the :kbd:`Left` and :kbd:`Right` keys to move the selected stop. If you also press :kbd:`Shift` the increment will be smaller.
    * Use :kbd:`Ctrl` + |mousescroll| or :kbd:`Ctrl + Left` and :kbd:`Ctrl + Right` to select the previous or next stop.
 
-6. :dfn:`Color type` - Whith these three buttons you can select the type of color used by the selected stop (Foreground, Background or custom).
+6. :dfn:`Color type` - With these three buttons you can select the type of color used by the selected stop (Foreground, Background or custom).
 7. :dfn:`Color button` - If the selected stop uses a custom color then you can use this button to open a color dialog and change the color.
 8. :guilabel:`Flip gradient` - With this button you can reverse the order of the stops in the gradient.
 9. :guilabel:`Sort stops by value` - Clicking this button will sort the stops by its value.
@@ -140,7 +140,7 @@ General UI Breakdown
    4. :dfn:`Handle actions area` - In this area will appear some actions you can perform on the selected handle. They vary depending on the type of handle selected.
    5. :guilabel:`Flip gradient` - With this button you can reverse the order of the segments (and their start and end colors) in the gradient.
    6. :guilabel:`Distribute segments evenly` - Clicking this button will make all the segments have the same amount of space.
-   7. :dfn:`Gradient slider` - This :dfn:`slider` is the main part of the editor, where the gradient preview is shown and where you can perform some basic operations to change the gradient. These operations basicaly make changes to the different handles and are explained in the following sections. You can change the selected handle by pressing :kbd:`Ctrl` and using |mousescroll| or by pressing :kbd:`Ctrl + Left` and :kbd:`Ctrl + Right`.
+   7. :dfn:`Gradient slider` - This :dfn:`slider` is the main part of the editor, where the gradient preview is shown and where you can perform some basic operations to change the gradient. These operations basically make changes to the different handles and are explained in the following sections. You can change the selected handle by pressing :kbd:`Ctrl` and using |mousescroll| or by pressing :kbd:`Ctrl + Left` and :kbd:`Ctrl + Right`.
    8. :dfn:`Handle properties area` - In this area will appear some widgets you can use to change the different properties of the selected handle.
 
 Segment Handle UI Breakdown
@@ -163,7 +163,7 @@ Segment Handle UI Breakdown
    6. :guilabel:`Left color` - In this row of widgets you can change the properties related to the start of the segment:
 
       * With the first three buttons you can set the type of color used (Foreground, Background or custom).
-      * Next to the color type buttons will appear a check box when the color type is Foreground or Background that you can use to stablish that the color should also be transparent. If the color type is custom, then instead a color button and an opacity slider will appear to let you choose a specific color.
+      * Next to the color type buttons will appear a check box when the color type is Foreground or Background that you can use to establish that the color should also be transparent. If the color type is custom, then instead a color button and an opacity slider will appear to let you choose a specific color.
       * Lastly there is a position slider you can use to fine-tune the start position of the segment. This also changes the end position of the previous segment.
 
    7. :guilabel:`Right color` - In this row of widgets you can change the properties related to the end of the segment. They are pretty much the same as the ones explained in the previous point.
@@ -187,7 +187,7 @@ Stop Handle UI Breakdown
    4. :guilabel:`Left Color` - In this row of widgets you can change the properties related to the end of the segment on the left of the stop:
 
       * With the first three buttons you can set the type of color used (Foreground, Background or custom).
-      * Next to the color type buttons will appear a check box when the color type is Foreground or Background that you can use to stablish that the color should also be transparent. If the color type is custom, then instead a color button and an opacity slider will appear to let you choose a specific color.
+      * Next to the color type buttons will appear a check box when the color type is Foreground or Background that you can use to establish that the color should also be transparent. If the color type is custom, then instead a color button and an opacity slider will appear to let you choose a specific color.
 
    5. :guilabel:`Right color` - In this row of widgets you can change the properties related to the start of the segment on the right of the stop. They are pretty much the same as the ones explained in the previous point.
    6. :guilabel:`Link colors` - If this button is checked then changing the properties on the *left color" area will also change the properties on the *right color* area and viceversa. Check it if you want the two colors to be synchronized.

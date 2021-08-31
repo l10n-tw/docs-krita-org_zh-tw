@@ -1,6 +1,6 @@
 .. meta::
    :description property=og\:description:
-        Tutorial on how to create a presure sensitive brush with a bristle effect.
+        Tutorial on how to create a pressure sensitive brush with a bristle effect.
 
 .. metadata-placeholder
 
@@ -14,7 +14,7 @@
 Heightmap Bristle Brush Tips
 ============================
 
-When looking at oil paintings, especially the impressionistic ones, it is hard not to be in awe of the effect the visible brush strokes have on the the painting. While a digital painting program is a fundamentally different medium from the oil paint one, we can utilize some tricks to get visible brush strokes.
+When looking at oil paintings, especially the impressionistic ones, it is hard not to be in awe of the effect the visible brush strokes have on the painting. While a digital painting program is a fundamentally different medium from the oil paint one, we can utilize some tricks to get visible brush strokes.
 
 The simplest way to get a visible brush stroke is to select a :ref:`predefined brush <predefined_brush_tip>`. If you select one with several separate dots, and lower the spacing to 0.02, you can get a sort of brush stroke effect. But we can do better, for example, how about a brush which gives more coverage, the harder you press?
 
@@ -24,13 +24,13 @@ The simplest way to get a visible brush stroke is to select a :ref:`predefined b
 Using the sharpness option.
 ---------------------------
 
-We can achieve that effect with the sharpness option. Consider the following brush tip. We've used the gradient tool to draw two concentric foreground-to-transparent gradients side by side on a white-filled layer. Then we used the elliptical selection tool with :menuselection:`Edit --> Copy Merged` to cut out an ellipse shape, and then used the clipboard option in the predfined brush chooser to create a new brush.
+We can achieve that effect with the sharpness option. Consider the following brush tip. We've used the gradient tool to draw two concentric foreground-to-transparent gradients side by side on a white-filled layer. Then we used the elliptical selection tool with :menuselection:`Edit --> Copy Merged` to cut out an ellipse shape, and then used the clipboard option in the predefined brush chooser to create a new brush.
 
 .. figure:: /images/brush-tips/sharpness_bristle_examples_1.png
    :alt: Simple brush with many gradients as a stroke.
 
 
-By default this isn't a very interesting brush. But when selecting the :guilabel:`Sharpness` option available in the pixel brush engine, it gives a totally different result:
+By default, this isn't a very interesting brush. But when selecting the :guilabel:`Sharpness` option available in the pixel brush engine, it gives a totally different result:
 
 .. figure:: /images/brush-tips/sharpness_bristle_examples_2.png
    :alt: Image as above but then with sharpness option enabled.
@@ -61,9 +61,9 @@ Then select all, copy, and use the clipboard function in the predefined brushes 
 Now select the brush and set the :guilabel:`Brush mode` to :guilabel:`Lightness Map`, and draw with a color that isn't black for the best effect.
 
 .. figure:: /images/brush-tips/sharpness_lightness_examples.png
-   :alt: Image showing various lightnes map strokes.
+   :alt: Image showing various lightness map strokes.
    
-   A variety of brushes made with the lightness method. You can adjust the brush by changing the neutral tone, brightness and contrast in the brush settings, or by adjusting these before hand while making the brush. A good lightness brush has both a bit of darkness and brightness.
+   A variety of brushes are made with the lightness method. You can adjust the brush by changing the neutral tone, brightness and contrast in the brush settings, or by adjusting these beforehand while making the brush. A good lightness brush has both a bit of darkness and brightness.
 
 .. tip::
 
@@ -85,7 +85,7 @@ You can make brush tips that are :ref:`animated <animated_brush_tips>`.
 
 If we take our example brush, and duplicate that layer 16 times or so.
 
-Now, for each layer, start at the top, going to the bottom, you will want to apply the :menuselection:`Filter --> Adjust --> Threshold`, with different values. Starting from 255, and then each time, decrease the value by 16. So, the topmost layer should be at 255, next layer 240, the layer after that 224 and so forth. Eventually you should have each layer have less coverage that the one above that. Now, go to the predefined brushes tab, and select :guilabel:`Stamp`. There select :guilabel:`Animated` for :guilabel:`Style` and :guilabel:`Pressure` for :guilabel:`Selection Mode`.
+Now, for each layer, start at the top, going to the bottom, you will want to apply the :menuselection:`Filter --> Adjust --> Threshold`, with different values. Starting from 255, and then each time, decrease the value by 16. So, the topmost layer should be at 255, next layer 240, the layer after that 224 and so forth. Eventually, you should have each layer have less coverage than the one above that. Now, go to the predefined brushes tab, and select :guilabel:`Stamp`. There select :guilabel:`Animated` for :guilabel:`Style` and :guilabel:`Pressure` for :guilabel:`Selection Mode`.
 
 If everything went right, you now have a brush-tip that can be used with the color smudge brush. For a brush that uses the gradient map, or the lightness mode, a similar principle applies, except you first |mouseright| for the context menu, then select :menuselection:`Split Alpha --> Alpha into Mask`, and then only apply the threshold to the transparency mask. A softer result can be made by using the :menuselection:`Filter --> Adjust --> Levels` or :menuselection:`Filter --> Adjust --> Curves` to isolate the pixels for the given amount of pressure.
 

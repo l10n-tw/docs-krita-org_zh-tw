@@ -195,9 +195,3 @@ double-click detection.
 
 To fix this, go to the Wacom settings utility and lower the double click
 sensitivity.
-
-Supported Tablets
------------------
-
-Supported tablets are the ones of which Krita developers have a version
-themselves, so they can reliably fix bugs with them. :ref:`We maintain a list of those here <list_supported_tablets>`.

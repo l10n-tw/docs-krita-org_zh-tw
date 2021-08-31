@@ -111,7 +111,7 @@ Reverse
 Dither
     .. versionadded:: 5.0
     
-    8 bits of color depth is not enough depth to make a truly smooth gradient. This option eleviates this by adding blue noise style dithering to gradients in 8 bit.
+    8 bits of color depth is not enough depth to make a truly smooth gradient. This option alleviates this by adding blue noise style dithering to gradients in 8 bit.
 
     .. figure:: /images/gradients/krita_gradient_dithering.svg
        :alt: Example showing gradients with and without dithering.

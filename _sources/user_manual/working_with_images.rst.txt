@@ -207,7 +207,7 @@ Resizing the image
 ~~~~~~~~~~~~~~~~~~
 
 :guilabel:`Scale Image to New Size...` allows you to resize the whole image. Also,
-importantly, this is where you can change the resolution or ;dfn:`upres` your
+importantly, this is where you can change the resolution or :dfn:`upres` your
 image. So for instance, if you were initially working at 72 PPI to block
 in large shapes and colors, images, etc... And now you want to really get
 in and do some detail work at 300 or 400 PPI this is where you would make
@@ -268,7 +268,7 @@ Create Copy from Current Image
     Existing Document as Untitled Document...`, but then with already
     opened files.
 Save Incremental Version
-    Saves the current image as :file:`filename'\_XXX.kra` and switches the
+    Saves the current image as :file:`filename\_XXX.kra` and switches the
     current document to it.
 Save Incremental Backup
     Copies and renames the last saved version of your file to a backup file and saves your document under the original name.

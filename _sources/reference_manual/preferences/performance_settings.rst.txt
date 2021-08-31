@@ -131,8 +131,8 @@ Instant Preview
 Use in-stack preview in Transform Tool
     Whether to use a floating preview for the :ref:`transform_tool`, or whether to have it rendered in place.
 Force instant preview in Transform Tool
-    Turns on :ref:`instant_preview` for the :ref:`transform_tool` even when it's off in :menuselection:`Wiew --> Instant preview`.
+    Turns on :ref:`instant_preview` for the :ref:`transform_tool` even when it's off in :menuselection:`View --> Instant preview`.
 Force instant preview in Move Tool
-    Turns on :ref:`instant_preview` for the :ref:`move_tool` even when it's off in :menuselection:`Wiew --> Instant preview`.
+    Turns on :ref:`instant_preview` for the :ref:`move_tool` even when it's off in :menuselection:`View --> Instant preview`.
 Force instant preview in Filters
     Turns on :ref:`instant_preview` for the :ref:`filters` even when it's off in :menuselection:`View --> Instant preview`.
