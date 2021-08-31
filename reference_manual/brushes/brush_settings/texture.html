@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-08-31T10:25:52" />
+  <meta property="og:article:modified_time" content="2021-08-31T20:26:09" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="Krita 中的紋理筆刷設定選項。" name="description" />
 
@@ -278,7 +278,7 @@
 <dt>水平和垂直偏移</dt><dd><p>筆刷的偏移量，每筆畫皆是新的隨機偏移量。</p>
 <img alt="../../../_images/Krita_2_9_brushengine_texture_04.png" src="../../../_images/Krita_2_9_brushengine_texture_04.png" />
 </dd>
-<dt>紋理模式</dt><dd><p>所有紋理模式都會影響透明度通道，只有*亮度映射*和*漸變映射*例外，它們影響顏色通道。</p>
+<dt>紋理模式</dt><dd><p>所有紋理模式都會影響透明度通道，只有<em>亮度映射</em>和<em>漸變映射</em>例外，它們影響顏色通道。</p>
 <img alt="../../../_images/Krita_2_9_brushengine_texture_01.png" src="../../../_images/Krita_2_9_brushengine_texture_01.png" />
 <img alt="../../../_images/Krita_4_4_brushengine_texture_lightness_gradient_demo.png" src="../../../_images/Krita_4_4_brushengine_texture_lightness_gradient_demo.png" />
 <p>下圖說明中，示例筆畫從左側的低強度到右側的高強度繪制 。上圖使用硬筆尖，下圖使用軟筆尖。在筆畫的左側有兩個無紋理的點，僅供比較。</p>
@@ -310,7 +310,7 @@
 <dt>覆蓋</dt><dd><div class="versionadded">
 <p><span class="versionmodified added">5.0 版新加入.</span></p>
 </div>
-<p>紋理會被柔和應用到筆尖的半透明區域。此模式類似於*色彩增值*的效果，但能夠在效果強度較高時填滿筆畫的全部區域。</p>
+<p>紋理會被柔和應用到筆尖的半透明區域。此模式類似於<em>色彩增值</em>的效果，但能夠在效果強度較高時填滿筆畫的全部區域。</p>
 <img alt="../../../_images/overlay.png" src="../../../_images/overlay.png" />
 </dd>
 <dt>加亮色彩 (減淡)</dt><dd><div class="versionadded">
@@ -328,13 +328,13 @@
 <dt>線性加亮 (減淡)</dt><dd><div class="versionadded">
 <p><span class="versionmodified added">5.0 版新加入.</span></p>
 </div>
-<p>類似於*加亮色彩*，但筆尖的不透明度進一步提高。</p>
+<p>類似於<em>加亮色彩</em>，但筆尖的不透明度進一步提高。</p>
 <img alt="../../../_images/linear_dodge.png" src="../../../_images/linear_dodge.png" />
 </dd>
 <dt>線性加深</dt><dd><div class="versionadded">
 <p><span class="versionmodified added">5.0 版新加入.</span></p>
 </div>
-<p>效果類似於*加深*模式，但不透明度進一步降低。它的效果也類似於紋理顏色反相後的*減去*模式。</p>
+<p>效果類似於<em>加深</em>模式，但不透明度進一步降低。它的效果也類似於紋理顏色反相後的<em>減去</em>模式。</p>
 <img alt="../../../_images/linear_burn.png" src="../../../_images/linear_burn.png" />
 </dd>
 <dt>實色混合 (Photoshop)</dt><dd><div class="versionadded">
@@ -346,35 +346,31 @@
 <dt>實色混合、更柔和 (Photoshop)</dt><dd><div class="versionadded">
 <p><span class="versionmodified added">5.0 版新加入.</span></p>
 </div>
-<p>此模式嘗試模擬*實色混合 (Photoshop)*，同時產生更柔和、抗鋸齒的邊緣。</p>
+<p>此模式嘗試模擬<em>實色混合 (Photoshop)</em>，同時產生更柔和、抗鋸齒的邊緣。</p>
 <img alt="../../../_images/hard_mix_softer_ps.png" src="../../../_images/hard_mix_softer_ps.png" />
 </dd>
 <dt>高度</dt><dd><div class="versionadded">
 <p><span class="versionmodified added">5.0 版新加入.</span></p>
 </div>
-<p>此模式類似於*減去*模式，但效果強度數值導致的筆尖變化范圍更加豐富。與*減去*模式不同，它單筆即可達到完全填滿筆尖的效果。</p>
+<p>此模式類似於<em>減去</em>模式，但效果強度數值導致的筆尖變化范圍更加豐富。與<em>減去</em>模式不同，它單筆即可達到完全填滿筆尖的效果。</p>
 <img alt="../../../_images/height.png" src="../../../_images/height.png" />
 </dd>
 <dt>線性高度</dt><dd><div class="versionadded">
 <p><span class="versionmodified added">5.0 版新加入.</span></p>
 </div>
-<p>與*高度*模式相同，但結合了*色彩增值*模式的特性以實現更柔和的過渡。</p>
+<p>與<em>高度</em>模式相同，但結合了<em>色彩增值</em>模式的特性以實現更柔和的過渡。</p>
 <img alt="../../../_images/linear_height.png" src="../../../_images/linear_height.png" />
 </dd>
 <dt>高度 (Photoshop)</dt><dd><div class="versionadded">
 <p><span class="versionmodified added">5.0 版新加入.</span></p>
 </div>
-<p>As the <em>height</em> mode, this mode is similar to the <em>subtract</em> mode but with a higher range of possibilities when applying
-the strength. Contrary to <em>subtract</em>, it allows to achieve full coverage with one stroke. This mode tries to
-emulate the height mode present in Photoshop and it only differs from Krita's <em>height</em> mode on how the strength
-is mapped in the algorithm. When using a strength value of 0.1 the results are almost identical to the <em>subtract</em>
-mode with a strength of 1.</p>
+<p>與<em>高度</em>模式一樣，此模式類似於<em>減去</em>模式，但應用效果強度數值時筆尖的變化範圍更加豐富。與<em>減去</em>模式不同的是它單筆即可達到完全填滿筆尖的效果。此模式嘗試模仿 Photoshop 中的高度模式，它與 Krita 原生的<em>高度</em>模式的區別在於演算法中的映射效果強度。當效果強度數值為 0.1 時，其效果基本與<em>減去</em>模式下效果強度數值為 1 時相同。</p>
 <img alt="../../../_images/height_ps.png" src="../../../_images/height_ps.png" />
 </dd>
 <dt>線性高度 (Photoshop)</dt><dd><div class="versionadded">
 <p><span class="versionmodified added">5.0 版新加入.</span></p>
 </div>
-<p>與*高度 (Photoshop)*相同，但結合*色彩增值*以實現更柔和的過渡。</p>
+<p>與<em>高度 (Photoshop)</em>相同，但結合<em>色彩增值</em>以實現更柔和的過渡。</p>
 <img alt="../../../_images/linear_height_ps.png" src="../../../_images/linear_height_ps.png" />
 </dd>
 </dl>
@@ -390,7 +386,7 @@ mode with a strength of 1.</p>
 </dl>
 <img alt="../../../_images/Krita_2_9_brushengine_texture_02.png" src="../../../_images/Krita_2_9_brushengine_texture_02.png" />
 </dd>
-<dt>截斷範圍</dt><dd><p>Cutoff is... the grayscale range that you can limit the texture to. This also affects the limit takes by the strength. In the below example, we move from the right arrow moved close to the left one, resulting in only the darkest values being drawn. After that, three images with larger range, and underneath that, three ranges with the left arrow moved, result in the darkest values being cut away, leaving only the lightest. The last example is the pattern without cutoff.</p>
+<dt>截斷範圍</dt><dd><p>截斷範圍是限制紋理使用的灰階範圍，同時還控制效果強度的輸入範圍。在下方的第一行的第一張圖中，我們把右邊的白色三角拖動到左邊的黑色三角附近，所以只有明度最暗的部分被繪制了出來。接下來的三張圖片的範圍更寬一些。第二行的前面三張圖的黑色三角被向右拖動，所以明度最暗的部分被忽略了，之後明度較亮的部分被繪制了出來。最後一張圖並未使用截斷功能。</p>
 <img alt="../../../_images/Krita_2_9_brushengine_texture_07.png" src="../../../_images/Krita_2_9_brushengine_texture_07.png" />
 </dd>
 <dt>圖案反轉</dt><dd><p>反轉圖案。</p>
@@ -399,21 +395,21 @@ mode with a strength of 1.</p>
 </dl>
 <p>亮度和對比度</p>
 <div class="versionadded">
-<p><span class="versionmodified added">3.3.1 版新加入: </span>Adjust the pattern with a simple brightness/contrast filter to make it easier to use. Because Subtract and Multiply work differently, it's recommended to use different values with each:</p>
+<p><span class="versionmodified added">3.3.1 版新加入: </span>使用簡單的亮度／對比度過濾器調整圖案，使其更易於使用。因為減去和色彩增值的工作方式不同，所以建議為它們使用不同的數值：</p>
 <img alt="../../../_images/Krita_3_1_brushengine_texture_07.png" src="../../../_images/Krita_3_1_brushengine_texture_07.png" /></div>
 <div class="versionadded">
 <p><span class="versionmodified added">4.4 版新加入: </span>中性點調整：</p>
 </div>
 <dl class="simple">
-<dt>中性點</dt><dd><p>Adjust the gray value that is considered neutral in the texture.  0.5 keeps the texture as is; higher values make the texture darker, and lower values make the texture lighter.  Works a bit differently from the brightness option, and is mostly useful to adjust existing textures to work well with Lightness Map and Gradient Map modes (though it can have applications with the other two modes).</p>
+<dt>中性點</dt><dd><p>調整被視作中性點的灰階值的位置。0.5 將保持原圖紋理不變。調高會讓紋理變暗，調低會讓紋理變亮，與亮度映射模式下的效果略有不同。它主要用來配合亮度映射和漸變映射模式使用，對紋理圖像的效果進行微調（儘管它可以具有其他兩種模式的應用）。</p>
 </dd>
 </dl>
 </section>
 <section id="strength">
 <h2>強度<a class="headerlink" href="#strength" title="本標題的永久連結">¶</a></h2>
-<p>This allows you to set the texture to Sensors. It will use the cutoff to continuously draw lighter values of the texture (making the result darker).</p>
+<p>此項控制感測器對紋理的影響。它會使用截止值使其連續繪制的區域深淺保持一致 (只在力度增大時加深顏色)。</p>
 <div class="versionadded">
-<p><span class="versionmodified added">4.4 版新加入: </span>For Lightness Map and Gradient Map modes, <span class="guilabel">Strength</span> controls how much of the texture is applied compared to how much of the selected paint color comes through.</p>
+<p><span class="versionmodified added">4.4 版新加入: </span>在亮度映射和漸變映射模式下，<span class="guilabel">Strength</span>滑動條用於控制應用多少紋理與多少選定的前景色通過。</p>
 </div>
 <img alt="../../../_images/Krita_2_9_brushengine_texture_03.png" src="../../../_images/Krita_2_9_brushengine_texture_03.png" />
 <div class="admonition seealso">
