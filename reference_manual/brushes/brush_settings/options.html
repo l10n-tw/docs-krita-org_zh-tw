@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-08-31T20:26:09" />
+  <meta property="og:article:modified_time" content="2021-09-01T09:26:00" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="Krita 的筆刷引擎選項概覽。" name="description" />
 
@@ -269,7 +269,7 @@
 <section id="airbrush">
 <span id="option-airbrush"></span><span id="index-0"></span><h2>噴槍<a class="headerlink" href="#airbrush" title="本標題的永久連結">¶</a></h2>
 <img alt="../../../_images/Krita_2_9_brushengine_airbrush.png" src="../../../_images/Krita_2_9_brushengine_airbrush.png" />
-<p>If you hold the brush still, but are still pressing down, this will keep adding color onto the canvas. The lower the rate, the quicker the color gets added.</p>
+<p>勾選噴槍選項後，若按下筆刷原地不動，將會繼續在畫布上添加顏色。頻率設定越高，顏色添加得越快。</p>
 </section>
 <section id="mirror">
 <span id="option-mirror"></span><span id="index-1"></span><h2>鏡射<a class="headerlink" href="#mirror" title="本標題的永久連結">¶</a></h2>
@@ -291,20 +291,20 @@
 <img alt="../../../_images/Krita_Pixel_Brush_Settings_Rotation.png" src="../../../_images/Krita_Pixel_Brush_Settings_Rotation.png" />
 <p>在上面的例子中，參數的幾個應用。</p>
 <ol class="arabic simple">
-<li><p>Drawing Angle -- A common one, usually used in combination with rake-type brushes. Especially effect because it does not rely on tablet-specific sensors. Sometimes, Tilt-Direction or Rotation is used to achieve a similar-more tablet focused effect, where with Tilt the 0° is at 12 o'clock, Drawing angle uses 3 o'clock as 0°.</p></li>
-<li><p>Fuzzy -- Also very common, this gives a nice bit of randomness for texture.</p></li>
-<li><p>Distance -- With careful editing of the Sensor curve, you can create nice patterns.</p></li>
-<li><p>Fade -- This slowly fades the rotation from one into another.</p></li>
-<li><p>Pressure -- An interesting one that can create an alternative looking line.</p></li>
+<li><p>筆跡方向：這是一個比較常用的傳感測器，經常和耙式筆刷配合使用。它不需要數位板就能生效。壓感筆的筆身傾斜和筆身旋轉有時候也會被用來得到類似的效果，但筆身傾斜把 12 點鐘方向作為 0°，而筆跡走向把 3 點鐘方向作為 0°。</p></li>
+<li><p>隨機度：也很常用，這為紋理提供了一些隨機變化。</p></li>
+<li><p>距離：通過精心編輯感測器曲線，您可以創建好看的圖案。</p></li>
+<li><p>淡化：讓旋轉效果的過渡更加平滑。</p></li>
+<li><p>壓力：可以有趣的畫出另一種風格的筆畫。</p></li>
 </ol>
 </section>
 <section id="lightness-strength">
 <span id="option-lightness-strength"></span><h2>亮度強度<a class="headerlink" href="#lightness-strength" title="本標題的永久連結">¶</a></h2>
 <div class="versionadded">
-<p><span class="versionmodified added">4.4 版新加入: </span>This allows you to affect the Lightness Strength of your brush tip with Sensors. Only available with brush tips in Lightness Map mode.</p>
+<p><span class="versionmodified added">4.4 版新加入: </span>這允許您使用感測器影響筆尖的亮度強度。僅適用於亮度映射模式下的筆尖。</p>
 </div>
 <img alt="../../../_images/lightness_strength_demo.png" src="../../../_images/lightness_strength_demo.png" />
-<p>This changes the contrast of the brush tip, so that at 100%, the full effect of the lightness variation is visible in the brush, while at 0% the brush paints without any lightness variation.  This allows a variable impasto effect with lightness brushes, and for variation in texture stamp brushes that use a lightness-enabled brush tip.</p>
+<p>此選項改變筆尖的對比度。在 100% 強度下，筆尖的整個變化範圍都得到保留，而在 0 % 強度下，筆尖沒有任何亮度變化。在亮度映射模式下配合帶有紋理的筆尖使用讓筆畫呈現多變的厚塗效果。</p>
 </section>
 <section id="scatter">
 <span id="option-scatter"></span><h2>分散<a class="headerlink" href="#scatter" title="本標題的永久連結">¶</a></h2>
@@ -320,7 +320,7 @@
 <section id="sharpness">
 <span id="option-sharpness"></span><h2>銳利度<a class="headerlink" href="#sharpness" title="本標題的永久連結">¶</a></h2>
 <img alt="../../../_images/Krita_Pixel_Brush_Settings_Sharpness.png" src="../../../_images/Krita_Pixel_Brush_Settings_Sharpness.png" />
-<p>Puts a threshold filter over the brush mask. This can be used for brush like strokes, but it also makes for good pixel art brushes.</p>
+<p>在筆刷遮罩之上應用的一個閾值過濾器。它既可用於類似筆觸的筆刷，也可用於像素藝術筆刷。</p>
 <dl class="simple">
 <dt>強度</dt><dd><p>控制閾值，可由下面的感測器控制。</p>
 </dd>
@@ -334,17 +334,17 @@
 <section id="size">
 <span id="option-size"></span><h2>大小<a class="headerlink" href="#size" title="本標題的永久連結">¶</a></h2>
 <img alt="../../../_images/Krita_Pixel_Brush_Settings_Size.png" src="../../../_images/Krita_Pixel_Brush_Settings_Size.png" />
-<p>This parameter is not the diameter itself, but rather the curve for how it's affected.</p>
-<p>So, if you want to lock the diameter of the brush, lock the Brush tip. Locking the size parameter will only lock this curve. Allowing this curve to be affected by the Sensors can be very useful to get the right kind of brush. For example, if you have trouble drawing fine lines, try to use a concave curve set to pressure. That way you'll have to press hard for thick lines.</p>
+<p>這個參數不是直徑，而是調整曲線影響筆刷大小時的手感輕重和快慢。</p>
+<p>因此，如果你想要鎖定筆刷的直徑，你應該鎖定「筆尖」選項。鎖定「大小」選項只會鎖定它的感測器曲線。你可以通過曲線來影響感測器的作用，打造具有某些特性的筆刷。例如，如果你不擅長勾畫細線，你可以把壓力曲線設為下凹的形狀，這樣你便需要更大的力量才能畫出粗線條。</p>
 <img alt="../../../_images/Krita_2_9_brushengine_size_01.png" src="../../../_images/Krita_2_9_brushengine_size_01.png" />
-<p>Also popular is setting the size to the sensor fuzzy or perspective, with the later in combination with a <a class="reference internal" href="../../../user_manual/painting_with_assistants.html#assistant-perspective"><span class="std std-ref">透視</span></a>.</p>
+<p>大小選項還有另外兩種常見用法。一種是把它映射到隨機度，這樣可以畫出輪廓不那麼均勻的線條。還有一種是把它映射到透視感測器，配合<a class="reference internal" href="../../../user_manual/painting_with_assistants.html#assistant-perspective"><span class="std std-ref">透視</span></a>輔助尺使用，可以把畫出的線條粗細也按照輔助尺來進行透視繪圖。</p>
 <img alt="../../../_images/Krita_2_9_brushengine_size_02.png" src="../../../_images/Krita_2_9_brushengine_size_02.png" />
 </section>
 <section id="softness">
 <span id="option-softness"></span><h2>柔和度<a class="headerlink" href="#softness" title="本標題的永久連結">¶</a></h2>
 <p>這允許您使用感測器影響淡化程度。</p>
 <img alt="../../../_images/Krita_2_9_brushengine_softness.png" src="../../../_images/Krita_2_9_brushengine_softness.png" />
-<p>Has a slight brush-decreasing effect, especially noticeable with soft-brush, and is overall more noticeable on large brushes.</p>
+<p>它會讓筆刷看起來輕微的變小了。越柔和越大的筆刷，效果就越明顯。</p>
 </section>
 <section id="source">
 <span id="option-source"></span><h2>來源<a class="headerlink" href="#source" title="本標題的永久連結">¶</a></h2>
@@ -366,24 +366,23 @@
 </section>
 <section id="mix">
 <span id="option-mix"></span><h2>混合<a class="headerlink" href="#mix" title="本標題的永久連結">¶</a></h2>
-<p>Allows you to affect the mix of the <a class="reference internal" href="#option-source"><span class="std std-ref">來源</span></a> color with Sensors. It will work with Plain Color and Gradient as source. If Plain Color is selected as source, it will mix between the currently selected foreground and background color. If Gradient is selected, it chooses a point on the gradient to use as painting color according to the sensors selected.</p>
+<p>此項用來調整感測器對 來源 選項的混合效果。它可以在純色和漸變兩種顏色來源下工作。如果顏色來源為純色，它將在當前選擇的前景色和背景色之間混合。如果顏色來源是漸變，則會根據感測器所選的漸變對應顏色。</p>
 <img alt="../../../_images/Krita_2_9_brushengine_mix_01.png" src="../../../_images/Krita_2_9_brushengine_mix_01.png" />
 <section id="uses">
 <h3>使用範例<a class="headerlink" href="#uses" title="本標題的永久連結">¶</a></h3>
 <img alt="../../../_images/Krita_2_9_brushengine_mix_02.png" src="../../../_images/Krita_2_9_brushengine_mix_02.png" />
 <dl class="simple">
-<dt>流向貼圖</dt><dd><p>The above example uses a <strong class="program">Krita</strong> painted flowmap in the 3D program <strong class="program">Blender</strong>.
-A brush was set to <span class="menuselection">Source ‣ Gradient</span> and <span class="menuselection">Mix ‣ Drawing angle</span>. The gradient in question contained the 360° for normal map colors. Flow maps are used in several Shaders, such as brushed metal, hair and certain river-shaders.</p>
+<dt>流向貼圖</dt><dd><p>上圖左側是 <strong class="program">Krita</strong> 繪制的流向貼圖，右邊是該貼圖在 3D 程式 <strong class="program">Blender</strong> 中的效果。筆刷選項為 <span class="menuselection">Source ‣ Gradient</span> 和 <span class="menuselection">Mix ‣ Drawing angle</span>。此處的漸變包含了 360° 的法線貼圖顏色。一些著色器需要使用流向貼圖來表現拉絲金屬、頭髮和流水效果。</p>
 </dd>
 </dl>
 </section>
 <section id="gradient">
 <span id="option-gradient"></span><h3>漸變<a class="headerlink" href="#gradient" title="本標題的永久連結">¶</a></h3>
-<p>Exactly the same as using <span class="menuselection">Source ‣ Gradient</span> with <span class="guilabel">Mix</span>, but only available for the Color Smudge Brush.</p>
+<p>效果與 <span class="menuselection">Source ‣ Gradient</span> 配合 <span class="guilabel">Mix</span> 使用時一樣，但只在顏色塗抹筆刷下可用。</p>
 <img alt="../../../_images/Krita-tutorial5-I.6-1.png" src="../../../_images/Krita-tutorial5-I.6-1.png" />
 <p>您可以：</p>
 <ul class="simple">
-<li><p>Leave the default <span class="menuselection">Foreground ‣ Background gradient</span> setting, and just change the foreground and background colors</p></li>
+<li><p>使用預設的 <span class="menuselection">Foreground ‣ Background gradient</span> 設定，然後只更改漸變中的前景色和背景色</p></li>
 <li><p>選擇更具體的漸變</p></li>
 <li><p>或製作自定義漸變。</p></li>
 </ul>
@@ -430,7 +429,7 @@ A brush was set to <span class="menuselection">Source ‣ Gradient</span> and <s
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>1c46744</code>
+          修訂版本 <code>65fdd6a</code>
         </span>
       
 
