@@ -23,6 +23,7 @@ jobs:
       run: |
         git config --local user.name github-actions[bot]
         git config --local user.email 41898282+github-actions[bot]@users.noreply.github.com
+        git fetch --unshallow
         git fetch origin trunk
         git checkout -b trunk refs/remotes/origin/trunk
         echo "HEAD (trunk) commit is $(git rev-parse HEAD)"
