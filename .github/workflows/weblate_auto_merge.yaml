@@ -25,5 +25,7 @@ jobs:
         git config --local user.email 41898282+github-actions[bot]@users.noreply.github.com
         git fetch origin trunk
         git checkout -b trunk refs/remotes/origin/trunk
-        git merge --no-ff -m"Merge weblate-stage" "$GITHUB_SHA"
+        echo "HEAD (trunk) commit is $(git rev-parse HEAD)"
+        echo "weblate-stage is ${{ github.sha }}"
+        # git merge --no-ff -m"Merge weblate-stage" "${{ github.sha }}"
         git push
