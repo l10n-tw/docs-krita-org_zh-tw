@@ -6,19 +6,19 @@ on:
       - weblate-stage
 
 jobs:
-  build_dist:
+  merge_weblate_stage:
 
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v2
-    - name: Verify that branch is same as Weblate remote
-      run: |
-        git fetch http://weblate.slat.org/git/krita-docs/0-index/
-        if [[ "$(git rev-parse FETCH_HEAD)" != "$GITHUB_SHA" ]]; then
-          echo "ERROR: Weblate HEAD is not same as pushed branch!"
-          exit 1
-        fi
+    # - name: Verify that branch is same as Weblate remote
+    #   run: |
+    #     git fetch http://weblate.slat.org/git/krita-docs/0-index/
+    #     if [[ "$(git rev-parse FETCH_HEAD)" != "$GITHUB_SHA" ]]; then
+    #       echo "ERROR: Weblate HEAD is not same as pushed branch!"
+    #       exit 1
+    #     fi
     - name: Merge into master
       run: |
         git config --local user.name github-actions[bot]
