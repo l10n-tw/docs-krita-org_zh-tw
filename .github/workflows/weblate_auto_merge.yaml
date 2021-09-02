@@ -1,0 +1,29 @@
+name: Auto merge changes from Weblate
+
+on:
+  push:
+    branches:
+      - weblate-stage
+
+jobs:
+  build_dist:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Verify that branch is same as Weblate remote
+      run: |
+        git fetch http://weblate.slat.org/git/krita-docs/0-index/
+        if [[ "$(git rev-parse FETCH_HEAD)" != "$GITHUB_SHA" ]]; then
+          echo "ERROR: Weblate HEAD is not same as pushed branch!"
+          exit 1
+        fi
+    - name: Merge into master
+      run: |
+        git config --local user.name github-actions[bot]
+        git config --local user.email 41898282+github-actions[bot]@users.noreply.github.com
+        git fetch origin master
+        git checkout -b master refs/remotes/origin/master
+        git merge -m"Merge weblate-stage" "$GITHUB_SHA"
+        git push
