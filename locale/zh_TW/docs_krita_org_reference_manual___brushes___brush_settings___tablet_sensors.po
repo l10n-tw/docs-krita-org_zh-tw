@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Krita Manual 4.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-19 22:30+0800\n"
-"PO-Revision-Date: 2021-08-29 07:05+0000\n"
+"PO-Revision-Date: 2021-09-01 09:23+0000\n"
 "Last-Translator: Solomon Hsu <solnone@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <http://weblate.slat.org/projects/"
 "krita-docs/3-reference_manual___brushes___brush_settings___tablet_sensors/"
@@ -36,7 +36,7 @@ msgstr "壓力"
 
 #: ../../reference_manual/brushes/brush_settings/tablet_sensors.rst:19
 msgid "Uses the pressure in and out values of your stylus."
-msgstr "使用觸控筆的壓力輸出和輸入值。"
+msgstr "使用觸控筆的壓力增減變化（並藉由調整曲線影響程度）。"
 
 #: ../../reference_manual/brushes/brush_settings/tablet_sensors.rst:20
 msgid "PressureIn"
@@ -47,7 +47,7 @@ msgid ""
 "Uses only pressure in values of your stylus. Previous pressure level in same "
 "stroke is overwritten *only* by applying more pressure. Lessening the "
 "pressure doesn't affect PressureIn."
-msgstr ""
+msgstr "僅感應觸控筆的壓力增量。在繪制一條筆畫的過程中，只會感應壓力的變大而無視壓力的變小。"
 
 #: ../../reference_manual/brushes/brush_settings/tablet_sensors.rst:22
 msgid "X-tilt"
@@ -56,7 +56,7 @@ msgstr "X 軸傾斜"
 #: ../../reference_manual/brushes/brush_settings/tablet_sensors.rst:23
 #: ../../reference_manual/brushes/brush_settings/tablet_sensors.rst:25
 msgid "How much the brush is affected by stylus angle, if supported."
-msgstr ""
+msgstr "觸控筆的角度（如果支持）。"
 
 #: ../../reference_manual/brushes/brush_settings/tablet_sensors.rst:24
 msgid "Y-tilt"
@@ -70,7 +70,7 @@ msgstr "傾斜方向"
 msgid ""
 "How much the brush is affected by stylus direction. The pen point pointing "
 "towards the user is 0°, and can vary from -180° to +180°."
-msgstr ""
+msgstr "感應觸控筆的方向（朝向）角度。筆尖指向執筆者正前方是為 0°，方向角度在正負 180° 的區間變化。"
 
 #: ../../reference_manual/brushes/brush_settings/tablet_sensors.rst:28
 msgid "Tilt-elevation"
@@ -80,7 +80,7 @@ msgstr "傾斜度"
 msgid ""
 "How much the brush is affected by stylus perpendicularity. 0° is the stylus "
 "horizontal, 90° is the stylus vertical."
-msgstr ""
+msgstr "觸控筆傾斜的角度。0° 為筆身平放，90° 為筆身直立。"
 
 #: ../../reference_manual/brushes/brush_settings/tablet_sensors.rst:30
 msgid "Speed"
@@ -88,7 +88,7 @@ msgstr "速度"
 
 #: ../../reference_manual/brushes/brush_settings/tablet_sensors.rst:31
 msgid "How much the brush is affected by the speed at which you draw."
-msgstr ""
+msgstr "筆刷受您繪製速度的影響程度。"
 
 #: ../../reference_manual/brushes/brush_settings/tablet_sensors.rst:32
 msgid "Drawing Angle"
@@ -102,6 +102,8 @@ msgid ""
 "angle being the angles threshold it'll round. :guilabel:`Angle offset` will "
 "add an extra offset to the current angle."
 msgstr ""
+"筆刷受您繪製方向的影響程度。\\ :guilabel:`鎖定`\\ 會將角度鎖定到您筆畫開始時的角度。\\ :guilabel:`平滑轉角`\\ "
+"將嘗試筆跡轉彎處平滑筆跡的角度變化，角度滑動條是平滑轉角的角度閾值。\\ :guilabel:`角度偏移`\\ 將當前角度添加一個額外的角度偏移量。"
 
 #: ../../reference_manual/brushes/brush_settings/tablet_sensors.rst:34
 msgid "Rotation"
@@ -111,7 +113,7 @@ msgstr "旋轉"
 msgid ""
 "How much a brush is affected by how the stylus is rotated, if supported by "
 "the tablet."
-msgstr ""
+msgstr "筆刷受您觸控筆旋轉方式的影響程度（如果數位板支持）。"
 
 #: ../../reference_manual/brushes/brush_settings/tablet_sensors.rst:36
 msgid "Distance"
@@ -119,7 +121,7 @@ msgstr "距離"
 
 #: ../../reference_manual/brushes/brush_settings/tablet_sensors.rst:37
 msgid "How much the brush is affected over length in pixels."
-msgstr ""
+msgstr "感應筆刷移動的距離（以像素為單位）。"
 
 #: ../../reference_manual/brushes/brush_settings/tablet_sensors.rst:38
 msgid "Time"
@@ -127,25 +129,25 @@ msgstr "時間"
 
 #: ../../reference_manual/brushes/brush_settings/tablet_sensors.rst:39
 msgid "How much a brush is affected over drawing time in seconds."
-msgstr ""
+msgstr "筆刷受您繪製時間的影響程度（以秒為單位）。"
 
 #: ../../reference_manual/brushes/brush_settings/tablet_sensors.rst:40
 msgid "Fuzzy (Dab)"
-msgstr "隨機度 (印跡)"
+msgstr "隨機度（印跡）"
 
 #: ../../reference_manual/brushes/brush_settings/tablet_sensors.rst:41
 msgid "Basically the random option."
-msgstr ""
+msgstr "隨機值，此項對一條筆畫內部的每個筆尖印跡生效。"
 
 #: ../../reference_manual/brushes/brush_settings/tablet_sensors.rst:42
 msgid "Fuzzy Stroke"
-msgstr "隨機度 (筆畫)"
+msgstr "隨機度（筆畫）"
 
 #: ../../reference_manual/brushes/brush_settings/tablet_sensors.rst:43
 msgid ""
 "A randomness value that is per stroke. Useful for getting color and size "
 "variation in on speed-paint brushes."
-msgstr ""
+msgstr "每個筆畫整體的隨機值。適用於速繪筆刷上的顏色和大小變化。"
 
 #: ../../reference_manual/brushes/brush_settings/tablet_sensors.rst:44
 msgid "Fade"
@@ -154,7 +156,7 @@ msgstr "淡化"
 #: ../../reference_manual/brushes/brush_settings/tablet_sensors.rst:45
 msgid ""
 "How much the brush is affected over length, proportional to the brush size."
-msgstr ""
+msgstr "筆刷在長度上的影響程度，與筆刷大小成正比。"
 
 #: ../../reference_manual/brushes/brush_settings/tablet_sensors.rst:46
 msgid "Perspective"
@@ -162,7 +164,7 @@ msgstr "透視"
 
 #: ../../reference_manual/brushes/brush_settings/tablet_sensors.rst:47
 msgid "How much the brush is affected by the perspective assistant."
-msgstr ""
+msgstr "筆刷受透視輔助尺的影響程度。"
 
 #: ../../reference_manual/brushes/brush_settings/tablet_sensors.rst:50
 msgid "Tangential Pressure"
@@ -171,7 +173,7 @@ msgstr "正切壓力"
 #: ../../reference_manual/brushes/brush_settings/tablet_sensors.rst:49
 msgid ""
 "How much the brush is affected by the wheel on airbrush-simulating styli."
-msgstr ""
+msgstr "模擬噴槍氣壓調整閥的滾輪影響。"
 
 #: ../../reference_manual/brushes/brush_settings/tablet_sensors.rst:11
 msgid "Tablets"
