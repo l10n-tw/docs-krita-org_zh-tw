@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-09-02T00:25:53" />
+  <meta property="og:article:modified_time" content="2021-09-02T09:22:04" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="Krita 的「圖層」選單。" name="description" property="og:description" />
 
@@ -295,105 +295,105 @@
 </dd>
 <dt>匯入</dt><dd><p>在當前檔案中匯入所選的影像為新圖層。</p>
 </dd>
-<dt>匯入為…</dt><dd><p>Import an image as a specific layer type. The following layer types are supported:</p>
+<dt>匯入為…</dt><dd><p>將一張影像匯入當前檔案中並指定圖層類型，新圖層會建立在當前選取的圖層上方。匯入時可以指定以下圖層類型：</p>
 <blockquote>
 <div><ul class="simple">
-<li><p>Paint layer</p></li>
-<li><p>Transparency Mask</p></li>
-<li><p>Filter Mask</p></li>
-<li><p>Selection Mask</p></li>
+<li><p>顏料圖層</p></li>
+<li><p>透明度遮罩</p></li>
+<li><p>濾鏡遮罩</p></li>
+<li><p>選取區域遮罩</p></li>
 </ul>
 </div></blockquote>
 </dd>
 </dl>
 </dd>
-<dt>Convert</dt><dd><p>這個子選單有以下可用的操作：</p>
-<p>Convert a layer to...</p>
+<dt>轉換</dt><dd><p>這個子選單有以下可用的操作：</p>
+<p>將圖層轉換為其他類型的圖層，或轉換它的色彩空間…</p>
 <blockquote>
 <div><dl class="simple">
-<dt>Convert to Paint Layer</dt><dd><p>Convert a mask or vector layer to a paint layer.</p>
+<dt>轉為顏料圖層</dt><dd><p>將遮罩或向量圖層轉換為顏料圖層。</p>
 </dd>
-<dt>Transparency Mask</dt><dd><p>Convert a layer to a transparency mask. The image will be converted to grayscale first, and these grayscale values are used to drive the transparency.</p>
+<dt>透明度遮罩</dt><dd><p>將圖層轉換為透明度遮罩，圖層影像會先被轉換為灰階，這張灰階圖的資訊可以使用於控制透明度。</p>
 </dd>
-<dt>Filter Mask</dt><dd><p>Convert a layer to a filter mask. The image will be converted to grayscale first, and these grayscale values are used to drive the filter effect area.</p>
+<dt>濾鏡遮罩</dt><dd><p>將圖層轉換為濾鏡遮罩。影像會先轉為灰階，這個灰階圖資訊可以用來控制濾鏡效果的區域。</p>
 </dd>
-<dt>Selection Mask</dt><dd><p>Convert a layer to a selection mask. The image will be converted to grayscale first, and these grayscale values are used to drive the selected area.</p>
+<dt>選取區域遮罩</dt><dd><p>將圖層轉換為選擇區域遮罩。影像會先轉換為灰階，這張灰階圖的資訊可以用來控制選擇區域。</p>
 </dd>
-<dt>File Layer</dt><dd><p>Convert the selected layer in to a file layer. This will open a dialog box, which will ask the user for a location to save the layer as file layer and reference it in place of the original layer. This feature cannot be used if the selected layer is either a clone layer or a file layer.</p>
+<dt>檔案圖層</dt><dd><p>將所選圖層轉換為檔案圖層。 點下後會打開一個對話盒詢問圖層儲存的位置，按確定後將選取的圖層另外儲存為別的檔案，然後再將這檔案以引用的方式來代替原始圖層。 如果所選圖層是複製圖層或檔案圖層，則無法使用此功能。</p>
 </dd>
-<dt>Convert Group to Animated Layer</dt><dd><p>This takes the images in the group layer and makes them into frames of an animated layer.</p>
+<dt>群組圖層轉換成動畫圖層</dt><dd><p>將群組圖層的影像轉換為一個動畫圖層的幀。</p>
 </dd>
-<dt>Convert Layer Color Space</dt><dd><p>This only converts the color space of the layer, not the image.</p>
+<dt>轉換圖層色彩空間</dt><dd><p>這功能僅轉換圖層的色彩空間，而不會轉換整個影像的色彩空間。</p>
 </dd>
 </dl>
 </div></blockquote>
 </dd>
-<dt>Select:</dt><dd><p>這個子選單有以下可用的操作：</p>
+<dt>選擇：</dt><dd><p>這個子選單有以下可用的操作：</p>
 <dl class="simple">
-<dt>All layers</dt><dd><p>Select all layers.</p>
+<dt>所有圖層</dt><dd><p>選取檔案中全部的圖層。</p>
 </dd>
-<dt>Visible Layers</dt><dd><p>Select all visible layers.</p>
+<dt>可見圖層</dt><dd><p>選取檔案中設定為可見的圖層。</p>
 </dd>
-<dt>Invisible Layers</dt><dd><p>Select all invisible layers, useful for cleaning up a sketch.</p>
+<dt>不可見圖層</dt><dd><p>選取所有設定為不可見的圖層，這在清理類似草圖那種不再需要的圖層時很幫助。</p>
 </dd>
-<dt>Locked Layers</dt><dd><p>Select all locked layers.</p>
+<dt>已鎖定圖層</dt><dd><p>選取所有設定為鎖定的圖層。</p>
 </dd>
-<dt>Unlocked Layers</dt><dd><p>Select all unlocked layers.</p>
+<dt>未鎖定圖層</dt><dd><p>選取所有未鎖定的圖層。</p>
 </dd>
 </dl>
 </dd>
-<dt>Group</dt><dd><p>這個子選單有以下可用的操作：</p>
+<dt>群組</dt><dd><p>這個子選單有以下可用的操作：</p>
 <dl class="simple">
-<dt>Quick Group</dt><dd><p>Adds all selected layers to a group.</p>
+<dt>快速建立群組</dt><dd><p>將所有選取的圖層搬進一個新的圖層群組。</p>
 </dd>
-<dt>Quick Clipping Group</dt><dd><p>Adds all selected layers to a group and adds a alpha-inherited layer above it.</p>
+<dt>快速建立裁剪群組</dt><dd><p>將所有選取的圖層搬進一個新群組中，並在圖層群組上方新建一個「繼承 alpha 」的圖層。</p>
 </dd>
-<dt>Quick Ungroup</dt><dd><p>Ungroups the activated layer.</p>
+<dt>快速拆散群組</dt><dd><p>將選取的圖層群組整個解散，或從圖層群組內將選取的圖層移出。</p>
 </dd>
 </dl>
 </dd>
-<dt>Transform</dt><dd><p>這個子選單有以下可用的操作：</p>
+<dt>變形</dt><dd><p>這個子選單有以下可用的操作：</p>
 <dl class="simple">
-<dt>Mirror Layer Horizontally</dt><dd><p>Mirror the layer horizontally using the image center.</p>
+<dt>水平翻轉圖層</dt><dd><p>以影像中心為軸將圖層左右翻轉。</p>
 </dd>
-<dt>Mirror Layer Vertically</dt><dd><p>Mirror the layer vertically using the image center.</p>
+<dt>垂直翻轉圖層</dt><dd><p>以影像中心為軸，將圖層上下翻轉。</p>
 </dd>
-<dt>Rotate</dt><dd><p>Rotate the layer around the image center.</p>
+<dt>旋轉</dt><dd><p>以影像中心為軸旋轉圖層。</p>
 </dd>
-<dt>Scale Layer</dt><dd><p>Scale the layer by the given amounts using the given interpolation filter.</p>
+<dt>縮放圖層至新尺寸</dt><dd><p>依照您在對話盒所設定的數值縮放圖層。</p>
 </dd>
-<dt>Shear Layer</dt><dd><p>Shear the layer pixels by the given X and Y angles.</p>
+<dt>切變圖層</dt><dd><p>依照您在對話盒中指定的 X 和 Y 角度對圖層進行斜切變形。</p>
 </dd>
-<dt>Offset Layer</dt><dd><p>Offset the layer pixels by a given amount.</p>
+<dt>平移圖層</dt><dd><p>依照您在對話盒設定的數值將圖層平移到指定位置。</p>
 </dd>
 </dl>
 </dd>
-<dt>Split</dt><dd><p>這個子選單有以下可用的操作：</p>
+<dt>分割</dt><dd><p>這個子選單有以下可用的操作：</p>
 <dl class="simple">
-<dt>Split Alpha</dt><dd><p>Split the image transparency into a mask. This is useful when you wish to edit the transparency separately.</p>
+<dt>分割 Alpha （透明度）</dt><dd><p>將影像的 Alpha 通道拆分為一個遮罩。這在需要單獨編輯 Alpha 透明度時很有幫助。</p>
 </dd>
-<dt>Split Layer</dt><dd><p><a class="reference internal" href="../split_layer.html#split-layer"><span class="std std-ref">Split the layer</span></a> into given color fields.</p>
+<dt>分割圖層</dt><dd><p>將圖層按照指定的顏色區域<a class="reference internal" href="../split_layer.html#split-layer"><span class="std std-ref">分割圖層</span></a>。</p>
 </dd>
-<dt>Clones Array</dt><dd><p>A complex bit of functionality to generate clone-layers for quick sprite making. See <a class="reference internal" href="../clones_array.html#clones-array"><span class="std std-ref">再製陣列</span></a> for more details.</p>
+<dt>再製陣列</dt><dd><p>這是專用以快速製作圖層陣列排序的特殊功能，詳細內容請見<a class="reference internal" href="../clones_array.html#clones-array"><span class="std std-ref">再製陣列</span></a>說明頁面。</p>
 </dd>
 </dl>
 </dd>
-<dt>Edit Metadata...</dt><dd><p>Each layer can have its own metadata.</p>
+<dt>編輯中繼資料…</dt><dd><p>可以為每個圖層指定不同的中繼資料。</p>
 </dd>
-<dt>Histogram</dt><dd><p>Shows a histogram.</p>
+<dt>直方圖</dt><dd><p>顯示直方圖。</p>
 <div class="deprecated">
-<p><span class="versionmodified deprecated">4.2 版後已棄用: </span>Removed. Use the <a class="reference internal" href="../dockers/histogram_docker.html#histogram-docker"><span class="std std-ref">Histogram Docker</span></a> instead.</p>
+<p><span class="versionmodified deprecated">4.2 版後已棄用: </span>之後的 Krita 版本，此功能已由<a class="reference internal" href="../dockers/histogram_docker.html#histogram-docker"><span class="std std-ref">Histogram Docker</span></a> 取代。</p>
 </div>
 </dd>
-<dt>Merge with Layer Below</dt><dd><p>Merge a layer down.</p>
+<dt>向下合併圖層</dt><dd><p>向下合併圖層或合併所選取的多個圖層成為一個圖層。</p>
 </dd>
-<dt>Flatten Layer</dt><dd><p>Flatten a Group Layer or flatten the masks into any other layer.</p>
+<dt>平整圖層</dt><dd><p>將選取的圖層群組整平合併為一個圖層。可以將圖層樣式或關連的遮罩圖層合併到其他圖層。</p>
 </dd>
-<dt>Rasterize Layer</dt><dd><p>For making vectors into raster layers.</p>
+<dt>點陣化圖層</dt><dd><p>將向量圖層建立的影像轉換為點陣圖影像圖層。</p>
 </dd>
-<dt>Flatten Image</dt><dd><p>Flatten all layers into one. Shortcut <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">E</kbd></kbd></p>
+<dt>平整影像</dt><dd><p>將當前影像中所有的圖層全部整平合併為一個。快捷鍵：<kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">E</kbd></kbd></p>
 </dd>
-<dt>Layer Style...</dt><dd><p>Set the <a class="reference internal" href="../layers_and_masks/layer_styles.html#layer-style"><span class="std std-ref">圖層樣式</span></a>.</p>
+<dt>圖層樣式…</dt><dd><p>詳細內容請見<a class="reference internal" href="../layers_and_masks/layer_styles.html#layer-style"><span class="std std-ref">圖層樣式</span></a>頁面說明。</p>
 </dd>
 </dl>
 </section>

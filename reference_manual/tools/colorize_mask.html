@@ -6,7 +6,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta property="og:title" name="title" content="Colorize Mask" />
+  <meta property="og:title" name="title" content="著色遮罩工具" />
   <meta property="og:site-name" content="Krita Manual" />
   <meta property="og:type" content="article" />
   <meta property="og:locale" content="zh_TW" />
@@ -21,13 +21,13 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-09-02T00:25:53" />
+  <meta property="og:article:modified_time" content="2021-09-02T09:22:04" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<meta content="How to use the colorize mask in Krita." name="description" />
+<meta content="如使在 Krita 使用著色遮罩。" name="description" />
 
   
   
-  <title>Colorize Mask &mdash; Krita Manual 5.0.0 說明文件</title>
+  <title>著色遮罩工具 &mdash; Krita Manual 5.0.0 說明文件</title>
   
 
   
@@ -181,8 +181,8 @@
 <li class="toctree-l3"><a class="reference internal" href="fill.html">填色工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="gradient_draw.html">Gradient Tool</a></li>
 <li class="toctree-l3"><a class="reference internal" href="color_sampler.html">色彩取樣器工具</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Colorize Mask</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#usage">Usage</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">著色遮罩工具</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#usage">用途</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#tool-options">Tool Options</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#layer-properties">Layer properties</a></li>
 </ul>
@@ -269,7 +269,7 @@
         
           <li><a href="../tools.html">工具</a> &raquo;</li>
         
-      <li>Colorize Mask</li>
+      <li>著色遮罩工具</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -294,18 +294,17 @@
            <div itemprop="articleBody">
             
   <section id="colorize-mask">
-<span id="index-0"></span><span id="id1"></span><h1>Colorize Mask<a class="headerlink" href="#colorize-mask" title="本標題的永久連結">¶</a></h1>
-<p><img alt="toolcolorizemask" src="../../_images/colorizemask_tool.svg" /></p>
-<p>A tool for quickly coloring line art, the Colorize Mask Editing tool can be found next to the gradient tool on your toolbox.</p>
-<p>This feature is technically already in 3.1, but disabled by default because we had not optimized the filling algorithm for production use yet. To enable it, find your krita configuration file, open it in notepad, and add &quot;disableColorizeMaskFeature=false&quot; to the top. Then restart Krita. Its official incarnation is in 4.0.</p>
+<span id="index-0"></span><span id="id1"></span><h1>著色遮罩工具<a class="headerlink" href="#colorize-mask" title="本標題的永久連結">¶</a></h1>
+<p><img alt="著色遮罩工具" src="../../_images/colorizemask_tool.svg" /></p>
+<p>著色遮罩是一個能把線稿快速著色的工具，你能在工具箱中的漸變工具附近找到著色遮罩編輯工具。</p>
+<p>這項功能其實已經在 3.1 版本實現，但是因為著色遮罩的算法不足以正式使用，因此在預設情況下是關閉的。如果要在開啟這項功能，找到 Krita 的設定檔案，在記事本軟體中打開，並在最上方加入「disableColorizeMaskFeature=false」，然後重新啟動 Krita。正式開放使用的版本是 4.0。</p>
 <section id="usage">
-<h2>Usage<a class="headerlink" href="#usage" title="本標題的永久連結">¶</a></h2>
-<p>This tool works in conjunction with the colorize mask, and the usage is as follows:</p>
-<p>For this example, we'll be using the ghost lady also used to explain masks on <a class="reference internal" href="../../user_manual/getting_started/basic_concepts.html#basic-concepts"><span class="std std-ref">the basic concepts page</span></a>.</p>
+<h2>用途<a class="headerlink" href="#usage" title="本標題的永久連結">¶</a></h2>
+<p>這個工具需要結合著色遮罩使用，而使用方法為：</p>
+<p>我們以在<a class="reference internal" href="../../user_manual/getting_started/basic_concepts.html#basic-concepts"><span class="std std-ref">基本概念</span></a>中也有使用的檔案作為範例。</p>
 <a class="reference internal image-reference" href="../../_images/Krita_4_0_colorize_mask_usage_01.png"><img alt="../../_images/Krita_4_0_colorize_mask_usage_01.png" class="align-center" src="../../_images/Krita_4_0_colorize_mask_usage_01.png" style="width: 800px;" /></a>
-<p>This image has the line art for the lady separated from the background, and what's more, the background is made up of two layers: one main and one for the details.</p>
-<p>First, select the colorize mask editing tool while having the line art layer selected. <img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> the canvas will add a colorize mask to the layer.
-You can also <img alt="滑鼠右鍵" src="../../_images/Krita_mouse_right.png" /> the line art layer, and then <span class="menuselection">Add ‣ Colorize Mask</span>. The line art will suddenly become really weird, this is the prefiltering which are filters through which we put the line art to make the algorithm easier to use. The tool options overview below shows which options control that.</p>
+<p>這個檔案中婦人的線稿已經與背景分離，同時，背景也被分成兩個圖層：一個主要圖層，一個細節圖層。</p>
+<p>首先，在線稿圖層已被選取的情況下使用著色遮罩編輯工具。<img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> 畫布會增加一個著色遮罩圖層。你亦可對線稿 <img alt="滑鼠右鍵" src="../../_images/Krita_mouse_right.png" />，然後 <span class="menuselection">新增 ‣ 著色遮罩</span>。線稿會突然變得奇怪，</p>
 <a class="reference internal image-reference" href="../../_images/Krita_4_0_colorize_mask_usage_02.png"><img alt="../../_images/Krita_4_0_colorize_mask_usage_02.png" class="align-center" src="../../_images/Krita_4_0_colorize_mask_usage_02.png" style="width: 800px;" /></a>
 <p>Now, you make strokes with brush colors, press <span class="guilabel">Update</span> in the tool options, or tick the last icon of the colorize mask properties. In the layer docker, you will be able to see a little progress bar appear on the colorize mask indicating how long it takes. The bigger your file, the longer it will take.</p>
 <a class="reference internal image-reference" href="../../_images/Krita_4_0_colorize_mask_usage_03.png"><img alt="../../_images/Krita_4_0_colorize_mask_usage_03.png" class="align-center" src="../../_images/Krita_4_0_colorize_mask_usage_03.png" style="width: 800px;" /></a>
@@ -324,7 +323,7 @@ You can also <img alt="滑鼠右鍵" src="../../_images/Krita_mouse_right.png" /
 <p>Now, we add strokes to the background quickly. We do not need to use the <span class="menuselection">Limit to Layer Bounds</span> because the background covers the whole image.</p>
 <a class="reference internal image-reference" href="../../_images/Krita_4_0_colorize_mask_usage_09.png"><img alt="../../_images/Krita_4_0_colorize_mask_usage_09.png" class="align-center" src="../../_images/Krita_4_0_colorize_mask_usage_09.png" style="width: 800px;" /></a>
 <p>For the record, you can use other brushes and tools also work on the colorize mask as long as they can draw. The Colorize Mask Editing tool is just the most convenient because you can get to the algorithm options.</p>
-<p>Out final result looks like this:</p>
+<p>最終成果看起來會是這樣：</p>
 <a class="reference internal image-reference" href="../../_images/Krita_4_0_colorize_mask_usage_10.png"><img alt="../../_images/Krita_4_0_colorize_mask_usage_10.png" class="align-center" src="../../_images/Krita_4_0_colorize_mask_usage_10.png" style="width: 800px;" /></a>
 <p>Now we are done, <img alt="滑鼠右鍵" src="../../_images/Krita_mouse_right.png" /> the colorize mask and <span class="menuselection">Convert ‣ to Paint Layer</span>. Then, <span class="menuselection">Layer ‣ Split ‣ Split Layer</span>. This will give separate color islands that you can easily edit:</p>
 <a class="reference internal image-reference" href="../../_images/Krita_4_0_colorize_mask_usage_11.png"><img alt="../../_images/Krita_4_0_colorize_mask_usage_11.png" class="align-center" src="../../_images/Krita_4_0_colorize_mask_usage_11.png" style="width: 800px;" /></a>

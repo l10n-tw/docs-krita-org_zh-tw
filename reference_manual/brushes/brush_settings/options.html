@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-09-02T00:25:53" />
+  <meta property="og:article:modified_time" content="2021-09-02T09:22:04" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="Krita 的筆刷引擎選項概覽。" name="description" />
 
@@ -324,7 +324,7 @@
 <dl class="simple">
 <dt>強度</dt><dd><p>控制閾值，可由下面的感測器控制。</p>
 </dd>
-<dt>柔和度</dt><dd><p>控制額外的非完全不透明 (半透明) 像素。這為筆劃增加了一點柔和度。</p>
+<dt>柔和度</dt><dd><p>控制額外的非完全不透明（半透明）像素。這為筆劃增加了一點柔和度。</p>
 </dd>
 </dl>
 <div class="versionchanged">
@@ -360,7 +360,7 @@
 </dd>
 <dt>圖案</dt><dd><p>使用當前的圖案，但圖案的對齊每筆不同。</p>
 </dd>
-<dt>鎖定圖案</dt><dd><p>將圖案鎖定到筆刷印跡。</p>
+<dt>筆尖鎖定圖案</dt><dd><p>將圖案鎖定到筆刷印跡。</p>
 </dd>
 </dl>
 </section>
@@ -372,17 +372,17 @@
 <h3>使用範例<a class="headerlink" href="#uses" title="本標題的永久連結">¶</a></h3>
 <img alt="../../../_images/Krita_2_9_brushengine_mix_02.png" src="../../../_images/Krita_2_9_brushengine_mix_02.png" />
 <dl class="simple">
-<dt>流向貼圖</dt><dd><p>上圖左側是 <strong class="program">Krita</strong> 繪制的流向貼圖，右邊是該貼圖在 3D 程式 <strong class="program">Blender</strong> 中的效果。筆刷選項為 <span class="menuselection">Source ‣ Gradient</span> 和 <span class="menuselection">Mix ‣ Drawing angle</span>。此處的漸變包含了 360° 的法線貼圖顏色。一些著色器需要使用流向貼圖來表現拉絲金屬、頭髮和流水效果。</p>
+<dt>流向貼圖</dt><dd><p>上圖左側是 <strong class="program">Krita</strong> 繪制的流向貼圖，右邊是該貼圖在 3D 程式 <strong class="program">Blender</strong> 中的效果。筆刷選項為 <span class="menuselection">來源 ‣ 漸變</span> 和 <span class="menuselection">混合 ‣ 筆跡方向</span>。此處的漸變包含了 360° 的法線貼圖顏色。一些著色器需要使用流向貼圖來表現拉絲金屬、頭髮和流水效果。</p>
 </dd>
 </dl>
 </section>
 <section id="gradient">
 <span id="option-gradient"></span><h3>漸變<a class="headerlink" href="#gradient" title="本標題的永久連結">¶</a></h3>
-<p>效果與 <span class="menuselection">Source ‣ Gradient</span> 配合 <span class="guilabel">Mix</span> 使用時一樣，但只在顏色塗抹筆刷下可用。</p>
+<p>效果與 <span class="menuselection">來源 ‣ 漸變</span> 配合 <span class="guilabel">混合</span> 使用時一樣，但只在顏色塗抹筆刷下可用。</p>
 <img alt="../../../_images/Krita-tutorial5-I.6-1.png" src="../../../_images/Krita-tutorial5-I.6-1.png" />
 <p>您可以：</p>
 <ul class="simple">
-<li><p>使用預設的 <span class="menuselection">Foreground ‣ Background gradient</span> 設定，然後只更改漸變中的前景色和背景色</p></li>
+<li><p>使用預設的 <span class="menuselection">（前景到背景色）漸變</span> 設定，然後只更改漸變中的前景色和背景色</p></li>
 <li><p>選擇更具體的漸變</p></li>
 <li><p>或製作自定義漸變。</p></li>
 </ul>
@@ -391,7 +391,7 @@
 <section id="spacing">
 <span id="option-spacing"></span><span id="index-2"></span><h2>間距<a class="headerlink" href="#spacing" title="本標題的永久連結">¶</a></h2>
 <img alt="../../../_images/Krita_Pixel_Brush_Settings_Spacing.png" src="../../../_images/Krita_Pixel_Brush_Settings_Spacing.png" />
-<p>這允許您使用<a class="reference internal" href="brush_tips.html#option-brush-tip"><span class="std std-ref">筆尖</span></a>影響<a class="reference internal" href="tablet_sensors.html#sensors"><span class="std std-ref">感測器</span></a>。</p>
+<p>這選項可使用<a class="reference internal" href="tablet_sensors.html#sensors"><span class="std std-ref">感測器</span></a>調整<a class="reference internal" href="brush_tips.html#option-brush-tip"><span class="std std-ref">筆尖</span></a>的間距。</p>
 <img alt="../../../_images/Krita_2_9_brushengine_spacing_02.png" src="../../../_images/Krita_2_9_brushengine_spacing_02.png" />
 <dl class="simple">
 <dt>各向同性間距</dt><dd><p>計算間距時不考慮筆刷的長寬比，只考慮筆刷的直徑。</p>

@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-09-02T00:25:53" />
+  <meta property="og:article:modified_time" content="2021-09-02T09:22:04" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="如何在 Krita 中使用筆尖。" name="description" property="og:description" />
 
@@ -280,7 +280,7 @@
 <dt>柔和</dt><dd><p>這個淡化是藉由調整曲線控制！</p>
 <img alt="../../../_images/Krita_2_9_brushengine_brushtips_soft.png" src="../../../_images/Krita_2_9_brushengine_brushtips_soft.png" />
 </dd>
-<dt>高斯</dt><dd><p>這個使用高斯算法來確定淡化。 在三個自動筆刷中是最慢的。</p>
+<dt>高斯</dt><dd><p>這使用高斯（模糊）演算法來確定淡化。 在三個自動筆刷中是最慢的。</p>
 <img alt="../../../_images/Krita_2_9_brushengine_brushtips_gaussian.png" src="../../../_images/Krita_2_9_brushengine_brushtips_gaussian.png" />
 </dd>
 </dl>
@@ -295,7 +295,7 @@
 </dd>
 <dt>淡化</dt><dd><p>這設定了畫刷的柔軟度。 您可以單擊鎖鏈符號來鎖定和解鎖這些設定。 淡化每種遮罩類型都有不同的效果，所以如果它看起來很奇怪，請不要驚慌，也許您的遮罩類型有誤。</p>
 <img alt="../../../_images/Krita_2_9_brushengine_brushtips_default2b.png" src="../../../_images/Krita_2_9_brushengine_brushtips_default2b.png" />
-<p>淡化鎖定 (水平 = 垂直)。</p>
+<p>淡化鎖定（水平 = 垂直）。</p>
 <img alt="../../../_images/Krita_2_9_brushengine_brushtips_default_3.png" src="../../../_images/Krita_2_9_brushengine_brushtips_default_3.png" />
 <p>水平和垂直分別淡化。</p>
 </dd>
@@ -313,7 +313,7 @@
 </dd>
 <dt>間距</dt><dd><p>此參數調整筆尖在畫布上留下筆跡的間距。左下圖間距分別為 0、1、5 。</p>
 </dd>
-<dt>自動 (間距)</dt><dd><p>勾選此項後筆刷間距將會使用一種不同的算法 (平方)，可以對間距進行更細致的控制。下圖右側三張圖是自動模式下間距分別為 0、1、5 。</p>
+<dt>自動（間距）</dt><dd><p>勾選此項後筆刷間距將會使用一種不同的算法（平方），可以對間距進行更細致的控制。下圖右側三張圖是自動模式下間距分別為 0、1、5 。</p>
 <img alt="../../../_images/Krita_2_9_brushengine_brushtips_spacing.png" src="../../../_images/Krita_2_9_brushengine_brushtips_spacing.png" />
 </dd>
 <dt>平滑線</dt><dd><p>勾選此項後會啟用抗鋸齒超平滑功能。下圖兩個筆刷都是使用淡化設定為 0 的預設筆刷繪製的。左側沒有啟用平滑線，右側有。對於線稿筆刷非常有用。此選項最好與自動間距結合使用。</p>
@@ -321,7 +321,7 @@
 </dd>
 <dt>精度</dt><dd><p>這會改變筆刷繪製的平滑程度。精度越低則越快，但繪製效果越差。使用線搞筆刷的精度最好為 5，而大面積填色則不需要這樣的精度，可將精度設定為 1 來加快速度。</p>
 </dd>
-<dt>自動 (精度)</dt><dd><p>筆刷精度按照筆刷大小自動調整。舉例如下的第一個值是不同筆刷大小對應的精度，第二個值是最大精度為 5 的筆刷大小。</p>
+<dt>自動（精度）</dt><dd><p>筆刷精度按照筆刷大小自動調整。舉例如下的第一個值是不同筆刷大小對應的精度，第二個值是最大精度為 5 的筆刷大小。</p>
 <p>例如：「起始畫筆大小」為 10 和「增量」為 4 的筆刷將具有…</p>
 <ul class="simple">
 <li><p>筆刷大小為 10 則精度為 5</p></li>
@@ -350,7 +350,7 @@
 <p>注意，由於 Adobe 未公開規範，因此 ABR 筆刷的定義已進行逆向工程。我們強烈建議每個 <strong class="program">Krita</strong> 用戶分享 GBR 和 GIH 格式分享筆尖。如果筆刷比較復雜，可把筆刷預設作為 <strong class="program">Krita</strong> 資源包導出分享。</p>
 <p>所有預定義的筆尖都顯示在一個選擇器中。有四個選項會影響您的初始點陣圖筆尖：</p>
 <dl class="simple">
-<dt>縮放</dt><dd><p>縮放筆尖。 1.0 是筆尖的原始大小。這可能相當大！當繪畫大小不同（例如受壓力控制）時，這將作為計算的基準點。</p>
+<dt>縮放</dt><dd><p>縮放筆尖。1.0 是筆尖的原始大小。這可能相當大！當繪畫大小不同（例如受壓力控制）時，這將作為計算的基準點。</p>
 </dd>
 <dt>旋轉</dt><dd><p>筆尖的初始旋轉方向。</p>
 </dd>
