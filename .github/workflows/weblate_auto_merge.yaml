@@ -19,11 +19,11 @@ jobs:
     #       echo "ERROR: Weblate HEAD is not same as pushed branch!"
     #       exit 1
     #     fi
-    - name: Merge into master
+    - name: Merge into trunk
       run: |
         git config --local user.name github-actions[bot]
         git config --local user.email 41898282+github-actions[bot]@users.noreply.github.com
-        git fetch origin master
-        git checkout -b master refs/remotes/origin/master
-        git merge -m"Merge weblate-stage" "$GITHUB_SHA"
+        git fetch origin trunk
+        git checkout -b trunk refs/remotes/origin/trunk
+        git merge --no-ff -m"Merge weblate-stage" "$GITHUB_SHA"
         git push
