@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: Krita Manual 4.2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-19 22:30+0800\n"
-"PO-Revision-Date: 2021-08-28 21:23+0000\n"
+"PO-Revision-Date: 2021-08-31 20:23+0000\n"
 "Last-Translator: Alvin Wong <alvin@alvinhc.com>\n"
 "Language-Team: Chinese (Traditional) <http://weblate.slat.org/projects/"
 "krita-docs/5-contributors_manual___user_support/zh_Hant/>\n"
@@ -64,7 +64,7 @@ msgstr "*針對所有運行 Windows 的裝置：*"
 msgid ""
 "Change API in :menuselection:`Settings --> Configure Krita... --> Tablet "
 "Settings`."
-msgstr "到 :menuselection:`設定 --> 設定 Krita… --> 數位板設定` 版面更改數位板輸入 API。"
+msgstr "到\\ :menuselection:`設定 --> 設定 Krita… --> 數位板設定`\\ 版面更改數位板輸入 API。"
 
 #: ../../contributors_manual/user_support.rst:54
 msgid ""
@@ -83,7 +83,7 @@ msgid ""
 "Yoga. Some less known brands might not have this standard implemented."
 msgstr ""
 "Windows 8+ 指標輸入 (Windows Ink)：較新的 API 標準。這個 API 只支援 1024 級筆壓。這比較適用於二合一平板電腦。"
-"某些較稀有的數位板品牌可能未有實作這個 API。"
+"某些較冷門的數位板品牌可能未有提供這個 API。"
 
 #: ../../contributors_manual/user_support.rst:58
 msgid "*For Windows, tablet/digitizer devices (not convertible/2-in-1 ones):*"
@@ -127,7 +127,7 @@ msgstr "你使用甚麼品牌和型號的數位板？"
 
 #: ../../contributors_manual/user_support.rst:74
 msgid "What is the version of the tablet driver?"
-msgstr "你裝有的數位板驅動程式是甚麼版本？"
+msgstr "你裝有的數位板驅動程式版本編號是甚麼？"
 
 #: ../../contributors_manual/user_support.rst:76
 msgid ""
@@ -328,7 +328,7 @@ msgid ""
 "menuselection:`Settings --> Configure Krita --> Display`."
 msgstr ""
 "如有 Windows 的使用者遇到任何與畫布顯示有關的問題，請要求該使用者嘗試更改\\ :menuselection:`設定 --> 設定 Krita… "
-"--> 顯示`內\\ :guilabel:`畫布圖形加速`\\ 的\\ :guilabel:`繪製器`\\ 設定。"
+"--> 顯示`\\ 內\\ :guilabel:`畫布圖形加速`\\ 的「繪製器」設定。"
 
 #: ../../contributors_manual/user_support.rst:151
 msgid ""
@@ -344,17 +344,18 @@ msgstr "給支援者的忠告"
 msgid ""
 "If you don't understand the question, ask for clarification -- asking for a "
 "screen recording or a screenshot is perfectly fine."
-msgstr "如果未能清楚理解求助者的提問，應請求闡明一下。要求畫面截圖或錄影是不錯的做法。"
+msgstr "如果未能清楚理解求助者的提問，應請求闡明一下。要求提供畫面截圖或錄影是不錯的做法。"
 
 #: ../../contributors_manual/user_support.rst:159
-#, fuzzy
 msgid ""
 "If you don't know the solution but you know what information will be needed "
 "to investigate the issue further, don't hesitate to ask. Other supporters "
 "may know the answer, but have too little time to move the user through the "
 "whole process, so you're helping a lot just by asking for additional "
 "information. This is very much true in case of tablet issues, for example."
-msgstr "如果不知道解決方法，但知道調查問題需要甚麼額外資訊的話，可以先向求助者查詢。這樣可以幫助其他知道解決方法的支援者更快能夠提供進一步支援。"
+msgstr ""
+"如果不知道解決方法，但知道調查問題需要甚麼額外資訊的話，可以先向求助者查詢。這樣可以幫助其他知道解決方法的支援者更快能夠提供進一步支援。這尤其適用於與數位"
+"板有關的問題。"
 
 #: ../../contributors_manual/user_support.rst:161
 msgid ""
@@ -362,13 +363,15 @@ msgid ""
 "other supporters, you can always ask for help on Krita IRC channel. It's "
 "#krita on Libera.Chat: :ref:`the_krita_community`."
 msgstr ""
+"如果不知道答案或解決方法而問題看來被其他支援者忽視，不妨到 Krita 的 IRC 聊天室提問（Libera.Chat 上的 #krita）：\\ "
+":ref:`the_krita_community`\\ 。"
 
 #: ../../contributors_manual/user_support.rst:163
 msgid ""
 "Explain steps the user needs to make clearly, for example if you need them "
 "to change something in settings, clearly state the whole path of buttons and "
 "tabs to get there."
-msgstr ""
+msgstr "向使用者清楚解釋他應採取的步驟。例如要修改某項設定的話，應完整列出每個步驟要點選的按鈕、選單與分頁。"
 
 #: ../../contributors_manual/user_support.rst:165
 msgid ""
@@ -377,6 +380,9 @@ msgid ""
 "(where you need to select :menuselection:`Krita --> Preferences...`) won't "
 "get confused."
 msgstr ""
+"不要寫\\ :menuselection:`設定 --> 設定 Krita…`\\ ，只需要寫\\ :menuselection:`設定 Krita`\\"
+" ——這個選單項目容易找到，而且這樣寫不會使 macOS 使用者產生混淆（因為在 macOS 上要經由\\ :menuselection:`Krita "
+"--> 偏好設定...`\\ 才能開啟設定）。"
 
 #: ../../contributors_manual/user_support.rst:167
 msgid ""
@@ -385,6 +391,9 @@ msgid ""
 "`intro_user_support_sharing_files`), otherwise Reddit users might create a "
 "new post with this image instead of including it to the old conversation."
 msgstr ""
+"如要求求助者提供影像，可建議 `Imgur <https://imgur.com>`_ 或 `Pasteboard <https://pasteboard"
+".co>`_\\ （\\ :ref:`intro_user_support_sharing_files`\\ ），否則 Reddit "
+"使用者可能會用該影像發表一篇新貼文而非從原本的討論串連結到該影像。"
 
 #: ../../contributors_manual/user_support.rst:169
 msgid ""
@@ -392,7 +401,7 @@ msgid ""
 "this manual page -- you can click on the little link icon next to the "
 "section or subsection title and give the link to the user so they for "
 "example know what information about their tablet issue you need."
-msgstr ""
+msgstr "快捷回答：如本說明文件內有相關內容，可直接連結到說明文件中相應的頁面。點擊章節標題旁的連結圖示即可複製連結，以提供予求助者作參考。"
 
 #: ../../contributors_manual/user_support.rst:176
 msgid "How to share a file"
@@ -403,6 +412,8 @@ msgid ""
 "Images (e.g. screenshots): `Imgur <https://imgur.com>`_ [*], `Pasteboard "
 "<https://pasteboard.co>`_"
 msgstr ""
+"影像（例如畫面截圖）：\\ `Imgur <https://imgur.com>`_ [*]、\\ `Pasteboard "
+"<https://pasteboard.co>`_"
 
 #: ../../contributors_manual/user_support.rst:181
 msgid ""
@@ -411,6 +422,10 @@ msgid ""
 "Pastebin Service <https://paste.centos.org/>`_ or `KDE Snippets (needs KDE "
 "Identity) <https://invent.kde.org/dashboard/snippets>`_."
 msgstr ""
+"純文字：\\ `Pastebin <https://pastebin.com>`_ [*]、\\ `BPaste <https://bpaste."
+"net>`_、\\ `paste.ubuntu.org.cn <https://paste.ubuntu.org.cn>`_\\ 、\\ `CentOS "
+"的 Pastebin 服務 <https://paste.centos.org/>`_\\ 、\\ `KDE Snippets（需要 KDE "
+"Identity） <https://invent.kde.org/dashboard/snippets>`_"
 
 #: ../../contributors_manual/user_support.rst:183
 msgid ""
@@ -418,6 +433,7 @@ msgid ""
 "command on Linux, send by mail or on Pastebin, then decode using the same "
 "command."
 msgstr ""
+"``.kra`` 以及其他檔案格式：電子郵件。或可以經 Linux 提供的 *base64* 命令列工具編碼並放到純文字分享服務，然後用相同的工具解碼。"
 
 #: ../../contributors_manual/user_support.rst:190
 msgid ""
