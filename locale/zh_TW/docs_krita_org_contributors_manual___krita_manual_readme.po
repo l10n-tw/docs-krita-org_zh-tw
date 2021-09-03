@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Krita Manual 4.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-14 14:51+0000\n"
-"PO-Revision-Date: 2021-09-02 17:23+0000\n"
+"PO-Revision-Date: 2021-09-03 20:23+0000\n"
 "Last-Translator: Alvin Wong <alvin@alvinhc.com>\n"
 "Language-Team: Chinese (Traditional) <http://weblate.slat.org/projects/"
 "krita-docs/5-contributors_manual___krita_manual_readme/zh_Hant/>\n"
@@ -192,7 +192,7 @@ msgid ""
 "Because we use Git, there's only a few people who can put things into the "
 "version control system, so if you want to make changes you will need to put "
 "it up for review."
-msgstr ""
+msgstr "由於我們使用的 Git 系統只允許特定人士直接提交更動，因此如有更動，你須要先將其提交作審核。"
 
 #: ../../contributors_manual/krita_manual_readme.rst:73
 msgid "Creating merge requests using Edit mode"
@@ -203,11 +203,11 @@ msgid ""
 "This method is only suitable if you have no push access to KDE repositories. "
 "Otherwise it would commit your changes directly to the repository, which is "
 "against the current guidelines."
-msgstr ""
+msgstr "這個方式只適用於沒有 KDE 原始碼儲存庫提交權限的成員。否則這會將更動直接提交到儲存庫內，不符合目前的工作指引。"
 
 #: ../../contributors_manual/krita_manual_readme.rst:80
 msgid "Recommended for users without a technical knowledge."
-msgstr ""
+msgstr "建議沒有進階電腦技術的人使用。"
 
 #: ../../contributors_manual/krita_manual_readme.rst:82
 msgid ""
@@ -215,30 +215,33 @@ msgid ""
 "ref:`merge-request-webide` or :ref:`merge-request-terminal` if you want to "
 "change more files, or simply edit only one per merge request)."
 msgstr ""
+"不建議用作同時修改多於一個檔案。（如要同時修改多個檔案，請參見\\ :ref:`以 WebIDE 建立合併請求 <merge-request-"
+"webide>`\\ 或\\ :ref:`以命令列建立合併請求 <merge-request-terminal>`\\ "
+"。為每個檔案的更動各自建立一個合併請求也可。）"
 
 #: ../../contributors_manual/krita_manual_readme.rst:85
 msgid ""
 "If you have a lot of changes you want to contribute, we recommend trying to "
 "follow these instructions."
-msgstr ""
+msgstr "如果有大量的更動要提交，我們建議跟從下列步驟。"
 
 #: ../../contributors_manual/krita_manual_readme.rst:87
 msgid "Get a KDE identity."
-msgstr ""
+msgstr "建立一個 KDE Identity。"
 
 #: ../../contributors_manual/krita_manual_readme.rst:88
 msgid "Login to `KDE_gitlab`_."
-msgstr ""
+msgstr "登入 `KDE_gitlab`_\\ 。"
 
 #: ../../contributors_manual/krita_manual_readme.rst:89
 msgid "Go to the `repository`_ and press :guilabel:`fork`."
-msgstr ""
+msgstr "到 `repository`_ 並點選 :guilabel:`Fork`\\ 。"
 
 #: ../../contributors_manual/krita_manual_readme.rst:90
 msgid ""
 "You should be redirected to the fork of your repository now. Typically it's "
 "located at ``invent.kde.org/YOUR_KDE_LOGIN_NAME/docs-krita-org``."
-msgstr ""
+msgstr "你將會被帶到自己的 fork，位置一般是 ``invent.kde.org/你的_KDE_登入名稱/docs-krita-org``\\ 。"
 
 #: ../../contributors_manual/krita_manual_readme.rst:92
 msgid ""
@@ -246,28 +249,31 @@ msgid ""
 "``Documentation > Krita.org Documentation``, not your own fork. Otherwise "
 "this method won't work correctly."
 msgstr ""
+"返回官方的儲存庫，確定你在瀏覽 ``Documentation > Krita.org Documentation`` 的專案而非你自己的 "
+"fork，否則此方式將不能按預期運作。"
 
 #: ../../contributors_manual/krita_manual_readme.rst:94
 msgid ""
 "Gitlab has an option to Edit files in the gitlab itself. To access this, go "
 "to :menuselection:`Repository --> Files`."
 msgstr ""
+"GitLab 內置有一個修改檔案的功能。要存取這個功能，請到 :menuselection:`Repository --> Files` 的部分。"
 
 #: ../../contributors_manual/krita_manual_readme.rst:96
 msgid ""
 "At the top of the page you should see a dropbox with ``master`` as a chosen "
 "item."
-msgstr ""
+msgstr "在頁面頂部應該會有一個標示已選取 ``master`` 的下拉選單。"
 
 #: ../../contributors_manual/krita_manual_readme.rst:98
 msgid ""
 "Find the file you want to edit, open it and then click :guilabel:`Edit`."
-msgstr ""
+msgstr "找出希望修改的檔案，然後點選 :guilabel:`Edit`\\ 。"
 
 #: ../../contributors_manual/krita_manual_readme.rst:100
 msgid ""
 "Make your changes. (Note: in this mode you can edit only one file at a time)."
-msgstr ""
+msgstr "作出更動。（這個模式每次只容許修改一個檔案。）"
 
 #: ../../contributors_manual/krita_manual_readme.rst:102
 msgid ""
@@ -276,6 +282,8 @@ msgid ""
 "`Commit changes`. This will make a merge request for you, just fill in all "
 "of the fields as explained here: :ref:`new-merge-request`."
 msgstr ""
+"在下方較小的文字輸入方塊「commit message」部分寫上一個簡單清晰的訊息來講解所作的更動。完成後點選 :guilabel:`Commit "
+"changes` 以提交更動並建立一個合併請求。請根據\\ :ref:`new-merge-request`\\ 頁面的指示填上欄位。"
 
 #: ../../contributors_manual/krita_manual_readme.rst:104
 msgid ""
@@ -284,6 +292,8 @@ msgid ""
 "`Online Sphinx Editor <https://livesphinx.herokuapp.com/>`_ (just copy and "
 "paste the entire file you're editing)."
 msgstr ""
+"使用這個方式的不便之處是不能即時知道有沒有標記錯誤。請自行用\\ `線上 Sphinx 編輯器 <https://livesphinx.herokuapp"
+".com/>`_\\ 檢查一下所作的更動（將檔案內容複製並貼上到該網頁內）。"
 
 #: ../../contributors_manual/krita_manual_readme.rst:108
 msgid ""
