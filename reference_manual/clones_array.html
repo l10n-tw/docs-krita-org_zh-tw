@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-09-02T17:26:15" />
+  <meta property="og:article:modified_time" content="2021-09-03T06:26:02" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="Krita 中的再製陣列功能。" name="description" />
 
@@ -249,19 +249,19 @@
             
   <section id="clones-array">
 <span id="index-0"></span><span id="id1"></span><h1>再製陣列<a class="headerlink" href="#clones-array" title="本標題的永久連結">¶</a></h1>
-<p>Allows you to create a set of clone layers quickly. These are ordered in terms of rows and columns. The default options will create a 2 by 2 grid. For setting up tiles of an isometric game, for example, you'd want to set the X offset of the rows to half the value input into the X offset for the columns, so that rows are offset by half. For a hexagonal grid, you'd want to do the same, but also reduce the Y offset of the grids by the amount of space the hexagon can overlap with itself when tiled.</p>
+<p>此對話框用於快速建立一組再製圖層。它們按照行和列數排序。預設選項會建立 2 乘 2 的陣列。如果是製作等角透視的遊戲素材，你需要把每行的 X 偏移量設為每列的 X 偏移量的一半。如果是製作六邊形（蜂巢）網格，除前述設定外還要按照六邊形平鋪時與自身重疊的深度減少網格的 Y 偏移量。</p>
 <dl class="simple">
-<dt>- 元素</dt><dd><p>The amount of elements that should be generated using a negative of the offset.</p>
+<dt>- 元素</dt><dd><p>按照偏移量的負值來產生元素數量。</p>
 </dd>
-<dt>+ 元素</dt><dd><p>The amount of elements that should be generated using a positive of the offset.</p>
+<dt>+ 元素</dt><dd><p>按照偏移量的正值來產生元素數量。</p>
 </dd>
-<dt>X 偏移</dt><dd><p>The X offset in pixels. Use this in combination with Y offset to position a clone using Cartesian coordinates.</p>
+<dt>X 偏移</dt><dd><p>X 軸偏移量，以像素為單位。使用此數值和 Y 偏移量在笛卡兒（直角）座標系中確定複製目標位置。</p>
 </dd>
-<dt>Y 偏移</dt><dd><p>The Y offset in pixels. Use this in combination with X offset to position a clone using Cartesian coordinates.</p>
+<dt>Y 偏移</dt><dd><p>Y 軸偏移量，以像素為單位。使用此數值和 X 偏移量在笛卡兒（直角）座標系中定位複製目標位置。</p>
 </dd>
-<dt>距離</dt><dd><p>The line-distance of the original origin to the clones origin. Use this in combination with angle to position a clone using a polar coordinate system.</p>
+<dt>距離</dt><dd><p>原始原點和再製原點的直線距離，使用此數值和角度值在極坐標系中定位複製目標位置。</p>
 </dd>
-<dt>角度</dt><dd><p>The angle-offset of the column or row. Use this in combination with distance to position a clone using a polar coordinate system.</p>
+<dt>角度</dt><dd><p>行或列的角度偏移。使用此數值和距離值在極坐標系中定位複製目標位置。</p>
 </dd>
 </dl>
 </section>
@@ -289,7 +289,7 @@
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>2632cb6</code>
+          修訂版本 <code>3034c62</code>
         </span>
       
 
