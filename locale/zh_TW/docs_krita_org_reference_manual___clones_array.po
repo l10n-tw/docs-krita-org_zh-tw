@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: Krita Manual 4.2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-19 22:30+0800\n"
-"PO-Revision-Date: 2021-09-01 09:23+0000\n"
+"PO-Revision-Date: 2021-09-03 06:23+0000\n"
 "Last-Translator: Solomon Hsu <solnone@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <http://weblate.slat.org/projects/"
 "krita-docs/3-reference_manual___clones_array/zh_Hant/>\n"
@@ -44,6 +44,8 @@ msgid ""
 "to do the same, but also reduce the Y offset of the grids by the amount of "
 "space the hexagon can overlap with itself when tiled."
 msgstr ""
+"此對話框用於快速建立一組再製圖層。它們按照行和列數排序。預設選項會建立 2 乘 2 的陣列。如果是製作等角透視的遊戲素材，你需要把每行的 X "
+"偏移量設為每列的 X 偏移量的一半。如果是製作六邊形（蜂巢）網格，除前述設定外還要按照六邊形平鋪時與自身重疊的深度減少網格的 Y 偏移量。"
 
 #: ../../reference_manual/clones_array.rst:19
 msgid "\\- Elements"
@@ -53,7 +55,7 @@ msgstr "\\- 元素"
 msgid ""
 "The amount of elements that should be generated using a negative of the "
 "offset."
-msgstr ""
+msgstr "按照偏移量的負值來產生元素數量。"
 
 #: ../../reference_manual/clones_array.rst:21
 msgid "\\+ Elements"
@@ -63,7 +65,7 @@ msgstr "\\+ 元素"
 msgid ""
 "The amount of elements that should be generated using a positive of the "
 "offset."
-msgstr ""
+msgstr "按照偏移量的正值來產生元素數量。"
 
 #: ../../reference_manual/clones_array.rst:23
 msgid "X offset"
@@ -73,7 +75,7 @@ msgstr "X 偏移"
 msgid ""
 "The X offset in pixels. Use this in combination with Y offset to position a "
 "clone using Cartesian coordinates."
-msgstr ""
+msgstr "X 軸偏移量，以像素為單位。使用此數值和 Y 偏移量在笛卡兒（直角）座標系中確定複製目標位置。"
 
 #: ../../reference_manual/clones_array.rst:25
 msgid "Y offset"
@@ -83,7 +85,7 @@ msgstr "Y 偏移"
 msgid ""
 "The Y offset in pixels. Use this in combination with X offset to position a "
 "clone using Cartesian coordinates."
-msgstr ""
+msgstr "Y 軸偏移量，以像素為單位。使用此數值和 X 偏移量在笛卡兒（直角）座標系中定位複製目標位置。"
 
 #: ../../reference_manual/clones_array.rst:27
 msgid "Distance"
@@ -93,7 +95,7 @@ msgstr "距離"
 msgid ""
 "The line-distance of the original origin to the clones origin. Use this in "
 "combination with angle to position a clone using a polar coordinate system."
-msgstr ""
+msgstr "原始原點和再製原點的直線距離，使用此數值和角度值在極坐標系中定位複製目標位置。"
 
 #: ../../reference_manual/clones_array.rst:31
 msgid "Angle"
@@ -103,7 +105,7 @@ msgstr "角度"
 msgid ""
 "The angle-offset of the column or row. Use this in combination with distance "
 "to position a clone using a polar coordinate system."
-msgstr ""
+msgstr "行或列的角度偏移。使用此數值和距離值在極坐標系中定位複製目標位置。"
 
 #: ../../reference_manual/clones_array.rst:10
 msgid "Clone"
