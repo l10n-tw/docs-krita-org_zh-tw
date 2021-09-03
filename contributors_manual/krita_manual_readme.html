@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-09-03T08:23:37" />
+  <meta property="og:article:modified_time" content="2021-09-03T20:26:05" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="給 Krita 說明文件貢獻者的指南。" name="description" />
 
@@ -276,32 +276,32 @@
 <p>Sphinx 的運作方式是基於使用 reStructuredText 標記編寫純文字檔案，然後將這些檔案處理並轉化成手冊。我們使用一個名為 <strong class="program">Git</strong> 的版本管理系統來追踪說明文件的更動。</p>
 <section id="making-changes">
 <span id="making-changes-sphinx"></span><h3>作出更動<a class="headerlink" href="#making-changes" title="本標題的永久連結">¶</a></h3>
-<p>Because we use Git, there's only a few people who can put things into the version control system, so if you want to make changes you will need to put it up for review.</p>
+<p>由於我們使用的 Git 系統只允許特定人士直接提交更動，因此如有更動，你須要先將其提交作審核。</p>
 <section id="creating-merge-requests-using-edit-mode">
 <span id="merge-request-edit"></span><h4>以編輯 (Edit) 模式建立合併請求 (Merge Request)<a class="headerlink" href="#creating-merge-requests-using-edit-mode" title="本標題的永久連結">¶</a></h4>
 <div class="admonition note">
 <p class="admonition-title">備註</p>
-<p>This method is only suitable if you have no push access to KDE repositories. Otherwise it would commit your changes directly to the repository, which is against the current guidelines.</p>
+<p>這個方式只適用於沒有 KDE 原始碼儲存庫提交權限的成員。否則這會將更動直接提交到儲存庫內，不符合目前的工作指引。</p>
 </div>
-<p>Recommended for users without a technical knowledge.</p>
-<p>Not recommended when you want to change more than one file at once. (See <a class="reference internal" href="#merge-request-webide"><span class="std std-ref">以 WebIDE 建立合併請求 (Merge Request)</span></a> or <a class="reference internal" href="#merge-request-terminal"><span class="std std-ref">以命令列建立合併請求 (Merge Request)</span></a> if you want to change more files, or simply edit only one per merge request).</p>
-<p>If you have a lot of changes you want to contribute, we recommend trying to follow these instructions.</p>
+<p>建議沒有進階電腦技術的人使用。</p>
+<p>不建議用作同時修改多於一個檔案。（如要同時修改多個檔案，請參見<a class="reference internal" href="#merge-request-webide"><span class="std std-ref">以 WebIDE 建立合併請求</span></a>或<a class="reference internal" href="#merge-request-terminal"><span class="std std-ref">以命令列建立合併請求</span></a>。為每個檔案的更動各自建立一個合併請求也可。）</p>
+<p>如果有大量的更動要提交，我們建議跟從下列步驟。</p>
 <ol class="arabic simple">
-<li><p>Get a KDE identity.</p></li>
-<li><p>Login to <a class="reference external" href="https://invent.kde.org/">KDE_gitlab</a>.</p></li>
-<li><p>Go to the <a class="reference external" href="https://invent.kde.org/documentation/docs-krita-org/tree/master">repository</a> and press <span class="guilabel">fork</span>.</p></li>
-<li><p>You should be redirected to the fork of your repository now. Typically it's located at <code class="docutils literal notranslate"><span class="pre">invent.kde.org/YOUR_KDE_LOGIN_NAME/docs-krita-org</span></code>.</p></li>
-<li><p>Come back to the official repository. Make sure you're browsing <code class="docutils literal notranslate"><span class="pre">Documentation</span> <span class="pre">&gt;</span> <span class="pre">Krita.org</span> <span class="pre">Documentation</span></code>, not your own fork. Otherwise this method won't work correctly.</p></li>
+<li><p>建立一個 KDE Identity。</p></li>
+<li><p>登入 <a class="reference external" href="https://invent.kde.org/">KDE_gitlab</a>。</p></li>
+<li><p>到 <a class="reference external" href="https://invent.kde.org/documentation/docs-krita-org/tree/master">repository</a> 並點選 <span class="guilabel">Fork</span>。</p></li>
+<li><p>你將會被帶到自己的 fork，位置一般是 <code class="docutils literal notranslate"><span class="pre">invent.kde.org/你的_KDE_登入名稱/docs-krita-org</span></code>。</p></li>
+<li><p>返回官方的儲存庫，確定你在瀏覽 <code class="docutils literal notranslate"><span class="pre">Documentation</span> <span class="pre">&gt;</span> <span class="pre">Krita.org</span> <span class="pre">Documentation</span></code> 的專案而非你自己的 fork，否則此方式將不能按預期運作。</p></li>
 </ol>
 <blockquote>
 <div><ol class="arabic">
-<li><p>Gitlab has an option to Edit files in the gitlab itself. To access this, go to <span class="menuselection">Repository ‣ Files</span>.</p></li>
-<li><p>At the top of the page you should see a dropbox with <code class="docutils literal notranslate"><span class="pre">master</span></code> as a chosen item.</p></li>
-<li><p>Find the file you want to edit, open it and then click <span class="guilabel">Edit</span>.</p></li>
-<li><p>Make your changes. (Note: in this mode you can edit only one file at a time).</p></li>
-<li><p>Go to the smaller textbox below and write a nice message in the commit message section with the changes you've made. When done, press <span class="guilabel">Commit changes</span>. This will make a merge request for you, just fill in all of the fields as explained here: <a class="reference internal" href="#new-merge-request"><span class="std std-ref">建立合併請求的準則</span></a>.</p>
+<li><p>GitLab 內置有一個修改檔案的功能。要存取這個功能，請到 <span class="menuselection">Repository ‣ Files</span> 的部分。</p></li>
+<li><p>在頁面頂部應該會有一個標示已選取 <code class="docutils literal notranslate"><span class="pre">master</span></code> 的下拉選單。</p></li>
+<li><p>找出希望修改的檔案，然後點選 <span class="guilabel">Edit</span>。</p></li>
+<li><p>作出更動。（這個模式每次只容許修改一個檔案。）</p></li>
+<li><p>在下方較小的文字輸入方塊「commit message」部分寫上一個簡單清晰的訊息來講解所作的更動。完成後點選 <span class="guilabel">Commit changes</span> 以提交更動並建立一個合併請求。請根據<a class="reference internal" href="#new-merge-request"><span class="std std-ref">建立合併請求的準則</span></a>頁面的指示填上欄位。</p>
 <blockquote>
-<div><p>The downside is that right now there's no way to tell if you made errors with the mark up using this method. Please check your changes with the <a class="reference external" href="https://livesphinx.herokuapp.com/">Online Sphinx Editor</a> (just copy and paste the entire file you're editing).</p>
+<div><p>使用這個方式的不便之處是不能即時知道有沒有標記錯誤。請自行用<a class="reference external" href="https://livesphinx.herokuapp.com/">線上 Sphinx 編輯器</a>檢查一下所作的更動（將檔案內容複製並貼上到該網頁內）。</p>
 </div></blockquote>
 </li>
 </ol>
