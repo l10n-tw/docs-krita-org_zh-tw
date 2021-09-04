@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Krita Manual 4.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-14 14:51+0000\n"
-"PO-Revision-Date: 2021-09-03 20:23+0000\n"
+"PO-Revision-Date: 2021-09-04 17:23+0000\n"
 "Last-Translator: Alvin Wong <alvin@alvinhc.com>\n"
 "Language-Team: Chinese (Traditional) <http://weblate.slat.org/projects/"
 "krita-docs/5-contributors_manual___krita_manual_readme/zh_Hant/>\n"
@@ -300,6 +300,7 @@ msgid ""
 ":guilabel:`Edit` and :guilabel:`WebIDE` are two different things! Make sure "
 "you select :guilabel:`Edit`."
 msgstr ""
+":guilabel:`Edit` 與 :guilabel:`WebIDE` 是兩個不同的功能，請確認你點選的是 :guilabel:`Edit`\\ 。"
 
 #: ../../contributors_manual/krita_manual_readme.rst:117
 msgid "Creating merge requests using WebIDE"
@@ -309,7 +310,7 @@ msgstr "以 WebIDE 建立合併請求 (Merge Request)"
 msgid ""
 "Recommended for users with a bit of knowledge about Git that want to edit "
 "multiple files at once."
-msgstr ""
+msgstr "建議懂得操作 Git 而又想同時修改多個檔案的人使用。"
 
 #: ../../contributors_manual/krita_manual_readme.rst:121
 #: ../../contributors_manual/krita_manual_readme.rst:160
@@ -317,43 +318,49 @@ msgid ""
 "Not recommended when you don't know what a branch is (see :ref:`merge-"
 "request-edit` instead)."
 msgstr ""
+"如果你不了解 branch（分支）的概念，不建議採用（取而代之，請見\\ :ref:`以編輯模式建立合併請求 <merge-request-edit>`"
+"\\ ）。"
 
 #: ../../contributors_manual/krita_manual_readme.rst:124
 #: ../../contributors_manual/krita_manual_readme.rst:162
 msgid ""
 "Follow the instructions above to login to `KDE_gitlab`_ and create your fork."
-msgstr ""
+msgstr "依照上述指示登入 `KDE_gitlab`_ 和建立自己的 fork。"
 
 #: ../../contributors_manual/krita_manual_readme.rst:126
 msgid "Go to your fork (make sure the url contains your username)."
-msgstr ""
+msgstr "到你的 Fork（請確認網址含你的帳號名稱）。"
 
 #: ../../contributors_manual/krita_manual_readme.rst:128
 msgid "Make sure you're on the ``master`` branch."
-msgstr ""
+msgstr "確認你在 ``master`` 分支。"
 
 #: ../../contributors_manual/krita_manual_readme.rst:130
 msgid ""
 "Click :guilabel:`WebIDE`. This should take you to a page that has a list of "
 "files on the left side and a big empty space for file contents on the right "
 "side."
-msgstr ""
+msgstr "點選 :guilabel:`WebIDE`\\ 。這會將你帶到一個左邊顯示檔案列表，而右邊有一個用作顯示檔案內容的空位的頁面。"
 
 #: ../../contributors_manual/krita_manual_readme.rst:132
 msgid "Open the files you want to edit and make the changes."
-msgstr ""
+msgstr "開啟你想修改的檔案並作出修改。"
 
 #: ../../contributors_manual/krita_manual_readme.rst:134
 msgid ""
 "Click :guilabel:`Commit...`. Double-click on all files in the :guilabel:"
 "`Unstaged changes` category to move them to :guilabel:`Staged changes`."
 msgstr ""
+"點選 :guilabel:`Commit...`\\ （提交）。點兩下所有在 :guilabel:`Unstaged changes` "
+"分類的檔案以將它們移到 :guilabel:`Staged changes`\\ 。"
 
 #: ../../contributors_manual/krita_manual_readme.rst:136
 msgid ""
 "Click :guilabel:`Commit...` again - it will expand a commit message textbox. "
 "Write commit message that explains what changes have you made and why."
 msgstr ""
+"再次點選 :guilabel:`Commit...`\\ ——這會展開 commit message 的文字輸入方塊。"
+"在這個方塊內寫上一個簡單清晰的訊息來講解所作的更動作為 commit 訊息。"
 
 #: ../../contributors_manual/krita_manual_readme.rst:138
 msgid ""
@@ -363,14 +370,17 @@ msgid ""
 "that :guilabel:`Start a new merge request` is checked. Otherwise you'll need "
 "to make a new merge request manually later."
 msgstr ""
+"請確認設定正確無誤：你須要選擇 :guilabel:`Create a new branch`\\ （branch 的名稱應為 "
+"``[帳號名稱]/[極簡短的更動描述]``。如已完成更動，請確認已勾選 :guilabel:`Start a new merge request`\\ ，"
+"否則之後將要另行建立一個 merge request。"
 
 #: ../../contributors_manual/krita_manual_readme.rst:140
 msgid "Click :guilabel:`Stage & Commit`."
-msgstr ""
+msgstr "點選 :guilabel:`Stage & Commit`\\ 。"
 
 #: ../../contributors_manual/krita_manual_readme.rst:142
 msgid "Fill all of the fields correctly: see :ref:`new-merge-request`."
-msgstr ""
+msgstr "正確地填上所有欄位：請參見\\ :ref:`new-merge-request`\\ 。"
 
 #: ../../contributors_manual/krita_manual_readme.rst:144
 msgid ""
@@ -379,6 +389,9 @@ msgid ""
 "click :guilabel:`Create a new merge request` (bright green button at the "
 "left). Select your fork and select the branch that you've created in WebIDE."
 msgstr ""
+"要手動建立一個 merge request 的話，請到 Krita Manual 官方專案儲存庫（確認網址不含你的帳號名稱），然後點選 "
+":guilabel:`Create a new merge request`\\ （在左方的綠色按鈕）。選取你的 fork 和先前用 WebIDE "
+"建立的 branch。"
 
 #: ../../contributors_manual/krita_manual_readme.rst:148
 msgid ""
@@ -389,12 +402,15 @@ msgid ""
 "access, you can't do it). It will just show the message: *An error occurred "
 "whilst committing your changes. Please try again.*"
 msgstr ""
+"如你沒有在官方專案的提交權限，GitLab 將不會允許你儲存更動。如果你錯手在官方的專案內作出修改，你只會得到一個「An error occurred "
+"whilst committing your changes. Please try again.」的訊息。（\\ :guilabel:`Create "
+"a merge request`\\ 也不能作用，因為這仍需要提交權限才能建立一個分支。）"
 
 #: ../../contributors_manual/krita_manual_readme.rst:150
 msgid ""
 "In this case, simply copy contents of all of the files you changed, go to "
 "your fork and paste them in the fork WebIDE."
-msgstr ""
+msgstr "在這個情況，請在你的 fork 內開啟 WebIDE 並手動將已修改的檔案內容複製過去。"
 
 #: ../../contributors_manual/krita_manual_readme.rst:156
 msgid "Creating merge requests using command line"
@@ -403,7 +419,7 @@ msgstr "以命令列建立合併請求 (Merge Request)"
 #: ../../contributors_manual/krita_manual_readme.rst:158
 msgid ""
 "Recommended for users that know how Git works and how to use command line."
-msgstr ""
+msgstr "建議懂得 Git 並熟習使用命令列操作的人使用。"
 
 #: ../../contributors_manual/krita_manual_readme.rst:164
 msgid ""
@@ -413,6 +429,8 @@ msgid ""
 "computer to edit these text files as well as build the manual locally to "
 "check for errors. (You need to do this step only once)."
 msgstr ""
+"使用 :guilabel:`git clone` 來下載一份儲存庫複本。儲存庫 (repository) 頁面提供了 clone 所需的 URL，"
+"讓你可以把更動推送 (push) 到你的 fork。這樣做的好處是可以電腦上任何程式來修改檔案以及在本機建置文件以檢查有否出錯。（這個步驟只需要做一次。）"
 
 #: ../../contributors_manual/krita_manual_readme.rst:167
 msgid ""
@@ -425,22 +443,30 @@ msgid ""
 "git remote add upstream https://invent.kde.org/documentation/docs-krita-org."
 "git"
 msgstr ""
+"# SSH 存取用：\n"
+"git clone git@invent.kde.org:<username>/docs-krita-org.git\n"
+"git remote add upstream git@invent.kde.org:documentation/docs-krita-org.git\n"
+"\n"
+"# HTTPS 存取用：\n"
+"git clone https://invent.kde.org/<username>/docs-krita-org.git\n"
+"git remote add upstream https://invent.kde.org/documentation/docs-krita-org."
+"git"
 
 #: ../../contributors_manual/krita_manual_readme.rst:177
 msgid ""
 "Remember to always pull changes from the official repository before making "
 "new changes:"
-msgstr ""
+msgstr "每次作出修改前，請記得要 pull（拉取）最新的更動："
 
 #: ../../contributors_manual/krita_manual_readme.rst:179
 msgid "git pull upstream master"
-msgstr ""
+msgstr "git pull upstream master"
 
 #: ../../contributors_manual/krita_manual_readme.rst:184
 msgid ""
 "Make sure you create a new branch for your changes, since september 2019, "
 "all changes should be branched from ``master``."
-msgstr ""
+msgstr "請確認為你的更動建立一個分支 (branch)。自 2019 年起，任何更動都應由 ``master`` 分支出來。"
 
 #: ../../contributors_manual/krita_manual_readme.rst:187
 msgid ""
@@ -449,6 +475,10 @@ msgid ""
 "# and then:\n"
 "git checkout -b \"<username>/<description of the new feature>\""
 msgstr ""
+"git checkout master\n"
+"\n"
+"# 然後：\n"
+"git checkout -b \"<帳號名稱>/<極簡短的更動描述>\""
 
 #: ../../contributors_manual/krita_manual_readme.rst:196
 msgid ""
@@ -456,6 +486,8 @@ msgid ""
 "detailed description of how to use Git in terminal in case of this workflow, "
 "go to :ref:`forking_gitlab`."
 msgstr ""
+"作出更動後，請 commit（提交）並將其 push（推送）到你的 fork。請參閱 :ref:`forking_gitlab` 以了解如何使用 Git "
+"命令列來做到這個工作流程。"
 
 #: ../../contributors_manual/krita_manual_readme.rst:198
 msgid ""
@@ -475,6 +507,19 @@ msgid ""
 "# submit your changes to your fork\n"
 "git push"
 msgstr ""
+"# 為你的系統安裝 python3-sphinx 套件。以 Ubuntu 為例：\n"
+"sudo apt install python3-sphinx\n"
+"# 建置文件（這會報告任何潛在問題，並讓你可以使用網頁瀏覽器來檢查更動）\n"
+"make html\n"
+"# 確認情況良好\n"
+"git status\n"
+"git diff\n"
+"# 追蹤所有已變更的檔案\n"
+"git add .\n"
+"# 提交更動\n"
+"git commit\n"
+"# 把更動推送到 fork\n"
+"git push"
 
 #: ../../contributors_manual/krita_manual_readme.rst:214
 msgid ""
@@ -483,6 +528,8 @@ msgid ""
 "request. For instruction on how to fill the fields, see :ref:`new-merge-"
 "request`."
 msgstr ""
+"最後，到官方專案儲存庫的頁面，然後到 Merge Requests 部分。選取你的 fork 以及正確的 branch 來建立一個 merge "
+"request。請參見\\ :ref:`new-merge-request`\\ 內的指示以填妥欄位。"
 
 #: ../../contributors_manual/krita_manual_readme.rst:220
 msgid "Guidelines for new merge requests"
@@ -1108,6 +1155,9 @@ msgid ""
 "follow the instructions on the team page to get in contact with fellow "
 "translators."
 msgstr ""
+"Krita 說明文件的翻譯工作是由\\ `KDE 在地化團隊 <https://l10n.kde.org/>`_\\ 負責。如果你希望參與正體中文版 "
+"Krita 說明文件的翻譯工作，請到\\ `臺灣自由暨開源軟體在地化社群的 Telegram 群組 <https://t.me/l10n_tw>`_\\ "
+"查詢。"
 
 #: ../../contributors_manual/krita_manual_readme.rst:438
 msgid ""
@@ -1118,6 +1168,9 @@ msgid ""
 "translations from the SVN and bring them to the manual section to be "
 "incorporated on a daily basis."
 msgstr ""
+"在地化團隊成員會存取說明文件的 PO 編目檔。這是一種可以使用翻譯軟體（如 POEdit 和 "
+"Lokalize）開啟的檔案格式。翻譯者會合作翻譯這些編目檔，並將它們提交到放置翻譯檔的 SVN 儲存庫。一個每日運行一次的自動程式會將翻譯檔由 SVN "
+"套用到說明文件內。正體中文在地化團隊目前的工作流程使用了私人的 Weblate 平台來協助翻譯。"
 
 #: ../../contributors_manual/krita_manual_readme.rst:440
 msgid ""
@@ -1130,6 +1183,12 @@ msgid ""
 "dutch version of :file:`/images/dockers/Krita-tutorial2-I.1-2.png` in :file:"
 "`/images/dockers/nl/Krita-tutorial2-I.1-2.png`."
 msgstr ""
+"如在地化團隊希望翻譯影像，這也是可以的。在 image 資料夾內的影像預設對應英文 "
+"(en)。要翻譯影像的話，首先在影像所在的資料夾建立一個以語言代碼命名的子資料夾（正體中文為 \"zh_TW\"），然後將已翻譯的影像放到裡面。例如 "
+"Sphinx 會從 :file:`/images/zh_TW/Pixels-brushstroke.png` 找出 :file:`/images/"
+"Pixels-brushstroke.png` 的中文版本，或從 :file:`/images/dockers/zh_TW/Krita-"
+"tutorial2-I.1-2.png` 找出 :file:`/images/dockers/Krita-tutorial2-I.1-2.png` "
+"的中文版本。"
 
 #: ../../contributors_manual/krita_manual_readme.rst:442
 msgid ""
@@ -1138,6 +1197,8 @@ msgid ""
 "translation should contact the main Krita team via the kimageshop "
 "mailinglist(kimageshop@kde.org), or foundation@krita.org, to accomplish this."
 msgstr ""
+"已完成的翻譯語言要手動加入到建置指令稿才會在官方網站上展示。在地化團隊如對翻譯感到滿意，應透過 kimageshop 郵遞清單 "
+"(kimageshop@kde.org) 或 foundation@krita.org 與 Krita 團隊聯絡，以處理相關事宜。"
 
 #: ../../contributors_manual/krita_manual_readme.rst:445
 msgid "Other"
@@ -1147,3 +1208,4 @@ msgstr "其他"
 msgid ""
 "For restructured text conventions, check :ref:`krita_markup_conventions`."
 msgstr ""
+"如要了解 reStructuredText 標記格式的使用慣例，請參閱 :ref:`krita_markup_conventions`\\ 一頁。"
