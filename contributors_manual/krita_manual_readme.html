@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-09-04T08:26:01" />
+  <meta property="og:article:modified_time" content="2021-09-04T17:26:07" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="給 Krita 說明文件貢獻者的指南。" name="description" />
 
@@ -307,90 +307,90 @@
 </ol>
 <div class="admonition attention">
 <p class="admonition-title">注意</p>
-<p><span class="guilabel">Edit</span> and <span class="guilabel">WebIDE</span> are two different things! Make sure you select <span class="guilabel">Edit</span>.</p>
+<p><span class="guilabel">Edit</span> 與 <span class="guilabel">WebIDE</span> 是兩個不同的功能，請確認你點選的是 <span class="guilabel">Edit</span>。</p>
 </div>
 </div></blockquote>
 <a class="reference internal image-reference" href="../_images/screenshot_editmode.png"><img alt="../_images/screenshot_editmode.png" src="../_images/screenshot_editmode.png" style="width: 1000px;" /></a>
 </section>
 <section id="creating-merge-requests-using-webide">
 <span id="merge-request-webide"></span><h4>以 WebIDE 建立合併請求 (Merge Request)<a class="headerlink" href="#creating-merge-requests-using-webide" title="本標題的永久連結">¶</a></h4>
-<p>Recommended for users with a bit of knowledge about Git that want to edit multiple files at once.</p>
-<p>Not recommended when you don't know what a branch is (see <a class="reference internal" href="#merge-request-edit"><span class="std std-ref">以編輯 (Edit) 模式建立合併請求 (Merge Request)</span></a> instead).</p>
+<p>建議懂得操作 Git 而又想同時修改多個檔案的人使用。</p>
+<p>如果你不了解 branch（分支）的概念，不建議採用（取而代之，請見<a class="reference internal" href="#merge-request-edit"><span class="std std-ref">以編輯模式建立合併請求</span></a>）。</p>
 <ol class="arabic simple">
-<li><p>Follow the instructions above to login to <a class="reference external" href="https://invent.kde.org/">KDE_gitlab</a> and create your fork.</p></li>
-<li><p>Go to your fork (make sure the url contains your username).</p></li>
-<li><p>Make sure you're on the <code class="docutils literal notranslate"><span class="pre">master</span></code> branch.</p></li>
-<li><p>Click <span class="guilabel">WebIDE</span>. This should take you to a page that has a list of files on the left side and a big empty space for file contents on the right side.</p></li>
-<li><p>Open the files you want to edit and make the changes.</p></li>
-<li><p>Click <span class="guilabel">Commit...</span>. Double-click on all files in the <span class="guilabel">Unstaged changes</span> category to move them to <span class="guilabel">Staged changes</span>.</p></li>
-<li><p>Click <span class="guilabel">Commit...</span> again - it will expand a commit message textbox. Write commit message that explains what changes have you made and why.</p></li>
-<li><p>Make sure the settings are correct: you need to select <span class="guilabel">Create a new branch</span> (the name of the branch should be: <code class="docutils literal notranslate"><span class="pre">[username]/[very</span> <span class="pre">short</span> <span class="pre">description</span> <span class="pre">of</span> <span class="pre">your</span> <span class="pre">changes]</span></code>). If you finished your changes, make sure that <span class="guilabel">Start a new merge request</span> is checked. Otherwise you'll need to make a new merge request manually later.</p></li>
-<li><p>Click <span class="guilabel">Stage &amp; Commit</span>.</p></li>
-<li><p>Fill all of the fields correctly: see <a class="reference internal" href="#new-merge-request"><span class="std std-ref">建立合併請求的準則</span></a>.</p></li>
-<li><p>To create a new merge request manually, go to Krita Manual official repository (make sure the url <em>doesn't</em> contain your username now) and click <span class="guilabel">Create a new merge request</span> (bright green button at the left). Select your fork and select the branch that you've created in WebIDE.</p></li>
+<li><p>依照上述指示登入 <a class="reference external" href="https://invent.kde.org/">KDE_gitlab</a> 和建立自己的 fork。</p></li>
+<li><p>到你的 Fork（請確認網址含你的帳號名稱）。</p></li>
+<li><p>確認你在 <code class="docutils literal notranslate"><span class="pre">master</span></code> 分支。</p></li>
+<li><p>點選 <span class="guilabel">WebIDE</span>。這會將你帶到一個左邊顯示檔案列表，而右邊有一個用作顯示檔案內容的空位的頁面。</p></li>
+<li><p>開啟你想修改的檔案並作出修改。</p></li>
+<li><p>點選 <span class="guilabel">Commit...</span>（提交）。點兩下所有在 <span class="guilabel">Unstaged changes</span> 分類的檔案以將它們移到 <span class="guilabel">Staged changes</span>。</p></li>
+<li><p>再次點選 <span class="guilabel">Commit...</span>——這會展開 commit message 的文字輸入方塊。在這個方塊內寫上一個簡單清晰的訊息來講解所作的更動作為 commit 訊息。</p></li>
+<li><p>請確認設定正確無誤：你須要選擇 <span class="guilabel">Create a new branch</span>（branch 的名稱應為 <code class="docutils literal notranslate"><span class="pre">[帳號名稱]/[極簡短的更動描述]</span></code>。如已完成更動，請確認已勾選 <span class="guilabel">Start a new merge request</span>，否則之後將要另行建立一個 merge request。</p></li>
+<li><p>點選 <span class="guilabel">Stage &amp; Commit</span>。</p></li>
+<li><p>正確地填上所有欄位：請參見<a class="reference internal" href="#new-merge-request"><span class="std std-ref">建立合併請求的準則</span></a>。</p></li>
+<li><p>要手動建立一個 merge request 的話，請到 Krita Manual 官方專案儲存庫（確認網址不含你的帳號名稱），然後點選 <span class="guilabel">Create a new merge request</span>（在左方的綠色按鈕）。選取你的 fork 和先前用 WebIDE 建立的 branch。</p></li>
 </ol>
 <div class="admonition note">
 <p class="admonition-title">備註</p>
-<p>If you don't have a push access to the official repository, gitlab won't allow you to save your changes if you were editing the official repository by mistake (and <span class="guilabel">Create a merge request</span> won't help with that: you still need to commit your changes to your branch, but if you don't have push access, you can't do it). It will just show the message: <em>An error occurred whilst committing your changes. Please try again.</em></p>
-<p>In this case, simply copy contents of all of the files you changed, go to your fork and paste them in the fork WebIDE.</p>
+<p>如你沒有在官方專案的提交權限，GitLab 將不會允許你儲存更動。如果你錯手在官方的專案內作出修改，你只會得到一個「An error occurred whilst committing your changes. Please try again.」的訊息。（<span class="guilabel">Create a merge request</span>也不能作用，因為這仍需要提交權限才能建立一個分支。）</p>
+<p>在這個情況，請在你的 fork 內開啟 WebIDE 並手動將已修改的檔案內容複製過去。</p>
 </div>
 </section>
 <section id="creating-merge-requests-using-command-line">
 <span id="merge-request-terminal"></span><h4>以命令列建立合併請求 (Merge Request)<a class="headerlink" href="#creating-merge-requests-using-command-line" title="本標題的永久連結">¶</a></h4>
-<p>Recommended for users that know how Git works and how to use command line.</p>
-<p>Not recommended when you don't know what a branch is (see <a class="reference internal" href="#merge-request-edit"><span class="std std-ref">以編輯 (Edit) 模式建立合併請求 (Merge Request)</span></a> instead).</p>
+<p>建議懂得 Git 並熟習使用命令列操作的人使用。</p>
+<p>如果你不了解 branch（分支）的概念，不建議採用（取而代之，請見<a class="reference internal" href="#merge-request-edit"><span class="std std-ref">以編輯模式建立合併請求</span></a>）。</p>
 <ol class="arabic">
-<li><p>Follow the instructions above to login to <a class="reference external" href="https://invent.kde.org/">KDE_gitlab</a> and create your fork.</p></li>
-<li><p>Clone the repository locally with <span class="guilabel">git clone</span>. The repository page has the urls you can perform git clone from, and you can then push to your fork. The advantage of this is that you can use all the tools on your computer to edit these text files as well as build the manual locally to check for errors. (You need to do this step only once).</p>
+<li><p>依照上述指示登入 <a class="reference external" href="https://invent.kde.org/">KDE_gitlab</a> 和建立自己的 fork。</p></li>
+<li><p>使用 <span class="guilabel">git clone</span> 來下載一份儲存庫複本。儲存庫 (repository) 頁面提供了 clone 所需的 URL，讓你可以把更動推送 (push) 到你的 fork。這樣做的好處是可以電腦上任何程式來修改檔案以及在本機建置文件以檢查有否出錯。（這個步驟只需要做一次。）</p>
 <blockquote>
-<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># for ssh access</span>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># SSH 存取用：</span>
 git clone git@invent.kde.org:&lt;username&gt;/docs-krita-org.git
 git remote add upstream git@invent.kde.org:documentation/docs-krita-org.git
 
-<span class="c1"># for https access</span>
+<span class="c1"># HTTPS 存取用：</span>
 git clone https://invent.kde.org/&lt;username&gt;/docs-krita-org.git
 git remote add upstream https://invent.kde.org/documentation/docs-krita-org.git
 </pre></div>
 </div>
 </div></blockquote>
 </li>
-<li><p>Remember to always pull changes from the official repository before making new changes:</p>
+<li><p>每次作出修改前，請記得要 pull（拉取）最新的更動：</p>
 <blockquote>
 <div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git pull upstream master
 </pre></div>
 </div>
 </div></blockquote>
 </li>
-<li><p>Make sure you create a new branch for your changes, since september 2019, all changes should be branched from <code class="docutils literal notranslate"><span class="pre">master</span></code>.</p>
+<li><p>請確認為你的更動建立一個分支 (branch)。自 2019 年起，任何更動都應由 <code class="docutils literal notranslate"><span class="pre">master</span></code> 分支出來。</p>
 <blockquote>
 <div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git checkout master
 
-<span class="c1"># and then:</span>
-git checkout -b <span class="s2">&quot;&lt;username&gt;/&lt;description of the new feature&gt;&quot;</span>
+<span class="c1"># 然後：</span>
+git checkout -b <span class="s2">&quot;&lt;帳號名稱&gt;/&lt;極簡短的更動描述&gt;&quot;</span>
 </pre></div>
 </div>
 </div></blockquote>
 </li>
-<li><p>After you make your changes, commit them and push to your fork. For a detailed description of how to use Git in terminal in case of this workflow, go to <a class="reference internal" href="../untranslatable_pages/intro_hacking_krita.html#forking-gitlab"><span class="std std-ref">Forking on Gitlab</span></a>.</p>
+<li><p>作出更動後，請 commit（提交）並將其 push（推送）到你的 fork。請參閱 <a class="reference internal" href="../untranslatable_pages/intro_hacking_krita.html#forking-gitlab"><span class="std std-ref">Forking on Gitlab</span></a> 以了解如何使用 Git 命令列來做到這個工作流程。</p>
 <blockquote>
-<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># install the python3-sphinx package for your system. For example for Ubuntu:</span>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># 為你的系統安裝 python3-sphinx 套件。以 Ubuntu 為例：</span>
 sudo apt install python3-sphinx
-<span class="c1"># build the manual (reports potential errors, allows to inspect changes in the browser)</span>
+<span class="c1"># 建置文件（這會報告任何潛在問題，並讓你可以使用網頁瀏覽器來檢查更動）</span>
 make html
-<span class="c1"># make sure everything is correct</span>
+<span class="c1"># 確認情況良好</span>
 git status
 git diff
-<span class="c1"># add all of the files</span>
+<span class="c1"># 追蹤所有已變更的檔案</span>
 git add .
-<span class="c1"># commit your changes</span>
+<span class="c1"># 提交更動</span>
 git commit
-<span class="c1"># submit your changes to your fork</span>
+<span class="c1"># 把更動推送到 fork</span>
 git push
 </pre></div>
 </div>
 </div></blockquote>
 </li>
-<li><p>Finally, go to the website of the original repository, and then to Merge Requests. Select your fork and the correct branch and create a new merge request. For instruction on how to fill the fields, see <a class="reference internal" href="#new-merge-request"><span class="std std-ref">建立合併請求的準則</span></a>.</p></li>
+<li><p>最後，到官方專案儲存庫的頁面，然後到 Merge Requests 部分。選取你的 fork 以及正確的 branch 來建立一個 merge request。請參見<a class="reference internal" href="#new-merge-request"><span class="std std-ref">建立合併請求的準則</span></a>內的指示以填妥欄位。</p></li>
 </ol>
 </section>
 <section id="guidelines-for-new-merge-requests">
@@ -598,15 +598,15 @@ is described as part of step 5. in <a class="reference internal" href="#merge-re
 </section>
 <section id="translating">
 <h3>翻譯<a class="headerlink" href="#translating" title="本標題的永久連結">¶</a></h3>
-<p>Translation of the manual is handled by the <a class="reference external" href="https://l10n.kde.org/">KDE localization community</a>. To join the translation effort, go to the localization site, select the list of <a class="reference external" href="https://l10n.kde.org/teams-list.php">translation teams</a>, select the language you wish to translate for, and follow the instructions on the team page to get in contact with fellow translators.</p>
-<p>The localization team has access to the PO files for this manual, which is a file type used by translation programs like POEdit and Lokalize. A translation team is able to work together on translating these files and uploading them to the translations SVN. A special script will then take the translations from the SVN and bring them to the manual section to be incorporated on a daily basis.</p>
-<p>Images can be translated if a translation team wants to provide their own images. All images in the image folder are by default for 'en'. When you want to translate a specific image, go into that folder and add another folder with your language code to add in the translated versions of images. So Sphinx will search for a dutch version of <code class="file docutils literal notranslate"><span class="pre">/images/Pixels-brushstroke.png</span></code> at <code class="file docutils literal notranslate"><span class="pre">/images/nl/Pixels-brushstroke.png</span></code> and for a dutch version of <code class="file docutils literal notranslate"><span class="pre">/images/dockers/Krita-tutorial2-I.1-2.png</span></code> in <code class="file docutils literal notranslate"><span class="pre">/images/dockers/nl/Krita-tutorial2-I.1-2.png</span></code>.</p>
-<p>Finished translations also need to be added to the build script to show up online. Translator teams which are confident in the state of their translation should contact the main Krita team via the kimageshop mailinglist(<a class="reference external" href="mailto:kimageshop&#37;&#52;&#48;kde&#46;org">kimageshop<span>&#64;</span>kde<span>&#46;</span>org</a>), or <a class="reference external" href="mailto:foundation&#37;&#52;&#48;krita&#46;org">foundation<span>&#64;</span>krita<span>&#46;</span>org</a>, to accomplish this.</p>
+<p>Krita 說明文件的翻譯工作是由<a class="reference external" href="https://l10n.kde.org/">KDE 在地化團隊</a>負責。如果你希望參與正體中文版 Krita 說明文件的翻譯工作，請到<a class="reference external" href="https://t.me/l10n_tw">臺灣自由暨開源軟體在地化社群的 Telegram 群組</a>查詢。</p>
+<p>在地化團隊成員會存取說明文件的 PO 編目檔。這是一種可以使用翻譯軟體（如 POEdit 和 Lokalize）開啟的檔案格式。翻譯者會合作翻譯這些編目檔，並將它們提交到放置翻譯檔的 SVN 儲存庫。一個每日運行一次的自動程式會將翻譯檔由 SVN 套用到說明文件內。正體中文在地化團隊目前的工作流程使用了私人的 Weblate 平台來協助翻譯。</p>
+<p>如在地化團隊希望翻譯影像，這也是可以的。在 image 資料夾內的影像預設對應英文 (en)。要翻譯影像的話，首先在影像所在的資料夾建立一個以語言代碼命名的子資料夾（正體中文為 &quot;zh_TW&quot;），然後將已翻譯的影像放到裡面。例如 Sphinx 會從 <code class="file docutils literal notranslate"><span class="pre">/images/zh_TW/Pixels-brushstroke.png</span></code> 找出 <code class="file docutils literal notranslate"><span class="pre">/images/Pixels-brushstroke.png</span></code> 的中文版本，或從 <code class="file docutils literal notranslate"><span class="pre">/images/dockers/zh_TW/Krita-tutorial2-I.1-2.png</span></code> 找出 <code class="file docutils literal notranslate"><span class="pre">/images/dockers/Krita-tutorial2-I.1-2.png</span></code> 的中文版本。</p>
+<p>已完成的翻譯語言要手動加入到建置指令稿才會在官方網站上展示。在地化團隊如對翻譯感到滿意，應透過 kimageshop 郵遞清單 (<a class="reference external" href="mailto:kimageshop&#37;&#52;&#48;kde&#46;org">kimageshop<span>&#64;</span>kde<span>&#46;</span>org</a>) 或 <a class="reference external" href="mailto:foundation&#37;&#52;&#48;krita&#46;org">foundation<span>&#64;</span>krita<span>&#46;</span>org</a> 與 Krita 團隊聯絡，以處理相關事宜。</p>
 </section>
 </section>
 <section id="other">
 <h2>其他<a class="headerlink" href="#other" title="本標題的永久連結">¶</a></h2>
-<p>For restructured text conventions, check <a class="reference internal" href="krita_manual_conventions.html#krita-markup-conventions"><span class="std std-ref">Krita 說明文件標記格式使用慣例</span></a>.</p>
+<p>如要了解 reStructuredText 標記格式的使用慣例，請參閱 <a class="reference internal" href="krita_manual_conventions.html#krita-markup-conventions"><span class="std std-ref">Krita 說明文件標記格式使用慣例</span></a>一頁。</p>
 </section>
 </section>
 
