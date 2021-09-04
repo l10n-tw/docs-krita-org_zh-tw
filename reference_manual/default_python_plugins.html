@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-09-03T20:26:05" />
+  <meta property="og:article:modified_time" content="2021-09-04T08:26:01" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="列出 Krita 預設可用的所有 Python 外掛程式。" name="description" />
 
@@ -138,7 +138,7 @@
 <li class="toctree-l2 current"><a class="current reference internal" href="#">預設安裝的 Python 外掛程式</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#usability">易用性</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#workflow-improvements">改善作業流程</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#image-document-actions">影像、文件操作</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#image-document-actions">影像／文件操作</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#file-actions">檔案操作</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#python-scripting">Python 指令稿</a></li>
 </ul>
@@ -291,33 +291,33 @@
 <ul class="simple">
 <li><p>組織頁面並快速訪問頁面。</p></li>
 <li><p>使用適當的中繼資料匯出多種格式。</p></li>
-<li><p>Random suggestions for metadata to avoid spending time on finding the perfect title before starting the project.</p></li>
+<li><p>編輯中繼資料時提供隨機建議，避免在建立專案之前花時間尋找完美的標題。</p></li>
 </ul>
 </div></blockquote>
 <p>批次匯出器</p>
 <blockquote>
 <div><p>遊戲開發者和平面設計師的外掛程式。</p>
 <ul class="simple">
-<li><p>Batch export of assets to multiple sizes, file types and custom paths.</p></li>
+<li><p>可以將資產批次匯出為多種大小、文件類型和自定義路徑。</p></li>
 <li><p>使用智慧重新命名工具快速更名圖層。</p></li>
 <li><p>匯出所有圖層或僅匯出選定圖層。</p></li>
 </ul>
-<p>By default, the plugin exports the images in an <code class="file docutils literal notranslate"><span class="pre">export</span></code> folder next to the Krita document and follows the structure of your layer stack.</p>
+<p>預設情況下，外掛程式會在 Krita 文件旁邊的<code class="file docutils literal notranslate"><span class="pre">export</span></code>文件夾中匯出影像，並遵循您的圖層堆疊結構。</p>
 </div></blockquote>
 </section>
 <section id="image-document-actions">
-<h2>影像、文件操作<a class="headerlink" href="#image-document-actions" title="本標題的永久連結">¶</a></h2>
+<h2>影像／文件操作<a class="headerlink" href="#image-document-actions" title="本標題的永久連結">¶</a></h2>
 <p>指定特性檔案對話框</p>
 <blockquote>
 <div><p>Allows you to assign a profile to an image instead of converting it to that profile. The difference is that it allows only interpreting the colors by the new profile, but not change any of the values. It can be found in <span class="menuselection">Tools ‣ Assign Profile to Image...</span>, and will present a list of profiles for the current image's color model.</p>
 </div></blockquote>
 <p>色彩空間</p>
 <blockquote>
-<div><p>Allows you to select a document and convert its colors to a new color space, like RGBA, CMYKA or L*a*b.</p>
+<div><p>可選擇文件並將其顏色轉換為新的色彩空間，如 RGBA、CMYKA 或 L*a*b。</p>
 </div></blockquote>
 <p>色彩通道轉換為圖層</p>
 <blockquote>
-<div><p>Splits channels from a layer to sub-layers.</p>
+<div><p>將一個圖層的色彩通道拆分為子圖層。</p>
 </div></blockquote>
 <p>檔案工具</p>
 <blockquote>
@@ -329,7 +329,7 @@
 </div></blockquote>
 <p>高通濾波</p>
 <blockquote>
-<div><p>Performs a high pass filter on the active document.</p>
+<div><p>對使用中文件應用高通濾波濾鏡。</p>
 </div></blockquote>
 </section>
 <section id="file-actions">
@@ -362,11 +362,11 @@
 </div></blockquote>
 <p>指令稿執行器</p>
 <blockquote>
-<div><p>一個小型 Python 指令稿控制台，允許在編輯器中寫程式並執行它，並提供與執行輸出相關的回饋。您還可以使用「調校（除錯）」按鈕除錯程式碼。</p>
+<div><p>一個小型 Python 指令稿控制台，允許在編輯器中寫程式並執行它，並提供與執行輸出相關的回饋。您還可以使用「調校」按鈕來除錯程式碼。</p>
 </div></blockquote>
 <p>十大指令稿</p>
 <blockquote>
-<div><p>與十大筆刷類似，這個外掛程式允許將 Python 指令稿分配給十個可配置的快捷鍵。</p>
+<div><p>與十大筆刷類似，這個外掛程式最多可以設定十個 Python 指令稿的快捷鍵。</p>
 </div></blockquote>
 </section>
 </section>
@@ -394,7 +394,7 @@
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>3034c62</code>
+          修訂版本 <code>10bdfa3</code>
         </span>
       
 
