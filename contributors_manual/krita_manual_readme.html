@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-09-06T07:26:51" />
+  <meta property="og:article:modified_time" content="2021-09-06T22:26:35" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="給 Krita 說明文件貢獻者的指南。" name="description" />
 
@@ -400,10 +400,10 @@ git push
 <li><p><span class="guilabel">Title</span>（標題）和<span class="guilabel">Description</span>（描述）應解釋所作的更動和作出更動的原因，與 Commit 訊息相似，因此也應依照相同的標準。</p></li>
 <li><p><span class="guilabel">Target</span> 應指向 <code class="docutils literal notranslate"><span class="pre">master</span></code>。</p></li>
 <li><p>如認定該合併請求將需要作進一步修改，請以 <code class="code docutils literal notranslate"><span class="pre">[WIP]</span></code> 作為標題開首。</p></li>
-<li><p>Make sure you checked <span class="guilabel">Allow commits from members who can merge to the target branch.</span> -- it is often needed for technical reasons that merge request is rebased on master, which technically changes the merge request, but it doesn't change the actual content of it. Rebase can be done by you or by the reviewer -- if you don't want to be bothered later too much, better check this checkbox so the reviewer can do it themselves with only a few clicks.</p></li>
-<li><p>You can safely check <span class="guilabel">Delete source branch when merge request is accepted</span> in most cases.</p></li>
-<li><p>Unless your reviewers tell you otherwise, check <span class="guilabel">Squash commits when merge request is accepted</span>. The first line of the commit message will come from the <span class="guilabel">Title</span> of your merge request and the rest of it will be taken from the <span class="guilabel">Description</span> of the merge request.</p></li>
-<li><p>When you finish creating your merge request, go to IRC (see <a class="reference internal" href="community.html#internet-relay-chat"><span class="std std-ref">IRC 聊天室</span></a>) and ask someone with push access to add the <code class="docutils literal notranslate"><span class="pre">Needs</span> <span class="pre">Review</span></code> label on your merge request.</p></li>
+<li><p>請確認已勾選 <span class="guilabel">Allow commits from members who can merge to the target branch.</span>。合併請求因技術原因而經常要被 rebase（衍合）到 master 分支之上，此舉會修改合併請求，但不會改變更動的實際內容。Rebase 操作可以是由你或是由審核者來進行。如果你不想經常被要求進行 rebase 操作，請啟用此選項以讓審核者代為進行 rebase。</p></li>
+<li><p>在多數情況下，勾選 <span class="guilabel">Delete source branch when merge request is accepted</span> 是安全的。</p></li>
+<li><p>除非審核者提出其他要求，否則應勾選 <span class="guilabel">Squash commits when merge request is accepted</span>。Commit 訊息的第一句會取自合併請求的 <span class="guilabel">Title</span>（標題）而其餘內容會取自合併請求的 <span class="guilabel">Description</span>（描述）。</p></li>
+<li><p>當完成建立合併請求，請到 <a class="reference internal" href="community.html#internet-relay-chat"><span class="std std-ref">IRC 聊天室</span></a>請求有權限的成員代為設定 <code class="docutils literal notranslate"><span class="pre">Needs</span> <span class="pre">Review</span></code> 標籤。</p></li>
 <li><p>You might get feedback on your merge request if it has mistakes. Just fix the mistakes in your branch in one of the following ways.</p>
 <blockquote>
 <div><ul class="simple">
