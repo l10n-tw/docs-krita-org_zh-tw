@@ -6,7 +6,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta property="og:title" name="title" content="Clone Layers" />
+  <meta property="og:title" name="title" content="再製圖層" />
   <meta property="og:site-name" content="Krita Manual" />
   <meta property="og:type" content="article" />
   <meta property="og:locale" content="zh_TW" />
@@ -21,13 +21,13 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-09-05T19:26:26" />
+  <meta property="og:article:modified_time" content="2021-09-06T07:26:51" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<meta content="How to use clone layers." name="description" />
+<meta content="如何使用再製圖層。" name="description" />
 
   
   
-  <title>Clone Layers &mdash; Krita Manual 5.0.0 說明文件</title>
+  <title>再製圖層 &mdash; Krita Manual 5.0.0 說明文件</title>
   
 
   
@@ -60,7 +60,7 @@
     <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="搜尋" href="../../search.html" />
-    <link rel="next" title="File Layers" href="file_layers.html" />
+    <link rel="next" title="濾鏡圖層" href="file_layers.html" />
     <link rel="prev" title="圖層及遮罩" href="../layers_and_masks.html" /> 
 
   
@@ -145,12 +145,12 @@
 <li class="toctree-l2"><a class="reference internal" href="../instant_preview.html">即時預覽</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../krita_4_preset_bundle.html">Krita 4 資源包介紹</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../layers_and_masks.html">圖層及遮罩</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Clone Layers</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#example-uses-of-clone-layers">Example uses of Clone Layers</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#changing-the-source-of-clone-layers">Changing the source of Clone Layers</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">再製圖層</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#example-uses-of-clone-layers">再製圖層的使用範例</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#changing-the-source-of-clone-layers">改變再製圖層的來源內容</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="file_layers.html">File Layers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="file_layers.html">濾鏡圖層</a></li>
 <li class="toctree-l3"><a class="reference internal" href="fill_layers.html">填充圖層</a></li>
 <li class="toctree-l3"><a class="reference internal" href="filter_layers.html">濾鏡圖層</a></li>
 <li class="toctree-l3"><a class="reference internal" href="filter_masks.html">濾鏡遮罩</a></li>
@@ -244,7 +244,7 @@
         
           <li><a href="../layers_and_masks.html">圖層及遮罩</a> &raquo;</li>
         
-      <li>Clone Layers</li>
+      <li>再製圖層</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -269,10 +269,10 @@
            <div itemprop="articleBody">
             
   <section id="clone-layers">
-<span id="index-0"></span><span id="id1"></span><h1>Clone Layers<a class="headerlink" href="#clone-layers" title="本標題的永久連結">¶</a></h1>
+<span id="index-0"></span><span id="id1"></span><h1>再製圖層<a class="headerlink" href="#clone-layers" title="本標題的永久連結">¶</a></h1>
 <p>A clone layer is a layer that keeps an up-to-date copy of another layer. You cannot draw or paint on it directly, but it can be used to create effects by applying different types of layers and masks (e.g. filter layers or masks).</p>
 <section id="example-uses-of-clone-layers">
-<h2>Example uses of Clone Layers<a class="headerlink" href="#example-uses-of-clone-layers" title="本標題的永久連結">¶</a></h2>
+<h2>再製圖層的使用範例<a class="headerlink" href="#example-uses-of-clone-layers" title="本標題的永久連結">¶</a></h2>
 <p>For example, if you were painting a picture of some magic person and wanted to create a glow around them that was updated as you updated your character, you could:</p>
 <ol class="arabic simple">
 <li><p>Have a Paint Layer where you draw your character</p></li>
@@ -283,7 +283,7 @@
 <p>As you keep painting and adding details, erasing on the first layer, Krita will automatically update the clone layer, making your &quot;glow&quot; apply to every change you make.</p>
 </section>
 <section id="changing-the-source-of-clone-layers">
-<h2>Changing the source of Clone Layers<a class="headerlink" href="#changing-the-source-of-clone-layers" title="本標題的永久連結">¶</a></h2>
+<h2>改變再製圖層的來源內容<a class="headerlink" href="#changing-the-source-of-clone-layers" title="本標題的永久連結">¶</a></h2>
 <p>You can change the source of one or more Clone Layers in the Layers Docker. To do so, select one or more Clone Layers in the docker (hold <kbd class="kbd docutils literal notranslate">Ctrl</kbd> or <kbd class="kbd docutils literal notranslate">Shift</kbd> and left-click the layers). Then, right-click on any selected layer. In the context menu, there is an action named <span class="guilabel">Set Copy From</span>. Click it. A dialog will pop up and there is a drop-down menu with all possible layers to be set as the source of all selected Clone Layers. If the current source of them consists of multiple layers, the default activated selection in the drop-down menu will be blank. Otherwise, it would be the common source of selected Clone Layers.</p>
 <p>Possible target layers are determined through the following criteria:</p>
 <ol class="arabic simple">
@@ -303,7 +303,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="file_layers.html" class="btn btn-neutral float-right" title="File Layers" accesskey="n" rel="next"> <!-- 下一個 --> <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="file_layers.html" class="btn btn-neutral float-right" title="濾鏡圖層" accesskey="n" rel="next"> <!-- 下一個 --> <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="../layers_and_masks.html" class="btn btn-neutral" title="圖層及遮罩" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- 上一個  -->  </a>
@@ -318,7 +318,7 @@
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>06166e6</code>
+          修訂版本 <code>1a68e8d</code>
         </span>
       
 
