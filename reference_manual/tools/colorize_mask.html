@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-09-07T22:09:09" />
+  <meta property="og:article:modified_time" content="2021-09-08T07:09:21" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="如使在 Krita 使用著色遮罩。" name="description" />
 
@@ -304,11 +304,11 @@
 <p>我們以在<a class="reference internal" href="../../user_manual/getting_started/basic_concepts.html#basic-concepts"><span class="std std-ref">基本概念</span></a>中也有使用的檔案作為範例。</p>
 <a class="reference internal image-reference" href="../../_images/Krita_4_0_colorize_mask_usage_01.png"><img alt="../../_images/Krita_4_0_colorize_mask_usage_01.png" class="align-center" src="../../_images/Krita_4_0_colorize_mask_usage_01.png" style="width: 800px;" /></a>
 <p>這個檔案中婦人的線稿已經與背景分離，同時，背景也被分成兩個圖層：一個主要圖層，一個細節圖層。</p>
-<p>首先，在線稿圖層已被選取的情況下使用著色遮罩編輯工具。<img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> 畫布會增加一個著色遮罩圖層。你亦可對線稿 <img alt="滑鼠右鍵" src="../../_images/Krita_mouse_right.png" />，然後 <span class="menuselection">新增 ‣ 著色遮罩</span>。線稿會突然變得奇怪，</p>
+<p>首先，在線稿圖層已被選取的情況下使用著色遮罩編輯工具。<img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> 畫布會增加一個著色遮罩圖層。你亦可對線稿 <img alt="滑鼠右鍵" src="../../_images/Krita_mouse_right.png" />，然後 <span class="menuselection">新增 ‣ 著色遮罩</span>。線稿會突然變得奇怪，這是為了算法能更容易使用而預先生成的遮罩。下面的工具選單顯示哪些選項控制這個遮罩。</p>
 <a class="reference internal image-reference" href="../../_images/Krita_4_0_colorize_mask_usage_02.png"><img alt="../../_images/Krita_4_0_colorize_mask_usage_02.png" class="align-center" src="../../_images/Krita_4_0_colorize_mask_usage_02.png" style="width: 800px;" /></a>
-<p>Now, you make strokes with brush colors, press <span class="guilabel">Update</span> in the tool options, or tick the last icon of the colorize mask properties. In the layer docker, you will be able to see a little progress bar appear on the colorize mask indicating how long it takes. The bigger your file, the longer it will take.</p>
+<p>現在使用筆刷上色，在工具選項按<span class="guilabel">更新</span>，或是打勾著色遮罩裡的最後一個圖像。在圖層工具面板裡，可以看到著色遮罩的進度條，檔案越大，所需的時間越長。</p>
 <a class="reference internal image-reference" href="../../_images/Krita_4_0_colorize_mask_usage_03.png"><img alt="../../_images/Krita_4_0_colorize_mask_usage_03.png" class="align-center" src="../../_images/Krita_4_0_colorize_mask_usage_03.png" style="width: 800px;" /></a>
-<p>We want to have the blue transparent. In the tool options of the colorize editing tool you will see a small palette. These are the colors already used. You can remove colors here, or mark a single color as standing for transparent, by selecting it and pressing &quot;transparent&quot;. Updating the mask will still show the blue stroke, but the result will be transparent:</p>
+<p>我們現在要加上透明藍色。在著色熟罩編輯工具的工具選項中，可以看到一個小的色票表。這是已經使用過的顏色。在這裡能夠移除或是標記一個顏色為透明色。在選了一個顏色後按「透明」，更新遮罩會看到藍色，但是透明的筆跡：</p>
 <a class="reference internal image-reference" href="../../_images/Krita_4_0_colorize_mask_usage_04.png"><img alt="../../_images/Krita_4_0_colorize_mask_usage_04.png" class="align-center" src="../../_images/Krita_4_0_colorize_mask_usage_04.png" style="width: 800px;" /></a>
 <p>Because the colorize mask algorithm is slow, and we only need a part of our layer to be filled to fill the whole ghost lady figure, we can make use of <span class="guilabel">Limit to layer bounds</span>. This will limit Colorize Mask to use the combined size of the line art and the coloring key strokes. Therefore, make sure that the colorizing keystrokes only take up as much as they really need.</p>
 <a class="reference internal image-reference" href="../../_images/Krita_4_0_colorize_mask_usage_05.png"><img alt="../../_images/Krita_4_0_colorize_mask_usage_05.png" class="align-center" src="../../_images/Krita_4_0_colorize_mask_usage_05.png" style="width: 800px;" /></a>
@@ -416,7 +416,7 @@
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>3631e22</code>
+          修訂版本 <code>1d37112</code>
         </span>
       
 

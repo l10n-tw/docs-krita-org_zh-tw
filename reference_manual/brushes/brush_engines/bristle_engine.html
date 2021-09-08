@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-09-07T22:09:09" />
+  <meta property="og:article:modified_time" content="2021-09-08T07:09:21" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="鬃毛刷工具引擎的手冊頁。" name="description" />
 
@@ -288,14 +288,14 @@
 </ul>
 <p>你可以：</p>
 <ul class="simple">
-<li><p>Use different shapes for different effects. Be aware that complex brush shapes will draw more slowly though, while the effects aren't always visible (since in the end, you're passing over an area with a certain number of bristles).</p></li>
+<li><p>使用不同的形狀產生不同的效果。請注意，複雜的畫筆形狀會繪製得更慢，雖然效果並不總是可見的（因為最後，你會經過一個有一定數量刷毛的區域）。</p></li>
 <li><p>要降低刷毛密度，您也可以只使用自動筆刷並降低刷頭的密度，或增加其隨機性。</p></li>
 </ul>
 <img alt="../../../_images/Krita-tutorial7-B.I.1.png" src="../../../_images/Krita-tutorial7-B.I.1.png" />
 </section>
 <section id="bristle-options">
 <h2>刷毛選項<a class="headerlink" href="#bristle-options" title="本標題的永久連結">¶</a></h2>
-<p>The core of this particular brush-engine.</p>
+<p>這個特殊的筆刷引擎的核心。</p>
 <dl class="simple">
 <dt>變形</dt><dd><p>把它想像成下壓刷子使刷毛岔開。</p>
 <ul class="simple">
@@ -311,9 +311,9 @@
 <li><p>負值與相應的正值具有相同的效果。</p></li>
 </ul>
 </dd>
-<dt>切變</dt><dd><p>Shear introduces an angle to your brush, as though you're drawing with an oval brush (or the side of a round brush).</p>
+<dt>切邊</dt><dd><p>切邊為您的畫筆引入了一個角度，就好像您正在使用橢圓形畫筆（或圓形畫筆的一側）繪圖一樣。</p>
 </dd>
-<dt>密度</dt><dd><p>這控制了刷毛的密度。縮放取一定數量的刷毛並將它們擴展或壓縮成一個更密集的區域，而密度取一個固定區域並決定其中的刷毛數量。看到差異觸了嗎？</p>
+<dt>密度</dt><dd><p>這控制了刷毛的密度。縮放取一定數量的刷毛並將它們擴展或壓縮成一個更密集的區域，而密度取一個固定區域並決定其中的刷毛數量。看到差異了嗎？</p>
 </dd>
 </dl>
 <img alt="../../../_images/Krita-tutorial7-B.I.2-1.png" src="../../../_images/Krita-tutorial7-B.I.2-1.png" />
@@ -348,17 +348,17 @@
 <div class="admonition note">
 <p class="admonition-title">備註</p>
 <ul class="simple">
-<li><p>It will only take colors in the unscaled area of the brush, so if you're using a brush with 4.00 scale for example, it will only take the colors in the 1/4 area closest to the center.</p></li>
-<li><p>When the source is transparent, the bristles take black color.</p></li>
+<li><p>它只會使用未縮放區域中的畫筆顏色，因此，如果您使用縮放為 4.00 的畫筆，它只會使用最靠近中心的 1/4 區域中的顏色。</p></li>
+<li><p>當元素是透明的時，刷毛呈黑色。</p></li>
 </ul>
 </div>
 <img alt="../../../_images/Krita-tutorial7-B.I.3-2.png" src="../../../_images/Krita-tutorial7-B.I.3-2.png" />
 <div class="admonition warning">
 <p class="admonition-title">警告</p>
-<p>Be aware that this feature is a bit buggy though. It's supposed to take the color from the current layer, but some buggy behavior causes it to often use the last layer you've painted on (with a non-Bristle brush?) as source. To avoid these weird behaviors, stick to just one layer, or paint something on the current active layer first with another brush (such as a Pixel brush).</p>
+<p>請注意，此功能有點問題。它應該從當前圖層中獲取顏色，但是一些錯誤的行為導致它經常使用您繪製的最後一個圖層（使用非鬃毛刷？）作為元素。為避免這些奇怪的行為，請堅持只使用一個圖層，或者先用另一個畫筆（例如像素畫筆）在當前活動圖層上繪製一些東西。</p>
 </div>
 </dd>
-<dt>Weighted saturation</dt><dd><p>Works by modifying the saturation with the following:</p>
+<dt>Weighted saturation</dt><dd><p>通過使用以下內容修改飽和度來工作：</p>
 <ul class="simple">
 <li><p>Pressure weight</p></li>
 <li><p>Bristle length weight</p></li>
@@ -393,7 +393,7 @@
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>3631e22</code>
+          修訂版本 <code>1d37112</code>
         </span>
       
 

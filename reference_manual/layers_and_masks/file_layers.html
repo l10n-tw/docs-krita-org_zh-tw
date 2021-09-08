@@ -6,7 +6,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta property="og:title" name="title" content="濾鏡圖層" />
+  <meta property="og:title" name="title" content="檔案圖層" />
   <meta property="og:site-name" content="Krita Manual" />
   <meta property="og:type" content="article" />
   <meta property="og:locale" content="zh_TW" />
@@ -21,13 +21,13 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-09-07T22:09:09" />
+  <meta property="og:article:modified_time" content="2021-09-08T07:09:21" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="在 Krita 如何使用濾鏡圖層。" name="description" />
 
   
   
-  <title>濾鏡圖層 &mdash; Krita Manual 5.0.0 說明文件</title>
+  <title>檔案圖層 &mdash; Krita Manual 5.0.0 說明文件</title>
   
 
   
@@ -146,7 +146,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../krita_4_preset_bundle.html">Krita 4 資源包介紹</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../layers_and_masks.html">圖層及遮罩</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="clone_layers.html">再製圖層</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">濾鏡圖層</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">檔案圖層</a></li>
 <li class="toctree-l3"><a class="reference internal" href="fill_layers.html">填充圖層</a></li>
 <li class="toctree-l3"><a class="reference internal" href="filter_layers.html">濾鏡圖層</a></li>
 <li class="toctree-l3"><a class="reference internal" href="filter_masks.html">濾鏡遮罩</a></li>
@@ -240,7 +240,7 @@
         
           <li><a href="../layers_and_masks.html">圖層及遮罩</a> &raquo;</li>
         
-      <li>濾鏡圖層</li>
+      <li>檔案圖層</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -265,23 +265,23 @@
            <div itemprop="articleBody">
             
   <section id="file-layers">
-<span id="index-0"></span><span id="id1"></span><h1>濾鏡圖層<a class="headerlink" href="#file-layers" title="本標題的永久連結">¶</a></h1>
-<p>File Layers are references to files outside of the document: If the referenced document updates, the file layer will update. Do not remove the original file on your computer once you add it to Krita. Deleting your original image will break the file layer. If Krita cannot find the original file, it'll ask you where to find it. File layers cannot display animations. Krita uses a relative path to store the location of the file in the .kra. If you move the .kra but not the file, the file layer may be broken.</p>
-<p>File Layers have the following scaling options:</p>
+<span id="index-0"></span><span id="id1"></span><h1>檔案圖層<a class="headerlink" href="#file-layers" title="本標題的永久連結">¶</a></h1>
+<p>檔案圖層是對外部檔案的引用：如果引用的檔案內容更新，檔案圖層也會更新。一開始將外部的檔案添加到 Krita 後，請不要刪除、移動電腦本機內中的原始檔案或更改其檔名。這麼做會使 Krita 找不到原始檔案進而破壞檔案圖層。如果 Krita 找不到原始檔案，再開檔案時它會詢問您在哪裡可以找到它 ( 或是在檔案圖層按 F3 可以再次連結外部檔案找回路徑 )。檔案圖層也無法顯示動畫。Krita 是使用相對路徑將外部檔案的位置存儲在 .kra 中。如果您移動 .kra 而不是檔案，則檔案圖層可能會找不到而損毀。</p>
+<p>檔案圖層具有以下縮放選項 ( 選取檔案圖層按 F3 可以看到這些項目 )：</p>
 <dl class="simple">
-<dt>No Scaling</dt><dd><p>This'll import the file layer with the full pixel-size.</p>
+<dt>無縮放</dt><dd><p>這將導入引用完整像素大小的檔案圖層。</p>
 </dd>
-<dt>Scale to Image Size</dt><dd><p>Scales the file layer to fit exactly within the canvas boundaries of the image.</p>
+<dt>縮放至影像大小</dt><dd><p>縮放檔案圖層以完全適合目前檔案的畫布邊界。</p>
 </dd>
-<dt>Adapt to image resolution</dt><dd><p>If the imported layer and the image have a different resolution, it'll scale the filelayer by scaling its resolution. In other words, import a 600dpi A4 image onto a 300dpi A4 image, and the filelayer will be scaled to fit precisely on the 300dpi image. Useful for comics, where the ink-layer is preferred to be at a higher resolution than the colors.</p>
+<dt>適應影像解析度 ( ppi )</dt><dd><p>如果引用的檔案圖層和目前檔案有不同的解析度 ( dpi )，它將通過解析度來縮放文件層。換句話說，將 600dpi A4 圖像導入引用至 300dpi A4 圖像上，檔案層將會縮放解析度以精確適應 300dpi 圖像的大小位置。這個選項適用於漫畫，通常在繪製或掃描線稿都會用比較高的解析度。</p>
 </dd>
 </dl>
-<p>File Layers can currently not be painted on. If you want to transform a file layer, you need to apply a transformation mask to it and use that.</p>
+<p>無法在檔案圖層做繪製。如果要繪製必須轉換檔案圖層 ( 轉換為顏料圖層 )，或是對檔案圖層使用功能遮罩圖層來加以改變。</p>
 <div class="versionadded">
-<p><span class="versionmodified added">3.3 版新加入: </span>In the layerdocker, next to the file layer only, there's a little folder icon. Pressing that will open the file pointed at in Krita if it hadn't yet. Using the properties you can make the file layer point to a different file.</p>
+<p><span class="versionmodified added">3.3 版新加入: </span>在圖層面板中，在檔案圖層旁邊，有一個文件夾的小圖示。如果該檔案尚未在 Krita 中開啟，則按下該按鈕將打開該文件。使用圖層屬性 ( 對檔案圖層案右鍵 )，可以將檔案圖層內容指向不同路徑的檔案。</p>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified added">4.0 版新加入: </span>You can turn any set of layers into a file layer by right-clicking them and doing <span class="menuselection">Convert ‣ to File Layer</span>. It will then open a save prompt for the file location and when done will save the file and replace the layer with a file layer pointing at that file.</p>
+<p><span class="versionmodified added">4.0 版新加入: </span>可以透過右鍵點擊檔案圖層並執行 轉換 ‣ 為檔案圖層 將任何一組圖層轉換為文件圖層。然後會跳出儲存的對話視窗，完成儲存後檔案圖層就會取代替換掉原本的圖層。( 這邊如果是針對群組塗層做轉換，存檔時附檔名改為 kra 這樣可以保留群組結構 )。</p>
 </div>
 </section>
 
@@ -308,7 +308,7 @@
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>3631e22</code>
+          修訂版本 <code>1d37112</code>
         </span>
       
 

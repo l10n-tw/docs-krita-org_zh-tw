@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-09-07T22:09:09" />
+  <meta property="og:article:modified_time" content="2021-09-08T07:09:21" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="如何使用再製圖層。" name="description" />
 
@@ -60,7 +60,7 @@
     <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="搜尋" href="../../search.html" />
-    <link rel="next" title="濾鏡圖層" href="file_layers.html" />
+    <link rel="next" title="檔案圖層" href="file_layers.html" />
     <link rel="prev" title="圖層及遮罩" href="../layers_and_masks.html" /> 
 
   
@@ -150,7 +150,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#changing-the-source-of-clone-layers">改變再製圖層的來源內容</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="file_layers.html">濾鏡圖層</a></li>
+<li class="toctree-l3"><a class="reference internal" href="file_layers.html">檔案圖層</a></li>
 <li class="toctree-l3"><a class="reference internal" href="fill_layers.html">填充圖層</a></li>
 <li class="toctree-l3"><a class="reference internal" href="filter_layers.html">濾鏡圖層</a></li>
 <li class="toctree-l3"><a class="reference internal" href="filter_masks.html">濾鏡遮罩</a></li>
@@ -275,23 +275,23 @@
 <h2>再製圖層的使用範例<a class="headerlink" href="#example-uses-of-clone-layers" title="本標題的永久連結">¶</a></h2>
 <p>例如，在繪製某個魔法角色的圖畫創作，希望在他周圍創作一個可以隨著角色而更新的光暈：</p>
 <ol class="arabic simple">
-<li><p>有一個繪製層，在其中繪製角色</p></li>
-<li><p>使用新增再製圖層功能建立一個繪製角色圖層的再製圖層</p></li>
-<li><p>將濾鏡遮罩 ( HSV/HSL 調整 ) 使用於再製圖層上，讓整個角色剪影外型變為白色 ( 或藍色、綠色 … 等 )</p></li>
-<li><p>將濾鏡遮罩 ( 模糊 ) 再次使用於再製圖層上，讓他看起來像是 &quot; 發光 &quot;。</p></li>
+<li><p>有一個繪製層 ( 下面簡稱 A 圖層 )，在其中繪製角色</p></li>
+<li><p>使用新增再製圖層功能建立一個角色繪製圖層 ( A圖層 ) 的再製圖層 ( 下面簡稱 B 圖層 )</p></li>
+<li><p>將濾鏡遮罩 ( HSV/HSL 調整 ) 使用於再製圖層 ( B 圖層 ) 上，讓整個角色剪影外型變為白色 ( 或藍色、綠色 … 等 )</p></li>
+<li><p>將濾鏡遮罩 ( 模糊 ) 再次使用於再製圖層 ( B 圖層 ) 上，讓他看起來像是 &quot; 發光 &quot;。</p></li>
 </ol>
-<p>這時候如果繼續繪製和添加細節 ( 原本繪製的圖層 )，或是更改擦除時，Krita 會自動更新再製出來的圖層，讓 &quot; 發光 &quot; 再次套用這個更改過後的內容。</p>
+<p>這時候如果繼續繪製和添加細節 ( A圖層 ) ，或是更改擦除時 ( 因為擦除會改變輪廓外型 )，Krita 會自動更新再製出來的圖層 ( B 圖層 ) ，讓 &quot; 發光 &quot; 再次套用這個更改過後的內容。</p>
 </section>
 <section id="changing-the-source-of-clone-layers">
 <h2>改變再製圖層的來源內容<a class="headerlink" href="#changing-the-source-of-clone-layers" title="本標題的永久連結">¶</a></h2>
-<p>You can change the source of one or more Clone Layers in the Layers Docker. To do so, select one or more Clone Layers in the docker (hold <kbd class="kbd docutils literal notranslate">Ctrl</kbd> or <kbd class="kbd docutils literal notranslate">Shift</kbd> and left-click the layers). Then, right-click on any selected layer. In the context menu, there is an action named <span class="guilabel">Set Copy From</span>. Click it. A dialog will pop up and there is a drop-down menu with all possible layers to be set as the source of all selected Clone Layers. If the current source of them consists of multiple layers, the default activated selection in the drop-down menu will be blank. Otherwise, it would be the common source of selected Clone Layers.</p>
-<p>Possible target layers are determined through the following criteria:</p>
+<p>在「圖層面板」中更改一個或多個再製圖層的來源。首先，請在面板中選擇一個或多個再製圖層（按住 Ctrl 左鍵點擊圖層可以增加選取圖層，按住Shift 左鍵點擊圖層可以連續選取多個圖層）。接著，右鍵點擊任何有被選定的圖層。在彈出的選項中，有一個名為 <span class="guilabel">設定複製來源</span>。點選它。將會再彈出一個對話框，並有一個下拉式選項，其中所有可以被再製圖層當作來源的圖層都會在下拉項目中。如果當下選取的是多個再製圖層，那下拉選單中將會替除這些圖層，不然，就會造成重複的共同來源。</p>
+<p>以下是圖層替換來源時的判斷規則：</p>
 <ol class="arabic simple">
-<li><p>Any Clone Layer that is selected is invalid.</p></li>
-<li><p>A parent or clone of any invalid layer is invalid.</p></li>
-<li><p>All other layers are valid.</p></li>
+<li><p>任何有選擇的再製圖層都是無效的。</p></li>
+<li><p>任何無效的再製圖層以及其父層群組或是其再製圖層也是無效的。</p></li>
+<li><p>除上述兩點其它均有效。</p></li>
 </ol>
-<p>If you select one layer in the drop-down menu, a preview of the canvas will be shown. Click <span class="guilabel">OK</span> to apply the changes. Click <span class="guilabel">Cancel</span> to discard the changes. If you make changes to the image outside the dialog, the changes will be applied and the dialog will be automatically closed.</p>
+<p>如果在下拉菜單中選擇一個圖層後，畫面將即時改變預覽結果。這時點擊 <span class="guilabel">確定</span> 就會進行更改. 反之點擊 <span class="guilabel">取消</span> 會放棄更改。如果這時在對話框外進行其他操作，將會應用目前所選圖層進行更改並自動關閉對話視窗。</p>
 </section>
 </section>
 
@@ -303,7 +303,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="file_layers.html" class="btn btn-neutral float-right" title="濾鏡圖層" accesskey="n" rel="next"> <!-- 下一個 --> <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="file_layers.html" class="btn btn-neutral float-right" title="檔案圖層" accesskey="n" rel="next"> <!-- 下一個 --> <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="../layers_and_masks.html" class="btn btn-neutral" title="圖層及遮罩" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- 上一個  -->  </a>
@@ -318,7 +318,7 @@
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>3631e22</code>
+          修訂版本 <code>1d37112</code>
         </span>
       
 
