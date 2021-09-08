@@ -21,9 +21,9 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-09-08T07:09:21" />
+  <meta property="og:article:modified_time" content="2021-09-08T14:09:23" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<meta content="How to use fill layers in Krita." name="description" property="og:description" />
+<meta content="在 krita 如何使用填充圖層呢。" name="description" property="og:description" />
 
   
   
@@ -275,10 +275,10 @@
             
   <section id="fill-layers">
 <span id="index-0"></span><span id="id1"></span><h1>填充圖層<a class="headerlink" href="#fill-layers" title="本標題的永久連結">¶</a></h1>
-<p>A Fill Layer is a special layer that Krita generates on-the-fly that can contain either a pattern or a solid color.</p>
+<p>填充圖層是 Krita 動態生成來填滿整個畫布的特殊圖層，其中可以生成圖案或純色。</p>
 <img alt="../../_images/Fill_Layer.png" src="../../_images/Fill_Layer.png" />
-<p>By default, the dialog selects the flat color fill. This fills the layer with a singular color. Newly created colored fill layers will be assigned to the currently active foreground color, unless they were made by drag-and-dropping a <a class="reference internal" href="../dockers/palette_docker.html#palette-docker"><span class="std std-ref">palette swatch</span></a> onto the <a class="reference internal" href="../dockers/layers.html#layer-docker"><span class="std std-ref">layer stack</span></a>.</p>
-<p>However, there are many more options, with more complex features:</p>
+<p>一班預設的情況下，新增填充圖層的對話視窗會是在「色彩」這個項目。會用單一的顏色填滿整個圖層。而新建時這個顏色會是目前的前景色，除非直接將 <span class="xref std std-ref">調色板</span>。</p>
+<p>接著，還有更多填滿類型選項，並且具有更新奇的功能：</p>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="fill_layer_generators/gradient.html">漸變</a></li>
@@ -291,7 +291,7 @@
 </div>
 <section id="painting-on-a-fill-layer">
 <h2>在填充圖層上繪畫<a class="headerlink" href="#painting-on-a-fill-layer" title="本標題的永久連結">¶</a></h2>
-<p>A fill-layer is a single-channel layer, meaning it only has transparency. Therefore, you can erase and paint on fill-layers to make them semi-opaque, or for when you want to have a particular color only. Being single channel, fill-layers are also a little bit less memory-consuming than regular 4-channel paint layers.</p>
+<p>填充圖層是單通道層，這表示在填充圖層上繪製只有透明度 ( 畫黑是透明，畫白是不透明 )。所以，可以在填充層上擦除( 等於是塗黑 )和繪製以使其半透明 ( 但不支援 MyPaint 筆刷引擎建構的筆刷 )，或是在想要具有特定顏色時使用。因為是單通道，填充層的效能也比一般的四通道顏料塗層消耗的少一些。</p>
 </section>
 </section>
 
