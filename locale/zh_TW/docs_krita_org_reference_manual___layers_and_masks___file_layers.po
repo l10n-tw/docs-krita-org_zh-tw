@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Krita Manual 4.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-19 22:30+0800\n"
-"PO-Revision-Date: 2021-09-06 07:23+0000\n"
+"PO-Revision-Date: 2021-09-08 07:06+0000\n"
 "Last-Translator: 楊景貴 <issacsopp@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <http://weblate.slat.org/projects/"
 "krita-docs/3-reference_manual___layers_and_masks___file_layers/zh_Hant/>\n"
@@ -29,7 +29,7 @@ msgstr "在 Krita 如何使用濾鏡圖層。"
 #: ../../reference_manual/layers_and_masks/file_layers.rst:17
 #: ../../reference_manual/layers_and_masks/file_layers.rst:12
 msgid "File Layers"
-msgstr "濾鏡圖層"
+msgstr "檔案圖層"
 
 #: ../../reference_manual/layers_and_masks/file_layers.rst:19
 msgid ""
@@ -41,32 +41,36 @@ msgid ""
 "Krita uses a relative path to store the location of the file in the .kra. If "
 "you move the .kra but not the file, the file layer may be broken."
 msgstr ""
+"檔案圖層是對外部檔案的引用：如果引用的檔案內容更新，檔案圖層也會更新。一開始將外部的檔案添加到 Krita "
+"後，請不要刪除、移動電腦本機內中的原始檔案或更改其檔名。這麼做會使 Krita 找不到原始檔案進而破壞檔案圖層。如果 Krita 找不到原始檔案，"
+"再開檔案時它會詢問您在哪裡可以找到它 ( 或是在檔案圖層按 F3 可以再次連結外部檔案找回路徑 )。檔案圖層也無法顯示動畫。Krita "
+"是使用相對路徑將外部檔案的位置存儲在 .kra 中。如果您移動 .kra 而不是檔案，則檔案圖層可能會找不到而損毀。"
 
 #: ../../reference_manual/layers_and_masks/file_layers.rst:21
 msgid "File Layers have the following scaling options:"
-msgstr ""
+msgstr "檔案圖層具有以下縮放選項 ( 選取檔案圖層按 F3 可以看到這些項目 )："
 
 #: ../../reference_manual/layers_and_masks/file_layers.rst:23
 msgid "No Scaling"
-msgstr ""
+msgstr "無縮放"
 
 #: ../../reference_manual/layers_and_masks/file_layers.rst:24
 msgid "This'll import the file layer with the full pixel-size."
-msgstr ""
+msgstr "這將導入引用完整像素大小的檔案圖層。"
 
 #: ../../reference_manual/layers_and_masks/file_layers.rst:25
 msgid "Scale to Image Size"
-msgstr ""
+msgstr "縮放至影像大小"
 
 #: ../../reference_manual/layers_and_masks/file_layers.rst:26
 msgid ""
 "Scales the file layer to fit exactly within the canvas boundaries of the "
 "image."
-msgstr ""
+msgstr "縮放檔案圖層以完全適合目前檔案的畫布邊界。"
 
 #: ../../reference_manual/layers_and_masks/file_layers.rst:28
 msgid "Adapt to image resolution"
-msgstr ""
+msgstr "適應影像解析度 ( ppi )"
 
 #: ../../reference_manual/layers_and_masks/file_layers.rst:28
 msgid ""
@@ -76,12 +80,14 @@ msgid ""
 "precisely on the 300dpi image. Useful for comics, where the ink-layer is "
 "preferred to be at a higher resolution than the colors."
 msgstr ""
+"如果引用的檔案圖層和目前檔案有不同的解析度 ( dpi )，它將通過解析度來縮放文件層。換句話說，將 600dpi A4 圖像導入引用至 300dpi "
+"A4 圖像上，檔案層將會縮放解析度以精確適應 300dpi 圖像的大小位置。這個選項適用於漫畫，通常在繪製或掃描線稿都會用比較高的解析度。"
 
 #: ../../reference_manual/layers_and_masks/file_layers.rst:30
 msgid ""
 "File Layers can currently not be painted on. If you want to transform a file "
 "layer, you need to apply a transformation mask to it and use that."
-msgstr ""
+msgstr "無法在檔案圖層做繪製。如果要繪製必須轉換檔案圖層 ( 轉換為顏料圖層 )，或是對檔案圖層使用功能遮罩圖層來加以改變。"
 
 #: ../../reference_manual/layers_and_masks/file_layers.rst:34
 msgid ""
@@ -89,6 +95,8 @@ msgid ""
 "icon. Pressing that will open the file pointed at in Krita if it hadn't yet. "
 "Using the properties you can make the file layer point to a different file."
 msgstr ""
+"在圖層面板中，在檔案圖層旁邊，有一個文件夾的小圖示。如果該檔案尚未在 Krita 中開啟，則按下該按鈕將打開該文件。使用圖層屬性 ( 對檔案圖層案右鍵 "
+")，可以將檔案圖層內容指向不同路徑的檔案。"
 
 #: ../../reference_manual/layers_and_masks/file_layers.rst:38
 msgid ""
@@ -97,6 +105,9 @@ msgid ""
 "prompt for the file location and when done will save the file and replace "
 "the layer with a file layer pointing at that file."
 msgstr ""
+"可以透過右鍵點擊檔案圖層並執行 轉換 ‣ 為檔案圖層 "
+"將任何一組圖層轉換為文件圖層。然後會跳出儲存的對話視窗，完成儲存後檔案圖層就會取代替換掉原本的圖層。( 這邊如果是針對群組塗層做轉換，存檔時附檔名改為 "
+"kra 這樣可以保留群組結構 )。"
 
 #: ../../reference_manual/layers_and_masks/file_layers.rst:12
 msgid "Layers"
@@ -104,4 +115,4 @@ msgstr "圖層"
 
 #: ../../reference_manual/layers_and_masks/file_layers.rst:12
 msgid "External File"
-msgstr ""
+msgstr "外部檔案"
