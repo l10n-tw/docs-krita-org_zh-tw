@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-09-09T12:09:56" />
+  <meta property="og:article:modified_time" content="2021-09-09T20:09:18" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="用於 Krita 旋轉盒和數字輸入的數學運算概述。" name="description" />
 
@@ -254,42 +254,42 @@
             
   <section id="maths-input">
 <span id="index-0"></span><span id="id1"></span><h1>數學運算式輸入<a class="headerlink" href="#maths-input" title="本標題的永久連結">¶</a></h1>
-<p>Krita 可以在數字輸入框中直接進行簡單的數學計算。 除了基本的數字輸入框之外，選取數字調整框的數值、或者在滑動條上以滑鼠右鍵點擊時也可以啟動數字輸入功能。 目前 Krita 還不能進行單位轉換，不過我們計劃在未來實現這項功能。</p>
+<p>Krita 可以在數字輸入框中直接進行簡單的數學計算。 除了基本的數字輸入框之外，選取數字調整框的數值、或者在滑塊上以滑鼠右鍵點擊時也可以啟動數字輸入功能。 目前 Krita 還不能進行單位轉換，不過我們計劃在未來實現這項功能。</p>
 <section id="possible-functions">
 <h2>可用運算函數<a class="headerlink" href="#possible-functions" title="本標題的永久連結">¶</a></h2>
 <dl class="simple">
-<dt>加法（運算子：+）</dt><dd><p>把數字相加，用法：<code class="docutils literal notranslate"><span class="pre">50+100``輸出：``150</span></code></p>
+<dt>加法（運算子：+）</dt><dd><p>把數字相加，用法：<code class="docutils literal notranslate"><span class="pre">50+100</span></code> 輸出：<code class="docutils literal notranslate"><span class="pre">150</span></code></p>
 </dd>
 <dt>減法（運算子：-）</dt><dd><p>用前一個數字減去後一個數字，用法：<code class="docutils literal notranslate"><span class="pre">50-100</span></code> 輸出：<code class="docutils literal notranslate"><span class="pre">50</span></code></p>
 </dd>
-<dt>乘法（運算子：<a href="#id1"><span class="problematic" id="id2">*</span></a>）</dt><dd><p>將各數字相乘，用法：<code class="docutils literal notranslate"><span class="pre">50*100``輸出：``5000</span></code></p>
+<dt>乘法（運算子：<a href="#id1"><span class="problematic" id="id2">*</span></a>）</dt><dd><p>將各數字相乘，用法：<code class="docutils literal notranslate"><span class="pre">50*100</span></code> 輸出：<code class="docutils literal notranslate"><span class="pre">5000</span></code></p>
 </dd>
-<dt>除法（運算子：/）</dt><dd><p>從前一個數字除去後一個數字，用法：<code class="docutils literal notranslate"><span class="pre">50/100``輸出：``0.5</span></code></p>
+<dt>除法（運算子：/）</dt><dd><p>由前一個數字除去後一個數字，用法：<code class="docutils literal notranslate"><span class="pre">50/100</span></code> 輸出：<code class="docutils literal notranslate"><span class="pre">0.5</span></code></p>
 </dd>
-<dt>乘方（運算子：^）</dt><dd><p>把後一個數字作為前一個數字的指數並求出結果。 用法： <code class="docutils literal notranslate"><span class="pre">2^8``輸出：``256</span></code></p>
+<dt>乘方（運算子：^）</dt><dd><p>把後一個數字作為前一個數字的指數並求出結果。 用法： <code class="docutils literal notranslate"><span class="pre">2^8</span></code> 輸出：<code class="docutils literal notranslate"><span class="pre">256</span></code></p>
 </dd>
-<dt>正弦（運算子：sin()）</dt><dd><p>求出指定角度的正弦值，用法：<code class="docutils literal notranslate"><span class="pre">sin(50)``輸出：``0.76</span></code></p>
+<dt>正弦（運算子：sin()）</dt><dd><p>求出指定角度的正弦值，用法：<code class="docutils literal notranslate"><span class="pre">sin(50)</span></code> 輸出：<code class="docutils literal notranslate"><span class="pre">0.76</span></code></p>
 </dd>
-<dt>餘弦（運算子：cos()）</dt><dd><p>求出指定角度的餘弦值，用法：<code class="docutils literal notranslate"><span class="pre">cos(50)``輸出：``0.64</span></code></p>
+<dt>餘弦（運算子：cos()）</dt><dd><p>求出指定角度的餘弦值，用法：<code class="docutils literal notranslate"><span class="pre">cos(50)</span></code> 輸出：<code class="docutils literal notranslate"><span class="pre">0.64</span></code></p>
 </dd>
-<dt>正切（運算子：tan()）</dt><dd><p>求出指定角度的正切值，用法：<code class="docutils literal notranslate"><span class="pre">tan(50)``輸出：``1.19</span></code></p>
+<dt>正切（運算子：tan()）</dt><dd><p>求出指定角度的正切值，用法：<code class="docutils literal notranslate"><span class="pre">tan(50)</span></code> 輸出：<code class="docutils literal notranslate"><span class="pre">1.19</span></code></p>
 </dd>
-<dt>反正弦（運算子：asin()）</dt><dd><p>正弦的反函數，求出指定正弦值的角度。 用法：<code class="docutils literal notranslate"><span class="pre">asin(0.76)``輸出：``50</span></code></p>
+<dt>反正弦（運算子：asin()）</dt><dd><p>正弦的反函數，求出指定正弦值的角度。 用法：<code class="docutils literal notranslate"><span class="pre">asin(0.76)</span></code> 輸出：<code class="docutils literal notranslate"><span class="pre">50</span></code></p>
 </dd>
-<dt>反餘弦（運算子：acos()）</dt><dd><p>餘弦的反函數，求出指定餘弦值的角度。 用法：<code class="docutils literal notranslate"><span class="pre">acos(0.64)``輸出``50</span></code></p>
+<dt>反餘弦（運算子：acos()）</dt><dd><p>餘弦的反函數，求出指定餘弦值的角度。 用法：<code class="docutils literal notranslate"><span class="pre">acos(0.64)</span></code> 輸出``50``</p>
 </dd>
-<dt>反正切（運算子：atan()）</dt><dd><p>正切的反函數，求出指定正切值的角度。 用法：<code class="docutils literal notranslate"><span class="pre">atan(1.19)``輸出：``50</span></code></p>
+<dt>反正切（運算子：atan()）</dt><dd><p>正切的反函數，求出指定正切值的角度。 用法：<code class="docutils literal notranslate"><span class="pre">atan(1.19)</span></code> 輸出：<code class="docutils literal notranslate"><span class="pre">50</span></code></p>
 </dd>
-<dt>絕對值（運算子：abs()）</dt><dd><p>求出指定值的非負值。 用法：<code class="docutils literal notranslate"><span class="pre">abs(75-100)``輸出：``25</span></code></p>
+<dt>絕對值（運算子：abs()）</dt><dd><p>求出指定值的非負值。 用法：<code class="docutils literal notranslate"><span class="pre">abs(75-100)</span></code> 輸出：<code class="docutils literal notranslate"><span class="pre">25</span></code></p>
 </dd>
-<dt>指數函數（運算子：exp()）</dt><dd><p>以 e 作為指數，求出指定值的函數。 用法：<code class="docutils literal notranslate"><span class="pre">exp(1)``輸出：``2.7183</span></code></p>
+<dt>指數函數（運算子：exp()）</dt><dd><p>以 e 作為指數，求出指定值的函數。 用法：<code class="docutils literal notranslate"><span class="pre">exp(1)</span></code> 輸出：<code class="docutils literal notranslate"><span class="pre">2.7183</span></code></p>
 </dd>
-<dt>自然對數（運算子：ln()）</dt><dd><p>求出指定值的自然對數，它是 exp （） 的反函數。 用法：<code class="docutils literal notranslate"><span class="pre">ln(2)``輸出：``0.6931</span></code></p>
+<dt>自然對數（運算子：ln()）</dt><dd><p>求出指定值的自然對數，它是 exp （） 的反函數。 用法：<code class="docutils literal notranslate"><span class="pre">ln(2)</span></code> 輸出：<code class="docutils literal notranslate"><span class="pre">0.6931</span></code></p>
 </dd>
 </dl>
-<p>Krita 在技術上支援下列函數，但存在程式問題：</p>
+<p>雖然 Krita 技術上有支援下列函數，但目前存在程式問題：</p>
 <dl class="simple">
-<dt>常用對數（運算子：log10()）</dt><dd><p>求給定值的對數。 用法：<code class="docutils literal notranslate"><span class="pre">log10(50)``輸出``0.64</span></code></p>
+<dt>常用對數（運算子：log10()）</dt><dd><p>求給定值的對數。 用法：<code class="docutils literal notranslate"><span class="pre">log10(50)</span></code> 輸出``0.64``</p>
 </dd>
 </dl>
 </section>
@@ -298,7 +298,7 @@
 <p>Krita 採用國際通用的運算順序規則。 以下面的這條數學運算式為例：</p>
 <p><code class="docutils literal notranslate"><span class="pre">2+3*4</span></code></p>
 <p>在沒有任何規則的情況下，這條運算式可以有兩種解讀方式。 您可以把這條運算式解讀為 2+3 = 5，然後 5*4 =20。 也可以把它解讀為 3*4 = 12，然後 2+12 = 14。</p>
-<p>Krita 的運算順序是：指數、乘法、加法、減法。 因此在上面的例子中，Krita 會先進行進行乘法運算，然後進行加法運算，得到的結果是 14。</p>
+<p>Krita 的運算順序是：指數 --&gt; 乘法 --&gt; 加法 --&gt; 減法。 因此在上面的例子中，Krita 會先進行進行乘法運算，然後進行加法運算，得到的結果是 14。</p>
 <p>我們可以使用括號來規定運算的先後順序。 若要在上面的例子中得到 20，我們可以對運算式進行如下修改：</p>
 <p><code class="docutils literal notranslate"><span class="pre">(</span> <span class="pre">2+3</span> <span class="pre">)*4</span></code></p>
 <p>Krita 會在解讀運算式時把括號考慮在內，因此會得出結果為 20。</p>
