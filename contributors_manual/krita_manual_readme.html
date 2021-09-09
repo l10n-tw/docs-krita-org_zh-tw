@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-09-09T05:09:33" />
+  <meta property="og:article:modified_time" content="2021-09-09T12:09:56" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="給 Krita 說明文件貢獻者的指南。" name="description" />
 
@@ -404,28 +404,26 @@ git push
 <li><p>在多數情況下，勾選 <span class="guilabel">Delete source branch when merge request is accepted</span> 是安全的。</p></li>
 <li><p>除非審核者提出其他要求，否則應勾選 <span class="guilabel">Squash commits when merge request is accepted</span>。Commit 訊息的第一句會取自合併請求的 <span class="guilabel">Title</span>（標題）而其餘內容會取自合併請求的 <span class="guilabel">Description</span>（描述）。</p></li>
 <li><p>當完成建立合併請求，請到 <a class="reference internal" href="community.html#internet-relay-chat"><span class="std std-ref">IRC 聊天室</span></a>請求有權限的成員代為設定 <code class="docutils literal notranslate"><span class="pre">Needs</span> <span class="pre">Review</span></code> 標籤。</p></li>
-<li><p>You might get feedback on your merge request if it has mistakes. Just fix the mistakes in your branch in one of the following ways.</p>
+<li><p>如合併請求帶有錯處，你可能會收到回饋意見。你只需依照以下其中一個方法修正問題：</p>
 <blockquote>
 <div><ul class="simple">
-<li><p>If you want to use <span class="guilabel">Edit</span> mode, just go to <span class="guilabel">Changes</span> section of the merge request and click on the pencil icon (with a tooltip that says <em>Edit</em>) to use the Edit mode again.</p></li>
-<li><p>If you want to use <span class="guilabel">WebIDE</span> mode, go to your fork, select the branch your changes are on and go to the WebIDE.</p></li>
-<li><p>If you edit files on your computer and work with terminal, make sure you're on the correct branch and push your changes - gitlab will update your merge request automatically.</p></li>
+<li><p>如果想使用 <span class="guilabel">Edit</span>（編輯）模式，可到 <span class="guilabel">Changes</span>（更動）部份並點選鉛筆圖示（工具提示標籤為「Edit」）。</p></li>
+<li><p>如果想使用 <span class="guilabel">WebIDE</span> 模式，可到你的 Fork 選擇更動所在的分支並從該分支開啟 WebIDE。</p></li>
+<li><p>如果你在本機修改檔並使用命令列作業，請確認處於正確的分支，然後推送更動。GitLab 會自動更新合併請求。</p></li>
 </ul>
-<p>After making changes, make sure you ask someone to change the label to <code class="docutils literal notranslate"><span class="pre">Needs</span> <span class="pre">Review</span></code> again.</p>
+<p>作出更動後，請務必請求成員再次設定 <code class="docutils literal notranslate"><span class="pre">Needs</span> <span class="pre">Review</span></code> 標籤。</p>
 </div></blockquote>
 </li>
 </ol>
-<p>For more detailed information, check out <a class="reference internal" href="../untranslatable_pages/intro_hacking_krita.html#forking-gitlab"><span class="std std-ref">Forking on Gitlab</span></a> in the technical section.</p>
+<p>若要閱讀更詳細的資訊，請參見技術分類的 <a class="reference internal" href="../untranslatable_pages/intro_hacking_krita.html#forking-gitlab"><span class="std std-ref">Forking on Gitlab</span></a>。</p>
 <div class="admonition note">
 <p class="admonition-title">備註</p>
-<p>At the time of writing this guide setting labels on merge requests is only possible by contributors with write access to the official repository. (If you don't know what that means, you're most probably not one of them). Because of that, when you create or change your merge request you need to get on IRC (see <a class="reference internal" href="community.html#the-krita-community"><span class="std std-ref">Krita 的社群</span></a>) and ask someone to label it for you.</p>
+<p>在撰寫本文時為止，只有已獲得推送寫入權限的貢獻者才能設定合併請求的標籤。（如你不清楚這是甚麼意思，你多數是沒有這個權限。）因為這樣，每當建立或更新合併請求時你都要到 IRC（見 <a class="reference internal" href="community.html#the-krita-community"><span class="std std-ref">Krita 的社群</span></a>）請求其他成員代為設定標籤。</p>
 </div>
 </section>
 <section id="building-the-manual-in-the-command-line">
-<h4>從命令列建置說明文件<a class="headerlink" href="#building-the-manual-in-the-command-line" title="本標題的永久連結">¶</a></h4>
-<p>For those that first want to try out some changes before embarking on a merge
-request right away (and already know how to use git and the command line) this
-is described as part of step 5. in <a class="reference internal" href="#merge-request-terminal"><span class="std std-ref">以命令列建立合併請求 (Merge Request)</span></a>.</p>
+<h4>以命令列建置說明文件<a class="headerlink" href="#building-the-manual-in-the-command-line" title="本標題的永久連結">¶</a></h4>
+<p>如果你希望在建立合併請求前首先測試一下更動的效果（而又了解如何使用 Git 和命令列），你可以依照<a class="reference internal" href="#merge-request-terminal"><span class="std std-ref">以命令列建立合併請求</span></a>中第 5 步所列出的步驟。</p>
 </section>
 </section>
 </section>
