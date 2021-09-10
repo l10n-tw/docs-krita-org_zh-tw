@@ -6,7 +6,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta property="og:title" name="title" content="色域遮罩工具面板" />
+  <meta property="og:title" name="title" content="色域遮罩" />
   <meta property="og:site-name" content="Krita Manual" />
   <meta property="og:type" content="article" />
   <meta property="og:locale" content="zh_TW" />
@@ -21,13 +21,13 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-09-09T20:09:18" />
+  <meta property="og:article:modified_time" content="2021-09-10T07:10:17" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="「色域遮罩」工具面板概觀。" name="description" property="og:description" />
 
   
   
-  <title>色域遮罩工具面板 &mdash; Krita Manual 5.0.0 說明文件</title>
+  <title>色域遮罩 &mdash; Krita Manual 5.0.0 說明文件</title>
   
 
   
@@ -60,8 +60,8 @@
     <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="搜尋" href="../../search.html" />
-    <link rel="next" title="Grids and Guides Docker" href="grids_and_guides.html" />
-    <link rel="prev" title="Digital Color Mixer" href="digital_color_mixer.html" /> 
+    <link rel="next" title="格線與參考線" href="grids_and_guides.html" />
+    <link rel="prev" title="數位混色器" href="digital_color_mixer.html" /> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -138,34 +138,34 @@
 <li class="toctree-l2"><a class="reference internal" href="../default_python_plugins.html">預設安裝的 Python 外掛程式</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../dockers.html">工具面板</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="add_shape.html">加入形狀</a></li>
-<li class="toctree-l3"><a class="reference internal" href="advanced_color_selector.html">Advanced Color Selector</a></li>
-<li class="toctree-l3"><a class="reference internal" href="animation_curves.html">Animation Curves Docker</a></li>
-<li class="toctree-l3"><a class="reference internal" href="animation_docker.html">Animation Docker</a></li>
-<li class="toctree-l3"><a class="reference internal" href="animation_timeline.html">Animation Timeline Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="advanced_color_selector.html">進階選色器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="animation_curves.html">動畫曲線</a></li>
+<li class="toctree-l3"><a class="reference internal" href="animation_docker.html">動畫面板</a></li>
+<li class="toctree-l3"><a class="reference internal" href="animation_timeline.html">動畫時間軸</a></li>
 <li class="toctree-l3"><a class="reference internal" href="arrange.html">向量圖形排列</a></li>
-<li class="toctree-l3"><a class="reference internal" href="artistic_color_selector.html">Artistic Color Selector Docker</a></li>
-<li class="toctree-l3"><a class="reference internal" href="brush_preset_docker.html">Preset Docker</a></li>
-<li class="toctree-l3"><a class="reference internal" href="brush_preset_history.html">Brush Preset History Docker</a></li>
-<li class="toctree-l3"><a class="reference internal" href="channels_docker.html">Channels</a></li>
-<li class="toctree-l3"><a class="reference internal" href="color_sliders.html">Color Sliders</a></li>
-<li class="toctree-l3"><a class="reference internal" href="compositions.html">Compositions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="digital_color_mixer.html">Digital Color Mixer</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">色域遮罩工具面板</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="artistic_color_selector.html">美術選色器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="brush_preset_docker.html">筆刷預設</a></li>
+<li class="toctree-l3"><a class="reference internal" href="brush_preset_history.html">筆刷預設歷史</a></li>
+<li class="toctree-l3"><a class="reference internal" href="channels_docker.html">色彩通道</a></li>
+<li class="toctree-l3"><a class="reference internal" href="color_sliders.html">調色滑塊</a></li>
+<li class="toctree-l3"><a class="reference internal" href="compositions.html">圖層組合方案</a></li>
+<li class="toctree-l3"><a class="reference internal" href="digital_color_mixer.html">數位混色器</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">色域遮罩</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#usage">Usage</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#editing">Editing</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#external-info">External Info</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="grids_and_guides.html">Grids and Guides Docker</a></li>
-<li class="toctree-l3"><a class="reference internal" href="histogram_docker.html">Histogram Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="grids_and_guides.html">格線與參考線</a></li>
+<li class="toctree-l3"><a class="reference internal" href="histogram_docker.html">色階分佈圖</a></li>
 <li class="toctree-l3"><a class="reference internal" href="layers.html">圖層</a></li>
 <li class="toctree-l3"><a class="reference internal" href="log_viewer.html">紀錄檢視器</a></li>
-<li class="toctree-l3"><a class="reference internal" href="lut_management.html">LUT Management</a></li>
-<li class="toctree-l3"><a class="reference internal" href="onion_skin.html">Onion Skin Docker</a></li>
-<li class="toctree-l3"><a class="reference internal" href="overview.html">Overview</a></li>
-<li class="toctree-l3"><a class="reference internal" href="palette_docker.html">Palette Docker</a></li>
-<li class="toctree-l3"><a class="reference internal" href="pattern_docker.html">Patterns Docker</a></li>
-<li class="toctree-l3"><a class="reference internal" href="recorder_docker.html">Recorder Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lut_management.html">LUT 色彩管理</a></li>
+<li class="toctree-l3"><a class="reference internal" href="onion_skin.html">洋蔥皮檢視</a></li>
+<li class="toctree-l3"><a class="reference internal" href="overview.html">總覽圖</a></li>
+<li class="toctree-l3"><a class="reference internal" href="palette_docker.html">調色板</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pattern_docker.html">圖案</a></li>
+<li class="toctree-l3"><a class="reference internal" href="recorder_docker.html">錄影工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="reference_images_docker.html">Reference Images Docker</a></li>
 <li class="toctree-l3"><a class="reference internal" href="shape_properties_docker.html">Shape Properties Docker</a></li>
 <li class="toctree-l3"><a class="reference internal" href="small_color_selector.html">Small Color Selector</a></li>
@@ -266,7 +266,7 @@
         
           <li><a href="../dockers.html">工具面板</a> &raquo;</li>
         
-      <li>色域遮罩工具面板</li>
+      <li>色域遮罩</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -291,7 +291,7 @@
            <div itemprop="articleBody">
             
   <section id="gamut-masks-docker">
-<span id="gamut-mask-docker"></span><span id="index-0"></span><h1>色域遮罩工具面板<a class="headerlink" href="#gamut-masks-docker" title="本標題的永久連結">¶</a></h1>
+<span id="gamut-mask-docker"></span><span id="index-0"></span><h1>色域遮罩<a class="headerlink" href="#gamut-masks-docker" title="本標題的永久連結">¶</a></h1>
 <img alt="../../_images/Krita_Gamut_Mask_Docker.png" src="../../_images/Krita_Gamut_Mask_Docker.png" />
 <div class="versionadded">
 <p><span class="versionmodified added">4.2 版新加入: </span>Docker for gamut masks selection and management.</p>
@@ -359,10 +359,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="grids_and_guides.html" class="btn btn-neutral float-right" title="Grids and Guides Docker" accesskey="n" rel="next"> <!-- 下一個 --> <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="grids_and_guides.html" class="btn btn-neutral float-right" title="格線與參考線" accesskey="n" rel="next"> <!-- 下一個 --> <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="digital_color_mixer.html" class="btn btn-neutral" title="Digital Color Mixer" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- 上一個  -->  </a>
+        <a href="digital_color_mixer.html" class="btn btn-neutral" title="數位混色器" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- 上一個  -->  </a>
       
     </div>
   
@@ -374,7 +374,7 @@
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>3fcd3b3</code>
+          修訂版本 <code>85b1472</code>
         </span>
       
 

@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-09-09T20:09:18" />
+  <meta property="og:article:modified_time" content="2021-09-10T07:10:17" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="Krita 動畫工作流程的詳細指南。" name="description" property="og:description" />
 
@@ -258,9 +258,9 @@
 <p>In traditional animation workflow, what you do is that you make <a class="reference internal" href="../reference_manual/dockers/animation_timeline.html#term-Keyframe"><span class="xref std std-term">Keyframes</span></a>, which contain the important poses, and then draw frames in between (<em class="dfn">tweening</em> in highly sophisticated animator's jargon).</p>
 <p>For this workflow, there are three important dockers:</p>
 <ol class="arabic simple">
-<li><p>The <a class="reference internal" href="../reference_manual/dockers/animation_timeline.html#timeline-docker"><span class="std std-ref">Animation Timeline Docker</span></a>. View and control all the frames in your animation. The timeline docker also contains functions to manage your layers. The layers that are created in the timeline docker also appear on the normal Layer docker.</p></li>
-<li><p>The <a class="reference internal" href="../reference_manual/dockers/onion_skin.html#onion-skin-docker"><span class="std std-ref">Onion Skin Docker</span></a>. This docker controls the look of the onion skin, which in turn is useful for seeing the previous frame.</p></li>
-<li><p>The <a class="reference internal" href="../reference_manual/dockers/animation_curves.html#animation-curves-docker"><span class="std std-ref">Animation Curves Docker</span></a>. This docker allows you to do minor tweening for animation curves.</p></li>
+<li><p>The <a class="reference internal" href="../reference_manual/dockers/animation_timeline.html#timeline-docker"><span class="std std-ref">動畫時間軸</span></a>. View and control all the frames in your animation. The timeline docker also contains functions to manage your layers. The layers that are created in the timeline docker also appear on the normal Layer docker.</p></li>
+<li><p>The <a class="reference internal" href="../reference_manual/dockers/onion_skin.html#onion-skin-docker"><span class="std std-ref">洋蔥皮檢視</span></a>. This docker controls the look of the onion skin, which in turn is useful for seeing the previous frame.</p></li>
+<li><p>The <a class="reference internal" href="../reference_manual/dockers/animation_curves.html#animation-curves-docker"><span class="std std-ref">動畫曲線</span></a>. This docker allows you to do minor tweening for animation curves.</p></li>
 <li><p>The <a class="reference internal" href="../reference_manual/dockers/storyboard_docker.html#storyboard-docker"><span class="std std-ref">Storyboard Docker</span></a>. This docker helps you create and keep track of storyboards.</p></li>
 </ol>
 <p>Furthermore, especially when you want to do a big animation, that is, any animation longer than 3 seconds, you will need to think about how you are going to approach this. Krita is specialized in <em class="dfn">frame by frame animation</em>, and because of this Krita keeps all the frames in memory. This means that animation files will eat up all of your computer's working memory (RAM). If you don't know what working memory is, you probably have too little to do a long sequence in Krita. Therefore, you need to take a page from professional animation and do some planning!</p>
@@ -306,7 +306,7 @@
 <figure class="align-default" id="id2">
 <img alt="../_images/Introduction_to_animation_01.png" src="../_images/Introduction_to_animation_01.png" />
 <figcaption>
-<p><span class="caption-text">The animation workspace adds the <a class="reference internal" href="../reference_manual/dockers/animation_timeline.html#timeline-docker"><span class="std std-ref">Animation Timeline Docker</span></a> at the bottom.</span><a class="headerlink" href="#id2" title="本圖片的永久連結">¶</a></p>
+<p><span class="caption-text">The animation workspace adds the <a class="reference internal" href="../reference_manual/dockers/animation_timeline.html#timeline-docker"><span class="std std-ref">動畫時間軸</span></a> at the bottom.</span><a class="headerlink" href="#id2" title="本圖片的永久連結">¶</a></p>
 </figcaption>
 </figure>
 </section>
@@ -399,7 +399,7 @@ in one go. More efficient for us, however, is to select all frames, <img alt="�
 </figcaption>
 </figure>
 <p>Another thing you can do is to adjust the onion skins.</p>
-<p>You can modify the onion skin by using the <a class="reference internal" href="../reference_manual/dockers/onion_skin.html#onion-skin-docker"><span class="std std-ref">Onion Skin Docker</span></a>, where you can change how many frames are visible at once, by toggling them on the top row. The bottom row is for controlling transparency, while below there you can modify the colors and intensity of the coloring.</p>
+<p>You can modify the onion skin by using the <a class="reference internal" href="../reference_manual/dockers/onion_skin.html#onion-skin-docker"><span class="std std-ref">洋蔥皮檢視</span></a>, where you can change how many frames are visible at once, by toggling them on the top row. The bottom row is for controlling transparency, while below there you can modify the colors and intensity of the coloring.</p>
 <img alt="../_images/Introduction_to_animation_15.png" src="../_images/Introduction_to_animation_15.png" />
 <figure class="align-default" id="id5">
 <img alt="../_images/Introduction_to_animation_14b.png" src="../_images/Introduction_to_animation_14b.png" />
@@ -436,7 +436,7 @@ timeline by clicking the <img alt="pintimeline" src="../_images/reference_images
 <p><span class="versionmodified added">5.0 版新加入.</span></p>
 </div>
 <p>If you want to move your walk cycle, you may use <a class="reference internal" href="../reference_manual/layers_and_masks/transformation_masks.html#transformation-masks"><span class="std std-ref">變形遮罩</span></a> to move the frames from left to right without editing the pixels themselves.</p>
-<p>First, open up the <a class="reference internal" href="../reference_manual/dockers/animation_curves.html#animation-curves-docker"><span class="std std-ref">Animation Curves Docker</span></a> if it has not been opened yet, under <span class="menuselection">Settings ‣ Dockers ‣ Animation Curves</span>.</p>
+<p>First, open up the <a class="reference internal" href="../reference_manual/dockers/animation_curves.html#animation-curves-docker"><span class="std std-ref">動畫曲線</span></a> if it has not been opened yet, under <span class="menuselection">Settings ‣ Dockers ‣ Animation Curves</span>.</p>
 <p>Then, group the layers that you want to transform, in our example, these are the <code class="docutils literal notranslate"><span class="pre">hands</span></code> and the <code class="docutils literal notranslate"><span class="pre">walkcycle</span></code> layers. <img alt="滑鼠右鍵" src="../_images/Krita_mouse_right.png" /> the group, <span class="menuselection">Add ‣ Transform mask</span>.</p>
 <p>Then, go into the animation docker, select the first frame, and select <span class="guilabel">Adds keyframe to control scalar property</span> (<img alt="scalaradd" src="../_images/keyframe-add.svg" />). In the Timeline Docker, <em class="dfn">Scalar Frames</em> will be marked with a diamond.</p>
 <p>Now select the <a class="reference internal" href="../reference_manual/tools/transform.html#transform-tool"><span class="std std-ref">Transform Tool</span></a>, press the screen and move the group to the start point. Press <kbd class="kbd docutils literal notranslate">Enter</kbd> to confirm. Select the last frame in the docker, and then press the screen again, now move everything to the end point. Press <span class="guilabel">Zoom view to fit channel range</span> to view the whole frame.</p>
@@ -462,9 +462,9 @@ timeline by clicking the <img alt="pintimeline" src="../_images/reference_images
 <div class="admonition seealso">
 <p class="admonition-title">也參考</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="../reference_manual/dockers/animation_timeline.html#timeline-docker"><span class="std std-ref">Animation Timeline Docker</span></a></p></li>
-<li><p><a class="reference internal" href="../reference_manual/dockers/onion_skin.html#onion-skin-docker"><span class="std std-ref">Onion Skin Docker</span></a></p></li>
-<li><p><a class="reference internal" href="../reference_manual/dockers/animation_curves.html#animation-curves-docker"><span class="std std-ref">Animation Curves Docker</span></a></p></li>
+<li><p><a class="reference internal" href="../reference_manual/dockers/animation_timeline.html#timeline-docker"><span class="std std-ref">動畫時間軸</span></a></p></li>
+<li><p><a class="reference internal" href="../reference_manual/dockers/onion_skin.html#onion-skin-docker"><span class="std std-ref">洋蔥皮檢視</span></a></p></li>
+<li><p><a class="reference internal" href="../reference_manual/dockers/animation_curves.html#animation-curves-docker"><span class="std std-ref">動畫曲線</span></a></p></li>
 <li><p><a class="reference internal" href="../reference_manual/dockers/storyboard_docker.html#storyboard-docker"><span class="std std-ref">Storyboard Docker</span></a></p></li>
 <li><p><a class="reference internal" href="../reference_manual/import_animation.html#import-animation"><span class="std std-ref">匯入動畫</span></a></p></li>
 <li><p><a class="reference internal" href="../reference_manual/audio_for_animation.html#audio-animation"><span class="std std-ref">動畫音訊</span></a></p></li>
@@ -499,7 +499,7 @@ timeline by clicking the <img alt="pintimeline" src="../_images/reference_images
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>3fcd3b3</code>
+          修訂版本 <code>85b1472</code>
         </span>
       
 

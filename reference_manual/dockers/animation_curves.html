@@ -6,7 +6,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta property="og:title" name="title" content="Animation Curves Docker" />
+  <meta property="og:title" name="title" content="動畫曲線" />
   <meta property="og:site-name" content="Krita Manual" />
   <meta property="og:type" content="article" />
   <meta property="og:locale" content="zh_TW" />
@@ -21,13 +21,13 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-09-09T20:09:18" />
+  <meta property="og:article:modified_time" content="2021-09-10T07:10:17" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="Overview of the Animation Curves docker." name="description" />
 
   
   
-  <title>Animation Curves Docker &mdash; Krita Manual 5.0.0 說明文件</title>
+  <title>動畫曲線 &mdash; Krita Manual 5.0.0 說明文件</title>
   
 
   
@@ -60,8 +60,8 @@
     <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="搜尋" href="../../search.html" />
-    <link rel="next" title="Animation Docker" href="animation_docker.html" />
-    <link rel="prev" title="Advanced Color Selector" href="advanced_color_selector.html" /> 
+    <link rel="next" title="動畫面板" href="animation_docker.html" />
+    <link rel="prev" title="進階選色器" href="advanced_color_selector.html" /> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -138,35 +138,35 @@
 <li class="toctree-l2"><a class="reference internal" href="../default_python_plugins.html">預設安裝的 Python 外掛程式</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../dockers.html">工具面板</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="add_shape.html">加入形狀</a></li>
-<li class="toctree-l3"><a class="reference internal" href="advanced_color_selector.html">Advanced Color Selector</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Animation Curves Docker</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="advanced_color_selector.html">進階選色器</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">動畫曲線</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#overview">Overview</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#animating-opacity">Animating Opacity</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#animating-transform-masks">Animating Transform Masks</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#controls">Controls</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="animation_docker.html">Animation Docker</a></li>
-<li class="toctree-l3"><a class="reference internal" href="animation_timeline.html">Animation Timeline Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="animation_docker.html">動畫面板</a></li>
+<li class="toctree-l3"><a class="reference internal" href="animation_timeline.html">動畫時間軸</a></li>
 <li class="toctree-l3"><a class="reference internal" href="arrange.html">向量圖形排列</a></li>
-<li class="toctree-l3"><a class="reference internal" href="artistic_color_selector.html">Artistic Color Selector Docker</a></li>
-<li class="toctree-l3"><a class="reference internal" href="brush_preset_docker.html">Preset Docker</a></li>
-<li class="toctree-l3"><a class="reference internal" href="brush_preset_history.html">Brush Preset History Docker</a></li>
-<li class="toctree-l3"><a class="reference internal" href="channels_docker.html">Channels</a></li>
-<li class="toctree-l3"><a class="reference internal" href="color_sliders.html">Color Sliders</a></li>
-<li class="toctree-l3"><a class="reference internal" href="compositions.html">Compositions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="digital_color_mixer.html">Digital Color Mixer</a></li>
-<li class="toctree-l3"><a class="reference internal" href="gamut_mask_docker.html">色域遮罩工具面板</a></li>
-<li class="toctree-l3"><a class="reference internal" href="grids_and_guides.html">Grids and Guides Docker</a></li>
-<li class="toctree-l3"><a class="reference internal" href="histogram_docker.html">Histogram Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="artistic_color_selector.html">美術選色器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="brush_preset_docker.html">筆刷預設</a></li>
+<li class="toctree-l3"><a class="reference internal" href="brush_preset_history.html">筆刷預設歷史</a></li>
+<li class="toctree-l3"><a class="reference internal" href="channels_docker.html">色彩通道</a></li>
+<li class="toctree-l3"><a class="reference internal" href="color_sliders.html">調色滑塊</a></li>
+<li class="toctree-l3"><a class="reference internal" href="compositions.html">圖層組合方案</a></li>
+<li class="toctree-l3"><a class="reference internal" href="digital_color_mixer.html">數位混色器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gamut_mask_docker.html">色域遮罩</a></li>
+<li class="toctree-l3"><a class="reference internal" href="grids_and_guides.html">格線與參考線</a></li>
+<li class="toctree-l3"><a class="reference internal" href="histogram_docker.html">色階分佈圖</a></li>
 <li class="toctree-l3"><a class="reference internal" href="layers.html">圖層</a></li>
 <li class="toctree-l3"><a class="reference internal" href="log_viewer.html">紀錄檢視器</a></li>
-<li class="toctree-l3"><a class="reference internal" href="lut_management.html">LUT Management</a></li>
-<li class="toctree-l3"><a class="reference internal" href="onion_skin.html">Onion Skin Docker</a></li>
-<li class="toctree-l3"><a class="reference internal" href="overview.html">Overview</a></li>
-<li class="toctree-l3"><a class="reference internal" href="palette_docker.html">Palette Docker</a></li>
-<li class="toctree-l3"><a class="reference internal" href="pattern_docker.html">Patterns Docker</a></li>
-<li class="toctree-l3"><a class="reference internal" href="recorder_docker.html">Recorder Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lut_management.html">LUT 色彩管理</a></li>
+<li class="toctree-l3"><a class="reference internal" href="onion_skin.html">洋蔥皮檢視</a></li>
+<li class="toctree-l3"><a class="reference internal" href="overview.html">總覽圖</a></li>
+<li class="toctree-l3"><a class="reference internal" href="palette_docker.html">調色板</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pattern_docker.html">圖案</a></li>
+<li class="toctree-l3"><a class="reference internal" href="recorder_docker.html">錄影工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="reference_images_docker.html">Reference Images Docker</a></li>
 <li class="toctree-l3"><a class="reference internal" href="shape_properties_docker.html">Shape Properties Docker</a></li>
 <li class="toctree-l3"><a class="reference internal" href="small_color_selector.html">Small Color Selector</a></li>
@@ -267,7 +267,7 @@
         
           <li><a href="../dockers.html">工具面板</a> &raquo;</li>
         
-      <li>Animation Curves Docker</li>
+      <li>動畫曲線</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -292,7 +292,7 @@
            <div itemprop="articleBody">
             
   <section id="animation-curves-docker">
-<span id="index-0"></span><span id="id1"></span><h1>Animation Curves Docker<a class="headerlink" href="#animation-curves-docker" title="本標題的永久連結">¶</a></h1>
+<span id="index-0"></span><span id="id1"></span><h1>動畫曲線<a class="headerlink" href="#animation-curves-docker" title="本標題的永久連結">¶</a></h1>
 <p><strong class="program">Krita</strong>'s <em class="dfn">Animation Curves Docker</em> allows artists to animate the values of some properties over time.</p>
 <p>When animating a complex cut, it's not unusual to want to animate things that would be difficult or inefficient to do through drawing alone. In traditional pen-and-paper animation dating back to the 1920s, special lighting rigs and purpose-built devices like multiplane cameras were used to pull off special effects that changed animation forever! Likewise, Krita's Animation Curves docker allows us to animate more than just the lines on your canvas, such as a layer's opacity or the position, rotation and scale of a <a class="reference internal" href="../layers_and_masks/transformation_masks.html#transformation-masks"><span class="std std-ref">Transform Mask</span></a>.</p>
 <p>Because most things can be boiled down to numeric values (for example, opacity as a percentage or the position of a Transform Mask), and because computers are great with maths and automation, we can plot and visualize the change in values over time on a simple 2D graph. What's more, we can also draw lines and curves that show the computer how we want it to calculate the values in between each of our plotted keyframe values; a technique known as interpolation or <em class="dfn">tweening</em>.</p>
@@ -312,11 +312,11 @@
 <p>Starting with <strong class="program">Krita 5</strong>, we can use the Animation Curves Docker to animate a layer's <a class="reference internal" href="layers.html#term-Opacity"><span class="xref std std-term">opacity</span></a> and, with the help of a <a class="reference internal" href="../layers_and_masks/transformation_masks.html#transformation-masks"><span class="std std-ref">Transform Mask</span></a>, its <em class="dfn">position</em>, <em class="dfn">rotation</em>, <em class="dfn">scale</em> and <em class="dfn">shear</em>.</p>
 <div class="admonition warning">
 <p class="admonition-title">警告</p>
-<p>Though the design is pretty similar to the <a class="reference internal" href="animation_timeline.html#timeline-docker"><span class="std std-ref">Animation Timeline Docker</span></a>, the Animation Curves Docker may be a bit confusing or intimidating when you first open it, especially if you haven't done digital animation before.</p>
+<p>Though the design is pretty similar to the <a class="reference internal" href="animation_timeline.html#timeline-docker"><span class="std std-ref">動畫時間軸</span></a>, the Animation Curves Docker may be a bit confusing or intimidating when you first open it, especially if you haven't done digital animation before.</p>
 </div>
 <p>Let's look first at <em>animating a layer's opacity</em>:</p>
 <p>Say you want to animate something like an expanding cloud of dust that gradually becomes more transparent as it dissipates, or maybe a haunting ghost that seems to materialize out of thin air. These types of effects are pretty hard to get right by traditionally animated line drawings alone, and that's exactly where the Animation Curves Docker can step in.</p>
-<p>After <em>selecting the layer</em> that you want to animate the opacity of, you need to <em>select the frame time you want the opacity to start changing at</em> by clicking somewhere on the <a class="reference internal" href="animation_timeline.html#term-Frame-Timing-Header"><span class="xref std std-term">frame timing header</span></a> at the top of the graph view. Just like the <a class="reference internal" href="animation_timeline.html#timeline-docker"><span class="std std-ref">Animation Timeline Docker</span></a>, we can click and drag anywhere on the timing header to &quot;scrub&quot; across your animation and preview the results.</p>
+<p>After <em>selecting the layer</em> that you want to animate the opacity of, you need to <em>select the frame time you want the opacity to start changing at</em> by clicking somewhere on the <a class="reference internal" href="animation_timeline.html#term-Frame-Timing-Header"><span class="xref std std-term">frame timing header</span></a> at the top of the graph view. Just like the <a class="reference internal" href="animation_timeline.html#timeline-docker"><span class="std std-ref">動畫時間軸</span></a>, we can click and drag anywhere on the timing header to &quot;scrub&quot; across your animation and preview the results.</p>
 <p>Next we create our first scalar <a class="reference internal" href="animation_timeline.html#term-Keyframe"><span class="xref std std-term">keyframe</span></a> by clicking on the <span class="guilabel">add keyframe</span> button on the docker's titlebar.</p>
 <p>When you do this you'll notice two things happen. First, a new <span class="guilabel">opacity channel</span> will appear in the <em class="dfn">channels list</em> on the left-hand side, next to a colored mark that's associated with the color of the keyframes and curves in the <em class="dfn">graph view</em>. Second, a single keyframe will appear somewhere inside the graph view at the currently active time.</p>
 <p>Of course it takes more than a single point to make a line or curve, so we have a little bit more work to do.</p>
@@ -418,10 +418,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="animation_docker.html" class="btn btn-neutral float-right" title="Animation Docker" accesskey="n" rel="next"> <!-- 下一個 --> <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="animation_docker.html" class="btn btn-neutral float-right" title="動畫面板" accesskey="n" rel="next"> <!-- 下一個 --> <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="advanced_color_selector.html" class="btn btn-neutral" title="Advanced Color Selector" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- 上一個  -->  </a>
+        <a href="advanced_color_selector.html" class="btn btn-neutral" title="進階選色器" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- 上一個  -->  </a>
       
     </div>
   
@@ -433,7 +433,7 @@
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>3fcd3b3</code>
+          修訂版本 <code>85b1472</code>
         </span>
       
 

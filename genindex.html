@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-09-09T20:09:18" />
+  <meta property="og:article:modified_time" content="2021-09-10T07:10:17" />
   
   
   
@@ -351,6 +351,7 @@
  | <a href="#線"><strong>線</strong></a>
  | <a href="#編"><strong>編</strong></a>
  | <a href="#縮"><strong>縮</strong></a>
+ | <a href="#總"><strong>總</strong></a>
  | <a href="#繪"><strong>繪</strong></a>
  | <a href="#羽"><strong>羽</strong></a>
  | <a href="#聲"><strong>聲</strong></a>
@@ -577,8 +578,6 @@
 </li>
       <li><a href="reference_manual/resource_management.html#term-Adobe-Style-Library"><strong>Adobe Style Library</strong></a>
 </li>
-      <li><a href="reference_manual/dockers/advanced_color_selector.html#index-0"><strong>Advanced Color Selector</strong></a>
-</li>
       <li><a href="reference_manual/brushes/brush_engines/spray_brush_engine.html#index-0">Airbrush</a>
 </li>
       <li><a href="reference_manual/brushes/brush_engines/shape_brush_engine.html#index-0">Al.Chemy</a>
@@ -727,10 +726,10 @@
 </li>
       <li><a href="reference_manual/seexpr.html#term-color-cnoise4-vector-v-float-t"><strong>color cnoise4 ( vector v, float t)</strong></a>
 </li>
-      <li><a href="reference_manual/seexpr.html#term-color-cturbulence-vector-v-int-octaves-6-float-lacunarity-2-float-gain-0.5"><strong>color cturbulence ( vector v, int octaves=6, float lacunarity=2, float gain=0.5 )</strong></a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="reference_manual/seexpr.html#term-color-cturbulence-vector-v-int-octaves-6-float-lacunarity-2-float-gain-0.5"><strong>color cturbulence ( vector v, int octaves=6, float lacunarity=2, float gain=0.5 )</strong></a>
+</li>
       <li><a href="reference_manual/seexpr.html#term-color-cvoronoi-vector-v-int-type-1-float-jitter-0.5-float-fbmScale-0-int-fbmOctaves-4-float-fbmLacunarity-2-float-fbmGain-0.5"><strong>color cvoronoi ( vector v, int type=1, float jitter=0.5, float fbmScale=0, int fbmOctaves=4, float fbmLacunarity=2, float fbmGain=0.5)</strong></a>
 </li>
       <li><a href="reference_manual/seexpr.html#term-color-hsi-color-x-float-h-float-s-float-i-float-map-1"><strong>color hsi ( color x, float h, float s, float i, float map=1 )</strong></a>
@@ -751,15 +750,11 @@
 </li>
       <li><a href="reference_manual/dockers/advanced_color_selector.html#index-0">Color Selector</a>, <a href="reference_manual/dockers/artistic_color_selector.html#index-0">[1]</a>, <a href="reference_manual/dockers/color_sliders.html#index-0">[2]</a>, <a href="reference_manual/dockers/digital_color_mixer.html#index-0">[3]</a>, <a href="reference_manual/dockers/gamut_mask_docker.html#index-0">[4]</a>, <a href="reference_manual/dockers/small_color_selector.html#index-0">[5]</a>, <a href="reference_manual/dockers/specific_color_selector.html#index-0">[6]</a>, <a href="reference_manual/preferences/color_selector_settings.html#index-0">[7]</a>
 </li>
-      <li><a href="reference_manual/dockers/color_sliders.html#index-0">Color Sliders</a>
-</li>
       <li><a href="reference_manual/dockers/specific_color_selector.html#index-0">Color Space</a>
 </li>
       <li><a href="reference_manual/filters/colors.html#index-1"><strong>Color to Alpha</strong></a>
 </li>
       <li><a href="reference_manual/tools/measure.html#index-0">Compass</a>
-</li>
-      <li><a href="reference_manual/dockers/compositions.html#index-0">Compositions</a>
 </li>
       <li><a href="reference_manual/tools/contiguous_select.html#index-0"><strong>Contiguous Selection</strong></a>
 </li>
@@ -796,8 +791,6 @@
       <li><a href="reference_manual/brushes/brush_engines/deform_brush_engine.html#index-0">Deform</a>
 </li>
       <li><a href="reference_manual/filters/adjust.html#index-7">Desaturation</a>
-</li>
-      <li><a href="reference_manual/dockers/digital_color_mixer.html#index-0">Digital Color Mixer</a>
 </li>
       <li><a href="reference_manual/preferences/display_settings.html#index-0">Display</a>
 </li>
@@ -1288,7 +1281,7 @@
 </li>
       <li><a href="reference_manual/dockers/color_sliders.html#index-0">Luminosity</a>
 </li>
-      <li><a href="reference_manual/dockers/lut_management.html#index-0"><strong>LUT Management</strong></a>
+      <li><a href="reference_manual/dockers/lut_management.html#index-0"><strong>LUT 色彩管理</strong></a>
 </li>
   </ul></td>
 </tr></table>
@@ -1385,8 +1378,6 @@
       <li><a href="reference_manual/tools/freehand_select.html#index-0">Outline Select</a>
 </li>
       <li><a href="reference_manual/blending_modes/mix.html#index-15"><strong>Overlay (Blending Mode)</strong></a>
-</li>
-      <li><a href="reference_manual/dockers/overview.html#index-0">Overview</a>
 </li>
   </ul></td>
 </tr></table>
@@ -2160,9 +2151,11 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="reference_manual/dockers/layers.html#index-0"><strong>圖層</strong></a>, <a href="reference_manual/layers_and_masks/clone_layers.html#index-0">[1]</a>, <a href="reference_manual/layers_and_masks/file_layers.html#index-0">[2]</a>, <a href="reference_manual/layers_and_masks/fill_layers.html#index-0">[3]</a>, <a href="reference_manual/layers_and_masks/filter_layers.html#index-0">[4]</a>, <a href="reference_manual/layers_and_masks/filter_masks.html#index-0">[5]</a>, <a href="reference_manual/layers_and_masks/group_layers.html#index-0">[6]</a>, <a href="reference_manual/layers_and_masks/paint_layers.html#index-0">[7]</a>, <a href="reference_manual/layers_and_masks/selection_masks.html#index-0">[8]</a>, <a href="reference_manual/layers_and_masks/split_alpha.html#index-0">[9]</a>, <a href="reference_manual/layers_and_masks/transformation_masks.html#index-0">[10]</a>, <a href="reference_manual/layers_and_masks/transparency_masks.html#index-0">[11]</a>, <a href="reference_manual/layers_and_masks/vector_layers.html#index-0">[12]</a>, <a href="reference_manual/main_menu/layers_menu.html#index-0">[13]</a>, <a href="reference_manual/tools/colorize_mask.html#index-0">[14]</a>, <a href="user_manual/getting_started/basic_concepts.html#index-0">[15]</a>, <a href="user_manual/layers_and_masks.html#index-0">[16]</a>
 </li>
+      <li><a href="reference_manual/layers_and_masks/layer_styles.html#index-0">圖層樣式</a>, <a href="reference_manual/main_menu/layers_menu.html#index-0">[1]</a>
+</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="reference_manual/layers_and_masks/layer_styles.html#index-0">圖層樣式</a>, <a href="reference_manual/main_menu/layers_menu.html#index-0">[1]</a>
+      <li><a href="reference_manual/dockers/compositions.html#index-0">圖層組合方案</a>
 </li>
       <li><a href="reference_manual/brushes/brush_settings/texture.html#index-0">圖案</a>
 </li>
@@ -2530,6 +2523,8 @@
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="reference_manual/dockers/digital_color_mixer.html#index-0">數位混色器</a>
+</li>
       <li><a href="reference_manual/maths_input.html#index-0">數學</a>
 </li>
   </ul></td>
@@ -2975,6 +2970,14 @@
   </ul></td>
 </tr></table>
 
+<h2 id="總">總</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="reference_manual/dockers/overview.html#index-0">總覽圖</a>
+</li>
+  </ul></td>
+</tr></table>
+
 <h2 id="繪">繪</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
@@ -3127,6 +3130,10 @@
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="reference_manual/main_menu/image_menu.html#index-0">調整大小</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="reference_manual/dockers/color_sliders.html#index-0">調色滑塊</a>
 </li>
   </ul></td>
 </tr></table>
@@ -3299,6 +3306,10 @@
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="reference_manual/main_menu/file_menu.html#term-Export-Advanced..."><strong>進階匯出…</strong></a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="reference_manual/dockers/advanced_color_selector.html#index-0"><strong>進階選色器</strong></a>
 </li>
   </ul></td>
 </tr></table>
@@ -3514,7 +3525,7 @@
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>3fcd3b3</code>
+          修訂版本 <code>85b1472</code>
         </span>
       
 
