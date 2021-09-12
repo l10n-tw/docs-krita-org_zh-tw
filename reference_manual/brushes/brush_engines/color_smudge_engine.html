@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-09-11T20:09:45" />
+  <meta property="og:article:modified_time" content="2021-09-12T09:09:43" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="混色筆刷工具的手冊頁。" name="description" property="og:description" />
 
@@ -309,7 +309,7 @@
 </figcaption>
 </figure>
 <div class="versionadded">
-<p><span class="versionmodified added">5.0 版新加入: </span>The option <span class="guilabel">Use new smudge algorithm</span> greatly affects how the <em class="dfn">Color Rate</em> works. With the old algorithm, the <em class="dfn">Color Rate</em> will be affected by both smudge length and opacity, while with the new algorithm, <em class="dfn">Color Rate</em> will only interact with <em class="dfn">Opacity</em>.</p>
+<p><span class="versionmodified added">在 5.0 版本新加入: </span>The option <span class="guilabel">Use new smudge algorithm</span> greatly affects how the <em class="dfn">Color Rate</em> works. With the old algorithm, the <em class="dfn">Color Rate</em> will be affected by both smudge length and opacity, while with the new algorithm, <em class="dfn">Color Rate</em> will only interact with <em class="dfn">Opacity</em>.</p>
 <p>At first glance, this may seem like it reduces nuance. But instead, the new algorithm simplifies brush creation, with it being far clearer which elements interact with <em class="dfn">Color Rate</em>.</p>
 </div>
 <figure class="align-default" id="id3">
@@ -362,7 +362,7 @@
 </figure>
 </dd>
 <dt>Use new smudge algorithm</dt><dd><div class="versionadded">
-<p><span class="versionmodified added">5.0 版新加入.</span></p>
+<p><span class="versionmodified added">在 5.0 版本新加入.</span></p>
 </div>
 <p>The new smudge algorithm was initially introduced to allow <a class="reference internal" href="../brush_settings/brush_tips.html#brush-mode"><span class="std std-ref">lightness and gradient modes</span></a> on the color smudge. But it allows for more: it is a little quicker, and it has a better separation between the <a class="reference internal" href="#option-color-rate"><span class="std std-ref">Color Rate</span></a> and the <em class="dfn">Smudge Length</em>.</p>
 </dd>
@@ -394,7 +394,7 @@
 </figcaption>
 </figure>
 <div class="versionchanged">
-<p><span class="versionmodified changed">5.0 版更變: </span>It used to be possible to go beyond three time the size of the current brush. The smudge radius is now limited to the total size of the brush, but is also faster.</p>
+<p><span class="versionmodified changed">在 5.0 版本變更: </span>It used to be possible to go beyond three time the size of the current brush. The smudge radius is now limited to the total size of the brush, but is also faster.</p>
 </div>
 </section>
 <section id="overlay">
@@ -406,7 +406,7 @@
 <section id="paint-thickness">
 <span id="option-paint-thickness"></span><h3>Paint Thickness<a class="headerlink" href="#paint-thickness" title="本標題的永久連結">¶</a></h3>
 <div class="versionadded">
-<p><span class="versionmodified added">5.0 版新加入.</span></p>
+<p><span class="versionmodified added">在 5.0 版本新加入.</span></p>
 </div>
 <p>This affects how strong the <a class="reference internal" href="../brush_settings/brush_tips.html#brush-mode"><span class="std std-ref">lightness modes</span></a> affect the current color. Because the <em class="dfn">Color Smudge Brush</em> smudges, what actually happens is that the lightness part is painted into a separate height map. This prevents the shadows and highlights of the current lightness brush tip from being mixed into the smudge, which would have resulted in all smudges becoming white or black. The height map is discarded when switching brush engines, layers or tools. Because this heightmap only exists for the layer currently being edited, lightness brushes and paint thickness cannot be used together with <a class="reference internal" href="#option-overlay"><span class="std std-ref">Overlay</span></a>.</p>
 <figure class="align-default" id="id8">
@@ -650,7 +650,7 @@ This is mainly achieved with the Smearing mode on. Basically:</p>
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>820750b</code>
+          修訂版本 <code>be1f000</code>
         </span>
       
 

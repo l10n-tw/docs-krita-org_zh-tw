@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-09-11T20:09:45" />
+  <meta property="og:article:modified_time" content="2021-09-12T09:09:43" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="Performance settings in Krita." name="description" />
 
@@ -288,7 +288,7 @@
 <p>This is recommended to be a size of one layer of your image, e.g. if you usually paint on the image of 3000x3000x8bit-ARGB, the pool should be something like 36 MiB.</p>
 <p>As <strong class="program">Krita</strong> does this on start-up, you will need to restart <strong class="program">Krita</strong> to have this change affect anything.</p>
 <div class="deprecated">
-<p><span class="versionmodified deprecated">4.4 版後已棄用: </span>This setting was not needed from user side and is deprecated starting from 4.4.</p>
+<p><span class="versionmodified deprecated">在 4.4 版本開始棄用: </span>This setting was not needed from user side and is deprecated starting from 4.4.</p>
 </div>
 </dd>
 <dt>Swap Undo After</dt><dd><p><strong class="program">Krita</strong> also needs to keep all the Undo states on the virtual desk (RAM). Swapping means that parts of the files on the virtual desk get sent to the virtual archive room. This allows <strong class="program">Krita</strong> to dedicate more RAM space to new actions, by sending old Undo states to the archive room once it hits this limit. This will make undoing a little slower, but this can be desirable for the performance of <strong class="program">Krita</strong> overall.
@@ -339,7 +339,7 @@ This too needs <strong class="program">Krita</strong> to be restarted.</p>
 <section id="animation-cache">
 <h2>Animation Cache<a class="headerlink" href="#animation-cache" title="本標題的永久連結">¶</a></h2>
 <div class="versionadded">
-<p><span class="versionmodified added">4.1 版新加入.</span></p>
+<p><span class="versionmodified added">在 4.1 版本新加入.</span></p>
 </div>
 <p>The animation cache is the space taken up by animation frames in the memory of the computer. A cache in this sense is a cache of precalculated images.</p>
 <p>Playing back a video at 25 FPS means that the computer has to precalculate 25 images per second of video. Now, video playing software is able to do this because it really focuses on this one single task. However, Krita as a painting program also allows you to edit the pictures. Because Krita needs to be able to do this, and a dedicated video player doesn't, Krita cannot do the same kind of optimizations as a dedicated video player can.</p>
@@ -412,7 +412,7 @@ This too needs <strong class="program">Krita</strong> to be restarted.</p>
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>820750b</code>
+          修訂版本 <code>be1f000</code>
         </span>
       
 
