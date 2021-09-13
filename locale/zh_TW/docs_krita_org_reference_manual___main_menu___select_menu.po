@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Krita Manual 4.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-19 22:30+0800\n"
-"PO-Revision-Date: 2021-09-06 07:23+0000\n"
+"PO-Revision-Date: 2021-09-13 07:06+0000\n"
 "Last-Translator: BiseChen <bise.chen@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <http://weblate.slat.org/projects/"
 "krita-docs/3-reference_manual___main_menu___select_menu/zh_Hant/>\n"
@@ -63,7 +63,7 @@ msgstr "反轉選取"
 
 #: ../../reference_manual/main_menu/select_menu.rst:30
 msgid "Inverts the selection. Shortcut :kbd:`Ctrl + Shift + I`"
-msgstr "反向選取當前的選取區域。快捷鍵：\\ :kbd:`Ctrl + Shift + I`"
+msgstr "反轉選取區域與未選取區域。快捷鍵：\\ :kbd:`Ctrl + Shift + I`"
 
 #: ../../reference_manual/main_menu/select_menu.rst:31
 msgid "Edit Selection"
@@ -76,8 +76,8 @@ msgid ""
 "selection depending on whether it's :ref:`vector <shape_selection_tool>` or :"
 "ref:`raster <freehand_brush_tool>`."
 msgstr ""
-"當選取區啟用狀態時，這會將當前圖層切換為全域選取遮罩，並且將當前工具切換到適當的類型來編輯選取區域，實際使用時取決於它是\\ :ref:`向量 "
-"<shape_selection_tool>`\\ 或\\ :ref:`點陣 <freehand_brush_tool>`\\ 繪圖而有所不同。"
+"當選取區在活動狀態時，這會將當前圖層切換為全域選取遮罩，並且將當前工具切換到適當的類型以編輯選取區域，實際使用時取決於它是\\ :ref:`形狀選取工具 "
+"<shape_selection_tool>`\\ 或\\ :ref:`手繪畫筆工具 <freehand_brush_tool>`\\ 而有所不同。"
 
 #: ../../reference_manual/main_menu/select_menu.rst:34
 msgid "Convert to Vector Selection"
@@ -121,12 +121,11 @@ msgstr "顯示選取區域"
 msgid ""
 "Display the selection. If turned off selections will be invisible. Shortcut :"
 "kbd:`Ctrl + H`"
-msgstr ""
-"啟用這功能時將會以虛線顯示選取區域的邊界，可以取消以暫時隱藏選取區域的顯示。用於隱藏和顯示之間快速切換的快捷鍵：\\ :kbd:`Ctrl + H`\\"
+msgstr "啟用這功能時將會以虛線顯示選取區的邊界，可以取消以暫時隱藏選取區的顯示。切換隱藏與顯示的快捷鍵：\\ :kbd:`Ctrl + H`\\"
 
 #: ../../reference_manual/main_menu/select_menu.rst:49
 msgid "Show Global Selection Mask"
-msgstr "顯示全域顯取區域遮罩"
+msgstr "顯示全域選取區域遮罩"
 
 #: ../../reference_manual/main_menu/select_menu.rst:51
 msgid ""
@@ -163,8 +162,8 @@ msgid ""
 "allowing you to select the opaque pixels of multiple layers into one "
 "selection. Semi-transparent (or semi-opaque) pixels will be semi-selected."
 msgstr ""
-"這功能是選取當前圖層中所有不透明像素。若已經一個選取區域的話，這會將新的選取添加到原本的選取區域中。這允許分次選取多個圖層的不透明像素，以得到一個合併的選"
-"取區域。若為半透明像素所在區域也會被選取區域繼承。"
+"這功能是選取當前圖層中所有不透明像素。若已有一個選取區的話，這會將新的選取添加到原本的選取區中。這允許分次選取多個圖層的不透明像素，以得到一個合併的選取區"
+"域。若為半透明像素所在區域也會被選取區域繼承。"
 
 #: ../../reference_manual/main_menu/select_menu.rst:62
 msgid "Select Opaque (Replace)"
@@ -172,7 +171,7 @@ msgstr "選取不透明區域（取代）"
 
 #: ../../reference_manual/main_menu/select_menu.rst:63
 msgid "Only select the opaque pixels of the layer, regardless of selection."
-msgstr "選取圖層中不透明像素區域作為新選取區域，取代當前的選取區域。"
+msgstr "選取圖層中不透明像素區作為新選取區域，取代當前的選取區。"
 
 #: ../../reference_manual/main_menu/select_menu.rst:64
 msgid "Select Opaque (Add)"
@@ -180,7 +179,7 @@ msgstr "選取不透明區域（新增）"
 
 #: ../../reference_manual/main_menu/select_menu.rst:65
 msgid "Adds the new selection from opaque pixels to the current selection."
-msgstr "選取圖層中不透明像素區域作為新選取區域，添加到當前的選取區域。"
+msgstr "選取圖層中不透明像素區作為新選取區域，添加到當前的選取區。"
 
 #: ../../reference_manual/main_menu/select_menu.rst:66
 msgid "Select Opaque (Subtract)"
@@ -189,7 +188,7 @@ msgstr "選取不透明區域（減去）"
 #: ../../reference_manual/main_menu/select_menu.rst:67
 msgid ""
 "Subtracts the new selection from opaque pixels from the current selection."
-msgstr "選取圖層中不透明像素區域作為新選取區域，將它從當前的選取區域中減去。"
+msgstr "選取圖層中不透明像素區作為新選取區域，將它從當前的選取區中減去。"
 
 #: ../../reference_manual/main_menu/select_menu.rst:69
 msgid "Select Opaque (Intersection)"
@@ -199,7 +198,7 @@ msgstr "選取不透明區域（相交）"
 msgid ""
 "Gets the intersection between the new selection from opaque pixels and the "
 "current selection."
-msgstr "選取圖層中不透明像素區域作為新選取區域，然後只保留新、舊選取區域相交的部分。"
+msgstr "選取圖層中不透明像素區作為新選取區域，然後只保留新、舊選取區相交的部分。"
 
 #: ../../reference_manual/main_menu/select_menu.rst:70
 msgid "Feather Selection..."
@@ -209,7 +208,7 @@ msgstr "羽化選取區域…"
 msgid ""
 "Feathering in design means to soften sharp borders. So this adds a soft "
 "border to the existing selection. Shortcut :kbd:`Shift + F6`"
-msgstr "羽化的意思是指柔化銳利的邊界。這個功能會給現有選取區域之邊緣添加一個柔和的漸層區域。快捷鍵：\\ :kbd:`Shift + F6`"
+msgstr "羽化的意思是指柔化銳利的邊界。這個功能會給現有選取區之邊緣添加一個柔和的漸層區域。快捷鍵：\\ :kbd:`Shift + F6`"
 
 #: ../../reference_manual/main_menu/select_menu.rst:73
 msgid "Grow Selection..."
@@ -225,7 +224,7 @@ msgstr "縮小選取區域…"
 
 #: ../../reference_manual/main_menu/select_menu.rst:78
 msgid "Make the selection a few pixels smaller."
-msgstr "使選取區域依您在對話盒中指定的數值和單位向內收縮。"
+msgstr "使選取區依您在對話盒中指定的數值和單位向內收縮。"
 
 #: ../../reference_manual/main_menu/select_menu.rst:79
 msgid "Border Selection..."
