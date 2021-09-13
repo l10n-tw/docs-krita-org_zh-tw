@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-09-12T20:09:21" />
+  <meta property="og:article:modified_time" content="2021-09-13T07:09:34" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="Krita 的「選取」選單。" name="description" property="og:description" />
 
@@ -270,9 +270,9 @@
 </dd>
 <dt id="term-Reselect">重新選取<a class="headerlink" href="#term-Reselect" title="本術語的永久連結">¶</a></dt><dd><p>重新選取剛才取消的選取區域。快捷鍵：<kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">D</kbd></kbd></p>
 </dd>
-<dt id="term-Invert-Selection">反轉選取<a class="headerlink" href="#term-Invert-Selection" title="本術語的永久連結">¶</a></dt><dd><p>反向選取當前的選取區域。快捷鍵：<kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">I</kbd></kbd></p>
+<dt id="term-Invert-Selection">反轉選取<a class="headerlink" href="#term-Invert-Selection" title="本術語的永久連結">¶</a></dt><dd><p>反轉選取區域與未選取區域。快捷鍵：<kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">I</kbd></kbd></p>
 </dd>
-<dt id="term-Edit-Selection">編輯選取區域<a class="headerlink" href="#term-Edit-Selection" title="本術語的永久連結">¶</a></dt><dd><p>當選取區啟用狀態時，這會將當前圖層切換為全域選取遮罩，並且將當前工具切換到適當的類型來編輯選取區域，實際使用時取決於它是<a class="reference internal" href="../tools/shape_selection.html#shape-selection-tool"><span class="std std-ref">向量</span></a>或<a class="reference internal" href="../tools/freehand_brush.html#freehand-brush-tool"><span class="std std-ref">點陣</span></a>繪圖而有所不同。</p>
+<dt id="term-Edit-Selection">編輯選取區域<a class="headerlink" href="#term-Edit-Selection" title="本術語的永久連結">¶</a></dt><dd><p>當選取區在活動狀態時，這會將當前圖層切換為全域選取遮罩，並且將當前工具切換到適當的類型以編輯選取區域，實際使用時取決於它是<a class="reference internal" href="../tools/shape_selection.html#shape-selection-tool"><span class="std std-ref">形狀選取工具</span></a>或<a class="reference internal" href="../tools/freehand_brush.html#freehand-brush-tool"><span class="std std-ref">手繪畫筆工具</span></a>而有所不同。</p>
 </dd>
 <dt id="term-Convert-to-Vector-Selection">轉成向量選取區域<a class="headerlink" href="#term-Convert-to-Vector-Selection" title="本術語的永久連結">¶</a></dt><dd><p>將點陣圖選取區域轉換為向量選取區，原選取區所包含的透明度層次將會被忽略。</p>
 </dd>
@@ -282,31 +282,31 @@
 </dd>
 <dt id="term-Convert-to-Shape">轉成形狀<a class="headerlink" href="#term-Convert-to-Shape" title="本術語的永久連結">¶</a></dt><dd><p>將向量選取區域轉為向量形狀。</p>
 </dd>
-<dt id="term-Display-Selection">顯示選取區域<a class="headerlink" href="#term-Display-Selection" title="本術語的永久連結">¶</a></dt><dd><p>啟用這功能時將會以虛線顯示選取區域的邊界，可以取消以暫時隱藏選取區域的顯示。用於隱藏和顯示之間快速切換的快捷鍵：<kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">H</kbd></kbd></p>
+<dt id="term-Display-Selection">顯示選取區域<a class="headerlink" href="#term-Display-Selection" title="本術語的永久連結">¶</a></dt><dd><p>啟用這功能時將會以虛線顯示選取區的邊界，可以取消以暫時隱藏選取區的顯示。切換隱藏與顯示的快捷鍵：<kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">H</kbd></kbd></p>
 </dd>
-<dt id="term-Show-Global-Selection-Mask">顯示全域顯取區域遮罩<a class="headerlink" href="#term-Show-Global-Selection-Mask" title="本術語的永久連結">¶</a></dt><dd><p>勾選這功能時，圖層面板頂部會顯示一個全域選取區域的遮罩。這功能可以很方便使用任何筆刷在遮罩上繪製以做出選取區域，也能使用選取工具或向量形狀工具做出選取區域。</p>
+<dt id="term-Show-Global-Selection-Mask">顯示全域選取區域遮罩<a class="headerlink" href="#term-Show-Global-Selection-Mask" title="本術語的永久連結">¶</a></dt><dd><p>勾選這功能時，圖層面板頂部會顯示一個全域選取區域的遮罩。這功能可以很方便使用任何筆刷在遮罩上繪製以做出選取區域，也能使用選取工具或向量形狀工具做出選取區域。</p>
 </dd>
 <dt id="term-Scale...">縮放…<a class="headerlink" href="#term-Scale..." title="本術語的永久連結">¶</a></dt><dd><p>縮放選取區域。</p>
 </dd>
 <dt id="term-Select-from-Color-Range...">從色彩範圍選取…<a class="headerlink" href="#term-Select-from-Color-Range..." title="本術語的永久連結">¶</a></dt><dd><p>選取畫面中符合某個色彩的區域。</p>
 </dd>
-<dt id="term-Select-Opaque">選取不透明區域<a class="headerlink" href="#term-Select-Opaque" title="本術語的永久連結">¶</a></dt><dd><p>這功能是選取當前圖層中所有不透明像素。若已經一個選取區域的話，這會將新的選取添加到原本的選取區域中。這允許分次選取多個圖層的不透明像素，以得到一個合併的選取區域。若為半透明像素所在區域也會被選取區域繼承。</p>
+<dt id="term-Select-Opaque">選取不透明區域<a class="headerlink" href="#term-Select-Opaque" title="本術語的永久連結">¶</a></dt><dd><p>這功能是選取當前圖層中所有不透明像素。若已有一個選取區的話，這會將新的選取添加到原本的選取區中。這允許分次選取多個圖層的不透明像素，以得到一個合併的選取區域。若為半透明像素所在區域也會被選取區域繼承。</p>
 <dl class="simple">
-<dt>選取不透明區域（取代）</dt><dd><p>選取圖層中不透明像素區域作為新選取區域，取代當前的選取區域。</p>
+<dt>選取不透明區域（取代）</dt><dd><p>選取圖層中不透明像素區作為新選取區域，取代當前的選取區。</p>
 </dd>
-<dt>選取不透明區域（新增）</dt><dd><p>選取圖層中不透明像素區域作為新選取區域，添加到當前的選取區域。</p>
+<dt>選取不透明區域（新增）</dt><dd><p>選取圖層中不透明像素區作為新選取區域，添加到當前的選取區。</p>
 </dd>
-<dt>選取不透明區域（減去）</dt><dd><p>選取圖層中不透明像素區域作為新選取區域，將它從當前的選取區域中減去。</p>
+<dt>選取不透明區域（減去）</dt><dd><p>選取圖層中不透明像素區作為新選取區域，將它從當前的選取區中減去。</p>
 </dd>
-<dt>選取不透明區域（相交）</dt><dd><p>選取圖層中不透明像素區域作為新選取區域，然後只保留新、舊選取區域相交的部分。</p>
+<dt>選取不透明區域（相交）</dt><dd><p>選取圖層中不透明像素區作為新選取區域，然後只保留新、舊選取區相交的部分。</p>
 </dd>
 </dl>
 </dd>
-<dt id="term-Feather-Selection...">羽化選取區域…<a class="headerlink" href="#term-Feather-Selection..." title="本術語的永久連結">¶</a></dt><dd><p>羽化的意思是指柔化銳利的邊界。這個功能會給現有選取區域之邊緣添加一個柔和的漸層區域。快捷鍵：<kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">F6</kbd></kbd></p>
+<dt id="term-Feather-Selection...">羽化選取區域…<a class="headerlink" href="#term-Feather-Selection..." title="本術語的永久連結">¶</a></dt><dd><p>羽化的意思是指柔化銳利的邊界。這個功能會給現有選取區之邊緣添加一個柔和的漸層區域。快捷鍵：<kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">F6</kbd></kbd></p>
 </dd>
 <dt id="term-Grow-Selection...">擴大選取區域…<a class="headerlink" href="#term-Grow-Selection..." title="本術語的永久連結">¶</a></dt><dd><p>使選取區域依您在對話盒中指定的數值和單位向外擴大。</p>
 </dd>
-<dt id="term-Shrink-Selection...">縮小選取區域…<a class="headerlink" href="#term-Shrink-Selection..." title="本術語的永久連結">¶</a></dt><dd><p>使選取區域依您在對話盒中指定的數值和單位向內收縮。</p>
+<dt id="term-Shrink-Selection...">縮小選取區域…<a class="headerlink" href="#term-Shrink-Selection..." title="本術語的永久連結">¶</a></dt><dd><p>使選取區依您在對話盒中指定的數值和單位向內收縮。</p>
 </dd>
 <dt id="term-Border-Selection...">邊框化選取區域…<a class="headerlink" href="#term-Border-Selection..." title="本術語的永久連結">¶</a></dt><dd><p>選取一個區域但只保留邊框作為選取區，可在對話盒中設定邊框的寬度和單位。</p>
 </dd>
@@ -338,7 +338,7 @@
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>be1f000</code>
+          修訂版本 <code>8cb6afa</code>
         </span>
       
 
