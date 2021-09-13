@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-09-13T07:09:34" />
+  <meta property="og:article:modified_time" content="2021-09-13T14:10:15" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="Page about the HSX blending modes in Krita, amongst which Hue, Color, Luminosity and Saturation." name="description" />
 
@@ -272,23 +272,23 @@
 <section id="hsi">
 <h2>HSI<a class="headerlink" href="#hsi" title="本標題的永久連結">¶</a></h2>
 <p>HSI is a color coordinate system, using Hue, Saturation and Intensity to categorize a color.
-Hue is roughly the wavelength, whether the color is red, yellow, green, cyan, blue or purple. It is measure in 360°, with 0 being red.
+Hue is roughly the wavelength, whether the color is red, yellow, green, cyan, blue or purple. It is measured in 360°, with 0 being red.
 Saturation is the measurement of how close a color is to gray.
-Intensity, in this case is the tone of the color. What makes intensity special is that it recognizes yellow (rgb:1,1,0) having a higher combined rgb value than blue (rgb:0,0,1). This is a non-linear tone dimension, which means it's gamma-corrected.</p>
+Intensity, in this case, is the tone of the color. What makes intensity special is that it recognizes yellow (rgb:1,1,0) having a higher combined rgb value than blue (rgb:0,0,1). This is a non-linear tone dimension, which means it's gamma-corrected.</p>
 </section>
 <section id="hsl">
 <h2>HSL<a class="headerlink" href="#hsl" title="本標題的永久連結">¶</a></h2>
-<p>HSL is also a color coordinate system. It describes colors in Hue, Saturation and Lightness.
+<p>HSL is a color coordinate system that describes colors in Hue, Saturation and Lightness.
 Lightness specifically puts both yellow (rgb:1,1,0), blue (rgb:0,0,1) and middle gray (rgb:0.5,0.5,0.5) at the same lightness (0.5).</p>
 </section>
 <section id="hsv">
 <h2>HSV<a class="headerlink" href="#hsv" title="本標題的永久連結">¶</a></h2>
-<p>HSV, occasionally called HSB, is a color coordinate system. It measures colors in Hue, Saturation, and Value (also called Brightness).
+<p>HSV, occasionally called HSB, is a color coordinate system that measures colors in Hue, Saturation, and Value (also called Brightness).
 Value or Brightness specifically refers to strength at which the pixel-lights on your monitor have to shine. It sets Yellow (rgb:1,1,0), Blue (rgb:0,0,1) and White (rgb:1,1,1) at the same Value (100%).</p>
 </section>
 <section id="hsy">
 <h2>HSY<a class="headerlink" href="#hsy" title="本標題的永久連結">¶</a></h2>
-<p>HSY is a color coordinate system. It categorizes colors in Hue, Saturation and Luminosity. Well, not really, it uses Luma instead of true luminosity, the difference being that Luminosity is linear while Luma is gamma-corrected and just weights the rgb components.
+<p>HSY is a color coordinate system categorizing colors in Hue, Saturation and Luminosity. Well, not really, it uses Luma instead of true luminosity, the difference being that Luminosity is linear while Luma is gamma-corrected and just weights the rgb components.
 Luma is based on scientific studies of how much light a color reflects in real-life. While like intensity it acknowledges that yellow (rgb:1,1,0) is lighter than blue (rgb:0,0,1), it also acknowledges that yellow (rgb:1,1,0) is lighter than cyan (rgb:0,1,1), based on these studies.</p>
 </section>
 <section id="hsx-blending-modes">
@@ -376,7 +376,7 @@ Tone in this case being either Value, Lightness, Intensity or Luminosity.</p>
 <p class="admonition-title">提示</p>
 <p>英文稱為「Increase Value / Lightness / Intensity / Luminosity」。</p>
 </div>
-<p>Similar to lighten, but specific to tone.
+<p>Similar to Lighten, but specific to tone.
 Checks whether the upper layer's pixel has a higher tone than the lower layer's pixel. If so, the tone is increased, if not, the lower layer's tone is maintained.</p>
 <figure class="align-center" id="id11">
 <img alt="../../_images/Blending_modes_Increase_Intensity_Sample_image_with_dots.png" src="../../_images/Blending_modes_Increase_Intensity_Sample_image_with_dots.png" />
@@ -409,7 +409,7 @@ Checks whether the upper layer's pixel has a higher tone than the lower layer's 
 <p class="admonition-title">提示</p>
 <p>英文稱為「Increase Saturation」。</p>
 </div>
-<p>Similar to lighten, but specific to Saturation.
+<p>Similar to Lighten, but specific to Saturation.
 Checks whether the upper layer's pixel has a higher Saturation than the lower layer's pixel. If so, the Saturation is increased, if not, the lower layer's Saturation is maintained.</p>
 <figure class="align-center" id="id15">
 <img alt="../../_images/Blending_modes_Increase_Saturation_HSI_Sample_image_with_dots.png" src="../../_images/Blending_modes_Increase_Saturation_HSI_Sample_image_with_dots.png" />
@@ -442,7 +442,7 @@ Checks whether the upper layer's pixel has a higher Saturation than the lower la
 <p class="admonition-title">提示</p>
 <p>英文稱為「Intensity」。</p>
 </div>
-<p>Takes the Hue and Saturation of the Lower layer and outputs them with the intensity of the upper layer.</p>
+<p>Takes the Hue and Saturation of the lower layer and outputs them with the intensity of the upper layer.</p>
 <figure class="align-center" id="id19">
 <img alt="../../_images/Blending_modes_Intensity_Sample_image_with_dots.png" src="../../_images/Blending_modes_Intensity_Sample_image_with_dots.png" />
 <figcaption>
@@ -456,7 +456,7 @@ Checks whether the upper layer's pixel has a higher Saturation than the lower la
 <p class="admonition-title">提示</p>
 <p>英文稱為「Value」。</p>
 </div>
-<p>Takes the Hue and Saturation of the Lower layer and outputs them with the Value of the upper layer.</p>
+<p>Takes the Hue and Saturation of the lower layer and outputs them with the Value of the upper layer.</p>
 <figure class="align-center" id="id20">
 <img alt="../../_images/Blending_modes_Value_Sample_image_with_dots.png" src="../../_images/Blending_modes_Value_Sample_image_with_dots.png" />
 <figcaption>
@@ -470,7 +470,7 @@ Checks whether the upper layer's pixel has a higher Saturation than the lower la
 <p class="admonition-title">提示</p>
 <p>英文稱為「Lightness」。</p>
 </div>
-<p>Takes the Hue and Saturation of the Lower layer and outputs them with the Lightness of the upper layer.</p>
+<p>Takes the Hue and Saturation of the lower layer and outputs them with the Lightness of the upper layer.</p>
 <figure class="align-center" id="id21">
 <img alt="../../_images/Blending_modes_Lightness_Sample_image_with_dots.png" src="../../_images/Blending_modes_Lightness_Sample_image_with_dots.png" />
 <figcaption>
@@ -485,7 +485,7 @@ Checks whether the upper layer's pixel has a higher Saturation than the lower la
 <p>英文稱為「Luminosity」。</p>
 </div>
 <p>As explained above, actually Luma, but called this way as it's in line with the terminology in other applications.
-Takes the Hue and Saturation of the Lower layer and outputs them with the Luminosity of the upper layer.
+Takes the Hue and Saturation of the lower layer and outputs them with the Luminosity of the upper layer.
 The most preferred one of the four Tone blending modes, as this one gives fairly intuitive results for the Tone of a hue.</p>
 <figure class="align-center" id="id22">
 <img alt="../../_images/Blending_modes_Luminosity_Sample_image_with_dots.png" src="../../_images/Blending_modes_Luminosity_Sample_image_with_dots.png" />
@@ -532,7 +532,7 @@ The most preferred one of the four Tone blending modes, as this one gives fairly
 <p class="admonition-title">提示</p>
 <p>英文稱為「Decrease Value / Lightness / Intensity / Luminosity」。</p>
 </div>
-<p>Similar to darken, but specific to tone.
+<p>Similar to Darken, but specific to tone.
 Checks whether the upper layer's pixel has a lower tone than the lower layer's pixel. If so, the tone is decreased, if not, the lower layer's tone is maintained.</p>
 <figure class="align-center" id="id27">
 <img alt="../../_images/Blending_modes_Decrease_Intensity_Gray_0.4_and_Gray_0.5.png" src="../../_images/Blending_modes_Decrease_Intensity_Gray_0.4_and_Gray_0.5.png" />
@@ -577,7 +577,7 @@ Checks whether the upper layer's pixel has a lower tone than the lower layer's p
 <p class="admonition-title">提示</p>
 <p>英文稱為「Decrease Saturation」。</p>
 </div>
-<p>Similar to darken, but specific to Saturation.
+<p>Similar to Darken, but specific to Saturation.
 Checks whether the upper layer's pixel has a lower Saturation than the lower layer's pixel. If so, the Saturation is decreased, if not, the lower layer's Saturation is maintained.</p>
 <figure class="align-center" id="id33">
 <img alt="../../_images/Blending_modes_Decrease_Saturation_HSI_Gray_0.4_and_Gray_0.5.png" src="../../_images/Blending_modes_Decrease_Saturation_HSI_Gray_0.4_and_Gray_0.5.png" />
@@ -642,14 +642,14 @@ Checks whether the upper layer's pixel has a lower Saturation than the lower lay
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>8cb6afa</code>
+          修訂版本 <code>c7dfa96</code>
         </span>
       
 
     </p>
   </div>
   使用 <a href="http://sphinx-doc.org/">Sphinx</a> 以及經修改過的 <a href="https://github.com/rtfd/sphinx_rtd_theme">RTD 主題</a>建置<br/>
-  <a href="https://krita.org" title="Krita official website.">Krita 官方網站</a> |
+  <a href="https://krita.org" title="Krita 官方網站">Krita 官方網站</a> |
   <a href="https://invent.kde.org/documentation/docs-krita-org/" title="這份手冊的 KDE GitLab 專案網址">docs.krita.org 的 Git 原始碼儲存庫</a> |
   <a href="https://www.kde.org/community/whatiskde/impressum-en.php" title="了解更多關於 KDE、code of conduct（行為準則）、隱私政策及 GDPR（一般資料保護規則）">KDE Impressum</a>
    

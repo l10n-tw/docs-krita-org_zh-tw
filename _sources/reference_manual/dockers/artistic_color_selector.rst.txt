@@ -56,7 +56,7 @@ Continuous Mode
     The value scale and hue sectors can also be set to continuous mode (with the infinity icon on the right of the slider). If toggled on, the respective area shows a continuous gradient instead of the discrete swatches.
 
 Invert saturation (4)
-    Changes the order of saturation rings within the the hue sectors. By default, the wheel has gray in the center and most saturated colors on the perimeter. :guilabel:`Invert saturation` puts gray on the perimeter and most saturated colors in the center.
+    Changes the order of saturation rings within the hue sectors. By default, the wheel has gray in the center and most saturated colors on the perimeter. :guilabel:`Invert saturation` puts gray on the perimeter and most saturated colors in the center.
 
 Reset to default (5)
     Loads default values for the sliders 1, 2, and 3. These default values are configured in selector settings.

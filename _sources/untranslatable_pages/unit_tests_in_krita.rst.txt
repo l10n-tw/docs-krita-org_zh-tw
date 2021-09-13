@@ -78,7 +78,7 @@ To enable unit tests, build Krita with an additional cmake flag: ``-DBUILD_TESTI
   * If you need help with building from source, see :ref:`building_krita`
   * For more information about cmake options, please refer to :ref:`cmake_settings_for_developers`
 
-Once built, the tests are run from the the **build** directory. There you can either run the whole suite at once or you can run a single test (or even a single test with a single data row for data-driven tests).
+Once built, the tests are run from the **build** directory. There you can either run the whole suite at once or you can run a single test (or even a single test with a single data row for data-driven tests).
 
 Run all the tests
 ~~~~~~~~~~~~~~~~~

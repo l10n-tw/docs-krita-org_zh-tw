@@ -73,7 +73,7 @@ And just like that, when you press the :guilabel:`play button` you'll see the op
 
 If you select the first keyframe (the one on the left-hand side) of your line segment and click on the :guilabel:`bezier curve interpolation` button in the utilities section of the titlebar, you'll notice that the keyframe will appear as a hollow circle on the graph view. That hollow circle is a :dfn:`handle`, and by clicking on it and dragging in different directions you can change the arc of the curve between your two keyframes.
 
-Similarly, you can like on the :guilabel:`linear interpolation` button to change your curve back into a line, or the :guilabel:`constant` button to turn off interpolation altogether, causing values to jump suddenly between keyframes.
+Similarly, you can click on the :guilabel:`linear interpolation` button to change your curve back into a line, or the :guilabel:`constant` button to turn off interpolation altogether, causing values to jump suddenly between keyframes.
 
  .. note::
 
@@ -109,7 +109,7 @@ If you want to you can edit these key frames directly in the graph view, but it'
 
          Animating a Transform Mask spawns a lot of channels but, depending on your goals, you may only want to work with a small number of them at a time. *Hiding* and *soloing* channels in the channels list can make it much easier to see and edit curves, especially since you can use the :guilabel:`zoom to channel` and :guilabel:`zoom to curve` buttons at the top of the docker to fit the graph view to the currently visible channels. 
          
-         Navigating by click-dragging on the zoomable scrollbars and and *values header* (on the left-hand side of the graph view) can also really help with editing curves!
+         Navigating by click-dragging on the zoomable scrollbars and *values header* (on the left-hand side of the graph view) can also really help with editing curves!
 
 Finally, click or scrub to a different frame time, add another keyframe, and use the Transform Tool on the same Transform Mask again. 
 

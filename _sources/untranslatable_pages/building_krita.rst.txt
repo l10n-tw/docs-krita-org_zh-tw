@@ -105,7 +105,7 @@ For example, for Ubuntu, you can start with:
 
     you@yourcomputer:~/kritadev/build>apt-get build-dep krita
     
-Which will install all the dependencies of the version of Krita in the repositories. You might need to enable the deb-src repositories by editing /etc/apt/sources.list (see https://help.ubuntu.com/community/Repositories/CommandLine) or, if you're using the KDE Plasma desktop, enabling them in the the Settings of the Discover application.
+Which will install all the dependencies of the version of Krita in the repositories. You might need to enable the deb-src repositories by editing /etc/apt/sources.list (see https://help.ubuntu.com/community/Repositories/CommandLine) or, if you're using the KDE Plasma desktop, enabling them in the Settings of the Discover application.
 
 However, the development version might use different dependencies, to find these, you can use ``apt-cache search``:
 
@@ -397,7 +397,7 @@ Again, on the command line, with the same script that is used to make the nightl
     cd c:\dev
     krita\build-tools\windows\build.cmd --no-interactive --jobs 8 --skip-deps --src-dir c:\dev\krita --download-dir c:\dev\d --deps-build-dir c:\dev\b --deps-install-dir c:\dev\is --krita-build-dir c:\dev\b_krita --krita-install-dir c:\dev\i
     
-If you are hacking on Krita, you can can rebuild Krita without running this script by entering the build directory and running mingw3-make install.
+If you are hacking on Krita, you can rebuild Krita without running this script by entering the build directory and running mingw3-make install.
 
 .. code:: console
 

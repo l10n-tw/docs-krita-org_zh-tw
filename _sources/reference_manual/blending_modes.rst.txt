@@ -40,7 +40,7 @@ These are the blending modes that have been ticked as favorites, defaulting thes
 Hotkeys associated with Blending modes
 --------------------------------------
 
-Defaultly the following hotkeys are associated with blending modes used for painting. Note: these shortcuts do not change the blending mode of the current layer.
+By default, the following hotkeys are associated with blending modes used for painting. Note: these shortcuts do not change the blending mode of the current layer.
 
 You first need to use modifiers :kbd:`Alt + Shift`, then use the following hotkey to have the associated blending mode:
 

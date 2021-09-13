@@ -190,8 +190,8 @@ Stop Handle UI Breakdown
       * Next to the color type buttons will appear a check box when the color type is Foreground or Background that you can use to establish that the color should also be transparent. If the color type is custom, then instead a color button and an opacity slider will appear to let you choose a specific color.
 
    5. :guilabel:`Right color` - In this row of widgets you can change the properties related to the start of the segment on the right of the stop. They are pretty much the same as the ones explained in the previous point.
-   6. :guilabel:`Link colors` - If this button is checked then changing the properties on the *left color" area will also change the properties on the *right color* area and viceversa. Check it if you want the two colors to be synchronized.
-   7. :guilabel:`Position` - you can use this slider to fine-tune the position of the stop. This cahnges the end position of the segment on the left and the start position of the segment on the right.
+   6. :guilabel:`Link colors` - If this button is checked then changing the properties on the *left color" area will also change the properties on the *right color* area and vice versa. Check it if you want the two colors to be synchronized.
+   7. :guilabel:`Position` - you can use this slider to fine-tune the position of the stop. This changes the end position of the segment on the left and the start position of the segment on the right.
 
 Middle Point Handle UI Breakdown
 
@@ -220,7 +220,7 @@ chooser and editors are shown together and that they are interconnected. When
 this happens, you are probably using the generic gradient editor, that was
 introduced to ease the creation and manipulation of gradients.
 
-It's main features are:
+Its main features are:
 
 * Allows you to load/save gradients from/to the gradient resources to/from the
   editor.

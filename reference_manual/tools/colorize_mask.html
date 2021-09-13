@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-09-13T07:09:34" />
+  <meta property="og:article:modified_time" content="2021-09-13T14:10:15" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="如何在 Krita 使用著色遮罩工具。" name="description" />
 
@@ -183,7 +183,7 @@
 <li class="toctree-l3"><a class="reference internal" href="color_sampler.html">色彩取樣器工具</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">著色遮罩工具</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#usage">用途</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#tool-options">Tool Options</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tool-options">工具選項</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#layer-properties">Layer properties</a></li>
 </ul>
 </li>
@@ -304,51 +304,51 @@
 <p>我們以在<a class="reference internal" href="../../user_manual/getting_started/basic_concepts.html#basic-concepts"><span class="std std-ref">基本概念</span></a>中也有使用的檔案作為範例。</p>
 <a class="reference internal image-reference" href="../../_images/Krita_4_0_colorize_mask_usage_01.png"><img alt="../../_images/Krita_4_0_colorize_mask_usage_01.png" class="align-center" src="../../_images/Krita_4_0_colorize_mask_usage_01.png" style="width: 800px;" /></a>
 <p>這個檔案中女士的線稿已經與背景分離，同時，背景也被分成兩個圖層：一個主要圖層，一個細節圖層。</p>
-<p>首先，在線稿圖層已被選取的情況下使用著色遮罩編輯工具。<img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> 畫布會增加一個著色遮罩圖層。你亦可對線稿 <img alt="滑鼠右鍵" src="../../_images/Krita_mouse_right.png" />，然後 <span class="menuselection">新增 ‣ 著色遮罩</span>。線稿會突然變得奇怪，這是為了算法能更容易使用而預先生成的遮罩。下面的工具選單顯示哪些選項控制這個遮罩。</p>
+<p>首先在線稿圖層已被選取的情況下使用著色遮罩編輯工具。<img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> 畫布會新增一個著色遮罩圖層。你亦可對線稿 <img alt="滑鼠右鍵" src="../../_images/Krita_mouse_right.png" />，然後 <span class="menuselection">新增 ‣ 著色遮罩</span>。線稿會變得奇怪起來，這是為了算法能更容易使用而產生的過濾效果。下面的工具選項顯示哪些選項控制這個遮罩。</p>
 <a class="reference internal image-reference" href="../../_images/Krita_4_0_colorize_mask_usage_02.png"><img alt="../../_images/Krita_4_0_colorize_mask_usage_02.png" class="align-center" src="../../_images/Krita_4_0_colorize_mask_usage_02.png" style="width: 800px;" /></a>
-<p>現在使用筆刷上色，在工具選項按<span class="guilabel">更新</span>，或是打勾著色遮罩裡的最後一個圖像。在圖層工具面板裡，可以看到著色遮罩的進度條，檔案越大，所需的時間越長。</p>
+<p>現在使用筆刷上色，然後在工具選項按<span class="guilabel">更新</span>，或是打勾著色遮罩裡的最後一個圖示。在圖層工具面板裡，可以看到著色遮罩的進度條，檔案越大，所需的時間越長。</p>
 <a class="reference internal image-reference" href="../../_images/Krita_4_0_colorize_mask_usage_03.png"><img alt="../../_images/Krita_4_0_colorize_mask_usage_03.png" class="align-center" src="../../_images/Krita_4_0_colorize_mask_usage_03.png" style="width: 800px;" /></a>
-<p>我們現在要加上透明藍色。在著色熟罩編輯工具的工具選項中，可以看到一個小的色票表。這是已經使用過的顏色。在這裡能夠移除或是標記一個顏色為透明色。在選了一個顏色後按「透明」，更新遮罩會看到藍色，但是透明的筆跡：</p>
+<p>我們現在要設定藍色為透明。在著色遮罩編輯工具的工具選項中，可以看到一個由已經使用過的色彩而成的色票表。在這裡能夠移除或是標記一個顏色為透明色。在選了一個色彩後按「透明」，更新遮罩會看到藍色筆跡，但是並沒有著色：</p>
 <a class="reference internal image-reference" href="../../_images/Krita_4_0_colorize_mask_usage_04.png"><img alt="../../_images/Krita_4_0_colorize_mask_usage_04.png" class="align-center" src="../../_images/Krita_4_0_colorize_mask_usage_04.png" style="width: 800px;" /></a>
-<p>Because the colorize mask algorithm is slow, and we only need a part of our layer to be filled to fill the whole ghost lady figure, we can make use of <span class="guilabel">Limit to layer bounds</span>. This will limit Colorize Mask to use the combined size of the line art and the coloring key strokes. Therefore, make sure that the colorizing keystrokes only take up as much as they really need.</p>
+<p>因為著色遮罩的算法運作很慢，而我們只需要圖層的一部分來填滿女士，因此我們會使用工具選項中的<span class="guilabel">限制到圖層邊界</span>。這樣會讓著色遮罩只使用線稿和著色的關鍵筆畫的畫布來運作。因此請確定關鍵筆畫是用在所需的範圍內。</p>
 <a class="reference internal image-reference" href="../../_images/Krita_4_0_colorize_mask_usage_05.png"><img alt="../../_images/Krita_4_0_colorize_mask_usage_05.png" class="align-center" src="../../_images/Krita_4_0_colorize_mask_usage_05.png" style="width: 800px;" /></a>
-<p>Now the algorithm will be possibly a lot faster, allowing us to add strokes and press <span class="guilabel">Update</span> in rapid succession:</p>
+<p>現在著色遮罩的算法會運算得比較快，能讓我們能夠連續地新增筆畫和<span class="guilabel">更新</span>：</p>
 <a class="reference internal image-reference" href="../../_images/Krita_4_0_colorize_mask_usage_06.png"><img alt="../../_images/Krita_4_0_colorize_mask_usage_06.png" class="align-center" src="../../_images/Krita_4_0_colorize_mask_usage_06.png" style="width: 800px;" /></a>
-<p>To see the final result, disable <span class="guilabel">Edit Key Strokes</span> or toggle the second to last icon on the colorize mask.</p>
+<p>要顯示最終成果，停用<span class="guilabel">編輯關鍵筆畫</span>或是按著色遮罩圖層裡的倒數第二個圖示。</p>
 <a class="reference internal image-reference" href="../../_images/Krita_4_0_colorize_mask_usage_07.png"><img alt="../../_images/Krita_4_0_colorize_mask_usage_07.png" class="align-center" src="../../_images/Krita_4_0_colorize_mask_usage_07.png" style="width: 800px;" /></a>
-<p>If you want to edit the strokes again, re-enable <span class="guilabel">Edit Key Strokes</span>.</p>
-<p>Now, the colorize mask, being a mask, can also be added to a group of line art layers. It will then use the composition of the whole group as the line art. This is perfect for our background which has two separate line art layers. It also means that the colorize mask will be disabled when added to a group with pass-through enabled, because those have no final composition. You can recognize a disabled colorize mask because its name is stricken through.</p>
-<p>To add a colorize mask to a group, select the group and <img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> the canvas with the Colorize Mask editing tool, or <img alt="滑鼠右鍵" src="../../_images/Krita_mouse_right.png" /> the layer to <span class="menuselection">Add ‣ Colorize Mask</span>.</p>
+<p>如果要再次編輯筆畫，重新開啟<span class="guilabel">編輯關鍵筆畫</span>。</p>
+<p>著色遮罩還能在多個圖層所組成的群組中使用，著色遮罩會合併群組的線稿來運算。因此這個功能十分適合有著兩個線稿圖層的背景。這也代表著著色遮罩會在群組開啟穿透時停用，因為這些圖層沒有最終的合成。當穿透開啟時著色遮罩的名字會有刪除線作提示。</p>
+<p>如要在群組中新增著色遮罩，選取群組並使用著色遮罩編輯工具 <img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> 畫布，或是 <img alt="滑鼠右鍵" src="../../_images/Krita_mouse_right.png" /> 圖層後 <span class="menuselection">新增 ‣ 著色遮罩</span>。</p>
 <a class="reference internal image-reference" href="../../_images/Krita_4_0_colorize_mask_usage_08.png"><img alt="../../_images/Krita_4_0_colorize_mask_usage_08.png" class="align-center" src="../../_images/Krita_4_0_colorize_mask_usage_08.png" style="width: 800px;" /></a>
-<p>Now, we add strokes to the background quickly. We do not need to use the <span class="menuselection">Limit to Layer Bounds</span> because the background covers the whole image.</p>
+<p>現在我們快速地為背景上色。因為背景覆蓋著整個畫布，所以不需要使用 <span class="menuselection">編輯關鍵筆畫</span>。</p>
 <a class="reference internal image-reference" href="../../_images/Krita_4_0_colorize_mask_usage_09.png"><img alt="../../_images/Krita_4_0_colorize_mask_usage_09.png" class="align-center" src="../../_images/Krita_4_0_colorize_mask_usage_09.png" style="width: 800px;" /></a>
-<p>For the record, you can use other brushes and tools also work on the colorize mask as long as they can draw. The Colorize Mask Editing tool is just the most convenient because you can get to the algorithm options.</p>
+<p>為了辨別和紀錄，你可以使用任何能夠繪畫的筆刷和工具來作出差異。只是著色遮罩編輯工具因為可以控制遮罩的算法，所以是最方便的。</p>
 <p>最終成果看起來會是這樣：</p>
 <a class="reference internal image-reference" href="../../_images/Krita_4_0_colorize_mask_usage_10.png"><img alt="../../_images/Krita_4_0_colorize_mask_usage_10.png" class="align-center" src="../../_images/Krita_4_0_colorize_mask_usage_10.png" style="width: 800px;" /></a>
-<p>Now we are done, <img alt="滑鼠右鍵" src="../../_images/Krita_mouse_right.png" /> the colorize mask and <span class="menuselection">Convert ‣ to Paint Layer</span>. Then, <span class="menuselection">Layer ‣ Split ‣ Split Layer</span>. This will give separate color islands that you can easily edit:</p>
+<p>現在我們已經完成了，<img alt="滑鼠右鍵" src="../../_images/Krita_mouse_right.png" /> 著色遮罩後 <span class="menuselection">轉換 ‣ 為顏料圖層</span>，然後在上方的選單 <span class="menuselection">圖層 ‣ 分割 ‣ 分割圖層</span>，這樣會分割各種顏色至不同圖層，使其便於修改：</p>
 <a class="reference internal image-reference" href="../../_images/Krita_4_0_colorize_mask_usage_11.png"><img alt="../../_images/Krita_4_0_colorize_mask_usage_11.png" class="align-center" src="../../_images/Krita_4_0_colorize_mask_usage_11.png" style="width: 800px;" /></a>
-<p>This way we can very quickly paint the image. Due to the colorize mask going from the first image to the following took only 30 minutes, and would've taken quite a bit longer.</p>
+<p>這種方法能快速地為影像填上色彩。從第一張圖片到接下來的這張圖片計算的話，只花費了大約三十分鐘。</p>
 <a class="reference internal image-reference" href="../../_images/Krita_4_0_colorize_mask_usage_12.png"><img alt="../../_images/Krita_4_0_colorize_mask_usage_12.png" class="align-center" src="../../_images/Krita_4_0_colorize_mask_usage_12.png" style="width: 800px;" /></a>
-<p>The colorize masks are saved to the <code class="docutils literal notranslate"><span class="pre">.kra</span></code> file, so as long as you don't save and open to a different file format, nor convert the colorize mask to a paintlayer, you can keep working adjust the results.</p>
+<p>色彩遮罩會儲存在 <code class="docutils literal notranslate"><span class="pre">.kra</span></code> 檔案中，除非把檔案格式改成其他類型，或是把遮罩轉換為顏料圖層，不然是可以一直調整色彩遮罩的結果的。</p>
 </section>
 <section id="tool-options">
-<h2>Tool Options<a class="headerlink" href="#tool-options" title="本標題的永久連結">¶</a></h2>
+<h2>工具選項<a class="headerlink" href="#tool-options" title="本標題的永久連結">¶</a></h2>
 <dl>
-<dt>Update</dt><dd><p>Run the colorize mask algorithm. The progress bar for updates on a colorize mask shows only in the layer docker.</p>
+<dt>更新</dt><dd><p>運行著色遮罩的算法。更新的進度條只會顯示在圖層面板中。</p>
 </dd>
-<dt>Edit key strokes</dt><dd><p>Put the mask into edit mode. In edit mode, it will also show the 'prefiltering' on the line art, which is for example a blur filter for gap closing.</p>
+<dt>編輯關鍵筆畫</dt><dd><p>將遮罩變成編輯模式。在編輯模式中會在線稿顯示「過濾效果」，這是為了閉合間隙的模糊濾鏡的參考。</p>
 </dd>
-<dt>Show output</dt><dd><p>Show the output of the colorize mask. If <span class="guilabel">Edit key strokes</span> is active, this will be shown semi-transparently, so it will be easy to recognize the difference between the strokes and the output.</p>
+<dt>顯示輸出</dt><dd><p>顯示著色遮罩的輸出。如果開啟<span class="guilabel">編輯關鍵筆畫</span>，輸出會變成半透明以辨別線條和輸出的差別。</p>
 <figure class="align-center" id="id2">
 <a class="reference internal image-reference" href="../../_images/Krita_4_0_colorize_mask_show_output_edit_strokes.png"><img alt="../../_images/Krita_4_0_colorize_mask_show_output_edit_strokes.png" src="../../_images/Krita_4_0_colorize_mask_show_output_edit_strokes.png" style="width: 800px;" /></a>
 <figcaption>
-<p><span class="caption-text">On the <strong>Left</strong>: <span class="guilabel">Show Output</span> is on, <span class="guilabel">Edit Key Strokes</span> is off. In the <strong>Middle</strong>: <span class="guilabel">Show Output</span> and <span class="guilabel">Edit Key Strokes</span> are on. On the <strong>Right</strong>: <span class="guilabel">Show Output</span> is off and <span class="guilabel">Edit Key Strokes</span> is on.</span><a class="headerlink" href="#id2" title="本圖片的永久連結">¶</a></p>
+<p><span class="caption-text">在**左邊**：開啟<span class="guilabel">顯示輸出</span>，關閉<span class="guilabel">編輯關鍵筆畫</span>；在**中間**：開啟<span class="guilabel">顯示輸出`和:guilabel:`編輯關鍵筆畫</span>；在**右邊**：關閉<span class="guilabel">顯示輸出</span>，開啟<span class="guilabel">編輯關鍵筆畫</span>。</span><a class="headerlink" href="#id2" title="本圖片的永久連結">¶</a></p>
 </figcaption>
 </figure>
 </dd>
-<dt>Limit to layer bounds</dt><dd><p>Limit the colorize mask to the combined layer bounds of the strokes and the line art it is filling. This can speed up the use of the mask on complicated compositions, such as comic pages.</p>
+<dt>限制到圖層邊界</dt><dd><p>限制著色遮罩的生效範圍在筆畫和要上色的線稿上。能夠加快遮罩在複雜環境的合成，像是漫畫頁面。</p>
 </dd>
-<dt>Edge detection</dt><dd><p>Activate this for line art with large solid areas, for example shadows on an object. For the best use, set the value to the thinnest lines on the image. In the image below, note how edge detection affects the big black areas:</p>
+<dt>邊緣檢測</dt><dd><p>Activate this for line art with large solid areas, for example shadows on an object. For the best use, set the value to the thinnest lines on the image. In the image below, note how edge detection affects the big black areas:</p>
 <figure class="align-center" id="id3">
 <a class="reference internal image-reference" href="../../_images/Krita_4_0_colorize_mask_edge_detection.png"><img alt="../../_images/Krita_4_0_colorize_mask_edge_detection.png" src="../../_images/Krita_4_0_colorize_mask_edge_detection.png" style="width: 800px;" /></a>
 <figcaption>
@@ -356,7 +356,7 @@
 </figcaption>
 </figure>
 </dd>
-<dt>Gap close hint</dt><dd><p>While the algorithm is pretty good against gaps in contours, this will improve the gap recognition. The higher this value is, the bigger the gaps it will try to close, but a too high value can lead to other errors. Note how the prefiltered line art (that's the blurry haze) affects the color patches.</p>
+<dt>開口閉合推測</dt><dd><p>While the algorithm is pretty good against gaps in contours, this will improve the gap recognition. The higher this value is, the bigger the gaps it will try to close, but a too high value can lead to other errors. Note how the prefiltered line art (that's the blurry haze) affects the color patches.</p>
 <figure class="align-center" id="id4">
 <a class="reference internal image-reference" href="../../_images/Krita_4_0_colorize_mask_gap_close_hint.png"><img alt="../../_images/Krita_4_0_colorize_mask_gap_close_hint.png" src="../../_images/Krita_4_0_colorize_mask_gap_close_hint.png" style="width: 800px;" /></a>
 <figcaption>
@@ -364,10 +364,10 @@
 </figcaption>
 </figure>
 </dd>
-<dt>Clean up</dt><dd><p>This will attempt to handle messy strokes that overlap the line art where they shouldn't. At 0 no clean up is done, at 100% the clean-up is most aggressive.</p>
+<dt>清理</dt><dd><p>This will attempt to handle messy strokes that overlap the line art where they shouldn't. At 0 no clean up is done, at 100% the clean-up is most aggressive.</p>
 <a class="reference internal image-reference" href="../../_images/Krita_4_0_colorize_mask_clean_up.png"><img alt="../../_images/Krita_4_0_colorize_mask_clean_up.png" class="align-center" src="../../_images/Krita_4_0_colorize_mask_clean_up.png" style="width: 800px;" /></a>
 </dd>
-<dt>Key strokes</dt><dd><p>This palette keeps track of the colors used by the strokes. This is useful so you can switch back to colors easily. You can increase the swatch size by hovering over it with the mouse, and doing <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="滑鼠滾輸" src="../../_images/Krita_mouse_scroll.png" />.</p>
+<dt>關鍵筆畫</dt><dd><p>This palette keeps track of the colors used by the strokes. This is useful so you can switch back to colors easily. You can increase the swatch size by hovering over it with the mouse, and doing <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="滑鼠滾輸" src="../../_images/Krita_mouse_scroll.png" />.</p>
 </dd>
 <dt>Transparent</dt><dd><p>This button is under the keystrokes palette, you can mark the selected color to be interpreted a 'transparent' with this. In the clean-up screenshot above, cyan had been marked as transparent.</p>
 </dd>
@@ -377,13 +377,13 @@
 <h2>Layer properties<a class="headerlink" href="#layer-properties" title="本標題的永久連結">¶</a></h2>
 <p>The colorize mask layer has four properties. They are all the buttons on the right side of the colorize mask layer:</p>
 <dl class="simple">
-<dt>Show output</dt><dd><p><img alt="show-output" src="../../_images/colorize-show-output-icons.png" /> The show output icon allows you to toggle whether you'll see the output from the colorize algorithm.</p>
+<dt>顯示輸出</dt><dd><p><img alt="show-output" src="../../_images/colorize-show-output-icons.png" /> The show output icon allows you to toggle whether you'll see the output from the colorize algorithm.</p>
 </dd>
 <dt>Lock</dt><dd><p><img alt="lock-icon" src="../../_images/colorize-lock-icon.png" /> This icon stops the mask from being edited.</p>
 </dd>
-<dt>Edit key strokes</dt><dd><p><img alt="edit-strokes" src="../../_images/colorize-edit-key-strokes-icon.png" /> This icon shows whether the colorize mask is in edit mode. In edit mode it'll show the strokes, and the output will be semi-transparent.</p>
+<dt>編輯關鍵筆畫</dt><dd><p><img alt="edit-strokes" src="../../_images/colorize-edit-key-strokes-icon.png" /> This icon shows whether the colorize mask is in edit mode. In edit mode it'll show the strokes, and the output will be semi-transparent.</p>
 </dd>
-<dt>Update</dt><dd><p><img alt="update-icon" src="../../_images/colorize-update-icon.png" /> This icon will force the colorize mask to update, even when you're in a different tool.</p>
+<dt>更新</dt><dd><p><img alt="update-icon" src="../../_images/colorize-update-icon.png" /> This icon will force the colorize mask to update, even when you're in a different tool.</p>
 </dd>
 </dl>
 <div class="admonition note">
@@ -416,14 +416,14 @@
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>8cb6afa</code>
+          修訂版本 <code>c7dfa96</code>
         </span>
       
 
     </p>
   </div>
   使用 <a href="http://sphinx-doc.org/">Sphinx</a> 以及經修改過的 <a href="https://github.com/rtfd/sphinx_rtd_theme">RTD 主題</a>建置<br/>
-  <a href="https://krita.org" title="Krita official website.">Krita 官方網站</a> |
+  <a href="https://krita.org" title="Krita 官方網站">Krita 官方網站</a> |
   <a href="https://invent.kde.org/documentation/docs-krita-org/" title="這份手冊的 KDE GitLab 專案網址">docs.krita.org 的 Git 原始碼儲存庫</a> |
   <a href="https://www.kde.org/community/whatiskde/impressum-en.php" title="了解更多關於 KDE、code of conduct（行為準則）、隱私政策及 GDPR（一般資料保護規則）">KDE Impressum</a>
    

@@ -64,7 +64,7 @@ The image above shows the various types of layers in :ref:`layer_docker`. Each l
 
 Now Let us see how these layers are composited in Krita.
 
-How are layers composited in Krita ?
+How are layers composited in Krita?
 ------------------------------------
 
 In Krita, the visible layers form a composite image which is shown on the canvas. The order in which Krita composites the layers is from bottom to top, much like the stack of papers we discussed above. As we continue adding layers, the image we see changes, according to the properties of the newly added layers on top.

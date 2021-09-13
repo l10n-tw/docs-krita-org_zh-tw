@@ -27,7 +27,7 @@ Additive Subtractive
 
    .. hint:: This blending mode is called "Additive Subtractive" in English.
 
-Subtract the square root of the lower layer from the upper layer.
+Subtracts the square root of the lower layer from the upper layer.
 
 .. figure:: /images/blending_modes/negative/Blending_modes_Additive_Subtractive_Sample_image_with_dots.png
    :align: center
@@ -115,7 +115,7 @@ Negation
 
    .. hint:: This blending mode is called "Negation" in English.
 
-The absolute of the 1.0f value subtracted by base subtracted by the blend layer. abs(1.0f - Base - Blend)
+The absolute of the 1.0f value subtracted by the base subtracted by the blend layer. abs(1.0f - Base - Blend)
 
 .. figure:: /images/blending_modes/negative/Blending_modes_Negation_Sample_image_with_dots.png
    :align: center

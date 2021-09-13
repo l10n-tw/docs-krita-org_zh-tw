@@ -64,7 +64,7 @@ Gamma Light
 
    .. hint:: This blending mode is called "Gamma Light" in English.
 
-Outputs the upper layer as power of the lower layer.
+Outputs the upper layer as a power of the lower layer.
 
 .. figure:: /images/blending_modes/lighten/Blending_modes_Gamma_Light_Sample_image_with_dots.png
    :align: center
@@ -84,7 +84,7 @@ Hard Light
 Similar to Overlay.
 A combination of the Multiply and Screen blending modes, switching between both at a middle-lightness.
 
-Hard light checks if the color on the upperlayer has a lightness above 0.5. Unlike overlay, if the pixel is lighter than 0.5, it is blended like in Multiply mode, if not the pixel is blended like in Screen mode.
+Hard Light checks if the color on the upper layer has a lightness above 0.5. Unlike Overlay, if the pixel is lighter than 0.5, it is blended like in Multiply mode, if not the pixel is blended like in Screen mode.
 
 Effectively, this decreases contrast.
 
@@ -102,7 +102,7 @@ Lighten
 
    .. hint:: This blending mode is called "Lighten" in English.
 
-With the darken, the upper layer's colors are checked for their lightness. Only if they are Lighter than the underlying color on the lower layer, will they be visible.
+With Lighten, the upper layer's colors are checked for their lightness. Only if they are Lighter than the underlying color on the lower layer, will they be visible.
 
 .. figure:: /images/blending_modes/lighten/Blending_modes_Lighten_Sample_image_with_dots.png
    :align: center
@@ -151,7 +151,7 @@ Easy Dodge
 
    .. hint:: This blending mode is called "Easy Dodge" in English.
 
-Aims to solve issues with Color Dodge blending mode by using a formula which falloff is similar to Dodge, but the falloff rate is softer. It is within the range of 0.0f and 1.0f unlike Color Dodge mode.
+Aims to solve issues with Color Dodge blending mode by using a formula in which falloff is similar to Dodge, but the falloff rate is softer. It is within the range of 0.0f and 1.0f unlike Color Dodge mode.
 
 .. figure:: /images/blending_modes/lighten/Blending_modes_Easy_Dodge_Sample_image_with_dots.png
    :align: center
@@ -167,7 +167,7 @@ Flat Light
 
    .. hint:: This blending mode is called "Flat Light" in English.
 
-The spreadout variation of Vivid Light mode which range is between 0.0f and 1.0f.
+The spreadout variation of Vivid Light mode in which range is between 0.0f and 1.0f.
 
 .. figure:: /images/blending_modes/lighten/Blending_modes_Flat_Light_Sample_image_with_dots.png
    :align: center
@@ -183,7 +183,7 @@ Fog Lighten (IFS Illusions)
 
    .. hint:: This blending mode is called "Fog Lighten (IFS Illusions)" in English.
 
-Lightens the image in a way that there is a 'fog' in the end result. This is due to the unique property of fog lighten in which midtones combined are lighter than non-midtones blend.
+Lightens the image in a way that there is a 'fog' in the end result. This is due to the unique property of Fog Lighten in which midtones combined are lighter than non-midtones blend.
 
 .. figure:: /images/blending_modes/lighten/Blending_modes_Fog_Light_Sample_image_with_dots.png
    :align: center
@@ -201,7 +201,7 @@ Linear Light
 
 Similar to :ref:`bm_overlay`.
 
-Combines :ref:`bm_linear_dodge` and :ref:`bm_linear_burn`. When the lightness of the upper-pixel is higher than 0.5, it uses Linear dodge, if not, Linear burn to blend the pixels.
+Combines :ref:`bm_linear_dodge` and :ref:`bm_linear_burn`. When the lightness of the upper-pixel is higher than 0.5, it uses Linear Dodge, if not, Linear Burn to blend the pixels.
 
 .. figure:: /images/blending_modes/lighten/Blending_modes_Linear_Light_Gray_0.4_and_Gray_0.5.png
    :align: center
@@ -230,7 +230,7 @@ Luminosity/Shine (SAI)
 
 Similar to :ref:`bm_addition`.
 
-Takes the opacity of the new color (combined opacity of the layer, the brush, any used transparency masks etc.) and multiples the color by the opacity, then adds to the original/previous color.
+Takes the opacity of the new color (combined opacity of the layer, the brush, any used transparency masks, etc.) and multiplies the color by the opacity, then adds to the original/previous color.
 
 .. math::
 
@@ -257,7 +257,7 @@ P-Norm A
 
    .. hint:: This blending mode is called "P-Norm A" in English.
 
-P-Norm A is similar to Screen blending mode which slightly darken images, and the falloff is more consistent all-around in terms of outline of values. Can be used an alternative to screen blending mode at times.
+P-Norm A is similar to Screen blending mode which slightly darken images, and the falloff is more consistent all-around in terms of outline of values. Can be used an alternative to Screen blending mode at times.
 
 .. figure:: /images/blending_modes/lighten/Blending_modes_P-Norm_A_Sample_image_with_dots.png
    :align: center
@@ -273,7 +273,7 @@ P-Norm B
 
    .. hint:: This blending mode is called "P-Norm B" in English.
 
-P-Norm B is similar to Screen blending mode which slightly darken images, and the falloff is more consistent all-around in terms of outline of values. The falloff is sharper in P-Norm B than in P-Norm A. Can be used an alternative to screen blending mode at times.
+P-Norm B is similar to Screen blending mode which slightly darken images, and the falloff is more consistent all-around in terms of outline of values. The falloff is sharper in P-Norm B than in P-Norm A. Can be used as an alternative to Screen blending mode at times.
 
 .. figure:: /images/blending_modes/lighten/Blending_modes_P-Norm_B_Sample_image_with_dots.png
    :align: center
@@ -289,7 +289,7 @@ Pin Light
 
    .. hint:: This blending mode is called "Pin Light" in English.
 
-Checks which is darker the lower layer's pixel or the upper layer's double so bright.
+Checks which is darker between the lower layer's pixel or the upper layer's double so bright.
 Then checks which is brighter of that result or the inversion of the doubled lower layer.
 
 .. figure:: /images/blending_modes/lighten/Blending_modes_Pin_Light_Gray_0.4_and_Gray_0.5.png
@@ -368,7 +368,7 @@ Soft Light (IFS Illusions) & Soft Light (Pegtop-Delphi)
 
    .. hint:: These blending modes are called "Soft Light (IFS Illusions)" and "Soft Light (Pegtop-Delphi)" in English.
 
-These are alternative versions of standard softlight modes which are made to solve discontinuities seen with the standard blend modes. Sometimes, these modes offer subtle advantages by offering more contrast within some areas, and these advantages are more or less noticeable within different color spaces and depth. 
+These are alternative versions of standard Soft Light modes which are made to solve discontinuities seen with the standard blend modes. Sometimes, these modes offer subtle advantages by offering more contrast within some areas, and these advantages are more or less noticeable within different color spaces and depth. 
 
 .. figure:: /images/blending_modes/lighten/Blending_modes_Soft_Light_IFS_Sample_image_with_dots.png
    :align: center

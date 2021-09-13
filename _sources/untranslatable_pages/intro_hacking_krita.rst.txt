@@ -54,7 +54,7 @@ Building Krita
 
 .. image:: /images/untranslatable/cat_guide/Krita-building_for-cats_intro_by-deevad.jpg
 
-To get started, all you need to do is get a copy of Krita and build it! This is not all that much much different from building something off GitHub... except that Krita is very large compared to most software.  There are :ref:`build guides <building_krita>` to get you going on various platforms, but of course Linux is easiest.
+To get started, all you need to do is get a copy of Krita and build it! This is not all that much different from building something off GitHub... except that Krita is very large compared to most software.  There are :ref:`build guides <building_krita>` to get you going on various platforms, but of course Linux is easiest.
 
 Working with the Krita codebase
 -------------------------------

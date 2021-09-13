@@ -56,7 +56,7 @@ But we can go even further. For example, how about making this a lightness brush
 5. Then select the lowest layer. |mouseright| for the context menu, then select :menuselection:`convert --> to transparency mask`.
 6. Finally, to soften the result, you can merge the layer and apply a bit of motion blur. Especially when using together with rotation set to drawing angle or tilt, some plain horizontal motion blur will reduce stray pixel artifacts.
 
-Then select all, copy, and use the clipboard function in the predefined brushes menu, and make sure to make sure to **untick** :guilabel:`Create Mask From Color`. What we're effectively doing here is ensuring that the transparency is being used for the sharpness, while having the color be using for the lightness map.
+Then select all, copy, and use the clipboard function in the predefined brushes menu, and make sure to **untick** :guilabel:`Create Mask From Color`. What we're effectively doing here is ensuring that the transparency is being used for the sharpness, while having the color be using for the lightness map.
 
 Now select the brush and set the :guilabel:`Brush mode` to :guilabel:`Lightness Map`, and draw with a color that isn't black for the best effect.
 

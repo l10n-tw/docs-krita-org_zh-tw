@@ -29,7 +29,7 @@ addition, removal, or adjustment of a scene. Users can also insert additional sc
 when necessary, or reorder scenes via drag-and-drop. The storyboard's visual content exists within Krita's 
 internal animation system, which gives users the ability to preview the sequence using the Animation Timeline's
 transport controls. The storyboard docker also supports exporting the contents of a storyboard 
-to a document; The current supported formats for export are `SVG` and `PDF`.
+to a document. The current supported formats for export are `SVG` and `PDF`.
 
 Toolbar Buttons
 -----------------

@@ -77,7 +77,7 @@ Fog Darken (IFS Illusions)
 
    .. hint:: This blending mode is called "Fog Darken (IFS Illusions)" in English.
 
-Darken the image in a way that there is a 'fog' in the end result. This is due to the unique property of fog darken in which midtones combined are lighter than non-midtones blend.
+Darken the image in a way that there is a 'fog' in the end result. This is due to the unique property of Fog Darken in which midtones combined are lighter than non-midtones blend.
 
 .. figure:: /images/blending_modes/darken/Blending_modes_Fog_Darken_Sample_image_with_dots.png
    :align: center
@@ -94,7 +94,7 @@ Darken
 
    .. hint:: This blending mode is called "Darken" in English.
 
-With the darken, the upper layer's colors are checked for their lightness. Only if they are darker than the underlying color on the lower layer, will they be visible.
+With Darken, the upper layer's colors are checked for their lightness. Only if they are darker than the underlying color on the lower layer, will they be visible.
 
 Is Lighter Gray(0.5, 0.5, 0.5) darker than Darker Gray(0.4, 0.4, 0.4)? = (no, no, no) → Darker Gray(0.4, 0.4, 0.4)
 

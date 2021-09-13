@@ -36,7 +36,7 @@ Management Toolbar
 Create new mask (2)
     Opens the mask editor with an empty template.
 Edit mask (3)
-    Opens the the currently selected mask in the editor.
+    Opens the currently selected mask in the editor.
 Duplicate mask (4)
     Creates a copy of the currently selected mask and opens the copy in the editor.
 Delete mask (5)

@@ -26,7 +26,7 @@ Allanon
 
    .. hint:: This blending mode is called "Allanon" in English.
 
-Blends the upper layer as half-transparent with the lower. (It add the two layers together and then halves the value).
+Blends the upper layer as half-transparent with the lower. (It adds the two layers together and then halves the value).
 
 .. figure:: /images/blending_modes/mix/Blending_modes_Allanon_Sample_image_with_dots.png
    :align: center
@@ -61,7 +61,7 @@ Interpolation - 2X
 
    .. hint:: This blending mode is called "Interpolation - 2X" in English.
 
-Applies Interpolation blend mode to base and blend layers, then duplicate to repeat interpolation blending.
+Applies Interpolation blend mode to base and blend layers, then duplicates to repeat interpolation blending.
 
 .. figure:: /images/blending_modes/mix/Blending_modes_Interpolation_X2_Sample_image_with_dots.png
    :align: center
@@ -95,7 +95,7 @@ Behind
 
    .. hint:: This blending mode is called "Behind" in English.
 
-Does the opposite of normal, and tries to have the upper layer rendered below the lower layer.
+Does the opposite of Normal, and tries to have the upper layer rendered below the lower layer.
 
 .. figure:: /images/blending_modes/mix/Blending_modes_Behind_Sample_image_with_dots.png
    :align: center
@@ -146,7 +146,7 @@ Grain Extract
 
    .. hint:: This blending mode is called "Grain Extract" in English.
 
-Similar to subtract, the colors of the upper layer are subtracted from the colors of the lower layer, and then 50% gray is added.
+Similar to Subtract, the colors of the upper layer are subtracted from the colors of the lower layer, and then 50% gray is added.
 
 .. figure:: /images/blending_modes/mix/Blending_modes_Grain_Extract_Sample_image_with_dots.png
    :align: center
@@ -163,7 +163,7 @@ Grain Merge
 
    .. hint:: This blending mode is called "Grain Merge" in English.
 
-Similar to addition, the colors of the upper layer are added to the colors, and then 50% gray is subtracted.
+Similar to Addition, the colors of the upper layer are added to the colors, and then 50% gray is subtracted.
 
 .. figure:: /images/blending_modes/mix/Blending_modes_Grain_Merge_Sample_image_with_dots.png
    :align: center
@@ -215,7 +215,7 @@ Hard Mix (Photoshop)
 
    .. hint:: This blending mode is called "Hard Mix (Photoshop)" in English.
 
-This is the hard mix blending mode as it is implemented in photoshop.
+This is the Hard Mix blending mode as it is implemented in Photoshop.
 
 .. figure:: /images/blending_modes/mix/Krita_4_0_hard_mix_ps.png
    :figwidth: 800
@@ -237,7 +237,7 @@ Hard Mix Softer (Photoshop)
 
 .. versionadded:: 5.0
 
-This is the hard mix blending mode as it is implemented in photoshop for texturing brushes. It produces softer edges
+This is the Hard Mix blending mode as it is implemented in Photoshop for texturing brushes. It produces softer edges
 than the normal *Hard Mix (Photoshop)*.
 
 .. figure:: /images/blending_modes/mix/Blending_modes_Hard_Mix_Softer_Photoshop_Sample_image_with_dots.png
@@ -246,8 +246,8 @@ than the normal *Hard Mix (Photoshop)*.
    
    **Left**: Dots are mixed in with the normal blending mode, on the **Right**: Dots are mixed in with hard mix softer.
    
-This is like the inverse subtract mode but the two terms are scaled up to increase the contrast. This is not really a
-hard mix mode in the sense that it doesn't choose between a result or another based on a threshold, although in most
+This is like the Inverse Subtract mode but the two terms are scaled up to increase the contrast. This is not really a
+Hard Mix mode in the sense that it doesn't choose between a result or another based on a threshold, although in most
 cases the result looks like the normal *Hard Mix (Photoshop)* but with softer edges.
 
 .. index:: ! Hard Overlay
@@ -262,7 +262,7 @@ Hard Overlay
 
 .. versionadded:: 4.0
 
-Similar to Hard light but hard light use Screen when the value is above 50%. Divide gives better results than Screen, especially on floating point images.
+Similar to Hard Light but Hard Light use Screen when the value is above 50%. Divide gives better results than Screen, especially on floating point images.
 
 .. figure:: /images/blending_modes/mix/Blending_modes_Hard_Overlay_Sample_image_with_dots.png
    :align: center
@@ -300,7 +300,7 @@ Overlay
 
 A combination of the Multiply and Screen blending modes, switching between both at a middle-lightness.
 
-Overlay checks if the color on the upperlayer has a lightness above 0.5. If so, the pixel is blended like in Screen mode, if not the pixel is blended like in Multiply mode.
+Overlay checks if the color on the upper layer has a lightness above 0.5. If so, the pixel is blended like in Screen mode, if not the pixel is blended like in Multiply mode.
 
 This is useful for deepening shadows and highlights.
 
@@ -319,7 +319,7 @@ Parallel
 
    .. hint:: This blending mode is called "Parallel" in English.
 
-This one first takes the percentage in two decimal behind the comma for both layers.
+This one first takes the percentage in decimals for both layers.
 It then adds the two values.
 Divides 2 by the sum.
 

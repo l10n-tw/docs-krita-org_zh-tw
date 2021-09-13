@@ -67,7 +67,7 @@ There’s certain things that people do to make their feature request sound impo
     For the exact same reason as above. Why do they need it, and who are these ‘people’? And what is it, exactly, what they need?
 
 “Krita will never be taken seriously if it doesn’t have a glingangiation filter.”
-    Weeell, Krita is quite a serious thing, used by hundreds of thousands of people, so whenever this sentence shows up in a feature request, we feel it might be a bit of emotional blackmail: it tries to to get us upset enough to work on it. Think about how that must feel.
+    Weeell, Krita is quite a serious thing, used by hundreds of thousands of people, so whenever this sentence shows up in a feature request, we feel it might be a bit of emotional blackmail: it tries to get us upset enough to work on it. Think about how that must feel.
 
 “This should be easy to implement.”
     Well, the code is open and we have excellent build guides, why doesn’t the feature request come with a patch then? The issue with this is very likely it is not actually all that easy. Telling us how to implement a feature based on a guess about Krita’s architecture, instead of telling us the problem the feature is meant to solve makes life really hard!

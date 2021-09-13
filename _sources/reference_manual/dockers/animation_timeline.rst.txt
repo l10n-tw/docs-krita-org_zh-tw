@@ -56,7 +56,7 @@ C. :dfn:`Layer List` -- This area contains some subset of the layers of your cur
 
             This special widget allows you to zoom in and out on the frame table, centered around the current frame time. Click-dragging from within the zoom handle controls the zoom level.
 
-D. :dfn:`Frame Table` -- The :dfn:`frame table` is a large grid of cells which can either hold a single keyframe or be empty. Each row of the trame table represents an :dfn:`animated layer` and each column represents a :dfn:`frame time`. Just like the layer list, the active layer is highlighted across the entire frame table. For those who are familiar with pen-and-paper animation, you can think of the frame table as Krita's :dfn:`dope sheet` or time sheet.
+D. :dfn:`Frame Table` -- The :dfn:`frame table` is a large grid of cells which can either hold a single keyframe or be empty. Each row of the frame table represents an :dfn:`animated layer` and each column represents a :dfn:`frame time`. Just like the layer list, the active layer is highlighted across the entire frame table. For those who are familiar with pen-and-paper animation, you can think of the frame table as Krita's :dfn:`dope sheet` or time sheet.
 
         .. note:: It's important to understand that frame timings are not based on units of time like seconds, but on :dfn:`frames`, which can then be played back at any speed, depending on the animation's :dfn:`frame rate` and :dfn:`play speed` settings.
 
@@ -69,7 +69,7 @@ D. :dfn:`Frame Table` -- The :dfn:`frame table` is a large grid of cells which c
             Right now, it's only possible to view and draw on one keyframe at a time. This is known as the :dfn:`active keyframe`, and is represented on the frame table as a block filled with diagonal stripes. Often, in simple animations, the active keyframe will be the frame on the active layer that is on or just before the current time. However, if the active keyframe has one or more :term:`clone frames` all drawing, painting and editing will also affect all of its clones.
 
         Clone frames
-            A :dfn:`clone frame` is of a keyframe is a reference to that keyframe at a different position. Clone frames share the exact same image data under the hood, and will have the same diagonal markings as the active frame when an active frame with clone frames is selected.
+            A :dfn:`clone frame` of a keyframe is a reference to that keyframe at a different position. Clone frames share the exact same image data under the hood, and will have the same diagonal markings as the active frame when an active frame with clone frames is selected.
 
         Duplicate keyframe
             Not to be confused with :term:`Clone Frames`, a duplicate frame is merely the :term:`Active Keyframe` copied and pasted as a separate :term:`Keyframe`. Where clone frames will automatically duplicate the changes you make to them to each cloned frame, a duplicated frame is just another keyframe that happens to have the same content as the source.

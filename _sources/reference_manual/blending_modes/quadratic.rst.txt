@@ -29,7 +29,7 @@ Freeze
 
    .. hint:: This blending mode is called "Freeze" in English.
 
-The freeze blending mode. Inversion of the reflect blending mode.
+The Freeze blending mode. Inversion of the Reflect blending mode.
 
 .. figure:: /images/blending_modes/quadratic/Blending_modes_Q_Freeze_Light_blue_and_Orange.png
    :align: center
@@ -46,7 +46,7 @@ Freeze-Reflect
 
    .. hint:: This blending mode is called "Freeze-Reflect" in English.
 
-Mix of Freeze and Reflect blend mode.
+Mix of Freeze and Reflect blending modes.
 
 .. figure:: /images/blending_modes/quadratic/Blending_modes_Q_Freeze_Reflect_Light_blue_and_Orange.png
    :align: center
@@ -62,7 +62,7 @@ Glow
 
    .. hint:: This blending mode is called "Glow" in English.
 
-Reflect Blend Mode with source and destination layers swapped. 
+The Reflect blending mode with source and destination layers swapped. 
 
 .. figure:: /images/blending_modes/quadratic/Blending_modes_Q_Glow_Light_blue_and_Orange.png
    :align: center
@@ -78,7 +78,7 @@ Glow-Heat
 
    .. hint:: This blending mode is called "Glow-Heat" in English.
 
-Mix of Glow and Heat blend mode.
+Mix of Glow and Heat blending modes.
 
 .. figure:: /images/blending_modes/quadratic/Blending_modes_Q_Glow_Heat_Light_blue_and_Orange.png
    :align: center
@@ -94,7 +94,7 @@ Heat
 
    .. hint:: This blending mode is called "Heat" in English.
 
-The Heat Blend Mode. Inversion of the Glow Blend Mode.
+The Heat blending mode. Inversion of the Glow blending mode.
 
 
 .. figure:: /images/blending_modes/quadratic/Blending_modes_Q_Heat_Light_blue_and_Orange.png
@@ -111,7 +111,7 @@ Heat-Glow
 
    .. hint:: This blending mode is called "Heat-Glow" in English.
 
-Mix of Heat, and Glow blending mode.
+Mix of Heat, and Glow blending modes.
 
 .. figure:: /images/blending_modes/quadratic/Blending_modes_Q_Heat_Glow_Light_blue_and_Orange.png
    :align: center
@@ -127,7 +127,7 @@ Heat-Glow and Freeze-Reflect Hybrid
 
    .. hint:: This blending mode is called "Heat-Glow and Freeze-Reflect Hybrid" in English.
 
-Mix of the continuous quadratic blending modes. Very similar to overlay, and sometimes provides better result than overlay.
+Mix of the continuous quadratic blending modes. Very similar to Overlay, and sometimes provides better result than Overlay.
 
 .. figure:: /images/blending_modes/quadratic/Blending_modes_Q_Heat_Glow_Freeze_Reflect_Light_blue_and_Orange.png
    :align: center
@@ -143,7 +143,7 @@ Reflect
 
    .. hint:: This blending mode is called "Reflect" in English.
 
-Reflect is essentially Color Dodge Blending mode with quadratic falloff.
+Reflect is essentially the Color Dodge blending mode with quadratic falloff.
 
 
 .. figure:: /images/blending_modes/quadratic/Blending_modes_Q_Reflect_Light_blue_and_Orange.png
@@ -160,7 +160,7 @@ Reflect-Freeze
 
    .. hint:: This blending mode is called "Reflect-Freeze" in English.
 
-Mix of Reflect and Freeze blend mode.
+Mix of Reflect and Freeze blending modes.
 
 .. figure:: /images/blending_modes/quadratic/Blending_modes_Q_Reflect_Freeze_Light_blue_and_Orange.png
    :align: center

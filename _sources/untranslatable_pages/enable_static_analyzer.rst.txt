@@ -32,7 +32,7 @@ Enable static analyzer
         sudo apt install clang-11 clang-format-11 clang-tidy-11 clang-tools-11
 
 
-2) Go to to the Analyser settings in QtCreator (Options->Analyser)
+2) Go to the Analyser settings in QtCreator (Options->Analyser)
 
 3) In the field for Clang-Tidy executable select the script from Krita source tree `sdk/clang-tidy-arguments-wrapper.sh`. This script removes GCC-specific compile options not supported by clang. Without the wrapper script the analyser tool will fail.
 

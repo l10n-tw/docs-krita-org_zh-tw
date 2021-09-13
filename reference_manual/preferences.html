@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-09-13T07:09:34" />
+  <meta property="og:article:modified_time" content="2021-09-13T14:10:15" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="Krita 的設定和偏好選項。" lang="en" name="description" xml:lang="en" />
 
@@ -60,7 +60,7 @@
     <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜尋" href="../search.html" />
-    <link rel="next" title="Author Profile Settings" href="preferences/author_settings.html" />
+    <link rel="next" title="「作者檔案」設定" href="preferences/author_settings.html" />
     <link rel="prev" title="浮動畫具板" href="popup-palette.html" /> 
 
   
@@ -151,19 +151,19 @@
 <li class="toctree-l2"><a class="reference internal" href="maths_input.html">數學運算式輸入</a></li>
 <li class="toctree-l2"><a class="reference internal" href="popup-palette.html">浮動畫具板</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">偏好選項</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="preferences/author_settings.html">Author Profile Settings</a></li>
-<li class="toctree-l3"><a class="reference internal" href="preferences/canvas_input_settings.html">Canvas Input Settings</a></li>
-<li class="toctree-l3"><a class="reference internal" href="preferences/canvas_only_mode.html">畫布獨佔模式</a></li>
-<li class="toctree-l3"><a class="reference internal" href="preferences/color_management_settings.html">Color Management Settings</a></li>
-<li class="toctree-l3"><a class="reference internal" href="preferences/color_selector_settings.html">Color Selector Settings</a></li>
-<li class="toctree-l3"><a class="reference internal" href="preferences/display_settings.html">Display Settings</a></li>
-<li class="toctree-l3"><a class="reference internal" href="preferences/g_mic_settings.html">G'Mic Settings</a></li>
-<li class="toctree-l3"><a class="reference internal" href="preferences/general_settings.html">General Settings</a></li>
-<li class="toctree-l3"><a class="reference internal" href="preferences/performance_settings.html">Performance Settings</a></li>
-<li class="toctree-l3"><a class="reference internal" href="preferences/popup_palette_settings.html">浮動畫具板設定</a></li>
-<li class="toctree-l3"><a class="reference internal" href="preferences/python_plugin_manager.html">Python Plugin Manager</a></li>
-<li class="toctree-l3"><a class="reference internal" href="preferences/shortcut_settings.html">Shortcut Settings</a></li>
-<li class="toctree-l3"><a class="reference internal" href="preferences/tablet_settings.html">Tablet Settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="preferences/author_settings.html">「作者檔案」設定</a></li>
+<li class="toctree-l3"><a class="reference internal" href="preferences/canvas_input_settings.html">「畫布輸入」設定</a></li>
+<li class="toctree-l3"><a class="reference internal" href="preferences/canvas_only_mode.html">「畫布獨佔模式」設定</a></li>
+<li class="toctree-l3"><a class="reference internal" href="preferences/color_management_settings.html">「色彩管理」設定</a></li>
+<li class="toctree-l3"><a class="reference internal" href="preferences/color_selector_settings.html">「選色器」設定</a></li>
+<li class="toctree-l3"><a class="reference internal" href="preferences/display_settings.html">「顯示」設定</a></li>
+<li class="toctree-l3"><a class="reference internal" href="preferences/g_mic_settings.html">「G'Mic」設定</a></li>
+<li class="toctree-l3"><a class="reference internal" href="preferences/general_settings.html">「一般」設定</a></li>
+<li class="toctree-l3"><a class="reference internal" href="preferences/performance_settings.html">「效能」設定</a></li>
+<li class="toctree-l3"><a class="reference internal" href="preferences/popup_palette_settings.html">「浮動畫具板」設定</a></li>
+<li class="toctree-l3"><a class="reference internal" href="preferences/python_plugin_manager.html">「PyThon 外掛程式管理器」設定</a></li>
+<li class="toctree-l3"><a class="reference internal" href="preferences/shortcut_settings.html">「鍵盤快捷鍵」設定</a></li>
+<li class="toctree-l3"><a class="reference internal" href="preferences/tablet_settings.html">「繪圖板」設定</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="render_animation.html">繪製動畫</a></li>
@@ -264,26 +264,26 @@
             
   <section id="preferences">
 <span id="id1"></span><h1>偏好選項<a class="headerlink" href="#preferences" title="本標題的永久連結">¶</a></h1>
-<p>Krita 可以讓使用者自訂這個軟體的各項功能。大多數的選項都可以在<span class="menuselection">設定 ‣ 設定 Krita…</span>對話視窗裡面進行設置。至於 macOS 系統上，這個選單和其它 macOS 軟體一樣顯示在左上角軟體名稱的選單中。</p>
-<p>Krita 軟體設定是保存於一個叫做 <code class="docutils literal notranslate"><span class="pre">kritarc</span></code> 的檔案中。 Windows 作業系統是放在 <code class="docutils literal notranslate"><span class="pre">%LOCALAPPDATA%\</span></code> 目錄下； Linux 是 <code class="docutils literal notranslate"><span class="pre">~/.config</span></code> 目錄； macOS 則是 <code class="docutils literal notranslate"><span class="pre">~/Library/Preferences</span></code> 目錄。您可以將這個檔案備份到別的地方存放，需在不同電腦之間同步或還原時也僅需將此檔案複製到前述的目錄下，值得一提的是此檔案在不同作業系統的 Krita 是通用的！</p>
+<p>Krita 可讓使用者自訂這個軟體的各項功能。大多數項目都可以在「<span class="menuselection">設定 ‣ 設定 Krita…</span>」對話視窗裡面進行設置。至於 macOS 系統上，這個功能和其它 macOS 軟體一樣顯示在左上角軟體名稱的選單中。</p>
+<p>Krita 軟體設定是儲存於一個叫做 <code class="docutils literal notranslate"><span class="pre">kritarc</span></code> 的檔案中。 Windows 作業系統是放在 <code class="docutils literal notranslate"><span class="pre">%LOCALAPPDATA%\</span></code> 目錄下； Linux 是 <code class="docutils literal notranslate"><span class="pre">~/.config</span></code> 目錄； macOS 則是 <code class="docutils literal notranslate"><span class="pre">~/Library/Preferences</span></code> 目錄。您可以將這個檔案備份到別的地方存放，在不同電腦之間同步或還原時也僅需將此檔案複製到前述的目錄下，值得一提的是此檔案在不同作業系統的 Krita 是通用的！</p>
 <p>若您的 Krita 是經由 Microsoft Store（微軟商店）安裝的，那麼這個 <code class="docutils literal notranslate"><span class="pre">kritarc</span></code> 檔案儲存目錄將會是位於：</p>
 <p><code class="file docutils literal notranslate"><span class="pre">%LOCALAPPDATA%\Packages\49800Krita_</span><em><span class="pre">隨機字串</span></em><span class="pre">\LocalCache\Local\kritarc</span></code></p>
-<p>自定義的快捷鍵則是另外儲存在 <code class="docutils literal notranslate"><span class="pre">kritashortcutsrc</span></code> 檔案中。它跟 <code class="docutils literal notranslate"><span class="pre">kritarc</span></code> 一樣都可以自行備份。在本章「鍵盤快捷鍵」中我們會對自定義節漸有更深入的介紹。Krita 設定項目如下（譯者註：受檔案系統限制，以下項目是依照英文原名順序）。</p>
+<p>自定義快捷鍵是另外儲存在 <code class="docutils literal notranslate"><span class="pre">kritashortcutsrc</span></code> 檔案中。它跟 <code class="docutils literal notranslate"><span class="pre">kritarc</span></code> 一樣都可以自行備份。在本章「鍵盤快捷鍵」中我們會對自定義快捷鍵有更深入的介紹。Krita 設定項目如下（譯者註：受檔案系統限制，以下項目是依照英文原名順序）。</p>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="preferences/author_settings.html">Author Profile Settings</a></li>
-<li class="toctree-l1"><a class="reference internal" href="preferences/canvas_input_settings.html">Canvas Input Settings</a></li>
-<li class="toctree-l1"><a class="reference internal" href="preferences/canvas_only_mode.html">畫布獨佔模式</a></li>
-<li class="toctree-l1"><a class="reference internal" href="preferences/color_management_settings.html">Color Management Settings</a></li>
-<li class="toctree-l1"><a class="reference internal" href="preferences/color_selector_settings.html">Color Selector Settings</a></li>
-<li class="toctree-l1"><a class="reference internal" href="preferences/display_settings.html">Display Settings</a></li>
-<li class="toctree-l1"><a class="reference internal" href="preferences/g_mic_settings.html">G'Mic Settings</a></li>
-<li class="toctree-l1"><a class="reference internal" href="preferences/general_settings.html">General Settings</a></li>
-<li class="toctree-l1"><a class="reference internal" href="preferences/performance_settings.html">Performance Settings</a></li>
-<li class="toctree-l1"><a class="reference internal" href="preferences/popup_palette_settings.html">浮動畫具板設定</a></li>
-<li class="toctree-l1"><a class="reference internal" href="preferences/python_plugin_manager.html">Python Plugin Manager</a></li>
-<li class="toctree-l1"><a class="reference internal" href="preferences/shortcut_settings.html">Shortcut Settings</a></li>
-<li class="toctree-l1"><a class="reference internal" href="preferences/tablet_settings.html">Tablet Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="preferences/author_settings.html">「作者檔案」設定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="preferences/canvas_input_settings.html">「畫布輸入」設定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="preferences/canvas_only_mode.html">「畫布獨佔模式」設定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="preferences/color_management_settings.html">「色彩管理」設定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="preferences/color_selector_settings.html">「選色器」設定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="preferences/display_settings.html">「顯示」設定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="preferences/g_mic_settings.html">「G'Mic」設定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="preferences/general_settings.html">「一般」設定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="preferences/performance_settings.html">「效能」設定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="preferences/popup_palette_settings.html">「浮動畫具板」設定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="preferences/python_plugin_manager.html">「PyThon 外掛程式管理器」設定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="preferences/shortcut_settings.html">「鍵盤快捷鍵」設定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="preferences/tablet_settings.html">「繪圖板」設定</a></li>
 </ul>
 </div>
 </section>
@@ -296,7 +296,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="preferences/author_settings.html" class="btn btn-neutral float-right" title="Author Profile Settings" accesskey="n" rel="next"> <!-- 下一個 --> <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="preferences/author_settings.html" class="btn btn-neutral float-right" title="「作者檔案」設定" accesskey="n" rel="next"> <!-- 下一個 --> <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="popup-palette.html" class="btn btn-neutral" title="浮動畫具板" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- 上一個  -->  </a>
@@ -311,14 +311,14 @@
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>8cb6afa</code>
+          修訂版本 <code>c7dfa96</code>
         </span>
       
 
     </p>
   </div>
   使用 <a href="http://sphinx-doc.org/">Sphinx</a> 以及經修改過的 <a href="https://github.com/rtfd/sphinx_rtd_theme">RTD 主題</a>建置<br/>
-  <a href="https://krita.org" title="Krita official website.">Krita 官方網站</a> |
+  <a href="https://krita.org" title="Krita 官方網站">Krita 官方網站</a> |
   <a href="https://invent.kde.org/documentation/docs-krita-org/" title="這份手冊的 KDE GitLab 專案網址">docs.krita.org 的 Git 原始碼儲存庫</a> |
   <a href="https://www.kde.org/community/whatiskde/impressum-en.php" title="了解更多關於 KDE、code of conduct（行為準則）、隱私政策及 GDPR（一般資料保護規則）">KDE Impressum</a>
    

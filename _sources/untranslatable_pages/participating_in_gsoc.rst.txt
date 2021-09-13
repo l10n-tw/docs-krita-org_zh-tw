@@ -22,7 +22,7 @@ Submitting a resumé or CV isn’t how this program works. For you to be picked,
 community early and show you have some capacity to do programming. The summer program involves focusing on one project. 
 You will have a mentor assigned to help learn the ropes. `Here <https://community.kde.org/GSoC/2021/Ideas#Krita>`_ are some potential project ideas for 2021, for other years you can find them on this `page <https://community.kde.org/GSoC>`_ (navigate to the specific year and find Krita). If there is another project 
 that you want to see, you can also propose your own. Use these `guidelines <https://community.kde.org/GSoC#Student_proposal_guidelines>`_ to help formulate ideas.
-We've mentored around half a dozen students every year year since GSoC started. Many students enjoyed their work and continue to be involved; perhaps your mentor will be a past GSoC student.
+We've mentored around half a dozen students every year since GSoC started. Many students enjoyed their work and continue to be involved; perhaps your mentor will be a past GSoC student.
 
 ++++++++++++++++++++++++++++++++++++++++++++++
 What is expected from you before participating

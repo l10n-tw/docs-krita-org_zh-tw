@@ -13,13 +13,13 @@
 Binary
 ------
 
-Binary modes are special class of blending modes which utilizes binary operators for calculations. Binary modes are unlike every other blending modes as these modes have a fractal attribute with falloff similar to other blending modes. Binary modes can be used for generation of abstract art using layers with very smooth surface. All binary modes have capitalized letters to distinguish themselves from other blending modes. 
+Binary modes are a special class of blending modes which utilize binary operators for calculations. Binary modes are unlike every other blending modes as these modes have a fractal attribute with falloff similar to other blending modes. Binary modes can be used for generation of abstract art using layers with very smooth surfaces. All binary modes have capitalized letters to distinguish themselves from other blending modes. 
 
-To clarify on how binary modes works, convert decimal values to binary values, then treat 1 or 0 as T or F respectively, and use binary operation to get the end result, and then convert the result back to decimal.
+To clarify on how binary modes work, convert decimal values to binary values, then treat 1 or 0 as T or F respectively, and use binary operation to get the end result, and then convert the result back to decimal.
 
 .. warning::
     
-    Binary blending modes do not work on float images or negative numbers! So, don't report bugs about using binary modes on unsupported color space.
+    Binary blending modes do not work on float images or negative numbers! So, don't report bugs about using binary modes on unsupported color spaces.
 
 .. index:: ! AND
 .. _bm_cat_AND:
