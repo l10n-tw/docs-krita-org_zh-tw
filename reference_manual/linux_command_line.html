@@ -21,9 +21,9 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-09-14T08:49:32" />
+  <meta property="og:article:modified_time" content="2021-09-14T15:09:29" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<meta content="Overview of Krita's command line options." name="description" />
+<meta content="Krita 命令列選項概述。" name="description" />
 
   
   
@@ -256,11 +256,11 @@
             
   <section id="linux-command-line">
 <span id="linux-cmd"></span><span id="index-0"></span><h1>命令列及參數<a class="headerlink" href="#linux-command-line" title="本標題的永久連結">¶</a></h1>
-<p>As a native Linux program, Krita allows you to do operations on images without opening the program when using the Terminal. This option was disabled on Windows and macOS, but with 3.3 it is enabled for them!</p>
-<p>This is primarily used in bash or shell scripts, for example, to mass convert KRA files into PNGs.</p>
+<p>Krita 是 Linux 原生的應用程式之一，因此它也能使用命令列模式直接處理影像。這項功能原本無法在 Wondows 和 macOS 作業系統使用，但自從 Krita 3.3 版開始，他們也能在命令列模式處理影像了！</p>
+<p>這功能主要用在 bash 或 shell 指令，例如一次性批次處理將大量 KRA 檔案轉換為 PNG 檔案。</p>
 <section id="export">
 <h2>匯出<a class="headerlink" href="#export" title="本標題的永久連結">¶</a></h2>
-<p>This allows you to quickly convert files via the terminal:</p>
+<p>你可以在終端機模式使用以下命令和參數快速匯出檔案與轉換檔案格式：</p>
 <p><code class="docutils literal notranslate"><span class="pre">krita</span> <span class="pre">importfilename</span> <span class="pre">--export</span> <span class="pre">--export-filename</span> <span class="pre">exportfilename</span></code></p>
 <dl class="simple">
 <dt>importfilename</dt><dd><p>Replace this with the filename of the file you want to manipulate.</p>
@@ -282,7 +282,7 @@
 <dt>exportfilename</dt><dd><p>Replace this with the name of the output file. Use a different extension to change the file format.</p>
 </dd>
 </dl>
-<p>Example:</p>
+<p>範例：</p>
 <p><code class="docutils literal notranslate"><span class="pre">krita</span> <span class="pre">file.png</span> <span class="pre">--export</span> <span class="pre">--export-filename</span> <span class="pre">final.jpg</span></code></p>
 <p>This line takes the file <code class="docutils literal notranslate"><span class="pre">file.png</span></code> and saves it as <code class="docutils literal notranslate"><span class="pre">file.jpg</span></code>.</p>
 <dl class="std option">
@@ -372,7 +372,7 @@
 <dt class="sig sig-object std" id="cmdoption-krita-file-layer">
 <span class="sig-name descname"><span class="pre">--file-layer</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;filename&gt;</span></span><a class="headerlink" href="#cmdoption-krita-file-layer" title="本定義的永久連結">¶</a></dt>
 <dd><p>Starts krita with <code class="docutils literal notranslate"><span class="pre">filename</span></code> added as a file-layer. Note that you must either open an existing file or create a new file using the <code class="docutils literal notranslate"><span class="pre">new-image</span></code> argument.</p>
-<p>Example:</p>
+<p>範例：</p>
 <p><code class="docutils literal notranslate"><span class="pre">krita</span> <span class="pre">file.kra</span> <span class="pre">--file-layer</span> <span class="pre">image.png</span></code></p>
 <p><code class="docutils literal notranslate"><span class="pre">krita</span> <span class="pre">--new-image</span> <span class="pre">RGBA,U8,1000,1000</span> <span class="pre">--file-layer</span> <span class="pre">image.jpg</span></code></p>
 <p>If an instance of Krita is already running and Multiple <a class="reference internal" href="preferences/general_settings.html#window-settings"><span class="std std-ref">instances</span></a> are disabled, then this option can be used alone to add a file-layer to the running krita document.</p>
@@ -406,7 +406,7 @@
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>edd0775</code>
+          修訂版本 <code>c161d10</code>
         </span>
       
 

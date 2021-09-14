@@ -76,19 +76,7 @@ Changes can be applied with the :kbd:`Enter` key for the Transform tool.
 Selections
 ~~~~~~~~~~
 
-Like in PS, you can use the :kbd:`Alt` or :kbd:`Shift` keys during a selection to remove or add selection to the active selection. Krita also offers sub tools for this, and you can select them in the :guilabel:`Tool Options` if a select tool is active. These sub tools are represented as icons.
-You can switch to those sub modes by pressing:
-
-* :kbd:`R` to replace selection
-* :kbd:`T` to intersect
-* :kbd:`A` to add to the selection (this is the one you will want to use often)
-* :kbd:`S` to subtract from the selection (the other one popular)
-
-Or hold:
-
-* :kbd:`Alt` to subtract from the selection
-* :kbd:`Shift` to add to the selection
-* :kbd:`Alt + Shift` to intersect
+Like in PS, you can use the :kbd:`Alt` or :kbd:`Shift` keys during a selection to remove or add selection to the active selection. In addition, you can hold :kbd:`Alt + Shift` to intersect. Krita also offers sub tools for this, and you can select them in the :guilabel:`Tool Options` if a select tool is active. These sub tools are represented as icons.
 
 .. note::
 

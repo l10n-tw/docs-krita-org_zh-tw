@@ -21,9 +21,9 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-09-14T08:49:32" />
+  <meta property="og:article:modified_time" content="2021-09-14T15:09:29" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<meta content="The color selector settings in Krita." name="description" />
+<meta content="Krita 的「選色器」設定。" name="description" />
 
   
   
@@ -156,8 +156,8 @@
 <li class="toctree-l3"><a class="reference internal" href="canvas_only_mode.html">「畫布獨佔模式」設定</a></li>
 <li class="toctree-l3"><a class="reference internal" href="color_management_settings.html">「色彩管理」設定</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">「選色器」設定</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#advanced-color-selector">Advanced Color Selector</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#color-hotkeys">Color Hotkeys</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#advanced-color-selector">「進階選色器」頁面</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#color-hotkeys">「色彩快捷鍵」頁面</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="display_settings.html">「顯示」設定</a></li>
@@ -270,35 +270,35 @@
             
   <section id="color-selector-settings">
 <span id="index-0"></span><span id="id1"></span><h1>「選色器」設定<a class="headerlink" href="#color-selector-settings" title="本標題的永久連結">¶</a></h1>
-<p>These settings directly affect Advanced Color Selector Dockers and the same dialog box appears when the user clicks the settings button in that docker as well. They also affect certain hotkey actions.</p>
-<p>This settings menu has a drop-down for Advanced Color Selector, and Color Hotkeys.</p>
+<p>這分頁裡的設定會直接影響「進階選色器」面板，單點一下面板的左上角設定按鈕時也會出現與這個分頁相同的對話視窗，同時這裡面所做之設定也會影響某些快捷建的操作。</p>
+<p>這個設定對話視窗上方的下拉選單有「進階選色器」和「色彩快捷鍵」兩個項目。「色彩快捷鍵」內容是用在以制相關快捷鍵在調整顏色時的級數。</p>
 <section id="advanced-color-selector">
-<h2>Advanced Color Selector<a class="headerlink" href="#advanced-color-selector" title="本標題的永久連結">¶</a></h2>
-<p>These settings are described on the page for the <a class="reference internal" href="../dockers/advanced_color_selector.html#advanced-color-selector-docker"><span class="std std-ref">進階選色器</span></a>.</p>
+<h2>「進階選色器」頁面<a class="headerlink" href="#advanced-color-selector" title="本標題的永久連結">¶</a></h2>
+<p>這個項目的詳細設定請見<a class="reference internal" href="../dockers/advanced_color_selector.html#advanced-color-selector-docker"><span class="std std-ref">進階選色器</span></a>頁面的說明。</p>
 </section>
 <section id="color-hotkeys">
-<h2>Color Hotkeys<a class="headerlink" href="#color-hotkeys" title="本標題的永久連結">¶</a></h2>
-<p>These allow you to set the steps for the following actions:</p>
+<h2>「色彩快捷鍵」頁面<a class="headerlink" href="#color-hotkeys" title="本標題的永久連結">¶</a></h2>
+<p>這頁面內各個「色彩快捷鍵」可以讓您設定以下內容：</p>
 <dl class="simple">
-<dt>Make Brush Color Darker</dt><dd><p>This is defaultly set to <kbd class="kbd docutils literal notranslate">K</kbd> key and uses the <span class="guilabel">lightness</span> steps. This uses luminance when possible.</p>
+<dt>降低筆刷顏色亮度</dt><dd><p>預設快捷鍵：<kbd class="kbd docutils literal notranslate">K</kbd>。依照<span class="guilabel">亮度</span>設定的級數降低亮度。它會盡可能依照 「HSY」光度模型的流明來運算。</p>
 </dd>
-<dt>Make Brush Color Lighter</dt><dd><p>This is defaultly set to <kbd class="kbd docutils literal notranslate">L</kbd> key and uses the <span class="guilabel">lightness</span> steps. This uses luminance when possible.</p>
+<dt>提高筆刷顏色亮度</dt><dd><p>預設快捷鍵：<kbd class="kbd docutils literal notranslate">L</kbd>。依照<span class="guilabel">亮度</span>設定的級數提高亮度。它會盡可能依照 「HSY」光度模型的流明來運算。</p>
 </dd>
-<dt>Make Brush Color More Saturated</dt><dd><p>This is defaultly unset and uses the <span class="guilabel">saturation</span> steps.</p>
+<dt>提高筆刷顏色飽和度</dt><dd><p>這個沒有預設快捷鍵。依照<span class="guilabel">飽和度</span>設定的級數提高或降低飽和度。</p>
 </dd>
-<dt>Make Brush Color More Desaturated</dt><dd><p>This is defaultly unset and uses the <span class="guilabel">saturation</span> steps.</p>
+<dt>降低筆刷顏色飽和度</dt><dd><p>這個沒有預設快捷鍵。依照<span class="guilabel">飽和度</span>設定的級數提高或降低飽和度。</p>
 </dd>
-<dt>Shift Brushcolor Hue clockwise</dt><dd><p>This is defaultly unset and uses the <span class="guilabel">Hue</span> steps.</p>
+<dt>讓筆刷色彩指標順時針在「色相環」旋轉</dt><dd><p>沒有預設快捷鍵。按照<span class="guilabel">色相</span>設定的級數讓指標在「色相環」順時針或逆時針方向旋轉。</p>
 </dd>
-<dt>Shift Brushcolor Hue counter-clockwise</dt><dd><p>This is defaultly unset and uses the <span class="guilabel">Hue</span> steps.</p>
+<dt>讓筆刷色彩指標逆時針在「色相環」旋轉</dt><dd><p>沒有預設快捷鍵。按照<span class="guilabel">色相</span>設定的級數讓指標在「色相環」順時針或逆時針方向旋轉。</p>
 </dd>
-<dt>Make Brush Color Redder</dt><dd><p>This is defaultly unset and uses the <span class="guilabel">Redder/Greener</span> steps.</p>
+<dt>提高筆刷色彩的「紅色」比例</dt><dd><p>沒有預設快捷鍵。依照<span class="guilabel">紅/綠</span>設定的級數調整紅/綠色比例。</p>
 </dd>
-<dt>Make Brush Color Greener</dt><dd><p>This is defaultly unset and uses the <span class="guilabel">Redder/Greener</span> steps.</p>
+<dt>提高筆刷色彩的「綠色」比例</dt><dd><p>沒有預設快捷鍵。依照<span class="guilabel">紅/綠</span>設定的級數調整紅/綠色比例。</p>
 </dd>
-<dt>Make Brush Color Yellower</dt><dd><p>This is defaultly unset and uses the <span class="guilabel">Bluer/Yellower</span> steps.</p>
+<dt>提高筆刷色彩的「黃色」比例</dt><dd><p>沒有預設快捷鍵。依照<span class="guilabel">藍/黃</span>設定的級數調整藍/黃色比例。</p>
 </dd>
-<dt>Make Brush Color Bluer</dt><dd><p>This is defaultly unset and uses the <span class="guilabel">Bluer/Yellower</span> steps.</p>
+<dt>提高筆刷色彩的「藍色」比例</dt><dd><p>沒有預設快捷鍵。依照<span class="guilabel">藍/黃</span>設定的級數調整藍/黃色比例。</p>
 </dd>
 </dl>
 </section>
@@ -327,7 +327,7 @@
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>edd0775</code>
+          修訂版本 <code>c161d10</code>
         </span>
       
 
