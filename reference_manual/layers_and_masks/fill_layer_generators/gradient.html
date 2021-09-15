@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-09-14T22:09:24" />
+  <meta property="og:article:modified_time" content="2021-09-15T09:09:59" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="在 krita 中如何生成出漸層。" name="description" />
 
@@ -285,11 +285,11 @@
 <h2>一般 ( 標籤項目 )<a class="headerlink" href="#general-options" title="本標題的永久連結">¶</a></h2>
 <dl>
 <dt>形狀 :</dt><dd><dl>
-<dt>Linear</dt><dd><p>這將會繪製直線漸變。起點和終點之間的距離和角度將分別是定義漸變的大小和旋轉。</p>
+<dt>線性</dt><dd><p>這將會繪製直線漸變。起點和終點之間的距離和角度將分別是定義漸變的大小和旋轉。</p>
 <figure class="align-default" id="id2">
 <img alt="線性漸變。" src="../../../_images/linear.png" />
 <figcaption>
-<p><span class="caption-text">左圖 : 循環值 <strong>無</strong>。中圖 : 循環值 <strong>前鋒</strong>。右圖 : 循環值 <strong>交替</strong>。</span><a class="headerlink" href="#id2" title="本圖片的永久連結">¶</a></p>
+<p><span class="caption-text">循環值設定 : 左圖 <strong>無</strong>。中圖 <strong>前鋒</strong>。右圖 <strong>交替</strong>。</span><a class="headerlink" href="#id2" title="本圖片的永久連結">¶</a></p>
 </figcaption>
 </figure>
 </dd>
@@ -299,105 +299,98 @@
 <figure class="align-default" id="id3">
 <img alt="../../../_images/bilinear.png" src="../../../_images/bilinear.png" />
 <figcaption>
-<p><span class="caption-text">左圖 : 循環值 <strong>無</strong>。中圖 : 循環值 <strong>前鋒</strong>。右圖 : 循環值 <strong>交替</strong>。</span><a class="headerlink" href="#id3" title="本圖片的永久連結">¶</a></p>
+<p><span class="caption-text">循環值設定 : 左圖 <strong>無</strong>。中圖 <strong>前鋒</strong>。右圖 <strong>交替</strong>。</span><a class="headerlink" href="#id3" title="本圖片的永久連結">¶</a></p>
 </figcaption>
 </figure>
 </dd>
-<dt>Radial</dt><dd><blockquote>
-<div><p>This will draw the gradient from a center, defined by the start point, with a radius equal to the distance
-between the start and end points.</p>
+<dt>放射</dt><dd><blockquote>
+<div><p>從中心位置 ( 開始點 ) 繪製漸變，半徑等於起點 ( 開始點 ) 和終點 ( 結束點 ) 之間的距離。</p>
 </div></blockquote>
 <figure class="align-default" id="id4">
 <img alt="../../../_images/radial.png" src="../../../_images/radial.png" />
 <figcaption>
-<p><span class="caption-text">左圖 : 循環值 <strong>無</strong>。中圖 : 循環值 <strong>前鋒</strong>。右圖 : 循環值 <strong>交替</strong>。</span><a class="headerlink" href="#id4" title="本圖片的永久連結">¶</a></p>
+<p><span class="caption-text">循環值設定 : 左圖 <strong>無</strong>。中圖 <strong>前鋒</strong>。右圖 <strong>交替</strong>。</span><a class="headerlink" href="#id4" title="本圖片的永久連結">¶</a></p>
 </figcaption>
 </figure>
 </dd>
-<dt>Square</dt><dd><p>This will draw the gradient from a center in a square shape, defined by the start point. The distance and angle between
-the start and end points will define the distance from that center to a side of the square and its rotation, respectively.</p>
+<dt>平方( 正方 )</dt><dd><p>從中心位置 ( 開始點 ) 繪製正方形的漸變，起點 ( 開始點 ) 和終點 ( 結束點 ) 決定了方形漸變的大小以及其旋轉角度。</p>
 <figure class="align-default" id="id5">
 <img alt="../../../_images/square.png" src="../../../_images/square.png" />
 <figcaption>
-<p><span class="caption-text">左圖 : 循環值 <strong>無</strong>。中圖 : 循環值 <strong>前鋒</strong>。右圖 : 循環值 <strong>交替</strong>。</span><a class="headerlink" href="#id5" title="本圖片的永久連結">¶</a></p>
+<p><span class="caption-text">循環值設定 : 左圖 <strong>無</strong>。中圖 <strong>前鋒</strong>。右圖 <strong>交替</strong>。</span><a class="headerlink" href="#id5" title="本圖片的永久連結">¶</a></p>
 </figcaption>
 </figure>
 </dd>
-<dt>Conical</dt><dd><p>This will wrap the gradient around a center, defined by the start point. The angle between the start and end points
-will define where the gradient starts.</p>
+<dt>圓錐</dt><dd><p>從中心位置 ( 開始點 ) 繪製環繞包覆的漸變，起點 ( 開始點 ) 和終點 ( 結束點 ) 決定環繞的開始位置及角度。</p>
 <figure class="align-default" id="id6">
 <img alt="../../../_images/conical.png" src="../../../_images/conical.png" />
 <figcaption>
-<p><span class="caption-text">左圖 : 循環值 <strong>無</strong>。中圖 : 循環值 <strong>前鋒</strong>。右圖 : 循環值 <strong>交替</strong>。</span><a class="headerlink" href="#id6" title="本圖片的永久連結">¶</a></p>
+<p><span class="caption-text">循環值設定 : 左圖 <strong>無</strong>。中圖 <strong>前鋒</strong>。右圖 <strong>交替</strong>。</span><a class="headerlink" href="#id6" title="本圖片的永久連結">¶</a></p>
 </figcaption>
 </figure>
 </dd>
-<dt>Conical-symmetric</dt><dd><p>This will wrap the gradient around a center, defined by the start point, but will mirror the wrap once.
-The angle between the start and end points will define where the gradient starts.</p>
+<dt>對稱圓錐</dt><dd><p>從中心位置 ( 開始點 ) 繪製環繞包覆的漸變，並且會鏡像對稱環繞包覆，起點 ( 開始點 ) 和終點 ( 結束點 ) 決定環繞的開始位置及角度。</p>
 <figure class="align-default" id="id7">
 <img alt="../../../_images/conical_symmetric.png" src="../../../_images/conical_symmetric.png" />
 <figcaption>
-<p><span class="caption-text">左圖 : 循環值 <strong>無</strong>。中圖 : 循環值 <strong>前鋒</strong>。右圖 : 循環值 <strong>交替</strong>。</span><a class="headerlink" href="#id7" title="本圖片的永久連結">¶</a></p>
+<p><span class="caption-text">循環值設定 : 左圖 <strong>無</strong>。中圖 <strong>前鋒</strong>。右圖 <strong>交替</strong>。</span><a class="headerlink" href="#id7" title="本圖片的永久連結">¶</a></p>
 </figcaption>
 </figure>
 </dd>
-<dt>Spiral</dt><dd><p>This will draw the gradient spiral from a center, defined by the start point. The distance and angle between
-the start and end points will define the distance between loops and the rotation of the spiral, respectively.</p>
+<dt>螺旋</dt><dd><p>從中心位置 ( 開始點 ) 繪製螺旋型漸變，起點 ( 開始點 ) 決定螺旋的開始位置，起點與終點 ( 結束點 ) 決定螺旋的大小 ( 也可以說去數量 ) 及角度。</p>
 <figure class="align-default" id="id8">
 <img alt="../../../_images/spiral.png" src="../../../_images/spiral.png" />
 <figcaption>
-<p><span class="caption-text">左圖 : 循環值 <strong>無</strong>。中圖 : 循環值 <strong>前鋒</strong>。右圖 : 循環值 <strong>交替</strong>。</span><a class="headerlink" href="#id8" title="本圖片的永久連結">¶</a></p>
+<p><span class="caption-text">循環值設定 : 左圖 <strong>無</strong>。中圖 <strong>前鋒</strong>。右圖 <strong>交替</strong>。</span><a class="headerlink" href="#id8" title="本圖片的永久連結">¶</a></p>
 </figcaption>
 </figure>
 </dd>
-<dt>Reverse Spiral</dt><dd><p>This will draw the gradient spiral from a center, defined by the start point, but direction is
-flipped perpendicular to the line that passes through the star and end points. The distance and angle between
-the start and end points will define the distance between loops and the rotation of the spiral, respectively.</p>
+<dt>反向螺旋</dt><dd><p>從中心位置 ( 開始點 ) 繪製螺旋型漸變，但會以另一個方向做轉動，起點 ( 開始點 ) 決定螺旋的開始位置，起點與終點 ( 結束點 ) 決定螺旋的大小 ( 也可以說去數量 ) 及角度。</p>
 <figure class="align-default" id="id9">
 <img alt="../../../_images/reverse_spiral.png" src="../../../_images/reverse_spiral.png" />
 <figcaption>
-<p><span class="caption-text">左圖 : 循環值 <strong>無</strong>。中圖 : 循環值 <strong>前鋒</strong>。右圖 : 循環值 <strong>交替</strong>。</span><a class="headerlink" href="#id9" title="本圖片的永久連結">¶</a></p>
+<p><span class="caption-text">循環值設定 : 左圖 <strong>無</strong>。中圖 <strong>前鋒</strong>。右圖 <strong>交替</strong>。</span><a class="headerlink" href="#id9" title="本圖片的永久連結">¶</a></p>
 </figcaption>
 </figure>
 </dd>
-<dt>Shaped</dt><dd><p>This will shape the gradient depending on the image bounds.</p>
+<dt>按輪廓漸變</dt><dd><p>會按照圖像邊界塑造漸變 ( <a href="#id1"><span class="problematic" id="id2">**</span></a>位置**設定對這個漸變無效 )。</p>
 <figure class="align-default">
 <img alt="../../../_images/shaped_image_bounds.png" src="../../../_images/shaped_image_bounds.png" />
 </figure>
 </dd>
 </dl>
 </dd>
-<dt>Repeat:</dt><dd><dl class="simple">
-<dt>None</dt><dd><p>This will extend the gradient into infinity.</p>
+<dt>循環 :</dt><dd><dl class="simple">
+<dt>無</dt><dd><p>這會讓漸層的結尾無限延伸出去到填滿畫布面積 ( 依照螺旋來看感覺只會繞一圈就斷掉，一般線性或放射會以開始和結束點的結果向外無限延伸 )。</p>
 </dd>
-<dt>Forward</dt><dd><p>This will repeat the gradient into one direction.</p>
+<dt>前鋒</dt><dd><p>這會讓漸層在結尾時接續起始然後重複，並無限延伸出去到填滿畫布面積 ( 若頭尾顏色不同或差異很大漸層會有斷峰的感覺 )。</p>
 </dd>
-<dt>Alternating</dt><dd><p>This will repeat the gradient, alternating the normal direction and the reversed.</p>
+<dt>交替</dt><dd><p>這會讓漸層在結尾時接續尾部並鏡像過程到起始然後重複，並無限延伸出去到填滿畫布面積 ( 因為它會不斷的反覆鏡像這樣的過程我們稱作交替 )。</p>
 </dd>
 </dl>
 </dd>
-<dt>Reverse</dt><dd><p>Reverses the direction of the gradient.</p>
+<dt>反轉</dt><dd><p>反轉漸變的方向 ( 這邊的意思是顏色，如果是螺旋需要反轉旋轉方向，請使用反向螺旋 ) 。</p>
 </dd>
-<dt>Antialias threshold</dt><dd><p>Controls how smooth is the border between repetitions.</p>
+<dt>反鋸齒閥值</dt><dd><p>掌控**循環**之間的邊界的平滑程度，循環設定為**無**該設定便無作用，若循環設定為**前鋒**該設定最有效果。</p>
 <ul class="simple">
-<li><p>A value equal to 0 means there is no smoothing. The border is aliased.</p></li>
-<li><p>A value greater than 0 tells Krita how many pixels to each side of the border should be smoothed.</p></li>
+<li><p>數值為 0 也就是沒有平滑。 邊界會是強烈鋸齒。</p></li>
+<li><p>數值大於 0 等於是告訴 Krita 應該平滑邊界的像素數 ( 以頭與尾邊界計算 1 pix共計 2 pix 的混合 )。</p></li>
 </ul>
 <figure class="align-default" id="id10">
 <img alt="../../../_images/antialias_threshold.png" src="../../../_images/antialias_threshold.png" />
 <figcaption>
-<p><span class="caption-text">Left: <strong>0</strong>. Middle: <strong>0.5</strong>. Right: <strong>1</strong>.</span><a class="headerlink" href="#id10" title="本圖片的永久連結">¶</a></p>
+<p><span class="caption-text">左圖: <strong>0</strong>。 中圖: <strong>0.5</strong>。右圖: <strong>1</strong>。</span><a class="headerlink" href="#id10" title="本圖片的永久連結">¶</a></p>
 </figcaption>
 </figure>
 </dd>
 </dl>
 </section>
 <section id="positioning-options">
-<h2>Positioning Options<a class="headerlink" href="#positioning-options" title="本標題的永久連結">¶</a></h2>
+<h2>位置 ( 標籤項目 )<a class="headerlink" href="#positioning-options" title="本標題的永久連結">¶</a></h2>
 <dl>
-<dt>Start</dt><dd><p>Allows you to set the start point for the gradient (in the gradient tool this is the point where you first click).</p>
+<dt>開始</dt><dd><p>設定漸變的起點（就像在漸變工具中，第一次點擊的位置）。</p>
 </dd>
-<dt>End</dt><dd><p>Allows you to set the endpoint for the gradient (in the gradient tool this is the point where you release the mouse button after dragging).</p>
+<dt>結束</dt><dd><p>設定漸變的結束點（就像在漸變工具中，拖動後放開滑鼠的位置）。</p>
 </dd>
 <dt>Units</dt><dd><p>You can make the values set for the start and end points mean different things by changing the units associated with them:</p>
 <dl class="simple">
@@ -446,10 +439,10 @@ to the size of the image, while using pixel units will make the gradient's posit
 </dd>
 <dt>Coordinate System</dt><dd><p>You can set the end point in cartesian or polar coordinates.</p>
 <dl class="simple">
-<dt>Cartesian</dt><dd><p>The coordinates of the end point are set by establishing horizontal and vertical distances
+<dt>笛卡爾 ( X Y )座標</dt><dd><p>The coordinates of the end point are set by establishing horizontal and vertical distances
 relative to the top-left corner of the image or to the start point.</p>
 </dd>
-<dt>Polar</dt><dd><p>The coordinates of the end point are set by establishing an angle and a distance
+<dt>恆座標</dt><dd><p>The coordinates of the end point are set by establishing an angle and a distance
 relative to the start point.</p>
 </dd>
 </dl>
@@ -494,7 +487,7 @@ relative to the start point's position).</p>
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>c161d10</code>
+          修訂版本 <code>f186ef3</code>
         </span>
       
 
