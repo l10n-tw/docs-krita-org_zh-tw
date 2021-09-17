@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-09-16T22:09:18" />
+  <meta property="og:article:modified_time" content="2021-09-17T07:10:01" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="Krita 的「色彩管理」設定。" name="description" property="og:description" />
 
@@ -272,7 +272,7 @@
   <section id="color-management-settings">
 <span id="index-0"></span><span id="id1"></span><h1>「色彩管理」設定<a class="headerlink" href="#color-management-settings" title="本標題的永久連結">¶</a></h1>
 <img alt="../../_images/Krita_Preferences_Color_Management.png" src="../../_images/Krita_Preferences_Color_Management.png" />
-<p>Krita 提供完整色彩管理功能， 使用 <cite>Little CMS &lt;http://www.littlecms.com/&gt;</cite> 程式庫支援。詳細「色彩管理」說明請見<a class="reference internal" href="../../general_concepts/colors/color_managed_workflow.html#color-managed-workflow"><span class="std std-ref">色彩管理作業流程</span></a>頁面。</p>
+<p>Krita 提供完整色彩管理功能， 使用 <a class="reference external" href="http://www.littlecms.com/">Little CMS</a> 程式庫支援。詳細「色彩管理」說明請見<a class="reference internal" href="../../general_concepts/colors/color_managed_workflow.html#color-managed-workflow"><span class="std std-ref">色彩管理作業流程</span></a>頁面。</p>
 <section id="general">
 <h2>一般<a class="headerlink" href="#general" title="本標題的永久連結">¶</a></h2>
 <section id="default-color-model-for-new-images">
@@ -283,9 +283,9 @@
 <h3>從其他應用程式貼上至 Krita 時<a class="headerlink" href="#when-pasting-into-krita-from-other-applications" title="本標題的永久連結">¶</a></h3>
 <p>使用者可以定義 Krita 對從其他應用程式（如瀏覽器、GIMP 等）複製進來的影像要進行何種色彩模型轉換（若有的話）。</p>
 <dl class="simple">
-<dt>假設為 sRGB</dt><dd><p>此選項將自動以 Krita 預設的 sRGB ICC 色彩設定檔顯示貼進來的影像。</p>
+<dt>假設為 sRGB</dt><dd><p>此選項將自動以 Krita 預設的 sRGB ICC 色彩特性檔顯示貼進來的影像。</p>
 </dd>
-<dt>假設為顯示器特性檔案</dt><dd><p>此選項將使用系統預設之顯示器設定檔以顯示貼進來的影像。</p>
+<dt>假設為顯示器特性檔案</dt><dd><p>此選項將使用系統預設之顯示器特性檔以顯示貼進來的影像。</p>
 </dd>
 <dt>每次詢問</dt><dd><p>每次將影像貼進來時，Krita 都會詢問要如何處理。這是預設項目。</p>
 </dd>
@@ -299,14 +299,14 @@
 <h3>使用「黑點補償」<a class="headerlink" href="#use-blackpoint-compensation" title="本標題的永久連結">¶</a></h3>
 <p>此選項將在轉換時打開「黑點補償」（BPC）。 LCMS 維護者對 BPC 的解釋如下：</p>
 <div class="line-block">
-<div class="line">BPC 「黑點補償」是一種對電腦效能要求比較低的“窮人”色域對應。主要是經由調整影像對比度將原始色彩空間和目的色彩空間對應。一般而言從印表機印出的成果會比顯示器顏色還要暗，如果您的影像是針對顯示器做調整，那麼「黑點補償」可以協助您做最佳化的調整。「黑點補償」只有在「相對比色模式」轉換的狀況下才有意義。「可感知模式」、「飽和度優先模式」之轉換狀況下已經包含了「黑點補償」。</div>
+<div class="line">BPC 「黑點補償」是一種對電腦效能要求比較低的“窮人”色域對應。主要是經由調整影像對比度將原始色彩空間和目的色彩空間對應。一般而言從印表機印出的成果會比顯示器顏色還要暗，如果您的影像是針對顯示器做調整，那麼「黑點補償」可以協助您做最佳化的調整。「黑點補償」只有在「相對比色模式」轉換的狀況下才有意義。而「可感知模式」、「飽和度優先模式」之轉換狀況下則已經包含了「黑點補償」。</div>
 </div>
 </section>
 <section id="allow-littlecms-optimizations">
 <h3>啟用 LittleCMS 最佳化<a class="headerlink" href="#allow-littlecms-optimizations" title="本標題的永久連結">¶</a></h3>
 <p>取消此選項可關閉 LittleCMS 最佳化。在某些場合中，例如使用線性色彩空間的情況下，Little CMS 所做的最佳化可能不會給出最好的結果，因此必要時可關閉它。</p>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 5.0 版本變更: </span>從 Krita 5.0 開始已內建<cite>LittleCMS 快速浮點外掛程式 &lt;https://www.littlecms.com/plugin/&gt;</cite> 以提高色彩管理效能。關閉 LittleCMS 最佳化時也會同時關閉這個外掛程式。</p>
+<p><span class="versionmodified changed">在 5.0 版本變更: </span>從 Krita 5.0 開始已內建 <a class="reference external" href="https://www.littlecms.com/plugin/">LittleCMS 快速浮點外掛程式</a> 以提高色彩管理效能。關閉 LittleCMS 最佳化時也會同時關閉這個外掛程式。</p>
 </div>
 </section>
 <section id="enforce-palette-colors-always-select-the-nearest-color-from-the-active-palette">
@@ -320,16 +320,16 @@
 <dl class="simple">
 <dt>使用系統螢幕特性檔</dt><dd><p>選用這個選項時 Krita 將會使用您在系統預設中選取的 ICC 色彩特性檔。</p>
 </dd>
-<dt>螢幕特性檔</dt><dd><p>這選單會顯示所有安裝在電腦的 ICC 色彩特性檔，使用者可以在這裡為任何一個螢幕指定與系統設定不同的色彩特性檔。在不選用「使用系統螢幕特性檔」這個項目時，Krita 預設使用內建的 sRGB 色彩特性檔。在 Linux/macOS/Android 這些作業系統中，色彩特性檔儲存在 $/usr/share/color/icc （系統位置）或者 $~/.local/share/color/icc （本地位置）中，它們也能在這個選單中列出。若色彩特性檔儲存在 $~/.local/share/krita/profiles ，則只有 Krita 才使用得到。</p>
+<dt>螢幕特性檔</dt><dd><p>這選單會顯示所有安裝在電腦的 ICC 色彩特性檔，使用者可以在這裡為任何一個螢幕指定與系統設定不同的色彩特性檔。若不選用「使用系統螢幕特性檔」這個項目時，Krita 預設使用內建的 sRGB 色彩特性檔。在 Linux/macOS/Android 這些作業系統中，色彩特性檔儲存於 $/usr/share/color/icc （系統位置）或者 $~/.local/share/color/icc （本地位置）中，它們也能在這個選單中列出。若色彩特性檔儲存在 $~/.local/share/krita/profiles ，則只有 Krita 才使用得到。</p>
 </dd>
-<dt>繪製意圖</dt><dd><p>繪製意圖之選項，選擇您想讓 LittleCMS 在不同色彩空間轉換的方式。這裡有四個選項可用，所有選項在<a class="reference internal" href="../../general_concepts/colors/color_managed_workflow.html#icc-profiles"><span class="std std-ref">ICC profiles</span></a>說明頁上有很詳細說明。</p>
+<dt>繪製意圖</dt><dd><p>繪製意圖之選項，選擇您想讓 LittleCMS 在不同色彩空間轉換的方式。這裡有四個選項可用，所有選項在<a class="reference internal" href="../../general_concepts/colors/color_managed_workflow.html#icc-profiles"><span class="std std-ref">ICC profiles</span></a>項目上有很詳細之說明。</p>
 </dd>
 </dl>
 </section>
 <section id="softproofing-options">
 <h2>螢幕校樣選項<a class="headerlink" href="#softproofing-options" title="本標題的永久連結">¶</a></h2>
-<p>這個分頁是讓您設定**預設**螢幕色彩校樣之選項，若要調整當前影像的色彩校樣選項時，請轉到<span class="menuselection">影像 ‣ 影像屬性 ‣ 螢幕校樣</span>。</p>
-<p>關於「螢幕校樣」的詳細使用內容，請查閱<a class="reference internal" href="../../user_manual/soft_proofing.html#soft-proofing"><span class="std std-ref">the 螢幕校樣</span></a>說明。</p>
+<p>這個分頁是讓您設定<strong>預設</strong>螢幕色彩校樣之選項，若要調整當前影像的色彩校樣選項時，請轉到「<span class="menuselection">影像 ‣ 影像屬性 ‣ 螢幕校樣</span>」。</p>
+<p>關於「螢幕校樣」的詳細使用內容，請查閱<a class="reference internal" href="../../user_manual/soft_proofing.html#soft-proofing"><span class="std std-ref">螢幕校樣</span></a>說明。</p>
 </section>
 </section>
 
@@ -356,7 +356,7 @@
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>bc03e95</code>
+          修訂版本 <code>45e8f62</code>
         </span>
       
 
