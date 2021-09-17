@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-09-17T07:10:01" />
+  <meta property="og:article:modified_time" content="2021-09-17T14:09:57" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="Krita 的「色彩管理」設定。" name="description" property="og:description" />
 
@@ -299,14 +299,14 @@
 <h3>使用「黑點補償」<a class="headerlink" href="#use-blackpoint-compensation" title="本標題的永久連結">¶</a></h3>
 <p>此選項將在轉換時打開「黑點補償」（BPC）。 LCMS 維護者對 BPC 的解釋如下：</p>
 <div class="line-block">
-<div class="line">BPC 「黑點補償」是一種對電腦效能要求比較低的“窮人”色域對應。主要是經由調整影像對比度將原始色彩空間和目的色彩空間對應。一般而言從印表機印出的成果會比顯示器顏色還要暗，如果您的影像是針對顯示器做調整，那麼「黑點補償」可以協助您做最佳化的調整。「黑點補償」只有在「相對比色模式」轉換的狀況下才有意義。而「可感知模式」、「飽和度優先模式」之轉換狀況下則已經包含了「黑點補償」。</div>
+<div class="line">BPC 「黑點補償」是一種對電腦效能要求比較低的“窮人”色域對映。主要是經由調整影像對比度將原始色彩空間和目的色彩空間對映。一般而言從印表機印出的成果會比顯示器顏色還要暗，如果您的影像是針對顯示器做調整，那麼「黑點補償」可以協助您做最佳化的調整。「黑點補償」只有在「相對比色模式」轉換的狀況下才有意義。而「可感知模式」、「飽和度優先模式」之轉換狀況下則已經包含了「黑點補償」。</div>
 </div>
 </section>
 <section id="allow-littlecms-optimizations">
 <h3>啟用 LittleCMS 最佳化<a class="headerlink" href="#allow-littlecms-optimizations" title="本標題的永久連結">¶</a></h3>
 <p>取消此選項可關閉 LittleCMS 最佳化。在某些場合中，例如使用線性色彩空間的情況下，Little CMS 所做的最佳化可能不會給出最好的結果，因此必要時可關閉它。</p>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 5.0 版本變更: </span>從 Krita 5.0 開始已內建 <a class="reference external" href="https://www.littlecms.com/plugin/">LittleCMS 快速浮點外掛程式</a> 以提高色彩管理效能。關閉 LittleCMS 最佳化時也會同時關閉這個外掛程式。</p>
+<p><span class="versionmodified changed">在 5.0 版本變更: </span>從 Krita 5.0 開始已內建 <a class="reference external" href="https://www.littlecms.com/plugin/">LittleCMS 快速浮點外掛程式</a>以提高色彩管理效能。關閉 LittleCMS 最佳化時也會同時關閉這個外掛程式。</p>
 </div>
 </section>
 <section id="enforce-palette-colors-always-select-the-nearest-color-from-the-active-palette">
@@ -322,7 +322,7 @@
 </dd>
 <dt>螢幕特性檔</dt><dd><p>這選單會顯示所有安裝在電腦的 ICC 色彩特性檔，使用者可以在這裡為任何一個螢幕指定與系統設定不同的色彩特性檔。若不選用「使用系統螢幕特性檔」這個項目時，Krita 預設使用內建的 sRGB 色彩特性檔。在 Linux/macOS/Android 這些作業系統中，色彩特性檔儲存於 $/usr/share/color/icc （系統位置）或者 $~/.local/share/color/icc （本地位置）中，它們也能在這個選單中列出。若色彩特性檔儲存在 $~/.local/share/krita/profiles ，則只有 Krita 才使用得到。</p>
 </dd>
-<dt>繪製意圖</dt><dd><p>繪製意圖之選項，選擇您想讓 LittleCMS 在不同色彩空間轉換的方式。這裡有四個選項可用，所有選項在<a class="reference internal" href="../../general_concepts/colors/color_managed_workflow.html#icc-profiles"><span class="std std-ref">ICC profiles</span></a>項目上有很詳細之說明。</p>
+<dt>繪製意圖</dt><dd><p>繪製意圖之選項，選擇您想讓 LittleCMS 在不同色彩空間轉換的方式。這裡有四個選項可用，所有選項在 <a class="reference internal" href="../../general_concepts/colors/color_managed_workflow.html#icc-profiles"><span class="std std-ref">ICC profiles</span></a>項目上有很詳細之說明。</p>
 </dd>
 </dl>
 </section>
