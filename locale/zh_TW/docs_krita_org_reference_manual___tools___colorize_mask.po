@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Krita Manual 4.3\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-27 21:21+0800\n"
-"PO-Revision-Date: 2021-09-17 14:06+0000\n"
+"PO-Revision-Date: 2021-09-20 02:06+0000\n"
 "Last-Translator: RinalNamori <rinalnamori@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <http://weblate.slat.org/projects/"
 "krita-docs/3-reference_manual___tools___colorize_mask/zh_Hant/>\n"
@@ -121,7 +121,7 @@ msgid ""
 "transparent, by selecting it and pressing \"transparent\". Updating the mask "
 "will still show the blue stroke, but the result will be transparent:"
 msgstr ""
-"我們現在要設定藍色為透明。在著色遮罩編輯工具的工具選項中，可以看到一個由已經使用過的色彩而成的色票表。在這裡能夠移除或是標記一個顏色為透明色。在選了一個色"
+"我們現在要設定藍色為透明。在著色遮罩編輯工具的工具選項中，可以看到一個由已經使用過的色彩而成的調色板。在這裡能夠移除或是標記一個顏色為透明色。在選了一個色"
 "彩後按「透明」，更新遮罩會看到藍色筆跡，但是並沒有著色："
 
 #: ../../reference_manual/tools/colorize_mask.rst:57
@@ -262,9 +262,9 @@ msgid ""
 "Strokes` are on. On the **Right**: :guilabel:`Show Output` is off and :"
 "guilabel:`Edit Key Strokes` is on."
 msgstr ""
-"在**左邊**：開啟\\ :guilabel:`顯示輸出`，關閉\\ :guilabel:`編輯關鍵筆畫`\\ ；在**中間**：開啟\\ "
-":guilabel:`顯示輸出`和\\ :guilabel:`編輯關鍵筆畫`\\ ；在**右邊**：關閉\\ :guilabel:`顯示輸出`，開啟\\ "
-":guilabel:`編輯關鍵筆畫`\\ 。"
+"在\\ **左邊**：開啟\\ :guilabel:`顯示輸出`，關閉\\ :guilabel:`編輯關鍵筆畫`\\ ；在\\ **中間**：開啟\\ "
+":guilabel:`顯示輸出`和\\ :guilabel:`編輯關鍵筆畫`\\ ；在\\ **右邊**：關閉\\ :guilabel:`顯示輸出`，"
+"開啟\\ :guilabel:`編輯關鍵筆畫`\\ 。"
 
 #: ../../reference_manual/tools/colorize_mask.rst:129
 msgid "Limit to layer bounds"
@@ -287,6 +287,7 @@ msgid ""
 "object. For the best use, set the value to the thinnest lines on the image. "
 "In the image below, note how edge detection affects the big black areas:"
 msgstr ""
+"當線稿有較大的純色區域時使用，比如一個物件上的陰影。為了得到最佳的效果，請把數值設定為影像中最幼線條的尺寸。請注意下面的圖像中邊緣檢測在黑色區域的效果："
 
 #: ../../reference_manual/tools/colorize_mask.rst:138
 msgid ""
@@ -295,6 +296,8 @@ msgid ""
 "the same example with edge detection enabled and set to 2px, and that same "
 "example without edit key strokes enabled."
 msgstr ""
+"從左到右：有著大範圍黑色陰影的物體，邊緣檢測為關閉的例子；相同設定，但是關閉了編輯關鍵筆畫；開啟了 2px "
+"的邊緣檢測的例子；相同設定，但是關閉了編輯關鍵筆畫。"
 
 #: ../../reference_manual/tools/colorize_mask.rst:146
 msgid "Gap close hint"
@@ -317,6 +320,8 @@ msgid ""
 "guilabel:`Gap close hint` is 15px (the lines are 10px). On the **Right**: :"
 "guilabel:`Gap close hint` is 275px."
 msgstr ""
+"在\\ **左邊**：\\ :guilabel:`開口閉合推測`\\ 是 0px。而在\\ **中間**：\\ :guilabel:`開口閉口推測`\\ "
+"是 15px（線稿是 10px）。在\\ **右邊**：\\ :guilabel:`開口閉合推測`\\ 是 275px。"
 
 #: ../../reference_manual/tools/colorize_mask.rst:153
 msgid "Clean up"
@@ -327,7 +332,7 @@ msgid ""
 "This will attempt to handle messy strokes that overlap the line art where "
 "they shouldn't. At 0 no clean up is done, at 100% the clean-up is most "
 "aggressive."
-msgstr ""
+msgstr "這個選項會嘗試處理超出線稿的筆畫。當數值為 0 時不進行處理，在 100% 時會進行最積極的處理。"
 
 #: ../../reference_manual/tools/colorize_mask.rst:155
 msgid "Key strokes"
@@ -338,7 +343,7 @@ msgid ""
 "This palette keeps track of the colors used by the strokes. This is useful "
 "so you can switch back to colors easily. You can increase the swatch size by "
 "hovering over it with the mouse, and doing :kbd:`Ctrl +` |mousescroll|."
-msgstr ""
+msgstr "這個調色板會持續檢測筆畫已經使用過的色彩。這樣可以方便地切回之前所使用的色彩。"
 
 #: ../../<rst_epilog>:8
 msgid "mousescroll"
@@ -353,7 +358,7 @@ msgid ""
 "This button is under the keystrokes palette, you can mark the selected color "
 "to be interpreted a 'transparent' with this. In the clean-up screenshot "
 "above, cyan had been marked as transparent."
-msgstr ""
+msgstr "這個按鈕在色票表下面，選取一個色彩後使用會把這個色彩標記為「透明」。在上面清理說明的圖例裡，淺藍色被標記成透明。"
 
 #: ../../reference_manual/tools/colorize_mask.rst:161
 msgid "Layer properties"
@@ -363,53 +368,53 @@ msgstr ""
 msgid ""
 "The colorize mask layer has four properties. They are all the buttons on the "
 "right side of the colorize mask layer:"
-msgstr ""
+msgstr "著色遮罩圖層有四個選項。這些選項都在著色遮罩圖層的右邊："
 
 #: ../../reference_manual/tools/colorize_mask.rst:166
 msgid ""
 "|show-output| The show output icon allows you to toggle whether you'll see "
 "the output from the colorize algorithm."
-msgstr ""
+msgstr "|show-output|\\ 這個顯示著色圖示可以開關著色算法的顯示。"
 
 #: ../../reference_manual/tools/colorize_mask.rst:177
 msgid "show-output"
-msgstr ""
+msgstr "顯示著色"
 
 #: ../../reference_manual/tools/colorize_mask.rst:167
 msgid "Lock"
-msgstr ""
+msgstr "鎖定"
 
 #: ../../reference_manual/tools/colorize_mask.rst:168
 msgid "|lock-icon| This icon stops the mask from being edited."
-msgstr ""
+msgstr "|lock-icon|\\ 這個圖示能防止遮罩被編輯。"
 
 #: ../../reference_manual/tools/colorize_mask.rst:179
 msgid "lock-icon"
-msgstr ""
+msgstr "鎖定圖示"
 
 #: ../../reference_manual/tools/colorize_mask.rst:170
 msgid ""
 "|edit-strokes| This icon shows whether the colorize mask is in edit mode. In "
 "edit mode it'll show the strokes, and the output will be semi-transparent."
-msgstr ""
+msgstr "|edit-strokes|\\ 這個圖示在著色遮罩編輯模式時顯示。在編輯模式時會顯示關鍵筆畫，然後輸出會顯示為半透明。"
 
 #: ../../reference_manual/tools/colorize_mask.rst:181
 msgid "edit-strokes"
-msgstr ""
+msgstr "編輯關鍵筆畫"
 
 #: ../../reference_manual/tools/colorize_mask.rst:172
 msgid ""
 "|update-icon| This icon will force the colorize mask to update, even when "
 "you're in a different tool."
-msgstr ""
+msgstr "|update-icon|\\ 這個圖示會強制更新著色遮罩，即使你正在使用其他工具時也會更新。"
 
 #: ../../reference_manual/tools/colorize_mask.rst:183
 msgid "update-icon"
-msgstr ""
+msgstr "更新圖示"
 
 #: ../../reference_manual/tools/colorize_mask.rst:174
 msgid "Colorize masks cannot be animated."
-msgstr ""
+msgstr "著色遮罩無法動畫化。"
 
 #: ../../reference_manual/tools/colorize_mask.rst:11
 msgid "Tools"
@@ -417,11 +422,11 @@ msgstr "工具"
 
 #: ../../reference_manual/tools/colorize_mask.rst:11
 msgid "Lazybrush"
-msgstr ""
+msgstr "懶人筆刷"
 
 #: ../../reference_manual/tools/colorize_mask.rst:11
 msgid "Masks"
-msgstr ""
+msgstr "遮罩"
 
 #: ../../reference_manual/tools/colorize_mask.rst:11
 msgid "Layers"
@@ -429,4 +434,4 @@ msgstr "圖層"
 
 #: ../../reference_manual/tools/colorize_mask.rst:11
 msgid "Flat Color"
-msgstr ""
+msgstr "底色"
