@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-09-20T02:10:36" />
+  <meta property="og:article:modified_time" content="2021-09-20T09:09:52" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="Krita 的相連選取區域工具的參考。" lang="en" name="description" xml:lang="en" />
 
@@ -175,7 +175,7 @@
 <li class="toctree-l3"><a class="reference internal" href="freehand_path.html">Freehand Path Tool</a></li>
 <li class="toctree-l3"><a class="reference internal" href="dyna.html">Dynamic Brush Tool</a></li>
 <li class="toctree-l3"><a class="reference internal" href="multibrush.html">Multibrush Tool</a></li>
-<li class="toctree-l3"><a class="reference internal" href="crop.html">Crop Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="crop.html">裁切工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="move.html">移動工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="transform.html">Transform Tool</a></li>
 <li class="toctree-l3"><a class="reference internal" href="fill.html">填色工具</a></li>
@@ -192,7 +192,7 @@
 <li class="toctree-l3"><a class="reference internal" href="polygonal_select.html">Polygonal Selection Tool</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">相連選取區域工具</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#hotkeys-and-sticky-keys">快捷鍵和相黏鍵</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#tool-options">Tool Options</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tool-options">工具選項</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="path_select.html">Path Selection Tool</a></li>
@@ -300,53 +300,53 @@
 <h2>快捷鍵和相黏鍵<a class="headerlink" href="#hotkeys-and-sticky-keys" title="本標題的永久連結">¶</a></h2>
 <ul class="simple">
 <li><p><kbd class="kbd docutils literal notranslate">R</kbd> 鍵設定工具選項中的操作為「取代」，這是工具預設的模式。</p></li>
-<li><p>:kbd:<a href="#id1"><span class="problematic" id="id2">`</span></a>A`鍵設定工具選項中的操作為「新增」。</p></li>
-<li><p>:kbd:<a href="#id1"><span class="problematic" id="id2">`</span></a>S`鍵設定工具選項中的操作為「減去」。</p></li>
-<li><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> sets the subsequent selection to 'add'. You can release the <kbd class="kbd docutils literal notranslate">Shift</kbd> key while dragging, but it will still be set to 'add'. Same for the others.</p></li>
-<li><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Alt</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> sets the subsequent selection to 'subtract'.</p></li>
-<li><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> sets the subsequent selection to 'replace'.</p></li>
-<li><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Alt</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> sets the subsequent selection to 'intersect'.</p></li>
+<li><p><kbd class="kbd docutils literal notranslate">A</kbd> 鍵設定工具選項中的操作為「新增」。</p></li>
+<li><p><kbd class="kbd docutils literal notranslate">S</kbd>鍵設定工具選項中的操作為「減去」。</p></li>
+<li><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" />設定接下來的操作為「新增」。可以在拖曳時放開<kbd class="kbd docutils literal notranslate">Shift</kbd>鍵，但是這時仍會是「新增」。其他的操作同理。</p></li>
+<li><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Alt</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> 設定接下來的操作為「減去」。</p></li>
+<li><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> 設定接下來的操作為「取代」。</p></li>
+<li><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Alt</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> 設定接下來的操作為「相交」。</p></li>
 </ul>
 <div class="versionadded">
 <p><span class="versionmodified added">在 4.2 版本新加入: </span></p>
 <ul class="simple">
-<li><p>Hovering over a selection allows you to move it.</p></li>
-<li><p><img alt="滑鼠右鍵" src="../../_images/Krita_mouse_right.png" /> will open up a selection quick menu with amongst others the ability to edit the selection.</p></li>
+<li><p>使用滑鼠懸浮在選取區域上時能夠移動選取區域。</p></li>
+<li><p><img alt="滑鼠右鍵" src="../../_images/Krita_mouse_right.png" /> 會開啟一個選單，其中包含了編輯選取區域的功能。</p></li>
 </ul>
 </div>
 <div class="admonition note">
 <p class="admonition-title">備註</p>
-<p>You can switch the behavior of the <kbd class="kbd docutils literal notranslate">Alt</kbd> key to use the <kbd class="kbd docutils literal notranslate">Ctrl</kbd> key instead by toggling the switch in the <a class="reference internal" href="../preferences/general_settings.html#general-settings"><span class="std std-ref">「一般」設定</span></a>.</p>
+<p>你可以在<a class="reference internal" href="../preferences/general_settings.html#general-settings"><span class="std std-ref">「一般」設定</span></a>中交換 <kbd class="kbd docutils literal notranslate">Alt</kbd> 鍵和 <kbd class="kbd docutils literal notranslate">Ctrl</kbd> 鍵的修飾鍵功能。</p>
 </div>
 </section>
 <section id="tool-options">
-<h2>Tool Options<a class="headerlink" href="#tool-options" title="本標題的永久連結">¶</a></h2>
+<h2>工具選項<a class="headerlink" href="#tool-options" title="本標題的永久連結">¶</a></h2>
 <dl>
-<dt>Anti-aliasing</dt><dd><p>This toggles whether or not to give selections feathered edges. Some people prefer hard-jagged edges for their selections.</p>
+<dt>反鋸齒</dt><dd><p>這個選項控制是否要羽化邊緣。有些人會想要選取鋸齒狀的邊緣。</p>
 </dd>
-<dt>Fuzziness</dt><dd><p>This controls whether or not the contiguous selection sees another color as a border.</p>
+<dt>模糊度</dt><dd><p>這個數值控制選取工具辨認其他色彩為邊界的程度。</p>
 </dd>
-<dt>Grow/Shrink selection.</dt><dd><p>This value extends/contracts the shape beyond its initial size.</p>
+<dt>擴大/縮小選取區域</dt><dd><p>這個數值會擴大或縮小初始選取區域的形狀。</p>
 </dd>
-<dt>Feathering</dt><dd><p>This value will add a soft border to the selection-shape.</p>
+<dt>羽化半徑</dt><dd><p>這個數值會在選取形狀新增一層軟性邊界。</p>
 </dd>
-<dt>Sample</dt><dd><div class="versionadded">
+<dt>取樣</dt><dd><div class="versionadded">
 <p><span class="versionmodified added">在 4.3 版本新加入.</span></p>
 </div>
-<p>Select which layers to use as a reference for the contiguous select tool. The options are:</p>
+<p>選取哪一個圖層用作相連選取區域工具的參考。這些選項為：</p>
 <dl class="simple">
-<dt>Current Layer</dt><dd><p>Only use the currently selected layer.</p>
+<dt>目前圖層</dt><dd><p>只使用當前選取的圖層。</p>
 </dd>
-<dt>All layers</dt><dd><p>Use all visible layers.</p>
+<dt>所有圖層</dt><dd><p>使用所有可見圖層。</p>
 </dd>
-<dt>Color Labeled Layers</dt><dd><p>Use only the layers specified with a certain color label. This is useful for complex images, where you might have multiple lineart layers. Label them with the appropriate color label and use these labels to mark which layers to use as a reference.</p>
+<dt>符合色彩標籤的圖層</dt><dd><p>使用符合特定色彩標籤的圖層。這適合用在複雜的圖像，在有著多個線稿圖層時使用合適的色彩標籤標記，然後標記那些圖層作為參考。</p>
 </dd>
 </dl>
 </dd>
-<dt>Labels Used</dt><dd><div class="versionadded">
+<dt>已使用的色彩標籤</dt><dd><div class="versionadded">
 <p><span class="versionmodified added">在 4.3 版本新加入.</span></p>
 </div>
-<p>Used with the 'Color Labeled Layers' option above.</p>
+<p>與上面的「符合色彩標籤的圖層」一起使用。</p>
 </dd>
 </dl>
 </section>
