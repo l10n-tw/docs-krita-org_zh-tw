@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-09-19T07:39:40" />
+  <meta property="og:article:modified_time" content="2021-09-20T02:10:36" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="如何在 Krita 使用著色遮罩工具。" name="description" />
 
@@ -195,7 +195,7 @@
 <li class="toctree-l3"><a class="reference internal" href="elliptical_select.html">Elliptical Selection Tool</a></li>
 <li class="toctree-l3"><a class="reference internal" href="freehand_select.html">Freehand Selection Tool</a></li>
 <li class="toctree-l3"><a class="reference internal" href="polygonal_select.html">Polygonal Selection Tool</a></li>
-<li class="toctree-l3"><a class="reference internal" href="contiguous_select.html">Contiguous Selection Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="contiguous_select.html">相連選取區域工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="path_select.html">Path Selection Tool</a></li>
 <li class="toctree-l3"><a class="reference internal" href="similar_select.html">Similar Color Selection Tool</a></li>
 <li class="toctree-l3"><a class="reference internal" href="magnetic_select.html">Magnetic Selection Tool</a></li>
@@ -308,7 +308,7 @@
 <a class="reference internal image-reference" href="../../_images/Krita_4_0_colorize_mask_usage_02.png"><img alt="../../_images/Krita_4_0_colorize_mask_usage_02.png" class="align-center" src="../../_images/Krita_4_0_colorize_mask_usage_02.png" style="width: 800px;" /></a>
 <p>現在使用筆刷上色，然後在工具選項按<span class="guilabel">更新</span>，或是打勾著色遮罩裡的最後一個圖示。在圖層工具面板裡，可以看到著色遮罩的進度條，檔案越大，所需的時間越長。</p>
 <a class="reference internal image-reference" href="../../_images/Krita_4_0_colorize_mask_usage_03.png"><img alt="../../_images/Krita_4_0_colorize_mask_usage_03.png" class="align-center" src="../../_images/Krita_4_0_colorize_mask_usage_03.png" style="width: 800px;" /></a>
-<p>我們現在要設定藍色為透明。在著色遮罩編輯工具的工具選項中，可以看到一個由已經使用過的色彩而成的色票表。在這裡能夠移除或是標記一個顏色為透明色。在選了一個色彩後按「透明」，更新遮罩會看到藍色筆跡，但是並沒有著色：</p>
+<p>我們現在要設定藍色為透明。在著色遮罩編輯工具的工具選項中，可以看到一個由已經使用過的色彩而成的調色板。在這裡能夠移除或是標記一個顏色為透明色。在選了一個色彩後按「透明」，更新遮罩會看到藍色筆跡，但是並沒有著色：</p>
 <a class="reference internal image-reference" href="../../_images/Krita_4_0_colorize_mask_usage_04.png"><img alt="../../_images/Krita_4_0_colorize_mask_usage_04.png" class="align-center" src="../../_images/Krita_4_0_colorize_mask_usage_04.png" style="width: 800px;" /></a>
 <p>因為著色遮罩的算法運作很慢，而我們只需要圖層的一部分來填滿女士，因此我們會使用工具選項中的<span class="guilabel">限制到圖層邊界</span>。這樣會讓著色遮罩只使用線稿和著色的關鍵筆畫的畫布來運作。因此請確定關鍵筆畫是用在所需的範圍內。</p>
 <a class="reference internal image-reference" href="../../_images/Krita_4_0_colorize_mask_usage_05.png"><img alt="../../_images/Krita_4_0_colorize_mask_usage_05.png" class="align-center" src="../../_images/Krita_4_0_colorize_mask_usage_05.png" style="width: 800px;" /></a>
@@ -342,17 +342,17 @@
 <figure class="align-center" id="id2">
 <a class="reference internal image-reference" href="../../_images/Krita_4_0_colorize_mask_show_output_edit_strokes.png"><img alt="../../_images/Krita_4_0_colorize_mask_show_output_edit_strokes.png" src="../../_images/Krita_4_0_colorize_mask_show_output_edit_strokes.png" style="width: 800px;" /></a>
 <figcaption>
-<p><span class="caption-text">在**左邊**：開啟<span class="guilabel">顯示輸出</span>，關閉<span class="guilabel">編輯關鍵筆畫</span>；在**中間**：開啟<span class="guilabel">顯示輸出`和:guilabel:`編輯關鍵筆畫</span>；在**右邊**：關閉<span class="guilabel">顯示輸出</span>，開啟<span class="guilabel">編輯關鍵筆畫</span>。</span><a class="headerlink" href="#id2" title="本圖片的永久連結">¶</a></p>
+<p><span class="caption-text">在<strong>左邊</strong>：開啟<span class="guilabel">顯示輸出</span>，關閉<span class="guilabel">編輯關鍵筆畫</span>；在<strong>中間</strong>：開啟<span class="guilabel">顯示輸出`和:guilabel:`編輯關鍵筆畫</span>；在<strong>右邊</strong>：關閉<span class="guilabel">顯示輸出</span>，開啟<span class="guilabel">編輯關鍵筆畫</span>。</span><a class="headerlink" href="#id2" title="本圖片的永久連結">¶</a></p>
 </figcaption>
 </figure>
 </dd>
 <dt>限制到圖層邊界</dt><dd><p>限制著色遮罩的生效範圍在筆畫和要上色的線稿上。能夠加快遮罩在複雜環境的合成，像是漫畫頁面。</p>
 </dd>
-<dt>邊緣檢測</dt><dd><p>Activate this for line art with large solid areas, for example shadows on an object. For the best use, set the value to the thinnest lines on the image. In the image below, note how edge detection affects the big black areas:</p>
+<dt>邊緣檢測</dt><dd><p>當線稿有較大的純色區域時使用，比如一個物件上的陰影。為了得到最佳的效果，請把數值設定為影像中最幼線條的尺寸。請注意下面的圖像中邊緣檢測在黑色區域的效果：</p>
 <figure class="align-center" id="id3">
 <a class="reference internal image-reference" href="../../_images/Krita_4_0_colorize_mask_edge_detection.png"><img alt="../../_images/Krita_4_0_colorize_mask_edge_detection.png" src="../../_images/Krita_4_0_colorize_mask_edge_detection.png" style="width: 800px;" /></a>
 <figcaption>
-<p><span class="caption-text">From left to right: an example with big black shadows on an object but no edge detection, the same example without the edit key strokes enabled. Then the same example with edge detection enabled and set to 2px, and that same example without edit key strokes enabled.</span><a class="headerlink" href="#id3" title="本圖片的永久連結">¶</a></p>
+<p><span class="caption-text">從左到右：有著大範圍黑色陰影的物體，邊緣檢測為關閉的例子；相同設定，但是關閉了編輯關鍵筆畫；開啟了 2px 的邊緣檢測的例子；相同設定，但是關閉了編輯關鍵筆畫。</span><a class="headerlink" href="#id3" title="本圖片的永久連結">¶</a></p>
 </figcaption>
 </figure>
 </dd>
@@ -360,35 +360,35 @@
 <figure class="align-center" id="id4">
 <a class="reference internal image-reference" href="../../_images/Krita_4_0_colorize_mask_gap_close_hint.png"><img alt="../../_images/Krita_4_0_colorize_mask_gap_close_hint.png" src="../../_images/Krita_4_0_colorize_mask_gap_close_hint.png" style="width: 800px;" /></a>
 <figcaption>
-<p><span class="caption-text">On the <strong>Left</strong>: <span class="guilabel">Gap close hint</span> is 0px. In the <strong>Middle</strong>: <span class="guilabel">Gap close hint</span> is 15px (the lines are 10px). On the <strong>Right</strong>: <span class="guilabel">Gap close hint</span> is 275px.</span><a class="headerlink" href="#id4" title="本圖片的永久連結">¶</a></p>
+<p><span class="caption-text">在<strong>左邊</strong>：<span class="guilabel">開口閉合推測</span>是 0px。而在<strong>中間</strong>：<span class="guilabel">開口閉口推測</span>是 15px（線稿是 10px）。在<strong>右邊</strong>：<span class="guilabel">開口閉合推測</span>是 275px。</span><a class="headerlink" href="#id4" title="本圖片的永久連結">¶</a></p>
 </figcaption>
 </figure>
 </dd>
-<dt>清理</dt><dd><p>This will attempt to handle messy strokes that overlap the line art where they shouldn't. At 0 no clean up is done, at 100% the clean-up is most aggressive.</p>
+<dt>清理</dt><dd><p>這個選項會嘗試處理超出線稿的筆畫。當數值為 0 時不進行處理，在 100% 時會進行最積極的處理。</p>
 <a class="reference internal image-reference" href="../../_images/Krita_4_0_colorize_mask_clean_up.png"><img alt="../../_images/Krita_4_0_colorize_mask_clean_up.png" class="align-center" src="../../_images/Krita_4_0_colorize_mask_clean_up.png" style="width: 800px;" /></a>
 </dd>
-<dt>關鍵筆畫</dt><dd><p>This palette keeps track of the colors used by the strokes. This is useful so you can switch back to colors easily. You can increase the swatch size by hovering over it with the mouse, and doing <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="滑鼠滾輸" src="../../_images/Krita_mouse_scroll.png" />.</p>
+<dt>關鍵筆畫</dt><dd><p>這個調色板會持續檢測筆畫已經使用過的色彩。這樣可以方便地切回之前所使用的色彩。</p>
 </dd>
-<dt>Transparent</dt><dd><p>This button is under the keystrokes palette, you can mark the selected color to be interpreted a 'transparent' with this. In the clean-up screenshot above, cyan had been marked as transparent.</p>
+<dt>Transparent</dt><dd><p>這個按鈕在色票表下面，選取一個色彩後使用會把這個色彩標記為「透明」。在上面清理說明的圖例裡，淺藍色被標記成透明。</p>
 </dd>
 </dl>
 </section>
 <section id="layer-properties">
 <h2>Layer properties<a class="headerlink" href="#layer-properties" title="本標題的永久連結">¶</a></h2>
-<p>The colorize mask layer has four properties. They are all the buttons on the right side of the colorize mask layer:</p>
+<p>著色遮罩圖層有四個選項。這些選項都在著色遮罩圖層的右邊：</p>
 <dl class="simple">
-<dt>顯示輸出</dt><dd><p><img alt="show-output" src="../../_images/colorize-show-output-icons.png" /> The show output icon allows you to toggle whether you'll see the output from the colorize algorithm.</p>
+<dt>顯示輸出</dt><dd><p><img alt="顯示著色" src="../../_images/colorize-show-output-icons.png" />這個顯示著色圖示可以開關著色算法的顯示。</p>
 </dd>
-<dt>Lock</dt><dd><p><img alt="lock-icon" src="../../_images/colorize-lock-icon.png" /> This icon stops the mask from being edited.</p>
+<dt>鎖定</dt><dd><p><img alt="鎖定圖示" src="../../_images/colorize-lock-icon.png" />這個圖示能防止遮罩被編輯。</p>
 </dd>
-<dt>編輯關鍵筆畫</dt><dd><p><img alt="edit-strokes" src="../../_images/colorize-edit-key-strokes-icon.png" /> This icon shows whether the colorize mask is in edit mode. In edit mode it'll show the strokes, and the output will be semi-transparent.</p>
+<dt>編輯關鍵筆畫</dt><dd><p><img alt="編輯關鍵筆畫" src="../../_images/colorize-edit-key-strokes-icon.png" />這個圖示在著色遮罩編輯模式時顯示。在編輯模式時會顯示關鍵筆畫，然後輸出會顯示為半透明。</p>
 </dd>
-<dt>更新</dt><dd><p><img alt="update-icon" src="../../_images/colorize-update-icon.png" /> This icon will force the colorize mask to update, even when you're in a different tool.</p>
+<dt>更新</dt><dd><p><img alt="更新圖示" src="../../_images/colorize-update-icon.png" />這個圖示會強制更新著色遮罩，即使你正在使用其他工具時也會更新。</p>
 </dd>
 </dl>
 <div class="admonition note">
 <p class="admonition-title">備註</p>
-<p>Colorize masks cannot be animated.</p>
+<p>著色遮罩無法動畫化。</p>
 </div>
 </section>
 </section>
@@ -416,7 +416,7 @@
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>a801d8e</code>
+          修訂版本 <code>4000064</code>
         </span>
       
 
