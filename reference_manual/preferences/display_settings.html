@@ -21,9 +21,9 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-09-22T09:10:04" />
+  <meta property="og:article:modified_time" content="2021-09-22T21:09:49" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<meta content="Display settings in Krita." name="description" property="og:description" />
+<meta content="Krita 的顯示設定。" name="description" property="og:description" />
 
   
   
@@ -158,11 +158,11 @@
 <li class="toctree-l3"><a class="reference internal" href="color_selector_settings.html">「選色器」設定</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">「顯示」設定</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#opengl">OpenGL</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#hdr">HDR</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#transparency-checkerboard">Transparency Checkerboard</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#canvas-border">Canvas Border</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#pixel-grid">Pixel Grid</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#miscellaneous">Miscellaneous</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#hdr">HDR 設定</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#transparency-checkerboard">透明棋盤格色彩</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#canvas-border">畫布外周色彩</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pixel-grid">像素格線</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#miscellaneous">其他</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="g_mic_settings.html">「G'Mic」設定</a></li>
@@ -275,98 +275,98 @@
   <section id="display-settings">
 <span id="index-0"></span><span id="id1"></span><h1>「顯示」設定<a class="headerlink" href="#display-settings" title="本標題的永久連結">¶</a></h1>
 <img alt="../../_images/Krita_Preferences_Display.png" src="../../_images/Krita_Preferences_Display.png" />
-<p>Here various settings for the rendering of Krita can be edited.</p>
+<p>這裡可以編輯 Krita 顯示相關的設定。</p>
 <section id="opengl">
 <h2>OpenGL<a class="headerlink" href="#opengl" title="本標題的永久連結">¶</a></h2>
-<p><strong>For Krita 3.3 or later: Reworded as &quot;*Canvas Graphics Acceleration*&quot;</strong></p>
-<p>OpenGL is a bit of code especially for graphics cards. Graphics cards a dedicate piece of hardware for helping your computer out with graphics calculations, which Krita uses a lot. All modern computer have graphics cards.</p>
-<p><strong>For Krita 3.3 or later:</strong> On Windows, Krita also supports using Direct3D instead with the help of the ANGLE library. ANGLE works by converting the OpenGL functions that Krita makes use of to the equivalent in Direct3D. It may (or may not) be slower than native OpenGL, but it has better compatibility with typical Windows graphics drivers.</p>
+<p>** Kruta 3.3 之後的版本：改稱為 &quot;<em>畫布圖形加速</em>&quot;**</p>
+<p>OpenGL 是一些使用於顯示卡的語言，顯示卡則是專門幫助電腦進行圖形運算的硬體，Krita 也依靠它進行圖形運算。現代的電腦上面通常會有一張顯卡，或是通過內建顯示晶片的 CPU 來提供圖形運算能力。</p>
+<p><a href="#id1"><span class="problematic" id="id2">**</span></a>Krita 3.3 與之後的版本：<a href="#id3"><span class="problematic" id="id4">**</span></a>在 Windows 作業系統下 Krita 還支援了 ANGLE 程式庫，依靠它的幫助以使用 Direct3D ，ANGLE 的工作原理是將 Krita 使用的 OpenGL 函數轉換為 Direct3D 中的相等功能，可能會（也可能不會）比原生 OpenGL 慢，但它與典型的 Windows 顯示驅動程式具有更好的相容性。</p>
 <dl>
-<dt>Enable OpenGL <strong>(For Krita 3.3 or later: Reworded as *Canvas Graphics Acceleration*)</strong></dt><dd><p>Selecting this checkbox will enable the OpenGL / ANGLE canvas drawing mode. With a decent graphics card this should give faster feedback on brushes and tools. Also the canvas operations like Rotate, Zoom and Pan should be considerably faster.</p>
+<dt>啟用 OpenGL <strong>（Krita 3.3 與之後的版本：改稱「畫布圖形加速」）</strong></dt><dd><p>Selecting this checkbox will enable the OpenGL / ANGLE canvas drawing mode. With a decent graphics card this should give faster feedback on brushes and tools. Also the canvas operations like Rotate, Zoom and Pan should be considerably faster.</p>
 </dd>
-<dt>For Krita 3.3 or later:</dt><dd><dl class="simple">
-<dt>Renderer</dt><dd><p><em>On Windows:</em> You can switch between native OpenGL or ANGLE Direct3D 11 rendering. The usual recommendation is to leave it as &quot;Auto&quot;, which Krita will decide the best to use based on some internal compatibility checking. Changes to this option require a restart of Krita to take effect.</p>
+<dt>Krita 3.3 與之後的版本：</dt><dd><dl class="simple">
+<dt>繪製</dt><dd><p><em>On Windows:</em> You can switch between native OpenGL or ANGLE Direct3D 11 rendering. The usual recommendation is to leave it as &quot;Auto&quot;, which Krita will decide the best to use based on some internal compatibility checking. Changes to this option require a restart of Krita to take effect.</p>
 </dd>
 </dl>
 </dd>
-<dt>Use Texture Buffer</dt><dd><p>This setting utilizes the graphics card's buffering capabilities to speed things up a bit. Although for now, this feature may be broken on some AMD/Radeon cards and may work fine on some Intel graphics cards.</p>
+<dt>啟用紋理緩衝區</dt><dd><p>This setting utilizes the graphics card's buffering capabilities to speed things up a bit. Although for now, this feature may be broken on some AMD/Radeon cards and may work fine on some Intel graphics cards.</p>
 </dd>
-<dt>Scaling Mode</dt><dd><p>The user can choose which scaling mode to use while zooming the canvas. The choice here only affects the way the image is displayed during canvas operations and has no effect on how Krita scales an image when a transformation is applied.</p>
+<dt>檢視縮放演算法</dt><dd><p>The user can choose which scaling mode to use while zooming the canvas. The choice here only affects the way the image is displayed during canvas operations and has no effect on how Krita scales an image when a transformation is applied.</p>
 <dl class="simple">
-<dt>Nearest Neighbour</dt><dd><p>This is the fastest and crudest filtering method. While fast, this results in a large number of artifacts - 'blockiness' during magnification, and aliasing and shimmering during minification.</p>
+<dt>最近相鄰</dt><dd><p>This is the fastest and crudest filtering method. While fast, this results in a large number of artifacts - 'blockiness' during magnification, and aliasing and shimmering during minification.</p>
 </dd>
-<dt>Bilinear Filtering</dt><dd><p>This is the next step up. This removes the 'blockiness' seen during magnification and gives a smooth looking result. For most purposes this should be a good trade-off between speed and quality.</p>
+<dt>雙線性過濾</dt><dd><p>This is the next step up. This removes the 'blockiness' seen during magnification and gives a smooth looking result. For most purposes this should be a good trade-off between speed and quality.</p>
 </dd>
-<dt>Trilinear Filtering</dt><dd><p>This should give a little better result than Bilinear Filtering.</p>
+<dt>三線性過濾</dt><dd><p>This should give a little better result than Bilinear Filtering.</p>
 </dd>
-<dt>High Quality Filtering</dt><dd><p>Only available when your graphics card supports OpenGL 3.0. As the name suggests, this setting provides the best looking image during canvas operations.</p>
+<dt>高品質過濾</dt><dd><p>Only available when your graphics card supports OpenGL 3.0. As the name suggests, this setting provides the best looking image during canvas operations.</p>
 </dd>
 </dl>
 </dd>
 </dl>
 </section>
 <section id="hdr">
-<span id="hdr-display-settings"></span><h2>HDR<a class="headerlink" href="#hdr" title="本標題的永久連結">¶</a></h2>
+<span id="hdr-display-settings"></span><h2>HDR 設定<a class="headerlink" href="#hdr" title="本標題的永久連結">¶</a></h2>
 <div class="versionadded">
-<p><span class="versionmodified added">在 4.2 版本新加入: </span>These settings are only available when using Windows.</p>
+<p><span class="versionmodified added">在 4.2 版本新加入: </span>這些設定僅在 Windows 作業系統下才可用。</p>
 </div>
 <p>Since 4.2 Krita can not just edit floating point images, but also render them on screen in a way that an HDR capable setup can show them as HDR images.</p>
 <p>The HDR settings will show you the display format that Krita can handle, and the current output format. You will want to set the preferred output format to the one closest to what your display can handle to make full use of it.</p>
 <dl class="simple">
-<dt>Display Format</dt><dd><p>The format your display is in by default. If this isn't higher than 8bit, there's a good chance your monitor is not an HDR monitor as far as Krita can tell. This can be a hardware issue, but also a graphics driver issue. Check if other HDR applications, or the system HDR settings are configured correctly.</p>
+<dt>顯示格式</dt><dd><p>The format your display is in by default. If this isn't higher than 8bit, there's a good chance your monitor is not an HDR monitor as far as Krita can tell. This can be a hardware issue, but also a graphics driver issue. Check if other HDR applications, or the system HDR settings are configured correctly.</p>
 </dd>
-<dt>Current Output format</dt><dd><p>What Krita is rendering the canvas to currently.</p>
+<dt>目前輸出格式</dt><dd><p>What Krita is rendering the canvas to currently.</p>
 </dd>
-<dt>Preferred Output Format</dt><dd><p>Which surface type you prefer. This should be ideally the closest to the display format, but perhaps due to driver issues you might want to try other formats. This requires a restart.</p>
+<dt>首選輸出格式</dt><dd><p>Which surface type you prefer. This should be ideally the closest to the display format, but perhaps due to driver issues you might want to try other formats. This requires a restart.</p>
 </dd>
 </dl>
 </section>
 <section id="transparency-checkerboard">
-<h2>Transparency Checkerboard<a class="headerlink" href="#transparency-checkerboard" title="本標題的永久連結">¶</a></h2>
+<h2>透明棋盤格色彩<a class="headerlink" href="#transparency-checkerboard" title="本標題的永久連結">¶</a></h2>
 <p>Krita supports layer transparency. Of course, the nasty thing is that transparency can't be seen. So to indicate transparency at the lowest layer, we use a checker pattern. This part allows you to configure it.</p>
 <dl class="simple">
-<dt>Size</dt><dd><p>This sets the size of the checkers which show up in transparent parts of an image.</p>
+<dt>大小</dt><dd><p>This sets the size of the checkers which show up in transparent parts of an image.</p>
 </dd>
-<dt>Color</dt><dd><p>The user can set the colors for the checkers over here.</p>
+<dt>色彩</dt><dd><p>使用者可在這裡設置棋盤格的顏色。</p>
 </dd>
-<dt>Move Checkers When Scrolling</dt><dd><p>When selected the checkers will move along with opaque elements of an image during canvas Panning, Zooming, etc.  Otherwise the checkers remain stationary and only the opaque parts of an image will move.</p>
+<dt>捲動時移動棋盤格背景</dt><dd><p>When selected the checkers will move along with opaque elements of an image during canvas Panning, Zooming, etc.  Otherwise the checkers remain stationary and only the opaque parts of an image will move.</p>
 </dd>
 </dl>
 </section>
 <section id="canvas-border">
-<h2>Canvas Border<a class="headerlink" href="#canvas-border" title="本標題的永久連結">¶</a></h2>
+<h2>畫布外周色彩<a class="headerlink" href="#canvas-border" title="本標題的永久連結">¶</a></h2>
 <dl class="simple">
-<dt>Color</dt><dd><p>The user can select the color for the canvas i.e. the space beyond a document's boundaries.</p>
+<dt>色彩</dt><dd><p>The user can select the color for the canvas i.e. the space beyond a document's boundaries.</p>
 </dd>
-<dt>Hide Scrollbars</dt><dd><p>Selecting this will hide the scrollbars in all view modes.</p>
+<dt>隱藏捲動軸</dt><dd><p>Selecting this will hide the scrollbars in all view modes.</p>
 </dd>
 </dl>
 </section>
 <section id="pixel-grid">
-<h2>Pixel Grid<a class="headerlink" href="#pixel-grid" title="本標題的永久連結">¶</a></h2>
+<h2>像素格線<a class="headerlink" href="#pixel-grid" title="本標題的永久連結">¶</a></h2>
 <div class="versionadded">
 <p><span class="versionmodified added">在 4.0 版本新加入.</span></p>
 </div>
 <p>This allows configuring an automatic pixel-by-pixel grid, which is very useful for doing pixel art.</p>
 <dl class="simple">
-<dt>Color</dt><dd><p>The color of the grid.</p>
+<dt>色彩</dt><dd><p>格線的顏色。</p>
 </dd>
-<dt>Start Showing at</dt><dd><p>This determines the zoom level at which the pixel grid starts showing, as showing it when the image is zoomed out a lot will make the grid overwhelm the image, and is thus counter productive.</p>
+<dt>開始顯示比例</dt><dd><p>This determines the zoom level at which the pixel grid starts showing, as showing it when the image is zoomed out a lot will make the grid overwhelm the image, and is thus counter productive.</p>
 </dd>
 </dl>
 </section>
 <section id="miscellaneous">
-<h2>Miscellaneous<a class="headerlink" href="#miscellaneous" title="本標題的永久連結">¶</a></h2>
+<h2>其他<a class="headerlink" href="#miscellaneous" title="本標題的永久連結">¶</a></h2>
 <dl class="simple">
-<dt>Color Channels in Color</dt><dd><p>This is supposed to determine what to do when only a single channel is selected in the channels docker, but it doesn't seem to work.</p>
+<dt>顏色中的色彩通道</dt><dd><p>This is supposed to determine what to do when only a single channel is selected in the channels docker, but it doesn't seem to work.</p>
 </dd>
-<dt>Enable Curve Anti-Aliasing</dt><dd><p>This allows anti-aliasing on previewing curves, like the ones for the circle tool, or the path tool.</p>
+<dt>啟用曲線反鋸齒</dt><dd><p>這功能啟用時可在預覽曲線上消除鋸齒，例如圓形工具或路徑工具的曲線會變更平滑。</p>
 </dd>
-<dt>Enable Selection Outline Anti-Aliasing</dt><dd><p>This allows automatic anti-aliasing on selection. It makes the selection feel less jaggy and more precise.</p>
+<dt>啟用選取區域輪廓反鋸齒</dt><dd><p>這功能啟用時可在選取範圍自動反鋸齒，使選取區域更精確並且降低邊緣鋸齒。</p>
 </dd>
-<dt>Hide window scrollbars.</dt><dd><p>Hides the scrollbars on the canvas.</p>
+<dt>隱藏畫布捲動軸。</dt><dd><p>隱藏畫布邊捲動條。</p>
 </dd>
-<dt>Hide Layer thumbnail popup</dt><dd><p>This disables the thumbnail that you get when hovering over a layer.</p>
+<dt>隱藏圖層浮動縮圖</dt><dd><p>這功能可停用滑鼠游標停在圖層上顯示的縮圖。</p>
 </dd>
 </dl>
 </section>
