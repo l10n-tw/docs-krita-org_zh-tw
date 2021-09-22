@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-09-21T15:09:56" />
+  <meta property="og:article:modified_time" content="2021-09-22T09:10:04" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="在 krita 中如何生成出漸層。" name="description" />
 
@@ -392,75 +392,59 @@
 </dd>
 <dt>結束</dt><dd><p>設定漸變的結束點（就像在漸變工具中，拖動後放開滑鼠的位置）。</p>
 </dd>
-<dt>Units</dt><dd><p>You can make the values set for the start and end points mean different things by changing the units associated with them:</p>
+<dt>單位</dt><dd><p>透過選項更改開始與結束的數值以及單位，使開始與結束 ( 點 ) 的數值具有不同含義：</p>
 <dl class="simple">
-<dt>Pixels</dt><dd><p>The value indicates a distance in pixels.</p>
+<dt>像素</dt><dd><p>最一般的像素單位距離。</p>
 </dd>
-<dt>Percent of the width</dt><dd><p>The value indicates a distance as a percentage of the width of the image.
-So for example, if the image is 1000 pixels wide and 500 pixels high, and the value is 25, then this would be translated to
-pixels as 250 (25% of the width).</p>
+<dt>寬度百分比</dt><dd><p>這個選項會將距離表示為圖像總寬度的百分比。假設圖像寬度為 1000 像素，高度為 500 像素，並且數值設定為 25，那麼這將轉換計算為 250pix（圖像寬度的 25%）。</p>
 </dd>
-<dt>Percent of the height</dt><dd><p>The value indicates a distance as a percentage of the height of the image.
-So for example, if the image is 1000 pixels wide and 500 pixels high, and the value is 25, then this would be translated to
-pixels as 125 (25% of the height).</p>
+<dt>高度百分比</dt><dd><p>這個選項會將距離表示為圖像總高度的百分比。假設圖像寬度為 1000 像素，高度為 500 像素，並且數值設定為 25，那麼這將轉換計算為 125pix（圖像高度的 25%）。</p>
 </dd>
-<dt>Percent of the shortest side</dt><dd><p>The value indicates a distance as a percentage of the shortest side of the image.
-So for example, if the image is 1000 pixels wide and 500 pixels high, and the value is 25, then this would
-be translated to pixels as 125 (25% of the shortest side).</p>
+<dt>短邊百分比</dt><dd><p>這個選項會將距離表示為圖像最短邊的百分比。假設圖像寬度為 1000 像素，高度為 500 像素，並且數值設定為 25，那麼這將轉換計算為 125pix（圖像最短邊的 25%）。</p>
 </dd>
-<dt>Percent of the longest side</dt><dd><p>The value indicates a distance as a percentage of the longest side of the image.
-So for example, if the image is 1000 pixels wide and 500 pixels high, and the value is 25, then this would
-be translated to pixels as 250 (25% of the longest side).</p>
+<dt>長邊百分比</dt><dd><p>這個選項會將距離表示為圖像最長邊的百分比。假設圖像寬度為 1000 像素，高度為 500 像素，並且數值設定為 25，那麼這將轉換計算為 250pix（圖像最長邊的 25%）。</p>
 </dd>
 </dl>
-<p>Values that have percentage units are useful when changing the image size. For example, if you want to have a
-linear gradient that always goes from the left to the right of the image, you can set the start point to
-(x = 0 pixels, y = 0 pixels) and the end point to (x = 100% of the width, y = 0 pixels).</p>
-<p>On the other hand, if you want a gradient to have the same size regardless of the image size, you should use pixel units.</p>
+<p>當圖像大小改變時，百分比單位會非常有用。假設要保持從圖像最左側到最右側的線性漸變，就可以將開始設定為 (x = 0 像素，y = 0 像素)，將終點設置為 (x = 100% 的寬度，y = 0 像素）。</p>
+<p>換句話說，如果希望圖像不管如何改變大小，漸變始終都是相同的大小，則應使用/ <a href="#id1"><span class="problematic" id="id2">**</span></a>像素/ <a href="#id3"><span class="problematic" id="id4">**</span></a>單位。</p>
 <figure class="align-default">
 <img alt="../../../_images/fill_layer_gradient_units.png" src="../../../_images/fill_layer_gradient_units.png" />
 </figure>
-<p>To make a gradient like the one in the image above, you can set the start position's
-X coordinate to 80 pixels, 25% of the width, or 25% of the longest side, and its
-Y coordinate to 60 pixels, 25% of the height, or 25% of the shortest side.
-Likewise, you could set the end position's
-X coordinate to 240 pixels, 75% of the width, or 75% of the longest side, and its
-Y coordinate to 180 pixels, 75% of the height, or 75% of the shortest side.</p>
-<p>Keep in mind that if you use percentages the gradient's start and end positions will adapt
-to the size of the image, while using pixel units will make the gradient's positions be static.</p>
+<p>最後舉例要製作上圖所示的漸變，設定如下 :
+開始位置 :
+X 坐標設置為 80 像素、寬度的 25% 或最長邊的 25%
+Y 坐標設置為 60 像素、高度的 25% 或最短邊的 25%
+結束位置 :
+X 坐標設置為 240 像素、寬度的 75% 或最長邊的 75%
+Y 坐標設置為 180 像素、高度的 75% 或最短邊的 75%</p>
+<p>注意，如果使用百分比，漸變的開始和結束位置將自適應圖像( 畫布 )的大小，而使用像素單位將使漸變的位置、角度及大小維持靜態。</p>
 </dd>
-<dt>Positioning</dt><dd><p>You can choose if the end point's coordinates are relative to the start point.</p>
+<dt>定位方式</dt><dd><p>來決定結束的坐標數值是否相對於開始的座標。</p>
 <dl class="simple">
-<dt>Absolute</dt><dd><p>The end coordinate indicates a distance from the top-left corner of the image.</p>
+<dt>絕對座標</dt><dd><p>依圖像 ( 畫布 ) 最左上角為初始，計算到結束數值的距離。</p>
 </dd>
-<dt>Relative</dt><dd><p>The end coordinate indicates a distance from the start point.</p>
+<dt>相對座標</dt><dd><p>依照開始的座標為初始，繼續增加計算到結束數值的距離。</p>
 </dd>
 </dl>
 </dd>
-<dt>Coordinate System</dt><dd><p>You can set the end point in cartesian or polar coordinates.</p>
+<dt>座標系統 ( 結束點 )</dt><dd><p>透過選項更改開始與結束的定位系統，使結束 ( 點 ) 的數值具有不同含義進而計算出不同的結果。</p>
 <dl class="simple">
-<dt>笛卡爾 ( X Y )座標</dt><dd><p>The coordinates of the end point are set by establishing horizontal and vertical distances
-relative to the top-left corner of the image or to the start point.</p>
+<dt>笛卡爾 ( X Y )座標</dt><dd><p>結束點的坐標是建立於相對圖像左上角或起點的水平 ( X ) 和垂直 ( Y ) 距離來設定。</p>
 </dd>
-<dt>恆座標</dt><dd><p>The coordinates of the end point are set by establishing an angle and a distance
-relative to the start point.</p>
+<dt>恆座標</dt><dd><p>結束點的坐標是建立於相對圖像左上角或起點的角度和距離來設定。</p>
 </dd>
 </dl>
 <figure class="align-default">
 <img alt="../../../_images/fill_layer_gradient_coordinate_system.png" src="../../../_images/fill_layer_gradient_coordinate_system.png" />
 </figure>
-<p>To set the end point's position in the gradient on the image above, you could use cartesian coordinates and
-set the X and Y coordinates relative to the top-left corner of the image (absolute positioning)
-or relative to the start point (relative positioning).</p>
-<p>However, in some cases it is more convenient using polar coordinates and setting the end point's
-position by establishing an angle and a distance relative to the start point (polar coordinates are always
-relative to the start point's position).</p>
+<p>要在上圖的漸變中設定結束點位置，可以使用笛卡爾坐標並設定為相對於圖像左上角（絕對定位）或相對於起點（相對定位）的 X 和 Y 坐標.</p>
+<p>無論如何，在一些情況下，使用極坐標並建立相對於起點的角度和距離來設定結束點位置更為方便（注意如果使用極坐標就會始終用相對於起點的位置做定位）。</p>
 </dd>
 </dl>
 </section>
 <section id="gradient-colors">
 <h2>漸變色彩 ( 標籤項目 )<a class="headerlink" href="#gradient-colors" title="本標題的永久連結">¶</a></h2>
-<p>Here you can select the actual colors used by the gradient.</p>
+<p>在這兒可以選擇漸變所使用的實際顏色。</p>
 </section>
 </section>
 
@@ -487,7 +471,7 @@ relative to the start point's position).</p>
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>61e5c65</code>
+          修訂版本 <code>10d610a</code>
         </span>
       
 
