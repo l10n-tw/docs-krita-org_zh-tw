@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-09-23T07:09:57" />
+  <meta property="og:article:modified_time" content="2021-09-23T21:10:10" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="Krita 的顯示設定。" name="description" property="og:description" />
 
@@ -157,7 +157,7 @@
 <li class="toctree-l3"><a class="reference internal" href="color_management_settings.html">「色彩管理」設定</a></li>
 <li class="toctree-l3"><a class="reference internal" href="color_selector_settings.html">「選色器」設定</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">「顯示」設定</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#opengl">OpenGL</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#opengl">OpenGL（Open Graphics Library 開放式圖形庫）</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#hdr">HDR 設定</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#transparency-checkerboard">透明棋盤格色彩</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#canvas-border">畫布外周色彩</a></li>
@@ -275,31 +275,31 @@
   <section id="display-settings">
 <span id="index-0"></span><span id="id1"></span><h1>「顯示」設定<a class="headerlink" href="#display-settings" title="本標題的永久連結">¶</a></h1>
 <img alt="../../_images/Krita_Preferences_Display.png" src="../../_images/Krita_Preferences_Display.png" />
-<p>這裡可以編輯 Krita 顯示相關的設定。</p>
+<p>這裡可以編輯 Krita 顯示方面相關的設定。</p>
 <section id="opengl">
-<h2>OpenGL<a class="headerlink" href="#opengl" title="本標題的永久連結">¶</a></h2>
-<p><strong>Kruta 3.3 之後的版本：改稱為 &quot;*畫布圖形加速*&quot;</strong></p>
+<h2>OpenGL（Open Graphics Library 開放式圖形庫）<a class="headerlink" href="#opengl" title="本標題的永久連結">¶</a></h2>
+<p><strong>Kruta 3.3 之後的版本：改稱為「 畫布圖形加速」</strong></p>
 <p>OpenGL 是一些使用於顯示卡的語言，顯示卡則是專門幫助電腦進行圖形運算的硬體，Krita 也依靠它進行圖形運算。現代的電腦上面通常會有一張顯卡，或是通過內建顯示晶片的 CPU 來提供圖形運算能力。</p>
 <p><strong>Krita 3.3 與之後的版本：</strong>在 Windows 作業系統下 Krita 還支援了 ANGLE 程式庫，依靠它的幫助以使用 Direct3D ，ANGLE 的工作原理是將 Krita 使用的 OpenGL 函數轉換為 Direct3D 中的相等功能，可能會（也可能不會）比原生 OpenGL 慢，但它與典型的 Windows 顯示驅動程式具有更好的相容性。</p>
 <dl>
-<dt>啟用 OpenGL <strong>（Krita 3.3 與之後的版本：改稱「畫布圖形加速」）</strong></dt><dd><p>Selecting this checkbox will enable the OpenGL / ANGLE canvas drawing mode. With a decent graphics card this should give faster feedback on brushes and tools. Also the canvas operations like Rotate, Zoom and Pan should be considerably faster.</p>
+<dt>啟用 OpenGL <strong>（Krita 3.3 與之後的版本：改稱「畫布圖形加速」）</strong></dt><dd><p>勾選這個項目後會啟用 OpenGL/ANGLE 「畫布圖形加速」模式。若顯示卡性能夠好，應該可以更快速反應筆刷和工具的操作，此外對於旋轉、縮放的動作也會更快、更細與膩滑順不會有停滯感。</p>
 </dd>
 <dt>Krita 3.3 與之後的版本：</dt><dd><dl class="simple">
-<dt>繪製</dt><dd><p><em>On Windows:</em> You can switch between native OpenGL or ANGLE Direct3D 11 rendering. The usual recommendation is to leave it as &quot;Auto&quot;, which Krita will decide the best to use based on some internal compatibility checking. Changes to this option require a restart of Krita to take effect.</p>
+<dt>繪製</dt><dd><p><em>在 Windows 作業系統上：</em>您可以在 OpenGL 或 ANGLE、 Direct3D 11 繪製器之間切換。 通常建議將其保留為「自動」，因為 Krita 會根據一些內部相容性檢查來決定最佳使用模式。 此選項若經更改，需重啟 Krita 才能生效。</p>
 </dd>
 </dl>
 </dd>
-<dt>啟用紋理緩衝區</dt><dd><p>This setting utilizes the graphics card's buffering capabilities to speed things up a bit. Although for now, this feature may be broken on some AMD/Radeon cards and may work fine on some Intel graphics cards.</p>
+<dt>啟用紋理緩衝區</dt><dd><p>勾選此項目可利用顯示卡的緩衝區來加快顯示速度。雖然目前此功能在某些 AMD/Radeon 顯示卡上可能會造成一些問題，在某些 Intel 顯卡上則可能工作良好，因此請實際測試後再選用。</p>
 </dd>
-<dt>檢視縮放演算法</dt><dd><p>The user can choose which scaling mode to use while zooming the canvas. The choice here only affects the way the image is displayed during canvas operations and has no effect on how Krita scales an image when a transformation is applied.</p>
+<dt>檢視縮放演算法</dt><dd><p>使用者可以選擇在檢視縮放畫布時使用哪種縮放演算法。這裡的選擇僅影響畫布操作時影像顯示之畫質，與 Krita 實際調整影像大小、變形工具之類處理後的影像品質沒有關係。</p>
 <dl class="simple">
-<dt>最近相鄰</dt><dd><p>This is the fastest and crudest filtering method. While fast, this results in a large number of artifacts - 'blockiness' during magnification, and aliasing and shimmering during minification.</p>
+<dt>最近相鄰</dt><dd><p>這是最快速又粗糙的過濾演算法，直接使用像素相鄰原圖的顏色。雖然速度很快，但這會導致放大後產生的鋸齒、色塊和摩爾紋，以及縮小影像時發生混色和閃爍。</p>
 </dd>
-<dt>雙線性過濾</dt><dd><p>This is the next step up. This removes the 'blockiness' seen during magnification and gives a smooth looking result. For most purposes this should be a good trade-off between speed and quality.</p>
+<dt>雙線性過濾</dt><dd><p>這個運算結果會比「最近相鄰」演算法的畫質好一點，可以消除放大後的色塊，整體也更加平滑。 在大多數情況下，這種演算法可在速度與畫質之間取得均衡。</p>
 </dd>
-<dt>三線性過濾</dt><dd><p>This should give a little better result than Bilinear Filtering.</p>
+<dt>三線性過濾</dt><dd><p>這個運算的畫質比「雙線性」演算法更好。</p>
 </dd>
-<dt>高品質過濾</dt><dd><p>Only available when your graphics card supports OpenGL 3.0. As the name suggests, this setting provides the best looking image during canvas operations.</p>
+<dt>高品質過濾</dt><dd><p>這個選項只有在您的顯示卡支援 OpenGL 3.0 或更高的版本時才可用。顧名思義，這個選項啟用後可在畫布操作時提供最好的畫質。</p>
 </dd>
 </dl>
 </dd>
@@ -310,35 +310,35 @@
 <div class="versionadded">
 <p><span class="versionmodified added">在 4.2 版本新加入: </span>這些設定僅在 Windows 作業系統下才可用。</p>
 </div>
-<p>Since 4.2 Krita can not just edit floating point images, but also render them on screen in a way that an HDR capable setup can show them as HDR images.</p>
-<p>The HDR settings will show you the display format that Krita can handle, and the current output format. You will want to set the preferred output format to the one closest to what your display can handle to make full use of it.</p>
+<p>從 Krita 4.2 版起，這套軟體不但可以製作浮點通道的影像，還能在支援 HDR 的軟硬體環境下按照 HDR 標準顯示影像。</p>
+<p>HDR 選項會列出 Krita 可用的格式，以及當前輸出格式，請將這選項設定至最接近您所使用的顯示器之格式以充分利用。</p>
 <dl class="simple">
-<dt>顯示格式</dt><dd><p>The format your display is in by default. If this isn't higher than 8bit, there's a good chance your monitor is not an HDR monitor as far as Krita can tell. This can be a hardware issue, but also a graphics driver issue. Check if other HDR applications, or the system HDR settings are configured correctly.</p>
+<dt>顯示格式</dt><dd><p>預設情況下這裡顯示器的格式若只有 8bit，那麼 Krita 會判斷您使用的很有可能不是 HDR 顯示器。這或許是硬體問題，例如顯示器使用的連接線是否支援 HDR ？但也可能是顯示驅動程式沒有正確安裝或過於老舊？同時請檢查其他 HDR 應用程式或系統 HDR 設定是否正確且能正常工作。</p>
 </dd>
-<dt>目前輸出格式</dt><dd><p>What Krita is rendering the canvas to currently.</p>
+<dt>目前輸出格式</dt><dd><p>Krita 當前用於畫布檢視繪製的格式。</p>
 </dd>
-<dt>首選輸出格式</dt><dd><p>Which surface type you prefer. This should be ideally the closest to the display format, but perhaps due to driver issues you might want to try other formats. This requires a restart.</p>
+<dt>首選輸出格式</dt><dd><p>您希望使用於畫布顯示的格式。理想情況下是將這設為與您使用的顯示器規格最接近之格式 ，但可能因為驅動程式的問題讓您必須嘗試使用其它格式。變更這項目後需要重新啟動 Krita 才會生效。</p>
 </dd>
 </dl>
 </section>
 <section id="transparency-checkerboard">
 <h2>透明棋盤格色彩<a class="headerlink" href="#transparency-checkerboard" title="本標題的永久連結">¶</a></h2>
-<p>Krita supports layer transparency. Of course, the nasty thing is that transparency can't be seen. So to indicate transparency at the lowest layer, we use a checker pattern. This part allows you to configure it.</p>
+<p>Krita 所有圖層都支援透明度，因為透明度是無法看到的，所以 Krita 預設以灰、白兩色的棋盤格圖案來代表透明區域。 你可在這些選項中更改棋盤格圖案的相關設定。</p>
 <dl class="simple">
-<dt>大小</dt><dd><p>This sets the size of the checkers which show up in transparent parts of an image.</p>
+<dt>大小</dt><dd><p>這個設定可變更影像透明部分棋盤格的大小。</p>
 </dd>
-<dt>色彩</dt><dd><p>使用者可在這裡設置棋盤格的顏色。</p>
+<dt>色彩</dt><dd><p>使用者可在這個項目設定棋盤格的顏色。</p>
 </dd>
-<dt>捲動時移動棋盤格背景</dt><dd><p>When selected the checkers will move along with opaque elements of an image during canvas Panning, Zooming, etc.  Otherwise the checkers remain stationary and only the opaque parts of an image will move.</p>
+<dt>捲動時移動棋盤格背景</dt><dd><p>勾選這個選項後，棋盤格會在畫布平移、縮放時與影像不透明元素一起移動；反之不勾選的話，棋盤格會保持固定，只有影像與不透明部分會移動。</p>
 </dd>
 </dl>
 </section>
 <section id="canvas-border">
 <h2>畫布外周色彩<a class="headerlink" href="#canvas-border" title="本標題的永久連結">¶</a></h2>
 <dl class="simple">
-<dt>色彩</dt><dd><p>The user can select the color for the canvas i.e. the space beyond a document's boundaries.</p>
+<dt>色彩</dt><dd><p>這裡可以指定畫布範圍外背景的顏色。預設是灰色。</p>
 </dd>
-<dt>隱藏捲動軸</dt><dd><p>Selecting this will hide the scrollbars in all view modes.</p>
+<dt>隱藏捲動軸</dt><dd><p>鉤選此項目時將在所有檢視模式下隱藏捲動軸。</p>
 </dd>
 </dl>
 </section>
@@ -347,18 +347,18 @@
 <div class="versionadded">
 <p><span class="versionmodified added">在 4.0 版本新加入.</span></p>
 </div>
-<p>This allows configuring an automatic pixel-by-pixel grid, which is very useful for doing pixel art.</p>
+<p>這個選項可設定以自動顯示像素格線，此功能對於像素藝術的繪圖非常有幫助。</p>
 <dl class="simple">
 <dt>色彩</dt><dd><p>格線的顏色。</p>
 </dd>
-<dt>開始顯示比例</dt><dd><p>This determines the zoom level at which the pixel grid starts showing, as showing it when the image is zoomed out a lot will make the grid overwhelm the image, and is thus counter productive.</p>
+<dt>開始顯示比例</dt><dd><p>指定像素格線開始顯示出來時的放大比率，因為當影像縮小很多時顯示這個只會讓格線覆蓋在影像，若設定太小只會適得其反。</p>
 </dd>
 </dl>
 </section>
 <section id="miscellaneous">
 <h2>其他<a class="headerlink" href="#miscellaneous" title="本標題的永久連結">¶</a></h2>
 <dl class="simple">
-<dt>顏色中的色彩通道</dt><dd><p>This is supposed to determine what to do when only a single channel is selected in the channels docker, but it doesn't seem to work.</p>
+<dt>顏色中的色彩通道</dt><dd><p>這個選項原本是用於控制色彩通道面板選取某個通到時顯示顏色的功能，但目前它似乎無作用。</p>
 </dd>
 <dt>啟用曲線反鋸齒</dt><dd><p>這功能啟用時可在預覽曲線上消除鋸齒，例如圓形工具或路徑工具的曲線會變更平滑。</p>
 </dd>
