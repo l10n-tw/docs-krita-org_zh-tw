@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Krita Manual 4.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-27 21:21+0800\n"
-"PO-Revision-Date: 2021-09-23 07:06+0000\n"
+"PO-Revision-Date: 2021-09-23 21:06+0000\n"
 "Last-Translator: BiseChen <bise.chen@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <http://weblate.slat.org/projects/"
 "krita-docs/3-reference_manual___preferences___display_settings/zh_Hant/>\n"
@@ -31,17 +31,17 @@ msgstr "「顯示」設定"
 
 #: ../../reference_manual/preferences/display_settings.rst:21
 msgid "Here various settings for the rendering of Krita can be edited."
-msgstr "這裡可以編輯 Krita 顯示相關的設定。"
+msgstr "這裡可以編輯 Krita 顯示方面相關的設定。"
 
 #: ../../reference_manual/preferences/display_settings.rst:24
 #: ../../reference_manual/preferences/display_settings.rst:12
 msgid "OpenGL"
-msgstr "OpenGL"
+msgstr "OpenGL（Open Graphics Library 開放式圖形庫）"
 
 #: ../../reference_manual/preferences/display_settings.rst:26
 msgid ""
 "**For Krita 3.3 or later: Reworded as \"*Canvas Graphics Acceleration*\"**"
-msgstr "**\\ Kruta 3.3 之後的版本：改稱為 \"*\\ 畫布圖形加速\\ *\"**"
+msgstr "**Kruta 3.3 之後的版本：改稱為「 畫布圖形加速」**"
 
 #: ../../reference_manual/preferences/display_settings.rst:28
 msgid ""
@@ -61,7 +61,7 @@ msgid ""
 "may (or may not) be slower than native OpenGL, but it has better "
 "compatibility with typical Windows graphics drivers."
 msgstr ""
-"**\\ Krita 3.3 與之後的版本：**\\ 在 Windows 作業系統下 Krita 還支援了 ANGLE 程式庫，依靠它的幫助以使用 "
+"**Krita 3.3 與之後的版本：**\\ 在 Windows 作業系統下 Krita 還支援了 ANGLE 程式庫，依靠它的幫助以使用 "
 "Direct3D ，ANGLE 的工作原理是將 Krita 使用的 OpenGL 函數轉換為 Direct3D 中的相等功能，可能會（也可能不會）比原生 "
 "OpenGL 慢，但它與典型的 Windows 顯示驅動程式具有更好的相容性。"
 
@@ -78,6 +78,8 @@ msgid ""
 "tools. Also the canvas operations like Rotate, Zoom and Pan should be "
 "considerably faster."
 msgstr ""
+"勾選這個項目後會啟用 OpenGL/ANGLE "
+"「畫布圖形加速」模式。若顯示卡性能夠好，應該可以更快速反應筆刷和工具的操作，此外對於旋轉、縮放的動作也會更快、更細與膩滑順不會有停滯感。"
 
 #: ../../reference_manual/preferences/display_settings.rst:35
 msgid "For Krita 3.3 or later:"
@@ -94,6 +96,8 @@ msgid ""
 "will decide the best to use based on some internal compatibility checking. "
 "Changes to this option require a restart of Krita to take effect."
 msgstr ""
+"*\\ 在 Windows 作業系統上：*\\ 您可以在 OpenGL 或 ANGLE、 Direct3D 11 繪製器之間切換。 "
+"通常建議將其保留為「自動」，因為 Krita 會根據一些內部相容性檢查來決定最佳使用模式。 此選項若經更改，需重啟 Krita 才能生效。"
 
 #: ../../reference_manual/preferences/display_settings.rst:37
 msgid "Use Texture Buffer"
@@ -105,6 +109,8 @@ msgid ""
 "things up a bit. Although for now, this feature may be broken on some AMD/"
 "Radeon cards and may work fine on some Intel graphics cards."
 msgstr ""
+"勾選此項目可利用顯示卡的緩衝區來加快顯示速度。雖然目前此功能在某些 AMD/Radeon 顯示卡上可能會造成一些問題，在某些 Intel "
+"顯卡上則可能工作良好，因此請實際測試後再選用。"
 
 #: ../../reference_manual/preferences/display_settings.rst:49
 msgid "Scaling Mode"
@@ -117,6 +123,8 @@ msgid ""
 "operations and has no effect on how Krita scales an image when a "
 "transformation is applied."
 msgstr ""
+"使用者可以選擇在檢視縮放畫布時使用哪種縮放演算法。這裡的選擇僅影響畫布操作時影像顯示之畫質，與 Krita "
+"實際調整影像大小、變形工具之類處理後的影像品質沒有關係。"
 
 #: ../../reference_manual/preferences/display_settings.rst:42
 msgid "Nearest Neighbour"
@@ -128,6 +136,7 @@ msgid ""
 "in a large number of artifacts - 'blockiness' during magnification, and "
 "aliasing and shimmering during minification."
 msgstr ""
+"這是最快速又粗糙的過濾演算法，直接使用像素相鄰原圖的顏色。雖然速度很快，但這會導致放大後產生的鋸齒、色塊和摩爾紋，以及縮小影像時發生混色和閃爍。"
 
 #: ../../reference_manual/preferences/display_settings.rst:44
 msgid "Bilinear Filtering"
@@ -138,7 +147,7 @@ msgid ""
 "This is the next step up. This removes the 'blockiness' seen during "
 "magnification and gives a smooth looking result. For most purposes this "
 "should be a good trade-off between speed and quality."
-msgstr ""
+msgstr "這個運算結果會比「最近相鄰」演算法的畫質好一點，可以消除放大後的色塊，整體也更加平滑。 在大多數情況下，這種演算法可在速度與畫質之間取得均衡。"
 
 #: ../../reference_manual/preferences/display_settings.rst:46
 msgid "Trilinear Filtering"
@@ -146,7 +155,7 @@ msgstr "三線性過濾"
 
 #: ../../reference_manual/preferences/display_settings.rst:47
 msgid "This should give a little better result than Bilinear Filtering."
-msgstr ""
+msgstr "這個運算的畫質比「雙線性」演算法更好。"
 
 #: ../../reference_manual/preferences/display_settings.rst:49
 msgid "High Quality Filtering"
@@ -157,7 +166,7 @@ msgid ""
 "Only available when your graphics card supports OpenGL 3.0. As the name "
 "suggests, this setting provides the best looking image during canvas "
 "operations."
-msgstr ""
+msgstr "這個選項只有在您的顯示卡支援 OpenGL 3.0 或更高的版本時才可用。顧名思義，這個選項啟用後可在畫布操作時提供最好的畫質。"
 
 #: ../../reference_manual/preferences/display_settings.rst:54
 msgid "HDR"
@@ -172,14 +181,14 @@ msgid ""
 "Since 4.2 Krita can not just edit floating point images, but also render "
 "them on screen in a way that an HDR capable setup can show them as HDR "
 "images."
-msgstr ""
+msgstr "從 Krita 4.2 版起，這套軟體不但可以製作浮點通道的影像，還能在支援 HDR 的軟硬體環境下按照 HDR 標準顯示影像。"
 
 #: ../../reference_manual/preferences/display_settings.rst:62
 msgid ""
 "The HDR settings will show you the display format that Krita can handle, and "
 "the current output format. You will want to set the preferred output format "
 "to the one closest to what your display can handle to make full use of it."
-msgstr ""
+msgstr "HDR 選項會列出 Krita 可用的格式，以及當前輸出格式，請將這選項設定至最接近您所使用的顯示器之格式以充分利用。"
 
 #: ../../reference_manual/preferences/display_settings.rst:64
 msgid "Display Format"
@@ -193,6 +202,9 @@ msgid ""
 "if other HDR applications, or the system HDR settings are configured "
 "correctly."
 msgstr ""
+"預設情況下這裡顯示器的格式若只有 8bit，那麼 Krita 會判斷您使用的很有可能不是 HDR 顯示器。這或許是硬體問題，"
+"例如顯示器使用的連接線是否支援 HDR ？但也可能是顯示驅動程式沒有正確安裝或過於老舊？同時請檢查其他 HDR 應用程式或系統 HDR "
+"設定是否正確且能正常工作。"
 
 #: ../../reference_manual/preferences/display_settings.rst:66
 msgid "Current Output format"
@@ -200,7 +212,7 @@ msgstr "目前輸出格式"
 
 #: ../../reference_manual/preferences/display_settings.rst:67
 msgid "What Krita is rendering the canvas to currently."
-msgstr ""
+msgstr "Krita 當前用於畫布檢視繪製的格式。"
 
 #: ../../reference_manual/preferences/display_settings.rst:69
 msgid "Preferred Output Format"
@@ -212,6 +224,8 @@ msgid ""
 "display format, but perhaps due to driver issues you might want to try other "
 "formats. This requires a restart."
 msgstr ""
+"您希望使用於畫布顯示的格式。理想情況下是將這設為與您使用的顯示器規格最接近之格式 ，但可能因為驅動程式的問題讓您必須嘗試使用其它格式。"
+"變更這項目後需要重新啟動 Krita 才會生效。"
 
 #: ../../reference_manual/preferences/display_settings.rst:72
 msgid "Transparency Checkerboard"
@@ -223,6 +237,8 @@ msgid ""
 "transparency can't be seen. So to indicate transparency at the lowest layer, "
 "we use a checker pattern. This part allows you to configure it."
 msgstr ""
+"Krita 所有圖層都支援透明度，因為透明度是無法看到的，所以 Krita 預設以灰、白兩色的棋盤格圖案來代表透明區域。 "
+"你可在這些選項中更改棋盤格圖案的相關設定。"
 
 #: ../../reference_manual/preferences/display_settings.rst:76
 msgid "Size"
@@ -232,7 +248,7 @@ msgstr "大小"
 msgid ""
 "This sets the size of the checkers which show up in transparent parts of an "
 "image."
-msgstr ""
+msgstr "這個設定可變更影像透明部分棋盤格的大小。"
 
 #: ../../reference_manual/preferences/display_settings.rst:78
 #: ../../reference_manual/preferences/display_settings.rst:86
@@ -242,7 +258,7 @@ msgstr "色彩"
 
 #: ../../reference_manual/preferences/display_settings.rst:79
 msgid "The user can set the colors for the checkers over here."
-msgstr "使用者可在這裡設置棋盤格的顏色。"
+msgstr "使用者可在這個項目設定棋盤格的顏色。"
 
 #: ../../reference_manual/preferences/display_settings.rst:81
 msgid "Move Checkers When Scrolling"
@@ -253,7 +269,7 @@ msgid ""
 "When selected the checkers will move along with opaque elements of an image "
 "during canvas Panning, Zooming, etc.  Otherwise the checkers remain "
 "stationary and only the opaque parts of an image will move."
-msgstr ""
+msgstr "勾選這個選項後，棋盤格會在畫布平移、縮放時與影像不透明元素一起移動；反之不勾選的話，棋盤格會保持固定，只有影像與不透明部分會移動。"
 
 #: ../../reference_manual/preferences/display_settings.rst:84
 #: ../../reference_manual/preferences/display_settings.rst:12
@@ -264,7 +280,7 @@ msgstr "畫布外周色彩"
 msgid ""
 "The user can select the color for the canvas i.e. the space beyond a "
 "document's boundaries."
-msgstr ""
+msgstr "這裡可以指定畫布範圍外背景的顏色。預設是灰色。"
 
 #: ../../reference_manual/preferences/display_settings.rst:89
 msgid "Hide Scrollbars"
@@ -272,7 +288,7 @@ msgstr "隱藏捲動軸"
 
 #: ../../reference_manual/preferences/display_settings.rst:89
 msgid "Selecting this will hide the scrollbars in all view modes."
-msgstr ""
+msgstr "鉤選此項目時將在所有檢視模式下隱藏捲動軸。"
 
 #: ../../reference_manual/preferences/display_settings.rst:92
 msgid "Pixel Grid"
@@ -282,7 +298,7 @@ msgstr "像素格線"
 msgid ""
 "This allows configuring an automatic pixel-by-pixel grid, which is very "
 "useful for doing pixel art."
-msgstr ""
+msgstr "這個選項可設定以自動顯示像素格線，此功能對於像素藝術的繪圖非常有幫助。"
 
 #: ../../reference_manual/preferences/display_settings.rst:99
 msgid "The color of the grid."
@@ -297,7 +313,7 @@ msgid ""
 "This determines the zoom level at which the pixel grid starts showing, as "
 "showing it when the image is zoomed out a lot will make the grid overwhelm "
 "the image, and is thus counter productive."
-msgstr ""
+msgstr "指定像素格線開始顯示出來時的放大比率，因為當影像縮小很多時顯示這個只會讓格線覆蓋在影像，若設定太小只會適得其反。"
 
 #: ../../reference_manual/preferences/display_settings.rst:104
 msgid "Miscellaneous"
@@ -311,7 +327,7 @@ msgstr "顏色中的色彩通道"
 msgid ""
 "This is supposed to determine what to do when only a single channel is "
 "selected in the channels docker, but it doesn't seem to work."
-msgstr ""
+msgstr "這個選項原本是用於控制色彩通道面板選取某個通到時顯示顏色的功能，但目前它似乎無作用。"
 
 #: ../../reference_manual/preferences/display_settings.rst:108
 msgid "Enable Curve Anti-Aliasing"
