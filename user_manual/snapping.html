@@ -21,9 +21,9 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-09-24T07:09:55" />
+  <meta property="og:article:modified_time" content="2021-09-24T22:10:16" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<meta content="How to use the snapping functionality in Krita." name="description" property="og:description" />
+<meta content="如何在 Krita 中使用吸附功能。" name="description" property="og:description" />
 
   
   
@@ -239,66 +239,66 @@
             
   <section id="snapping">
 <span id="index-0"></span><span id="id1"></span><h1>吸附<a class="headerlink" href="#snapping" title="本標題的永久連結">¶</a></h1>
-<p>In Krita 3.0, we now have functionality for Grids and Guides, but of course, this functionality is by itself not that interesting without snapping.</p>
+<p>在 Krita 3.0 中，現在我們有了網格和參考線的功能，但當然，如果少了吸附功能，這個功能本身就沒有那麼有趣。</p>
 <p>Snapping is the ability to have Krita automatically align a selection or shape to the grids and guides, document center and document edges. For Vector layers, this goes even a step further, and we can let you snap to bounding boxes, intersections, extrapolated lines and more.</p>
 <p>All of these can be toggled using the snap pop-up menu which is assigned to <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">S</kbd></kbd> shortcut.</p>
-<p>Now, let us go over what each option means:</p>
+<p>現在，讓我們來看看每個選項的含義：</p>
 <dl class="simple">
-<dt>Grids</dt><dd><p>This will snap the cursor to the current grid, as configured in the grid docker. This doesn’t need the grid to be visible. Grids are saved per document, making this useful for aligning your art work to grids, as is the case for game sprites and grid-based designs.</p>
+<dt>網格</dt><dd><p>This will snap the cursor to the current grid, as configured in the grid docker. This doesn’t need the grid to be visible. Grids are saved per document, making this useful for aligning your art work to grids, as is the case for game sprites and grid-based designs.</p>
 </dd>
-<dt>Pixel</dt><dd><p>This allows to snap to every pixel under the cursor. Similar to Grid Snapping but with a grid having spacing = 1px and offset = 0px.</p>
+<dt>像素</dt><dd><p>This allows to snap to every pixel under the cursor. Similar to Grid Snapping but with a grid having spacing = 1px and offset = 0px.</p>
 </dd>
-<dt>Guides</dt><dd><p>This allows you to snap to guides, which can be dragged out from the ruler. Guides do not need to be visible for this, and are saved per document. This is useful for comic panels and similar print-layouts, though we recommend Scribus for more intensive work.</p>
+<dt>參考線</dt><dd><p>This allows you to snap to guides, which can be dragged out from the ruler. Guides do not need to be visible for this, and are saved per document. This is useful for comic panels and similar print-layouts, though we recommend Scribus for more intensive work.</p>
 </dd>
 </dl>
 <img alt="../_images/Snap-orthogonal.png" src="../_images/Snap-orthogonal.png" />
 <dl class="simple">
-<dt>Orthogonal (Vector Only)</dt><dd><p>This allows you to snap to a horizontal or vertical line from existing vector objects' nodes (Unless dealing with resizing the height or width only, in which case you can drag the cursor over the path). This is useful for aligning object horizontally or vertically, like with comic panels.</p>
+<dt>正交直線（僅向量）</dt><dd><p>This allows you to snap to a horizontal or vertical line from existing vector objects' nodes (Unless dealing with resizing the height or width only, in which case you can drag the cursor over the path). This is useful for aligning object horizontally or vertically, like with comic panels.</p>
 </dd>
 </dl>
 <img alt="../_images/Snap-node.png" src="../_images/Snap-node.png" />
 <dl class="simple">
-<dt>Node (Vector Only)</dt><dd><p>This snaps a vector node or an object to the nodes of another path.</p>
+<dt>節點（僅向量）</dt><dd><p>這會將向量節點或物件吸附到另一條路徑的節點。</p>
 </dd>
 </dl>
 <img alt="../_images/Snap-extension.png" src="../_images/Snap-extension.png" />
 <dl class="simple">
-<dt>Extension (Vector Only)</dt><dd><p>When we draw an open path, the last nodes on either side can be mathematically extended. This option allows you to snap to that. The direction of the node depends on its side handles in path editing mode.</p>
+<dt>延伸（僅向量）</dt><dd><p>When we draw an open path, the last nodes on either side can be mathematically extended. This option allows you to snap to that. The direction of the node depends on its side handles in path editing mode.</p>
 </dd>
 </dl>
 <img alt="../_images/Snap-intersection.png" src="../_images/Snap-intersection.png" />
 <dl class="simple">
-<dt>Intersection (Vector Only)</dt><dd><p>This allows you to snap to an intersection of two vectors.</p>
+<dt>交點（僅向量）</dt><dd><p>吸附到兩個向量的交點。</p>
 </dd>
-<dt>Bounding box (Vector Only)</dt><dd><p>This allows you to snap to the bounding box of a vector shape.</p>
+<dt>邊框（僅向量）</dt><dd><p>吸附到向量圖形的邊框。</p>
 </dd>
-<dt>Image bounds</dt><dd><p>Allows you to snap to the vertical and horizontal borders of an image.</p>
+<dt>影像邊框</dt><dd><p>Allows you to snap to the vertical and horizontal borders of an image.</p>
 </dd>
-<dt>Image center</dt><dd><p>Allows you to snap to the horizontal and vertical center of an image.</p>
+<dt>影像中心</dt><dd><p>吸附到圖像的水平和垂直中心。</p>
 </dd>
 </dl>
-<p>The snap works for the following tools:</p>
+<p>吸附適用於以下工具：</p>
 <ol class="arabic simple">
-<li><p>Straight line</p></li>
-<li><p>Rectangle</p></li>
-<li><p>Ellipse</p></li>
-<li><p>Polyline</p></li>
-<li><p>Path</p></li>
-<li><p>Freehand path</p></li>
+<li><p>直線</p></li>
+<li><p>矩形</p></li>
+<li><p>橢圓形</p></li>
+<li><p>多邊形線條</p></li>
+<li><p>路徑</p></li>
+<li><p>手繪路徑</p></li>
 <li><p>Polygon</p></li>
-<li><p>Gradient</p></li>
-<li><p>Shape Handling tool</p></li>
-<li><p>The Text-tool</p></li>
-<li><p>Assistant editing tools</p></li>
-<li><p>The move tool (note that it snaps to the cursor position and not the bounding box of the layer, selection or whatever you are trying to move)</p></li>
-<li><p>The Transform tool</p></li>
-<li><p>Rectangle select</p></li>
+<li><p>梯形</p></li>
+<li><p>形狀處理工具</p></li>
+<li><p>文字工具</p></li>
+<li><p>輔助編輯工具</p></li>
+<li><p>移動工具（請注意，它會吸附到遊標位置，而不是圖層、選區或您嘗試移動的任何內容的邊框）</p></li>
+<li><p>變形工具</p></li>
+<li><p>矩形選取區域</p></li>
 <li><p>Elliptical select</p></li>
 <li><p>Polygonal select</p></li>
-<li><p>Path select</p></li>
-<li><p>Guides themselves can be snapped to grids and vectors</p></li>
+<li><p>路徑選擇</p></li>
+<li><p>參考線本身也可以吸附到網格與向量</p></li>
 </ol>
-<p>Snapping doesn’t have a sensitivity yet, and by default is set to 10 screen pixels.</p>
+<p>吸附還沒有設置靈敏度，默認設置為 10 屏幕像素。</p>
 </section>
 
 

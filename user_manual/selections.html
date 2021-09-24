@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-09-24T07:09:55" />
+  <meta property="og:article:modified_time" content="2021-09-24T22:10:16" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="Krita選取區域操作。" name="description" property="og:description" />
 
@@ -343,15 +343,15 @@
 </tbody>
 </table>
 <p>你可以在 <a class="reference internal" href="../reference_manual/preferences/general_settings.html#tool-options-settings"><span class="std std-ref">工具設定</span></a> 中更改設定。</p>
-<p>在使用選取工具時將滑鼠移到選取範圍的邊緣，按住左鍵可以拖移範圍；單擊右鍵 <img alt="滑鼠右鍵" src="../_images/Krita_mouse_right.png" /> 並點選<span class="guilabel">編輯選取區域</span>可以快速進入編輯模式。</p>
+<p>在使用選取工具時將滑鼠移到選取範圍的邊緣，按住左鍵可以拖移範圍；單擊右鍵 <img alt="滑鼠右鍵" src="../_images/Krita_mouse_right.png" /> 並點選 <span class="guilabel">編輯選取區域</span> 可以快速進入編輯模式。</p>
 </section>
 <section id="removing-selections">
 <h2>取消選取<a class="headerlink" href="#removing-selections" title="本標題的永久連結">¶</a></h2>
-<p>如果要刪除整個選擇，最簡單的方法是取消選擇所有內容。 <span class="menuselection">Select ‣ Deselect</span> 。快速鍵 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">A</kbd></kbd> 。當你正在執行任一項選擇工具時，在畫布中任意位置按下 <img alt="滑鼠左鍵" src="../_images/Krita_mouse_left.png" /> 可以取消當前選擇。</p>
+<p>如果要刪除整個選擇，最簡單的方法是取消選擇所有內容。 <span class="menuselection">選取 ‣ 取消選取</span> 。快速鍵 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">A</kbd></kbd> 。當你正在執行任一項選擇工具時，在畫布中任意位置按下 <img alt="滑鼠左鍵" src="../_images/Krita_mouse_left.png" /> 可以取消當前選擇。</p>
 </section>
 <section id="display-modes">
 <h2>顯示模式<a class="headerlink" href="#display-modes" title="本標題的永久連結">¶</a></h2>
-<p>狀態欄左下角按鈕可以切換選取區域顯示模式，在標準模式與快速遮色片模式中切換。快速遮色片模式預設為為紅色，可以 <span class="menuselection">Settings ‣ Configure Krita... ‣ Display ‣ Selection Overlay</span> 中變更。在沒有選取任何範圍狀況下按下按鈕不會有任何動作
+<p>狀態欄左下角按鈕可以切換選取區域顯示模式，在標準模式與快速遮色片模式中切換。快速遮色片模式預設為為紅色，可以 <span class="menuselection">設定 ‣ 設定 Krita... ‣ 顯示方式 ‣ 選取區域遮罩色彩</span> 中變更。在沒有選取任何範圍狀況下按下按鈕不會有任何動作
 。</p>
 <img alt="../_images/Ants-displayMode.jpg" src="../_images/Ants-displayMode.jpg" />
 <p>標準顯示模式（默認）是用來查看未選擇區域的最佳選擇。</p>
@@ -363,32 +363,30 @@
 </section>
 <section id="global-selection-mask-painting-a-selection">
 <h2>全域選取遮罩（繪畫出選取區域）<a class="headerlink" href="#global-selection-mask-painting-a-selection" title="本標題的永久連結">¶</a></h2>
-<p>The global Selection Mask is your selection that appears on the layers docker. By default, this is hidden, so you will need to make it visible via <span class="menuselection">Select ‣ Show Global Selection Mask</span>.</p>
+<p>你可以選擇在圖層工具面板顯示全域選取遮罩。默認為隱藏狀態，所以你需要經由 <span class="menuselection">選取 ‣ 顯示全域選取區域遮罩</span>.</p>
 <img alt="../_images/Global-selection-mask.jpg" src="../_images/Global-selection-mask.jpg" />
-<p>Once the global Selection Mask is shown, you will need to create a selection. The benefit of using this is that you can paint your
-selection using any of the normal painting tools, including the transform and move. The information is saved as grayscale.</p>
-<p>You can enter the global selection mask mode quickly from the selection tools by doing <img alt="滑鼠右鍵" src="../_images/Krita_mouse_right.png" /> and select <span class="guilabel">Edit Selection</span>.</p>
+<p>顯示全域選取遮罩時，你需要創建一個選擇才會顯示圖層。使用它的好處是你可以使用任意繪畫工具來創建選擇範圍，包含變形與移動。在這個模式下色彩為灰階。</p>
+<p>您可以通過 <img alt="滑鼠右鍵" src="../_images/Krita_mouse_right.png" /> 從選擇工具中快速進入全域選取區域遮罩模式。並選擇 <span class="guilabel">編輯選取區域</span>。</p>
 </section>
 <section id="selection-from-layer-transparency">
 <h2>自圖層透明度產生選取區域<a class="headerlink" href="#selection-from-layer-transparency" title="本標題的永久連結">¶</a></h2>
-<p>You can create a selection based on a layer's transparency by right-clicking on the layer in the layer docker and selecting <span class="guilabel">Select Opaque</span> from the context menu.</p>
+<p>你可以通過右鍵單擊圖層工具面板中的圖層並從上下文菜單中選擇 <a href="#id1"><span class="problematic" id="id2">:標簽:`選取不透明區域`</span></a> 來創建基於圖層透明度的選區。</p>
 <div class="versionadded">
-<p><span class="versionmodified added">在 4.2 版本新加入: </span>You can also do this for adding, subtracting and intersecting by going to <span class="menuselection">Select ‣ Select Opaque</span>, where you can find specific actions for each.</p>
-<p>If you want to quickly select parts of layers, you can hold the <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="滑鼠左鍵" src="../_images/Krita_mouse_left.png" /> shortcut on the layer <em>thumbnail</em>. To add a selection do <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="滑鼠左鍵" src="../_images/Krita_mouse_left.png" />, to remove <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Alt</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="滑鼠左鍵" src="../_images/Krita_mouse_left.png" /> and to intersect <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Alt</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="滑鼠左鍵" src="../_images/Krita_mouse_left.png" />. This works with any mask that has pixel or vector data (so everything but transform masks).</p>
+<p><span class="versionmodified added">在 4.2 版本新加入: </span>你還可以通過轉到 <span class="menuselection">選取‣ 選取不透明區域</span> 來執行新增、差集和交集，你可以在選單中找到對應操作。</p>
+<p>如果你想快速選擇圖層的一部分，你可以在圖層 <em>縮圖</em> 上按住 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="滑鼠左鍵" src="../_images/Krita_mouse_left.png" /> 。要新增選擇 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="滑鼠左鍵" src="../_images/Krita_mouse_left.png" /> ， 要刪除 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Alt</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="滑鼠左鍵" src="../_images/Krita_mouse_left.png" /> 以及交集 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Alt</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="滑鼠左鍵" src="../_images/Krita_mouse_left.png" /> 。這些組合鍵適用於除了變形遮罩外的任何不管是像素或向量的遮罩模式。</p>
 </div>
 </section>
 <section id="pixel-and-vector-selection-types">
 <span id="pixel-vector-selection"></span><h2>像素及向量選取區域類型<a class="headerlink" href="#pixel-and-vector-selection-types" title="本標題的永久連結">¶</a></h2>
-<p>Vector selections allow you to modify your selection with vector anchor tools. Pixel selections allow you to modify selections with pixel information. They both have their benefits and disadvantages. You can convert one type of selection to another.</p>
+<p>向量選擇可以使用矢量錨點工具修改選擇。像素選擇允許使用像素型態修改選擇。他們有各自的優缺點。您可以在兩種型態間切換使用。</p>
 <img alt="../_images/Vector-pixel-selections.jpg" src="../_images/Vector-pixel-selections.jpg" />
-<p>When creating a selection, you can select what type of selection you want from the Mode in the selection tool options: Pixel or Vector. By default this will be Vector.</p>
-<p>Vector selections can be modified as any other <a class="reference internal" href="vector_graphics.html#vector-graphics"><span class="std std-ref">vector shape</span></a> with the <a class="reference internal" href="../reference_manual/tools/shape_selection.html#shape-selection-tool"><span class="std std-ref">Shape Selection Tool</span></a>, if you try to paint on a vector selection mask it will be converted into a pixel selection. You can also convert vector shapes to selection. In turn, vector selections can be made from vector shapes, and vector shapes can be converted to vector selections using the options in the <span class="guilabel">Selection</span> menu. Krita will add a new vector layer for this shape.</p>
-<p>One of the most common reasons to use vector selections is that they give you the ability to move and transform a selection without the kind of resize artifacts you get with a pixel selection. You can also use the <a class="reference internal" href="../reference_manual/tools/shape_edit.html#shape-edit-tool"><span class="std std-ref">Shape Edit Tool</span></a> to change the anchor points in the selection, allowing you to precisely adjust bezier curves or add corners to rectangular selections.</p>
-<p>If you started with a pixel selection, you can still convert it to a
-vector selection to get these benefits. Go to <span class="menuselection">Select ‣ Convert to Vector Selection</span>.</p>
+<p>創建選區時可以從選取工具選項中選擇你想要的模式：像素或向量。默認情況將是向量模式。</p>
+<p>向量選取可以像任何其它 <span class="xref std std-ref">向量圖形 &lt;vector_graphics&gt;`一樣使用 :ref:`shape_selection_tool</span>，如果您嘗試在向量選擇遮罩上繪畫，它將被轉換為像素選取。你還可以將向量圖形轉換為選擇，反過來也可以將向量選取轉變為向量圖形，Krita 會為這個圖形添加一個新的向量圖層，圖形與選取的轉換可以使用 :guilabel:<a href="#id1"><span class="problematic" id="id2">`</span></a>選則`選單中的選項進行操作。 。</p>
+<p>使用向量選取的最常見原因之一，是它們能夠移動和改變選區而不會像像素選取那樣變動到選擇細節。您還可以使用 ref:<cite>shape_edit_tool</cite> 更改選區中的錨點，從而可以精確調整貝茲曲線或為矩形選擇添加新角。</p>
+<p>如果是從像素選區開始，你仍然可以將其轉換為向量選區以獲得這些優點。到 :menuselection:` 選取 --&gt; 轉成向量選取區域`。</p>
 <div class="admonition note">
 <p class="admonition-title">備註</p>
-<p>If you have multiple levels of transparency when you convert a selection to vector, you will lose the semi-transparent values.</p>
+<p>如果在將選區轉換為向量時有多個級別的透明度，將丟失半透明值。</p>
 </div>
 </section>
 <section id="common-shortcuts-while-using-selections">
