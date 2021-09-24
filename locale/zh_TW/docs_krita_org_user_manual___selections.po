@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Krita Manual 4.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-13 10:38+0000\n"
-"PO-Revision-Date: 2021-09-20 09:06+0000\n"
+"PO-Revision-Date: 2021-09-24 22:06+0000\n"
 "Last-Translator: Enic Huang <x_enic@hotmail.com>\n"
 "Language-Team: Chinese (Traditional) <http://weblate.slat.org/projects/"
 "krita-docs/1-user_manual___selections/zh_Hant/>\n"
@@ -310,7 +310,7 @@ msgid ""
 "activated, you can move it. To quickly go into transform mode, |mouseright| "
 "and select :guilabel:`Edit Selection`."
 msgstr ""
-"在使用選取工具時將滑鼠移到選取範圍的邊緣，按住左鍵可以拖移範圍；單擊右鍵 |mouseright| 並點選\\ :guilabel:`編輯選取區域`\\ "
+"在使用選取工具時將滑鼠移到選取範圍的邊緣，按住左鍵可以拖移範圍；單擊右鍵 |mouseright| 並點選 :guilabel:`編輯選取區域` "
 "可以快速進入編輯模式。"
 
 #: ../../<rst_epilog>:4
@@ -329,8 +329,8 @@ msgid ""
 "selection is in intersect, replace or symmetric difference then you can also "
 "deselect by just |mouseleft| anywhere on the canvas."
 msgstr ""
-"如果要刪除整個選擇，最簡單的方法是取消選擇所有內容。 :menuselection:`Select --> Deselect` 。快速鍵 :kbd:`"
-"Ctrl + Shift + A` 。當你正在執行任一項選擇工具時，在畫布中任意位置按下 |mouseleft| 可以取消當前選擇。"
+"如果要刪除整個選擇，最簡單的方法是取消選擇所有內容。 :menuselection:`選取 --> 取消選取` 。快速鍵 :kbd:`Ctrl + "
+"Shift + A` 。當你正在執行任一項選擇工具時，在畫布中任意位置按下 |mouseleft| 可以取消當前選擇。"
 
 #: ../../<rst_epilog>:2
 msgid "mouseleft"
@@ -349,9 +349,8 @@ msgid ""
 "Configure Krita... --> Display --> Selection Overlay`. If there is no "
 "selection, this button will not do anything."
 msgstr ""
-"狀態欄左下角按鈕可以切換選取區域顯示模式，在標準模式與快速遮色片模式中切換。快速遮色片模式預設為為紅色，可以 :menuselection:`"
-"Settings --> Configure Krita... --> Display --> Selection Overlay` 中變更。"
-"在沒有選取任何範圍狀況下按下按鈕不會有任何動作\n"
+"狀態欄左下角按鈕可以切換選取區域顯示模式，在標準模式與快速遮色片模式中切換。快速遮色片模式預設為為紅色，可以 :menuselection:`設定 --"
+"> 設定 Krita... --> 顯示方式 --> 選取區域遮罩色彩` 中變更。在沒有選取任何範圍狀況下按下按鈕不會有任何動作\n"
 "。"
 
 #: ../../user_manual/selections.rst:81
@@ -383,6 +382,7 @@ msgid ""
 "docker. By default, this is hidden, so you will need to make it visible via :"
 "menuselection:`Select --> Show Global Selection Mask`."
 msgstr ""
+"你可以選擇在圖層工具面板顯示全域選取遮罩。默認為隱藏狀態，所以你需要經由 :menuselection:`選取 --> 顯示全域選取區域遮罩`."
 
 #: ../../user_manual/selections.rst:98
 msgid ""
@@ -391,12 +391,13 @@ msgid ""
 "using any of the normal painting tools, including the transform and move. "
 "The information is saved as grayscale."
 msgstr ""
+"顯示全域選取遮罩時，你需要創建一個選擇才會顯示圖層。使用它的好處是你可以使用任意繪畫工具來創建選擇範圍，包含變形與移動。在這個模式下色彩為灰階。"
 
 #: ../../user_manual/selections.rst:101
 msgid ""
 "You can enter the global selection mask mode quickly from the selection "
 "tools by doing |mouseright| and select :guilabel:`Edit Selection`."
-msgstr ""
+msgstr "您可以通過 |mouseright| 從選擇工具中快速進入全域選取區域遮罩模式。並選擇 :guilabel:`編輯選取區域`。"
 
 #: ../../user_manual/selections.rst:104
 msgid "Selection from layer transparency"
@@ -407,14 +408,14 @@ msgid ""
 "You can create a selection based on a layer's transparency by right-clicking "
 "on the layer in the layer docker and selecting :guilabel:`Select Opaque` "
 "from the context menu."
-msgstr ""
+msgstr "你可以通過右鍵單擊圖層工具面板中的圖層並從上下文菜單中選擇 :標簽:`選取不透明區域` 來創建基於圖層透明度的選區。"
 
 #: ../../user_manual/selections.rst:111
 msgid ""
 "You can also do this for adding, subtracting and intersecting by going to :"
 "menuselection:`Select --> Select Opaque`, where you can find specific "
 "actions for each."
-msgstr ""
+msgstr "你還可以通過轉到 :menuselection:`選取--> 選取不透明區域` 來執行新增、差集和交集，你可以在選單中找到對應操作。"
 
 #: ../../user_manual/selections.rst:113
 msgid ""
@@ -424,6 +425,9 @@ msgid ""
 "to intersect :kbd:`Ctrl + Shift + Alt +` |mouseleft|. This works with any "
 "mask that has pixel or vector data (so everything but transform masks)."
 msgstr ""
+"如果你想快速選擇圖層的一部分，你可以在圖層 *縮圖* 上按住 :kbd:`Ctrl +` |mouseleft| 。要新增選擇 :kbd:`Ctrl + "
+"Shift +` |mouseleft| ， 要刪除 :kbd:`Ctrl + Alt +` |mouseleft| 以及交集 :kbd:`Ctrl + "
+"Shift + Alt +` |mouseleft| 。這些組合鍵適用於除了變形遮罩外的任何不管是像素或向量的遮罩模式。"
 
 #: ../../user_manual/selections.rst:119
 msgid "Pixel and Vector Selection Types"
@@ -435,14 +439,14 @@ msgid ""
 "tools. Pixel selections allow you to modify selections with pixel "
 "information. They both have their benefits and disadvantages. You can "
 "convert one type of selection to another."
-msgstr ""
+msgstr "向量選擇可以使用矢量錨點工具修改選擇。像素選擇允許使用像素型態修改選擇。他們有各自的優缺點。您可以在兩種型態間切換使用。"
 
 #: ../../user_manual/selections.rst:125
 msgid ""
 "When creating a selection, you can select what type of selection you want "
 "from the Mode in the selection tool options: Pixel or Vector. By default "
 "this will be Vector."
-msgstr ""
+msgstr "創建選區時可以從選取工具選項中選擇你想要的模式：像素或向量。默認情況將是向量模式。"
 
 #: ../../user_manual/selections.rst:127
 msgid ""
@@ -454,6 +458,9 @@ msgid ""
 "selections using the options in the :guilabel:`Selection` menu. Krita will "
 "add a new vector layer for this shape."
 msgstr ""
+"向量選取可以像任何其它 :ref:`向量圖形 <vector_graphics>`一樣使用 :ref:`shape_selection_tool`，如果您"
+"嘗試在向量選擇遮罩上繪畫，它將被轉換為像素選取。你還可以將向量圖形轉換為選擇，反過來也可以將向量選取轉變為向量圖形，Krita "
+"會為這個圖形添加一個新的向量圖層，圖形與選取的轉換可以使用 :guilabel:`選則`選單中的選項進行操作。 。"
 
 #: ../../user_manual/selections.rst:129
 msgid ""
@@ -463,19 +470,21 @@ msgid ""
 "`shape_edit_tool` to change the anchor points in the selection, allowing you "
 "to precisely adjust bezier curves or add corners to rectangular selections."
 msgstr ""
+"使用向量選取的最常見原因之一，是它們能夠移動和改變選區而不會像像素選取那樣變動到選擇細節。您還可以使用 ref:`shape_edit_tool` "
+"更改選區中的錨點，從而可以精確調整貝茲曲線或為矩形選擇添加新角。"
 
 #: ../../user_manual/selections.rst:131
 msgid ""
 "If you started with a pixel selection, you can still convert it to a vector "
 "selection to get these benefits. Go to :menuselection:`Select --> Convert to "
 "Vector Selection`."
-msgstr ""
+msgstr "如果是從像素選區開始，你仍然可以將其轉換為向量選區以獲得這些優點。到 :menuselection:` 選取 --> 轉成向量選取區域`。"
 
 #: ../../user_manual/selections.rst:135
 msgid ""
 "If you have multiple levels of transparency when you convert a selection to "
 "vector, you will lose the semi-transparent values."
-msgstr ""
+msgstr "如果在將選區轉換為向量時有多個級別的透明度，將丟失半透明值。"
 
 #: ../../user_manual/selections.rst:138
 msgid "Common Shortcuts while Using Selections"
