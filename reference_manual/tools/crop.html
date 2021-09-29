@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-09-28T19:02:51" />
+  <meta property="og:article:modified_time" content="2021-09-29T06:02:50" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="Krita 的裁切工具參考。" name="description" property="og:description" />
 
@@ -165,18 +165,18 @@
 <li class="toctree-l3"><a class="reference internal" href="gradient_edit.html">Gradient Editing Tool</a></li>
 <li class="toctree-l3"><a class="reference internal" href="pattern_edit.html">Pattern Editing Tool</a></li>
 <li class="toctree-l3"><a class="reference internal" href="calligraphy.html">西文書法工具</a></li>
-<li class="toctree-l3"><a class="reference internal" href="freehand_brush.html">Freehand Brush Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="freehand_brush.html">手繪筆刷工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="line.html">Straight Line Tool</a></li>
 <li class="toctree-l3"><a class="reference internal" href="rectangle.html">Rectangle Tool</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ellipse.html">橢圓工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="polygon.html">Polygon Tool</a></li>
 <li class="toctree-l3"><a class="reference internal" href="polyline.html">Polyline Tool</a></li>
 <li class="toctree-l3"><a class="reference internal" href="path.html">Bezier Curve Tool</a></li>
-<li class="toctree-l3"><a class="reference internal" href="freehand_path.html">Freehand Path Tool</a></li>
-<li class="toctree-l3"><a class="reference internal" href="dyna.html">Dynamic Brush Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="freehand_path.html">手繪路徑工具</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dyna.html">力學筆刷工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="multibrush.html">Multibrush Tool</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">裁切工具</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#continuous-crop">Continuous Crop</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#continuous-crop">連續裁切</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="move.html">移動工具</a></li>
@@ -190,7 +190,7 @@
 <li class="toctree-l3"><a class="reference internal" href="reference_images_tool.html">Reference Images Tool</a></li>
 <li class="toctree-l3"><a class="reference internal" href="measure.html">Measure Tool</a></li>
 <li class="toctree-l3"><a class="reference internal" href="rectangular_select.html">Rectangular Selection Tool</a></li>
-<li class="toctree-l3"><a class="reference internal" href="elliptical_select.html">Elliptical Selection Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="elliptical_select.html">橢圓選取區域工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="freehand_select.html">Freehand Selection Tool</a></li>
 <li class="toctree-l3"><a class="reference internal" href="polygonal_select.html">Polygonal Selection Tool</a></li>
 <li class="toctree-l3"><a class="reference internal" href="contiguous_select.html">相連選取區域工具</a></li>
@@ -293,36 +293,36 @@
             
   <section id="crop-tool">
 <span id="index-0"></span><span id="id1"></span><h1>裁切工具<a class="headerlink" href="#crop-tool" title="本標題的永久連結">¶</a></h1>
-<p>The crop tool can be used to crop an image or layer. To get started, choose the <span class="guilabel">Crop</span> tool and then click once to select the entire canvas. Using this method you ensure that you don't inadvertently grab outside of the visible canvas as part of the crop. You can then use the options below to refine your crop. Press the <kbd class="kbd docutils literal notranslate">Enter</kbd> key to finalize the crop action, or use the <span class="guilabel">Crop</span> button in the tool options docker.</p>
-<p>At its most basic, the crop tool allows you to size a rectangle around an area and reduce your image or layer to only that content which is contained within that area. There are several options which give a bit more flexibility and precision.</p>
-<p>The two numbers on the left are the exact horizontal position and vertical position of the left and top of the cropping frame respectively. The numbers are the right are from top to bottom: width, height, and aspect ratio. Selecting the check boxes will keep any one of these can be locked to allow you to manipulate the other two without losing the position or ratio of the locked property.</p>
+<p>裁切工具能被用於裁切一個圖像或圖層。首先選取 <span class="guilabel">裁切工具</span> 後點選一次來選取整個畫布。使用這個方式的話請確保不會在不經意間拿可見圖層之外的地方作裁切。然後你可以用下面提到的選項來調整裁切。最後要完成裁切的話，按 <kbd class="kbd docutils literal notranslate">Enter</kbd> 鍵或是在工具選項裡按 <span class="guilabel">裁切</span> 按鈕。</p>
+<p>作為裁切工具，最基本的功能可以讓你設定一個矩形區域，然後把影像和圖層裁切在矩形範圍內。這裡會有數個工具選項可以給予更靈活和更精確的控制。</p>
+<p>在工具選項裡左邊 X 和 Y 的數值分別代表著裁切區塊左上角的水平和垂直位置。而在右邊的數值分別是：寬度、高度和寬高比。旁邊的鎖定圖示可以鎖住數值，這樣在調整其他數值時不會改變鎖定數值的位置或比例。</p>
 <dl>
-<dt>Center</dt><dd><p>Keeps the crop area centered.</p>
+<dt>中間</dt><dd><p>固定裁切區域的中心位置。</p>
 </dd>
-<dt>Grow</dt><dd><p>Allows the crop area to expand beyond the image boundaries.</p>
+<dt>擴張</dt><dd><p>能讓裁切區域超出影像的邊界。</p>
 </dd>
-<dt>Applies to</dt><dd><div class="versionchanged">
+<dt>套用到</dt><dd><div class="versionchanged">
 <p><span class="versionmodified changed">在 5.0 版本變更.</span></p>
 </div>
-<p>Lets you apply the crop to the whole image or a subset:</p>
+<p>可以設定要裁切整個影像或是其他選項：</p>
 <dl class="simple">
-<dt>Image</dt><dd><p>Crops the whole image, the canvas, all layers and all frames are cropped.</p>
+<dt>影像</dt><dd><p>裁切整個影像，畫布、所有圖層和影格都會被裁切。</p>
 </dd>
-<dt>Canvas</dt><dd><p>Crops only the canvas, all layers and frames are left alone.</p>
+<dt>畫布</dt><dd><p>只裁切畫布，不會裁切圖層和影格。</p>
 </dd>
-<dt>Layer</dt><dd><p>Crops only the current layer and its animation frames.</p>
+<dt>圖層</dt><dd><p>只裁切目前圖層和它的動畫影格。</p>
 </dd>
-<dt>Frame</dt><dd><p>Crops only the current animation frame.</p>
+<dt>影格</dt><dd><p>只裁切目前的動畫影格。</p>
 </dd>
 </dl>
-<p>When you are ready, hit the <span class="guilabel">Crop</span> button and the crop will apply to your image.</p>
+<p>當設定完畢後，按 <span class="guilabel">裁切</span> 按鈕來裁切影像。</p>
 </dd>
-<dt>Decoration</dt><dd><p>Help you make a composition by showing you lines that divide up the screen. You can for example show thirds here, so you can crop your image according to the <a class="reference external" href="https://en.wikipedia.org/wiki/Rule_of_thirds">Rule of Thirds</a>.</p>
+<dt>輔助線</dt><dd><p>設定一個會把裁切區域劃分成數個區域，幫助合成的輔助線條。比如說設定成三分法網格，然後就可以以<cite>三分法 &lt;https://zh.wikipedia.org/zh-tw/%E4%B8%89%E5%88%86%E6%B3%95_(%E6%A7%8B%E5%9C%96)&gt;</cite>來裁切影像。</p>
 </dd>
 </dl>
 <section id="continuous-crop">
-<h2>Continuous Crop<a class="headerlink" href="#continuous-crop" title="本標題的永久連結">¶</a></h2>
-<p>If you crop an image, and try to start a new one directly afterwards, Krita will attempt to recall the previous crop, so you can continue it. This is the <em>continuous crop</em>. You can press the <kbd class="kbd docutils literal notranslate">Esc</kbd> key to cancel this and crop anew.</p>
+<h2>連續裁切<a class="headerlink" href="#continuous-crop" title="本標題的永久連結">¶</a></h2>
+<p>當你裁切了一個影像後，嘗試再次裁切一個影像時，Krita 會調回上次裁切的區域來讓你繼續裁切。這就是<em>連續裁切</em>。你可以按 <kbd class="kbd docutils literal notranslate">Esc</kbd> 鍵來取消然後開始一個新的裁切。</p>
 </section>
 </section>
 
@@ -349,7 +349,7 @@
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>1ef56ca</code>
+          修訂版本 <code>7d29215</code>
         </span>
       
 

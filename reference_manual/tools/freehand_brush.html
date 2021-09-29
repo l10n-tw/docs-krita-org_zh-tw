@@ -6,7 +6,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta property="og:title" name="title" content="Freehand Brush Tool" />
+  <meta property="og:title" name="title" content="手繪筆刷工具" />
   <meta property="og:site-name" content="Krita Manual" />
   <meta property="og:type" content="article" />
   <meta property="og:locale" content="zh_TW" />
@@ -21,13 +21,13 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-09-28T19:02:51" />
+  <meta property="og:article:modified_time" content="2021-09-29T06:02:50" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<meta content="Krita's freehand brush tool reference, containing how to use the stabilizer in krita." name="description" />
+<meta content="Krita 的手繪筆刷工具參考，包含 Krita 的防抖使用方法。" name="description" />
 
   
   
-  <title>Freehand Brush Tool &mdash; Krita Manual 5.0.0 說明文件</title>
+  <title>手繪筆刷工具 &mdash; Krita Manual 5.0.0 說明文件</title>
   
 
   
@@ -165,9 +165,9 @@
 <li class="toctree-l3"><a class="reference internal" href="gradient_edit.html">Gradient Editing Tool</a></li>
 <li class="toctree-l3"><a class="reference internal" href="pattern_edit.html">Pattern Editing Tool</a></li>
 <li class="toctree-l3"><a class="reference internal" href="calligraphy.html">西文書法工具</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Freehand Brush Tool</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#hotkeys-and-sticky-keys">Hotkeys and Sticky keys</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#tool-options">Tool Options</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">手繪筆刷工具</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#hotkeys-and-sticky-keys">快捷鍵和相黏鍵</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tool-options">工具選項</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="line.html">Straight Line Tool</a></li>
@@ -176,8 +176,8 @@
 <li class="toctree-l3"><a class="reference internal" href="polygon.html">Polygon Tool</a></li>
 <li class="toctree-l3"><a class="reference internal" href="polyline.html">Polyline Tool</a></li>
 <li class="toctree-l3"><a class="reference internal" href="path.html">Bezier Curve Tool</a></li>
-<li class="toctree-l3"><a class="reference internal" href="freehand_path.html">Freehand Path Tool</a></li>
-<li class="toctree-l3"><a class="reference internal" href="dyna.html">Dynamic Brush Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="freehand_path.html">手繪路徑工具</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dyna.html">力學筆刷工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="multibrush.html">Multibrush Tool</a></li>
 <li class="toctree-l3"><a class="reference internal" href="crop.html">裁切工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="move.html">移動工具</a></li>
@@ -191,7 +191,7 @@
 <li class="toctree-l3"><a class="reference internal" href="reference_images_tool.html">Reference Images Tool</a></li>
 <li class="toctree-l3"><a class="reference internal" href="measure.html">Measure Tool</a></li>
 <li class="toctree-l3"><a class="reference internal" href="rectangular_select.html">Rectangular Selection Tool</a></li>
-<li class="toctree-l3"><a class="reference internal" href="elliptical_select.html">Elliptical Selection Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="elliptical_select.html">橢圓選取區域工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="freehand_select.html">Freehand Selection Tool</a></li>
 <li class="toctree-l3"><a class="reference internal" href="polygonal_select.html">Polygonal Selection Tool</a></li>
 <li class="toctree-l3"><a class="reference internal" href="contiguous_select.html">相連選取區域工具</a></li>
@@ -268,7 +268,7 @@
         
           <li><a href="../tools.html">工具</a> &raquo;</li>
         
-      <li>Freehand Brush Tool</li>
+      <li>手繪筆刷工具</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -293,65 +293,63 @@
            <div itemprop="articleBody">
             
   <section id="freehand-brush-tool">
-<span id="index-0"></span><span id="id1"></span><h1>Freehand Brush Tool<a class="headerlink" href="#freehand-brush-tool" title="本標題的永久連結">¶</a></h1>
-<p><img alt="toolfreehandbrush" src="../../_images/freehand_brush_tool.svg" /></p>
-<p>The default tool you have selected on Krita start-up, and likely the tool that you will use the most.</p>
-<p>The freehand brush tool allows you to paint on paint layers without constraints like the straight line tool. It makes optimal use of your tablet's input settings to control the brush-appearance.
-To switch the brush, make use of the brush-preset docker.</p>
+<span id="index-0"></span><span id="id1"></span><h1>手繪筆刷工具<a class="headerlink" href="#freehand-brush-tool" title="本標題的永久連結">¶</a></h1>
+<p><img alt="手繪筆刷工具" src="../../_images/freehand_brush_tool.svg" /></p>
+<p>在 Krita 啟動時選取的基本工具，是你未來最常使用的工具。</p>
+<p>手繪筆刷工具可以讓你自由地在顏料圖層上色，而不用像是直線工具般有著限制。可以透過設定數位板來最佳化輸入設定以控制筆刷的樣貌。再切換筆刷，請使用筆刷預設選擇器。</p>
 <section id="hotkeys-and-sticky-keys">
-<h2>Hotkeys and Sticky keys<a class="headerlink" href="#hotkeys-and-sticky-keys" title="本標題的永久連結">¶</a></h2>
-<p>The freehand brush tool's hotkey is <kbd class="kbd docutils literal notranslate">B</kbd>.</p>
+<h2>快捷鍵和相黏鍵<a class="headerlink" href="#hotkeys-and-sticky-keys" title="本標題的永久連結">¶</a></h2>
+<p>手繪筆刷工具的快捷鍵是 <kbd class="kbd docutils literal notranslate">B</kbd>。</p>
 <ul class="simple">
-<li><p>The alternate invocation is the ''color sampler'' (standardly invoked by the <kbd class="kbd docutils literal notranslate">Ctrl</kbd> key). Press the <kbd class="kbd docutils literal notranslate">Ctrl</kbd> key to switch the tool to &quot;color sampler&quot;, use left or right click to sample fore and background color respectively. Release the <kbd class="kbd docutils literal notranslate">Ctrl</kbd> key to return to the freehand brush tool.</p></li>
-<li><p>The Primary setting is &quot;size&quot; (standardly invoked by the <kbd class="kbd docutils literal notranslate">Shift</kbd> key). Press the <kbd class="kbd docutils literal notranslate">Shift</kbd> key and drag outward to increase brush size. Drag inward to decrease it.</p></li>
-<li><p>You can also press the <kbd class="kbd docutils literal notranslate">V</kbd> key as a stickykey for the straight-line tool.</p></li>
+<li><p>切換備選功能是「色彩取樣器」（通常來說是使用 <kbd class="kbd docutils literal notranslate">Ctrl</kbd> 鍵）。按 <kbd class="kbd docutils literal notranslate">Ctrl</kbd> 鍵後會把工具換成「色彩取樣器工具」，左鍵或右鍵會分別採樣顏色為前景色或背景色。放開 <kbd class="kbd docutils literal notranslate">Ctrl</kbd> 鍵會換回手繪筆刷工具。</p></li>
+<li><p>主要的設定是「大小」（通常來說是使用 <kbd class="kbd docutils literal notranslate">Shift</kbd> 鍵）。按 :kbd:<a href="#id1"><span class="problematic" id="id2">`</span></a>Shift`鍵後向外拖曳會增加筆刷大小，向內拖曳會減少筆刷大小。</p></li>
+<li><p>你也可以按 <kbd class="kbd docutils literal notranslate">V</kbd> 鍵來把工具換成直線工具。</p></li>
 </ul>
-<p>The hotkey can be edited in <span class="menuselection">Settings ‣ Configure Krita... ‣ Shortcuts</span>.
-The sticky-keys can be edited in <span class="menuselection">Settings ‣ Configure Krita... ‣ Canvas Input Settings</span>.</p>
+<p>快捷鍵可以透過 <span class="menuselection">設定 ‣ 設定 Krita... ‣ 快捷鍵</span> 修改。而相黏鍵可以在 <span class="menuselection">設定 ‣ 設定 Krita... ‣ 畫布輸入設定</span> 中更改。</p>
 </section>
 <section id="tool-options">
-<h2>Tool Options<a class="headerlink" href="#tool-options" title="本標題的永久連結">¶</a></h2>
+<h2>工具選項<a class="headerlink" href="#tool-options" title="本標題的永久連結">¶</a></h2>
 <section id="smoothing">
-<span id="stroke-smoothing"></span><span id="index-1"></span><h3>Smoothing<a class="headerlink" href="#smoothing" title="本標題的永久連結">¶</a></h3>
-<p>Smoothing, also known as stabilising in some programs, allows the program to correct the stroke. Useful for people with shaky hands, or particularly difficult long lines.</p>
-<p>The following options can be selected:</p>
+<span id="stroke-smoothing"></span><span id="index-1"></span><h3>筆刷平滑<a class="headerlink" href="#smoothing" title="本標題的永久連結">¶</a></h3>
+<p>筆刷平滑，在一些軟體又名防抖，可以讓軟體修正筆刷線條。這對於有手抖的人，或是難以畫出較長線條時十分實用。</p>
+<p>這裡有數個選項可供選擇：</p>
 <dl>
-<dt>No Smoothing.</dt><dd><p>The input from the tablet translates directly to the screen. This is the fastest option, and good for fine details.</p>
+<dt>無</dt><dd><p>來自數位板的輸入會直接轉換到畫面中。這是運行得最快的選項，也是需要完整細節時不錯的選擇。</p>
 </dd>
-<dt>Basic Smoothing.</dt><dd><p>This option will smooth the input of older tablets like the Wacom Graphire 3. If you experience slightly jagged lines without any smoothing on, this option will apply a very little bit of smoothing to get rid of those lines.</p>
+<dt>基本</dt><dd><p>這個選項會平滑老舊數位板的輸入，像是 Wacom Graphire 3。如果你在沒有任何平滑處理的情況下遇到略微鋸齒狀的線條時，使用這個選項會增加一點點的平滑來解決這些線條。</p>
 </dd>
-<dt>Weighted smoothing:</dt><dd><p>This option allows you to use the following parameters to make the smoothing stronger or weaker:</p>
+<dt>權衡</dt><dd><p>這個選項可以透過接下來的選項來控制平滑強度：</p>
 <dl class="simple">
-<dt>Distance</dt><dd><p>The distance the brush needs to move before the first dab is drawn. (Literally the amount of events received by the tablet before the first dab is drawn.)</p>
+<dt>距離</dt><dd><p>在第一個下筆點前筆刷需要移動的距離。（基本上就是數位板在第一次下筆前動作的數量。）</p>
 </dd>
-<dt>Stroke Ending</dt><dd><p>This controls how much the line will attempt to reach the last known position of the cursor after the left-mouse button/or stylus is lifted. Will currently always result in a straight line, so use with caution.</p>
+<dt>筆末跟隨</dt><dd><p>這個選項會控制在下筆後移動時線條嘗試到達移動前位置的長度。因為結果有可能會是直線，所以請小心使用。</p>
 </dd>
-<dt>Smooth Pressure</dt><dd><p>This will apply the smoothing on the pressure input as well, resulting in more averaged size for example.</p>
+<dt>平滑壓力</dt><dd><p>這個選項會把平滑設定也在筆壓中生效，結果會像是筆刷大小會更平均。</p>
 </dd>
-<dt>Scalable Distance</dt><dd><p>This makes it so that the numbers involved will be scaled along the zoom level.</p>
+<dt>隨檢視縮放距離</dt><dd><p>這個選項會讓數值隨著檢視的比率變動。</p>
 </dd>
 </dl>
 </dd>
-<dt>Stabilizer</dt><dd><p>This option averages all inputs from the tablet. It is different from weighted smoothing in that it allows for always completing the line. It will draw a circle around your cursor and the line will be a bit behind your cursor while painting.</p>
+<dt>防抖</dt><dd><p>這個選項會平均數位板裡的所有輸入。這個選項和權衡的差異是防抖可以一直完成線條。防抖會在游標生成一個圓圈，在圓圈範圍外時線條會跟著游標移動上色。</p>
 <dl class="simple">
-<dt>Distance</dt><dd><p>This is the strength of the smoothing.</p>
+<dt>距離</dt><dd><p>這是平滑筆刷的強度。</p>
 </dd>
-<dt>Delay</dt><dd><p>This toggles and determines the size of the dead zone around the cursor. This can be used to create sharp corners with more control.</p>
+<dt>延遲</dt><dd><p>這個可以開關和判定游標範圍死區的大小。這個可以用來控制以畫出銳角。</p>
 </dd>
-<dt>Finish Line</dt><dd><p>This ensures that the line will be finished.</p>
+<dt>筆末挑尖</dt><dd><p>這個會保證線條最終會被完成。</p>
 </dd>
-<dt>Stabilize sensors</dt><dd><p>Similar to <span class="guilabel">Smooth Pressure</span>, this allows the input (pressure, speed, tilt) to be smoother.</p>
+<dt>穩定檢測器</dt><dd><p>接近<span class="guilabel">平滑壓力</span>，這能讓輸入（筆壓、速度、傾斜）變得滑順。</p>
 </dd>
-<dt>Scalable Distance</dt><dd><p>This makes it so that the numbers involved will be scaled along the zoom level.</p>
+<dt>隨檢視縮放距離</dt><dd><p>這個選項會讓數值隨著檢視的比率變動。</p>
 </dd>
 </dl>
 </dd>
 </dl>
 </section>
 <section id="assistants">
-<span id="index-2"></span><h3>Assistants<a class="headerlink" href="#assistants" title="本標題的永久連結">¶</a></h3>
-<p>Ticking this will allow snapping to <a class="reference internal" href="assistant.html#assistant-tool"><span class="std std-ref">輔助尺工具</span></a>, and the hotkey to toggle it is <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">L</kbd></kbd>. See <a class="reference internal" href="../../user_manual/painting_with_assistants.html#painting-with-assistants"><span class="std std-ref">使用輔助尺來繪畫</span></a> for more information.</p>
-<p>The slider will determine the amount of snapping, with 1000 being perfect snapping, and 0 being no snapping at all. For situations where there is more than one assistant on the canvas, the defaultly ticked <span class="guilabel">Snap Single</span> means that Krita will only snap to a single assistant at a time, preventing noise. Unticking it allows you to chain assistants together and snap along them.</p>
+<span id="index-2"></span><h3>吸附到輔助尺<a class="headerlink" href="#assistants" title="本標題的永久連結">¶</a></h3>
+<p>勾選這個選項能把線條吸附在<a class="reference internal" href="assistant.html#assistant-tool"><span class="std std-ref">輔助尺工具</span></a>上，快捷鍵是 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">L</kbd></kbd>。參閱 <a class="reference internal" href="../../user_manual/painting_with_assistants.html#painting-with-assistants"><span class="std std-ref">使用輔助尺來繪畫</span></a> 以取得更多資訊。</p>
+<p>磁性選項會判斷吸附的效果，1000 時為完美地吸附在輔助尺上，而 0 則是不吸附。當有多個輔助尺在畫布上時，預設勾選的<span class="guilabel">單一吸附</span>表示 Krita 在同時間只會吸附其中一個來防止雜亂。取消勾選來使用多個輔助尺輔助作畫。</p>
 </section>
 </section>
 </section>
@@ -379,7 +377,7 @@ The sticky-keys can be edited in <span class="menuselection">Settings ‣ Config
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>1ef56ca</code>
+          修訂版本 <code>7d29215</code>
         </span>
       
 
