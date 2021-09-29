@@ -6,7 +6,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta property="og:title" name="title" content="簡易噪訊" />
+  <meta property="og:title" name="title" content="單體雜點" />
   <meta property="og:site-name" content="Krita Manual" />
   <meta property="og:type" content="article" />
   <meta property="og:locale" content="zh_TW" />
@@ -21,13 +21,13 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-09-29T14:02:36" />
+  <meta property="og:article:modified_time" content="2021-09-29T23:02:36" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="如何在 Krita 中使用填充圖層生成出簡易噪訊。" name="description" />
 
   
   
-  <title>簡易噪訊 &mdash; Krita Manual 5.0.0 說明文件</title>
+  <title>單體雜點 &mdash; Krita Manual 5.0.0 說明文件</title>
   
 
   
@@ -153,7 +153,7 @@
 <li class="toctree-l4"><a class="reference internal" href="pattern_fill.html">圖案</a></li>
 <li class="toctree-l4"><a class="reference internal" href="screentone.html">網點</a></li>
 <li class="toctree-l4"><a class="reference internal" href="seexpr.html">SeExpr</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="#">簡易噪訊</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">單體雜點</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../fill_layers.html#painting-on-a-fill-layer">在填充圖層上繪畫</a></li>
 </ul>
 </li>
@@ -251,7 +251,7 @@
         
           <li><a href="../fill_layers.html">填充圖層</a> &raquo;</li>
         
-      <li>簡易噪訊</li>
+      <li>單體雜點</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -276,13 +276,13 @@
            <div itemprop="articleBody">
             
   <section id="simplex-noise">
-<span id="simplex-fill"></span><span id="index-0"></span><h1>簡易噪訊<a class="headerlink" href="#simplex-noise" title="本標題的永久連結">¶</a></h1>
+<span id="simplex-fill"></span><span id="index-0"></span><h1>單體雜點<a class="headerlink" href="#simplex-noise" title="本標題的永久連結">¶</a></h1>
 <div class="versionadded">
 <p><span class="versionmodified added">在 4.2 版本新加入.</span></p>
 </div>
 <img alt="../../../_images/fill_layer_simplex_noise.png" src="../../../_images/fill_layer_simplex_noise.png" />
 <p>這會生成 OpenSimplex 噪訊來填充整個圖層。 OpenSimplex 不同於更常見的 培林噪訊（其他軟體中通常稱為“雲狀效果”），也不同於改良培林噪訊。 OpenSimplex 具有較少的維度偽影（細微的“檢查器”紋理經常在高頻率培林噪訊發現）並且是一種普遍存在的開放標準。由於 OpenSimplex 噪訊對於紋理的生成很重要，因此該填充圖層可以選擇在畫布邊緣周圍循環。可以 <a class="reference external" href="https://en.wikipedia.org/wiki/OpenSimplex_noise">在這裡</a> 有更多相關訊息。</p>
-<p>簡易噪訊有幾種不同的用法。其中一種是創建有趣的循環模式，利用不同的混合模式進行堆疊多個簡易噪訊來實現。當調整圖層的混和時，會變得更具表現力。對於紋理藝術家來說，當與漸變貼圖過濾層融合為循環紋理提供顏色多樣性時，這是一個實用的流程。對於傳統藝術家，可以將簡易噪訊層轉換為選取遮罩以創建畫筆透明度動態和遮罩效果。嘗試不同的組合會有很多有趣的組合產生！</p>
+<p>單體雜點有幾種不同的用法。其中一種是創建有趣的循環模式，利用不同的混合模式進行堆疊多個單體雜點來實現。當調整圖層的混和時，會變得更具表現力。對於紋理藝術家來說，當與漸變貼圖過濾層融合為循環紋理提供顏色多樣性時，這是一個實用的流程。對於傳統藝術家，可以將單體雜點層轉換為選取遮罩以創建畫筆透明度動態和遮罩效果。嘗試不同的組合會有很多有趣的組合產生！</p>
 <dl class="simple">
 <dt>循環</dt><dd><p>是否強制開啟模式循環。</p>
 </dd>
