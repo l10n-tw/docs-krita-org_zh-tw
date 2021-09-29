@@ -21,9 +21,9 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-09-29T06:02:50" />
+  <meta property="og:article:modified_time" content="2021-09-29T14:02:36" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<meta content="How to use SeExpr as a Fill Layer in Krita." name="description" />
+<meta content="在 Krita 如何在填充圖層使用 SeExpr。" name="description" />
 
   
   
@@ -281,8 +281,7 @@
 <p><span class="versionmodified added">在 4.4 版本新加入.</span></p>
 </div>
 <img alt="../../../_images/SeExpr-David-Revoy.jpg" src="../../../_images/SeExpr-David-Revoy.jpg" />
-<p>Fills the layer with a pattern specified through Disney Animation's
-<a class="reference external" href="https://wdas.github.io/SeExpr">SeExpr expression language</a>.</p>
+<p>使用迪士尼動畫的 <a class="reference external" href="https://wdas.github.io/SeExpr">SeExpr 表達式語言</a> 。</p>
 <div class="admonition seealso">
 <p class="admonition-title">也參考</p>
 <ul class="simple">
@@ -294,31 +293,21 @@
 <li><p><a class="reference external" href="https://thebookofshaders.com/">The Book of Shaders</a></p></li>
 </ul>
 </div>
-<p>SeExpr is an embeddable, arithmetic expression language that enables you to
-write shader-like scripts. Through this language, Krita can add dynamically
-generated textures like lava (example above), force fields, wood, marble,
-etc. to your layers.</p>
-<p>As with Patterns, you can create your own and use those as well.
-For some examples, please check out the thread <a class="reference external" href="https://krita-artists.org/t/procedural-texture-generator-example-and-wishes/7638">&quot;Procedural texture generator (example and wishes)&quot; on Krita Artists</a>.
-You can download them as a bundle through <a class="reference external" href="https://www.amyspark.me/blog/posts/2020/07/03/third-alpha-release.html">Amyspark's blog</a>.</p>
+<p>SeExpr 是一種可嵌入的算術表達式語言，能夠編寫類似著色器的腳本。通過這種語言，Krita 可以添加動態生成的紋理，如熔岩（上圖）、力場、木材、大理石等，在填充圖層中。</p>
+<p>與其他模式一樣，可以創建自己的模組並使用。有關一些示例，請查看線上教學 <a class="reference external" href="https://krita-artists.org/t/procedural-texture-generator-example-and-wishes/7638">&quot;Krita Artists 上的主題 : 程序紋理生成器（範例和期望）&quot;</a> 。並下載下來使用。</p>
 <dl>
-<dt>Script</dt><dd><p>Select the desired preset out of any existing bundled presets.
-This tab is identical to the Pattern preset selector.</p>
+<dt>指令稿</dt><dd><p>任何有的資源預設中選擇所需的設定。此選項與圖案預設選擇器相同。</p>
 <img alt="../../../_images/SeExpr_script.png" src="../../../_images/SeExpr_script.png" />
 </dd>
-<dt>Options</dt><dd><p>This tab allows you to edit the selected preset, and apply its script
-to the layer.</p>
+<dt>選項</dt><dd><p>此選項標籤分頁可以編輯選定的項目，並將其腳本應用於圖層。</p>
 <img alt="../../../_images/SeExpr_editor.png" src="../../../_images/SeExpr_editor.png" />
-<p>There are three sections. The first bar allows you to edit and save the selected preset:</p>
+<p>共有三個部分。第一個欄可以編輯和保存選定的項目：</p>
 <img alt="../../../_images/SeExpr_editor_preset_mgmt.png" src="../../../_images/SeExpr_editor_preset_mgmt.png" />
-<p>If your script is syntactically correct, the middle box lets you
-adjust its variables through widgets.</p>
+<p>如果腳本在語法上是正確的，中間的框可以讓您利用小工具調整變量。</p>
 <img alt="../../../_images/SeExpr_editor_widgets.png" src="../../../_images/SeExpr_editor_widgets.png" />
-<p>The lower box contains the script text, and shows the detected syntax
-errors, if any.</p>
+<p>下面的欄位中包含腳本語法文本，並顯示檢測到的語法錯誤（如果有的話）。</p>
 <img alt="../../../_images/SeExpr_editor_script_error.png" src="../../../_images/SeExpr_editor_script_error.png" />
-<p>You can adjust how much space the latter two boxes have through their
-splitter.</p>
+<p>可利用滑鼠在兩個欄空之間按壓調整欄框的空間大小。</p>
 </dd>
 </dl>
 </section>

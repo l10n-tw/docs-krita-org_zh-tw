@@ -21,9 +21,9 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-09-29T06:02:50" />
+  <meta property="og:article:modified_time" content="2021-09-29T14:02:36" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<meta content="How to use Simplex Noise generation in Krita." name="description" />
+<meta content="如何在 Krita 中使用填充圖層生成出簡易噪訊。" name="description" />
 
   
   
@@ -281,18 +281,16 @@
 <p><span class="versionmodified added">在 4.2 版本新加入.</span></p>
 </div>
 <img alt="../../../_images/fill_layer_simplex_noise.png" src="../../../_images/fill_layer_simplex_noise.png" />
-<p>This fills the layer with generated OpenSimplex noise. OpenSimplex is different from the more common Perlin noise (often named 'clouds' in other software) and also different from Improved Perlin noise. OpenSimplex has less dimensional artifacts (the subtle &quot;checker&quot; texture often found high frequency Perlin noise) and is a ubiquitous open standard. Since OpenSimplex noise is important to texture generation, this fill layer has the option
-to loop around the canvas edge. You can read more about OpenSimplex <a class="reference external" href="https://en.wikipedia.org/wiki/OpenSimplex_noise">here</a>.</p>
-<p>There are a few different use cases for simplex noise. One of these is to create interesting looping patterns, achieved by stacking multiple simplex noise fills with different blending modes. It becomes even more expressive when combined with the levels adjustment layers. For texture artists, this can be a useful utility when combined with a gradient map filter layer to provide color diversity to a looping texture.
-For traditional artists, simplex noise layers can be converted to selection masks to create brush transparency dynamics and masking effects. Experimenting with different combinations can be fun and produce interesting results!</p>
+<p>這會生成 OpenSimplex 噪訊來填充整個圖層。 OpenSimplex 不同於更常見的 培林噪訊（其他軟體中通常稱為“雲狀效果”），也不同於改良培林噪訊。 OpenSimplex 具有較少的維度偽影（細微的“檢查器”紋理經常在高頻率培林噪訊發現）並且是一種普遍存在的開放標準。由於 OpenSimplex 噪訊對於紋理的生成很重要，因此該填充圖層可以選擇在畫布邊緣周圍循環。可以 <a class="reference external" href="https://en.wikipedia.org/wiki/OpenSimplex_noise">在這裡</a> 有更多相關訊息。</p>
+<p>簡易噪訊有幾種不同的用法。其中一種是創建有趣的循環模式，利用不同的混合模式進行堆疊多個簡易噪訊來實現。當調整圖層的混和時，會變得更具表現力。對於紋理藝術家來說，當與漸變貼圖過濾層融合為循環紋理提供顏色多樣性時，這是一個實用的流程。對於傳統藝術家，可以將簡易噪訊層轉換為選取遮罩以創建畫筆透明度動態和遮罩效果。嘗試不同的組合會有很多有趣的組合產生！</p>
 <dl class="simple">
-<dt>Looping</dt><dd><p>Whether or not to force the pattern to loop.</p>
+<dt>循環</dt><dd><p>是否強制開啟模式循環。</p>
 </dd>
-<dt>Frequency</dt><dd><p>The frequency of the waves used to generate the pattern. Higher frequency results in a finer noise pattern.</p>
+<dt>頻率</dt><dd><p>用於生成圖案的波型頻率。更高的頻率會產生更精細的噪訊結果。</p>
 </dd>
-<dt>Ratio</dt><dd><p>The ratio of the waves in the x and y dimensions. This makes the noise have a rectangular appearance.</p>
+<dt>寬高比</dt><dd><p>x 和 y 在維度中波浪的比率。這使得噪訊具有近似拉伸的外觀。</p>
 </dd>
-<dt>Use Custom Seed</dt><dd><p>The seed for the random component. You can input any value or text here, and it will always try to use this value to generate the random values with (which then are always the same for a given seed). Leaving the value empty will use the randomly-assigned seed value on layer creation.</p>
+<dt>使用自定種子</dt><dd><p>隨機分量的種子。您以在此處輸入任何值或語法文本，它會始終嘗試使用此數值來生成隨機值（對於給定的種子，這些值始終相同）。數值若是留空將在創建圖層時使用隨機分配的種子值。</p>
 </dd>
 </dl>
 </section>
