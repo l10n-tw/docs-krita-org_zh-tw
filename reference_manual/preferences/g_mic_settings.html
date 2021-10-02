@@ -21,9 +21,9 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-10-01T19:03:02" />
+  <meta property="og:article:modified_time" content="2021-10-02T21:02:20" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<meta content="How to setup G'Mic in Krita." name="description" />
+<meta content="如何設定 Krita 中的 G'Mic。" name="description" />
 
   
   
@@ -158,7 +158,7 @@
 <li class="toctree-l3"><a class="reference internal" href="color_selector_settings.html">「選色器」設定</a></li>
 <li class="toctree-l3"><a class="reference internal" href="display_settings.html">「顯示」設定</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">「G'Mic」設定</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#updates-to-g-mic">Updates to G'Mic</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#updates-to-g-mic">更新 G'Mic 濾鏡</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="general_settings.html">「一般」設定</a></li>
@@ -269,26 +269,26 @@
             
   <section id="g-mic-settings">
 <span id="index-0"></span><span id="id1"></span><h1>「G'Mic」設定<a class="headerlink" href="#g-mic-settings" title="本標題的永久連結">¶</a></h1>
-<p>G'Mic or GREYC's Magic for Image Computing is an opensource filter framework. The G'Mic plugin for Krita exists only on Windows and Linux.</p>
-<p>Krita has had G'Mic integration for a long time, but this is its most stable incarnation. On Windows, the plugin is included in the installer and Krita will find it automatically. On Linux, we are making an AppImage available for download.</p>
-<p>You set it up as following:</p>
+<p>G'Mic 的全稱是 GREYC's Magic for Image Computing（影像計算魔術），是個自由開源的濾鏡程式框架。但 Krita 的 G'Mic 只有在 Windows 與 Linux 平台才能使用。</p>
+<p>Krita 與 G'Mic 的整合已經歷過很長的時間，現在它更強大也更穩定。Krita 的Windows 版本已經內建了 G'Mic ，安裝好 Krita 之後就會自動找到 G'Mic 外掛程式，而 Linux 平台我們也有製作獨立的 G'Mic 安裝包可供下載。</p>
+<p>Linux 的 G'Mic 安裝包設定方式如下：</p>
 <ol class="arabic simple">
-<li><p>Download the gmic-krita AppImage.</p></li>
-<li><p>Make it executable.</p></li>
-<li><p>Go to <span class="menuselection">Settings ‣ Configure Krita... ‣ G'Mic plugin</span> and set G'MIC to the filepath there.</p></li>
-<li><p>Then restart Krita.</p></li>
+<li><p>下載 gmic-Krita 應用程式。</p></li>
+<li><p>將下載後的檔案標記為可執行檔案。</p></li>
+<li><p>跳到:menuselection:「設定」--&gt;「設定 Krita…」--&gt; 「G'Mic 外掛程式」，將檔案路徑指定到 G'Mic 所在位置。</p></li>
+<li><p>重新啟動 Krita。</p></li>
 </ol>
 <section id="updates-to-g-mic">
-<h2>Updates to G'Mic<a class="headerlink" href="#updates-to-g-mic" title="本標題的永久連結">¶</a></h2>
-<p>There is a refresh button at the bottom of the G'Mic window that will update your version. You will need an internet connection to download the latest version.</p>
-<p>If you have issues downloading the update through the plugin, you can also do it manually. If you are trying to update and get an error, copy the URL that is displayed in the error dialog. It will be to a &quot;.gmic&quot; file. Download it from your web browser and place the file in one of the following directories.</p>
+<h2>更新 G'Mic 濾鏡<a class="headerlink" href="#updates-to-g-mic" title="本標題的永久連結">¶</a></h2>
+<p>G'Mic 外掛程式視窗底部有個「更新濾鏡」的按鈕，您必須連上網際網路才可下載新版的濾鏡來更新。</p>
+<p>若是通過外掛程式更新的方式出現問題時，您也可以改以手動進行濾鏡的更新。將更新錯誤出現之對話框中顯示的 URL 複製下來，然後貼到網路瀏覽器的網址列進行下載 ，取得附檔名為 &quot;.gmic&quot; 之檔案，只要將它放到下列目錄即可。</p>
 <ul class="simple">
-<li><p>Windows : %APPDATA%/gmic/update2XX.gmic</p></li>
-<li><p>Linux : $HOME/.config/gmic/update2XX.gmic</p></li>
+<li><p>Windows 作業系統：%APPDATA%/gmic/update2XX.gmic</p></li>
+<li><p>Linux 作業系統：$HOME/.config/gmic/update2XX.gmic</p></li>
 </ul>
-<p>Load up the G'Mic plugin and press the refresh button for the version to update.</p>
+<p>重新打開 G'Mic 對話視窗，取消勾選「互聯網」然後點一下「更新濾鏡」以更新。</p>
 <div class="deprecated">
-<p><span class="versionmodified deprecated">在 5.0 版本開始棄用: </span>G'Mic is now included into Krita itself, and thus does not need to be configured separately anymore.</p>
+<p><span class="versionmodified deprecated">在 5.0 版本開始棄用: </span>G'Mic 外掛程式皆已隨 Krita 主程式一起包裝，不需再另外設定安裝。</p>
 </div>
 </section>
 </section>
@@ -316,7 +316,7 @@
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>17cf8f9</code>
+          修訂版本 <code>f53365d</code>
         </span>
       
 
