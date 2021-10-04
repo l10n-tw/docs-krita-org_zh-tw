@@ -6,7 +6,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta property="og:title" name="title" content="Gradient Editing Tool" />
+  <meta property="og:title" name="title" content="漸變編輯工具" />
   <meta property="og:site-name" content="Krita Manual" />
   <meta property="og:type" content="article" />
   <meta property="og:locale" content="zh_TW" />
@@ -21,13 +21,13 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-10-03T18:03:25" />
+  <meta property="og:article:modified_time" content="2021-10-04T07:03:09" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<meta content="Krita's vector gradient editing tool reference." name="description" />
+<meta content="Krita 的向量漸變編輯工具參考。" name="description" />
 
   
   
-  <title>Gradient Editing Tool &mdash; Krita Manual 5.0.0 說明文件</title>
+  <title>漸變編輯工具 &mdash; Krita Manual 5.0.0 說明文件</title>
   
 
   
@@ -162,11 +162,11 @@
 <li class="toctree-l3"><a class="reference internal" href="shape_selection.html">Shape Selection Tool</a></li>
 <li class="toctree-l3"><a class="reference internal" href="shape_edit.html">Shape Edit Tool</a></li>
 <li class="toctree-l3"><a class="reference internal" href="text.html">Text Tool</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Gradient Editing Tool</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">漸變編輯工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="pattern_edit.html">Pattern Editing Tool</a></li>
 <li class="toctree-l3"><a class="reference internal" href="calligraphy.html">西文書法工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="freehand_brush.html">手繪筆刷工具</a></li>
-<li class="toctree-l3"><a class="reference internal" href="line.html">Straight Line Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="line.html">直線工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="rectangle.html">Rectangle Tool</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ellipse.html">橢圓工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="polygon.html">Polygon Tool</a></li>
@@ -179,7 +179,7 @@
 <li class="toctree-l3"><a class="reference internal" href="move.html">移動工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="transform.html">Transform Tool</a></li>
 <li class="toctree-l3"><a class="reference internal" href="fill.html">填色工具</a></li>
-<li class="toctree-l3"><a class="reference internal" href="gradient_draw.html">Gradient Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gradient_draw.html">漸變工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="color_sampler.html">色彩取樣器工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="colorize_mask.html">著色遮罩工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="smart_patch.html">Smart Patch Tool</a></li>
@@ -264,7 +264,7 @@
         
           <li><a href="../tools.html">工具</a> &raquo;</li>
         
-      <li>Gradient Editing Tool</li>
+      <li>漸變編輯工具</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -289,12 +289,12 @@
            <div itemprop="articleBody">
             
   <section id="gradient-editing-tool">
-<span id="gradient-edit-tool"></span><span id="index-0"></span><h1>Gradient Editing Tool<a class="headerlink" href="#gradient-editing-tool" title="本標題的永久連結">¶</a></h1>
-<p><img alt="toolgradientedit" src="../../_images/gradient_edit_tool.svg" /></p>
+<span id="gradient-edit-tool"></span><span id="index-0"></span><h1>漸變編輯工具<a class="headerlink" href="#gradient-editing-tool" title="本標題的永久連結">¶</a></h1>
+<p><img alt="漸變編輯工具" src="../../_images/gradient_edit_tool.svg" /></p>
 <div class="deprecated">
-<p><span class="versionmodified deprecated">在 4.0 版本開始棄用: </span>This tool has been removed in Krita 4.0, and its functionality has been folded into the <a class="reference internal" href="shape_selection.html#shape-selection-tool"><span class="std std-ref">Shape Selection Tool</span></a>.</p>
+<p><span class="versionmodified deprecated">在 4.0 版本開始棄用: </span>這個工具在 Krita 版本 4.0 時已被移除，而這個工具的功能被加入在<a class="reference internal" href="shape_selection.html#shape-selection-tool"><span class="std std-ref">Shape Selection Tool</span></a>裡。</p>
 </div>
-<p>This tool allows you to edit the gradient on canvas, but it only works for vector layers. If you have a vector shape selected, and draw a line over the canvas, you will be able to see the nodes, and the stops in the gradient. Move around the nodes to move the gradient itself. Select the stops to change their color in the tool options docker, or to move their position in the on canvas gradient. You can select preset gradient in the tool docker to change the active shape's gradient to use those stops.</p>
+<p>這個工具可以編輯在畫布中的漸變，但是只會在向量圖層中生效。如果你選取了向量形狀，然後在畫布中畫一條線，你可以看到節點，然後在漸變中停止。你可以透過移動節點來移動漸變。在工具選項面板中點選停止點來更換色彩，或是在畫布中的漸變移動位置。你可以在工具面板中選擇預設漸變來讓向量形狀的漸變使用停止點。</p>
 </section>
 
 
@@ -320,7 +320,7 @@
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>370740d</code>
+          修訂版本 <code>3c572c0</code>
         </span>
       
 
