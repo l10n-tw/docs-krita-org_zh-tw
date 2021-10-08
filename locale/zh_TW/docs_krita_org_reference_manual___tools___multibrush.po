@@ -4,29 +4,31 @@
 # package.
 #
 # Alvin Wong <alvin@alvinhc.com>, 2021.
+# RinalNamori <rinalnamori@gmail.com>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 4.3\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-27 21:21+0800\n"
-"PO-Revision-Date: 2021-08-02 06:10+0000\n"
-"Last-Translator: Alvin Wong <alvin@alvinhc.com>\n"
-"Language-Team: Chinese <zh-l10n@lists.linux.org.tw>\n"
+"PO-Revision-Date: 2021-10-08 11:59+0000\n"
+"Last-Translator: RinalNamori <rinalnamori@gmail.com>\n"
+"Language-Team: Chinese (Traditional) <http://weblate.slat.org/projects/"
+"krita-docs/3-reference_manual___tools___multibrush/zh_Hant/>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.7.2\n"
+"X-Generator: Weblate 4.8\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../../reference_manual/tools/multibrush.rst:1
 msgid "Krita's multibrush tool reference."
-msgstr ""
+msgstr "Krita 的多重筆刷工具參考。"
 
 #: ../../reference_manual/tools/multibrush.rst:16
 msgid "Multibrush Tool"
-msgstr ""
+msgstr "多重筆刷工具"
 
 #: ../../reference_manual/tools/multibrush.rst:18
 msgid "|toolmultibrush|"
@@ -34,7 +36,7 @@ msgstr ""
 
 #: ../../<rst_epilog>:40
 msgid "toolmultibrush"
-msgstr ""
+msgstr "多重筆刷工具"
 
 #: ../../reference_manual/tools/multibrush.rst:20
 msgid ""
@@ -44,10 +46,13 @@ msgid ""
 "toggling the :ref:`mirror_tools`, but the Multibrush is more sophisticated, "
 "for example it can mirror freehand brush strokes along a rotated axis."
 msgstr ""
+"多重筆刷工具可以一次畫出在手繪筆刷工具中需要多次繪畫的情況，這個工具能在工具面板中找到，或是使用快捷鍵 :kbd:`Q` 來使用。"
+"多重筆刷工具使用起來有點像\\ :ref:`mirror_tools`\\ "
+"，但是多重筆刷工具更加精密，比如說這個工具能夠沿著一定的旋轉角度鏡像手繪筆刷線條。"
 
 #: ../../reference_manual/tools/multibrush.rst:22
 msgid "The settings for the tool will be found in the tool options dock."
-msgstr ""
+msgstr "你可以在工具選項面板設定這個工具。"
 
 #: ../../reference_manual/tools/multibrush.rst:24
 msgid ""
@@ -55,56 +60,58 @@ msgid ""
 "in the tool options dock. Symmetry and mirror reflect over an axis which can "
 "be set in the tool options dock. The default axis is the center of the "
 "canvas."
-msgstr ""
+msgstr "多重筆刷工具有一些模式，然後各種模式的設定能在工具選項面板中找到。旋轉對稱和鏡像反射的軸心可以在工具選項面板中調整。預設軸心是在畫布中央。"
 
 #: ../../reference_manual/tools/multibrush.rst:29
 msgid "The available modes are:"
-msgstr ""
+msgstr "可供使用的模式為："
 
 #: ../../reference_manual/tools/multibrush.rst:31
 #: ../../reference_manual/tools/multibrush.rst:11
 msgid "Symmetry"
-msgstr ""
+msgstr "旋轉對稱"
 
 #: ../../reference_manual/tools/multibrush.rst:32
 msgid ""
 "Symmetry will reflect your brush around the axis at even intervals. The "
 "slider determines the number of instances which will be drawn on the canvas."
-msgstr ""
+msgstr "旋轉對稱模式會環繞軸心以相同間隔反射筆刷。這個選項的滑條會決定在畫布中筆刷呈現的數量。"
 
 #: ../../reference_manual/tools/multibrush.rst:33
 msgid "Mirror"
-msgstr ""
+msgstr "鏡像"
 
 #: ../../reference_manual/tools/multibrush.rst:34
 msgid "Mirror will reflect the brush across the X axis, the Y axis, or both."
-msgstr ""
+msgstr "鏡像模式會以 X 軸、Y 軸或兩者反射筆刷。"
 
 #: ../../reference_manual/tools/multibrush.rst:35
 msgid "Translate"
-msgstr ""
+msgstr "並行"
 
 #: ../../reference_manual/tools/multibrush.rst:36
+#, fuzzy
 msgid ""
 "Translate will paint the set number of instances around the cursor at the "
 "radius distance."
-msgstr ""
+msgstr "並行模式會以游標為軸心在設定數量下在半徑範圍內繪畫。"
 
 #: ../../reference_manual/tools/multibrush.rst:37
 msgid "Snowflake"
-msgstr ""
+msgstr "雪花對稱"
 
 #: ../../reference_manual/tools/multibrush.rst:38
 msgid ""
 "This works as a mirrored symmetry, but is a bit slower than symmetry+toolbar "
 "mirror mode."
-msgstr ""
+msgstr "這個的運作是鏡像的旋轉對稱，但是會比旋轉對稱 + 工具列鏡像模式慢一點。"
 
 #: ../../reference_manual/tools/multibrush.rst:40
 msgid "Copy Translate"
-msgstr ""
+msgstr "自訂位移並行"
 
 #: ../../reference_manual/tools/multibrush.rst:40
+#, fuzzy
 msgid ""
 "This allows you to set the position of the copies relative to your own "
 "cursor. To set the position of the copies, first toggle :guilabel:`Add`, and "
@@ -112,6 +119,7 @@ msgid ""
 "origin. Finally, press :guilabel:`Add` again, and start drawing to see the "
 "copy translate in action."
 msgstr ""
+"這個選項可以設定複製筆刷與游標的距離。如要設定複製筆刷的位置，首先按 :guilabel:`新增`\\ ，然後 |mouseleft| 畫布來放置複製筆刷"
 
 #: ../../<rst_epilog>:2
 msgid "mouseleft"
@@ -121,7 +129,7 @@ msgstr "滑鼠左鍵"
 msgid ""
 "The assistant and smoothing options work the same as in the :ref:"
 "`freehand_brush_tool`, though only on the real brush and not its copies."
-msgstr ""
+msgstr "輔助線和平滑選項的運作和\\ :ref:`freehand_brush_tool`\\ 一樣，只是僅限真正的筆刷可以使用。"
 
 #: ../../reference_manual/tools/multibrush.rst:11
 msgid "Tools"
@@ -129,12 +137,12 @@ msgstr "工具"
 
 #: ../../reference_manual/tools/multibrush.rst:11
 msgid "Multibrush"
-msgstr ""
+msgstr "多重筆刷"
 
 #: ../../reference_manual/tools/multibrush.rst:11
 msgid "Mandala"
-msgstr ""
+msgstr "曼陀羅"
 
 #: ../../reference_manual/tools/multibrush.rst:11
 msgid "Rotational Symmetry"
-msgstr ""
+msgstr "旋轉對稱"
