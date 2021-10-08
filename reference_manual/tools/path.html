@@ -6,7 +6,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta property="og:title" name="title" content="Bezier Curve Tool" />
+  <meta property="og:title" name="title" content="貝茲曲線工具" />
   <meta property="og:site-name" content="Krita Manual" />
   <meta property="og:type" content="article" />
   <meta property="og:locale" content="zh_TW" />
@@ -21,13 +21,13 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-10-05T07:02:25" />
+  <meta property="og:article:modified_time" content="2021-10-08T12:02:29" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<meta content="Krita's path tool reference." name="description" />
+<meta content="Krita 的路徑工具參考。" name="description" />
 
   
   
-  <title>Bezier Curve Tool &mdash; Krita Manual 5.0.0 說明文件</title>
+  <title>貝茲曲線工具 &mdash; Krita Manual 5.0.0 說明文件</title>
   
 
   
@@ -171,13 +171,13 @@
 <li class="toctree-l3"><a class="reference internal" href="ellipse.html">橢圓工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="polygon.html">Polygon Tool</a></li>
 <li class="toctree-l3"><a class="reference internal" href="polyline.html">Polyline Tool</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Bezier Curve Tool</a><ul>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">貝茲曲線工具</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#tool-options">Tool Options</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="freehand_path.html">手繪路徑工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="dyna.html">力學筆刷工具</a></li>
-<li class="toctree-l3"><a class="reference internal" href="multibrush.html">Multibrush Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="multibrush.html">多重筆刷工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="crop.html">裁切工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="move.html">移動工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="transform.html">Transform Tool</a></li>
@@ -188,7 +188,7 @@
 <li class="toctree-l3"><a class="reference internal" href="smart_patch.html">Smart Patch Tool</a></li>
 <li class="toctree-l3"><a class="reference internal" href="assistant.html">輔助尺工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="reference_images_tool.html">Reference Images Tool</a></li>
-<li class="toctree-l3"><a class="reference internal" href="measure.html">Measure Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="measure.html">測量工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="rectangular_select.html">Rectangular Selection Tool</a></li>
 <li class="toctree-l3"><a class="reference internal" href="elliptical_select.html">橢圓選取區域工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="freehand_select.html">手繪選取區域工具</a></li>
@@ -267,7 +267,7 @@
         
           <li><a href="../tools.html">工具</a> &raquo;</li>
         
-      <li>Bezier Curve Tool</li>
+      <li>貝茲曲線工具</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -292,11 +292,11 @@
            <div itemprop="articleBody">
             
   <section id="bezier-curve-tool">
-<span id="path-tool"></span><span id="index-0"></span><span id="id1"></span><h1>Bezier Curve Tool<a class="headerlink" href="#bezier-curve-tool" title="本標題的永久連結">¶</a></h1>
-<p><img alt="toolbeziercurve" src="../../_images/bezier_curve.svg" /></p>
-<p>You can draw curves by using this tool. Click the <img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> to indicate the starting point of the curve, then click again for consecutive control points of the curve.</p>
-<p><strong class="program">Krita</strong> will show a blue line with two handles when you add a control point. You can drag these handles to change the direction of the curve in that point.</p>
-<p>On a vector layer, you can click on a previously inserted control point to modify it. With an intermediate control point (i.e. a point that is not the starting point and not the ending point), you can move the direction handles separately to have the curve enter and leave the point in different directions. After editing a point, you can just click on the canvas to continue adding points to the curve.</p>
+<span id="path-tool"></span><span id="index-0"></span><span id="id1"></span><h1>貝茲曲線工具<a class="headerlink" href="#bezier-curve-tool" title="本標題的永久連結">¶</a></h1>
+<p><img alt="貝茲曲線工具" src="../../_images/bezier_curve.svg" /></p>
+<p>你可以透過這個工具來畫出曲線。<img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> 來給繪製曲線的起點，然後再點一下來連續控制曲線的錨點。</p>
+<p><strong class="program">Krita</strong> 會在你新增一個控制錨點時顯示一個有著兩個控制項鐵人的藍色線段，你可以拖曳這些控制項來改變曲線在那個錨點的方向。</p>
+<p>在向量圖層中，你可以點選上一個錨點來修改。在中途的錨點（即除了首尾的兩個錨點），你可以分別移動控制項方向來讓曲線的起點和終點的方向不同。在編輯錨點後，點選畫布來繼續為曲線新增錨點。</p>
 <p>Pressing the <kbd class="kbd docutils literal notranslate">Del</kbd> key will remove the currently selected control point from the curve. Double-click the <img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> on any point of the curve or press the <kbd class="kbd docutils literal notranslate">Enter</kbd> key to finish drawing, or press the <kbd class="kbd docutils literal notranslate">Esc</kbd> key to cancel the entire curve. You can use the <kbd class="kbd docutils literal notranslate">Ctrl</kbd> key while keeping the <img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> pressed to move the entire curve to a different position.</p>
 <p>While drawing the <kbd class="kbd docutils literal notranslate">Ctrl</kbd> key while dragging will push the handles both ways. The <kbd class="kbd docutils literal notranslate">Alt</kbd> key will create a sharp corner, and the <kbd class="kbd docutils literal notranslate">Shift</kbd> key will allow you to make a handle while at the end of the curve. <img alt="滑鼠右鍵" src="../../_images/Krita_mouse_right.png" /> will undo the last added point.</p>
 <section id="tool-options">
@@ -340,7 +340,7 @@
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>67c1d51</code>
+          修訂版本 <code>177c516</code>
         </span>
       
 
