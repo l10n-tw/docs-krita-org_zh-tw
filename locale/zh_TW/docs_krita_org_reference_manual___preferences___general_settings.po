@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Krita Manual 4.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-09-03 08:09+0000\n"
-"PO-Revision-Date: 2021-10-11 19:54+0000\n"
+"PO-Revision-Date: 2021-10-12 21:54+0000\n"
 "Last-Translator: BiseChen <bise.chen@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <http://weblate.slat.org/projects/"
 "krita-docs/3-reference_manual___preferences___general_settings/zh_Hant/>\n"
@@ -233,7 +233,7 @@ msgid ""
 "or sub windows, like :program:`Photoshop`."
 msgstr ""
 "這裡可依喜好設定為類似 :program:`GIMP` 或 :program:`Paint Tool SAI` "
-"那樣將每個開啟的檔案在畫布視圖上以「分頁」方式呈現；也可設定為 :program:`PhotoShop` 那樣將每個開啟的檔案以「子視窗」呈現子視窗。"
+"那樣將每個開啟的檔案在畫布視圖上以「分頁」方式呈現；也可設定為 :program:`PhotoShop` 那樣將每個開啟的檔案以「子視窗」呈現。"
 
 #: ../../reference_manual/preferences/general_settings.rst:121
 msgid "Background image"
@@ -278,21 +278,21 @@ msgstr "在畫布上顯示浮動訊息"
 msgid ""
 "Whether you want to see the on-canvas pop-up messages that tell you whether "
 "you are in tabbed mode, rotating the canvas, or mirroring it."
-msgstr ""
+msgstr "選擇是否在畫布上浮動顯示當前您使用的是何種功能選項模式、旋轉畫布或鏡像。"
 
 #: ../../reference_manual/preferences/general_settings.rst:134
 msgid "Enable Hi-DPI support"
-msgstr ""
+msgstr "啟用高解析度螢幕（Hi-DPI ）支援"
 
 #: ../../reference_manual/preferences/general_settings.rst:135
 msgid ""
 "Attempt to use the Hi-DPI support. It is an option because we are still "
 "experiencing bugs on Windows."
-msgstr ""
+msgstr "嘗試使用 Hi-DPI 支援。這只是個選項，因為在 Windows 系統上此功能尚未成熟依然有介面顯示過大的錯誤發生。"
 
 #: ../../reference_manual/preferences/general_settings.rst:137
 msgid "(Hi-DPI) Enable fractional scale factor"
-msgstr ""
+msgstr "啟用非整數比例縮放（Hi-DPI）"
 
 #: ../../reference_manual/preferences/general_settings.rst:137
 msgid ""
@@ -301,10 +301,12 @@ msgid ""
 "interface of Krita match the interface size of the rest of your system, but "
 "it may cause some visual artifacts."
 msgstr ""
+"允許在高解析支援模式下使用非整數倍數（不是 100% 的整數倍數）顯示縮放。若您的系統使用了非整數倍數縮放，這個選項可讓 Krita "
+"的介面與系統互相配合，但可能因此造成一些顯示時不自然的問題。"
 
 #: ../../reference_manual/preferences/general_settings.rst:144
 msgid "Allow only one instance of Krita"
-msgstr ""
+msgstr "只允許一個 Krita 實例執行"
 
 #: ../../reference_manual/preferences/general_settings.rst:140
 msgid ""
@@ -315,12 +317,16 @@ msgid ""
 "allowing multiple instances, but if you can't think of any, just keep this "
 "option on."
 msgstr ""
+"實例是系統任務管理員中的單個處理程序。打開此選項可確保在點開 Krita 檔案格式時，先檢查是否有 Krita "
+"處理程序已經‎‎打開，若有的話就使用這個實例來打開檔案。在某些比較少見的工作流程可能會需要使用多個 Krita "
+"實例，但若您不知可以做何種用途的話請將這個項目勾選即可。"
 
 #: ../../reference_manual/preferences/general_settings.rst:144
 msgid ""
 "Since Krita 5.0 this has been deprecated, as it now uses a SQLite database "
 "for handling the resources, and this cannot be managed by multiple instances."
 msgstr ""
+"從 Krita 5.0 開始，這個功能已廢棄不用。因為新版 Krita 改用了 SQLite 資料庫來管理資源，而且工作上也無法再支援多個實例。"
 
 #: ../../reference_manual/preferences/general_settings.rst:149
 msgid "Tools Settings"
@@ -328,40 +334,40 @@ msgstr "工具設定"
 
 #: ../../reference_manual/preferences/general_settings.rst:152
 msgid "Tool Options Location"
-msgstr ""
+msgstr "工具選項位置"
 
 #: ../../reference_manual/preferences/general_settings.rst:154
 msgid "In docker (default)"
-msgstr ""
+msgstr "在工具面版中（預設）"
 
 #: ../../reference_manual/preferences/general_settings.rst:155
 msgid "Gives you the tool options in a docker."
-msgstr ""
+msgstr "工具選項會顯示在一個單獨的面版中，預設也是這個。"
 
 #: ../../reference_manual/preferences/general_settings.rst:157
 msgid "In toolbar"
-msgstr ""
+msgstr "在工具列內"
 
 #: ../../reference_manual/preferences/general_settings.rst:157
 msgid ""
 "Gives you the tool options in the toolbar, next to the brush settings. You "
 "can open it with the :kbd:`\\\\` key."
-msgstr ""
+msgstr "使用此選項的話，工具選項會顯示在工具列上，點一下即可顯示，也可用 :kbd:`\\\\` 快捷鍵叫出。"
 
 #: ../../reference_manual/preferences/general_settings.rst:160
 msgid "Brush Flow Mode"
-msgstr ""
+msgstr "筆刷流量模式"
 
 #: ../../reference_manual/preferences/general_settings.rst:160
 msgid ""
 "In Krita 4.2 the behavior of flow in combination with opacity was changed. "
 "This allows you to turn it back to the 4.1 behavior. This will however be "
 "removed in future versions."
-msgstr ""
+msgstr "Krita 4.2 版改變了筆刷在使用流量和不透明度的演算法，這選項允許您切換到舊版模式，但這最後也將會在未來的版本中移除。"
 
 #: ../../reference_manual/preferences/general_settings.rst:163
 msgid "Switch Control/Alt Selection Modifiers"
-msgstr ""
+msgstr "在使用選取區域工具時交換 Ctrl 與 Alt 組合鍵的作用"
 
 #: ../../reference_manual/preferences/general_settings.rst:163
 msgid ""
@@ -369,10 +375,12 @@ msgid ""
 "modifying selections. Useful for those used to Gimp instead of Photoshop, or "
 "Lefties without a right :kbd:`Alt` key on their keyboard."
 msgstr ""
+"選用這個功能後，會交換 :kbd:`Ctrl` 和 :kbd:`Alt` 鍵在修改選取區域時的組合鍵。此功能是專為習慣 Gimp 而不是 "
+"PhotoShop 組合鍵的人，或鍵盤右邊沒有 :kbd:`Alt` 鍵的左撇子畫家而準備的。"
 
 #: ../../reference_manual/preferences/general_settings.rst:170
 msgid "Enable Touch painting"
-msgstr ""
+msgstr "啟用以手指在觸控螢幕上繪畫"
 
 #: ../../reference_manual/preferences/general_settings.rst:166
 msgid ""
