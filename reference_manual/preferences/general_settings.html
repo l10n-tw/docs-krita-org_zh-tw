@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-10-12T21:57:43" />
+  <meta property="og:article:modified_time" content="2021-10-13T15:58:23" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="Krita 的一般偏好設定。" name="description" property="og:description" />
 
@@ -162,9 +162,9 @@
 <li class="toctree-l4"><a class="reference internal" href="#cursor-settings">游標設定</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#window-settings">視窗設定</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#tools-settings">工具設定</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#file-handling">File Handling</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#miscellaneous">Miscellaneous</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#resources">Resources</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#file-handling">檔案處理</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#miscellaneous">其它</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#resources">資源</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="performance_settings.html">「效能」設定</a></li>
@@ -324,11 +324,11 @@
 </section>
 <section id="outline-shape">
 <h3>輪廓形狀<a class="headerlink" href="#outline-shape" title="本標題的永久連結">¶</a></h3>
-<p>選擇在使用筆刷工具時要顯示輪廓形狀。您可選擇是否在繪圖時持續顯示輪廓，可用的輪廓形狀如下所示。（目前無說明圖片）</p>
+<p>選取筆刷工具使用時要顯示的輪廓形狀。您可選擇是否在繪圖時持續顯示輪廓，可用的輪廓形狀如下所示。（目前無說明圖片）</p>
 <dl class="simple">
 <dt>不顯示輪廓</dt><dd><p>不顯示筆刷輪廓。</p>
 </dd>
-<dt>圓形輪廓</dt><dd><p>顯示大約符合筆 刷尺寸的圓形輪廓。</p>
+<dt>圓形輪廓</dt><dd><p>顯示大約符合筆刷尺寸的圓形輪廓。</p>
 </dd>
 <dt>預覽輪廓</dt><dd><p>根據筆刷實際的形狀顯示輪廓。</p>
 </dd>
@@ -345,7 +345,7 @@
 </div>
 </dd>
 <dt>使用有效的輪廓大小</dt><dd><div class="versionadded">
-<p><span class="versionmodified added">在 4.1 版本新加入: </span>勾選這個功能時，筆刷輪廓的大小會按照繪圖板感壓筆壓力大小相應變化。在不鉤選的狀況下，筆刷輪廓會保持它的大小以減少干擾。</p>
+<p><span class="versionmodified added">在 4.1 版本新加入: </span>勾選這個功能時，筆刷輪廓的大小會按照繪圖板感壓筆壓力大小相應變化。在不勾選的狀況下，筆刷輪廓會保持它的大小以減少干擾。</p>
 </div>
 </dd>
 <dt>游標顏色：</dt><dd><p>預設的游標顏色，這顏色會在畫布上以對比色顯示，儘可能做到在各種顏色下游標依然清晰可辨。但有時在某些顏色下無法看清，這可能是顯示器驅動程式造成的問題，這時您可換用另一個顏色來試試看效果是否有改善。</p>
@@ -376,7 +376,7 @@
 <p><span class="versionmodified added">在 5.0 版本新加入: </span>允許在高解析支援模式下使用非整數倍數（不是 100% 的整數倍數）顯示縮放。若您的系統使用了非整數倍數縮放，這個選項可讓 Krita 的介面與系統互相配合，但可能因此造成一些顯示時不自然的問題。</p>
 </div>
 </dd>
-<dt>只允許一個 Krita 實例執行</dt><dd><p>實例是系統任務管理員中的單個處理程序。打開此選項可確保在點開 Krita 檔案格式時，先檢查是否有 Krita 處理程序已經‎‎打開，若有的話就使用這個實例來打開檔案。在某些比較少見的工作流程可能會需要使用多個 Krita 實例，但若您不知可以做何種用途的話請將這個項目勾選即可。</p>
+<dt>只允許一個 Krita 實例執行</dt><dd><p>實例是系統任務管理員中的單個處理程序。打開此選項可確保在點開 Krita 格式檔案時，先檢查是否有 Krita 處理程序已經‎‎打開，若有的話就使用這個實例來打開檔案。在某些比較少見的工作流程可能會需要使用多個 Krita 實例，但若您不知可以做何種用途的話請將這個項目勾選即可。</p>
 <div class="deprecated">
 <p><span class="versionmodified deprecated">在 5.0 版本開始棄用: </span>從 Krita 5.0 開始，這個功能已廢棄不用。因為新版 Krita 改用了 SQLite 資料庫來管理資源，而且工作上也無法再支援多個實例。</p>
 </div>
@@ -388,7 +388,7 @@
 <section id="tool-options-location">
 <h3>工具選項位置<a class="headerlink" href="#tool-options-location" title="本標題的永久連結">¶</a></h3>
 <dl>
-<dt>在工具面版中（預設）</dt><dd><p>工具選項會顯示在一個單獨的面版中，預設也是這個。</p>
+<dt>在工具面版中（預設）</dt><dd><p>工具選項會顯示在一個單獨的面版中，這是預設。</p>
 </dd>
 <dt>在工具列內</dt><dd><p>使用此選項的話，工具選項會顯示在工具列上，點一下即可顯示，也可用 <kbd class="kbd docutils literal notranslate">\</kbd> 快捷鍵叫出。</p>
 </dd>
@@ -396,38 +396,38 @@
 </dd>
 <dt>在使用選取區域工具時交換 Ctrl 與 Alt 組合鍵的作用</dt><dd><p>選用這個功能後，會交換 <kbd class="kbd docutils literal notranslate">Ctrl</kbd> 和 <kbd class="kbd docutils literal notranslate">Alt</kbd> 鍵在修改選取區域時的組合鍵。此功能是專為習慣 Gimp 而不是 PhotoShop 組合鍵的人，或鍵盤右邊沒有 <kbd class="kbd docutils literal notranslate">Alt</kbd> 鍵的左撇子畫家而準備的。</p>
 </dd>
-<dt>啟用以手指在觸控螢幕上繪畫</dt><dd><p>This allows finger painting with capacitive screens. Some devices have both capacitive touch and a stylus, and then this can interfere. In that case, just toggle this.</p>
+<dt>啟用以手指在觸控螢幕上繪畫</dt><dd><p>這功能啟用後，可用手指在電容觸控螢幕上繪圖。有些螢幕同時擁有電容觸控與繪圖板功能，這可能會干擾感壓筆的繪圖輸入，此時請關閉這個功能。</p>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 5.0 版本變更: </span>When this is disabled, panning the canvas can be done with by dragging a single finger over the canvas, while when enabled, panning will only be done by dragging three fingers.</p>
+<p><span class="versionmodified changed">在 5.0 版本變更: </span>停用此選項後可使用單指手勢來平移畫布；啟用後則需用三指手勢才能平移畫布。</p>
 </div>
 </dd>
-<dt>Activate transform tool after pasting</dt><dd><div class="versionadded">
-<p><span class="versionmodified added">在 4.2 版本新加入: </span>A convenience feature. When enabling this, the transform tool will activate after pasting for quick moving or rotating.</p>
+<dt>在貼上後自動切換到變形工具</dt><dd><div class="versionadded">
+<p><span class="versionmodified added">在 4.2 版本新加入: </span>這是個方便的功能，在啟用此選項的狀態下，貼上之後會自動切換到變形工具以快速移動或旋轉。</p>
 </div>
 </dd>
-<dt>Enable Touch Rotation</dt><dd><p>Without this, gestures on the canvas only allow zoom and pan, with this turned on, the two-finger gesture also allows to rotate.</p>
+<dt>啟用觸控螢幕旋轉手勢</dt><dd><p>不勾選此功能時，觸控手勢只能縮放與平移畫布視圖。勾選這項目後，兩指手勢還能執行旋轉畫布視圖。</p>
 </dd>
-<dt>Kinetic Scrolling (Needs Restart)</dt><dd><p>This enables kinetic scrolling for scrollable areas.</p>
+<dt>拖曳捲動（需要重啟程式）</dt><dd><p>在所有可捲動面板啟用「拖曳捲動」的功能，預設是使用按下滑鼠中鍵的方式拖動，效果類似在觸控螢幕以指尖滑動。</p>
 <figure class="align-center" id="id3">
 <img alt="../../_images/Krita_4_0_kinetic_scrolling.gif" src="../../_images/Krita_4_0_kinetic_scrolling.gif" />
 <figcaption>
-<p><span class="caption-text">Kinetic scrolling on the brush chooser drop-down with activation mode set to <span class="guilabel">On Click Drag</span>, with this disabled all of these clicks would lead to a brush being selected regardless of drag motion.</span><a class="headerlink" href="#id3" title="本圖片的永久連結">¶</a></p>
+<p><span class="caption-text">在啟用<span class="guilabel">點擊並拖曳捲動</span>的狀態時，只要按住滑鼠左鍵不放，面板上的游標即變成拖動圖示，不會因此誤選列表中的內容。</span><a class="headerlink" href="#id3" title="本圖片的永久連結">¶</a></p>
 </figcaption>
 </figure>
 <dl>
-<dt>Activation</dt><dd><p>How it is activated.</p>
+<dt>拖動方式</dt><dd><p>選擇拖曳捲動啟用的方式。</p>
 <dl class="simple">
-<dt>On Middle-Click Drag</dt><dd><p>Will activate when using the middle mouse button.</p>
+<dt>按住中間鍵拖曳捲動</dt><dd><p>在可捲動面板上按住滑鼠中鍵（或滾輪）不放時啟用拖曳捲動。</p>
 </dd>
-<dt>On Touch Drag</dt><dd><p>Will activate if it can recognize a touch event. May not always work.</p>
+<dt>以觸控螢幕拖曳捲動</dt><dd><p>在觸控螢幕中於可捲動面板偵測到動作時啟用，但這個選項並非總是能夠正常工作。</p>
 </dd>
-<dt>On Click Drag</dt><dd><p>Will activate when it can recognize a click event, will always work.</p>
+<dt>點擊並拖曳捲動</dt><dd><p>在可捲動面板上按住滑鼠左鍵時拖曳捲動，這個選項一定可以正常操作。</p>
 </dd>
 </dl>
 </dd>
-<dt>Sensitivity</dt><dd><p>How quickly the feature activates, this effective determines the length of the drag.</p>
+<dt>靈敏度</dt><dd><p>此設定影響拖曳被啟動的速度以及拖曳的有效距離。</p>
 </dd>
-<dt>Hide Scrollbar</dt><dd><p>Whether to show scrollbars when doing this.</p>
+<dt>啟用拖曳捲動時，隱藏工具面板的捲動軸（需要重啟程式）</dt><dd><p>在啟用拖曳捲動的功能時，是否隱藏工具面板之捲動軸。</p>
 </dd>
 </dl>
 </dd>
@@ -435,98 +435,98 @@
 </section>
 </section>
 <section id="file-handling">
-<span id="file-handling-settings"></span><h2>File Handling<a class="headerlink" href="#file-handling" title="本標題的永久連結">¶</a></h2>
+<span id="file-handling-settings"></span><h2>檔案處理<a class="headerlink" href="#file-handling" title="本標題的永久連結">¶</a></h2>
 <div class="versionadded">
 <p><span class="versionmodified added">在 4.2 版本新加入.</span></p>
 </div>
 <dl>
-<dt>Enable Autosaving</dt><dd><p>Determines whether Krita should periodically autosave.</p>
+<dt>啟用自動儲存</dt><dd><p>啟用此選項時，Krita 將每隔一段時間自動儲存。</p>
 </dd>
-<dt>Autosave Every</dt><dd><p>Here the user can specify how often Krita should autosave the file, you can tick the checkbox to turn it off. For Windows these files are saved in the <code class="docutils literal notranslate"><span class="pre">%TEMP%</span></code> directory. If you are on Linux it is stored in <code class="file docutils literal notranslate"><span class="pre">/home/'username'</span></code>.</p>
+<dt>自動儲存間隔</dt><dd><p>指定每隔多長的時間後進行一次自動儲存，取消勾選「啟用自動儲存」將會關閉此功能。 Windows 系統自動儲存的檔案位於<code class="docutils literal notranslate"><span class="pre">%TEMP%</span></code>目錄，Linux 系統則儲存的檔案在<code class="file docutils literal notranslate"><span class="pre">/home/'username'</span></code> 目錄。</p>
 </dd>
-<dt>Unnamed autosave files are hidden by default</dt><dd><p>This determines whether the filename of autosaves has a period prepended to the name. On Linux and macOS this is a technique to ensure the file is hidden by default.</p>
+<dt>預設隱藏未命名的自動儲存檔案</dt><dd><p>勾選這項目時，自動儲存的檔案名稱會插入一個半形句點，在 Linux 和 MacOS 系統下會預設將這種檔案指定為隱藏檔。</p>
 </dd>
-<dt>Create Backup File</dt><dd><p>When selected Krita will, upon save, rename the original file as a backup file and save the current image to the original name. The result is that you will have saved the image, and there will be a copy of the image that is saved separately as a backup. This is useful in case of crashes during saves.</p>
+<dt>儲存時建立備份檔案</dt><dd><p>選用這功能時，Krita 會在儲存時給原始檔案重新命名，並且將目前影像儲存為原始檔名。這表示您可以儲存一個影像檔案的同時另外保存備份檔，因為若不幸出現當機問題時，您還能從備份檔中復原當機前的工作進度。</p>
 </dd>
-<dt>Backup File Location</dt><dd><p>The default location these backups should be stored.</p>
+<dt>備份檔案位置</dt><dd><p>儲存這些備份檔案的預設目錄。</p>
 <dl class="simple">
-<dt>Same Folder as Original File</dt><dd><p>Store the file in the same folder as the original file was stored.</p>
+<dt>與原始檔案相同資料夾</dt><dd><p>將備份檔案儲存在原始檔同一個目錄裡。</p>
 </dd>
-<dt>User Folder</dt><dd><p>This is the main folder of your computer. On Linux and macOS this is the 'Home' folder, on Windows, the <code class="file docutils literal notranslate"><span class="pre">c:UsersYOUR_USER_NAME</span></code> folder (where <code class="docutils literal notranslate"><span class="pre">YOUR_USER_NAME</span></code> is your windows username).</p>
+<dt>使用者資料夾</dt><dd><p>這是您電腦上的主資料夾。在 Linux 與 MacOS 系統中相當於「Home」用戶資料夾。在 Windows 系統則是<code class="file docutils literal notranslate"><span class="pre">c:UsersYOUR_USER_NAME</span></code>資料夾（其中<code class="docutils literal notranslate"><span class="pre">YOUR_USER_NAME</span></code>是您在 Windows 系統下的用戶名稱）。</p>
 </dd>
-<dt>Temporary File Folder</dt><dd><p>This stored the file in the temp folder. Temp folders are special folders of which the contents are emptied when you shut down your computer. If you don't particularly care about your backup files and want them to be 'cleaned' automatically, this is the best place. If you want your backup files to be kept indefinitely, this is a wrong choice.</p>
+<dt>暫存位置</dt><dd><p>使用這個選項會將備份檔放到暫存資料夾。暫存資料夾是個在關閉電腦時會清空內容的特殊目錄，如果您不特別需要保存備份檔案並且希望讓電腦自動清理，那可以選擇將備份檔案放在這裡；反之若您希望無限期保存備份檔案，那麼設定在這個暫存資料夾則不是個好決定。</p>
 </dd>
 </dl>
 </dd>
-<dt>Backup File Suffix</dt><dd><p>The suffix that will be placed after the full filename. <code class="docutils literal notranslate"><span class="pre">filename.kra</span></code> will then be saved as <code class="docutils literal notranslate"><span class="pre">filename.kra~</span></code>, ensuring the files won't show up in Krita's open file dialog.</p>
+<dt>備份檔案後綴</dt><dd><p>在備份檔名添加後綴符號。例如使用預設的 <code class="docutils literal notranslate"><span class="pre">~</span></code> 符號時， <code class="docutils literal notranslate"><span class="pre">filename.kra</span></code> 將被保存為 <code class="docutils literal notranslate"><span class="pre">filename.kra~</span></code> ，以確保這些檔案不會出現在 Krita 開啟檔案的對話視窗中造成混淆。</p>
 </dd>
-<dt>Number of Backup Files Kept</dt><dd><p>Number of backup files Krita keeps, by default this is only one, but this can be up to 99. Krita will then number the backup files.</p>
+<dt>保留的備份檔案數目</dt><dd><p>指定 Krita 保留備份檔案的數量，預設情況下僅有 1 個，但您最多可以指定 99 個備份檔，Krita 會自動給檔案加上編號。</p>
 </dd>
-<dt>Compress <code class="docutils literal notranslate"><span class="pre">\*.kra</span></code> files more (slows loading/saving)</dt><dd><p>This increases the ZIP compression on the saved Krita files, which makes them lighter on disk, but this takes longer to load.</p>
+<dt>提高 .kra 檔案的壓縮率（載入及儲存的速度會變慢）</dt><dd><p>這會增加保存的 Krita 檔案的 ZIP 壓縮率，使它們佔用較少的硬碟空間，但開啟時間會更長。</p>
 </dd>
-<dt>Use Zip64</dt><dd><p>KRA files are ZIP files. Zip64 allows you to make really large image files (which is useful for animation), however, not all ZIP file programs can read Zip64, including older versions of Krita.</p>
+<dt>使用 Zip64</dt><dd><p>KRA 檔案本身其實是 ZIP 格式檔案。Zip64 的擴充格式可以支援比較大的影像檔案（例如動畫），但相對的並非所有 ZIP 檔案軟體都可以開啟 Zip64 格式壓縮檔，舊版的 Krita 也不支援這種格式。</p>
 </dd>
-<dt>Trim Files before Saving</dt><dd><p>Normally, Krita will always keep pixels outside the visible canvas area and save that. With this option turned on, Krita will first <a class="reference internal" href="../tools/crop.html#crop-tool"><span class="std std-ref">crop</span></a> all the layers to the canvas-area and then save it.</p>
+<dt>儲存前裁剪檔案</dt><dd><p>通常 Krita 儲存時會將所有可見像素保留在畫布及畫布以外的區域。啟用這個選項後，Krita 會先以 <a class="reference internal" href="../tools/crop.html#crop-tool"><span class="std std-ref">修剪至影像大小</span></a>將所有圖層裁剪到僅有畫布區域再進行儲存。</p>
 </dd>
 </dl>
 </section>
 <section id="miscellaneous">
-<span id="misc-settings"></span><h2>Miscellaneous<a class="headerlink" href="#miscellaneous" title="本標題的永久連結">¶</a></h2>
+<span id="misc-settings"></span><h2>其它<a class="headerlink" href="#miscellaneous" title="本標題的永久連結">¶</a></h2>
 <dl>
-<dt>When Krita starts</dt><dd><p>This is the option for handling <a class="reference internal" href="../resource_management/resource_workspace.html#working-sessions"><span class="std std-ref">user sessions</span></a>. It has the following options:</p>
+<dt>當 Krita 啟動時</dt><dd><p>這個是在 Krita 啟動時如何處理<a class="reference internal" href="../resource_management/resource_workspace.html#working-sessions"><span class="std std-ref">使用者工作階段</span></a>的選項，它有以下項目可用：</p>
 <dl class="simple">
-<dt>Open Default Window</dt><dd><p>This opens the regular empty window with the last used workspace.</p>
+<dt>開啟預設視窗</dt><dd><p>這將打開帶有上次使用的工作區設定的空白視窗。</p>
 </dd>
-<dt>Load Previous Session</dt><dd><p>Load the last opened session. If you have <span class="guilabel">Save session when Krita closes</span> toggled, this becomes the last files you had open and the like.</p>
+<dt>載入上一次工作階段</dt><dd><p>載入上一次的工作階段。若您勾選了<span class="guilabel">關閉 Krita 時儲存工作階段</span>項目，Krita 會自動記下工作階段的最後狀態，例如打開的檔案和視窗佈局。</p>
 </dd>
-<dt>Show Session Manager</dt><dd><p>Show the session manager directly, so you can pick a session.</p>
+<dt>顯示工作階段管理器</dt><dd><p>打開 Krita 時顯示「工作階段管理器」，讓您選擇要載入的工作階段。</p>
 </dd>
 </dl>
 <div class="versionadded">
 <p><span class="versionmodified added">在 4.1 版本新加入.</span></p>
 </div>
 </dd>
-<dt>Save session when Krita closes</dt><dd><p>Save the current open windows, documents and the like into the current session when closing Krita, so you can resume where you left off.</p>
+<dt>關閉 Krita 時儲存工作階段</dt><dd><p>在關閉 Krita 時將當前打開的視窗、檔案保存到當前工作階段中，以便下次開啟 Krita 時選取要加載的工作階段。</p>
 <div class="versionadded">
 <p><span class="versionmodified added">在 4.1 版本新加入.</span></p>
 </div>
 </dd>
-<dt>Upon importing Images as Layers, convert to the image color space.</dt><dd><p>This makes sure that layers are the same color space as the image, necessary for saving to PSD.</p>
+<dt>匯入影像為圖層時，將其轉換為目標影像的色彩空間。</dt><dd><p>這功能可確保圖層與影像擁有相同的色彩空間，這選項是儲存 PSD 格式檔案時所必須的。</p>
 </dd>
-<dt>Undo Stack Size</dt><dd><p>This is the number of undo commands Krita remembers. You can set the value to 0 for unlimited undo commands.</p>
+<dt>復原次數上限</dt><dd><p>這是 Krita 可復原紀錄的數量，將其設定為 0 即可無限制復原次數。</p>
 </dd>
-<dt>Enable Logging For Bug Reports</dt><dd><p>This controls whether Krita keeps a log of the important actions, which can then be attached to a bug report. You can view the log itself via <span class="menuselection">Help ‣ Show Krita Log for Bug Reports</span>, and the log itself is stored in the shared application settings.</p>
+<dt>啟用供錯誤報告用的紀錄</dt><dd><p>此選項啟用時 Krita 會將程式的重要操作紀錄到日誌檔中，以便於需要回報程式錯誤時附加到報告作為判斷線索。您可以通過<span class="menuselection">說明 ‣ 顯示要用於錯誤報告的 Krita 紀錄</span>來察看 Krita 日誌，這個日誌檔會儲存在作業系統的應用程式共享設定目錄。</p>
 <div class="admonition note">
 <p class="admonition-title">備註</p>
-<p>Krita does not automatically transfer data anywhere. The log needs to be uploaded by users themselves if necessary.</p>
+<p>Krita 不會自動將錯誤報告上傳到任何地方。您需要手動將日誌內容附加到程式錯誤報告中。</p>
 </div>
 </dd>
-<dt>Hide splash screen on startup.</dt><dd><p>This'll hide the splash screen automatically once Krita is fully loaded.</p>
+<dt>啟動時隱藏歡迎畫面。</dt><dd><p>在 Krita 完成啟動後自動關閉歡迎畫面。</p>
 <div class="deprecated">
-<p><span class="versionmodified deprecated">在 4.1 版本開始棄用: </span>Deprecated because Krita now has a welcome widget when no canvas is open.</p>
+<p><span class="versionmodified deprecated">在 4.1 版本開始棄用: </span>此選項在新版中已不存在。新版 Krita 會在啟動完成後直接顯示歡迎畫面。</p>
 </div>
 </dd>
-<dt>Enable Native File Dialog</dt><dd><p>This allows you to use the system file dialog. Turned off by default, because we cannot seem to get native file dialogues 100% bug free.</p>
+<dt>啟用系統原生「開啟」/「儲存」檔案對話框</dt><dd><p>勾選這個項目後 Krita 會嘗試使用作業系統原生檔案對話視窗。這功能不一定 100% 正常工作，若您遇到問題時請取消勾選這個項目。</p>
 </dd>
-<dt>Maximum brush size</dt><dd><p>This allows you to set the maximum brush size to a size of up to 10,000 pixels. Do be careful with using this, as a 10,000 pixel size can very quickly be a full gigabyte of data being manipulated, per dab. In other words, this might be slow.</p>
+<dt>筆刷最大大小</dt><dd><p>這功能可以指定筆刷大小上限，最高可設定為 10,000 像素的大小。但 10,000 這樣多的像素每一筆畫都會產生大約 1GB 的資料量，這將造成系統緩慢，因此請小心使用。</p>
 </dd>
-<dt>Recalculate animation cache in background.</dt><dd><p>Krita will recalculate the cache when you're not doing anything.</p>
+<dt>在背景計算動畫快取。</dt><dd><p>Krita 會在您沒有執行任何動作時於背景生成動畫快取。</p>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 4.1 版本變更: </span>This is now in the <a class="reference internal" href="performance_settings.html#performance-settings"><span class="std std-ref">「效能」設定</span></a> under <span class="guilabel">Animation Cache</span>.</p>
+<p><span class="versionmodified changed">在 4.1 版本變更: </span>這選項已移動到<a class="reference internal" href="performance_settings.html#performance-settings"><span class="std std-ref">「效能」設定</span></a>項目下的<span class="guilabel">「動畫快取」</span>中。</p>
 </div>
 </dd>
-<dt>Automatically Pin New layers To Timeline.</dt><dd><p>Used with the <a class="reference internal" href="../dockers/animation_timeline.html#timeline-docker"><span class="std std-ref">動畫時間軸</span></a>, this will pin all animation layers to the timeline automatically. Depending on your workflow, this can be quite intense, so hence the option to turn it off.</p>
+<dt>自動釘選新圖層至時間軸。</dt><dd><p>與<a class="reference internal" href="../dockers/animation_timeline.html#timeline-docker"><span class="std std-ref">動畫時間軸</span></a>配合使用，選用這功能後會將所有動畫圖層自動固定到時間軸面板。在某些工作流程下這可能會大量佔用系統資源造成操作緩慢，您可以選擇將此功能關閉。</p>
 <div class="versionadded">
 <p><span class="versionmodified added">在 5.0 版本新加入.</span></p>
 </div>
 </dd>
-<dt>Adapt playback range to key frames.</dt><dd><p>This option decides whether adding key frames outside the current playback range automatically extends the playback range or not.</p>
+<dt>將重播範圍調整至關鍵影格。</dt><dd><p>鉤選這個項目後，在當前播放範圍之外增加新的關鍵影格時，Krita 會自動延長播放範圍。</p>
 <div class="versionadded">
 <p><span class="versionmodified added">在 5.0 版本新加入.</span></p>
 </div>
 </dd>
-<dt>Font DPI Workaround</dt><dd><p>We had a bug in Krita 4.x where the DPI of the display affected the DPI of the text.</p>
-<p>Now when loading a file created in Krita 4.4 we convert its font sizes using the DPI of the display and bake this new value into the file. The user can override this behavior by selecting another DPI in here. Setting this value to 72 DPI will effectively disable any scaling.</p>
+<dt>字形 DPI 應急修正方法</dt><dd><p>Krita 4.x 中有一個程式錯誤，它會造成顯示器的 DPI 設定影響文字的 DPI 。此錯誤已在新版 Krita 獲得解決，但在開啟舊版 Krita 所儲存的檔案時，可能需要轉換字體 DPI 以保持字體的一致性。</p>
+<p>新版 Krita 在載入 4.4 版所建立的檔案時，我們使用DISP的DPI來轉換其字體大小，並將此新值轉移到檔案中。您可以通過在這裡設定另一個DPI來覆寫此行為。若將此值設置為 72 dpi 將不進行任何縮放。</p>
 <div class="versionadded">
 <p><span class="versionmodified added">在 5.0 版本新加入.</span></p>
 </div>
@@ -534,15 +534,15 @@
 </dl>
 </section>
 <section id="resources">
-<span id="resource-settings"></span><h2>Resources<a class="headerlink" href="#resources" title="本標題的永久連結">¶</a></h2>
-<p>For determining the location of the resource folder and the cache.</p>
+<span id="resource-settings"></span><h2>資源<a class="headerlink" href="#resources" title="本標題的永久連結">¶</a></h2>
+<p>用以決定資源檔案目錄和快取的位置。</p>
 <div class="versionadded">
 <p><span class="versionmodified added">在 5.0 版本新加入.</span></p>
 </div>
 <dl class="simple">
-<dt>Cache Location</dt><dd><p>Sets where the SQLite Database that manages all the resources is located.</p>
+<dt>快取位置</dt><dd><p>設定管理所有資源 SQLite 資料庫的所在位置。</p>
 </dd>
-<dt>Resource Folder</dt><dd><p>Sets where the Resource Folder itself is located.</p>
+<dt>資源目錄</dt><dd><p>設定資源資料夾本身所在的位置。</p>
 </dd>
 </dl>
 </section>
@@ -571,7 +571,7 @@
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>6339830</code>
+          修訂版本 <code>2c0b496</code>
         </span>
       
 
