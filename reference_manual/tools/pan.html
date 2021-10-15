@@ -6,7 +6,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta property="og:title" name="title" content="Pan Tool" />
+  <meta property="og:title" name="title" content="平移工具" />
   <meta property="og:site-name" content="Krita Manual" />
   <meta property="og:type" content="article" />
   <meta property="og:locale" content="zh_TW" />
@@ -21,13 +21,13 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-10-14T09:58:38" />
+  <meta property="og:article:modified_time" content="2021-10-15T12:57:55" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<meta content="Krita's pan tool reference." name="description" />
+<meta content="Krita 的平移工具參考。" name="description" />
 
   
   
-  <title>Pan Tool &mdash; Krita Manual 5.0.0 說明文件</title>
+  <title>平移工具 &mdash; Krita Manual 5.0.0 說明文件</title>
   
 
   
@@ -163,7 +163,7 @@
 <li class="toctree-l3"><a class="reference internal" href="shape_edit.html">Shape Edit Tool</a></li>
 <li class="toctree-l3"><a class="reference internal" href="text.html">Text Tool</a></li>
 <li class="toctree-l3"><a class="reference internal" href="gradient_edit.html">漸變編輯工具</a></li>
-<li class="toctree-l3"><a class="reference internal" href="pattern_edit.html">Pattern Editing Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pattern_edit.html">圖案編輯工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="calligraphy.html">西文書法工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="freehand_brush.html">手繪筆刷工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="line.html">直線工具</a></li>
@@ -191,11 +191,11 @@
 <li class="toctree-l3"><a class="reference internal" href="freehand_select.html">手繪選取區域工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="polygonal_select.html">Polygonal Selection Tool</a></li>
 <li class="toctree-l3"><a class="reference internal" href="contiguous_select.html">相連選取區域工具</a></li>
-<li class="toctree-l3"><a class="reference internal" href="path_select.html">Path Selection Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="path_select.html">路徑選取工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="similar_select.html">Similar Color Selection Tool</a></li>
 <li class="toctree-l3"><a class="reference internal" href="magnetic_select.html">磁性選取區域工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="zoom.html">Zoom Tool</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Pan Tool</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">平移工具</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../welcome_screen.html">歡迎畫面</a></li>
@@ -264,7 +264,7 @@
         
           <li><a href="../tools.html">工具</a> &raquo;</li>
         
-      <li>Pan Tool</li>
+      <li>平移工具</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -289,15 +289,15 @@
            <div itemprop="articleBody">
             
   <section id="pan-tool">
-<span id="index-0"></span><span id="id1"></span><h1>Pan Tool<a class="headerlink" href="#pan-tool" title="本標題的永久連結">¶</a></h1>
-<p><img alt="toolpan" src="../../_images/pan_tool.svg" /></p>
-<p>The pan tool allows you to pan your canvas around freely. It can be found at the bottom of the toolbox, and you just it by selecting the tool, and doing <img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">+</kbd> <kbd class="kbd docutils literal notranslate">drag</kbd></kbd> over the canvas.</p>
-<p>There are two hotkeys associated with this tool, which makes it easier to access from the other tools:</p>
+<span id="index-0"></span><span id="id1"></span><h1>平移工具<a class="headerlink" href="#pan-tool" title="本標題的永久連結">¶</a></h1>
+<p><img alt="平移工具" src="../../_images/pan_tool.svg" /></p>
+<p>平移工具可以讓你自由地平移畫布。可以在工具箱底部找到，點選工具後在畫布裡 <img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">+</kbd> <kbd class="kbd docutils literal notranslate">拖曳</kbd></kbd>。</p>
+<p>這個工具有兩個快捷鍵，可以快速地從其他工具切換至這個工具：</p>
 <ul class="simple">
-<li><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Space</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">+</kbd> <kbd class="kbd docutils literal notranslate">drag</kbd></kbd> over the canvas.</p></li>
-<li><p><img alt="滑鼠中鍵" src="../../_images/Krita_mouse_middle.png" /> <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">+</kbd> <kbd class="kbd docutils literal notranslate">drag</kbd></kbd> over the canvas.</p></li>
+<li><p>在畫布中 :kbd:` 空白鍵 +` <img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">+</kbd> <kbd class="kbd docutils literal notranslate">拖曳</kbd></kbd>。</p></li>
+<li><p>在畫布中 <img alt="滑鼠中鍵" src="../../_images/Krita_mouse_middle.png" /> <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">+</kbd> <kbd class="kbd docutils literal notranslate">拖曳</kbd></kbd>。</p></li>
 </ul>
-<p>For more information on such hotkeys, check <a class="reference internal" href="../../user_manual/getting_started/navigation.html#navigation"><span class="std std-ref">介面導航</span></a>.</p>
+<p>若是需要更多有關快捷鍵的資訊，參閱<a class="reference internal" href="../../user_manual/getting_started/navigation.html#navigation"><span class="std std-ref">介面導航</span></a>。</p>
 </section>
 
 
@@ -323,7 +323,7 @@
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>37e15c3</code>
+          修訂版本 <code>ea93fd4</code>
         </span>
       
 

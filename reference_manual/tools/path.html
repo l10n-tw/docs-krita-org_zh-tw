@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-10-14T09:58:38" />
+  <meta property="og:article:modified_time" content="2021-10-15T12:57:55" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="Krita 的路徑工具參考。" name="description" />
 
@@ -163,7 +163,7 @@
 <li class="toctree-l3"><a class="reference internal" href="shape_edit.html">Shape Edit Tool</a></li>
 <li class="toctree-l3"><a class="reference internal" href="text.html">Text Tool</a></li>
 <li class="toctree-l3"><a class="reference internal" href="gradient_edit.html">漸變編輯工具</a></li>
-<li class="toctree-l3"><a class="reference internal" href="pattern_edit.html">Pattern Editing Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pattern_edit.html">圖案編輯工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="calligraphy.html">西文書法工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="freehand_brush.html">手繪筆刷工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="line.html">直線工具</a></li>
@@ -172,7 +172,7 @@
 <li class="toctree-l3"><a class="reference internal" href="polygon.html">Polygon Tool</a></li>
 <li class="toctree-l3"><a class="reference internal" href="polyline.html">Polyline Tool</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">貝茲曲線工具</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#tool-options">Tool Options</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tool-options">工具選項</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="freehand_path.html">手繪路徑工具</a></li>
@@ -194,11 +194,11 @@
 <li class="toctree-l3"><a class="reference internal" href="freehand_select.html">手繪選取區域工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="polygonal_select.html">Polygonal Selection Tool</a></li>
 <li class="toctree-l3"><a class="reference internal" href="contiguous_select.html">相連選取區域工具</a></li>
-<li class="toctree-l3"><a class="reference internal" href="path_select.html">Path Selection Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="path_select.html">路徑選取工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="similar_select.html">Similar Color Selection Tool</a></li>
 <li class="toctree-l3"><a class="reference internal" href="magnetic_select.html">磁性選取區域工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="zoom.html">Zoom Tool</a></li>
-<li class="toctree-l3"><a class="reference internal" href="pan.html">Pan Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pan.html">平移工具</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../welcome_screen.html">歡迎畫面</a></li>
@@ -297,21 +297,21 @@
 <p>你可以透過這個工具來畫出曲線。<img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> 來給繪製曲線的起點，然後再點一下來連續控制曲線的錨點。</p>
 <p><strong class="program">Krita</strong> 會在你新增一個控制錨點時顯示一個有著兩個控制項鐵人的藍色線段，你可以拖曳這些控制項來改變曲線在那個錨點的方向。</p>
 <p>在向量圖層中，你可以點選上一個錨點來修改。在中途的錨點（即除了首尾的兩個錨點），你可以分別移動控制項方向來讓曲線的起點和終點的方向不同。在編輯錨點後，點選畫布來繼續為曲線新增錨點。</p>
-<p>Pressing the <kbd class="kbd docutils literal notranslate">Del</kbd> key will remove the currently selected control point from the curve. Double-click the <img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> on any point of the curve or press the <kbd class="kbd docutils literal notranslate">Enter</kbd> key to finish drawing, or press the <kbd class="kbd docutils literal notranslate">Esc</kbd> key to cancel the entire curve. You can use the <kbd class="kbd docutils literal notranslate">Ctrl</kbd> key while keeping the <img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> pressed to move the entire curve to a different position.</p>
-<p>While drawing the <kbd class="kbd docutils literal notranslate">Ctrl</kbd> key while dragging will push the handles both ways. The <kbd class="kbd docutils literal notranslate">Alt</kbd> key will create a sharp corner, and the <kbd class="kbd docutils literal notranslate">Shift</kbd> key will allow you to make a handle while at the end of the curve. <img alt="滑鼠右鍵" src="../../_images/Krita_mouse_right.png" /> will undo the last added point.</p>
+<p>按 <kbd class="kbd docutils literal notranslate">Del</kbd> 鍵會移除曲線中目前選取的錨點。在曲線上的任何錨點按 <img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> 兩次或是按 <kbd class="kbd docutils literal notranslate">Enter</kbd> 兩次來完成曲線，或是按 <kbd class="kbd docutils literal notranslate">Esc</kbd> 來取消曲線。在按著 <kbd class="kbd docutils literal notranslate">Ctrl</kbd> 時使用 <img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> 鍵會把整個曲線移動到不同位置。</p>
+<p>在拉線條時按 <kbd class="kbd docutils literal notranslate">Ctrl</kbd> 鍵會推動兩邊的控制柄；而按 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Alt`鍵會在曲線中生成銳角；按</kbd> <kbd class="kbd docutils literal notranslate">:kbd:`Shift</kbd></kbd> 鍵會在曲線末端生成控制柄。<img alt="滑鼠右鍵" src="../../_images/Krita_mouse_right.png" /> 會退回至上一個錨點。</p>
 <section id="tool-options">
-<h2>Tool Options<a class="headerlink" href="#tool-options" title="本標題的永久連結">¶</a></h2>
+<h2>工具選項<a class="headerlink" href="#tool-options" title="本標題的永久連結">¶</a></h2>
 <div class="versionadded">
 <p><span class="versionmodified added">在 4.1.3 版本新加入: </span></p>
 <dl class="simple">
-<dt>Autosmooth Curve</dt><dd><p>Toggling this will have nodes initialize with smooth curves instead of angles. Untoggle this if you want to create sharp angles for a node. This will affect curve sharpness from dragging after clicking.</p>
+<dt>自動平滑曲線</dt><dd><p>Toggling this will have nodes initialize with smooth curves instead of angles. Untoggle this if you want to create sharp angles for a node. This will affect curve sharpness from dragging after clicking.</p>
 </dd>
 </dl>
 </div>
 <dl class="simple">
-<dt>Angle Snapping Delta</dt><dd><p>The angle to snap to.</p>
+<dt>角度吸附增量</dt><dd><p>曲線吸附的角度。</p>
 </dd>
-<dt>Activate Angle Snap</dt><dd><p>Angle snap will make it easier to have the next line be at a specific angle of the current. The angle is determined by the <span class="guilabel">Angle Snapping Delta</span>.</p>
+<dt>啟動角度吸附</dt><dd><p>角度吸附會在下一個曲線為特定角度時十分方便的選項。角度由 <span class="guilabel">角度吸附增量</span> 決定。</p>
 </dd>
 </dl>
 </section>
@@ -340,7 +340,7 @@
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>37e15c3</code>
+          修訂版本 <code>ea93fd4</code>
         </span>
       
 

@@ -6,7 +6,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta property="og:title" name="title" content="Pattern Editing Tool" />
+  <meta property="og:title" name="title" content="圖案編輯工具" />
   <meta property="og:site-name" content="Krita Manual" />
   <meta property="og:type" content="article" />
   <meta property="og:locale" content="zh_TW" />
@@ -21,13 +21,13 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-10-14T09:58:38" />
+  <meta property="og:article:modified_time" content="2021-10-15T12:57:55" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<meta content="Krita's vector pattern editing tool reference." name="description" />
+<meta content="Krita 的向量圖案編輯工具參考。" name="description" />
 
   
   
-  <title>Pattern Editing Tool &mdash; Krita Manual 5.0.0 說明文件</title>
+  <title>圖案編輯工具 &mdash; Krita Manual 5.0.0 說明文件</title>
   
 
   
@@ -163,9 +163,9 @@
 <li class="toctree-l3"><a class="reference internal" href="shape_edit.html">Shape Edit Tool</a></li>
 <li class="toctree-l3"><a class="reference internal" href="text.html">Text Tool</a></li>
 <li class="toctree-l3"><a class="reference internal" href="gradient_edit.html">漸變編輯工具</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Pattern Editing Tool</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#on-canvas-editing">On Canvas-editing</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#tool-options">Tool Options</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">圖案編輯工具</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#on-canvas-editing">在畫布中編輯</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tool-options">工具選項</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="calligraphy.html">西文書法工具</a></li>
@@ -195,11 +195,11 @@
 <li class="toctree-l3"><a class="reference internal" href="freehand_select.html">手繪選取區域工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="polygonal_select.html">Polygonal Selection Tool</a></li>
 <li class="toctree-l3"><a class="reference internal" href="contiguous_select.html">相連選取區域工具</a></li>
-<li class="toctree-l3"><a class="reference internal" href="path_select.html">Path Selection Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="path_select.html">路徑選取工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="similar_select.html">Similar Color Selection Tool</a></li>
 <li class="toctree-l3"><a class="reference internal" href="magnetic_select.html">磁性選取區域工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="zoom.html">Zoom Tool</a></li>
-<li class="toctree-l3"><a class="reference internal" href="pan.html">Pan Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pan.html">平移工具</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../welcome_screen.html">歡迎畫面</a></li>
@@ -268,7 +268,7 @@
         
           <li><a href="../tools.html">工具</a> &raquo;</li>
         
-      <li>Pattern Editing Tool</li>
+      <li>圖案編輯工具</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -293,65 +293,65 @@
            <div itemprop="articleBody">
             
   <section id="pattern-editing-tool">
-<span id="pattern-edit-tool-rst"></span><span id="index-0"></span><h1>Pattern Editing Tool<a class="headerlink" href="#pattern-editing-tool" title="本標題的永久連結">¶</a></h1>
-<p><img alt="toolpatternedit" src="../../_images/pattern_tool.svg" /></p>
+<span id="pattern-edit-tool-rst"></span><span id="index-0"></span><h1>圖案編輯工具<a class="headerlink" href="#pattern-editing-tool" title="本標題的永久連結">¶</a></h1>
+<p><img alt="圖案編輯工具" src="../../_images/pattern_tool.svg" /></p>
 <div class="deprecated">
-<p><span class="versionmodified deprecated">在 4.0 版本開始棄用: </span>The pattern editing tool has been removed in 4.0, currently there's no way to edit pattern fills for vectors.</p>
+<p><span class="versionmodified deprecated">在 4.0 版本開始棄用: </span>這個工具在 4.0 版本時已被移除，現在並沒有方法編輯向量的圖案填滿。</p>
 </div>
-<p>The Pattern editing tool works on Vector Shapes that use a Pattern fill. On these shapes, the Pattern Editing Tool allows you to change the size, ratio and origin of a pattern.</p>
+<p>圖案編輯工具能對向量圖形中的填充圖案進行編輯。在這些形狀中，這個工具能改變圖案的尺寸、比例和原點。</p>
 <section id="on-canvas-editing">
-<h2>On Canvas-editing<a class="headerlink" href="#on-canvas-editing" title="本標題的永久連結">¶</a></h2>
-<p>You can change the origin by click dragging the upper node, this is only possible in Tiled mode.</p>
-<p>You can change the size and ratio by click-dragging the lower node. There's no way to constrain the ratio in on-canvas editing, this is only possible in Original and Tiled mode.</p>
+<h2>在畫布中編輯<a class="headerlink" href="#on-canvas-editing" title="本標題的永久連結">¶</a></h2>
+<p>你可以透過拖曳上面的錨點來更改原點，這只能在平鋪模式中使用。</p>
+<p>你可以透過拖曳下方的錨點來更改尺寸和比例。這裡沒有方法在畫布編輯中約束比例，這只能在原始和平鋪模式中使用。</p>
 </section>
 <section id="tool-options">
-<h2>Tool Options<a class="headerlink" href="#tool-options" title="本標題的永久連結">¶</a></h2>
-<p>There are several tool options with this tool, for fine-tuning:</p>
-<p>First there are the Pattern options.</p>
+<h2>工具選項<a class="headerlink" href="#tool-options" title="本標題的永久連結">¶</a></h2>
+<p>這裡有數項對於工具的選項，能作完全調整：</p>
+<p>首先有圖案選項。</p>
 <dl>
-<dt>Repeat:</dt><dd><p>This can be set to:</p>
+<dt>重覆：</dt><dd><p>這個可以設定為：</p>
 <dl class="simple">
-<dt>Original:</dt><dd><p>This will only show one, unstretched, copy of the pattern.</p>
+<dt>原始：</dt><dd><p>這只會顯示一個、未伸展，複製的圖案。</p>
 </dd>
-<dt>Tiled (Default):</dt><dd><p>This will let the pattern appear tiled in the x and y direction.</p>
+<dt>平鋪（預設）：</dt><dd><p>這會使圖案以 X 軸和 Y 軸平鋪。</p>
 </dd>
-<dt>Stretch:</dt><dd><p>This will stretch the Pattern image to the shape.</p>
+<dt>伸展：</dt><dd><p>這會拉伸圖案影像以符合形狀。</p>
 </dd>
 </dl>
 </dd>
-<dt>Reference point:</dt><dd><p>Pattern origin. This can be set to:</p>
+<dt>參考點：</dt><dd><p>圖案的原始點。這個可以設定為：</p>
 <ul class="simple">
-<li><p>Top-left</p></li>
-<li><p>Top</p></li>
-<li><p>Top-right</p></li>
-<li><p>Left</p></li>
-<li><p>Center</p></li>
-<li><p>Right</p></li>
-<li><p>Bottom-left</p></li>
-<li><p>Bottom</p></li>
-<li><p>Bottom-right.</p></li>
+<li><p>左上角</p></li>
+<li><p>頂部</p></li>
+<li><p>右上角</p></li>
+<li><p>左側</p></li>
+<li><p>中心</p></li>
+<li><p>右側</p></li>
+<li><p>左下角</p></li>
+<li><p>底部</p></li>
+<li><p>右下角</p></li>
 </ul>
 </dd>
-<dt>Reference Point Offset:</dt><dd><p>For extra tweaking, set in percentages.</p>
+<dt>參考點偏移：</dt><dd><p>提供額外調整，以比率設定。</p>
 <dl class="simple">
-<dt>X:</dt><dd><p>Offset in the X coordinate, so horizontally.</p>
+<dt>X:</dt><dd><p>以 X 軸偏移，即水平偏移。</p>
 </dd>
-<dt>Y:</dt><dd><p>Offset in the Y coordinate, so vertically.</p>
+<dt>Y:</dt><dd><p>以 Y 軸偏移，即垂直偏移。</p>
 </dd>
 </dl>
 </dd>
-<dt>Tile Offset:</dt><dd><p>The tile offset if the pattern is tiled.</p>
+<dt>平鋪偏移：</dt><dd><p>若是圖案為平鋪，則偏移圖案。</p>
 </dd>
-<dt>Pattern Size:</dt><dd><p>Fine Tune the resizing of the pattern.</p>
+<dt>圖案大小：</dt><dd><p>精確調整圖案的大小。</p>
 <dl class="simple">
-<dt>W:</dt><dd><p>The width, in pixels.</p>
+<dt>W:</dt><dd><p>寬度，以像素為數值。</p>
 </dd>
-<dt>H:</dt><dd><p>The height, in pixels.</p>
-</dd>
-</dl>
+<dt>H:</dt><dd><p>高度，以像素為數值。</p>
 </dd>
 </dl>
-<p>And then there's <span class="guilabel">Patterns</span>, which is a mini pattern docker, and where you can pick the pattern used for the fill.</p>
+</dd>
+</dl>
+<p>在這裡會有 <span class="guilabel">圖案</span>，即小型的圖案工具面板，你可以在這裡選擇填充的圖案。</p>
 </section>
 </section>
 
@@ -378,7 +378,7 @@
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>37e15c3</code>
+          修訂版本 <code>ea93fd4</code>
         </span>
       
 
