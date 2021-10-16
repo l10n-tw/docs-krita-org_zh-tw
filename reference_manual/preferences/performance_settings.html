@@ -21,9 +21,9 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-10-15T21:58:22" />
+  <meta property="og:article:modified_time" content="2021-10-16T21:57:52" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<meta content="Performance settings in Krita." name="description" />
+<meta content="Krita 的效能設定。" name="description" />
 
   
   
@@ -160,7 +160,7 @@
 <li class="toctree-l3"><a class="reference internal" href="g_mic_settings.html">「G'Mic」設定</a></li>
 <li class="toctree-l3"><a class="reference internal" href="general_settings.html">「一般」設定</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">「效能」設定</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#ram">RAM</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ram">記憶體</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#swapping">Swapping</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#advanced">Advanced</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#animation-cache">Animation Cache</a></li>
@@ -273,25 +273,25 @@
             
   <section id="performance-settings">
 <span id="index-0"></span><span id="id1"></span><h1>「效能」設定<a class="headerlink" href="#performance-settings" title="本標題的永久連結">¶</a></h1>
-<p><strong class="program">Krita</strong>, as a painting program, juggles a lot of data around, like the brushes you use, the colors you picked, but primarily, each pixel in your image. Due to this, how <strong class="program">Krita</strong> organizes where it stores all the data can really speed up <strong class="program">Krita</strong> while painting, just like having an organized artist's workplace can really speed up the painting process in real life.</p>
-<p>These preferences allow you to configure <strong class="program">Krita's</strong> organisation, but all do require you to restart <strong class="program">Krita</strong>, so it can do this organisation properly.</p>
+<p><strong class="program">Krita</strong> 作為一個數位繪圖軟體，它需要處理很多的資料，例如您使用的筆刷、您所選擇的色彩，但主要是影像中的每個像素。因此如何讓 <strong class="program">Krita</strong> 組織它所儲存資料的方式會影響 <strong class="program">Krita</strong> 呈現的效能與速度。就像一個條理分明的工作室可以提高現實中藝術家繪畫的效率。</p>
+<p>這些偏好選項允許您組織並設定 <strong class="program">Krita</strong> 的效能，例如記憶體、CPU、快取這些與效能有密切關係的項目。這頁面內所有項目經變更後需要重新啟動 <strong class="program">Krita</strong> 才會生效。</p>
 <section id="ram">
-<h2>RAM<a class="headerlink" href="#ram" title="本標題的永久連結">¶</a></h2>
-<p>RAM, or Random Access Memory, is the memory your computer is immediately using. The difference between RAM and the hard drive memory can be compared to the difference between having files on your desk and having files safely stored away in an archiving room: The files on your desk as much easier to access than the ones in your archive, and it takes time to pull new files from the archive. This is the same for your computer and RAM. Files need to be loaded into RAM before the computer can really use them, and storing and removing them from RAM takes time.</p>
-<p>These settings allow you to choose how much of your virtual desk you dedicate to <strong class="program">Krita</strong>. <strong class="program">Krita</strong> will then reserve them on start-up. This does mean that if you change any of the given options, you need to restart <strong class="program">Krita</strong> so it can make this reservation.</p>
+<h2>記憶體<a class="headerlink" href="#ram" title="本標題的永久連結">¶</a></h2>
+<p>「隨機存取記憶體」（RAM 或 Random Access Memory）以下簡稱「記憶體」，是一種容量小但讀寫速度很快的暫時容器，關機後資料就會消失；硬碟則用作永久儲存資料的容器，相對記憶體而言容量很大但是讀寫速度很慢。而 CPU 運算時會先將資料由硬碟讀進記憶體中以加快處裡速度，由硬碟抄寫進記憶體與清空記憶體會使用一些時間。因此恰當分配與運用電腦有限的記憶體，可提高 :Program: <cite>Krita</cite> 的效能 。</p>
+<p>您可經由這些設定選擇要將多少資源分配給 <strong class="program">Krita</strong> 使用，並且每次 <strong class="program">Krita</strong> 啟動都會使用這些設定。因此這頁面內所有設定經變更後都需要重新啟動 <strong class="program">Krita</strong> 才會生效。</p>
 <dl>
-<dt>Memory Limit</dt><dd><p>This is the maximum space <strong class="program">Krita</strong> will reserve on your RAM on startup. It's both available in percentages and Bytes, so you can specify precisely. <strong class="program">Krita</strong> will not take up more space than this, making it safe for you to run an internet browser or music on the background.</p>
+<dt>記憶體上限</dt><dd><p>這是指定給 <strong class="program">Krita</strong> 啟動後可用的記憶體大小上限。這裡以百分比與右側實際大小兩種方式顯示，因此您可以精確指定 <strong class="program">Krita</strong> 不要使用佔用超過上限的記憶體，讓電腦可以保持背景執行網路瀏覽器或播放您的音樂。</p>
 </dd>
-<dt>Internal Pool</dt><dd><p>A feature for advanced computer users. This allows <strong class="program">Krita</strong> to organize the area it takes up on the virtual working desk before putting its data on there. Like how a painter has a standard spot for their canvas, <strong class="program">Krita</strong> also benefits from giving certain data it uses its place (a memory pool), so that it can find them easily, and it doesn't get lost among the other data (memory fragmentation). It will then also not have to spend time finding a spot for this data.</p>
-<p>Increasing this, of course, means there's more space for this type of data, but like how filling up your working desk with only one big canvas will make it difficult to find room for your paints and brushes, having a large internal pool will result in <strong class="program">Krita</strong> not knowing where to put the other non-specific data.</p>
-<p>On the opposite end, not giving your canvas a spot at all, will result in you spending more time looking for a place where you will put the new layer or that reference you just took out of the storage. This happens for <strong class="program">Krita</strong> as well, making it slower.</p>
-<p>This is recommended to be a size of one layer of your image, e.g. if you usually paint on the image of 3000x3000x8bit-ARGB, the pool should be something like 36 MiB.</p>
-<p>As <strong class="program">Krita</strong> does this on start-up, you will need to restart <strong class="program">Krita</strong> to have this change affect anything.</p>
+<dt>內部儲存池</dt><dd><p>這是高級使用者選項，這功能是允許 <strong class="program">Krita</strong> 將資料放在記憶體中一個虛擬儲存區塊。就好像藝術家在畫布上有個標準位置一樣，也會因為給予 <strong class="program">Krita</strong> 一個專有的資料存取區域提高資料讀寫與搜尋效能，也避免因為記憶體碎片問題遺失資料。</p>
+<p>增加這個區塊的大小等同於有更多空間儲存這些資料，但也會因資料無法放滿整個空間顯得浪費，設定得太高也會造成某些資料 <strong class="program">Krita</strong> 不知要放在哪裡，反而因此效能降低。</p>
+<p>另一方面，若不給予或設定的數值太小，也會因此花更多時間在尋找存取的位置。這樣也會影響 <strong class="program">Krita</strong> 的執行效能。</p>
+<p>建議值是設定為您常用影像單一圖層所需記憶體的大小。例如一個 3000 x 3000 像素的 8bit RGBA 影像大概需要36 MiB。</p>
+<p>因為 <strong class="program">Krita</strong> 必須在啟動時才能向系統要求取得記憶體的分配，在做這些更改之後需重新啟動 <strong class="program">Krita</strong> 設定才會生效。</p>
 <div class="deprecated">
-<p><span class="versionmodified deprecated">在 4.4 版本開始棄用: </span>This setting was not needed from user side and is deprecated starting from 4.4.</p>
+<p><span class="versionmodified deprecated">在 4.4 版本開始棄用: </span>此選項在 <strong class="program">Krita 4.4</strong> 版之後已經移除，它現在由程式自動控制，使用者不需再做設定。</p>
 </div>
 </dd>
-<dt>Swap Undo After</dt><dd><p><strong class="program">Krita</strong> also needs to keep all the Undo states on the virtual desk (RAM). Swapping means that parts of the files on the virtual desk get sent to the virtual archive room. This allows <strong class="program">Krita</strong> to dedicate more RAM space to new actions, by sending old Undo states to the archive room once it hits this limit. This will make undoing a little slower, but this can be desirable for the performance of <strong class="program">Krita</strong> overall.
+<dt>交換復原起點</dt><dd><p><strong class="program">Krita</strong> also needs to keep all the Undo states on the virtual desk (RAM). Swapping means that parts of the files on the virtual desk get sent to the virtual archive room. This allows <strong class="program">Krita</strong> to dedicate more RAM space to new actions, by sending old Undo states to the archive room once it hits this limit. This will make undoing a little slower, but this can be desirable for the performance of <strong class="program">Krita</strong> overall.
 This too needs <strong class="program">Krita</strong> to be restarted.</p>
 </dd>
 </dl>
@@ -412,7 +412,7 @@ This too needs <strong class="program">Krita</strong> to be restarted.</p>
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>ea93fd4</code>
+          修訂版本 <code>bf97572</code>
         </span>
       
 
