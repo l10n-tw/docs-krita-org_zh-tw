@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Krita Manual 4.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-09-03 08:09+0000\n"
-"PO-Revision-Date: 2021-09-13 14:06+0000\n"
+"PO-Revision-Date: 2021-10-16 21:54+0000\n"
 "Last-Translator: BiseChen <bise.chen@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <http://weblate.slat.org/projects/"
 "krita-docs/3-reference_manual___preferences___performance_settings/zh_Hant/>"
@@ -24,7 +24,7 @@ msgstr ""
 
 #: ../../reference_manual/preferences/performance_settings.rst:1
 msgid "Performance settings in Krita."
-msgstr ""
+msgstr "Krita 的效能設定。"
 
 #: ../../reference_manual/preferences/performance_settings.rst:16
 msgid "Performance Settings"
@@ -39,6 +39,9 @@ msgid ""
 "having an organized artist's workplace can really speed up the painting "
 "process in real life."
 msgstr ""
+":program:`Krita` 作為一個數位繪圖軟體，它需要處理很多的資料，例如您使用的筆刷、您所選擇的色彩，但主要是影像中的每個像素。因此如何讓 "
+":program:`Krita` 組織它所儲存資料的方式會影響 :program:`Krita` "
+"呈現的效能與速度。就像一個條理分明的工作室可以提高現實中藝術家繪畫的效率。"
 
 #: ../../reference_manual/preferences/performance_settings.rst:20
 msgid ""
@@ -46,11 +49,13 @@ msgid ""
 "but all do require you to restart :program:`Krita`, so it can do this "
 "organisation properly."
 msgstr ""
+"這些偏好選項允許您組織並設定 :program:`Krita` 的效能，例如記憶體、CPU、快取這些與效能有密切關係的項目。"
+"這頁面內所有項目經變更後需要重新啟動 :program:`Krita` 才會生效。"
 
 #: ../../reference_manual/preferences/performance_settings.rst:23
 #: ../../reference_manual/preferences/performance_settings.rst:11
 msgid "RAM"
-msgstr ""
+msgstr "記憶體"
 
 #: ../../reference_manual/preferences/performance_settings.rst:25
 msgid ""
@@ -63,6 +68,10 @@ msgid ""
 "be loaded into RAM before the computer can really use them, and storing and "
 "removing them from RAM takes time."
 msgstr ""
+"「隨機存取記憶體」（RAM 或 Random Access Memory）以下簡稱「記憶體」，是一種容量小但讀寫速度很快的暫時容器，關機後資料就會消失；硬"
+"碟則用作永久儲存資料的容器，相對記憶體而言容量很大但是讀寫速度很慢。而 CPU "
+"運算時會先將資料由硬碟讀進記憶體中以加快處裡速度，由硬碟抄寫進記憶體與清空記憶體會使用一些時間。因此恰當分配與運用電腦有限的記憶體，可提高 "
+":Program: `Krita` 的效能 。"
 
 #: ../../reference_manual/preferences/performance_settings.rst:27
 msgid ""
@@ -71,10 +80,12 @@ msgid ""
 "start-up. This does mean that if you change any of the given options, you "
 "need to restart :program:`Krita` so it can make this reservation."
 msgstr ""
+"您可經由這些設定選擇要將多少資源分配給 :program:`Krita` 使用，並且每次 :program:`Krita` 啟動都會使用這些設定。"
+"因此這頁面內所有設定經變更後都需要重新啟動 :program:`Krita` 才會生效。"
 
 #: ../../reference_manual/preferences/performance_settings.rst:29
 msgid "Memory Limit"
-msgstr ""
+msgstr "記憶體上限"
 
 #: ../../reference_manual/preferences/performance_settings.rst:30
 msgid ""
@@ -83,10 +94,12 @@ msgid ""
 "precisely. :program:`Krita` will not take up more space than this, making it "
 "safe for you to run an internet browser or music on the background."
 msgstr ""
+"這是指定給 :program:`Krita` 啟動後可用的記憶體大小上限。這裡以百分比與右側實際大小兩種方式顯示，因此您可以精確指定 "
+":program:`Krita` 不要使用佔用超過上限的記憶體，讓電腦可以保持背景執行網路瀏覽器或播放您的音樂。"
 
 #: ../../reference_manual/preferences/performance_settings.rst:43
 msgid "Internal Pool"
-msgstr ""
+msgstr "內部儲存池"
 
 #: ../../reference_manual/preferences/performance_settings.rst:32
 msgid ""
@@ -98,6 +111,8 @@ msgid ""
 "the other data (memory fragmentation). It will then also not have to spend "
 "time finding a spot for this data."
 msgstr ""
+"這是高級使用者選項，這功能是允許 :program:`Krita` 將資料放在記憶體中一個虛擬儲存區塊。就好像藝術家在畫布上有個標準位置一樣，"
+"也會因為給予 :program:`Krita` 一個專有的資料存取區域提高資料讀寫與搜尋效能，也避免因為記憶體碎片問題遺失資料。"
 
 #: ../../reference_manual/preferences/performance_settings.rst:34
 msgid ""
@@ -107,6 +122,8 @@ msgid ""
 "internal pool will result in :program:`Krita` not knowing where to put the "
 "other non-specific data."
 msgstr ""
+"增加這個區塊的大小等同於有更多空間儲存這些資料，但也會因資料無法放滿整個空間顯得浪費，設定得太高也會造成某些資料 :program:`Krita` "
+"不知要放在哪裡，反而因此效能降低。"
 
 #: ../../reference_manual/preferences/performance_settings.rst:36
 msgid ""
@@ -114,30 +131,32 @@ msgid ""
 "you spending more time looking for a place where you will put the new layer "
 "or that reference you just took out of the storage. This happens for :"
 "program:`Krita` as well, making it slower."
-msgstr ""
+msgstr "另一方面，若不給予或設定的數值太小，也會因此花更多時間在尋找存取的位置。這樣也會影響 :program:`Krita` 的執行效能。"
 
 #: ../../reference_manual/preferences/performance_settings.rst:38
 msgid ""
 "This is recommended to be a size of one layer of your image, e.g. if you "
 "usually paint on the image of 3000x3000x8bit-ARGB, the pool should be "
 "something like 36 MiB."
-msgstr ""
+msgstr "建議值是設定為您常用影像單一圖層所需記憶體的大小。例如一個 3000 x 3000 像素的 8bit RGBA 影像大概需要36 MiB。"
 
 #: ../../reference_manual/preferences/performance_settings.rst:40
 msgid ""
 "As :program:`Krita` does this on start-up, you will need to restart :program:"
 "`Krita` to have this change affect anything."
 msgstr ""
+"因為 :program:`Krita` 必須在啟動時才能向系統要求取得記憶體的分配，在做這些更改之後需重新啟動 :program:`Krita` "
+"設定才會生效。"
 
 #: ../../reference_manual/preferences/performance_settings.rst:42
 msgid ""
 "This setting was not needed from user side and is deprecated starting from "
 "4.4."
-msgstr ""
+msgstr "此選項在 :program:`Krita 4.4` 版之後已經移除，它現在由程式自動控制，使用者不需再做設定。"
 
 #: ../../reference_manual/preferences/performance_settings.rst:47
 msgid "Swap Undo After"
-msgstr ""
+msgstr "交換復原起點"
 
 #: ../../reference_manual/preferences/performance_settings.rst:46
 msgid ""
