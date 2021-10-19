@@ -46,7 +46,6 @@ Crosshair
     .. image:: /images/preferences/Settings_cursor_crosshair.png
 
 Small circle
-
     Shows a small white dot with a black outline.
 
     .. image:: /images/preferences/Settings_cursor_small_circle.png
@@ -57,7 +56,6 @@ No Cursor
     .. image:: /images/preferences/Settings_cursor_no_cursor.png
 
 Triangle Right-Handed.
-
     Gives a small white triangle with a black border.
 
     .. image:: /images/preferences/Settings_cursor_triangle_righthanded.png
