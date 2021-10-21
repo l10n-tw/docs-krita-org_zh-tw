@@ -19,7 +19,7 @@ Tags are how you organize common types of resources. They can be used with brush
 
 You can use tags together with the :ref:`Pop-up Palette <navigation>` for increased productivity.
 
-.. image:: /images/resources/Tag_Management.jpeg
+.. image:: /images/resources/Tag_Management.png
 
 .. note::
     You can select different brush tags in the pop-up palette. This can be a quick way to access your favorite brushes.

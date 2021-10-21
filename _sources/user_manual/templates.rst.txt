@@ -24,6 +24,14 @@ You can make your own template file from any ``.kra`` file, by using :menuselect
 
 We have the following defaults:
 
+Animation Templates
+~~~~~~~~~~~~~~~~~~~
+
+These templates are used to make Japanese-style animation. They are designed on the assumption that they will be used in co-production, so you can customize the things like layer folders in these according to scale and details of your works. These are available in English and Japanese language.
+
+* Animation-Japanese-En
+* Animation-Japanese-Jp
+
 Comic Templates
 ~~~~~~~~~~~~~~~
 

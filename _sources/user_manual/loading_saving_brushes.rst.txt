@@ -34,7 +34,7 @@ When you open Brush Settings Editor panel you will see something like this:
 Tour of the brush settings drop-down
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. image:: /images/brushes/Krita_4_0_Brush_Settings_Layout.svg
+.. image:: /images/brushes/Krita_5_0_Brush_Settings_Layout.svg
    :width: 800
 
 The brush settings drop-down is divided into six areas,
@@ -213,7 +213,7 @@ Temporarily save tweaks to preset
     .. figure:: /images/brushes/Krita_4_0_dirty_preset_icon.png
        :figwidth: 450
 
-       The icon in the top left of the first two presets indicate it is “Dirty”, meaning there are tweaks made to the preset.
+       The icon encircled in red in the top left of the third, fourth and fifth presets in first row indicate it is “Dirty”, meaning there are tweaks made to the preset.
 
 Instant preview
     This allows you to toggle instant preview on the brush. The Instant Preview has a super-secret feature: when you press the instant preview label, and then right click it, it will show a threshold slider. This slider determines at what brush size instant preview is activated for the brush. This is useful because small brushes can be slower with instant preview, so the threshold ensures it only activates when necessary.

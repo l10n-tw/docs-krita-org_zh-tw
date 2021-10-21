@@ -19,7 +19,7 @@ Text Tool
 
 This tool allows you to add text to your artwork.
 
-You use it by doing |mouseleft| + drag to create a rectangular selection. When releasing |mouseleft| a default text will be created and the text editor window will pop-up.
+You use it by doing |mouseleft| :kbd:`+ drag` to create a rectangular selection. When releasing |mouseleft| a default text will be created and the text editor window will pop-up.
 
 Hovering over other text shapes will highlight their bounding box. |mouseleft| on a highlighted text will select it as the active text.
 

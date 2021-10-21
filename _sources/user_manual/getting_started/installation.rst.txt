@@ -143,7 +143,7 @@ If you prefer doing it from terminal you can use the following commands to insta
 
     ``flatpak --user remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo``
 
-    ``flatpak --user install kdeapps org.kde.krita``
+    ``flatpak --user install flathub org.kde.krita``
 
 Snaps
 ~~~~~

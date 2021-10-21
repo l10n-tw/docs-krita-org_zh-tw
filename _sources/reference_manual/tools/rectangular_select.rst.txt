@@ -31,12 +31,12 @@ Hotkeys and Stickykeys
 * :kbd:`R` sets the selection to 'replace' in the tool options, this is the default mode.
 * :kbd:`A` sets the selection to 'add' in the tool options.
 * :kbd:`S` sets the selection to 'subtract' in the tool options.
-* |mouseleft| + :kbd:`Shift` constrains the selection to a perfect square. (Make sure to press |mouseleft| before :kbd:`Shift`)
-* |mouseleft| + :kbd:`Ctrl` makes the selection resize from the center. (Make sure to press |mouseleft| before :kbd:`Ctrl`)
-* |mouseleft| + :kbd:`Alt` allows you to move the selection. (Make sure to press |mouseleft| before :kbd:`Alt`)
-* :kbd:`Shift` + |mouseleft| sets the subsequent selection to 'add'. You can release the :kbd:`Shift` key while dragging, but it will still be set to 'add'. Same for the others.
-* :kbd:`Alt` + |mouseleft| sets the subsequent selection to 'subtract'.
-* :kbd:`Ctrl` + |mouseleft| sets the subsequent selection to 'replace'.
+* |mouseleft| :kbd:`+ Shift` constrains the selection to a perfect square. (Make sure to press |mouseleft| before :kbd:`Shift` key)
+* |mouseleft| :kbd:`+ Ctrl` makes the selection resize from the center. (Make sure to press |mouseleft| before :kbd:`Ctrl` key)
+* |mouseleft| :kbd:`+ Alt` allows you to move the selection. (Make sure to press |mouseleft| before :kbd:`Alt` key)
+* :kbd:`Shift +` |mouseleft| sets the subsequent selection to 'add'. You can release the :kbd:`Shift` key while dragging, but it will still be set to 'add'. Same for the others.
+* :kbd:`Alt +` |mouseleft| sets the subsequent selection to 'subtract'.
+* :kbd:`Ctrl +` |mouseleft| sets the subsequent selection to 'replace'.
 * :kbd:`Shift + Alt +` |mouseleft| sets the subsequent selection to 'intersect'.
 
 .. versionadded:: 4.2
@@ -50,21 +50,21 @@ Hotkeys and Stickykeys
    
 .. versionadded:: 5.0
    
-   * |mouseleft| + :kbd:`Ctrl + Alt` allows you to rotate the rectangle around the marked corner. (Make sure to press |mouseleft| before :kbd:`Ctrl + Alt`)
-   * |mouseleft| + :kbd:`Ctrl + Alt + Shift` allows you to rotate a constrained perfect square around the marked corner. (Make sure to press |mouseleft| before :kbd:`Ctrl + Alt + Shift`)
+   * |mouseleft| :kbd:`+ Ctrl + Alt` allows you to rotate the rectangle around the marked corner. (Make sure to press |mouseleft| before :kbd:`Ctrl + Alt` shortcut)
+   * |mouseleft| :kbd:`+ Ctrl + Alt + Shift` allows you to rotate a constrained perfect square around the marked corner. (Make sure to press |mouseleft| before :kbd:`Ctrl + Alt + Shift` shortcut)
 
 
 .. hint::
 
     To subtract a perfect square, you can follow two different methods:
 
-    1. Press :kbd:`S` to subtract then |mouseleft| to select and press :kbd:`Shift` while dragging to constrain to a perfect square.
+    1. Press :kbd:`S` key to subtract then |mouseleft| to select and press :kbd:`Shift` key while dragging to constrain to a perfect square.
 
-    2. Press :kbd:`Alt +` |mouseleft|, then release the :kbd:`Alt` key while dragging and press :kbd:`Shift` to constrain.
+    2. Press :kbd:`Alt +` |mouseleft| shortcut, then release the :kbd:`Alt` key while dragging and press :kbd:`Shift` key to constrain.
 
 .. tip::
 
-    You can switch the behavior of the :kbd:`Alt` key to use :kbd:`Ctrl` instead by toggling the switch in the :ref:`general_settings`
+    You can switch the behavior of the :kbd:`Alt` key to use :kbd:`Ctrl` key instead by toggling the switch in the :ref:`general_settings`
 
 Tool Options
 ------------

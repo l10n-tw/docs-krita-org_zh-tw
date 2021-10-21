@@ -32,9 +32,9 @@ Hotkeys and Sticky keys
 * :kbd:`R` sets the selection to 'replace' in the tool options, this is the default mode.
 * :kbd:`A` sets the selection to 'add' in the tool options.
 * :kbd:`S` sets the selection to 'subtract' in the tool options.
-* :kbd:`Shift +` |mouseleft| temporarily sets the subsequent selection to 'add' mode. Release the :kbd:`Shift` will return to the current permanent mode. Same for the others.
-* :kbd:`Alt` + |mouseleft| temporarily sets the subsequent selection to 'subtract' mode.
-* :kbd:`Ctrl` + |mouseleft| temporarily sets the subsequent selection to 'replace' mode.
+* :kbd:`Shift +` |mouseleft| temporarily sets the subsequent selection to 'add' mode. Release the :kbd:`Shift` key will return to the current permanent mode. Same for the others.
+* :kbd:`Alt +` |mouseleft| temporarily sets the subsequent selection to 'subtract' mode.
+* :kbd:`Ctrl +` |mouseleft| temporarily sets the subsequent selection to 'replace' mode.
 * :kbd:`Shift + Alt +` |mouseleft| temporarily sets the subsequent selection to 'intersect' mode.
 
 .. versionadded:: 4.2
@@ -48,7 +48,7 @@ Hotkeys and Sticky keys
 
 .. tip::
 
-    You can switch the behavior of the :kbd:`Alt` key to use :kbd:`Ctrl` instead by toggling the switch in Tool Settings in the :ref:`general_settings`.
+    You can switch the behavior of the :kbd:`Alt` key to use :kbd:`Ctrl` key instead by toggling the switch in Tool Settings in the :ref:`general_settings`.
 
 .. tip::
 

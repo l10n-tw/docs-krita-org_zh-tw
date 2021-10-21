@@ -42,11 +42,11 @@ C. :dfn:`Layer List` -- This area contains some subset of the layers of your cur
     
         Active Layer:
 
-            The :dfn:`active layer` is the layer that you're currently able to edit or draw on, shown as a highlighted row in the layer list. Clicking a layer within the layer list will make it the currently active layer.
+            The :dfn:`active layer` is the layer that you're currently able to edit or draw on, shown as a highlighted row in the layer list. |mouseleft| a layer within the layer list will make it the currently active layer.
 
         Layer Menu:
 
-            A small menu for manipulating :dfn:`animated layers` at the top left of the layer list. You can create new layers, remove existing ones, as well as pin or unpin the active layer. (This menu also shows up when right-clicking on layer headers inside of the Layer List.)
+            A small menu for manipulating :dfn:`animated layers` at the top left of the layer list. You can create new layers, remove existing ones, as well as pin or unpin the active layer. (This menu also shows up when |mouseright| on layer headers inside of the Layer List.)
 
         Audio Menu: 
 
@@ -54,13 +54,13 @@ C. :dfn:`Layer List` -- This area contains some subset of the layers of your cur
 
         Zoom Handle:
 
-            This special widget allows you to zoom in and out on the frame table, centered around the current frame time. Click-dragging from within the zoom handle controls the zoom level.
+            This special widget allows you to zoom in and out on the frame table, centered around the current frame time. |mouseleft| :kbd:`+ drag` from within the zoom handle controls the zoom level.
 
 D. :dfn:`Frame Table` -- The :dfn:`frame table` is a large grid of cells which can either hold a single keyframe or be empty. Each row of the frame table represents an :dfn:`animated layer` and each column represents a :dfn:`frame time`. Just like the layer list, the active layer is highlighted across the entire frame table. For those who are familiar with pen-and-paper animation, you can think of the frame table as Krita's :dfn:`dope sheet` or time sheet.
 
         .. note:: It's important to understand that frame timings are not based on units of time like seconds, but on :dfn:`frames`, which can then be played back at any speed, depending on the animation's :dfn:`frame rate` and :dfn:`play speed` settings.
 
-    Keyframes can be moved around the timeline by left-clicking and dragging from one slot to another, even across layers. Furthermore, holding the :kbd:`Ctrl` key while dragging creates a copy, and holding the :kbd:`Alt` key while dragging creates a clone frame. Finally, right-clicking anywhere in the frame table will bring up a context menu for adding, removing, copying, pasting or adjusting timing.
+    Keyframes can be moved around the timeline by |mouseleft| :kbd:`+ drag` shortcut from one slot to another, even across layers. Furthermore, holding the :kbd:`Ctrl` key while dragging creates a copy, and holding the :kbd:`Alt` key while dragging creates a clone frame. Finally, |mouseright| anywhere in the frame table will bring up a context menu for adding, removing, copying, pasting or adjusting timing.
 
     .. glossary::
 
@@ -76,7 +76,7 @@ D. :dfn:`Frame Table` -- The :dfn:`frame table` is a large grid of cells which c
 
         Current Selection
 
-            Frames highlighted in orange represent a selection or multiple selections. While multiple frames are selected, right-clicking anywhere in the frame table will bring up a context menu that will allow for adding and removing keyframes or holds within the current selection. It's also possible to have multiple separate (non-contiguous) selections if needed.
+            Frames highlighted in orange represent a selection or multiple selections. While multiple frames are selected, |mouseright| anywhere in the frame table will bring up a context menu that will allow for adding and removing keyframes or holds within the current selection. It's also possible to have multiple separate (non-contiguous) selections if needed.
 
                 .. warning:: Painting always happens *only* on the :term:`active keyframe`, which is not necessarily part of your current selection on the timeline!
 
@@ -114,13 +114,13 @@ In order to begin animating with :program:`Krita`, we first need to turn our pai
 
 To make a new, blank keyframe, |mouseright| any square on the timeline docker and select :guilabel:`Create Blank Frame`. A blank frame (one that you haven't yet drawn anything in) appears as a *hollow outline* instead of a solid box, making that frame active and drawing on the canvas will make it appear as a *solid, colored rectangle*. To move a keyframe around, you can drag and drop it into another empty frame slot, even across animation layers.
 
-The currently selected layer will automatically be shown on the timeline. However, while animating you may find that you want to keep another layer "pinned", making it visible in the Animation Timeline Docker regardless of which layer is selected. There are a few ways to do this in Krita, but it doesn't get any simpler than clicking on the little pushpin icon next to the layer's name.
+The currently selected layer will automatically be shown on the timeline. However, while animating you may find that you want to keep another layer "pinned", making it visible in the Animation Timeline Docker regardless of which layer is selected. There are a few ways to do this in Krita, but it doesn't get any simpler than |mouseleft| on the little pushpin icon next to the layer's name.
 
-It's not much of an animation with only one frame, so to add another new frame you can do the same thing we did last time by selecting :guilabel:`Create Blank Frame` from the right-click menu or by double-clicking on a particular frame slot. For the sake of this lesson, however, we will mix it up by creating a duplicate keyframe by scrubbing to a different *time* and click the :guilabel:`Create Duplicate Keyframe` button on toolbar at the top of the Animation Timeline Docker. 
+It's not much of an animation with only one frame, so to add another new frame you can do the same thing we did last time by selecting :guilabel:`Create Blank Frame` from the |mouseright| menu or by double- |mouseleft| on a particular frame slot. For the sake of this lesson, however, we will mix it up by creating a duplicate keyframe by scrubbing to a different *time* and press the :guilabel:`Create Duplicate Keyframe` button on toolbar at the top of the Animation Timeline Docker. 
 
 As you can see, there are quick a few convenient ways to add or remove keyframes from your animation in Krita, depending on your personal preference, input devices and workflow! 
 
-Now that we have more than one keyframe, we can do different drawings in each and play back our simple animation by clicking on the :guilabel:`Play/Pause` button on the toolbar at the top of the docker. Another crucial technique for animating is manually switching between frames at your own pace to inspect the frame-by-frame movement of your animation as you work, also known as "scrubbing". Like everything else, we've made sure that there are a few different ways to scrub through you animation, but one of my favorites is to simply click and drag between different times on the :term:`Frame Timing Header` at the top of the frame table. 
+Now that we have more than one keyframe, we can do different drawings in each and play back our simple animation by press the :guilabel:`Play/Pause` button on the toolbar at the top of the docker. Another crucial technique for animating is manually switching between frames at your own pace to inspect the frame-by-frame movement of your animation as you work, also known as "scrubbing". Like everything else, we've made sure that there are a few different ways to scrub through you animation, but one of my favorites is to simply |mouseleft| :kbd:`+ drag` between different times on the :term:`Frame Timing Header` at the top of the frame table. 
 
 I know that's a lot of info to digest, but all you really need to know to get started is how to create new keyframes and scrub through your animation to check your progress. From there, all that's left is the hard but rewarding work of drawing lots and lots (and lots) of animation frames!
 
@@ -128,13 +128,13 @@ I know that's a lot of info to digest, but all you really need to know to get st
 Tips
 ----
 
-* There are a couple subtle features built into the docker's transport controls that you might find useful. For example, clicking the :guilabel:`stop button` *while your animation is playing* will jump back to whatever frame you started playing from, and clicking it again *when your animation is not playing* will jump back to the first frame of your animation. Similarly, the :guilabel:`next keyframe` button will jump the selection to the next available keyframe on the active layer, but *if there is no next keyframe on that layer it will use the timing of your animation to estimate where you may want to place your next keyframe, and jump to that position.* While a bit advanced, nuances like this mean that the Animation Timeline Docker's buttons (and keybind-able actions) almost always do something useful for animators.
+* There are a couple subtle features built into the docker's transport controls that you might find useful. For example, press the :guilabel:`Stop` button *while your animation is playing* will jump back to whatever frame you started playing from, and press it again *when your animation is not playing* will jump back to the first frame of your animation. Similarly, the :guilabel:`next keyframe` button will jump the selection to the next available keyframe on the active layer, but *if there is no next keyframe on that layer it will use the timing of your animation to estimate where you may want to place your next keyframe, and jump to that position.* While a bit advanced, nuances like this mean that the Animation Timeline Docker's buttons (and keybind-able actions) almost always do something useful for animators.
 
-* It's possible to add multiple keyframes by right-clicking inside the frame table and selecting :menuselection:`Keyframes --> Insert Multiple Keyframes`. With this option you can specify the number of frames to add with the option of built in timing for quickly creating a series of 1s, 2s, 3s, etc. These settings are saved between uses.
+* It's possible to add multiple keyframes by |mouseright| inside the frame table and selecting the :menuselection:`Keyframes --> Insert Multiple Keyframes` pop-up submenu item. With this option you can specify the number of frames to add with the option of built in timing for quickly creating a series of 1s, 2s, 3s, etc. These settings are saved between uses.
 
 * You can also change the color of keyframes within the frame table so that you can easily identify important frames or distinguish between different sections of your animation. The current color selection is remembered for new frames so that you can easily make a set of colored frames and then switch to another color. (By the way, it's even possible to quickly jump between frames of the same color by assigning a keyboard shortcut to :guilabel:`Previous/Next Matching Keyframe`.)
 
-* Clicking with |mouseright| within the :term:`Frame Timing Header` instead of the frame table gives you access to a few more option which allow you to add or remove entire columns of frames or holds at a time, as well as reset your animation cache if needed. For example, selecting :menuselection:`Keyframe Columns --> Insert Keyframe Column Left` will add new frames to each layer that's currently visible in the Timeline Docker.
+* |mouseright| within the :term:`Frame Timing Header` instead of the frame table gives you access to a few more option which allow you to add or remove entire columns of frames or holds at a time, as well as reset your animation cache if needed. For example, selecting the :menuselection:`Keyframe Columns --> Insert Keyframe Column Left` pop-up submenu item will add new frames to each layer that's currently visible in the Timeline Docker.
 
 
 
@@ -171,7 +171,7 @@ Controls
     * |mouseright| : Frames menu (insert/copy/paste frames and insert/remove holds).
     * |mouseleft| :kbd:`+ drag` : Select multiple frames and switch time to the last selected, but *does not switch active layer*.
     * :kbd:`Shift +` |mouseleft| : Select all frames between the active and the clicked frame.
-    * :kbd:`Ctrl +` |mouseleft| : Select individual frames together. :kbd:`click + drag` them into place.
+    * :kbd:`Ctrl +` |mouseleft| : Select individual frames together. |mouseleft| :kbd:`+ drag` them into place.
 
 #. :dfn:`Frames Table` (On Existing Frame)
 

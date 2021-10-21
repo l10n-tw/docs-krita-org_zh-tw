@@ -44,7 +44,7 @@ You can select a single node with |mouseleft|, they will turn bright green if se
 
 |mouseleft| :kbd:`+ Shift` on unselected nodes will add them to a selection.
 
-|mouseleft| + drag will make a selection rectangle. All nodes whose handles are touched by the rectangle will be selected. This combines with the |mouseleft| :kbd:`+ Shift` shortcut above.
+|mouseleft| :kbd:`+ drag` will make a selection rectangle. All nodes whose handles are touched by the rectangle will be selected. This combines with the |mouseleft| :kbd:`+ Shift` shortcut above.
 
 Selected Nodes
 ^^^^^^^^^^^^^^
@@ -62,7 +62,7 @@ Krita has several node-types that allow you control the side handles more effici
 
 |mouseleft| :kbd:`+ Ctrl` on a selected node will cycle between the node-types.
 
-:kbd:`Del` will remove the selected node.
+:kbd:`Del` key will remove the selected node.
 
 Selected Segments
 ^^^^^^^^^^^^^^^^^

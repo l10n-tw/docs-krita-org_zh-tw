@@ -93,7 +93,7 @@ Global Selection Mask (Painting a Selection)
 
 The global Selection Mask is your selection that appears on the layers docker. By default, this is hidden, so you will need to make it visible via :menuselection:`Select --> Show Global Selection Mask`.
 
-.. image:: /images/selection/Global-selection-mask.jpg
+.. image:: /images/selection/Global-selection-mask.png
 
 Once the global Selection Mask is shown, you will need to create a selection. The benefit of using this is that you can paint your
 selection using any of the normal painting tools, including the transform and move. The information is saved as grayscale.

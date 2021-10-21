@@ -70,10 +70,10 @@ Creating stop gradients is very straight forward. Following is a breakdown of th
 
    * |mouseleft| on the gradient to add a stop.
    * |mouseleft| on the stop handles (the drop-shaped icons) to select a stop, and drag to move them.
-   * Drag the stop handles outside of the bar or press :kbd:`Delete` to remove the selected stop.
-   * Double-|mouseleft| on a stop handle or press :kbd:`Enter` to open a color dialog where you can choose the color of the stop.
-   * Use the |mousescroll| or the :kbd:`Left` and :kbd:`Right` keys to move the selected stop. If you also press :kbd:`Shift` the increment will be smaller.
-   * Use :kbd:`Ctrl` + |mousescroll| or :kbd:`Ctrl + Left` and :kbd:`Ctrl + Right` to select the previous or next stop.
+   * Drag the stop handles outside of the bar or press :kbd:`Delete` key to remove the selected stop.
+   * Double-|mouseleft| on a stop handle or press :kbd:`Enter` key to open a color dialog where you can choose the color of the stop.
+   * Use the |mousescroll| or the :kbd:`Left` and :kbd:`Right` keys to move the selected stop. If you also press :kbd:`Shift` key the increment will be smaller.
+   * Use :kbd:`Ctrl +` |mousescroll| or :kbd:`Ctrl + Left` and :kbd:`Ctrl + Right` shortcuts to select the previous or next stop.
 
 6. :dfn:`Color type` - With these three buttons you can select the type of color used by the selected stop (Foreground, Background or custom).
 7. :dfn:`Color button` - If the selected stop uses a custom color then you can use this button to open a color dialog and change the color.
@@ -140,7 +140,7 @@ General UI Breakdown
    4. :dfn:`Handle actions area` - In this area will appear some actions you can perform on the selected handle. They vary depending on the type of handle selected.
    5. :guilabel:`Flip gradient` - With this button you can reverse the order of the segments (and their start and end colors) in the gradient.
    6. :guilabel:`Distribute segments evenly` - Clicking this button will make all the segments have the same amount of space.
-   7. :dfn:`Gradient slider` - This :dfn:`slider` is the main part of the editor, where the gradient preview is shown and where you can perform some basic operations to change the gradient. These operations basically make changes to the different handles and are explained in the following sections. You can change the selected handle by pressing :kbd:`Ctrl` and using |mousescroll| or by pressing :kbd:`Ctrl + Left` and :kbd:`Ctrl + Right`.
+   7. :dfn:`Gradient slider` - This :dfn:`slider` is the main part of the editor, where the gradient preview is shown and where you can perform some basic operations to change the gradient. These operations basically make changes to the different handles and are explained in the following sections. You can change the selected handle by pressing :kbd:`Ctrl` key and using |mousescroll| or by pressing :kbd:`Ctrl + Left` and :kbd:`Ctrl + Right` shortcuts.
    8. :dfn:`Handle properties area` - In this area will appear some widgets you can use to change the different properties of the selected handle.
 
 Segment Handle UI Breakdown
@@ -155,10 +155,10 @@ Segment Handle UI Breakdown
    5. :dfn:`Gradient slider` - Here is a list of the segment related actions you can perform on the gradient slider:
 
       * You can select a segment by |mouseleft| on an area of the slider where there is no stop handle (the drop-shaped icon) or middle point handle (the rhombus-shaped icon).
-      * You can move the whole segment by |mouseleft| and dragging on an area of the slider where there is no stop handle or middle point handle. You can also move the segment by using |mousescroll| or :kbd:`Left` and :kbd:`Right` and while doing that, if you also press :kbd:`Shift`, then the increment will be smaller. The first and last segments can not be moved.
-      * You can delete the selected segment by pressing :kbd:`Delete` or by dragging it outside the slider area.
-      * You can split a segment by pressing :kbd:`Ctrl` and |mouseleft| on it. The cutting point will be where you clicked.
-      * You can duplicate a segment by pressing :kbd:`Shift` and |mouseleft| on it.
+      * You can move the whole segment by |mouseleft| and dragging on an area of the slider where there is no stop handle or middle point handle. You can also move the segment by using |mousescroll| or :kbd:`Left` and :kbd:`Right` keys and while doing that, if you also press :kbd:`Shift` key, then the increment will be smaller. The first and last segments can not be moved.
+      * You can delete the selected segment by pressing :kbd:`Delete` key or by dragging it outside the slider area.
+      * You can split a segment by pressing :kbd:`Ctrl +` |mouseleft| shortcut on it. The cutting point will be where you clicked.
+      * You can duplicate a segment by pressing :kbd:`Shift +` |mouseleft| shortcut on it.
 
    6. :guilabel:`Left color` - In this row of widgets you can change the properties related to the start of the segment:
 
@@ -180,9 +180,9 @@ Stop Handle UI Breakdown
    3. :guilabel:`Gradient slider` - Here is a list of the stop related actions you can perform on the gradient slider:
 
       * You can select a stop handle by |mouseleft| on one of the drop-shaped icons.
-      * You can move the stop handle by |mouseleft| and dragging the drop-shaped icon. You can also move the stop handle by using |mousescroll| or :kbd:`Left` and :kbd:`Right` and while doing that, if you also press :kbd:`Shift`, then the increment will be smaller. The first and last stop handles can not be moved.
-      * You can delete the selected stop by pressing :kbd:`Delete` or by dragging it outside the slider area.
-      * You can create a new stop by pressing :kbd:`Ctrl` and |mouseleft| on an area of the slider where there is no stop handle or middle point handle. This is exactly the same action as splitting a segment.
+      * You can move the stop handle by |mouseleft| and dragging the drop-shaped icon. You can also move the stop handle by using |mousescroll| or :kbd:`Left` and :kbd:`Right` keys and while doing that, if you also press :kbd:`Shift` key, then the increment will be smaller. The first and last stop handles can not be moved.
+      * You can delete the selected stop by pressing :kbd:`Delete` key or by dragging it outside the slider area.
+      * You can create a new stop by pressing :kbd:`Ctrl +` |mouseleft| shortcut on an area of the slider where there is no stop handle or middle point handle. This is exactly the same action as splitting a segment.
 
    4. :guilabel:`Left Color` - In this row of widgets you can change the properties related to the end of the segment on the left of the stop:
 
@@ -202,7 +202,7 @@ Middle Point Handle UI Breakdown
    2. :dfn:`Gradient slider` - Here is a list of the middle point related actions you can perform on the gradient slider:
 
       * You can select a segment middle point by |mouseleft| on one of the rhombus-shaped icons.
-      * You can move the middle point by |mouseleft| and dragging the rhombus-shaped icon. You can also move it by using |mousescroll| or :kbd:`Left` and :kbd:`Right` and while doing that, if you also press :kbd:`Shift`, then the increment will be smaller.
+      * You can move the middle point by |mouseleft| and dragging the rhombus-shaped icon. You can also move it by using |mousescroll| or :kbd:`Left` and :kbd:`Right` keys and while doing that, if you also press :kbd:`Shift` key, then the increment will be smaller.
 
    3. :guilabel:`Position` - With this slider you can fine-tune the position of the middle point of the segment.
 

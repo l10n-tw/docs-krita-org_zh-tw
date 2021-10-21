@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-10-20T13:53:02" />
+  <meta property="og:article:modified_time" content="2021-10-21T14:37:03" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="給 Krita 說明文件貢獻者的指南。" name="description" />
 
@@ -446,7 +446,7 @@ git push
 </li>
 </ul>
 <p>因此，每頁的目標就是給出可用作產生美觀的影像的功能。</p>
-<p>除此之外，我們也察覺到下列使用者：</p>
+<p>除此之外，我們也察覺到下列類別的使用者：</p>
 <ul>
 <li><p>試用以不同軟體繪畫插圖的高中及大專生：他們通常有一些使用其他繪畫軟體的經驗（例如是 Paint Tool SAI 或 Photoshop），不過需要透過某些途徑去認識 <strong class="program">Krita</strong> 的特色。這類使用者的特點是，他們經常交流並互相分享大量資訊，例如各種秘決、小技巧和教學。</p></li>
 <li><p>以數位繪畫軟體謀生的專業人士：這類使用者的特點是，他們有著豐富的認識，並樂於捐款以支持改進軟體。他們又可細分為兩類：</p>
@@ -457,34 +457,34 @@ git push
 </ul>
 </div></blockquote>
 </li>
-<li><p>Adult and elderly hobbyists. This group doesn't know much about computers, and they always seem to get snagged on that one little step missing from a tutorial. Their strength as a group is that they adapt unconventional workflows from real life that the student wouldn't know about and the professional has no time for and create cool stuff with that, as well as that they have a tempering effect on the first group in the larger community.</p></li>
+<li><p>成年或老年的繪畫愛好者：這類使用者多數不太懂電腦技術，而且容易被教學文章省略掉的一個小步驟卡住。作為一個群體，他們的強項在於能創造出一些非比尋常的工作流程——一些學生不懂得而專業人士沒有空餘時間研究的流程——而且會以這些流程創作出很酷的作品。他們也對社群中較年輕的學生成員有著緩和作用。</p></li>
 </ul>
-<p>From these four groups...</p>
+<p>在這四類使用者當中……</p>
 <ul class="simple">
-<li><p>there's only one that is technical. Which is why we need the concept pages, so that we can create a solid base to write our manual texts on top of.</p></li>
-<li><p>three of them likely have previous experience with software and may need migration guides and be told how.</p></li>
-<li><p>two of them need to know how to get Krita to cooperate with other software.</p></li>
-<li><p>two of them have no clue what they are doing and may need to be guided through the most basic of steps.</p></li>
+<li><p>只有一類擁有技術知識。因此我們需要提供「通用概念」這部分，為其他類別的讀者們打好基礎，並使我們可以基於這些內容之上撰寫說明文件的其他內容。</p></li>
+<li><p>有三類使用者均可能已有使用其他軟體的經驗，因此也許需要參考一些過渡指南，以協助他們適應 Krita 與其他軟體的不同之處。</p></li>
+<li><p>有兩類使用者需要知道如何配合其他軟體一同使用 Krita。</p></li>
+<li><p>有兩類使用者不理解他們在做甚麼，或許需要由他人引導才能完成最基本的步驟。</p></li>
 </ul>
-<p>From that we can get the following rules:</p>
+<p>由此我們可以得出以下幾項指引：</p>
 </section>
 <section id="general-writing">
 <h3>一般書寫風格<a class="headerlink" href="#general-writing" title="本標題的永久連結">¶</a></h3>
 <dl class="simple">
-<dt>Use American English if possible.</dt><dd><p>We use American English in the manual, in accordance to Krita's UI being American English by default.</p>
+<dt>盡可能使用美式英語。</dt><dd><p>我們在這份說明文件中使用美式英語，以配合 Krita 使用者介面預設使用的美式英語。</p>
 </dd>
-<dt>Keep the language polite, but do not use academic language.</dt><dd><p>As a community, we want to be welcoming to the users, so we try to avoid language that is unwelcoming. Swearing is already not condoned by KDE, but going to the far other end, an academic style where neither writer nor reader is acknowledged might give the idea that the text is far more complex than necessary, and thus scare away users.</p>
+<dt>保持語句斯文有禮，但不要使用學術性語文。</dt><dd><p>作為一個社群，我們希望使用者們感到受歡迎，因此我們要避免採用不友善的用語。KDE 也不縱容使用粗話。然而，偏向另一個極端採用過於學術性的用語，會使文章內容顯得過於複雜而嚇怕使用者，因此我們也要避免這樣。</p>
 </dd>
-<dt>Avoid using GIFs (open for debate)</dt><dd><p>The reason is that people with epilepsy may be affected by fast moving images. Similarly, GIFs can sometimes carry too much of the burden of explanation. If you can't help but use GIFs, at the least notify the reader of this in the introduction of the page.</p>
+<dt>避免使用動態 GIF（具爭議性）</dt><dd><p>避免動畫的理由是，癲癇症患者可能會受快速移動變化的影像影響而病發。另外，太偏重於使用動畫來作解釋的話會容易忽略文字解釋。如果你必定要使用動態 GIF，請至少在頁面較前的介紹部分知會讀者。</p>
 </dd>
-<dt>Keep it translation compatible</dt><dd><p>This consists of using SVG for infographics, and using the appropriate markup for a given text.</p>
+<dt>使內容易於翻譯</dt><dd><p>這包括使用 SVG 製作說明圖，並為文字作出適當的標記。</p>
 </dd>
 </dl>
 </section>
 <section id="regarding-photos-and-paintings">
 <h3>有關相片與傳統畫作<a class="headerlink" href="#regarding-photos-and-paintings" title="本標題的永久連結">¶</a></h3>
 <ul class="simple">
-<li><p>I would like to discourage photos and traditional paintings in the manual if they are not illustrating a concept. The reason is that it is very silly and a little dishonest to show Rembrandt's work inside the Krita GUI, when we have so many modern works that were made in Krita. All of the pepper&amp;carrot artwork was made in Krita and the original files are available, so when you do not have an image handy, start there. Photos should be avoided because Krita is a painting program. Too many photos can give the impression Krita is trying to be a solution for photo retouching, which really isn't the focus.</p></li>
+<li><p>我們不鼓勵在說明文件中加入相片和傳統畫作，除非必定要用它們來解釋一個特定概念。理由是，使用 Krita 製作的現代數位藝術作品多的是。若我們在 Krita 的介面中展示林布蘭大師的名作，這反而顯得不自然，同時亦帶有一點誤導成份。Pepper&amp;Carrot 漫畫作品全集均以 Krita 製作，而且提供了原始檔下載，因此當你沒有合適的影像可用時，可在這套漫畫中搜尋。避免加入相片，因為 Krita 的重心是繪畫軟體而不是相片編輯軟體，過於使用相片或會令讀者產生 Krita 是用來編輯相片的錯覺。</p></li>
 <li><p>Of course, we still want to show certain concepts in play in photos and master paintings, such as glossing or indirect light. In this case, add a caption that mentions the name of the painting or the painter, or mentions it's a photograph.</p></li>
 <li><p>Photos can still be used for photobashing and the like, but only if it's obviously used in the context of photobashing.</p></li>
 </ul>
@@ -631,7 +631,7 @@ git push
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>621c5ec</code>
+          修訂版本 <code>b9eb00c</code>
         </span>
       
 

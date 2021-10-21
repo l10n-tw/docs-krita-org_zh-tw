@@ -42,12 +42,12 @@ These features save time and also help artists in maintaining the file with a la
 
 To assign a color label to your layer or layer group you have to |mouseright| on the layer and choose one of the given colors from the context menu. To remove an already existing color label you can click on the 'x' marked box in the context menu.
 
-.. image:: /images/layers/Layer-color-filters.png
+.. image:: /images/layers/Layer-color-filters.svg
    :width:  400
 
 Once you assign color labels to your layers, you can then filter layers having similar color label by clicking on one or more colors in the list from the drop-down situated in the top-right corner of the layer docker.
 
-.. image:: /images/layers/Layer-color-filters-menu.png
+.. image:: /images/layers/Layer-color-filters-menu.svg
    :width:  600
    
 .. versionadded:: 5.0
@@ -57,7 +57,7 @@ Once you assign color labels to your layers, you can then filter layers having s
 Types of Layers
 ---------------
 
-.. image:: /images/layers/500px-Krita-types-of-layers.png
+.. image:: /images/layers/Krita-types-of-layers.svg
     :width: 600
 
 The image above shows the various types of layers in :ref:`layer_docker`. Each layer type has a different purpose for example all the vector elements can be only placed on a vector layer and similarly normal raster elements are mostly on the paint layer, :ref:`cat_layers_and_masks` page contains more information about these types layers.
@@ -106,7 +106,7 @@ You can add various filters to a layer with Filter mask, or add Filter layer whi
 
 These filters and masks are accessible through the right-click menu (as shown in the image below) and the Plus icon on the layer docker.
 
-.. image:: /images/layers/Layer-right-click.png
+.. image:: /images/layers/Layer-right-click.svg
 
 You can also add a filter as a mask from filter dialog itself, by
 clicking on the :guilabel:`Create Filter Mask` button.
