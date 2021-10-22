@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-10-22T08:40:32" />
+  <meta property="og:article:modified_time" content="2021-10-22T15:46:15" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="給 Krita 說明文件貢獻者的指南。" name="description" />
 
@@ -144,7 +144,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#demographics-and-target-audience-s">目標讀者</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#general-writing">一般書寫風格</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#regarding-photos-and-paintings">有關相片與傳統畫作</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#regarding-images-in-general">有關使用影像</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#regarding-images-in-general">有關使用影像的一般指引</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#protocol">程序</a><ul>
@@ -485,23 +485,23 @@ git push
 <h3>有關相片與傳統畫作<a class="headerlink" href="#regarding-photos-and-paintings" title="本標題的永久連結">¶</a></h3>
 <ul class="simple">
 <li><p>我們不鼓勵在說明文件中加入相片和傳統畫作，除非必定要用它們來解釋一個特定概念。理由是，使用 Krita 製作的現代數位藝術作品多的是。若我們在 Krita 的介面中展示林布蘭大師的名作，這反而顯得不自然，同時亦帶有一點誤導成份。Pepper&amp;Carrot 漫畫作品全集均以 Krita 製作，而且提供了原始檔下載，因此當你沒有合適的影像可用時，可在這套漫畫中搜尋。避免加入相片，因為 Krita 的重心是繪畫軟體而不是相片編輯軟體，過度使用相片或會令讀者產生 Krita 是用來編輯相片的錯覺。</p></li>
-<li><p>Of course, we still want to show certain concepts in play in photos and master paintings, such as glossing or indirect light. In this case, add a caption that mentions the name of the painting or the painter, or mentions it's a photograph.</p></li>
-<li><p>Photos can still be used for photobashing and the like, but only if it's obviously used in the context of photobashing.</p></li>
+<li><p>當然，我們有時也希望講解一些在相片和名畫中出現的概念，例如光澤或者間接照明 。在這些情況下，請為該影像加上說明文字。如果是名畫，請在當中提及作品的名稱或其作者。如果是相片，請清楚標明。</p></li>
+<li><p>文章明顯地在講解相片接合插畫 (Photobashing) 的情境下可以使用相片。</p></li>
 </ul>
 </section>
 <section id="regarding-images-in-general">
-<h3>有關使用影像<a class="headerlink" href="#regarding-images-in-general" title="本標題的永久連結">¶</a></h3>
+<h3>有關使用影像的一般指引<a class="headerlink" href="#regarding-images-in-general" title="本標題的永久連結">¶</a></h3>
 <ul class="simple">
-<li><p>Avoid text in the images and use the caption instead. You can do this with the figure directive.</p></li>
-<li><p>If you do need to use text, make either an SVG, so the text inside can be manipulated easier, or try to minimize the amount of text.</p></li>
-<li><p>Try to make your images high quality/cute. Let's give people the idea that they are using a program for drawing!</p></li>
-<li><p>Remember that the manual is licensed under GDPL 1.3, so images submitted will be licensed under that. In the case of CC-By-Sa/CC-By ensure that the file gets attributed appropriately through a figure caption. Needless to say, don't submit images that cannot be licensed under either license.</p></li>
+<li><p>避免在影像中嵌入文字。取而代之，使用 <code class="docutils literal notranslate"><span class="pre">figure</span></code> 說明文字標記是較好的做法。</p></li>
+<li><p>如必須加入文字，請使用 SVG 影像格式以方便將來可以簡易地修改文字，或盡量減少文字量。</p></li>
+<li><p>盡可能製作高品質或美觀可愛的影像。始終 Krita 是一個用來繪畫的軟體，我們應該要給讀者一個好印象！</p></li>
+<li><p>請謹記此說明文件的授權條款為 GDPL 1.3，因此所有提交到這份文件的影像均會以其授權。如影像為創用 CC-By-Sa 或 CC-By 授權，請確認將該影像的作者和來源適當地以 <code class="docutils literal notranslate"><span class="pre">figure</span></code> 說明文字作標注。請勿提交不能符合這些授權條款的影像。</p></li>
 </ul>
 </section>
 </section>
 <section id="protocol">
 <h2>程序<a class="headerlink" href="#protocol" title="本標題的永久連結">¶</a></h2>
-<p>So here we line out all the boring workflows.</p>
+<p>在這一節我們會列出一系列工作流程。</p>
 <section id="tagging-and-branches">
 <h3>建立標籤 (Tag) 與分支 (Branch)<a class="headerlink" href="#tagging-and-branches" title="本標題的永久連結">¶</a></h3>
 <p>Adding and removing text will be done in the <code class="docutils literal notranslate"><span class="pre">draft</span></code> branch.</p>
@@ -517,12 +517,12 @@ git push
 </section>
 <section id="removing-pages">
 <h3>移除頁面<a class="headerlink" href="#removing-pages" title="本標題的永久連結">¶</a></h3>
-<p>If a feature is removed in a certain version, the corresponding pages:</p>
+<p>如有功能在某個版本中被移除，相關頁面會：</p>
 <ol class="arabic">
-<li><p>Will first be marked deprecated.</p>
+<li><p>先標記為「已棄用」。</p>
 <blockquote>
-<div><p>This can be done as so:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>.. deprecated:: version number
+<div><p>可使用以下方式標記：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>.. deprecated:: 版本編號
 
     這裡寫上使用者應該如何代替該項已放棄使用的功能。
 </pre></div>
@@ -536,18 +536,18 @@ git push
 <section id="adding-pages">
 <h3>加入頁面<a class="headerlink" href="#adding-pages" title="本標題的永久連結">¶</a></h3>
 <ol class="arabic">
-<li><p>Ensure that it is located in the right place.</p></li>
-<li><p>Follow the <a class="reference internal" href="krita_manual_conventions.html#krita-markup-conventions"><span class="std std-ref">Krita 說明文件標記格式使用慣例</span></a> to ensure the page is formatted correctly.</p></li>
-<li><p>Add the page to the TOC.</p></li>
-<li><p>If the feature is new, add in versionadded:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">versionadded</span><span class="p">::</span> <span class="n">version</span> <span class="n">number</span>
+<li><p>確認頁面已放到正確的位置。</p></li>
+<li><p>依照 <a class="reference internal" href="krita_manual_conventions.html#krita-markup-conventions"><span class="std std-ref">Krita 說明文件標記格式使用慣例</span></a>以確認頁面的格式正確。</p></li>
+<li><p>將頁面加入到 TOC（目錄）。</p></li>
+<li><p>如該功能是在近期版本新增的功能，請加入 <code class="docutils literal notranslate"><span class="pre">versionadded</span></code> 標記：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>.. versionadded:: 版本編號
 
-    <span class="n">optional</span> <span class="n">something</span> <span class="ow">or</span> <span class="n">the</span> <span class="n">other</span><span class="o">.</span>
+    有需要時選填說明文字。
 </pre></div>
 </div>
 </li>
 </ol>
-<p>As with images, don't add text that you do not have permission to add. This means that text is either written by you, or you have permission to port it from the original author. The manual is GDPL 1.3+ so the text will be relicensed under that.</p>
+<p>與影像相同，請勿加入未獲授權使用的文字。加入到此文件的文字必須由你自行撰寫，或者你已從原作者獲得授權可在此文件中使用。此文件以 GDPL 1.3+ 授權，因此任何加入到此文件的文字均會重新以該授權發佈。</p>
 </section>
 <section id="changing-pages">
 <h3>更改頁面<a class="headerlink" href="#changing-pages" title="本標題的永久連結">¶</a></h3>
@@ -631,7 +631,7 @@ git push
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>37fdf7c</code>
+          修訂版本 <code>a501fbe</code>
         </span>
       
 

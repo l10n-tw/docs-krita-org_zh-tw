@@ -111,8 +111,8 @@ In the New Bug form, fill in the following fields:
 
 - Attachments
 
-    - In all cases, attach the contents of the :menuselection:`Help --> Show system information for bug teports` dialog to the bug report.
-    - In all cases, attach the contents of the :menuselection:`Help --> Show krita log for nug reports` dialog to the bug report.
+    - In all cases, attach the contents of the :menuselection:`Help --> Show system information for bug reports` dialog to the bug report.
+    - In all cases, attach the contents of the :menuselection:`Help --> Show krita log for bug reports` dialog to the bug report.
 
     - Your file
     
