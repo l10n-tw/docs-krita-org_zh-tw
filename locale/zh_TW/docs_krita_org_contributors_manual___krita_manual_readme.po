@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Krita Manual 4.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-10-21 15:06+0000\n"
-"PO-Revision-Date: 2021-10-21 22:01+0000\n"
+"PO-Revision-Date: 2021-10-22 15:41+0000\n"
 "Last-Translator: Alvin Wong <alvin@alvinhc.com>\n"
 "Language-Team: Chinese (Traditional) <http://weblate.slat.org/projects/"
 "krita-docs/5-contributors_manual___krita_manual_readme/zh_Hant/>\n"
@@ -952,34 +952,36 @@ msgid ""
 "caption that mentions the name of the painting or the painter, or mentions "
 "it's a photograph."
 msgstr ""
+"當然，我們有時也希望講解一些在相片和名畫中出現的概念，例如光澤或者間接照明 "
+"。在這些情況下，請為該影像加上說明文字。如果是名畫，請在當中提及作品的名稱或其作者。如果是相片，請清楚標明。"
 
 #: ../../contributors_manual/krita_manual_readme.rst:319
 msgid ""
 "Photos can still be used for photobashing and the like, but only if it's "
 "obviously used in the context of photobashing."
-msgstr ""
+msgstr "文章明顯地在講解相片接合插畫 (Photobashing) 的情境下可以使用相片。"
 
 #: ../../contributors_manual/krita_manual_readme.rst:322
 msgid "Regarding images in general"
-msgstr "有關使用影像"
+msgstr "有關使用影像的一般指引"
 
 #: ../../contributors_manual/krita_manual_readme.rst:324
 msgid ""
 "Avoid text in the images and use the caption instead. You can do this with "
 "the figure directive."
-msgstr ""
+msgstr "避免在影像中嵌入文字。取而代之，使用 ``figure`` 說明文字標記是較好的做法。"
 
 #: ../../contributors_manual/krita_manual_readme.rst:325
 msgid ""
 "If you do need to use text, make either an SVG, so the text inside can be "
 "manipulated easier, or try to minimize the amount of text."
-msgstr ""
+msgstr "如必須加入文字，請使用 SVG 影像格式以方便將來可以簡易地修改文字，或盡量減少文字量。"
 
 #: ../../contributors_manual/krita_manual_readme.rst:326
 msgid ""
 "Try to make your images high quality/cute. Let's give people the idea that "
 "they are using a program for drawing!"
-msgstr ""
+msgstr "盡可能製作高品質或美觀可愛的影像。始終 Krita 是一個用來繪畫的軟體，我們應該要給讀者一個好印象！"
 
 #: ../../contributors_manual/krita_manual_readme.rst:327
 msgid ""
@@ -988,6 +990,8 @@ msgid ""
 "file gets attributed appropriately through a figure caption. Needless to "
 "say, don't submit images that cannot be licensed under either license."
 msgstr ""
+"請謹記此說明文件的授權條款為 GDPL 1.3，因此所有提交到這份文件的影像均會以其授權。如影像為創用 CC-By-Sa 或 CC-By 授權，"
+"請確認將該影像的作者和來源適當地以 ``figure`` 說明文字作標注。請勿提交不能符合這些授權條款的影像。"
 
 #: ../../contributors_manual/krita_manual_readme.rst:330
 msgid "Protocol"
@@ -995,7 +999,7 @@ msgstr "程序"
 
 #: ../../contributors_manual/krita_manual_readme.rst:332
 msgid "So here we line out all the boring workflows."
-msgstr ""
+msgstr "在這一節我們會列出一系列工作流程。"
 
 #: ../../contributors_manual/krita_manual_readme.rst:335
 msgid "Tagging and Branches"
@@ -1044,15 +1048,15 @@ msgstr "移除頁面"
 
 #: ../../contributors_manual/krita_manual_readme.rst:354
 msgid "If a feature is removed in a certain version, the corresponding pages:"
-msgstr ""
+msgstr "如有功能在某個版本中被移除，相關頁面會："
 
 #: ../../contributors_manual/krita_manual_readme.rst:356
 msgid "Will first be marked deprecated."
-msgstr ""
+msgstr "先標記為「已棄用」。"
 
 #: ../../contributors_manual/krita_manual_readme.rst:358
 msgid "This can be done as so::"
-msgstr ""
+msgstr "可使用以下方式標記："
 
 #: ../../contributors_manual/krita_manual_readme.rst:360
 msgid ""
@@ -1060,7 +1064,7 @@ msgid ""
 "\n"
 "    Text to indicate what the user should do without this feature."
 msgstr ""
-".. deprecated:: version number\n"
+".. deprecated:: 版本編號\n"
 "\n"
 "    這裡寫上使用者應該如何代替該項已放棄使用的功能。"
 
@@ -1080,21 +1084,21 @@ msgstr "加入頁面"
 
 #: ../../contributors_manual/krita_manual_readme.rst:370
 msgid "Ensure that it is located in the right place."
-msgstr ""
+msgstr "確認頁面已放到正確的位置。"
 
 #: ../../contributors_manual/krita_manual_readme.rst:371
 msgid ""
 "Follow the :ref:`krita_markup_conventions` to ensure the page is formatted "
 "correctly."
-msgstr ""
+msgstr "依照 :ref:`krita_markup_conventions`\\ 以確認頁面的格式正確。"
 
 #: ../../contributors_manual/krita_manual_readme.rst:372
 msgid "Add the page to the TOC."
-msgstr ""
+msgstr "將頁面加入到 TOC（目錄）。"
 
 #: ../../contributors_manual/krita_manual_readme.rst:373
 msgid "If the feature is new, add in versionadded::"
-msgstr ""
+msgstr "如該功能是在近期版本新增的功能，請加入 ``versionadded`` 標記："
 
 #: ../../contributors_manual/krita_manual_readme.rst:375
 msgid ""
@@ -1102,6 +1106,9 @@ msgid ""
 "\n"
 "    optional something or the other."
 msgstr ""
+".. versionadded:: 版本編號\n"
+"\n"
+"    有需要時選填說明文字。"
 
 #: ../../contributors_manual/krita_manual_readme.rst:379
 msgid ""
@@ -1110,6 +1117,8 @@ msgid ""
 "from the original author. The manual is GDPL 1.3+ so the text will be "
 "relicensed under that."
 msgstr ""
+"與影像相同，請勿加入未獲授權使用的文字。加入到此文件的文字必須由你自行撰寫，或者你已從原作者獲得授權可在此文件中使用。此文件以 GDPL 1.3+ "
+"授權，因此任何加入到此文件的文字均會重新以該授權發佈。"
 
 #: ../../contributors_manual/krita_manual_readme.rst:383
 msgid "Changing Pages"
