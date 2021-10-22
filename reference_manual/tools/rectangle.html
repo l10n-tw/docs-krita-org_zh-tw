@@ -6,7 +6,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta property="og:title" name="title" content="Rectangle Tool" />
+  <meta property="og:title" name="title" content="矩形工具" />
   <meta property="og:site-name" content="Krita Manual" />
   <meta property="og:type" content="article" />
   <meta property="og:locale" content="zh_TW" />
@@ -21,13 +21,13 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-10-21T22:04:55" />
+  <meta property="og:article:modified_time" content="2021-10-22T07:05:46" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<meta content="Krita's rectangle tool reference." name="description" />
+<meta content="Krita 的矩形工具參考。" name="description" />
 
   
   
-  <title>Rectangle Tool &mdash; Krita Manual 5.0.0 說明文件</title>
+  <title>矩形工具 &mdash; Krita Manual 5.0.0 說明文件</title>
   
 
   
@@ -167,14 +167,14 @@
 <li class="toctree-l3"><a class="reference internal" href="calligraphy.html">西文書法工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="freehand_brush.html">手繪筆刷工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="line.html">直線工具</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Rectangle Tool</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#hotkeys-and-sticky-keys">Hotkeys and Sticky-keys</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#tool-options">Tool Options</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">矩形工具</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#hotkeys-and-sticky-keys">快捷鍵和修飾鍵</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tool-options">工具選項</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="ellipse.html">橢圓工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="polygon.html">多邊形工具</a></li>
-<li class="toctree-l3"><a class="reference internal" href="polyline.html">Polyline Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="polyline.html">折線工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="path.html">貝茲曲線工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="freehand_path.html">手繪路徑工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="dyna.html">力學筆刷工具</a></li>
@@ -190,7 +190,7 @@
 <li class="toctree-l3"><a class="reference internal" href="assistant.html">輔助尺工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="reference_images_tool.html">Reference Images Tool</a></li>
 <li class="toctree-l3"><a class="reference internal" href="measure.html">測量工具</a></li>
-<li class="toctree-l3"><a class="reference internal" href="rectangular_select.html">Rectangular Selection Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rectangular_select.html">矩形選取區域工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="elliptical_select.html">橢圓選取區域工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="freehand_select.html">手繪選取區域工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="polygonal_select.html">多邊形選取區域工具</a></li>
@@ -268,7 +268,7 @@
         
           <li><a href="../tools.html">工具</a> &raquo;</li>
         
-      <li>Rectangle Tool</li>
+      <li>矩形工具</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -293,78 +293,77 @@
            <div itemprop="articleBody">
             
   <section id="rectangle-tool">
-<span id="index-0"></span><span id="id1"></span><h1>Rectangle Tool<a class="headerlink" href="#rectangle-tool" title="本標題的永久連結">¶</a></h1>
-<p><img alt="toolrectangle" src="../../_images/rectangle_tool.svg" /></p>
-<p>This tool can be used to paint rectangles, or create rectangle shapes on a vector layer. Click and hold <img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> to indicate one corner of the rectangle, drag to the opposite corner, and release the button.</p>
+<span id="index-0"></span><span id="id1"></span><h1>矩形工具<a class="headerlink" href="#rectangle-tool" title="本標題的永久連結">¶</a></h1>
+<p><img alt="矩形工具" src="../../_images/rectangle_tool.svg" /></p>
+<p>這個工具是用會繪畫矩形，或是在向量圖層中新建一個矩形。按下 <img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> 來生成起點，拖曳到終點後放開左鍵來繪製一個矩形。</p>
 <section id="hotkeys-and-sticky-keys">
-<h2>Hotkeys and Sticky-keys<a class="headerlink" href="#hotkeys-and-sticky-keys" title="本標題的永久連結">¶</a></h2>
-<p>There's no default hotkey for switching to rectangle.</p>
-<p>If you hold the <kbd class="kbd docutils literal notranslate">Shift</kbd> key while drawing, a square will be drawn instead of a rectangle. Holding the <kbd class="kbd docutils literal notranslate">Ctrl</kbd> key will change the way the rectangle is constructed. Normally, the first mouse click indicates one corner and the second click the opposite. With the <kbd class="kbd docutils literal notranslate">Ctrl</kbd> key, the initial mouse position indicates the center of the rectangle, and the final mouse position indicates a corner. You can press the <kbd class="kbd docutils literal notranslate">Alt</kbd> key while still keeping <img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> down to move the rectangle to a different location.</p>
-<p>You can change between the corner/corner and center/corner drawing methods as often
-as you want by pressing or releasing the <kbd class="kbd docutils literal notranslate">Ctrl</kbd> key, provided that you keep <img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> pressed. With the <kbd class="kbd docutils literal notranslate">Ctrl</kbd> key pressed, mouse movements will affect all four corners of the rectangle (relative to the center), without the <kbd class="kbd docutils literal notranslate">Ctrl</kbd> key, one of the corners is unaffected.</p>
+<h2>快捷鍵和修飾鍵<a class="headerlink" href="#hotkeys-and-sticky-keys" title="本標題的永久連結">¶</a></h2>
+<p>在預設裡沒有切換到這個工具的快捷鍵。</p>
+<p>如果在繪製時按下 <kbd class="kbd docutils literal notranslate">Shift</kbd> 鍵，矩形會被取代成正方形。如果按下 <kbd class="kbd docutils literal notranslate">Ctrl</kbd> 鍵的話，會改變矩形的新建方式，平常的方式是以對角生成，而按著 <kbd class="kbd docutils literal notranslate">Ctrl</kbd> 鍵的話，滑鼠點下去的地方會變成中心點，而其後點下去的位置則是對角位置。你可以在按著 <img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> 的情況下按下 <kbd class="kbd docutils literal notranslate">Alt</kbd> 鍵來移動矩形的位置。</p>
+<p>在按下了 <img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> 的情況下，你可以按下或放開 <kbd class="kbd docutils literal notranslate">Ctrl</kbd> 鍵來切換工具以對角或中心的繪製方式。在按下了 <kbd class="kbd docutils literal notranslate">Ctrl</kbd> 鍵後，滑鼠的移動會影響矩形的四個角（相對以中心繪製而言），沒有 <kbd class="kbd docutils literal notranslate">Ctrl</kbd> 鍵的話，當中一個角會不受影響。</p>
 <div class="versionadded">
 <p><span class="versionmodified added">在 5.0 版本新加入.</span></p>
 </div>
-<p>If you hold <kbd class="kbd docutils literal notranslate">Ctrl</kbd> and <kbd class="kbd docutils literal notranslate">Alt</kbd> keys while drawing, the rectangle will be rotated around the marked corner. If used with holding <kbd class="kbd docutils literal notranslate">Shift</kbd> key, a square will be rotated around the marked corner.</p>
+<p>如果在繪製時按著 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Alt</kbd></kbd>，矩形會以標記的角落為軸心旋轉。如果在按著的同時加上 <kbd class="kbd docutils literal notranslate">Shift</kbd> 鍵，一個正方形會以標記的角落為軸心旋轉。</p>
 </section>
 <section id="tool-options">
-<h2>Tool Options<a class="headerlink" href="#tool-options" title="本標題的永久連結">¶</a></h2>
+<h2>工具選項<a class="headerlink" href="#tool-options" title="本標題的永久連結">¶</a></h2>
 <section id="fill">
-<h3>Fill<a class="headerlink" href="#fill" title="本標題的永久連結">¶</a></h3>
+<h3>填充<a class="headerlink" href="#fill" title="本標題的永久連結">¶</a></h3>
 <dl class="simple">
-<dt>Not filled</dt><dd><p>The rectangle will be transparent from the inside.</p>
+<dt>無填充</dt><dd><p>矩形內部會是透明的。</p>
 </dd>
-<dt>Foreground color</dt><dd><p>The rectangle will use the foreground color as fill.</p>
+<dt>前景色</dt><dd><p>矩形內部會以前景色填充。</p>
 </dd>
-<dt>Background color</dt><dd><p>The rectangle will use the background color as fill.</p>
+<dt>背景色</dt><dd><p>矩形內部會以背景色填充。</p>
 </dd>
-<dt>Pattern</dt><dd><p>The rectangle will use the active pattern as fill.</p>
+<dt>圖案</dt><dd><p>矩形內部會以使用中的圖案填充。</p>
 </dd>
 </dl>
-<p>Pattern Transform</p>
+<p>圖案變形</p>
 <blockquote>
 <div><div class="versionadded">
 <p><span class="versionmodified added">在 4.4 版本新加入.</span></p>
 </div>
-<p>This enables upon using pattern as the fill, and has options for changing the pattern transformation a little.</p>
+<p>這個選項在使用圖案填充時啟用，會有用來改變圖案的選項。</p>
 <dl class="simple">
-<dt>Rotation</dt><dd><p>This allows you to rotate the pattern used in the fill.</p>
+<dt>旋轉</dt><dd><p>這個選項可以把用來填充的圖案旋轉。</p>
 </dd>
-<dt>Scale</dt><dd><p>This allows you to scale the pattern used in the fill.</p>
+<dt>縮放</dt><dd><p>這個選項可以把用來填充的圖案縮放大小。</p>
 </dd>
 </dl>
 </div></blockquote>
 </section>
 <section id="outline">
-<h3>Outline<a class="headerlink" href="#outline" title="本標題的永久連結">¶</a></h3>
+<h3>描邊<a class="headerlink" href="#outline" title="本標題的永久連結">¶</a></h3>
 <dl class="simple">
-<dt>No Outline</dt><dd><p>The Rectangle will render without outline.</p>
+<dt>無輪廓</dt><dd><p>矩形會以沒有輪廓的方式繪製。</p>
 </dd>
-<dt>Brush</dt><dd><p>The Rectangle will use the current selected brush to outline.</p>
+<dt>筆刷</dt><dd><p>矩形會使用當前使用的筆刷作為輪廓。</p>
 </dd>
 </dl>
 <div class="admonition note">
 <p class="admonition-title">備註</p>
-<p>On vector layers, the rectangle will not render with a brush outline, but rather a vector outline.</p>
+<p>在向量圖層中，矩形不會繪製筆刷輪廓，但是會繪製向量線條。</p>
 </div>
 <dl>
-<dt>Anti-aliasing</dt><dd><p>This toggles whether or not to give selections feathered edges. Some people prefer hard-jagged edges for their selections.</p>
+<dt>反鋸齒</dt><dd><p>這個選項控制是否要羽化邊緣。有些人會想要選取鋸齒狀的邊緣。</p>
 </dd>
-<dt>Width</dt><dd><p>Gives the current width. Use the lock to force the next selection made to this width.</p>
+<dt>寬度</dt><dd><p>顯示目前新增的選取區域的寬度。你可以手動輸入數值然後「鎖定寬度」來讓你接下來的選取區域使用目前寬度。</p>
 </dd>
-<dt>Height</dt><dd><p>Gives the current height. Use the lock to force the next selection made to this height.</p>
+<dt>高度</dt><dd><p>顯示目前新增的選取區域的高度。你可以手動輸入數值然後「鎖定高度」來讓你接下來的選取區域使用目前高度。</p>
 </dd>
-<dt>Ratio</dt><dd><div class="versionadded">
+<dt>寬高比</dt><dd><div class="versionadded">
 <p><span class="versionmodified added">在 4.2 版本新加入.</span></p>
 </div>
-<p>Gives the current ratio. Use the lock to force the next selection made to this ratio.</p>
-<p>Round X</p>
+<p>顯示寬度和高度之間的比例。和寬度和高度相似，你可以手動輸入數值然後「鎖定寬高比」來讓你接下來的選取區域使用目前比例。</p>
+<p>圓角 X</p>
 <blockquote>
-<div><p>The horizontal radius of the rectangle corners.</p>
+<div><p>設定矩形角落的水平圓角。</p>
 </div></blockquote>
-<p>Round Y</p>
+<p>圓角 Y</p>
 <blockquote>
-<div><p>The vertical radius of the rectangle corners.</p>
+<div><p>設定矩形角落的垂直圓角。</p>
 </div></blockquote>
 </dd>
 </dl>
@@ -395,7 +394,7 @@ as you want by pressing or releasing the <kbd class="kbd docutils literal notran
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>b4e6ea0</code>
+          修訂版本 <code>37fdf7c</code>
         </span>
       
 
