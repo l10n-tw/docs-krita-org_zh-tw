@@ -48,17 +48,6 @@ Background color
 Pattern
     The rectangle will use the active pattern as fill.
 
-Pattern Transform
-
-    .. versionadded:: 4.4
-
-    This enables upon using pattern as the fill, and has options for changing the pattern transformation a little.
-
-    Rotation
-        This allows you to rotate the pattern used in the fill.
-    Scale
-        This allows you to scale the pattern used in the fill.
-
 Outline
 ~~~~~~~
 
@@ -66,25 +55,37 @@ No Outline
     The Rectangle will render without outline.
 Brush
     The Rectangle will use the current selected brush to outline.
+Brush (Background Color)
+    The Rectangle will use the current selected brush with the current background color to outline.
 
 .. note::
     On vector layers, the rectangle will not render with a brush outline, but rather a vector outline.
 
-Anti-aliasing
-    This toggles whether or not to give selections feathered edges. Some people prefer hard-jagged edges for their selections.
+Pattern Transform
+~~~~~~~~~~~~~~~~~
+
+.. versionadded:: 4.4
+
+This enables upon using pattern as the fill, and has options for changing the pattern transformation a little.
+
+Rotation
+    This allows you to rotate the pattern used in the fill.
+Scale
+    This allows you to scale the pattern used in the fill.
+
+Size
+~~~~
+
 Width
-    Gives the current width. Use the lock to force the next selection made to this width.
+    Gives the current width. Use the lock to force the next rectangle made to this width.
 Height
-    Gives the current height. Use the lock to force the next selection made to this height.
+    Gives the current height. Use the lock to force the next rectangle made to this height.
 Ratio
     .. versionadded:: 4.2
 
-    Gives the current ratio. Use the lock to force the next selection made to this ratio.
+    Gives the current ratio. Use the lock to force the next rectangle made to this ratio.
 
-    Round X
-
-        The horizontal radius of the rectangle corners.
-
-    Round Y
-
-        The vertical radius of the rectangle corners.
+Round X
+    The horizontal radius of the rectangle corners.
+Round Y
+    The vertical radius of the rectangle corners.

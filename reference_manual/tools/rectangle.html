@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-10-23T19:26:20" />
+  <meta property="og:article:modified_time" content="2021-10-25T18:05:21" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="Krita 的矩形工具參考。" name="description" />
 
@@ -320,9 +320,25 @@
 <dt>圖案</dt><dd><p>矩形內部會以使用中的圖案填充。</p>
 </dd>
 </dl>
-<p>圖案變形</p>
-<blockquote>
-<div><div class="versionadded">
+</section>
+<section id="outline">
+<h3>描邊<a class="headerlink" href="#outline" title="本標題的永久連結">¶</a></h3>
+<dl class="simple">
+<dt>無輪廓</dt><dd><p>矩形會以沒有輪廓的方式繪製。</p>
+</dd>
+<dt>筆刷</dt><dd><p>矩形會使用當前使用的筆刷作為輪廓。</p>
+</dd>
+<dt>Brush (Background Color)</dt><dd><p>The Rectangle will use the current selected brush with the current background color to outline.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">備註</p>
+<p>在向量圖層中，矩形不會繪製筆刷輪廓，但是會繪製向量線條。</p>
+</div>
+</section>
+<section id="pattern-transform">
+<h3>圖案變形<a class="headerlink" href="#pattern-transform" title="本標題的永久連結">¶</a></h3>
+<div class="versionadded">
 <p><span class="versionmodified added">在 4.4 版本新加入.</span></p>
 </div>
 <p>這個選項在使用圖案填充時啟用，會有用來改變圖案的選項。</p>
@@ -332,39 +348,22 @@
 <dt>縮放</dt><dd><p>這個選項可以把用來填充的圖案縮放大小。</p>
 </dd>
 </dl>
-</div></blockquote>
 </section>
-<section id="outline">
-<h3>描邊<a class="headerlink" href="#outline" title="本標題的永久連結">¶</a></h3>
-<dl class="simple">
-<dt>無輪廓</dt><dd><p>矩形會以沒有輪廓的方式繪製。</p>
-</dd>
-<dt>筆刷</dt><dd><p>矩形會使用當前使用的筆刷作為輪廓。</p>
-</dd>
-</dl>
-<div class="admonition note">
-<p class="admonition-title">備註</p>
-<p>在向量圖層中，矩形不會繪製筆刷輪廓，但是會繪製向量線條。</p>
-</div>
+<section id="size">
+<h3>Size<a class="headerlink" href="#size" title="本標題的永久連結">¶</a></h3>
 <dl>
-<dt>反鋸齒</dt><dd><p>這個選項控制是否要羽化邊緣。有些人會想要選取鋸齒狀的邊緣。</p>
+<dt>寬度</dt><dd><p>Gives the current width. Use the lock to force the next rectangle made to this width.</p>
 </dd>
-<dt>寬度</dt><dd><p>顯示目前新增的選取區域的寬度。你可以手動輸入數值然後「鎖定寬度」來讓你接下來的選取區域使用目前寬度。</p>
-</dd>
-<dt>高度</dt><dd><p>顯示目前新增的選取區域的高度。你可以手動輸入數值然後「鎖定高度」來讓你接下來的選取區域使用目前高度。</p>
+<dt>高度</dt><dd><p>Gives the current height. Use the lock to force the next rectangle made to this height.</p>
 </dd>
 <dt>寬高比</dt><dd><div class="versionadded">
 <p><span class="versionmodified added">在 4.2 版本新加入.</span></p>
 </div>
-<p>顯示寬度和高度之間的比例。和寬度和高度相似，你可以手動輸入數值然後「鎖定寬高比」來讓你接下來的選取區域使用目前比例。</p>
-<p>圓角 X</p>
-<blockquote>
-<div><p>設定矩形角落的水平圓角。</p>
-</div></blockquote>
-<p>圓角 Y</p>
-<blockquote>
-<div><p>設定矩形角落的垂直圓角。</p>
-</div></blockquote>
+<p>Gives the current ratio. Use the lock to force the next rectangle made to this ratio.</p>
+</dd>
+<dt>圓角 X</dt><dd><p>設定矩形角落的水平圓角。</p>
+</dd>
+<dt>圓角 Y</dt><dd><p>設定矩形角落的垂直圓角。</p>
 </dd>
 </dl>
 </section>
@@ -394,7 +393,7 @@
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>ec76001</code>
+          修訂版本 <code>dc52023</code>
         </span>
       
 
