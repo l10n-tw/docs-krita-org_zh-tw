@@ -6,7 +6,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta property="og:title" name="title" content="Reference Images Tool" />
+  <meta property="og:title" name="title" content="參考圖工具" />
   <meta property="og:site-name" content="Krita Manual" />
   <meta property="og:type" content="article" />
   <meta property="og:locale" content="zh_TW" />
@@ -21,13 +21,13 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-10-26T07:26:24" />
+  <meta property="og:article:modified_time" content="2021-10-28T09:26:29" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<meta content="The reference images tool." name="description" />
+<meta content="Krita 的參考圖工具參考。" name="description" />
 
   
   
-  <title>Reference Images Tool &mdash; Krita Manual 5.0.0 說明文件</title>
+  <title>參考圖工具 &mdash; Krita Manual 5.0.0 說明文件</title>
   
 
   
@@ -184,8 +184,8 @@
 <li class="toctree-l3"><a class="reference internal" href="colorize_mask.html">著色遮罩工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="smart_patch.html">Smart Patch Tool</a></li>
 <li class="toctree-l3"><a class="reference internal" href="assistant.html">輔助尺工具</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Reference Images Tool</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#tool-options">Tool Options</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">參考圖工具</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#tool-options">工具選項</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="measure.html">測量工具</a></li>
@@ -267,7 +267,7 @@
         
           <li><a href="../tools.html">工具</a> &raquo;</li>
         
-      <li>Reference Images Tool</li>
+      <li>參考圖工具</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -292,36 +292,36 @@
            <div itemprop="articleBody">
             
   <section id="reference-images-tool">
-<span id="index-0"></span><span id="id1"></span><h1>Reference Images Tool<a class="headerlink" href="#reference-images-tool" title="本標題的永久連結">¶</a></h1>
-<p><img alt="toolreference" src="../../_images/reference_images_tool.svg" /></p>
+<span id="index-0"></span><span id="id1"></span><h1>參考圖工具<a class="headerlink" href="#reference-images-tool" title="本標題的永久連結">¶</a></h1>
+<p><img alt="參考圖工具" src="../../_images/reference_images_tool.svg" /></p>
 <div class="versionadded">
 <p><span class="versionmodified added">在 4.1 版本新加入.</span></p>
 </div>
-<p>The reference images tool is a replacement for the reference images docker. You can use it to load images from your disk as reference, which can then be moved around freely on the canvas and placed wherever.</p>
+<p>參考圖工具是用來取代參考圖面板的。你可以使用這個工具來把電腦裡的圖片作為參考圖，這個圖片可以在畫布中任意擺放。</p>
 <section id="tool-options">
-<h2>Tool Options<a class="headerlink" href="#tool-options" title="本標題的永久連結">¶</a></h2>
+<h2>工具選項<a class="headerlink" href="#tool-options" title="本標題的永久連結">¶</a></h2>
 <dl>
-<dt>Add Reference Image</dt><dd><p>Load a single image to display on the canvas.</p>
+<dt>新增參考圖</dt><dd><p>讀取單獨一張圖片並顯示在畫布上。</p>
 </dd>
-<dt>Paste as Reference Image</dt><dd><p>Load an image from the system clipboard and add it as a reference image.</p>
+<dt>作為參考圖貼上</dt><dd><p>從電腦的剪貼板中讀取圖片並新增為參考圖。</p>
 </dd>
-<dt>Load Set</dt><dd><p>Load a set of reference images.</p>
+<dt>載入集合</dt><dd><p>讀取一組參考圖。</p>
 </dd>
-<dt>Save Set</dt><dd><p>Save a set of reference images.</p>
+<dt>儲存集合</dt><dd><p>儲存一組參考圖。</p>
 </dd>
-<dt>Delete all reference images</dt><dd><p>Delete all the reference images.</p>
+<dt>刪除所有參考圖</dt><dd><p>刪除所有參考圖片。</p>
 </dd>
-<dt>Keep aspect ratio</dt><dd><p>When toggled this will force the image to not get distorted.</p>
+<dt>保持寬高比</dt><dd><p>當開啟這個選項時會強制圖片不被變形。</p>
 </dd>
-<dt>Opacity</dt><dd><p>Lower the opacity.</p>
+<dt>透明度</dt><dd><p>控制透明度。</p>
 </dd>
-<dt>Saturation</dt><dd><p>Desaturate the image. This is useful if you only want to focus on the light/shadow instead of getting distracted by the colors.</p>
+<dt>飽和度</dt><dd><p>控制圖片的飽和度。當你只想要專注於光影而不被色彩打擾時可以使用。</p>
 </dd>
-<dt>Storage mode</dt><dd><p>How is the reference image stored.</p>
+<dt>儲存模式</dt><dd><p>設定參考圖片的儲存方式。</p>
 <dl class="simple">
-<dt>Embed to *.kra</dt><dd><p>Store this reference image into the KRA file. This is recommended for small vital files you'd easily lose track of otherwise.</p>
+<dt>嵌入到 .KRA 檔案</dt><dd><p>儲存參考圖到 KRA 檔案。適合用於小型但重要，容易丟失的檔案。</p>
 </dd>
-<dt>Link to external file.</dt><dd><p>Only link to the reference image, krita will open it from the disk everytime it loads this file. This is recommended for big files, or files that change a lot. This option is only available when reference images are loaded from a local path.</p>
+<dt>連結到外部檔案。</dt><dd><p>只連接參考圖，每次打開檔案 Krita 就會從電腦硬碟中讀取圖片。這種方式適合大型檔案，或是會頻繁改變的檔案。這個選項只能在參考圖為本地路徑時使用。</p>
 </dd>
 </dl>
 </dd>
@@ -354,7 +354,7 @@
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>9fd0afe</code>
+          修訂版本 <code>831035f</code>
         </span>
       
 
