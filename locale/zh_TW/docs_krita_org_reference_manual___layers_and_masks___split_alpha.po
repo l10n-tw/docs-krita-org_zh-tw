@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: Krita Manual 4.2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-27 21:21+0800\n"
-"PO-Revision-Date: 2021-08-29 16:23+0000\n"
+"PO-Revision-Date: 2021-11-01 09:22+0000\n"
 "Last-Translator: 楊景貴 <issacsopp@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <http://weblate.slat.org/projects/"
 "krita-docs/3-reference_manual___layers_and_masks___split_alpha/zh_Hant/>\n"
@@ -29,7 +29,7 @@ msgstr ""
 msgid ""
 "Split Alpha: how to work with color and alpha channels of the layer "
 "separately."
-msgstr ""
+msgstr "分割 Alpha：如何分別處理圖層的顏色以及其所屬的 Alpha 通道。"
 
 #: ../../reference_manual/layers_and_masks/split_alpha.rst:16
 msgid "Split Alpha"
@@ -44,6 +44,9 @@ msgid ""
 "`transparency_masks`. The artist can work on the transparency mask in an "
 "isolated environment and merge it back when he has finished working."
 msgstr ""
+"尤其在遊戲開發相關領域，美術人員需要單獨處理紋理的 alpha 通道。 為了協助這樣的工作流程，Krita 有個特殊的功能，叫做 "
+":menuselection:`分割 Alpha`. 它可以將圖層的 alpha 通道拆分為單獨的 :ref:`transparency_masks`。 "
+"美術人員可以在獨立的環境中處理透明遮罩，並在完成編修後將其合併回來。"
 
 #: ../../reference_manual/layers_and_masks/split_alpha.rst:21
 msgid "How to work with alpha channel of the layer"
@@ -51,7 +54,7 @@ msgstr "如何使用圖層的 alpha 通道"
 
 #: ../../reference_manual/layers_and_masks/split_alpha.rst:23
 msgid "|mouseright| the paint layer in the layers docker."
-msgstr ""
+msgstr "用 |mouseright| 在圖層工作介面中點選一個顏料圖層。"
 
 #: ../../<rst_epilog>:4
 msgid "mouseright"
@@ -60,7 +63,7 @@ msgstr "滑鼠右鍵"
 #: ../../reference_manual/layers_and_masks/split_alpha.rst:24
 #: ../../reference_manual/layers_and_masks/split_alpha.rst:35
 msgid "Choose :menuselection:`Split Alpha --> Alpha into Mask`."
-msgstr ""
+msgstr "選取 :menuselection:`分割 Alpha ( 透明度 ) --> Alpha ( 透明度 ) 轉為遮罩`，的功能。"
 
 #: ../../reference_manual/layers_and_masks/split_alpha.rst:25
 msgid ""
@@ -68,6 +71,8 @@ msgid ""
 "paints transparency (see-through), white paints opacity (visible). Gray "
 "values paint semi-transparency."
 msgstr ""
+"這時候就可以用習慣的繪畫工具在透明度遮罩上編修繪製。 如果塗上黑色就表示透明（越黑越透明），塗白色則表示不透明（越白越是可見）。 "
+"灰階曾依照比例呈現半透明。"
 
 #: ../../reference_manual/layers_and_masks/split_alpha.rst:26
 msgid ""
@@ -75,6 +80,8 @@ msgid ""
 "mouseright| + :menuselection:`Isolate Layer` (or the :kbd:`Alt +` |"
 "mouseleft| shortcut)."
 msgstr ""
+"如果要進入透明度遮罩可以用 |mouseright| + :menuselection:`單獨顯示使用中圖層` 進入隔離編輯模式 ( 或是用 :kbd:`"
+"Alt +` |mouseleft| 單點該圖層 )。"
 
 #: ../../<rst_epilog>:2
 msgid "mouseleft"
@@ -85,6 +92,8 @@ msgid ""
 "When finished editing the Transparency Mask, |mouseright| on it and select :"
 "menuselection:`Split Alpha --> Write as Alpha`."
 msgstr ""
+"當完成透明度的編繪後，在圖層工作介面的該圖層上 |mouseright| :menuselection:`分割 Alpha ( 透明度 ) --> 作為 "
+"Alpha ( 透明度 ) 寫入`。"
 
 #: ../../reference_manual/layers_and_masks/split_alpha.rst:30
 msgid ""
@@ -100,16 +109,21 @@ msgid ""
 "compositing of the image i.e. limit image to only one layer without any "
 "masks or effects, or use the following method:"
 msgstr ""
+"一般來說，將圖像匯出或另存時( 不示指用儲存多圖層檔案，例如匯出 PNG 這類不帶圖層格式的檔案 )，圖像有完全透明區域都會在 alpha 通道填黑色。 "
+"這是因為在合併所有圖層時，Krita 會用最有效率的方式，因此完全丟棄全透明像素的顏色數據。 為了避免這種顏色數據丟失 ( 失真 ) "
+"，可以不合併圖層，不過若是圖像需要輸出並限制在沒有任何效果或塗層的情況時，就可以使用以下方法："
 
 #: ../../reference_manual/layers_and_masks/split_alpha.rst:34
 msgid "|mouseright| the layer in the layers docker."
-msgstr ""
+msgstr "在圖層工作介面中 |mouseright| 點擊圖層 ( 最好帶有透明區域 )。"
 
 #: ../../reference_manual/layers_and_masks/split_alpha.rst:36
 msgid ""
 "|mouseright| on the created mask and select :menuselection:`Split Alpha --> "
 "Save Merged...`."
 msgstr ""
+"在建立的透明度遮罩上 |mouseright| :menuselection:`分割 Alpha ( 透明度 ) --> 合併儲存...`( 建議輸出 "
+"png 目前測試 exr 會失真 )。"
 
 #: ../../reference_manual/layers_and_masks/split_alpha.rst:11
 msgid "Layers"
@@ -117,12 +131,12 @@ msgstr "圖層"
 
 #: ../../reference_manual/layers_and_masks/split_alpha.rst:11
 msgid "Transparency"
-msgstr ""
+msgstr "透明度"
 
 #: ../../reference_manual/layers_and_masks/split_alpha.rst:11
 msgid "Alpha channel"
-msgstr ""
+msgstr "Alpha 通道"
 
 #: ../../reference_manual/layers_and_masks/split_alpha.rst:11
 msgid "Game"
-msgstr ""
+msgstr "遊戲"
