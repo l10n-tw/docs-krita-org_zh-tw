@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-11-01T18:26:31" />
+  <meta property="og:article:modified_time" content="2021-11-02T21:31:24" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="給 Krita 說明文件貢獻者的指南。" name="description" />
 
@@ -551,40 +551,40 @@ git push
 </section>
 <section id="changing-pages">
 <h3>更改頁面<a class="headerlink" href="#changing-pages" title="本標題的永久連結">¶</a></h3>
-<p>If you fully rewrite a page, as opposed to proofreading it, the resulting page should be reviewed.</p>
-<p>If you change a page because a feature has changed, and you have commit access, the change can be pushed without review (unless you feel more comfortable with a review), but you should add:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">versionchanged</span><span class="p">::</span> <span class="n">version</span> <span class="n">number</span>
+<p>如你將頁面重寫，而非單純作校閱修訂，重寫後的頁面應先通過審核。</p>
+<p>如因功能改動而修改頁面，而你又擁有提交 (commit) 權限，則可以跳過審核而直接將更動推送到主儲存庫（除非你認為經過審核後會較為安心）。你應在變更的部份加上：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>.. versionchanged:: 版本編號
 
-    <span class="n">This</span> <span class="ow">and</span> <span class="n">that</span> <span class="n">changed</span><span class="o">.</span>
+    在此處描述變更內容。
 </pre></div>
 </div>
-<p>In all cases, check if you want to add yourself to the author field in the metadata section on top.</p>
-<p>Using deprecated, versionadded and versionchanged with the version number allows us to easily search the manual for these terms with grep:</p>
+<p>在作出任何變更後，請考慮要否在頁頂 metadata（中繼資料）內的 <code class="docutils literal notranslate"><span class="pre">author</span></code>（作者）欄位加入自己的作者資料。</p>
+<p>連同版本編號加上 <code class="docutils literal notranslate"><span class="pre">deprecated</span></code>、<code class="docutils literal notranslate"><span class="pre">versionadded</span></code> 和 <code class="docutils literal notranslate"><span class="pre">versionchanged</span></code> 標記可讓我們能輕易地使用 <code class="docutils literal notranslate"><span class="pre">grep</span></code> 在說明文件中找出這些內容：</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>grep -d recurse versionadded * --exclude-dir<span class="o">={</span>_build,locale<span class="o">}</span>
 </pre></div>
 </div>
 </section>
 <section id="faulty-pages">
 <h3>發現問題頁面<a class="headerlink" href="#faulty-pages" title="本標題的永久連結">¶</a></h3>
-<p>If a page slips through the cracks, either...</p>
+<p>如發現有錯處，可：</p>
 <ul class="simple">
-<li><p>Make a merge request per the <a class="reference internal" href="#making-changes-sphinx"><span class="std std-ref">作出更動</span></a> section.</p></li>
-<li><p>Make a task at the <a class="reference external" href="https://phabricator.kde.org/project/view/135/">Manual Project Workboard</a>.</p></li>
-<li><p>Make a bug at <a class="reference external" href="https://bugs.kde.org/">bugzilla</a> under the project Krita in the section 'documentation'.</p></li>
+<li><p>按<a class="reference internal" href="#making-changes-sphinx"><span class="std std-ref">作出更動</span></a>一節建立一個合併請求。</p></li>
+<li><p>在 <a class="reference external" href="https://phabricator.kde.org/project/view/135/">Manual Project Workboard</a> 看板建立一個 Task。</p></li>
+<li><p>在 <a class="reference external" href="https://bugs.kde.org/">bugzilla</a> 上「Krita」專案中的「documentation」組件下建立一個 bug report。</p></li>
 </ul>
 </section>
 <section id="proofreading">
 <h3>校對<a class="headerlink" href="#proofreading" title="本標題的永久連結">¶</a></h3>
-<p>There are two types of proofreading that needs to be done.</p>
-<p>The most important one is <strong>reviewing changes people make</strong>. You can do this on <a class="reference external" href="https://invent.kde.org/">KDE_gitlab</a> in two ways:</p>
+<p>我們的校對工作分為兩類。</p>
+<p>最重要的一類為<strong>審閱其他人作出的更動</strong>。在 <a class="reference external" href="https://invent.kde.org/">KDE_gitlab</a> 上有兩種方法進行審閱：</p>
 <ol class="arabic">
-<li><p>Reviewing merge requests</p>
-<p>You can help review merge requests. Request reviewing is usually done by programmers to find mistakes in each other's code, but because programming code is text based just like regular text, we can use this to check against typos as well!</p>
+<li><p>審閱合併請求</p>
+<p>你可以協助審閱合併請求。審閱程序一般是程式設計員互相在大家的程式碼中尋找錯處。由於說明文件和程式碼一樣都是以文字為基礎，因此我們也可以採用相同的程序來檢查錯處！</p>
 <blockquote>
 <div><p>A merge request, is an amount of changes done in a document (added, removed) put into a machine readable file. When someone submits a review request (on system like gitlab or github this is a merge or pull request), people who maintain the original files will have to look them over and can make comments about things needing to change. This allows them to comment on things like typos, over-complicated writing but also things that are incorrect. After a patch has been accepted it can be pushed into the version control system.</p>
 </div></blockquote>
 </li>
-<li><p>Commenting on changes in the manual.</p>
+<li><p>在文件的更動留下評語。</p>
 <blockquote>
 <div><p>Commenting changes happens after the fact. You can comment on a change by going to the commit message (from the repository page, go to history and then click on an entry), where you will be able to make comments on the changes made.</p>
 </div></blockquote>
@@ -631,7 +631,7 @@ git push
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>5f3e00a</code>
+          修訂版本 <code>abf5534</code>
         </span>
       
 
