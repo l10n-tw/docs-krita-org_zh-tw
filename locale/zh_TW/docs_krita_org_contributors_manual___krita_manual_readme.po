@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Krita Manual 4.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-10-21 15:06+0000\n"
-"PO-Revision-Date: 2021-10-22 15:41+0000\n"
+"PO-Revision-Date: 2021-11-02 21:27+0000\n"
 "Last-Translator: Alvin Wong <alvin@alvinhc.com>\n"
 "Language-Team: Chinese (Traditional) <http://weblate.slat.org/projects/"
 "krita-docs/5-contributors_manual___krita_manual_readme/zh_Hant/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.8\n"
+"X-Generator: Weblate 4.8.1\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../../contributors_manual/krita_manual_readme.rst:1
@@ -1128,7 +1128,7 @@ msgstr "更改頁面"
 msgid ""
 "If you fully rewrite a page, as opposed to proofreading it, the resulting "
 "page should be reviewed."
-msgstr ""
+msgstr "如你將頁面重寫，而非單純作校閱修訂，重寫後的頁面應先通過審核。"
 
 #: ../../contributors_manual/krita_manual_readme.rst:387
 msgid ""
@@ -1136,6 +1136,8 @@ msgid ""
 "access, the change can be pushed without review (unless you feel more "
 "comfortable with a review), but you should add::"
 msgstr ""
+"如因功能改動而修改頁面，而你又擁有提交 (commit) "
+"權限，則可以跳過審核而直接將更動推送到主儲存庫（除非你認為經過審核後會較為安心）。你應在變更的部份加上："
 
 #: ../../contributors_manual/krita_manual_readme.rst:389
 msgid ""
@@ -1143,22 +1145,27 @@ msgid ""
 "\n"
 "    This and that changed."
 msgstr ""
+".. versionchanged:: 版本編號\n"
+"\n"
+"    在此處描述變更內容。"
 
 #: ../../contributors_manual/krita_manual_readme.rst:393
 msgid ""
 "In all cases, check if you want to add yourself to the author field in the "
 "metadata section on top."
-msgstr ""
+msgstr "在作出任何變更後，請考慮要否在頁頂 metadata（中繼資料）內的 ``author``\\ （作者）欄位加入自己的作者資料。"
 
 #: ../../contributors_manual/krita_manual_readme.rst:395
 msgid ""
 "Using deprecated, versionadded and versionchanged with the version number "
 "allows us to easily search the manual for these terms with grep:"
 msgstr ""
+"連同版本編號加上 ``deprecated``\\ 、\\ ``versionadded`` 和 ``versionchanged`` "
+"標記可讓我們能輕易地使用 ``grep`` 在說明文件中找出這些內容："
 
 #: ../../contributors_manual/krita_manual_readme.rst:397
 msgid "grep -d recurse versionadded * --exclude-dir={_build,locale}"
-msgstr ""
+msgstr "grep -d recurse versionadded * --exclude-dir={_build,locale}"
 
 #: ../../contributors_manual/krita_manual_readme.rst:402
 msgid "Faulty pages"
@@ -1166,21 +1173,21 @@ msgstr "發現問題頁面"
 
 #: ../../contributors_manual/krita_manual_readme.rst:404
 msgid "If a page slips through the cracks, either..."
-msgstr ""
+msgstr "如發現有錯處，可："
 
 #: ../../contributors_manual/krita_manual_readme.rst:406
 msgid "Make a merge request per the :ref:`making_changes_sphinx` section."
-msgstr ""
+msgstr "按\\ :ref:`making_changes_sphinx`\\ 一節建立一個合併請求。"
 
 #: ../../contributors_manual/krita_manual_readme.rst:407
 msgid "Make a task at the `Manual Project Workboard`_."
-msgstr ""
+msgstr "在 `Manual Project Workboard`_ 看板建立一個 Task。"
 
 #: ../../contributors_manual/krita_manual_readme.rst:408
 msgid ""
 "Make a bug at `bugzilla`_ under the project Krita in the section "
 "'documentation'."
-msgstr ""
+msgstr "在 `bugzilla`_ 上「Krita」專案中的「documentation」組件下建立一個 bug report。"
 
 #: ../../contributors_manual/krita_manual_readme.rst:411
 msgid "Proofreading"
@@ -1188,17 +1195,17 @@ msgstr "校對"
 
 #: ../../contributors_manual/krita_manual_readme.rst:413
 msgid "There are two types of proofreading that needs to be done."
-msgstr ""
+msgstr "我們的校對工作分為兩類。"
 
 #: ../../contributors_manual/krita_manual_readme.rst:415
 msgid ""
 "The most important one is **reviewing changes people make**. You can do this "
 "on `KDE_gitlab`_ in two ways:"
-msgstr ""
+msgstr "最重要的一類為\\ **審閱其他人作出的更動**\\ 。在 `KDE_gitlab`_ 上有兩種方法進行審閱："
 
 #: ../../contributors_manual/krita_manual_readme.rst:417
 msgid "Reviewing merge requests"
-msgstr ""
+msgstr "審閱合併請求"
 
 #: ../../contributors_manual/krita_manual_readme.rst:419
 msgid ""
@@ -1207,6 +1214,8 @@ msgid ""
 "code is text based just like regular text, we can use this to check against "
 "typos as well!"
 msgstr ""
+"你可以協助審閱合併請求。審閱程序一般是程式設計員互相在大家的程式碼中尋找錯處。由於說明文件和程式碼一樣都是以文字為基礎，因此我們也可以採用相同的程序來檢查"
+"錯處！"
 
 #: ../../contributors_manual/krita_manual_readme.rst:421
 msgid ""
@@ -1222,7 +1231,7 @@ msgstr ""
 
 #: ../../contributors_manual/krita_manual_readme.rst:423
 msgid "Commenting on changes in the manual."
-msgstr ""
+msgstr "在文件的更動留下評語。"
 
 #: ../../contributors_manual/krita_manual_readme.rst:425
 msgid ""
