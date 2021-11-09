@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-11-08T07:58:22" />
+  <meta property="og:article:modified_time" content="2021-11-09T19:58:19" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="給 Krita 說明文件貢獻者的指南。" name="description" />
 
@@ -504,16 +504,15 @@ git push
 <p>在這一節我們會列出一系列工作流程。</p>
 <section id="tagging-and-branches">
 <h3>建立標籤 (Tag) 與分支 (Branch)<a class="headerlink" href="#tagging-and-branches" title="本標題的永久連結">¶</a></h3>
-<p>Adding and removing text will be done in the <code class="docutils literal notranslate"><span class="pre">draft</span></code> branch.</p>
-<p>Proofreading results for old pages will be considered as bugfixes and thus will go into the <code class="docutils literal notranslate"><span class="pre">master</span></code> branch and merged into the <code class="docutils literal notranslate"><span class="pre">draft</span></code> branch as necessary.</p>
-<p>Before the <code class="docutils literal notranslate"><span class="pre">draft</span></code> branch is merged for a given release:</p>
+<p>加入及移除內文會於 <code class="docutils literal notranslate"><span class="pre">draft</span></code> 分支中進行。</p>
+<p>為現存頁面校對的結果會被視為修正，因此會提交到 <code class="docutils literal notranslate"><span class="pre">master</span></code> 分支並按需要合併到 <code class="docutils literal notranslate"><span class="pre">draft</span></code> 分支中。</p>
+<p>為推出新版本合併 <code class="docutils literal notranslate"><span class="pre">draft</span></code> 分支前：</p>
 <ul class="simple">
-<li><p>The master branch will be tagged with the old version.</p></li>
-<li><p>The draft branch is first double checked that it has updated version number and updated epub cover.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">master</span></code> 分支會以舊版本篇號標籤。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">draft</span></code> 分支會先作複檢，以確認其版本篇號以及 EPUB 封面已作更新。</p></li>
 </ul>
-<p>The <code class="docutils literal notranslate"><span class="pre">draft</span></code> branch will not be merged until the day before a release to keep the pages intact for long enough.</p>
-<p>Each release will have a version of the epub uploaded as part of the release process.
-.. Where do we get the POT files from? Even the translated versions?</p>
+<p><code class="docutils literal notranslate"><span class="pre">draft</span></code> 分支要待發佈前一日才合併，以保持先前頁面不變。</p>
+<p>每個發佈版本均上傳一份 EPUB 文件。 ... Where do we get the POT files from? Even the translated versions?</p>
 </section>
 <section id="removing-pages">
 <h3>移除頁面<a class="headerlink" href="#removing-pages" title="本標題的永久連結">¶</a></h3>
@@ -529,8 +528,8 @@ git push
 </div>
 </div></blockquote>
 </li>
-<li><p>Will be linked on a page called 'deprecated'</p></li>
-<li><p>If the next version rolls around, all the pages linked in the deprecated section will be removed.</p></li>
+<li><p>會連結自一個名為「已棄用」的頁面</p></li>
+<li><p>當下一個版本推出時，所有連結自「已棄用」的頁面均會被移除。</p></li>
 </ol>
 </section>
 <section id="adding-pages">
@@ -590,9 +589,9 @@ git push
 </div></blockquote>
 </li>
 </ol>
-<p>In both cases, the interface consists of the difference being shown, with on the left the old version, and on the right the new version. Lines that have been added will be marked in green while lines that have been removed will be marked with red. You can click a speech bubble icon to add an 'inline' comment.</p>
-<p>The second major way the manual needs to be proofread is <strong>over the whole file</strong>. Many of the pages have only been checked for correctness but not for style and grammar.</p>
-<p>For this you will need to follow the <a class="reference internal" href="#making-changes-sphinx"><span class="std std-ref">作出更動</span></a> section, so that you can have full access to the pages and edit them.</p>
+<p>在進行上述兩種審閱工作時，介面會顯示更動比較資訊——左邊為舊版，而右邊為新版。新加入的內容會以綠色標示，而已移除的會以紅色標示。你可點選對話方塊圖示以加入「行內」評論。</p>
+<p>另一類校對為<strong>單一頁面檢查</strong>。說明文件中有很多頁面只被確認過內容的準確性，而未有經過格式和文化的檢查。</p>
+<p>為此你需要依照<a class="reference internal" href="#making-changes-sphinx"><span class="std std-ref">作出更動</span></a>一節的內容以存取整個頁面並對其作出修改。</p>
 </section>
 <section id="translating">
 <h3>翻譯<a class="headerlink" href="#translating" title="本標題的永久連結">¶</a></h3>
@@ -631,7 +630,7 @@ git push
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>8cbd48a</code>
+          修訂版本 <code>08263ff</code>
         </span>
       
 
