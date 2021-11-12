@@ -32,7 +32,7 @@ Gamut masking is available in both the Advanced and Artistic Color Selectors.
 
   - `Color Wheel Masking, Part 1 by James Gurney <https://gurneyjourney.blogspot.com/2008/01/color-wheel-masking-part-1.html>`_
   - `The Shapes of Color Schemes by James Gurney <https://gurneyjourney.blogspot.com/2008/02/shapes-of-color-schemes.html>`_
-  - `Gamut Masking Demonstration by James Gourney (YouTube) <https://youtu.be/qfE4E5goEIc>`_
+  - `Gamut Masking Demonstration by James Gurney (YouTube) <https://youtu.be/qfE4E5goEIc>`_
 
 
 Selecting a gamut mask
