@@ -6794,6 +6794,13 @@ footer span.commit .rst-content tt,
     margin-bottom: 12px;
 }
 
+/* Band-aid to fix margins of page contents list */
+.rst-content .section .contents ul p,
+.rst-content section .contents ul p {
+    margin-top: 0;
+    margin-bottom: 0.25em;
+}
+
 .rst-content .line-block {
     margin-left: 0;
     margin-bottom: 24px;

@@ -21,6 +21,8 @@ MyPaint Brush Engine
 
 `MyPaint <http://www.mypaint.org>`_ is a free painting program that comes with a lot of specific brushes. Krita can use those brushes for painting using the MyPaint brush engine.
 
+.. warning:: You can create new brush presets using the MyPaint brush engine in Krita, but the presets are saved in Krita's .kpp file format, not mypaints .myb format, so you cannot reuse those presets in MyPaint.
+
 Dynamic Inputs
 ---------------
 
