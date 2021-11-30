@@ -8,12 +8,12 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 4.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-27 21:21+0800\n"
+"POT-Creation-Date: 2021-11-30 14:17+0000\n"
 "PO-Revision-Date: 2021-08-24 00:27+0000\n"
 "Last-Translator: 黃郁純 <imvsfnd@gmail.com>\n"
-"Language-Team: Chinese (Traditional) <http://weblate.slat.org/projects/"
-"krita-docs/3-reference_manual___brushes___brush_engines___mypaint_engine/"
-"zh_Hant/>\n"
+"Language-Team: Chinese (Traditional) <http://weblate.slat.org/projects/krita-"
+"docs/3-reference_manual___brushes___brush_engines___mypaint_engine/zh_Hant/"
+">\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -38,11 +38,18 @@ msgid ""
 "using the MyPaint brush engine."
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:25
-msgid "Dynamic Inputs"
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:24
+msgid ""
+"You can create new brush presets using the MyPaint brush engine in Krita, "
+"but the presets are saved in Krita's .kpp file format, not mypaints .myb "
+"format, so you cannot reuse those presets in MyPaint."
 msgstr ""
 
 #: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:27
+msgid "Dynamic Inputs"
+msgstr ""
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:29
 msgid ""
 "Dynamic Inputs are a way for MyPaint to get information of the external "
 "devices as a drawing tablet; for instance the pressure over the drawing "
@@ -50,145 +57,145 @@ msgid ""
 "equivalent to :ref:`sensors` in Krita."
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:29
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:31
 msgid "MyPaint has 9 inputs:"
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:32
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:34
 msgid "Pressure"
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:32
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:34
 msgid "The pressure handled by a tablet. Typically in the range 0.0 to 1.0."
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:35
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:37
 msgid "Fine Speed"
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:35
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:37
 msgid "How quickly the stylus is moving. This can vary quite a lot."
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:38
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:40
 msgid "Gross Speed"
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:38
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:40
 msgid "Similar to fine speed but it changes very slowly."
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:41
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:43
 msgid "Random"
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:41
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:43
 msgid "Fast and random noise, changes with every brush stroke."
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:44
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:238
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:46
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:240
 msgid "Stroke"
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:44
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:46
 msgid ""
 "This input goes slowly from 0.0 to 1.0 while the stroke is being applied. "
 "This is related to \"stroke duration\" and \"stroke holdtime\" settings."
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:47
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:49
 msgid "Direction"
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:47
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:49
 msgid "This input defines the angle of a stroke, in degrees."
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:50
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:52
 msgid "Declination"
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:50
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:52
 msgid ""
 "This input defines the declination of the stylus tilt. This is the same as "
 "tilt-elevation in Krita."
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:53
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:55
 msgid "Ascension"
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:53
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:55
 msgid ""
 "Straight pen ascension. When the active tip points to it, it is 0. When the "
 "pen turns 90 degrees clockwise is +90. When it turns 90 degrees "
 "counterclockwise is -90. This is the same as tilt-direction in Krita."
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:57
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:59
 msgid "Custom"
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:56
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:58
 msgid ""
 "This is a user-defined input. It is related to the \"customized input\" "
 "setting."
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:60
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:62
 msgid "Parameters"
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:63
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:65
 msgid "Has the following parameters:"
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:65
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:67
 msgid ":ref:`mypaint_basic`"
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:66
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:68
 msgid ":ref:`mypaint_color`"
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:67
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:69
 msgid ":ref:`mypaint_speed`"
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:68
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:70
 msgid ":ref:`mypaint_dabs`"
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:69
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:71
 msgid ":ref:`mypaint_opacity`"
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:70
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:72
 msgid ":ref:`mypaint_tracking`"
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:71
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:73
 msgid ":ref:`mypaint_smudge`"
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:72
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:74
 msgid ":ref:`mypaint_stroke`"
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:73
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:75
 msgid ":ref:`mypaint_custom`"
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:79
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:81
 msgid "Basic"
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:82
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:84
 msgid "Radius"
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:83
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:85
 msgid ""
 "This is to set the radius of the brush. Please note that all of the mypaint "
 "radii are logarithmic. For instance, if you are setting the radius of a "
@@ -197,350 +204,350 @@ msgid ""
 "14.78. So, we can say that mypaint_radius = log(actual_radius)."
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:86
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:88
 msgid "Hardness"
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:87
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:89
 msgid "Hardness defines the sharpness of the brushes."
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:92
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:94
 msgid "Eraser"
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:93
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:95
 msgid "If this option is checked the brush will act as an eraser."
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:96
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:98
 msgid "Radius by Random"
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:97
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:99
 msgid ""
 "This option is used to generate a brush preset whose radii and opacity "
 "change randomly during the stroke. This should not be confused with the "
 "random dynamic option in the radius setting."
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:100
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:102
 msgid "Anti Aliasing"
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:101
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:103
 msgid ""
 "This option is used to smoothen the edges of the brush and remove the "
 "jagging effect. Most useful for very small presets."
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:104
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:106
 msgid "Elliptical Dab: Angle"
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:105
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:107
 msgid ""
 "Sets the angle of the brush dabs. Gives the best results for brushes with a "
 "low ratio and a direction filter, and allows for strokes akin to a "
 "calligraphic pen."
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:108
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:110
 msgid "Elliptical Dab: Ratio"
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:109
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:111
 msgid "This option is used to change the aspect ratio of dab."
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:114
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:116
 msgid "Direction Filter"
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:115
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:117
 msgid ""
 "This option is used to make the dabs adhere to a specific vector direction. "
 "In simple words, at times you might find the dabs not following the vector "
 "path of your strokes, this setting helps us rectify that."
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:120
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:122
 msgid "Color"
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:123
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:125
 msgid "Change color Hue"
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:124
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:126
 msgid ""
 "This option is used to shift the hue in a clockwise or anti-clockwise "
 "direction."
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:127
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:129
 msgid "Change color Lightness"
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:128
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:130
 msgid ""
 "This option is used to change color luminance using the HSL color model."
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:131
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:133
 msgid "Change color Value"
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:132
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:134
 msgid ""
 "This option is used to change color value (brightness, intensity) in HSV "
 "color model."
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:135
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:137
 msgid "Change color Saturation HSL"
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:136
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:138
 msgid "This option is used to change color saturation using HSL color model."
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:139
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:141
 msgid "Change color Saturation HSV"
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:140
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:142
 msgid "This option is used to change color saturation using HSV color model."
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:145
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:147
 msgid "Speed"
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:148
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:150
 msgid "Fine Speed Gamma"
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:149
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:151
 msgid ""
 "This option is used to change the reaction of the fine speed input to "
 "extreme physical speed."
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:152
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:154
 msgid "Gross Speed Gamma"
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:153
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:155
 msgid ""
 "This option is used to change the reaction of gross speed to extreme "
 "physical speed."
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:156
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:158
 msgid "Fine Speed Slowness / Fine Speed Filter"
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:157
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:159
 msgid ""
 "This option describes how slow the input fine speed is following the real "
 "speed."
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:160
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:162
 msgid "Gross Speed Slowness / Gross Speed Filter"
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:161
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:163
 msgid ""
 "This option describes how slow the input gross speed is following the real "
 "speed."
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:164
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:166
 msgid "Offset by Speed"
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:165
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:167
 msgid ""
 "This option is used to change the position of dabs based on stroke speed."
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:168
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:170
 msgid "Offset By Random [Jitter]"
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:169
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:171
 msgid ""
 "This option adds a random offset to the position where each dab is drawn."
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:174
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:176
 msgid "Dabs"
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:177
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:179
 msgid "Dabs per Actual Radius"
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:178
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:180
 msgid ""
 "This option describes how many dabs to draw when the pointer moves the "
 "distance of the brush radius."
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:181
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:183
 msgid "Dabs per Second"
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:182
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:184
 msgid ""
 "This option describes how many dabs to draw per second irrespective of any "
 "other parameter."
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:187
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:189
 msgid "Opacity"
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:190
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:192
 msgid "Opaque"
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:191
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:193
 msgid "Opaque describe the translucency or transparency of mypaint brushes."
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:194
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:196
 msgid "Opaque Linearize"
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:195
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:197
 msgid ""
 "This option lets you correct the nonlinearity introduced by blending "
 "multiple dabs on top of each other."
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:198
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:200
 msgid "Opaque Multiply"
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:199
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:201
 msgid "This makes opacity depend on pressure."
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:204
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:206
 msgid "Tracking"
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:207
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:209
 msgid "Slow Tracking"
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:208
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:210
 msgid ""
 "Slow pointer tracking speed. Higher values remove jitter in cursor "
 "movements. Useful for drawing smooth outlines."
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:211
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:213
 msgid "Slow Tracking per Dab"
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:212
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:214
 msgid "Similar to above but at a brushdab level."
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:215
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:217
 msgid "Tracking Noise"
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:216
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:218
 msgid ""
 "Add randomness to the mouse pointer. This usually generates many small lines "
 "in random directions."
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:221
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:224
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:223
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:226
 msgid "Smudge"
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:225
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:227
 msgid ""
 "This option lets you smudge, by picking a color from the canvas and mixing "
 "this with the brush color. The color slowly changes to the color you are "
 "painting on."
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:228
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:230
 msgid "Smudge Length"
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:229
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:231
 msgid ""
 "This option controls how much the painting color is mixed with the colors "
 "from the canvas."
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:232
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:234
 msgid "Smudge Radius logarithmic"
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:233
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:235
 msgid ""
 "This option modifies the radius of the circle where the color is picked up "
 "for smudging."
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:241
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:243
 msgid "Stroke Duration logarithmic"
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:242
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:244
 msgid ""
 "This option describes how far you have to move until the stroke input "
 "becomes 1.0"
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:245
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:247
 msgid "Stroke Holdtime"
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:246
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:248
 msgid ""
 "This option defines how long the stroke input stays at 1.0. After that it "
 "will go back towards 0.0 and then start increasing again."
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:249
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:251
 msgid "Stroke Threshold"
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:250
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:252
 msgid ""
 "This option defines how much pressure is needed to start the stroke. This "
 "affects stroke input only. The MyPaint brush engine does not need any "
 "minimum pressure level to start drawing."
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:255
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:258
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:257
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:260
 msgid "Custom Input"
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:259
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:261
 msgid ""
 "The idea of this input is that you make this input depend on a mixture of "
 "pressure/speed/whatever, and then make other settings depend on this 'custom "
 "input' instead of repeating this combination everywhere you need."
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:262
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:264
 msgid "Custom Input Slowness"
 msgstr ""
 
-#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:263
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:265
 msgid ""
 "This option defines how slow the custom input setting actually follows the "
 "desired value."
