@@ -8,7 +8,7 @@
              - Scott Petrovic
    :license: GNU free documentation license 1.3 or later.
 
-.. index:: Image, Canvas Projection Color, Trim, Resize, Scale, Mirror, Transform, Convert Color Space, Offset, Split Channels
+.. index:: Image, Canvas Color, Trim, Resize, Scale, Mirror, Transform, Convert Color Space, Offset, Split Channels
 .. _image_menu:
 
 ==========

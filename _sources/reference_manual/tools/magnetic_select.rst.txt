@@ -54,9 +54,6 @@ You can edit previous points by |mouseleft| dragging them. You can remove points
 Hotkeys and Sticky keys
 -----------------------
 
-* :kbd:`R` sets the selection to 'replace' in the tool options, this is the default mode.
-* :kbd:`A` sets the selection to 'add' in the tool options.
-* :kbd:`S` sets the selection to 'subtract' in the tool options.
 * :kbd:`Shift +` |mouseleft| sets the subsequent selection to 'add'. You can release the :kbd:`Shift` key while dragging, but it will still be set to 'add'. Same for the others.
 * :kbd:`Alt +` |mouseleft| sets the subsequent selection to 'subtract'.
 * :kbd:`Ctrl +` |mouseleft| sets the subsequent selection to 'replace'.

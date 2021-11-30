@@ -17,7 +17,7 @@ Zoom Tool
 
 |toolzoom|
 
-The zoom tool allows you to zoom your canvas in and out discretely. It can be found at the bottom of the toolbox, and you just activate it by selecting the tool, and doing |mouseleft| on the canvas will zoom in, while :kbd:`Ctrl +` |mouseright| will zoom out.
+The zoom tool allows you to zoom your canvas in and out discretely. It can be found at the bottom of the toolbox, and you just activate it by selecting the tool, and doing |mouseleft| on the canvas will zoom in, while :kbd:`Ctrl +` |mouseleft| will zoom out.
 
 You can reverse this behavior in the :guilabel:`Tool Options`.
 

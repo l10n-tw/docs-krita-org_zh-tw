@@ -29,9 +29,6 @@ This tool, represented by a polygon with a dashed border, allows you to make :re
 Hotkeys and Sticky keys
 -----------------------
 
-* :kbd:`R` sets the selection to 'replace' in the tool options, this is the default mode.
-* :kbd:`A` sets the selection to 'add' in the tool options.
-* :kbd:`S` sets the selection to 'subtract' in the tool options.
 * :kbd:`Shift +` |mouseleft| temporarily sets the subsequent selection to 'add' mode. Release the :kbd:`Shift` key will return to the current permanent mode. Same for the others.
 * :kbd:`Alt +` |mouseleft| temporarily sets the subsequent selection to 'subtract' mode.
 * :kbd:`Ctrl +` |mouseleft| temporarily sets the subsequent selection to 'replace' mode.

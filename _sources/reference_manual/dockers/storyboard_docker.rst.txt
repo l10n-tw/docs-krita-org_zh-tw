@@ -5,6 +5,7 @@
 .. metadata-placeholder
 
    :authors: - Saurabh Kumar <saurabhk660@gmail.com>
+             - Emmet O'Neill <emmetoneill.pdx@gmail.com>
    :license: GNU free documentation license 1.3 or later.
 
 .. index:: ! Storyboard, Storyboarding
@@ -187,12 +188,11 @@ Working with multiple layers
 Exporting Storyboard
 --------------------
 
-The storyboard created using the docker can be exported to PDF or SVG documents. The :ref:`Export Menu <storyboard_export_menu>` offers options to export the storyboard.
-It has options to export as either a PDF or SVG document. Choosing any of these will take you to the Export Dialog where you can pick the layout, that is, how scenes of the storyboard are arranged in the exported document.
-You can either set the layout using custom options provided or using an SVG file. The Export dialog also provides options for which the scenes to export.
+Storyboards that you've created in Krita can be easily exported as either PDF or SVG files.
 
-You can choose the range using the frame number of storyboard scene. The first two options in the dialog let you select the first and last frame to export. All scenes that have frame number in that range (inclusive of both the first and last) would be exported.
-Here you can also select the font size of any text on the document, such as scenes' name, duration or the comments.
+Clicking on the :guilabel:`Export` button at the upper-left corner of the Storyboard Docker will bring you to the :ref:`storyboard export menu <storyboard_export_menu>` for the chosen format.
+Within this menu you have various options covering essentials like page size, board layout and font size.
+When using our procedural board layout modes (rows, columns, and grid), other appropriate parameters will appear and Krita will also try to estimate a maximum comfortable font size based on your other settings.
 
 Specifying layout using custom options
     The following options are provided to specify layout :
@@ -204,8 +204,12 @@ Specifying layout using custom options
 
     .. image:: /images/dockers/storyboard_custom_options.png
 
-Specifying Layout using SVG file
-    For specifying layout using an SVG file you have to upload an SVG file. The file should have one or more non-overlapping rectangles.
+Specifying Layout using SVG template file
+    Better yet, Krita has the ability to make use of special SVG template files for even more control of how your storyboard elements will be placed on the page.
+    By using an SVG template file, you can design custom storyboard paper to suit the needs of almost any project or existing storyboard paper format.
+    
+    We've made a default SVG storyboard template that will come bundled with Krita for everyone to use, modify, or learn from when creating their own custom templates.
+    Finally, :ref:`if you'd like to create your own custom SVG storyboard template file, you can learn how to do that here.<storyboard_svg_template>`
 
     .. image:: /images/dockers/storyboard_SVG_layout.png
 

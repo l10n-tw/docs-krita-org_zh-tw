@@ -28,9 +28,6 @@ Hotkeys and Stickykeys
 ----------------------
 
 * :kbd:`Ctrl + R` selects this tool.
-* :kbd:`R` sets the selection to 'replace' in the tool options, this is the default mode.
-* :kbd:`A` sets the selection to 'add' in the tool options.
-* :kbd:`S` sets the selection to 'subtract' in the tool options.
 * |mouseleft| :kbd:`+ Shift` constrains the selection to a perfect square. (Make sure to press |mouseleft| before :kbd:`Shift` key)
 * |mouseleft| :kbd:`+ Ctrl` makes the selection resize from the center. (Make sure to press |mouseleft| before :kbd:`Ctrl` key)
 * |mouseleft| :kbd:`+ Alt` allows you to move the selection. (Make sure to press |mouseleft| before :kbd:`Alt` key)
@@ -56,11 +53,7 @@ Hotkeys and Stickykeys
 
 .. hint::
 
-    To subtract a perfect square, you can follow two different methods:
-
-    1. Press :kbd:`S` key to subtract then |mouseleft| to select and press :kbd:`Shift` key while dragging to constrain to a perfect square.
-
-    2. Press :kbd:`Alt +` |mouseleft| shortcut, then release the :kbd:`Alt` key while dragging and press :kbd:`Shift` key to constrain.
+    To subtract a perfect square, you can do the following: Press :kbd:`Alt +` |mouseleft| shortcut, then release the :kbd:`Alt` key while dragging and press :kbd:`Shift` key to constrain.  
 
 .. tip::
 

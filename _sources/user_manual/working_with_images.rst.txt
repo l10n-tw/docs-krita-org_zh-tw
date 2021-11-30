@@ -9,7 +9,7 @@
              - Scott Petrovic
    :license: GNU free documentation license 1.3 or later.
 
-.. index:: Image, Document, Raster, Vector, Metadata
+.. index:: Image, Canvas Color, Document, Raster, Vector, Metadata
 .. _working_with_images:
 
 ===================

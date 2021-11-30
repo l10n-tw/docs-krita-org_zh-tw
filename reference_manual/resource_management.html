@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-11-23T14:43:31" />
+  <meta property="og:article:modified_time" content="2021-11-30T14:36:58" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="Overview of Resource Management in Krita." name="description" property="og:description" />
 
@@ -184,6 +184,7 @@
 <li class="toctree-l2"><a class="reference internal" href="separate_image.html">分離影像</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sharing_krita_logs.html">獲取紀錄檔</a></li>
 <li class="toctree-l2"><a class="reference internal" href="split_layer.html">分割圖層</a></li>
+<li class="toctree-l2"><a class="reference internal" href="storyboard_svg_template.html">SVG Storyboard Export Templates</a></li>
 <li class="toctree-l2"><a class="reference internal" href="stroke_selection.html">對選取區域描邊</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tools.html">工具</a></li>
 <li class="toctree-l2"><a class="reference internal" href="welcome_screen.html">歡迎畫面</a></li>
@@ -391,19 +392,7 @@ The right hand side provides a list of available resources. Choose the type of r
 <h2>Filtering<a class="headerlink" href="#filtering" title="本標題的永久連結">¶</a></h2>
 <p>Some dockers, for example the brush preset docker as shown below, have a resource filter, which functions like a search bar for the resource in question.</p>
 <img alt="../_images/Brushpreset-filters.png" src="../_images/Brushpreset-filters.png" />
-<p>You can enter brush name, tag name to quickly pull up a list of brush presets you want. When you select any tag from the tag drop-down and want to include brush presets from other tags as well then you can add filters the following way:</p>
-<ul class="simple">
-<li><p>To filter based on the partial, case insensitive name of the resources you can add <code class="docutils literal notranslate"><span class="pre">partialname</span></code> or <code class="docutils literal notranslate"><span class="pre">!partialname</span></code>.</p></li>
-<li><p>To include other Tags type the respective name of the tag in square brackets like this <code class="docutils literal notranslate"><span class="pre">[Tagname]</span></code> or to exclude a tag type <code class="docutils literal notranslate"><span class="pre">![Tagname]</span></code>.</p></li>
-<li><p>For case sensitive matching of preset name type <code class="docutils literal notranslate"><span class="pre">&quot;Preset</span> <span class="pre">name&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">!</span> <span class="pre">&quot;Preset</span> <span class="pre">name&quot;</span></code> to exclude.</p></li>
-</ul>
-<p>An incredibly quick way to save a group or brushes into a tag is to:</p>
-<ol class="arabic simple">
-<li><p>Create a new tag by <img alt="滑鼠左鍵" src="../_images/Krita_mouse_left.png" /> on the <span class="guilabel">+</span>.  This will empty out the contents of the Brush Preset docker.</p></li>
-<li><p>Use the <span class="guilabel">Resource Filter</span> at the bottom of the <span class="guilabel">Brush Presets</span> dock or <span class="guilabel">Brush Settings Editor</span> to type in what you want to group.  For instance: if you type <code class="docutils literal notranslate"><span class="pre">Pencil</span></code> in the filter box you will get all Brush Presets with <code class="docutils literal notranslate"><span class="pre">Pencil</span></code> somewhere in their name.  Now you have all the Pencil-related Brush Presets together in one place.</p></li>
-<li><p>To finish, click the <span class="guilabel">Save</span> button (small disk icon to the right of the <span class="guilabel">Resource Filter</span> box) or press the <kbd class="kbd docutils literal notranslate">Enter</kbd> key and all the items will be saved with the new tag you created.</p></li>
-</ol>
-<p>Now, anytime you want to open up your &quot;digital pencil box&quot; and see what you have to work with all you have to do is use the pull-down and select <span class="guilabel">Pencils</span>.  The Resource Filter works the same way in other parts of Krita so be on the lookout for it!</p>
+<p>You can enter brush name, tag name to quickly pull up a list of brush presets you want. When you select any tag from the tag drop-down and want to include brush presets from other tags as well then you can add filters based on the partial, case insensitive name of the resources by using <code class="docutils literal notranslate"><span class="pre">partialname</span></code> or <code class="docutils literal notranslate"><span class="pre">!partialname</span></code>.</p>
 <dl class="simple">
 <dt>Resource Zooming</dt><dd><p>If you find the thumbnails of the resources such as color swatches brushes and pattern to be small you can make them bigger or <em class="dfn">Zoom in</em>. All resource selectors can be zoomed in and out of, by hovering over the selector and using the <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="滑鼠滾輸" src="../_images/Krita_mouse_scroll.png" /> shortcut.</p>
 </dd>
@@ -458,7 +447,7 @@ The right hand side provides a list of available resources. Choose the type of r
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>6cd8546</code>
+          修訂版本 <code>5d3c3d8</code>
         </span>
       
 

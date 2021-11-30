@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-11-23T14:43:31" />
+  <meta property="og:article:modified_time" content="2021-11-30T14:36:58" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="Overview of the storyboard docker." name="description" />
 
@@ -200,6 +200,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../separate_image.html">分離影像</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../sharing_krita_logs.html">獲取紀錄檔</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../split_layer.html">分割圖層</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../storyboard_svg_template.html">SVG Storyboard Export Templates</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../stroke_selection.html">對選取區域描邊</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../tools.html">工具</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../welcome_screen.html">歡迎畫面</a></li>
@@ -454,11 +455,10 @@ An easy way to do this is to turn the <span class="guilabel">Auto Frame</span> m
 </section>
 <section id="exporting-storyboard">
 <span id="id3"></span><h2>Exporting Storyboard<a class="headerlink" href="#exporting-storyboard" title="本標題的永久連結">¶</a></h2>
-<p>The storyboard created using the docker can be exported to PDF or SVG documents. The <a class="reference internal" href="#storyboard-export-menu"><span class="std std-ref">Export Menu</span></a> offers options to export the storyboard.
-It has options to export as either a PDF or SVG document. Choosing any of these will take you to the Export Dialog where you can pick the layout, that is, how scenes of the storyboard are arranged in the exported document.
-You can either set the layout using custom options provided or using an SVG file. The Export dialog also provides options for which the scenes to export.</p>
-<p>You can choose the range using the frame number of storyboard scene. The first two options in the dialog let you select the first and last frame to export. All scenes that have frame number in that range (inclusive of both the first and last) would be exported.
-Here you can also select the font size of any text on the document, such as scenes' name, duration or the comments.</p>
+<p>Storyboards that you've created in Krita can be easily exported as either PDF or SVG files.</p>
+<p>Clicking on the <span class="guilabel">Export</span> button at the upper-left corner of the Storyboard Docker will bring you to the <a class="reference internal" href="#storyboard-export-menu"><span class="std std-ref">storyboard export menu</span></a> for the chosen format.
+Within this menu you have various options covering essentials like page size, board layout and font size.
+When using our procedural board layout modes (rows, columns, and grid), other appropriate parameters will appear and Krita will also try to estimate a maximum comfortable font size based on your other settings.</p>
 <dl>
 <dt>Specifying layout using custom options</dt><dd><p>The following options are provided to specify layout :</p>
 <ul class="simple">
@@ -469,7 +469,10 @@ Here you can also select the font size of any text on the document, such as scen
 </ul>
 <img alt="../../_images/storyboard_custom_options.png" src="../../_images/storyboard_custom_options.png" />
 </dd>
-<dt>Specifying Layout using SVG file</dt><dd><p>For specifying layout using an SVG file you have to upload an SVG file. The file should have one or more non-overlapping rectangles.</p>
+<dt>Specifying Layout using SVG template file</dt><dd><p>Better yet, Krita has the ability to make use of special SVG template files for even more control of how your storyboard elements will be placed on the page.
+By using an SVG template file, you can design custom storyboard paper to suit the needs of almost any project or existing storyboard paper format.</p>
+<p>We've made a default SVG storyboard template that will come bundled with Krita for everyone to use, modify, or learn from when creating their own custom templates.
+Finally, <a class="reference internal" href="../storyboard_svg_template.html#storyboard-svg-template"><span class="std std-ref">if you'd like to create your own custom SVG storyboard template file, you can learn how to do that here.</span></a></p>
 <img alt="../../_images/storyboard_SVG_layout.png" src="../../_images/storyboard_SVG_layout.png" />
 </dd>
 <dt>File name for Export document</dt><dd><ul class="simple">
@@ -505,7 +508,7 @@ Here you can also select the font size of any text on the document, such as scen
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>6cd8546</code>
+          修訂版本 <code>5d3c3d8</code>
         </span>
       
 

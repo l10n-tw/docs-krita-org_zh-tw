@@ -182,20 +182,7 @@ Some dockers, for example the brush preset docker as shown below, have a resourc
 
 .. image:: /images/brushes/Brushpreset-filters.png
 
-You can enter brush name, tag name to quickly pull up a list of brush presets you want. When you select any tag from the tag drop-down and want to include brush presets from other tags as well then you can add filters the following way: 
-
-* To filter based on the partial, case insensitive name of the resources you can add ``partialname`` or ``!partialname``.
-* To include other Tags type the respective name of the tag in square brackets like this ``[Tagname]`` or to exclude a tag type ``![Tagname]``.
-* For case sensitive matching of preset name type ``"Preset name"`` or ``! "Preset name"`` to exclude.
-
-
-An incredibly quick way to save a group or brushes into a tag is to:
-
-#. Create a new tag by |mouseleft| on the :guilabel:`+`.  This will empty out the contents of the Brush Preset docker.
-#. Use the :guilabel:`Resource Filter` at the bottom of the :guilabel:`Brush Presets` dock or :guilabel:`Brush Settings Editor` to type in what you want to group.  For instance: if you type ``Pencil`` in the filter box you will get all Brush Presets with ``Pencil`` somewhere in their name.  Now you have all the Pencil-related Brush Presets together in one place.
-#. To finish, click the :guilabel:`Save` button (small disk icon to the right of the :guilabel:`Resource Filter` box) or press the :kbd:`Enter` key and all the items will be saved with the new tag you created.  
-
-Now, anytime you want to open up your "digital pencil box" and see what you have to work with all you have to do is use the pull-down and select :guilabel:`Pencils`.  The Resource Filter works the same way in other parts of Krita so be on the lookout for it!
+You can enter brush name, tag name to quickly pull up a list of brush presets you want. When you select any tag from the tag drop-down and want to include brush presets from other tags as well then you can add filters based on the partial, case insensitive name of the resources by using ``partialname`` or ``!partialname``.
 
 Resource Zooming
     If you find the thumbnails of the resources such as color swatches brushes and pattern to be small you can make them bigger or :dfn:`Zoom in`. All resource selectors can be zoomed in and out of, by hovering over the selector and using the :kbd:`Ctrl +` |mousescroll| shortcut.

@@ -136,7 +136,7 @@ Note that the definition of ABR brushes has been reverse engineered since Adobe 
 
 All predefined brush tips are shown in one selector. There are four more options that influence the initial bitmap brush tip you start painting with:
 
-Scale
+Size
     Scales the brush tip. 1.0 is the native size of the brush tip. This can be fairly large! When painting with variable size (for instance governed by pressure), this is the base for the calculations.
 Rotation
     Initial rotation of the brush tip.
