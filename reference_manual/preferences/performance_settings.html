@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-12-09T12:13:52" />
+  <meta property="og:article:modified_time" content="2021-12-10T16:13:33" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="Krita 的效能設定。" name="description" />
 
@@ -161,10 +161,10 @@
 <li class="toctree-l3"><a class="reference internal" href="general_settings.html">「一般」設定</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">「效能」設定</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#ram">記憶體</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#swapping">Swapping</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#advanced">Advanced</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#animation-cache">Animation Cache</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#instant-preview">Instant Preview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#swapping">置換檔案大小</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#advanced">進階</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#animation-cache">動畫快取</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#instant-preview">即時預覽</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="popup_palette_settings.html">「浮動畫具板」設定</a></li>
@@ -278,12 +278,12 @@
 <p>這些偏好選項允許您組織並設定 <strong class="program">Krita</strong> 的效能，例如記憶體、CPU、快取這些與效能有密切關係的項目。這頁面內所有項目經變更後需要重新啟動 <strong class="program">Krita</strong> 才會生效。</p>
 <section id="ram">
 <h2>記憶體<a class="headerlink" href="#ram" title="本標題的永久連結">¶</a></h2>
-<p>「隨機存取記憶體」（RAM 或 Random Access Memory）以下簡稱「記憶體」，是一種容量小但讀寫速度很快的暫時容器，關機後資料就會消失；硬碟則用作永久儲存資料的容器，相對記憶體而言容量很大但是讀寫速度很慢。而 CPU 運算時會先將資料由硬碟讀進記憶體中以加快處裡速度，由硬碟抄寫進記憶體與清空記憶體會使用一些時間。因此恰當分配與運用電腦有限的記憶體，可提高 :Program: <cite>Krita</cite> 的效能 。</p>
+<p>「隨機存取記憶體」（RAM 或 Random Access Memory）以下簡稱「記憶體」，是一種容量小但讀寫速度很快的暫時容器，關機後資料就會消失；硬碟則用作永久儲存資料的容器，相對記憶體而言容量很大但是讀寫速度很慢。而 CPU 運算時會先將資料由硬碟讀進記憶體中以加快處裡速度，由硬碟抄寫進記憶體與清空記憶體會使用一些時間。因此恰當分配與運用電腦有限的記憶體，可提高 :program: <cite>Krita</cite> 的效能 。</p>
 <p>您可經由這些設定選擇要將多少資源分配給 <strong class="program">Krita</strong> 使用，並且每次 <strong class="program">Krita</strong> 啟動都會使用這些設定。因此這頁面內所有設定經變更後都需要重新啟動 <strong class="program">Krita</strong> 才會生效。</p>
 <dl>
 <dt>記憶體上限</dt><dd><p>這是指定給 <strong class="program">Krita</strong> 啟動後可用的記憶體大小上限。這裡以百分比與右側實際大小兩種方式顯示，因此您可以精確指定 <strong class="program">Krita</strong> 不要使用佔用超過上限的記憶體，讓電腦可以保持背景執行網路瀏覽器或播放您的音樂。</p>
 </dd>
-<dt>內部儲存池</dt><dd><p>這是高級使用者選項，這功能是允許 <strong class="program">Krita</strong> 將資料放在記憶體中一個虛擬儲存區塊。就好像藝術家在畫布上有個標準位置一樣，也會因為給予 <strong class="program">Krita</strong> 一個專有的資料存取區域提高資料讀寫與搜尋效能，也避免因為記憶體碎片問題遺失資料。</p>
+<dt>記憶體保留上限</dt><dd><p>這是高級使用者選項，這功能是允許 <strong class="program">Krita</strong> 將資料放在記憶體中一個虛擬儲存區塊。就好像藝術家在畫布上有個標準位置一樣，也會因為給予 <strong class="program">Krita</strong> 一個專有的資料存取區域提高資料讀寫與搜尋效能，也避免因為記憶體碎片問題遺失資料。</p>
 <p>增加這個區塊的大小等同於有更多空間儲存這些資料，但也會因資料無法放滿整個空間顯得浪費，設定得太高也會造成某些資料 <strong class="program">Krita</strong> 不知要放在哪裡，反而因此效能降低。</p>
 <p>另一方面，若不給予或設定的數值太小，也會因此花更多時間在尋找存取的位置。這樣也會影響 <strong class="program">Krita</strong> 的執行效能。</p>
 <p>建議值是設定為您常用影像單一圖層所需記憶體的大小。例如一個 3000 x 3000 像素的 8bit RGBA 影像大概需要36 MiB。</p>
@@ -292,63 +292,62 @@
 <p><span class="versionmodified deprecated">在 4.4 版本開始棄用: </span>此選項在 <strong class="program">Krita 4.4</strong> 版之後已經移除，它現在由程式自動控制，使用者不需再做設定。</p>
 </div>
 </dd>
-<dt>交換復原起點</dt><dd><p><strong class="program">Krita</strong> also needs to keep all the Undo states on the virtual desk (RAM). Swapping means that parts of the files on the virtual desk get sent to the virtual archive room. This allows <strong class="program">Krita</strong> to dedicate more RAM space to new actions, by sending old Undo states to the archive room once it hits this limit. This will make undoing a little slower, but this can be desirable for the performance of <strong class="program">Krita</strong> overall.
-This too needs <strong class="program">Krita</strong> to be restarted.</p>
+<dt>復原資料置換前上限</dt><dd><p><strong class="program">Krita</strong> 的復原資料必須保存在記憶體中，超出這個數值限制的舊復原資料會直接寫入檔案。如果您的記憶體不足，可以降低這個數值將更多記憶體保留給目前的作業，但若這個數值設定太低，經過多次的復原操作時可能會造成 <strong class="program">Krita</strong> 緩慢問題。變更這個數值後需重新啟動 <strong class="program">Krita</strong> 才能生效。</p>
 </dd>
 </dl>
 </section>
 <section id="swapping">
-<h2>Swapping<a class="headerlink" href="#swapping" title="本標題的永久連結">¶</a></h2>
+<h2>置換檔案大小<a class="headerlink" href="#swapping" title="本標題的永久連結">¶</a></h2>
 <dl class="simple">
-<dt>File Size Limit</dt><dd><p>This determines the limit of the total space <strong class="program">Krita</strong> can take up in the virtual archive room. If <strong class="program">Krita</strong> hits the limit of both the memory limit above, and this Swap File limit, it can't do anything anymore (and will freeze).</p>
+<dt>檔案大小限制</dt><dd><p>指定 <strong class="program">Krita</strong> 可以使用的交換檔空間大小上限。若資料同時超過這個記憶體與交換檔的大小上限，可能會造成 <strong class="program">Krita</strong> 軟體凍結。</p>
 </dd>
-<dt>Swap File Location</dt><dd><p>This determines where the Swap File will be stored on your hard-drive. Location can make a difference, for example, Solid State Drives (SSD) are faster than Hard Disk Drives (HDD). Some people even like to use USB-sticks for the swap file location.</p>
+<dt>置換檔案位置</dt><dd><p>指定 <strong class="program">Krita</strong> 交換檔保存於硬碟的位置。這個交換檔位置對於 <strong class="program">Krita</strong> 性能也會有影響，例如放在固態硬碟 (SSD) 會比傳統機械硬碟 (HDD) 來得快。有些人會使用 USB 外接碟作為交換檔空間，但前提是這 USB 外接碟性能要夠好，且也受到 USB 連接埠速率所影響，例如 USB 3.0 會比 USB 2.0 快。若 USB 外接碟只支援到 2.0 ，那就算接到電腦 USB 3.0 的連接埠，那依然也只能用 USB 2.0 速率。</p>
 </dd>
 </dl>
 </section>
 <section id="advanced">
-<h2>Advanced<a class="headerlink" href="#advanced" title="本標題的永久連結">¶</a></h2>
+<h2>進階<a class="headerlink" href="#advanced" title="本標題的永久連結">¶</a></h2>
 <section id="multithreading">
-<h3>Multithreading<a class="headerlink" href="#multithreading" title="本標題的永久連結">¶</a></h3>
-<p>Since 4.0, Krita supports multithreading for the animation cache and handling the drawing of brush tips when using the pixel brush.</p>
+<h3>多執行緒<a class="headerlink" href="#multithreading" title="本標題的永久連結">¶</a></h3>
+<p>從 4.0 版開始，Krita 支援了動畫快取多執行緒處理，並且像素筆刷引擎的筆尖圖案功能都已完成多執行緒的最佳化。</p>
 <dl class="simple">
-<dt>CPU Limit</dt><dd><p>The number of cores you want to allow Krita to use when multithreading.</p>
+<dt>CPU 限制</dt><dd><p>指定 Krita 可使用的執行緒數量上限。</p>
 </dd>
-<dt>Frame Rendering Clones Limit</dt><dd><p>When rendering animations to frames, Krita multithreads by keeping a few copies of the image, with a maximum determined by the number of cores your processor has. If you have a heavy animation file and lots of cores, the copies can be quite heavy on your machine, so in that case try lowering this value.</p>
+<dt>動畫繪製平行副本上限</dt><dd><p>Krita 在繪製動畫時，會先將影像複製為多個複本，對大值由 CPU 核心數決定，然後在盡可能多的 CPU 執行緒中平行同時處理以提高速度。這表示每一份複本都需要佔用額外的記憶體，如果處裡的動畫很龐大又複雜時，為了不耗盡記憶體，這時有必要限制處理動畫使用的執行緒數量。</p>
 </dd>
 </dl>
 </section>
 <section id="other">
-<h3>Other<a class="headerlink" href="#other" title="本標題的永久連結">¶</a></h3>
+<h3>其它<a class="headerlink" href="#other" title="本標題的永久連結">¶</a></h3>
 <dl>
-<dt>Limit frames per second while painting.</dt><dd><p>This makes the canvas update less often, which means Krita can spend more time calculating other things. Some people find fewer updates unnerving to watch however, hence this is configurable.</p>
+<dt>繪畫模式每秒影格數限制。</dt><dd><p>降低繪製時畫布更新率。這讓 Krita 可以保留處理其他事情的資源，因為有些人很在意筆刷更新頻率，因此加入這個選項讓用戶自己設置。</p>
 </dd>
-<dt>Debug logging of OpenGL framerate</dt><dd><p>Will show the canvas framerate on the canvas when active.</p>
+<dt>啟用除錯用的OpenGL影格速率記錄</dt><dd><p>啟用後將在畫布上顯示影格速率。</p>
 </dd>
-<dt>Debug logging for brush rendering speed.</dt><dd><p>Will show numbers indicating how fast the last brush stroke was on canvas.</p>
+<dt>啟用供除錯用的筆刷繪製速度記錄。</dt><dd><p>啟用後將顯示一組數字，顯示最後一個畫筆描繪的速度。</p>
 </dd>
-<dt>Disable vector optimizations (for AMD CPUs)</dt><dd><p>Vector optimizations are a special way of asking the CPU to do maths, these have names such as SIMD and AVX. These optimizations can make Krita a lot faster when painting, except when you have an AMD CPU under Windows. There seems to be something strange going on there, so just deactivate them then.</p>
+<dt>停用AVX 向量最佳化（給 AMD CPU）</dt><dd><p>向量最佳化是一種要求 CPU 進行數學運算的特殊方式，相關指令集包括 SIMD 和 AVX 等。這些最佳化可以讓 Krita 繪製時更快。假如您 Windows 電腦使用的是比較老舊的 AMD CPU ，當執行 Krita 繪製發生一些奇怪的狀況時，可以將這個項目打鉤停用。</p>
 </dd>
-<dt>Progress reporting</dt><dd><p>This allows you to toggle the progress reporter, which is a little feedback progress bar that shows up in the status bar when you let Krita do heavy operations, such as heavy filters or big strokes. The red icon next to the bar will allow you to cancel your operation. This is on by default, but as progress reporting itself can take up some time, you can switch it off here.</p>
+<dt>程式進度報告</dt><dd><p>選用這項目後，在進行需要長時間處理繁重工作（例如過濾器或大型筆刷）時，Krita 會在狀態欄顯示進度條表明當前狀態，欄位旁邊的紅色停止按鈕可以中止這個顯示。這功能預設開啟，您可以在這裡將它關閉。</p>
 </dd>
-<dt>Performance logging</dt><dd><p>This enables performance logging, which is then saved to the <code class="docutils literal notranslate"><span class="pre">Log</span></code> folder in your <code class="docutils literal notranslate"><span class="pre">working</span> <span class="pre">directory</span></code>. Your working directory is where the autosave is saved at as well.</p>
-<p>So for unnamed files, this is the <code class="docutils literal notranslate"><span class="pre">$HOME</span></code> folder in Linux, and the <code class="docutils literal notranslate"><span class="pre">%TEMP%</span></code> folder in Windows.</p>
+<dt>程式效能記錄</dt><dd><p>啟用這個項目時，Krita 會將程式性能記錄寫入到 <code class="docutils literal notranslate"><span class="pre">工作目錄</span></code> 的 <code class="docutils literal notranslate"><span class="pre">Log</span></code> 檔案中。這個 <code class="docutils literal notranslate"><span class="pre">工作目錄</span></code> 也是自動儲存的目錄。</p>
+<p>如果影像尚未命名， Linux 環境下的日誌會寫入到 <code class="docutils literal notranslate"><span class="pre">$HOME</span></code> 資料夾，而 Windows 環境則是 <code class="docutils literal notranslate"><span class="pre">%TEMP%</span></code> 資料夾。</p>
 </dd>
 </dl>
 </section>
 </section>
 <section id="animation-cache">
-<h2>Animation Cache<a class="headerlink" href="#animation-cache" title="本標題的永久連結">¶</a></h2>
+<h2>動畫快取<a class="headerlink" href="#animation-cache" title="本標題的永久連結">¶</a></h2>
 <div class="versionadded">
 <p><span class="versionmodified added">在 4.1 版本新加入.</span></p>
 </div>
-<p>The animation cache is the space taken up by animation frames in the memory of the computer. A cache in this sense is a cache of precalculated images.</p>
-<p>Playing back a video at 25 FPS means that the computer has to precalculate 25 images per second of video. Now, video playing software is able to do this because it really focuses on this one single task. However, Krita as a painting program also allows you to edit the pictures. Because Krita needs to be able to do this, and a dedicated video player doesn't, Krita cannot do the same kind of optimizations as a dedicated video player can.</p>
-<p>Still, an animator does need to be able to see what kind of animation they are making. To do this properly, we need to decide how Krita will regenerate the cache after the animator makes a change. There's fortunately a lot of different options how we can do this. However, the best solution really depends on what kind of computer you have and what kind of animation you are making. Therefore in this tab you can customize the way how and when the cache is generated.</p>
+<p>動畫快取是動畫幀在記憶體中所佔用的空間，是將預先計算好的影像放在快取中。</p>
+<p>假設我們要播放一個 25 FPS 的動畫，這表示電腦需每秒繪製 25 張影像。影片播放軟體可以為此做大量最佳化以提高效率，但 Krita 必須允許使用者編輯影像，因此無法像影片播放軟體那樣做出最佳化。</p>
+<p>儘管如此，動畫師也必須看到製作中的是怎樣的動畫。為了正確達到這個要求，因此我們需要決定 Krita 要如何在動畫師進行更改後重新生成快取。幸運的是我們有很多不同選擇可以做到這個要求，最好的解決方案就是依序動畫的特性在電腦配備的效能上進行調整。在這個選項中您可以自定義生成快取的方式和場合。</p>
 <section id="cache-storage-backend">
-<h3>Cache Storage Backend<a class="headerlink" href="#cache-storage-backend" title="本標題的永久連結">¶</a></h3>
+<h3>快取存放空間後端（快取空間的位置）<a class="headerlink" href="#cache-storage-backend" title="本標題的永久連結">¶</a></h3>
 <dl>
-<dt>In-memory</dt><dd><p>Animation frame cache will be stored in RAM, completely without any limitations. This is also the way it was handled before 4.1. This is only recommended for computers with a huge amount of RAM and animations that must show full-canvas full resolution 6k at 25 fps. If you do not have a huge amount (say, 64GiB) of RAM, do <em>not</em> use this option (and scale down your projects).</p>
+<dt>使用記憶體</dt><dd><p>Animation frame cache will be stored in RAM, completely without any limitations. This is also the way it was handled before 4.1. This is only recommended for computers with a huge amount of RAM and animations that must show full-canvas full resolution 6k at 25 fps. If you do not have a huge amount (say, 64GiB) of RAM, do <em>not</em> use this option (and scale down your projects).</p>
 <div class="admonition warning">
 <p class="admonition-title">警告</p>
 <p>Please make sure your computer has enough RAM <em>above</em> the amount you requested in the <span class="guilabel">General</span> tab. Otherwise you might face system freezes.</p>
@@ -358,33 +357,33 @@ This too needs <strong class="program">Krita</strong> to be restarted.</p>
 </ul>
 </div>
 </dd>
-<dt>On-disk</dt><dd><p>Animation frames are stored in the hard disk in the same folder as the swap file. The cache is stored in a compressed way. A little amount of extra RAM is needed.</p>
+<dt>使用硬碟</dt><dd><p>Animation frames are stored in the hard disk in the same folder as the swap file. The cache is stored in a compressed way. A little amount of extra RAM is needed.</p>
 <p>Since data transfer speed of the hard drive is slow, you might want to limit the <span class="guilabel">Cached Frame Size</span> to be able to play your video at 25 fps. A limit of 2500 px is usually a good choice.</p>
 </dd>
 </dl>
 </section>
 <section id="cache-generation-options">
-<h3>Cache Generation Options<a class="headerlink" href="#cache-generation-options" title="本標題的永久連結">¶</a></h3>
+<h3>快取產生選項<a class="headerlink" href="#cache-generation-options" title="本標題的永久連結">¶</a></h3>
 <dl class="simple">
-<dt>Limit Cached Frame Size</dt><dd><p>Render scaled down version of the frame if the image is bigger than the provided limit. Make sure you enable this option when using On-Disk storage backend, because On-Disk storage is a little slow. Without the limit, there's a good chance that it will not be able to render at full speed. Lower the size to play back faster at the cost of lower resolution.</p>
+<dt>限制快取影格大小</dt><dd><p>Render scaled down version of the frame if the image is bigger than the provided limit. Make sure you enable this option when using On-Disk storage backend, because On-Disk storage is a little slow. Without the limit, there's a good chance that it will not be able to render at full speed. Lower the size to play back faster at the cost of lower resolution.</p>
 </dd>
-<dt>Use Region Of Interest</dt><dd><p>We technically only need to use the section of the image that is in view. Region of interest represents that section. When the image is above the configurable limit, render only the currently visible part of it.</p>
+<dt>使用重點區域</dt><dd><p>We technically only need to use the section of the image that is in view. Region of interest represents that section. When the image is above the configurable limit, render only the currently visible part of it.</p>
 </dd>
-<dt>Enable Background Cache Generation</dt><dd><p>This allows you to set whether the animation is cached for playback in the background (that is, when you're not using the computer). Then, when animation is cached when pressing play, this caching will take less long. However, turning off this automatic caching can save power by having your computer work less.</p>
+<dt>啟用在背景產生快取</dt><dd><p>This allows you to set whether the animation is cached for playback in the background (that is, when you're not using the computer). Then, when animation is cached when pressing play, this caching will take less long. However, turning off this automatic caching can save power by having your computer work less.</p>
 </dd>
 </dl>
 </section>
 </section>
 <section id="instant-preview">
-<span id="instant-preview-settings"></span><h2>Instant Preview<a class="headerlink" href="#instant-preview" title="本標題的永久連結">¶</a></h2>
+<span id="instant-preview-settings"></span><h2>即時預覽<a class="headerlink" href="#instant-preview" title="本標題的永久連結">¶</a></h2>
 <dl class="simple">
-<dt>Use in-stack preview in Transform Tool</dt><dd><p>Whether to use a floating preview for the <a class="reference internal" href="../tools/transform.html#transform-tool"><span class="std std-ref">變形工具</span></a>, or whether to have it rendered in place.</p>
+<dt>變形工具顯示圖層堆疊中的預覽</dt><dd><p>Whether to use a floating preview for the <a class="reference internal" href="../tools/transform.html#transform-tool"><span class="std std-ref">變形工具</span></a>, or whether to have it rendered in place.</p>
 </dd>
-<dt>Force instant preview in Transform Tool</dt><dd><p>Turns on <a class="reference internal" href="../instant_preview.html#instant-preview"><span class="std std-ref">即時預覽</span></a> for the <a class="reference internal" href="../tools/transform.html#transform-tool"><span class="std std-ref">變形工具</span></a> even when it's off in <span class="menuselection">View ‣ Instant preview</span>.</p>
+<dt>強制變形工具使用即時預覽</dt><dd><p>Turns on <a class="reference internal" href="../instant_preview.html#instant-preview"><span class="std std-ref">即時預覽</span></a> for the <a class="reference internal" href="../tools/transform.html#transform-tool"><span class="std std-ref">變形工具</span></a> even when it's off in <span class="menuselection">View ‣ Instant preview</span>.</p>
 </dd>
-<dt>Force instant preview in Move Tool</dt><dd><p>Turns on <a class="reference internal" href="../instant_preview.html#instant-preview"><span class="std std-ref">即時預覽</span></a> for the <a class="reference internal" href="../tools/move.html#move-tool"><span class="std std-ref">移動工具</span></a> even when it's off in <span class="menuselection">View ‣ Instant preview</span>.</p>
+<dt>強制移動工具使用即時預覽</dt><dd><p>Turns on <a class="reference internal" href="../instant_preview.html#instant-preview"><span class="std std-ref">即時預覽</span></a> for the <a class="reference internal" href="../tools/move.html#move-tool"><span class="std std-ref">移動工具</span></a> even when it's off in <span class="menuselection">View ‣ Instant preview</span>.</p>
 </dd>
-<dt>Force instant preview in Filters</dt><dd><p>Turns on <a class="reference internal" href="../instant_preview.html#instant-preview"><span class="std std-ref">即時預覽</span></a> for the <a class="reference internal" href="../filters.html#filters"><span class="std std-ref">濾鏡</span></a> even when it's off in <span class="menuselection">View ‣ Instant preview</span>.</p>
+<dt>強制濾鏡使用即時預覽</dt><dd><p>Turns on <a class="reference internal" href="../instant_preview.html#instant-preview"><span class="std std-ref">即時預覽</span></a> for the <a class="reference internal" href="../filters.html#filters"><span class="std std-ref">濾鏡</span></a> even when it's off in <span class="menuselection">View ‣ Instant preview</span>.</p>
 </dd>
 </dl>
 </section>
@@ -413,7 +412,7 @@ This too needs <strong class="program">Krita</strong> to be restarted.</p>
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>238ea14</code>
+          修訂版本 <code>044c6cc</code>
         </span>
       
 
