@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-12-11T08:13:16" />
+  <meta property="og:article:modified_time" content="2021-12-11T18:11:54" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="Krita 的效能設定。" name="description" />
 
@@ -313,7 +313,7 @@
 <dl class="simple">
 <dt>CPU 限制</dt><dd><p>指定 Krita 可使用的執行緒數量上限。</p>
 </dd>
-<dt>動畫繪製平行副本上限</dt><dd><p>Krita 在繪製動畫時，會先將影像複製為多個複本，對大值由 CPU 核心數決定，然後在盡可能多的 CPU 執行緒中平行同時處理以提高速度。這表示每一份複本都需要佔用額外的記憶體，如果處裡的動畫很龐大又複雜時，為了不耗盡記憶體，這時有必要限制處理動畫使用的執行緒數量。</p>
+<dt>動畫繪製平行副本上限</dt><dd><p>Krita 在繪製動畫時，會先將影像複製為多個複本，對大值由 CPU 核心數決定，然後在盡可能多的 CPU 執行緒中平行同時處理以提高速度。這表示每一份複本都需要佔用額外的記憶體，如果處理的動畫很龐大又複雜時，為了不耗盡記憶體，這時有必要限制處理動畫使用的執行緒數量。</p>
 </dd>
 </dl>
 </section>
@@ -347,29 +347,29 @@
 <section id="cache-storage-backend">
 <h3>快取存放空間後端（快取空間的位置）<a class="headerlink" href="#cache-storage-backend" title="本標題的永久連結">¶</a></h3>
 <dl>
-<dt>使用記憶體</dt><dd><p>Animation frame cache will be stored in RAM, completely without any limitations. This is also the way it was handled before 4.1. This is only recommended for computers with a huge amount of RAM and animations that must show full-canvas full resolution 6k at 25 fps. If you do not have a huge amount (say, 64GiB) of RAM, do <em>not</em> use this option (and scale down your projects).</p>
+<dt>使用記憶體</dt><dd><p>選用這個項目時，動畫快取將會儲存在記憶體中，且不做任何限制，這也是 4.1 版之前預設的處理方式。但這選項對於系統記憶體需求會比較多，若您製作的動畫經常都需全螢幕解析度為 6K 每秒 25fps ，那麼您的電腦最好有安裝 64GB （或以上）的記憶體。如果您電腦沒有這麼多記憶體，那麼最好*不要*使用此選項，同時也請考慮降低動畫的解析度。</p>
 <div class="admonition warning">
 <p class="admonition-title">警告</p>
-<p>Please make sure your computer has enough RAM <em>above</em> the amount you requested in the <span class="guilabel">General</span> tab. Otherwise you might face system freezes.</p>
+<p>請確保您的電腦有足夠的實體記憶體。實體記憶體必須*大於*您在 :guilabel:<cite>一般</cite>中所指定的容量，否則您可能會遇到系統凍結鎖死的狀況。</p>
 <ul class="simple">
-<li><p>For 1 second of FullHD &#64; 25 FPS you will need 200 extra MiB of Memory.</p></li>
-<li><p>For 1 second of 4K UltraHD&#64; 25 FPS, you will need 800 extra MiB of Memory.</p></li>
+<li><p>每秒 25 FPS 的FullHD （全高清1080P）動畫需要 200MiB 記憶體。</p></li>
+<li><p>每秒 25 FPS 的 4K UltraHD （超高清 4K）動畫需要 800MiB 記憶體。</p></li>
 </ul>
 </div>
 </dd>
-<dt>使用硬碟</dt><dd><p>Animation frames are stored in the hard disk in the same folder as the swap file. The cache is stored in a compressed way. A little amount of extra RAM is needed.</p>
-<p>Since data transfer speed of the hard drive is slow, you might want to limit the <span class="guilabel">Cached Frame Size</span> to be able to play your video at 25 fps. A limit of 2500 px is usually a good choice.</p>
+<dt>使用硬碟</dt><dd><p>使用此選項時，動畫幀會預先壓縮並與記憶體交換檔儲存在同一個硬碟的目錄中。此選項需使用少量實體記憶體以供運作。</p>
+<p>因為硬碟的資料傳輸速度比較慢，建議您將 :guilabel:<cite>限制快取影格的大小</cite>設定為 2500px （像素） 以便讓 Krita 能在 25fps 的速度下播放影片。</p>
 </dd>
 </dl>
 </section>
 <section id="cache-generation-options">
 <h3>快取產生選項<a class="headerlink" href="#cache-generation-options" title="本標題的永久連結">¶</a></h3>
 <dl class="simple">
-<dt>限制快取影格大小</dt><dd><p>Render scaled down version of the frame if the image is bigger than the provided limit. Make sure you enable this option when using On-Disk storage backend, because On-Disk storage is a little slow. Without the limit, there's a good chance that it will not be able to render at full speed. Lower the size to play back faster at the cost of lower resolution.</p>
+<dt>限制快取影格大小</dt><dd><p>如果製作的影像畫質超過此大小限制，則將快取影格製成減少畫質的縮小版，在選用*硬碟*為快取儲存空間時，請確保啟用此選項。因為硬碟讀寫很慢，如果按照完全畫質寫入快取，它很有可能因無法全速播放而出現卡幀的狀況，所以這是用比較低的畫質來換取影片流暢的播放，請放心這個功能並不會影響最後輸出的畫質。</p>
 </dd>
-<dt>使用重點區域</dt><dd><p>We technically only need to use the section of the image that is in view. Region of interest represents that section. When the image is above the configurable limit, render only the currently visible part of it.</p>
+<dt>使用重點區域</dt><dd><p>就技術而言，我們僅需使用視圖中有影像的那部分畫面。啟用此選項並設定數值後， Krita 將以此值為限制，繪製可見畫面外百分比之區域。</p>
 </dd>
-<dt>啟用在背景產生快取</dt><dd><p>This allows you to set whether the animation is cached for playback in the background (that is, when you're not using the computer). Then, when animation is cached when pressing play, this caching will take less long. However, turning off this automatic caching can save power by having your computer work less.</p>
+<dt>啟用在背景產生快取</dt><dd><p>這個選項可讓您選擇是否在電腦不使用時於背景製作動畫快取，這可以減少快取等待時間，有利於流暢的播放動畫。若您想節省電腦的耗電量那就關閉這個選項。</p>
 </dd>
 </dl>
 </section>
@@ -377,13 +377,13 @@
 <section id="instant-preview">
 <span id="instant-preview-settings"></span><h2>即時預覽<a class="headerlink" href="#instant-preview" title="本標題的永久連結">¶</a></h2>
 <dl class="simple">
-<dt>變形工具顯示圖層堆疊中的預覽</dt><dd><p>Whether to use a floating preview for the <a class="reference internal" href="../tools/transform.html#transform-tool"><span class="std std-ref">變形工具</span></a>, or whether to have it rendered in place.</p>
+<dt>變形工具顯示圖層堆疊中的預覽</dt><dd><p>啟用此選項後，將顯示已繪製圖層混合模式效果的<a class="reference internal" href="../tools/transform.html#transform-tool"><span class="std std-ref">變形工具</span></a>預覽。取消鉤選時則浮動顯示預覽。</p>
 </dd>
-<dt>強制變形工具使用即時預覽</dt><dd><p>Turns on <a class="reference internal" href="../instant_preview.html#instant-preview"><span class="std std-ref">即時預覽</span></a> for the <a class="reference internal" href="../tools/transform.html#transform-tool"><span class="std std-ref">變形工具</span></a> even when it's off in <span class="menuselection">View ‣ Instant preview</span>.</p>
+<dt>強制變形工具使用即時預覽</dt><dd><p>就算在選單中<span class="menuselection">檢視‣ 即時預覽</span>功能未啟用的狀態下，乃強制開啟<a class="reference internal" href="../tools/transform.html#transform-tool"><span class="std std-ref">變形工具</span></a>的<a class="reference internal" href="../instant_preview.html#instant-preview"><span class="std std-ref">即時預覽</span></a>。</p>
 </dd>
-<dt>強制移動工具使用即時預覽</dt><dd><p>Turns on <a class="reference internal" href="../instant_preview.html#instant-preview"><span class="std std-ref">即時預覽</span></a> for the <a class="reference internal" href="../tools/move.html#move-tool"><span class="std std-ref">移動工具</span></a> even when it's off in <span class="menuselection">View ‣ Instant preview</span>.</p>
+<dt>強制移動工具使用即時預覽</dt><dd><p>就算在選單中<span class="menuselection">檢視‣ 即時預覽</span>功能未啟用的狀態下，乃強制開啟<a class="reference internal" href="../tools/move.html#move-tool"><span class="std std-ref">移動工具</span></a>的<a class="reference internal" href="../instant_preview.html#instant-preview"><span class="std std-ref">即時預覽</span></a>。</p>
 </dd>
-<dt>強制濾鏡使用即時預覽</dt><dd><p>Turns on <a class="reference internal" href="../instant_preview.html#instant-preview"><span class="std std-ref">即時預覽</span></a> for the <a class="reference internal" href="../filters.html#filters"><span class="std std-ref">濾鏡</span></a> even when it's off in <span class="menuselection">View ‣ Instant preview</span>.</p>
+<dt>強制濾鏡使用即時預覽</dt><dd><p>就算在選單中<span class="menuselection">檢視‣ 即時預覽</span>功能未啟用的狀態下，乃強制開啟<span class="xref std std-ref">filtersl</span>的<a class="reference internal" href="../instant_preview.html#instant-preview"><span class="std std-ref">即時預覽</span></a>。</p>
 </dd>
 </dl>
 </section>
