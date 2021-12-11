@@ -10,8 +10,8 @@ msgstr ""
 "Project-Id-Version: Krita Manual 4.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-27 21:21+0800\n"
-"PO-Revision-Date: 2021-12-10 16:09+0000\n"
-"Last-Translator: Alvin Wong <alvin@alvinhc.com>\n"
+"PO-Revision-Date: 2021-12-11 08:09+0000\n"
+"Last-Translator: 楊景貴 <issacsopp@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <http://weblate.slat.org/projects/"
 "krita-docs/3-reference_manual___layers_and_masks___vector_layers/zh_Hant/>\n"
 "Language: zh_TW\n"
@@ -198,6 +198,9 @@ msgid ""
 "the black line. The active mode will be shown by which is on top of the "
 "other."
 msgstr ""
+"除了由點和曲線定義之外，形狀還有兩個定義屬性: **填充** 和 **描邊**. **填充** 定義填充形狀對象內部空間的顏色、漸變或圖案。 "
+"'**描邊**' 定義沿形狀邊緣的邊框的顏色、漸變、圖案和粗細。這兩個可以使用**描邊和填充**停靠欄進行編輯。 Dock 有兩種模式。 "
+"一種用於描邊，一種用於填充。 您可以通過單擊停靠欄上的實心方塊或黑線來更改模式。 活動模式將通過哪個在另一個之上顯示。"
 
 #: ../../reference_manual/layers_and_masks/vector_layers.rst:104
 msgid ""
@@ -205,10 +208,12 @@ msgid ""
 "the solid white square. This tells us that there is no fill assigned "
 "therefore the inside of the shape will be transparent."
 msgstr ""
+"**注意 !! 新版已無該介面**這是填充物件時的介面樣貌。 注意最左邊有紅線白色實心方塊在邊框之上。 "
+"這告訴我們該物件沒有內填色，因此該形狀的內部會是透明的。"
 
 #: ../../reference_manual/layers_and_masks/vector_layers.rst:108
 msgid "Here is the dock with the stroke element active."
-msgstr ""
+msgstr "**注意 !! 新版已無該介面**這是描邊時的介面樣貌。"
 
 #: ../../reference_manual/layers_and_masks/vector_layers.rst:113
 msgid "Editing Stroke Properties"
@@ -218,7 +223,7 @@ msgstr "調整邊線屬性"
 msgid ""
 "The stroke properties dock will allow you to edit a different aspect of how "
 "the outline of your vector shape looks."
-msgstr ""
+msgstr "筆畫屬性介面可以編輯向量形狀輪廓外觀。"
 
 #: ../../reference_manual/layers_and_masks/vector_layers.rst:119
 msgid ""
@@ -227,6 +232,8 @@ msgid ""
 "The cap option changes how line endings appear. The join option changes how "
 "corners appear."
 msgstr ""
+"**注意 !! 新版已無該介面**樣式編輯器可以選擇不同的圖案和線條樣式。 寬度選項可更改向量形狀輪廓的粗細。 cap 選項會更改頭尾的顯示方式。 "
+"連接選項可更改摺角的顯示方式。"
 
 #: ../../reference_manual/layers_and_masks/vector_layers.rst:121
 msgid ""
@@ -234,7 +241,7 @@ msgid ""
 "The higher the number the more the corners will be allowed to stretch out "
 "past the points. Lower numbers will restrict the stroke to shorter and less "
 "sharp corners."
-msgstr ""
+msgstr "斜接限制控制對象角的顯示程度。 數字越大，允許越過這些點的角越多。 較低的數字會將筆劃限制為較短且較不尖銳的角。"
 
 #: ../../reference_manual/layers_and_masks/vector_layers.rst:124
 msgid "Editing Fill Properties"
@@ -243,13 +250,13 @@ msgstr "編輯填充屬性"
 #: ../../reference_manual/layers_and_masks/vector_layers.rst:126
 msgid ""
 "All of the fill properties are contained in the **Stroke and Fill** dock."
-msgstr ""
+msgstr "**注意 !! 新版已無該介面**所有填充屬性都包含在 **描邊 和 填充** 介面中。"
 
 #: ../../reference_manual/layers_and_masks/vector_layers.rst:130
 msgid ""
 "The large red **X** button will set the fill to none causing the area inside "
 "of the vector shape to be transparent."
-msgstr ""
+msgstr "大紅色 **X** 按鈕會將填充設定為無，從而使向量形狀內部的區域變得透明。"
 
 #: ../../reference_manual/layers_and_masks/vector_layers.rst:132
 msgid ""
@@ -260,6 +267,8 @@ msgid ""
 "gradient. A gradient can be selected by pressing the down arrow next to the "
 "long button."
 msgstr ""
+"右邊是實心方塊。 這會將填充設定為顯示在右邊長按鈕裡面的純色，可以按長按鈕右側的向下箭頭進行選擇。 實心方塊的右側是漸變填充按鈕。 這將設定填充為漸變。 "
+"這時按長按鈕旁邊的向下箭頭可以選擇漸變。"
 
 #: ../../reference_manual/layers_and_masks/vector_layers.rst:134
 msgid ""
@@ -268,12 +277,14 @@ msgid ""
 "to the long button. The two other buttons are for **fill rules**: the way a "
 "self-overlapping path is filled."
 msgstr ""
+"在 **X** 下方是一個顯示圖案的按鈕。 這個內部區域將填充一個圖案。 可以按長按鈕旁邊的向下箭頭來選擇圖案。 "
+"另外兩個按鈕用於**填充規則**：填充自重疊路徑的方式。"
 
 #: ../../reference_manual/layers_and_masks/vector_layers.rst:136
 msgid ""
 "The button with the inner square blank toggles even-odd mode, where every "
 "filled region of the path is next to an unfilled one, like this:"
-msgstr ""
+msgstr "帶有內部方形空白的按鈕是切換奇偶模式，其中路徑的每個填充區域都緊接著一個未填充區域，如下所示："
 
 #: ../../reference_manual/layers_and_masks/vector_layers.rst:142
 msgid ""
@@ -283,6 +294,8 @@ msgid ""
 "overlapping' so that the region between the two is considered outside the "
 "path and remain unfilled, like this:"
 msgstr ""
+"填充內部方塊的按鈕則是切換非零模式，其中大部分完全填充重疊路徑，除非它與“降低重疊級別”的不同方向的子路徑重疊，以便之間的區域 "
+"這兩個被認為在路徑之外並且保持未填充，如下所示："
 
 #: ../../reference_manual/layers_and_masks/vector_layers.rst:148
 msgid ""
@@ -290,10 +303,12 @@ msgid ""
 "manual <http://tavmjong.free.fr/INKSCAPE/MANUAL/html/Attributes-Fill-Stroke."
 "html#Attributes-Fill-Rule>`_."
 msgstr ""
+"有關填充規則的更多（更好）信息，請查看 `Inkscape 說明 <http://tavmjong.free.fr/INKSCAPE/MANUAL/"
+"html/Attributes-Fill-Stroke.html#Attributes-Fill-Rule>`_."
 
 #: ../../reference_manual/layers_and_masks/vector_layers.rst:15
 msgid "Vector"
-msgstr ""
+msgstr "向量"
 
 #: ../../reference_manual/layers_and_masks/vector_layers.rst:15
 msgid "Layers"
