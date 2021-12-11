@@ -38,7 +38,8 @@ def get_latest_commit_time_str() -> str:
     if res.returncode > 0:
         raise RuntimeError(
             f"Failed to get latest commit date, subprocess returned {res.returncode}")
-    return res.stdout.decode('utf-8')
+    time_str = res.stdout.decode('utf-8')
+    return time_str.rstrip('\n')
 
 
 def main() -> None:
@@ -56,7 +57,7 @@ def main() -> None:
     )
     if warnings:
         message += f"\n警告數目：{len(warnings)}"
-        send_message_with_file_unchecked(message, "警告.txt", '\n'.join(warnings))
+        send_message_with_file_unchecked(message, "警告.txt", ''.join(warnings))
     else:
         message += f"\n警告數目：0"
         send_message_unchecked(message)
