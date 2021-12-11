@@ -6,6 +6,7 @@ import logging
 import os
 import subprocess
 import sys
+import time
 import urllib.request
 import urllib.error
 
@@ -24,14 +25,22 @@ def send_message_unchecked(msg: str) -> None:
         "embeds": [],
     }
     payload = json.dumps(message).encode('utf8')
-    req = urllib.request.Request(WEBHOOK_URL, data=payload,
-                                 headers={'content-type': 'application/json'})
+    req = urllib.request.Request(
+        WEBHOOK_URL,
+        data=payload,
+        headers={
+            'content-type': 'application/json',
+            'user-agent': 'l10n-tw docs.krita.org notifier',
+        },
+    )
     try:
         response: http.client.HTTPResponse = urllib.request.urlopen(req)
         response_text = response.read().decode('utf8')
-        if response.status != 200:
+        if response.status != 200 and response.status != 204:
             logging.warning(
                 f"Discord message posting returned status {response.status} with response:\n{response_text}")
+        else:
+            logging.info("Discord message sent.")
     except urllib.error.HTTPError as err:
         response_text = err.read().decode('utf8')
         logging.warning(
@@ -73,6 +82,7 @@ def main() -> None:
     send_message_unchecked(message)
     if warnings:
         for warning in warnings:
+            time.sleep(0.5)
             send_message_unchecked(
                 "```\n"
                 f"{warning}\n"
