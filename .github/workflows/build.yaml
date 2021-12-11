@@ -48,4 +48,5 @@ jobs:
       env:
         WEBHOOK_URL: ${{ secrets.KRITA_L10N_DISCORD_NOTIFY_WEBHOOK_URL }}
       run : |
-        python3 discord_webhook.py
+        python3 -m pip install discord-webhook==0.14.0
+        python3 discord_notify.py
