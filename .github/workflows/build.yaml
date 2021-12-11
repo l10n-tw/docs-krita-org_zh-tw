@@ -48,19 +48,4 @@ jobs:
       env:
         WEBHOOK_URL: ${{ secrets.KRITA_L10N_DISCORD_NOTIFY_WEBHOOK_URL }}
       run : |
-        last_commit_timestr="$(TZ=Asia/Taipei date -d "$(git log -1 --format=%cI)" "+%Y年%m月%d日 %H:%M")"
-        echo "已建置翻譯更新預覽到 http://l10n.tw/docs-krita-org_zh-tw/" >> /tmp/discord-msg-content.txt
-        echo "最後翻譯更動：$last_commit_timestr" >> /tmp/discord-msg-content.txt
-        echo "建置事件：https://github.com/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID" >> /tmp/discord-msg-content.txt
-        if [[ -f /tmp/sphinx-build-warnings.log ]]; then
-          echo "警告數目：$(</tmp/sphinx-build-warnings.log wc -l)" >> /tmp/discord-msg-content.txt
-          if [[ -s /tmp/sphinx-build-warnings.log ]]; then
-            echo '```' >> /tmp/discord-msg-content.txt
-            cat /tmp/sphinx-build-warnings.log >> /tmp/discord-msg-content.txt
-            echo '```' >> /tmp/discord-msg-content.txt
-          fi
-        fi
-        curl \
-          -H "Content-Type: application/json" \
-          -d '{ "username": "通知", "content": '"$(</tmp/discord-msg-content.txt jq -Rs)"', "embeds": [] }' \
-          "$WEBHOOK_URL"
+        python3 discord_webhook.py
