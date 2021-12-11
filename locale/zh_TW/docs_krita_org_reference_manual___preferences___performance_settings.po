@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Krita Manual 4.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-09-03 08:09+0000\n"
-"PO-Revision-Date: 2021-12-10 16:09+0000\n"
+"PO-Revision-Date: 2021-12-11 18:08+0000\n"
 "Last-Translator: BiseChen <bise.chen@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <http://weblate.slat.org/projects/"
 "krita-docs/3-reference_manual___preferences___performance_settings/zh_Hant/>"
@@ -242,7 +242,7 @@ msgid ""
 "value."
 msgstr ""
 "Krita 在繪製動畫時，會先將影像複製為多個複本，對大值由 CPU 核心數決定，然後在盡可能多的 CPU 執行緒中平行同時處理以提高速度。這表示每一份複"
-"本都需要佔用額外的記憶體，如果處裡的動畫很龐大又複雜時，為了不耗盡記憶體，這時有必要限制處理動畫使用的執行緒數量。"
+"本都需要佔用額外的記憶體，如果處理的動畫很龐大又複雜時，為了不耗盡記憶體，這時有必要限制處理動畫使用的執行緒數量。"
 
 #: ../../reference_manual/preferences/performance_settings.rst:71
 msgid "Other"
@@ -374,6 +374,9 @@ msgid ""
 "amount (say, 64GiB) of RAM, do *not* use this option (and scale down your "
 "projects)."
 msgstr ""
+"選用這個項目時，動畫快取將會儲存在記憶體中，且不做任何限制，這也是 4.1 版之前預設的處理方式。但這選項對於系統記憶體需求會比較多，"
+"若您製作的動畫經常都需全螢幕解析度為 6K 每秒 25fps ，那麼您的電腦最好有安裝 64GB "
+"（或以上）的記憶體。如果您電腦沒有這麼多記憶體，那麼最好*不要*使用此選項，同時也請考慮降低動畫的解析度。"
 
 #: ../../reference_manual/preferences/performance_settings.rst:106
 msgid ""
@@ -381,15 +384,16 @@ msgid ""
 "requested in the :guilabel:`General` tab. Otherwise you might face system "
 "freezes."
 msgstr ""
+"請確保您的電腦有足夠的實體記憶體。實體記憶體必須*大於*您在 \\:guilabel:`一般`\\ 中所指定的容量，否則您可能會遇到系統凍結鎖死的狀況。"
 
 #: ../../reference_manual/preferences/performance_settings.rst:108
 msgid "For 1 second of FullHD @ 25 FPS you will need 200 extra MiB of Memory."
-msgstr ""
+msgstr "每秒 25 FPS 的FullHD （全高清1080P）動畫需要 200MiB 記憶體。"
 
 #: ../../reference_manual/preferences/performance_settings.rst:109
 msgid ""
 "For 1 second of 4K UltraHD@ 25 FPS, you will need 800 extra MiB of Memory."
-msgstr ""
+msgstr "每秒 25 FPS 的 4K UltraHD （超高清 4K）動畫需要 800MiB 記憶體。"
 
 #: ../../reference_manual/preferences/performance_settings.rst:114
 msgid "On-disk"
@@ -400,7 +404,7 @@ msgid ""
 "Animation frames are stored in the hard disk in the same folder as the swap "
 "file. The cache is stored in a compressed way. A little amount of extra RAM "
 "is needed."
-msgstr ""
+msgstr "使用此選項時，動畫幀會預先壓縮並與記憶體交換檔儲存在同一個硬碟的目錄中。此選項需使用少量實體記憶體以供運作。"
 
 #: ../../reference_manual/preferences/performance_settings.rst:114
 msgid ""
@@ -408,6 +412,8 @@ msgid ""
 "the :guilabel:`Cached Frame Size` to be able to play your video at 25 fps. A "
 "limit of 2500 px is usually a good choice."
 msgstr ""
+"因為硬碟的資料傳輸速度比較慢，建議您將 \\:guilabel:`限制快取影格的大小`\\ 設定為 2500px （像素） 以便讓 Krita 能在 "
+"25fps 的速度下播放影片。"
 
 #: ../../reference_manual/preferences/performance_settings.rst:117
 msgid "Cache Generation Options"
@@ -425,6 +431,8 @@ msgid ""
 "there's a good chance that it will not be able to render at full speed. "
 "Lower the size to play back faster at the cost of lower resolution."
 msgstr ""
+"如果製作的影像畫質超過此大小限制，則將快取影格製成減少畫質的縮小版，在選用*硬碟*為快取儲存空間時，請確保啟用此選項。因為硬碟讀寫很慢，如果按照完全畫質寫"
+"入快取，它很有可能因無法全速播放而出現卡幀的狀況，所以這是用比較低的畫質來換取影片流暢的播放，請放心這個功能並不會影響最後輸出的畫質。"
 
 #: ../../reference_manual/preferences/performance_settings.rst:121
 msgid "Use Region Of Interest"
@@ -435,7 +443,7 @@ msgid ""
 "We technically only need to use the section of the image that is in view. "
 "Region of interest represents that section. When the image is above the "
 "configurable limit, render only the currently visible part of it."
-msgstr ""
+msgstr "就技術而言，我們僅需使用視圖中有影像的那部分畫面。啟用此選項並設定數值後， Krita 將以此值為限制，繪製可見畫面外百分比之區域。"
 
 #: ../../reference_manual/preferences/performance_settings.rst:124
 msgid "Enable Background Cache Generation"
@@ -448,7 +456,7 @@ msgid ""
 "animation is cached when pressing play, this caching will take less long. "
 "However, turning off this automatic caching can save power by having your "
 "computer work less."
-msgstr ""
+msgstr "這個選項可讓您選擇是否在電腦不使用時於背景製作動畫快取，這可以減少快取等待時間，有利於流暢的播放動畫。若您想節省電腦的耗電量那就關閉這個選項。"
 
 #: ../../reference_manual/preferences/performance_settings.rst:129
 msgid "Instant Preview"
@@ -462,7 +470,7 @@ msgstr "變形工具顯示圖層堆疊中的預覽"
 msgid ""
 "Whether to use a floating preview for the :ref:`transform_tool`, or whether "
 "to have it rendered in place."
-msgstr ""
+msgstr "啟用此選項後，將顯示已繪製圖層混合模式效果的\\ :ref:`transform_tool`\\ 預覽。取消鉤選時則浮動顯示預覽。"
 
 #: ../../reference_manual/preferences/performance_settings.rst:133
 msgid "Force instant preview in Transform Tool"
@@ -473,6 +481,8 @@ msgid ""
 "Turns on :ref:`instant_preview` for the :ref:`transform_tool` even when it's "
 "off in :menuselection:`View --> Instant preview`."
 msgstr ""
+"就算在選單中\\ :menuselection:`檢視--> 即時預覽`\\ 功能未啟用的狀態下，乃強制開啟\\ "
+":ref:`transform_tool`\\ 的\\ :ref:`instant_preview`\\。"
 
 #: ../../reference_manual/preferences/performance_settings.rst:135
 msgid "Force instant preview in Move Tool"
@@ -483,6 +493,8 @@ msgid ""
 "Turns on :ref:`instant_preview` for the :ref:`move_tool` even when it's off "
 "in :menuselection:`View --> Instant preview`."
 msgstr ""
+"就算在選單中\\ :menuselection:`檢視--> 即時預覽`\\ 功能未啟用的狀態下，乃強制開啟\\ :ref:`move_tool`\\ "
+"的\\ :ref:`instant_preview`\\。"
 
 #: ../../reference_manual/preferences/performance_settings.rst:139
 msgid "Force instant preview in Filters"
@@ -493,6 +505,8 @@ msgid ""
 "Turns on :ref:`instant_preview` for the :ref:`filters` even when it's off "
 "in :menuselection:`View --> Instant preview`."
 msgstr ""
+"就算在選單中\\ :menuselection:`檢視--> 即時預覽`\\ 功能未啟用的狀態下，乃強制開啟\\ :ref:`filtersl`\\ "
+"的\\ :ref:`instant_preview`\\。"
 
 #: ../../reference_manual/preferences/performance_settings.rst:11
 msgid "Preferences"
@@ -512,4 +526,4 @@ msgstr "記憶體使用狀況"
 
 #: ../../reference_manual/preferences/performance_settings.rst:11
 msgid "Lag"
-msgstr ""
+msgstr "電腦效能不足"
