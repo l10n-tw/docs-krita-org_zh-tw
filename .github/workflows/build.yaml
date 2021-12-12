@@ -33,6 +33,11 @@ jobs:
     #   with:
     #     name: html
     #     path: ~/docs/_build/html/
+    - name: Generate warnings report
+      run : |
+        python3 -m pip install polib
+        python3 gen_warnings_report.py
+        cp _warnings_report.html ~/docs/_build/html/
     - name: Deploy
       run: |
         git fetch --depth=1 origin gh-pages

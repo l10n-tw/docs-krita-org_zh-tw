@@ -4,7 +4,7 @@ import logging
 import os
 import subprocess
 import sys
-from discord_webhook import DiscordWebhook
+from discord_webhook import DiscordWebhook, DiscordEmbed
 
 WEBHOOK_URL = os.environ["WEBHOOK_URL"]
 GITHUB_REPOSITORY = os.environ["GITHUB_REPOSITORY"]
@@ -19,10 +19,12 @@ def send_message_unchecked(msg: str) -> None:
     response = webhook.execute()
 
 
-def send_message_with_file_unchecked(msg: str, file_name: str, file_content: str) -> None:
+def send_message_with_file_unchecked(msg: str, file_name: str, file_content: str, embed: DiscordEmbed = None) -> None:
     """Sends message with an embedded file attachment without checking its length. Messages shall have < 2000 characters."""
     webhook = DiscordWebhook(url=WEBHOOK_URL, content=msg, username="通知")
     webhook.add_file(filename=file_name, file=file_content)
+    if embed:
+        webhook.add_embed(embed)
     response = webhook.execute()
 
 
@@ -31,7 +33,7 @@ def get_latest_commit_time_str() -> str:
         [
             "bash",
             "-c",
-            'TZ=Asia/Taipei date -d "$(git log -1 --format=%cI)" "+%Y年%m月%d日 %H:%M"',
+            'TZ=Asia/Taipei date -d "$(git log -1 --format=%cI -- locale/zh_TW)" "+%Y年%m月%d日 %H:%M"',
         ],
         capture_output=True,
     )
@@ -57,7 +59,15 @@ def main() -> None:
     )
     if warnings:
         message += f"\n警告數目：{len(warnings)}"
-        send_message_with_file_unchecked(message, "警告.txt", ''.join(warnings))
+        send_message_with_file_unchecked(
+            message,
+            "warnings.txt",
+            ''.join(warnings),
+            embed=DiscordEmbed(
+                title="檢示警告清單",
+                url="http://l10n.tw/docs-krita-org_zh-tw/_warnings_report.html",
+            ),
+        )
     else:
         message += f"\n警告數目：0"
         send_message_unchecked(message)
