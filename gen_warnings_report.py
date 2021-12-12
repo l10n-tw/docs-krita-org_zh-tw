@@ -22,7 +22,7 @@ DOCS_EN_URL = "https://docs.krita.org/en/"
 WEBLATE_BASE_URL = "https://weblate.slat.org/languages/zh_Hant/krita-docs/"
 
 
-@functools.cache
+@functools.lru_cache(maxsize=None)
 def load_catalog(pofile: str) -> polib.POFile:
     return polib.pofile(pofile)
 
