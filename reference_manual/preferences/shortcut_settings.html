@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-12-12T10:47:02" />
+  <meta property="og:article:modified_time" content="2021-12-12T18:13:31" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="在 Krita 中自訂快捷鍵。" name="description" property="og:description" />
 
@@ -163,8 +163,8 @@
 <li class="toctree-l3"><a class="reference internal" href="popup_palette_settings.html">「浮動畫具板」設定</a></li>
 <li class="toctree-l3"><a class="reference internal" href="python_plugin_manager.html">「PyThon 外掛程式管理器」設定</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">「鍵盤快捷鍵」設定</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#menu-items">Menu Items</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#configuration">Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#menu-items">選單項目</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#configuration">設定</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="tablet_settings.html">「數位板」設定</a></li>
@@ -272,43 +272,43 @@
   <section id="shortcut-settings">
 <span id="index-0"></span><span id="id1"></span><h1>「鍵盤快捷鍵」設定<a class="headerlink" href="#shortcut-settings" title="本標題的永久連結">¶</a></h1>
 <p>好的快捷鍵配置可以提高工作效率。您可以自訂 Krita 快捷以符合本身使用習慣，若您由 PhotoShop 或 MyPaint 軟體轉移過來，或覺得自訂的快捷鍵在作業上更有幫助，那麼 Krita 自訂快捷鍵功能可以滿足您的需求。您可在<span class="menuselection">設定 ‣ 設定 Krita…</span>打開設定視窗進入<span class="menuselection">鍵盤快捷鍵</span>分頁裡面開始配置您的快捷鍵。</p>
-<p>Most of Krita's shortcuts are configured in the menu section <span class="menuselection">Settings ‣ Configure Krita... ‣ Shortcuts</span>. The shortcuts configured here are simple key combinations, for example the <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">X</kbd></kbd> shortcut to cut. Shortcuts can also be sequences of key combinations (e.g. <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">S</kbd></kbd> shortcut then the <kbd class="kbd docutils literal notranslate">B</kbd> key). Krita also has a special interface for configuring the mouse and stylus events sent to the canvas, found under <a class="reference internal" href="canvas_input_settings.html#canvas-input-settings"><span class="std std-ref">「畫布輸入」設定</span></a>.</p>
-<p>To use, just type the <span class="guilabel">Action</span> into the Search box you want to assign/reassign the shortcut for.  Suppose we wanted to assign the shortcut <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">G</kbd></kbd> to the <span class="guilabel">Action</span> of Group Layers so that every time we pressed the <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">G</kbd></kbd> shortcut a new Layer Group would be created.  Use the following steps to do this:</p>
+<p>Krita 大部分快捷鍵都可以在<span class="menuselection">設定‣ Krita 設定... ‣ 鍵盤快捷鍵</span>頁面中進行設定。此處設定都是簡單的組合鍵，例如 Ctrl+X 快捷鍵可以用以剪切。某些快捷鍵可以按順序組合，例如按 Shift+S 可以叫出吸附選單，然後按 TAB 鍵來選取吸附選項（譯者註：原文中 B 按鍵於此處似乎無效，B 鍵現為手繪筆刷工具的熱鍵）。Krita 還有一個特殊介面用來設定發送到畫布的滑鼠與觸控筆事件，可以在<a class="reference internal" href="canvas_input_settings.html#canvas-input-settings"><span class="std std-ref">「畫布輸入」設定</span></a>中找到。</p>
+<p>設定方法：只需在「搜尋」欄位中輸入<span class="guilabel">操作</span>，然後給它指定快捷鍵。假設您想把 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">G</kbd></kbd> 指定給圖層的操作，以便於每次按下 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">G</kbd></kbd> 後，自動建立一個新圖層群組，請依照以下步驟：</p>
 <ol class="arabic simple">
-<li><p>Type &quot;Group Layer&quot;.</p></li>
-<li><p>Click on Group Layer and a small inset box will open.</p></li>
-<li><p>Click the Custom radio button.</p></li>
-<li><p>Click on the first button and type the <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">G</kbd></kbd> shortcut.</p></li>
-<li><p>Click OK.</p></li>
+<li><p>輸入&quot;快速建立群組&quot;。</p></li>
+<li><p>以滑鼠點一下「快速建立群組」，這時會打開一個小對話盒。</p></li>
+<li><p>點一下「自訂」單選按鈕。</p></li>
+<li><p>接著點一下旁邊的「無」之後會變成「輸入」，請在這裡按下 :kbd:<a href="#id1"><span class="problematic" id="id2">`</span></a>Ctrl + G`組合鍵。</p></li>
+<li><p>單擊右下方的「確定」即可。</p></li>
 </ol>
-<p>From this point on, whenever you press the <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">G</kbd></kbd> shortcut you'll get a new <span class="guilabel">Group Layer</span>.</p>
+<p>從現在開始，當您按下 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">G</kbd></kbd> 之後，都會自動建立一個新圖層群組。</p>
 <div class="admonition tip">
 <p class="admonition-title">小訣竅</p>
-<p>Smart use of shortcuts can save you significant time and further streamline your workflow.</p>
+<p>靈活使用快捷鍵可以為您節省大量時間，並進一步簡化您的工作流程。</p>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified added">在 5.0 版本新加入: </span>Actions, which includes everything that can be assigned a shortcut, can now be searched with <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Enter</kbd></kbd>, reducing the need to assign a shortcut to every single action. This itself is called the <span class="guilabel">Search Actions</span> shortcut, and can also be reassigned if desired.</p>
+<p><span class="versionmodified added">在 5.0 版本新加入: </span>您可以隨時按下 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Enter</kbd></kbd> 組合鍵開啟<span class="guilabel">搜尋操作</span>輸入以搜尋所有可用的功能，從而減少不必要的快捷鍵分配。您也可以為這個功能另外指定快捷鍵。</p>
 </div>
 <section id="menu-items">
-<h2>Menu Items<a class="headerlink" href="#menu-items" title="本標題的永久連結">¶</a></h2>
+<h2>選單項目<a class="headerlink" href="#menu-items" title="本標題的永久連結">¶</a></h2>
 <dl class="simple">
-<dt>Search bar</dt><dd><p>Entering text here will search for matching shortcuts in the shortcut list.</p>
+<dt>搜尋欄位</dt><dd><p>在這裡輸入文字可以在列表中搜尋符合輸入字串的快捷鍵。</p>
 </dd>
-<dt>Shortcut List</dt><dd><p>Shortcuts are organized into sections. Each shortcut can be given a primary and alternate key combination.</p>
+<dt>快捷鍵列表</dt><dd><p>快捷鍵在列表中依照屬性分組，每一個操作都可以有一個主快捷鍵和備選快捷鍵。</p>
 </dd>
-<dt>Load/Save Shortcuts Profiles</dt><dd><p>The bottom row of buttons contains commands for exporting and import keyboard shortcuts.</p>
+<dt>載入/儲存快捷鍵設定檔</dt><dd><p>此設定頁面底部有一排按鈕，可用於建立、刪除、儲存、載入和列印目前快捷鍵方案。</p>
 </dd>
 </dl>
 <img alt="../../_images/Krita_Configure_Shortcuts.png" src="../../_images/Krita_Configure_Shortcuts.png" />
 </section>
 <section id="configuration">
-<h2>Configuration<a class="headerlink" href="#configuration" title="本標題的永久連結">¶</a></h2>
+<h2>設定<a class="headerlink" href="#configuration" title="本標題的永久連結">¶</a></h2>
 <dl class="simple">
-<dt>Primary and alternate shortcuts</dt><dd><p>Each shortcut is assigned a default, which may be empty. The user can assign up to two custom shortcuts, known as primary and alternate shortcuts. Simply click on a &quot;Custom&quot; button and type the key combination you wish to assign to the shortcut. If the key combination is already in use for another shortcut, the dialog will prompt the user to resolve the conflict.</p>
+<dt>主要和備選快捷鍵</dt><dd><p>每個操作項目都分配了一個預設值，但可能是空的設定。使用者最多可以指派兩個自定快捷鍵，稱為「主要快捷鍵」和「備選快捷鍵」。只需要單擊&quot;自訂&quot;按鈕並按下您想指派給操作項目的快捷鍵組合。若按下的組合鍵已被別的操作佔用，將會提示您目前快捷鍵有衝突 ，讓您選擇要如何處理。</p>
 </dd>
-<dt>Shortcut schemes</dt><dd><p>Many users migrate to Krita from other tools with different default shortcuts. Krita users may change the default shortcuts to mimic these other programs.  Currently, Krita ships with defaults for Photoshop and Paint Tool Sai. Additional shortcut schemes can be placed in the ~/.config/krita/input/ folder.</p>
+<dt>快捷鍵方案</dt><dd><p>您可以從快捷鍵方案選單中隨時切換不同快捷鍵方案。Krita 附帶了 PhotoShop和 Paint Tool Sai 的預設快捷鍵設定。您可以將額外的快捷鍵方案保存在 ~/.config/krita/input/ 資料夾中。</p>
 </dd>
-<dt>Saving, loading and sharing custom shortcuts</dt><dd><p>Users may wish to export their shortcuts to use across machines, or even share with other users. This can be done with the save/load drop-down. Note: the shortcuts can be saved and overridden manually by backingup the text file kritashortcutsrc located in ~/.config/krita/.  Additionally, the user can export a custom shortcut scheme file generated by merging the existing scheme defaults with the current customizations.</p>
+<dt>儲存、載入和分享自訂快捷鍵</dt><dd><p>您可能希望將快捷鍵的設定沿用在不同電腦、不同平台或與別的使用者共享設定。這可以按下「儲存」/「載入」下拉選單來完成。您也可以在 ~/.config/krita/ 資料夾中將 kritashortcutsrc 手動複製來備份或覆蓋新的快捷鍵方案。此外也可以導出現有方案預設值與當前自訂項目合併以產生新的自訂快捷鍵方案。</p>
 </dd>
 </dl>
 </section>
