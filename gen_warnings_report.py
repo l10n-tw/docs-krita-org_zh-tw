@@ -177,9 +177,9 @@ def write_html(w: TextIO, last_commit: str, warnings: Iterable[WarningItem]) -> 
         w.write("</tbody></table>")
     w.write(
         "<!DOCTYPE html>"
-        '<htm lang="zh-hant-TW"><head>'
+        '<html lang="zh-Hant-TW"><head>'
         '<meta charset="utf-8">'
-        "<title></title>"
+        "<title>Krita 說明文件翻譯警告清單</title>"
     )
     write_styles(w)
     w.write(

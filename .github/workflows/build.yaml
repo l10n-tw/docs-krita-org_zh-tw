@@ -34,7 +34,7 @@ jobs:
     #     name: html
     #     path: ~/docs/_build/html/
     - name: Generate warnings report
-      run : |
+      run: |
         python3 -m pip install polib
         python3 gen_warnings_report.py
         cp _warnings_report.html ~/docs/_build/html/
@@ -52,7 +52,7 @@ jobs:
     - name: Send notification to Discord
       env:
         WEBHOOK_URL: ${{ secrets.KRITA_L10N_DISCORD_NOTIFY_WEBHOOK_URL }}
-      run : |
+      run: |
         echo "::add-mask::${WEBHOOK_URL##*/}"
         python3 -m pip install discord-webhook==0.14.0
         python3 discord_notify.py
