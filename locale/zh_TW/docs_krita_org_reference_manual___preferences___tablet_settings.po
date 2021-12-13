@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Krita Manual 4.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-13 10:38+0000\n"
-"PO-Revision-Date: 2021-10-15 21:54+0000\n"
+"PO-Revision-Date: 2021-12-13 07:09+0000\n"
 "Last-Translator: BiseChen <bise.chen@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <http://weblate.slat.org/projects/"
 "krita-docs/3-reference_manual___preferences___tablet_settings/zh_Hant/>\n"
@@ -18,12 +18,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.8\n"
+"X-Generator: Weblate 4.8.1\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../../reference_manual/preferences/tablet_settings.rst:1
 msgid "Configuring the tablet in Krita."
-msgstr ""
+msgstr "在 Krita 設定數位板（繪圖板）。"
 
 #: ../../reference_manual/preferences/tablet_settings.rst:17
 msgid "Tablet Settings"
@@ -39,11 +39,11 @@ msgid ""
 "Input Pressure Global Curve : This is the global curve setting that your "
 "tablet will use in Krita. The settings here will make your tablet feel soft "
 "or hard globally."
-msgstr ""
+msgstr "全域筆刷輸入調整曲線：這是您的繪圖板將在 Krita 中使用的全域曲線設定，這裡的設定會影響您繪圖板壓力手感柔軟或偏硬。"
 
 #: ../../reference_manual/preferences/tablet_settings.rst:26
 msgid "Use Mouse Events for Right and Middle clicks."
-msgstr ""
+msgstr "透過滑鼠事件讀取右鍵和中間鍵點擊。"
 
 #: ../../reference_manual/preferences/tablet_settings.rst:24
 msgid ""
@@ -54,38 +54,44 @@ msgid ""
 "tablet driver implementation). After changing this option Krita should be "
 "restarted."
 msgstr ""
+"某些二合一平板電腦無法得知是否有手寫筆上的側面按鍵。如果您有這樣的設備，可以嘗試啟用這個解決方式。Krita "
+"會嘗試讀取右鍵和中間鍵的點擊，以模擬這些動作來自滑鼠而不是這一台平板電腦。這功能可能會也可能不會在您的設備上正常運作，這取決於平板電腦驅動程式的執行效果。"
+"變更這個選項後需要重新啟動 Krita 。"
 
 #: ../../reference_manual/preferences/tablet_settings.rst:31
 msgid "Use Tablet Driver Stamps For Brush Speed"
-msgstr ""
+msgstr "以數位板驅動程式提供的時間來計算筆刷速度"
 
 #: ../../reference_manual/preferences/tablet_settings.rst:29
 msgid ""
 "This changes the way freehand brush smoothing works in Krita by using the "
 "driver's timestamps instead of a timer-based one."
-msgstr ""
+msgstr "勾選時是經由驅動程式的時間標記改變 Krita 徒手繪圖筆刷工具防抖動平滑化，不勾選時則是使用計時器的時間標記。"
 
 #: ../../reference_manual/preferences/tablet_settings.rst:39
 msgid "For Krita 3.3 or later:Tablet Input API"
-msgstr ""
+msgstr "數位板輸入 API（Krita 3.3 或更高版本）"
 
 #: ../../reference_manual/preferences/tablet_settings.rst:34
 msgid "On Windows 8 or above only."
 msgstr ""
+"以下項目僅適用於 Windows 8 及以上作業系統版本。WIndows 8 "
+"及以上的版本設備都有兩種數位板軟體連接方式，有些設備則只能在一種連接方式正常使用。變更後需要重新啟動。"
 
 #: ../../reference_manual/preferences/tablet_settings.rst:36
 msgid "WinTab"
-msgstr ""
+msgstr "使用 WinTab 方式連接"
 
 #: ../../reference_manual/preferences/tablet_settings.rst:37
 msgid ""
 "Use the WinTab API to receive tablet pen input. This is the API being used "
 "before Krita 3.3. This option is recommended for most Wacom tablets."
 msgstr ""
+"以 WinTab API 方式接收感壓筆的輸入。雖然這是 Krita 3.3 版之前使用的API，但對於大多數 Wacom 數位板使用者建議使用此選項。"
 
 #: ../../reference_manual/preferences/tablet_settings.rst:39
 msgid "Windows 8+ Pointer Input"
-msgstr ""
+msgstr "Windows 8+ 指標輸入"
 
 #: ../../reference_manual/preferences/tablet_settings.rst:39
 msgid ""
@@ -96,10 +102,13 @@ msgid ""
 "device (e.g. recent Microsoft Surface devices) or if your tablet does not "
 "work well with WinTab."
 msgstr ""
+"使用指標輸入的方式接收數位板的輸入。這選項取決於數位板驅動程式是否有 Windows Ink "
+"的支援。這是相對較新的方式，所以仍然被認為是實驗性，不過應該也能正常用於繪畫。若您使用的是 N-Trig 設備（例如微軟的 SurFace 平板電腦），"
+"或您的數位板以 WinTab 方式無法正常操作，請改用這個方式試試看。"
 
 #: ../../reference_manual/preferences/tablet_settings.rst:42
 msgid "Advanced Tablet Settings for WinTab"
-msgstr ""
+msgstr "進階 WinTab 數位板設定"
 
 #: ../../reference_manual/preferences/tablet_settings.rst:47
 msgid ""
@@ -108,26 +117,28 @@ msgid ""
 "if it has to choose itself, there will be a tablet offset. This window "
 "allows you to select the appropriate screen resolution."
 msgstr ""
+"使用多台螢幕或使用可以做為螢幕的繪圖平板時，WinTab 可能會讓 Krita "
+"將數位板映射到錯誤的螢幕區域造成畫面偏移，您可以在「映射到自訂區域」手動設定。"
 
 #: ../../reference_manual/preferences/tablet_settings.rst:49
 msgid "Use Information Provided by Tablet"
-msgstr ""
+msgstr "使用數位板提供的資訊"
 
 #: ../../reference_manual/preferences/tablet_settings.rst:50
 msgid "Use the information as given by the tablet."
-msgstr ""
+msgstr "使用 WinTab 數位板驅動程式提供的映射資料。"
 
 #: ../../reference_manual/preferences/tablet_settings.rst:51
 msgid "Map to entire virtual screen"
-msgstr ""
+msgstr "映射到整個虛擬桌面"
 
 #: ../../reference_manual/preferences/tablet_settings.rst:52
 msgid "Use the information as given by Windows."
-msgstr ""
+msgstr "使用 Windows 提供的資料映射到整個虛擬桌面以及多個螢幕。"
 
 #: ../../reference_manual/preferences/tablet_settings.rst:56
 msgid "Map to Custom Area"
-msgstr ""
+msgstr "映射到自訂區域"
 
 #: ../../reference_manual/preferences/tablet_settings.rst:54
 msgid ""
@@ -135,36 +146,37 @@ msgid ""
 "options. You might even need to do trial and error if that is the case, but "
 "at the least you can configure it."
 msgstr ""
+"手動輸入螢幕大小和偏移數值。如果您使用多螢幕且其它設定還會出現感壓筆尖對不上螢幕游標位置時，可改用這個選項，但您可能需要反覆試驗，直到完全符合為止。"
 
 #: ../../reference_manual/preferences/tablet_settings.rst:56
 msgid ""
 "If you have a dual monitor setup and only the top half of the screen is "
 "reachable, you might have to enter the total width of both screens plus the "
 "double height of your monitor in this field."
-msgstr ""
+msgstr "如果您使用雙螢幕，而數位板游標只能在螢幕上半部移動，這時您可能需要輸入兩個螢幕的總寬度和兩倍螢幕高度。"
 
 #: ../../reference_manual/preferences/tablet_settings.rst:60
 msgid ""
 "To access this dialog in Krita versions older than 4.2, you had to do the "
 "following:"
-msgstr ""
+msgstr "若需要在 4.2 之前的舊版 Krita 版本中進入這個對話框，您必須執行以下操作："
 
 #: ../../reference_manual/preferences/tablet_settings.rst:62
 msgid "Put your stylus away from the tablet."
-msgstr ""
+msgstr "將感壓筆移出數位板感應的區域外。"
 
 #: ../../reference_manual/preferences/tablet_settings.rst:63
 msgid ""
 "Start Krita without using a stylus, that is using a mouse or a keyboard."
-msgstr ""
+msgstr "不要使用數位板的感壓筆，而是使用滑鼠或鍵盤啟動 Krita。"
 
 #: ../../reference_manual/preferences/tablet_settings.rst:64
 msgid "Press the :kbd:`Shift` key and hold it."
-msgstr ""
+msgstr "啟動 Krita 後，按著 :kbd:`Shift` 鍵不放。"
 
 #: ../../reference_manual/preferences/tablet_settings.rst:65
 msgid "Touch a tablet with your stylus so Krita would recognize it."
-msgstr ""
+msgstr "現在使用感壓筆碰觸數位板，讓 Krita 進行辨識。"
 
 #: ../../reference_manual/preferences/tablet_settings.rst:67
 msgid ""
@@ -172,6 +184,8 @@ msgid ""
 "the canvas can be caused by a faulty Wacom preference file which is not "
 "removed or replaced by reinstalling the drivers."
 msgstr ""
+"如果手動辨識也無法解決問題，而使用的是 Wacom 數位板，那麼這畫布偏移的問題可能是 Wacom "
+"驅動程式偏好選項設定錯誤或損壞，而這設定檔沒有通過重新安裝驅動程式刪除或置換。您可經由下面方式進行修復。"
 
 #: ../../reference_manual/preferences/tablet_settings.rst:69
 msgid ""
@@ -179,16 +193,19 @@ msgid ""
 "preferences. This should allow Krita to detect the correct settings "
 "automatically."
 msgstr ""
+"要修復這個問題時，請到 Wacom 下載新版驅動程式與 “Wacom Tablet Preference File Utility” ，執行 “"
+"Wacom Tablet Preference File Utility” 清除所有偏好選項，然後移除舊版驅動程式並安裝最新版驅動程式。 這應該能讓 "
+"Krita 自動檢測正確的設置。"
 
 #: ../../reference_manual/preferences/tablet_settings.rst:72
 msgid ""
 "Clearing all wacom preferences will reset your tablet's configuration, thus "
 "you will need to recalibrate/reconfigure it."
-msgstr ""
+msgstr "清除 Wacom 所有設定之後數位板設定會恢復為預設值，因此您需要重新校准和設定。"
 
 #: ../../reference_manual/preferences/tablet_settings.rst:75
 msgid "Tablet Tester"
-msgstr ""
+msgstr "數位板測試器"
 
 #: ../../reference_manual/preferences/tablet_settings.rst:79
 msgid ""
@@ -196,26 +213,28 @@ msgid ""
 "it will open a window with two sections. The left section is the **Drawing "
 "Area** and the right is the **Text Output**."
 msgstr ""
+"這是用於調試數位板書的的特殊功能，當您打開後他包含兩個視窗區域，請以感壓筆在左邊\\ **繪圖區** \\繪製，校准結果會在右邊 \\**文字輸出區**"
+"\\ 顯示數位板輸入的資料。"
 
 #: ../../reference_manual/preferences/tablet_settings.rst:81
 msgid ""
 "If you draw over the Drawing Area, you will see a line appear. If your "
 "tablet is working it should be both a red and blue line."
-msgstr ""
+msgstr "使用數位板感壓筆在繪圖區中繪圖時，會出現顏色軌跡，當您的數位板執行工作時，這裡應該會同時顯示紅色與藍色線。"
 
 #: ../../reference_manual/preferences/tablet_settings.rst:83
 msgid ""
 "The red line represents mouse events. Mouse events are the most basic events "
 "that Krita can pick up. However, mouse events have crude coordinates and "
 "have no pressure sensitivity."
-msgstr ""
+msgstr "紅色代表滑鼠事件。滑鼠事件是 Krita 可以接受的最基本事件，但是滑鼠事件僅有粗略的座標沒有壓力感應。"
 
 #: ../../reference_manual/preferences/tablet_settings.rst:85
 msgid ""
 "The blue line represents the tablet events. The tablet events only show up "
 "when Krita can access your tablet. These have more precise coordinates and "
 "access to sensors like pressure sensitivity."
-msgstr ""
+msgstr "藍色代表數位板事件。僅在 Krita 可以正常使用數位板時才會顯示。這包含精確的座標與壓力感應數據。"
 
 #: ../../reference_manual/preferences/tablet_settings.rst:89
 msgid ""
@@ -223,17 +242,19 @@ msgid ""
 "cannot access your tablet. Check out the :ref:`page on drawing tablets "
 "<drawing_tablets>` for suggestions on what is causing this."
 msgstr ""
+"如果在繪圖區繪圖時沒有顯示藍線，這表示 Krita 無法正常使用您的數位板。請查看\\ :ref:`數位繪圖板<drawing_tablets>`\\ "
+"頁面取得更多詳細資料。"
 
 #: ../../reference_manual/preferences/tablet_settings.rst:91
 msgid ""
 "When you draw a line, the output on the right will show all sorts of text "
 "output. This text output can be attached to a help request or a bug report "
 "to figure out what is going on."
-msgstr ""
+msgstr "當您以感壓筆在繪圖區繪製一條線時，右邊文字區域會顯示各種輸出。這輸出的文字內容可以附加到請求協助或錯誤報告中，以讓我們瞭解發生什麼問題。"
 
 #: ../../reference_manual/preferences/tablet_settings.rst:94
 msgid "External Links"
-msgstr ""
+msgstr "外部連結"
 
 #: ../../reference_manual/preferences/tablet_settings.rst:96
 msgid ""
@@ -241,15 +262,17 @@ msgid ""
 "advantage <https://www.davidrevoy.com/article182/calibrating-wacom-stylus-"
 "pressure-on-krita>`_."
 msgstr ""
+"`David Revoy 數位板感壓曲線調整教學 <https://www.davidrevoy.com/article182/calibrating-"
+"wacom-stylus-pressure-on-krita>`_."
 
 #: ../../reference_manual/preferences/tablet_settings.rst:12
 msgid "Preferences"
-msgstr ""
+msgstr "選項"
 
 #: ../../reference_manual/preferences/tablet_settings.rst:12
 msgid "Settings"
-msgstr ""
+msgstr "設定"
 
 #: ../../reference_manual/preferences/tablet_settings.rst:12
 msgid "Pressure Curve"
-msgstr ""
+msgstr "數位板感壓曲線"
