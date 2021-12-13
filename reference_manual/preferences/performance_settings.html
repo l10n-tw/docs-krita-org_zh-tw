@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-12-13T07:14:17" />
+  <meta property="og:article:modified_time" content="2021-12-13T14:14:13" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="Krita 的效能設定。" name="description" />
 
@@ -278,7 +278,7 @@
 <p>這些偏好選項允許您組織並設定 <strong class="program">Krita</strong> 的效能，例如記憶體、CPU、快取這些與效能有密切關係的項目。這頁面內所有項目經變更後需要重新啟動 <strong class="program">Krita</strong> 才會生效。</p>
 <section id="ram">
 <h2>記憶體<a class="headerlink" href="#ram" title="本標題的永久連結">¶</a></h2>
-<p>「隨機存取記憶體」（RAM 或 Random Access Memory）以下簡稱「記憶體」，是一種容量小但讀寫速度很快的暫時容器，關機後資料就會消失；硬碟則用作永久儲存資料的容器，相對記憶體而言容量很大但是讀寫速度很慢。而 CPU 運算時會先將資料由硬碟讀進記憶體中以加快處裡速度，由硬碟抄寫進記憶體與清空記憶體會使用一些時間。因此恰當分配與運用電腦有限的記憶體，可提高 :program: <cite>Krita</cite> 的效能 。</p>
+<p>「隨機存取記憶體」（RAM 或 Random Access Memory）以下簡稱「記憶體」，是一種容量小但讀寫速度很快的暫時容器，關機後資料就會消失；硬碟則用作永久儲存資料的容器，相對記憶體而言容量很大但是讀寫速度很慢。而 CPU 運算時會先將資料由硬碟讀進記憶體中以加快處裡速度，由硬碟抄寫進記憶體與清空記憶體會使用一些時間。因此恰當分配與運用電腦有限的記憶體，可提高 <strong class="program">Krita</strong> 的效能 。</p>
 <p>您可經由這些設定選擇要將多少資源分配給 <strong class="program">Krita</strong> 使用，並且每次 <strong class="program">Krita</strong> 啟動都會使用這些設定。因此這頁面內所有設定經變更後都需要重新啟動 <strong class="program">Krita</strong> 才會生效。</p>
 <dl>
 <dt>記憶體上限</dt><dd><p>這是指定給 <strong class="program">Krita</strong> 啟動後可用的記憶體大小上限。這裡以百分比與右側實際大小兩種方式顯示，因此您可以精確指定 <strong class="program">Krita</strong> 不要使用佔用超過上限的記憶體，讓電腦可以保持背景執行網路瀏覽器或播放您的音樂。</p>
@@ -299,9 +299,9 @@
 <section id="swapping">
 <h2>置換檔案大小<a class="headerlink" href="#swapping" title="本標題的永久連結">¶</a></h2>
 <dl class="simple">
-<dt>檔案大小限制</dt><dd><p>指定 <strong class="program">Krita</strong> 可以使用的交換檔空間大小上限。若資料同時超過這個記憶體與交換檔的大小上限，可能會造成 <strong class="program">Krita</strong> 軟體凍結。</p>
+<dt>檔案大小限制</dt><dd><p>指定 <strong class="program">Krita</strong> 可以使用的交換檔空間大小上限。若資料大小同時超過記憶體與交換檔的大小上限，可能會造成 <strong class="program">Krita</strong> 軟體凍結。</p>
 </dd>
-<dt>置換檔案位置</dt><dd><p>指定 <strong class="program">Krita</strong> 交換檔保存於硬碟的位置。這個交換檔位置對於 <strong class="program">Krita</strong> 性能也會有影響，例如放在固態硬碟 (SSD) 會比傳統機械硬碟 (HDD) 來得快。有些人會使用 USB 外接碟作為交換檔空間，但前提是這 USB 外接碟性能要夠好，且也受到 USB 連接埠速率所影響，例如 USB 3.0 會比 USB 2.0 快。若 USB 外接碟只支援到 2.0 ，那就算接到電腦 USB 3.0 的連接埠，那依然也只能用 USB 2.0 速率。</p>
+<dt>置換檔案位置</dt><dd><p>指定 <strong class="program">Krita</strong> 交換檔保存的位置。這個交換檔位置對於 <strong class="program">Krita</strong> 性能也會有影響，例如放在固態硬碟 (SSD) 會比傳統機械硬碟 (HDD) 來得快。有些人會使用 USB 外接碟作為交換檔空間，但前提是這 USB 外接碟性能要夠好，且也受到 USB 連接埠速率所影響，例如 USB 3.0 連接埠會比 USB 2.0 連接埠快，但是若 USB 外接碟本身只支援到 USB 2.0 ，那就算把它接到電腦 USB 3.0 或 USB 3.1 的連接埠，它依然也只能以 USB 2.0 速率傳輸。</p>
 </dd>
 </dl>
 </section>
@@ -313,7 +313,7 @@
 <dl class="simple">
 <dt>CPU 限制</dt><dd><p>指定 Krita 可使用的執行緒數量上限。</p>
 </dd>
-<dt>動畫繪製平行副本上限</dt><dd><p>Krita 在繪製動畫時，會先將影像複製為多個複本，對大值由 CPU 核心數決定，然後在盡可能多的 CPU 執行緒中平行同時處理以提高速度。這表示每一份複本都需要佔用額外的記憶體，如果處理的動畫很龐大又複雜時，為了不耗盡記憶體，這時有必要限制處理動畫使用的執行緒數量。</p>
+<dt>動畫繪製平行副本上限</dt><dd><p>Krita 在繪製動畫時，會先將影像複製為多個複本，對大值由 CPU 核心數量決定，然後在盡可能多的 CPU 執行緒中平行同時處理以提高速度。這表示每一份複本都需要佔用額外的記憶體，如果處理的動畫很龐大又複雜時，為了不耗盡記憶體，這時有必要限制處理動畫使用的執行緒數量。</p>
 </dd>
 </dl>
 </section>
@@ -352,8 +352,8 @@
 <p class="admonition-title">警告</p>
 <p>請確保您的電腦有足夠的實體記憶體。實體記憶體必須*大於*您在 :guilabel:<cite>一般</cite>中所指定的容量，否則您可能會遇到系統凍結鎖死的狀況。</p>
 <ul class="simple">
-<li><p>每秒 25 FPS 的FullHD （全高清1080P）動畫需要 200MiB 記憶體。</p></li>
-<li><p>每秒 25 FPS 的 4K UltraHD （超高清 4K）動畫需要 800MiB 記憶體。</p></li>
+<li><p>每秒 25 FPS 的 FullHD （高畫質 1080P）動畫需要 200MiB 記憶體。</p></li>
+<li><p>每秒 25 FPS 的 4K UltraHD （超高畫質 4K）動畫需要 800MiB 記憶體。</p></li>
 </ul>
 </div>
 </dd>

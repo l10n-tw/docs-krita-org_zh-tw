@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-12-13T07:14:17" />
+  <meta property="og:article:modified_time" content="2021-12-13T14:14:13" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="Krita 命令列選項概述。" name="description" />
 
@@ -276,11 +276,11 @@
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-krita-export-filename">
 <span class="sig-name descname"><span class="pre">--export-filename</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;filename&gt;</span></span><a class="headerlink" href="#cmdoption-krita-export-filename" title="本定義的永久連結">¶</a></dt>
-<dd><p>「Export filename」請改為匯出時指定的檔案名稱。</p>
+<dd><p>請將「Export filename」改為匯出時指定的檔案名稱。</p>
 </dd></dl>
 
 <dl class="simple">
-<dt>exportfilename</dt><dd><p>Replace this with the name of the output file. Use a different extension to change the file format.</p>
+<dt>exportfilename</dt><dd><p>將這段文字更換為輸出時的檔案名稱。使用不同延伸檔名可轉存不同檔案格式。</p>
 </dd>
 </dl>
 <p>範例：</p>
@@ -303,7 +303,7 @@
 <h2>匯出為 PDF<a class="headerlink" href="#pdf-export" title="本標題的永久連結">¶</a></h2>
 <p>PDF 格式的匯出稍微不同，這時須使用 <code class="docutils literal notranslate"><span class="pre">--export-pdf</span></code> 選項。</p>
 <p><code class="docutils literal notranslate"><span class="pre">krita</span> <span class="pre">file.png</span> <span class="pre">--export-pdf</span> <span class="pre">--export-filename</span> <span class="pre">final.pdf</span></code></p>
-<p>這一行指令會將 <code class="docutils literal notranslate"><span class="pre">file.png</span></code> 檔案轉存成一個叫做 <a href="#id1"><span class="problematic" id="id2">``</span></a>final.pdf``的 PDF 檔案。</p>
+<p>這一行指令會將 <code class="docutils literal notranslate"><span class="pre">file.png</span></code> 檔案轉存成一個叫做 final.pdf 的 PDF 檔案。</p>
 <div class="admonition warning">
 <p class="admonition-title">警告</p>
 <p>因為得到的結果並不正確，此功能已經在 3.1 版移除。</p>
@@ -376,8 +376,8 @@
 <p>範例：</p>
 <p><code class="docutils literal notranslate"><span class="pre">krita</span> <span class="pre">file.kra</span> <span class="pre">--file-layer</span> <span class="pre">image.png</span></code></p>
 <p><code class="docutils literal notranslate"><span class="pre">krita</span> <span class="pre">--new-image</span> <span class="pre">RGBA,U8,1000,1000</span> <span class="pre">--file-layer</span> <span class="pre">image.jpg</span></code></p>
-<p>If an instance of Krita is already running and Multiple <a class="reference internal" href="preferences/general_settings.html#window-settings"><span class="std std-ref">instances</span></a> are disabled, then this option can be used alone to add a file-layer to the running krita document.</p>
-<p>Example:  <code class="docutils literal notranslate"><span class="pre">krita</span> <span class="pre">--file-layer</span> <span class="pre">image.png</span></code></p>
+<p>如果系統中已有一個 Krita 正在執行，而且<a class="reference internal" href="preferences/general_settings.html#window-settings"><span class="std std-ref">只允許一個 Krita 實例執行</span></a>是停用的狀態，那麼這個指令會將檔案圖層添加到執行中 Krita 檔前的影像中。</p>
+<p>例如： <code class="docutils literal notranslate"><span class="pre">krita</span> <span class="pre">--file-layer</span> <span class="pre">image.png</span></code></p>
 </dd></dl>
 
 </div>
