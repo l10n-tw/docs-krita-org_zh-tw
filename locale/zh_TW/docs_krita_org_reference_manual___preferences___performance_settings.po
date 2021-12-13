@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Krita Manual 4.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-09-03 08:09+0000\n"
-"PO-Revision-Date: 2021-12-12 18:09+0000\n"
+"PO-Revision-Date: 2021-12-13 14:09+0000\n"
 "Last-Translator: BiseChen <bise.chen@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <http://weblate.slat.org/projects/"
 "krita-docs/3-reference_manual___preferences___performance_settings/zh_Hant/>"
@@ -71,7 +71,7 @@ msgstr ""
 "「隨機存取記憶體」（RAM 或 Random Access Memory）以下簡稱「記憶體」，是一種容量小但讀寫速度很快的暫時容器，關機後資料就會消失；硬"
 "碟則用作永久儲存資料的容器，相對記憶體而言容量很大但是讀寫速度很慢。而 CPU "
 "運算時會先將資料由硬碟讀進記憶體中以加快處裡速度，由硬碟抄寫進記憶體與清空記憶體會使用一些時間。因此恰當分配與運用電腦有限的記憶體，可提高 "
-":program: `Krita` 的效能 。"
+":program:`Krita` 的效能 。"
 
 #: ../../reference_manual/preferences/performance_settings.rst:27
 msgid ""
@@ -187,7 +187,7 @@ msgid ""
 "memory limit above, and this Swap File limit, it can't do anything anymore "
 "(and will freeze)."
 msgstr ""
-"指定 :program:`Krita` 可以使用的交換檔空間大小上限。若資料同時超過這個記憶體與交換檔的大小上限，可能會造成 "
+"指定 :program:`Krita` 可以使用的交換檔空間大小上限。若資料大小同時超過記憶體與交換檔的大小上限，可能會造成 "
 ":program:`Krita` 軟體凍結。"
 
 #: ../../reference_manual/preferences/performance_settings.rst:55
@@ -201,10 +201,10 @@ msgid ""
 "faster than Hard Disk Drives (HDD). Some people even like to use USB-sticks "
 "for the swap file location."
 msgstr ""
-"指定 :program:`Krita` 交換檔保存於硬碟的位置。這個交換檔位置對於 :program:`Krita` 性能也會有影響，例如放在固態硬碟 "
+"指定 :program:`Krita` 交換檔保存的位置。這個交換檔位置對於 :program:`Krita` 性能也會有影響，例如放在固態硬碟 "
 "(SSD) 會比傳統機械硬碟 (HDD) 來得快。有些人會使用 USB 外接碟作為交換檔空間，但前提是這 USB 外接碟性能要夠好，且也受到 USB "
-"連接埠速率所影響，例如 USB 3.0 會比 USB 2.0 快。若 USB 外接碟只支援到 2.0 ，那就算接到電腦 USB 3.0 的連接埠，"
-"那依然也只能用 USB 2.0 速率。"
+"連接埠速率所影響，例如 USB 3.0 連接埠會比 USB 2.0 連接埠快，但是若 USB 外接碟本身只支援到 USB 2.0 ，那就算把它接到電腦 "
+"USB 3.0 或 USB 3.1 的連接埠，它依然也只能以 USB 2.0 速率傳輸。"
 
 #: ../../reference_manual/preferences/performance_settings.rst:58
 msgid "Advanced"
@@ -241,8 +241,8 @@ msgid ""
 "copies can be quite heavy on your machine, so in that case try lowering this "
 "value."
 msgstr ""
-"Krita 在繪製動畫時，會先將影像複製為多個複本，對大值由 CPU 核心數決定，然後在盡可能多的 CPU 執行緒中平行同時處理以提高速度。這表示每一份複"
-"本都需要佔用額外的記憶體，如果處理的動畫很龐大又複雜時，為了不耗盡記憶體，這時有必要限制處理動畫使用的執行緒數量。"
+"Krita 在繪製動畫時，會先將影像複製為多個複本，對大值由 CPU 核心數量決定，然後在盡可能多的 CPU 執行緒中平行同時處理以提高速度。這表示每一份"
+"複本都需要佔用額外的記憶體，如果處理的動畫很龐大又複雜時，為了不耗盡記憶體，這時有必要限制處理動畫使用的執行緒數量。"
 
 #: ../../reference_manual/preferences/performance_settings.rst:71
 msgid "Other"
@@ -388,12 +388,12 @@ msgstr ""
 
 #: ../../reference_manual/preferences/performance_settings.rst:108
 msgid "For 1 second of FullHD @ 25 FPS you will need 200 extra MiB of Memory."
-msgstr "每秒 25 FPS 的FullHD （全高清1080P）動畫需要 200MiB 記憶體。"
+msgstr "每秒 25 FPS 的 FullHD （高畫質 1080P）動畫需要 200MiB 記憶體。"
 
 #: ../../reference_manual/preferences/performance_settings.rst:109
 msgid ""
 "For 1 second of 4K UltraHD@ 25 FPS, you will need 800 extra MiB of Memory."
-msgstr "每秒 25 FPS 的 4K UltraHD （超高清 4K）動畫需要 800MiB 記憶體。"
+msgstr "每秒 25 FPS 的 4K UltraHD （超高畫質 4K）動畫需要 800MiB 記憶體。"
 
 #: ../../reference_manual/preferences/performance_settings.rst:114
 msgid "On-disk"
