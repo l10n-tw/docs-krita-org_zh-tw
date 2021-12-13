@@ -21,9 +21,9 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-12-12T18:13:31" />
+  <meta property="og:article:modified_time" content="2021-12-13T07:14:17" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<meta content="Configuring the tablet in Krita." name="description" property="og:description" />
+<meta content="在 Krita 設定數位板（繪圖板）。" name="description" property="og:description" />
 
   
   
@@ -164,9 +164,9 @@
 <li class="toctree-l3"><a class="reference internal" href="python_plugin_manager.html">「PyThon 外掛程式管理器」設定</a></li>
 <li class="toctree-l3"><a class="reference internal" href="shortcut_settings.html">「鍵盤快捷鍵」設定</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">「數位板」設定</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#advanced-tablet-settings-for-wintab">Advanced Tablet Settings for WinTab</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#tablet-tester">Tablet Tester</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#external-links">External Links</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#advanced-tablet-settings-for-wintab">進階 WinTab 數位板設定</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tablet-tester">數位板測試器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#external-links">外部連結</a></li>
 </ul>
 </li>
 </ul>
@@ -274,74 +274,74 @@
 <span id="index-0"></span><span id="id1"></span><h1>「數位板」設定<a class="headerlink" href="#tablet-settings" title="本標題的永久連結">¶</a></h1>
 <img alt="../../_images/Krita_Preferences_Tablet_Settings.png" src="../../_images/Krita_Preferences_Tablet_Settings.png" />
 <dl>
-<dt>數位板</dt><dd><p>Input Pressure Global Curve : This is the global curve setting that your tablet will use in Krita. The settings here will make your tablet feel soft or hard globally.</p>
+<dt>數位板</dt><dd><p>全域筆刷輸入調整曲線：這是您的繪圖板將在 Krita 中使用的全域曲線設定，這裡的設定會影響您繪圖板壓力手感柔軟或偏硬。</p>
 </dd>
-<dt>Use Mouse Events for Right and Middle clicks.</dt><dd><p>Some tablet devices don't tell us whether the side buttons on a stylus. If you have such a device, you can try activate this workaround. Krita will try to read right and middle-button clicks as if they were coming from a mouse instead of a tablet. It may or may not work on your device (depends on the tablet driver implementation). After changing this option Krita should be restarted.</p>
+<dt>透過滑鼠事件讀取右鍵和中間鍵點擊。</dt><dd><p>某些二合一平板電腦無法得知是否有手寫筆上的側面按鍵。如果您有這樣的設備，可以嘗試啟用這個解決方式。Krita 會嘗試讀取右鍵和中間鍵的點擊，以模擬這些動作來自滑鼠而不是這一台平板電腦。這功能可能會也可能不會在您的設備上正常運作，這取決於平板電腦驅動程式的執行效果。變更這個選項後需要重新啟動 Krita 。</p>
 <div class="versionadded">
 <p><span class="versionmodified added">在 4.2 版本新加入.</span></p>
 </div>
 </dd>
-<dt>Use Tablet Driver Stamps For Brush Speed</dt><dd><p>This changes the way freehand brush smoothing works in Krita by using the driver's timestamps instead of a timer-based one.</p>
+<dt>以數位板驅動程式提供的時間來計算筆刷速度</dt><dd><p>勾選時是經由驅動程式的時間標記改變 Krita 徒手繪圖筆刷工具防抖動平滑化，不勾選時則是使用計時器的時間標記。</p>
 <div class="versionadded">
 <p><span class="versionmodified added">在 5.0 版本新加入.</span></p>
 </div>
 </dd>
-<dt>For Krita 3.3 or later:Tablet Input API</dt><dd><p>On Windows 8 or above only.</p>
+<dt>數位板輸入 API（Krita 3.3 或更高版本）</dt><dd><p>以下項目僅適用於 Windows 8 及以上作業系統版本。WIndows 8 及以上的版本設備都有兩種數位板軟體連接方式，有些設備則只能在一種連接方式正常使用。變更後需要重新啟動。</p>
 <dl class="simple">
-<dt>WinTab</dt><dd><p>Use the WinTab API to receive tablet pen input. This is the API being used before Krita 3.3. This option is recommended for most Wacom tablets.</p>
+<dt>使用 WinTab 方式連接</dt><dd><p>以 WinTab API 方式接收感壓筆的輸入。雖然這是 Krita 3.3 版之前使用的API，但對於大多數 Wacom 數位板使用者建議使用此選項。</p>
 </dd>
-<dt>Windows 8+ Pointer Input</dt><dd><p>Use the Pointer Input messages to receive tablet pen input. This option depends on Windows Ink support from the tablet driver. This is a relatively new addition so it's still considered to be experimental, but it should work well enough for painting. You should try this if you are using an N-Trig device (e.g. recent Microsoft Surface devices) or if your tablet does not work well with WinTab.</p>
+<dt>Windows 8+ 指標輸入</dt><dd><p>使用指標輸入的方式接收數位板的輸入。這選項取決於數位板驅動程式是否有 Windows Ink 的支援。這是相對較新的方式，所以仍然被認為是實驗性，不過應該也能正常用於繪畫。若您使用的是 N-Trig 設備（例如微軟的 SurFace 平板電腦），或您的數位板以 WinTab 方式無法正常操作，請改用這個方式試試看。</p>
 </dd>
 </dl>
 </dd>
 </dl>
 <section id="advanced-tablet-settings-for-wintab">
-<h2>Advanced Tablet Settings for WinTab<a class="headerlink" href="#advanced-tablet-settings-for-wintab" title="本標題的永久連結">¶</a></h2>
+<h2>進階 WinTab 數位板設定<a class="headerlink" href="#advanced-tablet-settings-for-wintab" title="本標題的永久連結">¶</a></h2>
 <img alt="../../_images/advanced-settings-tablet.png" src="../../_images/advanced-settings-tablet.png" />
-<p>When using multiple monitors or using a tablet that is also a screen, Krita will get conflicting information about how big your screen is, and sometimes if it has to choose itself, there will be a tablet offset. This window allows you to select the appropriate screen resolution.</p>
+<p>使用多台螢幕或使用可以做為螢幕的繪圖平板時，WinTab 可能會讓 Krita 將數位板映射到錯誤的螢幕區域造成畫面偏移，您可以在「映射到自訂區域」手動設定。</p>
 <dl>
-<dt>Use Information Provided by Tablet</dt><dd><p>Use the information as given by the tablet.</p>
+<dt>使用數位板提供的資訊</dt><dd><p>使用 WinTab 數位板驅動程式提供的映射資料。</p>
 </dd>
-<dt>Map to entire virtual screen</dt><dd><p>Use the information as given by Windows.</p>
+<dt>映射到整個虛擬桌面</dt><dd><p>使用 Windows 提供的資料映射到整個虛擬桌面以及多個螢幕。</p>
 </dd>
-<dt>Map to Custom Area</dt><dd><p>Type in the numbers manually. Use this when you have tried the other options. You might even need to do trial and error if that is the case, but at the least you can configure it.</p>
-<p>If you have a dual monitor setup and only the top half of the screen is reachable, you might have to enter the total width of both screens plus the double height of your monitor in this field.</p>
+<dt>映射到自訂區域</dt><dd><p>手動輸入螢幕大小和偏移數值。如果您使用多螢幕且其它設定還會出現感壓筆尖對不上螢幕游標位置時，可改用這個選項，但您可能需要反覆試驗，直到完全符合為止。</p>
+<p>如果您使用雙螢幕，而數位板游標只能在螢幕上半部移動，這時您可能需要輸入兩個螢幕的總寬度和兩倍螢幕高度。</p>
 </dd>
 </dl>
 <div class="versionadded">
-<p><span class="versionmodified added">在 4.2 版本新加入: </span>To access this dialog in Krita versions older than 4.2, you had to do the following:</p>
+<p><span class="versionmodified added">在 4.2 版本新加入: </span>若需要在 4.2 之前的舊版 Krita 版本中進入這個對話框，您必須執行以下操作：</p>
 <ol class="arabic simple">
-<li><p>Put your stylus away from the tablet.</p></li>
-<li><p>Start Krita without using a stylus, that is using a mouse or a keyboard.</p></li>
-<li><p>Press the <kbd class="kbd docutils literal notranslate">Shift</kbd> key and hold it.</p></li>
-<li><p>Touch a tablet with your stylus so Krita would recognize it.</p></li>
+<li><p>將感壓筆移出數位板感應的區域外。</p></li>
+<li><p>不要使用數位板的感壓筆，而是使用滑鼠或鍵盤啟動 Krita。</p></li>
+<li><p>啟動 Krita 後，按著 <kbd class="kbd docutils literal notranslate">Shift</kbd> 鍵不放。</p></li>
+<li><p>現在使用感壓筆碰觸數位板，讓 Krita 進行辨識。</p></li>
 </ol>
 </div>
-<p>If adjusting this doesn't work, and if you have a Wacom tablet, an offset in the canvas can be caused by a faulty Wacom preference file which is not removed or replaced by reinstalling the drivers.</p>
-<p>To fix it, use the “Wacom Tablet Preference File Utility” to clear all the preferences. This should allow Krita to detect the correct settings automatically.</p>
+<p>如果手動辨識也無法解決問題，而使用的是 Wacom 數位板，那麼這畫布偏移的問題可能是 Wacom 驅動程式偏好選項設定錯誤或損壞，而這設定檔沒有通過重新安裝驅動程式刪除或置換。您可經由下面方式進行修復。</p>
+<p>要修復這個問題時，請到 Wacom 下載新版驅動程式與 “Wacom Tablet Preference File Utility” ，執行 “Wacom Tablet Preference File Utility” 清除所有偏好選項，然後移除舊版驅動程式並安裝最新版驅動程式。 這應該能讓 Krita 自動檢測正確的設置。</p>
 <div class="admonition warning">
 <p class="admonition-title">警告</p>
-<p>Clearing all wacom preferences will reset your tablet's configuration, thus you will need to recalibrate/reconfigure it.</p>
+<p>清除 Wacom 所有設定之後數位板設定會恢復為預設值，因此您需要重新校准和設定。</p>
 </div>
 </section>
 <section id="tablet-tester">
-<h2>Tablet Tester<a class="headerlink" href="#tablet-tester" title="本標題的永久連結">¶</a></h2>
+<h2>數位板測試器<a class="headerlink" href="#tablet-tester" title="本標題的永久連結">¶</a></h2>
 <div class="versionadded">
 <p><span class="versionmodified added">在 4.1 版本新加入.</span></p>
 </div>
-<p>This is a special feature for debugging tablet input. When you click on it, it will open a window with two sections. The left section is the <strong>Drawing Area</strong> and the right is the <strong>Text Output</strong>.</p>
-<p>If you draw over the Drawing Area, you will see a line appear. If your tablet is working it should be both a red and blue line.</p>
-<p>The red line represents mouse events. Mouse events are the most basic events that Krita can pick up. However, mouse events have crude coordinates and have no pressure sensitivity.</p>
-<p>The blue line represents the tablet events. The tablet events only show up when Krita can access your tablet. These have more precise coordinates and access to sensors like pressure sensitivity.</p>
+<p>這是用於調試數位板書的的特殊功能，當您打開後他包含兩個視窗區域，請以感壓筆在左邊<strong>繪圖區</strong> 繪製，校准結果會在右邊 **文字輸出區**顯示數位板輸入的資料。</p>
+<p>使用數位板感壓筆在繪圖區中繪圖時，會出現顏色軌跡，當您的數位板執行工作時，這裡應該會同時顯示紅色與藍色線。</p>
+<p>紅色代表滑鼠事件。滑鼠事件是 Krita 可以接受的最基本事件，但是滑鼠事件僅有粗略的座標沒有壓力感應。</p>
+<p>藍色代表數位板事件。僅在 Krita 可以正常使用數位板時才會顯示。這包含精確的座標與壓力感應數據。</p>
 <div class="admonition important">
 <p class="admonition-title">重要</p>
-<p>If you have no blue line when drawing on the lefthand drawing area, Krita cannot access your tablet. Check out the <a class="reference internal" href="../../user_manual/drawing_tablets.html#drawing-tablets"><span class="std std-ref">page on drawing tablets</span></a> for suggestions on what is causing this.</p>
+<p>如果在繪圖區繪圖時沒有顯示藍線，這表示 Krita 無法正常使用您的數位板。請查看<a class="reference internal" href="../../user_manual/drawing_tablets.html#drawing-tablets"><span class="std std-ref">數位繪圖板</span></a>頁面取得更多詳細資料。</p>
 </div>
-<p>When you draw a line, the output on the right will show all sorts of text output. This text output can be attached to a help request or a bug report to figure out what is going on.</p>
+<p>當您以感壓筆在繪圖區繪製一條線時，右邊文字區域會顯示各種輸出。這輸出的文字內容可以附加到請求協助或錯誤報告中，以讓我們瞭解發生什麼問題。</p>
 </section>
 <section id="external-links">
-<h2>External Links<a class="headerlink" href="#external-links" title="本標題的永久連結">¶</a></h2>
-<p><a class="reference external" href="https://www.davidrevoy.com/article182/calibrating-wacom-stylus-pressure-on-krita">David Revoy wrote an indepth guide on using this feature to maximum advantage</a>.</p>
+<h2>外部連結<a class="headerlink" href="#external-links" title="本標題的永久連結">¶</a></h2>
+<p><a class="reference external" href="https://www.davidrevoy.com/article182/calibrating-wacom-stylus-pressure-on-krita">David Revoy 數位板感壓曲線調整教學</a>.</p>
 </section>
 </section>
 
@@ -368,7 +368,7 @@
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>0fc6b03</code>
+          修訂版本 <code>3ae1b6b</code>
         </span>
       
 
