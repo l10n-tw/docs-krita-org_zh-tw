@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Krita Manual 4.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-19 22:30+0800\n"
-"PO-Revision-Date: 2021-09-14 15:06+0000\n"
+"PO-Revision-Date: 2021-12-13 07:09+0000\n"
 "Last-Translator: BiseChen <bise.chen@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <http://weblate.slat.org/projects/"
 "krita-docs/3-reference_manual___linux_command_line/zh_Hant/>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.8\n"
+"X-Generator: Weblate 4.8.1\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../../reference_manual/linux_command_line.rst:1
@@ -55,7 +55,7 @@ msgstr "你可以在終端機模式使用以下命令和參數快速匯出檔案
 
 #: ../../reference_manual/linux_command_line.rst:29
 msgid "``krita importfilename --export --export-filename exportfilename``"
-msgstr ""
+msgstr "``krita 匯入檔案名稱 --export --export-filename exportfilename``"
 
 #: ../../reference_manual/linux_command_line.rst:34
 msgid "importfilename"
@@ -63,17 +63,17 @@ msgstr ""
 
 #: ../../reference_manual/linux_command_line.rst:34
 msgid "Replace this with the filename of the file you want to manipulate."
-msgstr ""
+msgstr "將「importfilename」更換為您要匯入的檔案名稱。"
 
 #: ../../reference_manual/linux_command_line.rst:38
 msgid "Export a file selects the export option."
-msgstr ""
+msgstr "匯出檔案時使用的選項。"
 
 #: ../../reference_manual/linux_command_line.rst:42
 msgid ""
 "Export filename says that the following word is the filename it should be "
 "exported to."
-msgstr ""
+msgstr "「Export filename」請改為匯出時指定的檔案名稱。"
 
 #: ../../reference_manual/linux_command_line.rst:45
 msgid "exportfilename"
@@ -96,17 +96,18 @@ msgstr ""
 
 #: ../../reference_manual/linux_command_line.rst:51
 msgid "This line takes the file ``file.png`` and saves it as ``file.jpg``."
-msgstr ""
+msgstr "這一行命令會將 ``file.png`` 轉存為 ``file.jpg``。"
 
 #: ../../reference_manual/linux_command_line.rst:57
 msgid "Export animation to the given filename and exit."
-msgstr ""
+msgstr "將動畫導出到指定的檔案名稱並退出。"
 
 #: ../../reference_manual/linux_command_line.rst:59
 msgid ""
 "If a KRA file has no animation, then this command prints \"This file has no "
 "animation.\" error and does nothing."
 msgstr ""
+"如果 KRA 檔案裡沒有動畫，則此命令會在命令列打出 \"This file has no animation.\" 的錯誤訊息之後什麼也不會做。"
 
 #: ../../reference_manual/linux_command_line.rst:61
 msgid "``krita --export-sequence --export-filename file.png test.kra``"
@@ -118,6 +119,8 @@ msgid ""
 "filename (*file.png*), to determine the sequence fileformat('png') and the "
 "frame prefix ('file')."
 msgstr ""
+"這一行命令是使用 *test.kra* 檔案的動畫，以 --export-sequence 指令確定序列，並使用 --export-filename "
+"(file.png) 指令來匯出前綴名稱為 `file` 的 `PNG` 格式的檔案。"
 
 #: ../../reference_manual/linux_command_line.rst:67
 msgid "PDF export"
@@ -125,7 +128,7 @@ msgstr "匯出為 PDF"
 
 #: ../../reference_manual/linux_command_line.rst:69
 msgid "PDF export looks a bit different, using the ``--export-pdf`` option."
-msgstr ""
+msgstr "PDF 格式的匯出稍微不同，這時須使用 ``--export-pdf`` 選項。"
 
 #: ../../reference_manual/linux_command_line.rst:71
 msgid "``krita file.png --export-pdf --export-filename final.pdf``"
@@ -133,11 +136,11 @@ msgstr ""
 
 #: ../../reference_manual/linux_command_line.rst:73
 msgid "This option exports the file ``file.png`` as a PDF file."
-msgstr ""
+msgstr "這一行指令會將 ``file.png`` 檔案轉存成一個叫做 ``final.pdf``的 PDF 檔案。"
 
 #: ../../reference_manual/linux_command_line.rst:77
 msgid "This has been removed from 3.1 because the results were incorrect."
-msgstr ""
+msgstr "因為得到的結果並不正確，此功能已經在 3.1 版移除。"
 
 #: ../../reference_manual/linux_command_line.rst:80
 msgid "Open with Custom Screen DPI"
@@ -146,11 +149,11 @@ msgstr "以自訂顯示器 DPI 開啟"
 #: ../../reference_manual/linux_command_line.rst:82
 #: ../../reference_manual/linux_command_line.rst:88
 msgid "Open Krita with specified Screen DPI."
-msgstr ""
+msgstr "以指定的螢幕解析度（DPI）來啟動 Krita。"
 
 #: ../../reference_manual/linux_command_line.rst:90
 msgid "For example:"
-msgstr ""
+msgstr "例如："
 
 #: ../../reference_manual/linux_command_line.rst:92
 msgid "``krita --dpi <72,72>``"
@@ -166,6 +169,7 @@ msgid ""
 "for example, create a shortcut to Krita that opens a given template, so you "
 "can get to work immediately!"
 msgstr ""
+"啟動 Krita 定自動打開指定的模版。您可以使用這種方式建立桌面捷徑，以這種方式來在啟動 Krita 時自動打開指定的模版，這樣就可以馬上進行工作了！"
 
 #: ../../reference_manual/linux_command_line.rst:99
 msgid "``krita --template templatename.desktop``"
@@ -173,13 +177,15 @@ msgstr ""
 
 #: ../../reference_manual/linux_command_line.rst:105
 msgid "Selects the template option."
-msgstr ""
+msgstr "用來指定磨板的參數。"
 
 #: ../../reference_manual/linux_command_line.rst:107
 msgid ""
 "All templates are saved with the .desktop extension. You can find templates "
 "in the .local/share/krita/template or in the install folder of Krita."
 msgstr ""
+"所有模板都以 .desktop 延伸檔名保存。您可以在`` .local/share/krita/template`` 或 Krita "
+"安裝目錄中找到模板。"
 
 #: ../../reference_manual/linux_command_line.rst:109
 msgid "``krita --template BD-EuroTemplate.desktop``"
@@ -187,7 +193,7 @@ msgstr ""
 
 #: ../../reference_manual/linux_command_line.rst:111
 msgid "This opens the European BD comic template with Krita."
-msgstr ""
+msgstr "這條指令會在 Krita 啟動後打開歐式 BD 漫畫模板。"
 
 #: ../../reference_manual/linux_command_line.rst:113
 msgid "``krita --template BD-EuroTemplate.desktop BD-EuroTemplate.desktop``"
@@ -195,7 +201,7 @@ msgstr ""
 
 #: ../../reference_manual/linux_command_line.rst:115
 msgid "This opens the European BD template twice, in separate documents."
-msgstr ""
+msgstr "這條指令會在啟動 Krita 後打開兩個獨立的歐式 BD 漫畫模板。"
 
 #: ../../reference_manual/linux_command_line.rst:118
 msgid "Start up"
@@ -203,19 +209,19 @@ msgstr "啟動參數"
 
 #: ../../reference_manual/linux_command_line.rst:126
 msgid "Starts krita without showing the splash screen."
-msgstr ""
+msgstr "啟動 Krita 時不顯示啟動畫面。"
 
 #: ../../reference_manual/linux_command_line.rst:130
 msgid "Starts krita in canvasonly mode."
-msgstr ""
+msgstr "以畫布獨佔模式啟動 Krita。"
 
 #: ../../reference_manual/linux_command_line.rst:134
 msgid "Starts krita in fullscreen mode."
-msgstr ""
+msgstr "以全螢幕模式啟動 Krita。"
 
 #: ../../reference_manual/linux_command_line.rst:138
 msgid "Starts krita with the given workspace. So for example..."
-msgstr ""
+msgstr "以指定的工作空間啟動 Krita。例如..."
 
 #: ../../reference_manual/linux_command_line.rst:140
 msgid "``krita --workspace Animation``"
@@ -223,7 +229,7 @@ msgstr ""
 
 #: ../../reference_manual/linux_command_line.rst:142
 msgid "Starts Krita in the Animation workspace."
-msgstr ""
+msgstr "啟動 Krita 在動畫工作空間。"
 
 #: ../../reference_manual/linux_command_line.rst:145
 msgid ""
@@ -231,6 +237,8 @@ msgid ""
 "either open an existing file or create a new file using the ``new-image`` "
 "argument."
 msgstr ""
+"啟動 Krita ，並將 ``filename`` 為檔名的影像添加一個檔案圖層。使用這個指令參數時，您必須同時打開一個影像，或者使用 ``new-"
+"image`` 指令新建一個影像。"
 
 #: ../../reference_manual/linux_command_line.rst:149
 msgid "``krita file.kra --file-layer image.png``"
