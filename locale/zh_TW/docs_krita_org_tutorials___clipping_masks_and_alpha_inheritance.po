@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Krita Manual 4.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-27 21:21+0800\n"
-"PO-Revision-Date: 2021-12-13 14:09+0000\n"
+"PO-Revision-Date: 2021-12-13 17:23+0000\n"
 "Last-Translator: 楊景貴 <issacsopp@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <http://weblate.slat.org/projects/"
 "krita-docs/4-tutorials___clipping_masks_and_alpha_inheritance/zh_Hant/>\n"
@@ -38,42 +38,44 @@ msgid ""
 "rest of the stack, and then the result is added into the stack. In other "
 "words, in Krita group layers are in effect distinct images inside your image."
 msgstr ""
+"Krita 沒有像 Photoshop 那樣的遮罩功能。 這是因為 Krita ，和它截然不同，群組圖層不是無意義的群組再一起。 相反的，在 Krita "
+"中，群組圖層是與其他圖層順序分開合成的，然後合成將結果計算回上層結構。 換句話說， Krita 在有群組塗層時，圖層不只是簡單的上下堆疊計算而已。"
 
 #: ../../tutorials/clipping_masks_and_alpha_inheritance.rst:None
 msgid ""
 "Animation showing that groups are composed before the rest of composition "
 "takes place."
-msgstr ""
+msgstr "動畫顯示群組在其他圖層組合發生之前就進行組合計算。"
 
 #: ../../tutorials/clipping_masks_and_alpha_inheritance.rst:24
 msgid ""
 "The exception is when using pass-through mode, meaning that alpha "
 "inheritance won't work right when turning on pass-through on the layer."
-msgstr ""
+msgstr "當群組圖層使用穿透模式時例外，但這也表示在該開啟**穿透**群組圖層中的其他圖層對 alpha 繼承也無法正常工作。"
 
 #: ../../tutorials/clipping_masks_and_alpha_inheritance.rst:None
 msgid "An image showing the way layers composite in Krita."
-msgstr ""
+msgstr "這張圖顯示了 Krita 中圖層與塗層群組的合成方式。"
 
 #: ../../tutorials/clipping_masks_and_alpha_inheritance.rst:30
 msgid ""
 "When we turn on alpha inheritance, the alpha-inherited layer keeps the same "
 "transparency as the layers below."
-msgstr ""
+msgstr "當我們打開 alpha 繼承時，有 開啟 alpha 繼承的圖層會與下面的層保持相同的透明度。"
 
 #: ../../tutorials/clipping_masks_and_alpha_inheritance.rst:None
 msgid "An image showing how the alpha inheritance works and affects layers."
-msgstr ""
+msgstr "這顯示 alpha 繼承如何工作並影響圖層群組的成相。"
 
 #: ../../tutorials/clipping_masks_and_alpha_inheritance.rst:36
 msgid ""
 "Combined with group layers this can be quite powerful. A situation where "
 "this is particularly useful is the following:"
-msgstr ""
+msgstr "群組圖層，可以非常強大。 這有個特別的情況如下："
 
 #: ../../tutorials/clipping_masks_and_alpha_inheritance.rst:None
 msgid "An image with line art and a layer for each flat of color."
-msgstr ""
+msgstr "這裡有張圖其中塗層包含了線稿以及每個顏色都是獨立圖層。"
 
 #: ../../tutorials/clipping_masks_and_alpha_inheritance.rst:42
 msgid ""
@@ -85,31 +87,34 @@ msgid ""
 "you want grouped and pressing the :kbd:`Ctrl + G` shortcut. Here we do that "
 "with the iris and the eye-white layers."
 msgstr ""
+"這邊，這裡有張圖其中塗層包含了線稿以及每個顏色都是獨立圖層。 我們想為此作品增加較複雜的多層陰影，同時保有彩色平面的整潔。 "
+"要使遮罩工作，首先需要將圖層放入一個群組圖層中。 利用創建群組圖層並將圖層拖放到其中來完成，或者選取需要分組的圖層按 Ctrl + G 快捷鍵來實現群組。"
+" 在這裡，我們使用虹膜和眼白層來作範例。"
 
 #: ../../tutorials/clipping_masks_and_alpha_inheritance.rst:50
 msgid ""
 "We add a layer for the highlight above the other two layers, and add some "
 "white scribbles."
-msgstr ""
+msgstr "我們在其他兩層之上增加一個高光層，並塗上白色亮點。"
 
 #: ../../tutorials/clipping_masks_and_alpha_inheritance.rst:None
 msgid "Clipping mask step 3."
-msgstr ""
+msgstr "遮罩步驟 3。"
 
 #: ../../tutorials/clipping_masks_and_alpha_inheritance.rst:None
 msgid "Clipping mask step 4."
-msgstr ""
+msgstr "遮罩步驟 4。"
 
 #: ../../tutorials/clipping_masks_and_alpha_inheritance.rst:60
 msgid ""
 "In the above, we have our layer with a white scribble on the left, and on "
 "the right, the same layer, but with alpha inheritance active, limiting it to "
 "the combined area of the iris and eye-white layers."
-msgstr ""
+msgstr "在上面，我們的圖層左側有白色亮點，右側是同一圖層，但 alpha 繼承處於啟用狀態，將其限制為虹膜和眼白圖層的組合區域。"
 
 #: ../../tutorials/clipping_masks_and_alpha_inheritance.rst:None
 msgid "Clipping mask step 5."
-msgstr ""
+msgstr "遮罩步驟 5。"
 
 #: ../../tutorials/clipping_masks_and_alpha_inheritance.rst:66
 msgid ""
@@ -118,14 +123,16 @@ msgid ""
 "a quick clipping group. That is, you group the layers, and a ‘mask layer’ "
 "set with alpha inheritance is added on top."
 msgstr ""
+"現在有個更簡單的方法來設定 alpha 繼承。 如果選擇一個圖層或多個所需圖層並按下快捷鍵 :kbd:`Ctrl + Shift + G` "
+"，則會創建一個**快速剪輯組**。 也就是說，圖層群組一樣會建立，並在頂部增加一個帶有 alpha 繼承的“遮罩圖層”。"
 
 #: ../../tutorials/clipping_masks_and_alpha_inheritance.rst:None
 msgid "Clipping mask step 6."
-msgstr ""
+msgstr "遮罩步驟 6。"
 
 #: ../../tutorials/clipping_masks_and_alpha_inheritance.rst:None
 msgid "Clipping mask step 7."
-msgstr ""
+msgstr "遮罩步驟 7。"
 
 #: ../../tutorials/clipping_masks_and_alpha_inheritance.rst:76
 msgid ""
@@ -136,21 +143,23 @@ msgid ""
 "except with the erase-layer hidden. Filters can also affect the alpha "
 "inheritance:"
 msgstr ""
+"alpha 繼承可以使用來自群組中的合成透明度這也表示可以在圖層之間使用擦除混合模式，並影響上面圖層的遮罩區域。 "
+"上圖中，下圖與上圖完全相同，只是隱藏了擦除層。 濾鏡也會影響 alpha 繼承："
 
 #: ../../tutorials/clipping_masks_and_alpha_inheritance.rst:None
 msgid "Filter layers and alpha inheritance."
-msgstr ""
+msgstr "濾鏡圖層和 alpha 繼承。"
 
 #: ../../tutorials/clipping_masks_and_alpha_inheritance.rst:83
 msgid ""
 "Above, the blur filter layer gives different results when in different "
 "places, due to different parts being blurred."
-msgstr ""
+msgstr "上面，模糊濾鏡圖層在不同的地方會給出不同的結果，因為不同的部分被模糊了。"
 
 #: ../../tutorials/clipping_masks_and_alpha_inheritance.rst:10
 msgid "Alpha Inheritance"
-msgstr ""
+msgstr "Alpha 繼承"
 
 #: ../../tutorials/clipping_masks_and_alpha_inheritance.rst:10
 msgid "Clipping Masks"
-msgstr ""
+msgstr "遮罩"
