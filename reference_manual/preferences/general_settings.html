@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-12-13T14:14:13" />
+  <meta property="og:article:modified_time" content="2021-12-17T14:14:47" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="Krita 的一般偏好設定。" name="description" property="og:description" />
 
@@ -520,6 +520,7 @@
 </dd>
 <dt>字形 DPI 應急修正方法</dt><dd><p>Krita 4.x 中有一個程式錯誤，它會造成顯示器的 DPI 設定影響文字的 DPI 。此錯誤已在新版 Krita 獲得解決，但在開啟舊版 Krita 所儲存的檔案時，可能需要轉換字體 DPI 以保持字體的一致性。</p>
 <p>新版 Krita 在載入 4.4 版所建立的檔案時，我們使用 DISP 的 DPI 來轉換其字體大小，並將此新值轉移到檔案中。您可以通過在這裡設定另一個DPI來覆寫此行為。若將此值設置為 72 dpi 將不進行任何縮放。</p>
+<p>In Krita 4.x the size of the text was also affected by the HiDPI settings, the best conversion results are dependent on whether <cite>Use HiDPI</cite> and <cite>Use Fractional HiDPI</cite> were used when creating the text. In other words, if you want the text to look exactly the same, try to match the Krita 5 HiDPI settings to the Krita 4 HiDPI settings. You don't have to keep these settings the same after the conversion has happened.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">在 5.0 版本新加入.</span></p>
 </div>
@@ -564,7 +565,7 @@
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>3ae1b6b</code>
+          修訂版本 <code>e6203bf</code>
         </span>
       
 

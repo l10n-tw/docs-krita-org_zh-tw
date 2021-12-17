@@ -146,6 +146,11 @@ Deleting Backup files
 
 When you delete a preset from Krita, Krita doesn't actually delete the physical copy of the preset. It just adds it to a black list so that the next time when you start Krita the presets from this list are not loaded. To delete the brushes from this list click on :guilabel:`Delete Backup Files`.
 
+
+.. note::
+
+   Deleting backup files has temporarily been disabled for 5.0.
+
 .. _resource_tagging:
 
 Tags

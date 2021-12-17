@@ -295,6 +295,8 @@ Font DPI Workaround
 
     Now when loading a file created in Krita 4.4 we convert its font sizes using the DPI of the display and bake this new value into the file. The user can override this behavior by selecting another DPI in here. Setting this value to 72 DPI will effectively disable any scaling.
     
+    In Krita 4.x the size of the text was also affected by the HiDPI settings, the best conversion results are dependent on whether `Use HiDPI` and `Use Fractional HiDPI` were used when creating the text. In other words, if you want the text to look exactly the same, try to match the Krita 5 HiDPI settings to the Krita 4 HiDPI settings. You don't have to keep these settings the same after the conversion has happened.
+    
     .. versionadded:: 5.0
 
 .. _resource_settings:

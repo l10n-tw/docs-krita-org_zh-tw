@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-12-13T14:14:13" />
+  <meta property="og:article:modified_time" content="2021-12-17T14:14:47" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="在 Krita 中使用剪裁遮罩的介紹。" lang="en" name="description" xml:lang="en" />
 
@@ -228,30 +228,27 @@
             
   <section id="clipping-masks-and-alpha-inheritance">
 <span id="index-0"></span><span id="id1"></span><h1>遮罩與 Alpha 繼承<a class="headerlink" href="#clipping-masks-and-alpha-inheritance" title="本標題的永久連結">¶</a></h1>
-<p>Krita doesn't have clipping mask functionality in the manner that Photoshop and programs that mimic Photoshop's functionality have. That's because in Krita, unlike such software, a group layer is not an arbitrary collection of layers.
-Rather, in Krita, group layers are composited separately from the rest of the stack, and then the result is added into the stack. In other words, in Krita group layers are in effect distinct images inside your image.</p>
-<a class="reference internal image-reference" href="../_images/Composition_animation.gif"><img alt="Animation showing that groups are composed before the rest of composition takes place." src="../_images/Composition_animation.gif" style="width: 800px;" /></a>
-<p>The exception is when using pass-through mode, meaning that alpha inheritance won't work right when turning on pass-through on the layer.</p>
-<a class="reference internal image-reference" href="../_images/Layer-composite.png"><img alt="An image showing the way layers composite in Krita." src="../_images/Layer-composite.png" style="width: 800px;" /></a>
-<p>When we turn on alpha inheritance, the alpha-inherited layer keeps the same transparency as the layers below.</p>
-<a class="reference internal image-reference" href="../_images/Krita-tutorial2-I.1-2.png"><img alt="An image showing how the alpha inheritance works and affects layers." src="../_images/Krita-tutorial2-I.1-2.png" style="width: 800px;" /></a>
-<p>Combined with group layers this can be quite powerful. A situation where this is particularly useful is the following:</p>
-<a class="reference internal image-reference" href="../_images/Tut_Clipping_1.png"><img alt="An image with line art and a layer for each flat of color." src="../_images/Tut_Clipping_1.png" style="width: 800px;" /></a>
-<p>Here we have an image with line art and a layer for each flat of colors. We want to add complicated multi-layered shading to this, while keeping the neatness of the existing color flats.
-To get a clipping mask working, you first need to put layers into a group. You can do this by making a group layer and drag-and-dropping the layers into it, or by selecting the layers you want grouped and pressing the <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">G</kbd></kbd> shortcut. Here we do that with the iris and the eye-white layers.</p>
-<a class="reference internal image-reference" href="../_images/Tut_Clipping_2.png"><img alt="An image showing how the alpha inheritance works and affects layers." src="../_images/Tut_Clipping_2.png" style="width: 800px;" /></a>
-<p>We add a layer for the highlight above the other two layers, and add some white scribbles.</p>
-<a class="reference internal image-reference" href="../_images/Tut_Clipping_3.png"><img alt="Clipping mask step 3." src="../_images/Tut_Clipping_3.png" style="width: 800px;" /></a>
-<a class="reference internal image-reference" href="../_images/Tut_Clipping_4.png"><img alt="Clipping mask step 4." src="../_images/Tut_Clipping_4.png" style="width: 800px;" /></a>
-<p>In the above, we have our layer with a white scribble on the left, and on the right, the same layer, but with alpha inheritance active, limiting it to the combined area of the iris and eye-white layers.</p>
-<a class="reference internal image-reference" href="../_images/Tut_Clipping_5.png"><img alt="Clipping mask step 5." src="../_images/Tut_Clipping_5.png" style="width: 800px;" /></a>
-<p>Now there’s an easier way to set up alpha inheritance. If you select a layer or set of layers and press the <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">G</kbd></kbd> shortcut, you create a quick clipping group. That is, you group the layers, and a ‘mask layer’ set with alpha inheritance is added on top.</p>
-<a class="reference internal image-reference" href="../_images/Tut_Clipping_6.png"><img alt="Clipping mask step 6." src="../_images/Tut_Clipping_6.png" style="width: 800px;" /></a>
-<a class="reference internal image-reference" href="../_images/Tut_Clipping_7.png"><img alt="Clipping mask step 7." src="../_images/Tut_Clipping_7.png" style="width: 800px;" /></a>
-<p>The fact that alpha inheritance can use the composited transparency from a combination of layers means that you can have a layer with the erase-blending mode in between, and have that affect the area that the layer above is clipped to.
-Above, the lower image is exactly the same as the upper one, except with the erase-layer hidden. Filters can also affect the alpha inheritance:</p>
-<a class="reference internal image-reference" href="../_images/Tut_clip_blur.gif"><img alt="Filter layers and alpha inheritance." src="../_images/Tut_clip_blur.gif" style="width: 800px;" /></a>
-<p>Above, the blur filter layer gives different results when in different places, due to different parts being blurred.</p>
+<p>Krita 沒有像 Photoshop 那樣的遮罩功能。 這是因為 Krita ，和它截然不同，群組圖層不是無意義的群組再一起。 相反的，在 Krita 中，群組圖層是與其他圖層順序分開合成的，然後合成將結果計算回上層結構。 換句話說， Krita 在有群組塗層時，圖層不只是簡單的上下堆疊計算而已。</p>
+<a class="reference internal image-reference" href="../_images/Composition_animation.gif"><img alt="動畫顯示群組在其他圖層組合發生之前就進行組合計算。" src="../_images/Composition_animation.gif" style="width: 800px;" /></a>
+<p>當群組圖層使用穿透模式時例外，但這也表示在該開啟**穿透**群組圖層中的其他圖層對 alpha 繼承也無法正常工作。</p>
+<a class="reference internal image-reference" href="../_images/Layer-composite.png"><img alt="這張圖顯示了 Krita 中圖層與塗層群組的合成方式。" src="../_images/Layer-composite.png" style="width: 800px;" /></a>
+<p>當我們打開 alpha 繼承時，有 開啟 alpha 繼承的圖層會與下面的層保持相同的透明度。</p>
+<a class="reference internal image-reference" href="../_images/Krita-tutorial2-I.1-2.png"><img alt="這顯示 alpha 繼承如何工作並影響圖層群組的成相。" src="../_images/Krita-tutorial2-I.1-2.png" style="width: 800px;" /></a>
+<p>群組圖層，可以非常強大。 這有個特別的情況如下：</p>
+<a class="reference internal image-reference" href="../_images/Tut_Clipping_1.png"><img alt="這裡有張圖其中塗層包含了線稿以及每個顏色都是獨立圖層。" src="../_images/Tut_Clipping_1.png" style="width: 800px;" /></a>
+<p>這邊，這裡有張圖其中塗層包含了線稿以及每個顏色都是獨立圖層。 我們想為此作品增加較複雜的多層陰影，同時保有彩色平面的整潔。 要使遮罩工作，首先需要將圖層放入一個群組圖層中。 利用創建群組圖層並將圖層拖放到其中來完成，或者選取需要分組的圖層按 Ctrl + G 快捷鍵來實現群組。 在這裡，我們使用虹膜和眼白層來作範例。</p>
+<a class="reference internal image-reference" href="../_images/Tut_Clipping_2.png"><img alt="這顯示 alpha 繼承如何工作並影響圖層群組的成相。" src="../_images/Tut_Clipping_2.png" style="width: 800px;" /></a>
+<p>我們在其他兩層之上增加一個高光層，並塗上白色亮點。</p>
+<a class="reference internal image-reference" href="../_images/Tut_Clipping_3.png"><img alt="遮罩步驟 3。" src="../_images/Tut_Clipping_3.png" style="width: 800px;" /></a>
+<a class="reference internal image-reference" href="../_images/Tut_Clipping_4.png"><img alt="遮罩步驟 4。" src="../_images/Tut_Clipping_4.png" style="width: 800px;" /></a>
+<p>在上面，我們的圖層左側有白色亮點，右側是同一圖層，但 alpha 繼承處於啟用狀態，將其限制為虹膜和眼白圖層的組合區域。</p>
+<a class="reference internal image-reference" href="../_images/Tut_Clipping_5.png"><img alt="遮罩步驟 5。" src="../_images/Tut_Clipping_5.png" style="width: 800px;" /></a>
+<p>現在有個更簡單的方法來設定 alpha 繼承。 如果選擇一個圖層或多個所需圖層並按下快捷鍵 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">G</kbd></kbd> ，則會創建一個**快速剪輯組**。 也就是說，圖層群組一樣會建立，並在頂部增加一個帶有 alpha 繼承的“遮罩圖層”。</p>
+<a class="reference internal image-reference" href="../_images/Tut_Clipping_6.png"><img alt="遮罩步驟 6。" src="../_images/Tut_Clipping_6.png" style="width: 800px;" /></a>
+<a class="reference internal image-reference" href="../_images/Tut_Clipping_7.png"><img alt="遮罩步驟 7。" src="../_images/Tut_Clipping_7.png" style="width: 800px;" /></a>
+<p>alpha 繼承可以使用來自群組中的合成透明度這也表示可以在圖層之間使用擦除混合模式，並影響上面圖層的遮罩區域。 上圖中，下圖與上圖完全相同，只是隱藏了擦除層。 濾鏡也會影響 alpha 繼承：</p>
+<a class="reference internal image-reference" href="../_images/Tut_clip_blur.gif"><img alt="濾鏡圖層和 alpha 繼承。" src="../_images/Tut_clip_blur.gif" style="width: 800px;" /></a>
+<p>上面，模糊濾鏡圖層在不同的地方會給出不同的結果，因為不同的部分被模糊了。</p>
 </section>
 
 
@@ -277,7 +274,7 @@ Above, the lower image is exactly the same as the upper one, except with the era
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>3ae1b6b</code>
+          修訂版本 <code>e6203bf</code>
         </span>
       
 

@@ -99,7 +99,7 @@ At this point you have the option of adding whatever visual design elements you 
 
 .. NOTE:: As of Inkscape 1.1, new objects are automatically added to the layer that you currently have selected or that you last added something to. As such, I find it easiest to work on one layer at a time.
 
-.. WARNING:: Also as of Inscape 1.1, I find that text often gets transformed in strange ways that make it appear correctly in Inkscape but show up in the completely wrong place in Krita and other programs! I don't know why this happens or how to fix it, but I *do* know how to work around it. If you use text elements and you run into problems with them not showing up where they're supposed to, I recommend converting them to paths with the :guilabel:`Path > Object to Path` function.
+.. WARNING:: Also as of Inkscape 1.1, I find that text often gets transformed in strange ways that make it appear correctly in Inkscape but show up in the completely wrong place in Krita and other programs! I don't know why this happens or how to fix it, but I *do* know how to work around it. If you use text elements and you run into problems with them not showing up where they're supposed to, I recommend converting them to paths with the :guilabel:`Path > Object to Path` function.
 
 Layout Basics:
 ^^^^^^^^^^^^^^
