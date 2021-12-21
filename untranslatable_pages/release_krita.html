@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-12-17T14:14:47" />
+  <meta property="og:article:modified_time" content="2021-12-21T18:02:04" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="Releasing Krita" name="description" />
 
@@ -297,7 +297,7 @@
 <li><p>Coordinate with #kde-promo</p></li>
 <li><p>Notify translators of string freeze!</p></li>
 <li><p>Verify that the release notes page is done, like <a class="reference external" href="https://krita.org/en/krita-4-2-release-notes/">https://krita.org/en/krita-4-2-release-notes/</a></p></li>
-<li><p>Verify that all 8 (eight!) dependency builds are up to date. Remember that these builds are built from <strong>master</strong>, not from the stable branch.</p>
+<li><p>Verify that all dependency builds are up to date. Remember that these builds are built from <strong>master</strong>, not from the stable branch.</p>
 <blockquote>
 <div><ul class="simple">
 <li><p><a class="reference external" href="https://binary-factory.kde.org/job/Krita_Android_arm64-v8a_Dependency_Build/">https://binary-factory.kde.org/job/Krita_Android_arm64-v8a_Dependency_Build/</a></p></li>
@@ -307,7 +307,6 @@
 <li><p><a class="reference external" href="https://binary-factory.kde.org/job/Krita_Nightly_Appimage_Dependency_Build/">https://binary-factory.kde.org/job/Krita_Nightly_Appimage_Dependency_Build/</a></p></li>
 <li><p><a class="reference external" href="https://binary-factory.kde.org/job/Krita_Nightly_MacOS_Dependency_Build/">https://binary-factory.kde.org/job/Krita_Nightly_MacOS_Dependency_Build/</a></p></li>
 <li><p><a class="reference external" href="https://binary-factory.kde.org/job/Krita_Nightly_Windows_Dependency_Build/">https://binary-factory.kde.org/job/Krita_Nightly_Windows_Dependency_Build/</a></p></li>
-<li><p><a class="reference external" href="https://binary-factory.kde.org/job/Krita_Release_Windows32_Dependency_Build/">https://binary-factory.kde.org/job/Krita_Release_Windows32_Dependency_Build/</a></p></li>
 </ul>
 <p>Compare the build date and included commits to the commit in 3rdparty directory in master:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">fetch</span> <span class="n">origin</span> <span class="o">&amp;&amp;</span> <span class="n">git</span> <span class="n">log</span> <span class="n">origin</span><span class="o">/</span><span class="n">master</span> <span class="mi">3</span><span class="n">rdparty</span>
@@ -319,31 +318,17 @@
 </section>
 <section id="update-version-in-source-code">
 <h2><a class="toc-backref" href="#id5">Update version in source code</a><a class="headerlink" href="#update-version-in-source-code" title="本標題的永久連結">¶</a></h2>
-<ol class="arabic">
+<ol class="arabic simple">
 <li><p>!! REMOVE THE SURVEY LINK !! (or, if this is a beta, make a survey and update the survey link)</p></li>
-<li><p>update the version of krita.xmlgui</p></li>
+<li><p>update the version of krita5.xmlgui</p></li>
 <li><p>update the CMakeLists.txt version</p></li>
 <li><p>update the snapcraft.yaml file</p></li>
-<li><p>update the appstream screenshots</p></li>
+<li><p>update the appstream screenshots: <a class="reference external" href="https://invent.kde.org/websites/product-screenshots">https://invent.kde.org/websites/product-screenshots</a></p></li>
 <li><p>update org.kde.krita.appdata.xml 's release tag in the BRANCH</p></li>
 <li><p>update download_release_artifacts.sh</p></li>
-<li><p>update Android version (keep in mind that <em>all</em> Krita releases on Android are marked as Beta at the moment):</p>
-<blockquote>
-<div><ul class="simple">
-<li><p>packaging/android/apk/AndroidManifest.xml</p></li>
-<li><p>packaging/android/apk/build.gradle</p></li>
-</ul>
-</div></blockquote>
-</li>
 </ol>
-<ol class="arabic simple" start="10">
-<li><p>Update Windows Store package version and maxTestedVersion tag</p>
-<ul class="simple">
-<li><p>packaging/windows/msix/manifest.xml</p></li>
-</ul>
-</li>
-<li><p>When releasing beta-version double-check that you updated to &quot;beta1&quot;, not just plain &quot;beta&quot;. Only &quot;alpha&quot; versions can be made without a number, because they are built nightly.</p></li>
-</ol>
+<p>8. update Android version (keep in mind that <em>all</em> Krita releases on Android are marked as Beta at the moment): packaging/android/apk/build.gradle
+10. When releasing beta-version double-check that you updated to &quot;beta1&quot;, not just plain &quot;beta&quot;. Only &quot;alpha&quot; versions can be made without a number, because they are built nightly.</p>
 </section>
 <section id="update-versions-in-the-stable-branch-to-avoid-xmlgui-conflicts">
 <h2><a class="toc-backref" href="#id6">Update versions in the stable branch to avoid XMLGUI conflicts</a><a class="headerlink" href="#update-versions-in-the-stable-branch-to-avoid-xmlgui-conflicts" title="本標題的永久連結">¶</a></h2>
@@ -412,13 +397,10 @@
 </div>
 </div></blockquote>
 </li>
-<li><p>Upload tarballs to files.kde.org, where builders can pick them up:</p>
+<li><p>Upload the gz tarball to files.kde.org, where builders can pick them up (the sigs and the xz tarball aren't used for the binary builders):</p>
 <blockquote>
 <div><ul class="simple">
 <li><p><a class="reference external" href="https://files.kde.org/krita/.release/$version/krita-$version.tar.gz">https://files.kde.org/krita/.release/$version/krita-$version.tar.gz</a></p></li>
-<li><p><a class="reference external" href="https://files.kde.org/krita/.release/$version/krita-$version.tar.xz">https://files.kde.org/krita/.release/$version/krita-$version.tar.xz</a></p></li>
-<li><p><a class="reference external" href="https://files.kde.org/krita/.release/$version/krita-$version.tar.gz.sig">https://files.kde.org/krita/.release/$version/krita-$version.tar.gz.sig</a></p></li>
-<li><p><a class="reference external" href="https://files.kde.org/krita/.release/$version/krita-$version.tar.xz.sig">https://files.kde.org/krita/.release/$version/krita-$version.tar.xz.sig</a></p></li>
 </ul>
 </div></blockquote>
 </li>
@@ -430,7 +412,6 @@
 <li><p>Request four release builds on binary-factory.kde.org, after starting each build,go to &quot;Console Output&quot; section, click on &quot;Input Requested&quot; and choose a tarball version to build.</p>
 <blockquote>
 <div><ul class="simple">
-<li><p><a class="reference external" href="https://binary-factory.kde.org/job/Krita_Release_Windows32_Build/">https://binary-factory.kde.org/job/Krita_Release_Windows32_Build/</a></p></li>
 <li><p><a class="reference external" href="https://binary-factory.kde.org/job/Krita_Release_Windows64_Build/">https://binary-factory.kde.org/job/Krita_Release_Windows64_Build/</a></p></li>
 <li><p><a class="reference external" href="https://binary-factory.kde.org/job/Krita_Release_Appimage_Build/">https://binary-factory.kde.org/job/Krita_Release_Appimage_Build/</a></p></li>
 <li><p><a class="reference external" href="https://binary-factory.kde.org/job/Krita_Release_MacOS_Build/">https://binary-factory.kde.org/job/Krita_Release_MacOS_Build/</a></p></li>
@@ -456,7 +437,7 @@
 </pre></div>
 </div>
 </li>
-<li><p>Sign four Android packages (or send them to Boud for signing)</p>
+<li><p>Sign four Android packages (or send them to Halla for signing)</p>
 <ul class="simple">
 <li><p>krita-arm64-4.2.9-beta1-unsigned.apk</p></li>
 <li><p>krita-arm32-4.2.9-beta1-unsigned.apk</p></li>
@@ -597,7 +578,7 @@ There are two tasks:
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>e6203bf</code>
+          修訂版本 <code>4c7e325</code>
         </span>
       
 

@@ -30,7 +30,7 @@ There are also the:
 
 You’ll find that there are a number of people are almost always around: the core team.
 
-* Halla (irc: halla): project maintainer, lead developer. Works full-time on Krita. Manages the Krita Foundation, triages bugs, does social media and admin stuff. Halla is also on Reddit as hallaewijnrempt.
+* Halla (irc: halla): project maintainer, lead developer. Works full-time on Krita. Manages the Krita Foundation, triages bugs, does social media and admin stuff.
 * Dmitry (irc: dmitryK|log): lead developer. Works full-time on Krita.
 * Wolthera (irc: Wolthera_laptop): developer, writes the manual and tutorials, triages bugs, helps people out. Works full-time on Krita.
 * Ivan Yossi (irc: ivanyossi|log): developer. Works full-time on Krita.

@@ -21,7 +21,7 @@ Before the release
 1. Coordinate with #kde-promo
 2. Notify translators of string freeze!
 3. Verify that the release notes page is done, like https://krita.org/en/krita-4-2-release-notes/
-4. Verify that all 8 (eight!) dependency builds are up to date. Remember that these builds are built from **master**, not from the stable branch.
+4. Verify that all dependency builds are up to date. Remember that these builds are built from **master**, not from the stable branch.
 
     * https://binary-factory.kde.org/job/Krita_Android_arm64-v8a_Dependency_Build/
     * https://binary-factory.kde.org/job/Krita_Android_armeabi-v7a_Dependency_Build/
@@ -30,7 +30,6 @@ Before the release
     * https://binary-factory.kde.org/job/Krita_Nightly_Appimage_Dependency_Build/
     * https://binary-factory.kde.org/job/Krita_Nightly_MacOS_Dependency_Build/
     * https://binary-factory.kde.org/job/Krita_Nightly_Windows_Dependency_Build/
-    * https://binary-factory.kde.org/job/Krita_Release_Windows32_Dependency_Build/
     
     Compare the build date and included commits to the commit in 3rdparty directory in master:
     
@@ -43,22 +42,14 @@ Update version in source code
 -----------------------------
 
 1. !! REMOVE THE SURVEY LINK !! (or, if this is a beta, make a survey and update the survey link)
-2. update the version of krita.xmlgui
+2. update the version of krita5.xmlgui
 3. update the CMakeLists.txt version
 4. update the snapcraft.yaml file
-5. update the appstream screenshots
+5. update the appstream screenshots: https://invent.kde.org/websites/product-screenshots
 6. update org.kde.krita.appdata.xml 's release tag in the BRANCH
 7. update download_release_artifacts.sh
-8. update Android version (keep in mind that *all* Krita releases on Android are marked as Beta at the moment):
-
-    * packaging/android/apk/AndroidManifest.xml 
-    * packaging/android/apk/build.gradle
-    
-10. Update Windows Store package version and maxTestedVersion tag
-
-    * packaging/windows/msix/manifest.xml
-    
-11. When releasing beta-version double-check that you updated to "beta1", not just plain "beta". Only "alpha" versions can be made without a number, because they are built nightly.
+8. update Android version (keep in mind that *all* Krita releases on Android are marked as Beta at the moment): packaging/android/apk/build.gradle
+10. When releasing beta-version double-check that you updated to "beta1", not just plain "beta". Only "alpha" versions can be made without a number, because they are built nightly.
 
 Update versions in the stable branch to avoid XMLGUI conflicts
 --------------------------------------------------------------
@@ -119,12 +110,9 @@ Create the tarball
         gpg --output krita-4.2.9-beta1.tar.gz.sig --detach-sign krita-4.2.9-beta1.tar.gz
         gpg --output krita-4.2.9-beta1.tar.xz.sig --detach-sign krita-4.2.9-beta1.tar.xz
 
-5. Upload tarballs to files.kde.org, where builders can pick them up:
+5. Upload the gz tarball to files.kde.org, where builders can pick them up (the sigs and the xz tarball aren't used for the binary builders):
 
     * https://files.kde.org/krita/.release/$version/krita-$version.tar.gz
-    * https://files.kde.org/krita/.release/$version/krita-$version.tar.xz
-    * https://files.kde.org/krita/.release/$version/krita-$version.tar.gz.sig
-    * https://files.kde.org/krita/.release/$version/krita-$version.tar.xz.sig
 
 
 Make Windows, Linux, macOS and Android packages
@@ -132,7 +120,6 @@ Make Windows, Linux, macOS and Android packages
 
 8. Request four release builds on binary-factory.kde.org, after starting each build,go to "Console Output" section, click on "Input Requested" and choose a tarball version to build.
 
-    * https://binary-factory.kde.org/job/Krita_Release_Windows32_Build/
     * https://binary-factory.kde.org/job/Krita_Release_Windows64_Build/
     * https://binary-factory.kde.org/job/Krita_Release_Appimage_Build/
     * https://binary-factory.kde.org/job/Krita_Release_MacOS_Build/
@@ -158,7 +145,7 @@ Make Windows, Linux, macOS and Android packages
         gpg --detach-sign --output gmic_krita_qt-x86_64.appimage.sig gmic_krita_qt-x86_64.appimage
 
 
-12. Sign four Android packages (or send them to Boud for signing)
+12. Sign four Android packages (or send them to Halla for signing)
 
     * krita-arm64-4.2.9-beta1-unsigned.apk
     * krita-arm32-4.2.9-beta1-unsigned.apk
