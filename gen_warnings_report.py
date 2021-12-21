@@ -23,8 +23,13 @@ WEBLATE_BASE_URL = "https://weblate.slat.org/languages/zh_Hant/krita-docs/"
 
 
 @functools.lru_cache(maxsize=None)
-def load_catalog(pofile: str) -> polib.POFile:
-    return polib.pofile(pofile)
+def load_catalog(pofile: str) -> Optional[polib.POFile]:
+    try:
+        return polib.pofile(pofile)
+    except Exception as ex:
+        logging.error(
+            f"Got exception when opening PO file {pofile}", exc_info=ex)
+        return None
 
 
 @dataclass
@@ -39,6 +44,10 @@ class WarningItem:
         pofile = "locale/zh_TW/docs_krita_org_" + \
             self.file.replace("/", "___").replace(".rst", ".po")
         catalog = load_catalog(pofile)
+        if catalog is None:
+            logging.error(
+                f"Failed to lookup message for {self.file}:{self.line}")
+            return
         matches = [e for e in catalog if not e.obsolete and (
             "../../" + self.file, str(self.line)) in e.occurrences]
         if len(matches) == 1:
