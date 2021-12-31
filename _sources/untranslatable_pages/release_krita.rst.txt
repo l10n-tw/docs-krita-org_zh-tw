@@ -49,7 +49,7 @@ Update version in source code
 6. update org.kde.krita.appdata.xml 's release tag in the BRANCH
 7. update download_release_artifacts.sh
 8. update Android version (keep in mind that *all* Krita releases on Android are marked as Beta at the moment): packaging/android/apk/build.gradle
-10. When releasing beta-version double-check that you updated to "beta1", not just plain "beta". Only "alpha" versions can be made without a number, because they are built nightly.
+9. When releasing beta-version double-check that you updated to "beta1", not just plain "beta". Only "alpha" versions can be made without a number, because they are built nightly.
 
 Update versions in the stable branch to avoid XMLGUI conflicts
 --------------------------------------------------------------

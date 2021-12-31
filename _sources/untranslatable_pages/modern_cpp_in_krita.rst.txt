@@ -71,7 +71,7 @@ Motivation:
     If we later decide that we want to store a hash of strings and that ``gimmeSomeStrings`` should return a ``QMap<int, QString>``, we probably won't need to make any changes inside the client snippet if we are doing tasks like iterating.
 
 Drawbacks:
-    the use of auto is be obfuscating.  For example, ``auto x = 2`` is not obviously an integer, and ``auto x = {"a", "b", "c"}`` returns ``std::initializer_list``, and sometimes it is not clear what some function returns by the name of the function.
+    The use of ``auto`` obfuscates variable types.  For example, ``auto x = 2`` is not obviously an integer, and ``auto x = {"a", "b", "c"}`` returns ``std::initializer_list``, and sometimes it is not clear what some function returns by the name of the function.
 
 Recommendation:
     Do not use auto, except, maybe, in loops, where there can be no confusion about the type of what is looped. But even there, hesitate.

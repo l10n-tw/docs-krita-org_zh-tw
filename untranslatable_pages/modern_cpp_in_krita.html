@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-12-24T23:14:12" />
+  <meta property="og:article:modified_time" content="2021-12-31T13:30:59" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   
@@ -338,7 +338,7 @@
 </div>
 <p>If we later decide that we want to store a hash of strings and that <code class="docutils literal notranslate"><span class="pre">gimmeSomeStrings</span></code> should return a <code class="docutils literal notranslate"><span class="pre">QMap&lt;int,</span> <span class="pre">QString&gt;</span></code>, we probably won't need to make any changes inside the client snippet if we are doing tasks like iterating.</p>
 </dd>
-<dt>Drawbacks:</dt><dd><p>the use of auto is be obfuscating.  For example, <code class="docutils literal notranslate"><span class="pre">auto</span> <span class="pre">x</span> <span class="pre">=</span> <span class="pre">2</span></code> is not obviously an integer, and <code class="docutils literal notranslate"><span class="pre">auto</span> <span class="pre">x</span> <span class="pre">=</span> <span class="pre">{&quot;a&quot;,</span> <span class="pre">&quot;b&quot;,</span> <span class="pre">&quot;c&quot;}</span></code> returns <code class="docutils literal notranslate"><span class="pre">std::initializer_list</span></code>, and sometimes it is not clear what some function returns by the name of the function.</p>
+<dt>Drawbacks:</dt><dd><p>The use of <code class="docutils literal notranslate"><span class="pre">auto</span></code> obfuscates variable types.  For example, <code class="docutils literal notranslate"><span class="pre">auto</span> <span class="pre">x</span> <span class="pre">=</span> <span class="pre">2</span></code> is not obviously an integer, and <code class="docutils literal notranslate"><span class="pre">auto</span> <span class="pre">x</span> <span class="pre">=</span> <span class="pre">{&quot;a&quot;,</span> <span class="pre">&quot;b&quot;,</span> <span class="pre">&quot;c&quot;}</span></code> returns <code class="docutils literal notranslate"><span class="pre">std::initializer_list</span></code>, and sometimes it is not clear what some function returns by the name of the function.</p>
 </dd>
 <dt>Recommendation:</dt><dd><p>Do not use auto, except, maybe, in loops, where there can be no confusion about the type of what is looped. But even there, hesitate.</p>
 </dd>
@@ -589,7 +589,7 @@
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>6524e3d</code>
+          修訂版本 <code>29e3ed2</code>
         </span>
       
 
