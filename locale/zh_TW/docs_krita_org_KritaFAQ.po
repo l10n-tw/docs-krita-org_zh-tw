@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the Krita Manual
 # package.
 #
-# Alvin Wong <alvin@alvinhc.com>, 2021.
+# Alvin Wong <alvin@alvinhc.com>, 2021, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 4.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-19 22:30+0800\n"
-"PO-Revision-Date: 2021-12-31 13:26+0000\n"
+"PO-Revision-Date: 2021-12-31 21:10+0000\n"
 "Last-Translator: Alvin Wong <alvin@alvinhc.com>\n"
 "Language-Team: Chinese (Traditional) <http://weblate.slat.org/projects/"
 "krita-docs/0-kritafaq/zh_Hant/>\n"
@@ -493,6 +493,9 @@ msgid ""
 "two (one for the image, one for the display). If you add masks, filter "
 "layers or clone layers, it gets more complicated."
 msgstr ""
+"就基本影像而言，簡單來說可以這樣計算：寛度像素 乘以 高度像素 乘以 色彩通度數目 乘以 色彩通度位元組數（例如一張 1000×1000 像素的 16 "
+"位元整數 RGBA 影像：1000 × 1000 × 4 × 2）。這個數再乘以 "
+"圖層數目加二（一為影像本身，一為顯示用）。如果影像含有遮罩、濾鏡圖層或再製圖層，計算則變得複雜。"
 
 #: ../../KritaFAQ.rst:199
 msgid "Why do I get a checkerboard pattern when I use the eraser?"
@@ -549,7 +552,7 @@ msgstr "所有舊版本 Krita 均可在這裡找到："
 
 #: ../../KritaFAQ.rst:216
 msgid "`Very old builds <https://download.kde.org/Attic/krita/>`_."
-msgstr "`超舊版本存放區 <https://download.kde.org/Attic/krita/>`_."
+msgstr "`超舊版本存放區 <https://download.kde.org/Attic/krita/>`_"
 
 #: ../../KritaFAQ.rst:219
 msgid "On Windows, the Krita User Interface is too big on my screen"
@@ -562,19 +565,21 @@ msgid ""
 "might be too big for your screen. You can turn it off using the following "
 "steps:"
 msgstr ""
+"如果你使用 Windows，你可能會設定顯示器縮放為 150% 或 200%。Krita 預設啟用了 High-DPI 顯示器縮放，Krita "
+"的介面或許會因此而變得太大，大於顯示器可顯示的空間。你可以依照下列步聚將其停用："
 
 #: ../../KritaFAQ.rst:223
 msgid "On the menu, select :menuselection:`Settings --> Configure Krita...`"
-msgstr ""
+msgstr "在主選單上點選 :menuselection:`設定 --> 設定 Krita…`"
 
 #: ../../KritaFAQ.rst:224
 msgid "On :guilabel:`General` page, switch to :guilabel:`Window` tab."
-msgstr ""
+msgstr "在 :guilabel:`一般` 版面中選取 :guilabel:`視窗` 分頁。"
 
 #: ../../KritaFAQ.rst:225
 msgid ""
 "Uncheck :guilabel:`Enable Hi-DPI support` (or check if you wish to enable it)"
-msgstr ""
+msgstr "取消勾選 :guilabel:`啟用高解析度螢幕 (Hi-DPI) 支援`\\ （或者如果你想要啟用這項功能的話，請將其勾選）"
 
 #: ../../KritaFAQ.rst:226
 msgid ""
@@ -582,22 +587,24 @@ msgid ""
 "can instead try keeping :guilabel:`Enable Hi-DPI support` enabled and also "
 "enable :guilabel:`(Hi-DPI) Enable fractional scale factor`."
 msgstr ""
+"如果你的顯示器縮放設定為非整數（即不是 100% 的倍數）的話，你也可以嘗試保持啟用 :guilabel:`啟用高解析度螢幕 (Hi-DPI) 支援` "
+"選項並同時啟用 :guilabel:`啟用非整數比例縮放 (Hi-DPI)` 選項。"
 
 #: ../../KritaFAQ.rst:227
 msgid ""
 "Press :guilabel:`OK`, if the settings screen is too big, :kbd:`Alt + O` will "
 "trigger the OK button too."
-msgstr ""
+msgstr "點選 :guilabel:`確定`\\ 。如設定視窗顯示過大，你也可嘗試使用 :kbd:`Alt + O` 鍵盤組合鍵來觸發確定按鈕。"
 
 #: ../../KritaFAQ.rst:228
 msgid "Restart Krita"
-msgstr ""
+msgstr "重新啟動 Krita"
 
 #: ../../KritaFAQ.rst:230
 msgid ""
 "You can also change the toolbox icon size by right-clicking on the toolbox "
 "and selecting a size."
-msgstr ""
+msgstr "你也可以在工具箱上點按滑鼠右鍵以選取工具箱圖示的大小。"
 
 #: ../../KritaFAQ.rst:233
 msgid ""
@@ -613,6 +620,9 @@ msgid ""
 "dropdowns to be unusable. If you find it distracting, you can consider "
 "changing the Renderer to Direct3D 11 which doesn't require this workaround."
 msgstr ""
+"當\\ :ref:`畫布圖形加速 <display_settings>`\\ 繪製器設定為 OpenGL 時，你或許會在全螢幕 Krita "
+"視窗的底部看到一道穿透的橫線。這是為了解決在全螢幕模式時不能使用選單和下拉方塊的問題而作出的折衷方案。如果這困擾著你，你可以考慮將繪製器改為 "
+"Direct3D 11，這沒有同樣的問題。"
 
 #: ../../KritaFAQ.rst:238
 msgid "Windows: OBS can't record the Krita OpenGL canvas"
@@ -620,25 +630,25 @@ msgstr "Windows：OBS 不能錄製 Krita 的 OpenGL 畫布"
 
 #: ../../KritaFAQ.rst:240
 msgid "The possible workarounds for this is to do either of the following:"
-msgstr ""
+msgstr "可以嘗試以下解決方法："
 
 #: ../../KritaFAQ.rst:242
 msgid ""
 "Turn off OpenGL in :menuselection:`Settings --> Configure Krita... --> "
 "Display`."
-msgstr ""
+msgstr "在 :menuselection:`設定 --> 設定 Krita… --> 顯示` 停用 OpenGL。"
 
 #: ../../KritaFAQ.rst:243
 msgid ""
 "Or don't use the hardware accelerated mode (game recording mode) in OBS, "
 "thus capturing the whole desktop instead of attempting to capture only Krita."
-msgstr ""
+msgstr "或在 OBS 中不要使用硬體加速模式（遊戲擷取模式），取而代之使用視窗擷取或顯示器擷取模式。"
 
 #: ../../KritaFAQ.rst:247
 msgid ""
 "You might also be able to work around the problem by using the ANGLE "
 "renderer instead of native OpenGL."
-msgstr ""
+msgstr "你或許也可以選取使用 ANGLE 繪製器而不使用原生 OpenGL。"
 
 #: ../../KritaFAQ.rst:250
 msgid "Windows: Can I use Krita with Sandboxie?"
@@ -648,7 +658,7 @@ msgstr "Windows：我可以經 Sandboxie 執行 Krita 嗎？"
 msgid ""
 "No, this is not recommended. Sandboxie causes stuttering and freezes due to "
 "the way it intercepts calls for resources on disk."
-msgstr ""
+msgstr "我們不建議這樣做。Sandboxie 攔截資源檔案讀取的方式或會引致運作不順暢或停頓。"
 
 #: ../../KritaFAQ.rst:255
 msgid "Windows: Krita cannot save"
@@ -658,29 +668,31 @@ msgstr "Windows：Krita 不能儲存檔案"
 msgid ""
 "If the message is \"File not found. Check the file name and try again.\", "
 "you probably have Controlled Folder Access enabled."
-msgstr ""
+msgstr "如錯誤訊息為「找不到檔案。檢查檔案名稱，然後再試一次。」，你或許啟用了「受控資料夾存取權」。"
 
 #: ../../KritaFAQ.rst:259
 msgid "Select :menuselection:`Start --> Settings`."
-msgstr ""
+msgstr "點選 :menuselection:`開始功能表 --> 設定`\\ 。"
 
 #: ../../KritaFAQ.rst:260
 msgid "Choose :menuselection:`Update & security --> Windows Defender`."
-msgstr ""
+msgstr "點選 :menuselection:`更新與安全性 --> Windows 安全性`\\ 。"
 
 #: ../../KritaFAQ.rst:261
 msgid "Select :guilabel:`Open Windows Defender Security Center`."
-msgstr ""
+msgstr "點選 :guilabel:`開啟 Windows 安全性`\\ 。"
 
 #: ../../KritaFAQ.rst:262
 msgid ""
 "Select :guilabel:`Virus & threat protection`, and then choose :guilabel:"
 "`Virus & threat protection settings`."
 msgstr ""
+"點選 :guilabel:`病毒與威脅防護`\\ ，然後點選選 :guilabel:`勒索軟體防護` 下的 :guilabel:`管理勒索軟體防護`\\ "
+"。"
 
 #: ../../KritaFAQ.rst:263
 msgid "Under :guilabel:`Controlled folder access`, turn it on or off."
-msgstr ""
+msgstr "在 :guilabel:`受控資料夾存取權` 之下將其關閉。"
 
 #: ../../KritaFAQ.rst:265
 msgid ""
@@ -689,6 +701,9 @@ msgid ""
 "atp/customize-controlled-folders#allow-specific-apps-to-make-changes-to-"
 "controlled-folders>`_."
 msgstr ""
+"你也可以嘗試依照\\ `這些指示 <https://docs.microsoft.com/zh-tw/microsoft-365/security/"
+"defender-endpoint/customize-controlled-folders?view=o365-worldwide#allow-"
+"specific-apps-to-make-changes-to-controlled-folders>`_\\ 將 Krita 加入到允許清單中。"
 
 #: ../../KritaFAQ.rst:268
 msgid "Windows: Krita cannot open my file anymore"
