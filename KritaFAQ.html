@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2021-12-31T13:30:59" />
+  <meta property="og:article:modified_time" content="2021-12-31T21:14:19" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   
@@ -528,7 +528,7 @@
 </section>
 <section id="how-much-memory-does-my-image-take">
 <h3><a class="toc-backref" href="#id15">我的影像會佔用多少記憶體？</a><a class="headerlink" href="#how-much-memory-does-my-image-take" title="本標題的永久連結">¶</a></h3>
-<p>For simple images, it's easy to calculate: you multiply width * height * channels * size of the channels (so, for a 1000×1000 16-bit integer RGBA image: 1000 × 1000 × 4 × 2). You multiply this by the number of layers plus two (one for the image, one for the display). If you add masks, filter layers or clone layers, it gets more complicated.</p>
+<p>就基本影像而言，簡單來說可以這樣計算：寛度像素 乘以 高度像素 乘以 色彩通度數目 乘以 色彩通度位元組數（例如一張 1000×1000 像素的 16 位元整數 RGBA 影像：1000 × 1000 × 4 × 2）。這個數再乘以 圖層數目加二（一為影像本身，一為顯示用）。如果影像含有遮罩、濾鏡圖層或再製圖層，計算則變得複雜。</p>
 </section>
 <section id="why-do-i-get-a-checkerboard-pattern-when-i-use-the-eraser">
 <h3><a class="toc-backref" href="#id16">為何當我使用橡皮擦時，會出現棋盤方格圖案？</a><a class="headerlink" href="#why-do-i-get-a-checkerboard-pattern-when-i-use-the-eraser" title="本標題的永久連結">¶</a></h3>
@@ -543,55 +543,53 @@
 <h3><a class="toc-backref" href="#id18">在哪裡可以找到舊版本 Krita？</a><a class="headerlink" href="#where-can-i-find-older-versions-of-krita" title="本標題的永久連結">¶</a></h3>
 <p>所有舊版本 Krita 均可在這裡找到：</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://download.kde.org/Attic/krita/">超舊版本存放區</a>.</p></li>
+<li><p><a class="reference external" href="https://download.kde.org/Attic/krita/">超舊版本存放區</a></p></li>
 </ul>
 </section>
 <section id="on-windows-the-krita-user-interface-is-too-big-on-my-screen">
 <h3><a class="toc-backref" href="#id19">在 Windows 上，Krita 的使用者介面在螢幕上的顯示過大</a><a class="headerlink" href="#on-windows-the-krita-user-interface-is-too-big-on-my-screen" title="本標題的永久連結">¶</a></h3>
-<p>If you're using Windows, you can set the display scaling to 150% or 200%. Krita comes with HiDPI enabled by default, so if you do that, the Krita UI might be too big for your screen. You can turn it off using the following steps:</p>
+<p>如果你使用 Windows，你可能會設定顯示器縮放為 150% 或 200%。Krita 預設啟用了 High-DPI 顯示器縮放，Krita 的介面或許會因此而變得太大，大於顯示器可顯示的空間。你可以依照下列步聚將其停用：</p>
 <ul>
-<li><p>On the menu, select <span class="menuselection">Settings ‣ Configure Krita...</span></p></li>
-<li><p>On <span class="guilabel">General</span> page, switch to <span class="guilabel">Window</span> tab.</p></li>
-<li><p>Uncheck <span class="guilabel">Enable Hi-DPI support</span> (or check if you wish to enable it)</p></li>
+<li><p>在主選單上點選 <span class="menuselection">設定 ‣ 設定 Krita…</span></p></li>
+<li><p>在 <span class="guilabel">一般</span> 版面中選取 <span class="guilabel">視窗</span> 分頁。</p></li>
+<li><p>取消勾選 <span class="guilabel">啟用高解析度螢幕 (Hi-DPI) 支援</span>（或者如果你想要啟用這項功能的話，請將其勾選）</p></li>
 <li><div class="versionadded">
-<p><span class="versionmodified added">在 5.0 版本新加入: </span>If you are using a fractional (not multiples of 100%) display scaling, you can instead try keeping <span class="guilabel">Enable Hi-DPI support</span> enabled and also enable <span class="guilabel">(Hi-DPI) Enable fractional scale factor</span>.</p>
+<p><span class="versionmodified added">在 5.0 版本新加入: </span>如果你的顯示器縮放設定為非整數（即不是 100% 的倍數）的話，你也可以嘗試保持啟用 <span class="guilabel">啟用高解析度螢幕 (Hi-DPI) 支援</span> 選項並同時啟用 <span class="guilabel">啟用非整數比例縮放 (Hi-DPI)</span> 選項。</p>
 </div>
 </li>
-<li><p>Press <span class="guilabel">OK</span>, if the settings screen is too big, <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Alt</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">O</kbd></kbd> will trigger the OK button too.</p></li>
-<li><p>Restart Krita</p></li>
+<li><p>點選 <span class="guilabel">確定</span>。如設定視窗顯示過大，你也可嘗試使用 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Alt</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">O</kbd></kbd> 鍵盤組合鍵來觸發確定按鈕。</p></li>
+<li><p>重新啟動 Krita</p></li>
 </ul>
-<p>You can also change the toolbox icon size by right-clicking on the toolbox and selecting a size.</p>
+<p>你也可以在工具箱上點按滑鼠右鍵以選取工具箱圖示的大小。</p>
 </section>
 <section id="windows-in-full-screen-mode-why-is-there-a-thin-gap-at-the-bottom-of-the-window">
 <h3><a class="toc-backref" href="#id20">Windows：在全螢幕模式中，為何畫面最下方會有一條幼邊？</a><a class="headerlink" href="#windows-in-full-screen-mode-why-is-there-a-thin-gap-at-the-bottom-of-the-window" title="本標題的永久連結">¶</a></h3>
-<p>When <a class="reference internal" href="reference_manual/preferences/display_settings.html#display-settings"><span class="std std-ref">Canvas Graphics Acceleration</span></a> is set to OpenGL, you may see a thin gap at the bottom of the window which you can see through. This is done deliberately to work around a bug causing menus and dropdowns to be unusable. If you find it distracting, you can consider changing the Renderer to Direct3D 11 which doesn't require this workaround.</p>
+<p>當<a class="reference internal" href="reference_manual/preferences/display_settings.html#display-settings"><span class="std std-ref">畫布圖形加速</span></a>繪製器設定為 OpenGL 時，你或許會在全螢幕 Krita 視窗的底部看到一道穿透的橫線。這是為了解決在全螢幕模式時不能使用選單和下拉方塊的問題而作出的折衷方案。如果這困擾著你，你可以考慮將繪製器改為 Direct3D 11，這沒有同樣的問題。</p>
 </section>
 <section id="windows-obs-can-t-record-the-krita-opengl-canvas">
 <h3><a class="toc-backref" href="#id21">Windows：OBS 不能錄製 Krita 的 OpenGL 畫布</a><a class="headerlink" href="#windows-obs-can-t-record-the-krita-opengl-canvas" title="本標題的永久連結">¶</a></h3>
-<p>The possible workarounds for this is to do either of the following:</p>
+<p>可以嘗試以下解決方法：</p>
 <ol class="arabic simple">
-<li><p>Turn off OpenGL in <span class="menuselection">Settings ‣ Configure Krita... ‣ Display</span>.</p></li>
-<li><p>Or don't use the hardware accelerated mode (game recording mode) in
-OBS, thus capturing the whole desktop instead of attempting to capture
-only Krita.</p></li>
+<li><p>在 <span class="menuselection">設定 ‣ 設定 Krita… ‣ 顯示</span> 停用 OpenGL。</p></li>
+<li><p>或在 OBS 中不要使用硬體加速模式（遊戲擷取模式），取而代之使用視窗擷取或顯示器擷取模式。</p></li>
 </ol>
-<p>You might also be able to work around the problem by using the ANGLE renderer instead of native OpenGL.</p>
+<p>你或許也可以選取使用 ANGLE 繪製器而不使用原生 OpenGL。</p>
 </section>
 <section id="windows-can-i-use-krita-with-sandboxie">
 <h3><a class="toc-backref" href="#id22">Windows：我可以經 Sandboxie 執行 Krita 嗎？</a><a class="headerlink" href="#windows-can-i-use-krita-with-sandboxie" title="本標題的永久連結">¶</a></h3>
-<p>No, this is not recommended. Sandboxie causes stuttering and freezes due to the way it intercepts calls for resources on disk.</p>
+<p>我們不建議這樣做。Sandboxie 攔截資源檔案讀取的方式或會引致運作不順暢或停頓。</p>
 </section>
 <section id="windows-krita-cannot-save">
 <h3><a class="toc-backref" href="#id23">Windows：Krita 不能儲存檔案</a><a class="headerlink" href="#windows-krita-cannot-save" title="本標題的永久連結">¶</a></h3>
-<p>If the message is &quot;File not found. Check the file name and try again.&quot;, you probably have Controlled Folder Access enabled.</p>
+<p>如錯誤訊息為「找不到檔案。檢查檔案名稱，然後再試一次。」，你或許啟用了「受控資料夾存取權」。</p>
 <ul class="simple">
-<li><p>Select <span class="menuselection">Start ‣ Settings</span>.</p></li>
-<li><p>Choose <span class="menuselection">Update &amp; security ‣ Windows Defender</span>.</p></li>
-<li><p>Select <span class="guilabel">Open Windows Defender Security Center</span>.</p></li>
-<li><p>Select <span class="guilabel">Virus &amp; threat protection</span>, and then choose <span class="guilabel">Virus &amp; threat protection settings</span>.</p></li>
-<li><p>Under <span class="guilabel">Controlled folder access</span>, turn it on or off.</p></li>
+<li><p>點選 <span class="menuselection">開始功能表 ‣ 設定</span>。</p></li>
+<li><p>點選 <span class="menuselection">更新與安全性 ‣ Windows 安全性</span>。</p></li>
+<li><p>點選 <span class="guilabel">開啟 Windows 安全性</span>。</p></li>
+<li><p>點選 <span class="guilabel">病毒與威脅防護</span>，然後點選選 <span class="guilabel">勒索軟體防護</span> 下的 <span class="guilabel">管理勒索軟體防護</span>。</p></li>
+<li><p>在 <span class="guilabel">受控資料夾存取權</span> 之下將其關閉。</p></li>
 </ul>
-<p>You can also whitelist Krita, following <a class="reference external" href="https://docs.microsoft.com/en-us/windows/security/threat-protection/microsoft-defender-atp/customize-controlled-folders#allow-specific-apps-to-make-changes-to-controlled-folders">these instructions</a>.</p>
+<p>你也可以嘗試依照<a class="reference external" href="https://docs.microsoft.com/zh-tw/microsoft-365/security/defender-endpoint/customize-controlled-folders?view=o365-worldwide#allow-specific-apps-to-make-changes-to-controlled-folders">這些指示</a>將 Krita 加入到允許清單中。</p>
 </section>
 <section id="windows-krita-cannot-open-my-file-anymore">
 <h3><a class="toc-backref" href="#id24">Windows：Krita 不能開啟我的檔案</a><a class="headerlink" href="#windows-krita-cannot-open-my-file-anymore" title="本標題的永久連結">¶</a></h3>
