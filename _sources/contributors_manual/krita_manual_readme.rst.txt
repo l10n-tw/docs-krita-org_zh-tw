@@ -435,6 +435,8 @@ Translating
 
 Translation of the manual is handled by the `KDE localization community <https://l10n.kde.org/>`_. To join the translation effort, go to the localization site, select the list of `translation teams <https://l10n.kde.org/teams-list.php>`_, select the language you wish to translate for, and follow the instructions on the team page to get in contact with fellow translators.
 
+Please refer to https://community.kde.org/Get_Involved/translation for more general instructions on getting involved in KDE localization.
+
 The localization team has access to the PO files for this manual, which is a file type used by translation programs like POEdit and Lokalize. A translation team is able to work together on translating these files and uploading them to the translations SVN. A special script will then take the translations from the SVN and bring them to the manual section to be incorporated on a daily basis.
 
 Images can be translated if a translation team wants to provide their own images. All images in the image folder are by default for 'en'. When you want to translate a specific image, go into that folder and add another folder with your language code to add in the translated versions of images. So Sphinx will search for a dutch version of :file:`/images/Pixels-brushstroke.png` at :file:`/images/nl/Pixels-brushstroke.png` and for a dutch version of :file:`/images/dockers/Krita-tutorial2-I.1-2.png` in :file:`/images/dockers/nl/Krita-tutorial2-I.1-2.png`.

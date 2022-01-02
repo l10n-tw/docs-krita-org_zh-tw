@@ -581,6 +581,8 @@ Who translates Krita
 
 Krita is a `KDE application <https://www.kde.org/>`_ — and proud of it! That means that Krita’s translations are done by `KDE localization teams <https://l10n.kde.org/>`_. If you want to help out, join the team for your language! There is another way you can help out making Krita look good in any language, and that is join the development team and fix issues within the code that make Krita harder to translate.
 
+Please refer to https://community.kde.org/Get_Involved/translation for more general instructions on getting involved in KDE localization.
+
 Reference
 =========
 

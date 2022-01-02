@@ -15,11 +15,13 @@
 The Krita Community
 ===================
 
-Get in touch! Apart from the website at https://www.krita.org, the Krita project has three main communication channels:
+Get in touch! Apart from the website at https://www.krita.org, the Krita project has several main communication channels:
 
 * Internet Relay Chat (IRC)
 * The mailing list
+* GitLab (KDE Invent)
 * Phabricator
+* Krita Artists community forum
 
 While Krita developers and users are present on social media such as Twitter, Mastodon, Reddit, Google+, Tumblr or Facebook, those are not the place where we discuss new features, bugs, development or where we make plans for the future.
 
@@ -73,10 +75,10 @@ The mailing list is used for announcements and sparingly for discussions. Everyo
 The mailing list is called "kimageshop", because that is the name under which the Krita project was started. Legal issues (surprise!) led to two renames, once to Krayon, then to Krita.
 
 
-Gitlab (KDE Invent)
+GitLab (KDE Invent)
 -------------------
 
-Gitlab serves the following purposes for the Krita team:
+GitLab serves the following purposes for the Krita team:
 
 * Reviewing volunteers' submissions through Merge Requests (MR) on `Graphics/Krita`_ for the code and `Documentation/Krita.org Documentation Website`_ for the content of the Krita Manual.
 * Host the code git repository: https://invent.kde.org/graphics/krita.git . Note that while there are mirrors of our git repository on Github and Phabricator, we do not use them for Krita development.
@@ -85,9 +87,9 @@ Gitlab serves the following purposes for the Krita team:
 .. _Graphics/Krita: https://invent.kde.org/graphics/krita/merge_requests
 .. _Documentation/Krita.org Documentation Website: https://invent.kde.org/documentation/docs-krita-org/merge_requests
 
-**Do not** make new issues on Gitlab or use it to make bug reports.
+**Do not** make new issues on GitLab or use it to make bug reports.
 
-**Do** put all your code submissions (merge requests) on Gitlab. **Do not** attach patches to bugs in the bug tracker.
+**Do** put all your code submissions (merge requests) on GitLab. **Do not** attach patches to bugs in the bug tracker.
 
 Phabricator
 -----------
@@ -97,6 +99,11 @@ Phabricator serves the following purposes for the Krita team:
 * Track what we are working on: https://phabricator.kde.org/maniphest/ This includes development tasks, designing new features and UX design, as well as tasks related to the website.
 
 **Do not** report bugs as tasks on Phabricator. Phabricator is where we organize our work.
+
+Krita Artists
+-------------
+
+`Krita Artists <https://krita-artists.org>`_ is a forum built for users and artists. Most of the developers have accounts on the forum too.
 
 Bugzilla: the Bug Tracker
 -------------------------
