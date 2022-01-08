@@ -1,4 +1,4 @@
-.. meta::
+f.. meta::
     :description:
         Releasing Krita
 
@@ -69,13 +69,13 @@ Create and push the tag
 
     .. code::
     
-        git tag -a v4.2.9-beta1 -m "Krita 4.2.9 Beta1"
+        git tag -a v5.1.0-beta1 -m "Krita 5.1.0 Beta1"
 
 2. Push the tag: 
 
     .. code::
     
-        git push origin refs/tags/v4.2.9-beta1:refs/tags/v4.2.9-beta1
+        git push origin refs/tags/v5.1.0-beta1:refs/tags/v5.1.0-beta1
 
 3. If you need to change the tag position (not recommended):
 
@@ -83,13 +83,13 @@ Create and push the tag
 
         # remove the previous tag
 
-        git push origin :refs/tags/v4.2.9-beta1
+        git push origin :refs/tags/v5.1.0-beta1
 
         # make a new tag locally
-        git tag -a v4.2.9-beta1 -m "Krita 4.2.9 Beta1"
+        git tag -a v5.1.0-beta1 -m "Krita 5.1.0 Beta1"
 
         # push the new tag
-        git push origin refs/tags/v4.2.9-beta1:refs/tags/v4.2.9-beta1
+        git push origin refs/tags/v5.1.0-beta1:refs/tags/v5.1.0-beta1
 
         # all Krita developers now have to refetch tags to 
         # get the updated tag position
@@ -107,8 +107,8 @@ Create the tarball
 
     .. code::
 
-        gpg --output krita-4.2.9-beta1.tar.gz.sig --detach-sign krita-4.2.9-beta1.tar.gz
-        gpg --output krita-4.2.9-beta1.tar.xz.sig --detach-sign krita-4.2.9-beta1.tar.xz
+        gpg --output krita-5.1.0-beta1.tar.gz.sig --detach-sign krita-5.1.0-beta1.tar.gz
+        gpg --output krita-5.1.0-beta1.tar.xz.sig --detach-sign krita-5.1.0-beta1.tar.xz
 
 5. Upload the gz tarball to files.kde.org, where builders can pick them up (the sigs and the xz tarball aren't used for the binary builders):
 
@@ -128,6 +128,10 @@ Make Windows, Linux, macOS and Android packages
     * https://binary-factory.kde.org/job/Krita_Release_Android_x86_64_Build/
     * https://binary-factory.kde.org/job/Krita_Release_Android_x86_Build/
 
+Runs
+
+    * https://binary-factory.kde.org/job/Krita_Release_Android_AppBundle_Build/ (after the android builds are done)
+
 9. Download all built artifacts using `download_release_artifacts.sh` script. Open the script and modify `KRITA_VERSION` variable to correspond to the version string.
 
 10. For each build check:
@@ -137,29 +141,30 @@ Make Windows, Linux, macOS and Android packages
     * Python plugins are available
     * Basic painting and most recently fixed bugs are fixed
 
-11. Sign both AppImages:
+11. Sign the AppImage:
 
     .. code::
 
-        gpg --detach-sign --output krita-4.2.9-beta-x86_64.appimage.sig krita-4.2.9-beta-x86_64.appimage
-        gpg --detach-sign --output gmic_krita_qt-x86_64.appimage.sig gmic_krita_qt-x86_64.appimage
+        gpg --detach-sign --output krita-5.1.0-beta-x86_64.appimage.sig krita-5.1.0-beta-x86_64.appimage
 
 
 12. Sign four Android packages (or send them to Halla for signing)
 
-    * krita-arm64-4.2.9-beta1-unsigned.apk
-    * krita-arm32-4.2.9-beta1-unsigned.apk
-    * krita-x86-4.2.9-beta1-unsigned.apk
-    * krita-x86_64-4.2.9-beta1-unsigned.apk
+    Note: there is a useful script for signing them...
+
+    * krita-arm64-5.1.0-beta1-unsigned.apk
+    * krita-arm32-5.1.0-beta1-unsigned.apk
+    * krita-x86-5.1.0-beta1-unsigned.apk
+    * krita-x86_64-5.1.0-beta1-unsigned.apk
 
     After signing, remove "-unsigned" suffix, so the signed packages would look like that:
 
-    * krita-arm64-4.2.9-beta1.apk
-    * krita-arm32-4.2.9-beta1.apk
-    * krita-x86-4.2.9-beta1.apk
-    * krita-x86_64-4.2.9-beta1.apk
-  
-13. Now you should have 20(!) files in your release folder
+    * krita-arm64-5.1.0-beta1.apk
+    * krita-arm32-5.1.0-beta1.apk
+    * krita-x86-5.1.0-beta1.apk
+    * krita-x86_64-5.1.0-beta1.apk
+
+13. Now you should have 18 files in your release folder
 
 14. Generate an md5sum.txt file for all of them:
 
@@ -167,29 +172,34 @@ Make Windows, Linux, macOS and Android packages
 
         md5sum ./* > md5sum.txt
 
-15. Upload 21(!) files to download.kde.org (or ask sysadmins to do that using this manual ftp://upload.kde.org/README):
+15. Upload all files to download.kde.org (or ask sysadmins to do that using this manual ftp://upload.kde.org/README):
 
-    * krita-4.2.9-beta1.tar.gz
-    * krita-4.2.9-beta1.tar.gz.sig
-    * krita-4.2.9-beta1.tar.xz
-    * krita-4.2.9-beta1.tar.xz.sig
-    * gmic_krita_qt-x86_64.appimage
-    * gmic_krita_qt-x86_64.appimage.sig
-    * krita-4.2.9-beta1-x86_64.appimage
-    * krita-4.2.9-beta1-x86_64.appimage.sig
-    * Krita-Beta-x86_64.appimage.zsync (beta zsync belongs to /unstable/krita/updates/, stable to /stable/krita/updates/)
-    * krita-x64-4.2.9-beta1-dbg.zip
-    * krita-x64-4.2.9-beta1-setup.exe
-    * krita-x64-4.2.9-beta1.zip
-    * krita-x86-4.2.9-beta1-dbg.zip
-    * krita-x86-4.2.9-beta1-setup.exe
-    * krita-x86-4.2.9-beta1.zip
-    * krita-4.2.9-beta1.dmg
-    * krita-arm64-4.2.9-beta1.apk
-    * krita-arm32-4.2.9-beta1.apk
-    * krita-x86-4.2.9-beta1.apk
-    * krita-x86_64-4.2.9-beta1.apk
-    * md5sum.txt
+Note that the msix file is only for uploading to the Windows Store, it doesn't need to be uploaded to download.kde.org.
+
+    - to https://download.kde.org/unstable/krita/5.1.0-beta1/
+        * krita-5.1.0-beta1.tar.gz
+        * krita-5.1.0-beta1.tar.gz.sig
+        * krita-5.1.0-beta1.tar.xz
+        * krita-5.1.0-beta1.tar.xz.sig
+        * krita-5.1.0-beta1-x86_64.appimage
+        * krita-5.1.0-beta1-x86_64.appimage.sig
+        * krita-x64-5.1.0-beta1-dbg.zip
+        * krita-x64-5.1.0-beta1-setup.exe
+        * krita-x64-5.1.0-beta1.zip
+        * krita-x86-5.1.0-beta1-dbg.zip
+        * krita-x86-5.1.0-beta1-setup.exe
+        * krita-x86-5.1.0-beta1.zip
+        * krita-5.1.0-beta1.dmg
+        * krita-arm64-5.1.0-beta1.apk
+        * krita-arm32-5.1.0-beta1.apk
+        * krita-x86-5.1.0-beta1.apk
+        * krita-x86_64-5.1.0-beta1.apk
+        * md5sum.txt
+    - to https://download.kde.org/unstable/krita/updates/
+        * Krita-Beta-x86_64.appimage.zsync
+        
+    Please don't forget to replace "unstable" to "stable" for stable release builds. 
+    It should be replaced for both, packages themselves and zsync file
 
 
 16. Template ticket for sysadmins:
@@ -202,13 +212,16 @@ Make Windows, Linux, macOS and Android packages
 
         There are two tasks:
 
-        1) Upload release artifacts (21 files) to download.kde.org:
+        1) Upload release artifacts (20 files) to download.kde.org:
 
-            * Source link: https://files.kde.org/krita/release-4.2.9-beta1/
-            * Destination link: https://download.kde.org/unstable/krita/4.2.9-beta1/
-            * There should be 16 files including `md5sum.txt`
-
-        2) Add `Krita 4.2.9 Beta1` bugzilla version 
+            * Source link: https://files.kde.org/krita/release-5.1.0-beta1/
+            * Destination link: https://download.kde.org/unstable/krita/5.1.0-beta1/
+            
+        2) Upload updates ZSync artifacts (1 file) to download.kde.org:
+            * Source link: https://files.kde.org/krita/release-5.1.0-beta1-updates/
+            * Destination link: https://download.kde.org/unstable/krita/updates/
+                         
+        3) Add `Krita 5.1.0 Beta1` bugzilla version
 
 17. Now the folder on download.kde.org should have 21(!) files. Check if you missed something (and you surely did! :) ).
 

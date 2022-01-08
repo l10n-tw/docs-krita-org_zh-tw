@@ -21,9 +21,8 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2022-01-02T15:35:20" />
+  <meta property="og:article:modified_time" content="2022-01-08T18:54:58" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<meta content="Releasing Krita" name="description" />
 
   
   
@@ -258,7 +257,15 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="making-a-release">
+  <dl class="simple">
+<dt>f.. meta::</dt><dd><dl class="field-list simple">
+<dt class="field-odd">description</dt>
+<dd class="field-odd"><p>Releasing Krita</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<section id="making-a-release">
 <span id="release-krita"></span><h1><a class="toc-backref" href="#id3">Making a release</a><a class="headerlink" href="#making-a-release" title="本標題的永久連結">¶</a></h1>
 <div class="contents topic" id="id1">
 <p class="topic-title">目錄</p>
@@ -347,14 +354,14 @@
 <ol class="arabic">
 <li><p>Set the tag:</p>
 <blockquote>
-<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">tag</span> <span class="o">-</span><span class="n">a</span> <span class="n">v4</span><span class="o">.</span><span class="mf">2.9</span><span class="o">-</span><span class="n">beta1</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&quot;Krita 4.2.9 Beta1&quot;</span>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">tag</span> <span class="o">-</span><span class="n">a</span> <span class="n">v5</span><span class="o">.</span><span class="mf">1.0</span><span class="o">-</span><span class="n">beta1</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&quot;Krita 5.1.0 Beta1&quot;</span>
 </pre></div>
 </div>
 </div></blockquote>
 </li>
 <li><p>Push the tag:</p>
 <blockquote>
-<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="n">refs</span><span class="o">/</span><span class="n">tags</span><span class="o">/</span><span class="n">v4</span><span class="o">.</span><span class="mf">2.9</span><span class="o">-</span><span class="n">beta1</span><span class="p">:</span><span class="n">refs</span><span class="o">/</span><span class="n">tags</span><span class="o">/</span><span class="n">v4</span><span class="o">.</span><span class="mf">2.9</span><span class="o">-</span><span class="n">beta1</span>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="n">refs</span><span class="o">/</span><span class="n">tags</span><span class="o">/</span><span class="n">v5</span><span class="o">.</span><span class="mf">1.0</span><span class="o">-</span><span class="n">beta1</span><span class="p">:</span><span class="n">refs</span><span class="o">/</span><span class="n">tags</span><span class="o">/</span><span class="n">v5</span><span class="o">.</span><span class="mf">1.0</span><span class="o">-</span><span class="n">beta1</span>
 </pre></div>
 </div>
 </div></blockquote>
@@ -363,13 +370,13 @@
 <blockquote>
 <div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># remove the previous tag</span>
 
-<span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="p">:</span><span class="n">refs</span><span class="o">/</span><span class="n">tags</span><span class="o">/</span><span class="n">v4</span><span class="o">.</span><span class="mf">2.9</span><span class="o">-</span><span class="n">beta1</span>
+<span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="p">:</span><span class="n">refs</span><span class="o">/</span><span class="n">tags</span><span class="o">/</span><span class="n">v5</span><span class="o">.</span><span class="mf">1.0</span><span class="o">-</span><span class="n">beta1</span>
 
 <span class="c1"># make a new tag locally</span>
-<span class="n">git</span> <span class="n">tag</span> <span class="o">-</span><span class="n">a</span> <span class="n">v4</span><span class="o">.</span><span class="mf">2.9</span><span class="o">-</span><span class="n">beta1</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&quot;Krita 4.2.9 Beta1&quot;</span>
+<span class="n">git</span> <span class="n">tag</span> <span class="o">-</span><span class="n">a</span> <span class="n">v5</span><span class="o">.</span><span class="mf">1.0</span><span class="o">-</span><span class="n">beta1</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&quot;Krita 5.1.0 Beta1&quot;</span>
 
 <span class="c1"># push the new tag</span>
-<span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="n">refs</span><span class="o">/</span><span class="n">tags</span><span class="o">/</span><span class="n">v4</span><span class="o">.</span><span class="mf">2.9</span><span class="o">-</span><span class="n">beta1</span><span class="p">:</span><span class="n">refs</span><span class="o">/</span><span class="n">tags</span><span class="o">/</span><span class="n">v4</span><span class="o">.</span><span class="mf">2.9</span><span class="o">-</span><span class="n">beta1</span>
+<span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="n">refs</span><span class="o">/</span><span class="n">tags</span><span class="o">/</span><span class="n">v5</span><span class="o">.</span><span class="mf">1.0</span><span class="o">-</span><span class="n">beta1</span><span class="p">:</span><span class="n">refs</span><span class="o">/</span><span class="n">tags</span><span class="o">/</span><span class="n">v5</span><span class="o">.</span><span class="mf">1.0</span><span class="o">-</span><span class="n">beta1</span>
 
 <span class="c1"># all Krita developers now have to refetch tags to</span>
 <span class="c1"># get the updated tag position</span>
@@ -391,8 +398,8 @@
 <ol class="arabic" start="4">
 <li><p>Sign both tarballs:</p>
 <blockquote>
-<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">gpg</span> <span class="o">--</span><span class="n">output</span> <span class="n">krita</span><span class="o">-</span><span class="mf">4.2</span><span class="o">.</span><span class="mi">9</span><span class="o">-</span><span class="n">beta1</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span><span class="o">.</span><span class="n">sig</span> <span class="o">--</span><span class="n">detach</span><span class="o">-</span><span class="n">sign</span> <span class="n">krita</span><span class="o">-</span><span class="mf">4.2</span><span class="o">.</span><span class="mi">9</span><span class="o">-</span><span class="n">beta1</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
-<span class="n">gpg</span> <span class="o">--</span><span class="n">output</span> <span class="n">krita</span><span class="o">-</span><span class="mf">4.2</span><span class="o">.</span><span class="mi">9</span><span class="o">-</span><span class="n">beta1</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">xz</span><span class="o">.</span><span class="n">sig</span> <span class="o">--</span><span class="n">detach</span><span class="o">-</span><span class="n">sign</span> <span class="n">krita</span><span class="o">-</span><span class="mf">4.2</span><span class="o">.</span><span class="mi">9</span><span class="o">-</span><span class="n">beta1</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">xz</span>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">gpg</span> <span class="o">--</span><span class="n">output</span> <span class="n">krita</span><span class="o">-</span><span class="mf">5.1</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">beta1</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span><span class="o">.</span><span class="n">sig</span> <span class="o">--</span><span class="n">detach</span><span class="o">-</span><span class="n">sign</span> <span class="n">krita</span><span class="o">-</span><span class="mf">5.1</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">beta1</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
+<span class="n">gpg</span> <span class="o">--</span><span class="n">output</span> <span class="n">krita</span><span class="o">-</span><span class="mf">5.1</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">beta1</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">xz</span><span class="o">.</span><span class="n">sig</span> <span class="o">--</span><span class="n">detach</span><span class="o">-</span><span class="n">sign</span> <span class="n">krita</span><span class="o">-</span><span class="mf">5.1</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">beta1</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">xz</span>
 </pre></div>
 </div>
 </div></blockquote>
@@ -422,6 +429,14 @@
 </ul>
 </div></blockquote>
 </li>
+</ol>
+<p>Runs</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference external" href="https://binary-factory.kde.org/job/Krita_Release_Android_AppBundle_Build/">https://binary-factory.kde.org/job/Krita_Release_Android_AppBundle_Build/</a> (after the android builds are done)</p></li>
+</ul>
+</div></blockquote>
+<ol class="arabic" start="9">
 <li><p>Download all built artifacts using <cite>download_release_artifacts.sh</cite> script. Open the script and modify <cite>KRITA_VERSION</cite> variable to correspond to the version string.</p></li>
 <li><p>For each build check:</p>
 <ul class="simple">
@@ -431,58 +446,74 @@
 <li><p>Basic painting and most recently fixed bugs are fixed</p></li>
 </ul>
 </li>
-<li><p>Sign both AppImages:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">gpg</span> <span class="o">--</span><span class="n">detach</span><span class="o">-</span><span class="n">sign</span> <span class="o">--</span><span class="n">output</span> <span class="n">krita</span><span class="o">-</span><span class="mf">4.2</span><span class="o">.</span><span class="mi">9</span><span class="o">-</span><span class="n">beta</span><span class="o">-</span><span class="n">x86_64</span><span class="o">.</span><span class="n">appimage</span><span class="o">.</span><span class="n">sig</span> <span class="n">krita</span><span class="o">-</span><span class="mf">4.2</span><span class="o">.</span><span class="mi">9</span><span class="o">-</span><span class="n">beta</span><span class="o">-</span><span class="n">x86_64</span><span class="o">.</span><span class="n">appimage</span>
-<span class="n">gpg</span> <span class="o">--</span><span class="n">detach</span><span class="o">-</span><span class="n">sign</span> <span class="o">--</span><span class="n">output</span> <span class="n">gmic_krita_qt</span><span class="o">-</span><span class="n">x86_64</span><span class="o">.</span><span class="n">appimage</span><span class="o">.</span><span class="n">sig</span> <span class="n">gmic_krita_qt</span><span class="o">-</span><span class="n">x86_64</span><span class="o">.</span><span class="n">appimage</span>
+<li><p>Sign the AppImage:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">gpg</span> <span class="o">--</span><span class="n">detach</span><span class="o">-</span><span class="n">sign</span> <span class="o">--</span><span class="n">output</span> <span class="n">krita</span><span class="o">-</span><span class="mf">5.1</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">beta</span><span class="o">-</span><span class="n">x86_64</span><span class="o">.</span><span class="n">appimage</span><span class="o">.</span><span class="n">sig</span> <span class="n">krita</span><span class="o">-</span><span class="mf">5.1</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">beta</span><span class="o">-</span><span class="n">x86_64</span><span class="o">.</span><span class="n">appimage</span>
 </pre></div>
 </div>
 </li>
 <li><p>Sign four Android packages (or send them to Halla for signing)</p>
+<p>Note: there is a useful script for signing them...</p>
 <ul class="simple">
-<li><p>krita-arm64-4.2.9-beta1-unsigned.apk</p></li>
-<li><p>krita-arm32-4.2.9-beta1-unsigned.apk</p></li>
-<li><p>krita-x86-4.2.9-beta1-unsigned.apk</p></li>
-<li><p>krita-x86_64-4.2.9-beta1-unsigned.apk</p></li>
+<li><p>krita-arm64-5.1.0-beta1-unsigned.apk</p></li>
+<li><p>krita-arm32-5.1.0-beta1-unsigned.apk</p></li>
+<li><p>krita-x86-5.1.0-beta1-unsigned.apk</p></li>
+<li><p>krita-x86_64-5.1.0-beta1-unsigned.apk</p></li>
 </ul>
 <p>After signing, remove &quot;-unsigned&quot; suffix, so the signed packages would look like that:</p>
 <ul class="simple">
-<li><p>krita-arm64-4.2.9-beta1.apk</p></li>
-<li><p>krita-arm32-4.2.9-beta1.apk</p></li>
-<li><p>krita-x86-4.2.9-beta1.apk</p></li>
-<li><p>krita-x86_64-4.2.9-beta1.apk</p></li>
+<li><p>krita-arm64-5.1.0-beta1.apk</p></li>
+<li><p>krita-arm32-5.1.0-beta1.apk</p></li>
+<li><p>krita-x86-5.1.0-beta1.apk</p></li>
+<li><p>krita-x86_64-5.1.0-beta1.apk</p></li>
 </ul>
 </li>
-<li><p>Now you should have 20(!) files in your release folder</p></li>
+<li><p>Now you should have 18 files in your release folder</p></li>
 <li><p>Generate an md5sum.txt file for all of them:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">md5sum</span> <span class="o">./*</span> <span class="o">&gt;</span> <span class="n">md5sum</span><span class="o">.</span><span class="n">txt</span>
 </pre></div>
 </div>
 </li>
-<li><p>Upload 21(!) files to download.kde.org (or ask sysadmins to do that using this manual <a class="reference external" href="ftp://upload.kde.org/README">ftp://upload.kde.org/README</a>):</p>
-<ul class="simple">
-<li><p>krita-4.2.9-beta1.tar.gz</p></li>
-<li><p>krita-4.2.9-beta1.tar.gz.sig</p></li>
-<li><p>krita-4.2.9-beta1.tar.xz</p></li>
-<li><p>krita-4.2.9-beta1.tar.xz.sig</p></li>
-<li><p>gmic_krita_qt-x86_64.appimage</p></li>
-<li><p>gmic_krita_qt-x86_64.appimage.sig</p></li>
-<li><p>krita-4.2.9-beta1-x86_64.appimage</p></li>
-<li><p>krita-4.2.9-beta1-x86_64.appimage.sig</p></li>
-<li><p>Krita-Beta-x86_64.appimage.zsync (beta zsync belongs to /unstable/krita/updates/, stable to /stable/krita/updates/)</p></li>
-<li><p>krita-x64-4.2.9-beta1-dbg.zip</p></li>
-<li><p>krita-x64-4.2.9-beta1-setup.exe</p></li>
-<li><p>krita-x64-4.2.9-beta1.zip</p></li>
-<li><p>krita-x86-4.2.9-beta1-dbg.zip</p></li>
-<li><p>krita-x86-4.2.9-beta1-setup.exe</p></li>
-<li><p>krita-x86-4.2.9-beta1.zip</p></li>
-<li><p>krita-4.2.9-beta1.dmg</p></li>
-<li><p>krita-arm64-4.2.9-beta1.apk</p></li>
-<li><p>krita-arm32-4.2.9-beta1.apk</p></li>
-<li><p>krita-x86-4.2.9-beta1.apk</p></li>
-<li><p>krita-x86_64-4.2.9-beta1.apk</p></li>
+<li><p>Upload all files to download.kde.org (or ask sysadmins to do that using this manual <a class="reference external" href="ftp://upload.kde.org/README">ftp://upload.kde.org/README</a>):</p></li>
+</ol>
+<p>Note that the msix file is only for uploading to the Windows Store, it doesn't need to be uploaded to download.kde.org.</p>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>to <a class="reference external" href="https://download.kde.org/unstable/krita/5.1.0-beta1/">https://download.kde.org/unstable/krita/5.1.0-beta1/</a></dt><dd><ul>
+<li><p>krita-5.1.0-beta1.tar.gz</p></li>
+<li><p>krita-5.1.0-beta1.tar.gz.sig</p></li>
+<li><p>krita-5.1.0-beta1.tar.xz</p></li>
+<li><p>krita-5.1.0-beta1.tar.xz.sig</p></li>
+<li><p>krita-5.1.0-beta1-x86_64.appimage</p></li>
+<li><p>krita-5.1.0-beta1-x86_64.appimage.sig</p></li>
+<li><p>krita-x64-5.1.0-beta1-dbg.zip</p></li>
+<li><p>krita-x64-5.1.0-beta1-setup.exe</p></li>
+<li><p>krita-x64-5.1.0-beta1.zip</p></li>
+<li><p>krita-x86-5.1.0-beta1-dbg.zip</p></li>
+<li><p>krita-x86-5.1.0-beta1-setup.exe</p></li>
+<li><p>krita-x86-5.1.0-beta1.zip</p></li>
+<li><p>krita-5.1.0-beta1.dmg</p></li>
+<li><p>krita-arm64-5.1.0-beta1.apk</p></li>
+<li><p>krita-arm32-5.1.0-beta1.apk</p></li>
+<li><p>krita-x86-5.1.0-beta1.apk</p></li>
+<li><p>krita-x86_64-5.1.0-beta1.apk</p></li>
 <li><p>md5sum.txt</p></li>
 </ul>
+</dd>
+</dl>
 </li>
+<li><dl class="simple">
+<dt>to <a class="reference external" href="https://download.kde.org/unstable/krita/updates/">https://download.kde.org/unstable/krita/updates/</a></dt><dd><ul>
+<li><p>Krita-Beta-x86_64.appimage.zsync</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<p>Please don't forget to replace &quot;unstable&quot; to &quot;stable&quot; for stable release builds.
+It should be replaced for both, packages themselves and zsync file</p>
+</div></blockquote>
+<ol class="arabic" start="16">
 <li><p>Template ticket for sysadmins:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Hi, sysadmins!
 
@@ -490,13 +521,16 @@ Could you please do the final steps for publishing Krita release?
 
 There are two tasks:
 
-1) Upload release artifacts (21 files) to download.kde.org:
+1) Upload release artifacts (20 files) to download.kde.org:
 
-    * Source link: https://files.kde.org/krita/release-4.2.9-beta1/
-    * Destination link: https://download.kde.org/unstable/krita/4.2.9-beta1/
-    * There should be 16 files including `md5sum.txt`
+    * Source link: https://files.kde.org/krita/release-5.1.0-beta1/
+    * Destination link: https://download.kde.org/unstable/krita/5.1.0-beta1/
 
-2) Add `Krita 4.2.9 Beta1` bugzilla version
+2) Upload updates ZSync artifacts (1 file) to download.kde.org:
+    * Source link: https://files.kde.org/krita/release-5.1.0-beta1-updates/
+    * Destination link: https://download.kde.org/unstable/krita/updates/
+
+3) Add `Krita 5.1.0 Beta1` bugzilla version
 </pre></div>
 </div>
 </li>
@@ -578,7 +612,7 @@ There are two tasks:
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>dbe5ac2</code>
+          修訂版本 <code>36f190b</code>
         </span>
       
 
