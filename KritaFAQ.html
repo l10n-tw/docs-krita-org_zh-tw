@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2022-01-08T18:54:58" />
+  <meta property="og:article:modified_time" content="2022-01-16T22:54:55" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   
@@ -602,10 +602,10 @@
 </div>
 </div></blockquote>
 </li>
-<li><p>Badly programmed security software may attempt to rewrite KRA files, or prevent Krita from writing to the folder you wish to save to. These cases can be checked by trying to save in that location, and then, without shutting down Krita, checking in the folder to see if the file saved. Files lost due this cannot be recovered.</p></li>
-<li><p>Cloud services like Dropbox and OneDrive have been known to prevent Krita from saving. We've implemented fixes for this, but much like the above point it is worth checking that this isn't the cause of the issue. Files lost due this cannot be recovered.</p></li>
-<li><p>Occasionally the ZIP files that KRA files consist of will have the last few bytes missing. We're doing everything in our power to prevent this kind of corruption, but it might be a file system issue. This particular bug can be fixed by renaming the extension (in windows you will need to enable the file extensions, which this FAQ will not cover) to ZIP, and then using a ZIP repairing utility to fix the ZIP file. Then rename it back to KRA.</p></li>
-<li><p>If Krita doesn't give an error message, but rather crashes, your file is too big, and Krita is not so much crashing as that the operating system is shutting it down. Try shutting down some other programs like web browsers or streaming services to free up working memory. You should be able to open the file in question. At this point the recommended course of action is to try and reduce the file size in some manner, such as merging layers, splitting up an animation or scaling the image down.</p></li>
+<li><p>不良品質的防毒軟體可能會試圖修改 KRA 檔案或防止 Krita 正常將檔案寫入到目標資料夾中。要檢查這種情況，你可以先嘗試從 Krita 將檔案儲存到資料夾位置，然後在不關上 Krita 的情況下到該資料夾檢查檔案有沒有被正常儲存。因這種情況丟失的檔案不能被還原。</p></li>
+<li><p>雲端儲存空間如 Dropbox 和 OneDrive 的用戶端同步功能已知有可能會阻礙 Krita 正常儲存檔案。雖然我們已為這種情況加入了修正方案，但是也值得自行測試一下這些同步功能有沒有在產生相關問題。因這種情況丟失的檔案不能被還原。</p></li>
+<li><p>有時候，構成 KRA 檔案格式的 ZIP 檔案會缺少了檔案的最後數個位元組。我們已盡力採取可行的措施來預防這類檔案損壞問題，但這也有可能是磁碟區檔案系統的問題。這種情況可以將檔案的副檔名重新命名為 ZIP（需先在 Windows 中啟用顯示副檔名，方法可自行在網上搜尋），然後使用一些能修復 ZIP 壓縮檔的軟體來修復這個檔案，再將經修復後的檔案改回副檔名為 KRA。</p></li>
+<li><p>如 Krita 沒有顯示錯誤訊息，而是出現軟體當機或崩潰的情況，這很可能代表你的影像太大了，系統沒有足夠的記憶體讓 Krita 處理該檔案而導致作業系統強制終止 Krita 運行。請嘗試關閉其他軟體（例如網頁瀏覽器或影視串流服務）以騰出可用記憶體，然後再嘗試開啟該檔案。一般建議的後續行動是盡量縮減該檔案的大小，例如是將圖層合併、分割動畫檔或把影像尺寸縮小。</p></li>
 </ol>
 </section>
 <section id="how-to-recover-my-files">
@@ -897,7 +897,7 @@ AppImage, Snap/Flatpak or PPA releases that are officially provided on the <a cl
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>36f190b</code>
+          修訂版本 <code>2b12483</code>
         </span>
       
 
