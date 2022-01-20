@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2022-01-19T22:55:03" />
+  <meta property="og:article:modified_time" content="2022-01-20T15:54:26" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   
@@ -616,34 +616,34 @@
 <dt>嘗試能不能以 ZIP 檔案格式開啟檔案。</dt><dd><ol class="arabic simple">
 <li><p>將副檔名由 <code class="docutils literal notranslate"><span class="pre">.kra</span></code> 改為 <code class="docutils literal notranslate"><span class="pre">.zip</span></code>。</p></li>
 <li><p>嘗試將其開啟（系統應該會自動選用壓縮檔工具開啟）。</p></li>
-<li><p>There is file called mergedimage.png inside that represents all layers merged that you can use for reference in case you can't restore anything else.</p></li>
+<li><p>壓縮檔內應該含有一個名為 <code class="docutils literal notranslate"><span class="pre">mergedimage.png</span></code> 的檔案，儲存了合併圖層後的影像。如無法復原整份文件，你仍可以這張影像作參考。</p></li>
 </ol>
 </dd>
 </dl>
 </li>
 <li><dl>
-<dt>Check whether ZIP repairer tool helps.</dt><dd><ol class="arabic">
-<li><p>Copy the file, so you have a backup just in case.</p></li>
+<dt>嘗試使用修復 ZIP 壓縮檔的軟體。</dt><dd><ol class="arabic">
+<li><p>為檔案建立副本，留作備份以備不時之需。</p></li>
 <li><p>將副檔名由 <code class="docutils literal notranslate"><span class="pre">.kra</span></code> 改為 <code class="docutils literal notranslate"><span class="pre">.zip</span></code>。</p></li>
-<li><p>Use ZIP repairer tool on the <code class="docutils literal notranslate"><span class="pre">.zip</span></code> file.</p>
+<li><p>用 ZIP 壓縮檔修復軟體修復 <code class="docutils literal notranslate"><span class="pre">.zip</span></code> 檔。</p>
 <blockquote>
-<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># On Linux:</span>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># 在 Linux：</span>
 mv file.kra file_copy.zip
 zip -F file_copy.zip --out file_new1.zip
 unzip file_new1.zip
-<span class="c1"># if it still doesn&#39;t work:</span>
+<span class="c1"># 如果這還不行的話：</span>
 zip -FF file_copy.zip --out file_new2.zip
 unzip file_new2.zip
-<span class="c1"># if it still doesn&#39;t work, try to run it again on *file_new2.zip* file, or try on *file_new1.zip* file</span>
+<span class="c1"># 如果這還不行的話，嘗試以 *file_new2.zip* 檔再運行一次，或嘗試以 *file_new_1.zip* 檔運行。</span>
 
-<span class="c1"># On Windows:</span>
-Copy the file, rename the extension.
-Use any graphical ZIP repairer on the new file. <span class="o">(</span>Follow the instructions <span class="k">for</span> that specific program<span class="o">)</span>.
+<span class="c1"># 在 Windows：</span>
+複製檔案然後修改其副檔名。
+使用修復 ZIP 壓縮檔的軟體。（請依照該軟體所提供的指示。）
 </pre></div>
 </div>
 </div></blockquote>
 </li>
-<li><p>Try to open in Krita.</p></li>
+<li><p>嘗試在 Krita 內開啟。</p></li>
 <li><p>If it cannot be opened in Krita, try the trick from 2.: open the archive and find mergedimage.png file.</p></li>
 </ol>
 </dd>
@@ -897,7 +897,7 @@ AppImage, Snap/Flatpak or PPA releases that are officially provided on the <a cl
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>e47012a</code>
+          修訂版本 <code>310a7cd</code>
         </span>
       
 
