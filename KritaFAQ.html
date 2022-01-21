@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2022-01-20T15:54:26" />
+  <meta property="og:article:modified_time" content="2022-01-21T20:54:26" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   
@@ -154,7 +154,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#windows-krita-cannot-save">Windows：Krita 不能儲存檔案</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#windows-krita-cannot-open-my-file-anymore">Windows：Krita 不能開啟我的檔案</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#how-to-recover-my-files">如何復原我的檔案？</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#krita-crashes-on-windows-7-on-start-up">Krita 在 Windows 7 上啟動時當機</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#krita-crashes-on-windows-7-on-start-up">Krita 在 Windows 7 上啟動時當機而強制終止</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#krita-freezes-randomly-on-my-windows-system">Krita 在 Windows 上運行不時會出現卡住的情況</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#windows-how-can-i-produce-a-backtrace">Windows：如何產生 Backtrace？</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#windows-krita-s-window-is-semi-transparent">Windows：Krita 的視窗顯示為半透明</a></li>
@@ -326,7 +326,7 @@
 <li><p><a class="reference internal" href="#windows-krita-cannot-save" id="id23">Windows：Krita 不能儲存檔案</a></p></li>
 <li><p><a class="reference internal" href="#windows-krita-cannot-open-my-file-anymore" id="id24">Windows：Krita 不能開啟我的檔案</a></p></li>
 <li><p><a class="reference internal" href="#how-to-recover-my-files" id="id25">如何復原我的檔案？</a></p></li>
-<li><p><a class="reference internal" href="#krita-crashes-on-windows-7-on-start-up" id="id26">Krita 在 Windows 7 上啟動時當機</a></p></li>
+<li><p><a class="reference internal" href="#krita-crashes-on-windows-7-on-start-up" id="id26">Krita 在 Windows 7 上啟動時當機而強制終止</a></p></li>
 <li><p><a class="reference internal" href="#krita-freezes-randomly-on-my-windows-system" id="id27">Krita 在 Windows 上運行不時會出現卡住的情況</a></p></li>
 <li><p><a class="reference internal" href="#windows-how-can-i-produce-a-backtrace" id="id28">Windows：如何產生 Backtrace？</a></p></li>
 <li><p><a class="reference internal" href="#windows-krita-s-window-is-semi-transparent" id="id29">Windows：Krita 的視窗顯示為半透明</a></p></li>
@@ -644,16 +644,16 @@ unzip file_new2.zip
 </div></blockquote>
 </li>
 <li><p>嘗試在 Krita 內開啟。</p></li>
-<li><p>If it cannot be opened in Krita, try the trick from 2.: open the archive and find mergedimage.png file.</p></li>
+<li><p>如不能在 Krita 開啟該檔案，請嘗試步驟 <code class="docutils literal notranslate"><span class="pre">2.</span></code> 的措施：開啟壓縮檔並在裡面找出 <code class="docutils literal notranslate"><span class="pre">mergedimage.png</span></code> 檔案。</p></li>
 </ol>
 </dd>
 </dl>
 </li>
-<li><p>Open your file in Notepad or any other text editor. If the content of the file is only a repeated <em>NULL</em> symbol, it means the file is most probably unrecoverable using the standard method. If it's of a very high importance for you, you can try to recover the previous save using methods that checks the hard drive directly.</p></li>
+<li><p>以 Notepad（記事本）或任何純文字編輯器開啟檔案。如檔案內容只含有重覆的 <em>NULL</em> 符號，這表示該檔案很大機會無法以一般方式還原。如該文件非常重要，你或可嘗試使用會掃描整個硬碟的方法來還原先前的存檔。</p></li>
 </ol>
 </section>
 <section id="krita-crashes-on-windows-7-on-start-up">
-<h3><a class="toc-backref" href="#id26">Krita 在 Windows 7 上啟動時當機</a><a class="headerlink" href="#krita-crashes-on-windows-7-on-start-up" title="本標題的永久連結">¶</a></h3>
+<h3><a class="toc-backref" href="#id26">Krita 在 Windows 7 上啟動時當機而強制終止</a><a class="headerlink" href="#krita-crashes-on-windows-7-on-start-up" title="本標題的永久連結">¶</a></h3>
 <p>Starting with Krita 4.2.0, Krita uses version 5.12 of the Qt toolkit. This needs to have access to Direct3D 11 or OpenGL ES 2.0 or higher. You might need to install drivers appropriate to your GPU (Nvidia, AMD/ATI, Intel). This also makes it hard to run Krita in a virtual environment: in Virtual Box you need to install the guest addition in safe mode, and enable the experimental Direct3D support.</p>
 </section>
 <section id="krita-freezes-randomly-on-my-windows-system">
@@ -897,7 +897,7 @@ AppImage, Snap/Flatpak or PPA releases that are officially provided on the <a cl
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>310a7cd</code>
+          修訂版本 <code>60ed741</code>
         </span>
       
 
