@@ -4,13 +4,13 @@
 # package.
 #
 # Alvin Wong <alvin@alvinhc.com>, 2021.
-# RinalNamori <rinalnamori@gmail.com>, 2021.
+# RinalNamori <rinalnamori@gmail.com>, 2021, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 4.3\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-27 21:21+0800\n"
-"PO-Revision-Date: 2021-10-15 12:54+0000\n"
+"PO-Revision-Date: 2022-01-22 21:50+0000\n"
 "Last-Translator: RinalNamori <rinalnamori@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <http://weblate.slat.org/projects/"
 "krita-docs/3-reference_manual___tools___path/zh_Hant/>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.8\n"
+"X-Generator: Weblate 4.8.1\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../../reference_manual/tools/path.rst:1
@@ -43,7 +43,7 @@ msgid ""
 "You can draw curves by using this tool. Click the |mouseleft| to indicate "
 "the starting point of the curve, then click again for consecutive control "
 "points of the curve."
-msgstr "你可以透過這個工具來畫出曲線。\\ |mouseleft| 來給繪製曲線的起點，然後再點一下來連續控制曲線的錨點。"
+msgstr "你可以透過這個工具來畫出曲線。\\ |mouseleft| 來給繪製曲線的起點，然後再點一下來連續控制曲線的節點。"
 
 #: ../../<rst_epilog>:2
 msgid "mouseleft"
@@ -55,7 +55,7 @@ msgid ""
 "control point. You can drag these handles to change the direction of the "
 "curve in that point."
 msgstr ""
-":program:`Krita` 會在你新增一個控制錨點時顯示一個有著兩個控制項鐵人的藍色線段，你可以拖曳這些控制項來改變曲線在那個錨點的方向。"
+":program:`Krita` 會在你新增一個控制節點時顯示一個有著兩個控制項鐵人的藍色線段，你可以拖曳這些控制項來改變曲線在那個節點的方向。"
 
 #: ../../reference_manual/tools/path.rst:25
 msgid ""
@@ -66,8 +66,8 @@ msgid ""
 "directions. After editing a point, you can just click on the canvas to "
 "continue adding points to the curve."
 msgstr ""
-"在向量圖層中，你可以點選上一個錨點來修改。在中途的錨點（即除了首尾的兩個錨點），你可以分別移動控制項方向來讓曲線的起點和終點的方向不同。在編輯錨點後，點選"
-"畫布來繼續為曲線新增錨點。"
+"在向量圖層中，你可以點選上一個節點來修改。在中途的節點（即除了首尾的兩個節點），你可以分別移動控制項方向來讓曲線的起點和終點的方向不同。在編輯昂點後，點選"
+"畫布來繼續為曲線新增節點。"
 
 #: ../../reference_manual/tools/path.rst:27
 msgid ""
@@ -77,7 +77,7 @@ msgid ""
 "cancel the entire curve. You can use the :kbd:`Ctrl` key while keeping the |"
 "mouseleft| pressed to move the entire curve to a different position."
 msgstr ""
-"按 :kbd:`Del` 鍵會移除曲線中目前選取的錨點。在曲線上的任何錨點按 |mouseleft| 兩次或是按 :kbd:`Enter` "
+"按 :kbd:`Del` 鍵會移除曲線中目前選取的節點。在曲線上的任何節點按 |mouseleft| 兩次或是按 :kbd:`Enter` "
 "兩次來完成曲線，或是按 :kbd:`Esc` 來取消曲線。在按著 :kbd:`Ctrl` 時使用 |mouseleft| 鍵會把整個曲線移動到不同位置。"
 
 #: ../../reference_manual/tools/path.rst:29
@@ -88,7 +88,7 @@ msgid ""
 "mouseright| will undo the last added point."
 msgstr ""
 "在拉線條時按 :kbd:`Ctrl` 鍵會推動兩邊的控制柄；而按 :kbd:`Alt`鍵會在曲線中生成銳角；按 :kbd:`Shift` "
-"鍵會在曲線末端生成控制柄。|mouseright| 會退回至上一個錨點。"
+"鍵會在曲線末端生成控制柄。|mouseright| 會退回至上一個節點。"
 
 #: ../../<rst_epilog>:4
 msgid "mouseright"
@@ -103,12 +103,11 @@ msgid "Autosmooth Curve"
 msgstr "自動平滑曲線"
 
 #: ../../reference_manual/tools/path.rst:37
-#, fuzzy
 msgid ""
 "Toggling this will have nodes initialize with smooth curves instead of "
 "angles. Untoggle this if you want to create sharp angles for a node. This "
 "will affect curve sharpness from dragging after clicking."
-msgstr "開啟這個選項會有平滑曲線的錨點，若你想要創建一個有銳利角度的曲線，關閉這個選項。這個功能會影響點選後拖曳出的曲線的銳利度。"
+msgstr "開啟這個選項會有平滑曲線的節點，若你想要創建一個有銳利角度的曲線，關閉這個選項。這個功能會影響點選後拖曳出的曲線的銳利度。"
 
 #: ../../reference_manual/tools/path.rst:39
 msgid "Angle Snapping Delta"
