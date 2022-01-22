@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2022-01-22T14:55:27" />
+  <meta property="og:article:modified_time" content="2022-01-22T21:55:30" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="Krita 的形狀編輯工具參考。" name="description" />
 
@@ -304,17 +304,17 @@
 <p>在稍後的工具選項中會有更詳細的資訊，這裡有路徑形狀和特殊向量形狀的差異，可以容易做出完美的橢圓形、矩形等形狀。</p>
 <section id="path-shapes">
 <h3>路徑形狀<a class="headerlink" href="#path-shapes" title="本標題的永久連結">¶</a></h3>
-<p>Path shapes can be recognized by the different nodes they have.</p>
-<p>Paths in Krita are mostly bezier curves, and are made up of nodes. For straight lines, the nodes are connected by a line-segment and that's it. For curved lines, each node has a side handle to allow curving of that segment using the <a class="reference external" href="https://en.wikipedia.org/wiki/B%C3%A9zier_curve#/media/File:B%C3%A9zier_3_big.gif">cubic bezier curve algorithm</a>.</p>
-<p><strong>What that means, in short, is that moving the side handles into a given direction will make the segment curve in that direction, and the longer the line of the node to the side handle, the stronger the curving.</strong></p>
+<p>路徑形狀可以透過自身不同的節點來辨認。</p>
+<p>在 Krita 裡的路徑最常見的是貝茲曲線，貝茲曲線由節點組成。如果是直線線段，節點之間會有線段連接；曲線線段的話，每個節點會有個控制柄來控制曲線，其算法可參見<a href="#id3"><span class="problematic" id="id4">`三次貝茲曲線&lt; https://zh.wikipedia.org/wiki/%E8%B2%9D%E8%8C%B2%E6%9B%B2%E7%B7%9A#/media/File:B%C3%A9zier_3_big.gif&gt;`_</span></a>。</p>
+<p><strong>要簡約地說明的話，就是移動控制柄至目標方向時會使曲線線段朝向該方向，若控制柄的長度越長，曲線的彎曲程度越高。</strong></p>
 <section id="selecting-nodes-for-editing">
-<h4>Selecting Nodes for Editing<a class="headerlink" href="#selecting-nodes-for-editing" title="本標題的永久連結">¶</a></h4>
-<p>You can select a single node with <img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" />, they will turn bright green if selected.</p>
-<p><img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">+</kbd> <kbd class="kbd docutils literal notranslate">Shift</kbd></kbd> on unselected nodes will add them to a selection.</p>
+<h4>選擇要編輯的節點<a class="headerlink" href="#selecting-nodes-for-editing" title="本標題的永久連結">¶</a></h4>
+<p>你可以透過 <img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> 選取一個節點，在被選取的情況下會變成亮綠色。</p>
+<p>在未被選取的節點上 <img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">+</kbd> <kbd class="kbd docutils literal notranslate">Shift</kbd></kbd> 可以加入選取。</p>
 <p><img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">+</kbd> <kbd class="kbd docutils literal notranslate">drag</kbd></kbd> will make a selection rectangle. All nodes whose handles are touched by the rectangle will be selected. This combines with the <img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">+</kbd> <kbd class="kbd docutils literal notranslate">Shift</kbd></kbd> shortcut above.</p>
 </section>
 <section id="selected-nodes">
-<h4>Selected Nodes<a class="headerlink" href="#selected-nodes" title="本標題的永久連結">¶</a></h4>
+<h4>已被選取的節點<a class="headerlink" href="#selected-nodes" title="本標題的永久連結">¶</a></h4>
 <p>You can add and remove side handles from a selected node with the <img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">+</kbd> <kbd class="kbd docutils literal notranslate">Shift</kbd></kbd> shortcut.</p>
 <p>Krita has several node-types that allow you control the side handles more efficiently. These are the corner, smooth and symmetric modes.</p>
 <blockquote>

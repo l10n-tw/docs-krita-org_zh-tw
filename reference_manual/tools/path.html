@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2022-01-22T14:55:27" />
+  <meta property="og:article:modified_time" content="2022-01-22T21:55:30" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="Krita 的路徑工具參考。" name="description" />
 
@@ -295,17 +295,17 @@
   <section id="bezier-curve-tool">
 <span id="path-tool"></span><span id="index-0"></span><span id="id1"></span><h1>貝茲曲線工具<a class="headerlink" href="#bezier-curve-tool" title="本標題的永久連結">¶</a></h1>
 <p><img alt="貝茲曲線工具" src="../../_images/bezier_curve.svg" /></p>
-<p>你可以透過這個工具來畫出曲線。<img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> 來給繪製曲線的起點，然後再點一下來連續控制曲線的錨點。</p>
-<p><strong class="program">Krita</strong> 會在你新增一個控制錨點時顯示一個有著兩個控制項鐵人的藍色線段，你可以拖曳這些控制項來改變曲線在那個錨點的方向。</p>
-<p>在向量圖層中，你可以點選上一個錨點來修改。在中途的錨點（即除了首尾的兩個錨點），你可以分別移動控制項方向來讓曲線的起點和終點的方向不同。在編輯錨點後，點選畫布來繼續為曲線新增錨點。</p>
-<p>按 <kbd class="kbd docutils literal notranslate">Del</kbd> 鍵會移除曲線中目前選取的錨點。在曲線上的任何錨點按 <img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> 兩次或是按 <kbd class="kbd docutils literal notranslate">Enter</kbd> 兩次來完成曲線，或是按 <kbd class="kbd docutils literal notranslate">Esc</kbd> 來取消曲線。在按著 <kbd class="kbd docutils literal notranslate">Ctrl</kbd> 時使用 <img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> 鍵會把整個曲線移動到不同位置。</p>
-<p>在拉線條時按 <kbd class="kbd docutils literal notranslate">Ctrl</kbd> 鍵會推動兩邊的控制柄；而按 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Alt`鍵會在曲線中生成銳角；按</kbd> <kbd class="kbd docutils literal notranslate">:kbd:`Shift</kbd></kbd> 鍵會在曲線末端生成控制柄。<img alt="滑鼠右鍵" src="../../_images/Krita_mouse_right.png" /> 會退回至上一個錨點。</p>
+<p>你可以透過這個工具來畫出曲線。<img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> 來給繪製曲線的起點，然後再點一下來連續控制曲線的節點。</p>
+<p><strong class="program">Krita</strong> 會在你新增一個控制節點時顯示一個有著兩個控制項鐵人的藍色線段，你可以拖曳這些控制項來改變曲線在那個節點的方向。</p>
+<p>在向量圖層中，你可以點選上一個節點來修改。在中途的節點（即除了首尾的兩個節點），你可以分別移動控制項方向來讓曲線的起點和終點的方向不同。在編輯昂點後，點選畫布來繼續為曲線新增節點。</p>
+<p>按 <kbd class="kbd docutils literal notranslate">Del</kbd> 鍵會移除曲線中目前選取的節點。在曲線上的任何節點按 <img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> 兩次或是按 <kbd class="kbd docutils literal notranslate">Enter</kbd> 兩次來完成曲線，或是按 <kbd class="kbd docutils literal notranslate">Esc</kbd> 來取消曲線。在按著 <kbd class="kbd docutils literal notranslate">Ctrl</kbd> 時使用 <img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> 鍵會把整個曲線移動到不同位置。</p>
+<p>在拉線條時按 <kbd class="kbd docutils literal notranslate">Ctrl</kbd> 鍵會推動兩邊的控制柄；而按 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Alt`鍵會在曲線中生成銳角；按</kbd> <kbd class="kbd docutils literal notranslate">:kbd:`Shift</kbd></kbd> 鍵會在曲線末端生成控制柄。<img alt="滑鼠右鍵" src="../../_images/Krita_mouse_right.png" /> 會退回至上一個節點。</p>
 <section id="tool-options">
 <h2>工具選項<a class="headerlink" href="#tool-options" title="本標題的永久連結">¶</a></h2>
 <div class="versionadded">
 <p><span class="versionmodified added">在 4.1.3 版本新加入: </span></p>
 <dl class="simple">
-<dt>自動平滑曲線</dt><dd><p>Toggling this will have nodes initialize with smooth curves instead of angles. Untoggle this if you want to create sharp angles for a node. This will affect curve sharpness from dragging after clicking.</p>
+<dt>自動平滑曲線</dt><dd><p>開啟這個選項會有平滑曲線的節點，若你想要創建一個有銳利角度的曲線，關閉這個選項。這個功能會影響點選後拖曳出的曲線的銳利度。</p>
 </dd>
 </dl>
 </div>

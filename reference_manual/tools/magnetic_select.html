@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2022-01-22T14:55:27" />
+  <meta property="og:article:modified_time" content="2022-01-22T21:55:30" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="Krita 的磁性選取區域工具參考。" name="description" />
 
@@ -304,7 +304,7 @@
 <p><span class="caption-text">顯示第一個模式生成一個磁性選取區域的動畫。</span><a class="headerlink" href="#id2" title="本圖片的永久連結">¶</a></p>
 </figcaption>
 </figure>
-<p>首先用 <img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> 來設置磁性選取區域的錨點，<img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> 直到要完成選取時，點選第一個錨點兩次來完成選取，或是換一下 <kbd class="kbd docutils literal notranslate">Enter</kbd> 來結束，又或是在工具選單中點選 <span class="guilabel">完成</span> 按鈕。</p>
+<p>首先用 <img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> 來設置磁性選取區域的節點，<img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> 直到要完成選取時，點選第一個節點兩次來完成選取，或是換一下 <kbd class="kbd docutils literal notranslate">Enter</kbd> 來結束，又或是在工具選單中點選 <span class="guilabel">完成</span> 按鈕。</p>
 <figure class="align-center" id="id3">
 <a class="reference internal image-reference" href="../../_images/magnetic_selection_mode_2.gif"><img alt="../../_images/magnetic_selection_mode_2.gif" src="../../_images/magnetic_selection_mode_2.gif" style="width: 320px;" /></a>
 <figcaption>
@@ -318,7 +318,7 @@
 <p><span class="caption-text">第一種模式和第二種模式可以一起使用。</span><a class="headerlink" href="#id4" title="本圖片的永久連結">¶</a></p>
 </figcaption>
 </figure>
-<p>你可以透過 <img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> 拖曳之前節點來編輯選取區域。把錨點拉出畫布外可以把錨點移除。當路徑封閉後，可以按 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Z</kbd></kbd> 來返回上一步。一個未完成的磁性選取可以按 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Esc`或是在工具選項按</kbd> <kbd class="kbd docutils literal notranslate">:guilabel:`取消</kbd></kbd> 按鈕。</p>
+<p>你可以透過 <img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> 拖曳之前節點來編輯選取區域。把節點拉出畫布外可以把節點移除。當路徑封閉後，可以按 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Z</kbd></kbd> 來返回上一步。一個未完成的磁性選取可以按 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Esc`或是在工具選項按</kbd> <kbd class="kbd docutils literal notranslate">:guilabel:`取消</kbd></kbd> 按鈕。</p>
 <div class="admonition important">
 <p class="admonition-title">重要</p>
 <p>磁性選取區域工具大多數動作和其他選取區域工具相似，請詳閱<a class="reference internal" href="../../user_manual/selections.html#selections-basics"><span class="std std-ref">選取區域</span></a>以取得使用這個工具的更多資訊。</p>
@@ -361,7 +361,7 @@
 </dd>
 <dt>閾值：</dt><dd><p>從 0 到 255，判斷邊緣的銳利度，0 是最不銳利，255 最銳利。只能在交互模式使用。</p>
 </dd>
-<dt>搜尋半徑：</dt><dd><p>這個數值決定工具在影像中搜尋銳利邊緣的範圍大小。更大的範圍表示在放錨點時需要更少的精確度，但是這樣的話 Krita 需要運算更久，因而減慢這個工具的速度。</p>
+<dt>搜尋半徑：</dt><dd><p>這個數值決定工具在影像中搜尋銳利邊緣的範圍大小。更大的範圍表示在放置節點時需要更少的精確度，但是這樣的話 Krita 需要運算更久，因而減慢這個工具的速度。</p>
 </dd>
 <dt>錨點間距：</dt><dd><p>在使用 <img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> 拖曳時會自動放置錨點，這個數值會判斷兩個錨點之間的平均間距。數值較低時因錨點較多而精確度更高，但是這樣會導致後續修改困難。數值判斷是螢幕顯示的面積而非影像面積，這代表著這個數值會因縮放影響。</p>
 <figure class="align-center" id="id5">
