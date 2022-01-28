@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2022-01-26T17:55:35" />
+  <meta property="og:article:modified_time" content="2022-01-28T11:55:15" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="Krita 的變形工具參考。" name="description" />
 
@@ -182,9 +182,9 @@
 <li class="toctree-l4"><a class="reference internal" href="#free-transform">自由變形</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#perspective">透視</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#warp">網面</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#cage">Cage</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#liquify">Liquify</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#mesh">Mesh</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cage">外框</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#liquify">液化</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#mesh">網狀</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#recursive-transform">Recursive Transform</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#continuous-transform">Continuous Transform</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#transformation-masks">Transformation Masks</a></li>
@@ -304,7 +304,7 @@
 <span id="index-0"></span><span id="id1"></span><h1>變形工具<a class="headerlink" href="#transform-tool" title="本標題的永久連結">¶</a></h1>
 <p><img alt="變形工具" src="../../_images/transform_tool.svg" /></p>
 <p>變形工具可以迅速地對選取區域或圖層進行變形。基本的變形選項包括縮放，旋轉和切變。此外，也會有諸如透視、網面，外框和液化的進階變形。這些都是讓你完全控制你的選取區域或圖層的強大選項。</p>
-<p>在你初次調用這個工具時，在角落和四邊會有控制桿，你可以用來縮放選取區域或圖層。把游標放在控制桿的上面或側面可以進行旋轉。在選取區域或圖層範圍內拖曳來進行移動。</p>
+<p>在你初次調用這個工具時，在角落和四邊會有控制柄，你可以用來縮放選取區域或圖層。把游標放在控制柄的上面或側面可以進行旋轉。在選取區域或圖層範圍內拖曳來進行移動。</p>
 <p>你可以在工具選項面板調整變形工具的參數。這些參數被分成 5 個部分：自由變形，網面，透視，外框和液化。</p>
 <figure class="align-default" id="id2">
 <img alt="../../_images/Transform_Tool_Options.png" src="../../_images/Transform_Tool_Options.png" />
@@ -327,7 +327,7 @@
 <section id="perspective">
 <h2>透視<a class="headerlink" href="#perspective" title="本標題的永久連結">¶</a></h2>
 <p>雖然自由變形有著透視的選項，但是透視變形可以做出最大程度的控制。你可以拖曳角落的節點，甚至是指定的消失點。</p>
-<p>你可以在工具選項面板中在保留透視的情況下更改縮放，切變和位置的變形。</p>
+<p>你可以在工具選項面板裡在保留透視的情況下更改縮放，切變和位置。</p>
 <figure class="align-default" id="id4">
 <img alt="../../_images/Krita_transforms_perspective.png" src="../../_images/Krita_transforms_perspective.png" />
 <figcaption>
@@ -350,101 +350,101 @@
 <p><span class="caption-text">自由變形的實例。</span><a class="headerlink" href="#id6" title="本圖片的永久連結">¶</a></p>
 </figcaption>
 </figure>
-<p>There are warp options: Rigid, Affine and Similitude. These change the algorithm used to determine the strength of the deformation. The flexibility determines, how strong the effect of moving these points are.</p>
+<p>網面的選項為：強(硬性)，預設 (仿射) 和最強 (相似)。這些選項會更改判斷變形強度的算法。而彈性控制移動錨點時的變形強度。</p>
 <section id="anchor-points">
-<h3>Anchor Points<a class="headerlink" href="#anchor-points" title="本標題的永久連結">¶</a></h3>
-<p>You can divide these either by subdivision or drawing custom points.</p>
+<h3>錨點<a class="headerlink" href="#anchor-points" title="本標題的永久連結">¶</a></h3>
+<p>你可以透過細分來劃分錨點或是自行繪製錨點。</p>
 <dl class="simple">
-<dt>Subdivision</dt><dd><p>This allows you to subdivide the selected area into a grid.</p>
+<dt>細分</dt><dd><p>這個選項能夠在選取區域劃分網格。</p>
 </dd>
-<dt>Draw</dt><dd><p>Draw the anchor points yourself. Locking the points will put you in transform mode. Unlocking the points back into edit mode.</p>
+<dt>繪製</dt><dd><p>這個選項能夠讓你自行繪製錨點。按下鎖定點後會變成變形模式，按下解鎖點會返回至繪製模式。</p>
 </dd>
 </dl>
 </section>
 </section>
 <section id="cage">
-<h2>Cage<a class="headerlink" href="#cage" title="本標題的永久連結">¶</a></h2>
-<p>Create a cage around an image, and when it's closed, you can use it to deform the image. If you have at least 3 points on the canvas, you can choose to switch between deforming and editing the existing points.</p>
+<h2>外框<a class="headerlink" href="#cage" title="本標題的永久連結">¶</a></h2>
+<p>在圖像周圍建立外框，當外框封閉時便能變形圖像。當畫布上有至少 3 個錨點時，你可以選擇切換編輯錨點或是變形模式。</p>
 <figure class="align-default" id="id7">
 <img alt="../../_images/Krita_transforms_cage.png" src="../../_images/Krita_transforms_cage.png" />
 <figcaption>
-<p><span class="caption-text">Transforming a straight banana to be curved with the cage tool.</span><a class="headerlink" href="#id7" title="本圖片的永久連結">¶</a></p>
+<p><span class="caption-text">使用外框模式把一個直的香蕉變形為彎曲的香蕉。</span><a class="headerlink" href="#id7" title="本圖片的永久連結">¶</a></p>
 </figcaption>
 </figure>
 <section id="adjust-granularity">
-<h3>Adjust Granularity<a class="headerlink" href="#adjust-granularity" title="本標題的永久連結">¶</a></h3>
+<h3>調整粒度<a class="headerlink" href="#adjust-granularity" title="本標題的永久連結">¶</a></h3>
 <div class="versionadded">
 <p><span class="versionmodified added">在 4.2 版本新加入.</span></p>
 </div>
-<p>This adjusts the precision of the cage transform grid. The lower the value, the higher the quality of the transformation (and consequently, the lower the speed). When the granularity is too high, the result starts to look &quot;blocky&quot;.</p>
+<p>這個選項會調節外框變形網面的精準度。數值越低，變形的品質越好（相對地，速度越慢）。當數值過高時，其結果看起來會是「方塊狀」的。</p>
 <dl class="simple">
-<dt>Preview</dt><dd><p>Adjusts the granularity of the preview. It is recommended to have this higher than the <span class="guilabel">Real</span> value, as it speeds up adjusting.</p>
+<dt>預覽時</dt><dd><p>調整預覽時的粒度。推薦把數值設定高於 <span class="guilabel">實際</span> 的數值，這能夠加快調整的速度。</p>
 </dd>
-<dt>Real</dt><dd><p>Adjusts the granularity of the final result.</p>
+<dt>實際</dt><dd><p>調整輸出最終成果時的粒度。</p>
 </dd>
 </dl>
 </section>
 <section id="hotkeys">
-<h3>Hotkeys<a class="headerlink" href="#hotkeys" title="本標題的永久連結">¶</a></h3>
-<p>Both Cage and Warp use little nodes. These nodes can be selected and deselected together by pressing the <kbd class="kbd docutils literal notranslate">Ctrl</kbd> key before clicking nodes.</p>
-<p>Then you can move them by pressing the cursor inside the bounding box. Rotating is done by pressing and dragging the cursor outside the bounding box and scaling the same, only one presses the <kbd class="kbd docutils literal notranslate">Ctrl</kbd> key before doing the motion.</p>
+<h3>快捷鍵<a class="headerlink" href="#hotkeys" title="本標題的永久連結">¶</a></h3>
+<p>網點和外框模式都會使用錨點。這些錨點可以透過 <kbd class="kbd docutils literal notranslate">Ctrl</kbd> 鍵來進行多選。</p>
+<p>在多選的情況下你可以把游標移動到外框內，然後移動錨點；而旋轉則是把游標移動到外框外，然後旋轉；縮放和旋轉一樣，只是要在按下滑鼠前按 <kbd class="kbd docutils literal notranslate">Ctrl</kbd> 鍵。</p>
 </section>
 </section>
 <section id="liquify">
-<span id="liquify-mode"></span><h2>Liquify<a class="headerlink" href="#liquify" title="本標題的永久連結">¶</a></h2>
+<span id="liquify-mode"></span><h2>液化<a class="headerlink" href="#liquify" title="本標題的永久連結">¶</a></h2>
 <img alt="../../_images/Transform_Tool_Options_Liquify.png" src="../../_images/Transform_Tool_Options_Liquify.png" />
-<p>Like our deform brush, the liquify brush allows you to draw the deformations straight on the canvas.</p>
+<p>和扭曲筆刷相似，液化筆刷能夠在畫布上直接繪製變形。</p>
 <dl class="simple">
-<dt>Move</dt><dd><p>Drag the image along the brush stroke.</p>
+<dt>移動</dt><dd><p>順著筆刷推拉圖像。按著 <kbd class="kbd docutils literal notranslate">Ctrl</kbd> 鍵會反轉方向。</p>
 </dd>
-<dt>Scale</dt><dd><p>Grow/Shrink the image under the cursor.</p>
+<dt>縮放</dt><dd><p>放大或縮小在游標下的圖像。按著 <kbd class="kbd docutils literal notranslate">Ctrl</kbd> 鍵可以切換放大或縮小。</p>
 </dd>
-<dt>Rotate</dt><dd><p>Twirl the image under the cursor.</p>
+<dt>旋轉</dt><dd><p>旋轉在游標下的圖像。按著 <kbd class="kbd docutils literal notranslate">Ctrl</kbd> 鍵可以改變旋轉方向。</p>
 </dd>
-<dt>Offset</dt><dd><p>Shift the image under the cursor.</p>
+<dt>平移</dt><dd><p>順著方向平移游標下的圖像。按著 <kbd class="kbd docutils literal notranslate">Ctrl</kbd> 鍵可以反轉方向。</p>
 </dd>
-<dt>Undo</dt><dd><p>Erases the actions of other tools.</p>
+<dt>復原</dt><dd><p>擦去液化裡所繪製的變形。</p>
 </dd>
 </dl>
 <figure class="align-default" id="id8">
 <img alt="../../_images/Krita_transforms_liquefy.png" src="../../_images/Krita_transforms_liquefy.png" />
 <figcaption>
-<p><span class="caption-text">Liquify used to turn an apple into a pear.</span><a class="headerlink" href="#id8" title="本圖片的永久連結">¶</a></p>
+<p><span class="caption-text">使用液化把蘋果變形為梨。</span><a class="headerlink" href="#id8" title="本圖片的永久連結">¶</a></p>
 </figcaption>
 </figure>
-<p>In the options for each brush there are:</p>
+<p>筆刷裡的選項有：</p>
 <dl class="simple">
-<dt>Mode</dt><dd><p>This is either <span class="guilabel">Wash</span> or <span class="guilabel">Build up</span>. <span class="guilabel">Wash</span> will normalize the effect to be between none, and the amount parameter as maximum. <span class="guilabel">Build up</span> will just add on until it's impossible.</p>
+<dt>模式</dt><dd><p>這裡分別有 <span class="guilabel">沖刷</span> 和 <span class="guilabel">堆疊</span> 的選項。<span class="guilabel">沖刷</span> 會限制變形的範圍，變形的範圍受限於扭曲量。而 <span class="guilabel">堆疊</span> 則不會限制範圍，會一直疊加直至不可能的程度。</p>
 </dd>
-<dt>Size</dt><dd><p>The brush size. The button to the right allows you to let it scale with pressure.</p>
+<dt>大小</dt><dd><p>筆刷尺寸。右邊的按鈕可以使大小由筆壓控制。</p>
 </dd>
-<dt>Amount</dt><dd><p>The strength of the brush. The button to the right lets it scale with tablet pressure.</p>
+<dt>扭曲量</dt><dd><p>筆刷的強度。右邊的按鈕可以使扭曲量由筆壓控制。</p>
 </dd>
-<dt>Flow</dt><dd><p>Only applicable with <span class="guilabel">Build up</span>.</p>
+<dt>流量</dt><dd><p>Only applicable with <span class="guilabel">Build up</span>.</p>
 </dd>
-<dt>Spacing</dt><dd><p>The spacing of the liquify dabs.</p>
+<dt>間距</dt><dd><p>控制液化印跡 (dab) 的間距。</p>
 </dd>
-<dt>Reverse</dt><dd><p>Reverses the action, so grow becomes shrink, rotate results in clockwise becoming counter-clockwise.</p>
+<dt>反轉</dt><dd><p>反轉操作方向，放大會變成縮小，順時針旋轉變成逆時針旋轉。按著 <kbd class="kbd docutils literal notranslate">Ctrl</kbd> 鍵時會短暫切換開關。</p>
 </dd>
 </dl>
 <figure class="align-default" id="id9">
 <img alt="../../_images/Krita_transforms_deformvsliquefy.png" src="../../_images/Krita_transforms_deformvsliquefy.png" />
 <figcaption>
-<p><span class="caption-text">Liquify on the left and deform brush on the right.</span><a class="headerlink" href="#id9" title="本圖片的永久連結">¶</a></p>
+<p><span class="caption-text">左邊的是液化，右邊的是扭曲筆刷。</span><a class="headerlink" href="#id9" title="本圖片的永久連結">¶</a></p>
 </figcaption>
 </figure>
-<p>Krita also has a <a class="reference internal" href="../brushes/brush_engines/deform_brush_engine.html#deform-brush-engine"><span class="std std-ref">扭曲筆刷工具</span></a> which is much faster than liquify, but has less quality. If you are attempting to make liquify a little faster, note that it speeds up with the less information it needs to process, so working with liquify within a selection or using liquify on a separate layer with little on it will greatly enhance the speed.</p>
+<p>Krita 有著<a class="reference internal" href="../brushes/brush_engines/deform_brush_engine.html#deform-brush-engine"><span class="std std-ref">扭曲筆刷工具</span></a>，運算比液化快，但是品質較低。如果你想讓液化運算有一點的加快，因為需要運算的數據越少，運算越快，所以選取區域再液化，或是分圖層運算能夠有效地加快速度。</p>
 </section>
 <section id="mesh">
-<span id="mesh-mode"></span><h2>Mesh<a class="headerlink" href="#mesh" title="本標題的永久連結">¶</a></h2>
+<span id="mesh-mode"></span><h2>網狀<a class="headerlink" href="#mesh" title="本標題的永久連結">¶</a></h2>
 <div class="versionadded">
 <p><span class="versionmodified added">在 4.4.2 版本新加入.</span></p>
 </div>
-<p>The mesh transform is similar to the warp and the cage transform, except that its interface uses patches comprised of Bezier curve segments. This transform mode is particularly useful for placing images and textures on curved surfaces:</p>
+<p>網狀變形和網面及外框變形相似，只是網狀變形是用貝茲曲線來控制網面的變形。這個變形模式在放置圖像和材質於彎曲表面時十分有效：</p>
 <figure class="align-default" id="id10">
 <img alt="../../_images/Krita_transforms_mesh.png" src="../../_images/Krita_transforms_mesh.png" />
 <figcaption>
-<p><span class="caption-text">Curving a logo to an apple with the mesh transform, with the control points shown.</span><a class="headerlink" href="#id10" title="本圖片的永久連結">¶</a></p>
+<p><span class="caption-text">用網狀變形把 Logo 彎曲到蘋果的表面上，附控制點的顯示。</span><a class="headerlink" href="#id10" title="本圖片的永久連結">¶</a></p>
 </figcaption>
 </figure>
 <p>This is a very keyboard shortcut heavy transform mode. When you start the transform you will see the overlay, which consists of several nodes that can be dragged around. You can drag on the segments between the nodes to curve them precisely, or drag on patches themselves to freely transform them. <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Alt</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">+</kbd> <kbd class="kbd docutils literal notranslate">drag</kbd></kbd> shortcut on nodes and segments will allow you to subdivide the mesh. For more precision, enable the control points in the tool options, so each Bezier segment can be fine-tuned to your content.</p>
@@ -532,7 +532,7 @@
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>957b1b3</code>
+          修訂版本 <code>b842030</code>
         </span>
       
 
