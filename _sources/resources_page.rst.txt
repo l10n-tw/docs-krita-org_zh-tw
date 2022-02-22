@@ -225,6 +225,18 @@ Reference Image Docker (old style)
 
     https://github.com/antoine-roux/krita-plugin-reference
 
+Rogudator's Comic Panel generator
+
+    Docker to create simple comic panels faster.
+
+    https://rogudator.gumroad.com/l/UbPzz
+
+Rogudator's Speech Bubble Generator
+
+    Docker to create speech bubbles for comics.
+
+    https://rogudator.gumroad.com/l/bvvnn
+
 Mirror Fix
 
     This plugin allows you to correct symmetry errors for example after a transformation of a part of the image.

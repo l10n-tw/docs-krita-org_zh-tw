@@ -65,6 +65,9 @@ You can select the active layer here. Using the :kbd:`Shift` and :kbd:`Ctrl` key
     Layer Style
         This is only available on layers which have a :ref:`layer_style` assigned. The button allows you to switch between on/off quickly.
 
+    Thumbnail Image
+        This shows a miniature image with the layer contents. If you :kbd:`Ctrl +` |mouseleft| on it then you can make a selection from the contents of that layer (see `Hot keys and Sticky Keys`_ section below).
+
 To edit these properties on multiple layers at once, press the properties option when you have multiple layers selected or press the :kbd:`F3` key.
 There, to change the names of all layers, the checkbox before :guilabel:`Name` should be ticked after which you can type in a name. Krita will automatically add a number behind the layer names. You can change other layer properties like visibility, opacity, lock states, etc. too.
 
@@ -108,5 +111,9 @@ Hot keys and Sticky Keys
 * :kbd:`Alt +` |mouseleft| shortcut for isolated view of a layer. This will maintain between layers till the same action is repeated again.
 * :kbd:`Page Up` and :kbd:`Page Down` keys for switching between layers.
 * :kbd:`Ctrl + Page Up` and :kbd:`Ctrl + Page Down` shortcuts will move the selected layers up and down.
+* :kbd:`Ctrl +` |mouseleft| over a layer's thumbnail to replace the current selection with a new one created from the contents of that layer.
+* :kbd:`Ctrl + Shift +` |mouseleft| over a layer's thumbnail to add a new selection created from the contents of that layer to the current selection.
+* :kbd:`Ctrl + Alt +` |mouseleft| over a layer's thumbnail to subtract a new selection created from the contents of that layer from the current selection.
+* :kbd:`Ctrl + Shift + Alt +` |mouseleft| over a layer's thumbnail to intersect the current selection with a new selection created from the contents of that layer.
 
 
