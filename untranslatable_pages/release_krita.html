@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2022-02-22T22:55:00" />
+  <meta property="og:article:modified_time" content="2022-02-23T13:56:01" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   
@@ -473,6 +473,16 @@
 </pre></div>
 </div>
 </li>
+<li><p>Verify that the filesize of .zsync blob is different from the one
+stored on <a class="reference external" href="https://download.kde.org">https://download.kde.org</a></p>
+<ul class="simple">
+<li><p>for stable releases: <a class="reference external" href="https://download.kde.org/stable/krita/updates/">https://download.kde.org/stable/krita/updates/</a></p></li>
+<li><p>for unstable releases: <a class="reference external" href="https://download.kde.org/unstable/krita/updates/">https://download.kde.org/unstable/krita/updates/</a></p></li>
+</ul>
+<p>The filesize must be different, otherwise KDE's mirroring system will not
+propagate the change automatically. If you see that the filesize is the same,
+notify sysadmins to update the mirrors manually.</p>
+</li>
 <li><p>Upload all files to download.kde.org (or ask sysadmins to do that using this manual <a class="reference external" href="ftp://upload.kde.org/README">ftp://upload.kde.org/README</a>):</p></li>
 </ol>
 <p>Note that the msix file is only for uploading to the Windows Store, it doesn't need to be uploaded to download.kde.org.</p>
@@ -513,7 +523,7 @@
 <p>Please don't forget to replace &quot;unstable&quot; to &quot;stable&quot; for stable release builds.
 It should be replaced for both, packages themselves and zsync file</p>
 </div></blockquote>
-<ol class="arabic" start="16">
+<ol class="arabic" start="17">
 <li><p>Template ticket for sysadmins:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Hi, sysadmins!
 
@@ -535,6 +545,8 @@ There are two tasks:
 </div>
 </li>
 <li><p>Now the folder on download.kde.org should have 21(!) files. Check if you missed something (and you surely did! :) ).</p></li>
+<li><p>Verify that the previous version of Krita AppImage can update to
+the new one from the GUI. It should use the .zsync file uploaded above.</p></li>
 </ol>
 </section>
 <section id="release-coordination">
@@ -612,7 +624,7 @@ There are two tasks:
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>6e0aa70</code>
+          修訂版本 <code>0ac4979</code>
         </span>
       
 

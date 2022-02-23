@@ -171,8 +171,18 @@ Runs
     .. code::
 
         md5sum ./* > md5sum.txt
+        
+15. Verify that the filesize of .zsync blob is different from the one 
+    stored on https://download.kde.org
 
-15. Upload all files to download.kde.org (or ask sysadmins to do that using this manual ftp://upload.kde.org/README):
+    - for stable releases: https://download.kde.org/stable/krita/updates/
+    - for unstable releases: https://download.kde.org/unstable/krita/updates/
+    
+    The filesize must be different, otherwise KDE's mirroring system will not 
+    propagate the change automatically. If you see that the filesize is the same,
+    notify sysadmins to update the mirrors manually.
+
+16. Upload all files to download.kde.org (or ask sysadmins to do that using this manual ftp://upload.kde.org/README):
 
 Note that the msix file is only for uploading to the Windows Store, it doesn't need to be uploaded to download.kde.org.
 
@@ -202,7 +212,7 @@ Note that the msix file is only for uploading to the Windows Store, it doesn't n
     It should be replaced for both, packages themselves and zsync file
 
 
-16. Template ticket for sysadmins:
+17. Template ticket for sysadmins:
 
     .. code::
 
@@ -223,7 +233,10 @@ Note that the msix file is only for uploading to the Windows Store, it doesn't n
                          
         3) Add `Krita 5.1.0 Beta1` bugzilla version
 
-17. Now the folder on download.kde.org should have 21(!) files. Check if you missed something (and you surely did! :) ).
+18. Now the folder on download.kde.org should have 21(!) files. Check if you missed something (and you surely did! :) ).
+
+19. Verify that the previous version of Krita AppImage can update to 
+    the new one from the GUI. It should use the .zsync file uploaded above.
 
     
 Release coordination
