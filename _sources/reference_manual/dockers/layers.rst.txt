@@ -105,6 +105,7 @@ Hot keys and Sticky Keys
 * :kbd:`Ctrl + Shift + E` shortcut merges all layers.
 * :kbd:`R +` |mouseleft| shortcut allows you to select layers on canvas, similar to picking colors directly on canvas. Use the :kbd:`Shift + R +` |mouseleft| shortcut for multiple layers.
 * :kbd:`Ins` key for adding a new layer. 
+* :kbd:`Shift + Ins` key for adding a new vector layer.
 * :kbd:`Ctrl + G` shortcut will create a group layer. If multiple layers are selected, they are put into the group layer.
 * :kbd:`Ctrl + Shift + G` shortcut will quickly set-up a clipping group, with the selected layers added into the group, and a new layer added on top with alpha-inheritance turned on, ready for painting!
 * :kbd:`Ctrl + Alt + G` shortcut will ungroup layers inside a group.
