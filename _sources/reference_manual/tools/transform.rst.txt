@@ -203,6 +203,11 @@ Show control points
 
 Recursive Transform
 -------------------
+
+.. deprecated:: 5.0
+
+   As of Krita 5.0, the toggle for recursive transform has been removed to reduce confusion, as this only worked with masks. Recursive transform is on by default for all contents of a group layer. To achieve non-recursive transformation you can use the layer lock feature.
+
 The little spider icon on the lower-left of the transform tool options is the :guilabel:`Recursive Transform`.
 
 .. figure:: /images/tools/Krita_transforms_recursive.png
