@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Krita Manual 4.3\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-10-21 15:06+0000\n"
-"PO-Revision-Date: 2022-03-30 13:15+0000\n"
+"PO-Revision-Date: 2022-03-31 13:15+0000\n"
 "Last-Translator: RinalNamori <rinalnamori@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <http://weblate.slat.org/projects/"
 "krita-docs/3-reference_manual___tools___transform/zh_Hant/>\n"
@@ -422,6 +422,11 @@ msgid ""
 "allowing for sharp angles in the mesh. After a sharp angle has been created, "
 "the locked mode will try to keep this as well."
 msgstr ""
+"為了輔助處理物件的彎曲，這個工具有一個「鎖定」變形的概念。這個模式預設開啓，"
+"游標會顯示為鎖頭的圖示。當這個模式被開啓時，調整一段變形時會同時把相鄰的段落"
+"變形。你可以在按著 :kbd:`Shift` 鍵時拖曳一個線段或一個控制點來暫時關閉這個模"
+"式，容許物件有著尖銳的角度。當一個尖銳的角度被生成時，即使在鎖定模式下也會盡"
+"量保留這個角度。"
 
 #: ../../reference_manual/tools/transform.rst:172
 msgid "Shortcuts"
@@ -429,7 +434,7 @@ msgstr "快捷鍵"
 
 #: ../../reference_manual/tools/transform.rst:174
 msgid "Node or control point move"
-msgstr ""
+msgstr "節點或控制點的移動"
 
 #: ../../reference_manual/tools/transform.rst:175
 msgid ""
@@ -437,32 +442,35 @@ msgid ""
 "'nodes' which determine the corners of a patch, and the small ones are the "
 "'control points', which determine the curvature for their associated segment."
 msgstr ""
+"|mouseleft| :kbd:`+ 拖曳` 任何圓點。比較大的點被稱作「節點」，節點決定一個格"
+"子的四角；而比較小的則被稱為「控制點」，控制點決定其附著線段的彎曲程度。"
 
 #: ../../reference_manual/tools/transform.rst:176
 msgid "Unlocked node or control point move"
-msgstr ""
+msgstr "解鎖節點或控制點的移動"
 
 #: ../../reference_manual/tools/transform.rst:177
 msgid ":kbd:`Shift +` |mouseleft| :kbd:`+ drag` on a node or control point."
-msgstr ""
+msgstr ":kbd:`Shift +` |mouseleft| :kbd:`+ 拖曳`一個節點或控制點。"
 
 #: ../../reference_manual/tools/transform.rst:178
 msgid "Locked segment move:"
-msgstr ""
+msgstr "已鎖定線段的移動："
 
 #: ../../reference_manual/tools/transform.rst:179
 msgid ""
 "|mouseleft| :kbd:`+ drag` on a segment. As explained above, this will adjust "
 "neighbouring segments as well, to keep the curvature of the node intact."
-msgstr ""
+msgstr "在線段上 |mouseleft| :kbd:`+ "
+"拖曳`。如上所述，這個模式下會同時調整相鄰的線段，將彎曲的節點保持不動。"
 
 #: ../../reference_manual/tools/transform.rst:180
 msgid "Segment move"
-msgstr ""
+msgstr "移動線段"
 
 #: ../../reference_manual/tools/transform.rst:181
 msgid ":kbd:`Shift +` |mouseleft| :kbd:`+ drag` on a segment of the mesh."
-msgstr ""
+msgstr ":kbd:`Shift +` |mouseleft| :kbd:`+ 拖曳`物件的線段。"
 
 #: ../../reference_manual/tools/transform.rst:182
 msgid "Free patch deform:"
