@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2022-03-30T13:19:50" />
+  <meta property="og:article:modified_time" content="2022-03-31T13:19:26" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="Krita 的變形工具參考。" name="description" />
 
@@ -448,17 +448,17 @@
 </figcaption>
 </figure>
 <p>在這個模式下有各種變形操作。當你開始變形時可以看見物件被覆蓋，被數個能夠移動的控制柄控制，如果拖曳控制點之間的分格線段，便能精確地彎曲物件；或是拖曳格子來自由變形。<kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Alt</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">+</kbd> <kbd class="kbd docutils literal notranslate">drag</kbd></kbd> 控制點和分格線段來細分物件。如要更加精準，在工具選項開啓控制點，這樣便能使用貝茲曲線線段來精確調整物件。</p>
-<p>To assist in maintaining the curvature of a mesh, this tool has a concept of 'locked' transform. This mode is signalled by the lock icon in the cursor, and on by default. When this is enabled, adjusting one segment will also adjust its neighbouring segment in another patch. You can press <kbd class="kbd docutils literal notranslate">Shift</kbd> key while dragging a segment or control point to turn this feature off, allowing for sharp angles in the mesh. After a sharp angle has been created, the locked mode will try to keep this as well.</p>
+<p>為了輔助處理物件的彎曲，這個工具有一個「鎖定」變形的概念。這個模式預設開啓，游標會顯示為鎖頭的圖示。當這個模式被開啓時，調整一段變形時會同時把相鄰的段落變形。你可以在按著 <kbd class="kbd docutils literal notranslate">Shift</kbd> 鍵時拖曳一個線段或一個控制點來暫時關閉這個模式，容許物件有著尖銳的角度。當一個尖銳的角度被生成時，即使在鎖定模式下也會盡量保留這個角度。</p>
 <section id="shortcuts">
 <h3>快捷鍵<a class="headerlink" href="#shortcuts" title="本標題的永久連結">¶</a></h3>
 <dl class="simple">
-<dt>Node or control point move</dt><dd><p><img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">+</kbd> <kbd class="kbd docutils literal notranslate">drag</kbd></kbd> any of the round points. The big ones are the 'nodes' which determine the corners of a patch, and the small ones are the 'control points', which determine the curvature for their associated segment.</p>
+<dt>節點或控制點的移動</dt><dd><p><img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">+</kbd> <kbd class="kbd docutils literal notranslate">拖曳</kbd></kbd> 任何圓點。比較大的點被稱作「節點」，節點決定一個格子的四角；而比較小的則被稱為「控制點」，控制點決定其附著線段的彎曲程度。</p>
 </dd>
-<dt>Unlocked node or control point move</dt><dd><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">+</kbd> <kbd class="kbd docutils literal notranslate">drag</kbd></kbd> on a node or control point.</p>
+<dt>解鎖節點或控制點的移動</dt><dd><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> :kbd:<a href="#id1"><span class="problematic" id="id2">`</span></a>+ 拖曳`一個節點或控制點。</p>
 </dd>
-<dt>Locked segment move:</dt><dd><p><img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">+</kbd> <kbd class="kbd docutils literal notranslate">drag</kbd></kbd> on a segment. As explained above, this will adjust neighbouring segments as well, to keep the curvature of the node intact.</p>
+<dt>已鎖定線段的移動：</dt><dd><p>在線段上 <img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">+</kbd> <kbd class="kbd docutils literal notranslate">拖曳</kbd></kbd>。如上所述，這個模式下會同時調整相鄰的線段，將彎曲的節點保持不動。</p>
 </dd>
-<dt>Segment move</dt><dd><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">+</kbd> <kbd class="kbd docutils literal notranslate">drag</kbd></kbd> on a segment of the mesh.</p>
+<dt>移動線段</dt><dd><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> :kbd:<a href="#id1"><span class="problematic" id="id2">`</span></a>+ 拖曳`物件的線段。</p>
 </dd>
 <dt>Free patch deform:</dt><dd><p><img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">+</kbd> <kbd class="kbd docutils literal notranslate">drag</kbd></kbd> on an empty area inside the mesh. This will allow you to intuitively adjust a segment by just clicking anywhere and dragging. The whole segment will then adjust all its control points around the point of the cursor.</p>
 </dd>
@@ -535,7 +535,7 @@
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>11138ae</code>
+          修訂版本 <code>b86c620</code>
         </span>
       
 
