@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Krita Manual 4.3\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-10-21 15:06+0000\n"
-"PO-Revision-Date: 2022-03-31 13:15+0000\n"
+"PO-Revision-Date: 2022-04-07 12:15+0000\n"
 "Last-Translator: RinalNamori <rinalnamori@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <http://weblate.slat.org/projects/"
 "krita-docs/3-reference_manual___tools___transform/zh_Hant/>\n"
@@ -422,10 +422,10 @@ msgid ""
 "allowing for sharp angles in the mesh. After a sharp angle has been created, "
 "the locked mode will try to keep this as well."
 msgstr ""
-"為了輔助處理物件的彎曲，這個工具有一個「鎖定」變形的概念。這個模式預設開啓，"
+"為了輔助處理網面的彎曲，這個工具有一個「鎖定」變形的概念。這個模式預設開啓，"
 "游標會顯示為鎖頭的圖示。當這個模式被開啓時，調整一段變形時會同時把相鄰的段落"
 "變形。你可以在按著 :kbd:`Shift` 鍵時拖曳一個線段或一個控制點來暫時關閉這個模"
-"式，容許物件有著尖銳的角度。當一個尖銳的角度被生成時，即使在鎖定模式下也會盡"
+"式，容許網面有著尖銳的角度。當一個尖銳的角度被生成時，即使在鎖定模式下也會盡"
 "量保留這個角度。"
 
 #: ../../reference_manual/tools/transform.rst:172
@@ -470,11 +470,11 @@ msgstr "移動線段"
 
 #: ../../reference_manual/tools/transform.rst:181
 msgid ":kbd:`Shift +` |mouseleft| :kbd:`+ drag` on a segment of the mesh."
-msgstr ":kbd:`Shift +` |mouseleft| :kbd:`+ 拖曳`物件的線段。"
+msgstr ":kbd:`Shift +` |mouseleft| :kbd:`+ 拖曳`網面的線段。"
 
 #: ../../reference_manual/tools/transform.rst:182
 msgid "Free patch deform:"
-msgstr ""
+msgstr "自由變形網面："
 
 #: ../../reference_manual/tools/transform.rst:183
 msgid ""
@@ -482,61 +482,63 @@ msgid ""
 "you to intuitively adjust a segment by just clicking anywhere and dragging. "
 "The whole segment will then adjust all its control points around the point "
 "of the cursor."
-msgstr ""
+msgstr "|mouseleft| :kbd:`+ 拖曳` 網面裡的空白區域。這樣能夠直覺地透過拖拉來調整一個"
+"線段。整個線段會調整其在游標附近的控制點。"
 
 #: ../../reference_manual/tools/transform.rst:186
 msgid "Split mesh or Move/Delete split:"
-msgstr ""
+msgstr "分離網面或移動 / 刪除分離："
 
 #: ../../reference_manual/tools/transform.rst:185
 msgid ""
 ":kbd:`Ctrl + Alt +` |mouseleft| :kbd:`+ drag` on a border segment to split "
 "the mesh"
-msgstr ""
+msgstr ":kbd:`Ctrl + Alt +` |mouseleft| :kbd:`+ 拖曳` 線段的邊界來分離網面"
 
 #: ../../reference_manual/tools/transform.rst:186
 msgid ""
 ":kbd:`Ctrl + Alt +` |mouseleft| :kbd:`+ drag` on a node to change the split"
-msgstr ""
+msgstr ":kbd:`Ctrl + Alt +` |mouseleft| :kbd:`+ 拖曳` 一個節點來改變分離"
 
 #: ../../reference_manual/tools/transform.rst:187
 msgid ""
 ":kbd:`Ctrl + Alt +` |mouseleft| :kbd:`+ drag` away a node to remove the split"
-msgstr ""
+msgstr ":kbd:`Ctrl + Alt +` |mouseleft| :kbd:`+ 拖曳` 拉開一個節點來移除分離"
 
 #: ../../reference_manual/tools/transform.rst:188
 msgid "Select multiple nodes"
-msgstr ""
+msgstr "選取多個節點"
 
 #: ../../reference_manual/tools/transform.rst:189
 msgid ""
 ":kbd:`Ctrl +` |mouseleft| on a node or control or segment, these can then be "
 "moved"
-msgstr ""
+msgstr ":kbd:`Ctrl +` |mouseleft| 在一個節點、控制點或線段，這樣它們便能移動"
 
 #: ../../reference_manual/tools/transform.rst:190
 msgid "Move selection or mesh"
-msgstr ""
+msgstr "移動選取項或網面"
 
 #: ../../reference_manual/tools/transform.rst:191
 msgid ""
 ":kbd:`Shift +` |mouseleft| :kbd:`+ drag` on empty area outside the mesh."
-msgstr ""
+msgstr ":kbd:`Shift +` |mouseleft| :kbd:`+ 拖曳` 在網面外的空白區域。"
 
 #: ../../reference_manual/tools/transform.rst:192
 msgid "Rotate selection or mesh"
-msgstr ""
+msgstr "旋轉選取項或網面"
 
 #: ../../reference_manual/tools/transform.rst:193
 msgid ""
 "|mouseleft| :kbd:`+ drag` on an empty area outside the mesh, if there is a "
 "selection of nodes, it will rotate only them, otherwise the whole mesh will "
 "be rotated."
-msgstr ""
+msgstr "|mouseleft| :kbd:`+ 拖曳` 在網面外的空白區域，如果那裡是已選取的節點，則只旋"
+"轉節點，否則整個網面都會被旋轉。"
 
 #: ../../reference_manual/tools/transform.rst:195
 msgid "Scale selection or mesh"
-msgstr ""
+msgstr "縮放選取項或網面"
 
 #: ../../reference_manual/tools/transform.rst:195
 msgid ""
@@ -544,21 +546,25 @@ msgid ""
 "there is a selection of nodes, it will scale only them, otherwise the whole "
 "mesh will be scaled."
 msgstr ""
+":kbd:`Ctrl +` |mouseleft| :kbd:`+ 拖曳`網面外的空白區域，如果那裡有已選取的節"
+"點，則只會縮放節點，否則整個網面都會被縮放。"
 
 #: ../../reference_manual/tools/transform.rst:198
 msgid "Tool options"
-msgstr ""
+msgstr "工具選項"
 
 #: ../../reference_manual/tools/transform.rst:199
 msgid "Mesh Size"
-msgstr ""
+msgstr "網面尺寸"
 
 #: ../../reference_manual/tools/transform.rst:200
+#, fuzzy
 msgid ""
 "Gives precise controls to change the amount of patches vertically and "
 "horizontally. When increasing or decreasing the amount of patches, Krita "
 "will try to keep the curvature the same, which can be used to your advantage."
-msgstr ""
+msgstr "給予用於調整格柵水平和垂直的數量的精確控制。當增加或減少格柵的數量，Krita "
+"會嘗試保持彎曲的程度不變，"
 
 #: ../../reference_manual/tools/transform.rst:202
 msgid "Show control points"
