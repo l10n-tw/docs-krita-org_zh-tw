@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2022-04-02T22:20:36" />
+  <meta property="og:article:modified_time" content="2022-04-07T12:19:57" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="Krita 的變形工具參考。" name="description" />
 
@@ -448,7 +448,7 @@
 </figcaption>
 </figure>
 <p>在這個模式下有各種變形操作。當你開始變形時可以看見物件被覆蓋，被數個能夠移動的控制柄控制，如果拖曳控制點之間的分格線段，便能精確地彎曲物件；或是拖曳格子來自由變形。<kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Alt</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">+</kbd> <kbd class="kbd docutils literal notranslate">drag</kbd></kbd> 控制點和分格線段來細分物件。如要更加精準，在工具選項開啓控制點，這樣便能使用貝茲曲線線段來精確調整物件。</p>
-<p>為了輔助處理物件的彎曲，這個工具有一個「鎖定」變形的概念。這個模式預設開啓，游標會顯示為鎖頭的圖示。當這個模式被開啓時，調整一段變形時會同時把相鄰的段落變形。你可以在按著 <kbd class="kbd docutils literal notranslate">Shift</kbd> 鍵時拖曳一個線段或一個控制點來暫時關閉這個模式，容許物件有著尖銳的角度。當一個尖銳的角度被生成時，即使在鎖定模式下也會盡量保留這個角度。</p>
+<p>為了輔助處理網面的彎曲，這個工具有一個「鎖定」變形的概念。這個模式預設開啓，游標會顯示為鎖頭的圖示。當這個模式被開啓時，調整一段變形時會同時把相鄰的段落變形。你可以在按著 <kbd class="kbd docutils literal notranslate">Shift</kbd> 鍵時拖曳一個線段或一個控制點來暫時關閉這個模式，容許網面有著尖銳的角度。當一個尖銳的角度被生成時，即使在鎖定模式下也會盡量保留這個角度。</p>
 <section id="shortcuts">
 <h3>快捷鍵<a class="headerlink" href="#shortcuts" title="本標題的永久連結">¶</a></h3>
 <dl class="simple">
@@ -458,30 +458,30 @@
 </dd>
 <dt>已鎖定線段的移動：</dt><dd><p>在線段上 <img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">+</kbd> <kbd class="kbd docutils literal notranslate">拖曳</kbd></kbd>。如上所述，這個模式下會同時調整相鄰的線段，將彎曲的節點保持不動。</p>
 </dd>
-<dt>移動線段</dt><dd><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> :kbd:<a href="#id1"><span class="problematic" id="id2">`</span></a>+ 拖曳`物件的線段。</p>
+<dt>移動線段</dt><dd><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> :kbd:<a href="#id1"><span class="problematic" id="id2">`</span></a>+ 拖曳`網面的線段。</p>
 </dd>
-<dt>Free patch deform:</dt><dd><p><img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">+</kbd> <kbd class="kbd docutils literal notranslate">drag</kbd></kbd> on an empty area inside the mesh. This will allow you to intuitively adjust a segment by just clicking anywhere and dragging. The whole segment will then adjust all its control points around the point of the cursor.</p>
+<dt>自由變形網面：</dt><dd><p><img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">+</kbd> <kbd class="kbd docutils literal notranslate">拖曳</kbd></kbd> 網面裡的空白區域。這樣能夠直覺地透過拖拉來調整一個線段。整個線段會調整其在游標附近的控制點。</p>
 </dd>
-<dt>Split mesh or Move/Delete split:</dt><dd><ul class="simple">
-<li><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Alt</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">+</kbd> <kbd class="kbd docutils literal notranslate">drag</kbd></kbd> on a border segment to split the mesh</p></li>
-<li><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Alt</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">+</kbd> <kbd class="kbd docutils literal notranslate">drag</kbd></kbd> on a node to change the split</p></li>
-<li><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Alt</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">+</kbd> <kbd class="kbd docutils literal notranslate">drag</kbd></kbd> away a node to remove the split</p></li>
+<dt>分離網面或移動 / 刪除分離：</dt><dd><ul class="simple">
+<li><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Alt</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">+</kbd> <kbd class="kbd docutils literal notranslate">拖曳</kbd></kbd> 線段的邊界來分離網面</p></li>
+<li><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Alt</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">+</kbd> <kbd class="kbd docutils literal notranslate">拖曳</kbd></kbd> 一個節點來改變分離</p></li>
+<li><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Alt</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">+</kbd> <kbd class="kbd docutils literal notranslate">拖曳</kbd></kbd> 拉開一個節點來移除分離</p></li>
 </ul>
 </dd>
-<dt>Select multiple nodes</dt><dd><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> on a node or control or segment, these can then be moved</p>
+<dt>選取多個節點</dt><dd><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> 在一個節點、控制點或線段，這樣它們便能移動</p>
 </dd>
-<dt>Move selection or mesh</dt><dd><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">+</kbd> <kbd class="kbd docutils literal notranslate">drag</kbd></kbd> on empty area outside the mesh.</p>
+<dt>移動選取項或網面</dt><dd><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">+</kbd> <kbd class="kbd docutils literal notranslate">拖曳</kbd></kbd> 在網面外的空白區域。</p>
 </dd>
-<dt>Rotate selection or mesh</dt><dd><p><img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">+</kbd> <kbd class="kbd docutils literal notranslate">drag</kbd></kbd> on an empty area outside the mesh, if there is a selection of nodes, it will rotate only them, otherwise the whole mesh will be rotated.</p>
+<dt>旋轉選取項或網面</dt><dd><p><img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">+</kbd> <kbd class="kbd docutils literal notranslate">拖曳</kbd></kbd> 在網面外的空白區域，如果那裡是已選取的節點，則只旋轉節點，否則整個網面都會被旋轉。</p>
 </dd>
-<dt>Scale selection or mesh</dt><dd><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">+</kbd> <kbd class="kbd docutils literal notranslate">drag</kbd></kbd> on empty area outside the mesh, if there is a selection of nodes, it will scale only them, otherwise the whole mesh will be scaled.</p>
+<dt>縮放選取項或網面</dt><dd><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> :kbd:<a href="#id1"><span class="problematic" id="id2">`</span></a>+ 拖曳`網面外的空白區域，如果那裡有已選取的節點，則只會縮放節點，否則整個網面都會被縮放。</p>
 </dd>
 </dl>
 </section>
 <section id="tool-options">
-<h3>Tool options<a class="headerlink" href="#tool-options" title="本標題的永久連結">¶</a></h3>
+<h3>工具選項<a class="headerlink" href="#tool-options" title="本標題的永久連結">¶</a></h3>
 <dl class="simple">
-<dt>Mesh Size</dt><dd><p>Gives precise controls to change the amount of patches vertically and horizontally. When increasing or decreasing the amount of patches, Krita will try to keep the curvature the same, which can be used to your advantage.</p>
+<dt>網面尺寸</dt><dd><p>Gives precise controls to change the amount of patches vertically and horizontally. When increasing or decreasing the amount of patches, Krita will try to keep the curvature the same, which can be used to your advantage.</p>
 </dd>
 <dt>Show control points</dt><dd><p>This will toggle the control points.</p>
 </dd>
@@ -535,7 +535,7 @@
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>b4f59a1</code>
+          修訂版本 <code>9fb98fc</code>
         </span>
       
 
