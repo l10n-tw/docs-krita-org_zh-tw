@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2022-04-15T06:19:08" />
+  <meta property="og:article:modified_time" content="2022-04-15T22:20:26" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="設定 Krita 以使用眼球追蹤。 " name="description" />
 <meta content="- H. Turgut Uyar &lt;hturgut&#64;uyar.info&gt; " name="authors" />
@@ -244,57 +244,24 @@
 <p>如果您還沒有類似案例的經驗，那在開始之前，需要了解以下幾點：</p>
 <ul class="simple">
 <li><p>眼球追蹤需要正確校準，使指標非常靠近使用者正在註視的焦點。 要實現這個可能很困難，特別是如果眼球追蹤相對於與用者的定位在不同對話框之間固定時。</p></li>
-<li><p>The lack of accuracy in control makes it nearly impossible to hit small areas
-on the screen such as small buttons or menu items. Corners and edges
-of the screen might be difficult to reach too. You also don't want to put
-interface elements close to one another since it increases the chances of
-selecting the wrong element accidentally.</p></li>
-<li><p>Mouse operations like single click, double click, right click, drag and drop,
-etc. all demand extra effort in the form of switching modes in the program
-that controls the device. You will want to keep these switches to a minimum
-so that the work will not be interrupted frequently.</p></li>
-<li><p>Switching the mode doesn't automatically start the operation. You need
-an extra action for that. In our case, this action is &quot;dwelling&quot;.
-For example, to start a program, you switch to the left double click mode and
-then dwell on the icon for the application to activate the double click.
-Adjusting the dwell time is an important tradeoff: shorter dwell times allow
-for faster work but are also more error-prone.</p></li>
+<li><p>由於控制不准確，因此幾乎不可能點擊屏幕上的小區域，例如小按鈕或菜單項。 屏幕的角落和邊緣也可能難以觸及。 您也不希望將界面元素彼此靠近，因為這會增加意外選擇錯誤元素的機會。</p></li>
+<li><p>單點擊、雙點擊、右鍵單點擊、拖放等鼠標操作都需要在控制設備的軟體中以切換模式的形式進行額外的設定。 目的是減少這些切換的操作次數，以便創作工作不會經常中斷。</p></li>
+<li><p>切換模式不會自動啟動操作。 為此，需要採取額外的動作。 在範例中，這個動作是“駐停”。 例如，要啟動一個工具，切換到左側雙擊模式，然後停留在工具的圖標上雙擊。 調整停留時間是一個重要的權衡：更短的停留時間允許更快的工作，但也更容易出錯。</p></li>
 </ul>
 <section id="requirements">
 <h2>要求<a class="headerlink" href="#requirements" title="本標題的永久連結">¶</a></h2>
-<p>Besides the <em>obvious</em> requirement of having an eye tracker device, you will
-also need a control program that will let you interact with the device. When
-you obtain the device, such a program will most probably be provided to you
-but that program might not be sufficient for using the device with Krita.</p>
-<p>One of the basic functionalities of these programs is to emulate mouse clicks.
-In our case, the program provides a hovering menu which includes large buttons
-for switching modes between left/right mouse buttons and single/double clicks.
-After selecting the mode, the hovering menu can be collapsed so that it will
-leave more screen space for the application.</p>
-<p>In order to make them easier to configure and use, some programs include only
-basic modes like single clicks. This is sufficient for many popular
-applications like e-mail agents and browsers, but for Krita you need
-the drag and drop mode to be able to draw. If the provided control software
-doesn't support this mode (usually called &quot;mouse emulation&quot;), you can contact
-the manufacturer of the device for assistance, or look for open source options.</p>
+<p>除了擁有眼球追蹤設備的*明顯*要求外，您還需要一個控製程式，讓您與設備進行互動。 當獲得設備時，設備原廠可能就會附有這樣的程式，但該程式可能不足以將 Krita 連動一起使用。</p>
+<p>這些程式的基本功能之一是模擬滑鼠點擊。 在範例中，該程式提供了一個懸停選單，其中包括用於在滑鼠左鍵/右鍵和單擊/雙擊之間切換模式的大按鈕。 選擇模式後，懸停選單可以折疊起來，為軟體留出更多作畫空間。</p>
+<p>為了使它們更易於設定和使用，某些程式僅包含單擊等基本模式。 這對於許多時下流行的應用程式（例如電子郵件代理和瀏覽器）來說已經足夠了，但是對於 Krita，需要拖放模式才能進行繪圖。 如果提供的控制軟體不支持此模式（通常稱為“滑鼠模擬”），您可以聯繫設備製造商尋求幫助，或尋找開源的解決方案。</p>
 </section>
 <section id="starting-krita">
 <h2>啟動 Krita<a class="headerlink" href="#starting-krita" title="本標題的永久連結">¶</a></h2>
-<p>Basically, setting the control program to left double click mode and
-dwelling on the Krita icon on the desktop would be enough to start up Krita
-but there are some issues with this:</p>
+<p>基本上，將控製程式設定為左鍵雙擊模式並停留在桌面上的 Krita 圖標上就足以啟動 Krita，但這樣做存在一些問題：</p>
 <ul class="simple">
-<li><p>On startup, Krita asks you to choose a template. It's likely that you don't
-want to go through this setting every time and just want to start
-with a blank template.</p></li>
-<li><p>Later, saving the document will require interacting with the file save
-dialog which is not very friendly for this type of use.</p></li>
+<li><p>啟動時，Krita 會要求您選擇一個模板。 您可能不想每次都要設定一次，而只想從空白模板開始。</p></li>
+<li><p>稍後，存檔將需要與文件儲存的對話框互動，這對於眼球追蹤的使用者不是很友善。</p></li>
 </ul>
-<p>A workaround for these issues could be creating and saving a blank template
-and running a script that will copy this template under a new name and send it
-to Krita. Here's an example script for Windows which uses a timestamp suffix
-to make sure that each file will have a different name (replace USERNAME
-with the actual user name):</p>
+<p>解決這些問題的方法是建立並儲存一個空白模板並運行一個腳本程式，該腳本程式將以新名稱複製該模板並將其發送給 Krita。 這是一個用於 Windows 的示例腳本程式碼，它使用時間戳後綴來確保每個文件都有不同的名稱（將 USERNAME 替換為實際用戶名）:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@echo</span> <span class="n">off</span>
 <span class="k">for</span> <span class="o">/</span><span class="n">f</span> <span class="s2">&quot;tokens=2 delims==&quot;</span> <span class="o">%%</span><span class="n">a</span> <span class="ow">in</span> <span class="p">(</span><span class="s1">&#39;wmic OS Get localdatetime /value&#39;</span><span class="p">)</span> <span class="n">do</span> <span class="nb">set</span> <span class="s2">&quot;dt=</span><span class="si">%%</span><span class="s2">a&quot;</span>
 <span class="nb">set</span> <span class="s2">&quot;YY=</span><span class="si">%d</span><span class="s2">t:~2,2%&quot;</span> <span class="o">&amp;</span> <span class="nb">set</span> <span class="s2">&quot;YYYY=</span><span class="si">%d</span><span class="s2">t:~0,4%&quot;</span> <span class="o">&amp;</span> <span class="nb">set</span> <span class="s2">&quot;MM=</span><span class="si">%d</span><span class="s2">t:~4,2%&quot;</span> <span class="o">&amp;</span> <span class="nb">set</span> <span class="s2">&quot;DD=</span><span class="si">%d</span><span class="s2">t:~6,2%&quot;</span>
@@ -306,48 +273,26 @@ with the actual user name):</p>
 <span class="n">start</span> <span class="s2">&quot;C:\Program Files\Krita (x64)</span><span class="se">\b</span><span class="s2">in\krita.exe&quot;</span> <span class="s2">&quot;</span><span class="si">%f</span><span class="s2">ilename%&quot;</span>
 </pre></div>
 </div>
-<p>Double clicking on this script will create a new Krita file in the same folder
-as the script file. Since the file already has a name, the file save dialog
-will be avoided. Combined with autosaving, this can be an efficient way
-to save your work.</p>
+<p>雙擊此腳本程式並在與腳本文程式文件相同的資料夾中建立一個新的 Krita 檔案。 由於文件已經有了名稱，因此將避免文件出現儲存的對話框。 結合自動保存，這可以成為有效的儲存方式。</p>
 <div class="admonition tip">
 <p class="admonition-title">小訣竅</p>
-<p>Storing these files directly on a cloud storage service will be even safer.</p>
+<p>將這些檔案直接存儲在雲服務上會更加安全。</p>
 </div>
-<p>You might also deal with some timing issues when starting Krita:</p>
+<p>在啟動 Krita 時，您可能還需要處理一些時間問題 :</p>
 <ul class="simple">
-<li><p>After the icon for Krita or for the script is double clicked and Krita starts
-loading, lingering on the icon will start a second instance.</p></li>
-<li><p>Similarly, after double clicking, if another window is accidentally brought
-to the foreground, Krita might start up partially visible behind that window.</p></li>
+<li><p>雙擊 Krita 或腳本程式的圖示並開始加載 Krita 後，停留在圖標上將啟動第二個實例。</p></li>
+<li><p>同樣，雙擊後，如果另一個視窗意外地被帶到前面，Krita 可能會被遮擋在該視窗的後面。</p></li>
 </ul>
-<p>To prevent these problems, it will help if the users train themselves
-to look at some harmless spot (like an empty space on the desktop)
-until Krita is loaded.</p>
+<p>為了防止這些問題，如果使用者訓練自己注視 ( 因為是眼球追蹤 ) 一些沒有遮擋的地方（例如桌面上的空白區域），直到加載 Krita，這將有所幫助。</p>
 </section>
 <section id="layout">
 <h2>排版<a class="headerlink" href="#layout" title="本標題的永久連結">¶</a></h2>
-<p>Since the interface elements need to be large, you have to use the screen area
-economically. Running in full-screen mode and getting rid of unused menus
-and toolbars are the first steps that you can take. Here's the screenshot
-of our layout:</p>
-<a class="reference internal image-reference" href="../_images/eyetracker_layout_screenshot.png"><img alt="Screenshot of Krita when used with an eye tracker." class="align-center" src="../_images/eyetracker_layout_screenshot.png" style="width: 800px;" /></a>
-<p>You will want to put everything you need somewhere you can easily access.
-For our drawings, the essential items are brushes and colors. So we've decided
-to place permanent dockers for these.</p>
-<p>Krita features many brushes but the docker has to contain a limited number
-of those so that the brush icons can be large enough. We recommend that
-you create <a class="reference internal" href="../user_manual/loading_saving_brushes.html#loading-saving-brushes"><span class="std std-ref">a custom brush preset to your own liking</span></a>.</p>
-<p>There are various tools for selecting color but most of them are not easily
-usable since they require quite a high level of mouse control. The Python
-Palette Docker is the simplest to use where you select from a set of predefined
-colors, similar to brush presets. Again, similarly to brush selection,
-it will help to create a <a class="reference internal" href="../reference_manual/dockers/palette_docker.html#palette-docker"><span class="std std-ref">custom set of favorite colors</span></a>.</p>
-<p>Once you are happy with your layout, another feature that will help you is
-to lock the dockers. It's possible to accidentally close or move dockers.
-For example, in drag and drop mode you can accidentally grab a docker and
-drag it across the screen. To prevent this, put the following setting
-in the <code class="file docutils literal notranslate"><span class="pre">kritarc</span></code> file:</p>
+<p>由於界面元素需要比較大空間，因此必須更有效的使用畫面區域。 在全螢幕模式下運行並關閉些未使用的選單和工具欄是可以採取的手段。 這是我們介面佈局的螢幕截圖：</p>
+<a class="reference internal image-reference" href="../_images/eyetracker_layout_screenshot.png"><img alt="與眼球追蹤設備配合使用時 Krita 的螢幕截圖。" class="align-center" src="../_images/eyetracker_layout_screenshot.png" style="width: 800px;" /></a>
+<p>你應該會想把需要的所有功能放在可以輕鬆按的地方。 對於我們的圖紙，最基本項目是畫筆和顏色。 所以我們決定為這些放置永久介面。</p>
+<p>Krita 有許多畫筆，但工具介面必須包含有限數量的筆刷，這樣筆刷圖示才夠大。 我們建議 <a class="reference internal" href="../user_manual/loading_saving_brushes.html#loading-saving-brushes"><span class="std std-ref">根據自己的喜好建立筆刷</span></a>。</p>
+<p>有多種選擇顏色的工具，但大多數都不容易使用，因為它們需要相當精準的滑鼠控制。 Python Palette Docker 是最簡單的使用方式，可以從一組預定義的顏色中進行選擇，類似於筆刷。 同樣，類似於畫刷選擇，這將有助於 <a class="reference internal" href="../reference_manual/dockers/palette_docker.html#palette-docker"><span class="std std-ref">自定義一組最喜歡的顏色</span></a>。</p>
+<p>一旦對介面佈局感到滿意，另一個可以幫助您的功能是鎖定工具介面。 可能會意外關閉或移動到工作介面。 例如，在拖放模式下，您可能會意外抓住一個工具介面並將其拖到工作區域。 為防止這種情況發生，請將以下設定放入 <code class="file docutils literal notranslate"><span class="pre">kritarc</span></code> file:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">LockAllDockerPanels</span><span class="o">=</span><span class="n">true</span>
 </pre></div>
 </div>
