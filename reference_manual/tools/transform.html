@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2022-04-15T22:20:26" />
+  <meta property="og:article:modified_time" content="2022-04-18T16:19:03" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="Krita 的變形工具參考。" name="description" />
 
@@ -162,7 +162,7 @@
 <li class="toctree-l2 current"><a class="reference internal" href="../tools.html">工具</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="shape_selection.html">形狀選取工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="shape_edit.html">形狀編輯工具</a></li>
-<li class="toctree-l3"><a class="reference internal" href="text.html">SVG 文字工具</a></li>
+<li class="toctree-l3"><a class="reference internal" href="text.html">文字工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="gradient_edit.html">漸變編輯工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="pattern_edit.html">圖案編輯工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="calligraphy.html">西文書法工具</a></li>
@@ -185,9 +185,9 @@
 <li class="toctree-l4"><a class="reference internal" href="#cage">外框</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#liquify">液化</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#mesh">網狀</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#recursive-transform">Recursive Transform</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#continuous-transform">Continuous Transform</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#transformation-masks">Transformation Masks</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#recursive-transform">遞歸運算轉換</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#continuous-transform">連續變形</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#transformation-masks">變形遮罩</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="fill.html">填色工具</a></li>
@@ -481,34 +481,34 @@
 <section id="tool-options">
 <h3>工具選項<a class="headerlink" href="#tool-options" title="本標題的永久連結">¶</a></h3>
 <dl class="simple">
-<dt>網面尺寸</dt><dd><p>Gives precise controls to change the amount of patches vertically and horizontally. When increasing or decreasing the amount of patches, Krita will try to keep the curvature the same, which can be used to your advantage.</p>
+<dt>網面尺寸</dt><dd><p>給予用於調整格柵水平和垂直的數量的精確控制。當增加或減少格柵的數量，Krita 會嘗試保持彎曲的程度不變，為你的調整給予便利。</p>
 </dd>
-<dt>Show control points</dt><dd><p>This will toggle the control points.</p>
+<dt>顯示控制點</dt><dd><p>這個選項能控制顯示控制點的開關。</p>
 </dd>
 </dl>
 </section>
 </section>
 <section id="recursive-transform">
-<h2>Recursive Transform<a class="headerlink" href="#recursive-transform" title="本標題的永久連結">¶</a></h2>
+<h2>遞歸運算轉換<a class="headerlink" href="#recursive-transform" title="本標題的永久連結">¶</a></h2>
 <div class="deprecated">
 <p><span class="versionmodified deprecated">在 5.0 版本開始棄用: </span>As of Krita 5.0, the toggle for recursive transform has been removed to reduce confusion, as this only worked with masks. Recursive transform is on by default for all contents of a group layer. To achieve non-recursive transformation you can use the layer lock feature.</p>
 </div>
-<p>The little spider icon on the lower-left of the transform tool options is the <span class="guilabel">Recursive Transform</span>.</p>
+<p>在變形工具選項裡左下的蜘蛛圖示便是 <span class="guilabel">遞歸運算轉換</span>。</p>
 <figure class="align-default" id="id11">
 <img alt="../../_images/Krita_transforms_recursive.png" src="../../_images/Krita_transforms_recursive.png" />
 <figcaption>
-<p><span class="caption-text">Recursive transform transforms all the layers in the group, so with this apple, both the lineart as the fill will be transformed.</span><a class="headerlink" href="#id11" title="本圖片的永久連結">¶</a></p>
+<p><span class="caption-text">遞歸運算轉換會變形所有在群組裡的圖層，如圖中所示，線條和填充顏色都被變形。</span><a class="headerlink" href="#id11" title="本圖片的永久連結">¶</a></p>
 </figcaption>
 </figure>
-<p>Recursive transform, when toggled, allows you to mass-transform all the layers in a group when only transforming the group.</p>
+<p>遞歸運算轉換，當被開啟時，可以在只變形群組時變形在群組裡的圖層。</p>
 </section>
 <section id="continuous-transform">
-<h2>Continuous Transform<a class="headerlink" href="#continuous-transform" title="本標題的永久連結">¶</a></h2>
-<p>If you apply a transformation, and try to start a new one directly afterwards, Krita will attempt to recall the previous transform, so you can continue it. This is a <em>continuous transform</em>. You can press the <kbd class="kbd docutils literal notranslate">Esc</kbd> key to cancel this and start a new transform, or press <span class="guilabel">Reset</span> in the tool options while no transform is active.</p>
+<h2>連續變形<a class="headerlink" href="#continuous-transform" title="本標題的永久連結">¶</a></h2>
+<p>當完成一個變形時，並在之後開始新的變形，Krita 會嘗試叫回之前的變形來繼續變形。這便是「連續變形」。你可以按 <kbd class="kbd docutils literal notranslate">Esc</kbd> 來取消來開始一個新的變形，或在沒有變形時按工具選項裡的 <span class="guilabel">重設</span>。</p>
 </section>
 <section id="transformation-masks">
-<h2>Transformation Masks<a class="headerlink" href="#transformation-masks" title="本標題的永久連結">¶</a></h2>
-<p>These allow you to make non-destructive transforms, check <a class="reference internal" href="../layers_and_masks/transformation_masks.html#transformation-masks"><span class="std std-ref">here</span></a> for more info.</p>
+<h2>變形遮罩<a class="headerlink" href="#transformation-masks" title="本標題的永久連結">¶</a></h2>
+<p>這個功能可以讓你進行非破壞性的變形，在<a class="reference internal" href="../layers_and_masks/transformation_masks.html#transformation-masks"><span class="std std-ref">這裡</span></a>取得更多資訊。</p>
 </section>
 </section>
 
@@ -535,7 +535,7 @@
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>846ca21</code>
+          修訂版本 <code>aaec622</code>
         </span>
       
 
