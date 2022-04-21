@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2022-04-20T14:19:36" />
+  <meta property="og:article:modified_time" content="2022-04-21T14:20:03" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="Krita 的文字工具參考。" name="description" />
 
@@ -308,7 +308,7 @@
 <dl class="simple">
 <dt>字型</dt><dd><p>設定建立文字時所使用的字型。</p>
 </dd>
-<dt>文字尺寸（pt）</dt><dd><p>設定建立文字時文字的尺寸。數值為 pts（點），這是 1 寸（inch）比 72 點的標準尺寸。因此即使改變畫布的 dpi 時文字也會保持相同的尺寸。</p>
+<dt>文字尺寸（pt）</dt><dd><p>設定建立文字時文字的尺寸。數值為 pts（點），這是 1 英寸比 72 點的標準尺寸。因此即使改變畫布的 dpi 時文字也會保持相同的尺寸。</p>
 </dd>
 <dt>錨定 / 對齊 文字至左側 / 中間 / 右側</dt><dd><p>文字對齊。可以對齊文字至左側、中間或是右側。這被稱為文字錨定的原因是 SVG 1.1 的多行文字只會使用文字錨定，這跟文字對齊有所分別（這也是沒有對齊功能的原因）。</p>
 </dd>
@@ -322,102 +322,102 @@
 </section>
 <section id="text-editor">
 <h2>文字編輯器<a class="headerlink" href="#text-editor" title="本標題的永久連結">¶</a></h2>
-<p>A small window for all your text editing needs. The Text Editor has two tabs: Rich text and SVG source.</p>
+<p>包含所有文字編輯需求的視窗。裡面包含兩個分頁：富文字和 SVG 原始碼。</p>
 <img alt="../../_images/Text-editor-example.png" src="../../_images/Text-editor-example.png" />
 <dl>
-<dt>Activating</dt><dd><p>You can use the Text tool to first create a text box. There are a few options in the tool options if you want to customize how the text will be adding. You will need to drag a rectangle on the canvas to create the text area. Once your text is created, you can edit the text from two ways:</p>
+<dt>啟用</dt><dd><p>使用文字工具來建立一個文字方塊。工具選項會有數項選項來改變建立文字時的樣式。在畫布裡拖曳一個矩形來建立文字區域。文字建立後，可以透過兩個方法來編輯文字：</p>
 <ol class="arabic simple">
-<li><p>Select the text with the shape selection tool (first tool). Press the <kbd class="kbd docutils literal notranslate">Enter</kbd> key. The text editor will appear.</p></li>
-<li><p>Select the text with the shape selection tool (first tool). Then click the Text tool. In the tool options there is an <span class="guilabel">Edit Text</span> button. When you click that the text editor window will appear.</p></li>
+<li><p>透過形狀選取區域工具（第一個工具）來選取文字。按 <kbd class="kbd docutils literal notranslate">Enter</kbd> 鍵後文字編輯器便會出現。</p></li>
+<li><p>透過形狀選取區域工具（第一個工具）來選取文字，然後切換到文字工具，工具選項裡有 <span class="guilabel">編輯文字</span> 按鈕，點擊按鈕後文字編輯器便會出現。</p></li>
 </ol>
 </dd>
-<dt>Editing</dt><dd><p>If you are unfamiliar with the way SVG text works, use the rich text tab, it will allow you to edit the text as you see it, at the cost of not having all functionality.</p>
-<p>If you are a little bit more familiar with SVG text, you can directly edit the SVG source. Do note that not all attributes and properties are converted back to the rich text editor, so do be careful when switching back.</p>
-<p>Press <span class="guilabel">Save</span> as you're done with your edits to preview them on canvas.</p>
+<dt>編輯</dt><dd><p>如果你不熟悉 SVG 文字的使用方式，請使用富文字分頁，這分頁可以用肉眼的方式來編輯文字，只是這個分頁沒有包含所有的功能。</p>
+<p>如果你對 SVG 文字有一定的認知，你可以直接使用 SVG 原始碼來編輯文字。請注意不是所有屬性都能轉換回富文字編輯器，所以當要換為富文字編輯器時請留意。</p>
+<p>當完成編輯後按 <span class="guilabel">儲存</span> 來在畫布中預覽文字。</p>
 </dd>
-<dt>File</dt><dd><dl class="simple">
-<dt>Save <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">S</kbd></kbd></dt><dd><p>Save current edits to the text on canvas.</p>
+<dt>檔案</dt><dd><dl class="simple">
+<dt>儲存 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">S</kbd></kbd></dt><dd><p>儲存目前編輯的文字至畫布。</p>
 </dd>
-<dt>Close <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">W</kbd></kbd></dt><dd><p>Close the editor.</p>
+<dt>關閉 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">W</kbd></kbd></dt><dd><p>關閉編輯器。</p>
 </dd>
 </dl>
 </dd>
-<dt>Edit</dt><dd><p>Basic editing functions:</p>
+<dt>編輯</dt><dd><p>基本編輯功能：</p>
 <dl class="simple">
-<dt>Undo <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Z</kbd></kbd></dt><dd><p>Undo the last action in the text editor.</p>
+<dt>返回上一步 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Z</kbd></kbd></dt><dd><p>返回文字編輯器裡的上一個步驟。</p>
 </dd>
-<dt>Redo <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Z</kbd></kbd></dt><dd><p>Redo the last undone action in the text editor.</p>
+<dt>重做操作 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Z</kbd></kbd></dt><dd><p>重做文字編輯器裡上一個未完成的操作。</p>
 </dd>
-<dt>Cut <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">X</kbd></kbd></dt><dd><p>Cut selected text to the clipboard.</p>
+<dt>剪下 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">X</kbd></kbd></dt><dd><p>剪下選取中的文字至剪貼簿。</p>
 </dd>
-<dt>Copy <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">C</kbd></kbd></dt><dd><p>Copy selected text to the clipboard.</p>
+<dt>複製 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">C</kbd></kbd></dt><dd><p>複製選取中的文字至剪貼簿。</p>
 </dd>
-<dt>Paste <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">V</kbd></kbd></dt><dd><p>Paste text from the clipboard.</p>
+<dt>貼上 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">V</kbd></kbd></dt><dd><p>貼上來自剪貼簿的文字。</p>
 </dd>
-<dt>Select all <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">A</kbd></kbd></dt><dd><p>Select all text in the active editor.</p>
+<dt>選取所有 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">A</kbd></kbd></dt><dd><p>選取使用中的文字編輯器裡的所有文字。</p>
 </dd>
-<dt>Deselect <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">A</kbd></kbd></dt><dd><p>Deselect any selected text.</p>
+<dt>取消選取 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">A</kbd></kbd></dt><dd><p>取消選取所有已選取的文字。</p>
 </dd>
-<dt>Find <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">F</kbd></kbd></dt><dd><p>Pops up a window with an input to find the given text in the active editor.</p>
+<dt>尋找 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate">F</kbd></kbd></dt><dd><p>彈出一個視窗，輸入文字後會在文字編輯器裡尋找與輸入文字相符的文字。</p>
 </dd>
-<dt>Find Next <kbd class="kbd docutils literal notranslate">F3</kbd></dt><dd><p>Searches for the next text using the last search key.</p>
+<dt>尋找下一個 <kbd class="kbd docutils literal notranslate">F3</kbd></dt><dd><p>尋找符合尋找文字的下一個文字。</p>
 </dd>
-<dt>Find Previous <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">F3</kbd></kbd></dt><dd><p>Searches for the last text using the last search key.</p>
+<dt>尋找上一個 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">F3</kbd></kbd></dt><dd><p>尋找符合尋找文字的上一個文字。</p>
 </dd>
-<dt>Replace... <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">R</kbd></kbd></dt><dd><p>Pops up a dialog with two inputs: The string you wish to find, and the string you wish to replace it with. Will always replace ALL found instances.</p>
-</dd>
-</dl>
-</dd>
-<dt>View</dt><dd><dl class="simple">
-<dt>Zoom Out <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">-</kbd></kbd></dt><dd><p>Zoom out the text.</p>
-</dd>
-<dt>Zoom In <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd></dt><dd><p>Zoom in the text.</p>
+<dt>取代... <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">R</kbd></kbd></dt><dd><p>彈出有兩個輸入項目的界面：一個是要尋找的文字，另一個是想取代的文字。會取代所有符合的項目。</p>
 </dd>
 </dl>
 </dd>
-<dt>Insert</dt><dd><dl class="simple">
-<dt>Special Character... <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Alt</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">C</kbd></kbd></dt><dd><p>Pops up a dialog that allows you to search for special characters that are difficult to type in with your keyboard.</p>
+<dt>檢視</dt><dd><dl class="simple">
+<dt>縮小 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">-</kbd></kbd></dt><dd><p>縮小文字。</p>
+</dd>
+<dt>放大 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd></dt><dd><p>放大文字。</p>
 </dd>
 </dl>
 </dd>
-<dt>Format</dt><dd><dl class="simple">
-<dt>Bold <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">B</kbd></kbd></dt><dd><p>Set the font-weight to <strong>bold</strong>.</p>
-</dd>
-<dt>Italic <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">I</kbd></kbd></dt><dd><p>Sets the selected text <em>italic</em>.</p>
-</dd>
-<dt>Underline <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">U</kbd></kbd></dt><dd><p>Underline the selected text.</p>
-</dd>
-<dt>Strike-Through</dt><dd><p>Adds a strike-through text decoration.</p>
-</dd>
-<dt>Superscript <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">P</kbd></kbd></dt><dd><p>Sets the text to super-script baseline.</p>
-</dd>
-<dt>Subscript <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">B</kbd></kbd></dt><dd><p>Sets the text to subscript baseline.</p>
-</dd>
-<dt>Weight</dt><dd><p>Sets the font weight a little more specifically. Possibilities are... Light, Normal, Bold, and Black.</p>
-</dd>
-<dt>Align Left</dt><dd><p>Align the selected paragraph to the left.</p>
-</dd>
-<dt>Align Center <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Alt</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">C</kbd></kbd></dt><dd><p>Center the selected paragraph.</p>
-</dd>
-<dt>Align Right <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Alt</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">R</kbd></kbd></dt><dd><p>Align the selected paragraph to the right.</p>
-</dd>
-<dt>Kerning</dt><dd><p>Toggles kerning for selected text.</p>
+<dt>插入</dt><dd><dl class="simple">
+<dt>特殊字元... <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Alt</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">C</kbd></kbd></dt><dd><p>彈出一個用來尋找難以用鍵盤輸入的特殊字元的界面。</p>
 </dd>
 </dl>
 </dd>
-<dt>Settings</dt><dd><dl class="simple">
-<dt>Settings...</dt><dd><p>Calls up the text-editor settings dialog.</p>
+<dt>格式</dt><dd><dl class="simple">
+<dt>粗體 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">B</kbd></kbd></dt><dd><p>設定文字粗細為<strong>粗體</strong>。</p>
+</dd>
+<dt>斜體 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">I</kbd></kbd></dt><dd><p>設定選取文字為<em>斜體</em>。</p>
+</dd>
+<dt>底線 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">U</kbd></kbd></dt><dd><p>為選取文字添加底線。</p>
+</dd>
+<dt>刪除線</dt><dd><p>為選取文字添加刪除線。</p>
+</dd>
+<dt>上標 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">P</kbd></kbd></dt><dd><p>設定文字為上標。</p>
+</dd>
+<dt>下標 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">B</kbd></kbd></dt><dd><p>設定文字為下標。</p>
+</dd>
+<dt>粗細</dt><dd><p>設定更明確的文字粗細。有可能的選項為... 幼，普通，較粗，粗。</p>
+</dd>
+<dt>左側對齊</dt><dd><p>對齊選取段落至左側。</p>
+</dd>
+<dt>居中對齊 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Alt</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">C</kbd></kbd></dt><dd><p>居中所選取的段落。</p>
+</dd>
+<dt>右側對齊 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Alt</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">R</kbd></kbd></dt><dd><p>對齊選取段落至右側。</p>
+</dd>
+<dt>字距調整（Kerning）</dt><dd><p>調整選取文字的字距。</p>
+</dd>
+</dl>
+</dd>
+<dt>設定</dt><dd><dl class="simple">
+<dt>進階...</dt><dd><p>叫出文字編輯器設定的界面。</p>
 </dd>
 </dl>
 </dd>
 </dl>
 <section id="text-editor-settings">
-<h3>Text Editor Settings<a class="headerlink" href="#text-editor-settings" title="本標題的永久連結">¶</a></h3>
-<p>The settings that can be configured for the text editor.</p>
+<h3>文字編輯器設定<a class="headerlink" href="#text-editor-settings" title="本標題的永久連結">¶</a></h3>
+<p>用來調整文字編輯器的設定。</p>
 <dl>
-<dt>Editor Mode</dt><dd><p>Whether you want both the Rich Text Editor and the SVG Source Editor, or only one of either.</p>
+<dt>編輯器模式</dt><dd><p>設定想使用的編輯器，可以分別使用富文字編輯器和 SVG 原始碼編輯器，或是同時使用。</p>
 </dd>
-<dt>Colors</dt><dd><p>Here you can configure the syntax highlighting for the SVG source.</p>
+<dt>色彩</dt><dd><p>Here you can configure the syntax highlighting for the SVG source.</p>
 <dl class="simple">
 <dt>Keyword</dt><dd><p>These highlights important characters like &lt;, /, and &gt;.</p>
 </dd>
@@ -447,7 +447,7 @@
 <h3>Word-spacing, Letter-spacing and Kerning<a class="headerlink" href="#word-spacing-letter-spacing-and-kerning" title="本標題的永久連結">¶</a></h3>
 <p>These three are written and read from the rich text tab, but only two of them can be controlled from Rich Text tab.</p>
 <dl>
-<dt>Kerning</dt><dd><p><a class="reference external" href="https://www.w3.org/TR/SVG/text.html#KerningProperty">Kerning, in SVG 1.1</a> behaves slightly differently than <code class="docutils literal notranslate"><span class="pre">font-kerning</span></code> in CSS. Krita by default uses the <code class="docutils literal notranslate"><span class="pre">auto</span></code> property for this, which means it is on. To turn it off use <code class="docutils literal notranslate"><span class="pre">kerning:</span> <span class="pre">0;</span></code> in the <code class="docutils literal notranslate"><span class="pre">style</span></code> section of the text. Any other numeric value will be added to current <code class="docutils literal notranslate"><span class="pre">letter-spacing</span></code>.</p>
+<dt>字距調整（Kerning）</dt><dd><p><a class="reference external" href="https://www.w3.org/TR/SVG/text.html#KerningProperty">Kerning, in SVG 1.1</a> behaves slightly differently than <code class="docutils literal notranslate"><span class="pre">font-kerning</span></code> in CSS. Krita by default uses the <code class="docutils literal notranslate"><span class="pre">auto</span></code> property for this, which means it is on. To turn it off use <code class="docutils literal notranslate"><span class="pre">kerning:</span> <span class="pre">0;</span></code> in the <code class="docutils literal notranslate"><span class="pre">style</span></code> section of the text. Any other numeric value will be added to current <code class="docutils literal notranslate"><span class="pre">letter-spacing</span></code>.</p>
 <img alt="../../_images/Krita_4_0_text_kerning.png" class="align-center" src="../../_images/Krita_4_0_text_kerning.png" />
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">text</span> <span class="n">style</span><span class="o">=</span><span class="s2">&quot;kerning:0; font-family:Dancing Script; font-size:18pt; font-size-adjust:0.265625&quot;</span><span class="o">&gt;</span>
     <span class="o">&lt;</span><span class="n">tspan</span><span class="o">&gt;</span><span class="n">No</span> <span class="n">Kerning</span> <span class="n">on</span> <span class="n">Valhalla</span> <span class="n">Tower</span><span class="o">.&lt;/</span><span class="n">tspan</span><span class="o">&gt;</span>
@@ -516,7 +516,7 @@
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>f112ea2</code>
+          修訂版本 <code>7edefc8</code>
         </span>
       
 
