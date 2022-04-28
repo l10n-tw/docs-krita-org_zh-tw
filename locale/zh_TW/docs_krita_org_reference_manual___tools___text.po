@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Krita Manual 4.3\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-10-21 15:06+0000\n"
-"PO-Revision-Date: 2022-04-21 14:15+0000\n"
+"PO-Revision-Date: 2022-04-28 15:15+0000\n"
 "Last-Translator: RinalNamori <rinalnamori@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <http://weblate.slat.org/projects/"
 "krita-docs/3-reference_manual___tools___text/zh_Hant/>\n"
@@ -486,74 +486,76 @@ msgstr "色彩"
 
 #: ../../reference_manual/tools/text.rst:144
 msgid "Here you can configure the syntax highlighting for the SVG source."
-msgstr ""
+msgstr "在這裡你可以設定 SVG 原始碼的語法高亮。"
 
 #: ../../reference_manual/tools/text.rst:146
 msgid "Keyword"
-msgstr ""
+msgstr "關鍵字"
 
 #: ../../reference_manual/tools/text.rst:147
 msgid "These highlights important characters like <, /, and >."
-msgstr ""
+msgstr "這個功能突顯重要符號如 <，/ 和 >。"
 
 #: ../../reference_manual/tools/text.rst:148
 msgid "Element"
-msgstr ""
+msgstr "元素"
 
 #: ../../reference_manual/tools/text.rst:149
 msgid ""
 "The format for highlighting the element tag name. **text** and **tspan** are "
 "examples of element names."
-msgstr ""
+msgstr "突顯元素標籤名稱的格式。**text** 和 **tspan** 是元素名稱的例子。"
 
 #: ../../reference_manual/tools/text.rst:150
 msgid "Attribute"
-msgstr ""
+msgstr "屬性"
 
 #: ../../reference_manual/tools/text.rst:151
 msgid ""
 "The format for highlighting the attributes of the tag. For example, ``font-"
 "family``, when it isn't in the ``style`` tag is usually written as an "
 "attribute."
-msgstr ""
+msgstr "突顯標籤屬性的格式。如：\\ ``font-family``\\ ，當這個不在 ``style``\\ "
+"時通常會被寫成一個屬性。"
 
 #: ../../reference_manual/tools/text.rst:152
 msgid "Value"
-msgstr ""
+msgstr "明度"
 
 #: ../../reference_manual/tools/text.rst:153
 msgid "The format for highlighting value of attributes."
-msgstr ""
+msgstr "突顯屬性的明度的格式。"
 
 #: ../../reference_manual/tools/text.rst:154
 msgid "Comment"
-msgstr ""
+msgstr "注釋"
 
 #: ../../reference_manual/tools/text.rst:155
 msgid ""
 "This highlights XML comments, which are written as following: ``<!-- This is "
 "an XML comment -->``. Comments are pieces of text that never get interpreted."
-msgstr ""
+msgstr "突顯 XML 注釋，格式為：\\ ``<!-- 這是一個 XML 注釋 -->``\\ "
+"。注釋是一段不會受任何影響的文字。"
 
 #: ../../reference_manual/tools/text.rst:156
 msgid "Editor Text Color"
-msgstr ""
+msgstr "編輯器文字色彩"
 
 #: ../../reference_manual/tools/text.rst:157
 msgid "The main color of the editor."
-msgstr ""
+msgstr "編輯器的主要顏色。"
 
 #: ../../reference_manual/tools/text.rst:159
 msgid "Editor background color"
-msgstr ""
+msgstr "編輯器的背景色彩"
 
 #: ../../reference_manual/tools/text.rst:159
 msgid "The main background color of the editor."
-msgstr ""
+msgstr "編輯器的主要背景色彩。"
 
 #: ../../reference_manual/tools/text.rst:162
 msgid "Fonts"
-msgstr ""
+msgstr "字型"
 
 #: ../../reference_manual/tools/text.rst:162
 msgid ""
@@ -563,10 +565,13 @@ msgid ""
 "writing systems which you use yourself, and the font drop-down will only "
 "show fonts that have full support for that language."
 msgstr ""
+"這個選項可以以輸入系統為基準過濾文字編輯器的字型。有些系統有著大量能正確顯示"
+"海外語言的字型，但這些字型未必對你有用。勾選你的系統使用的語言，然後列出支援"
+"該語言的字型。"
 
 #: ../../reference_manual/tools/text.rst:165
 msgid "Fine typographic control with the SVG Source tab"
-msgstr ""
+msgstr "在 SVG 原始碼分頁做出精細的排字"
 
 #: ../../reference_manual/tools/text.rst:167
 msgid ""
@@ -577,16 +582,21 @@ msgid ""
 "editor will lose some information, so if you go all out, use :guilabel:`SVG "
 "Source`."
 msgstr ""
+"由於富文字編輯器無法控制 SVG 文字所容許的所有功能。如要使用那些功能，"
+"你需要直接使用 SVG 原始碼。在開始之前，你要先去文字編輯器設定並啟用 "
+":guilabel:`SVG 原始碼` 或 :guilabel:`兩者` "
+"的編輯器的模式。富文字編輯器會丟失部分資訊，因此如要保留所有資訊，使用 "
+":guilabel:`SVG 原始碼`\\ 。"
 
 #: ../../reference_manual/tools/text.rst:170
 msgid "Word-spacing, Letter-spacing and Kerning"
-msgstr ""
+msgstr "間距，字距和字距調整"
 
 #: ../../reference_manual/tools/text.rst:172
 msgid ""
 "These three are written and read from the rich text tab, but only two of "
 "them can be controlled from Rich Text tab."
-msgstr ""
+msgstr "這三個格式都能在富文字編輯器中輸入及顯示，但只有兩個能在富文字編輯器中控制。"
 
 #: ../../reference_manual/tools/text.rst:175
 msgid ""
@@ -596,6 +606,11 @@ msgid ""
 "use ``kerning: 0;`` in the ``style`` section of the text. Any other numeric "
 "value will be added to current ``letter-spacing``."
 msgstr ""
+"`字距調整在 SVG 版本 1.1<https://www.w3.org/TR/SVG/text."
+"html#KerningProperty>`_ 表現和 在 CSS 裡的 ``font-kerning`` 有些微差異。"
+"Krita 預設在這裡使用 ``auto`` 屬性，也表示預設是開啟的。如要關閉字距調整，"
+"請在文字裡的 ``style`` 使用 ``kerning: 0``\\ 。任何其他的數值會被加到目前的 "
+"``letter-spacing``\\ 。"
 
 #: ../../reference_manual/tools/text.rst:182
 msgid ""
@@ -607,7 +622,7 @@ msgstr ""
 
 #: ../../reference_manual/tools/text.rst:187
 msgid "Letter-spacing"
-msgstr ""
+msgstr "字距"
 
 #: ../../reference_manual/tools/text.rst:187
 msgid ""
@@ -615,10 +630,13 @@ msgid ""
 "spacing`` in the ``style`` and add a distance in pts behind it. A negative "
 "value will decrease the value between letters."
 msgstr ""
+"這是字母之間的間距，通常以點為單位。只需在 ``style`` 裡加入 ``letter-"
+"spacing``\\ "
+"然後在後面加上以點為距離的數值。當數值為負時會減少字詞之間的數值。"
 
 #: ../../reference_manual/tools/text.rst:204
 msgid "Word-spacing"
-msgstr ""
+msgstr "間距"
 
 #: ../../reference_manual/tools/text.rst:190
 msgid ""
@@ -627,6 +645,8 @@ msgid ""
 "for that font. A negative value will decrease the amount of space between "
 "words:"
 msgstr ""
+"這是單詞之間的額外距離，預設以點為單位。預設中 ``word-spacing: 0;`` "
+"只會用於該字型空白符號的寬度。當數值為負時會減少單詞之間的空間："
 
 #: ../../reference_manual/tools/text.rst:197
 msgid ""
@@ -655,21 +675,25 @@ msgid ""
 "editor, because the rich text editor uses these to figure out if a line is a "
 "new-line and thus writes to these."
 msgstr ""
+"這些是更為精細的控制，能用於定位文字。然而，他們\\ **不能**\\ 可靠地轉換至富"
+"文字編輯器格式，因為富文字編輯器使用這些數值一來判斷是否為新一行文字並輸入文"
+"字。"
 
 #: ../../reference_manual/tools/text.rst:211
 msgid "X and Y"
-msgstr ""
+msgstr "X 和 Y"
 
 #: ../../reference_manual/tools/text.rst:212
 msgid ""
 "X and Y are absolute coordinates. But because you cannot change the absolute "
 "coordinates of the text from the editor, these get added to the position "
 "when they show up in a tspan."
-msgstr ""
+msgstr "X 和 Y 是絕對座標。但因為你無法由文字編輯器更改絕對座標，這些數值會在 tspan "
+"出現時加入定位中。"
 
 #: ../../reference_manual/tools/text.rst:214
 msgid "dx and dy"
-msgstr ""
+msgstr "dx 和 dy"
 
 #: ../../reference_manual/tools/text.rst:214
 msgid "These are relative coordinates to the position of the previous letter."
