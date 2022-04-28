@@ -11,7 +11,7 @@
 .. _repository : https://invent.kde.org/graphics/krita.git
 .. _bugzilla : https://bugs.kde.org/
 .. _Krita developer IRC : https://krita.org/irc/
-.. _API guide : https://api.kde.org/extragear-api/graphics-apidocs/krita/html/index.html
+.. _API guide : https://api.kde.org/krita/html/index.html
 
 .. _intro_user_support:
 

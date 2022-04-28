@@ -27,7 +27,7 @@ These mini-tutorials are written for people with a basic understanding of python
 Getting Krita to recognize your plugin
 --------------------------------------
 
-A script in Krita has two components -- the script directory (holding your script's Python files) and a ".desktop" file that Krita uses to load and register your script. For Krita to load your script both of these must put be in the :file:`pykrita` subdirectory of your Krita resources folder (See :ref:`resource_management` for the paths per operating system). To find your resources folder start Krita and click the :menuselection:`Settings --> Manage Resources...` menu item. This will open a dialog box. Click the :guilabel:`Open Resources Folder` button. This should open a file manager on your system at your Krita resources folder. See the `API <https://api.kde.org/extragear-api/graphics-apidocs/krita/libs/libkis/html/index.html>`_ docs under "Auto starting scripts". If there is no :file:`pykrita` subfolder in the Krita resources directory use your file manager to create one.
+A script in Krita has two components -- the script directory (holding your script's Python files) and a ".desktop" file that Krita uses to load and register your script. For Krita to load your script both of these must put be in the :file:`pykrita` subdirectory of your Krita resources folder (See :ref:`resource_management` for the paths per operating system). To find your resources folder start Krita and click the :menuselection:`Settings --> Manage Resources...` menu item. This will open a dialog box. Click the :guilabel:`Open Resources Folder` button. This should open a file manager on your system at your Krita resources folder. See the `API <https://api.kde.org/krita/html/index.html>`_ docs under "Auto starting scripts". If there is no :file:`pykrita` subfolder in the Krita resources directory use your file manager to create one.
 
 Scripts are identified by a file that ends in a ``.desktop`` extension that contain information about the script itself.
 
@@ -102,7 +102,7 @@ In summary, if you want to create a script called ``myplugin``:
 Creating an extension
 ---------------------
 
-`Extensions <https://api.kde.org/extragear-api/graphics-apidocs/krita/libs/libkis/html/classExtension.html>`_ are relatively simple python scripts that run on Krita start. They are made by extending the Extension class, and the most barebones extension looks like this:
+`Extensions <https://api.kde.org/krita/html/classExtension.html>`_ are relatively simple python scripts that run on Krita start. They are made by extending the Extension class, and the most barebones extension looks like this:
 
 .. code:: python
 
@@ -125,7 +125,7 @@ Creating an extension
 
 This code of course doesn't do anything. Typically, in createActions we add actions to Krita, so we can access our script from the :guilabel:`Tools` menu.
 
-First, let's create an `action <https://api.kde.org/extragear-api/graphics-apidocs/krita/libs/libkis/html/classAction.html>`_. We can do that easily with `Window.createAction() <https://api.kde.org/extragear-api/graphics-apidocs/krita/libs/libkis/html/classWindow.html#a72ec58e53844076c1461966c34a9115c>`_. Krita will call createActions for every Window that is created and pass the right window object that we have to use.
+First, let's create an `action <https://api.kde.org/krita/html/classAction.html>`_. We can do that easily with `Window.createAction() <https://api.kde.org/krita/html/classWindow.html#a72ec58e53844076c1461966c34a9115c>`_. Krita will call createActions for every Window that is created and pass the right window object that we have to use.
 
 So...
 
@@ -238,7 +238,7 @@ Save this file as ``myplugin.action`` where myplugin is the name of your plugin.
 Creating a docker
 -----------------
 
-Creating a custom `docker <https://api.kde.org/extragear-api/graphics-apidocs/krita/libs/libkis/html/classDockWidget.html>`_ is much like creating an extension. Dockers are in some ways a little easier, but they also require more use of widgets. This is the barebones docker code:
+Creating a custom `docker <https://api.kde.org/krita/html/classDockWidget.html>`_ is much like creating an extension. Dockers are in some ways a little easier, but they also require more use of widgets. This is the barebones docker code:
 
 .. code:: python
 

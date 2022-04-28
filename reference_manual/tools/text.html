@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2022-04-21T14:20:03" />
+  <meta property="og:article:modified_time" content="2022-04-28T15:20:43" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="Krita 的文字工具參考。" name="description" />
 
@@ -165,7 +165,7 @@
 <li class="toctree-l3 current"><a class="current reference internal" href="#">文字工具</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#tool-options">工具選項</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#text-editor">文字編輯器</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#fine-typographic-control-with-the-svg-source-tab">Fine typographic control with the SVG Source tab</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fine-typographic-control-with-the-svg-source-tab">在 SVG 原始碼分頁做出精細的排字</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="gradient_edit.html">漸變編輯工具</a></li>
@@ -417,37 +417,37 @@
 <dl>
 <dt>編輯器模式</dt><dd><p>設定想使用的編輯器，可以分別使用富文字編輯器和 SVG 原始碼編輯器，或是同時使用。</p>
 </dd>
-<dt>色彩</dt><dd><p>Here you can configure the syntax highlighting for the SVG source.</p>
+<dt>色彩</dt><dd><p>在這裡你可以設定 SVG 原始碼的語法高亮。</p>
 <dl class="simple">
-<dt>Keyword</dt><dd><p>These highlights important characters like &lt;, /, and &gt;.</p>
+<dt>關鍵字</dt><dd><p>這個功能突顯重要符號如 &lt;，/ 和 &gt;。</p>
 </dd>
-<dt>Element</dt><dd><p>The format for highlighting the element tag name. <strong>text</strong> and <strong>tspan</strong> are examples of element names.</p>
+<dt>元素</dt><dd><p>突顯元素標籤名稱的格式。<strong>text</strong> 和 <strong>tspan</strong> 是元素名稱的例子。</p>
 </dd>
-<dt>Attribute</dt><dd><p>The format for highlighting the attributes of the tag. For example, <code class="docutils literal notranslate"><span class="pre">font-family</span></code>, when it isn't in the <code class="docutils literal notranslate"><span class="pre">style</span></code> tag is usually written as an attribute.</p>
+<dt>屬性</dt><dd><p>突顯標籤屬性的格式。如：<code class="docutils literal notranslate"><span class="pre">font-family</span></code>，當這個不在 <code class="docutils literal notranslate"><span class="pre">style</span></code>時通常會被寫成一個屬性。</p>
 </dd>
-<dt>Value</dt><dd><p>The format for highlighting value of attributes.</p>
+<dt>明度</dt><dd><p>突顯屬性的明度的格式。</p>
 </dd>
-<dt>Comment</dt><dd><p>This highlights XML comments, which are written as following: <code class="docutils literal notranslate"><span class="pre">&lt;!--</span> <span class="pre">This</span> <span class="pre">is</span> <span class="pre">an</span> <span class="pre">XML</span> <span class="pre">comment</span> <span class="pre">--&gt;</span></code>. Comments are pieces of text that never get interpreted.</p>
+<dt>注釋</dt><dd><p>突顯 XML 注釋，格式為：<code class="docutils literal notranslate"><span class="pre">&lt;!--</span> <span class="pre">這是一個</span> <span class="pre">XML</span> <span class="pre">注釋</span> <span class="pre">--&gt;</span></code>。注釋是一段不會受任何影響的文字。</p>
 </dd>
-<dt>Editor Text Color</dt><dd><p>The main color of the editor.</p>
+<dt>編輯器文字色彩</dt><dd><p>編輯器的主要顏色。</p>
 </dd>
-<dt>Editor background color</dt><dd><p>The main background color of the editor.</p>
+<dt>編輯器的背景色彩</dt><dd><p>編輯器的主要背景色彩。</p>
 </dd>
 </dl>
 </dd>
-<dt>Fonts</dt><dd><p>This allows you to filter the selection of fonts in the editor by writing system. Some systems have a lot of fonts specifically for showing foreign languages properly, but these might not be useful for you. You just tick the writing systems which you use yourself, and the font drop-down will only show fonts that have full support for that language.</p>
+<dt>字型</dt><dd><p>這個選項可以以輸入系統為基準過濾文字編輯器的字型。有些系統有著大量能正確顯示海外語言的字型，但這些字型未必對你有用。勾選你的系統使用的語言，然後列出支援該語言的字型。</p>
 </dd>
 </dl>
 </section>
 </section>
 <section id="fine-typographic-control-with-the-svg-source-tab">
-<h2>Fine typographic control with the SVG Source tab<a class="headerlink" href="#fine-typographic-control-with-the-svg-source-tab" title="本標題的永久連結">¶</a></h2>
-<p>So, the rich text editor cannot control all functionality that SVG text allows for. For that, you will need to touch the SVG source directly. But to do that, you will first need to go to the text editor settings and enable either <span class="guilabel">SVG Source</span> or <span class="guilabel">Both</span> editor mode. The Rich Text editor will lose some information, so if you go all out, use <span class="guilabel">SVG Source</span>.</p>
+<h2>在 SVG 原始碼分頁做出精細的排字<a class="headerlink" href="#fine-typographic-control-with-the-svg-source-tab" title="本標題的永久連結">¶</a></h2>
+<p>由於富文字編輯器無法控制 SVG 文字所容許的所有功能。如要使用那些功能，你需要直接使用 SVG 原始碼。在開始之前，你要先去文字編輯器設定並啟用 <span class="guilabel">SVG 原始碼</span> 或 <span class="guilabel">兩者</span> 的編輯器的模式。富文字編輯器會丟失部分資訊，因此如要保留所有資訊，使用 <span class="guilabel">SVG 原始碼</span>。</p>
 <section id="word-spacing-letter-spacing-and-kerning">
-<h3>Word-spacing, Letter-spacing and Kerning<a class="headerlink" href="#word-spacing-letter-spacing-and-kerning" title="本標題的永久連結">¶</a></h3>
-<p>These three are written and read from the rich text tab, but only two of them can be controlled from Rich Text tab.</p>
+<h3>間距，字距和字距調整<a class="headerlink" href="#word-spacing-letter-spacing-and-kerning" title="本標題的永久連結">¶</a></h3>
+<p>這三個格式都能在富文字編輯器中輸入及顯示，但只有兩個能在富文字編輯器中控制。</p>
 <dl>
-<dt>字距調整（Kerning）</dt><dd><p><a class="reference external" href="https://www.w3.org/TR/SVG/text.html#KerningProperty">Kerning, in SVG 1.1</a> behaves slightly differently than <code class="docutils literal notranslate"><span class="pre">font-kerning</span></code> in CSS. Krita by default uses the <code class="docutils literal notranslate"><span class="pre">auto</span></code> property for this, which means it is on. To turn it off use <code class="docutils literal notranslate"><span class="pre">kerning:</span> <span class="pre">0;</span></code> in the <code class="docutils literal notranslate"><span class="pre">style</span></code> section of the text. Any other numeric value will be added to current <code class="docutils literal notranslate"><span class="pre">letter-spacing</span></code>.</p>
+<dt>字距調整（Kerning）</dt><dd><p><a href="#id2"><span class="problematic" id="id3">`字距調整在 SVG 版本 1.1&lt;https://www.w3.org/TR/SVG/text.html#KerningProperty&gt;`_</span></a> 表現和 在 CSS 裡的 <code class="docutils literal notranslate"><span class="pre">font-kerning</span></code> 有些微差異。Krita 預設在這裡使用 <code class="docutils literal notranslate"><span class="pre">auto</span></code> 屬性，也表示預設是開啟的。如要關閉字距調整，請在文字裡的 <code class="docutils literal notranslate"><span class="pre">style</span></code> 使用 <code class="docutils literal notranslate"><span class="pre">kerning:</span> <span class="pre">0</span></code>。任何其他的數值會被加到目前的 <code class="docutils literal notranslate"><span class="pre">letter-spacing</span></code>。</p>
 <img alt="../../_images/Krita_4_0_text_kerning.png" class="align-center" src="../../_images/Krita_4_0_text_kerning.png" />
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">text</span> <span class="n">style</span><span class="o">=</span><span class="s2">&quot;kerning:0; font-family:Dancing Script; font-size:18pt; font-size-adjust:0.265625&quot;</span><span class="o">&gt;</span>
     <span class="o">&lt;</span><span class="n">tspan</span><span class="o">&gt;</span><span class="n">No</span> <span class="n">Kerning</span> <span class="n">on</span> <span class="n">Valhalla</span> <span class="n">Tower</span><span class="o">.&lt;/</span><span class="n">tspan</span><span class="o">&gt;</span>
@@ -455,9 +455,9 @@
 </pre></div>
 </div>
 </dd>
-<dt>Letter-spacing</dt><dd><p>This is the distance between letters in pts, usually. Just write <code class="docutils literal notranslate"><span class="pre">letter-spacing</span></code> in the <code class="docutils literal notranslate"><span class="pre">style</span></code> and add a distance in pts behind it. A negative value will decrease the value between letters.</p>
+<dt>字距</dt><dd><p>這是字母之間的間距，通常以點為單位。只需在 <code class="docutils literal notranslate"><span class="pre">style</span></code> 裡加入 <code class="docutils literal notranslate"><span class="pre">letter-spacing</span></code>然後在後面加上以點為距離的數值。當數值為負時會減少字詞之間的數值。</p>
 </dd>
-<dt>Word-spacing</dt><dd><p>This is the extra distance between words, defaulting to pts. By default, <code class="docutils literal notranslate"><span class="pre">word-spacing:</span> <span class="pre">0;</span></code> will have it use only the width of the space character for that font. A negative value will decrease the amount of space between words:</p>
+<dt>間距</dt><dd><p>這是單詞之間的額外距離，預設以點為單位。預設中 <code class="docutils literal notranslate"><span class="pre">word-spacing:</span> <span class="pre">0;</span></code> 只會用於該字型空白符號的寬度。當數值為負時會減少單詞之間的空間：</p>
 <img alt="../../_images/Krita_4_0_letter_and_word_spacing.png" class="align-center" src="../../_images/Krita_4_0_letter_and_word_spacing.png" />
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">text</span> <span class="n">style</span><span class="o">=</span><span class="s2">&quot;font-family:Noto Serif; font-size:12pt; font-size-adjust:0.389915; text-anchor:middle&quot;</span><span class="o">&gt;</span>
     <span class="o">&lt;</span><span class="n">tspan</span><span class="o">&gt;</span><span class="n">No</span> <span class="n">Adjustment</span><span class="o">.&lt;/</span><span class="n">tspan</span><span class="o">&gt;</span>
@@ -473,11 +473,11 @@
 </section>
 <section id="x-y-dx-dy">
 <h3>x, y, dx, dy<a class="headerlink" href="#x-y-dx-dy" title="本標題的永久連結">¶</a></h3>
-<p>These are even finer-grained controls that can be used to position text. However, they CANNOT be reliably converted to the format of the rich text editor, because the rich text editor uses these to figure out if a line is a new-line and thus writes to these.</p>
+<p>這些是更為精細的控制，能用於定位文字。然而，他們<strong>不能</strong>可靠地轉換至富文字編輯器格式，因為富文字編輯器使用這些數值一來判斷是否為新一行文字並輸入文字。</p>
 <dl class="simple">
-<dt>X and Y</dt><dd><p>X and Y are absolute coordinates. But because you cannot change the absolute coordinates of the text from the editor, these get added to the position when they show up in a tspan.</p>
+<dt>X 和 Y</dt><dd><p>X 和 Y 是絕對座標。但因為你無法由文字編輯器更改絕對座標，這些數值會在 tspan 出現時加入定位中。</p>
 </dd>
-<dt>dx and dy</dt><dd><p>These are relative coordinates to the position of the previous letter.</p>
+<dt>dx 和 dy</dt><dd><p>These are relative coordinates to the position of the previous letter.</p>
 </dd>
 </dl>
 </section>
@@ -516,7 +516,7 @@
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>7edefc8</code>
+          修訂版本 <code>7d1be01</code>
         </span>
       
 

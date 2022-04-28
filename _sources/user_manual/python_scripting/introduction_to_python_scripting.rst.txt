@@ -83,12 +83,12 @@ But it's likely that you need more information. For that, we will need see what'
 Krita's API
 ~~~~~~~~~~~
 
-- `LibKis API Overview <https://api.kde.org/extragear-api/graphics-apidocs/krita/libs/libkis/html/index.html>`_
-- `Krita class documentation <https://api.kde.org/extragear-api/graphics-apidocs/krita/libs/libkis/html/classKrita.html>`_
+- `LibKis API Overview <https://api.kde.org/krita/html/index.html>`_
+- `Krita class documentation <https://api.kde.org/krita/html/annotated.html>`_
 
 Those pages may look like a lot of jargon at first. This is because Krita's API documentation comes from the underlying C++ language that Krita is written in. The magic happens because of a Python tool called SIP, which makes it possible for python speak in C++ and talk to Krita. The end result is that when we ``import krita`` and call functions, we're actually using the C++ methods listed in that documentation. 
 
-Let's see how this stuff works in more detail. Let's take a look at the second link, the `Krita class reference <https://api.kde.org/extragear-api/graphics-apidocs/krita/libs/libkis/html/classKrita.html#aa55507903d088013ced2df8c74f28a63>`_. There we can see all the functions available to the Krita instance. If you type ``dir(Krita.instance())`` in Python, it should match this page very closely - you can view the documentation of the functions ``createDocument()``, ``activeWindow()``, and ``action()`` which we used above. 
+Let's see how this stuff works in more detail. Let's take a look at the second link, the `Krita class reference <https://api.kde.org/krita/html/classKrita.html#aa55507903d088013ced2df8c74f28a63>`_. There we can see all the functions available to the Krita instance. If you type ``dir(Krita.instance())`` in Python, it should match this page very closely - you can view the documentation of the functions ``createDocument()``, ``activeWindow()``, and ``action()`` which we used above.
 
 One of the more confusing things is seeing all the C++ classes that Krita uses, including the Qt classes that start with Q. But here is the beauty of SIP: it tries to make the translation from these classes into Python as simple and straightforward as possible. For example, you can see that the function ``filters()`` returns a ``QStringList``. However, SIP converts those ``QStringLists`` into regular python list of strings!
 
@@ -124,7 +124,7 @@ gives something like this::
     <PyKrita.krita.Document object at 0x7f72946309d8>,
     <PyKrita.krita.Document object at 0x7f7294630c18>]
 
-It is a list of something, sure, but how to use it? If we go back to the Krita apidocs page and look at the function, documents() we'll see there's actually a clickable link on the 'Document' class. `If you follow that link <https://api.kde.org/extragear-api/graphics-apidocs/krita/libs/libkis/html/classDocument.html>`_, you'll see that the document has a function called name() which returns the name of the document, and functions width() and height() which return the dimensions. So if we wanted to generate an info report about the documents in Krita, we could write a script like this:
+It is a list of something, sure, but how to use it? If we go back to the Krita apidocs page and look at the function, documents() we'll see there's actually a clickable link on the 'Document' class. `If you follow that link <https://api.kde.org/krita/html/classDocument.html>`_, you'll see that the document has a function called name() which returns the name of the document, and functions width() and height() which return the dimensions. So if we wanted to generate an info report about the documents in Krita, we could write a script like this:
 
 .. code:: python
 
