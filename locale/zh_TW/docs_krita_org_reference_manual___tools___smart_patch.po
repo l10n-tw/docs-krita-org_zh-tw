@@ -4,13 +4,13 @@
 # package.
 #
 # Alvin Wong <alvin@alvinhc.com>, 2021.
-# RinalNamori <rinalnamori@gmail.com>, 2021.
+# RinalNamori <rinalnamori@gmail.com>, 2021, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 4.3\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-27 21:21+0800\n"
-"PO-Revision-Date: 2021-11-03 14:27+0000\n"
+"PO-Revision-Date: 2022-06-29 13:00+0000\n"
 "Last-Translator: RinalNamori <rinalnamori@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <http://weblate.slat.org/projects/"
 "krita-docs/3-reference_manual___tools___smart_patch/zh_Hant/>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.8.1\n"
+"X-Generator: Weblate 4.12.2\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../../reference_manual/tools/smart_patch.rst:1
@@ -44,19 +44,20 @@ msgid ""
 "image. It does this by letting you draw the area which has the element you "
 "wish to remove, and then it will attempt to use patterns already existing in "
 "the image to fill the blank."
-msgstr ""
+msgstr "智慧補丁工具可以無痕地把圖像中的元素消除。透過已有的影像作為圖案來覆蓋掉圖像"
+"裡的元素。"
 
 #: ../../reference_manual/tools/smart_patch.rst:22
 msgid "You can see it as a smarter version of the clone brush."
-msgstr ""
+msgstr "你可以把這個工具視為更聰明的仿製筆刷。"
 
 #: ../../reference_manual/tools/smart_patch.rst:26
 msgid "The smart patch tool has the following tool options:"
-msgstr ""
+msgstr "智慧補丁工具的工具選項如下："
 
 #: ../../reference_manual/tools/smart_patch.rst:29
 msgid "Accuracy"
-msgstr ""
+msgstr "精度"
 
 #: ../../reference_manual/tools/smart_patch.rst:31
 msgid ""
@@ -66,10 +67,13 @@ msgid ""
 "the algorithm run more often and give more precise results, but because it "
 "has to do more work, it is slower."
 msgstr ""
+"精度是用來判斷使用多少的參考，因而控制運算的頻率。低精度會使用較少的參考，運"
+"算的次數較少，運算較快。高精度會使用更多參考，使運算的次數更頻繁，給予更精確"
+"的結果，因為運算量較大，其工作的速度較慢。"
 
 #: ../../reference_manual/tools/smart_patch.rst:34
 msgid "Patch size"
-msgstr ""
+msgstr "補丁半徑"
 
 #: ../../reference_manual/tools/smart_patch.rst:36
 msgid ""
@@ -79,6 +83,9 @@ msgid ""
 "results, while a big patch size will be better for images with big elements, "
 "so they get reused as a whole."
 msgstr ""
+"補丁半徑是用來判斷圖案的尺寸。要說明的話嘗試一下是最快的。如果附近的圖像大多"
+"是小型的元素，如樹枝，較小的半徑會帶來較好的結果；而較大的半徑則是適合大型的"
+"元素，補丁工具會把整個元素拿去重用。"
 
 #: ../../reference_manual/tools/smart_patch.rst:11
 msgid "Tools"
@@ -86,8 +93,8 @@ msgstr "工具"
 
 #: ../../reference_manual/tools/smart_patch.rst:11
 msgid "Smart Patch"
-msgstr ""
+msgstr "智慧補丁"
 
 #: ../../reference_manual/tools/smart_patch.rst:11
 msgid "Automatic Healing"
-msgstr ""
+msgstr "自動修復"
