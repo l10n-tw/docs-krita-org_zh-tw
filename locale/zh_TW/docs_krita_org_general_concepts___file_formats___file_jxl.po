@@ -12,6 +12,7 @@ msgstr ""
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -25,23 +26,55 @@ msgid "\\*.jxl"
 msgstr ""
 
 #: ../../general_concepts/file_formats/file_jxl.rst:18
-msgid "JPEG XL (``.jxl``) is a new royalty-free image file format. It supports :ref:`lossy compression mode <lossless_compression>` designed for photographs similar to the :ref:`JPEG <file_jpeg>` file format, and also :ref:`lossless compression mode <lossless_compression>` similar to formats like :ref:`PNG <file_png>`. In addition, it also supports saving animations with multiple frames like :ref:`GIF <file_gif>`."
+msgid ""
+"JPEG XL (``.jxl``) is a new royalty-free image file format. It supports :ref:"
+"`lossy compression mode <lossless_compression>` designed for photographs "
+"similar to the :ref:`JPEG <file_jpeg>` file format, and also :ref:`lossless "
+"compression mode <lossless_compression>` similar to formats like :ref:`PNG "
+"<file_png>`. In addition, it also supports saving animations with multiple "
+"frames like :ref:`GIF <file_gif>`."
 msgstr ""
 
 #: ../../general_concepts/file_formats/file_jxl.rst:20
-msgid "When deciding between lossy and lossless compression modes, the same advice for :ref:`JPEG <file_jpeg>` and :ref:`PNG <file_png>` applies. For images with a lot of gradients, like full scale paintings, lossy compression may work very well to produce small files with very little visual quality loss. But for images with a lot of sharp contrasts, like text and comic book styles, lossless compression is usually the better choice."
+msgid ""
+"When deciding between lossy and lossless compression modes, the same advice "
+"for :ref:`JPEG <file_jpeg>` and :ref:`PNG <file_png>` applies. For images "
+"with a lot of gradients, like full scale paintings, lossy compression may "
+"work very well to produce small files with very little visual quality loss. "
+"But for images with a lot of sharp contrasts, like text and comic book "
+"styles, lossless compression is usually the better choice."
 msgstr ""
 
 #: ../../general_concepts/file_formats/file_jxl.rst:22
-msgid "For JPEG XL files using lossy compression, it is not advised to save over the same file multiple times. The lossy compression will cause the file to reduce in quality each time you save it. This is a fundamental problem with lossy compression methods. Instead you should use the lossless compression mode, or a working file format while you are working on the image."
+msgid ""
+"For JPEG XL files using lossy compression, it is not advised to save over "
+"the same file multiple times. The lossy compression will cause the file to "
+"reduce in quality each time you save it. This is a fundamental problem with "
+"lossy compression methods. Instead you should use the lossless compression "
+"mode, or a working file format while you are working on the image."
 msgstr ""
 
 #: ../../general_concepts/file_formats/file_jxl.rst:24
-msgid "It is possible to losslessly transcode JPEG images into JPEG XL. Transcoding preserves the already-lossy compression data from the original JPEG image without any quality loss caused by re-encoding, while making the file size smaller than the original. To do this, you need to use specialized tools, for example the :program:`cjxl` command line tool from `libjxl <https://github.com/libjxl/libjxl>`_, to perform the conversion. Beware that you *cannot* do this by opening the JPEG image in Krita and re-exporting it into JPEG XL. Krita always exports files from the raw pixel data, therefore this does *not* have the same effect as transcoding directly from JPEG to JPEG XL."
+msgid ""
+"It is possible to losslessly transcode JPEG images into JPEG XL. Transcoding "
+"preserves the already-lossy compression data from the original JPEG image "
+"without any quality loss caused by re-encoding, while making the file size "
+"smaller than the original. To do this, you need to use specialized tools, "
+"for example the :program:`cjxl` command line tool from `libjxl <https://"
+"github.com/libjxl/libjxl>`_, to perform the conversion. Beware that you "
+"*cannot* do this by opening the JPEG image in Krita and re-exporting it into "
+"JPEG XL. Krita always exports files from the raw pixel data, therefore this "
+"does *not* have the same effect as transcoding directly from JPEG to JPEG XL."
 msgstr ""
 
 #: ../../general_concepts/file_formats/file_jxl.rst:26
-msgid "Exporting animations from Krita as JPEG XL is supported, though this flattens all layers in the image. To export JPEG XL animations, use :term:`Export...` from the :ref:`file_menu` and then saving or exporting to a ``.jxl`` file. Make sure to enable :guilabel:`Save as animated JPEG XL` in the export options. This is different from :ref:`render_animation` in that it does not use FFmpeg."
+msgid ""
+"Exporting animations from Krita as JPEG XL is supported, though this "
+"flattens all layers in the image. To export JPEG XL animations, use :term:"
+"`Export...` from the :ref:`file_menu` and then saving or exporting to a ``."
+"jxl`` file. Make sure to enable :guilabel:`Save as animated JPEG XL` in the "
+"export options. This is different from :ref:`render_animation` in that it "
+"does not use FFmpeg."
 msgstr ""
 
 #: ../../general_concepts/file_formats/file_jxl.rst:30
@@ -53,7 +86,9 @@ msgid "`JPEG XL community website <https://jpegxl.info/>`_"
 msgstr ""
 
 #: ../../general_concepts/file_formats/file_jxl.rst:32
-msgid "`libjxl -- JPEG XL reference implementation <https://github.com/libjxl/libjxl>`_"
+msgid ""
+"`libjxl -- JPEG XL reference implementation <https://github.com/libjxl/"
+"libjxl>`_"
 msgstr ""
 
 #: ../../general_concepts/file_formats/file_jxl.rst:11
