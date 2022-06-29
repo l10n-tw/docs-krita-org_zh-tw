@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 5.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-19 22:30+0800\n"
+"POT-Creation-Date: 2022-06-29 13:07+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,191 +20,211 @@ msgstr ""
 msgid "The edit menu in Krita."
 msgstr ""
 
-#: ../../reference_manual/main_menu/edit_menu.rst:16
+#: ../../reference_manual/main_menu/edit_menu.rst:17
 msgid "Edit Menu"
 msgstr ""
 
-#: ../../reference_manual/main_menu/edit_menu.rst:19
-#: ../../reference_manual/main_menu/edit_menu.rst:11
+#: ../../reference_manual/main_menu/edit_menu.rst:20
+#: ../../reference_manual/main_menu/edit_menu.rst:12
 msgid "Undo"
 msgstr ""
 
-#: ../../reference_manual/main_menu/edit_menu.rst:21
+#: ../../reference_manual/main_menu/edit_menu.rst:22
 msgid "Undoes the last action. Shortcut: :kbd:`Ctrl + Z`"
 msgstr ""
 
-#: ../../reference_manual/main_menu/edit_menu.rst:22
-#: ../../reference_manual/main_menu/edit_menu.rst:11
+#: ../../reference_manual/main_menu/edit_menu.rst:23
+#: ../../reference_manual/main_menu/edit_menu.rst:12
 msgid "Redo"
 msgstr ""
 
-#: ../../reference_manual/main_menu/edit_menu.rst:24
+#: ../../reference_manual/main_menu/edit_menu.rst:25
 msgid "Redoes the last undone action. Shortcut: :kbd:`Ctrl + Shift+ Z`"
 msgstr ""
 
-#: ../../reference_manual/main_menu/edit_menu.rst:25
-#: ../../reference_manual/main_menu/edit_menu.rst:11
+#: ../../reference_manual/main_menu/edit_menu.rst:26
+#: ../../reference_manual/main_menu/edit_menu.rst:12
 msgid "Cut"
 msgstr ""
 
-#: ../../reference_manual/main_menu/edit_menu.rst:27
-msgid "Cuts the selection or layer. Shortcut: :kbd:`Ctrl + X`"
+#: ../../reference_manual/main_menu/edit_menu.rst:28
+msgid "If shapes are selected, then they are cut from the image and saved into the clipboard."
 msgstr ""
 
-#: ../../reference_manual/main_menu/edit_menu.rst:28
-#: ../../reference_manual/main_menu/edit_menu.rst:11
-msgid "Copy"
+#: ../../reference_manual/main_menu/edit_menu.rst:29
+msgid "If :ref:`selections_basics` are active, then that area is cut in all the layers selected in the layer docker and saved into the clipboard."
 msgstr ""
 
 #: ../../reference_manual/main_menu/edit_menu.rst:30
-msgid "Copies the selection or layer. Shortcut: :kbd:`Ctrl + C`"
+msgid "If no selection, the layers selected inside the layer docker are cut from the image and saved into the clipboard."
 msgstr ""
 
 #: ../../reference_manual/main_menu/edit_menu.rst:31
-msgid "Cut (Sharp)"
+msgid "Shortcut: :kbd:`Ctrl + X`"
 msgstr ""
 
-#: ../../reference_manual/main_menu/edit_menu.rst:33
-msgid "This prevents semi-transparent areas from appearing on your cut pixels, making them either fully opaque or fully transparent."
+#: ../../reference_manual/main_menu/edit_menu.rst:32
+#: ../../reference_manual/main_menu/edit_menu.rst:12
+msgid "Copy"
 msgstr ""
 
 #: ../../reference_manual/main_menu/edit_menu.rst:34
-msgid "Copy (Sharp)"
+msgid "Similar to :term:`Cut`, but elements are only copied into the clipboard without modifying existing image. Shortcut: :kbd:`Ctrl + C`"
 msgstr ""
 
-#: ../../reference_manual/main_menu/edit_menu.rst:36
-msgid "Same as :term:`Cut (Sharp)` but then copying instead."
+#: ../../reference_manual/main_menu/edit_menu.rst:35
+msgid "Cut (Sharp)"
 msgstr ""
 
 #: ../../reference_manual/main_menu/edit_menu.rst:37
-msgid "Copy Merged"
+msgid "This prevents semi-transparent areas from appearing on your cut pixels, making them either fully opaque or fully transparent."
 msgstr ""
 
-#: ../../reference_manual/main_menu/edit_menu.rst:39
-msgid "Copies the selection over all layers. Shortcut: :kbd:`Ctrl + Shift + C`"
+#: ../../reference_manual/main_menu/edit_menu.rst:38
+msgid "Copy (Sharp)"
 msgstr ""
 
 #: ../../reference_manual/main_menu/edit_menu.rst:40
-#: ../../reference_manual/main_menu/edit_menu.rst:11
-msgid "Paste"
+msgid "Same as :term:`Cut (Sharp)` but then copying instead."
 msgstr ""
 
-#: ../../reference_manual/main_menu/edit_menu.rst:42
-msgid "Pastes the copied buffer into the image as a new layer. Shortcut: :kbd:`Ctrl + V`"
+#: ../../reference_manual/main_menu/edit_menu.rst:41
+msgid "Copy Merged"
 msgstr ""
 
 #: ../../reference_manual/main_menu/edit_menu.rst:43
-msgid "Paste at Cursor"
+msgid "Copies the selection over all layers. Shortcut: :kbd:`Ctrl + Shift + C`"
 msgstr ""
 
-#: ../../reference_manual/main_menu/edit_menu.rst:45
-msgid "Same as :term:`Paste`, but aligns the image to the cursor. Shortcut: :kbd:`Ctrl + Alt + V`"
+#: ../../reference_manual/main_menu/edit_menu.rst:44
+#: ../../reference_manual/main_menu/edit_menu.rst:12
+msgid "Paste"
 msgstr ""
 
 #: ../../reference_manual/main_menu/edit_menu.rst:46
-msgid "Paste into Active Layer"
+msgid "If vector shapes are in the copied buffer, the shapes are pasted into the image as a new layer."
+msgstr ""
+
+#: ../../reference_manual/main_menu/edit_menu.rst:47
+msgid "If layers are in the copied buffer, these layers are pasted into the image above the active layer or inside a group layer if the active layer is a group layer."
 msgstr ""
 
 #: ../../reference_manual/main_menu/edit_menu.rst:48
-msgid "Pastes the copied buffer into the current layer as a new selection."
+msgid "Shortcut: :kbd:`Ctrl + V`"
+msgstr ""
+
+#: ../../reference_manual/main_menu/edit_menu.rst:49
+msgid "Paste at Cursor"
 msgstr ""
 
 #: ../../reference_manual/main_menu/edit_menu.rst:51
-msgid "Paste into New Image"
+msgid "Same as :term:`Paste`, but aligns the image to the cursor. Shortcut: :kbd:`Ctrl + Alt + V`"
 msgstr ""
 
-#: ../../reference_manual/main_menu/edit_menu.rst:53
-msgid "Pastes the copied buffer into a new image. Shortcut: :kbd:`Ctrl + Shift + N`"
+#: ../../reference_manual/main_menu/edit_menu.rst:52
+msgid "Paste into Active Layer"
 msgstr ""
 
 #: ../../reference_manual/main_menu/edit_menu.rst:54
-msgid "Paste as Reference Image"
-msgstr ""
-
-#: ../../reference_manual/main_menu/edit_menu.rst:56
-msgid "Pastes the selection as a new :ref:`Reference Image <reference_images_tool>`."
+msgid "Pastes the copied buffer into the current layer as a new selection."
 msgstr ""
 
 #: ../../reference_manual/main_menu/edit_menu.rst:57
-msgid "Paste Shape Style"
+msgid "Paste into New Image"
 msgstr ""
 
 #: ../../reference_manual/main_menu/edit_menu.rst:59
-msgid "Used with :ref:`shape_selection_tool`, this allows you to copy the style (the fill, outline and markers) of one vector shape to another."
+msgid "Pastes the copied buffer into a new image. Shortcut: :kbd:`Ctrl + Shift + N`"
+msgstr ""
+
+#: ../../reference_manual/main_menu/edit_menu.rst:60
+msgid "Paste as Reference Image"
 msgstr ""
 
 #: ../../reference_manual/main_menu/edit_menu.rst:62
-msgid "Clear"
+msgid "Pastes the selection as a new :ref:`Reference Image <reference_images_tool>`."
 msgstr ""
 
-#: ../../reference_manual/main_menu/edit_menu.rst:64
-msgid "Empty the currently selected area or layer. Shortcut: :kbd:`Del`"
+#: ../../reference_manual/main_menu/edit_menu.rst:63
+msgid "Paste Shape Style"
 msgstr ""
 
 #: ../../reference_manual/main_menu/edit_menu.rst:65
-msgid "Fill with Foreground Color"
-msgstr ""
-
-#: ../../reference_manual/main_menu/edit_menu.rst:67
-msgid "Fills the layer or selection with the foreground color without taking into account blending modes or opacity. Shortcut: :kbd:`Shift + Backspace`"
+msgid "Used with :ref:`shape_selection_tool`, this allows you to copy the style (the fill, outline and markers) of one vector shape to another."
 msgstr ""
 
 #: ../../reference_manual/main_menu/edit_menu.rst:68
-msgid "Fill with Background Color"
+msgid "Clear"
 msgstr ""
 
 #: ../../reference_manual/main_menu/edit_menu.rst:70
-msgid "Fills the layer or selection with the background color without taking into account blending modes or opacity. Shortcut: :kbd:`Backspace`"
+msgid "Empty the currently selected area or total area of all the selected layers. Shortcut: :kbd:`Del`"
 msgstr ""
 
 #: ../../reference_manual/main_menu/edit_menu.rst:71
-msgid "Fill with Pattern"
+msgid "Fill with Foreground Color"
 msgstr ""
 
 #: ../../reference_manual/main_menu/edit_menu.rst:73
-msgid "Fills the layer or selection with the active pattern without taking into account blending modes or opacity."
+msgid "Fills the layer or selection with the foreground color without taking into account blending modes or opacity. Shortcut: :kbd:`Shift + Backspace`"
 msgstr ""
 
 #: ../../reference_manual/main_menu/edit_menu.rst:74
-msgid "Fill with Foreground Color (Opacity)"
+msgid "Fill with Background Color"
 msgstr ""
 
 #: ../../reference_manual/main_menu/edit_menu.rst:76
-msgid "Fills the layer or selection with the foreground color, taking blending modes and opacity into account. Shortcut: :kbd:`Ctrl + Shift + Backspace`"
+msgid "Fills the layer or selection with the background color without taking into account blending modes or opacity. Shortcut: :kbd:`Backspace`"
 msgstr ""
 
 #: ../../reference_manual/main_menu/edit_menu.rst:77
-msgid "Fill with Background Color (Opacity)"
+msgid "Fill with Pattern"
 msgstr ""
 
 #: ../../reference_manual/main_menu/edit_menu.rst:79
-msgid "Fills the layer or selection with the background color, taking blending modes and opacity into account. Shortcut: :kbd:`Ctrl + Backspace`"
+msgid "Fills the layer or selection with the active pattern without taking into account blending modes or opacity."
 msgstr ""
 
 #: ../../reference_manual/main_menu/edit_menu.rst:80
-msgid "Fill with Pattern (Opacity)"
+msgid "Fill with Foreground Color (Opacity)"
 msgstr ""
 
 #: ../../reference_manual/main_menu/edit_menu.rst:82
-msgid "Fills the layer or selection with the active pattern, taking blending modes and opacity into account."
+msgid "Fills the layer or selection with the foreground color, taking blending modes and opacity into account. Shortcut: :kbd:`Ctrl + Shift + Backspace`"
 msgstr ""
 
 #: ../../reference_manual/main_menu/edit_menu.rst:83
-msgid "Stroke Selected Shapes"
+msgid "Fill with Background Color (Opacity)"
 msgstr ""
 
 #: ../../reference_manual/main_menu/edit_menu.rst:85
-msgid "Strokes the selected vector shape with the selected brush, will create a new layer."
+msgid "Fills the layer or selection with the background color, taking blending modes and opacity into account. Shortcut: :kbd:`Ctrl + Backspace`"
 msgstr ""
 
 #: ../../reference_manual/main_menu/edit_menu.rst:86
-msgid "Stroke Selection"
+msgid "Fill with Pattern (Opacity)"
 msgstr ""
 
 #: ../../reference_manual/main_menu/edit_menu.rst:88
+msgid "Fills the layer or selection with the active pattern, taking blending modes and opacity into account."
+msgstr ""
+
+#: ../../reference_manual/main_menu/edit_menu.rst:89
+msgid "Stroke Selected Shapes"
+msgstr ""
+
+#: ../../reference_manual/main_menu/edit_menu.rst:91
+msgid "Strokes the selected vector shape with the selected brush, will create a new layer."
+msgstr ""
+
+#: ../../reference_manual/main_menu/edit_menu.rst:92
+msgid "Stroke Selection"
+msgstr ""
+
+#: ../../reference_manual/main_menu/edit_menu.rst:94
 msgid "Strokes the active selection using the menu."
 msgstr ""
 
-#: ../../reference_manual/main_menu/edit_menu.rst:11
+#: ../../reference_manual/main_menu/edit_menu.rst:12
 msgid "Edit"
 msgstr ""

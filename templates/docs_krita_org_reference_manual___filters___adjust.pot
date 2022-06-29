@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 5.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-27 21:21+0800\n"
+"POT-Creation-Date: 2022-06-29 13:07+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -95,216 +95,296 @@ msgid "This filter allows you to directly modify the levels of the tone-values o
 msgstr ""
 
 #: ../../reference_manual/filters/adjust.rst:66
-msgid "This is very useful to do an initial cleanup of scanned lineart or grayscale images. If the scanned lineart is light you can slide the black triangle to right to make it darker or if you want to remove the gray areas you can slide the white slider to left."
+msgid "With these two buttons you can switch between \"lightness only\" and \"per channel\" levels adjustment. If you use the second mode you can modify the levels for each channel independently and you can change the active channel by selecting it in the list that appears at the right side of the buttons."
+msgstr ""
+
+#: ../../reference_manual/filters/adjust.rst:67
+msgid "This area shows the histogram for the active channel."
 msgstr ""
 
 #: ../../reference_manual/filters/adjust.rst:68
-msgid "Auto levels is a quick way to adjust tone of an image. If you want to change the settings later you can click on the :guilabel:`Create Filter Mask` button to add the levels as a filter mask."
+msgid "This is a slider that you can use to quickly change the input black and white points and gamma."
+msgstr ""
+
+#: ../../reference_manual/filters/adjust.rst:69
+msgid "These input boxes do the same as the input levels slider, but allow you to finetune the values."
+msgstr ""
+
+#: ../../reference_manual/filters/adjust.rst:70
+msgid "This is a slider that you can use to quickly change the output black and white ponts."
+msgstr ""
+
+#: ../../reference_manual/filters/adjust.rst:71
+msgid "These input boxes do the same as the output levels slider, but allow you to finetune the values."
+msgstr ""
+
+#: ../../reference_manual/filters/adjust.rst:72
+msgid "These buttons allow you to control the visualization of the histogram. The first button makes it use a linear scale (the default). The second one makes it use a logarithmic scale. The third one changes its vertical size to fit the whole histogram in the area. The forth one changes the vertical size to fit in the area most of the histogram but cutting long peaks produced by outliers. You can also change the size of the histogram by clicking and dragging verticaly on the area or by double-clicking to change between \"fit all\" and \"fit cutting long peaks\"."
+msgstr ""
+
+#: ../../reference_manual/filters/adjust.rst:73
+msgid "This button brings up the auto levels dialog for the current channel."
 msgstr ""
 
 #: ../../reference_manual/filters/adjust.rst:74
-#: ../../reference_manual/filters/adjust.rst:71
-msgid "Color Adjustment Curves"
+msgid "These buttons allow you to reset (from top to bottom) the levels of the current channel, the input levels of the current channel, the output levels of the current channel, and the levels of all the channels."
 msgstr ""
 
-#: ../../reference_manual/filters/adjust.rst:76
-msgid "This filter allows you to adjust each channel by manipulating the curves. You can even adjust the alpha channel and the lightness channel through this filter. This is used very often by artists as a post processing filter to slightly heighten the mood of the painting by adjust the overall color. For example a scene with fire breathing dragon may be made more red and yellow by adjusting the curves to give it more warmer look, similarly a snowy mountain scene can be made to look cooler by adjusting the blues and greens. The default shortcut for this filter is :kbd:`Ctrl + M`."
+#: ../../reference_manual/filters/adjust.rst:75
+msgid "This button brings up the multi-channel auto levels dialog (only available in the RGBA color model)."
 msgstr ""
 
-#: ../../reference_manual/filters/adjust.rst:81
-msgid "Since 4.1 this filter can also handle Hue and Saturation curves."
+#: ../../reference_manual/filters/adjust.rst:77
+msgid "This filter is very useful to do an initial cleanup of scanned lineart or grayscale images. If the scanned lineart is light you can slide the black handle in the input levels to the right to make it darker or if you want to remove the gray areas you can slide the white handle to the left."
+msgstr ""
+
+#: ../../reference_manual/filters/adjust.rst:79
+msgid "Auto levels is a quick way to adjust tone of an image. You can update the levels of the filter automaticaly by using the auto levels dialog that appears when clicking one of the buttons explained earlier:"
+msgstr ""
+
+#: ../../reference_manual/filters/adjust.rst:85
+msgid ":guilabel:`Shadows and Highlights`: In this group of widgets you can select how the shadows and highlights are enhanced."
+msgstr ""
+
+#: ../../reference_manual/filters/adjust.rst:87
+msgid ":guilabel:`Method`: this is available only in the RGBA color model when using the multi-channel autolevels and allows you to select if you want to apply the same input levels to all the channels or different input levels to each."
 msgstr ""
 
 #: ../../reference_manual/filters/adjust.rst:88
-msgid "Cross-channel color adjustment"
+msgid ":guilabel:`Shadows clipping` and :guilabel:`Highlights clipping`: these parameters tell the percentage of dark/light colors that are going to be clipped. This is useful when the histogram has long, low valued, tails at the shadows/highlights extremes."
+msgstr ""
+
+#: ../../reference_manual/filters/adjust.rst:89
+msgid ":guilabel:`Maximum offset`: this allows to set how much the input black and white points can be moved from their relative extremes."
+msgstr ""
+
+#: ../../reference_manual/filters/adjust.rst:90
+msgid ":guilabel:`Shadows color` and :guilabel:`Highlights color`: allows you to choose which colors should be used for the output shadows/highlights."
 msgstr ""
 
 #: ../../reference_manual/filters/adjust.rst:92
-msgid "Sometimes, when you are adjusting the colors for an image, you want bright colors to be more saturated, or have a little bit of brightness in the purples."
+msgid ":guilabel:`Midtones`: In this group of widgets you can select how the midtones are enhanced."
 msgstr ""
 
 #: ../../reference_manual/filters/adjust.rst:94
-msgid "The Cross-channel color adjustment filter allows you to do this."
+msgid ":guilabel:`Method`: here you can choose not to enhance the midtones or a method to find the midtone point of the image using the median or the mean of the histogram."
+msgstr ""
+
+#: ../../reference_manual/filters/adjust.rst:95
+msgid ":guilabel:`Amount`: with this parameter you can choose how much the final midtone point used to adjust the image differs from the center of the histogram. If you choose 0% then the center of the histogram is used as midtone point (which meand no correction except for the output color). If you choose 100% then the median or mean is used (depending on the method selected). And if you choose a value inbetween then a midtone point between those is used by linearly interpolating them."
 msgstr ""
 
 #: ../../reference_manual/filters/adjust.rst:96
+msgid ":guilabel:`Color`: allows you to choose which color should be used for the output midtones."
+msgstr ""
+
+#: ../../reference_manual/filters/adjust.rst:98
+msgid "If you want to change the settings later you can click on the :guilabel:`Create Filter Mask` button to add the levels as a filter mask."
+msgstr ""
+
+#: ../../reference_manual/filters/adjust.rst:103
+#: ../../reference_manual/filters/adjust.rst:100
+msgid "Color Adjustment Curves"
+msgstr ""
+
+#: ../../reference_manual/filters/adjust.rst:105
+msgid "This filter allows you to adjust each channel by manipulating the curves. You can even adjust the alpha channel and the lightness channel through this filter. This is used very often by artists as a post processing filter to slightly heighten the mood of the painting by adjust the overall color. For example a scene with fire breathing dragon may be made more red and yellow by adjusting the curves to give it more warmer look, similarly a snowy mountain scene can be made to look cooler by adjusting the blues and greens. The default shortcut for this filter is :kbd:`Ctrl + M`."
+msgstr ""
+
+#: ../../reference_manual/filters/adjust.rst:110
+msgid "Since 4.1 this filter can also handle Hue and Saturation curves."
+msgstr ""
+
+#: ../../reference_manual/filters/adjust.rst:117
+msgid "Cross-channel color adjustment"
+msgstr ""
+
+#: ../../reference_manual/filters/adjust.rst:121
+msgid "Sometimes, when you are adjusting the colors for an image, you want bright colors to be more saturated, or have a little bit of brightness in the purples."
+msgstr ""
+
+#: ../../reference_manual/filters/adjust.rst:123
+msgid "The Cross-channel color adjustment filter allows you to do this."
+msgstr ""
+
+#: ../../reference_manual/filters/adjust.rst:125
 msgid "At the top, there are two drop-downs. The first one is to choose which :guilabel:`Channel` you wish to modify. The :guilabel:`Driver Channel` drop down is what channel you use to control which parts are modified."
 msgstr ""
 
-#: ../../reference_manual/filters/adjust.rst:100
+#: ../../reference_manual/filters/adjust.rst:129
 msgid "The curve, on the horizontal axis, represents the driver channel, while the vertical axis represent the channel you wish to modify."
 msgstr ""
 
-#: ../../reference_manual/filters/adjust.rst:102
+#: ../../reference_manual/filters/adjust.rst:131
 msgid "So if you wish to increase the saturation in the lighter parts, you pick :guilabel:`Saturation` in the first drop-down, and :guilabel:`Lightness` as the driver channel. Then, pull up the right end to the top."
 msgstr ""
 
-#: ../../reference_manual/filters/adjust.rst:104
+#: ../../reference_manual/filters/adjust.rst:133
 msgid "If you wish to desaturate everything but the teal/blues, you select :guilabel:`Saturation` for the channel and :guilabel:`Hue` for the driver. Then put a dot in the middle and pull down the dots on either sides."
 msgstr ""
 
-#: ../../reference_manual/filters/adjust.rst:107
+#: ../../reference_manual/filters/adjust.rst:136
 msgid "Brightness/Contrast curves"
 msgstr ""
 
-#: ../../reference_manual/filters/adjust.rst:109
+#: ../../reference_manual/filters/adjust.rst:138
 msgid "This filter allows you to adjust the brightness and contrast of the image by adjusting the curves."
 msgstr ""
 
-#: ../../reference_manual/filters/adjust.rst:113
+#: ../../reference_manual/filters/adjust.rst:142
 msgid "These have been removed in Krita 4.0, because the Color Adjustment filter can do the same. Old files with brightness/contrast curves will be loaded as Color Adjustment curves."
 msgstr ""
 
-#: ../../reference_manual/filters/adjust.rst:118
-#: ../../reference_manual/filters/adjust.rst:115
+#: ../../reference_manual/filters/adjust.rst:147
+#: ../../reference_manual/filters/adjust.rst:144
 msgid "Color Balance"
 msgstr ""
 
-#: ../../reference_manual/filters/adjust.rst:120
+#: ../../reference_manual/filters/adjust.rst:149
 msgid "This filter allows you to control the color balance of the image by adjusting the sliders for Shadows, Midtones and Highlights. The default shortcut for this filter is :kbd:`Ctrl + B`."
 msgstr ""
 
-#: ../../reference_manual/filters/adjust.rst:127
+#: ../../reference_manual/filters/adjust.rst:156
 msgid "Desaturate"
 msgstr ""
 
-#: ../../reference_manual/filters/adjust.rst:129
+#: ../../reference_manual/filters/adjust.rst:158
 msgid "Image-wide desaturation filter. Will make any image Grayscale. Has several choices by which logic the colors are turned to gray. The default shortcut for this filter is :kbd:`Ctrl + Shift + U`."
 msgstr ""
 
-#: ../../reference_manual/filters/adjust.rst:134
-#: ../../reference_manual/filters/adjust.rst:162
+#: ../../reference_manual/filters/adjust.rst:163
+#: ../../reference_manual/filters/adjust.rst:191
 msgid "Lightness"
 msgstr ""
 
-#: ../../reference_manual/filters/adjust.rst:135
+#: ../../reference_manual/filters/adjust.rst:164
 msgid "This will turn colors to gray using the HSL model."
 msgstr ""
 
-#: ../../reference_manual/filters/adjust.rst:136
+#: ../../reference_manual/filters/adjust.rst:165
 msgid "Luminosity (ITU-R BT.709)"
 msgstr ""
 
-#: ../../reference_manual/filters/adjust.rst:137
+#: ../../reference_manual/filters/adjust.rst:166
 msgid "Will turn the color to gray by using the appropriate amount of weighting per channel according to ITU-R BT.709."
 msgstr ""
 
-#: ../../reference_manual/filters/adjust.rst:138
+#: ../../reference_manual/filters/adjust.rst:167
 msgid "Luminosity (ITU-R BT.601)"
 msgstr ""
 
-#: ../../reference_manual/filters/adjust.rst:139
+#: ../../reference_manual/filters/adjust.rst:168
 msgid "Will turn the color to gray by using the appropriate amount of weighting per channel according to ITU-R BT.601."
 msgstr ""
 
-#: ../../reference_manual/filters/adjust.rst:140
+#: ../../reference_manual/filters/adjust.rst:169
 msgid "Average"
 msgstr ""
 
-#: ../../reference_manual/filters/adjust.rst:141
+#: ../../reference_manual/filters/adjust.rst:170
 msgid "Will make an average of all channels."
 msgstr ""
 
-#: ../../reference_manual/filters/adjust.rst:142
+#: ../../reference_manual/filters/adjust.rst:171
 msgid "Min"
 msgstr ""
 
-#: ../../reference_manual/filters/adjust.rst:143
+#: ../../reference_manual/filters/adjust.rst:172
 msgid "Subtracts all from one another to find the gray value."
 msgstr ""
 
-#: ../../reference_manual/filters/adjust.rst:145
+#: ../../reference_manual/filters/adjust.rst:174
 msgid "Max"
 msgstr ""
 
-#: ../../reference_manual/filters/adjust.rst:145
+#: ../../reference_manual/filters/adjust.rst:174
 msgid "Adds all channels together to get a gray value."
-msgstr ""
-
-#: ../../reference_manual/filters/adjust.rst:150
-#: ../../reference_manual/filters/adjust.rst:147
-msgid "Invert"
-msgstr ""
-
-#: ../../reference_manual/filters/adjust.rst:152
-msgid "This filter like the name suggests inverts the color values in the image. So white (1,1,1) becomes black (0,0,0), yellow (1,1,0) becomes blue (0,1,1), etc. The default shortcut for this filter is :kbd:`Ctrl + I`."
-msgstr ""
-
-#: ../../reference_manual/filters/adjust.rst:158
-msgid "Auto Contrast"
-msgstr ""
-
-#: ../../reference_manual/filters/adjust.rst:160
-msgid "Tries to adjust the contrast to universally acceptable levels."
-msgstr ""
-
-#: ../../reference_manual/filters/adjust.rst:165
-msgid "HSV/HSL Adjustment"
-msgstr ""
-
-#: ../../reference_manual/filters/adjust.rst:167
-msgid "With this filter, you can adjust the Hue, Saturation, Value or Lightness, through sliders. The default shortcut for this filter is :kbd:`Ctrl + U`."
-msgstr ""
-
-#: ../../reference_manual/filters/adjust.rst:171
-msgid "Colorize"
-msgstr ""
-
-#: ../../reference_manual/filters/adjust.rst:172
-msgid "This is an option to have all the pixels have the same hue. It uses a HSL formula by default."
-msgstr ""
-
-#: ../../reference_manual/filters/adjust.rst:174
-msgid "Legacy Mode"
-msgstr ""
-
-#: ../../reference_manual/filters/adjust.rst:174
-msgid "In the development of Krita 4.3, the HSV algorithm was adjusted to maintain the variation in brightness better. This is important because brightness contrast is the most important contrast, so you want to avoid losing variation in it. This option toggles the old behaviour for files made in previous versions."
 msgstr ""
 
 #: ../../reference_manual/filters/adjust.rst:179
 #: ../../reference_manual/filters/adjust.rst:176
-msgid "Threshold"
+msgid "Invert"
 msgstr ""
 
 #: ../../reference_manual/filters/adjust.rst:181
-msgid "A simple black and white threshold filter that uses sRGB luminosity. It'll convert any image to a image with only black and white, with the input number indicating the threshold value at which black becomes white."
+msgid "This filter like the name suggests inverts the color values in the image. So white (1,1,1) becomes black (0,0,0), yellow (1,1,0) becomes blue (0,1,1), etc. The default shortcut for this filter is :kbd:`Ctrl + I`."
 msgstr ""
 
-#: ../../reference_manual/filters/adjust.rst:186
-msgid "Slope, Offset, Power"
+#: ../../reference_manual/filters/adjust.rst:187
+msgid "Auto Contrast"
 msgstr ""
 
-#: ../../reference_manual/filters/adjust.rst:188
-msgid "A different kind of color balance filter, with three color selectors, which will have the same shape as the one used in settings."
+#: ../../reference_manual/filters/adjust.rst:189
+msgid "Tries to adjust the contrast to universally acceptable levels."
 msgstr ""
 
-#: ../../reference_manual/filters/adjust.rst:190
-msgid "This filter is particular useful because it has been defined by the American Society for Cinema as \"ASC_CDL\", meaning that it is a standard way of describing a color balance method."
+#: ../../reference_manual/filters/adjust.rst:194
+msgid "HSV/HSL Adjustment"
 msgstr ""
 
 #: ../../reference_manual/filters/adjust.rst:196
-#: ../../reference_manual/filters/adjust.rst:183
-msgid "Slope"
+msgid "With this filter, you can adjust the Hue, Saturation, Value or Lightness, through sliders. The default shortcut for this filter is :kbd:`Ctrl + U`."
 msgstr ""
 
-#: ../../reference_manual/filters/adjust.rst:197
-msgid "This represents a multiplication and determine the adjustment of the brighter colors in an image."
-msgstr ""
-
-#: ../../reference_manual/filters/adjust.rst:198
-msgid "Offset"
-msgstr ""
-
-#: ../../reference_manual/filters/adjust.rst:199
-msgid "This determines how much the bottom is offset from the top, and so determines the color of the darkest colors."
-msgstr ""
-
-#: ../../reference_manual/filters/adjust.rst:202
-msgid "Power"
+#: ../../reference_manual/filters/adjust.rst:200
+msgid "Colorize"
 msgstr ""
 
 #: ../../reference_manual/filters/adjust.rst:201
+msgid "This is an option to have all the pixels have the same hue. It uses a HSL formula by default."
+msgstr ""
+
+#: ../../reference_manual/filters/adjust.rst:203
+msgid "Legacy Mode"
+msgstr ""
+
+#: ../../reference_manual/filters/adjust.rst:203
+msgid "In the development of Krita 4.3, the HSV algorithm was adjusted to maintain the variation in brightness better. This is important because brightness contrast is the most important contrast, so you want to avoid losing variation in it. This option toggles the old behaviour for files made in previous versions."
+msgstr ""
+
+#: ../../reference_manual/filters/adjust.rst:208
+#: ../../reference_manual/filters/adjust.rst:205
+msgid "Threshold"
+msgstr ""
+
+#: ../../reference_manual/filters/adjust.rst:210
+msgid "A simple black and white threshold filter that uses sRGB luminosity. It'll convert any image to a image with only black and white, with the input number indicating the threshold value at which black becomes white."
+msgstr ""
+
+#: ../../reference_manual/filters/adjust.rst:215
+msgid "Slope, Offset, Power"
+msgstr ""
+
+#: ../../reference_manual/filters/adjust.rst:217
+msgid "A different kind of color balance filter, with three color selectors, which will have the same shape as the one used in settings."
+msgstr ""
+
+#: ../../reference_manual/filters/adjust.rst:219
+msgid "This filter is particular useful because it has been defined by the American Society for Cinema as \"ASC_CDL\", meaning that it is a standard way of describing a color balance method."
+msgstr ""
+
+#: ../../reference_manual/filters/adjust.rst:225
+#: ../../reference_manual/filters/adjust.rst:212
+msgid "Slope"
+msgstr ""
+
+#: ../../reference_manual/filters/adjust.rst:226
+msgid "This represents a multiplication and determine the adjustment of the brighter colors in an image."
+msgstr ""
+
+#: ../../reference_manual/filters/adjust.rst:227
+msgid "Offset"
+msgstr ""
+
+#: ../../reference_manual/filters/adjust.rst:228
+msgid "This determines how much the bottom is offset from the top, and so determines the color of the darkest colors."
+msgstr ""
+
+#: ../../reference_manual/filters/adjust.rst:231
+msgid "Power"
+msgstr ""
+
+#: ../../reference_manual/filters/adjust.rst:230
 msgid "This represents a power function, and determines the adjustment of the mid-tone to dark colors of an image."
 msgstr ""
 
@@ -316,67 +396,67 @@ msgstr ""
 msgid "Levels Filter"
 msgstr ""
 
-#: ../../reference_manual/filters/adjust.rst:71
+#: ../../reference_manual/filters/adjust.rst:100
 msgid "RGB Curves"
 msgstr ""
 
-#: ../../reference_manual/filters/adjust.rst:71
+#: ../../reference_manual/filters/adjust.rst:100
 msgid "Curves Filter"
 msgstr ""
 
-#: ../../reference_manual/filters/adjust.rst:85
+#: ../../reference_manual/filters/adjust.rst:114
 msgid "Cross Channel Color Adjustment"
 msgstr ""
 
-#: ../../reference_manual/filters/adjust.rst:85
+#: ../../reference_manual/filters/adjust.rst:114
 msgid "Driving Adjustment by channel"
 msgstr ""
 
-#: ../../reference_manual/filters/adjust.rst:124
-#: ../../reference_manual/filters/adjust.rst:162
+#: ../../reference_manual/filters/adjust.rst:153
+#: ../../reference_manual/filters/adjust.rst:191
 msgid "Saturation"
 msgstr ""
 
-#: ../../reference_manual/filters/adjust.rst:124
+#: ../../reference_manual/filters/adjust.rst:153
 msgid "Desaturation"
 msgstr ""
 
-#: ../../reference_manual/filters/adjust.rst:124
+#: ../../reference_manual/filters/adjust.rst:153
 msgid "Gray"
 msgstr ""
 
-#: ../../reference_manual/filters/adjust.rst:147
+#: ../../reference_manual/filters/adjust.rst:176
 msgid "Negative"
 msgstr ""
 
-#: ../../reference_manual/filters/adjust.rst:155
+#: ../../reference_manual/filters/adjust.rst:184
 msgid "Contrast"
 msgstr ""
 
-#: ../../reference_manual/filters/adjust.rst:162
+#: ../../reference_manual/filters/adjust.rst:191
 msgid "Hue"
 msgstr ""
 
-#: ../../reference_manual/filters/adjust.rst:162
+#: ../../reference_manual/filters/adjust.rst:191
 msgid "Value"
 msgstr ""
 
-#: ../../reference_manual/filters/adjust.rst:162
+#: ../../reference_manual/filters/adjust.rst:191
 msgid "Brightness"
 msgstr ""
 
-#: ../../reference_manual/filters/adjust.rst:162
+#: ../../reference_manual/filters/adjust.rst:191
 msgid "Chroma"
 msgstr ""
 
-#: ../../reference_manual/filters/adjust.rst:176
+#: ../../reference_manual/filters/adjust.rst:205
 msgid "Black and White"
 msgstr ""
 
-#: ../../reference_manual/filters/adjust.rst:183
+#: ../../reference_manual/filters/adjust.rst:212
 msgid "ASC CDL"
 msgstr ""
 
-#: ../../reference_manual/filters/adjust.rst:183
+#: ../../reference_manual/filters/adjust.rst:212
 msgid "Offset and Power Curves"
 msgstr ""
