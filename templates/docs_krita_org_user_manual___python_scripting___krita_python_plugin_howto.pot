@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 5.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-13 10:38+0000\n"
+"POT-Creation-Date: 2022-06-29 12:56+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -41,7 +41,7 @@ msgid "Getting Krita to recognize your plugin"
 msgstr ""
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:30
-msgid "A script in Krita has two components -- the script directory (holding your script's Python files) and a \".desktop\" file that Krita uses to load and register your script. For Krita to load your script both of these must put be in the :file:`pykrita` subdirectory of your Krita resources folder (See :ref:`resource_management` for the paths per operating system). To find your resources folder start Krita and click the :menuselection:`Settings --> Manage Resources...` menu item. This will open a dialog box. Click the :guilabel:`Open Resources Folder` button. This should open a file manager on your system at your Krita resources folder. See the `API <https://api.kde.org/extragear-api/graphics-apidocs/krita/libs/libkis/html/index.html>`_ docs under \"Auto starting scripts\". If there is no :file:`pykrita` subfolder in the Krita resources directory use your file manager to create one."
+msgid "A script in Krita has two components -- the script directory (holding your script's Python files) and a \".desktop\" file that Krita uses to load and register your script. For Krita to load your script both of these must put be in the :file:`pykrita` subdirectory of your Krita resources folder (See :ref:`resource_management` for the paths per operating system). To find your resources folder start Krita and click the :menuselection:`Settings --> Manage Resources...` menu item. This will open a dialog box. Click the :guilabel:`Open Resources Folder` button. This should open a file manager on your system at your Krita resources folder. See the `API <https://api.kde.org/krita/html/index.html>`_ docs under \"Auto starting scripts\". If there is no :file:`pykrita` subfolder in the Krita resources directory use your file manager to create one."
 msgstr ""
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:32
@@ -199,7 +199,7 @@ msgid "Creating an extension"
 msgstr ""
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:105
-msgid "`Extensions <https://api.kde.org/extragear-api/graphics-apidocs/krita/libs/libkis/html/classExtension.html>`_ are relatively simple python scripts that run on Krita start. They are made by extending the Extension class, and the most barebones extension looks like this:"
+msgid "`Extensions <https://api.kde.org/krita/html/classExtension.html>`_ are relatively simple python scripts that run on Krita start. They are made by extending the Extension class, and the most barebones extension looks like this:"
 msgstr ""
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:107
@@ -226,7 +226,7 @@ msgid "This code of course doesn't do anything. Typically, in createActions we a
 msgstr ""
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:128
-msgid "First, let's create an `action <https://api.kde.org/extragear-api/graphics-apidocs/krita/libs/libkis/html/classAction.html>`_. We can do that easily with `Window.createAction() <https://api.kde.org/extragear-api/graphics-apidocs/krita/libs/libkis/html/classWindow.html#a72ec58e53844076c1461966c34a9115c>`_. Krita will call createActions for every Window that is created and pass the right window object that we have to use."
+msgid "First, let's create an `action <https://api.kde.org/krita/html/classAction.html>`_. We can do that easily with `Window.createAction() <https://api.kde.org/krita/html/classWindow.html#a72ec58e53844076c1461966c34a9115c>`_. Krita will call createActions for every Window that is created and pass the right window object that we have to use."
 msgstr ""
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:130
@@ -441,7 +441,7 @@ msgid "Creating a docker"
 msgstr ""
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:241
-msgid "Creating a custom `docker <https://api.kde.org/extragear-api/graphics-apidocs/krita/libs/libkis/html/classDockWidget.html>`_ is much like creating an extension. Dockers are in some ways a little easier, but they also require more use of widgets. This is the barebones docker code:"
+msgid "Creating a custom `docker <https://api.kde.org/krita/html/classDockWidget.html>`_ is much like creating an extension. Dockers are in some ways a little easier, but they also require more use of widgets. This is the barebones docker code:"
 msgstr ""
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:243
