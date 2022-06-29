@@ -9,7 +9,7 @@
   <meta property="og:title" name="title" content="矩形工具" />
   <meta property="og:site-name" content="Krita Manual" />
   <meta property="og:type" content="article" />
-  <meta property="og:locale" content="zh_TW" />
+  <meta property="og:locale" content="zh-TW" />
   <meta property="og:locale:alternate" content="ca" />
   <meta property="og:locale:alternate" content="en" />
   <meta property="og:locale:alternate" content="fr" />
@@ -21,8 +21,8 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2022-05-02T15:19:52" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta property="og:article:modified_time" content="2022-06-29T13:10:37" />
+  <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <meta content="Krita 的矩形工具參考。" name="description" />
 
   
@@ -197,7 +197,7 @@
 <li class="toctree-l3"><a class="reference internal" href="polygonal_select.html">多邊形選取區域工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="contiguous_select.html">相連選取區域工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="path_select.html">路徑選取工具</a></li>
-<li class="toctree-l3"><a class="reference internal" href="similar_select.html">相連色彩選取區域工具參考</a></li>
+<li class="toctree-l3"><a class="reference internal" href="similar_select.html">相似色彩選取區域工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="magnetic_select.html">磁性選取區域工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="zoom.html">縮放工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="pan.html">平移工具</a></li>
@@ -294,11 +294,11 @@
            <div itemprop="articleBody">
             
   <section id="rectangle-tool">
-<span id="index-0"></span><span id="id1"></span><h1>矩形工具<a class="headerlink" href="#rectangle-tool" title="本標題的永久連結">¶</a></h1>
+<span id="index-0"></span><span id="id1"></span><h1>矩形工具<a class="headerlink" href="#rectangle-tool" title="Permalink to this heading">¶</a></h1>
 <p><img alt="矩形工具" src="../../_images/rectangle_tool.svg" /></p>
 <p>這個工具是用會繪畫矩形，或是在向量圖層中新建一個矩形。按下 <img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> 來生成起點，拖曳到終點後放開左鍵來繪製一個矩形。</p>
 <section id="hotkeys-and-sticky-keys">
-<h2>快捷鍵和修飾鍵<a class="headerlink" href="#hotkeys-and-sticky-keys" title="本標題的永久連結">¶</a></h2>
+<h2>快捷鍵和修飾鍵<a class="headerlink" href="#hotkeys-and-sticky-keys" title="Permalink to this heading">¶</a></h2>
 <p>在預設裡沒有切換到這個工具的快捷鍵。</p>
 <p>如果在繪製時按下 <kbd class="kbd docutils literal notranslate">Shift</kbd> 鍵，矩形會被取代成正方形。如果按下 <kbd class="kbd docutils literal notranslate">Ctrl</kbd> 鍵的話，會改變矩形的新建方式，平常的方式是以對角生成，而按著 <kbd class="kbd docutils literal notranslate">Ctrl</kbd> 鍵的話，滑鼠點下去的地方會變成中心點，而其後點下去的位置則是對角位置。你可以在按著 <img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> 的情況下按下 <kbd class="kbd docutils literal notranslate">Alt</kbd> 鍵來移動矩形的位置。</p>
 <p>在按下了 <img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> 的情況下，你可以按下或放開 <kbd class="kbd docutils literal notranslate">Ctrl</kbd> 鍵來切換工具以對角或中心的繪製方式。在按下了 <kbd class="kbd docutils literal notranslate">Ctrl</kbd> 鍵後，滑鼠的移動會影響矩形的四個角（相對以中心繪製而言），沒有 <kbd class="kbd docutils literal notranslate">Ctrl</kbd> 鍵的話，當中一個角會不受影響。</p>
@@ -308,9 +308,9 @@
 <p>如果在繪製時按著 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Alt</kbd></kbd>，矩形會以標記的角落為軸心旋轉。如果在按著的同時加上 <kbd class="kbd docutils literal notranslate">Shift</kbd> 鍵，一個正方形會以標記的角落為軸心旋轉。</p>
 </section>
 <section id="tool-options">
-<h2>工具選項<a class="headerlink" href="#tool-options" title="本標題的永久連結">¶</a></h2>
+<h2>工具選項<a class="headerlink" href="#tool-options" title="Permalink to this heading">¶</a></h2>
 <section id="fill">
-<h3>填充<a class="headerlink" href="#fill" title="本標題的永久連結">¶</a></h3>
+<h3>填充<a class="headerlink" href="#fill" title="Permalink to this heading">¶</a></h3>
 <dl class="simple">
 <dt>無填充</dt><dd><p>矩形內部會是透明的。</p>
 </dd>
@@ -323,7 +323,7 @@
 </dl>
 </section>
 <section id="outline">
-<h3>描邊<a class="headerlink" href="#outline" title="本標題的永久連結">¶</a></h3>
+<h3>描邊<a class="headerlink" href="#outline" title="Permalink to this heading">¶</a></h3>
 <dl class="simple">
 <dt>無輪廓</dt><dd><p>矩形會以沒有輪廓的方式繪製。</p>
 </dd>
@@ -338,7 +338,7 @@
 </div>
 </section>
 <section id="pattern-transform">
-<h3>圖案變形<a class="headerlink" href="#pattern-transform" title="本標題的永久連結">¶</a></h3>
+<h3>圖案變形<a class="headerlink" href="#pattern-transform" title="Permalink to this heading">¶</a></h3>
 <div class="versionadded">
 <p><span class="versionmodified added">在 4.4 版本新加入.</span></p>
 </div>
@@ -351,7 +351,7 @@
 </dl>
 </section>
 <section id="size">
-<h3>Size<a class="headerlink" href="#size" title="本標題的永久連結">¶</a></h3>
+<h3>Size<a class="headerlink" href="#size" title="Permalink to this heading">¶</a></h3>
 <dl>
 <dt>寬度</dt><dd><p>Gives the current width. Use the lock to force the next rectangle made to this width.</p>
 </dd>
@@ -394,7 +394,7 @@
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>6a90bff</code>
+          修訂版本 <code>d9da50a</code>
         </span>
       
 
@@ -420,6 +420,7 @@
       <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
       <script src="../../_static/jquery.js"></script>
       <script src="../../_static/underscore.js"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
       <script src="../../_static/doctools.js"></script>
       <script src="../../_static/translations.js"></script>
 

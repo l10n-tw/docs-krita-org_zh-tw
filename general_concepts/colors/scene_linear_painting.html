@@ -9,7 +9,7 @@
   <meta property="og:title" name="title" content="場景線性作畫" />
   <meta property="og:site-name" content="Krita Manual" />
   <meta property="og:type" content="article" />
-  <meta property="og:locale" content="zh_TW" />
+  <meta property="og:locale" content="zh-TW" />
   <meta property="og:locale:alternate" content="ca" />
   <meta property="og:locale:alternate" content="en" />
   <meta property="og:locale:alternate" content="fr" />
@@ -21,8 +21,8 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2022-05-02T15:19:52" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta property="og:article:modified_time" content="2022-06-29T13:10:37" />
+  <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <meta content="Scene Linear painting in Krita" name="description" />
 
   
@@ -239,7 +239,7 @@
            <div itemprop="articleBody">
             
   <section id="scene-linear-painting">
-<span id="index-0"></span><span id="id1"></span><h1>場景線性作畫<a class="headerlink" href="#scene-linear-painting" title="本標題的永久連結">¶</a></h1>
+<span id="index-0"></span><span id="id1"></span><h1>場景線性作畫<a class="headerlink" href="#scene-linear-painting" title="Permalink to this heading">¶</a></h1>
 <p>Previously referred to as HDR painting and Scene Referred painting, Scene Linear Painting is doing digital painting in a peculiar type of colorspace. It is painting in a color space that is...</p>
 <ol class="arabic simple">
 <li><p>Linear - there’s no gamma encoding, or tone-mapping or whatever going on with the pixels you manipulate. (This is different from the pixels you see, but we’ll get to that later)</p></li>
@@ -263,7 +263,7 @@
 </figure>
 <p>Conversely, transforming and interpreting your image’s colors is the only thing OCIO can do, and it can do it with really complex transforms, really fast. It doesn’t understand what your image’s color space is originally, doesn’t understand what CMYK is, and there’s also no such thing as a OCIO color profile. Therefore you will need to switch to an ICC workflow if you wish to prepare for print.</p>
 <section id="yes-but-what-is-the-point">
-<h2>Yes, but what is the point?<a class="headerlink" href="#yes-but-what-is-the-point" title="本標題的永久連結">¶</a></h2>
+<h2>Yes, but what is the point?<a class="headerlink" href="#yes-but-what-is-the-point" title="Permalink to this heading">¶</a></h2>
 <p>The point is making things easier in the long run:</p>
 <ol class="arabic simple">
 <li><p>It is easier to keep saturated non-muddy colors in a linear space.</p></li>
@@ -275,7 +275,7 @@
 <p>So the advantages are prettier colors, cooler filter results, more control and easier interchange with other methods.</p>
 </section>
 <section id="okay-but-why-isnt-this-all-the-rage-then">
-<h2>Okay, but why isn’t this all the rage then?<a class="headerlink" href="#okay-but-why-isnt-this-all-the-rage-then" title="本標題的永久連結">¶</a></h2>
+<h2>Okay, but why isn’t this all the rage then?<a class="headerlink" href="#okay-but-why-isnt-this-all-the-rage-then" title="Permalink to this heading">¶</a></h2>
 <p>Simply put, because while it’s easier in the long run, you will also have to drop tools and change habits...</p>
 <p>In particular, there are many tools in a digital painter’s toolbox that have <strong>hard-coded assumptions about black and white</strong>.</p>
 <p>A very simple but massive problem is one with <strong>inversion</strong>. Inverting colors is done code-wise by taking the color for white and subtracting the color you want to invert from it. It’s used in many blending modes. But often the color white is hardcoded in these filters. There’s currently no application out there that allows you to define the value range that inversion is done with, so inverting is useless. And that also means the filters and blending modes that use it, such as (but not limited to)...</p>
@@ -314,22 +314,22 @@
 <p>16 bit float per channel images are big. 32 bit float per channel images are bigger. This means that they will eat RAM and that painting and filtering will be slower. This is something that will fix itself over the years, but not many people have such a high-end PC yet, so it can be a blocker.</p>
 <p>So the issues are tools, expectations and size.</p>
 <section id="in-summary">
-<h3>In Summary<a class="headerlink" href="#in-summary" title="本標題的永久連結">¶</a></h3>
+<h3>In Summary<a class="headerlink" href="#in-summary" title="Permalink to this heading">¶</a></h3>
 <p>Scene Linear Painting is painting an image in a color space that is linear and has a floating point bit depth. This does not assume anything about the values of black and white, so you can only use tools that don’t assume anything about the values of black and white. It has the advantage of having nicer filter results and better color mixtures as well as better interoperability with other scene-linear output.</p>
 <p>To be able to view such an image you use a view transform, also called a display conversion. Which means that if you wish to finalize your image for the web, you make a copy of the image that goes through a display conversion or view transform that then gets saved to PNG, JPEG or TIFF.</p>
 </section>
 </section>
 <section id="getting-to-actual-painting">
-<h2>Getting to actual painting<a class="headerlink" href="#getting-to-actual-painting" title="本標題的永久連結">¶</a></h2>
+<h2>Getting to actual painting<a class="headerlink" href="#getting-to-actual-painting" title="Permalink to this heading">¶</a></h2>
 <p>Now we’ve covered the theory, let us look at a workflow for painting scene linear.</p>
 <section id="setting-up-the-canvas">
-<h3>Setting up the Canvas<a class="headerlink" href="#setting-up-the-canvas" title="本標題的永久連結">¶</a></h3>
+<h3>Setting up the Canvas<a class="headerlink" href="#setting-up-the-canvas" title="Permalink to this heading">¶</a></h3>
 <p>Select either a 16bit or 32bit image. By default Krita will select a linear sRGB profile. If you want to create images for HDR display, you will need to make sure that the profile selected is the <span class="guilabel">Rec2020-elle-V4-g10.icc</span> profile. HDR images are standardised to use the Rec. 2020 gamut, which is much larger than sRGB in size, so this ensures you've got access to all the colors.</p>
 <p>If you're working on a non-HDR enabled monitor, you should enable OCIO in the LUT docker.</p>
 <p>Keep in mind everything mentioned above. Not all filters and not all blending modes work. This will improve in the future. Other than that, everything else is the same.</p>
 </section>
 <section id="picking-really-bright-colors">
-<h3>Picking really bright colors<a class="headerlink" href="#picking-really-bright-colors" title="本標題的永久連結">¶</a></h3>
+<h3>Picking really bright colors<a class="headerlink" href="#picking-really-bright-colors" title="Permalink to this heading">¶</a></h3>
 <p>Picking regular colors is easy, but how do we pick the really bright colors? There are three ways of getting access to the really bright colors in Krita:</p>
 <ol class="arabic simple">
 <li><p>By lowering the exposure in the LUT docker. This will increase the visible range of colors in the color selectors. You can even hotkey the exposure in the canvas input settings.</p></li>
@@ -340,7 +340,7 @@
 <p>Then paint. It’s recommended to make a bunch of swatches in the corner, at the least, until Krita’s new Palette docker allows you to save the values properly.</p>
 </section>
 <section id="lighting-based-workflow">
-<h3>Lighting based workflow<a class="headerlink" href="#lighting-based-workflow" title="本標題的永久連結">¶</a></h3>
+<h3>Lighting based workflow<a class="headerlink" href="#lighting-based-workflow" title="Permalink to this heading">¶</a></h3>
 <p>So, we have our typical value based workflow, where we only paint the grays of the image so that we can focus on the values of the image. We can do something similar with Scene Linear Painting.</p>
 <p>Where with the value based workflow you paint the image as if it were a grayscale of what you intended to paint, with a lighting based workflow you paint as if all the objects are white. The effect of the color of an object can be determined by multiplying its base color with the color of the light. So you could paint objects as if they were white, paint the colors on a separate layer and just use the Multiply blending mode to get the right colors.</p>
 <figure class="align-center" id="id3" style="width: 800px">
@@ -353,7 +353,7 @@
 <p>The keen minded will notice that a lighting based workflow kind of resembles the idea of a light pass and a color pass in 3d rendering. And indeed, it is basically the same, so you can use lighting passes from 3d renders here, just save them as EXR and import them as a layer. One of the examples where scene linear painting simplifies combining methods.</p>
 </section>
 <section id="finishing-up">
-<h3>Finishing up<a class="headerlink" href="#finishing-up" title="本標題的永久連結">¶</a></h3>
+<h3>Finishing up<a class="headerlink" href="#finishing-up" title="Permalink to this heading">¶</a></h3>
 <p>When you are done, you will want to apply the view transform you have been using to the image (at the least, if you want to post the end result on the Internet)... This is called LUT baking and not possible yet in Krita. Therefore you will have to save out your image in EXR and open it in either Blender or Natron. Then, in Blender it is enough to just use the same OCIO config, select the right values and save the result as a PNG.</p>
 <p>For saving HDR images, check the <a class="reference internal" href="../../reference_manual/hdr_display.html#hdr-display"><span class="std std-ref">HDR 顯示器</span></a> page.</p>
 <p>You can even use some of Blender’s or Natron’s filters at this stage, and when working with others, you would save out in EXR so that others can use those.</p>
@@ -384,7 +384,7 @@
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>6a90bff</code>
+          修訂版本 <code>d9da50a</code>
         </span>
       
 
@@ -410,6 +410,7 @@
       <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
       <script src="../../_static/jquery.js"></script>
       <script src="../../_static/underscore.js"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
       <script src="../../_static/doctools.js"></script>
       <script src="../../_static/translations.js"></script>
 

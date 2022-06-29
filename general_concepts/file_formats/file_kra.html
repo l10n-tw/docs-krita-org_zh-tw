@@ -9,7 +9,7 @@
   <meta property="og:title" name="title" content="*.kra" />
   <meta property="og:site-name" content="Krita Manual" />
   <meta property="og:type" content="article" />
-  <meta property="og:locale" content="zh_TW" />
+  <meta property="og:locale" content="zh-TW" />
   <meta property="og:locale:alternate" content="ca" />
   <meta property="og:locale:alternate" content="en" />
   <meta property="og:locale:alternate" content="fr" />
@@ -21,8 +21,8 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2022-05-02T15:19:52" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta property="og:article:modified_time" content="2022-06-29T13:10:37" />
+  <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <meta content="The Krita Raster Archive file format." name="description" property="og:description" />
 
   
@@ -143,6 +143,7 @@
 <li class="toctree-l4"><a class="reference internal" href="file_gih.html">*.gih</a></li>
 <li class="toctree-l4"><a class="reference internal" href="file_heif.html">*.heif 及 *.avif</a></li>
 <li class="toctree-l4"><a class="reference internal" href="file_jpeg.html">*.jpg</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_jxl.html">*.jxl</a></li>
 <li class="toctree-l4"><a class="reference internal" href="file_kpl.html">*.kpl</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">*.kra</a></li>
 <li class="toctree-l4"><a class="reference internal" href="file_ora.html">*.ora</a></li>
@@ -249,7 +250,7 @@
            <div itemprop="articleBody">
             
   <section id="kra">
-<span id="file-kra"></span><span id="index-0"></span><h1>*.kra<a class="headerlink" href="#kra" title="本標題的永久連結">¶</a></h1>
+<span id="file-kra"></span><span id="index-0"></span><h1>*.kra<a class="headerlink" href="#kra" title="Permalink to this heading">¶</a></h1>
 <p><code class="docutils literal notranslate"><span class="pre">.kra</span></code> is Krita's internal file-format, which means that it is the file format that saves all of the features Krita can handle. It's construction is vaguely based on the open document standard, which means that you can rename your <code class="docutils literal notranslate"><span class="pre">.kra</span></code> file to a <code class="docutils literal notranslate"><span class="pre">.zip</span></code> file and open it up to look at the insides. In Krita's settings dialog you can enable compression; with compression enabled the files will be smaller, but saving will take longer.</p>
 <p>Other applications mostly cannot open <code class="docutils literal notranslate"><span class="pre">.kra</span></code>  files, and you cannot upload <code class="docutils literal notranslate"><span class="pre">.kra</span></code> as images on websites like twitter or deviantArt.</p>
 <p>A <code class="docutils literal notranslate"><span class="pre">.kra</span></code> file contains a file names <code class="docutils literal notranslate"><span class="pre">mergedimage.png</span></code> which contains the rendered image as you see it on your canvas. Some applications, like Scribus, can use the <code class="docutils literal notranslate"><span class="pre">mergedimage.png</span></code> file to open <code class="docutils literal notranslate"><span class="pre">.kra</span></code> files. This file is always in the RGBA color model, or grayscale for files that are originally grayscale.</p>
@@ -279,7 +280,7 @@
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>6a90bff</code>
+          修訂版本 <code>d9da50a</code>
         </span>
       
 
@@ -305,6 +306,7 @@
       <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
       <script src="../../_static/jquery.js"></script>
       <script src="../../_static/underscore.js"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
       <script src="../../_static/doctools.js"></script>
       <script src="../../_static/translations.js"></script>
 

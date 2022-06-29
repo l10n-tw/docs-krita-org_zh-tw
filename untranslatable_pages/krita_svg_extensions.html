@@ -9,7 +9,7 @@
   <meta property="og:title" name="title" content="Krita SVG Extensions" />
   <meta property="og:site-name" content="Krita Manual" />
   <meta property="og:type" content="article" />
-  <meta property="og:locale" content="zh_TW" />
+  <meta property="og:locale" content="zh-TW" />
   <meta property="og:locale:alternate" content="ca" />
   <meta property="og:locale:alternate" content="en" />
   <meta property="og:locale:alternate" content="fr" />
@@ -21,8 +21,8 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2022-05-02T15:19:52" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta property="og:article:modified_time" content="2022-06-29T13:10:37" />
+  <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <meta content="Krita SVG extensions" name="description" />
 
   
@@ -158,7 +158,6 @@
 <li class="toctree-l3"><a class="reference internal" href="quality_assurance.html">Introduction to Quality Assurance</a></li>
 <li class="toctree-l3"><a class="reference internal" href="release_krita.html">Making a release</a></li>
 <li class="toctree-l3"><a class="reference internal" href="reporting_bugs.html">Reporting Bugs</a></li>
-<li class="toctree-l3"><a class="reference internal" href="running_krita.html">Running Krita from Source</a></li>
 <li class="toctree-l3"><a class="reference internal" href="strokes_documentation.html">Strokes queue</a></li>
 <li class="toctree-l3"><a class="reference internal" href="strokes_documentation.html#strokes-public-api">Strokes public API</a></li>
 <li class="toctree-l3"><a class="reference internal" href="strokes_documentation.html#internals-of-the-freehand-tool">Internals of the freehand tool</a></li>
@@ -256,11 +255,11 @@
            <div itemprop="articleBody">
             
   <section id="krita-svg-extensions">
-<span id="svg-extensions"></span><h1>Krita SVG Extensions<a class="headerlink" href="#krita-svg-extensions" title="本標題的永久連結">¶</a></h1>
+<span id="svg-extensions"></span><h1>Krita SVG Extensions<a class="headerlink" href="#krita-svg-extensions" title="Permalink to this heading">¶</a></h1>
 <p>Krita has a few extensions over SVG format to ensure correct saving and
 loading of Krita custom elements.</p>
 <section id="attribute-krita-marker-fill-method">
-<h2>Attribute: <code class="docutils literal notranslate"><span class="pre">krita:marker-fill-method</span></code><a class="headerlink" href="#attribute-krita-marker-fill-method" title="本標題的永久連結">¶</a></h2>
+<h2>Attribute: <code class="docutils literal notranslate"><span class="pre">krita:marker-fill-method</span></code><a class="headerlink" href="#attribute-krita-marker-fill-method" title="Permalink to this heading">¶</a></h2>
 <p>Possible values:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">default</span></code> – markers are filled according to SVG standard rules,
@@ -273,7 +272,7 @@ filled with a single pass of the object’s fill strategy.</p></li>
 <p>Default value: <code class="docutils literal notranslate"><span class="pre">default</span></code></p>
 </section>
 <section id="deprecated-attribute-krita-arc-arc-and-krita-arctype-chord">
-<h2>[DEPRECATED] Attribute: <code class="docutils literal notranslate"><span class="pre">krita:arc=‘arc’</span></code> and <code class="docutils literal notranslate"><span class="pre">krita:arcType=‘chord’</span></code><a class="headerlink" href="#deprecated-attribute-krita-arc-arc-and-krita-arctype-chord" title="本標題的永久連結">¶</a></h2>
+<h2>[DEPRECATED] Attribute: <code class="docutils literal notranslate"><span class="pre">krita:arc=‘arc’</span></code> and <code class="docutils literal notranslate"><span class="pre">krita:arcType=‘chord’</span></code><a class="headerlink" href="#deprecated-attribute-krita-arc-arc-and-krita-arctype-chord" title="Permalink to this heading">¶</a></h2>
 <p>That is a temporary namespace that was used before introduction of
 sodipodi:arc-type=‘chord’ option. Krita never saves files with this
 option and the support of it will be removed soon.</p>
@@ -303,7 +302,7 @@ option and the support of it will be removed soon.</p>
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>6a90bff</code>
+          修訂版本 <code>d9da50a</code>
         </span>
       
 
@@ -329,6 +328,7 @@ option and the support of it will be removed soon.</p>
       <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
       <script src="../_static/jquery.js"></script>
       <script src="../_static/underscore.js"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
       <script src="../_static/doctools.js"></script>
       <script src="../_static/translations.js"></script>
 

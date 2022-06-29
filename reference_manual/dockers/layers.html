@@ -9,7 +9,7 @@
   <meta property="og:title" name="title" content="圖層" />
   <meta property="og:site-name" content="Krita Manual" />
   <meta property="og:type" content="article" />
-  <meta property="og:locale" content="zh_TW" />
+  <meta property="og:locale" content="zh-TW" />
   <meta property="og:locale:alternate" content="ca" />
   <meta property="og:locale:alternate" content="en" />
   <meta property="og:locale:alternate" content="fr" />
@@ -21,8 +21,8 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2022-05-02T15:19:52" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta property="og:article:modified_time" content="2022-06-29T13:10:37" />
+  <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <meta content="Overview of the layers docker." name="description" property="og:description" />
 
   
@@ -292,14 +292,14 @@
            <div itemprop="articleBody">
             
   <section id="layers">
-<span id="layer-docker"></span><span id="index-0"></span><h1>圖層<a class="headerlink" href="#layers" title="本標題的永久連結">¶</a></h1>
+<span id="layer-docker"></span><span id="index-0"></span><h1>圖層<a class="headerlink" href="#layers" title="Permalink to this heading">¶</a></h1>
 <img alt="../../_images/Krita_Layers_Docker.png" src="../../_images/Krita_Layers_Docker.png" />
 <p>The Layers docker is for one of the core concepts of Krita: <a class="reference internal" href="../../user_manual/layers_and_masks.html#layers-and-masks"><span class="std std-ref">Layer Management</span></a>. You can add, delete, rename, duplicate and do many other things to layers here.</p>
-<p>At the top there are four controls. Two of them are layer properties, the blending mode and the opacity. But there are also two smaller buttons. One is the filter option. This allows you to filter all existing layers by either color label, or since Krita 5.0 by layer name. The second button allows you to control the thumbnail size of the layers. Some people prefer large thumbnails, others want them really small.</p>
+<p>At the top there are four controls. Two of them are layer properties, the blending mode and the opacity. But there are also two smaller buttons. One is the filter option. This allows you to filter all existing layers by either color label, or since Krita 5.0 by layer name. The second button allows you to control the thumbnail size of the layers and how much layers indent when they are grouped. Some people prefer large thumbnails with a lot of indentation, others want the visuals to take up the least amount of space.</p>
 <section id="the-layer-stack">
-<h2>The Layer Stack<a class="headerlink" href="#the-layer-stack" title="本標題的永久連結">¶</a></h2>
+<h2>The Layer Stack<a class="headerlink" href="#the-layer-stack" title="Permalink to this heading">¶</a></h2>
 <p>You can select the active layer here. Using the <kbd class="kbd docutils literal notranslate">Shift</kbd> and <kbd class="kbd docutils literal notranslate">Ctrl</kbd> keys you can select multiple layers and drag-and-drop them. You can also change the visibility, edit state, alpha inheritance and rename layers. You can open and close groups, and you can drag and drop layers, either to reorder them, or to put them in groups.</p>
-<dl class="glossary simple">
+<dl class="simple glossary">
 <dt id="term-Name">Name<a class="headerlink" href="#term-Name" title="本術語的永久連結">¶</a></dt><dd><p>The Layer name, just do double- <img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> to make it editable, and press the <kbd class="kbd docutils literal notranslate">Enter</kbd> key to finish editing.</p>
 </dd>
 <dt id="term-Color-Label">Color Label<a class="headerlink" href="#term-Color-Label" title="本術語的永久連結">¶</a></dt><dd><p>This is a color that you can set on the layer. <img alt="滑鼠右鍵" src="../../_images/Krita_mouse_right.png" /> the layer to get a context menu to assign a color to it. You can then later filter on these colors.</p>
@@ -335,7 +335,7 @@ There, to change the names of all layers, the checkbox before <span class="guila
 <img alt="../../_images/Krita-multi-layer-edit.png" src="../../_images/Krita-multi-layer-edit.png" />
 </section>
 <section id="lower-buttons">
-<h2>Lower buttons<a class="headerlink" href="#lower-buttons" title="本標題的永久連結">¶</a></h2>
+<h2>Lower buttons<a class="headerlink" href="#lower-buttons" title="Permalink to this heading">¶</a></h2>
 <p>These are buttons for doing layer operations.</p>
 <dl class="simple">
 <dt>Add</dt><dd><p>Will by default add a new Paint Layer, but using the little arrow, you can call a sub-menu with the other layer types.</p>
@@ -346,14 +346,14 @@ There, to change the names of all layers, the checkbox before <span class="guila
 </dd>
 <dt>Move layer down.</dt><dd><p>Will move the active layer down. Will switch them out and in groups when coming across them.</p>
 </dd>
-<dt>Layer properties.</dt><dd><p>Will open the layer properties window.</p>
+<dt>Layer properties.</dt><dd><p>Will open the layer properties window. The button to the side will open up the <img alt="滑鼠右鍵" src="../../_images/Krita_mouse_right.png" /> context menu for the currently selected layer. This is useful when you don't have access to a <img alt="滑鼠右鍵" src="../../_images/Krita_mouse_right.png" /> button.</p>
 </dd>
 <dt>Delete</dt><dd><p>Will delete the active layer(s). For safety reasons, you can only delete visible layers.</p>
 </dd>
 </dl>
 </section>
 <section id="hot-keys-and-sticky-keys">
-<h2>Hot keys and Sticky Keys<a class="headerlink" href="#hot-keys-and-sticky-keys" title="本標題的永久連結">¶</a></h2>
+<h2>Hot keys and Sticky Keys<a class="headerlink" href="#hot-keys-and-sticky-keys" title="Permalink to this heading">¶</a></h2>
 <ul class="simple">
 <li><p><kbd class="kbd docutils literal notranslate">Shift</kbd> key for selecting multiple contiguous layers.</p></li>
 <li><p><kbd class="kbd docutils literal notranslate">Ctrl</kbd> key for select or deselect layer without affecting other layers selection.</p></li>
@@ -400,7 +400,7 @@ There, to change the names of all layers, the checkbox before <span class="guila
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>6a90bff</code>
+          修訂版本 <code>d9da50a</code>
         </span>
       
 
@@ -426,6 +426,7 @@ There, to change the names of all layers, the checkbox before <span class="guila
       <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
       <script src="../../_static/jquery.js"></script>
       <script src="../../_static/underscore.js"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
       <script src="../../_static/doctools.js"></script>
       <script src="../../_static/translations.js"></script>
 

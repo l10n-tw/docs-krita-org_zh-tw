@@ -9,7 +9,7 @@
   <meta property="og:title" name="title" content="噴槍工具" />
   <meta property="og:site-name" content="Krita Manual" />
   <meta property="og:type" content="article" />
-  <meta property="og:locale" content="zh_TW" />
+  <meta property="og:locale" content="zh-TW" />
   <meta property="og:locale:alternate" content="ca" />
   <meta property="og:locale:alternate" content="en" />
   <meta property="og:locale:alternate" content="fr" />
@@ -21,8 +21,8 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2022-05-02T15:19:52" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta property="og:article:modified_time" content="2022-06-29T13:10:37" />
+  <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <meta content="噴槍工具的手冊頁。" name="description" />
 
   
@@ -277,10 +277,10 @@
            <div itemprop="articleBody">
             
   <section id="spray-brush-engine">
-<span id="index-0"></span><span id="id1"></span><h1>噴槍工具<a class="headerlink" href="#spray-brush-engine" title="本標題的永久連結">¶</a></h1>
+<span id="index-0"></span><span id="id1"></span><h1>噴槍工具<a class="headerlink" href="#spray-brush-engine" title="Permalink to this heading">¶</a></h1>
 <img alt="../../../_images/spraybrush.svg" src="../../../_images/spraybrush.svg" /><p>A brush that can spray particles around in its brush area.</p>
 <section id="options">
-<h2>Options<a class="headerlink" href="#options" title="本標題的永久連結">¶</a></h2>
+<h2>Options<a class="headerlink" href="#options" title="Permalink to this heading">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference internal" href="#option-spray-area"><span class="std std-ref">Spray Area</span></a></p></li>
 <li><p><a class="reference internal" href="#option-spray-shape"><span class="std std-ref">Spray Shape</span></a></p></li>
@@ -295,8 +295,10 @@
 </ul>
 </section>
 <section id="spray-area">
-<span id="option-spray-area"></span><h2>Spray Area<a class="headerlink" href="#spray-area" title="本標題的永久連結">¶</a></h2>
-<p>The area in which the particles are sprayed.</p>
+<span id="option-spray-area"></span><h2>Spray Area<a class="headerlink" href="#spray-area" title="Permalink to this heading">¶</a></h2>
+<p>Here you can set different properties related to the area where the particles are distributed and how they are distributed.</p>
+<section id="area">
+<h3>Area<a class="headerlink" href="#area" title="Permalink to this heading">¶</a></h3>
 <dl class="simple">
 <dt>Diameter</dt><dd><p>The size of the area.</p>
 </dd>
@@ -308,23 +310,99 @@
 </dd>
 <dt>Spacing</dt><dd><p>Increases the spacing of the diameter's spray.</p>
 </dd>
-</dl>
-<section id="particles">
-<h3>Particles<a class="headerlink" href="#particles" title="本標題的永久連結">¶</a></h3>
-<dl class="simple">
-<dt>Count</dt><dd><p>Use a specified amount of particles.</p>
-</dd>
-<dt>Density</dt><dd><p>Use a % amount of particles.</p>
-</dd>
 <dt>Jitter Movement</dt><dd><p>Jitters the spray area around for extra randomness.</p>
 </dd>
-<dt>Gaussian Distribution</dt><dd><p>Focuses the particles to paint in the center instead of evenly random over the spray area.</p>
+</dl>
+</section>
+<section id="particles">
+<h3>Particles<a class="headerlink" href="#particles" title="Permalink to this heading">¶</a></h3>
+<dl>
+<dt>Amount</dt><dd><dl class="simple">
+<dt>Count</dt><dd><p>Use a specified number of particles.</p>
+</dd>
+<dt>Density</dt><dd><p>Use a percentage for the number of particles.</p>
 </dd>
 </dl>
+</dd>
+<dt>Distribution</dt><dd><div class="versionadded">
+<p><span class="versionmodified added">在 5.1 版本新加入.</span></p>
+</div>
+<p>Here you can set how the particles are distributed in the spray area. The particles are distributed using <a class="reference external" href="https://en.wikipedia.org/wiki/Polar_coordinate_system">polar coordinates</a>, so you can set different distributions for the angle and the distance of the particles relative to the center of the spray area.</p>
+<dl>
+<dt>Angular</dt><dd><p>You can specify how the particles are distributed around the center using one of the following options:</p>
+<ul>
+<li><p><span class="guilabel">Uniform</span>: Distributes the particles uniformly. Each angle is equally likely to receive a particle.</p></li>
+<li><p><span class="guilabel">Curve</span>: You can set a custom curve that models how the particles should be distributed. The left side of the curve represents an angle of 0 degrees and the right side an angle of 360 degrees. Higher values in the vertical direction mean that there is a higher probability that a particle ends up at that particular angle. In the spray area the angle increases clockwise.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><span class="guilabel">Repeat</span>: Have the curve repeat itself multiple times from 0 to 360 degrees. Without this, you would need to build a very complex curve with too many control points to achieve the same result.</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</dd>
+<dt>Radial</dt><dd><p>You can specify how the particles are distributed from the center to the edge of the spray area using one of the following options:</p>
+<ul>
+<li><p><span class="guilabel">Uniform</span>: Distributes the particles uniformly.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><span class="guilabel">Center-biased spread (legacy)</span>: This option ensures compatibility with the brushes made prior to version 5.1. Before, the particles were distributed uniformly in terms of distance from the center, but that ended up concentrating more particles in the center of the spray area from a 2d space perspective. For example, a circumference at a distance of 10 pixels from the center ended having roughly the same number of particles as a circumference at a distance of 100 pixels, while being 10 times smaller in length.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><span class="guilabel">Gaussian</span>: distributes the particles using a gaussian or <a class="reference external" href="https://en.wikipedia.org/wiki/Normal_distribution">normal distribution</a>.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><span class="guilabel">Standard deviation</span>: Sets the standard deviation of the distribution. Higher values will make the particles more spread.</p></li>
+<li><p><span class="guilabel">Center-biased spread (legacy)</span>: This option ensures compatibility with the brushes made prior to version 5.1. See the previous point for more information.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><span class="guilabel">Cluster</span>: This will allow you to quickly concentrate the particles towards the center or the edge of the spray area.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><span class="guilabel">Clustering amount</span>: Positive values will make the particles concentrate towards the center of the spray area. Negative values will make the particles concentrate towards the border of the spray area. Values near 0 will make the particles spread more uniformly.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><span class="guilabel">Curve</span>: You can set a custom curve that models how the particles should be distributed. The left side of the curve represents the center of the spray area and the right side represents its border. Higher values in the vertical direction mean that there is a higher probability that a particle ends up at that particular distance.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><span class="guilabel">Repeat</span>: Have the curve repeat itself multiple times from the center of the spray area to its edge. Without this, you would need to build a very complex curve with too many control points to achieve the same result.</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</dd>
+</dl>
+</dd>
+</dl>
+<figure class="align-default" id="id2">
+<img alt="images/brushes/krita-spray-brush-engine-distribution.png" src="images/brushes/krita-spray-brush-engine-distribution.png" />
+<figcaption>
+<p><span class="caption-text">Different distribution types on display:</span><a class="headerlink" href="#id2" title="本圖片的永久連結">¶</a></p>
+<div class="legend">
+<ol class="arabic simple">
+<li><p>Uniform for both Angular and Radial, with <cite>Center-biased spread (legacy)</cite> turned on.</p></li>
+<li><p>Uniform for both Angular and Radial, with <cite>Center-biased spread (legacy)</cite> turned off.</p></li>
+<li><p>Clustered for Radial, with Clusting Amount: 0.0.</p></li>
+<li><p>Clustered for Radial, with Clusting Amount: -5.0.</p></li>
+<li><p>Clustered for Radial, with Clusting Amount: +5.0.</p></li>
+<li><p>Curve for Angular, using the default curve and 0 repeats.</p></li>
+<li><p>Curve for Angular, using the default curve and 5 repeats.</p></li>
+<li><p>Curve for Radial, using the default curve with 3 repeats.</p></li>
+<li><p>Curve for Angular using a hill shaped curve, 7 repeats, and Clustered for Radial, with Clusting Amount: -5.0.</p></li>
+<li><p>Gaussian for Radial, with Standard Deviation: 25.</p></li>
+<li><p>Gaussian for Radial, with Standard Deviation: 50.</p></li>
+<li><p>Gaussian for Radial, with Standard Deviation: 80.</p></li>
+</ol>
+</div>
+</figcaption>
+</figure>
 </section>
 </section>
 <section id="spray-shape">
-<span id="option-spray-shape"></span><h2>Spray Shape<a class="headerlink" href="#spray-shape" title="本標題的永久連結">¶</a></h2>
+<span id="option-spray-shape"></span><h2>Spray Shape<a class="headerlink" href="#spray-shape" title="Permalink to this heading">¶</a></h2>
 <p>If activated, this will generate a special particle. If not, the brush-tip will be the particle.</p>
 <dl class="simple">
 <dt>Shape</dt><dd><p>Can be...</p>
@@ -345,7 +423,7 @@
 </dl>
 </section>
 <section id="shape-dynamics">
-<span id="option-shape-dyna"></span><h2>Shape Dynamics<a class="headerlink" href="#shape-dynamics" title="本標題的永久連結">¶</a></h2>
+<span id="option-shape-dyna"></span><h2>Shape Dynamics<a class="headerlink" href="#shape-dynamics" title="Permalink to this heading">¶</a></h2>
 <dl class="simple">
 <dt>Random Size</dt><dd><p>Randomizes the particle size between 1x1 px and the given size of the particle in brush-tip or spray shape.</p>
 </dd>
@@ -360,7 +438,7 @@
 </dl>
 </section>
 <section id="color-options">
-<span id="option-color-spray"></span><h2>Color Options<a class="headerlink" href="#color-options" title="本標題的永久連結">¶</a></h2>
+<span id="option-color-spray"></span><h2>Color Options<a class="headerlink" href="#color-options" title="Permalink to this heading">¶</a></h2>
 <dl class="simple">
 <dt>Random HSV</dt><dd><p>Randomize the HSV with the strength of the sliders. The higher, the more the color will deviate from the foreground color, with the direction indicating clock or counter clockwise.</p>
 </dd>
@@ -401,7 +479,7 @@
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>6a90bff</code>
+          修訂版本 <code>d9da50a</code>
         </span>
       
 
@@ -427,6 +505,7 @@
       <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
       <script src="../../../_static/jquery.js"></script>
       <script src="../../../_static/underscore.js"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
       <script src="../../../_static/doctools.js"></script>
       <script src="../../../_static/translations.js"></script>
 

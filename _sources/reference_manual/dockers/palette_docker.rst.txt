@@ -38,7 +38,8 @@ Since 4.2 Krita's color palettes are not just a list of colors to store, but als
 * |mouseright| on a swatch will give you a context menu with modify and delete options.
 * Pressing the :guilabel:`+` icon will allow you to add a new swatch.
 * The drop down contains all the entries, id numbers and names. When a color is a spot color the thumbnail is circular. You can use the dropdown to search on color name or id.
-* By drag-and-dropping colors from the palette onto the :ref:`layer stack <layer_docker>`, you can quickly create a :ref:`fill layer <fill_layers>`, while dropping them onto the canvas allows you to fill the current layer with that color.
+* By drag-and-dropping colors from the palette onto the :ref:`layer stack <layer_docker>`, you can quickly create a :ref:`fill layer <fill_layers>`.
+* By drag-and-dropping colors from the palette onto the canvas you can fill the current layer with that color. The filling options used are taken from the :ref:`fill tool<fill_tool>` but if :kbd:`Alt` is pressed when the color is dropped then all the layer (or the portion inside the current selection) will be filled.
 
   .. versionadded::5.0
 

@@ -9,7 +9,7 @@
   <meta property="og:title" name="title" content="智慧補丁工具" />
   <meta property="og:site-name" content="Krita Manual" />
   <meta property="og:type" content="article" />
-  <meta property="og:locale" content="zh_TW" />
+  <meta property="og:locale" content="zh-TW" />
   <meta property="og:locale:alternate" content="ca" />
   <meta property="og:locale:alternate" content="en" />
   <meta property="og:locale:alternate" content="fr" />
@@ -21,8 +21,8 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2022-05-02T15:19:52" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta property="og:article:modified_time" content="2022-06-29T13:10:37" />
+  <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <meta content="Krita 的智慧補丁工具參考。" name="description" />
 
   
@@ -184,8 +184,8 @@
 <li class="toctree-l3"><a class="reference internal" href="color_sampler.html">色彩取樣器工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="colorize_mask.html">著色遮罩工具</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">智慧補丁工具</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#accuracy">Accuracy</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#patch-size">Patch size</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#accuracy">精度</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#patch-size">補丁半徑</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="assistant.html">輔助尺工具</a></li>
@@ -197,7 +197,7 @@
 <li class="toctree-l3"><a class="reference internal" href="polygonal_select.html">多邊形選取區域工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="contiguous_select.html">相連選取區域工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="path_select.html">路徑選取工具</a></li>
-<li class="toctree-l3"><a class="reference internal" href="similar_select.html">相連色彩選取區域工具參考</a></li>
+<li class="toctree-l3"><a class="reference internal" href="similar_select.html">相似色彩選取區域工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="magnetic_select.html">磁性選取區域工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="zoom.html">縮放工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="pan.html">平移工具</a></li>
@@ -294,19 +294,19 @@
            <div itemprop="articleBody">
             
   <section id="smart-patch-tool">
-<span id="index-0"></span><span id="id1"></span><h1>智慧補丁工具<a class="headerlink" href="#smart-patch-tool" title="本標題的永久連結">¶</a></h1>
+<span id="index-0"></span><span id="id1"></span><h1>智慧補丁工具<a class="headerlink" href="#smart-patch-tool" title="Permalink to this heading">¶</a></h1>
 <p><img alt="智慧補丁工具" src="../../_images/smart_patch_tool.svg" /></p>
-<p>The smart patch tool allows you to seamlessly remove elements from the image. It does this by letting you draw the area which has the element you wish to remove, and then it will attempt to use patterns already existing in the image to fill the blank.</p>
-<p>You can see it as a smarter version of the clone brush.</p>
+<p>智慧補丁工具可以無痕地把圖像中的元素消除。透過已有的影像作為圖案來覆蓋掉圖像裡的元素。</p>
+<p>你可以把這個工具視為更聰明的仿製筆刷。</p>
 <img alt="../../_images/Smart-patch.gif" src="../../_images/Smart-patch.gif" />
-<p>The smart patch tool has the following tool options:</p>
+<p>智慧補丁工具的工具選項如下：</p>
 <section id="accuracy">
-<h2>Accuracy<a class="headerlink" href="#accuracy" title="本標題的永久連結">¶</a></h2>
-<p>Accuracy indicates how many samples, and thus how often the algorithm is run. A low accuracy will do few samples, but will also run the algorithm fewer times, making it faster. Higher accuracy will do many samples, making the algorithm run more often and give more precise results, but because it has to do more work, it is slower.</p>
+<h2>精度<a class="headerlink" href="#accuracy" title="Permalink to this heading">¶</a></h2>
+<p>精度是用來判斷使用多少的參考，因而控制運算的頻率。低精度會使用較少的參考，運算的次數較少，運算較快。高精度會使用更多參考，使運算的次數更頻繁，給予更精確的結果，因為運算量較大，其工作的速度較慢。</p>
 </section>
 <section id="patch-size">
-<h2>Patch size<a class="headerlink" href="#patch-size" title="本標題的永久連結">¶</a></h2>
-<p>Patch size determines how big the size of the pattern to choose is. This will be best explained with some testing, but if the surrounding image has mostly small elements, like branches, a small patch size will give better results, while a big patch size will be better for images with big elements, so they get reused as a whole.</p>
+<h2>補丁半徑<a class="headerlink" href="#patch-size" title="Permalink to this heading">¶</a></h2>
+<p>補丁半徑是用來判斷圖案的尺寸。要說明的話嘗試一下是最快的。如果附近的圖像大多是小型的元素，如樹枝，較小的半徑會帶來較好的結果；而較大的半徑則是適合大型的元素，補丁工具會把整個元素拿去重用。</p>
 </section>
 </section>
 
@@ -333,7 +333,7 @@
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>6a90bff</code>
+          修訂版本 <code>d9da50a</code>
         </span>
       
 
@@ -359,6 +359,7 @@
       <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
       <script src="../../_static/jquery.js"></script>
       <script src="../../_static/underscore.js"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
       <script src="../../_static/doctools.js"></script>
       <script src="../../_static/translations.js"></script>
 

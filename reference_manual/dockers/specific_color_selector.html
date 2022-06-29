@@ -9,7 +9,7 @@
   <meta property="og:title" name="title" content="Specific Color Selector" />
   <meta property="og:site-name" content="Krita Manual" />
   <meta property="og:type" content="article" />
-  <meta property="og:locale" content="zh_TW" />
+  <meta property="og:locale" content="zh-TW" />
   <meta property="og:locale:alternate" content="ca" />
   <meta property="og:locale:alternate" content="en" />
   <meta property="og:locale:alternate" content="fr" />
@@ -21,8 +21,8 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2022-05-02T15:19:52" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta property="og:article:modified_time" content="2022-06-29T13:10:37" />
+  <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <meta content="Overview of the specific color selector docker." name="description" />
 
   
@@ -169,6 +169,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#color-space-chooser-dropdown">Color Space Chooser Dropdown</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#sliders">Sliders</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#hex-color-selector">Hex Color Selector</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#hsv-color-selector">HSV Color Selector</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="storyboard_docker.html">Storyboard Docker</a></li>
@@ -292,22 +293,31 @@
            <div itemprop="articleBody">
             
   <section id="specific-color-selector">
-<span id="specific-color-selector-docker"></span><span id="index-0"></span><h1>Specific Color Selector<a class="headerlink" href="#specific-color-selector" title="本標題的永久連結">¶</a></h1>
+<span id="specific-color-selector-docker"></span><span id="index-0"></span><h1>Specific Color Selector<a class="headerlink" href="#specific-color-selector" title="Permalink to this heading">¶</a></h1>
 <img alt="../../_images/Krita_Specific_Color_Selector_Docker.png" src="../../_images/Krita_Specific_Color_Selector_Docker.png" />
+<img alt="../../_images/Krita_Specific_Color_Selector_Docker_2.png" src="../../_images/Krita_Specific_Color_Selector_Docker_2.png" />
 <p>The specific color selector allows you to choose specific colors within a color space.</p>
 <section id="color-space-chooser-dropdown">
-<h2>Color Space Chooser Dropdown<a class="headerlink" href="#color-space-chooser-dropdown" title="本標題的永久連結">¶</a></h2>
+<h2>Color Space Chooser Dropdown<a class="headerlink" href="#color-space-chooser-dropdown" title="Permalink to this heading">¶</a></h2>
 <p>Fairly straightforward. This color space chooser dropdown allows you to pick the color space, the bit depth and the ICC profile in which you are going to pick your color.</p>
 </section>
 <section id="sliders">
-<h2>Sliders<a class="headerlink" href="#sliders" title="本標題的永久連結">¶</a></h2>
+<h2>Sliders<a class="headerlink" href="#sliders" title="Permalink to this heading">¶</a></h2>
 <p>These change per color space.
 If you chose 16bit float or 32 bit float, these will go from 0 to 1.0, with the decimals deciding the difference between colors. When you choose 8 bit integer or 16 bit integer, a button with percentage sign (%) will appear besides the dropdown, which will allow you to input values in percentages.</p>
 </section>
 <section id="hex-color-selector">
-<h2>Hex Color Selector<a class="headerlink" href="#hex-color-selector" title="本標題的永久連結">¶</a></h2>
+<h2>Hex Color Selector<a class="headerlink" href="#hex-color-selector" title="Permalink to this heading">¶</a></h2>
 <p>This is only available for the color spaces with a depth of 8 bit.
 This allows you to input hex color codes, and receive the RGB, CMYK, LAB, XYZ or YCrCb equivalent, and the other way around!</p>
+</section>
+<section id="hsv-color-selector">
+<h2>HSV Color Selector<a class="headerlink" href="#hsv-color-selector" title="Permalink to this heading">¶</a></h2>
+<div class="versionadded">
+<p><span class="versionmodified added">在 5.1 版本新加入.</span></p>
+</div>
+<p>In RGB color spaces, the toggle button allows you to switch into HSV mode and choose using the Hue, Saturation and Value sliders.</p>
+<img alt="../../_images/Krita_Specific_Color_Selector_Docker_3.png" src="../../_images/Krita_Specific_Color_Selector_Docker_3.png" />
 </section>
 </section>
 
@@ -334,7 +344,7 @@ This allows you to input hex color codes, and receive the RGB, CMYK, LAB, XYZ or
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>6a90bff</code>
+          修訂版本 <code>d9da50a</code>
         </span>
       
 
@@ -360,6 +370,7 @@ This allows you to input hex color codes, and receive the RGB, CMYK, LAB, XYZ or
       <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
       <script src="../../_static/jquery.js"></script>
       <script src="../../_static/underscore.js"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
       <script src="../../_static/doctools.js"></script>
       <script src="../../_static/translations.js"></script>
 

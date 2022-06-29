@@ -9,7 +9,7 @@
   <meta property="og:title" name="title" content="遮罩與 Alpha 繼承" />
   <meta property="og:site-name" content="Krita Manual" />
   <meta property="og:type" content="article" />
-  <meta property="og:locale" content="zh_TW" />
+  <meta property="og:locale" content="zh-TW" />
   <meta property="og:locale:alternate" content="ca" />
   <meta property="og:locale:alternate" content="en" />
   <meta property="og:locale:alternate" content="fr" />
@@ -21,8 +21,8 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2022-05-02T15:19:52" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta property="og:article:modified_time" content="2022-06-29T13:10:37" />
+  <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <meta content="在 Krita 中使用剪裁遮罩的介紹。" lang="en" name="description" xml:lang="en" />
 
   
@@ -227,7 +227,7 @@
            <div itemprop="articleBody">
             
   <section id="clipping-masks-and-alpha-inheritance">
-<span id="index-0"></span><span id="id1"></span><h1>遮罩與 Alpha 繼承<a class="headerlink" href="#clipping-masks-and-alpha-inheritance" title="本標題的永久連結">¶</a></h1>
+<span id="index-0"></span><span id="id1"></span><h1>遮罩與 Alpha 繼承<a class="headerlink" href="#clipping-masks-and-alpha-inheritance" title="Permalink to this heading">¶</a></h1>
 <p>Krita 沒有像 Photoshop 那樣的遮罩功能。 這是因為 Krita ，和它截然不同，群組圖層不是無意義的群組再一起。 相反的，在 Krita 中，群組圖層是與其他圖層順序分開合成的，然後合成將結果計算回上層結構。 換句話說， Krita 在有群組圖層時，圖層不只是簡單的上下堆疊計算而已。</p>
 <a class="reference internal image-reference" href="../_images/Composition_animation.gif"><img alt="動畫顯示群組在其他圖層組合發生之前就進行組合計算。" src="../_images/Composition_animation.gif" style="width: 800px;" /></a>
 <p>當群組圖層使用穿透模式時例外，但這也表示在該開啟**穿透**群組圖層中的其他圖層對 alpha 繼承也無法正常工作。</p>
@@ -274,7 +274,7 @@
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>6a90bff</code>
+          修訂版本 <code>d9da50a</code>
         </span>
       
 
@@ -300,6 +300,7 @@
       <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
       <script src="../_static/jquery.js"></script>
       <script src="../_static/underscore.js"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
       <script src="../_static/doctools.js"></script>
       <script src="../_static/translations.js"></script>
 

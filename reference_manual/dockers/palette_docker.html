@@ -9,7 +9,7 @@
   <meta property="og:title" name="title" content="調色板" />
   <meta property="og:site-name" content="Krita Manual" />
   <meta property="og:type" content="article" />
-  <meta property="og:locale" content="zh_TW" />
+  <meta property="og:locale" content="zh-TW" />
   <meta property="og:locale:alternate" content="ca" />
   <meta property="og:locale:alternate" content="en" />
   <meta property="og:locale:alternate" content="fr" />
@@ -21,8 +21,8 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2022-05-02T15:19:52" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta property="og:article:modified_time" content="2022-06-29T13:10:37" />
+  <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <meta content="Overview of the palette docker." name="description" property="og:description" />
 
   
@@ -287,7 +287,7 @@
            <div itemprop="articleBody">
             
   <section id="palette-docker">
-<span id="index-0"></span><span id="id1"></span><h1>調色板<a class="headerlink" href="#palette-docker" title="本標題的永久連結">¶</a></h1>
+<span id="index-0"></span><span id="id1"></span><h1>調色板<a class="headerlink" href="#palette-docker" title="Permalink to this heading">¶</a></h1>
 <p>The palette docker displays various color swatches for quick use. It also supports editing palettes and organizing colors into groups, as well as arbitrary positioning of swatches.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">在 4.2 版本新加入: </span>The palette docker was overhauled in 4.2, allowing for grid ordering, storing palette in the document and more.</p>
@@ -305,7 +305,8 @@ You can click on one and to load it into the docker, or click on import resource
 <li><p><img alt="滑鼠右鍵" src="../../_images/Krita_mouse_right.png" /> on a swatch will give you a context menu with modify and delete options.</p></li>
 <li><p>Pressing the <span class="guilabel">+</span> icon will allow you to add a new swatch.</p></li>
 <li><p>The drop down contains all the entries, id numbers and names. When a color is a spot color the thumbnail is circular. You can use the dropdown to search on color name or id.</p></li>
-<li><p>By drag-and-dropping colors from the palette onto the <a class="reference internal" href="layers.html#layer-docker"><span class="std std-ref">layer stack</span></a>, you can quickly create a <a class="reference internal" href="../layers_and_masks/fill_layers.html#fill-layers"><span class="std std-ref">fill layer</span></a>, while dropping them onto the canvas allows you to fill the current layer with that color.</p>
+<li><p>By drag-and-dropping colors from the palette onto the <a class="reference internal" href="layers.html#layer-docker"><span class="std std-ref">layer stack</span></a>, you can quickly create a <a class="reference internal" href="../layers_and_masks/fill_layers.html#fill-layers"><span class="std std-ref">fill layer</span></a>.</p></li>
+<li><p>By drag-and-dropping colors from the palette onto the canvas you can fill the current layer with that color. The filling options used are taken from the <a class="reference internal" href="../tools/fill.html#fill-tool"><span class="std std-ref">fill tool</span></a> but if <kbd class="kbd docutils literal notranslate">Alt</kbd> is pressed when the color is dropped then all the layer (or the portion inside the current selection) will be filled.</p>
 </li>
 </ul>
 <p>Pressing the Folder icon will allow you to modify the palette. Here you can add more columns, modify the default group's rows, or add more groups and modify their rows.</p>
@@ -386,7 +387,7 @@ You can click on one and to load it into the docker, or click on import resource
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>6a90bff</code>
+          修訂版本 <code>d9da50a</code>
         </span>
       
 
@@ -412,6 +413,7 @@ You can click on one and to load it into the docker, or click on import resource
       <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
       <script src="../../_static/jquery.js"></script>
       <script src="../../_static/underscore.js"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
       <script src="../../_static/doctools.js"></script>
       <script src="../../_static/translations.js"></script>
 

@@ -9,7 +9,7 @@
   <meta property="og:title" name="title" content="手繪筆刷工具" />
   <meta property="og:site-name" content="Krita Manual" />
   <meta property="og:type" content="article" />
-  <meta property="og:locale" content="zh_TW" />
+  <meta property="og:locale" content="zh-TW" />
   <meta property="og:locale:alternate" content="ca" />
   <meta property="og:locale:alternate" content="en" />
   <meta property="og:locale:alternate" content="fr" />
@@ -21,8 +21,8 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2022-05-02T15:19:52" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta property="og:article:modified_time" content="2022-06-29T13:10:37" />
+  <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <meta content="Krita 的手繪筆刷工具參考，包含 Krita 的防抖使用方法。" name="description" />
 
   
@@ -197,7 +197,7 @@
 <li class="toctree-l3"><a class="reference internal" href="polygonal_select.html">多邊形選取區域工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="contiguous_select.html">相連選取區域工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="path_select.html">路徑選取工具</a></li>
-<li class="toctree-l3"><a class="reference internal" href="similar_select.html">相連色彩選取區域工具參考</a></li>
+<li class="toctree-l3"><a class="reference internal" href="similar_select.html">相似色彩選取區域工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="magnetic_select.html">磁性選取區域工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="zoom.html">縮放工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="pan.html">平移工具</a></li>
@@ -294,12 +294,12 @@
            <div itemprop="articleBody">
             
   <section id="freehand-brush-tool">
-<span id="index-0"></span><span id="id1"></span><h1>手繪筆刷工具<a class="headerlink" href="#freehand-brush-tool" title="本標題的永久連結">¶</a></h1>
+<span id="index-0"></span><span id="id1"></span><h1>手繪筆刷工具<a class="headerlink" href="#freehand-brush-tool" title="Permalink to this heading">¶</a></h1>
 <p><img alt="手繪筆刷工具" src="../../_images/freehand_brush_tool.svg" /></p>
 <p>在 Krita 啟動時選取的基本工具，是你未來最常使用的工具。</p>
 <p>手繪筆刷工具可以讓你自由地在顏料圖層上色，而不用像是直線工具般有著限制。可以透過設定數位板來最佳化輸入設定以控制筆刷的樣貌。再切換筆刷，請使用筆刷預設選擇器。</p>
 <section id="hotkeys-and-sticky-keys">
-<h2>快捷鍵和相黏鍵<a class="headerlink" href="#hotkeys-and-sticky-keys" title="本標題的永久連結">¶</a></h2>
+<h2>快捷鍵和相黏鍵<a class="headerlink" href="#hotkeys-and-sticky-keys" title="Permalink to this heading">¶</a></h2>
 <p>手繪筆刷工具的快捷鍵是 <kbd class="kbd docutils literal notranslate">B</kbd>。</p>
 <ul class="simple">
 <li><p>切換備選功能是「色彩取樣器」（通常來說是使用 <kbd class="kbd docutils literal notranslate">Ctrl</kbd> 鍵）。按 <kbd class="kbd docutils literal notranslate">Ctrl</kbd> 鍵後會把工具換成「色彩取樣器工具」，左鍵或右鍵會分別採樣顏色為前景色或背景色。放開 <kbd class="kbd docutils literal notranslate">Ctrl</kbd> 鍵會換回手繪筆刷工具。</p></li>
@@ -309,9 +309,9 @@
 <p>快捷鍵可以透過 <span class="menuselection">設定 ‣ 設定 Krita... ‣ 快捷鍵</span> 修改。而相黏鍵可以在 <span class="menuselection">設定 ‣ 設定 Krita... ‣ 畫布輸入設定</span> 中更改。</p>
 </section>
 <section id="tool-options">
-<h2>工具選項<a class="headerlink" href="#tool-options" title="本標題的永久連結">¶</a></h2>
+<h2>工具選項<a class="headerlink" href="#tool-options" title="Permalink to this heading">¶</a></h2>
 <section id="smoothing">
-<span id="stroke-smoothing"></span><span id="index-1"></span><h3>筆刷平滑<a class="headerlink" href="#smoothing" title="本標題的永久連結">¶</a></h3>
+<span id="stroke-smoothing"></span><span id="index-1"></span><h3>筆刷平滑<a class="headerlink" href="#smoothing" title="Permalink to this heading">¶</a></h3>
 <p>筆刷平滑，在一些軟體又名防抖，可以讓軟體修正筆刷線條。這對於有手抖的人，或是難以畫出較長線條時十分實用。</p>
 <p>這裡有數個選項可供選擇：</p>
 <dl>
@@ -348,7 +348,7 @@
 </dl>
 </section>
 <section id="assistants">
-<span id="index-2"></span><h3>吸附到輔助尺<a class="headerlink" href="#assistants" title="本標題的永久連結">¶</a></h3>
+<span id="index-2"></span><h3>吸附到輔助尺<a class="headerlink" href="#assistants" title="Permalink to this heading">¶</a></h3>
 <p>勾選這個選項能把線條吸附在<a class="reference internal" href="assistant.html#assistant-tool"><span class="std std-ref">輔助尺工具</span></a>上，快捷鍵是 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">L</kbd></kbd>。參閱 <a class="reference internal" href="../../user_manual/painting_with_assistants.html#painting-with-assistants"><span class="std std-ref">使用輔助尺來繪畫</span></a> 以取得更多資訊。</p>
 <p>磁性選項會判斷吸附的效果，1000 時為完美地吸附在輔助尺上，而 0 則是不吸附。當有多個輔助尺在畫布上時，預設勾選的<span class="guilabel">單一吸附</span>表示 Krita 在同時間只會吸附其中一個來防止雜亂。取消勾選來使用多個輔助尺輔助作畫。</p>
 </section>
@@ -378,7 +378,7 @@
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>6a90bff</code>
+          修訂版本 <code>d9da50a</code>
         </span>
       
 
@@ -404,6 +404,7 @@
       <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
       <script src="../../_static/jquery.js"></script>
       <script src="../../_static/underscore.js"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
       <script src="../../_static/doctools.js"></script>
       <script src="../../_static/translations.js"></script>
 

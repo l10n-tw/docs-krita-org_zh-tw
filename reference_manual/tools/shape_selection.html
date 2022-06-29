@@ -9,7 +9,7 @@
   <meta property="og:title" name="title" content="形狀選取工具" />
   <meta property="og:site-name" content="Krita Manual" />
   <meta property="og:type" content="article" />
-  <meta property="og:locale" content="zh_TW" />
+  <meta property="og:locale" content="zh-TW" />
   <meta property="og:locale:alternate" content="ca" />
   <meta property="og:locale:alternate" content="en" />
   <meta property="og:locale:alternate" content="fr" />
@@ -21,8 +21,8 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2022-05-02T15:19:52" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta property="og:article:modified_time" content="2022-06-29T13:10:37" />
+  <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <meta content="Krita 的形狀選取工具參考。" name="description" />
 
   
@@ -199,7 +199,7 @@
 <li class="toctree-l3"><a class="reference internal" href="polygonal_select.html">多邊形選取區域工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="contiguous_select.html">相連選取區域工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="path_select.html">路徑選取工具</a></li>
-<li class="toctree-l3"><a class="reference internal" href="similar_select.html">相連色彩選取區域工具參考</a></li>
+<li class="toctree-l3"><a class="reference internal" href="similar_select.html">相似色彩選取區域工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="magnetic_select.html">磁性選取區域工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="zoom.html">縮放工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="pan.html">平移工具</a></li>
@@ -296,12 +296,12 @@
            <div itemprop="articleBody">
             
   <section id="shape-selection-tool">
-<span id="index-0"></span><span id="id1"></span><h1>形狀選取工具<a class="headerlink" href="#shape-selection-tool" title="本標題的永久連結">¶</a></h1>
+<span id="index-0"></span><span id="id1"></span><h1>形狀選取工具<a class="headerlink" href="#shape-selection-tool" title="Permalink to this heading">¶</a></h1>
 <p><img alt="形狀選取工具" src="../../_images/shape_select_tool.svg" /></p>
 <p>形狀選取工具原本應被稱為「預設」工具。因為 Krita 原本預定是作為其中一個辦公應用程式系列的。當這個預定取消時，我們把這個工具更名為符合 Krita 目的的名字：形狀選取！這個工具只適用於向量圖層，因此在顏料圖層中嘗試這個工具時會得到提示。</p>
 <p>在你建立向量形狀後，你可以使用這個工具來選取，變形和在工具選項面板裡使用這個形狀的選項。這裡你可以對各種向量形狀調整其不同的屬性。</p>
 <section id="selection">
-<h2>選取<a class="headerlink" href="#selection" title="本標題的永久連結">¶</a></h2>
+<h2>選取<a class="headerlink" href="#selection" title="Permalink to this heading">¶</a></h2>
 <p>可以由兩種動作來選取形狀：</p>
 <ul class="simple">
 <li><p>在一個形狀物件上 <img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> 可以選取物件。</p></li>
@@ -322,7 +322,7 @@
 </figure>
 </section>
 <section id="placement-scale-angle-and-distortion">
-<h2>放置，縮放，角度和扭曲<a class="headerlink" href="#placement-scale-angle-and-distortion" title="本標題的永久連結">¶</a></h2>
+<h2>放置，縮放，角度和扭曲<a class="headerlink" href="#placement-scale-angle-and-distortion" title="Permalink to this heading">¶</a></h2>
 <p>當一件物件被選取後，這件物件的邊界會被一個虛線的矩形包裹。矩形會有正方形的控制柄。你可以由此來調整選取物件的位置，大小，角度和扭曲。</p>
 <figure class="align-center" id="id3">
 <img alt="左至右：位置，大小，角度及扭曲。" src="../../_images/shapes-selection-properties.png" />
@@ -342,10 +342,10 @@
 </dl>
 </section>
 <section id="tool-options">
-<h2>工具選項<a class="headerlink" href="#tool-options" title="本標題的永久連結">¶</a></h2>
+<h2>工具選項<a class="headerlink" href="#tool-options" title="Permalink to this heading">¶</a></h2>
 <p>這個工具選項的選單有點複雜，它被分成三個分頁。</p>
 <section id="geometry">
-<h3>幾何<a class="headerlink" href="#geometry" title="本標題的永久連結">¶</a></h3>
+<h3>幾何<a class="headerlink" href="#geometry" title="Permalink to this heading">¶</a></h3>
 <a class="reference internal image-reference" href="../../_images/shape-selection-menu-geometry.png"><img alt="工具選項：幾何工具。" src="../../_images/shape-selection-menu-geometry.png" style="width: 400px;" /></a>
 <p>幾何是工具選項裡的第一個分頁。這個分頁可以精確地設定 X 軸和 Y 軸的座標，同時也能設定形狀的長度和寬度。</p>
 <dl>
@@ -363,7 +363,7 @@
 </div>
 </section>
 <section id="stroke">
-<h3>描邊<a class="headerlink" href="#stroke" title="本標題的永久連結">¶</a></h3>
+<h3>描邊<a class="headerlink" href="#stroke" title="Permalink to this heading">¶</a></h3>
 <a class="reference internal image-reference" href="../../_images/shape-selection-menu-stroke.png"><img alt="工具選項：描邊工具。" src="../../_images/shape-selection-menu-stroke.png" style="width: 400px;" /></a>
 <p>The stroke tab determines how the stroke around the object should look.</p>
 <p>The first set of buttons allows us to set the fill of the stroke: <em>None</em>, <em>Color</em> and <em>Gradient</em>; the same options exist for the fill of the shape, please refer to the following &quot;<strong>Fill</strong>&quot; section for more details on how to use both of them.</p>
@@ -380,7 +380,7 @@
 </dl>
 </section>
 <section id="fill">
-<h3>Fill<a class="headerlink" href="#fill" title="本標題的永久連結">¶</a></h3>
+<h3>Fill<a class="headerlink" href="#fill" title="Permalink to this heading">¶</a></h3>
 <a class="reference internal image-reference" href="../../_images/shape-selection-menu-fill.png"><img alt="Tool options: Fill tool." src="../../_images/shape-selection-menu-fill.png" style="width: 400px;" /></a>
 <p>This section is about the color that fills the shape. As mentioned above in the <strong>Stroke</strong> section, the features are the same for both the fill of the stroke and the fill of the shape. Here is the explanation for both:</p>
 <p>A fill can be: <em>solid color</em>, <em>gradient</em>, or <em>none</em> (transparent)</p>
@@ -439,11 +439,11 @@ The other way to edit gradients is editing their position on the canvas.</p>
 <p>Mesh Gradients follow <a class="reference external" href="https://svgwg.org/svg-next/pservers.html#MeshGradients">SVG draft 2</a> for the rendering.</p>
 </div>
 <section id="creating-mesh-gradients">
-<h4>Creating Mesh Gradients<a class="headerlink" href="#creating-mesh-gradients" title="本標題的永久連結">¶</a></h4>
+<h4>Creating Mesh Gradients<a class="headerlink" href="#creating-mesh-gradients" title="Permalink to this heading">¶</a></h4>
 <p>When Mesh Gradients option is selected for a shape, Krita fills it with default mesh gradient, which is an alternating color (it alternates between background color and white). Changing number of rows and columns from Tool Options, will add more patches to the Mesh Gradient and corners can be changed individually.</p>
 </section>
 <section id="editing-mesh-gradients">
-<h4>Editing Mesh Gradients<a class="headerlink" href="#editing-mesh-gradients" title="本標題的永久連結">¶</a></h4>
+<h4>Editing Mesh Gradients<a class="headerlink" href="#editing-mesh-gradients" title="Permalink to this heading">¶</a></h4>
 <p>The way to edit Mesh Gradients is pretty straight forward. Each curve is an individual Bezier Curve. There are two ways to change the structure, one is by dragging the corner (rectangle) and other is by dragging the handle (circle).</p>
 <figure class="align-center" id="id4">
 <img alt="Left to right: Normal, Corner Hovered, Corner Moved and Selected." src="../../_images/MeshGradients-corner-moving.png" />
@@ -460,7 +460,7 @@ The other way to edit gradients is editing their position on the canvas.</p>
 </section>
 </section>
 <section id="right-click-menu">
-<h2>Right-click menu<a class="headerlink" href="#right-click-menu" title="本標題的永久連結">¶</a></h2>
+<h2>Right-click menu<a class="headerlink" href="#right-click-menu" title="Permalink to this heading">¶</a></h2>
 <p>The shape selection tool has a nice right click menu that gives you several features. If you have an object selected, you can perform various functions like cutting, copying, or moving the object to the front or back.</p>
 <img alt="../../_images/Vector-right-click-menu.png" src="../../_images/Vector-right-click-menu.png" />
 <p>If you have multiple objects selected you can perform &quot;Logical Operators&quot; on them, or boolean operations as they are commonly called. It will be the last item on the right-click menu. You can unite, intersect, subtract, or split the selected objects.</p>
@@ -490,7 +490,7 @@ The other way to edit gradients is editing their position on the canvas.</p>
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>6a90bff</code>
+          修訂版本 <code>d9da50a</code>
         </span>
       
 
@@ -516,6 +516,7 @@ The other way to edit gradients is editing their position on the canvas.</p>
       <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
       <script src="../../_static/jquery.js"></script>
       <script src="../../_static/underscore.js"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
       <script src="../../_static/doctools.js"></script>
       <script src="../../_static/translations.js"></script>
 

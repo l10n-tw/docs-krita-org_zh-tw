@@ -50,7 +50,12 @@ Quick access
     * :ref:`Backtrace  <getting_backtrace_mac>`
     * Krita text output from :ref:`Log Viewer (in GUI) <krita_text_output_logviewer>` or :ref:`console <krita_text_output_console>`
 
+* Android
 
+    * :ref:`Krita Usage Log <krita_usage_log>`
+    * :ref:`System information <getting_system_information>`
+    * :ref:`Backtrace  <getting_backtrace_android>`
+    * :ref:`Logcat  <getting_logcat>`
 
 
 .. _krita_usage_log:
@@ -79,6 +84,9 @@ The file is called :file:`krita.log`. Location of the file:
         :file:`%LOCALAPPDATA%\\krita.log`
     macOS
         :file:`$HOME/Library/Application Support/krita.log`
+    Android
+        - Play Store version: :file:`<storage>/Android/data/org.krita/files/krita.log`
+        - Krita Next: :file:`<storage>/Android/data/org.krita.next/files/krita.log`
 
 .. note::
 
@@ -112,6 +120,9 @@ The file is called :file:`krita-sysinfo.log`. Location of the file:
         :file:`%LOCALAPPDATA%\\krita-sysinfo.log`
     macOS
         :file:`$HOME/Library/Application Support/krita-sysinfo.log`
+    Android
+        - Play Store version: :file:`<storage>/Android/data/org.krita/files/krita-sysinfo.log`
+        - Krita Next: :file:`<storage>/Android/data/org.krita.next/files/krita-sysinfo.log`
 
 .. note::
     
@@ -227,6 +238,22 @@ On macOS it's recommended to use :literal:`lldb`.
 
     If you prefer not to make this decision, just attach the file with the backtrace to the bug report.
 
+
+.. _getting_backtrace_android:
+
+Android
+=======
+
+To get the logs using the GUI, share the content of :menuselection:`Help --> Show crash log for bug reports`.
+
+If you cannot open Krita because it crashes on startup, please provide the :file:`<storage>/Android/data/org.krita/files/kritacrashlog.txt`.
+
+.. _getting_logcat:
+
+Logcat (Android)
+================
+
+To get the logcat output for Krita, share the content of :menuselection:`Help --> Show Android log for bug reports`.
 
 .. _krita_console_debugview:
 

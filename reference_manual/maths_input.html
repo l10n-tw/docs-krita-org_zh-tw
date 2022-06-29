@@ -9,7 +9,7 @@
   <meta property="og:title" name="title" content="數學運算式輸入" />
   <meta property="og:site-name" content="Krita Manual" />
   <meta property="og:type" content="article" />
-  <meta property="og:locale" content="zh_TW" />
+  <meta property="og:locale" content="zh-TW" />
   <meta property="og:locale:alternate" content="ca" />
   <meta property="og:locale:alternate" content="en" />
   <meta property="og:locale:alternate" content="fr" />
@@ -21,8 +21,8 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2022-05-02T15:19:52" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta property="og:article:modified_time" content="2022-06-29T13:10:37" />
+  <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <meta content="用於 Krita 旋轉盒和數字輸入的數學運算概述。" name="description" />
 
   
@@ -254,10 +254,10 @@
            <div itemprop="articleBody">
             
   <section id="maths-input">
-<span id="index-0"></span><span id="id1"></span><h1>數學運算式輸入<a class="headerlink" href="#maths-input" title="本標題的永久連結">¶</a></h1>
+<span id="index-0"></span><span id="id1"></span><h1>數學運算式輸入<a class="headerlink" href="#maths-input" title="Permalink to this heading">¶</a></h1>
 <p>Krita 可以在數字輸入框中直接進行簡單的數學計算。 除了基本的數字輸入框之外，選取數字調整框的數值、或者在滑動條上以滑鼠右鍵點擊時也可以啟動數字輸入功能。 目前 Krita 還不能進行單位轉換，不過我們計劃在未來實現這項功能。</p>
 <section id="possible-functions">
-<h2>可用運算函數<a class="headerlink" href="#possible-functions" title="本標題的永久連結">¶</a></h2>
+<h2>可用運算函數<a class="headerlink" href="#possible-functions" title="Permalink to this heading">¶</a></h2>
 <dl class="simple">
 <dt>加法（運算子：+）</dt><dd><p>把數字相加，用法：<code class="docutils literal notranslate"><span class="pre">50+100</span></code> 輸出：<code class="docutils literal notranslate"><span class="pre">150</span></code></p>
 </dd>
@@ -295,7 +295,7 @@
 </dl>
 </section>
 <section id="order-of-operations">
-<h2>運算順序。<a class="headerlink" href="#order-of-operations" title="本標題的永久連結">¶</a></h2>
+<h2>運算順序。<a class="headerlink" href="#order-of-operations" title="Permalink to this heading">¶</a></h2>
 <p>Krita 採用國際通用的運算順序規則。 以下面的這條數學運算式為例：</p>
 <p><code class="docutils literal notranslate"><span class="pre">2+3\*4</span></code></p>
 <p>在沒有任何規則的情況下，這條運算式可以有兩種解讀方式。 您可以把這條運算式解讀為 2+3 = 5，然後 5*4 =20。 也可以把它解讀為 3*4 = 12，然後 2+12 = 14。</p>
@@ -305,7 +305,7 @@
 <p>Krita 會在解讀運算式時把括號考慮在內，因此會得出結果為 20。</p>
 </section>
 <section id="errors">
-<h2>運算錯誤<a class="headerlink" href="#errors" title="本標題的永久連結">¶</a></h2>
+<h2>運算錯誤<a class="headerlink" href="#errors" title="Permalink to this heading">¶</a></h2>
 <p>在某些情況下計算的結果會變成紅色。 這表示您的運算式有問題，因此 Krita 無法對其進行分析。 這時請點擊輸入框重新輸入即可。</p>
 </section>
 </section>
@@ -333,7 +333,7 @@
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>6a90bff</code>
+          修訂版本 <code>d9da50a</code>
         </span>
       
 
@@ -359,6 +359,7 @@
       <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
       <script src="../_static/jquery.js"></script>
       <script src="../_static/underscore.js"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
       <script src="../_static/doctools.js"></script>
       <script src="../_static/translations.js"></script>
 

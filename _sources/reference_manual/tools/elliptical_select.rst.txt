@@ -7,6 +7,7 @@
    :authors: - Wolthera van Hövell tot Westerflier <griffinvalley@gmail.com>
              - Scott Petrovic
        	     - Alberto Eleuterio Flores Guerrero <barbanegra+bugs@posteo.mx>
+       	     - Santhosh Anguluri
    :license: GNU free documentation license 1.3 or later.
 
 .. index:: Tools, Ellipse, Circle, Elliptical Select, Selection

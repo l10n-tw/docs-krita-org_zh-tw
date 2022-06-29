@@ -9,7 +9,7 @@
   <meta property="og:title" name="title" content="「效能」設定" />
   <meta property="og:site-name" content="Krita Manual" />
   <meta property="og:type" content="article" />
-  <meta property="og:locale" content="zh_TW" />
+  <meta property="og:locale" content="zh-TW" />
   <meta property="og:locale:alternate" content="ca" />
   <meta property="og:locale:alternate" content="en" />
   <meta property="og:locale:alternate" content="fr" />
@@ -21,8 +21,8 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2022-05-02T15:19:52" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta property="og:article:modified_time" content="2022-06-29T13:10:37" />
+  <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <meta content="Krita 的效能設定。" name="description" />
 
   
@@ -273,11 +273,11 @@
            <div itemprop="articleBody">
             
   <section id="performance-settings">
-<span id="index-0"></span><span id="id1"></span><h1>「效能」設定<a class="headerlink" href="#performance-settings" title="本標題的永久連結">¶</a></h1>
+<span id="index-0"></span><span id="id1"></span><h1>「效能」設定<a class="headerlink" href="#performance-settings" title="Permalink to this heading">¶</a></h1>
 <p><strong class="program">Krita</strong> 作為一個數位繪圖軟體，它需要處理很多的資料，例如您使用的筆刷、您所選擇的色彩，但主要是影像中的每個像素。因此如何讓 <strong class="program">Krita</strong> 組織它所儲存資料的方式會影響 <strong class="program">Krita</strong> 呈現的效能與速度。就像一個條理分明的工作室可以提高現實中藝術家繪畫的效率。</p>
 <p>這些偏好選項允許您組織並設定 <strong class="program">Krita</strong> 的效能，例如記憶體、CPU、快取這些與效能有密切關係的項目。這頁面內所有項目經變更後需要重新啟動 <strong class="program">Krita</strong> 才會生效。</p>
 <section id="ram">
-<h2>記憶體<a class="headerlink" href="#ram" title="本標題的永久連結">¶</a></h2>
+<h2>記憶體<a class="headerlink" href="#ram" title="Permalink to this heading">¶</a></h2>
 <p>「隨機存取記憶體」（RAM 或 Random Access Memory）以下簡稱「記憶體」，是一種容量小但讀寫速度很快的暫時容器，關機後資料就會消失；硬碟則用作永久儲存資料的容器，相對記憶體而言容量很大但是讀寫速度很慢。而 CPU 運算時會先將資料由硬碟讀進記憶體中以加快處裡速度，由硬碟抄寫進記憶體與清空記憶體會使用一些時間。因此恰當分配與運用電腦有限的記憶體，可提高 <strong class="program">Krita</strong> 的效能 。</p>
 <p>您可經由這些設定選擇要將多少資源分配給 <strong class="program">Krita</strong> 使用，並且每次 <strong class="program">Krita</strong> 啟動都會使用這些設定。因此這頁面內所有設定經變更後都需要重新啟動 <strong class="program">Krita</strong> 才會生效。</p>
 <dl>
@@ -297,7 +297,7 @@
 </dl>
 </section>
 <section id="swapping">
-<h2>置換檔案大小<a class="headerlink" href="#swapping" title="本標題的永久連結">¶</a></h2>
+<h2>置換檔案大小<a class="headerlink" href="#swapping" title="Permalink to this heading">¶</a></h2>
 <dl class="simple">
 <dt>檔案大小限制</dt><dd><p>指定 <strong class="program">Krita</strong> 可以使用的交換檔空間大小上限。若資料大小同時超過記憶體與交換檔的大小上限，可能會造成 <strong class="program">Krita</strong> 軟體凍結。</p>
 </dd>
@@ -306,9 +306,9 @@
 </dl>
 </section>
 <section id="advanced">
-<h2>進階<a class="headerlink" href="#advanced" title="本標題的永久連結">¶</a></h2>
+<h2>進階<a class="headerlink" href="#advanced" title="Permalink to this heading">¶</a></h2>
 <section id="multithreading">
-<h3>多執行緒<a class="headerlink" href="#multithreading" title="本標題的永久連結">¶</a></h3>
+<h3>多執行緒<a class="headerlink" href="#multithreading" title="Permalink to this heading">¶</a></h3>
 <p>從 4.0 版開始，Krita 支援了動畫快取多執行緒處理，並且像素筆刷引擎的筆尖圖案功能都已完成多執行緒的最佳化。</p>
 <dl class="simple">
 <dt>CPU 限制</dt><dd><p>指定 Krita 可使用的執行緒數量上限。</p>
@@ -318,7 +318,7 @@
 </dl>
 </section>
 <section id="other">
-<h3>其它<a class="headerlink" href="#other" title="本標題的永久連結">¶</a></h3>
+<h3>其它<a class="headerlink" href="#other" title="Permalink to this heading">¶</a></h3>
 <dl>
 <dt>繪畫模式每秒影格數限制。</dt><dd><p>降低繪製時畫布更新率。這讓 Krita 可以保留處理其他事情的資源，因為有些人很在意筆刷更新頻率，因此加入這個選項讓用戶自己設置。</p>
 </dd>
@@ -337,7 +337,7 @@
 </section>
 </section>
 <section id="animation-cache">
-<h2>動畫快取<a class="headerlink" href="#animation-cache" title="本標題的永久連結">¶</a></h2>
+<h2>動畫快取<a class="headerlink" href="#animation-cache" title="Permalink to this heading">¶</a></h2>
 <div class="versionadded">
 <p><span class="versionmodified added">在 4.1 版本新加入.</span></p>
 </div>
@@ -345,7 +345,7 @@
 <p>假設我們要播放一個 25 FPS 的動畫，這表示電腦需每秒繪製 25 張影像。影片播放軟體可以為此做大量最佳化以提高效率，但 Krita 必須允許使用者編輯影像，因此無法像影片播放軟體那樣做出最佳化。</p>
 <p>儘管如此，動畫師也必須看到製作中的是怎樣的動畫。為了正確達到這個要求，因此我們需要決定 Krita 要如何在動畫師進行更改後重新生成快取。幸運的是我們有很多不同選擇可以做到這個要求，最好的解決方案就是依序動畫的特性在電腦配備的效能上進行調整。在這個選項中您可以自定義生成快取的方式和場合。</p>
 <section id="cache-storage-backend">
-<h3>快取存放空間後端（快取空間的位置）<a class="headerlink" href="#cache-storage-backend" title="本標題的永久連結">¶</a></h3>
+<h3>快取存放空間後端（快取空間的位置）<a class="headerlink" href="#cache-storage-backend" title="Permalink to this heading">¶</a></h3>
 <dl>
 <dt>使用記憶體</dt><dd><p>選用這個項目時，動畫快取將會儲存在記憶體中，且不做任何限制，這也是 4.1 版之前預設的處理方式。但這選項對於系統記憶體需求會比較多，若您製作的動畫經常都需全螢幕解析度為 6K 每秒 25fps ，那麼您的電腦最好有安裝 64GB （或以上）的記憶體。如果您電腦沒有這麼多記憶體，那麼最好*不要*使用此選項，同時也請考慮降低動畫的解析度。</p>
 <div class="admonition warning">
@@ -363,7 +363,7 @@
 </dl>
 </section>
 <section id="cache-generation-options">
-<h3>快取產生選項<a class="headerlink" href="#cache-generation-options" title="本標題的永久連結">¶</a></h3>
+<h3>快取產生選項<a class="headerlink" href="#cache-generation-options" title="Permalink to this heading">¶</a></h3>
 <dl class="simple">
 <dt>限制快取影格大小</dt><dd><p>如果製作的影像畫質超過此大小限制，則將快取影格製成減少畫質的縮小版，在選用*硬碟*為快取儲存空間時，請確保啟用此選項。因為硬碟讀寫很慢，如果按照完全畫質寫入快取，它很有可能因無法全速播放而出現卡幀的狀況，所以這是用比較低的畫質來換取影片流暢的播放，請放心這個功能並不會影響最後輸出的畫質。</p>
 </dd>
@@ -375,7 +375,7 @@
 </section>
 </section>
 <section id="instant-preview">
-<span id="instant-preview-settings"></span><h2>即時預覽<a class="headerlink" href="#instant-preview" title="本標題的永久連結">¶</a></h2>
+<span id="instant-preview-settings"></span><h2>即時預覽<a class="headerlink" href="#instant-preview" title="Permalink to this heading">¶</a></h2>
 <dl class="simple">
 <dt>變形工具顯示圖層堆疊中的預覽</dt><dd><p>啟用此選項後，將顯示已繪製圖層混合模式效果的<a class="reference internal" href="../tools/transform.html#transform-tool"><span class="std std-ref">變形工具</span></a>預覽。取消鉤選時則浮動顯示預覽。</p>
 </dd>
@@ -412,7 +412,7 @@
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>6a90bff</code>
+          修訂版本 <code>d9da50a</code>
         </span>
       
 
@@ -438,6 +438,7 @@
       <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
       <script src="../../_static/jquery.js"></script>
       <script src="../../_static/underscore.js"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
       <script src="../../_static/doctools.js"></script>
       <script src="../../_static/translations.js"></script>
 

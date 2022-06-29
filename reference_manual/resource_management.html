@@ -9,7 +9,7 @@
   <meta property="og:title" name="title" content="資源管理" />
   <meta property="og:site-name" content="Krita Manual" />
   <meta property="og:type" content="article" />
-  <meta property="og:locale" content="zh_TW" />
+  <meta property="og:locale" content="zh-TW" />
   <meta property="og:locale:alternate" content="ca" />
   <meta property="og:locale:alternate" content="en" />
   <meta property="og:locale:alternate" content="fr" />
@@ -21,8 +21,8 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2022-05-02T15:19:52" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta property="og:article:modified_time" content="2022-06-29T13:10:37" />
+  <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <meta content="Overview of Resource Management in Krita." name="description" property="og:description" />
 
   
@@ -276,7 +276,7 @@
            <div itemprop="articleBody">
             
   <section id="resource-management">
-<span id="index-0"></span><span id="id1"></span><h1>資源管理<a class="headerlink" href="#resource-management" title="本標題的永久連結">¶</a></h1>
+<span id="index-0"></span><span id="id1"></span><h1>資源管理<a class="headerlink" href="#resource-management" title="Permalink to this heading">¶</a></h1>
 <p>Resources are pluggable bits of data, like brush presets or patterns. Krita has a sophisticated resource management system, which allows tagging, disabling, sharing and more.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 5.0 版本變更.</span></p>
@@ -295,9 +295,9 @@
 </dd>
 </dl>
 <section id="resource-libraries">
-<span id="id2"></span><h2>Resource Libraries<a class="headerlink" href="#resource-libraries" title="本標題的永久連結">¶</a></h2>
+<span id="id2"></span><h2>Resource Libraries<a class="headerlink" href="#resource-libraries" title="Permalink to this heading">¶</a></h2>
 <p>Krita can load a variety of resource libraries.</p>
-<dl class="glossary simple">
+<dl class="simple glossary">
 <dt id="term-Resource-Folder">Resource Folder<a class="headerlink" href="#term-Resource-Folder" title="本術語的永久連結">¶</a></dt><dd><p>The resource folder is considered the primary library. When creating new resources, they will all end up here. You can configure its location in the <a class="reference internal" href="preferences/general_settings.html#resource-settings"><span class="std std-ref">general preferences</span></a>.</p>
 </dd>
 <dt id="term-Resource-Bundle">Resource Bundle<a class="headerlink" href="#term-Resource-Bundle" title="本術語的永久連結">¶</a></dt><dd><p>The primary format to share resources is <em class="dfn">Resource Bundles</em>, which is a compressed file containing all the resources together. It also contains some other information like metadata and a manifest so Krita can check there's no errors in the file.</p>
@@ -313,12 +313,12 @@
 </dl>
 <p>You can manage resource libraries by going to <span class="menuselection">Settings ‣ Manage Resource Libraries</span>. In this dialog, you can import resource libraries, deactivate them, and also <a class="reference internal" href="#create-bundle"><span class="std std-ref">Creating your own Bundle</span></a>.</p>
 <section id="importing-bundles">
-<h3>Importing Bundles<a class="headerlink" href="#importing-bundles" title="本標題的永久連結">¶</a></h3>
+<h3>Importing Bundles<a class="headerlink" href="#importing-bundles" title="Permalink to this heading">¶</a></h3>
 <p>To import a bundle click on <span class="guilabel">Import</span> button on the top right side of the dialog.
 Select <code class="docutils literal notranslate"><span class="pre">.bundle</span></code> file format from the file type if it is not already selected, browse to the folder where you have downloaded the bundle, select it and click <span class="guilabel">Open</span>. Once the bundle is imported it will be listed in the bundle view. To enable or disable a bundle, select the entry in the view, and then select <span class="guilabel">Deactivate</span>.</p>
 </section>
 <section id="creating-your-own-bundle">
-<span id="create-bundle"></span><h3>Creating your own Bundle<a class="headerlink" href="#creating-your-own-bundle" title="本標題的永久連結">¶</a></h3>
+<span id="create-bundle"></span><h3>Creating your own Bundle<a class="headerlink" href="#creating-your-own-bundle" title="Permalink to this heading">¶</a></h3>
 <p>You can create your own bundle from the resources of your choice. Click on the <span class="guilabel">Create bundle</span> button. This will open a dialog box as shown below.</p>
 <img alt="../_images/Creating-bundle.png" src="../_images/Creating-bundle.png" />
 <p>The left hand section is for filling up information about the bundle like author name, website, email, bundle icon, etc.
@@ -330,29 +330,29 @@ The right hand side provides a list of available resources. Choose the type of r
 <p>Once you have added all the resources you can create bundle by clicking on the <span class="guilabel">Save</span> button, the bundle will be saved in the location you have specified. You can then share this bundle with other artists or load it on other workstations.</p>
 </section>
 <section id="deleting-imported-bundles">
-<h3>Deleting Imported Bundles<a class="headerlink" href="#deleting-imported-bundles" title="本標題的永久連結">¶</a></h3>
+<h3>Deleting Imported Bundles<a class="headerlink" href="#deleting-imported-bundles" title="Permalink to this heading">¶</a></h3>
 <p>In case you wish to delete the bundles you have imported <em>permanently</em> click on the <span class="guilabel">Open Resource Folder</span> button in the <span class="guilabel">Manage Resources</span> dialog. This will open the resource folder in your file browser. Go inside the bundles folder and delete the bundle file which you don't need any more. The next time you start Krita the bundle and its associated resources will not be loaded.</p>
 </section>
 </section>
 <section id="managing-resources">
-<span id="resource-manager"></span><h2>Managing Resources<a class="headerlink" href="#managing-resources" title="本標題的永久連結">¶</a></h2>
+<span id="resource-manager"></span><h2>Managing Resources<a class="headerlink" href="#managing-resources" title="Permalink to this heading">¶</a></h2>
 <p>As mentioned earlier Krita has a flexible resource management system. Starting from version 2.9 you can share various resources mentioned above by sharing a single compressed ZIP file created within Krita.</p>
 <p>The manage resources section in the settings was also revamped for making it easy for the artists to prepare these bundle files. You can open manage resource section by going to <span class="menuselection">Settings ‣ Manage Resources...</span> menu item.</p>
 <img alt="../_images/Manageresources.png" class="align-center" src="../_images/Manageresources.png" />
 <p>You can do a variety of things here, like deleting backup files, mass-tagging, deleting/deactivating the resource itself, importing resources and open the create bundle dialog.</p>
 <section id="importing-resources">
-<span id="import-resources"></span><h3>Importing resources<a class="headerlink" href="#importing-resources" title="本標題的永久連結">¶</a></h3>
+<span id="import-resources"></span><h3>Importing resources<a class="headerlink" href="#importing-resources" title="Permalink to this heading">¶</a></h3>
 <p>To import resources, select the <span class="guilabel">import</span> in the resource choosers or the resource manager.</p>
 <p>The resource chooser import is fairly straight forward. You can only select certain kinds of files, and all the files you can select are possible to import for that resource.</p>
 <p>The import button in the resource manager however sometimes needs to make a choice on whether an imported <a class="reference internal" href="../general_concepts/file_formats/file_png.html#file-png"><span class="std std-ref">*.png</span></a> file is a brush tip or a texture. When importing a format that can be used for multiple types of resources, a window will pop up asking which resource type you intended to import the file for.</p>
 </section>
 <section id="activating-and-deactivating">
-<span id="activating-resources"></span><span id="deactivating-resources"></span><h3>Activating and Deactivating<a class="headerlink" href="#activating-and-deactivating" title="本標題的永久連結">¶</a></h3>
+<span id="activating-resources"></span><span id="deactivating-resources"></span><h3>Activating and Deactivating<a class="headerlink" href="#activating-and-deactivating" title="Permalink to this heading">¶</a></h3>
 <p>Deactivating resources is done by selecting them in their respective resource chooser, and pressing the trashcan icon.</p>
 <p>For activating a resource, go to <span class="menuselection">Setti<span class="accelerator">n</span>gs ‣ Manage Resources...</span>, then turn on <span class="guilabel"><span class="accelerator">S</span>how Deleted Resources</span>. The deactivated resources should now be visible, select them, and then press <span class="guilabel">Undelete Resource</span>.</p>
 </section>
 <section id="returning-a-resource-to-the-previous-version">
-<span id="resource-version-history"></span><h3>Returning a resource to the previous version<a class="headerlink" href="#returning-a-resource-to-the-previous-version" title="本標題的永久連結">¶</a></h3>
+<span id="resource-version-history"></span><h3>Returning a resource to the previous version<a class="headerlink" href="#returning-a-resource-to-the-previous-version" title="Permalink to this heading">¶</a></h3>
 <ol class="arabic simple">
 <li><p>First go to the resource folder, <span class="menuselection">Settings ‣ Manage Resources... ‣ Open Resource Folder</span>.</p></li>
 <li><p>Then go into the <code class="docutils literal notranslate"><span class="pre">paintoppresets</span></code> folder.</p></li>
@@ -362,7 +362,7 @@ The right hand side provides a list of available resources. Choose the type of r
 </ol>
 </section>
 <section id="deleting-backup-files">
-<span id="delete-backup-files"></span><h3>Deleting Backup files<a class="headerlink" href="#deleting-backup-files" title="本標題的永久連結">¶</a></h3>
+<span id="delete-backup-files"></span><h3>Deleting Backup files<a class="headerlink" href="#deleting-backup-files" title="Permalink to this heading">¶</a></h3>
 <p>When you delete a preset from Krita, Krita doesn't actually delete the physical copy of the preset. It just adds it to a black list so that the next time when you start Krita the presets from this list are not loaded. To delete the brushes from this list click on <span class="guilabel">Delete Backup Files</span>.</p>
 <div class="admonition note">
 <p class="admonition-title">備註</p>
@@ -370,7 +370,7 @@ The right hand side provides a list of available resources. Choose the type of r
 </div>
 </section>
 <section id="tags">
-<span id="resource-tagging"></span><h3>Tags<a class="headerlink" href="#tags" title="本標題的永久連結">¶</a></h3>
+<span id="resource-tagging"></span><h3>Tags<a class="headerlink" href="#tags" title="Permalink to this heading">¶</a></h3>
 <p>Tagging allows you to manage the resources on the fly while painting. All Krita resources can be tagged. These tags can be added via the resource manager, but also via the respective dockers such as brush preset docker, pattern docker etc. You can <img alt="滑鼠左鍵" src="../_images/Krita_mouse_left.png" /> the <span class="guilabel">+</span> icon in the docker and add a tag name. In addition to adding you can rename and delete a tag as well.</p>
 <img alt="../_images/Tags-krita.png" class="align-center" src="../_images/Tags-krita.png" />
 <ul class="simple">
@@ -393,7 +393,7 @@ The right hand side provides a list of available resources. Choose the type of r
 </section>
 </section>
 <section id="filtering">
-<h2>Filtering<a class="headerlink" href="#filtering" title="本標題的永久連結">¶</a></h2>
+<h2>Filtering<a class="headerlink" href="#filtering" title="Permalink to this heading">¶</a></h2>
 <p>Some dockers, for example the brush preset docker as shown below, have a resource filter, which functions like a search bar for the resource in question.</p>
 <img alt="../_images/Brushpreset-filters.png" src="../_images/Brushpreset-filters.png" />
 <p>You can enter brush name, tag name to quickly pull up a list of brush presets you want. When you select any tag from the tag drop-down and want to include brush presets from other tags as well then you can add filters based on the partial, case insensitive name of the resources by using <code class="docutils literal notranslate"><span class="pre">partialname</span></code> or <code class="docutils literal notranslate"><span class="pre">!partialname</span></code>.</p>
@@ -403,7 +403,7 @@ The right hand side provides a list of available resources. Choose the type of r
 </dl>
 </section>
 <section id="resource-types-in-krita">
-<h2>Resource Types in Krita<a class="headerlink" href="#resource-types-in-krita" title="本標題的永久連結">¶</a></h2>
+<h2>Resource Types in Krita<a class="headerlink" href="#resource-types-in-krita" title="Permalink to this heading">¶</a></h2>
 <div class="toctree-wrapper compound">
 <p class="caption" role="heading"><span class="caption-text">Main Resource Types</span></p>
 <ul>
@@ -416,7 +416,7 @@ The right hand side provides a list of available resources. Choose the type of r
 </ul>
 </div>
 <section id="other-resource-types">
-<h3>Other Resource Types<a class="headerlink" href="#other-resource-types" title="本標題的永久連結">¶</a></h3>
+<h3>Other Resource Types<a class="headerlink" href="#other-resource-types" title="Permalink to this heading">¶</a></h3>
 <ul class="simple">
 <li><p><a class="reference internal" href="dockers/gamut_mask_docker.html#gamut-mask-docker"><span class="std std-ref">色域遮罩</span></a></p></li>
 <li><p><a class="reference internal" href="layers_and_masks/layer_styles.html#layer-style"><span class="std std-ref">圖層樣式</span></a></p></li>
@@ -451,7 +451,7 @@ The right hand side provides a list of available resources. Choose the type of r
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>6a90bff</code>
+          修訂版本 <code>d9da50a</code>
         </span>
       
 
@@ -477,6 +477,7 @@ The right hand side provides a list of available resources. Choose the type of r
       <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
       <script src="../_static/jquery.js"></script>
       <script src="../_static/underscore.js"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
       <script src="../_static/doctools.js"></script>
       <script src="../_static/translations.js"></script>
 

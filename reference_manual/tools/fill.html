@@ -9,7 +9,7 @@
   <meta property="og:title" name="title" content="填色工具" />
   <meta property="og:site-name" content="Krita Manual" />
   <meta property="og:type" content="article" />
-  <meta property="og:locale" content="zh_TW" />
+  <meta property="og:locale" content="zh-TW" />
   <meta property="og:locale:alternate" content="ca" />
   <meta property="og:locale:alternate" content="en" />
   <meta property="og:locale:alternate" content="fr" />
@@ -21,8 +21,8 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2022-05-02T15:19:52" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta property="og:article:modified_time" content="2022-06-29T13:10:37" />
+  <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <meta content="Krita 填色工具的說明文件。" name="description" />
 
   
@@ -196,7 +196,7 @@
 <li class="toctree-l3"><a class="reference internal" href="polygonal_select.html">多邊形選取區域工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="contiguous_select.html">相連選取區域工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="path_select.html">路徑選取工具</a></li>
-<li class="toctree-l3"><a class="reference internal" href="similar_select.html">相連色彩選取區域工具參考</a></li>
+<li class="toctree-l3"><a class="reference internal" href="similar_select.html">相似色彩選取區域工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="magnetic_select.html">磁性選取區域工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="zoom.html">縮放工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="pan.html">平移工具</a></li>
@@ -293,69 +293,124 @@
            <div itemprop="articleBody">
             
   <section id="fill-tool">
-<span id="index-0"></span><span id="id1"></span><h1>填色工具<a class="headerlink" href="#fill-tool" title="本標題的永久連結">¶</a></h1>
+<span id="index-0"></span><span id="id1"></span><h1>填色工具<a class="headerlink" href="#fill-tool" title="Permalink to this heading">¶</a></h1>
 <p>填色工具</p>
 <p>Krita 擁有最強大的填色功能。選項可以在工具面板中找到，並且在接下來的導覽中將為您提供靈活運用圖層和選項的方法。</p>
 <p>要開始使用，使用填色工具在畫面上的任何地方將會直接以前景色填滿該區域。</p>
 <section id="tool-options">
-<h2>工具選項<a class="headerlink" href="#tool-options" title="本標題的永久連結">¶</a></h2>
+<h2>工具選項<a class="headerlink" href="#tool-options" title="Permalink to this heading">¶</a></h2>
 <dl>
-<dt>快速填充模式</dt><dd><p>這是個特殊模式用於快速填色。然而，許多功能並不適用於這個模式。</p>
+<dt>What to Fill</dt><dd><dl class="simple">
+<dt>Current Selection</dt><dd><p>Activating this will result in the shape filling the whole of the active selection.</p>
 </dd>
-<dt>閾值</dt><dd><p>Determines when the fill-tool sees another color as a border.</p>
+<dt>Contiguous Region</dt><dd><p>This option is the default and allows filling a region of contiguous pixels obtained from the image at the point where the user clicks.</p>
 </dd>
-<dt>擴大選取區域</dt><dd><p>此值將形狀擴展到其初始大小之外。</p>
+</dl>
 </dd>
-<dt>羽化半徑</dt><dd><p>這個值將為填充形狀添加淡化的邊框。</p>
+<dt>Fill with</dt><dd><dl class="simple">
+<dt>Foreground Color</dt><dd><p>Selecting this option will fill the obtained region with the foreground color.</p>
 </dd>
-<dt>填充整個選取區域</dt><dd><p>選取這個選項將導致形狀填充整個選取範圍，而不受閾值控制。</p>
+</dl>
+<div class="versionadded">
+<p><span class="versionmodified added">在 5.1 版本新加入: </span></p>
+<dl class="simple">
+<dt>Background Color</dt><dd><p>Selecting this option will fill the obtained region with the background color.</p>
+</dd>
+</dl>
+</div>
+<dl>
+<dt>Pattern</dt><dd><p>Selecting this option will fill the obtained region with the current pattern.</p>
+<dl>
+<dt>Scale</dt><dd><div class="versionadded">
+<p><span class="versionmodified added">在 4.4 版本新加入.</span></p>
+</div>
+<p>This allows you to scale the pattern used in the fill.</p>
+</dd>
+<dt>Rotation</dt><dd><div class="versionadded">
+<p><span class="versionmodified added">在 4.4 版本新加入.</span></p>
+</div>
+<p>This allows you to rotate the pattern used in the fill.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+<dt>Region Extent</dt><dd><dl class="simple">
+<dt>閾值</dt><dd><p>Determines when the fill-tool sees another color as a border. In other words, how far the region should extend from the selected pixel in terms of color similarity.</p>
+</dd>
+</dl>
+<div class="versionadded">
+<p><span class="versionmodified added">在 5.1 版本新加入: </span></p>
+<dl>
+<dt>Spread</dt><dd><p>Set how far the fully opaque portion of the region should extend. 0% will make opaque only the pixels that are exactly equal to the selected pixel. 100% will make opaque all the pixels in the region up to its boundary.</p>
+<figure class="align-default" id="id2">
+<img alt="../../_images/opacity_spread.png" src="../../_images/opacity_spread.png" />
+<figcaption>
+<p><span class="caption-text">Left: Original image. The black dot indicates where the fill operation starts. Top-right: a row of images that show the result of filling with a threshold value of 30 and a spread value of 0, 30, 60 and 100 percent from left to right. Bottom-right: a row of images that show the result of filling with a threshold value of 65 and a spread value of 0, 30, 60 and 100 percent from left to right.</span><a class="headerlink" href="#id2" title="本圖片的永久連結">¶</a></p>
+</figcaption>
+</figure>
+</dd>
+</dl>
+</div>
 <div class="versionadded">
 <p><span class="versionmodified added">在 4.4 版本新加入: </span></p>
 <dl>
 <dt>以選取區域為邊界</dt><dd><p>When checked, this will count the borders of the selection as an extra boundary on top of the pixel difference.</p>
-<figure class="align-default" id="id2">
+<figure class="align-default" id="id3">
 <img alt="../../_images/fill_selection_boundary.png" src="../../_images/fill_selection_boundary.png" />
 <figcaption>
-<p><span class="caption-text">Left: Original selection with a line. Middle: Filled with 'use selection as boundary' off. Right: Filled with 'use selection as boundary' on.</span><a class="headerlink" href="#id2" title="本圖片的永久連結">¶</a></p>
+<p><span class="caption-text">Left: Original selection with a line. Middle: Filled with 'use selection as boundary' off. Right: Filled with 'use selection as boundary' on.</span><a class="headerlink" href="#id3" title="本圖片的永久連結">¶</a></p>
 </figcaption>
 </figure>
 </dd>
 </dl>
 </div>
 </dd>
-<dt>Use Pattern</dt><dd><p>Ticking this will result in the active pattern being used.</p>
-<dl>
-<dt>Rotation</dt><dd><div class="versionadded">
-<p><span class="versionmodified added">在 4.4 版本新加入.</span></p>
-</div>
-<p>This allows you to rotate the pattern used in the fill.</p>
+<dt>Adjustments</dt><dd><div class="versionadded">
+<p><span class="versionmodified added">在 5.1 版本新加入: </span></p>
+<dl class="simple">
+<dt>Anti-alias</dt><dd><p>This will smooth the jagged edges present in the region. It differs from feathering in that this will smooth in the direction of the edge instead of all directions, and only if the edge is jagged (high contrast).</p>
 </dd>
-<dt>Scale</dt><dd><div class="versionadded">
-<p><span class="versionmodified added">在 4.4 版本新加入.</span></p>
+</dl>
 </div>
-<p>This allows you to scale the pattern used in the fill.</p>
+<dl class="simple">
+<dt>擴大選取區域</dt><dd><p>This value extends (positive values) or contracts (negative values) the region.</p>
+</dd>
+<dt>羽化半徑</dt><dd><p>This value will add a soft border to the region.</p>
 </dd>
 </dl>
 </dd>
-<dt>Sample</dt><dd><div class="versionadded">
+<dt>Reference</dt><dd><div class="versionadded">
 <p><span class="versionmodified added">在 4.3 版本新加入.</span></p>
 </div>
 <p>Select which layers to use as a reference for the fill tool. The options are:</p>
-<dl class="simple">
+<dl>
 <dt>Current Layer</dt><dd><p>Only use the currently selected layer.</p>
 </dd>
 <dt>All layers</dt><dd><p>Use all visible layers.</p>
 </dd>
 <dt>Color Labeled Layers</dt><dd><p>Use only the layers specified with a certain color label. This is useful for complex images, where you might have multiple lineart layers. Label them with the appropriate color label and use these labels to mark which layers to use as a reference.</p>
+<dl class="simple">
+<dt>Labels Used</dt><dd><p>Select the color labels of the layers that should be used as reference.</p>
 </dd>
 </dl>
 </dd>
-<dt>Labels Used</dt><dd><div class="versionadded">
-<p><span class="versionmodified added">在 4.3 版本新加入.</span></p>
+</dl>
+</dd>
+</dl>
+<div class="versionadded">
+<p><span class="versionmodified added">在 5.1 版本新加入: </span></p>
+<dl>
+<dt>Multiple Fill</dt><dd><p>Select what should happen when one clicks and drags the pointer on the canvas.</p>
+<dl class="simple">
+<dt>Fill Regions of Any Color</dt><dd><p>With this option selected, the tool will fill any region along the path described by the pointer while dragging, regardless of its color.</p>
+</dd>
+<dt>Fill Regions of Similar Colors</dt><dd><p>With this option selected, the tool will fill the regions along path described by the pointer while dragging that have the same color as the first region filled.</p>
+</dd>
+</dl>
+</dd>
+</dl>
 </div>
-<p>Used with the 'Color Labeled Layers' option above.</p>
-</dd>
-</dl>
 </section>
 </section>
 
@@ -382,7 +437,7 @@
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>6a90bff</code>
+          修訂版本 <code>d9da50a</code>
         </span>
       
 
@@ -408,6 +463,7 @@
       <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
       <script src="../../_static/jquery.js"></script>
       <script src="../../_static/underscore.js"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
       <script src="../../_static/doctools.js"></script>
       <script src="../../_static/translations.js"></script>
 

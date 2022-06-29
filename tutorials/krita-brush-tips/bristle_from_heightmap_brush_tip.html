@@ -9,7 +9,7 @@
   <meta property="og:title" name="title" content="高度圖 ( 灰階 )與鬃毛筆刷技巧" />
   <meta property="og:site-name" content="Krita Manual" />
   <meta property="og:type" content="article" />
-  <meta property="og:locale" content="zh_TW" />
+  <meta property="og:locale" content="zh-TW" />
   <meta property="og:locale:alternate" content="ca" />
   <meta property="og:locale:alternate" content="en" />
   <meta property="og:locale:alternate" content="fr" />
@@ -21,8 +21,8 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2022-05-02T15:19:52" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta property="og:article:modified_time" content="2022-06-29T13:10:37" />
+  <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <meta content="Tutorial on how to create a pressure sensitive brush with a bristle effect." name="description" property="og:description" />
 
   
@@ -245,14 +245,14 @@
            <div itemprop="articleBody">
             
   <section id="heightmap-bristle-brush-tips">
-<span id="index-0"></span><span id="id1"></span><h1>高度圖 ( 灰階 )與鬃毛筆刷技巧<a class="headerlink" href="#heightmap-bristle-brush-tips" title="本標題的永久連結">¶</a></h1>
+<span id="index-0"></span><span id="id1"></span><h1>高度圖 ( 灰階 )與鬃毛筆刷技巧<a class="headerlink" href="#heightmap-bristle-brush-tips" title="Permalink to this heading">¶</a></h1>
 <p>When looking at oil paintings, especially the impressionistic ones, it is hard not to be in awe of the effect the visible brush strokes have on the painting. While a digital painting program is a fundamentally different medium from the oil paint one, we can utilize some tricks to get visible brush strokes.</p>
 <p>The simplest way to get a visible brush stroke is to select a <a class="reference internal" href="../../reference_manual/brushes/brush_settings/brush_tips.html#predefined-brush-tip"><span class="std std-ref">predefined brush</span></a>. If you select one with several separate dots, and lower the spacing to 0.02, you can get a sort of brush stroke effect. But we can do better, for example, how about a brush which gives more coverage, the harder you press?</p>
 <figure class="align-default">
 <img alt="Image showing a simple bristle-like stroke." src="../../_images/sharpness_bristle_examples_0.png" />
 </figure>
 <section id="using-the-sharpness-option">
-<h2>使用銳度選項。<a class="headerlink" href="#using-the-sharpness-option" title="本標題的永久連結">¶</a></h2>
+<h2>使用銳度選項。<a class="headerlink" href="#using-the-sharpness-option" title="Permalink to this heading">¶</a></h2>
 <p>We can achieve that effect with the sharpness option. Consider the following brush tip. We've used the gradient tool to draw two concentric foreground-to-transparent gradients side by side on a white-filled layer. Then we used the elliptical selection tool with <span class="menuselection">Edit ‣ Copy Merged</span> to cut out an ellipse shape, and then used the clipboard option in the predefined brush chooser to create a new brush.</p>
 <figure class="align-default">
 <img alt="Simple brush with many gradients as a stroke." src="../../_images/sharpness_bristle_examples_1.png" />
@@ -303,7 +303,7 @@
 <p>However, this sharpness option is not available for the color smudge brush, so what to do there?</p>
 </section>
 <section id="animated-pressure-brush">
-<h2>動態壓力筆刷<a class="headerlink" href="#animated-pressure-brush" title="本標題的永久連結">¶</a></h2>
+<h2>動態壓力筆刷<a class="headerlink" href="#animated-pressure-brush" title="Permalink to this heading">¶</a></h2>
 <p>You can make brush tips that are <a class="reference internal" href="animated_brushes.html#animated-brush-tips"><span class="std std-ref">animated</span></a>.</p>
 <p>If we take our example brush, and duplicate that layer 16 times or so.</p>
 <p>Now, for each layer, start at the top, going to the bottom, you will want to apply the <span class="menuselection">Filter ‣ Adjust ‣ Threshold</span>, with different values. Starting from 255, and then each time, decrease the value by 16. So, the topmost layer should be at 255, next layer 240, the layer after that 224 and so forth. Eventually, you should have each layer have less coverage than the one above that. Now, go to the predefined brushes tab, and select <span class="guilabel">Stamp</span>. There select <span class="guilabel">Animated</span> for <span class="guilabel">Style</span> and <span class="guilabel">Pressure</span> for <span class="guilabel">Selection Mode</span>.</p>
@@ -334,7 +334,7 @@
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>6a90bff</code>
+          修訂版本 <code>d9da50a</code>
         </span>
       
 
@@ -360,6 +360,7 @@
       <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
       <script src="../../_static/jquery.js"></script>
       <script src="../../_static/underscore.js"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
       <script src="../../_static/doctools.js"></script>
       <script src="../../_static/translations.js"></script>
 

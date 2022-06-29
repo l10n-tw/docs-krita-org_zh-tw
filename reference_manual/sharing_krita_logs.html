@@ -9,7 +9,7 @@
   <meta property="og:title" name="title" content="獲取紀錄檔" />
   <meta property="og:site-name" content="Krita Manual" />
   <meta property="og:type" content="article" />
-  <meta property="og:locale" content="zh_TW" />
+  <meta property="og:locale" content="zh-TW" />
   <meta property="og:locale:alternate" content="ca" />
   <meta property="og:locale:alternate" content="en" />
   <meta property="og:locale:alternate" content="fr" />
@@ -21,8 +21,8 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2022-05-02T15:19:52" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta property="og:article:modified_time" content="2022-06-29T13:10:37" />
+  <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <meta content="How to get a Krita Usage Log, Krita's backtrace or Krita's text output." name="description" />
 
   
@@ -171,6 +171,8 @@
 <li class="toctree-l4"><a class="reference internal" href="#windows">Windows</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#linux">Linux</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#macos">macOS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#android">Android</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#logcat-android">Logcat (Android)</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#krita-s-text-output">Krita 的文字紀錄輸出</a><ul>
@@ -274,7 +276,7 @@
            <div itemprop="articleBody">
             
   <section id="getting-krita-logs">
-<span id="sharing-logs"></span><span id="index-0"></span><h1>獲取紀錄檔<a class="headerlink" href="#getting-krita-logs" title="本標題的永久連結">¶</a></h1>
+<span id="sharing-logs"></span><span id="index-0"></span><h1>獲取紀錄檔<a class="headerlink" href="#getting-krita-logs" title="Permalink to this heading">¶</a></h1>
 <p>There are three different kinds of logs that Krita can produce. Depending on the issue, you might be asked for a specific one or for all of them. This page will tell you how to gather the necessary information to give to Krita developers or user supporters.</p>
 <ol class="arabic simple">
 <li><p><a class="reference internal" href="#krita-usage-log"><span class="std std-ref">Krita Usage Log</span></a> -- this log contains your last 10 Krita sessions (one session means opening Krita). It shows times when you opened it, basic information about your system and Krita, and all files you created, opened and saved, including all auto-saves.</p></li>
@@ -283,7 +285,7 @@
 <li><p><a class="reference internal" href="#krita-console-debugview"><span class="std std-ref">Krita console output/Log Viewer output/DebugView output</span></a> -- this log contains anything random that Krita felt the need to report. It often contains some useful additional information that can help solving the issue.</p></li>
 </ol>
 <section id="quick-access">
-<h2>快速連結<a class="headerlink" href="#quick-access" title="本標題的永久連結">¶</a></h2>
+<h2>快速連結<a class="headerlink" href="#quick-access" title="Permalink to this heading">¶</a></h2>
 <ul>
 <li><p>Windows</p>
 <blockquote>
@@ -315,16 +317,26 @@
 </ul>
 </div></blockquote>
 </li>
+<li><p>Android</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference internal" href="#krita-usage-log"><span class="std std-ref">Krita Usage Log</span></a></p></li>
+<li><p><a class="reference internal" href="#getting-system-information"><span class="std std-ref">System information</span></a></p></li>
+<li><p><a class="reference internal" href="#getting-backtrace-android"><span class="std std-ref">Backtrace</span></a></p></li>
+<li><p><a class="reference internal" href="#getting-logcat"><span class="std std-ref">Logcat</span></a></p></li>
+</ul>
+</div></blockquote>
+</li>
 </ul>
 </section>
 <section id="krita-usage-log">
-<span id="id1"></span><h2>Krita Usage Log<a class="headerlink" href="#krita-usage-log" title="本標題的永久連結">¶</a></h2>
+<span id="id1"></span><h2>Krita Usage Log<a class="headerlink" href="#krita-usage-log" title="Permalink to this heading">¶</a></h2>
 <section id="through-gui">
-<h3>經由使用者介面<a class="headerlink" href="#through-gui" title="本標題的永久連結">¶</a></h3>
+<h3>經由使用者介面<a class="headerlink" href="#through-gui" title="Permalink to this heading">¶</a></h3>
 <p>The easiest way to get Krita Usage Log is through Krita's GUI. Go to  <span class="menuselection">Help ‣ Show Krita Log for bug reports</span>. A new dialog will open, showing the content of the log.</p>
 </section>
 <section id="from-the-file-system">
-<h3>從檔案<a class="headerlink" href="#from-the-file-system" title="本標題的永久連結">¶</a></h3>
+<h3>從檔案<a class="headerlink" href="#from-the-file-system" title="Permalink to this heading">¶</a></h3>
 <p>Sometimes however it is not possible to use Krita's GUI, for example when it doesn't even open. Since logs are regular text files, you can get them from your file system by yourself.</p>
 <p>The file is called <code class="file docutils literal notranslate"><span class="pre">krita.log</span></code>. Location of the file:</p>
 <blockquote>
@@ -335,6 +347,11 @@
 </dd>
 <dt>macOS</dt><dd><p><code class="file docutils literal notranslate"><span class="pre">$HOME/Library/Application</span> <span class="pre">Support/krita.log</span></code></p>
 </dd>
+<dt>Android</dt><dd><ul class="simple">
+<li><p>Play Store version: <code class="file docutils literal notranslate"><span class="pre">&lt;storage&gt;/Android/data/org.krita/files/krita.log</span></code></p></li>
+<li><p>Krita Next: <code class="file docutils literal notranslate"><span class="pre">&lt;storage&gt;/Android/data/org.krita.next/files/krita.log</span></code></p></li>
+</ul>
+</dd>
 </dl>
 </div></blockquote>
 <div class="admonition note">
@@ -344,13 +361,13 @@
 </section>
 </section>
 <section id="system-information-related-to-krita">
-<span id="getting-system-information"></span><h2>與 Krita 有關的系統資訊<a class="headerlink" href="#system-information-related-to-krita" title="本標題的永久連結">¶</a></h2>
+<span id="getting-system-information"></span><h2>與 Krita 有關的系統資訊<a class="headerlink" href="#system-information-related-to-krita" title="Permalink to this heading">¶</a></h2>
 <section id="id2">
-<h3>經由使用者介面<a class="headerlink" href="#id2" title="本標題的永久連結">¶</a></h3>
+<h3>經由使用者介面<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h3>
 <p>The easiest way to get system information related to Krita is through Krita's GUI. Go to  <span class="menuselection">Help ‣ Show system information for bug reports</span>. A new dialog will open, showing the content.</p>
 </section>
 <section id="id3">
-<h3>從檔案<a class="headerlink" href="#id3" title="本標題的永久連結">¶</a></h3>
+<h3>從檔案<a class="headerlink" href="#id3" title="Permalink to this heading">¶</a></h3>
 <p>Sometimes however it is not possible to use Krita's GUI, for example when it doesn't even open. Since logs are regular text files, you can get them from your file system by yourself.</p>
 <p>The file is called <code class="file docutils literal notranslate"><span class="pre">krita-sysinfo.log</span></code>. Location of the file:</p>
 <blockquote>
@@ -361,6 +378,11 @@
 </dd>
 <dt>macOS</dt><dd><p><code class="file docutils literal notranslate"><span class="pre">$HOME/Library/Application</span> <span class="pre">Support/krita-sysinfo.log</span></code></p>
 </dd>
+<dt>Android</dt><dd><ul class="simple">
+<li><p>Play Store version: <code class="file docutils literal notranslate"><span class="pre">&lt;storage&gt;/Android/data/org.krita/files/krita-sysinfo.log</span></code></p></li>
+<li><p>Krita Next: <code class="file docutils literal notranslate"><span class="pre">&lt;storage&gt;/Android/data/org.krita.next/files/krita-sysinfo.log</span></code></p></li>
+</ul>
+</dd>
 </dl>
 </div></blockquote>
 <div class="admonition note">
@@ -370,15 +392,15 @@
 </section>
 </section>
 <section id="crash-log-and-backtrace">
-<span id="getting-backtrace"></span><h2>當機紀錄及 Backtrace<a class="headerlink" href="#crash-log-and-backtrace" title="本標題的永久連結">¶</a></h2>
+<span id="getting-backtrace"></span><h2>當機紀錄及 Backtrace<a class="headerlink" href="#crash-log-and-backtrace" title="Permalink to this heading">¶</a></h2>
 <p>Location and the way to get a backtrace is different on all systems.</p>
 <section id="windows">
-<span id="getting-backtrace-windows"></span><h3>Windows<a class="headerlink" href="#windows" title="本標題的永久連結">¶</a></h3>
+<span id="getting-backtrace-windows"></span><h3>Windows<a class="headerlink" href="#windows" title="Permalink to this heading">¶</a></h3>
 <p>Usually, it is sufficient to share the content of <span class="menuselection">Help ‣ Show Krita Log for bug reports</span> as it contains the backtrace.</p>
 <p>If you cannot open Krita because it crashes on startup, please provide the <code class="file docutils literal notranslate"><span class="pre">%LOCALAPPDATA%\kritacrash.log</span></code>. Sometimes more detailed information is needed, then you will be asked to closely follow <a class="reference internal" href="dr_minw_debugger.html#dr-minw"><span class="std std-ref">Dr. Mingw debugger</span></a> guide.</p>
 </section>
 <section id="linux">
-<span id="getting-backtrace-linux"></span><h3>Linux<a class="headerlink" href="#linux" title="本標題的永久連結">¶</a></h3>
+<span id="getting-backtrace-linux"></span><h3>Linux<a class="headerlink" href="#linux" title="Permalink to this heading">¶</a></h3>
 <p>On Linux, there are five ways of installing Krita.</p>
 <blockquote>
 <div><ul class="simple">
@@ -440,7 +462,7 @@ gdb path/to/krita
 </ol>
 </section>
 <section id="macos">
-<span id="getting-backtrace-mac"></span><h3>macOS<a class="headerlink" href="#macos" title="本標題的永久連結">¶</a></h3>
+<span id="getting-backtrace-mac"></span><h3>macOS<a class="headerlink" href="#macos" title="Permalink to this heading">¶</a></h3>
 <p>On macOS it's recommended to use <code class="docutils literal notranslate"><span class="pre">lldb</span></code>.</p>
 <ol class="arabic">
 <li><p>Open Terminal.app</p></li>
@@ -475,12 +497,21 @@ gdb path/to/krita
 </li>
 </ol>
 </section>
+<section id="android">
+<span id="getting-backtrace-android"></span><h3>Android<a class="headerlink" href="#android" title="Permalink to this heading">¶</a></h3>
+<p>To get the logs using the GUI, share the content of <span class="menuselection">Help ‣ Show crash log for bug reports</span>.</p>
+<p>If you cannot open Krita because it crashes on startup, please provide the <code class="file docutils literal notranslate"><span class="pre">&lt;storage&gt;/Android/data/org.krita/files/kritacrashlog.txt</span></code>.</p>
+</section>
+<section id="logcat-android">
+<span id="getting-logcat"></span><h3>Logcat (Android)<a class="headerlink" href="#logcat-android" title="Permalink to this heading">¶</a></h3>
+<p>To get the logcat output for Krita, share the content of <span class="menuselection">Help ‣ Show Android log for bug reports</span>.</p>
+</section>
 </section>
 <section id="krita-s-text-output">
-<span id="krita-console-debugview"></span><h2>Krita 的文字紀錄輸出<a class="headerlink" href="#krita-s-text-output" title="本標題的永久連結">¶</a></h2>
+<span id="krita-console-debugview"></span><h2>Krita 的文字紀錄輸出<a class="headerlink" href="#krita-s-text-output" title="Permalink to this heading">¶</a></h2>
 <p>Most of Krita's text output can be gathered using <span class="guilabel">Log Viewer</span>. The only exception are messages from when Krita is starting up, so there is no GUI yet, or when it closes or crashes so no user interaction is possible after the event.</p>
 <section id="krita-text-output-logviewer">
-<span id="id4"></span><h3>經由使用者介面<a class="headerlink" href="#krita-text-output-logviewer" title="本標題的永久連結">¶</a></h3>
+<span id="id4"></span><h3>經由使用者介面<a class="headerlink" href="#krita-text-output-logviewer" title="Permalink to this heading">¶</a></h3>
 <ol class="arabic simple">
 <li><p>Go to <span class="menuselection">Settings ‣ Dockers ‣ Log Viewer</span>.</p></li>
 <li><p>The first button from the left enables and disables logging, so make sure it is pressed.</p></li>
@@ -490,7 +521,7 @@ gdb path/to/krita
 </ol>
 </section>
 <section id="from-the-console">
-<span id="krita-text-output-console"></span><h3>經由主控台視窗<a class="headerlink" href="#from-the-console" title="本標題的永久連結">¶</a></h3>
+<span id="krita-text-output-console"></span><h3>經由主控台視窗<a class="headerlink" href="#from-the-console" title="Permalink to this heading">¶</a></h3>
 <p>Using the console is the most reliable way to get Krita's text output. This way is similar on macOS and Linux.</p>
 <blockquote>
 <div><div class="versionchanged">
@@ -531,7 +562,7 @@ path/to/krita
 </ol>
 </section>
 <section id="from-the-debugview">
-<span id="using-debug-view"></span><h3>經由 DebugView<a class="headerlink" href="#from-the-debugview" title="本標題的永久連結">¶</a></h3>
+<span id="using-debug-view"></span><h3>經由 DebugView<a class="headerlink" href="#from-the-debugview" title="Permalink to this heading">¶</a></h3>
 <p>To get the text output of Krita on Windows using the graphical program, you need an external program called <code class="docutils literal notranslate"><span class="pre">DebugView</span></code>. Compared to using the console, DebugView has the benefit of including timestamps to the log entries.</p>
 <ol class="arabic simple">
 <li><p><a class="reference external" href="https://docs.microsoft.com/en-us/sysinternals/downloads/debugview">Download DebugView</a> if you haven't already. Click on the blue bold <span class="guilabel">Download DebugView</span> text with underline, downloading should start immediately.</p></li>
@@ -568,7 +599,7 @@ path/to/krita
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>6a90bff</code>
+          修訂版本 <code>d9da50a</code>
         </span>
       
 
@@ -594,6 +625,7 @@ path/to/krita
       <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
       <script src="../_static/jquery.js"></script>
       <script src="../_static/underscore.js"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
       <script src="../_static/doctools.js"></script>
       <script src="../_static/translations.js"></script>
 

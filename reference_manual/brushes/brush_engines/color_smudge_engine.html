@@ -9,7 +9,7 @@
   <meta property="og:title" name="title" content="混色筆刷工具" />
   <meta property="og:site-name" content="Krita Manual" />
   <meta property="og:type" content="article" />
-  <meta property="og:locale" content="zh_TW" />
+  <meta property="og:locale" content="zh-TW" />
   <meta property="og:locale:alternate" content="ca" />
   <meta property="og:locale:alternate" content="en" />
   <meta property="og:locale:alternate" content="fr" />
@@ -21,8 +21,8 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2022-05-02T15:19:52" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta property="og:article:modified_time" content="2022-06-29T13:10:37" />
+  <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <meta content="混色筆刷工具的手冊頁。" name="description" property="og:description" />
 
   
@@ -277,10 +277,10 @@
            <div itemprop="articleBody">
             
   <section id="color-smudge-brush-engine">
-<span id="index-0"></span><span id="id1"></span><h1>混色筆刷工具<a class="headerlink" href="#color-smudge-brush-engine" title="本標題的永久連結">¶</a></h1>
+<span id="index-0"></span><span id="id1"></span><h1>混色筆刷工具<a class="headerlink" href="#color-smudge-brush-engine" title="Permalink to this heading">¶</a></h1>
 <img alt="../../../_images/colorsmudge.svg" src="../../../_images/colorsmudge.svg" /><p>色彩塗筆刷使用於通過塗抹或變暗來混合顏色。是個非常實用的繪畫筆刷引擎。</p>
 <section id="options">
-<h2>選項<a class="headerlink" href="#options" title="本標題的永久連結">¶</a></h2>
+<h2>選項<a class="headerlink" href="#options" title="Permalink to this heading">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference internal" href="../brush_settings/brush_tips.html#option-brush-tip"><span class="std std-ref">筆尖</span></a></p></li>
 <li><p><a class="reference internal" href="../../blending_modes.html#blending-modes"><span class="std std-ref">混色模式</span></a></p></li>
@@ -300,9 +300,9 @@
 </ul>
 </section>
 <section id="options-unique-to-the-color-smudge-brush">
-<h2>顏色塗抹專用選項<a class="headerlink" href="#options-unique-to-the-color-smudge-brush" title="本標題的永久連結">¶</a></h2>
+<h2>顏色塗抹專用選項<a class="headerlink" href="#options-unique-to-the-color-smudge-brush" title="Permalink to this heading">¶</a></h2>
 <section id="color-rate">
-<span id="option-color-rate"></span><h3>顏色色率<a class="headerlink" href="#color-rate" title="本標題的永久連結">¶</a></h3>
+<span id="option-color-rate"></span><h3>顏色色率<a class="headerlink" href="#color-rate" title="Permalink to this heading">¶</a></h3>
 <p>使用塗抹混色時前景色的比重是多少。運用<a class="reference internal" href="#option-smudge-length"><span class="std std-ref">Smudge Length</span></a>以及<a class="reference internal" href="#option-smudge-radius"><span class="std std-ref">Smudge Radius</span></a>來應用。</p>
 <figure class="align-default" id="id2">
 <img alt="../../../_images/brushengine_color_rate_smear.svg" src="../../../_images/brushengine_color_rate_smear.svg" /><figcaption>
@@ -323,7 +323,7 @@
 <p>Blending modes are applied when the color part is composed onto the smudge part. This effectively means that color smudge brushes with a blending mode other than <a class="reference internal" href="../../blending_modes/mix.html#bm-normal"><span class="std std-ref">正常</span></a> will be greatly affected by <em class="dfn">Color Rate</em> in addition to <a class="reference internal" href="../brush_settings/options.html#option-spacing"><span class="std std-ref">間距</span></a> and <a class="reference internal" href="../brush_settings/opacity_and_flow.html#option-opacity-n-flow"><span class="std std-ref">opacity</span></a>.</p>
 </section>
 <section id="smudge-length">
-<span id="option-smudge-length"></span><h3>Smudge Length<a class="headerlink" href="#smudge-length" title="本標題的永久連結">¶</a></h3>
+<span id="option-smudge-length"></span><h3>Smudge Length<a class="headerlink" href="#smudge-length" title="Permalink to this heading">¶</a></h3>
 <p>Affects smudging and allows you to set it to Sensors. Smudging is greatly affected by <a class="reference internal" href="../brush_settings/options.html#option-spacing"><span class="std std-ref">間距</span></a> as well as <a class="reference internal" href="../brush_settings/opacity_and_flow.html#option-opacity-n-flow"><span class="std std-ref">Opacity</span></a>. The former controls how many dabs are placed, and thus how many samples are made. This results in a smoother result for <em class="dfn">Smear Mode</em>, and a more opaque result for <em class="dfn">Dulling Mode</em>.</p>
 <p>There are two major types:</p>
 <dl>
@@ -369,14 +369,14 @@
 </dd>
 </dl>
 <section id="common-behaviors">
-<h4>Common behaviors:<a class="headerlink" href="#common-behaviors" title="本標題的永久連結">¶</a></h4>
+<h4>Common behaviors:<a class="headerlink" href="#common-behaviors" title="Permalink to this heading">¶</a></h4>
 <ul class="simple">
 <li><p>Unchecking the smudge length function sets smudge length to 100% (not 0.00).</p></li>
 <li><p>Opacity: Below 50%, there is practically no smudging left: keep opacity over 50%.</p></li>
 </ul>
 </section>
 <section id="differences">
-<h4>Differences:<a class="headerlink" href="#differences" title="本標題的永久連結">¶</a></h4>
+<h4>Differences:<a class="headerlink" href="#differences" title="Permalink to this heading">¶</a></h4>
 <ul class="simple">
 <li><p>Spacing with Smearing: the lower the spacing, the smoother the effect, so for smearing with a round brush you may prefer a value of 0.05 or less. Spacing affects the length of the smudge trail, but to a much lesser extent. The <span class="guilabel">strength</span> of the effect remains more or less the same however.</p></li>
 <li><p>Spacing with Dulling: the lower the spacing, the stronger the effect: lowering the spacing too much can make the dulling effect too strong (it picks up a color and never lets go of it). The length of the effect is also affected.</p></li>
@@ -385,7 +385,7 @@
 </section>
 </section>
 <section id="smudge-radius">
-<span id="option-smudge-radius"></span><h3>Smudge Radius<a class="headerlink" href="#smudge-radius" title="本標題的永久連結">¶</a></h3>
+<span id="option-smudge-radius"></span><h3>Smudge Radius<a class="headerlink" href="#smudge-radius" title="Permalink to this heading">¶</a></h3>
 <p>The <span class="guilabel">Smudge Radius</span> allows you to sample a larger radius when using smudge-length in <span class="guilabel">Dulling</span> mode.</p>
 <p>The slider is percentage of the brush-size. You can have it modified with <span class="guilabel">Sensors</span>.</p>
 <figure class="align-default" id="id7">
@@ -399,13 +399,13 @@
 </div>
 </section>
 <section id="overlay">
-<span id="option-overlay"></span><h3>Overlay<a class="headerlink" href="#overlay" title="本標題的永久連結">¶</a></h3>
+<span id="option-overlay"></span><h3>Overlay<a class="headerlink" href="#overlay" title="Permalink to this heading">¶</a></h3>
 <p>Overlay is a toggle that determine whether the smudge brush will sample all layers (overlay on), or only the current one.</p>
 <p>By default, the Color Smudge Brush only takes information from the layer it is on. However, if you want it to take color information from all the layers, you can turn on the Overlay mode.</p>
 <p>Be aware though, that it does so by &quot;picking up&quot; bits of the layer underneath, which may mess up your drawing if you later make changes to the layer underneath.</p>
 </section>
 <section id="paint-thickness">
-<span id="option-paint-thickness"></span><h3>Paint Thickness<a class="headerlink" href="#paint-thickness" title="本標題的永久連結">¶</a></h3>
+<span id="option-paint-thickness"></span><h3>Paint Thickness<a class="headerlink" href="#paint-thickness" title="Permalink to this heading">¶</a></h3>
 <div class="versionadded">
 <p><span class="versionmodified added">在 5.0 版本新加入.</span></p>
 </div>
@@ -430,7 +430,7 @@
 </figure>
 </section>
 <section id="hue-saturation-value">
-<span id="option-hue-sat-val-color-smudge"></span><h3>Hue, Saturation, Value<a class="headerlink" href="#hue-saturation-value" title="本標題的永久連結">¶</a></h3>
+<span id="option-hue-sat-val-color-smudge"></span><h3>Hue, Saturation, Value<a class="headerlink" href="#hue-saturation-value" title="Permalink to this heading">¶</a></h3>
 <p>Identical to <a class="reference internal" href="pixel_brush_engine.html#option-hue-sat-val-pixel"><span class="std std-ref">Hue, Saturation, Value</span></a> in the Pixel Brush Engine, this will adjust the current foreground color before it is mixed in via <a class="reference internal" href="#option-color-rate"><span class="std std-ref">顏色色率</span></a>. Introduced because this brush engine used to have a small rounding error leading to iridescent smears, which was fixed. Artists who liked this effect can now emulate it by enabling <span class="guilabel">Hue</span>, enabling <span class="guilabel">Fuzzy Dab</span> and disabling <span class="guilabel">Pressure</span> and finally setting <span class="guilabel">Strength</span> to 40%.</p>
 <figure class="align-default" id="id10">
 <img alt="../../../_images/brushengine_smudge_hue_variance.png" src="../../../_images/brushengine_smudge_hue_variance.png" />
@@ -441,13 +441,13 @@
 <p>Hue, Saturation and Value don't affect brush-tips using the <a class="reference internal" href="../brush_settings/brush_tips.html#brush-mode"><span class="std std-ref">gradient mode</span></a>.</p>
 </section>
 <section id="brush-tips">
-<h3>Brush tips<a class="headerlink" href="#brush-tips" title="本標題的永久連結">¶</a></h3>
+<h3>Brush tips<a class="headerlink" href="#brush-tips" title="Permalink to this heading">¶</a></h3>
 <p>The <em class="dfn">Color Smudge Brush</em> has all the same <a class="reference internal" href="../brush_settings/brush_tips.html#option-brush-tip"><span class="std std-ref">筆尖</span></a> as the <a class="reference internal" href="pixel_brush_engine.html#pixel-brush-engine"><span class="std std-ref">像素筆刷工具</span></a>!</p>
 <img alt="../../../_images/Krita-tutorial5-I.4.png" src="../../../_images/Krita-tutorial5-I.4.png" />
 <p>Just remember that the smudge effects are weaker when a brush tip's opacity is lower, so for low-opacity brush tips, increase the opacity and smudge/color rates.</p>
 </section>
 <section id="scatter-and-other-shape-dynamics">
-<h3>Scatter and other shape dynamics<a class="headerlink" href="#scatter-and-other-shape-dynamics" title="本標題的永久連結">¶</a></h3>
+<h3>Scatter and other shape dynamics<a class="headerlink" href="#scatter-and-other-shape-dynamics" title="Permalink to this heading">¶</a></h3>
 <p>The <em class="dfn">Color Smudge Brush</em> shares a number of options with the <a class="reference internal" href="pixel_brush_engine.html#pixel-brush-engine"><span class="std std-ref">像素筆刷工具</span></a>.</p>
 <p>However, because of the Smudge effects, the outcome will be different from the Pixel Brush. In particular, the Scatter option becomes much more significant.</p>
 <img alt="../../../_images/Krita-tutorial5-I.5-1.png" src="../../../_images/Krita-tutorial5-I.5-1.png" />
@@ -461,14 +461,14 @@
 </section>
 </section>
 <section id="tutorial-color-smudge-brushes">
-<h2>Tutorial: Color Smudge Brushes<a class="headerlink" href="#tutorial-color-smudge-brushes" title="本標題的永久連結">¶</a></h2>
+<h2>Tutorial: Color Smudge Brushes<a class="headerlink" href="#tutorial-color-smudge-brushes" title="Permalink to this heading">¶</a></h2>
 <p>I recommend at least skimming over the first part to get an idea of what does what.</p>
 <section id="smudging-and-blending">
-<h3>Smudging and blending<a class="headerlink" href="#smudging-and-blending" title="本標題的永久連結">¶</a></h3>
+<h3>Smudging and blending<a class="headerlink" href="#smudging-and-blending" title="Permalink to this heading">¶</a></h3>
 <p>This part describes use cases with color rate off.</p>
 <p>I won't explain the settings for dynamics in detail, as you can find the explanations in the <a class="reference internal" href="pixel_brush_engine.html#pixel-brush-engine"><span class="std std-ref">Pixel Brush tutorial</span></a>.</p>
 <section id="smudging-effects">
-<h4>Smudging effects<a class="headerlink" href="#smudging-effects" title="本標題的永久連結">¶</a></h4>
+<h4>Smudging effects<a class="headerlink" href="#smudging-effects" title="Permalink to this heading">¶</a></h4>
 <p>For simple smudging:</p>
 <ul class="simple">
 <li><p>Pick the Color Smudge Brush. You can use either Smearing or Dulling.</p></li>
@@ -478,13 +478,13 @@
 <img alt="../../../_images/Krita-tutorial5-II.2.png" src="../../../_images/Krita-tutorial5-II.2.png" />
 <p>When using lower opacity brush tips, remember to &quot;compensate&quot; for the less visible effects by increasing both <span class="guilabel">Smudge Rate</span> and <span class="guilabel">Opacity</span>, if necessary to maximum.</p>
 <section id="some-settings-for-smearing">
-<h5>Some settings for Smearing<a class="headerlink" href="#some-settings-for-smearing" title="本標題的永久連結">¶</a></h5>
+<h5>Some settings for Smearing<a class="headerlink" href="#some-settings-for-smearing" title="Permalink to this heading">¶</a></h5>
 <ul class="simple">
 <li><p>For smoother smearing, decrease spacing. Remember that spacing is proportional to brush tip size. For a small round brush, 0.10 spacing is fine, but for mid-sized and large brushes, decrease spacing to 0.05 or less.</p></li>
 </ul>
 </section>
 <section id="some-settings-for-dulling">
-<h5>Some settings for Dulling<a class="headerlink" href="#some-settings-for-dulling" title="本標題的永久連結">¶</a></h5>
+<h5>Some settings for Dulling<a class="headerlink" href="#some-settings-for-dulling" title="Permalink to this heading">¶</a></h5>
 <ul class="simple">
 <li><p>Lowering the spacing will also make the smudging effect stronger, so find a right balance. 0.10 for most mid-sized round brushes should be fine.</p></li>
 <li><p>Unlike Smearing, Dulling preserves the brush shape and size, so it won't &quot;fade off&quot; in size like Smearing brushes do. You can mimic that effect through the simple size fade dynamic.</p></li>
@@ -492,7 +492,7 @@
 </section>
 </section>
 <section id="textured-blending">
-<h4>Textured blending<a class="headerlink" href="#textured-blending" title="本標題的永久連結">¶</a></h4>
+<h4>Textured blending<a class="headerlink" href="#textured-blending" title="Permalink to this heading">¶</a></h4>
 <p>In this case, what I refer to as &quot;Blending&quot; here is simply using one of the following two dynamics:</p>
 <ul class="simple">
 <li><p><span class="guilabel">Rotation</span> set to <span class="guilabel">Distance</span> or <span class="guilabel">Fuzzy</span></p></li>
@@ -515,10 +515,10 @@
 </section>
 </section>
 <section id="coloring">
-<h3>Coloring<a class="headerlink" href="#coloring" title="本標題的永久連結">¶</a></h3>
+<h3>Coloring<a class="headerlink" href="#coloring" title="Permalink to this heading">¶</a></h3>
 <p>For this last section, <span class="guilabel">Color Rate</span> is on.</p>
 <section id="layer-options">
-<h4>Layer options<a class="headerlink" href="#layer-options" title="本標題的永久連結">¶</a></h4>
+<h4>Layer options<a class="headerlink" href="#layer-options" title="Permalink to this heading">¶</a></h4>
 <p>Before we get started, notice that you have several possibilities for your set-up:</p>
 <ul>
 <li><p>Shading on the same layer</p></li>
@@ -539,7 +539,7 @@
 </ul>
 <img alt="../../../_images/Krita-tutorial5-III.1-1.png" src="../../../_images/Krita-tutorial5-III.1-1.png" />
 <section id="issue-with-transparency">
-<h5>Issue with transparency<a class="headerlink" href="#issue-with-transparency" title="本標題的永久連結">¶</a></h5>
+<h5>Issue with transparency<a class="headerlink" href="#issue-with-transparency" title="Permalink to this heading">¶</a></h5>
 <p>The <em class="dfn">Color Smudge Brush</em> blends with transparency. What this means is that when you start a new, transparent layer and &quot;paint&quot; on this layer, you will nearly always get less than full opacity.</p>
 <p>Basically:</p>
 <ul class="simple">
@@ -565,7 +565,7 @@
 </section>
 </section>
 <section id="soft-shading">
-<h3>Soft-shading<a class="headerlink" href="#soft-shading" title="本標題的永久連結">¶</a></h3>
+<h3>Soft-shading<a class="headerlink" href="#soft-shading" title="Permalink to this heading">¶</a></h3>
 <p>Suppose you want more or less smooth color transitions. You can either:</p>
 <ul class="simple">
 <li><p><span class="guilabel">Color Rate</span> as low as 10% for round brushes, higher with non fully opaque brush tips.</p></li>
@@ -584,7 +584,7 @@
 <img alt="../../../_images/Krita-tutorial5-III.2-2.png" src="../../../_images/Krita-tutorial5-III.2-2.png" />
 </section>
 <section id="painting-thick-oil-style">
-<h3>Painting: thick oil style<a class="headerlink" href="#painting-thick-oil-style" title="本標題的永久連結">¶</a></h3>
+<h3>Painting: thick oil style<a class="headerlink" href="#painting-thick-oil-style" title="Permalink to this heading">¶</a></h3>
 <p>Many of the included color smudge brush presets produce a thick oil paint-like effect.
 This is mainly achieved with the Smearing mode on. Basically:</p>
 <ul class="simple">
@@ -605,7 +605,7 @@ This is mainly achieved with the Smearing mode on. Basically:</p>
 <img alt="../../../_images/Krita-tutorial5-III.3-3.png" src="../../../_images/Krita-tutorial5-III.3-3.png" />
 </section>
 <section id="painting-digital-watercolor-style">
-<h3>Painting: Digital watercolor style<a class="headerlink" href="#painting-digital-watercolor-style" title="本標題的永久連結">¶</a></h3>
+<h3>Painting: Digital watercolor style<a class="headerlink" href="#painting-digital-watercolor-style" title="Permalink to this heading">¶</a></h3>
 <p>When I say &quot;digital watercolor&quot;, it refers to a style often seen online, i.e. a soft, smooth shading style rather than realistic watercolor. For this you mostly need the Dulling mode. A few things:</p>
 <ul class="simple">
 <li><p>Contrary to the Smearing mode, you may want to lower opacity for normal round brushes to get a smoother effect, to 70% for example.</p></li>
@@ -615,7 +615,7 @@ This is mainly achieved with the Smearing mode on. Basically:</p>
 <img alt="../../../_images/Krita-tutorial5-III.4.png" src="../../../_images/Krita-tutorial5-III.4.png" />
 </section>
 <section id="blurring">
-<h3>Blurring<a class="headerlink" href="#blurring" title="本標題的永久連結">¶</a></h3>
+<h3>Blurring<a class="headerlink" href="#blurring" title="Permalink to this heading">¶</a></h3>
 <p>You can:</p>
 <ul class="simple">
 <li><p>Paint then smudge, for mostly texture transitions</p></li>
@@ -651,7 +651,7 @@ This is mainly achieved with the Smearing mode on. Basically:</p>
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>6a90bff</code>
+          修訂版本 <code>d9da50a</code>
         </span>
       
 
@@ -677,6 +677,7 @@ This is mainly achieved with the Smearing mode on. Basically:</p>
       <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
       <script src="../../../_static/jquery.js"></script>
       <script src="../../../_static/underscore.js"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
       <script src="../../../_static/doctools.js"></script>
       <script src="../../../_static/translations.js"></script>
 

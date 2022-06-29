@@ -1,0 +1,360 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-TW" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-TW" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" name="title" content="*.jxl" />
+  <meta property="og:site-name" content="Krita Manual" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="zh-TW" />
+  <meta property="og:locale:alternate" content="ca" />
+  <meta property="og:locale:alternate" content="en" />
+  <meta property="og:locale:alternate" content="fr" />
+  <meta property="og:locale:alternate" content="it" />
+  <meta property="og:locale:alternate" content="ja" />
+  <meta property="og:locale:alternate" content="ko" />
+  <meta property="og:locale:alternate" content="nl" />
+  <meta property="og:locale:alternate" content="pl" />
+  <meta property="og:locale:alternate" content="pt_PT" />
+  <meta property="og:locale:alternate" content="uk_UA" />
+  <meta property="og:locale:alternate" content="zh_CN" />
+  <meta property="og:article:modified_time" content="2022-06-29T13:10:37" />
+  <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+<meta content="The JPEG XL file format in Krita." name="description" />
+
+  
+  
+  <title>*.jxl &mdash; Krita Manual 5.0.0 說明文件</title>
+  
+
+  
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    
+  
+  
+  
+    <link rel="canonical" href="zh_TW/general_concepts/file_formats/file_jxl.html"/>
+    <meta property="og:url" content="zh_TW/general_concepts/file_formats/file_jxl.html" />
+    <meta property="og:image" content="zh_TW/_static/sidebar-logo.png" />
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜尋" href="../../search.html" />
+    <link rel="next" title="*.kpl" href="file_kpl.html" />
+    <link rel="prev" title="*.jpg" href="file_jpeg.html" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+       
+           <a href="../../index.html" class="icon icon-home">
+
+			<img src="../../_static/sidebar-logo.png" class="logo" alt="Logo"/>
+           	
+           <!--	Krita Manual -->
+
+
+          </a>
+
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="搜尋文件" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-side-nav-language-selector">
+        	<p class="caption-text">
+	        	<select id="language-selector-container">
+	        		<option value="ca">Català</option>
+	        		<option value="en">English</option>
+	        		<option value="fr">français</option>
+	        		<option value="it">Italiano</option>
+	        		<option value="ja">日本語</option>
+	        		<option value="ko">한국어</option>
+	        		<option value="nl">Nederlands</option>
+	        		<option value="pl">Polski</option>
+	        		<option value="pt_PT">português</option>
+	        		<option value="uk_UA">Українська</option>
+	        		<option value="zh_CN">简体中文</option>
+	        	</select>
+        	</p>
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../user_manual.html">使用者手冊</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../general_concepts.html">通用概念</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../colors.html">色彩</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../file_formats.html">檔案格式</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../file_formats.html#compression">壓縮</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../file_formats.html#metadata">中繼資料</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../file_formats.html#openness">開放性</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../file_formats.html#contents">目錄</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="file_bmp.html">*.bmp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_csv.html">*.csv</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_exr.html">*.exr</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_gbr.html">*.gbr</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_gif.html">*.gif</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_gih.html">*.gih</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_heif.html">*.heif 及 *.avif</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_jpeg.html">*.jpg</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">*.jxl</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_kpl.html">*.kpl</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_kra.html">*.kra</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_ora.html">*.ora</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_pbgpm.html">*.pbm、*.pgm 及 *.ppm</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_pdf.html">*.pdf</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_png.html">*.png</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_psd.html">*.psd</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_svg.html">*.svg</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_tif.html">*.tiff</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lossy_lossless.html">有損與無損影像壓縮方式</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../projection.html">透視投影</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference_manual.html">參考文件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials.html">教學及指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../KritaFAQ.html">常見問題 FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributors_manual.html">貢獻者手冊</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../resources_page.html">資源</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+	<!-- start top banner area (for fundraisers or messages)
+
+	<div style="text-align: center; background-color: #333">
+		<a href="https://krita.org/en/fundraising-2018-campaign/" target="_self" onclick="ga('send', 'event', 'frontpage', 'button', 'Fundraiser 2018');">
+			<img src="https://krita.org/wp-content/themes/krita-org-theme/images/decoration/2018-fundraiser-banner.png" style="max-width: 100%">
+		</a>
+	</div>
+	
+	 end top banner area -->
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Krita Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">文件</a> &raquo;</li>
+        
+          <li><a href="../../general_concepts.html">通用概念</a> &raquo;</li>
+        
+          <li><a href="../file_formats.html">檔案格式</a> &raquo;</li>
+        
+      <li>*.jxl</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+          
+            <a href="../../_sources/general_concepts/file_formats/file_jxl.rst.txt" rel="nofollow"> 
+             
+              <img src="../../_static/images/source-code.png" />
+             <!-- 檢視頁面原始碼 -->
+
+          </a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="jxl">
+<span id="file-jxl"></span><span id="index-0"></span><h1>*.jxl<a class="headerlink" href="#jxl" title="Permalink to this heading">¶</a></h1>
+<p>JPEG XL (<code class="docutils literal notranslate"><span class="pre">.jxl</span></code>) is a new royalty-free image file format. It supports <a class="reference internal" href="lossy_lossless.html#lossless-compression"><span class="std std-ref">lossy compression mode</span></a> designed for photographs similar to the <a class="reference internal" href="file_jpeg.html#file-jpeg"><span class="std std-ref">JPEG</span></a> file format, and also <a class="reference internal" href="lossy_lossless.html#lossless-compression"><span class="std std-ref">lossless compression mode</span></a> similar to formats like <a class="reference internal" href="file_png.html#file-png"><span class="std std-ref">PNG</span></a>. In addition, it also supports saving animations with multiple frames like <a class="reference internal" href="file_gif.html#file-gif"><span class="std std-ref">GIF</span></a>.</p>
+<p>When deciding between lossy and lossless compression modes, the same advice for <a class="reference internal" href="file_jpeg.html#file-jpeg"><span class="std std-ref">JPEG</span></a> and <a class="reference internal" href="file_png.html#file-png"><span class="std std-ref">PNG</span></a> applies. For images with a lot of gradients, like full scale paintings, lossy compression may work very well to produce small files with very little visual quality loss. But for images with a lot of sharp contrasts, like text and comic book styles, lossless compression is usually the better choice.</p>
+<p>For JPEG XL files using lossy compression, it is not advised to save over the same file multiple times. The lossy compression will cause the file to reduce in quality each time you save it. This is a fundamental problem with lossy compression methods. Instead you should use the lossless compression mode, or a working file format while you are working on the image.</p>
+<p>It is possible to losslessly transcode JPEG images into JPEG XL. Transcoding preserves the already-lossy compression data from the original JPEG image without any quality loss caused by re-encoding, while making the file size smaller than the original. To do this, you need to use specialized tools, for example the <strong class="program">cjxl</strong> command line tool from <a class="reference external" href="https://github.com/libjxl/libjxl">libjxl</a>, to perform the conversion. Beware that you <em>cannot</em> do this by opening the JPEG image in Krita and re-exporting it into JPEG XL. Krita always exports files from the raw pixel data, therefore this does <em>not</em> have the same effect as transcoding directly from JPEG to JPEG XL.</p>
+<p>Exporting animations from Krita as JPEG XL is supported, though this flattens all layers in the image. To export JPEG XL animations, use <a class="reference internal" href="../../reference_manual/main_menu/file_menu.html#term-Export..."><span class="xref std std-term">Export...</span></a> from the <a class="reference internal" href="../../reference_manual/main_menu/file_menu.html#file-menu"><span class="std std-ref">「檔案」選單</span></a> and then saving or exporting to a <code class="docutils literal notranslate"><span class="pre">.jxl</span></code> file. Make sure to enable <span class="guilabel">Save as animated JPEG XL</span> in the export options. This is different from <a class="reference internal" href="../../reference_manual/render_animation.html#render-animation"><span class="std std-ref">繪製動畫</span></a> in that it does not use FFmpeg.</p>
+<div class="admonition seealso">
+<p class="admonition-title">也參考</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://jpeg.org/jpegxl/">JPEG XL official website</a></p></li>
+<li><p><a class="reference external" href="https://jpegxl.info/">JPEG XL community website</a></p></li>
+<li><p><a class="reference external" href="https://github.com/libjxl/libjxl">libjxl -- JPEG XL reference implementation</a></p></li>
+</ul>
+</div>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="file_kpl.html" class="btn btn-neutral float-right" title="*.kpl" accesskey="n" rel="next"> <!-- 下一個 --> <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="file_jpeg.html" class="btn btn-neutral" title="*.jpg" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- 上一個  -->  </a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
+      
+        <span class="commit">
+          修訂版本 <code>d9da50a</code>
+        </span>
+      
+
+    </p>
+  </div>
+  使用 <a href="http://sphinx-doc.org/">Sphinx</a> 以及經修改過的 <a href="https://github.com/rtfd/sphinx_rtd_theme">RTD 主題</a>建置<br/>
+  <a href="https://krita.org" title="Krita 官方網站">Krita 官方網站</a> |
+  <a href="https://invent.kde.org/documentation/docs-krita-org/" title="這份手冊的 KDE GitLab 專案網址">docs.krita.org 的 Git 原始碼儲存庫</a> |
+  <a href="https://www.kde.org/community/whatiskde/impressum-en.php" title="了解更多關於 KDE、code of conduct（行為準則）、隱私政策及 GDPR（一般資料保護規則）">KDE Impressum</a>
+   
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  
+      <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+      <script src="../../_static/jquery.js"></script>
+      <script src="../../_static/underscore.js"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+      <script src="../../_static/doctools.js"></script>
+      <script src="../../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
+      });
+  </script> 
+
+ <script type="text/javascript">
+	 var _paq=_paq||[];
+	 _paq.push(['setCookieDomain','*.krita.org']);
+	 _paq.push(['setDomains','*.krita.org']);
+	 _paq.push(['setDocumentTitle',document.domain+"/"+document.title]);
+	 _paq.push(['trackPageView']);
+	 _paq.push(['enableLinkTracking']);
+
+	 (function(){
+	 	var u="//stats.kde.org/";
+	    _paq.push(['setTrackerUrl',u+'piwik.php']);
+	    _paq.push(['setSiteId',13]);
+	    var d = document, g = d.createElement('script'),s=d.getElementsByTagName('script')[0];
+	    g.type = 'text/javascript';
+	    g.async = true;
+	    g.defer = true;
+	    g.src = u+'piwik.js';
+	    s.parentNode.insertBefore(g,s);
+	  })();
+</script> 
+<noscript><p><img src="//stats.kde.org/piwik.php?idsite=13" style="border:0;" alt="" /></p></noscript>
+
+</body>
+</html>

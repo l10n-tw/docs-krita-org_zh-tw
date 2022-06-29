@@ -9,7 +9,7 @@
   <meta property="og:title" name="title" content="儲存、自動儲存及備份檔案" />
   <meta property="og:site-name" content="Krita Manual" />
   <meta property="og:type" content="article" />
-  <meta property="og:locale" content="zh_TW" />
+  <meta property="og:locale" content="zh-TW" />
   <meta property="og:locale:alternate" content="ca" />
   <meta property="og:locale:alternate" content="en" />
   <meta property="og:locale:alternate" content="fr" />
@@ -21,8 +21,8 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2022-05-02T15:19:52" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta property="og:article:modified_time" content="2022-06-29T13:10:37" />
+  <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <meta content="講解在 Krita 中自動儲存和備份檔案如何運作。" name="description" property="og:description" />
 
   
@@ -252,10 +252,10 @@
            <div itemprop="articleBody">
             
   <section id="saving-autosave-and-backup-files">
-<span id="autosave"></span><span id="index-0"></span><h1>儲存、自動儲存及備份檔案<a class="headerlink" href="#saving-autosave-and-backup-files" title="本標題的永久連結">¶</a></h1>
+<span id="autosave"></span><span id="index-0"></span><h1>儲存、自動儲存及備份檔案<a class="headerlink" href="#saving-autosave-and-backup-files" title="Permalink to this heading">¶</a></h1>
 <p>Krita does its best to keep your work safe. But if you want to make sure that you won't lose work, you will need to understand how Saving, AutoSave and Backup Files work in Krita.</p>
 <section id="saving">
-<h2>儲存<a class="headerlink" href="#saving" title="本標題的永久連結">¶</a></h2>
+<h2>儲存<a class="headerlink" href="#saving" title="Permalink to this heading">¶</a></h2>
 <p>Krita does not store your images somewhere without your intervention. You need to save your work, or it will be lost, irretrievably. Krita can save your images in many formats. You should always save your work in Krita's native format, <code class="docutils literal notranslate"><span class="pre">.kra</span></code>
 because that supports all Krita's features.</p>
 <p>Additionally, you can export your work to other formats, for compatibility with other applications or publication on the Web or on paper. Krita will warn which aspects of your work are going to be lost when you save to another format than <code class="docutils literal notranslate"><span class="pre">.kra</span></code> and offers to make a <code class="docutils literal notranslate"><span class="pre">.kra</span></code> file for you as well.</p>
@@ -267,7 +267,7 @@ because that supports all Krita's features.</p>
 <p><a class="reference internal" href="../tutorials/saving-for-the-web.html#saving-for-the-web"><span class="std std-ref">Saving for the Web</span></a></p>
 </section>
 <section id="id1">
-<h2>自動儲存<a class="headerlink" href="#id1" title="本標題的永久連結">¶</a></h2>
+<h2>自動儲存<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h2>
 <p>AutoSave is what happens when you've worked for a bit and not saved your work yourself: Krita will save your work for you. Autosave files are by default hidden in your file manager. You can configure Krita 4.2 and up to create autosave files that are visible in your file manager. By default, Krita autosaves every fifteen minutes; you can configure that in the File tab of the General Settings page of the <span class="guilabel">Configure Krita</span> dialog, which is in the Settings menu (Linux, Windows) or in the Application menu (macOS).</p>
 <p>If you close Krita without saving, your unsaved work is lost and cannot be retrieved. Closing Krita normally also means that autosave files are removed.</p>
 <img alt="../_images/file_config_page.png" src="../_images/file_config_page.png" />
@@ -277,7 +277,7 @@ because that supports all Krita's features.</p>
 <li><p>You had saved your work already</p></li>
 </ul>
 <section id="autosave-for-unsaved-files">
-<h3>未經儲存檔案的「自動儲存」<a class="headerlink" href="#autosave-for-unsaved-files" title="本標題的永久連結">¶</a></h3>
+<h3>未經儲存檔案的「自動儲存」<a class="headerlink" href="#autosave-for-unsaved-files" title="Permalink to this heading">¶</a></h3>
 <p>If you had not yet saved your work, Krita will create an unnamed AutoSave file.</p>
 <p>When you're using Linux or macOS, the AutoSave file will be a hidden file in your home directory. If you're using Windows, the AutoSave file will be a file in your user's <code class="docutils literal notranslate"><span class="pre">%TEMP%</span></code> folder. In Krita 4.2 and up, you can configure Krita to make the AutoSave files visible by default.</p>
 <p>A hidden autosave file will be named like <code class="docutils literal notranslate"><span class="pre">.krita-12549-document_1-autosave.kra</span></code></p>
@@ -288,7 +288,7 @@ because that supports all Krita's features.</p>
 <p>If you save your work and continue, or close Krita and do save your work, the AutoSave file will be removed.</p>
 </section>
 <section id="autosave-for-saved-files">
-<h3>已儲存檔案的「自動儲存」<a class="headerlink" href="#autosave-for-saved-files" title="本標題的永久連結">¶</a></h3>
+<h3>已儲存檔案的「自動儲存」<a class="headerlink" href="#autosave-for-saved-files" title="Permalink to this heading">¶</a></h3>
 <p>If you had already saved your work, Krita will create a named AutoSave file.</p>
 <p>A hidden named autosave file will look like <code class="docutils literal notranslate"><span class="pre">.myimage.kra-autosave.kra</span></code>.</p>
 <p>By default, named AutoSave files are hidden. Named AutoSave files are placed in the same folder as the file you were working on.</p>
@@ -301,7 +301,7 @@ because that supports all Krita's features.</p>
 </section>
 </section>
 <section id="backup-files">
-<h2>備份檔案<a class="headerlink" href="#backup-files" title="本標題的永久連結">¶</a></h2>
+<h2>備份檔案<a class="headerlink" href="#backup-files" title="Permalink to this heading">¶</a></h2>
 <p>There are three kinds of Backup files</p>
 <ul class="simple">
 <li><p>Ordinary Backup files that are created when you save a file that has been opened from disk</p></li>
@@ -309,7 +309,7 @@ because that supports all Krita's features.</p>
 <li><p>Incremental Version files that are saves of the file you are working on with a new number, leaving alone the existing files on disk.</p></li>
 </ul>
 <section id="ordinary-backup-files">
-<h3>普通備份檔案<a class="headerlink" href="#ordinary-backup-files" title="本標題的永久連結">¶</a></h3>
+<h3>普通備份檔案<a class="headerlink" href="#ordinary-backup-files" title="Permalink to this heading">¶</a></h3>
 <p>If you have opened a file, made changes, then save it, or save a new file after the first time you've saved it, Krita will save a backup of your file.</p>
 <p>You can disable this mechanism in the File tab of the General Settings page of the <span class="guilabel">Configure Krita</span> dialog, which is in the Settings menu (Linux, Windows) or in the Application menu (macOS). By default, Backup files are enabled.</p>
 <img alt="../_images/file_config_page.png" src="../_images/file_config_page.png" />
@@ -320,14 +320,14 @@ because that supports all Krita's features.</p>
 <p>Every time you save your file, the last version without a <code class="docutils literal notranslate"><span class="pre">~</span></code> suffix will be copied to the version with the <code class="docutils literal notranslate"><span class="pre">~</span></code> suffix. The contents of the original file will be gone: it will not be possible to restore that version.</p>
 </section>
 <section id="incremental-backup-files">
-<h3>增量備份檔案<a class="headerlink" href="#incremental-backup-files" title="本標題的永久連結">¶</a></h3>
+<h3>增量備份檔案<a class="headerlink" href="#incremental-backup-files" title="Permalink to this heading">¶</a></h3>
 <p>Incremental Backup files are similar to ordinary Backup files: the last saved state is copied to another file just before saving. However, instead of overwriting the Backup file, the Backup files are numbered:</p>
 <img alt="../_images/save_incremental_backup.png" src="../_images/save_incremental_backup.png" />
 <p>Use this when you want to keep various known good states of your image throughout your painting process. This takes more disk space, of course.</p>
 <p>Do not be confused: Krita does not save the current state of your work to the latest Incremental file, but copies the last saved file to the Backup file and then saves your image under the original filename.</p>
 </section>
 <section id="incremental-version-files">
-<h3>增量版本檔案<a class="headerlink" href="#incremental-version-files" title="本標題的永久連結">¶</a></h3>
+<h3>增量版本檔案<a class="headerlink" href="#incremental-version-files" title="Permalink to this heading">¶</a></h3>
 <p>Incremental Version works a bit like Incremental Backup, but it leaves the original files alone. Instead, it will save a new file with a file number:</p>
 <img alt="../_images/save_incremental_version.png" src="../_images/save_incremental_version.png" />
 </section>
@@ -357,7 +357,7 @@ because that supports all Krita's features.</p>
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>6a90bff</code>
+          修訂版本 <code>d9da50a</code>
         </span>
       
 
@@ -383,6 +383,7 @@ because that supports all Krita's features.</p>
       <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
       <script src="../_static/jquery.js"></script>
       <script src="../_static/underscore.js"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
       <script src="../_static/doctools.js"></script>
       <script src="../_static/translations.js"></script>
 

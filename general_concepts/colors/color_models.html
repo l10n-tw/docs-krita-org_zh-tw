@@ -9,7 +9,7 @@
   <meta property="og:title" name="title" content="色彩模型" />
   <meta property="og:site-name" content="Krita Manual" />
   <meta property="og:type" content="article" />
-  <meta property="og:locale" content="zh_TW" />
+  <meta property="og:locale" content="zh-TW" />
   <meta property="og:locale:alternate" content="ca" />
   <meta property="og:locale:alternate" content="en" />
   <meta property="og:locale:alternate" content="fr" />
@@ -21,8 +21,8 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2022-05-02T15:19:52" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta property="og:article:modified_time" content="2022-06-29T13:10:37" />
+  <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <meta content="Color Models in Krita" name="description" />
 
   
@@ -241,10 +241,10 @@
            <div itemprop="articleBody">
             
   <section id="color-models">
-<span id="index-0"></span><span id="id1"></span><h1>色彩模型<a class="headerlink" href="#color-models" title="本標題的永久連結">¶</a></h1>
+<span id="index-0"></span><span id="id1"></span><h1>色彩模型<a class="headerlink" href="#color-models" title="Permalink to this heading">¶</a></h1>
 <p>Krita has many different color spaces and models. Following here is a brief explanation of each, and their use-cases.</p>
 <section id="rgb">
-<span id="model-rgb"></span><h2>RGB<a class="headerlink" href="#rgb" title="本標題的永久連結">¶</a></h2>
+<span id="model-rgb"></span><h2>RGB<a class="headerlink" href="#rgb" title="Permalink to this heading">¶</a></h2>
 <p>Red, Green, Blue.</p>
 <p>These are the most efficient primaries for light-based color mixing, like computer screens. Adding Red, Green and Blue light together results in White, and is thus named the additive color wheel.</p>
 <p>RGB is used for two purposes:</p>
@@ -256,26 +256,8 @@
 </ul>
 <p>And for the working space. A working space is an RGB gamut that is really large and predictable, meaning it's good for image manipulation. You use this next to a profiled monitor. This way you can have precise colors while also being able to view them correctly on multiple screens.</p>
 <section id="blending-modes-in-rgb">
-<h3>Blending modes in RGB<a class="headerlink" href="#blending-modes-in-rgb" title="本標題的永久連結">¶</a></h3>
+<h3>Blending modes in RGB<a class="headerlink" href="#blending-modes-in-rgb" title="Permalink to this heading">¶</a></h3>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 8%" />
-<col style="width: 6%" />
-<col style="width: 6%" />
-<col style="width: 6%" />
-<col style="width: 6%" />
-<col style="width: 6%" />
-<col style="width: 6%" />
-<col style="width: 6%" />
-<col style="width: 6%" />
-<col style="width: 6%" />
-<col style="width: 7%" />
-<col style="width: 7%" />
-<col style="width: 7%" />
-<col style="width: 7%" />
-<col style="width: 7%" />
-<col style="width: 7%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"></th>
 <th class="head" colspan="3"><p>Color 1</p></th>
@@ -341,7 +323,7 @@
 </table>
 </section>
 <section id="rgb-models-hsv-hsl-hsi-and-hsy">
-<h3>RGB models: HSV, HSL, HSI and HSY<a class="headerlink" href="#rgb-models-hsv-hsl-hsi-and-hsy" title="本標題的永久連結">¶</a></h3>
+<h3>RGB models: HSV, HSL, HSI and HSY<a class="headerlink" href="#rgb-models-hsv-hsl-hsi-and-hsy" title="Permalink to this heading">¶</a></h3>
 <p>These are not included as their own color spaces in Krita. However, they do show up in the blending modes and color selectors, so a brief overview:</p>
 <p>--Images of relationship rgb-hsv etc.</p>
 <dl class="simple">
@@ -361,19 +343,11 @@
 </section>
 </section>
 <section id="grayscale">
-<span id="model-gray"></span><h2>Grayscale<a class="headerlink" href="#grayscale" title="本標題的永久連結">¶</a></h2>
+<span id="model-gray"></span><h2>Grayscale<a class="headerlink" href="#grayscale" title="Permalink to this heading">¶</a></h2>
 <p>This color space only registers gray values.
 This is useful, because by only registering gray values, it only needs one channel of information, which in turn means the image becomes much lighter in memory consumption!</p>
 <p>This is useful for textures, but also anything else that needs to stay grayscale, like Black and White comics.</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 12%" />
-<col style="width: 18%" />
-<col style="width: 18%" />
-<col style="width: 16%" />
-<col style="width: 20%" />
-<col style="width: 16%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"></th>
 <th class="head"><p>Color 1</p></th>
@@ -402,33 +376,10 @@ This is useful, because by only registering gray values, it only needs one chann
 </table>
 </section>
 <section id="cmyk">
-<span id="model-cmyk"></span><h2>CMYK<a class="headerlink" href="#cmyk" title="本標題的永久連結">¶</a></h2>
+<span id="model-cmyk"></span><h2>CMYK<a class="headerlink" href="#cmyk" title="Permalink to this heading">¶</a></h2>
 <p>Cyan, Magenta, Yellow, Key</p>
 <p>This is the color space of printers. Unlike computers, printers have these four colors, and adding them all adds up to black instead of white. This is thus also called a 'subtractive' color space.</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 6%" />
-<col style="width: 4%" />
-<col style="width: 4%" />
-<col style="width: 4%" />
-<col style="width: 4%" />
-<col style="width: 4%" />
-<col style="width: 4%" />
-<col style="width: 4%" />
-<col style="width: 4%" />
-<col style="width: 4%" />
-<col style="width: 4%" />
-<col style="width: 4%" />
-<col style="width: 4%" />
-<col style="width: 5%" />
-<col style="width: 5%" />
-<col style="width: 4%" />
-<col style="width: 5%" />
-<col style="width: 5%" />
-<col style="width: 5%" />
-<col style="width: 4%" />
-<col style="width: 5%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"></th>
 <th class="head" colspan="4"><p>Color 1</p></th>
@@ -509,21 +460,6 @@ This is useful, because by only registering gray values, it only needs one chann
 </table>
 <p>There's also a difference between 'colored gray' and 'neutral gray' depending on the profile.</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 17%" />
-<col style="width: 7%" />
-<col style="width: 7%" />
-<col style="width: 7%" />
-<col style="width: 7%" />
-<col style="width: 6%" />
-<col style="width: 6%" />
-<col style="width: 6%" />
-<col style="width: 6%" />
-<col style="width: 7%" />
-<col style="width: 7%" />
-<col style="width: 7%" />
-<col style="width: 7%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"></th>
 <th class="head" colspan="4"><p>25%</p></th>
@@ -586,7 +522,7 @@ This is useful, because by only registering gray values, it only needs one chann
 Or you can just give the workspace rgb image to your printer and let them handle the work.</p>
 </section>
 <section id="ycrcb">
-<span id="model-ycrcb"></span><h2>YCrCb<a class="headerlink" href="#ycrcb" title="本標題的永久連結">¶</a></h2>
+<span id="model-ycrcb"></span><h2>YCrCb<a class="headerlink" href="#ycrcb" title="Permalink to this heading">¶</a></h2>
 <p>Luminosity, Red-chroma, Blue-chroma</p>
 <p>YCrCb stands for:</p>
 <dl class="simple">
@@ -603,7 +539,7 @@ Or you can just give the workspace rgb image to your printer and let them handle
 <p>Krita doesn't bundle a ICC profile for YCrCb on the basis of there being no open source ICC profiles for this color space. It's unusable without one, and also probably very untested.</p>
 </div>
 <section id="xyz">
-<span id="model-xyz"></span><h3>XYZ<a class="headerlink" href="#xyz" title="本標題的永久連結">¶</a></h3>
+<span id="model-xyz"></span><h3>XYZ<a class="headerlink" href="#xyz" title="Permalink to this heading">¶</a></h3>
 <p>Back in 1931, the CIE (Institute of Color and Light), was studying human color perception.
 In doing so, they made the first color spaces, with XYZ being the one best at approximating human vision.</p>
 <p>It's almost impossible to really explain what XYZ is.</p>
@@ -618,7 +554,7 @@ In doing so, they made the first color spaces, with XYZ being the one best at ap
 <p>XYZ is used as a baseline reference for all other profiles and models. All color conversions are done in XYZ, and all profiles coordinates match XYZ.</p>
 </section>
 <section id="l-a-b">
-<span id="model-lab"></span><h3>L*a*b*<a class="headerlink" href="#l-a-b" title="本標題的永久連結">¶</a></h3>
+<span id="model-lab"></span><h3>L*a*b*<a class="headerlink" href="#l-a-b" title="Permalink to this heading">¶</a></h3>
 <p>Stands for:</p>
 <dl class="simple">
 <dt>L*</dt><dd><p>Lightness, similar to luminosity in this case.</p>
@@ -633,7 +569,7 @@ In doing so, they made the first color spaces, with XYZ being the one best at ap
 </section>
 </section>
 <section id="filters-and-blending-modes">
-<h2>Filters and blending modes<a class="headerlink" href="#filters-and-blending-modes" title="本標題的永久連結">¶</a></h2>
+<h2>Filters and blending modes<a class="headerlink" href="#filters-and-blending-modes" title="Permalink to this heading">¶</a></h2>
 <p>Maybe you have noticed that blending modes in LAB don't work like they do in RGB or CMYK. This is because the blending modes work by doing a bit of maths on the color coordinates, and because color coordinates are different per color space, the blending modes look different.</p>
 </section>
 </section>
@@ -661,7 +597,7 @@ In doing so, they made the first color spaces, with XYZ being the one best at ap
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>6a90bff</code>
+          修訂版本 <code>d9da50a</code>
         </span>
       
 
@@ -687,6 +623,7 @@ In doing so, they made the first color spaces, with XYZ being the one best at ap
       <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
       <script src="../../_static/jquery.js"></script>
       <script src="../../_static/underscore.js"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
       <script src="../../_static/doctools.js"></script>
       <script src="../../_static/translations.js"></script>
 

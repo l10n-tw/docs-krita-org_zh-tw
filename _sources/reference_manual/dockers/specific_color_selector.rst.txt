@@ -9,7 +9,7 @@
              - Scott Petrovic
    :license: GNU free documentation license 1.3 or later.
 
-.. index:: Color, Color Selector, Specific Color Selector, Color Space
+.. index:: Color, Color Selector, Specific Color Selector, Color Space, Color Sliders, Hue, Saturation, Value, Brightness, Lightness, Intensity, Luma, Luminosity
 .. _specific_color_selector_docker:
 
 =======================
@@ -17,6 +17,7 @@ Specific Color Selector
 =======================
 
 .. image:: /images/dockers/Krita_Specific_Color_Selector_Docker.png
+.. image:: /images/dockers/Krita_Specific_Color_Selector_Docker_2.png
 
 The specific color selector allows you to choose specific colors within a color space.
 
@@ -36,3 +37,12 @@ Hex Color Selector
 
 This is only available for the color spaces with a depth of 8 bit.
 This allows you to input hex color codes, and receive the RGB, CMYK, LAB, XYZ or YCrCb equivalent, and the other way around!
+
+HSV Color Selector
+------------------
+
+.. versionadded:: 5.1
+
+In RGB color spaces, the toggle button allows you to switch into HSV mode and choose using the Hue, Saturation and Value sliders.
+
+.. image:: /images/dockers/Krita_Specific_Color_Selector_Docker_3.png

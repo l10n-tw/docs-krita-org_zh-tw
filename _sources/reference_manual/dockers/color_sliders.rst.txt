@@ -17,7 +17,8 @@ Color Sliders
 
 .. deprecated:: 4.1
 
-    This docker has been removed in 4.1. It will return in some form in the future.
+    Replaced by the :ref:`specific_color_selector_docker` in 5.1
+
 
 A small docker with Hue, Saturation and Lightness bars.
 

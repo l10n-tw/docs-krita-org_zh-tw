@@ -9,7 +9,7 @@
   <meta property="og:title" name="title" content="平塗著色" />
   <meta property="og:site-name" content="Krita Manual" />
   <meta property="og:type" content="article" />
-  <meta property="og:locale" content="zh_TW" />
+  <meta property="og:locale" content="zh-TW" />
   <meta property="og:locale:alternate" content="ca" />
   <meta property="og:locale:alternate" content="en" />
   <meta property="og:locale:alternate" content="fr" />
@@ -21,8 +21,8 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2022-05-02T15:19:52" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta property="og:article:modified_time" content="2022-06-29T13:10:37" />
+  <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <meta content="Common workflows used in Krita." lang="en" name="description" xml:lang="en" />
 
   
@@ -272,14 +272,14 @@
            <div itemprop="articleBody">
             
   <section id="flat-coloring">
-<span id="id1"></span><h1>平塗著色<a class="headerlink" href="#flat-coloring" title="本標題的永久連結">¶</a></h1>
+<span id="id1"></span><h1>平塗著色<a class="headerlink" href="#flat-coloring" title="Permalink to this heading">¶</a></h1>
 <p>So you've got a cool black on white drawing, and now you want to color it! The thing we’ll aim for in this tutorial is to get your line art colored in with flat colors. So no shading just yet. We’ll be going through some techniques for preparing the line art, and we’ll be using the layer docker to put each color on a separate layer, so we can easily access each color when we add shading.</p>
 <div class="admonition note">
 <p class="admonition-title">備註</p>
 <p>This tutorial is adapted from this <a class="reference external" href="http://theratutorial.tumblr.com/post/66584924501/flat-colouring-in-the-kingdom-of-2d-layers-are">tutorial</a> by the original author.</p>
 </div>
 <section id="understanding-layers">
-<h2>理解塗層<a class="headerlink" href="#understanding-layers" title="本標題的永久連結">¶</a></h2>
+<h2>理解塗層<a class="headerlink" href="#understanding-layers" title="Permalink to this heading">¶</a></h2>
 <p>To fill line art comfortably, it's best to take advantage of the layerstack. The layer stack is pretty awesome, and it's one of those features that make digital art super-convenient.</p>
 <p>In traditional art, it is not uncommon to first draw the full background before drawing the subject. Or to first draw a line art and then color it in. Computers have a similar way of working.</p>
 <p>In programming, if you tell a computer to draw a red circle, and then afterwards tell it to draw a smaller yellow circle, you will see the small yellow circle overlap the red circle. Switch the commands around, and you will not see the yellow circle at all: it was drawn before the red circle and thus ‘behind’ it.</p>
@@ -291,13 +291,13 @@
 </div>
 </section>
 <section id="preparing-your-line-art">
-<h2>準備好你的線稿<a class="headerlink" href="#preparing-your-line-art" title="本標題的永久連結">¶</a></h2>
+<h2>準備好你的線稿<a class="headerlink" href="#preparing-your-line-art" title="Permalink to this heading">¶</a></h2>
 <p>Put the new layer underneath the layer containing the line art (drag and drop or use the up/down arrows for that), and draw on it.</p>
 <img alt="Layer structure for flatting in krita." src="../_images/Krita_filling_lineart14.png" />
 <p>…And notice nothing happening. This is because the white isn’t transparent. You wouldn’t really want it to either, how else would you make convincing highlights? So what we first need to do to color in our drawing is prepare our line art. There’s several methods of doing so, each with varying qualities.</p>
 </section>
 <section id="the-multiply-blending-mode">
-<h2>色彩增值模式<a class="headerlink" href="#the-multiply-blending-mode" title="本標題的永久連結">¶</a></h2>
+<h2>色彩增值模式<a class="headerlink" href="#the-multiply-blending-mode" title="Permalink to this heading">¶</a></h2>
 <p>So, typically, to get a black and white line art usable for coloring, you can set the blending mode of the line art layer to Multiply. You do this by selecting the layer and going to the drop-down that says <strong>Normal</strong> and setting that to <strong>Multiply</strong>.</p>
 <img alt="Blend mode setup of line art flat coloring." src="../_images/Krita_filling_lineart1.png" />
 <p>And then you should be able to see your colors!</p>
@@ -306,15 +306,6 @@
 <p>This is because multiply literally multiplies the colors. So it uses maths!</p>
 <p>What it first does is take the values of the RGB channels, then divides them by the max (because we're in 8bit, this is 255), a process we call normalising. Then it multiplies the normalized values. Finally, it takes the result and multiplies it with 255 again to get the result values.</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 14%" />
-<col style="width: 14%" />
-<col style="width: 14%" />
-<col style="width: 14%" />
-<col style="width: 14%" />
-<col style="width: 14%" />
-<col style="width: 14%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"></th>
 <th class="head"><p>Pink</p></th>
@@ -354,16 +345,16 @@
 </table>
 <p>This isn't completely undesirable, and a lot of artists use this effect to add a little richness to their colors.</p>
 <section id="advantages">
-<h3>優點<a class="headerlink" href="#advantages" title="本標題的永久連結">¶</a></h3>
+<h3>優點<a class="headerlink" href="#advantages" title="Permalink to this heading">¶</a></h3>
 <p>Easy, can work to your benefit even with colored lines by softening the look of the lines while keeping nice contrast.</p>
 </section>
 <section id="disadvantages">
-<h3>缺點<a class="headerlink" href="#disadvantages" title="本標題的永久連結">¶</a></h3>
+<h3>缺點<a class="headerlink" href="#disadvantages" title="Permalink to this heading">¶</a></h3>
 <p>Not actually transparent. Is a little funny with colored lines.</p>
 </section>
 </section>
 <section id="using-selections">
-<h2>使用選取<a class="headerlink" href="#using-selections" title="本標題的永久連結">¶</a></h2>
+<h2>使用選取<a class="headerlink" href="#using-selections" title="Permalink to this heading">¶</a></h2>
 <p>The second method is one where we'll make it actually transparent. In other programs this would be done via the channel docker, but Krita doesn't do custom channels, instead it uses Selection Masks to store custom selections.</p>
 <ol class="arabic">
 <li><p>Duplicate your line art layer.</p></li>
@@ -381,16 +372,16 @@
 </ol>
 <p>And you should now have the line art on a separate layer.</p>
 <section id="id2">
-<h3>優點<a class="headerlink" href="#id2" title="本標題的永久連結">¶</a></h3>
+<h3>優點<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h3>
 <p>Actual transparency.</p>
 </section>
 <section id="id3">
-<h3>缺點<a class="headerlink" href="#id3" title="本標題的永久連結">¶</a></h3>
+<h3>缺點<a class="headerlink" href="#id3" title="Permalink to this heading">¶</a></h3>
 <p>Doesn't work when the line art is colored.</p>
 </section>
 </section>
 <section id="using-masks">
-<h2>使用遮罩<a class="headerlink" href="#using-masks" title="本標題的永久連結">¶</a></h2>
+<h2>使用遮罩<a class="headerlink" href="#using-masks" title="Permalink to this heading">¶</a></h2>
 <p>This is a simpler variation of the above.</p>
 <ol class="arabic">
 <li><p>Make a filled layer underneath the line art layer.</p>
@@ -410,37 +401,37 @@
 </li>
 </ol>
 <section id="id4">
-<h3>優點<a class="headerlink" href="#id4" title="本標題的永久連結">¶</a></h3>
+<h3>優點<a class="headerlink" href="#id4" title="Permalink to this heading">¶</a></h3>
 <p>Actual transparency. You can also very easily doodle a pattern on the filled layer where the mask is on without affecting the transparency.</p>
 </section>
 <section id="id5">
-<h3>缺點<a class="headerlink" href="#id5" title="本標題的永久連結">¶</a></h3>
+<h3>缺點<a class="headerlink" href="#id5" title="Permalink to this heading">¶</a></h3>
 <p>Doesn't work when the line art is colored already. We can still get faster.</p>
 </section>
 </section>
 <section id="using-color-to-alpha">
-<h2>用顏色轉換到 Alpha<a class="headerlink" href="#using-color-to-alpha" title="本標題的永久連結">¶</a></h2>
+<h2>用顏色轉換到 Alpha<a class="headerlink" href="#using-color-to-alpha" title="Permalink to this heading">¶</a></h2>
 <p>By far the fastest way to get transparent line art.</p>
 <ol class="arabic simple">
 <li><p>Select the line art layer and apply the <span class="guilabel">Filter: Color to Alpha</span> dialog under <span class="menuselection">Filters ‣ Colors ‣ Color to Alpha...</span> menu item. The default values should be sufficient for line art.</p></li>
 </ol>
 <img alt="../_images/Krita_filling_lineart_color_to_alpha.png" src="../_images/Krita_filling_lineart_color_to_alpha.png" />
 <section id="id6">
-<h3>優點<a class="headerlink" href="#id6" title="本標題的永久連結">¶</a></h3>
+<h3>優點<a class="headerlink" href="#id6" title="Permalink to this heading">¶</a></h3>
 <p>Actual transparency. Works with colored line art as well, because it removes the white specifically.</p>
 </section>
 <section id="id7">
-<h3>缺點<a class="headerlink" href="#id7" title="本標題的永久連結">¶</a></h3>
+<h3>缺點<a class="headerlink" href="#id7" title="Permalink to this heading">¶</a></h3>
 <p>You'll have to lock the layer transparency or separate out the alpha via the right-click menu if you want to easily color it.</p>
 <section id="coloring-the-image">
-<h4>幫圖片上色<a class="headerlink" href="#coloring-the-image" title="本標題的永久連結">¶</a></h4>
+<h4>幫圖片上色<a class="headerlink" href="#coloring-the-image" title="Permalink to this heading">¶</a></h4>
 <p>Much like preparing the line art, there are many different ways of coloring a layer.</p>
 <p>You could for example fill in everything by hand, but while that is very precise it also takes a lot of work. Let's take a look at the other options, shall we?</p>
 </section>
 </section>
 </section>
 <section id="fill-tool">
-<h2>填滿工具<a class="headerlink" href="#fill-tool" title="本標題的永久連結">¶</a></h2>
+<h2>填滿工具<a class="headerlink" href="#fill-tool" title="Permalink to this heading">¶</a></h2>
 <img alt="Fill-tool icon." src="../_images/fill_tool.svg" /><p>In most cases the fill-tool can’t deal with the anti-aliasing (the soft edge in your line art to make it more smooth when zoomed out) In Krita you have the grow-shrink option. Setting that to say… 2 expands the color two pixels.</p>
 <p>Threshold decides when the fill-tool should consider a different color pixel to be a border. And the feathering adds an extra soft border to the fill.</p>
 <p>Now, if you click on a gapless-part of the image with your preferred color… (Remember to set the opacity to 1.0!)</p>
@@ -448,16 +439,16 @@
 <img alt="Colors filled with fill tool." src="../_images/Krita_filling_lineart7.png" />
 <p>However, setting the threshold high can end with the fill not recognizing some of the lighter lines. Besides these little artifacts can be removed with the brush easily.</p>
 <section id="id8">
-<h3>優點<a class="headerlink" href="#id8" title="本標題的永久連結">¶</a></h3>
+<h3>優點<a class="headerlink" href="#id8" title="Permalink to this heading">¶</a></h3>
 <p>Pretty darn quick depending on the available settings.</p>
 </section>
 <section id="id9">
-<h3>缺點<a class="headerlink" href="#id9" title="本標題的永久連結">¶</a></h3>
+<h3>缺點<a class="headerlink" href="#id9" title="Permalink to this heading">¶</a></h3>
 <p>Again, not great with gaps or details. And it works best with aliased line art.</p>
 </section>
 </section>
 <section id="selections">
-<h2>選取<a class="headerlink" href="#selections" title="本標題的永久連結">¶</a></h2>
+<h2>選取<a class="headerlink" href="#selections" title="Permalink to this heading">¶</a></h2>
 <p>Selections work using the selection tools.</p>
 <img alt="Selecting with selection tools for filling color." src="../_images/Krita_filling_lineart15.png" />
 <p>For example with the <a class="reference internal" href="../reference_manual/tools/path_select.html#bezier-curve-selection-tool"><span class="std std-ref">路徑選取工具</span></a> you can easily select a curved area, and the with <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="滑鼠左鍵" src="../_images/Krita_mouse_left.png" /> (not <img alt="滑鼠左鍵" src="../_images/Krita_mouse_left.png" /> <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">+</kbd> <kbd class="kbd docutils literal notranslate">Shift</kbd></kbd>, there's a difference!) you can easily add to an existing selection.</p>
@@ -469,16 +460,16 @@
 <p>This can serve as an alternative way to split out different parts of the image, which is good for more painterly pieces:</p>
 <img alt="Result of coloring made with the help of selection tools." src="../_images/Krita_filling_lineart18.png" />
 <section id="id10">
-<h3>優點<a class="headerlink" href="#id10" title="本標題的永久連結">¶</a></h3>
+<h3>優點<a class="headerlink" href="#id10" title="Permalink to this heading">¶</a></h3>
 <p>A bit more precise than filling.</p>
 </section>
 <section id="id11">
-<h3>缺點<a class="headerlink" href="#id11" title="本標題的永久連結">¶</a></h3>
+<h3>缺點<a class="headerlink" href="#id11" title="Permalink to this heading">¶</a></h3>
 <p>Previewing your color isn't as easy.</p>
 </section>
 </section>
 <section id="geometric-tools">
-<h2>形狀工具<a class="headerlink" href="#geometric-tools" title="本標題的永久連結">¶</a></h2>
+<h2>形狀工具<a class="headerlink" href="#geometric-tools" title="Permalink to this heading">¶</a></h2>
 <p>So you have a tool for making rectangles or circles. And in the case of Krita, a tool for bezier curves.
 Select the path tool (<img alt="path tool" src="../_images/bezier_curve.svg" />), and set the tool options to fill=foreground and outline=none. Make sure that your opacity is set to 1.00 (fully opaque).</p>
 <p>By clicking and holding, you can influence how curvy a line draw with the path tool is going to be. Letting go of the mouse button confirms the action, and then you’re free to draw the next point.</p>
@@ -486,16 +477,16 @@ Select the path tool (<img alt="path tool" src="../_images/bezier_curve.svg" />)
 <p>You can also erase with a geometric tool. Just press the <kbd class="kbd docutils literal notranslate">E</kbd> key or the eraser button.</p>
 <img alt="Erasing with path tool." src="../_images/Krita_filling_lineart9.png" />
 <section id="id12">
-<h3>優點<a class="headerlink" href="#id12" title="本標題的永久連結">¶</a></h3>
+<h3>優點<a class="headerlink" href="#id12" title="Permalink to this heading">¶</a></h3>
 <p>Quicker than using the brush or selections. Also decent with line art that contains gaps.</p>
 </section>
 <section id="id13">
-<h3>缺點<a class="headerlink" href="#id13" title="本標題的永久連結">¶</a></h3>
+<h3>缺點<a class="headerlink" href="#id13" title="Permalink to this heading">¶</a></h3>
 <p>Fiddly details aren’t easy to fill in with this. So I recommend skipping those and filling them in later with a brush.</p>
 </section>
 </section>
 <section id="colorize-mask">
-<h2>著色遮罩<a class="headerlink" href="#colorize-mask" title="本標題的永久連結">¶</a></h2>
+<h2>著色遮罩<a class="headerlink" href="#colorize-mask" title="Permalink to this heading">¶</a></h2>
 <p>So it works like this:</p>
 <ol class="arabic simple">
 <li><p>選取著色遮罩工具。</p></li>
@@ -511,16 +502,16 @@ Select the path tool (<img alt="path tool" src="../_images/bezier_curve.svg" />)
 <p>Finally, press <strong>Ok</strong> and you should get the following. Each color patch it on a different layer, named by the palette in the menu and alpha locked, so you can start painting right away!</p>
 <img alt="Resulting color islands from split layers." src="../_images/Krita_filling_lineart13.png" />
 <section id="id14">
-<h3>優點<a class="headerlink" href="#id14" title="本標題的永久連結">¶</a></h3>
+<h3>優點<a class="headerlink" href="#id14" title="Permalink to this heading">¶</a></h3>
 <p>Works with anti-aliased line art. Really quick to get the base work done. Can auto-close gaps.</p>
 </section>
 <section id="id15">
-<h3>缺點<a class="headerlink" href="#id15" title="本標題的永久連結">¶</a></h3>
+<h3>缺點<a class="headerlink" href="#id15" title="Permalink to this heading">¶</a></h3>
 <p>No anti-aliasing of its own. You have to choose between getting details right or the gaps auto-closed.</p>
 </section>
 </section>
 <section id="conclusion">
-<h2>結論<a class="headerlink" href="#conclusion" title="本標題的永久連結">¶</a></h2>
+<h2>結論<a class="headerlink" href="#conclusion" title="Permalink to this heading">¶</a></h2>
 <p>I hope this has given you a good idea of how to fill in flats using the various techniques, as well as getting a hand of different Krita features. Remember that a good flat filled line art is better than a badly shaded one, so keep practicing to get the best out of these techniques!</p>
 </section>
 </section>
@@ -548,7 +539,7 @@ Select the path tool (<img alt="path tool" src="../_images/bezier_curve.svg" />)
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>6a90bff</code>
+          修訂版本 <code>d9da50a</code>
         </span>
       
 
@@ -574,6 +565,7 @@ Select the path tool (<img alt="path tool" src="../_images/bezier_curve.svg" />)
       <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
       <script src="../_static/jquery.js"></script>
       <script src="../_static/underscore.js"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
       <script src="../_static/doctools.js"></script>
       <script src="../_static/translations.js"></script>
 

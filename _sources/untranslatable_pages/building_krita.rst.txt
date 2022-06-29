@@ -6,6 +6,7 @@
 
     :authors: - Halla Rempt <boud@valdyas.org>
               - Wolthera van Hövell tot Westerflier <griffinvalley@gmail.com>
+              - Alvin Wong
               - images and latter parts by David Revoy <info@davidrevoy.com>
     :license: GNU free documentation license 1.3 or later.
     
@@ -26,7 +27,7 @@ Linux is the easiest operating system to build Krita on because all the librarie
 
 On macOS you can use tools like homebrew to get the dependencies, or build the dependencies manually. Building the dependencies manually is recommended because we have a number of changes to the source for libraries to make them function better with Krita.
 
-On Windows you will have to build the dependencies yourself. 
+On Windows you can either reuse the dependencies from the KDE Binary Factory, or build the dependencies yourself.
 
 On all operating systems, you need to be familiar with using a terminal. Building Krita is a technical task and demands accuracy in following instructions and intelligence in understanding what happens.
 
@@ -277,7 +278,7 @@ Outside of the source being unstable, there's the following common problems:
 Building on Windows
 -------------------
 
-On Windows, you will have to build all the dependencies yourself. This will take a long time. Note that you will do all your work in a CMD command window.
+On Windows, you can either reuse the dependencies from the KDE Binary Factory, or build the dependencies yourself. If you decide to build all the dependencies yourself, this will take a long time. Note that you will do all your work in a CMD command window.
 
 This is also more difficult than building Krita on Linux, so you need to pay attention to details. If you follow the guide closely, install correct dependencies and make sure your PATH doesn't contain anything unwanted, there should be no issues.
 
@@ -285,22 +286,42 @@ Prerequisites
 ~~~~~~~~~~~~~
 
 1. Git - https://git-scm.com/downloads
-2. CMake 3.3.2 or later - https://cmake.org/download/
-    - CMake 3.9 does not build Krita properly at the moment, please use 3.8 or 3.10 instead.
-3. Make sure you have a compiler - Only mingw-w64 7.3 (by mingw-builds) - https://files.kde.org/krita/build/x86_64-7.3.0-release-posix-seh-rt_v5-rev0.7z
-    - For threading, select posix.
-    - For exceptions, select seh (64-bit) or dwarf (32-bit).
-    - Unzip mingw with `7zip <https://www.7-zip.org/>`_ into a folder like C:\mingw-w64; the full path must not contain any spaces.
-    - MSVC is *not* supported at the moment.
-    - CLANG is *not* supported at the moment.
-    - MSYS is *not* supported at the moment.
-4. You will also need a release of Python 3.8 (not 3.7, not 3.9) - https://www.python.org.
+2. CMake 3.16.0 or later, the latest is usually fine - https://cmake.org/download/
+3. Ninja build system - https://github.com/ninja-build/ninja/releases
+
+    - Since Ninja is a single executable, you can place it in the bin folder of CMake, next to ``cmake.exe`` for convenience.
+
+4. LLVM MinGW compiler toolchain
+
+    - Can be downloaded here: https://github.com/mstorsjo/llvm-mingw/releases/download/20220323/llvm-mingw-20220323-ucrt-x86_64.zip
+    - Unzip the archive with `7zip <https://www.7-zip.org/>`_ into a folder like :file:`C:\\llvm-mingw`; the full path must not contain any spaces.
+    - At the time of writing, we are using the tagged release 20220323 with LLVM 14.0.0 on the Binary Factory. In theory a newer version should be compatible, but use at your own risk.
+    - If you really want to use other compilers, see below.
+
+5. You will also need a release of Python 3.8 (not 3.7, not 3.9) - https://www.python.org.
+
     - Make sure to have that version of python.exe in your path. This version of Python will be used for two things to configure Qt and to build the Python scripting module.  Do not set PYTHONHOME or PYTHONPATH.
     - Make sure that your Python will have the correct architecture for the version you are trying to build. If building for 32-bit target, you need the 32-bit release of Python.
-5. Install the Windows 10 SDK - https://developer.microsoft.com/en-us/windows/downloads/windows-10-sdk/
-6. It is useful to install Qt Creator - https://download.qt.io/official_releases/qtcreator/
 
-***MAKE DOUBLE PLUS SURE YOU DO NOT HAVE ANY OTHER COMPILER OR DEVELOPMENT ENVIRONMENT OR PYTHON INSTALLATION IN YOUR PATH***
+6. Install the Windows 10 SDK - https://developer.microsoft.com/en-us/windows/downloads/windows-10-sdk/
+7. It is useful to install Qt Creator - https://download.qt.io/official_releases/qtcreator/
+
+.. attention::
+
+    **Make double plus sure you do not have any other compilers or development environments or Python installation in your PATH!**
+
+
+Other Compilers
+^^^^^^^^^^^^^^^
+
+- In the past we used mingw-w64 gcc 7.3.0 (mingw-builds). This version is no longer supported because our dependencies started requiring a more updated compiler to work.
+- It is possible to build Krita with a newer mingw-w64 gcc toolchain, for example gcc 11.2.0 by niXman on GitHub (mingw-builds), or the one from MSYS2.
+- MSYS2 can build Krita with the MINGW64, UCRT64 or CLANG64 environments.
+- Krita can also be built with MSVC (check the batch file in ``build-tools\windows``). Krita built with MSVC has suboptimal performance due to codegen issues so we can't use it.
+
+.. attention::
+    
+    If you use these compilers, you must build the dependencies yourself. Trying to mix dependencies built with a different compiler may outright fail to configure, or Krita may appear to build successfully but you get random crashes wuen running it.
 
 
 Preparation
@@ -308,43 +329,43 @@ Preparation
 
 .. image:: /images/untranslatable/cat_guide/Krita-building_for-cats_001-init-dir_001_by-deevad.jpg
 
-After installing the Prerequisites, prepare your working directory. Keep this as short as possible. 
-        
-.. code:: console
+After installing the Prerequisites, prepare your working directory somewhere, like ``C:\krita-dev``. Keep this short (30 characters in the prefix path is fine, but longer than this and you may get build errors). Makes sure the path does not contain whitespace. If you use a different path, remember to adjust the paths in the later steps.
 
-    cd  c:\
-    mkdir c:\dev
-    mkdir c:\d
-    mkdir c:\i
+.. code:: batch
+
+    mkdir C:\krita-dev
+    cd /d C:\krita-dev
     
-Then prepare a batch file to set the environment. Every time you want to build or run your home-grown Krita, open the CMD windows, go to the c:\dev folder and run the env.bat file. Read this example and ADJUST THE VERSION NUMBERS where necessary so the PATH is correct.
+Then prepare a batch file to set the environment. Read this example and **adjust the version numbers and paths** where necessary so the PATH is correct. Save this as ``C:\krita-dev\env.bat``.
 
-.. code:: console
+.. code:: batch
 
-    set DLLTOOL_EXE=C:\mingw-w64\x86_64-7.3.0-posix-seh-rt_v5-rev0\mingw64\bin\dlltool.exe
-    set MINGW_GCC_BIN=C:\mingw-w64\x86_64-7.3.0-posix-seh-rt_v5-rev0\mingw64\\bin
-    set MINGW_BIN_DIR=C:\mingw-w64\x86_64-7.3.0-posix-seh-rt_v5-rev0\mingw64\\bin
-    set BUILDROOT=c:\dev
-    set BUILDDIR_INSTALL=%BUILDROOT%\i
-    set PATH=%BUILDROOT%\i\bin;%BUILDROOT%\i\lib;%MINGW_GCC_BIN%;C:\Program Files\CMake\bin;c:\qt\qtcreator-4.12.0\bin;%PATH%
-    set "WindowsSdkDir=%ProgramFiles(x86)%\Windows Kits\10"
-    set "WindowsSdkVerBinPath=%ProgramFiles(x86)%\Windows Kits\10\bin\10.0.17763.0"
-    
-    :: Since Krita 5.1 when using SIP5+ you also need to set up PYTHONPATH manually
-    set PYTHONPATH=%BUILDROOT%\i\lib\site-packages;%PYTHONPATH%
+    :: Build/dev tools
+    set MINGW_BIN_DIR=C:\llvm-mingw\llvm-mingw-20220323-ucrt-x86_64\bin
+    set CMAKE_BIN_DIR=C:\Program Files\CMake\bin
+    set NINJA_BIN_DIR=C:\krita-dev\ninja
+    set PYTHON_BIN_DIR=C:\Python38
+    set QTCREATOR_DIR=C:\Qt\Tools\QtCreator\bin
 
-.. code:: console
+    set BUILDROOT=C:\krita-dev
+    set PATH=C:\krita-dev\i\bin;C:\krita-dev\i\lib;%MINGW_BIN_DIR%;%MINGW_BIN_DIR%\..\x86_64-w64-mingw32\bin;%CMAKE_BIN_DIR%;%NINJA_BIN_DIR%;%QTCREATOR_DIR%;%PATH%
 
-    cd c:\dev 
+Every time you want to build or run your home-grown Krita, open the CMD window, change to the ``C:\krita-dev`` folder and run the ``env.bat`` file:
+
+.. code:: batch
+
+    cd /d C:\krita-dev
     env.bat
 
-Then get krita:
+You will note that most command samples below contain these two lines, but the truth is you only need to run ``env.bat`` once for each CMD window.
+
+Then get the source code of Krita:
 
 .. image:: /images/untranslatable/cat_guide/Krita-building_for-cats_002-git-clone_001_by-deevad.jpg
 
-.. code:: console
+.. code:: batch
 
-    cd c:\dev
+    cd /d C:\krita-dev
     git clone https://invent.kde.org/graphics/krita.git
     
 Getting the dependencies
@@ -353,34 +374,36 @@ Getting the dependencies
 .. image:: /images/untranslatable/cat_guide/Krita-building_for-cats_003-get-libs_001_by-deevad.jpg
 
 
-Here we have two options. The quick one is to reuse prebuilt dependencies from the binary factory (you need to have the same version of the compiler locally as the one used on the binary factory). And the slow one is to build everything ourselves.
+Here we have two options. The quick one is to reuse prebuilt dependencies from the Binary Factory. You can only do this if you are using the same version of compiler as the one on the Binary Factory (as stated in the prerequisites section). And the slow one is to build everything ourselves.
 
 Using prebuilt dependencies from the binary factory
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-To fetch prebuilt dependencies just run the embedded cmake script: 
+To fetch prebuilt dependencies just run the embedded cmake script:
 
-.. code:: console
+.. code:: batch
 
-    cd c:\dev
-    mkdir b
-    cd b
-    cmake ..\krita\build-tools\ci-deps -G "MinGW Makefiles" -DCMAKE_INSTALL_PREFIX=..\i
-    cmake --build .
-    
+    cd /d C:\krita-dev
+    env.bat
+    mkdir fetch-deps
+    cmake -S krita\build-tools\ci-deps -B fetch-deps -G "MinGW Makefiles" -DCMAKE_INSTALL_PREFIX=C:/krita-dev/i
+    cmake --build fetch-deps
+
+(Or you can download it yourself from https://binary-factory.kde.org/job/Krita_Nightly_Windows_Dependency_Build/)
+
 
 Building dependencies yourself
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-
 We will build everything on Windows with the same script that is used to make the nightly builds and the releases:
 
-.. code:: console
+.. code:: batch
 
-    cd c:\dev
-    krita\build-tools\windows\build.cmd --no-interactive --jobs 8 --skip-krita --src-dir c:\dev\krita --download-dir c:\dev\d --deps-build-dir c:\dev\b --deps-install-dir c:\dev\i
+    cd /d C:\krita-dev
+    env.bat
+    krita\build-tools\windows\build.cmd --no-interactive --jobs 8 --skip-krita --download-dir C:\krita-dev\d --deps-build-dir C:\krita-dev\b_deps --deps-install-dir C:\krita-dev\i
 
-This will take several hours, but you only need to do it once. When it's ready, make a zip archive of the c:\dev\i folder. That's a backup because we will install krita into the same folder as the dependencies, and if you need to nuke your krita build (because you're switching between branches or for some other reason, you'll also nuke your built dependencies. You can also build the depedencies into another folder, like c:\dev\i_deps, BUT in that case you're going to have trouble running Krita without first packaging it.
+This will take several hours, but you only need to do it once (until you need to update the deps again). When it's ready, make a zip archive of the ``C:\krita-dev\i`` folder. That's a backup because we will install Krita into the same folder as the dependencies, and if you need to nuke your Krita build (because you're switching between branches or for some other reason, you'll also nuke your built dependencies. You can also build the depedencies into another folder, like ``C:\krita-dev\i_deps``, **but** in that case you're going to have trouble running Krita without first packaging it, so that is not recommended unless you really know what you are doing.
 
 Building Krita
 ~~~~~~~~~~~~~~
@@ -392,17 +415,20 @@ Building Krita
 
 Again, on the command line, with the same script that is used to make the nightly builds and the releases:
 
-.. code:: console
+.. code:: batch
 
-    cd c:\dev
-    krita\build-tools\windows\build.cmd --no-interactive --jobs 8 --skip-deps --src-dir c:\dev\krita --download-dir c:\dev\d --deps-build-dir c:\dev\b --deps-install-dir c:\dev\is --krita-build-dir c:\dev\b_krita --krita-install-dir c:\dev\i
+    cd /d C:\krita-dev
+    env.bat
+    krita\build-tools\windows\build.cmd --no-interactive --jobs 8 --skip-deps --download-dir C:\krita-dev\d --deps-install-dir C:\krita-dev\i --krita-build-dir C:\krita-dev\b_krita --plugins-build-dir C:\krita-dev\b_plugins --krita-install-dir C:\krita-dev\i
     
-If you are hacking on Krita, you can rebuild Krita without running this script by entering the build directory and running mingw3-make install.
+If you are hacking on Krita, you can rebuild Krita without running this script by entering the build directory and running ``mingw32-make -j8 install`` or ``ninja install``.
 
-.. code:: console
+.. code:: batch
 
-    cd c:\dev\b_krita
-    mingw32-make install
+    cd b_krita
+    mingw32-make -j8 install
+    :: or
+    ninja install
 
 .. image:: /images/untranslatable/cat_guide/Krita-building_for-cats_006-installing_by-deevad.jpg
 
@@ -410,13 +436,15 @@ If you are hacking on Krita, you can rebuild Krita without running this script b
 Running Krita
 ~~~~~~~~~~~~~
 
-You must start Krita from the command prompt, after having run env.bat:
+You must start Krita from the command prompt, after having run ``env.bat``:
 
-.. code:: console
+.. code:: batch
 
-    cd c:\dev\b_krita
-    env.bat 
-    c:\dev\i\bin\krita.exe 
+    cd /d C:\krita-dev
+    env.bat
+    i\bin\krita
+    :: or
+    i\bin\krita.exe
     
 .. image:: /images/untranslatable/cat_guide/Krita-building_for-cats_008-running-success_by-deevad.jpg
 
@@ -575,7 +603,7 @@ If Krita crashes you can look up the logs using ``adb logcat``
 Specialized Ways of Building Krita
 ----------------------------------
 
-These are specialized ways of building Krita on Windows and Linux while re-using the dependencies built on KDE's binary factory. You only need to try this if you don't want to build Krita's dependencies yourself on Windows or use distribution dependencies on Linux.
+These are specialized ways of building Krita on Linux while re-using the dependencies built on KDE's binary factory. You only need to try this if you don't want to use distribution dependencies on Linux.
 
 .. toctree::
    :maxdepth: 1

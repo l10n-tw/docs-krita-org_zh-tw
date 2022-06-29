@@ -9,7 +9,7 @@
   <meta property="og:title" name="title" content="Building Krita from Source" />
   <meta property="og:site-name" content="Krita Manual" />
   <meta property="og:type" content="article" />
-  <meta property="og:locale" content="zh_TW" />
+  <meta property="og:locale" content="zh-TW" />
   <meta property="og:locale:alternate" content="ca" />
   <meta property="og:locale:alternate" content="en" />
   <meta property="og:locale:alternate" content="fr" />
@@ -21,8 +21,8 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2022-05-02T15:19:52" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta property="og:article:modified_time" content="2022-06-29T13:10:37" />
+  <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <meta content="Guide to building Krita from source." name="description" />
 
   
@@ -60,7 +60,7 @@
     <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜尋" href="../search.html" />
-    <link rel="next" title="Half-automatic building script on Windows" href="building/auto_build_script.html" />
+    <link rel="next" title="Building krita with Docker on Linux" href="building/build_krita_with_docker_on_linux.html" />
     <link rel="prev" title="Technical Pages" href="../untranslatable_pages.html" /> 
 
   
@@ -161,7 +161,6 @@
 <li class="toctree-l3"><a class="reference internal" href="quality_assurance.html">Introduction to Quality Assurance</a></li>
 <li class="toctree-l3"><a class="reference internal" href="release_krita.html">Making a release</a></li>
 <li class="toctree-l3"><a class="reference internal" href="reporting_bugs.html">Reporting Bugs</a></li>
-<li class="toctree-l3"><a class="reference internal" href="running_krita.html">Running Krita from Source</a></li>
 <li class="toctree-l3"><a class="reference internal" href="strokes_documentation.html">Strokes queue</a></li>
 <li class="toctree-l3"><a class="reference internal" href="strokes_documentation.html#strokes-public-api">Strokes public API</a></li>
 <li class="toctree-l3"><a class="reference internal" href="strokes_documentation.html#internals-of-the-freehand-tool">Internals of the freehand tool</a></li>
@@ -259,9 +258,9 @@
            <div itemprop="articleBody">
             
   <section id="building-krita-from-source">
-<span id="building-krita"></span><h1><a class="toc-backref" href="#id8">Building Krita from Source</a><a class="headerlink" href="#building-krita-from-source" title="本標題的永久連結">¶</a></h1>
+<span id="building-krita"></span><h1><a class="toc-backref" href="#id8" role="doc-backlink">Building Krita from Source</a><a class="headerlink" href="#building-krita-from-source" title="Permalink to this heading">¶</a></h1>
 <p>If you want to help developing Krita, you need to know how to build Krita yourself. If you merely want to run the latest version of Krita, to test a bug or play with, you can use the <a class="reference external" href="https://binary-factory.kde.org/job/Krita_Nightly_Windows_Build/">nightly build for Windows</a> the <a class="reference external" href="https://binary-factory.kde.org/job/Krita_Nightly_Appimage_Build/">nightly build for Linux</a>, or the <a class="reference external" href="https://binary-factory.kde.org/job/Krita_Nightly_MacOS_Build/">nightly build for macOS</a>.</p>
-<div class="contents topic" id="id1">
+<nav class="contents" id="id1">
 <p class="topic-title">目錄</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#building-krita-from-source" id="id8">Building Krita from Source</a></p>
@@ -280,49 +279,53 @@
 </li>
 <li><p><a class="reference internal" href="#building-on-windows" id="id18">Building on Windows</a></p>
 <ul>
-<li><p><a class="reference internal" href="#prerequisites" id="id19">Prerequisites</a></p></li>
-<li><p><a class="reference internal" href="#preparation" id="id20">Preparation</a></p></li>
-<li><p><a class="reference internal" href="#getting-the-dependencies" id="id21">Getting the dependencies</a></p>
+<li><p><a class="reference internal" href="#prerequisites" id="id19">Prerequisites</a></p>
 <ul>
-<li><p><a class="reference internal" href="#using-prebuilt-dependencies-from-the-binary-factory" id="id22">Using prebuilt dependencies from the binary factory</a></p></li>
-<li><p><a class="reference internal" href="#building-dependencies-yourself" id="id23">Building dependencies yourself</a></p></li>
+<li><p><a class="reference internal" href="#other-compilers" id="id20">Other Compilers</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#id2" id="id24">Building Krita</a></p></li>
-<li><p><a class="reference internal" href="#id3" id="id25">Running Krita</a></p></li>
-</ul>
-</li>
-<li><p><a class="reference internal" href="#building-on-macos" id="id26">Building on macOS</a></p>
+<li><p><a class="reference internal" href="#preparation" id="id21">Preparation</a></p></li>
+<li><p><a class="reference internal" href="#getting-the-dependencies" id="id22">Getting the dependencies</a></p>
 <ul>
-<li><p><a class="reference internal" href="#prequisites" id="id27">Prequisites</a></p></li>
-<li><p><a class="reference internal" href="#id4" id="id28">Preparation</a></p></li>
-<li><p><a class="reference internal" href="#building-the-dependencies" id="id29">Building the dependencies</a></p></li>
-<li><p><a class="reference internal" href="#id5" id="id30">Building Krita</a></p></li>
-<li><p><a class="reference internal" href="#id6" id="id31">Running Krita</a></p></li>
+<li><p><a class="reference internal" href="#using-prebuilt-dependencies-from-the-binary-factory" id="id23">Using prebuilt dependencies from the binary factory</a></p></li>
+<li><p><a class="reference internal" href="#building-dependencies-yourself" id="id24">Building dependencies yourself</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#building-on-android" id="id32">Building on Android</a></p>
+<li><p><a class="reference internal" href="#id2" id="id25">Building Krita</a></p></li>
+<li><p><a class="reference internal" href="#id3" id="id26">Running Krita</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#building-on-macos" id="id27">Building on macOS</a></p>
 <ul>
-<li><p><a class="reference internal" href="#setting-up-android-sdk-and-ndk" id="id33">Setting up Android SDK and NDK</a></p></li>
-<li><p><a class="reference internal" href="#id7" id="id34">Building Krita</a></p></li>
-<li><p><a class="reference internal" href="#installing-krita-apk" id="id35">Installing Krita APK</a></p></li>
-<li><p><a class="reference internal" href="#crash" id="id36">Crash</a></p></li>
+<li><p><a class="reference internal" href="#prequisites" id="id28">Prequisites</a></p></li>
+<li><p><a class="reference internal" href="#id4" id="id29">Preparation</a></p></li>
+<li><p><a class="reference internal" href="#building-the-dependencies" id="id30">Building the dependencies</a></p></li>
+<li><p><a class="reference internal" href="#id5" id="id31">Building Krita</a></p></li>
+<li><p><a class="reference internal" href="#id6" id="id32">Running Krita</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#specialized-ways-of-building-krita" id="id37">Specialized Ways of Building Krita</a></p></li>
+<li><p><a class="reference internal" href="#building-on-android" id="id33">Building on Android</a></p>
+<ul>
+<li><p><a class="reference internal" href="#setting-up-android-sdk-and-ndk" id="id34">Setting up Android SDK and NDK</a></p></li>
+<li><p><a class="reference internal" href="#id7" id="id35">Building Krita</a></p></li>
+<li><p><a class="reference internal" href="#installing-krita-apk" id="id36">Installing Krita APK</a></p></li>
+<li><p><a class="reference internal" href="#crash" id="id37">Crash</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#specialized-ways-of-building-krita" id="id38">Specialized Ways of Building Krita</a></p></li>
 </ul>
 </li>
 </ul>
-</div>
+</nav>
 <p>You can build Krita on Linux, Windows, macOS and on Linux for Android. The libraries Krita needs (for instance to load and save various image types) are called dependencies.</p>
 <p>Linux is the easiest operating system to build Krita on because all the libraries that Krita needs are available on most recent Linux distributions. For an easy guide to building Krita see <a class="reference external" href="https://www.davidrevoy.com/article193/compil-krita-from-source-code-on-linux-for-cats">Building Krita on Linux for Cats</a>.</p>
 <p>On macOS you can use tools like homebrew to get the dependencies, or build the dependencies manually. Building the dependencies manually is recommended because we have a number of changes to the source for libraries to make them function better with Krita.</p>
-<p>On Windows you will have to build the dependencies yourself.</p>
+<p>On Windows you can either reuse the dependencies from the KDE Binary Factory, or build the dependencies yourself.</p>
 <p>On all operating systems, you need to be familiar with using a terminal. Building Krita is a technical task and demands accuracy in following instructions and intelligence in understanding what happens.</p>
 <section id="building-on-linux">
-<h2><a class="toc-backref" href="#id9">Building on Linux</a><a class="headerlink" href="#building-on-linux" title="本標題的永久連結">¶</a></h2>
+<h2><a class="toc-backref" href="#id9" role="doc-backlink">Building on Linux</a><a class="headerlink" href="#building-on-linux" title="Permalink to this heading">¶</a></h2>
 <section id="preparing-your-development-environment">
-<h3><a class="toc-backref" href="#id10">Preparing your development environment</a><a class="headerlink" href="#preparing-your-development-environment" title="本標題的永久連結">¶</a></h3>
+<h3><a class="toc-backref" href="#id10" role="doc-backlink">Preparing your development environment</a><a class="headerlink" href="#preparing-your-development-environment" title="Permalink to this heading">¶</a></h3>
 <img alt="../_images/Krita-building_for-cats_001-init-dir_001_by-deevad.jpg" src="../_images/Krita-building_for-cats_001-init-dir_001_by-deevad.jpg" />
 <p>The most convenient layout is as follows:</p>
 <ul class="simple">
@@ -341,7 +344,7 @@
 </div>
 </section>
 <section id="getting-the-source-code">
-<h3><a class="toc-backref" href="#id11">Getting the Source Code</a><a class="headerlink" href="#getting-the-source-code" title="本標題的永久連結">¶</a></h3>
+<h3><a class="toc-backref" href="#id11" role="doc-backlink">Getting the Source Code</a><a class="headerlink" href="#getting-the-source-code" title="Permalink to this heading">¶</a></h3>
 <img alt="../_images/Krita-building_for-cats_002-git-clone_001_by-deevad.jpg" src="../_images/Krita-building_for-cats_002-git-clone_001_by-deevad.jpg" />
 <p>Open a terminal and enter the build root. Clone Krita from kde's git infrastructure (not github):</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">you@yourcomputer:~/kritadev&gt; git clone https://invent.kde.org/graphics/krita.git</span>
@@ -349,7 +352,7 @@
 </div>
 </section>
 <section id="configuring-the-build">
-<h3><a class="toc-backref" href="#id12">Configuring the Build</a><a class="headerlink" href="#configuring-the-build" title="本標題的永久連結">¶</a></h3>
+<h3><a class="toc-backref" href="#id12" role="doc-backlink">Configuring the Build</a><a class="headerlink" href="#configuring-the-build" title="Permalink to this heading">¶</a></h3>
 <img alt="../_images/Krita-building_for-cats_004-configure_001_by-deevad.jpg" src="../_images/Krita-building_for-cats_004-configure_001_by-deevad.jpg" />
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">you@yourcomputer:~/kritadev&gt; cd build</span>
 </pre></div>
@@ -412,7 +415,7 @@
 </div>
 </section>
 <section id="installing">
-<h3><a class="toc-backref" href="#id13">Installing</a><a class="headerlink" href="#installing" title="本標題的永久連結">¶</a></h3>
+<h3><a class="toc-backref" href="#id13" role="doc-backlink">Installing</a><a class="headerlink" href="#installing" title="Permalink to this heading">¶</a></h3>
 <img alt="../_images/Krita-building_for-cats_006-installing_by-deevad.jpg" src="../_images/Krita-building_for-cats_006-installing_by-deevad.jpg" />
 <p>When the build has fully succeeded, you can install:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">you@yourcomputer:~/kritadev/build&gt; make install</span>
@@ -424,7 +427,7 @@
 </div>
 </section>
 <section id="running-krita">
-<h3><a class="toc-backref" href="#id14">Running Krita</a><a class="headerlink" href="#running-krita" title="本標題的永久連結">¶</a></h3>
+<h3><a class="toc-backref" href="#id14" role="doc-backlink">Running Krita</a><a class="headerlink" href="#running-krita" title="Permalink to this heading">¶</a></h3>
 <p>You do not have to set environment variables in order to run Krita.</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">you@yourcomputer:~&gt; cd ~/kritadev/</span>
 <span class="go">you@yourcomputer:~&gt; ./install/bin/krita</span>
@@ -433,7 +436,7 @@
 <img alt="../_images/Krita-building_for-cats_008-running-success_by-deevad.jpg" src="../_images/Krita-building_for-cats_008-running-success_by-deevad.jpg" />
 </section>
 <section id="updating">
-<h3><a class="toc-backref" href="#id15">Updating</a><a class="headerlink" href="#updating" title="本標題的永久連結">¶</a></h3>
+<h3><a class="toc-backref" href="#id15" role="doc-backlink">Updating</a><a class="headerlink" href="#updating" title="Permalink to this heading">¶</a></h3>
 <img alt="../_images/Krita-building_for-cats_009-want-update_by-deevad.jpg" src="../_images/Krita-building_for-cats_009-want-update_by-deevad.jpg" />
 <p>Now, Krita is in constant development, so you will want to update your build from time to time. Maybe a cool feature got in, or a bug was fixed, or you just want the latest source.</p>
 <img alt="../_images/Krita-building_for-cats_010-git-update_by-deevad.jpg" src="../_images/Krita-building_for-cats_010-git-update_by-deevad.jpg" />
@@ -456,7 +459,7 @@
 <p>If you update daily, you might want to automate these command by making your own minimal bash script.</p>
 </section>
 <section id="trouble-shooting">
-<h3><a class="toc-backref" href="#id16">Trouble Shooting</a><a class="headerlink" href="#trouble-shooting" title="本標題的永久連結">¶</a></h3>
+<h3><a class="toc-backref" href="#id16" role="doc-backlink">Trouble Shooting</a><a class="headerlink" href="#trouble-shooting" title="Permalink to this heading">¶</a></h3>
 <img alt="../_images/Krita-building_for-cats_012-git-update-fail_by-deevad.jpg" src="../_images/Krita-building_for-cats_012-git-update-fail_by-deevad.jpg" />
 <p>The recent development version might break, or sometime be just unusable. Experimental changes are made daily.</p>
 <p>This will affect your productivity if you don't know how to 'go back in time' (for example, your favorite brush doesn't work anymore).</p>
@@ -485,7 +488,7 @@
 </div>
 </section>
 <section id="common-problems">
-<h3><a class="toc-backref" href="#id17">Common problems</a><a class="headerlink" href="#common-problems" title="本標題的永久連結">¶</a></h3>
+<h3><a class="toc-backref" href="#id17" role="doc-backlink">Common problems</a><a class="headerlink" href="#common-problems" title="Permalink to this heading">¶</a></h3>
 <img alt="../_images/Krita-building_for-cats_012-git-update-fail_by-deevad.jpg" src="../_images/Krita-building_for-cats_012-git-update-fail_by-deevad.jpg" />
 <p>Outside of the source being unstable, there's the following common problems:</p>
 <ul class="simple">
@@ -497,136 +500,156 @@
 </section>
 </section>
 <section id="building-on-windows">
-<h2><a class="toc-backref" href="#id18">Building on Windows</a><a class="headerlink" href="#building-on-windows" title="本標題的永久連結">¶</a></h2>
-<p>On Windows, you will have to build all the dependencies yourself. This will take a long time. Note that you will do all your work in a CMD command window.</p>
+<h2><a class="toc-backref" href="#id18" role="doc-backlink">Building on Windows</a><a class="headerlink" href="#building-on-windows" title="Permalink to this heading">¶</a></h2>
+<p>On Windows, you can either reuse the dependencies from the KDE Binary Factory, or build the dependencies yourself. If you decide to build all the dependencies yourself, this will take a long time. Note that you will do all your work in a CMD command window.</p>
 <p>This is also more difficult than building Krita on Linux, so you need to pay attention to details. If you follow the guide closely, install correct dependencies and make sure your PATH doesn't contain anything unwanted, there should be no issues.</p>
 <section id="prerequisites">
-<h3><a class="toc-backref" href="#id19">Prerequisites</a><a class="headerlink" href="#prerequisites" title="本標題的永久連結">¶</a></h3>
-<ol class="arabic simple">
+<h3><a class="toc-backref" href="#id19" role="doc-backlink">Prerequisites</a><a class="headerlink" href="#prerequisites" title="Permalink to this heading">¶</a></h3>
+<ol class="arabic">
 <li><p>Git - <a class="reference external" href="https://git-scm.com/downloads">https://git-scm.com/downloads</a></p></li>
-<li><dl class="simple">
-<dt>CMake 3.3.2 or later - <a class="reference external" href="https://cmake.org/download/">https://cmake.org/download/</a></dt><dd><ul class="simple">
-<li><p>CMake 3.9 does not build Krita properly at the moment, please use 3.8 or 3.10 instead.</p></li>
+<li><p>CMake 3.16.0 or later, the latest is usually fine - <a class="reference external" href="https://cmake.org/download/">https://cmake.org/download/</a></p></li>
+<li><p>Ninja build system - <a class="reference external" href="https://github.com/ninja-build/ninja/releases">https://github.com/ninja-build/ninja/releases</a></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Since Ninja is a single executable, you can place it in the bin folder of CMake, next to <code class="docutils literal notranslate"><span class="pre">cmake.exe</span></code> for convenience.</p></li>
 </ul>
-</dd>
-</dl>
+</div></blockquote>
 </li>
-<li><dl class="simple">
-<dt>Make sure you have a compiler - Only mingw-w64 7.3 (by mingw-builds) - <a class="reference external" href="https://files.kde.org/krita/build/x86_64-7.3.0-release-posix-seh-rt_v5-rev0.7z">https://files.kde.org/krita/build/x86_64-7.3.0-release-posix-seh-rt_v5-rev0.7z</a></dt><dd><ul class="simple">
-<li><p>For threading, select posix.</p></li>
-<li><p>For exceptions, select seh (64-bit) or dwarf (32-bit).</p></li>
-<li><p>Unzip mingw with <a class="reference external" href="https://www.7-zip.org/">7zip</a> into a folder like C:mingw-w64; the full path must not contain any spaces.</p></li>
-<li><p>MSVC is <em>not</em> supported at the moment.</p></li>
-<li><p>CLANG is <em>not</em> supported at the moment.</p></li>
-<li><p>MSYS is <em>not</em> supported at the moment.</p></li>
+<li><p>LLVM MinGW compiler toolchain</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Can be downloaded here: <a class="reference external" href="https://github.com/mstorsjo/llvm-mingw/releases/download/20220323/llvm-mingw-20220323-ucrt-x86_64.zip">https://github.com/mstorsjo/llvm-mingw/releases/download/20220323/llvm-mingw-20220323-ucrt-x86_64.zip</a></p></li>
+<li><p>Unzip the archive with <a class="reference external" href="https://www.7-zip.org/">7zip</a> into a folder like <code class="file docutils literal notranslate"><span class="pre">C:\llvm-mingw</span></code>; the full path must not contain any spaces.</p></li>
+<li><p>At the time of writing, we are using the tagged release 20220323 with LLVM 14.0.0 on the Binary Factory. In theory a newer version should be compatible, but use at your own risk.</p></li>
+<li><p>If you really want to use other compilers, see below.</p></li>
 </ul>
-</dd>
-</dl>
+</div></blockquote>
 </li>
-<li><dl class="simple">
-<dt>You will also need a release of Python 3.8 (not 3.7, not 3.9) - <a class="reference external" href="https://www.python.org">https://www.python.org</a>.</dt><dd><ul class="simple">
+<li><p>You will also need a release of Python 3.8 (not 3.7, not 3.9) - <a class="reference external" href="https://www.python.org">https://www.python.org</a>.</p>
+<blockquote>
+<div><ul class="simple">
 <li><p>Make sure to have that version of python.exe in your path. This version of Python will be used for two things to configure Qt and to build the Python scripting module.  Do not set PYTHONHOME or PYTHONPATH.</p></li>
 <li><p>Make sure that your Python will have the correct architecture for the version you are trying to build. If building for 32-bit target, you need the 32-bit release of Python.</p></li>
 </ul>
-</dd>
-</dl>
+</div></blockquote>
 </li>
 <li><p>Install the Windows 10 SDK - <a class="reference external" href="https://developer.microsoft.com/en-us/windows/downloads/windows-10-sdk/">https://developer.microsoft.com/en-us/windows/downloads/windows-10-sdk/</a></p></li>
 <li><p>It is useful to install Qt Creator - <a class="reference external" href="https://download.qt.io/official_releases/qtcreator/">https://download.qt.io/official_releases/qtcreator/</a></p></li>
 </ol>
-<p><strong>*MAKE DOUBLE PLUS SURE YOU DO NOT HAVE ANY OTHER COMPILER OR DEVELOPMENT ENVIRONMENT OR PYTHON INSTALLATION IN YOUR PATH*</strong></p>
+<div class="admonition attention">
+<p class="admonition-title">注意</p>
+<p><strong>Make double plus sure you do not have any other compilers or development environments or Python installation in your PATH!</strong></p>
+</div>
+<section id="other-compilers">
+<h4><a class="toc-backref" href="#id20" role="doc-backlink">Other Compilers</a><a class="headerlink" href="#other-compilers" title="Permalink to this heading">¶</a></h4>
+<ul class="simple">
+<li><p>In the past we used mingw-w64 gcc 7.3.0 (mingw-builds). This version is no longer supported because our dependencies started requiring a more updated compiler to work.</p></li>
+<li><p>It is possible to build Krita with a newer mingw-w64 gcc toolchain, for example gcc 11.2.0 by niXman on GitHub (mingw-builds), or the one from MSYS2.</p></li>
+<li><p>MSYS2 can build Krita with the MINGW64, UCRT64 or CLANG64 environments.</p></li>
+<li><p>Krita can also be built with MSVC (check the batch file in <code class="docutils literal notranslate"><span class="pre">build-tools\windows</span></code>). Krita built with MSVC has suboptimal performance due to codegen issues so we can't use it.</p></li>
+</ul>
+<div class="admonition attention">
+<p class="admonition-title">注意</p>
+<p>If you use these compilers, you must build the dependencies yourself. Trying to mix dependencies built with a different compiler may outright fail to configure, or Krita may appear to build successfully but you get random crashes wuen running it.</p>
+</div>
+</section>
 </section>
 <section id="preparation">
-<h3><a class="toc-backref" href="#id20">Preparation</a><a class="headerlink" href="#preparation" title="本標題的永久連結">¶</a></h3>
+<h3><a class="toc-backref" href="#id21" role="doc-backlink">Preparation</a><a class="headerlink" href="#preparation" title="Permalink to this heading">¶</a></h3>
 <img alt="../_images/Krita-building_for-cats_001-init-dir_001_by-deevad.jpg" src="../_images/Krita-building_for-cats_001-init-dir_001_by-deevad.jpg" />
-<p>After installing the Prerequisites, prepare your working directory. Keep this as short as possible.</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">cd  c:\</span>
-<span class="go">mkdir c:\dev</span>
-<span class="go">mkdir c:\d</span>
-<span class="go">mkdir c:\i</span>
+<p>After installing the Prerequisites, prepare your working directory somewhere, like <code class="docutils literal notranslate"><span class="pre">C:\krita-dev</span></code>. Keep this short (30 characters in the prefix path is fine, but longer than this and you may get build errors). Makes sure the path does not contain whitespace. If you use a different path, remember to adjust the paths in the later steps.</p>
+<div class="highlight-batch notranslate"><div class="highlight"><pre><span></span><span class="k">mkdir</span> C:\krita-dev
+<span class="k">cd</span> /d C:\krita-dev
 </pre></div>
 </div>
-<p>Then prepare a batch file to set the environment. Every time you want to build or run your home-grown Krita, open the CMD windows, go to the c:dev folder and run the env.bat file. Read this example and ADJUST THE VERSION NUMBERS where necessary so the PATH is correct.</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">set DLLTOOL_EXE=C:\mingw-w64\x86_64-7.3.0-posix-seh-rt_v5-rev0\mingw64\bin\dlltool.exe</span>
-<span class="go">set MINGW_GCC_BIN=C:\mingw-w64\x86_64-7.3.0-posix-seh-rt_v5-rev0\mingw64\\bin</span>
-<span class="go">set MINGW_BIN_DIR=C:\mingw-w64\x86_64-7.3.0-posix-seh-rt_v5-rev0\mingw64\\bin</span>
-<span class="go">set BUILDROOT=c:\dev</span>
-<span class="go">set BUILDDIR_INSTALL=%BUILDROOT%\i</span>
-<span class="go">set PATH=%BUILDROOT%\i\bin;%BUILDROOT%\i\lib;%MINGW_GCC_BIN%;C:\Program Files\CMake\bin;c:\qt\qtcreator-4.12.0\bin;%PATH%</span>
-<span class="go">set &quot;WindowsSdkDir=%ProgramFiles(x86)%\Windows Kits\10&quot;</span>
-<span class="go">set &quot;WindowsSdkVerBinPath=%ProgramFiles(x86)%\Windows Kits\10\bin\10.0.17763.0&quot;</span>
+<p>Then prepare a batch file to set the environment. Read this example and <strong>adjust the version numbers and paths</strong> where necessary so the PATH is correct. Save this as <code class="docutils literal notranslate"><span class="pre">C:\krita-dev\env.bat</span></code>.</p>
+<div class="highlight-batch notranslate"><div class="highlight"><pre><span></span><span class="p">:</span><span class="c1">: Build/dev tools</span>
+<span class="k">set</span> <span class="nv">MINGW_BIN_DIR</span><span class="p">=</span>C:\llvm-mingw\llvm-mingw-20220323-ucrt-x86_64\bin
+<span class="k">set</span> <span class="nv">CMAKE_BIN_DIR</span><span class="p">=</span>C:\Program Files\CMake\bin
+<span class="k">set</span> <span class="nv">NINJA_BIN_DIR</span><span class="p">=</span>C:\krita-dev\ninja
+<span class="k">set</span> <span class="nv">PYTHON_BIN_DIR</span><span class="p">=</span>C:\Python38
+<span class="k">set</span> <span class="nv">QTCREATOR_DIR</span><span class="p">=</span>C:\Qt\Tools\QtCreator\bin
 
-<span class="go">:: Since Krita 5.1 when using SIP5+ you also need to set up PYTHONPATH manually</span>
-<span class="go">set PYTHONPATH=%BUILDROOT%\i\lib\site-packages;%PYTHONPATH%</span>
+<span class="k">set</span> <span class="nv">BUILDROOT</span><span class="p">=</span>C:\krita-dev
+<span class="k">set</span> <span class="nv">PATH</span><span class="p">=</span>C:\krita-dev\i\bin;C:\krita-dev\i\lib;<span class="nv">%MINGW_BIN_DIR%</span>;<span class="nv">%MINGW_BIN_DIR%</span>\..\x86_64-w64-mingw32\bin;<span class="nv">%CMAKE_BIN_DIR%</span>;<span class="nv">%NINJA_BIN_DIR%</span>;<span class="nv">%QTCREATOR_DIR%</span>;<span class="nv">%PATH%</span>
 </pre></div>
 </div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">cd c:\dev</span>
-<span class="go">env.bat</span>
+<p>Every time you want to build or run your home-grown Krita, open the CMD window, change to the <code class="docutils literal notranslate"><span class="pre">C:\krita-dev</span></code> folder and run the <code class="docutils literal notranslate"><span class="pre">env.bat</span></code> file:</p>
+<div class="highlight-batch notranslate"><div class="highlight"><pre><span></span><span class="k">cd</span> /d C:\krita-dev
+env.bat
 </pre></div>
 </div>
-<p>Then get krita:</p>
+<p>You will note that most command samples below contain these two lines, but the truth is you only need to run <code class="docutils literal notranslate"><span class="pre">env.bat</span></code> once for each CMD window.</p>
+<p>Then get the source code of Krita:</p>
 <img alt="../_images/Krita-building_for-cats_002-git-clone_001_by-deevad.jpg" src="../_images/Krita-building_for-cats_002-git-clone_001_by-deevad.jpg" />
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">cd c:\dev</span>
-<span class="go">git clone https://invent.kde.org/graphics/krita.git</span>
+<div class="highlight-batch notranslate"><div class="highlight"><pre><span></span><span class="k">cd</span> /d C:\krita-dev
+git clone https://invent.kde.org/graphics/krita.git
 </pre></div>
 </div>
 </section>
 <section id="getting-the-dependencies">
-<h3><a class="toc-backref" href="#id21">Getting the dependencies</a><a class="headerlink" href="#getting-the-dependencies" title="本標題的永久連結">¶</a></h3>
+<h3><a class="toc-backref" href="#id22" role="doc-backlink">Getting the dependencies</a><a class="headerlink" href="#getting-the-dependencies" title="Permalink to this heading">¶</a></h3>
 <img alt="../_images/Krita-building_for-cats_003-get-libs_001_by-deevad.jpg" src="../_images/Krita-building_for-cats_003-get-libs_001_by-deevad.jpg" />
-<p>Here we have two options. The quick one is to reuse prebuilt dependencies from the binary factory (you need to have the same version of the compiler locally as the one used on the binary factory). And the slow one is to build everything ourselves.</p>
+<p>Here we have two options. The quick one is to reuse prebuilt dependencies from the Binary Factory. You can only do this if you are using the same version of compiler as the one on the Binary Factory (as stated in the prerequisites section). And the slow one is to build everything ourselves.</p>
 <section id="using-prebuilt-dependencies-from-the-binary-factory">
-<h4><a class="toc-backref" href="#id22">Using prebuilt dependencies from the binary factory</a><a class="headerlink" href="#using-prebuilt-dependencies-from-the-binary-factory" title="本標題的永久連結">¶</a></h4>
+<h4><a class="toc-backref" href="#id23" role="doc-backlink">Using prebuilt dependencies from the binary factory</a><a class="headerlink" href="#using-prebuilt-dependencies-from-the-binary-factory" title="Permalink to this heading">¶</a></h4>
 <p>To fetch prebuilt dependencies just run the embedded cmake script:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">cd c:\dev</span>
-<span class="go">mkdir b</span>
-<span class="go">cd b</span>
-<span class="go">cmake ..\krita\build-tools\ci-deps -G &quot;MinGW Makefiles&quot; -DCMAKE_INSTALL_PREFIX=..\i</span>
-<span class="go">cmake --build .</span>
+<div class="highlight-batch notranslate"><div class="highlight"><pre><span></span><span class="k">cd</span> /d C:\krita-dev
+env.bat
+<span class="k">mkdir</span> fetch-deps
+cmake -S krita\build-tools\ci-deps -B fetch-deps -G <span class="s2">&quot;MinGW Makefiles&quot;</span> -DCMAKE_INSTALL_PREFIX=C:/krita-dev/i
+cmake --build fetch-deps
 </pre></div>
 </div>
+<p>(Or you can download it yourself from <a class="reference external" href="https://binary-factory.kde.org/job/Krita_Nightly_Windows_Dependency_Build/">https://binary-factory.kde.org/job/Krita_Nightly_Windows_Dependency_Build/</a>)</p>
 </section>
 <section id="building-dependencies-yourself">
-<h4><a class="toc-backref" href="#id23">Building dependencies yourself</a><a class="headerlink" href="#building-dependencies-yourself" title="本標題的永久連結">¶</a></h4>
+<h4><a class="toc-backref" href="#id24" role="doc-backlink">Building dependencies yourself</a><a class="headerlink" href="#building-dependencies-yourself" title="Permalink to this heading">¶</a></h4>
 <p>We will build everything on Windows with the same script that is used to make the nightly builds and the releases:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">cd c:\dev</span>
-<span class="go">krita\build-tools\windows\build.cmd --no-interactive --jobs 8 --skip-krita --src-dir c:\dev\krita --download-dir c:\dev\d --deps-build-dir c:\dev\b --deps-install-dir c:\dev\i</span>
+<div class="highlight-batch notranslate"><div class="highlight"><pre><span></span><span class="k">cd</span> /d C:\krita-dev
+env.bat
+krita\build-tools\windows\build.cmd --no-interactive --jobs 8 --skip-krita --download-dir C:\krita-dev\d --deps-build-dir C:\krita-dev\b_deps --deps-install-dir C:\krita-dev\i
 </pre></div>
 </div>
-<p>This will take several hours, but you only need to do it once. When it's ready, make a zip archive of the c:devi folder. That's a backup because we will install krita into the same folder as the dependencies, and if you need to nuke your krita build (because you're switching between branches or for some other reason, you'll also nuke your built dependencies. You can also build the depedencies into another folder, like c:devi_deps, BUT in that case you're going to have trouble running Krita without first packaging it.</p>
+<p>This will take several hours, but you only need to do it once (until you need to update the deps again). When it's ready, make a zip archive of the <code class="docutils literal notranslate"><span class="pre">C:\krita-dev\i</span></code> folder. That's a backup because we will install Krita into the same folder as the dependencies, and if you need to nuke your Krita build (because you're switching between branches or for some other reason, you'll also nuke your built dependencies. You can also build the depedencies into another folder, like <code class="docutils literal notranslate"><span class="pre">C:\krita-dev\i_deps</span></code>, <strong>but</strong> in that case you're going to have trouble running Krita without first packaging it, so that is not recommended unless you really know what you are doing.</p>
 </section>
 </section>
 <section id="id2">
-<h3><a class="toc-backref" href="#id24">Building Krita</a><a class="headerlink" href="#id2" title="本標題的永久連結">¶</a></h3>
+<h3><a class="toc-backref" href="#id25" role="doc-backlink">Building Krita</a><a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h3>
 <img alt="../_images/Krita-building_for-cats_005-build_001_by-deevad.jpg" src="../_images/Krita-building_for-cats_005-build_001_by-deevad.jpg" />
 <p>Again, on the command line, with the same script that is used to make the nightly builds and the releases:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">cd c:\dev</span>
-<span class="go">krita\build-tools\windows\build.cmd --no-interactive --jobs 8 --skip-deps --src-dir c:\dev\krita --download-dir c:\dev\d --deps-build-dir c:\dev\b --deps-install-dir c:\dev\is --krita-build-dir c:\dev\b_krita --krita-install-dir c:\dev\i</span>
+<div class="highlight-batch notranslate"><div class="highlight"><pre><span></span><span class="k">cd</span> /d C:\krita-dev
+env.bat
+krita\build-tools\windows\build.cmd --no-interactive --jobs 8 --skip-deps --download-dir C:\krita-dev\d --deps-install-dir C:\krita-dev\i --krita-build-dir C:\krita-dev\b_krita --plugins-build-dir C:\krita-dev\b_plugins --krita-install-dir C:\krita-dev\i
 </pre></div>
 </div>
-<p>If you are hacking on Krita, you can rebuild Krita without running this script by entering the build directory and running mingw3-make install.</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">cd c:\dev\b_krita</span>
-<span class="go">mingw32-make install</span>
+<p>If you are hacking on Krita, you can rebuild Krita without running this script by entering the build directory and running <code class="docutils literal notranslate"><span class="pre">mingw32-make</span> <span class="pre">-j8</span> <span class="pre">install</span></code> or <code class="docutils literal notranslate"><span class="pre">ninja</span> <span class="pre">install</span></code>.</p>
+<div class="highlight-batch notranslate"><div class="highlight"><pre><span></span><span class="k">cd</span> b_krita
+mingw32-make -j8 install
+<span class="p">:</span><span class="c1">: or</span>
+ninja install
 </pre></div>
 </div>
 <img alt="../_images/Krita-building_for-cats_006-installing_by-deevad.jpg" src="../_images/Krita-building_for-cats_006-installing_by-deevad.jpg" />
 </section>
 <section id="id3">
-<h3><a class="toc-backref" href="#id25">Running Krita</a><a class="headerlink" href="#id3" title="本標題的永久連結">¶</a></h3>
-<p>You must start Krita from the command prompt, after having run env.bat:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">cd c:\dev\b_krita</span>
-<span class="go">env.bat</span>
-<span class="go">c:\dev\i\bin\krita.exe</span>
+<h3><a class="toc-backref" href="#id26" role="doc-backlink">Running Krita</a><a class="headerlink" href="#id3" title="Permalink to this heading">¶</a></h3>
+<p>You must start Krita from the command prompt, after having run <code class="docutils literal notranslate"><span class="pre">env.bat</span></code>:</p>
+<div class="highlight-batch notranslate"><div class="highlight"><pre><span></span><span class="k">cd</span> /d C:\krita-dev
+env.bat
+i\bin\krita
+<span class="p">:</span><span class="c1">: or</span>
+i\bin\krita.exe
 </pre></div>
 </div>
 <img alt="../_images/Krita-building_for-cats_008-running-success_by-deevad.jpg" src="../_images/Krita-building_for-cats_008-running-success_by-deevad.jpg" />
 </section>
 </section>
 <section id="building-on-macos">
-<h2><a class="toc-backref" href="#id26">Building on macOS</a><a class="headerlink" href="#building-on-macos" title="本標題的永久連結">¶</a></h2>
+<h2><a class="toc-backref" href="#id27" role="doc-backlink">Building on macOS</a><a class="headerlink" href="#building-on-macos" title="Permalink to this heading">¶</a></h2>
 <p>We will build Krita on macOS with the same scripts that are used to build the nightly builds and the releases. We will <em>NOT</em> be building krita from within XCode, but from within the terminal.</p>
 <section id="prequisites">
-<h3><a class="toc-backref" href="#id27">Prequisites</a><a class="headerlink" href="#prequisites" title="本標題的永久連結">¶</a></h3>
+<h3><a class="toc-backref" href="#id28" role="doc-backlink">Prequisites</a><a class="headerlink" href="#prequisites" title="Permalink to this heading">¶</a></h3>
 <p>You will need to install:</p>
 <ul class="simple">
 <li><p>CMake: <a class="reference external" href="https://cmake.org">https://cmake.org</a></p></li>
@@ -635,7 +658,7 @@
 </ul>
 </section>
 <section id="id4">
-<h3><a class="toc-backref" href="#id28">Preparation</a><a class="headerlink" href="#id4" title="本標題的永久連結">¶</a></h3>
+<h3><a class="toc-backref" href="#id29" role="doc-backlink">Preparation</a><a class="headerlink" href="#id4" title="Permalink to this heading">¶</a></h3>
 <p>Open Terminal.app</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">cd</span>
 <span class="go">mkdir dev</span>
@@ -651,7 +674,7 @@
 </div>
 </section>
 <section id="building-the-dependencies">
-<h3><a class="toc-backref" href="#id29">Building the dependencies</a><a class="headerlink" href="#building-the-dependencies" title="本標題的永久連結">¶</a></h3>
+<h3><a class="toc-backref" href="#id30" role="doc-backlink">Building the dependencies</a><a class="headerlink" href="#building-the-dependencies" title="Permalink to this heading">¶</a></h3>
 <img alt="../_images/Krita-building_for-cats_003-get-libs_001_by-deevad.jpg" src="../_images/Krita-building_for-cats_003-get-libs_001_by-deevad.jpg" />
 <p>It is possible to build Krita against dependencies installed through MacPorts or some similar packaging service. If you do that, you're on your own though.</p>
 <p>Open Terminal.app and source the env.sh file you just created:</p>
@@ -663,7 +686,7 @@
 <p>This will complain several time that it cannot find the Java SDK: just click that away, and don't worry. Building the dependencies will take several hours.</p>
 </section>
 <section id="id5">
-<h3><a class="toc-backref" href="#id30">Building Krita</a><a class="headerlink" href="#id5" title="本標題的永久連結">¶</a></h3>
+<h3><a class="toc-backref" href="#id31" role="doc-backlink">Building Krita</a><a class="headerlink" href="#id5" title="Permalink to this heading">¶</a></h3>
 <p>In the same terminal window (if you open a new one, you will have to <em>source</em> the env.sh script again by running &quot;. env.sh&quot; -- that's a dot.</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">./krita/packaging/macos/osxbuild.sh buildinstall</span>
 </pre></div>
@@ -672,7 +695,7 @@
 <img alt="../_images/Krita-building_for-cats_006-installing_by-deevad.jpg" src="../_images/Krita-building_for-cats_006-installing_by-deevad.jpg" />
 </section>
 <section id="id6">
-<h3><a class="toc-backref" href="#id31">Running Krita</a><a class="headerlink" href="#id6" title="本標題的永久連結">¶</a></h3>
+<h3><a class="toc-backref" href="#id32" role="doc-backlink">Running Krita</a><a class="headerlink" href="#id6" title="Permalink to this heading">¶</a></h3>
 <p>You can run krita in the same terminal window:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">~/dev/i/krita.app/Contents/MacOS/krita</span>
 </pre></div>
@@ -688,10 +711,10 @@
 </section>
 </section>
 <section id="building-on-android">
-<h2><a class="toc-backref" href="#id32">Building on Android</a><a class="headerlink" href="#building-on-android" title="本標題的永久連結">¶</a></h2>
+<h2><a class="toc-backref" href="#id33" role="doc-backlink">Building on Android</a><a class="headerlink" href="#building-on-android" title="Permalink to this heading">¶</a></h2>
 <p>Use Linux to build Krita for Android. Building Krita for Android on another system is <em>NOT</em> supported.</p>
 <section id="setting-up-android-sdk-and-ndk">
-<h3><a class="toc-backref" href="#id33">Setting up Android SDK and NDK</a><a class="headerlink" href="#setting-up-android-sdk-and-ndk" title="本標題的永久連結">¶</a></h3>
+<h3><a class="toc-backref" href="#id34" role="doc-backlink">Setting up Android SDK and NDK</a><a class="headerlink" href="#setting-up-android-sdk-and-ndk" title="Permalink to this heading">¶</a></h3>
 <p>We right now use Android NDK version <code class="docutils literal notranslate"><span class="pre">r18b</span></code> to do our builds. So, I would recommend to use that. Download it from <a class="reference external" href="https://developer.android.com/ndk/downloads/older_releases.html">google's
 website</a>
 then extract it.</p>
@@ -714,7 +737,7 @@ and then run it again.</p>
 <p>That's the only dependency we have to manage manually!</p>
 </section>
 <section id="id7">
-<h3><a class="toc-backref" href="#id34">Building Krita</a><a class="headerlink" href="#id7" title="本標題的永久連結">¶</a></h3>
+<h3><a class="toc-backref" href="#id35" role="doc-backlink">Building Krita</a><a class="headerlink" href="#id7" title="Permalink to this heading">¶</a></h3>
 <p>Now, to build krita, run
 <code class="docutils literal notranslate"><span class="pre">&lt;krita-source&gt;/packaging/android/androidbuild.sh</span> <span class="pre">--help</span></code> and pass the required arguments.</p>
 <p>Example:</p>
@@ -723,23 +746,22 @@ and then run it again.</p>
 </div>
 </section>
 <section id="installing-krita-apk">
-<h3><a class="toc-backref" href="#id35">Installing Krita APK</a><a class="headerlink" href="#installing-krita-apk" title="本標題的永久連結">¶</a></h3>
+<h3><a class="toc-backref" href="#id36" role="doc-backlink">Installing Krita APK</a><a class="headerlink" href="#installing-krita-apk" title="Permalink to this heading">¶</a></h3>
 <p>To install run
 <code class="docutils literal notranslate"><span class="pre">adb</span> <span class="pre">install</span> <span class="pre">-d</span> <span class="pre">-r</span> <span class="pre">&lt;build-root&gt;/krita_build_apk/build/outputs/apk/debug/krita_build_apk-debug.apk</span></code>.</p>
 <p><code class="docutils literal notranslate"><span class="pre">adb</span></code> should be in <code class="docutils literal notranslate"><span class="pre">&lt;sdk-root&gt;/platform-tools/</span></code></p>
 </section>
 <section id="crash">
-<h3><a class="toc-backref" href="#id36">Crash</a><a class="headerlink" href="#crash" title="本標題的永久連結">¶</a></h3>
+<h3><a class="toc-backref" href="#id37" role="doc-backlink">Crash</a><a class="headerlink" href="#crash" title="Permalink to this heading">¶</a></h3>
 <p>If Krita crashes you can look up the logs using <code class="docutils literal notranslate"><span class="pre">adb</span> <span class="pre">logcat</span></code></p>
 </section>
 </section>
 <section id="specialized-ways-of-building-krita">
-<h2><a class="toc-backref" href="#id37">Specialized Ways of Building Krita</a><a class="headerlink" href="#specialized-ways-of-building-krita" title="本標題的永久連結">¶</a></h2>
-<p>These are specialized ways of building Krita on Windows and Linux while re-using the dependencies built on KDE's binary factory. You only need to try this if you don't want to build Krita's dependencies yourself on Windows or use distribution dependencies on Linux.</p>
+<h2><a class="toc-backref" href="#id38" role="doc-backlink">Specialized Ways of Building Krita</a><a class="headerlink" href="#specialized-ways-of-building-krita" title="Permalink to this heading">¶</a></h2>
+<p>These are specialized ways of building Krita on Linux while re-using the dependencies built on KDE's binary factory. You only need to try this if you don't want to use distribution dependencies on Linux.</p>
 <div class="toctree-wrapper compound">
 <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="building/auto_build_script.html">Half-automatic building script on Windows</a></li>
 <li class="toctree-l1"><a class="reference internal" href="building/build_krita_with_docker_on_linux.html">Building krita with Docker on Linux</a></li>
 </ul>
 </div>
@@ -754,7 +776,7 @@ and then run it again.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="building/auto_build_script.html" class="btn btn-neutral float-right" title="Half-automatic building script on Windows" accesskey="n" rel="next"> <!-- 下一個 --> <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="building/build_krita_with_docker_on_linux.html" class="btn btn-neutral float-right" title="Building krita with Docker on Linux" accesskey="n" rel="next"> <!-- 下一個 --> <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="../untranslatable_pages.html" class="btn btn-neutral" title="Technical Pages" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- 上一個  -->  </a>
@@ -769,7 +791,7 @@ and then run it again.</p>
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>6a90bff</code>
+          修訂版本 <code>d9da50a</code>
         </span>
       
 
@@ -795,6 +817,7 @@ and then run it again.</p>
       <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
       <script src="../_static/jquery.js"></script>
       <script src="../_static/underscore.js"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
       <script src="../_static/doctools.js"></script>
       <script src="../_static/translations.js"></script>
 

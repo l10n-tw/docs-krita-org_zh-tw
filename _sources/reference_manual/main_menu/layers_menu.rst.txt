@@ -19,11 +19,11 @@ Layers Menu
 These are the topmenu options are related to Layer Management, check out :ref:`that page <layers_and_masks>` first, if you haven't.
 
 Cut Layer
-    Cuts the whole layer rather than just the pixels.
+    Cuts the whole selected layer/layers rather than just the pixels.
 Copy Layer
-    Copy the whole layer rather than just the pixels.
+    Copy the whole selected layer/layers rather than just the pixels.
 Paste Layer
-    Pastes the whole layer if any of the top two actions have been taken.
+    Pastes all the layers saved in the clipboard.
 New
     Organizes the following actions:
 

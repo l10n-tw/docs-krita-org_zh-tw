@@ -103,6 +103,15 @@ Brush Packs
 
                Razcore
 
+        * - .. figure:: /images/resource_packs/Resources-eyeodin.png
+               :target: https://github.com/EyeOdin/eo_bundle
+
+               EO Bundle by EyeOdin
+
+          -
+
+          -
+
 
 Texture Packs
 =============
@@ -239,7 +248,7 @@ Rogudator's Speech Bubble Generator
 
 Mirror Fix
 
-    This plugin allows you to correct symmetry errors for example after a transformation of a part of the image.
+    This plugin allows to quickly correct symmetry errors done by non-symmetrical edits.
 
     https://github.com/EyeOdin/mirror_fix
 
@@ -280,6 +289,17 @@ Spritesheet Plugin
 
     https://github.com/Falano/kritaSpritesheetManager
 
+Imagine Board
+
+    This plugin displays and organizes images to inspire the artists imagination.
+
+    - Directory images can be filtered by Keywords then displayed in Preview, Grid or Slide-Show.
+    - Reference board uses Pins from various sources and can bind them to the KRA save file.
+    - Function>> can preform File Management operations using a standard nomenclature.
+    - Includes other small utilities and support to KRA, GIF/WEBP and SVG file formats.
+
+    https://github.com/EyeOdin/imagine_board
+
 
 File management
 ~~~~~~~~~~~~~~~~
@@ -296,6 +316,13 @@ Spine File Format Export
     This plugin exports the document in a format compatible with Spine. The README describes what kind of structure the document needs to have to be exported properly. Besides exported images, the plugin creates :file:`spine.json` file.
 
     https://github.com/chartinger/krita-unofficial-spine-export
+
+Key Enter
+
+    This plugin helps to quickly organize images using a standard nomenclature through the usage of Keywords. These keywords are used for file filtering purposes. Key Enter has a custom version of Photobash Images.
+
+    https://github.com/EyeOdin/key_enter
+
 
 Color selectors
 ~~~~~~~~~~~~~~~
@@ -337,12 +364,18 @@ KanvasBuddy
 
     Krita-artists thread: https://krita-artists.org/t/kanvasbuddy-a-minimalist-toolbar/549
 
+Tela
+
+    This plugin can display the canvas in real time and create a extra window that helps with OBS recording (ignoring camera transforms). Also acts as quick settings for Krita’s Brush, Canvas and Document values. Tela can also expand the Canvas temporarily and has Guide management options and formatting.
+
+    https://github.com/EyeOdin/Tela
+
 
 Miscellaneous
 ~~~~~~~~~~~~~~~~~~~~~
-Timer Watch - Time Management Tool
+Timer Watch
 
-    This plugin adds a timer. You can start it, stop, pause when you want to take a break and restart afterwards. You can set up an alarm to remind you to take a break.
+    This plugin is a time management tool. Clock shows the current local time. Stopwatch shows a aim work goal that is flexible and can use a silent alarm. Information displays file stats like original creator, time spent editing and others.
 
     https://github.com/EyeOdin/timer_watch
 

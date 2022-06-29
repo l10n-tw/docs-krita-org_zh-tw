@@ -38,7 +38,10 @@ Options
 Spray Area
 ----------
 
-The area in which the particles are sprayed.
+Here you can set different properties related to the area where the particles are distributed and how they are distributed.
+
+Area
+~~~~
 
 Diameter
     The size of the area.
@@ -50,18 +53,67 @@ Scale
     Scales the diameter up.
 Spacing
     Increases the spacing of the diameter's spray.
+Jitter Movement
+    Jitters the spray area around for extra randomness.
 
 Particles
 ~~~~~~~~~
 
-Count
-    Use a specified amount of particles.
-Density
-    Use a % amount of particles.
-Jitter Movement
-    Jitters the spray area around for extra randomness.
-Gaussian Distribution
-    Focuses the particles to paint in the center instead of evenly random over the spray area.
+Amount
+    Count
+        Use a specified number of particles.
+    Density
+        Use a percentage for the number of particles.
+
+Distribution
+    .. versionadded:: 5.1
+
+    Here you can set how the particles are distributed in the spray area. The particles are distributed using `polar coordinates <https://en.wikipedia.org/wiki/Polar_coordinate_system>`_, so you can set different distributions for the angle and the distance of the particles relative to the center of the spray area.
+
+    Angular
+        You can specify how the particles are distributed around the center using one of the following options:
+
+        * :guilabel:`Uniform`: Distributes the particles uniformly. Each angle is equally likely to receive a particle.
+        * :guilabel:`Curve`: You can set a custom curve that models how the particles should be distributed. The left side of the curve represents an angle of 0 degrees and the right side an angle of 360 degrees. Higher values in the vertical direction mean that there is a higher probability that a particle ends up at that particular angle. In the spray area the angle increases clockwise.
+
+            * :guilabel:`Repeat`: Have the curve repeat itself multiple times from 0 to 360 degrees. Without this, you would need to build a very complex curve with too many control points to achieve the same result.
+
+    Radial
+        You can specify how the particles are distributed from the center to the edge of the spray area using one of the following options:
+
+        * :guilabel:`Uniform`: Distributes the particles uniformly.
+
+            * :guilabel:`Center-biased spread (legacy)`: This option ensures compatibility with the brushes made prior to version 5.1. Before, the particles were distributed uniformly in terms of distance from the center, but that ended up concentrating more particles in the center of the spray area from a 2d space perspective. For example, a circumference at a distance of 10 pixels from the center ended having roughly the same number of particles as a circumference at a distance of 100 pixels, while being 10 times smaller in length.
+
+        * :guilabel:`Gaussian`: distributes the particles using a gaussian or `normal distribution <https://en.wikipedia.org/wiki/Normal_distribution>`_.
+
+            * :guilabel:`Standard deviation`: Sets the standard deviation of the distribution. Higher values will make the particles more spread.
+            * :guilabel:`Center-biased spread (legacy)`: This option ensures compatibility with the brushes made prior to version 5.1. See the previous point for more information.
+
+        * :guilabel:`Cluster`: This will allow you to quickly concentrate the particles towards the center or the edge of the spray area.
+
+            * :guilabel:`Clustering amount`: Positive values will make the particles concentrate towards the center of the spray area. Negative values will make the particles concentrate towards the border of the spray area. Values near 0 will make the particles spread more uniformly.
+
+        * :guilabel:`Curve`: You can set a custom curve that models how the particles should be distributed. The left side of the curve represents the center of the spray area and the right side represents its border. Higher values in the vertical direction mean that there is a higher probability that a particle ends up at that particular distance.
+
+            * :guilabel:`Repeat`: Have the curve repeat itself multiple times from the center of the spray area to its edge. Without this, you would need to build a very complex curve with too many control points to achieve the same result.
+
+.. figure:: /images/brushes/krita-spray-brush-engine-distribution.png
+
+   Different distribution types on display:
+
+   1. Uniform for both Angular and Radial, with `Center-biased spread (legacy)` turned on.
+   2. Uniform for both Angular and Radial, with `Center-biased spread (legacy)` turned off.
+   3. Clustered for Radial, with Clusting Amount: 0.0.
+   4. Clustered for Radial, with Clusting Amount: -5.0.
+   5. Clustered for Radial, with Clusting Amount: +5.0.
+   6. Curve for Angular, using the default curve and 0 repeats.
+   7. Curve for Angular, using the default curve and 5 repeats.
+   8. Curve for Radial, using the default curve with 3 repeats.
+   9. Curve for Angular using a hill shaped curve, 7 repeats, and Clustered for Radial, with Clusting Amount: -5.0.
+   10. Gaussian for Radial, with Standard Deviation: 25.
+   11. Gaussian for Radial, with Standard Deviation: 50.
+   12. Gaussian for Radial, with Standard Deviation: 80.
 
 .. _option_spray_shape:
 

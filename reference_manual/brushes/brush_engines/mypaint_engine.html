@@ -9,7 +9,7 @@
   <meta property="og:title" name="title" content="自訂筆刷工具" />
   <meta property="og:site-name" content="Krita Manual" />
   <meta property="og:type" content="article" />
-  <meta property="og:locale" content="zh_TW" />
+  <meta property="og:locale" content="zh-TW" />
   <meta property="og:locale:alternate" content="ca" />
   <meta property="og:locale:alternate" content="en" />
   <meta property="og:locale:alternate" content="fr" />
@@ -21,8 +21,8 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2022-05-02T15:19:52" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta property="og:article:modified_time" content="2022-06-29T13:10:37" />
+  <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <meta content="自訂筆刷工具的手冊頁。" name="description" />
 
   
@@ -277,14 +277,14 @@
            <div itemprop="articleBody">
             
   <section id="mypaint-brush-engine">
-<span id="index-0"></span><span id="id1"></span><h1>自訂筆刷工具<a class="headerlink" href="#mypaint-brush-engine" title="本標題的永久連結">¶</a></h1>
+<span id="index-0"></span><span id="id1"></span><h1>自訂筆刷工具<a class="headerlink" href="#mypaint-brush-engine" title="Permalink to this heading">¶</a></h1>
 <img alt="../../../_images/mypaintbrush.svg" src="../../../_images/mypaintbrush.svg" /><p><a class="reference external" href="http://www.mypaint.org">MyPaint</a> is a free painting program that comes with a lot of specific brushes. Krita can use those brushes for painting using the MyPaint brush engine.</p>
 <div class="admonition warning">
 <p class="admonition-title">警告</p>
 <p>You can create new brush presets using the MyPaint brush engine in Krita, but the presets are saved in Krita's .kpp file format, not mypaints .myb format, so you cannot reuse those presets in MyPaint.</p>
 </div>
 <section id="dynamic-inputs">
-<h2>Dynamic Inputs<a class="headerlink" href="#dynamic-inputs" title="本標題的永久連結">¶</a></h2>
+<h2>Dynamic Inputs<a class="headerlink" href="#dynamic-inputs" title="Permalink to this heading">¶</a></h2>
 <blockquote>
 <div><p>Dynamic Inputs are a way for MyPaint to get information of the external devices as a drawing tablet; for instance the pressure over the drawing tablet, the speed of pencil movement, the pencil tilt .. etc. They are equivalent to <a class="reference internal" href="../brush_settings/tablet_sensors.html#sensors"><span class="std std-ref">感測器</span></a> in Krita.</p>
 <p>MyPaint has 9 inputs:</p>
@@ -338,7 +338,7 @@
 </div></blockquote>
 </section>
 <section id="parameters">
-<h2>Parameters<a class="headerlink" href="#parameters" title="本標題的永久連結">¶</a></h2>
+<h2>Parameters<a class="headerlink" href="#parameters" title="Permalink to this heading">¶</a></h2>
 <p>Has the following parameters:</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#mypaint-basic"><span class="std std-ref">Basic</span></a></p></li>
@@ -353,239 +353,239 @@
 </ul>
 </section>
 <section id="basic">
-<span id="mypaint-basic"></span><h2>Basic<a class="headerlink" href="#basic" title="本標題的永久連結">¶</a></h2>
+<span id="mypaint-basic"></span><h2>Basic<a class="headerlink" href="#basic" title="Permalink to this heading">¶</a></h2>
 <section id="radius">
-<h3>Radius<a class="headerlink" href="#radius" title="本標題的永久連結">¶</a></h3>
+<h3>Radius<a class="headerlink" href="#radius" title="Permalink to this heading">¶</a></h3>
 <blockquote>
 <div><p>This is to set the radius of the brush. Please note that all of the mypaint radii are logarithmic. For instance, if you are setting the radius of a preset to say, 2.0 then the actual radius of the preset is going to be e^(2.0) which is equal to 7.389. This makes the size of the brush equal to 14.78. So, we can say that mypaint_radius = log(actual_radius).</p>
 </div></blockquote>
 </section>
 <section id="hardness">
-<h3>Hardness<a class="headerlink" href="#hardness" title="本標題的永久連結">¶</a></h3>
+<h3>Hardness<a class="headerlink" href="#hardness" title="Permalink to this heading">¶</a></h3>
 <blockquote>
 <div><p>Hardness defines the sharpness of the brushes.</p>
 </div></blockquote>
 <img alt="../../../_images/hardness.png" src="../../../_images/hardness.png" />
 </section>
 <section id="eraser">
-<h3>Eraser<a class="headerlink" href="#eraser" title="本標題的永久連結">¶</a></h3>
+<h3>Eraser<a class="headerlink" href="#eraser" title="Permalink to this heading">¶</a></h3>
 <blockquote>
 <div><p>If this option is checked the brush will act as an eraser.</p>
 </div></blockquote>
 </section>
 <section id="radius-by-random">
-<h3>Radius by Random<a class="headerlink" href="#radius-by-random" title="本標題的永久連結">¶</a></h3>
+<h3>Radius by Random<a class="headerlink" href="#radius-by-random" title="Permalink to this heading">¶</a></h3>
 <blockquote>
 <div><p>This option is used to generate a brush preset whose radii and opacity change randomly during the stroke. This should not be confused with the random dynamic option in the radius setting.</p>
 </div></blockquote>
 </section>
 <section id="anti-aliasing">
-<h3>Anti Aliasing<a class="headerlink" href="#anti-aliasing" title="本標題的永久連結">¶</a></h3>
+<h3>Anti Aliasing<a class="headerlink" href="#anti-aliasing" title="Permalink to this heading">¶</a></h3>
 <blockquote>
 <div><p>This option is used to smoothen the edges of the brush and remove the jagging effect. Most useful for very small presets.</p>
 </div></blockquote>
 </section>
 <section id="elliptical-dab-angle">
-<h3>Elliptical Dab: Angle<a class="headerlink" href="#elliptical-dab-angle" title="本標題的永久連結">¶</a></h3>
+<h3>Elliptical Dab: Angle<a class="headerlink" href="#elliptical-dab-angle" title="Permalink to this heading">¶</a></h3>
 <blockquote>
 <div><p>Sets the angle of the brush dabs. Gives the best results for brushes with a low ratio and a direction filter, and allows for strokes akin to a calligraphic pen.</p>
 </div></blockquote>
 </section>
 <section id="elliptical-dab-ratio">
-<h3>Elliptical Dab: Ratio<a class="headerlink" href="#elliptical-dab-ratio" title="本標題的永久連結">¶</a></h3>
+<h3>Elliptical Dab: Ratio<a class="headerlink" href="#elliptical-dab-ratio" title="Permalink to this heading">¶</a></h3>
 <blockquote>
 <div><p>This option is used to change the aspect ratio of dab.</p>
 </div></blockquote>
 <img alt="../../../_images/elliptical_dab_ratio.png" src="../../../_images/elliptical_dab_ratio.png" />
 </section>
 <section id="direction-filter">
-<h3>Direction Filter<a class="headerlink" href="#direction-filter" title="本標題的永久連結">¶</a></h3>
+<h3>Direction Filter<a class="headerlink" href="#direction-filter" title="Permalink to this heading">¶</a></h3>
 <blockquote>
 <div><p>This option is used to make the dabs adhere to a specific vector direction. In simple words, at times you might find the dabs not following the vector path of your strokes, this setting helps us rectify that.</p>
 </div></blockquote>
 </section>
 </section>
 <section id="color">
-<span id="mypaint-color"></span><h2>Color<a class="headerlink" href="#color" title="本標題的永久連結">¶</a></h2>
+<span id="mypaint-color"></span><h2>Color<a class="headerlink" href="#color" title="Permalink to this heading">¶</a></h2>
 <section id="change-color-hue">
-<h3>Change color Hue<a class="headerlink" href="#change-color-hue" title="本標題的永久連結">¶</a></h3>
+<h3>Change color Hue<a class="headerlink" href="#change-color-hue" title="Permalink to this heading">¶</a></h3>
 <blockquote>
 <div><p>This option is used to shift the hue in a clockwise or anti-clockwise direction.</p>
 </div></blockquote>
 </section>
 <section id="change-color-lightness">
-<h3>Change color Lightness<a class="headerlink" href="#change-color-lightness" title="本標題的永久連結">¶</a></h3>
+<h3>Change color Lightness<a class="headerlink" href="#change-color-lightness" title="Permalink to this heading">¶</a></h3>
 <blockquote>
 <div><p>This option is used to change color luminance using the HSL color model.</p>
 </div></blockquote>
 </section>
 <section id="change-color-value">
-<h3>Change color Value<a class="headerlink" href="#change-color-value" title="本標題的永久連結">¶</a></h3>
+<h3>Change color Value<a class="headerlink" href="#change-color-value" title="Permalink to this heading">¶</a></h3>
 <blockquote>
 <div><p>This option is used to change color value (brightness, intensity) in HSV color model.</p>
 </div></blockquote>
 </section>
 <section id="change-color-saturation-hsl">
-<h3>Change color Saturation HSL<a class="headerlink" href="#change-color-saturation-hsl" title="本標題的永久連結">¶</a></h3>
+<h3>Change color Saturation HSL<a class="headerlink" href="#change-color-saturation-hsl" title="Permalink to this heading">¶</a></h3>
 <blockquote>
 <div><p>This option is used to change color saturation using HSL color model.</p>
 </div></blockquote>
 </section>
 <section id="change-color-saturation-hsv">
-<h3>Change color Saturation HSV<a class="headerlink" href="#change-color-saturation-hsv" title="本標題的永久連結">¶</a></h3>
+<h3>Change color Saturation HSV<a class="headerlink" href="#change-color-saturation-hsv" title="Permalink to this heading">¶</a></h3>
 <blockquote>
 <div><p>This option is used to change color saturation using HSV color model.</p>
 </div></blockquote>
 </section>
 </section>
 <section id="speed">
-<span id="mypaint-speed"></span><h2>Speed<a class="headerlink" href="#speed" title="本標題的永久連結">¶</a></h2>
+<span id="mypaint-speed"></span><h2>Speed<a class="headerlink" href="#speed" title="Permalink to this heading">¶</a></h2>
 <section id="fine-speed-gamma">
-<h3>Fine Speed Gamma<a class="headerlink" href="#fine-speed-gamma" title="本標題的永久連結">¶</a></h3>
+<h3>Fine Speed Gamma<a class="headerlink" href="#fine-speed-gamma" title="Permalink to this heading">¶</a></h3>
 <blockquote>
 <div><p>This option is used to change the reaction of the fine speed input to extreme physical speed.</p>
 </div></blockquote>
 </section>
 <section id="gross-speed-gamma">
-<h3>Gross Speed Gamma<a class="headerlink" href="#gross-speed-gamma" title="本標題的永久連結">¶</a></h3>
+<h3>Gross Speed Gamma<a class="headerlink" href="#gross-speed-gamma" title="Permalink to this heading">¶</a></h3>
 <blockquote>
 <div><p>This option is used to change the reaction of gross speed to extreme physical speed.</p>
 </div></blockquote>
 </section>
 <section id="fine-speed-slowness-fine-speed-filter">
-<h3>Fine Speed Slowness / Fine Speed Filter<a class="headerlink" href="#fine-speed-slowness-fine-speed-filter" title="本標題的永久連結">¶</a></h3>
+<h3>Fine Speed Slowness / Fine Speed Filter<a class="headerlink" href="#fine-speed-slowness-fine-speed-filter" title="Permalink to this heading">¶</a></h3>
 <blockquote>
 <div><p>This option describes how slow the input fine speed is following the real speed.</p>
 </div></blockquote>
 </section>
 <section id="gross-speed-slowness-gross-speed-filter">
-<h3>Gross Speed Slowness / Gross Speed Filter<a class="headerlink" href="#gross-speed-slowness-gross-speed-filter" title="本標題的永久連結">¶</a></h3>
+<h3>Gross Speed Slowness / Gross Speed Filter<a class="headerlink" href="#gross-speed-slowness-gross-speed-filter" title="Permalink to this heading">¶</a></h3>
 <blockquote>
 <div><p>This option describes how slow the input gross speed is following the real speed.</p>
 </div></blockquote>
 </section>
 <section id="offset-by-speed">
-<h3>Offset by Speed<a class="headerlink" href="#offset-by-speed" title="本標題的永久連結">¶</a></h3>
+<h3>Offset by Speed<a class="headerlink" href="#offset-by-speed" title="Permalink to this heading">¶</a></h3>
 <blockquote>
 <div><p>This option is used to change the position of dabs based on stroke speed.</p>
 </div></blockquote>
 </section>
 <section id="offset-by-random-jitter">
-<h3>Offset By Random [Jitter]<a class="headerlink" href="#offset-by-random-jitter" title="本標題的永久連結">¶</a></h3>
+<h3>Offset By Random [Jitter]<a class="headerlink" href="#offset-by-random-jitter" title="Permalink to this heading">¶</a></h3>
 <blockquote>
 <div><p>This option adds a random offset to the position where each dab is drawn.</p>
 </div></blockquote>
 </section>
 </section>
 <section id="dabs">
-<span id="mypaint-dabs"></span><h2>Dabs<a class="headerlink" href="#dabs" title="本標題的永久連結">¶</a></h2>
+<span id="mypaint-dabs"></span><h2>Dabs<a class="headerlink" href="#dabs" title="Permalink to this heading">¶</a></h2>
 <section id="dabs-per-actual-radius">
-<h3>Dabs per Actual Radius<a class="headerlink" href="#dabs-per-actual-radius" title="本標題的永久連結">¶</a></h3>
+<h3>Dabs per Actual Radius<a class="headerlink" href="#dabs-per-actual-radius" title="Permalink to this heading">¶</a></h3>
 <blockquote>
 <div><p>This option describes how many dabs to draw when the pointer moves the distance of the brush radius.</p>
 </div></blockquote>
 </section>
 <section id="dabs-per-second">
-<h3>Dabs per Second<a class="headerlink" href="#dabs-per-second" title="本標題的永久連結">¶</a></h3>
+<h3>Dabs per Second<a class="headerlink" href="#dabs-per-second" title="Permalink to this heading">¶</a></h3>
 <blockquote>
 <div><p>This option describes how many dabs to draw per second irrespective of any other parameter.</p>
 </div></blockquote>
 </section>
 </section>
 <section id="opacity">
-<span id="mypaint-opacity"></span><h2>Opacity<a class="headerlink" href="#opacity" title="本標題的永久連結">¶</a></h2>
+<span id="mypaint-opacity"></span><h2>Opacity<a class="headerlink" href="#opacity" title="Permalink to this heading">¶</a></h2>
 <section id="opaque">
-<h3>Opaque<a class="headerlink" href="#opaque" title="本標題的永久連結">¶</a></h3>
+<h3>Opaque<a class="headerlink" href="#opaque" title="Permalink to this heading">¶</a></h3>
 <blockquote>
 <div><p>Opaque describe the translucency or transparency of mypaint brushes.</p>
 </div></blockquote>
 </section>
 <section id="opaque-linearize">
-<h3>Opaque Linearize<a class="headerlink" href="#opaque-linearize" title="本標題的永久連結">¶</a></h3>
+<h3>Opaque Linearize<a class="headerlink" href="#opaque-linearize" title="Permalink to this heading">¶</a></h3>
 <blockquote>
 <div><p>This option lets you correct the nonlinearity introduced by blending multiple dabs on top of each other.</p>
 </div></blockquote>
 </section>
 <section id="opaque-multiply">
-<h3>Opaque Multiply<a class="headerlink" href="#opaque-multiply" title="本標題的永久連結">¶</a></h3>
+<h3>Opaque Multiply<a class="headerlink" href="#opaque-multiply" title="Permalink to this heading">¶</a></h3>
 <blockquote>
 <div><p>This makes opacity depend on pressure.</p>
 </div></blockquote>
 </section>
 </section>
 <section id="tracking">
-<span id="mypaint-tracking"></span><h2>Tracking<a class="headerlink" href="#tracking" title="本標題的永久連結">¶</a></h2>
+<span id="mypaint-tracking"></span><h2>Tracking<a class="headerlink" href="#tracking" title="Permalink to this heading">¶</a></h2>
 <section id="slow-tracking">
-<h3>Slow Tracking<a class="headerlink" href="#slow-tracking" title="本標題的永久連結">¶</a></h3>
+<h3>Slow Tracking<a class="headerlink" href="#slow-tracking" title="Permalink to this heading">¶</a></h3>
 <blockquote>
 <div><p>Slow pointer tracking speed. Higher values remove jitter in cursor movements. Useful for drawing smooth outlines.</p>
 </div></blockquote>
 </section>
 <section id="slow-tracking-per-dab">
-<h3>Slow Tracking per Dab<a class="headerlink" href="#slow-tracking-per-dab" title="本標題的永久連結">¶</a></h3>
+<h3>Slow Tracking per Dab<a class="headerlink" href="#slow-tracking-per-dab" title="Permalink to this heading">¶</a></h3>
 <blockquote>
 <div><p>Similar to above but at a brushdab level.</p>
 </div></blockquote>
 </section>
 <section id="tracking-noise">
-<h3>Tracking Noise<a class="headerlink" href="#tracking-noise" title="本標題的永久連結">¶</a></h3>
+<h3>Tracking Noise<a class="headerlink" href="#tracking-noise" title="Permalink to this heading">¶</a></h3>
 <blockquote>
 <div><p>Add randomness to the mouse pointer. This usually generates many small lines in random directions.</p>
 </div></blockquote>
 </section>
 </section>
 <section id="smudge">
-<span id="mypaint-smudge"></span><h2>Smudge<a class="headerlink" href="#smudge" title="本標題的永久連結">¶</a></h2>
+<span id="mypaint-smudge"></span><h2>Smudge<a class="headerlink" href="#smudge" title="Permalink to this heading">¶</a></h2>
 <section id="id2">
-<h3>Smudge<a class="headerlink" href="#id2" title="本標題的永久連結">¶</a></h3>
+<h3>Smudge<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h3>
 <blockquote>
 <div><p>This option lets you smudge, by picking a color from the canvas and mixing this with the brush color. The color slowly changes to the color you are painting on.</p>
 </div></blockquote>
 </section>
 <section id="smudge-length">
-<h3>Smudge Length<a class="headerlink" href="#smudge-length" title="本標題的永久連結">¶</a></h3>
+<h3>Smudge Length<a class="headerlink" href="#smudge-length" title="Permalink to this heading">¶</a></h3>
 <blockquote>
 <div><p>This option controls how much the painting color is mixed with the colors from the canvas.</p>
 </div></blockquote>
 </section>
 <section id="smudge-radius-logarithmic">
-<h3>Smudge Radius logarithmic<a class="headerlink" href="#smudge-radius-logarithmic" title="本標題的永久連結">¶</a></h3>
+<h3>Smudge Radius logarithmic<a class="headerlink" href="#smudge-radius-logarithmic" title="Permalink to this heading">¶</a></h3>
 <blockquote>
 <div><p>This option modifies the radius of the circle where the color is picked up for smudging.</p>
 </div></blockquote>
 </section>
 </section>
 <section id="stroke">
-<span id="mypaint-stroke"></span><h2>Stroke<a class="headerlink" href="#stroke" title="本標題的永久連結">¶</a></h2>
+<span id="mypaint-stroke"></span><h2>Stroke<a class="headerlink" href="#stroke" title="Permalink to this heading">¶</a></h2>
 <section id="stroke-duration-logarithmic">
-<h3>Stroke Duration logarithmic<a class="headerlink" href="#stroke-duration-logarithmic" title="本標題的永久連結">¶</a></h3>
+<h3>Stroke Duration logarithmic<a class="headerlink" href="#stroke-duration-logarithmic" title="Permalink to this heading">¶</a></h3>
 <blockquote>
 <div><p>This option describes how far you have to move until the stroke input becomes 1.0</p>
 </div></blockquote>
 </section>
 <section id="stroke-holdtime">
-<h3>Stroke Holdtime<a class="headerlink" href="#stroke-holdtime" title="本標題的永久連結">¶</a></h3>
+<h3>Stroke Holdtime<a class="headerlink" href="#stroke-holdtime" title="Permalink to this heading">¶</a></h3>
 <blockquote>
 <div><p>This option defines how long the stroke input stays at 1.0. After that it will go back towards 0.0 and then start increasing again.</p>
 </div></blockquote>
 </section>
 <section id="stroke-threshold">
-<h3>Stroke Threshold<a class="headerlink" href="#stroke-threshold" title="本標題的永久連結">¶</a></h3>
+<h3>Stroke Threshold<a class="headerlink" href="#stroke-threshold" title="Permalink to this heading">¶</a></h3>
 <blockquote>
 <div><p>This option defines how much pressure is needed to start the stroke. This affects stroke input only. The MyPaint brush engine does not need any minimum pressure level to start drawing.</p>
 </div></blockquote>
 </section>
 </section>
 <section id="custom-input">
-<span id="mypaint-custom"></span><h2>Custom Input<a class="headerlink" href="#custom-input" title="本標題的永久連結">¶</a></h2>
+<span id="mypaint-custom"></span><h2>Custom Input<a class="headerlink" href="#custom-input" title="Permalink to this heading">¶</a></h2>
 <section id="id3">
-<h3>Custom Input<a class="headerlink" href="#id3" title="本標題的永久連結">¶</a></h3>
+<h3>Custom Input<a class="headerlink" href="#id3" title="Permalink to this heading">¶</a></h3>
 <blockquote>
 <div><p>The idea of this input is that you make this input depend on a mixture of pressure/speed/whatever, and then make other settings depend on this 'custom input' instead of repeating this combination everywhere you need.</p>
 </div></blockquote>
 </section>
 <section id="custom-input-slowness">
-<h3>Custom Input Slowness<a class="headerlink" href="#custom-input-slowness" title="本標題的永久連結">¶</a></h3>
+<h3>Custom Input Slowness<a class="headerlink" href="#custom-input-slowness" title="Permalink to this heading">¶</a></h3>
 <blockquote>
 <div><p>This option defines how slow the custom input setting actually follows the desired value.</p>
 </div></blockquote>
@@ -616,7 +616,7 @@
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>6a90bff</code>
+          修訂版本 <code>d9da50a</code>
         </span>
       
 
@@ -642,6 +642,7 @@
       <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
       <script src="../../../_static/jquery.js"></script>
       <script src="../../../_static/underscore.js"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
       <script src="../../../_static/doctools.js"></script>
       <script src="../../../_static/translations.js"></script>
 
