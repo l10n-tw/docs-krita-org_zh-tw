@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2022-06-29T13:10:37" />
+  <meta property="og:article:modified_time" content="2022-06-29T13:41:44" />
   <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <meta content="Krita 的相似色彩選取區域工具。" name="description" property="og:description" />
 
@@ -194,7 +194,7 @@
 <li class="toctree-l3"><a class="reference internal" href="contiguous_select.html">相連選取區域工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="path_select.html">路徑選取工具</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">相似色彩選取區域工具</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#hotkeys-and-sticky-keys">Hotkeys and Sticky keys</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#hotkeys-and-sticky-keys">快捷鍵和修飾鍵</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#tool-options">Tool Options</a></li>
 </ul>
 </li>
@@ -299,27 +299,27 @@
 <p>相似色彩選取區域工具在工具列裡的圖示是一個有虛線邊界的滴管，能夠以選取色彩的方式來 <a class="reference internal" href="../../user_manual/selections.html#selections-basics"><span class="std std-ref">選取區域</span></a>。這個工具會選取和色彩相似的區域。在工具選項裡調節「模糊度」，數值越低，選取的色彩更接近點選的色彩。</p>
 <div class="admonition important">
 <p class="admonition-title">重要</p>
-<p>Most of the behavior of the Similar Color Selection Tool is common to all other selection tools, please make sure to read <a class="reference internal" href="../../user_manual/selections.html#selections-basics"><span class="std std-ref">選取區域</span></a> to learn more about this tool.</p>
+<p>大多數動作和其他選取區域工具相似，請詳閱<a class="reference internal" href="../../user_manual/selections.html#selections-basics"><span class="std std-ref">選取區域</span></a>以取得使用這個工具的更多資訊。</p>
 </div>
 <section id="hotkeys-and-sticky-keys">
-<h2>Hotkeys and Sticky keys<a class="headerlink" href="#hotkeys-and-sticky-keys" title="Permalink to this heading">¶</a></h2>
+<h2>快捷鍵和修飾鍵<a class="headerlink" href="#hotkeys-and-sticky-keys" title="Permalink to this heading">¶</a></h2>
 <ul class="simple">
-<li><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> sets the subsequent selection to 'add'. You can release the <kbd class="kbd docutils literal notranslate">Shift</kbd> key while dragging, but it will still be set to 'add'. Same for the others.</p></li>
-<li><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Alt</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> sets the subsequent selection to 'subtract'.</p></li>
-<li><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> sets the subsequent selection to 'replace'.</p></li>
-<li><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Alt</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> sets the subsequent selection to 'intersect'.</p></li>
+<li><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> 設定選取操作為「相加」。在拖曳時能夠放開 Shift 鍵，但是操作會還是「相加」，其他的操作類同。</p></li>
+<li><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Alt</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> 設定選取操作為「減去」。</p></li>
+<li><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> 設定選取操作為「取代」。</p></li>
+<li><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Alt</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> 設定選取操作為「相交」。</p></li>
 </ul>
 <div class="versionadded">
 <p><span class="versionmodified added">在 4.2 版本新加入: </span></p>
 <ul class="simple">
-<li><p>Hovering your cursor over the dashed line of the selection, or marching ants as it is commonly called, turns the cursor into the move tool icon, which you <img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> and drag to move the selection.</p></li>
-<li><p><img alt="滑鼠右鍵" src="../../_images/Krita_mouse_right.png" /> will open up a selection quick menu with amongst others the ability to edit the selection.</p></li>
+<li><p>把游標移到選取區域的虛線時，游標會顯示成移動工具圖示，這時候可以 <img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> 然後拖曳選取區域。</p></li>
+<li><p><img alt="滑鼠右鍵" src="../../_images/Krita_mouse_right.png" /> 會開啟一個快速選單，裡面會有修改選取區域的選項。</p></li>
 </ul>
 </div>
-<a class="reference internal image-reference" href="../../_images/selections-right-click-menu.png"><img alt="Menu of similar color selection" src="../../_images/selections-right-click-menu.png" style="width: 200px;" /></a>
+<a class="reference internal image-reference" href="../../_images/selections-right-click-menu.png"><img alt="相似色彩選取區域工具的選單" src="../../_images/selections-right-click-menu.png" style="width: 200px;" /></a>
 <div class="admonition tip">
 <p class="admonition-title">小訣竅</p>
-<p>You can switch the behavior of the <kbd class="kbd docutils literal notranslate">Alt</kbd> key to use <kbd class="kbd docutils literal notranslate">Ctrl</kbd> instead by toggling the switch in Tool Settings in the <a class="reference internal" href="../preferences/general_settings.html#general-settings"><span class="std std-ref">「一般」設定</span></a></p>
+<p>你可以在 Krita 的<a class="reference internal" href="../preferences/general_settings.html#general-settings"><span class="std std-ref">「一般」設定</span></a>裡交換 <kbd class="kbd docutils literal notranslate">Alt</kbd> 鍵和 <kbd class="kbd docutils literal notranslate">Ctrl</kbd> 鍵的修飾鍵功能。</p>
 </div>
 <div class="admonition tip">
 <p class="admonition-title">小訣竅</p>
