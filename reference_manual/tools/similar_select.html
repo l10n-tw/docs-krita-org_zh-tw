@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2022-06-29T13:41:44" />
+  <meta property="og:article:modified_time" content="2022-06-29T20:16:04" />
   <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <meta content="Krita 的相似色彩選取區域工具。" name="description" property="og:description" />
 
@@ -195,7 +195,7 @@
 <li class="toctree-l3"><a class="reference internal" href="path_select.html">路徑選取工具</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">相似色彩選取區域工具</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#hotkeys-and-sticky-keys">快捷鍵和修飾鍵</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#tool-options">Tool Options</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tool-options">工具選項</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="magnetic_select.html">磁性選取區域工具</a></li>
@@ -323,41 +323,41 @@
 </div>
 <div class="admonition tip">
 <p class="admonition-title">小訣竅</p>
-<p>This tool is not bound to any Hotkey, if you want to define one, go to <span class="menuselection">Settings ‣ Configure Krita ‣ Keyboard Shortcuts</span> and search for 'Similar Color Selection Tool', there you can select the shortcut you want. Check <a class="reference internal" href="../preferences/shortcut_settings.html#shortcut-settings"><span class="std std-ref">「鍵盤快捷鍵」設定</span></a> for more info.</p>
+<p>這個工具預設並沒有綁定任何快捷鍵，如果想要設定一個，在<span class="menuselection">設定 ‣ 設定 Krita ‣ 鍵盤快捷鍵</span>然後搜尋「手繪選取區域工具」，在這裡可以設定你想要的快捷鍵。在<a class="reference internal" href="../preferences/shortcut_settings.html#shortcut-settings"><span class="std std-ref">「鍵盤快捷鍵」設定</span></a>取得更多資訊。</p>
 </div>
 </section>
 <section id="tool-options">
-<h2>Tool Options<a class="headerlink" href="#tool-options" title="Permalink to this heading">¶</a></h2>
-<a class="reference internal image-reference" href="../../_images/selections-similar-color-selection-options.png"><img alt="Similar Color selection options" src="../../_images/selections-similar-color-selection-options.png" style="width: 300px;" /></a>
+<h2>工具選項<a class="headerlink" href="#tool-options" title="Permalink to this heading">¶</a></h2>
+<a class="reference internal image-reference" href="../../_images/selections-similar-color-selection-options.png"><img alt="相似色彩選取區域工具選項" src="../../_images/selections-similar-color-selection-options.png" style="width: 300px;" /></a>
 <dl class="simple">
-<dt>Action</dt><dd><p>This option is explained in the <a class="reference internal" href="../../user_manual/selections.html#pixel-vector-selection"><span class="std std-ref">像素及向量選取區域類型</span></a> section.</p>
+<dt>操作</dt><dd><p>這個選項在<a class="reference internal" href="../../user_manual/selections.html#pixel-vector-selection"><span class="std std-ref">像素及向量選取區域類型</span></a>已被解釋。</p>
 </dd>
-<dt>Anti-aliasing</dt><dd><p>This toggles whether or not to give selections feathered edges. Some people prefer hard-jagged edges for their selections.</p>
+<dt>反鋸齒</dt><dd><p>這個選項控制是否要羽化邊緣。有些人會想要選取鋸齒狀的邊緣。</p>
 </dd>
 </dl>
 <div class="deprecated">
-<p><span class="versionmodified deprecated">在 5.0 版本開始棄用: </span>This has been removed as it only caused confusion.</p>
+<p><span class="versionmodified deprecated">在 5.0 版本開始棄用: </span>因為這個選項只會造成混淆而被移除。</p>
 </div>
 <dl>
-<dt>Sample</dt><dd><div class="versionadded">
+<dt>取樣</dt><dd><div class="versionadded">
 <p><span class="versionmodified added">在 5.0 版本新加入.</span></p>
 </div>
-<p>Select which layers to use as a reference for the contiguous select tool. The options are:</p>
+<p>選擇要作為參考的圖層。裡面的選項為：</p>
 <dl class="simple">
-<dt>Current Layer</dt><dd><p>Only use the currently selected layer.</p>
+<dt>目前圖層</dt><dd><p>只取樣目前的圖層。</p>
 </dd>
-<dt>All layers</dt><dd><p>Use all visible layers.</p>
+<dt>所有圖層</dt><dd><p>取樣全部可見圖層。</p>
 </dd>
-<dt>Color Labeled Layers</dt><dd><p>Use only the layers specified with a certain color label. This is useful for complex images, where you might have multiple lineart layers. Label them with the appropriate color label and use these labels to mark which layers to use as a reference.</p>
+<dt>符合色彩標籤的圖層</dt><dd><p>只取樣符合色彩標籤的圖層。適合用於複雜的圖像，如多個線稿圖層。透過色彩標籤來標記並以其來用作參考。</p>
 </dd>
 </dl>
 </dd>
-<dt>Labels Used</dt><dd><div class="versionadded">
+<dt>使用的色彩標籤</dt><dd><div class="versionadded">
 <p><span class="versionmodified added">在 5.0 版本新加入.</span></p>
 </div>
-<p>Used with the 'Color Labeled Layers' option above.</p>
+<p>配合上面的「符合色彩標籤的圖層」使用。</p>
 </dd>
-<dt>Fuzziness</dt><dd><p>This controls the range of the color hue used to create the selection. A lower number will select colors closer to the color that you chose in the first place. And a higher number will expand the hue range and select colors even if they are not so similar to the original color.</p>
+<dt>模糊度</dt><dd><p>這個選項會控制選取區域的色相範圍。數值較低時會選取較接近點選的色彩；數值較高時會提高色相的範圍並選取較不接近點選色的的區域。</p>
 </dd>
 </dl>
 </section>
