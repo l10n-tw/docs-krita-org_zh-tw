@@ -19,7 +19,7 @@ jobs:
     - name: Clone docs
       run: |
         cd ~
-        git clone -b krita/5.0 --depth 1 https://invent.kde.org/documentation/docs-krita-org.git docs
+        git clone -b master --depth 1 https://invent.kde.org/documentation/docs-krita-org.git docs
     - name: Place new zh_TW PO catalogs
       run: |
         rm -rf ~/docs/locale/zh_TW/LC_MESSAGES/*
