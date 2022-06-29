@@ -16,7 +16,7 @@ jobs:
     - name: Clone docs
       run: |
         cd ~
-        git clone -b krita/5.0 --depth 1 https://invent.kde.org/documentation/docs-krita-org.git docs
+        git clone -b master --depth 1 https://invent.kde.org/documentation/docs-krita-org.git docs
     - name: Build POT templates
       run: |
         cd ~/docs
