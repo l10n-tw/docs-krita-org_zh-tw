@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Krita Manual 4.3\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-10-21 15:06+0000\n"
-"PO-Revision-Date: 2022-05-02 15:15+0000\n"
+"PO-Revision-Date: 2022-06-29 13:00+0000\n"
 "Last-Translator: RinalNamori <rinalnamori@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <http://weblate.slat.org/projects/"
 "krita-docs/3-reference_manual___tools___text/zh_Hant/>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.11\n"
+"X-Generator: Weblate 4.12.2\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../../reference_manual/tools/text.rst:1
@@ -108,9 +108,8 @@ msgid ""
 "uses text-anchor, and this is a slight bit different than text-align (and "
 "also the reason justify isn't available at the moment)."
 msgstr ""
-"文字對齊。可以對齊文字至左側、中間或是右側。這被稱為文字錨定的原因是 SVG 1.1 "
-"的多行文字只會使用文字錨定，這跟文字對齊有所分別（這也是沒有對齊功能的原因）"
-"。"
+"文字對齊。可以對齊文字至左側、中間或是右側。稱為文字錨定的原因是 SVG 1.1 的多"
+"行文字只會使用文字錨定，這跟文字對齊有所分別（這也是沒有對齊功能的原因）。"
 
 #: ../../reference_manual/tools/text.rst:41
 msgid "Letter Spacing"
@@ -590,7 +589,7 @@ msgstr ""
 
 #: ../../reference_manual/tools/text.rst:170
 msgid "Word-spacing, Letter-spacing and Kerning"
-msgstr "間距，字距和字距調整"
+msgstr "Word-spacing, Letter-spacing and Kerning（間距，字距和字距調整）"
 
 #: ../../reference_manual/tools/text.rst:172
 msgid ""
@@ -606,9 +605,9 @@ msgid ""
 "use ``kerning: 0;`` in the ``style`` section of the text. Any other numeric "
 "value will be added to current ``letter-spacing``."
 msgstr ""
-"`字距調整在 SVG 版本 1.1<https://www.w3.org/TR/SVG/text."
-"html#KerningProperty>`_ 表現和 在 CSS 裡的 ``font-kerning`` 有些微差異。"
-"Krita 預設在這裡使用 ``auto`` 屬性，也表示預設是開啟的。如要關閉字距調整，"
+"`字距調整在 SVG 版本 1.1中<https://www.w3.org/TR/SVG/text."
+"html#KerningProperty>` 表現和 在 CSS 裡的 ``font-kerning`` 有些微差異。Krita "
+"預設在這裡使用 ``auto`` 屬性，也表示預設是開啟的。如要關閉字距調整，"
 "請在文字裡的 ``style`` 使用 ``kerning: 0``\\ 。任何其他的數值會被加到目前的 "
 "``letter-spacing``\\ 。"
 
@@ -622,7 +621,7 @@ msgstr ""
 
 #: ../../reference_manual/tools/text.rst:187
 msgid "Letter-spacing"
-msgstr "字距"
+msgstr "Letter-spacing（字距）"
 
 #: ../../reference_manual/tools/text.rst:187
 msgid ""
@@ -636,7 +635,7 @@ msgstr ""
 
 #: ../../reference_manual/tools/text.rst:204
 msgid "Word-spacing"
-msgstr "間距"
+msgstr "Word-spacing（間距）"
 
 #: ../../reference_manual/tools/text.rst:190
 msgid ""
@@ -645,7 +644,7 @@ msgid ""
 "for that font. A negative value will decrease the amount of space between "
 "words:"
 msgstr ""
-"這是單詞之間的額外距離，預設以點為單位。預設中 ``word-spacing: 0;`` "
+"這是用來設定單詞之間的額外距離，預設以點為單位。預設中 ``word-spacing: 0;`` "
 "只會用於該字型空白符號的寬度。當數值為負時會減少單詞之間的空間："
 
 #: ../../reference_manual/tools/text.rst:197
@@ -715,12 +714,16 @@ msgid ""
 "Dominant Baseline, Alignment baseline, Font-size-adjust, Writing mode, Glyph-"
 "orientation, rotate"
 msgstr ""
+"Dominant Baseline, Alignment baseline, Font-size-adjust, Writing mode, Glyph-"
+"orientation, "
+"rotate（主導基線，對齊基線，字體大小調整，書寫模式，字形方向，旋轉字元）"
 
 #: ../../reference_manual/tools/text.rst:224
 msgid ""
 "These are not stored in the rich text right now, and while they can be "
 "written into the SVG text, the SVG text-shape doesn't do anything with them."
-msgstr ""
+msgstr "這些屬性目前未能儲存在富文字中，雖然這些屬性能寫進 SVG 文字中，"
+"但是不會反映在 SVG 文字形狀中。"
 
 #: ../../reference_manual/tools/text.rst:226
 msgid ""
@@ -728,6 +731,8 @@ msgid ""
 "text, as this can help designers when they want to use the SVG source as a "
 "basis for later adjustments."
 msgstr ""
+"Krita 會把富文字中生成的文字加上 ``font-size-adjust``\\ ，"
+"這樣設計能使設計師方便地使用 SVG 原始碼來進行後期的調整。"
 
 #: ../../reference_manual/tools/text.rst:11
 msgid "Tools"
@@ -735,8 +740,8 @@ msgstr "工具"
 
 #: ../../reference_manual/tools/text.rst:11
 msgid "Text"
-msgstr ""
+msgstr "文字"
 
 #: ../../reference_manual/tools/text.rst:11
 msgid "Vector"
-msgstr ""
+msgstr "向量"
