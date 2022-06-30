@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2022-06-29T20:16:04" />
+  <meta property="og:article:modified_time" content="2022-06-30T21:17:35" />
   <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <meta content="Krita 的形狀選取工具參考。" name="description" />
 
@@ -365,81 +365,79 @@
 <section id="stroke">
 <h3>描邊<a class="headerlink" href="#stroke" title="Permalink to this heading">¶</a></h3>
 <a class="reference internal image-reference" href="../../_images/shape-selection-menu-stroke.png"><img alt="工具選項：描邊工具。" src="../../_images/shape-selection-menu-stroke.png" style="width: 400px;" /></a>
-<p>The stroke tab determines how the stroke around the object should look.</p>
-<p>The first set of buttons allows us to set the fill of the stroke: <em>None</em>, <em>Color</em> and <em>Gradient</em>; the same options exist for the fill of the shape, please refer to the following &quot;<strong>Fill</strong>&quot; section for more details on how to use both of them.</p>
-<p>Then, there are the settings for the stroke style:</p>
+<p>描邊分頁可以設定形狀邊緣所使用的線條形狀和色彩。</p>
+<p>第一排的按鈕可以設定線條的填充方式，分別有：<em>無</em>，<em>純色</em>和<em>漸變</em>；和填充形狀的選項相同，請參見下面的「<strong>填充</strong>」欄位來瞭解如何使用這個功能。</p>
+<p>然後關於線條樣式的選項為：</p>
 <dl class="simple">
-<dt>Thickness</dt><dd><p>Sets the width of the stroke. When creating a shape, Krita will use the current brush size to determine the width of the stroke.</p>
+<dt>粗細</dt><dd><p>設定線條的寬度。當建立一個形狀時，Krita 會使用目前筆刷的尺寸來決定線條的寬度。</p>
 </dd>
-<dt>Cap and corner style</dt><dd><p>Sets the stroke cap and stroke corner style, this can be accessed by pressing the three dots button next to the thickness entry.</p>
+<dt>線頭和連結的樣式</dt><dd><p>設定線頭和線條連結的樣式，在粗細選項的右邊按鈕取用。</p>
 </dd>
-<dt>Line-style</dt><dd><p>Sets the line style of the stroke: <em>solid</em>, <em>dashes</em>, <em>dots</em>, or mixes of <em>dashes and dots</em>.</p>
+<dt>線條樣式</dt><dd><p>設定線條的樣式：分別有<em>實線</em>， <em>虛線</em>， <em>點線</em>，或是<em>虛線和點線</em>混合。</p>
 </dd>
-<dt>Markers</dt><dd><p>Adds markers to the stroke. Markers are little figures that will appear at the start, end or all the nodes in between, depending on your configuration.</p>
+<dt>記號</dt><dd><p>在線條中加入記號。可以在開頭、末端和在兩者之間的節點中加入記號，記號形狀可以自行選擇。</p>
 </dd>
 </dl>
 </section>
 <section id="fill">
-<h3>Fill<a class="headerlink" href="#fill" title="Permalink to this heading">¶</a></h3>
-<a class="reference internal image-reference" href="../../_images/shape-selection-menu-fill.png"><img alt="Tool options: Fill tool." src="../../_images/shape-selection-menu-fill.png" style="width: 400px;" /></a>
-<p>This section is about the color that fills the shape. As mentioned above in the <strong>Stroke</strong> section, the features are the same for both the fill of the stroke and the fill of the shape. Here is the explanation for both:</p>
-<p>A fill can be: <em>solid color</em>, <em>gradient</em>, or <em>none</em> (transparent)</p>
+<h3>填充<a class="headerlink" href="#fill" title="Permalink to this heading">¶</a></h3>
+<a class="reference internal image-reference" href="../../_images/shape-selection-menu-fill.png"><img alt="工具選項：填充工具。" src="../../_images/shape-selection-menu-fill.png" style="width: 400px;" /></a>
+<p>這個分頁是用來設定形狀的填充色彩。和上面的<strong>線條</strong>分頁所提到的一樣，兩者的功能一致，一個填充線條，一個填充形狀。所以我們把兩者捆在一起說明：</p>
+<p>填充的選項有：<em>純色</em>，<em>漸變</em>或是<em>無</em>（透明）</p>
 <dl>
-<dt>None</dt><dd><p>No fill. It's transparent.</p>
+<dt>無</dt><dd><p>不填充色彩，即透明。</p>
 </dd>
-<dt>Color</dt><dd><p>A flat color, you can select a new one by pressing the color button.</p>
+<dt>純色</dt><dd><p>純色，可以按色彩按鈕來更改色彩。</p>
 </dd>
-<dt>Gradient</dt><dd><p>As the name implies this type fills the shape with a gradient. It has the following options:</p>
+<dt>漸變</dt><dd><p>如名稱所示，這個選項會為形狀填充漸變色彩，選項如下：</p>
 <dl class="simple">
-<dt>Type</dt><dd><p>A linear or radial gradient.</p>
+<dt>類型</dt><dd><p>設定線性或放射性漸變。</p>
 </dd>
-<dt>Repeat</dt><dd><p>How the gradient repeats itself.</p>
+<dt>循環</dt><dd><p>設定如何重覆漸變。</p>
 </dd>
-<dt>Preset</dt><dd><p>A menu for selecting a base gradient from a set of predefined gradient presets, which can be edited as desired.</p>
+<dt>預設</dt><dd><p>一個用來選擇各種已有漸變的選單，可以根據需要進行編輯。</p>
 </dd>
-<dt>Save Gradient</dt><dd><p>A quick way for saving the current gradient as a preset.</p>
+<dt>儲存漸變</dt><dd><p>用來儲存目前漸變的快捷鍵。</p>
 </dd>
-<dt>Stops Options Line</dt><dd><p>A representation of how the gradient colors should look.
-The stops are represented by triangles. There are two stops by default one at the beginning and one at the end. You can create more stops just by clicking anywhere on the line. To select a stop <img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> inside the triangle. To delete the stops, <img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> drag them to left or right until the end of the line.</p>
+<dt>停駐點編輯線段</dt><dd><p>展示著漸變色彩的線條。停駐點是線條下方的滑塊，預設會有兩個分別在開端和末尾的停駐點。你可以點選線條的任意一處來建立一個新的停駐點；<img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> 點選滑塊來選取停駐點；對停駐點 <img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> 拉離線條來移除停駐點。</p>
 </dd>
-<dt>Flip Gradient</dt><dd><p>A quick way to invert the order of the gradient.</p>
+<dt>翻轉漸變</dt><dd><p>以一個快捷的方式翻轉漸變。</p>
 </dd>
-<dt>Stop</dt><dd><p>Choose a color for the current selected stop.</p>
+<dt>編輯停駐點</dt><dd><p>對目前的停駐點選取一個色彩。</p>
 </dd>
-<dt>不透明度</dt><dd><p>Choose the opacity for the current selected stop.</p>
+<dt>不透明度</dt><dd><p>對目前的停駐點設定透明度。</p>
 </dd>
 </dl>
 </dd>
 </dl>
 <div class="admonition hint">
 <p class="admonition-title">提示</p>
-<p>When a stop triangle is selected, it is highlighted with a slight blue outline. The selected stop triangle will change its color and opacity accordingly when these options are changed.</p>
+<p>選取停駐點時，滑塊外圍會有著藍色的標記。已選取的滑塊會隨著色彩和透明度改變。</p>
 </div>
 <div class="admonition hint">
 <p class="admonition-title">提示</p>
-<p>You can edit the gradient in two ways. The first one is the actual gradient in the docker that you can manipulate. Vectors always use stop-gradients.
-The other way to edit gradients is editing their position on the canvas.</p>
+<p>你有兩種途徑來編輯漸變。第一種是透過工具面板修改色彩。停駐點的漸變以向量呈現。另一種是在畫布中改變漸變的位置。</p>
 </div>
 <dl>
-<dt>Mesh Gradient</dt><dd><p>Fills the shape with a Mesh Gradient. It has following options:</p>
+<dt>網狀漸變</dt><dd><p>以網狀漸變填充形狀，選項如下：</p>
 <dl class="simple">
-<dt>Stop</dt><dd><p>Change the color of the selected stop. Only the color of a Corner can be changed (rectangle), changing the color of Bezier handle (circle) is not possible.</p>
+<dt>編輯停駐點</dt><dd><p>更改所選停駐點的色彩。只有角落的色彩可供調整（矩形），不可以改變貝茲曲線控制柄（圓形）的色彩。</p>
 </dd>
-<dt>Rows</dt><dd><p>Change the number of rows in a Mesh Gradient.</p>
+<dt>行數</dt><dd><p>設定網狀漸變的行數。</p>
 </dd>
-<dt>Columns</dt><dd><p>Change the number of columns in a Mesh Gradient.</p>
+<dt>列數</dt><dd><p>設定網狀漸變的列數。</p>
 </dd>
-<dt>Smoothing</dt><dd><p>There are two possible values, <em>Bilinear</em> (default) and <em>Bicubic</em>. <em>Bilinear</em> is the linear interpolation of the color of stops, however it may create <a class="reference external" href="https://en.wikipedia.org/wiki/Mach_bands">Mach Banding effect</a>. <em>Bicubic</em> is the bicubic interpolation of the color stops, this should produce smoother gradient.</p>
+<dt>平滑化</dt><dd><p>這裡有兩個選項：<em>雙線性</em>（預設）和<em>雙立方演算法</em>。<em>雙線性</em>是在停駐點之間以線性的方式插值，然而會造成 <cite>馬赫帶效應 &lt;https://en.wikipedia.org/wiki/Mach_bands&gt;</cite>。<em>雙立方演算法</em>是以雙立方的方式在停駐點之間插值，可以建立更平滑的漸變效果。</p>
 </dd>
 </dl>
 </dd>
 </dl>
 <div class="admonition note">
 <p class="admonition-title">備註</p>
-<p>Mesh Gradients follow <a class="reference external" href="https://svgwg.org/svg-next/pservers.html#MeshGradients">SVG draft 2</a> for the rendering.</p>
+<p>網狀漸變跟隨 <cite>SVG draft 2 &lt;https://svgwg.org/svg-next/pservers.html#MeshGradients&gt;</cite> 彩現。</p>
 </div>
 <section id="creating-mesh-gradients">
-<h4>Creating Mesh Gradients<a class="headerlink" href="#creating-mesh-gradients" title="Permalink to this heading">¶</a></h4>
+<h4>建立網狀漸變<a class="headerlink" href="#creating-mesh-gradients" title="Permalink to this heading">¶</a></h4>
 <p>When Mesh Gradients option is selected for a shape, Krita fills it with default mesh gradient, which is an alternating color (it alternates between background color and white). Changing number of rows and columns from Tool Options, will add more patches to the Mesh Gradient and corners can be changed individually.</p>
 </section>
 <section id="editing-mesh-gradients">
