@@ -102,12 +102,18 @@ Puts a threshold filter over the brush mask. This can be used for brush like str
 
 Strength
     Controls the threshold, and can be controlled by the sensors below.
-Softness
+Soften Edge
     Controls the extra non-fully opaque pixels. This adds a little softness to the stroke.
     
 .. versionchanged:: 4.2
 
     The sensors now control the threshold instead of the subpixel precision, softness slider was added.
+
+
+Align the brush preview outline to the pixel grid.
+    Whether to have the brush outline align to the pixel grid. This is useful with some forms of pixel art.
+    
+    .. versionadded:: 5.1
 
 .. _option_size:
 

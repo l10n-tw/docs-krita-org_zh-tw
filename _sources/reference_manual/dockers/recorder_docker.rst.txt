@@ -70,6 +70,16 @@ Input FPS:
    How many frames per second should go in. For example, to make your time lapse twice faster, this value should be double that of the :guilabel:`Video fps`.
 Video FPS:
    The actual FPS of the video.
+Extend End Result
+   Whether to hold the last frame and how long to hold the last frame of the recording. This allows a viewer to take a good long at the end result.
+   
+   .. versionadded:: 5.1
+
+Enable Result Preview
+   Whether to add a copy of the last frame to the start and how long to hold this frame. This will show viewers what kind of image is being drawn here.
+   
+   .. versionadded:: 5.0
+
 Resize:
    Scale the final video.
 FFMpeg:

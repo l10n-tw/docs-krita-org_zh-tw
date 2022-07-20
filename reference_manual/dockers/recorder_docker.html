@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2022-07-01T10:16:54" />
+  <meta property="og:article:modified_time" content="2022-07-20T15:55:45" />
   <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <meta content="The recorder docker allows recording time lapses in Krita." name="description" property="og:description" />
 
@@ -334,12 +334,22 @@
 <section id="export-options">
 <h2>Export Options<a class="headerlink" href="#export-options" title="Permalink to this heading">¶</a></h2>
 <p>Compare these options with the one on the <a class="reference internal" href="../render_animation.html#render-animation"><span class="std std-ref">繪製動畫</span></a> page, as they do largely the same things.</p>
-<dl class="simple">
+<dl>
 <dt>Recording info:</dt><dd><p>Shows what kind of frames and how many frames are taken into account when creating the final video file. Pressing <span class="guilabel">Open Record Directory</span> will allow you to open the folder where the recordings are located in your file browser.</p>
 </dd>
 <dt>Input FPS:</dt><dd><p>How many frames per second should go in. For example, to make your time lapse twice faster, this value should be double that of the <span class="guilabel">Video fps</span>.</p>
 </dd>
 <dt>Video FPS:</dt><dd><p>The actual FPS of the video.</p>
+</dd>
+<dt>Extend End Result</dt><dd><p>Whether to hold the last frame and how long to hold the last frame of the recording. This allows a viewer to take a good long at the end result.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">在 5.1 版本新加入.</span></p>
+</div>
+</dd>
+<dt>Enable Result Preview</dt><dd><p>Whether to add a copy of the last frame to the start and how long to hold this frame. This will show viewers what kind of image is being drawn here.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">在 5.0 版本新加入.</span></p>
+</div>
 </dd>
 <dt>Resize:</dt><dd><p>Scale the final video.</p>
 </dd>
@@ -389,7 +399,7 @@
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>d9da50a</code>
+          修訂版本 <code>60ea049</code>
         </span>
       
 

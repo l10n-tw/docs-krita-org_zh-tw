@@ -76,9 +76,7 @@ Krita supports layer transparency. Of course, the nasty thing is that transparen
 Size
     This sets the size of the checkers which show up in transparent parts of an image. 
 Color
-    The user can set the colors for the checkers over here. 
-Move Checkers When Scrolling 
-    When selected the checkers will move along with opaque elements of an image during canvas Panning, Zooming, etc.  Otherwise the checkers remain stationary and only the opaque parts of an image will move. 
+    The user can set the colors for the checkers over here.
 
 Canvas Border
 -------------
@@ -88,6 +86,16 @@ Color
 Hide Scrollbars
     Selecting this will hide the scrollbars in all view modes. 
 
+Selection Overlay
+-----------------
+
+Set the color of the alternate :ref:`Selection <selections_basics>` display mode. This mode is typically used when making complex selections.
+
+Color
+    Color of the overlay.
+Opacity
+    How opaque the overlay is.
+    
 Pixel Grid
 ----------
 
@@ -103,13 +111,15 @@ Start Showing at
 Miscellaneous
 -------------
 
-Color Channels in Color
-    This configures whether the image display should be colored when only a single channel is selected in the channels docker.
+Hide canvas scrollbars.
+    Hides the scrollbars on the canvas.
 Enable Curve Anti-Aliasing
     This allows anti-aliasing on previewing curves, like the ones for the circle tool, or the path tool.
-Enable Selection Outline Anti-Aliasing
-    This allows automatic anti-aliasing on selection. It makes the selection feel less jaggy and more precise.
-Hide window scrollbars.
-    Hides the scrollbars on the canvas.
 Hide Layer thumbnail popup
     This disables the thumbnail that you get when hovering over a layer.
+Color Channels in Color
+    This configures whether the image display should be colored when only a single channel is selected in the channels docker.
+Enable Selection Outline Anti-Aliasing
+    This allows automatic anti-aliasing on selection. It makes the selection feel less jaggy and more precise.
+Move Checkers When Scrolling 
+    When selected the checkers will move along with opaque elements of an image during canvas Panning, Zooming, etc.  Otherwise the checkers remain stationary and only the opaque parts of an image will move. 

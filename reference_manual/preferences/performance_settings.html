@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2022-07-01T10:16:54" />
+  <meta property="og:article:modified_time" content="2022-07-20T15:55:45" />
   <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <meta content="Krita 的效能設定。" name="description" />
 
@@ -315,6 +315,8 @@
 </dd>
 <dt>動畫繪製平行副本上限</dt><dd><p>Krita 在繪製動畫時，會先將影像複製為多個複本，對大值由 CPU 核心數量決定，然後在盡可能多的 CPU 執行緒中平行同時處理以提高速度。這表示每一份複本都需要佔用額外的記憶體，如果處理的動畫很龐大又複雜時，為了不耗盡記憶體，這時有必要限制處理動畫使用的執行緒數量。</p>
 </dd>
+<dt>Frame Rendering Timeout</dt><dd><p>To prevent Krita from hanging on a single frame, we limit how long it can spend on rendering a frame before moving on the next. If rendering an animation fails very often due a timeout, you can increase this value. Do note that it might also be caused by the file being too complex.</p>
+</dd>
 </dl>
 </section>
 <section id="other">
@@ -412,7 +414,7 @@
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>d9da50a</code>
+          修訂版本 <code>60ea049</code>
         </span>
       
 

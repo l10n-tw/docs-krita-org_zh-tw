@@ -61,14 +61,20 @@ Tool Options
 
 Action
     This option is explained in the :ref:`pixel_vector_selection` section.
-Anti-aliasing
-    This toggles whether or not to give selections feathered edges. Some people prefer hard-jagged edges for their selections.
+Selection Extent
+    Threshold
+        This controls the range of the color hue used to create the selection. A lower number will select colors closer to the color that you chose in the first place. And a higher number will expand the hue range and select colors even if they are not so similar to the original color.
+Adjustments
+    .. versionadded:: 5.1
 
-.. deprecated:: 5.0
+        Anti-alias
+            This will smooth the jagged edges present in the region. It differs from feathering in that this will smooth in the direction of the edge instead of all directions, and only if the edge is jagged (high contrast).
 
-   This has been removed as it only caused confusion.
-
-Sample
+    Grow Selection
+        This value extends (positive values) or contracts (negative values) the region.
+    Feathering Radius
+        This value will add a soft border to the region.
+Reference
     .. versionadded:: 5.0
     
     Select which layers to use as a reference for the contiguous select tool. The options are:
@@ -80,10 +86,6 @@ Sample
     Color Labeled Layers
         Use only the layers specified with a certain color label. This is useful for complex images, where you might have multiple lineart layers. Label them with the appropriate color label and use these labels to mark which layers to use as a reference.
 
-Labels Used
-    .. versionadded:: 5.0
+        Labels Used
+            Select the color labels of the layers that should be used as reference.
 
-    Used with the 'Color Labeled Layers' option above.
-
-Fuzziness
-    This controls the range of the color hue used to create the selection. A lower number will select colors closer to the color that you chose in the first place. And a higher number will expand the hue range and select colors even if they are not so similar to the original color.

@@ -35,7 +35,10 @@ Hotkeys and Sticky keys
 * :kbd:`Alt +` |mouseleft| sets the subsequent selection to 'subtract'.
 * :kbd:`Ctrl +` |mouseleft| sets the subsequent selection to 'replace'.
 * :kbd:`Shift + Alt +` |mouseleft| sets the subsequent selection to 'intersect'.
-* Holding the :kbd:`Ctrl` key while drawing the selection temporarily makes this tool behave like the Polygon Selection tool and you can then draw straight line selections by just clicking on the canvas.
+
+.. deprecated:: 5.1
+
+    * Holding the :kbd:`Ctrl` key while drawing the selection temporarily makes this tool behave like the Polygon Selection tool and you can then draw straight line selections by just clicking on the canvas. This has been removed in 5.1
 
 .. versionadded:: 4.2
 

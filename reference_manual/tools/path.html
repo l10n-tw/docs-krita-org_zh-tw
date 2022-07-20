@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2022-07-01T10:16:54" />
+  <meta property="og:article:modified_time" content="2022-07-20T15:55:45" />
   <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <meta content="Krita 的路徑工具參考。" name="description" />
 
@@ -183,6 +183,7 @@
 <li class="toctree-l3"><a class="reference internal" href="move.html">移動工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="transform.html">變形工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="fill.html">填色工具</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enclose_and_fill.html">Enclose and Fill Tool</a></li>
 <li class="toctree-l3"><a class="reference internal" href="gradient_draw.html">漸變工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="color_sampler.html">色彩取樣器工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="colorize_mask.html">著色遮罩工具</a></li>
@@ -295,11 +296,16 @@
   <section id="bezier-curve-tool">
 <span id="path-tool"></span><span id="index-0"></span><span id="id1"></span><h1>貝茲曲線工具<a class="headerlink" href="#bezier-curve-tool" title="Permalink to this heading">¶</a></h1>
 <p><img alt="貝茲曲線工具" src="../../_images/bezier_curve.svg" /></p>
-<p>你可以透過這個工具來畫出曲線。<img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> 來給繪製曲線的起點，然後再點一下來連續控制曲線的節點。</p>
-<p><strong class="program">Krita</strong> 會在你新增一個控制節點時顯示一個有著兩個控制項鐵人的藍色線段，你可以拖曳這些控制項來改變曲線在那個節點的方向。</p>
-<p>在向量圖層中，你可以點選上一個節點來修改。在中途的節點（即除了首尾的兩個節點），你可以分別移動控制項方向來讓曲線的起點和終點的方向不同。在編輯昂點後，點選畫布來繼續為曲線新增節點。</p>
-<p>按 <kbd class="kbd docutils literal notranslate">Del</kbd> 鍵會移除曲線中目前選取的節點。在曲線上的任何節點按 <img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> 兩次或是按 <kbd class="kbd docutils literal notranslate">Enter</kbd> 兩次來完成曲線，或是按 <kbd class="kbd docutils literal notranslate">Esc</kbd> 來取消曲線。在按著 <kbd class="kbd docutils literal notranslate">Ctrl</kbd> 時使用 <img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> 鍵會把整個曲線移動到不同位置。</p>
-<p>在拉線條時按 <kbd class="kbd docutils literal notranslate">Ctrl</kbd> 鍵會推動兩邊的控制柄；而按 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Alt`鍵會在曲線中生成銳角；按</kbd> <kbd class="kbd docutils literal notranslate">:kbd:`Shift</kbd></kbd> 鍵會在曲線末端生成控制柄。<img alt="滑鼠右鍵" src="../../_images/Krita_mouse_right.png" /> 會退回至上一個節點。</p>
+<p>You can draw curves by using this tool. Click <img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> to indicate the starting point of the curve, then click again for consecutive control points of the curve. While creating a control point, drag to create the handles, they will show as red lines.</p>
+<p>With an intermediate control point (i.e. a point that is not the starting point and not the ending point), you can move the direction handles separately to have the curve enter and leave the point in different directions. After editing a point, you can just click on the canvas to continue adding points to the curve. When creating a path on a vector layer, the resulting path can be further edited with the <a class="reference internal" href="shape_edit.html#shape-edit-tool"><span class="std std-ref">形狀編輯工具</span></a>.</p>
+<figure class="align-default" id="id2">
+<img alt="../../_images/path_tool_usage.png" src="../../_images/path_tool_usage.png" />
+<figcaption>
+<p><span class="caption-text">The path preview that shows while drawing a path. The start of the path is indicated with a white square, the preview for the path itself in black, and the red dotted lines being the control points for the current handle.</span><a class="headerlink" href="#id2" title="本圖片的永久連結">¶</a></p>
+</figcaption>
+</figure>
+<p>Double-click <img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> on any point of the curve or press the <kbd class="kbd docutils literal notranslate">Enter</kbd> key to finish drawing, or press the <kbd class="kbd docutils literal notranslate">Esc</kbd> key to cancel the entire curve.</p>
+<p>While drawing a curve, pressing the <kbd class="kbd docutils literal notranslate">Ctrl</kbd> key while dragging will push the handles both ways. The <kbd class="kbd docutils literal notranslate">Alt</kbd> key will create a sharp corner, and the <kbd class="kbd docutils literal notranslate">Shift</kbd> key will allow you to make a handle while at the end of the curve. <img alt="滑鼠右鍵" src="../../_images/Krita_mouse_right.png" /> will undo the last added point.</p>
 <section id="tool-options">
 <h2>工具選項<a class="headerlink" href="#tool-options" title="Permalink to this heading">¶</a></h2>
 <div class="versionadded">
@@ -341,7 +347,7 @@
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>d9da50a</code>
+          修訂版本 <code>60ea049</code>
         </span>
       
 

@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2022-07-01T10:16:54" />
+  <meta property="og:article:modified_time" content="2022-07-20T15:55:45" />
   <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <meta content="Krita 的顯示設定。" name="description" property="og:description" />
 
@@ -161,6 +161,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#hdr">HDR 設定</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#transparency-checkerboard">透明棋盤格色彩</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#canvas-border">畫布外周色彩</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#selection-overlay">Selection Overlay</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#pixel-grid">像素格線</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#miscellaneous">其他</a></li>
 </ul>
@@ -330,8 +331,6 @@
 </dd>
 <dt>色彩</dt><dd><p>使用者可在這個項目設定棋盤格的顏色。</p>
 </dd>
-<dt>捲動時移動棋盤格背景</dt><dd><p>勾選這個選項後，棋盤格會在畫布平移、縮放時與影像不透明元素一起移動；反之不勾選的話，棋盤格會保持固定，只有影像與不透明部分會移動。</p>
-</dd>
 </dl>
 </section>
 <section id="canvas-border">
@@ -340,6 +339,16 @@
 <dt>色彩</dt><dd><p>這裡可以指定畫布範圍外背景的顏色。預設是灰色。</p>
 </dd>
 <dt>隱藏捲動軸</dt><dd><p>鉤選此項目時將在所有檢視模式下隱藏捲動軸。</p>
+</dd>
+</dl>
+</section>
+<section id="selection-overlay">
+<h2>Selection Overlay<a class="headerlink" href="#selection-overlay" title="Permalink to this heading">¶</a></h2>
+<p>Set the color of the alternate <a class="reference internal" href="../../user_manual/selections.html#selections-basics"><span class="std std-ref">Selection</span></a> display mode. This mode is typically used when making complex selections.</p>
+<dl class="simple">
+<dt>色彩</dt><dd><p>Color of the overlay.</p>
+</dd>
+<dt>Opacity</dt><dd><p>How opaque the overlay is.</p>
 </dd>
 </dl>
 </section>
@@ -359,15 +368,17 @@
 <section id="miscellaneous">
 <h2>其他<a class="headerlink" href="#miscellaneous" title="Permalink to this heading">¶</a></h2>
 <dl class="simple">
-<dt>顏色中的色彩通道</dt><dd><p>This configures whether the image display should be colored when only a single channel is selected in the channels docker.</p>
+<dt>Hide canvas scrollbars.</dt><dd><p>隱藏畫布邊捲動條。</p>
 </dd>
 <dt>啟用曲線反鋸齒</dt><dd><p>這功能啟用時可在預覽曲線上消除鋸齒，例如圓形工具或路徑工具的曲線會變更平滑。</p>
 </dd>
+<dt>隱藏圖層浮動縮圖</dt><dd><p>這功能可停用滑鼠游標停在圖層上顯示的縮圖。</p>
+</dd>
+<dt>顏色中的色彩通道</dt><dd><p>This configures whether the image display should be colored when only a single channel is selected in the channels docker.</p>
+</dd>
 <dt>啟用選取區域輪廓反鋸齒</dt><dd><p>這功能啟用時可在選取範圍自動反鋸齒，使選取區域更精確並且降低邊緣鋸齒。</p>
 </dd>
-<dt>隱藏畫布捲動軸。</dt><dd><p>隱藏畫布邊捲動條。</p>
-</dd>
-<dt>隱藏圖層浮動縮圖</dt><dd><p>這功能可停用滑鼠游標停在圖層上顯示的縮圖。</p>
+<dt>捲動時移動棋盤格背景</dt><dd><p>勾選這個選項後，棋盤格會在畫布平移、縮放時與影像不透明元素一起移動；反之不勾選的話，棋盤格會保持固定，只有影像與不透明部分會移動。</p>
 </dd>
 </dl>
 </section>
@@ -396,7 +407,7 @@
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>d9da50a</code>
+          修訂版本 <code>60ea049</code>
         </span>
       
 

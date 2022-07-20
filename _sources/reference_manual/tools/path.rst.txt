@@ -18,15 +18,17 @@ Bezier Curve Tool
 
 |toolbeziercurve|
 
-You can draw curves by using this tool. Click the |mouseleft| to indicate the starting point of the curve, then click again for consecutive control points of the curve.
+You can draw curves by using this tool. Click |mouseleft| to indicate the starting point of the curve, then click again for consecutive control points of the curve. While creating a control point, drag to create the handles, they will show as red lines.
 
-:program:`Krita` will show a blue line with two handles when you add a control point. You can drag these handles to change the direction of the curve in that point.
+With an intermediate control point (i.e. a point that is not the starting point and not the ending point), you can move the direction handles separately to have the curve enter and leave the point in different directions. After editing a point, you can just click on the canvas to continue adding points to the curve. When creating a path on a vector layer, the resulting path can be further edited with the :ref:`shape_edit_tool`.
 
-On a vector layer, you can click on a previously inserted control point to modify it. With an intermediate control point (i.e. a point that is not the starting point and not the ending point), you can move the direction handles separately to have the curve enter and leave the point in different directions. After editing a point, you can just click on the canvas to continue adding points to the curve.
+.. figure:: /images/tools/path_tool_usage.png
+   
+   The path preview that shows while drawing a path. The start of the path is indicated with a white square, the preview for the path itself in black, and the red dotted lines being the control points for the current handle.
 
-Pressing the :kbd:`Del` key will remove the currently selected control point from the curve. Double-click the |mouseleft| on any point of the curve or press the :kbd:`Enter` key to finish drawing, or press the :kbd:`Esc` key to cancel the entire curve. You can use the :kbd:`Ctrl` key while keeping the |mouseleft| pressed to move the entire curve to a different position.
+Double-click |mouseleft| on any point of the curve or press the :kbd:`Enter` key to finish drawing, or press the :kbd:`Esc` key to cancel the entire curve.
 
-While drawing the :kbd:`Ctrl` key while dragging will push the handles both ways. The :kbd:`Alt` key will create a sharp corner, and the :kbd:`Shift` key will allow you to make a handle while at the end of the curve. |mouseright| will undo the last added point.
+While drawing a curve, pressing the :kbd:`Ctrl` key while dragging will push the handles both ways. The :kbd:`Alt` key will create a sharp corner, and the :kbd:`Shift` key will allow you to make a handle while at the end of the curve. |mouseright| will undo the last added point.
 
 Tool Options
 ------------

@@ -149,7 +149,7 @@ The slider is percentage of the brush-size. You can have it modified with :guila
 
 .. versionchanged:: 5.0
 
-   It used to be possible to go beyond three time the size of the current brush. The smudge radius is now limited to the total size of the brush, but is also faster.
+   In versions prior to 5.0, Smudge Radius can go up to 3,00,00%, while the program's internal value is 1/100 of the displayed value. Starting from 5.0, the displayed and the internal value of Smudge Radius are unified, they can only go up to 300%, as intended.
 
 .. _option_overlay:
 

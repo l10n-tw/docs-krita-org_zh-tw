@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2022-07-01T10:16:54" />
+  <meta property="og:article:modified_time" content="2022-07-20T15:55:45" />
   <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <meta content="Krita 的形狀選取工具參考。" name="description" />
 
@@ -164,7 +164,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#selection">選取</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#placement-scale-angle-and-distortion">放置，縮放，角度和扭曲</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#tool-options">工具選項</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#right-click-menu">Right-click menu</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#right-click-menu">右鍵選單</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="shape_edit.html">形狀編輯工具</a></li>
@@ -186,6 +186,7 @@
 <li class="toctree-l3"><a class="reference internal" href="move.html">移動工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="transform.html">變形工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="fill.html">填色工具</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enclose_and_fill.html">Enclose and Fill Tool</a></li>
 <li class="toctree-l3"><a class="reference internal" href="gradient_draw.html">漸變工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="color_sampler.html">色彩取樣器工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="colorize_mask.html">著色遮罩工具</a></li>
@@ -438,30 +439,30 @@
 </div>
 <section id="creating-mesh-gradients">
 <h4>建立網狀漸變<a class="headerlink" href="#creating-mesh-gradients" title="Permalink to this heading">¶</a></h4>
-<p>When Mesh Gradients option is selected for a shape, Krita fills it with default mesh gradient, which is an alternating color (it alternates between background color and white). Changing number of rows and columns from Tool Options, will add more patches to the Mesh Gradient and corners can be changed individually.</p>
+<p>當一個形狀使用網狀漸變時，Krita 會以預設的網狀漸變作填充，也就是說兩種色彩交替使用（使用前景色和白色）。你可以在工具選項中改變行列的數量，這樣網狀漸變會增加色塊、而色塊的角落可以獨立更改色彩。</p>
 </section>
 <section id="editing-mesh-gradients">
-<h4>Editing Mesh Gradients<a class="headerlink" href="#editing-mesh-gradients" title="Permalink to this heading">¶</a></h4>
-<p>The way to edit Mesh Gradients is pretty straight forward. Each curve is an individual Bezier Curve. There are two ways to change the structure, one is by dragging the corner (rectangle) and other is by dragging the handle (circle).</p>
+<h4>編輯網狀漸變<a class="headerlink" href="#editing-mesh-gradients" title="Permalink to this heading">¶</a></h4>
+<p>編輯網狀漸變的方法還蠻直接的：每條曲線都有一個獨立的貝茲曲線，這裡有兩種方式改變這個結構，一是拖曳角落（矩形），一是拖曳控制柄（圓形）。</p>
 <figure class="align-center" id="id4">
-<img alt="Left to right: Normal, Corner Hovered, Corner Moved and Selected." src="../../_images/MeshGradients-corner-moving.png" />
+<img alt="從左至右：普通，游標在角落上，選取並移動角落。" src="../../_images/MeshGradients-corner-moving.png" />
 <figcaption>
-<p><span class="caption-text">Left to right: Normal, Corner Hovered, Corner Moved and Selected.</span><a class="headerlink" href="#id4" title="本圖片的永久連結">¶</a></p>
+<p><span class="caption-text">從左至右：普通，游標在角落上，選取並移動角落。</span><a class="headerlink" href="#id4" title="本圖片的永久連結">¶</a></p>
 </figcaption>
 </figure>
-<p>To change the color, a corner has to be selected and then Tool Options can be used to change the color of the selected corner.</p>
+<p>如要更改色彩，點選角落，然後在工具選項裡的節點選項裡更改色彩。</p>
 <div class="admonition note">
 <p class="admonition-title">備註</p>
-<p>When importing from Inkscape, shapes may be grouped, which may not allow Krita to edit Mesh Gradients. To fix this, first ungroup (via <img alt="滑鼠右鍵" src="../../_images/Krita_mouse_right.png" />) them.</p>
+<p>當從 Inkscape 中匯入檔案時，形狀可能會是群組的狀態，這樣 Krita 會無法編輯網狀漸變。透過解除群組（<img alt="滑鼠右鍵" src="../../_images/Krita_mouse_right.png" />選單）來解決。</p>
 </div>
 </section>
 </section>
 </section>
 <section id="right-click-menu">
-<h2>Right-click menu<a class="headerlink" href="#right-click-menu" title="Permalink to this heading">¶</a></h2>
-<p>The shape selection tool has a nice right click menu that gives you several features. If you have an object selected, you can perform various functions like cutting, copying, or moving the object to the front or back.</p>
+<h2>右鍵選單<a class="headerlink" href="#right-click-menu" title="Permalink to this heading">¶</a></h2>
+<p>形狀選取工具有著易用的右鍵選單，給予數項功能：在選取物件後，可以使用如剪下、複製，或是移動物件至前面或後面。</p>
 <img alt="../../_images/Vector-right-click-menu.png" src="../../_images/Vector-right-click-menu.png" />
-<p>If you have multiple objects selected you can perform &quot;Logical Operators&quot; on them, or boolean operations as they are commonly called. It will be the last item on the right-click menu. You can unite, intersect, subtract, or split the selected objects.</p>
+<p>在多選的情況下，你可以使用「布爾邏輯操作」。以最後選取的物件作主體，在右鍵選單中進行聯集、交集，減去或是分割物件。</p>
 </section>
 </section>
 
@@ -488,7 +489,7 @@
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>d9da50a</code>
+          修訂版本 <code>60ea049</code>
         </span>
       
 

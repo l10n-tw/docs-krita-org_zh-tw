@@ -49,6 +49,23 @@ If you press the :kbd:`Shift` key while holding the first two handles, they will
 to perfectly horizontal or vertical lines. Press the :kbd:`Shift` key while holding the
 third handle, and it'll snap to a perfect circle.
 
+
+.. _assistant_perspective_ellipse:
+
+Perspective Ellipse
+~~~~~~~~~~~~~~~~~~~
+
+Alternative assistant for drawing ellipses. It can be used either simply, to draw an ellipse defined by a tetragon which the ellipse is tangential to, or in a perspective as an ellipse representing the perspective transformation of a circle.
+
+
+.. image:: /images/assistants/Assistants_ellipse_in_perspective.png
+
+The assistant consists of four points, which are the corners for the tetragon defining the ellipse.
+
+The X-like marks show the locations of the vanishing points for the perspective.
+
+There are two sets of lines inside the ellipse: one, solid, are the lines connecting points where the ellipse touches the tetragon. They are the axis of the circle in perspective. The dotted lines represent the current, actual axis of the final ellipse.
+
 .. _assistant_perspective:
 
 Perspective
@@ -79,6 +96,15 @@ Parallel Ruler
     This ruler allows you to draw a line parallel to the line between the two points anywhere on the canvas.
 
 If you press the :kbd:`Shift` key while holding the first two handles, they will snap to perfectly horizontal or vertical lines.
+
+.. versionadded:: 5.1
+
+    Of these, the :guilabel:`Ruler` assistant also has extra options to add markers:
+    
+    Subdivisions
+        This adds notches to the length of the assistant, evenly spread over the assistant.
+    Minor Subdivisions
+        This adds extra smaller notches between the :guilabel:`Subdivisions`.
 
 .. _assistant_spline:
 

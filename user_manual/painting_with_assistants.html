@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2022-07-01T10:16:54" />
+  <meta property="og:article:modified_time" content="2022-07-20T15:55:45" />
   <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <meta content="How to use the painting assistants in Krita to draw perspectives." name="description" property="og:description" />
 
@@ -137,6 +137,7 @@
 <li class="toctree-l2 current"><a class="current reference internal" href="#">使用輔助尺來繪畫</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#types">類型</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#ellipse">橢圓</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#perspective-ellipse">Perspective Ellipse</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#perspective">透視</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#ruler">直線</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#spline">樣條曲線（雲形線、Spline）</a></li>
@@ -283,6 +284,14 @@
 to perfectly horizontal or vertical lines. Press the <kbd class="kbd docutils literal notranslate">Shift</kbd> key while holding the
 third handle, and it'll snap to a perfect circle.</p>
 </section>
+<section id="perspective-ellipse">
+<span id="assistant-perspective-ellipse"></span><h3>Perspective Ellipse<a class="headerlink" href="#perspective-ellipse" title="Permalink to this heading">¶</a></h3>
+<p>Alternative assistant for drawing ellipses. It can be used either simply, to draw an ellipse defined by a tetragon which the ellipse is tangential to, or in a perspective as an ellipse representing the perspective transformation of a circle.</p>
+<img alt="../_images/Assistants_ellipse_in_perspective.png" src="../_images/Assistants_ellipse_in_perspective.png" />
+<p>The assistant consists of four points, which are the corners for the tetragon defining the ellipse.</p>
+<p>The X-like marks show the locations of the vanishing points for the perspective.</p>
+<p>There are two sets of lines inside the ellipse: one, solid, are the lines connecting points where the ellipse touches the tetragon. They are the axis of the circle in perspective. The dotted lines represent the current, actual axis of the final ellipse.</p>
+</section>
 <section id="perspective">
 <span id="assistant-perspective"></span><h3>透視<a class="headerlink" href="#perspective" title="Permalink to this heading">¶</a></h3>
 <p>This ruler allows you to draw and manipulate grids on the canvas that can serve as perspective guides for your painting. A grid can be added to your canvas by first clicking the tool in the toolbar and then clicking four points on the canvas which will serve as the four corners of your grid.</p>
@@ -303,6 +312,15 @@ third handle, and it'll snap to a perfect circle.</p>
 </dd>
 </dl>
 <p>If you press the <kbd class="kbd docutils literal notranslate">Shift</kbd> key while holding the first two handles, they will snap to perfectly horizontal or vertical lines.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">在 5.1 版本新加入: </span>Of these, the <span class="guilabel">Ruler</span> assistant also has extra options to add markers:</p>
+<dl class="simple">
+<dt>Subdivisions</dt><dd><p>This adds notches to the length of the assistant, evenly spread over the assistant.</p>
+</dd>
+<dt>Minor Subdivisions</dt><dd><p>This adds extra smaller notches between the <span class="guilabel">Subdivisions</span>.</p>
+</dd>
+</dl>
+</div>
 </section>
 <section id="spline">
 <span id="assistant-spline"></span><h3>樣條曲線（雲形線、Spline）<a class="headerlink" href="#spline" title="Permalink to this heading">¶</a></h3>
@@ -446,7 +464,7 @@ third handle, and it'll snap to a perfect circle.</p>
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>d9da50a</code>
+          修訂版本 <code>60ea049</code>
         </span>
       
 

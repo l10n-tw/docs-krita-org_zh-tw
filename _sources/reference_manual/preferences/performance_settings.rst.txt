@@ -66,6 +66,8 @@ CPU Limit
     The number of cores you want to allow Krita to use when multithreading.
 Frame Rendering Clones Limit
     When rendering animations to frames, Krita multithreads by keeping a few copies of the image, with a maximum determined by the number of cores your processor has. If you have a heavy animation file and lots of cores, the copies can be quite heavy on your machine, so in that case try lowering this value.
+Frame Rendering Timeout
+    To prevent Krita from hanging on a single frame, we limit how long it can spend on rendering a frame before moving on the next. If rendering an animation fails very often due a timeout, you can increase this value. Do note that it might also be caused by the file being too complex.
 
 Other
 ~~~~~

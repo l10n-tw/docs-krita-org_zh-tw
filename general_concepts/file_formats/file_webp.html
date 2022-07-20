@@ -1,0 +1,442 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-TW" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-TW" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" name="title" content="*.webp" />
+  <meta property="og:site-name" content="Krita Manual" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="zh-TW" />
+  <meta property="og:locale:alternate" content="ca" />
+  <meta property="og:locale:alternate" content="en" />
+  <meta property="og:locale:alternate" content="fr" />
+  <meta property="og:locale:alternate" content="it" />
+  <meta property="og:locale:alternate" content="ja" />
+  <meta property="og:locale:alternate" content="ko" />
+  <meta property="og:locale:alternate" content="nl" />
+  <meta property="og:locale:alternate" content="pl" />
+  <meta property="og:locale:alternate" content="pt_PT" />
+  <meta property="og:locale:alternate" content="uk_UA" />
+  <meta property="og:locale:alternate" content="zh_CN" />
+  <meta property="og:article:modified_time" content="2022-07-20T15:55:45" />
+  <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+<meta content="The WebP file format in Krita." name="description" />
+
+  
+  
+  <title>*.webp &mdash; Krita Manual 5.0.0 說明文件</title>
+  
+
+  
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    
+  
+  
+  
+    <link rel="canonical" href="zh_TW/general_concepts/file_formats/file_webp.html"/>
+    <meta property="og:url" content="zh_TW/general_concepts/file_formats/file_webp.html" />
+    <meta property="og:image" content="zh_TW/_static/sidebar-logo.png" />
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜尋" href="../../search.html" />
+    <link rel="next" title="有損與無損影像壓縮方式" href="lossy_lossless.html" />
+    <link rel="prev" title="*.tiff" href="file_tif.html" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+       
+           <a href="../../index.html" class="icon icon-home">
+
+			<img src="../../_static/sidebar-logo.png" class="logo" alt="Logo"/>
+           	
+           <!--	Krita Manual -->
+
+
+          </a>
+
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="搜尋文件" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-side-nav-language-selector">
+        	<p class="caption-text">
+	        	<select id="language-selector-container">
+	        		<option value="ca">Català</option>
+	        		<option value="en">English</option>
+	        		<option value="fr">français</option>
+	        		<option value="it">Italiano</option>
+	        		<option value="ja">日本語</option>
+	        		<option value="ko">한국어</option>
+	        		<option value="nl">Nederlands</option>
+	        		<option value="pl">Polski</option>
+	        		<option value="pt_PT">português</option>
+	        		<option value="uk_UA">Українська</option>
+	        		<option value="zh_CN">简体中文</option>
+	        	</select>
+        	</p>
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../user_manual.html">使用者手冊</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../general_concepts.html">通用概念</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../colors.html">色彩</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../file_formats.html">檔案格式</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../file_formats.html#compression">壓縮</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../file_formats.html#metadata">中繼資料</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../file_formats.html#openness">開放性</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../file_formats.html#contents">目錄</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="file_bmp.html">*.bmp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_csv.html">*.csv</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_exr.html">*.exr</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_gbr.html">*.gbr</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_gif.html">*.gif</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_gih.html">*.gih</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_heif.html">*.heif 及 *.avif</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_jpeg.html">*.jpg</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_jxl.html">*.jxl</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_kpl.html">*.kpl</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_kra.html">*.kra</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_ora.html">*.ora</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_pbgpm.html">*.pbm、*.pgm 及 *.ppm</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_pdf.html">*.pdf</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_png.html">*.png</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_psd.html">*.psd</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_svg.html">*.svg</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_tif.html">*.tiff</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">*.webp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lossy_lossless.html">有損與無損影像壓縮方式</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../projection.html">透視投影</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference_manual.html">參考文件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials.html">教學及指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../KritaFAQ.html">常見問題 FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributors_manual.html">貢獻者手冊</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../resources_page.html">資源</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+	<!-- start top banner area (for fundraisers or messages)
+
+	<div style="text-align: center; background-color: #333">
+		<a href="https://krita.org/en/fundraising-2018-campaign/" target="_self" onclick="ga('send', 'event', 'frontpage', 'button', 'Fundraiser 2018');">
+			<img src="https://krita.org/wp-content/themes/krita-org-theme/images/decoration/2018-fundraiser-banner.png" style="max-width: 100%">
+		</a>
+	</div>
+	
+	 end top banner area -->
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Krita Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">文件</a> &raquo;</li>
+        
+          <li><a href="../../general_concepts.html">通用概念</a> &raquo;</li>
+        
+          <li><a href="../file_formats.html">檔案格式</a> &raquo;</li>
+        
+      <li>*.webp</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+          
+            <a href="../../_sources/general_concepts/file_formats/file_webp.rst.txt" rel="nofollow"> 
+             
+              <img src="../../_static/images/source-code.png" />
+             <!-- 檢視頁面原始碼 -->
+
+          </a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="webp">
+<span id="file-webp"></span><span id="index-0"></span><h1>*.webp<a class="headerlink" href="#webp" title="Permalink to this heading">¶</a></h1>
+<p>WebP is a file format based on the <a class="reference external" href="https://developers.google.com/speed/webp/docs/riff_container">RIFF container specification</a> that, like <a class="reference internal" href="file_heif.html#file-heif"><span class="std std-ref">*.heif 及 *.avif</span></a>, it builds upon a video codec (<a class="reference external" href="https://developers.google.com/speed/webp/docs/compression#lossy_webp">VP8</a>) to support <a class="reference internal" href="lossy_lossless.html#lossy-compression"><span class="std std-ref">有損與無損影像壓縮方式</span></a>. WebP tends to be largely used for websites, though not all websites support uploading such files. If you self-host you can investigate whether WebP is an improvement over <a class="reference internal" href="file_jpeg.html#file-jpeg"><span class="std std-ref">*.jpg</span></a> or <a class="reference internal" href="file_png.html#file-png"><span class="std std-ref">*.png</span></a>. However, it is not very widely supported by image editors, so if you are doing collaboration with other artists, it may be better to use a different file format.</p>
+<p><strong class="program">Krita</strong> has supported simple WebP export for a while, but since 5.1 it supports all the export options offered by <a class="reference external" href="https://chromium.googlesource.com/webm/libwebp">libwebp</a>.</p>
+<section id="export-options">
+<h2>Export Options:<a class="headerlink" href="#export-options" title="Permalink to this heading">¶</a></h2>
+<p>Instead of making you responsible for the precise settings, the WebP exporter will try out different techniques to compress better. You give a goal (a given quality or a certain file size) to aim for, and it will try its best to reach that goal. To do this, it may actually try to redo a given step of the encoding process several times. In the end, what you will have to choose is whether you want a high quality result at the cost of a slow export, or a quick export at the cost of quality.</p>
+<section id="general">
+<h3>General:<a class="headerlink" href="#general" title="Permalink to this heading">¶</a></h3>
+<dl>
+<dt>Preset:</dt><dd><p>WebP offers some presets for given a given type of photo. For stylized images, use <span class="guilabel">Line Drawing</span>, for painterly images, use <span class="guilabel">Portrait</span> or <span class="guilabel">Outdoor Photo</span>.</p>
+</dd>
+<dt>Lossless Compression:</dt><dd><p>Use the <a class="reference internal" href="lossy_lossless.html#lossless-compression"><span class="std std-ref">lossless compression mode</span></a> mode, this is a slightly different algorithm, which is heavier but gives better results for sharp contrasts.</p>
+</dd>
+<dt>Quality:</dt><dd><p>Slider for quality.</p>
+<p>With <span class="guilabel">Lossless Compression</span>, 0% means the library will use the fewest amount of algorithmic tricks to reduce file size. This means fast saving times, at the expense of larger files. Conversely, 100% means all algorithmic tricks will be used, leading to the smallest file size, but saving will take longer. The first is best for a situation where speed is more important than size, such as files you share via USB. The latter is useful for situations where the file size can become a problem, such as serving it over the Internet.</p>
+<p>Without <span class="guilabel">Lossless Compression</span>, image information considered redundant will be removed, rather than compressed. This means that at 0%, the most information wll be lost and thus the smallest file size is achieved. This also reduces the overall quality. Conversely, 100% will remove the least amount of image information and thus maintain quality at the expense of a large file size.</p>
+</dd>
+<dt>Trade Off</dt><dd><p>A slider that allows you to select whether saving speed is more important than quality.</p>
+</dd>
+<dt>Dithering:</dt><dd><p>This enables dithering, which allows storing fewer colors while still keeping good gradients.</p>
+</dd>
+</dl>
+</section>
+<section id="advanced">
+<h3>Advanced<a class="headerlink" href="#advanced" title="Permalink to this heading">¶</a></h3>
+<dl class="simple">
+<dt>SNS Strength:</dt><dd><p>Specifies the strength of the Spatial Noise Shaping algorithm, which tries to see if parts of the image can be better compressed than other parts.</p>
+</dd>
+<dt>Filter Strength:</dt><dd><p>Strength of the deblocking filter. 0% will mean there's no filtering after decoding, with increasing filter strength the image will appear smoother.</p>
+</dd>
+<dt>Filter Sharpness:</dt><dd><p>Defines the sharpness of the deblocking filter, with 0 being the sharpest and 7 being the least sharp.</p>
+</dd>
+<dt>Filter Type:</dt><dd><p>Type of deblocking filter, options are <span class="guilabel">Strong</span> and <span class="guilabel">Simple</span>.</p>
+</dd>
+<dt>Alpha Plane Compression:</dt><dd><p>Whether to losslessly compress the alpha channel (Lossless) or outright discard it (None).
+None</p>
+</dd>
+<dt>Predictive Filtering for Alpha Plane:</dt><dd><p>Whether to use predictive filtering for the alpha/transparency.:guilabel:<cite>Best</cite> will try all potential predictive filter modes before deciding which one to use, making it slower than <span class="guilabel">Fast</span>, which just makes a guess and selects that.</p>
+</dd>
+<dt>Alpha Plane Quality:</dt><dd><p>Compression quality for the alpha channel. 0% means smallest size, 100% means no compression. Only with <span class="guilabel">Alpha Plane Compression</span> set to Lossless.</p>
+</dd>
+<dt>Show Compressed:</dt><dd><p>Tells libwebp to skip the in-loop filtering step. May adversely affect the quality of the end file.</p>
+</dd>
+<dt>Multithreaded Encoding:</dt><dd><p>Use multithreading for encoding if possible.</p>
+</dd>
+<dt>Reduce Memory Usage:</dt><dd><p>Try to reduce memory usage at the cost of speed.</p>
+</dd>
+<dt>Exact:</dt><dd><p>Preserve RGB values in transparent areas instead of defaulting them to transparent black.</p>
+</dd>
+<dt>Use Sharp YUV:</dt><dd><p>Whether to use the slower, but more accurate, RGB to YUV conversion.</p>
+</dd>
+</dl>
+<section id="lossy-compression">
+<h4>Lossy Compression<a class="headerlink" href="#lossy-compression" title="Permalink to this heading">¶</a></h4>
+<p>The following options only apply if <span class="guilabel">Lossless Compression</span> is off.</p>
+<dl class="simple">
+<dt>Target Size:</dt><dd><p>Specify the amount of bytes to aim for.</p>
+</dd>
+<dt>Target PSNR:</dt><dd><p>PSNR means <cite>Peak Signal to Noise Ratio &lt;https://en.wikipedia.org/wiki/Peak_signal-to-noise_ratio_&gt;</cite>, and indicates how much noise the image has. Higher values mean less noise is accepted.</p>
+</dd>
+<dt>Segments:</dt><dd><p>How many segments the VP8 video codec can divide the image into. VP8 accepts between 1 and 4 segments.</p>
+</dd>
+<dt>Partitions:</dt><dd><p>Sets how many partitions can the VP8 codec use for storing decompression information. Must be between 0 and 3. Default is 0 to make decoding easier.</p>
+</dd>
+<dt>Auto Adjust Filter Stretch:</dt><dd><p>The encoder will spend some time tuning and selecting the best filter options before encoding.</p>
+</dd>
+<dt>Entropy Passes:</dt><dd><p>Number of passes to do for selecting the best option between target size and target PSNR.</p>
+</dd>
+<dt>Emulate JPEG Size:</dt><dd><p>The encoder will try to match the size of a jpeg of similar dimensions.</p>
+</dd>
+<dt>Minimum Quality:</dt><dd><p>Used with 'entropy passes', the lowest allowed quality for the image.</p>
+</dd>
+<dt>Maximum Quality:</dt><dd><p>Used with 'entropy passes', the highest allowed quality for the image.</p>
+</dd>
+<dt>Preprocessing Filter:</dt><dd><p>Whether or not to add <span class="guilabel">Pseudo Random Dithering</span> to the image before converting RGB to YUV.</p>
+</dd>
+</dl>
+</section>
+<section id="lossless-compression">
+<h4>Lossless compression<a class="headerlink" href="#lossless-compression" title="Permalink to this heading">¶</a></h4>
+<p>The following options only work with <span class="guilabel">Lossless Compression</span> on.</p>
+<dl class="simple">
+<dt>Partition Limit:</dt><dd><p>Limit how big a given segment is in bytes. The higher this is, the less possible information is stored per segment.</p>
+</dd>
+<dt>Near Lossless:</dt><dd><p>The encoder is able to minimally adjust pixel-values so they compress better in lossless compression mode. This enables this feature.
+Automatically triggers <span class="guilabel">Lossless Compression</span>.</p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">也參考</p>
+<p><a class="reference external" href="https://developers.google.com/speed/webp/docs/compression">https://developers.google.com/speed/webp/docs/compression</a></p>
+</div>
+</section>
+</section>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="lossy_lossless.html" class="btn btn-neutral float-right" title="有損與無損影像壓縮方式" accesskey="n" rel="next"> <!-- 下一個 --> <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="file_tif.html" class="btn btn-neutral" title="*.tiff" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- 上一個  -->  </a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
+      
+        <span class="commit">
+          修訂版本 <code>60ea049</code>
+        </span>
+      
+
+    </p>
+  </div>
+  使用 <a href="http://sphinx-doc.org/">Sphinx</a> 以及經修改過的 <a href="https://github.com/rtfd/sphinx_rtd_theme">RTD 主題</a>建置<br/>
+  <a href="https://krita.org" title="Krita 官方網站">Krita 官方網站</a> |
+  <a href="https://invent.kde.org/documentation/docs-krita-org/" title="這份手冊的 KDE GitLab 專案網址">docs.krita.org 的 Git 原始碼儲存庫</a> |
+  <a href="https://www.kde.org/community/whatiskde/impressum-en.php" title="了解更多關於 KDE、code of conduct（行為準則）、隱私政策及 GDPR（一般資料保護規則）">KDE Impressum</a>
+   
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  
+      <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+      <script src="../../_static/jquery.js"></script>
+      <script src="../../_static/underscore.js"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+      <script src="../../_static/doctools.js"></script>
+      <script src="../../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
+      });
+  </script> 
+
+ <script type="text/javascript">
+	 var _paq=_paq||[];
+	 _paq.push(['setCookieDomain','*.krita.org']);
+	 _paq.push(['setDomains','*.krita.org']);
+	 _paq.push(['setDocumentTitle',document.domain+"/"+document.title]);
+	 _paq.push(['trackPageView']);
+	 _paq.push(['enableLinkTracking']);
+
+	 (function(){
+	 	var u="//stats.kde.org/";
+	    _paq.push(['setTrackerUrl',u+'piwik.php']);
+	    _paq.push(['setSiteId',13]);
+	    var d = document, g = d.createElement('script'),s=d.getElementsByTagName('script')[0];
+	    g.type = 'text/javascript';
+	    g.async = true;
+	    g.defer = true;
+	    g.src = u+'piwik.js';
+	    s.parentNode.insertBefore(g,s);
+	  })();
+</script> 
+<noscript><p><img src="//stats.kde.org/piwik.php?idsite=13" style="border:0;" alt="" /></p></noscript>
+
+</body>
+</html>

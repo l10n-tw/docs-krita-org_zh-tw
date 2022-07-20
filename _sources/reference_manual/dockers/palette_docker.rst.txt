@@ -96,4 +96,6 @@ Krita's native palette format is since 4.0 :ref:`file_kpl`. It also supports imp
 * PaintShop Pro palettes (.psp)
 * Photoshop Swatches (.aco)
 * Scribus XML (.xml)
-* Swatchbooker (.sbz).
+* Swatchbooker (.sbz)
+* Adobe Swatch Exchange (.ase)
+* Adobe Color Books (.acb)

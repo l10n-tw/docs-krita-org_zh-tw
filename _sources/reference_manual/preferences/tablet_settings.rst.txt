@@ -29,6 +29,16 @@ Use Tablet Driver Stamps For Brush Speed
     This changes the way freehand brush smoothing works in Krita by using the driver's timestamps instead of a timer-based one.
     
     .. versionadded:: 5.0
+
+Maximum Brush Speed
+    This sets what Krita should consider the maximum brush speed. You can find the maximum value by using the tablet tester.
+    
+    .. versionadded:: 5.1
+
+Brush Speed Smoothing
+    With some devices the speed samples can be very erratic. This can be reduced by instead of using each sample on it's own, several samples are compared to find a smoother value. This controls how many speed samples should be taken into account. Note that too many samples can result in the loss of subtle speed changes.
+
+    .. versionadded:: 5.1
     
 For Krita 3.3 or later:Tablet Input API
     On Windows 8 or above only.

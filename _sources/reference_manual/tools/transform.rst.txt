@@ -33,6 +33,7 @@ Free transform
 --------------
 
 This allows you to do basic rotation, resizing, flipping, and even perspective skewing if you hold the :kbd:`Ctrl` key. Holding the :kbd:`Shift` key will maintain your aspect ratio throughout the transform.
+When you move the center pivot point, pressing :kbd:`Alt` will allow you to limit it to the transformation bounds.
 
 .. figure:: /images/tools/Krita_transforms_free.png 
 

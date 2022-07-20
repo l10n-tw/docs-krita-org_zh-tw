@@ -16,16 +16,6 @@ G'Mic Settings
 
 G'Mic or GREYC's Magic for Image Computing is an opensource filter framework. The G'Mic plugin for Krita exists only on Windows and Linux.
 
-Krita has had G'Mic integration for a long time, but this is its most stable incarnation. On Windows, the plugin is included in the installer and Krita will find it automatically. On Linux, we are making an AppImage available for download.
-
-You set it up as following:
-
-#. Download the gmic-krita AppImage.
-#. Make it executable.
-#. Go to :menuselection:`Settings --> Configure Krita... --> G'Mic plugin` and set G'MIC to the filepath there.
-#. Then restart Krita. 
-
-
 Updates to G'Mic
 ----------------
 

@@ -1,0 +1,490 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-TW" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-TW" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" name="title" content="Enclose and Fill Tool" />
+  <meta property="og:site-name" content="Krita Manual" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="zh-TW" />
+  <meta property="og:locale:alternate" content="ca" />
+  <meta property="og:locale:alternate" content="en" />
+  <meta property="og:locale:alternate" content="fr" />
+  <meta property="og:locale:alternate" content="it" />
+  <meta property="og:locale:alternate" content="ja" />
+  <meta property="og:locale:alternate" content="ko" />
+  <meta property="og:locale:alternate" content="nl" />
+  <meta property="og:locale:alternate" content="pl" />
+  <meta property="og:locale:alternate" content="pt_PT" />
+  <meta property="og:locale:alternate" content="uk_UA" />
+  <meta property="og:locale:alternate" content="zh_CN" />
+  <meta property="og:article:modified_time" content="2022-07-20T15:55:45" />
+  <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+<meta content="Krita's enclose and fill tool reference." name="description" property="og:description" />
+
+  
+  
+  <title>Enclose and Fill Tool &mdash; Krita Manual 5.0.0 說明文件</title>
+  
+
+  
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    
+  
+  
+  
+    <link rel="canonical" href="zh_TW/reference_manual/tools/enclose_and_fill.html"/>
+    <meta property="og:url" content="zh_TW/reference_manual/tools/enclose_and_fill.html" />
+    <meta property="og:image" content="zh_TW/_static/sidebar-logo.png" />
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜尋" href="../../search.html" />
+    <link rel="next" title="漸變工具" href="gradient_draw.html" />
+    <link rel="prev" title="填色工具" href="fill.html" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+       
+           <a href="../../index.html" class="icon icon-home">
+
+			<img src="../../_static/sidebar-logo.png" class="logo" alt="Logo"/>
+           	
+           <!--	Krita Manual -->
+
+
+          </a>
+
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="搜尋文件" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-side-nav-language-selector">
+        	<p class="caption-text">
+	        	<select id="language-selector-container">
+	        		<option value="ca">Català</option>
+	        		<option value="en">English</option>
+	        		<option value="fr">français</option>
+	        		<option value="it">Italiano</option>
+	        		<option value="ja">日本語</option>
+	        		<option value="ko">한국어</option>
+	        		<option value="nl">Nederlands</option>
+	        		<option value="pl">Polski</option>
+	        		<option value="pt_PT">português</option>
+	        		<option value="uk_UA">Українська</option>
+	        		<option value="zh_CN">简体中文</option>
+	        	</select>
+        	</p>
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../user_manual.html">使用者手冊</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../general_concepts.html">通用概念</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../reference_manual.html">參考文件</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../audio_for_animation.html">動畫音訊</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blending_modes.html">混色模式</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../brushes.html">筆刷</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../clones_array.html">再製陣列</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_new_document.html">建立新文件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../default_python_plugins.html">預設安裝的 Python 外掛程式</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dockers.html">工具面板</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dr_minw_debugger.html">Dr. MinGW 除錯工具</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../filters.html">濾鏡</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hdr_display.html">HDR 顯示器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../image_split.html">分割影像</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../import_animation.html">匯入動畫</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../instant_preview.html">即時預覽</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../krita_4_preset_bundle.html">Krita 4 資源包介紹</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../layers_and_masks.html">圖層及遮罩</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../linux_command_line.html">命令列及參數</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../list_supported_tablets.html">支援的繪圖板、數位板</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../main_menu.html">主選單</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../maths_input.html">數學運算式輸入</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../popup-palette.html">浮動畫具板</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preferences.html">偏好選項</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../render_animation.html">繪製動畫</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../resource_management.html">資源管理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../seexpr.html">SeExpr 快速參考</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../separate_image.html">分離影像</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sharing_krita_logs.html">獲取紀錄檔</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../split_layer.html">分割圖層</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../storyboard_svg_template.html">SVG Storyboard Export Templates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../stroke_selection.html">對選取區域描邊</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../tools.html">工具</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="shape_selection.html">形狀選取工具</a></li>
+<li class="toctree-l3"><a class="reference internal" href="shape_edit.html">形狀編輯工具</a></li>
+<li class="toctree-l3"><a class="reference internal" href="text.html">文字工具</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gradient_edit.html">漸變編輯工具</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pattern_edit.html">圖案編輯工具</a></li>
+<li class="toctree-l3"><a class="reference internal" href="calligraphy.html">西文書法工具</a></li>
+<li class="toctree-l3"><a class="reference internal" href="freehand_brush.html">手繪筆刷工具</a></li>
+<li class="toctree-l3"><a class="reference internal" href="line.html">直線工具</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rectangle.html">矩形工具</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ellipse.html">橢圓工具</a></li>
+<li class="toctree-l3"><a class="reference internal" href="polygon.html">多邊形工具</a></li>
+<li class="toctree-l3"><a class="reference internal" href="polyline.html">折線工具</a></li>
+<li class="toctree-l3"><a class="reference internal" href="path.html">貝茲曲線工具</a></li>
+<li class="toctree-l3"><a class="reference internal" href="freehand_path.html">手繪路徑工具</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dyna.html">力學筆刷工具</a></li>
+<li class="toctree-l3"><a class="reference internal" href="multibrush.html">多重筆刷工具</a></li>
+<li class="toctree-l3"><a class="reference internal" href="crop.html">裁切工具</a></li>
+<li class="toctree-l3"><a class="reference internal" href="move.html">移動工具</a></li>
+<li class="toctree-l3"><a class="reference internal" href="transform.html">變形工具</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fill.html">填色工具</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Enclose and Fill Tool</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#tool-options">Tool Options</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="gradient_draw.html">漸變工具</a></li>
+<li class="toctree-l3"><a class="reference internal" href="color_sampler.html">色彩取樣器工具</a></li>
+<li class="toctree-l3"><a class="reference internal" href="colorize_mask.html">著色遮罩工具</a></li>
+<li class="toctree-l3"><a class="reference internal" href="smart_patch.html">智慧補丁工具</a></li>
+<li class="toctree-l3"><a class="reference internal" href="assistant.html">輔助尺工具</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reference_images_tool.html">參考圖工具</a></li>
+<li class="toctree-l3"><a class="reference internal" href="measure.html">測量工具</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rectangular_select.html">矩形選取區域工具</a></li>
+<li class="toctree-l3"><a class="reference internal" href="elliptical_select.html">橢圓選取區域工具</a></li>
+<li class="toctree-l3"><a class="reference internal" href="freehand_select.html">手繪選取區域工具</a></li>
+<li class="toctree-l3"><a class="reference internal" href="polygonal_select.html">多邊形選取區域工具</a></li>
+<li class="toctree-l3"><a class="reference internal" href="contiguous_select.html">相連選取區域工具</a></li>
+<li class="toctree-l3"><a class="reference internal" href="path_select.html">路徑選取工具</a></li>
+<li class="toctree-l3"><a class="reference internal" href="similar_select.html">相似色彩選取區域工具</a></li>
+<li class="toctree-l3"><a class="reference internal" href="magnetic_select.html">磁性選取區域工具</a></li>
+<li class="toctree-l3"><a class="reference internal" href="zoom.html">縮放工具</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pan.html">平移工具</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../welcome_screen.html">歡迎畫面</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials.html">教學及指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../KritaFAQ.html">常見問題 FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributors_manual.html">貢獻者手冊</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../resources_page.html">資源</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+	<!-- start top banner area (for fundraisers or messages)
+
+	<div style="text-align: center; background-color: #333">
+		<a href="https://krita.org/en/fundraising-2018-campaign/" target="_self" onclick="ga('send', 'event', 'frontpage', 'button', 'Fundraiser 2018');">
+			<img src="https://krita.org/wp-content/themes/krita-org-theme/images/decoration/2018-fundraiser-banner.png" style="max-width: 100%">
+		</a>
+	</div>
+	
+	 end top banner area -->
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Krita Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">文件</a> &raquo;</li>
+        
+          <li><a href="../../reference_manual.html">參考文件</a> &raquo;</li>
+        
+          <li><a href="../tools.html">工具</a> &raquo;</li>
+        
+      <li>Enclose and Fill Tool</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+          
+            <a href="../../_sources/reference_manual/tools/enclose_and_fill.rst.txt" rel="nofollow"> 
+             
+              <img src="../../_static/images/source-code.png" />
+             <!-- 檢視頁面原始碼 -->
+
+          </a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="enclose-and-fill-tool">
+<span id="index-0"></span><span id="id1"></span><h1>Enclose and Fill Tool<a class="headerlink" href="#enclose-and-fill-tool" title="Permalink to this heading">¶</a></h1>
+<p><img alt="toolenclosefill" src="../../_images/enclose_and_fill_tool.svg" /></p>
+<p>The Enclose and Fill Tool is a different method of filling large colored areas. Instead of <a class="reference internal" href="fill.html#fill-tool"><span class="std std-ref">selecting each area you want to fill</span></a>, or <a class="reference internal" href="colorize_mask.html#colorize-mask"><span class="std std-ref">drawing the associated color of each area</span></a>, this tool allows you to select an area, and it will fill everything inside said area.</p>
+<figure class="align-default" id="id2">
+<img alt="../../_images/enclose_and_fill_basic_usage.png" src="../../_images/enclose_and_fill_basic_usage.png" />
+<figcaption>
+<p><span class="caption-text">Simple usage of the enclose an fill. Draw a rectangle around everything you wish to fill and <strong class="program">Krita</strong> will try to find all possible areas inside that rectangle that can be filled.</span><a class="headerlink" href="#id2" title="本圖片的永久連結">¶</a></p>
+</figcaption>
+</figure>
+<section id="tool-options">
+<h2>Tool Options<a class="headerlink" href="#tool-options" title="Permalink to this heading">¶</a></h2>
+<section id="enclosing-method">
+<h3>Enclosing Method<a class="headerlink" href="#enclosing-method" title="Permalink to this heading">¶</a></h3>
+<p>What kind of method to use for the enclosing area. Different images call for different methods.</p>
+<dl class="simple">
+<dt>Rectangle</dt><dd><p>Use a rectangle to draw the enclosing area.</p>
+</dd>
+<dt>Ellipse</dt><dd><p>Use an ellipse, much like the elliptical selection to draw the enclosing area.</p>
+</dd>
+<dt>Bezier Curve</dt><dd><p>Use a bezier curve to draw the enclosing area.</p>
+</dd>
+<dt>Lasso</dt><dd><p>Use a freehand selection to draw out the enclosing area.</p>
+</dd>
+<dt>Brush</dt><dd><p>Use a brush with the current brush size to draw out an enclosing area. The brush size is determined by the size of the active brush, and can be resized with <kbd class="kbd docutils literal notranslate">Shift</kbd> + <img alt="mouseleft" src="../../_images/Krita_mouse_left.png" />.</p>
+</dd>
+</dl>
+</section>
+<section id="what-to-fill">
+<h3>What to fill<a class="headerlink" href="#what-to-fill" title="Permalink to this heading">¶</a></h3>
+<p>Besides choosing how to create an enclosing area, it is also possible to choose which found regions will be filled. Krita can differentiate between the color (or lack thereof) of a region as well as the colors it is surrounded by. For some of these options a specific color needs to be selected, and thus a color selection button is shown. The <span class="guilabel">Region Extent</span> options control how precise a given color should match this selected color.</p>
+<figure class="align-default" id="id3">
+<img alt="../../_images/enclose_and_fill_potential_areas.png" src="../../_images/enclose_and_fill_potential_areas.png" />
+<figcaption>
+<p><span class="caption-text">An image illustrating the different areas that can be found by this tool within this image. Each area has a different outline to indicate it's a seperate area. The following examples all show these outlines to demonstrate which areas are selected, but note that they are for demonstration only and would not show in a real situation.</span><a class="headerlink" href="#id3" title="本圖片的永久連結">¶</a></p>
+</figcaption>
+</figure>
+<div class="admonition note">
+<p class="admonition-title">備註</p>
+<p>When <span class="guilabel">Reference</span> is set to <span class="guilabel">All Layers</span> only areas of the canvas that show the transparency checkers are considered transparent.</p>
+</div>
+<p>All these options have a toggle for <span class="guilabel">invert</span>, which inverts which regions are filled.</p>
+<figure class="align-default" id="id4">
+<img alt="../../_images/enclose_and_fill_potential_areas_fill_all.png" src="../../_images/enclose_and_fill_potential_areas_fill_all.png" />
+<figcaption>
+<p><span class="caption-text">Demonstration of which areas will be filled when using <span class="guilabel">All Regions</span> and the given enclosing area. Blue areas are the selected areas.</span><a class="headerlink" href="#id4" title="本圖片的永久連結">¶</a></p>
+</figcaption>
+</figure>
+<dl class="simple">
+<dt>All Regions.</dt><dd><p>Any regions found will be filled. Most basic option.</p>
+</dd>
+</dl>
+<p>The following options have an option for <span class="guilabel">Include Contour Regions</span>, which will also fill everything that follows the chosen conditions, but isn't completely enclosed by the enclosing area.</p>
+<figure class="align-default" id="id5">
+<img alt="../../_images/enclose_and_fill_potential_areas_fill_area.png" src="../../_images/enclose_and_fill_potential_areas_fill_area.png" />
+<figcaption>
+<p><span class="caption-text">Topleft: <span class="guilabel">Regions of a Specific Color</span> set to cream white, topright: <span class="guilabel">Transparent Regions</span>, bottom: <span class="guilabel">Regions of a specific color or transparent</span>.</span><a class="headerlink" href="#id5" title="本圖片的永久連結">¶</a></p>
+</figcaption>
+</figure>
+<dl class="simple">
+<dt>Regions of a Specific Color.</dt><dd><p>Only regions that are a specific color will be filled. If you have a complex image where seperate figures have their whole silhouette in a seperate color, this can be used to only affect the silhouette of a single figure.</p>
+</dd>
+<dt>Transparent Regions.</dt><dd><p>Only regions that are transparent will be filled. Useful for filling a line art.</p>
+</dd>
+<dt>Regions of a specific color or transparent.</dt><dd><p>Combines the transparent and specific color options.</p>
+</dd>
+</dl>
+<figure class="align-default" id="id6">
+<img alt="../../_images/enclose_and_fill_potential_areas_fill_all_except.png" src="../../_images/enclose_and_fill_potential_areas_fill_all_except.png" />
+<figcaption>
+<p><span class="caption-text">Topleft: <span class="guilabel">All regions except those of a specific color</span> set to cream white, topright: <span class="guilabel">All regions except transparent ones</span>, bottomleft: <span class="guilabel">All regions except those of a specific color or transparent</span>, and bottomright: <span class="guilabel">All regions except transparent ones</span> with <span class="guilabel">Include Contour Regions</span> turned on, limited to a small area.</span><a class="headerlink" href="#id6" title="本圖片的永久連結">¶</a></p>
+</figcaption>
+</figure>
+<dl class="simple">
+<dt>All regions except those of a specific color.</dt><dd><p>Fill all regions except ones with the selected color. If you set the selected color to red and the <span class="guilabel">Threshold</span> to say, 50, then not just red, but also colors close to red, like pink and orange will be avoided.</p>
+</dd>
+<dt>All regions except transparent ones.</dt><dd><p>Fill all regions except transparent ones. This is useful when you've first filled out a silhouette, so only select areas that are within that silhouette.</p>
+</dd>
+<dt>All regions except those of a specific color or transparent.</dt><dd><p>Fill neither transparent nor the specific color.</p>
+</dd>
+</dl>
+<figure class="align-default" id="id7">
+<img alt="../../_images/enclose_and_fill_potential_areas_fill_surrounded.png" src="../../_images/enclose_and_fill_potential_areas_fill_surrounded.png" />
+<figcaption>
+<p><span class="caption-text">Topleft: To demonstrate the following features the sample image got some adjustments: The outlines were colored and some red silhouettes of strawberries were added. Topright <span class="guilabel">Regions surrounded by a specific color</span> set to grey, bottomleft: <span class="guilabel">Regions surrounded by transparent</span>, and bottomright: <span class="guilabel">Regions surrounded by a specific color or transparent</span>.</span><a class="headerlink" href="#id7" title="本圖片的永久連結">¶</a></p>
+</figcaption>
+</figure>
+<dl class="simple">
+<dt>Regions surrounded by a specific color.</dt><dd><p>Fill all regions surrounded by a specific color. This is useful when you have line art that uses different colored outlines for different features.</p>
+</dd>
+<dt>Regions surrounded by transparent.</dt><dd><p>Fill regions that are surrounded by transparent. If you set the blending mode to <span class="guilabel">Erase</span>, this can be used to clean up tiny dots and other noise in a transparent area without affecting the main drawing.</p>
+</dd>
+<dt>Regions surrounded by a specific color or transparent.</dt><dd><p>Combines the previous two.</p>
+</dd>
+</dl>
+</section>
+<section id="features-shared-with-the-fill-tool">
+<h3>Features shared with the fill tool<a class="headerlink" href="#features-shared-with-the-fill-tool" title="Permalink to this heading">¶</a></h3>
+<p>Beyond these, a number of features are shared with the fill tool, amongst which <span class="guilabel">Region Extent</span>, <span class="guilabel">Adjustments</span> and <span class="guilabel">Reference</span>. These function much the same as the ones documented on the <a class="reference internal" href="fill.html#fill-tool"><span class="std std-ref">Fill Tool page</span></a>, with exception of <span class="guilabel">Region Extent</span>, which affects the color selected for region selection.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="gradient_draw.html" class="btn btn-neutral float-right" title="漸變工具" accesskey="n" rel="next"> <!-- 下一個 --> <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="fill.html" class="btn btn-neutral" title="填色工具" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- 上一個  -->  </a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
+      
+        <span class="commit">
+          修訂版本 <code>60ea049</code>
+        </span>
+      
+
+    </p>
+  </div>
+  使用 <a href="http://sphinx-doc.org/">Sphinx</a> 以及經修改過的 <a href="https://github.com/rtfd/sphinx_rtd_theme">RTD 主題</a>建置<br/>
+  <a href="https://krita.org" title="Krita 官方網站">Krita 官方網站</a> |
+  <a href="https://invent.kde.org/documentation/docs-krita-org/" title="這份手冊的 KDE GitLab 專案網址">docs.krita.org 的 Git 原始碼儲存庫</a> |
+  <a href="https://www.kde.org/community/whatiskde/impressum-en.php" title="了解更多關於 KDE、code of conduct（行為準則）、隱私政策及 GDPR（一般資料保護規則）">KDE Impressum</a>
+   
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  
+      <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+      <script src="../../_static/jquery.js"></script>
+      <script src="../../_static/underscore.js"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+      <script src="../../_static/doctools.js"></script>
+      <script src="../../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
+      });
+  </script> 
+
+ <script type="text/javascript">
+	 var _paq=_paq||[];
+	 _paq.push(['setCookieDomain','*.krita.org']);
+	 _paq.push(['setDomains','*.krita.org']);
+	 _paq.push(['setDocumentTitle',document.domain+"/"+document.title]);
+	 _paq.push(['trackPageView']);
+	 _paq.push(['enableLinkTracking']);
+
+	 (function(){
+	 	var u="//stats.kde.org/";
+	    _paq.push(['setTrackerUrl',u+'piwik.php']);
+	    _paq.push(['setSiteId',13]);
+	    var d = document, g = d.createElement('script'),s=d.getElementsByTagName('script')[0];
+	    g.type = 'text/javascript';
+	    g.async = true;
+	    g.defer = true;
+	    g.src = u+'piwik.js';
+	    s.parentNode.insertBefore(g,s);
+	  })();
+</script> 
+<noscript><p><img src="//stats.kde.org/piwik.php?idsite=13" style="border:0;" alt="" /></p></noscript>
+
+</body>
+</html>

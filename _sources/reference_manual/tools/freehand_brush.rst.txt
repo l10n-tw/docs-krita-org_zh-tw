@@ -86,3 +86,5 @@ Assistants
 Ticking this will allow snapping to :ref:`assistant_tool`, and the hotkey to toggle it is :kbd:`Ctrl + Shift + L`. See :ref:`painting_with_assistants` for more information.
 
 The slider will determine the amount of snapping, with 1000 being perfect snapping, and 0 being no snapping at all. For situations where there is more than one assistant on the canvas, the defaultly ticked :guilabel:`Snap Single` means that Krita will only snap to a single assistant at a time, preventing noise. Unticking it allows you to chain assistants together and snap along them.
+
+You may not always want erasers to snap, especially when using assistants liberally during the sketching process. :guilabel:`Snap Eraser` will allow you to turn off snapping for brushes with the blending mode :ref:`bm_erase`.

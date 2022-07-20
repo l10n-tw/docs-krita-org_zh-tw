@@ -25,3 +25,9 @@ You have on the left side the current color.
 
 Next to that there are six columns. Each of these columns consists of three rows:
 The lowest row is the color that you are mixing the current color with. Ticking this button allows you to set a different color using a palette and the mini-color wheel. The slider above this mixing color represent the proportions of the mixing color and the current color. The higher the slider, the less of the mixing color will be used in mixing. Finally, the result color. Clicking this will change your current color to the result color.
+
+At the bottom there's another slider, which will allow you to create a specific gradient to mix between, regardless of the current foreground color.
+
+.. versionadded:: 5.1
+
+   To reset everything to default, press the :guilabel:`Reset` button that is overlaid on the color swatch.

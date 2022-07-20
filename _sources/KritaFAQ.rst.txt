@@ -93,7 +93,7 @@ systems:
 Linux
     :file:`$HOME/.config/kritarc`
 Windows
-    :file:`%APPDATA%\\Local\\kritarc`
+    :file:`%LOCALAPPDATA%\\kritarc`
 macOS
     :file:`$HOME/Library/Preferences/kritarc`
 

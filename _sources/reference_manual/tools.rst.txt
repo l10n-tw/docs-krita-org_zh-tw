@@ -29,6 +29,7 @@ The contents of the toolbox docker.
    tools/move
    tools/transform
    tools/fill
+   tools/enclose_and_fill
    tools/gradient_draw
    tools/color_sampler
    tools/colorize_mask

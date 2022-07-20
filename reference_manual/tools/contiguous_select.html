@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2022-07-01T10:16:54" />
+  <meta property="og:article:modified_time" content="2022-07-20T15:55:45" />
   <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <meta content="Krita 的相連選取區域工具的參考。" lang="en" name="description" xml:lang="en" />
 
@@ -180,6 +180,7 @@
 <li class="toctree-l3"><a class="reference internal" href="move.html">移動工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="transform.html">變形工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="fill.html">填色工具</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enclose_and_fill.html">Enclose and Fill Tool</a></li>
 <li class="toctree-l3"><a class="reference internal" href="gradient_draw.html">漸變工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="color_sampler.html">色彩取樣器工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="colorize_mask.html">著色遮罩工具</a></li>
@@ -320,31 +321,43 @@
 <section id="tool-options">
 <h2>工具選項<a class="headerlink" href="#tool-options" title="Permalink to this heading">¶</a></h2>
 <dl>
-<dt>反鋸齒</dt><dd><p>這個選項控制是否要羽化邊緣。有些人會想要選取鋸齒狀的邊緣。</p>
+<dt>Selection Extent</dt><dd><dl class="simple">
+<dt>Threshold</dt><dd><p>這個數值控制選取工具辨認其他色彩為邊界的程度。</p>
 </dd>
-<dt>模糊度</dt><dd><p>這個數值控制選取工具辨認其他色彩為邊界的程度。</p>
+</dl>
+<div class="versionadded">
+<p><span class="versionmodified added">在 5.1 版本新加入: </span></p>
+<dl class="simple">
+<dt>Spread</dt><dd><p>Set how far the fully opaque portion of the selection should extend. See <a class="reference internal" href="fill.html#fill-tool"><span class="std std-ref">填色工具</span></a> for extra explanation.</p>
 </dd>
-<dt>擴大/縮小選取區域</dt><dd><p>這個數值會擴大或縮小初始選取區域的形狀。</p>
+</dl>
+</div>
 </dd>
-<dt>羽化半徑</dt><dd><p>這個數值會在選取形狀新增一層軟性邊界。</p>
+<dt>Adjustments</dt><dd><dl class="simple">
+<dt>Anti-alias</dt><dd><p>This will smooth the jagged edges present in the selection. It differs from feathering in that this will smooth in the direction of the edge instead of all directions, and only if the edge is jagged (high contrast).</p>
 </dd>
-<dt>取樣</dt><dd><div class="versionadded">
+<dt>Grow Selection</dt><dd><p>This value extends (positive values) or contracts (negative values) the selection.</p>
+</dd>
+<dt>Feathering Radius</dt><dd><p>This value will add a soft border to the selection.</p>
+</dd>
+</dl>
+</dd>
+<dt>Reference</dt><dd><div class="versionadded">
 <p><span class="versionmodified added">在 4.3 版本新加入.</span></p>
 </div>
 <p>選取哪一個圖層用作相連選取區域工具的參考。這些選項為：</p>
-<dl class="simple">
+<dl>
 <dt>目前圖層</dt><dd><p>只使用當前選取的圖層。</p>
 </dd>
 <dt>所有圖層</dt><dd><p>使用所有可見圖層。</p>
 </dd>
 <dt>符合色彩標籤的圖層</dt><dd><p>使用符合特定色彩標籤的圖層。這適合用在複雜的圖像，在有著多個線稿圖層時使用合適的色彩標籤標記，然後標記那些圖層作為參考。</p>
+<dl class="simple">
+<dt>已使用的色彩標籤</dt><dd><p>Select the color labels of the layers that should be used as reference.</p>
 </dd>
 </dl>
 </dd>
-<dt>已使用的色彩標籤</dt><dd><div class="versionadded">
-<p><span class="versionmodified added">在 4.3 版本新加入.</span></p>
-</div>
-<p>與上面的「符合色彩標籤的圖層」一起使用。</p>
+</dl>
 </dd>
 </dl>
 </section>
@@ -373,7 +386,7 @@
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>d9da50a</code>
+          修訂版本 <code>60ea049</code>
         </span>
       
 

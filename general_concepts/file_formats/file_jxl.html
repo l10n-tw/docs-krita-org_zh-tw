@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2022-07-01T10:16:54" />
+  <meta property="og:article:modified_time" content="2022-07-20T15:55:45" />
   <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <meta content="Krita 內的 JPEG XL 檔案格式。" name="description" />
 
@@ -153,6 +153,7 @@
 <li class="toctree-l4"><a class="reference internal" href="file_psd.html">*.psd</a></li>
 <li class="toctree-l4"><a class="reference internal" href="file_svg.html">*.svg</a></li>
 <li class="toctree-l4"><a class="reference internal" href="file_tif.html">*.tiff</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_webp.html">*.webp</a></li>
 <li class="toctree-l4"><a class="reference internal" href="lossy_lossless.html">有損與無損影像壓縮方式</a></li>
 </ul>
 </li>
@@ -256,6 +257,203 @@
 <p>For JPEG XL files using lossy compression, it is not advised to save over the same file multiple times. The lossy compression will cause the file to reduce in quality each time you save it. This is a fundamental problem with lossy compression methods. Instead you should use the lossless compression mode, or a working file format while you are working on the image.</p>
 <p>It is possible to losslessly transcode JPEG images into JPEG XL. Transcoding preserves the already-lossy compression data from the original JPEG image without any quality loss caused by re-encoding, while making the file size smaller than the original. To do this, you need to use specialized tools, for example the <strong class="program">cjxl</strong> command line tool from <a class="reference external" href="https://github.com/libjxl/libjxl">libjxl</a>, to perform the conversion. Beware that you <em>cannot</em> do this by opening the JPEG image in Krita and re-exporting it into JPEG XL. Krita always exports files from the raw pixel data, therefore this does <em>not</em> have the same effect as transcoding directly from JPEG to JPEG XL.</p>
 <p>Exporting animations from Krita as JPEG XL is supported, though this flattens all layers in the image. To export JPEG XL animations, use <a class="reference internal" href="../../reference_manual/main_menu/file_menu.html#term-Export..."><span class="xref std std-term">Export...</span></a> from the <a class="reference internal" href="../../reference_manual/main_menu/file_menu.html#file-menu"><span class="std std-ref">「檔案」選單</span></a> and then saving or exporting to a <code class="docutils literal notranslate"><span class="pre">.jxl</span></code> file. Make sure to enable <span class="guilabel">Save as animated JPEG XL</span> in the export options. This is different from <a class="reference internal" href="../../reference_manual/render_animation.html#render-animation"><span class="std std-ref">繪製動畫</span></a> in that it does not use FFmpeg.</p>
+<section id="export-options">
+<h2>Export Options<a class="headerlink" href="#export-options" title="Permalink to this heading">¶</a></h2>
+<section id="general">
+<h3>General<a class="headerlink" href="#general" title="Permalink to this heading">¶</a></h3>
+<p>JPEG XL's encoder is designed to be fairly hands-off. Where in the case of JPEG you'd have to select the appropriate quality, JPEG XL instead tries to find the best quality for your image. What you instead choose is whether the preferred compression is <a class="reference internal" href="lossy_lossless.html#lossless-compression"><span class="std std-ref">lossy or lossless</span></a>, and how much effort the encoder should put into finding the best compression for your image, with more effort also meaning longer saving times.</p>
+<dl>
+<dt>Save as animated JPEG XL</dt><dd><p>JPEG XL has the ability to store small animations like <a class="reference internal" href="file_gif.html#file-gif"><span class="std std-ref">*.gif</span></a>. Its animation capabilities are simple though, and specifically designed for stylized content that doesn't have a lot of colors, like cel-animation. This is because JPEG XL doesn't have intra-frame prediction, which is the best way to store video files with a lot of colors like 3D animation, film and painterly animation. We recommend you try using video rendering for painterly animation instead.</p>
+</dd>
+<dt>Encoding Options</dt><dd><dl>
+<dt>Lossless encoding.</dt><dd><p>Whether to use <a class="reference internal" href="lossy_lossless.html#lossless-compression"><span class="std std-ref">Lossless compression</span></a>. Like <a class="reference internal" href="file_webp.html#file-webp"><span class="std std-ref">*.webp</span></a>, JPEG XL has a different way of encoding the images in lossless and lossy mode, with the latter being closer to the way the original <a class="reference internal" href="file_jpeg.html#file-jpeg"><span class="std std-ref">*.jpg</span></a> encodes.</p>
+</dd>
+<dt>Tradeoff</dt><dd><p>The encoder can give a better result if it is given more time. This slider allows you to decide how much the encoder should prioritize quality over speed. The different modes can be seen as presets <a class="footnote-reference brackets" href="#id2" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>:</p>
+<ol class="arabic simple">
+<li><p>Lightning -- A fast mode useful for lossless mode. Fastest possible values for lossy compression, for lossless uses gradient predictors and fast histograms, but no MA tree.</p></li>
+<li><p>Thunder -- Both Lightning and Thunder are similar for Lossy, for lossless, Thunder uses a fixed MA tree and gradient predictors.</p></li>
+<li><p>Falcon -- Instead of using lossless mode, disables all options.</p></li>
+<li><p>Cheetah -- Enables coefficient reordering, context clustering, and heuristics for selecting DCT sizes and quantization steps.</p></li>
+<li><p>Hare -- Enables Gaborish Filtering, Chroma from Luma and estimates quantization steps.</p></li>
+<li><p>Wombat -- Enables error diffusion quantization and DCT heuristics.</p></li>
+<li><p>Squirrel -- Enables dots, patches and spline detection as well as context clustering.</p></li>
+<li><p>Kitten -- Optimizes the adaptive quantization for a psychovisual metric.</p></li>
+<li><p>Tortoise -- Enables a more thorough adaptive quantization search.</p></li>
+</ol>
+<p>You can force-enable several of the options in the <span class="guilabel">Advanced</span> section even if they are disabled by the <span class="guilabel">Tradeoff</span> preset.</p>
+</dd>
+<dt>Decoding Speed</dt><dd><p>Decoding speed can be improved by allowing certain optimizations. However, this will lead to some quality loss. For example, if you think your images will be largely viewed on mobile phones it might be a good idea to experiment with this option. Conversely, if your image will only be viewed by desktop computers and quality is of utmost importance, this should be set to 0.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+<section id="advanced">
+<h3>Advanced<a class="headerlink" href="#advanced" title="Permalink to this heading">¶</a></h3>
+<p>JPEG XL has two major ways of encoding data:</p>
+<dl class="simple">
+<dt>VarDCT</dt><dd><p>This one is in the same family of compression techniques as used by the original JPEG, and thus best for 'Natural' images, such as photographs and images with a lot of gradients and textures.</p>
+</dd>
+<dt>Modular Mode</dt><dd><p>This one has specific features for so-called 'synthetic' images, such as line art and images with a lot of wide patches. Modular mode is always used when selecting <span class="guilabel">Lossless Encoding</span>.</p>
+</dd>
+</dl>
+<p>You could consider VarDCT to be like 'lossy' compression, while Modular Mode is like 'lossless' compression. Furthermore, JPEG XL splits up images into smaller chunks called 'Groups', these are 256x256 for VarDCT and you can choose one of several sizes for Modular Mode.</p>
+<dl>
+<dt>Color channel resamping.</dt><dd><p>How to sample the color channels.
+This means that there will be less information stored, leading to a smaller file. However, because this only samples a few pixels, sharp contrasts are lost. The effect is similar to if you'd scale down the image by half (for 2x2), quarter (for 4x4) or to an eight (for 8x8) and then scaled it back up to the original size.</p>
+<p>This feature is particularly useful for images that are deliberately blurry and devoid of sharp contrast. It's recommended to set this to <span class="guilabel">No Downsampling</span> in any other case.</p>
+</dd>
+<dt>Alpha channel resampling</dt><dd><p>Same as <span class="guilabel">Color channel resamping</span>, but then for the transparency of the image.</p>
+</dd>
+<dt>Photon noise</dt><dd><p>This determines whether noise in the image should be abstracted and added later by the computer, giving a simulation of the noise that cameras sometimes capture.</p>
+</dd>
+<dt>Generate dots</dt><dd><p>Dots are a form of noise larger than <span class="guilabel">Photon noise</span>. Such dots make images more pleasing to look at, however, they make compressing difficult. This option allows you to choose whether or not to abstract these dots away and have the computer add them later. If this and <span class="guilabel">Generate Patches</span> is on, and the encoder finds both patches and dots, the dots will be encoded as if they were patches.</p>
+<ul class="simple">
+<li><p>Default -- Encoder will select this option depending on <span class="guilabel">Tradeoff</span>.</p></li>
+<li><p>Enabled -- Always use this regardless <span class="guilabel">Tradeoff</span>.</p></li>
+<li><p>Disabled -- Never use this regardless <span class="guilabel">Tradeoff</span>.</p></li>
+</ul>
+</dd>
+<dt>Generate patches</dt><dd><p>This determines whether or not to try and reuse bits and pieces of an image. This can be useful with images that have a lot of repeating bits, like sprite art, images with text or images using a lot of patterns.</p>
+<ul class="simple">
+<li><p>Default -- Encoder will select this option depending on <span class="guilabel">Tradeoff</span>.</p></li>
+<li><p>Enabled -- Always use this regardless <span class="guilabel">Tradeoff</span>.</p></li>
+<li><p>Disabled -- Never use this regardless <span class="guilabel">Tradeoff</span>.</p></li>
+</ul>
+</dd>
+<dt>Edge Preserving Filter</dt><dd><p>The edge preserving filter tries to preserve edges without getting artifacts like 'rings'.</p>
+</dd>
+<dt>Gaborish filter</dt><dd><p>Whether or not to apply a Gabor-like sharpening filter, which can help emphasize important contrasts that would otherwise be lost during encoding and decoding.</p>
+<ul class="simple">
+<li><p>Default -- Encoder will select this option depending on <span class="guilabel">Tradeoff</span>.</p></li>
+<li><p>Enabled -- Always use this regardless <span class="guilabel">Tradeoff</span>.</p></li>
+<li><p>Disabled -- Never use this regardless <span class="guilabel">Tradeoff</span>.</p></li>
+</ul>
+</dd>
+<dt>Modular encoding</dt><dd><p>Unlike <em>Modular Mode</em>, which is the lossless compression method, Modular encoding instead splits the image into smaller chunks, allowing for multi-threaded encoding, as well as per-chunk optimization. This option allows you to choose whether the encoder should do so with the lossy <span class="guilabel">VarDCT</span> method, the lossless <span class="guilabel">Modular Mode</span>, or by letting the encoder itself choose.</p>
+</dd>
+<dt>Keep color of invisible pixels</dt><dd><p>Whether to keep the color values when a pixel is fully transparent or whether to abstract them away as if they were transparent black.</p>
+<ul class="simple">
+<li><p>Default -- Encoder will select this option depending on <span class="guilabel">Tradeoff</span>.</p></li>
+<li><p>Enabled -- Always use this regardless of <span class="guilabel">Tradeoff</span>.</p></li>
+<li><p>Disabled -- Never use this regardless of <span class="guilabel">Tradeoff</span>.</p></li>
+</ul>
+</dd>
+<dt>Group order</dt><dd><p>How the groups are stored in <span class="guilabel">Modular encoding</span>. This is important for partially downloaded images and images using <span class="guilabel">Progressive Encoding</span>.</p>
+<dl class="simple">
+<dt>Default</dt><dd><p>Depends on <span class="guilabel">Tradeoff</span>.</p>
+</dd>
+<dt>Scanline order</dt><dd><p>Top left of the image is also the first group.</p>
+</dd>
+<dt>Center first</dt><dd><p>The centermost group of the image is the first group.</p>
+</dd>
+</dl>
+</dd>
+<dt>Chroma-from-luma</dt><dd><p>JPEG XL can use some algorithmic trickery to predict the color of a given section from the pixel brightness, meaning it only has to store the pixel brightness and not the color. Experimentation is recommended.</p>
+<ul class="simple">
+<li><p>Default -- Encoder will select this option depending on <span class="guilabel">Tradeoff</span>.</p></li>
+<li><p>Enabled -- Always use this regardless of <span class="guilabel">Tradeoff</span>.</p></li>
+<li><p>Disabled -- Never use this regardless of <span class="guilabel">Tradeoff</span>.</p></li>
+</ul>
+</dd>
+<dt>VarDCT parameters</dt><dd><p>The core of JPEG's compression is the so-called Discrete Cosine Transform (DCT). This allows it to simplify a complex gradient of colors to a mathematical function. One of the new features of JPEG XL is that these DCT don't have to be 8x8, nor do they have to be the same size over the whole image. This is called 'Variable DCT'. The compression that is applied on this mathematical function is also finetuned by the encoder, this is called <cite>Adaptive Quantization</cite>.</p>
+<p>Because the encoder is able to pick the best solution for the compression (Depending on what you selected for <span class="guilabel">Tradeoff</span>), the only thing you need to worry about is whether to enable progressive mode. Progressive mode for VarDCT takes the so-called <cite>DC</cite> values (which are per DCT block) to produce a coarse preview image that gets shown first and then it takes the <cite>AC</cite> values, which represent the fine details, and sends them out last. In effect this results in progressive images first showing a rough blurry image which, as the download completes, becomes <em>progressively</em> sharper. This is especially useful for images alongside text or images that get served over a slow internet connection.</p>
+<dl>
+<dt>Spectral progression</dt><dd><p>This enables progressive mode and uses advanced color maths to calculate the fine details of images. This takes more time but generally gives better results.</p>
+<ul class="simple">
+<li><p>Default -- Encoder will select this option depending on <span class="guilabel">Tradeoff</span>.</p></li>
+<li><p>Enabled -- Always use this regardless of <span class="guilabel">Tradeoff</span>.</p></li>
+<li><p>Disabled -- Never use this regardless of <span class="guilabel">Tradeoff</span>.</p></li>
+</ul>
+</dd>
+<dt>Quantization</dt><dd><p>This enables progressive mode and then uses quantization to compress the fine details. This leads to a smaller file size at the cost of giving the encoder more time to do so.</p>
+<ul class="simple">
+<li><p>Default -- Encoder will select this option depending on <span class="guilabel">Tradeoff</span>.</p></li>
+<li><p>Enabled -- Always use this regardless of <span class="guilabel">Tradeoff</span>.</p></li>
+<li><p>Disabled -- Never use this regardless of <span class="guilabel">Tradeoff</span>.</p></li>
+</ul>
+</dd>
+<dt>Low resolution DC</dt><dd><p>Where the previous two options covered the fine-grain parts of a progressive-encoded image, the <cite>DC</cite> is coarse-grain compression, specifically a coefficient for every DCT block that can be used to create the coarse preview image for progressive decoding. Because DCT can be variable-size in JPEG XL, you can opt to use a low-resolution image in addition. This should result in a better preview, though the file size will be a few bytes bigger.</p>
+<dl class="simple">
+<dt>Default</dt><dd><p>Let the encoder choose.</p>
+</dd>
+<dt>Disable</dt><dd><p>Do not use a lower-resolution image at all.</p>
+</dd>
+<dt>64x64 low resolution pass</dt><dd><p>Create an 64x64 image to use alongside the <cite>DC</cite> values to create the progressive preview.</p>
+</dd>
+<dt>512x512 + 64x64 low resolution pass</dt><dd><p>Create both a 512x512 image and a 64x64 image to use alongside the <cite>DC</cite> values to create the progressive preview.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+<dt>Modular Parameters</dt><dd><p>Extra options for <span class="guilabel">Modular Mode</span>. Modular mode uses something akin to a small programming language by way of predictors to describe image data succint and precise.</p>
+<dl class="simple">
+<dt>Progressive encoding</dt><dd><p>Whether or not to enable progressive encoding/decoding. As explained in <span class="guilabel">VarDCT parameters</span>, this means that the image can be saved in such a way that upon downloading and showing it, a rough previous will get shown first.</p>
+<ul class="simple">
+<li><p>Default -- Encoder will select this option depending on <span class="guilabel">Tradeoff</span>.</p></li>
+<li><p>Enabled -- Always use this regardless of <span class="guilabel">Tradeoff</span>.</p></li>
+<li><p>Disabled -- Never use this regardless of <span class="guilabel">Tradeoff</span>.</p></li>
+</ul>
+</dd>
+<dt>Global channel palette range</dt><dd><p>Colors will be stored as a palette depending on whether the total amount of different colors used is smaller than the percentage of all color channel values possible. For 8 bit, 100% would mean 255 values total, 50% would mean 128 values total, and 10% would mean a total of 25 values total.</p>
+</dd>
+<dt>Local channel palette range</dt><dd><p>Like <span class="guilabel">Global channel palette range</span>, but then decided per group.</p>
+</dd>
+<dt>Use color palette for ... colors or less.</dt><dd><p>Select the maximum amount of colors that need to be present in a group before the encoder will try to store them as a palette.</p>
+</dd>
+<dt>Delta palette</dt><dd><p>Whether to use a Delta-palette, also called a lossy-palette. This compresses the palette, but there's no official documentation yet on how exactly.</p>
+<ul class="simple">
+<li><p>Default -- Encoder will select this option depending on <span class="guilabel">Tradeoff</span>.</p></li>
+<li><p>Enabled -- Always use this regardless of <span class="guilabel">Tradeoff</span>.</p></li>
+<li><p>Disabled -- Never use this regardless of <span class="guilabel">Tradeoff</span>.</p></li>
+</ul>
+</dd>
+<dt>Group size</dt><dd><p>Images can be split into smaller chunks, which can be encoded separately. You can choose how big these chunks are when using Modular Mode, for VarDCT they will default to 256x256.</p>
+<ul class="simple">
+<li><p>128x128</p></li>
+<li><p>256x256</p></li>
+<li><p>512x512</p></li>
+<li><p>1024x1024</p></li>
+</ul>
+</dd>
+<dt>Predictor</dt><dd><p>Which predictor to use in conjunction with the <span class="guilabel">MA tree</span>. Where VarDCT compresses the image by abstracting complex gradients into mathematical functions, Modular Mode compresses sections by determining if it can be described by its neighbouring pixels, like 'the same color as the pixel to the left'. This is a predictor, and you can select which predictor you'd prefer to be used. Recommended value is <span class="guilabel">Default</span>.</p>
+<ul class="simple">
+<li><p>Default -- Let the encoder choose.</p></li>
+<li><p>Zero -- Always returns the value 0.</p></li>
+<li><p>Left -- Always returns the value at the left.</p></li>
+<li><p>Top -- Always returns the value at the top.</p></li>
+<li><p>Avg0 -- Returns the average of the values to the immediate left and top of the current location.</p></li>
+<li><p>Select  -- Subtracts the left and top neighbour from the top-left, and returns the neighbour whose difference is lower.</p></li>
+<li><p>Gradient -- Returns the value of the top-left neighbour minus the values of the top and left neighbours.</p></li>
+<li><p>Weighted -- A complex predictor that weights the top, left and top-left pixels in certain ways to achieve the result.</p></li>
+<li><p>Top Right -- Returns the value topright of the current location.</p></li>
+<li><p>Top Left -- Returns the value topleft of the current location.</p></li>
+<li><p>Left Left -- Returns the value topright of the current location.</p></li>
+<li><p>Avg1 -- Returns the average of the values to the immediate left and top-left of the current location.</p></li>
+<li><p>Avg2 -- Returns the average of the values to the immediate top-left and top of the current location.</p></li>
+<li><p>Avg3 -- Returns the average of the values to the immediate left and top-right of the current location.</p></li>
+<li><p>Toptop predictive average -- Weights the value of 6 neighbours: the top, left, topright, and their immediately adjacent neighbours in the same direction.</p></li>
+<li><p>Gradient + Weighted -- Mixes gradient and weighted.</p></li>
+<li><p>Use all predictors</p></li>
+</ul>
+</dd>
+<dt>Pixels for MA tree learning.</dt><dd><p>Fraction of pixels used for the Meta-Adaptive Context tree. The MA tree is a way of analyzing the pixels surrounding the current pixel, and depending on the context choose a given predictor for this pixel. More pixels mean a better understood context and thus better compression, but these also take more resources while encoding.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+<section id="metadata">
+<h3>Metadata<a class="headerlink" href="#metadata" title="Permalink to this heading">¶</a></h3>
+<dl class="simple">
+<dt>Store document metadata.</dt><dd><p>Whether to store any metadata at all. You can individually toggle <span class="guilabel">Exif</span>, <span class="guilabel">IPTC</span> and <span class="guilabel">XMP</span>.</p>
+</dd>
+<dt>Anonymizer</dt><dd><p>Whether to remove author information.</p>
+</dd>
+<dt>Tool information</dt><dd><p>Whether to add tool information.</p>
+</dd>
+</dl>
 <div class="admonition seealso">
 <p class="admonition-title">也參考</p>
 <ul class="simple">
@@ -263,7 +461,13 @@
 <li><p><a class="reference external" href="https://jpegxl.info/">JPEG XL community website</a></p></li>
 <li><p><a class="reference external" href="https://github.com/libjxl/libjxl">libjxl -- JPEG XL reference implementation</a></p></li>
 </ul>
+<aside class="footnote brackets" id="id2" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://github.com/libjxl/libjxl/blob/315247f000cff01fbc7ee2dd8252ea8fb82d0769/doc/benchmarking.md">Copied from this libjxl readme</a> as well as comments inside the libjxl source code.</p>
+</aside>
 </div>
+</section>
+</section>
 </section>
 
 
@@ -289,7 +493,7 @@
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>d9da50a</code>
+          修訂版本 <code>60ea049</code>
         </span>
       
 

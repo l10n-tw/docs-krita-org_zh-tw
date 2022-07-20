@@ -86,3 +86,7 @@ Simple Mode
     This mode exists for performance reasons, and doesn't affect the output in a visible way. Check this for large brushes or thick lines for faster rendering. 
 Paint Connection Line
     What appears to be the connection line is usually made up of an actual connection line and many smaller curve lines. The many small curve lines make up the majority of the line. For this reason, the only time this option will make a visible difference is if you're drawing with 0% or near 0% density, and with a thick line width. The rest of the time, this option won't make a visible difference.
+Anti-aliasing
+    This applies anti-aliasing to the lines, giving a smoother feel at the cost of being a little slower.
+    
+    .. versionadded:: 5.1
