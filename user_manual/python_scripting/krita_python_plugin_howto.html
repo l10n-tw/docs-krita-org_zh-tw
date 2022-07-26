@@ -21,8 +21,8 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2022-07-20T15:55:45" />
-  <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta property="og:article:modified_time" content="2022-07-26T01:56:52" />
+  <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 <meta content="Guide on all the specifics of creating Krita python plugins." name="description" property="og:description" />
 
   
@@ -254,12 +254,12 @@
            <div itemprop="articleBody">
             
   <section id="how-to-make-a-krita-python-plugin">
-<span id="krita-python-plugin-howto"></span><span id="index-0"></span><h1>如何為 Krita 製作 Python 外掛程式<a class="headerlink" href="#how-to-make-a-krita-python-plugin" title="Permalink to this heading">¶</a></h1>
+<span id="krita-python-plugin-howto"></span><span id="index-0"></span><h1>如何為 Krita 製作 Python 外掛程式<a class="headerlink" href="#how-to-make-a-krita-python-plugin" title="本標頭的永久連結">¶</a></h1>
 <p>You might have some neat scripts you have written in the Scripter Python runner, but maybe you want to do more with it and run it automatically for instance. Wrapping your script in a plugin can give you much more flexibility and power than running scripts from the Scripter editor.</p>
 <p>Okay, so even if you know python really well, there are some little details to getting Krita to recognize a python plugin. So this page will give an overview how to create the various types of python script unique to Krita.</p>
 <p>These mini-tutorials are written for people with a basic understanding of python, and in such a way to encourage experimentation instead of plainly copy and pasting code, so read the text carefully.</p>
 <section id="getting-krita-to-recognize-your-plugin">
-<h2>使 Krita 找到你的外掛程式<a class="headerlink" href="#getting-krita-to-recognize-your-plugin" title="Permalink to this heading">¶</a></h2>
+<h2>使 Krita 找到你的外掛程式<a class="headerlink" href="#getting-krita-to-recognize-your-plugin" title="本標頭的永久連結">¶</a></h2>
 <p>A script in Krita has two components -- the script directory (holding your script's Python files) and a &quot;.desktop&quot; file that Krita uses to load and register your script. For Krita to load your script both of these must put be in the <code class="file docutils literal notranslate"><span class="pre">pykrita</span></code> subdirectory of your Krita resources folder (See <a class="reference internal" href="../../reference_manual/resource_management.html#resource-management"><span class="std std-ref">資源管理</span></a> for the paths per operating system). To find your resources folder start Krita and click the <span class="menuselection">Settings ‣ Manage Resources...</span> menu item. This will open a dialog box. Click the <span class="guilabel">Open Resources Folder</span> button. This should open a file manager on your system at your Krita resources folder. See the <a class="reference external" href="https://api.kde.org/krita/html/index.html">API</a> docs under &quot;Auto starting scripts&quot;. If there is no <code class="file docutils literal notranslate"><span class="pre">pykrita</span></code> subfolder in the Krita resources directory use your file manager to create one.</p>
 <p>Scripts are identified by a file that ends in a <code class="docutils literal notranslate"><span class="pre">.desktop</span></code> extension that contain information about the script itself.</p>
 <p>Therefore, for each proper plugin you will need to create a folder, and a desktop file.</p>
@@ -300,7 +300,7 @@
 <p>You need to explicitly enable your plugin. Go to the Settings menu, open the <span class="guilabel">Configure Krita</span> dialog and go to the Python Plugin Manager page and enable your plugin.</p>
 </div>
 <section id="summary">
-<h3>小結<a class="headerlink" href="#summary" title="Permalink to this heading">¶</a></h3>
+<h3>小結<a class="headerlink" href="#summary" title="本標頭的永久連結">¶</a></h3>
 <p>In summary, if you want to create a script called <code class="docutils literal notranslate"><span class="pre">myplugin</span></code>:</p>
 <ul class="simple">
 <li><dl class="simple">
@@ -341,7 +341,7 @@
 </section>
 </section>
 <section id="creating-an-extension">
-<h2>製作一個擴充功能<a class="headerlink" href="#creating-an-extension" title="Permalink to this heading">¶</a></h2>
+<h2>製作一個擴充功能<a class="headerlink" href="#creating-an-extension" title="本標頭的永久連結">¶</a></h2>
 <p><a class="reference external" href="https://api.kde.org/krita/html/classExtension.html">Extensions</a> are relatively simple python scripts that run on Krita start. They are made by extending the Extension class, and the most barebones extension looks like this:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">krita</span> <span class="kn">import</span> <span class="o">*</span>
 
@@ -403,7 +403,7 @@
 <p>Restart Krita and your new action ought to now export the document.</p>
 </section>
 <section id="creating-configurable-keyboard-shortcuts">
-<h2>加入可設定的鍵盤快捷鍵<a class="headerlink" href="#creating-configurable-keyboard-shortcuts" title="Permalink to this heading">¶</a></h2>
+<h2>加入可設定的鍵盤快捷鍵<a class="headerlink" href="#creating-configurable-keyboard-shortcuts" title="本標頭的永久連結">¶</a></h2>
 <p>Now, your new action doesn't show up in <span class="menuselection">Settings ‣ Configure Krita ‣ Keyboard Shortcuts</span>.</p>
 <p>Krita, for various reasons, only adds actions to the <a class="reference internal" href="../../reference_manual/preferences/shortcut_settings.html#shortcut-settings"><span class="std std-ref">「鍵盤快捷鍵」設定</span></a> when they are present in an <code class="docutils literal notranslate"><span class="pre">.action</span></code> file. The action file to get our action to be added to the shortcuts should look like this:</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
@@ -456,7 +456,7 @@
 <p>Save this file as <code class="docutils literal notranslate"><span class="pre">myplugin.action</span></code> where myplugin is the name of your plugin. The action file should be saved, not in the pykrita resources folder, but rather in a resources folder named &quot;actions&quot;. (So, <code class="docutils literal notranslate"><span class="pre">share/pykrita</span></code> is where the python plugins and desktop files go, and <code class="docutils literal notranslate"><span class="pre">share/actions</span></code> is where the action files go) Restart Krita. The shortcut should now show up in the shortcut action list.</p>
 </section>
 <section id="creating-a-docker">
-<h2>製作一個工具面板<a class="headerlink" href="#creating-a-docker" title="Permalink to this heading">¶</a></h2>
+<h2>製作一個工具面板<a class="headerlink" href="#creating-a-docker" title="本標頭的永久連結">¶</a></h2>
 <p>Creating a custom <a class="reference external" href="https://api.kde.org/krita/html/classDockWidget.html">docker</a> is much like creating an extension. Dockers are in some ways a little easier, but they also require more use of widgets. This is the barebones docker code:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">PyQt5.QtWidgets</span> <span class="kn">import</span> <span class="o">*</span>
 <span class="kn">from</span> <span class="nn">krita</span> <span class="kn">import</span> <span class="o">*</span>
@@ -508,7 +508,7 @@
 <p>Restart Krita and the button should now be laid out nicely.</p>
 </section>
 <section id="pyqt-signals-and-slots">
-<h2>PyQt 的 Signal、Slot（訊號與訊號槽）<a class="headerlink" href="#pyqt-signals-and-slots" title="Permalink to this heading">¶</a></h2>
+<h2>PyQt 的 Signal、Slot（訊號與訊號槽）<a class="headerlink" href="#pyqt-signals-and-slots" title="本標頭的永久連結">¶</a></h2>
 <p>We've already been using PyQt signals and slots already, but there are times when you want to create your own signals and slots.
 <a class="reference external" href="https://www.riverbankcomputing.com/static/Docs/PyQt5/signals_slots.html">As PyQt's documentation is pretty difficult to understand</a>, and the way how signals and slots are created is very different from C++ Qt, we're explaining it here:</p>
 <p>All python functions you make in PyQt can be understood as slots, meaning that they can be connected to signals like <code class="docutils literal notranslate"><span class="pre">Action.triggered</span></code> or <code class="docutils literal notranslate"><span class="pre">QPushButton.clicked</span></code>. However, <code class="docutils literal notranslate"><span class="pre">QCheckBox</span></code> has a signal for toggled, which sends a boolean. How do we get our function to accept that boolean?</p>
@@ -539,11 +539,11 @@
 <p>To emit or create slots for objects that aren't standard python objects, you only have to put their names between quotation marks.</p>
 </section>
 <section id="a-note-on-unit-tests">
-<h2>有關 Unit Test 的提示<a class="headerlink" href="#a-note-on-unit-tests" title="Permalink to this heading">¶</a></h2>
+<h2>有關 Unit Test 的提示<a class="headerlink" href="#a-note-on-unit-tests" title="本標頭的永久連結">¶</a></h2>
 <p>If you want to write unit tests for your plugin, have a look at the <a class="reference external" href="https://github.com/rbreu/krita-python-mock">mock krita module</a>.</p>
 </section>
 <section id="conclusion">
-<h2>總結<a class="headerlink" href="#conclusion" title="Permalink to this heading">¶</a></h2>
+<h2>總結<a class="headerlink" href="#conclusion" title="本標頭的永久連結">¶</a></h2>
 <p>Okay, so that covers all the Krita specific details for creating python plugins. It doesn't handle how to parse the pixel data, or best practices with documents, but if you have a little bit of experience with python you should be able to start creating your own plugins.</p>
 <p>As always, read the code carefully and read the API docs for python, Krita and Qt carefully to see what is possible, and you'll get pretty far.</p>
 </section>

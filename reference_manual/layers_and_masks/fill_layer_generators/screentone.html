@@ -21,8 +21,8 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2022-07-20T15:55:45" />
-  <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta property="og:article:modified_time" content="2022-07-26T01:56:52" />
+  <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 <meta content="如何在 Krita 中使用網點。" name="description" />
 
   
@@ -277,7 +277,7 @@
            <div itemprop="articleBody">
             
   <section id="screentone">
-<span id="screentone-fill"></span><span id="index-0"></span><h1>網點<a class="headerlink" href="#screentone" title="Permalink to this heading">¶</a></h1>
+<span id="screentone-fill"></span><span id="index-0"></span><h1>網點<a class="headerlink" href="#screentone" title="本標頭的永久連結">¶</a></h1>
 <div class="versionadded">
 <p><span class="versionmodified added">在 4.4 版本新加入.</span></p>
 </div>
@@ -305,7 +305,7 @@
 </ul>
 </nav>
 <section id="general-concepts">
-<h2><a class="toc-backref" href="#id7" role="doc-backlink">General Concepts</a><a class="headerlink" href="#general-concepts" title="Permalink to this heading">¶</a></h2>
+<h2><a class="toc-backref" href="#id7" role="doc-backlink">General Concepts</a><a class="headerlink" href="#general-concepts" title="本標頭的永久連結">¶</a></h2>
 <p>The screentone generator is based on traditional and digital halftoning principles. Following are some explanations of basic concepts used through this page.</p>
 <dl class="simple glossary">
 <dt id="term-Pixel-Grid">Pixel Grid<a class="headerlink" href="#term-Pixel-Grid" title="本術語的永久連結">¶</a></dt><dd><p>The pixel grid is the grid formed by the regular positioning of each pixel in the image. Each cell in this grid is formed by a single pixel.</p>
@@ -329,9 +329,9 @@
 </figure>
 </section>
 <section id="description-of-the-parameters">
-<h2><a class="toc-backref" href="#id8" role="doc-backlink">Description of the Parameters</a><a class="headerlink" href="#description-of-the-parameters" title="Permalink to this heading">¶</a></h2>
+<h2><a class="toc-backref" href="#id8" role="doc-backlink">Description of the Parameters</a><a class="headerlink" href="#description-of-the-parameters" title="本標頭的永久連結">¶</a></h2>
 <section id="screentone-type">
-<h3><a class="toc-backref" href="#id9" role="doc-backlink">網點類型</a><a class="headerlink" href="#screentone-type" title="Permalink to this heading">¶</a></h3>
+<h3><a class="toc-backref" href="#id9" role="doc-backlink">網點類型</a><a class="headerlink" href="#screentone-type" title="本標頭的永久連結">¶</a></h3>
 <dl>
 <dt>圖案</dt><dd><p>選擇一種外觀 ( 點、線 )。</p>
 </dd>
@@ -359,7 +359,7 @@
 </figure>
 </section>
 <section id="transformation">
-<h3><a class="toc-backref" href="#id10" role="doc-backlink">變形</a><a class="headerlink" href="#transformation" title="Permalink to this heading">¶</a></h3>
+<h3><a class="toc-backref" href="#id10" role="doc-backlink">變形</a><a class="headerlink" href="#transformation" title="本標頭的永久連結">¶</a></h3>
 <p>圖案在圖像中的幾何排列方式（位置、大小、切變、旋轉）。一些模式會受數值影響造型上變化較大。例如，正弦波紋圖案預設值較小波文較小頻率較高，利用較大的水平切變值，讓波紋看起來比較大。</p>
 <dl>
 <dt>Size Mode</dt><dd><div class="versionadded">
@@ -381,7 +381,7 @@
 </figure>
 </section>
 <section id="postprocessing">
-<h3><a class="toc-backref" href="#id11" role="doc-backlink">後期處理</a><a class="headerlink" href="#postprocessing" title="Permalink to this heading">¶</a></h3>
+<h3><a class="toc-backref" href="#id11" role="doc-backlink">後期處理</a><a class="headerlink" href="#postprocessing" title="本標頭的永久連結">¶</a></h3>
 <dl>
 <dt>背景與前景</dt><dd><p>可以選擇前景（點、線）和背景的顏色和不透明度。</p>
 </dd>
@@ -402,15 +402,15 @@
 </section>
 </section>
 <section id="usage-tips">
-<h2><a class="toc-backref" href="#id12" role="doc-backlink">Usage Tips</a><a class="headerlink" href="#usage-tips" title="Permalink to this heading">¶</a></h2>
+<h2><a class="toc-backref" href="#id12" role="doc-backlink">Usage Tips</a><a class="headerlink" href="#usage-tips" title="本標頭的永久連結">¶</a></h2>
 <section id="what-interpolation-to-use">
-<h3><a class="toc-backref" href="#id13" role="doc-backlink">What Interpolation to Use?</a><a class="headerlink" href="#what-interpolation-to-use" title="Permalink to this heading">¶</a></h3>
+<h3><a class="toc-backref" href="#id13" role="doc-backlink">What Interpolation to Use?</a><a class="headerlink" href="#what-interpolation-to-use" title="本標頭的永久連結">¶</a></h3>
 <p>The interpolation sets how the shape of the pattern should vary from dark to light.</p>
 <p>You will only have to worry about the interpolation in the case of the round and elliptical dots and the line patterns, although if you use some equalization mode the interpolation will look the same in the case of the line patterns.</p>
 <p>So, in summary, change the interpolation if you use round or elliptical dots to vary how they change shape when changing the brightness. If you use linear interpolation the dots will look as black circles/ellipses that grow radially until they cover the <a class="reference internal" href="#term-Screen-Cell"><span class="xref std std-term">cells</span></a>. If you use the sinusoidal interpolation, the round/elliptical dot pattern will change <em>symmetrically</em>. This means that at low brightness values the pattern will look as small white circles/ellipses and at hight brightness values it will look as small black circles/ellipses. At mid-brightness values the pattern will look as a checkerboard.</p>
 </section>
 <section id="what-equalization-mode-to-use">
-<h3><a class="toc-backref" href="#id14" role="doc-backlink">What Equalization Mode to Use?</a><a class="headerlink" href="#what-equalization-mode-to-use" title="Permalink to this heading">¶</a></h3>
+<h3><a class="toc-backref" href="#id14" role="doc-backlink">What Equalization Mode to Use?</a><a class="headerlink" href="#what-equalization-mode-to-use" title="本標頭的永久連結">¶</a></h3>
 <p>Most of the time you will be fine using the default <em class="dfn">template based equalization</em>. It is the mode that gives better tone representation when using small <a class="reference internal" href="#term-Screen-Cell"><span class="xref std std-term">cell</span></a> sizes. Here is a comparison of the modes:</p>
 <ul class="simple">
 <li><p><span class="guilabel">No Equalization</span>:</p>
@@ -468,19 +468,19 @@
 </ul>
 </section>
 <section id="what-size-mode-to-use">
-<h3><a class="toc-backref" href="#id15" role="doc-backlink">What Size Mode to Use?</a><a class="headerlink" href="#what-size-mode-to-use" title="Permalink to this heading">¶</a></h3>
+<h3><a class="toc-backref" href="#id15" role="doc-backlink">What Size Mode to Use?</a><a class="headerlink" href="#what-size-mode-to-use" title="本標頭的永久連結">¶</a></h3>
 <p>At the end of the day choosing what size mode to use is a matter of how many size related calculations you want to avoid, and this usually has to be with the final medium you intend the image to be displayed on.</p>
 <p>If you intend to print the image you are making, then you will find it easier setting the <a class="reference internal" href="#term-Screen-Cell"><span class="xref std std-term">cells</span></a> size in terms of resolution and cell frequency. If you choose the same resolution as the resolution of the image then you can easily map the frequency values to real life meassures.</p>
 <p>On the other hand, if you just want to produce digital images, then you may find it easier to work with pixel sizes directly, as they are easier to compare to the image size. In the case you don't really care about the exact size of the pattern, this mode allows you to easily try different sizes while looking at the image to see the changes.</p>
 </section>
 <section id="using-the-align-to-pixel-grid-options">
-<h3><a class="toc-backref" href="#id16" role="doc-backlink">Using the Align to Pixel Grid Options</a><a class="headerlink" href="#using-the-align-to-pixel-grid-options" title="Permalink to this heading">¶</a></h3>
+<h3><a class="toc-backref" href="#id16" role="doc-backlink">Using the Align to Pixel Grid Options</a><a class="headerlink" href="#using-the-align-to-pixel-grid-options" title="本標頭的永久連結">¶</a></h3>
 <p>This option is key to achieve the maximum <a class="reference internal" href="#term-Screen-Cell"><span class="xref std std-term">cell</span></a> regularity and to avoid moire patterns. Usually you won't have to change the default values.</p>
 <p>The downside of aligning to the <a class="reference internal" href="#term-Pixel-Grid"><span class="xref std std-term">pixel grid</span></a> is that the available range of transformations is reduced. So, if you want to use a specific rotation, cell size or shear, but you can't achieve it with the selected alignment options, you can try to upper every how many cells to align using the sliders. Always prefer first changing those values than to disabling the alignment. In fact, disabling the alignment has the same effect as aligning the grid at infinity.</p>
 <p>Keep in mind that the greater the distance between alignment points (with respect to the <a class="reference internal" href="#term-Screen-Grid"><span class="xref std std-term">screen grid</span></a>), the more likely the appearance of moire patterns will be.</p>
 </section>
 <section id="using-the-brightness-and-contrast-options">
-<h3><a class="toc-backref" href="#id17" role="doc-backlink">Using the Brightness and Contrast Options</a><a class="headerlink" href="#using-the-brightness-and-contrast-options" title="Permalink to this heading">¶</a></h3>
+<h3><a class="toc-backref" href="#id17" role="doc-backlink">Using the Brightness and Contrast Options</a><a class="headerlink" href="#using-the-brightness-and-contrast-options" title="本標頭的永久連結">¶</a></h3>
 <p>Most of the times, to achieve the classical screentone/halftone look, you will have to set the contrast slider to a high value and then change how dark/light the pattern looks with the brightness slider.</p>
 <p>At 100% contrast the shapes will look aliased, binary. This is the classic approach to digital halftoning, since printers can only output black or white (ink or absence of ink).</p>
 <p>If you want sharp edges but also want antialiased edges, you can try choosing a contrast value around 80% to 95%.</p>

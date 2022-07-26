@@ -21,8 +21,8 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2022-07-20T15:55:45" />
-  <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta property="og:article:modified_time" content="2022-07-26T01:56:52" />
+  <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 <meta content="透視格點筆刷的手冊頁。" name="description" />
 
   
@@ -277,7 +277,7 @@
            <div itemprop="articleBody">
             
   <section id="tangent-normal-brush-engine">
-<span id="tangent-brush-engine"></span><span id="index-0"></span><h1>透視格點筆刷工具<a class="headerlink" href="#tangent-normal-brush-engine" title="Permalink to this heading">¶</a></h1>
+<span id="tangent-brush-engine"></span><span id="index-0"></span><h1>透視格點筆刷工具<a class="headerlink" href="#tangent-normal-brush-engine" title="本標頭的永久連結">¶</a></h1>
 <img alt="../../../_images/tangentnormal.svg" src="../../../_images/tangentnormal.svg" /><p>The Tangent Normal Brush Engine is an engine that is specifically designed for drawing normal maps, of the tangent variety. These are in turn used in 3d programs and game engines to do all sorts of lightning trickery. Common uses of normal maps include faking detail where there is none, and to drive transformations (Flow Maps).</p>
 <p>A Normal map is an image that holds information for vectors. In particular, they hold information for Normal Vectors, which is the information for how the light bends on a surface. Because Normal Vectors are made up of 3 coordinates, just like colors, we can store and see this information as colors.</p>
 <p>Normals can be seen similar to the stylus on your tablet. Therefore, we can use the tilt-sensors that are available to some tablets to generate the color of the normals, which can then be used by a 3d program to do lighting effects.</p>
@@ -299,9 +299,9 @@
 <li><p><a class="reference internal" href="../brush_settings/texture.html#option-texture"><span class="std std-ref">紋理</span></a></p></li>
 </ul>
 <section id="specific-parameters-to-the-tangent-normal-brush-engine">
-<h2>Specific Parameters to the Tangent Normal Brush Engine<a class="headerlink" href="#specific-parameters-to-the-tangent-normal-brush-engine" title="Permalink to this heading">¶</a></h2>
+<h2>Specific Parameters to the Tangent Normal Brush Engine<a class="headerlink" href="#specific-parameters-to-the-tangent-normal-brush-engine" title="本標頭的永久連結">¶</a></h2>
 <section id="tangent-tilt">
-<h3>Tangent Tilt<a class="headerlink" href="#tangent-tilt" title="Permalink to this heading">¶</a></h3>
+<h3>Tangent Tilt<a class="headerlink" href="#tangent-tilt" title="本標頭的永久連結">¶</a></h3>
 <p>These are the options that determine how the normals are calculated from tablet input.</p>
 <dl class="simple">
 <dt>Tangent Encoding</dt><dd><p>This allows you to set what each color channel means. Different programs set different coordinates to different channels, a common version is that the green channel might need to be inverted (-Y), or that the green channel is actually storing the x-value (+X).</p>
@@ -320,10 +320,10 @@
 </section>
 </section>
 <section id="usage">
-<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this heading">¶</a></h2>
+<h2>Usage<a class="headerlink" href="#usage" title="本標頭的永久連結">¶</a></h2>
 <p>The Tangent Normal Map Brush Engine is best used with the Tilt Cursor, which can be set in <span class="menuselection">Settings ‣ Configure Krita ‣ General ‣ Outline Shape ‣ Tilt Outline</span>.</p>
 <section id="normal-map-authoring-workflow">
-<h3>Normal Map authoring workflow<a class="headerlink" href="#normal-map-authoring-workflow" title="Permalink to this heading">¶</a></h3>
+<h3>Normal Map authoring workflow<a class="headerlink" href="#normal-map-authoring-workflow" title="本標頭的永久連結">¶</a></h3>
 <ol class="arabic">
 <li><p>Create an image with a background color of (128, 128, 255) blue/purple.</p>
 <blockquote>
@@ -366,12 +366,12 @@
 </ol>
 </section>
 <section id="drawing-direction-maps">
-<h3>Drawing Direction Maps<a class="headerlink" href="#drawing-direction-maps" title="Permalink to this heading">¶</a></h3>
+<h3>Drawing Direction Maps<a class="headerlink" href="#drawing-direction-maps" title="本標頭的永久連結">¶</a></h3>
 <p>Direction maps are made with the <span class="guilabel">Direction</span> option in the <span class="guilabel">Tangent Tilt</span> options. These normal maps are used to distort textures in a 3d program (to simulate for example, the flow of water) or to create maps that indicate how hair and brushed metal is brushed. Krita can't currently give feedback on how a given direction map will influence a distortion or shader, but these maps are a little easier to read.</p>
 <p>Just set the <span class="guilabel">Tangent Tilt</span> option to <span class="guilabel">Direction</span>, and draw. The direction your brush draws in will be the direction that is encoded in the colors.</p>
 </section>
 <section id="only-editing-a-single-channel">
-<h3>Only editing a single channel<a class="headerlink" href="#only-editing-a-single-channel" title="Permalink to this heading">¶</a></h3>
+<h3>Only editing a single channel<a class="headerlink" href="#only-editing-a-single-channel" title="本標頭的永久連結">¶</a></h3>
 <p>Sometimes you only want to edit a single channel. In that case set the blending mode of the brush to <span class="guilabel">Copy &lt;channel&gt;</span>, with &lt;channel&gt; replaced with red, green or blue. These are under the <span class="guilabel">Misc</span> section of the blending modes.</p>
 <p>So, if you want the brush to only affect the red channel, set the blending mode to <span class="guilabel">Copy Red</span>.</p>
 <figure class="align-default" id="id5" style="width: 500px">
@@ -383,7 +383,7 @@
 <p>This can also be done with filter layers. So if you quickly want to flip a layer's green channel, make an invert filter layer with <span class="guilabel">Copy Green</span> above it.</p>
 </section>
 <section id="mixing-normal-maps">
-<h3>Mixing Normal Maps<a class="headerlink" href="#mixing-normal-maps" title="Permalink to this heading">¶</a></h3>
+<h3>Mixing Normal Maps<a class="headerlink" href="#mixing-normal-maps" title="本標頭的永久連結">¶</a></h3>
 <p>For mixing two normal maps, Krita has the <span class="guilabel">Combine Normal Map</span> blending mode under <span class="guilabel">Misc</span>.</p>
 </section>
 </section>

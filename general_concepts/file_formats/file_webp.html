@@ -21,8 +21,8 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2022-07-20T15:55:45" />
-  <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta property="og:article:modified_time" content="2022-07-26T01:56:52" />
+  <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 <meta content="The WebP file format in Krita." name="description" />
 
   
@@ -251,14 +251,14 @@
            <div itemprop="articleBody">
             
   <section id="webp">
-<span id="file-webp"></span><span id="index-0"></span><h1>*.webp<a class="headerlink" href="#webp" title="Permalink to this heading">¶</a></h1>
+<span id="file-webp"></span><span id="index-0"></span><h1>*.webp<a class="headerlink" href="#webp" title="本標頭的永久連結">¶</a></h1>
 <p>WebP is a file format based on the <a class="reference external" href="https://developers.google.com/speed/webp/docs/riff_container">RIFF container specification</a> that, like <a class="reference internal" href="file_heif.html#file-heif"><span class="std std-ref">*.heif 及 *.avif</span></a>, it builds upon a video codec (<a class="reference external" href="https://developers.google.com/speed/webp/docs/compression#lossy_webp">VP8</a>) to support <a class="reference internal" href="lossy_lossless.html#lossy-compression"><span class="std std-ref">有損與無損影像壓縮方式</span></a>. WebP tends to be largely used for websites, though not all websites support uploading such files. If you self-host you can investigate whether WebP is an improvement over <a class="reference internal" href="file_jpeg.html#file-jpeg"><span class="std std-ref">*.jpg</span></a> or <a class="reference internal" href="file_png.html#file-png"><span class="std std-ref">*.png</span></a>. However, it is not very widely supported by image editors, so if you are doing collaboration with other artists, it may be better to use a different file format.</p>
 <p><strong class="program">Krita</strong> has supported simple WebP export for a while, but since 5.1 it supports all the export options offered by <a class="reference external" href="https://chromium.googlesource.com/webm/libwebp">libwebp</a>.</p>
 <section id="export-options">
-<h2>Export Options:<a class="headerlink" href="#export-options" title="Permalink to this heading">¶</a></h2>
+<h2>Export Options:<a class="headerlink" href="#export-options" title="本標頭的永久連結">¶</a></h2>
 <p>Instead of making you responsible for the precise settings, the WebP exporter will try out different techniques to compress better. You give a goal (a given quality or a certain file size) to aim for, and it will try its best to reach that goal. To do this, it may actually try to redo a given step of the encoding process several times. In the end, what you will have to choose is whether you want a high quality result at the cost of a slow export, or a quick export at the cost of quality.</p>
 <section id="general">
-<h3>General:<a class="headerlink" href="#general" title="Permalink to this heading">¶</a></h3>
+<h3>General:<a class="headerlink" href="#general" title="本標頭的永久連結">¶</a></h3>
 <dl>
 <dt>Preset:</dt><dd><p>WebP offers some presets for given a given type of photo. For stylized images, use <span class="guilabel">Line Drawing</span>, for painterly images, use <span class="guilabel">Portrait</span> or <span class="guilabel">Outdoor Photo</span>.</p>
 </dd>
@@ -275,7 +275,7 @@
 </dl>
 </section>
 <section id="advanced">
-<h3>Advanced<a class="headerlink" href="#advanced" title="Permalink to this heading">¶</a></h3>
+<h3>Advanced<a class="headerlink" href="#advanced" title="本標頭的永久連結">¶</a></h3>
 <dl class="simple">
 <dt>SNS Strength:</dt><dd><p>Specifies the strength of the Spatial Noise Shaping algorithm, which tries to see if parts of the image can be better compressed than other parts.</p>
 </dd>
@@ -304,7 +304,7 @@ None</p>
 </dd>
 </dl>
 <section id="lossy-compression">
-<h4>Lossy Compression<a class="headerlink" href="#lossy-compression" title="Permalink to this heading">¶</a></h4>
+<h4>Lossy Compression<a class="headerlink" href="#lossy-compression" title="本標頭的永久連結">¶</a></h4>
 <p>The following options only apply if <span class="guilabel">Lossless Compression</span> is off.</p>
 <dl class="simple">
 <dt>Target Size:</dt><dd><p>Specify the amount of bytes to aim for.</p>
@@ -330,7 +330,7 @@ None</p>
 </dl>
 </section>
 <section id="lossless-compression">
-<h4>Lossless compression<a class="headerlink" href="#lossless-compression" title="Permalink to this heading">¶</a></h4>
+<h4>Lossless compression<a class="headerlink" href="#lossless-compression" title="本標頭的永久連結">¶</a></h4>
 <p>The following options only work with <span class="guilabel">Lossless Compression</span> on.</p>
 <dl class="simple">
 <dt>Partition Limit:</dt><dd><p>Limit how big a given segment is in bytes. The higher this is, the less possible information is stored per segment.</p>

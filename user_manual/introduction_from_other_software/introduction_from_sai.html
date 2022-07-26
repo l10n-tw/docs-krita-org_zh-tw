@@ -21,8 +21,8 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2022-07-20T15:55:45" />
-  <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta property="og:article:modified_time" content="2022-07-26T01:56:52" />
+  <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 <meta content="這是一篇給 Paint Tool SAI 使用者轉用 Krita 的入門介紹。" name="description" property="og:description" />
 
   
@@ -250,12 +250,12 @@
            <div itemprop="articleBody">
             
   <section id="introduction-to-krita-coming-from-paint-tool-sai">
-<span id="introduction-from-sai"></span><span id="index-0"></span><h1>Paint Tool SAI 使用者轉用 Krita 入門介紹<a class="headerlink" href="#introduction-to-krita-coming-from-paint-tool-sai" title="Permalink to this heading">¶</a></h1>
+<span id="introduction-from-sai"></span><span id="index-0"></span><h1>Paint Tool SAI 使用者轉用 Krita 入門介紹<a class="headerlink" href="#introduction-to-krita-coming-from-paint-tool-sai" title="本標頭的永久連結">¶</a></h1>
 <section id="how-do-you-do-that-in-krita">
-<h2>在 Krita 如何這樣做呢？<a class="headerlink" href="#how-do-you-do-that-in-krita" title="Permalink to this heading">¶</a></h2>
+<h2>在 Krita 如何這樣做呢？<a class="headerlink" href="#how-do-you-do-that-in-krita" title="本標頭的永久連結">¶</a></h2>
 <p>This section goes over the functionalities that Krita and Paint Tool SAI share, but shows how they slightly differ.</p>
 <section id="canvas-navigation">
-<h3>控制畫布<a class="headerlink" href="#canvas-navigation" title="Permalink to this heading">¶</a></h3>
+<h3>控制畫布<a class="headerlink" href="#canvas-navigation" title="本標頭的永久連結">¶</a></h3>
 <p>Krita, just like SAI, allows you to flip, rotate and duplicate the view. Unlike SAI, these are tied to keyboard keys.</p>
 <dl class="simple">
 <dt>鏡像</dt><dd><p>This is tied to <kbd class="kbd docutils literal notranslate">M</kbd> key to flip.</p>
@@ -276,7 +276,7 @@
 </div>
 </section>
 <section id="right-click-color-sampler">
-<h3>右鍵點擊以採樣色彩<a class="headerlink" href="#right-click-color-sampler" title="Permalink to this heading">¶</a></h3>
+<h3>右鍵點擊以採樣色彩<a class="headerlink" href="#right-click-color-sampler" title="本標頭的永久連結">¶</a></h3>
 <p>You can actually set this in <span class="menuselection">Settings ‣ Configure Krita... ‣ Canvas input settings ‣ Alternate invocation</span>. Just double-click the entry that says <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> shortcut before <span class="guilabel">Sample Foreground Color from Merged Image</span> to get a window to set it to <img alt="滑鼠右鍵" src="../../_images/Krita_mouse_right.png" />.</p>
 <div class="admonition note">
 <p class="admonition-title">備註</p>
@@ -284,28 +284,28 @@
 </div>
 </section>
 <section id="stabilizer">
-<h3>穩定器<a class="headerlink" href="#stabilizer" title="Permalink to this heading">¶</a></h3>
+<h3>穩定器<a class="headerlink" href="#stabilizer" title="本標頭的永久連結">¶</a></h3>
 <p>This is in the tool options docker of the freehand brush. Use Basic Smoothing for more advanced tablets, and Stabilizer is much like Paint Tool SAI's. Just turn off <span class="guilabel">Delay</span> so that the dead-zone disappears.</p>
 </section>
 <section id="transparency">
-<h3>透明度背景<a class="headerlink" href="#transparency" title="Permalink to this heading">¶</a></h3>
+<h3>透明度背景<a class="headerlink" href="#transparency" title="本標頭的永久連結">¶</a></h3>
 <p>So one of the things that throw a lot of Paint Tool SAI users off is that Krita uses checkers to display transparency, which is actually not that uncommon. Still, if you want to have the canvas background to be white, this is possible. Just choose <span class="guilabel">Background: As Canvas Color</span> in the new image dialogue and the image background will be white. You can turn it back to transparent via <span class="menuselection">Image ‣ Image Background Color and Transparency...</span> menu item. If you export a PNG or JPG, make sure to uncheck <span class="guilabel">Store alpha channel (transparency)</span> and to make the background color white (it's black by default).</p>
 <img alt="../../_images/Krita-color-to-alpha.png" class="align-center" src="../../_images/Krita-color-to-alpha.png" />
 <p>Like SAI, you can quickly turn a black and white image to black and transparent with the <span class="guilabel">Filter: Color to Alpha</span> dialog under <span class="menuselection">Filters ‣ Colors ‣ Color to Alpha...</span> menu item.</p>
 </section>
 <section id="brush-settings">
-<h3>筆刷設定<a class="headerlink" href="#brush-settings" title="Permalink to this heading">¶</a></h3>
+<h3>筆刷設定<a class="headerlink" href="#brush-settings" title="本標頭的永久連結">¶</a></h3>
 <p>Another, somewhat amusing misconception is that Krita's brush engine is not very complex. After all, you can only change the Size, Flow and Opacity from the top bar.</p>
 <p>This is not quite true. It's rather that we don't have our brush settings in a docker but a drop-down on the toolbar. The easiest way to access this is with the <kbd class="kbd docutils literal notranslate">F5</kbd> key. As you can see, it's actually quite complex. We have more than a dozen brush engines, which are a type of brush you can make. The ones you are used to from Paint Tool SAI are the Pixel Brush (ink), The Color Smudge Brush (brush) and the filter brush (dodge, burn).</p>
 <p>A simple inking brush recipe for example is to take a pixel brush, uncheck the <span class="guilabel">Enable Pen Settings</span> on opacity and flow, and uncheck everything but size from the option list. Then, go into brush-tip, pick <a class="reference internal" href="../../reference_manual/brushes/brush_settings/brush_tips.html#auto-brush-tip"><span class="std std-ref">自動筆刷</span></a> from the tabs, and set the size to 25 (right-click a blue bar if you want to input numbers), turn on anti-aliasing under the brush icon, and set fade to 0.9. Then, as a final touch, set spacing to 'auto' and the spacing number to 0.8.</p>
 <p>You can configure the brushes in a lot of detail, and share the packs with others. Importing of packs and brushes can be done via the <span class="menuselection">Settings ‣ Manage Resources...</span>, where you can import <code class="docutils literal notranslate"><span class="pre">.bundle</span></code> or <code class="docutils literal notranslate"><span class="pre">.kpp</span></code> files.</p>
 </section>
 <section id="erasing">
-<h3>擦除<a class="headerlink" href="#erasing" title="Permalink to this heading">¶</a></h3>
+<h3>擦除<a class="headerlink" href="#erasing" title="本標頭的永久連結">¶</a></h3>
 <p>Erasing is a blending mode in Krita, much like the transparency mode of Paint Tool SAI. It's activated with the <kbd class="kbd docutils literal notranslate">E</kbd> key, or you can select it from the <span class="guilabel">Blending Mode</span> drop-down box.</p>
 </section>
 <section id="blending-modes">
-<h3>混色模式<a class="headerlink" href="#blending-modes" title="Permalink to this heading">¶</a></h3>
+<h3>混色模式<a class="headerlink" href="#blending-modes" title="本標頭的永久連結">¶</a></h3>
 <p>Krita has a lot of Blending modes, and thankfully all of Paint Tool SAI's are amongst them except binary. To manage the blending modes, each of them has a little check-box that you can tick to add them to the favorites.</p>
 <p>Multiple, Screen, Overlay and Normal are amongst the favorites.
 Krita's Luminosity is actually slightly different from Paint Tool SAI's, and it replaces the relative brightness of color with the relative brightness of the color of the layer.</p>
@@ -313,7 +313,7 @@ Krita's Luminosity is actually slightly different from Paint Tool SAI's, and it 
 The SAI's Shade mode is the same as <em>Color Burn</em> and <em>Hard Mix</em> is the same as the Luminosity and Shade modes.</p>
 </section>
 <section id="layers">
-<h3>圖層<a class="headerlink" href="#layers" title="Permalink to this heading">¶</a></h3>
+<h3>圖層<a class="headerlink" href="#layers" title="本標頭的永久連結">¶</a></h3>
 <dl class="simple">
 <dt>Lock Alpha</dt><dd><p>This is the checker box icon next to every layer.</p>
 </dd>
@@ -328,33 +328,33 @@ The SAI's Shade mode is the same as <em>Color Burn</em> and <em>Hard Mix</em> is
 </dl>
 </section>
 <section id="mixing-between-two-colors">
-<h3>在兩種色彩之間混合<a class="headerlink" href="#mixing-between-two-colors" title="Permalink to this heading">¶</a></h3>
+<h3>在兩種色彩之間混合<a class="headerlink" href="#mixing-between-two-colors" title="本標頭的永久連結">¶</a></h3>
 <p>If you liked this docker in Paint Tool SAI, Krita's Digital Color Selector docker will be able to help you. Dragging the sliders will change how much of a color is mixed in.</p>
 </section>
 </section>
 <section id="what-do-you-get-extra-when-using-krita">
-<h2>Krita 有甚麼優勝之處呢？<a class="headerlink" href="#what-do-you-get-extra-when-using-krita" title="Permalink to this heading">¶</a></h2>
+<h2>Krita 有甚麼優勝之處呢？<a class="headerlink" href="#what-do-you-get-extra-when-using-krita" title="本標頭的永久連結">¶</a></h2>
 <section id="more-brush-customization">
-<h3>更多的筆刷自訂設定<a class="headerlink" href="#more-brush-customization" title="Permalink to this heading">¶</a></h3>
+<h3>更多的筆刷自訂設定<a class="headerlink" href="#more-brush-customization" title="本標頭的永久連結">¶</a></h3>
 <p>You already met the brush settings editor. Sketch brushes, grid brushes, deform brushes, clone brushes, brushes that are textures, brushes that respond to tilt, rotation, speed, brushes that draw hatches and brushes that deform the colors. Krita's variety is quite big.</p>
 </section>
 <section id="more-color-selectors">
-<h3>更多的選色器<a class="headerlink" href="#more-color-selectors" title="Permalink to this heading">¶</a></h3>
+<h3>更多的選色器<a class="headerlink" href="#more-color-selectors" title="本標頭的永久連結">¶</a></h3>
 <p>You can have HSV sliders, RGB sliders, triangle in a hue ring. But you can also have HSI, HSL or HSY' sliders, CMYK sliders, palettes, round selectors, square selectors, tiny selectors, big selectors, color history and shade selectors. Just go into <span class="menuselection">Settings ‣ Configure Krita... ‣ Color Selector Settings ‣ Color Selector tab</span>, select an option in the <span class="guilabel">Docker:</span> drop-down box, to change the shape and type of your main color selector.</p>
 <img alt="../../_images/Krita_Color_Selector_Types.png" class="align-center" src="../../_images/Krita_Color_Selector_Types.png" />
 <p>You can call the color history with the <kbd class="kbd docutils literal notranslate">H</kbd> key, common colors with the <kbd class="kbd docutils literal notranslate">U</kbd> key and the two shade selectors with the <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">N</kbd></kbd> and <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">M</kbd></kbd> shortcuts. The big selector can be called with the <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">I</kbd></kbd> shortcut on canvas.</p>
 </section>
 <section id="geometric-tools">
-<h3>幾何圖形工具<a class="headerlink" href="#geometric-tools" title="Permalink to this heading">¶</a></h3>
+<h3>幾何圖形工具<a class="headerlink" href="#geometric-tools" title="本標頭的永久連結">¶</a></h3>
 <p>Circles, rectangles, paths, Krita allows you to draw these easily.</p>
 </section>
 <section id="multibrush-mirror-symmetry-and-wrap-around">
-<h3>多重筆刷、鏡像對稱、四方連續環繞模式<a class="headerlink" href="#multibrush-mirror-symmetry-and-wrap-around" title="Permalink to this heading">¶</a></h3>
+<h3>多重筆刷、鏡像對稱、四方連續環繞模式<a class="headerlink" href="#multibrush-mirror-symmetry-and-wrap-around" title="本標頭的永久連結">¶</a></h3>
 <p>These tools allow you to quickly paint a mirrored image, mandala or tiled texture in no time. Useful for backgrounds and abstract vignettes.</p>
 <img alt="../../_images/Krita-multibrush.png" class="align-center" src="../../_images/Krita-multibrush.png" />
 </section>
 <section id="assistants">
-<h3>繪畫輔助尺<a class="headerlink" href="#assistants" title="Permalink to this heading">¶</a></h3>
+<h3>繪畫輔助尺<a class="headerlink" href="#assistants" title="本標頭的永久連結">¶</a></h3>
 <p>The painting assistants can help you to set up a perspective, or a concentric circle and snap to them with the brush.</p>
 <figure class="align-default" id="id1">
 <a class="reference internal image-reference" href="../../_images/Krita_basic_assistants.png"><img alt="Krita's vanishing point assistants in action." src="../../_images/Krita_basic_assistants.png" style="width: 800px;" /></a>
@@ -364,36 +364,36 @@ The SAI's Shade mode is the same as <em>Color Burn</em> and <em>Hard Mix</em> is
 </figure>
 </section>
 <section id="locking-the-layer">
-<h3>鎖定圖層<a class="headerlink" href="#locking-the-layer" title="Permalink to this heading">¶</a></h3>
+<h3>鎖定圖層<a class="headerlink" href="#locking-the-layer" title="本標頭的永久連結">¶</a></h3>
 <p>Lock the layer with the padlock, so you don't draw on it.</p>
 </section>
 <section id="quick-layer-select">
-<h3>快速選擇圖層<a class="headerlink" href="#quick-layer-select" title="Permalink to this heading">¶</a></h3>
+<h3>快速選擇圖層<a class="headerlink" href="#quick-layer-select" title="本標頭的永久連結">¶</a></h3>
 <p>If you hold the <kbd class="kbd docutils literal notranslate">R</kbd> key and press a spot on your drawing, Krita will select the layer underneath the cursor. Really useful when dealing with many layers.</p>
 </section>
 <section id="color-management">
-<h3>色彩管理<a class="headerlink" href="#color-management" title="Permalink to this heading">¶</a></h3>
+<h3>色彩管理<a class="headerlink" href="#color-management" title="本標頭的永久連結">¶</a></h3>
 <p>This allows you to prepare your work for print, or to do tricks with the LUT docker, so you can diagnose your image better. For example, using the LUT docker to turn the colors grayscale in a separate view, so you can see the values instantly.</p>
 <img alt="../../_images/Krita-view-dependant-lut-management.png" class="align-center" src="../../_images/Krita-view-dependant-lut-management.png" />
 </section>
 <section id="advanced-transform-tools">
-<h3>進階變形工具<a class="headerlink" href="#advanced-transform-tools" title="Permalink to this heading">¶</a></h3>
+<h3>進階變形工具<a class="headerlink" href="#advanced-transform-tools" title="本標頭的永久連結">¶</a></h3>
 <p>Not just rotate and scale, but also cage, wrap, liquify and non-destructive transforms with the transform tool and masks.</p>
 <img alt="../../_images/Krita_transforms_liquefy.png" class="align-center" src="../../_images/Krita_transforms_liquefy.png" />
 </section>
 <section id="more-filters-and-non-destructive-filter-layers-and-masks">
-<h3>更多的濾鏡及非破壞性的濾鏡圖層和遮罩<a class="headerlink" href="#more-filters-and-non-destructive-filter-layers-and-masks" title="Permalink to this heading">¶</a></h3>
+<h3>更多的濾鏡及非破壞性的濾鏡圖層和遮罩<a class="headerlink" href="#more-filters-and-non-destructive-filter-layers-and-masks" title="本標頭的永久連結">¶</a></h3>
 <p>With filters like color balance and curves you can make easy shadow layers. In fact, with the filter layers and layer masks you can make them apply on the fly as you draw underneath.</p>
 <img alt="../../_images/Krita_ghostlady_3.png" class="align-center" src="../../_images/Krita_ghostlady_3.png" />
 </section>
 <section id="pop-up-palette">
-<h3>浮動畫具板<a class="headerlink" href="#pop-up-palette" title="Permalink to this heading">¶</a></h3>
+<h3>浮動畫具板<a class="headerlink" href="#pop-up-palette" title="本標頭的永久連結">¶</a></h3>
 <p>This is the little circular thing that is by default on the right click. You can organize your brushes in tags, and use those tags to fill up the pop-up palette. It also keeps a little color selector and color history, so you can switch brushes on the fly.</p>
 <img alt="../../_images/Krita-popuppalette.png" class="align-center" src="../../_images/Krita-popuppalette.png" />
 </section>
 </section>
 <section id="what-does-krita-lack-compared-to-paint-tool-sai">
-<h2>與 SAI 相比之下 Krita 欠缺了甚麼呢？<a class="headerlink" href="#what-does-krita-lack-compared-to-paint-tool-sai" title="Permalink to this heading">¶</a></h2>
+<h2>與 SAI 相比之下 Krita 欠缺了甚麼呢？<a class="headerlink" href="#what-does-krita-lack-compared-to-paint-tool-sai" title="本標頭的永久連結">¶</a></h2>
 <ul class="simple">
 <li><p>Variable width vector lines</p></li>
 <li><p>The selection source option for layers</p></li>
@@ -404,7 +404,7 @@ The SAI's Shade mode is the same as <em>Color Burn</em> and <em>Hard Mix</em> is
 </ul>
 </section>
 <section id="conclusion">
-<h2>總結<a class="headerlink" href="#conclusion" title="Permalink to this heading">¶</a></h2>
+<h2>總結<a class="headerlink" href="#conclusion" title="本標頭的永久連結">¶</a></h2>
 <p>I hope this introduction got you a little more excited to use Krita, if not feel a little more at home.</p>
 </section>
 </section>

@@ -21,8 +21,8 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2022-07-20T15:55:45" />
-  <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta property="og:article:modified_time" content="2022-07-26T01:56:52" />
+  <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 <meta content="Page about the HSX blending modes in Krita, amongst which Hue, Color, Luminosity and Saturation." name="description" />
 
   
@@ -268,34 +268,34 @@
            <div itemprop="articleBody">
             
   <section id="hsx">
-<span id="bm-cat-hsx"></span><span id="index-0"></span><h1>HSX<a class="headerlink" href="#hsx" title="Permalink to this heading">¶</a></h1>
+<span id="bm-cat-hsx"></span><span id="index-0"></span><h1>HSX<a class="headerlink" href="#hsx" title="本標頭的永久連結">¶</a></h1>
 <p>Krita has four different HSX coordinate systems. The difference between them is how they handle tone.</p>
 <section id="hsi">
-<h2>HSI<a class="headerlink" href="#hsi" title="Permalink to this heading">¶</a></h2>
+<h2>HSI<a class="headerlink" href="#hsi" title="本標頭的永久連結">¶</a></h2>
 <p>HSI is a color coordinate system, using Hue, Saturation and Intensity to categorize a color.
 Hue is roughly the wavelength, whether the color is red, yellow, green, cyan, blue or purple. It is measured in 360°, with 0 being red.
 Saturation is the measurement of how close a color is to gray.
 Intensity, in this case, is the tone of the color. What makes intensity special is that it recognizes yellow (rgb:1,1,0) having a higher combined rgb value than blue (rgb:0,0,1). This is a non-linear tone dimension, which means it's gamma-corrected.</p>
 </section>
 <section id="hsl">
-<h2>HSL<a class="headerlink" href="#hsl" title="Permalink to this heading">¶</a></h2>
+<h2>HSL<a class="headerlink" href="#hsl" title="本標頭的永久連結">¶</a></h2>
 <p>HSL is a color coordinate system that describes colors in Hue, Saturation and Lightness.
 Lightness specifically puts both yellow (rgb:1,1,0), blue (rgb:0,0,1) and middle gray (rgb:0.5,0.5,0.5) at the same lightness (0.5).</p>
 </section>
 <section id="hsv">
-<h2>HSV<a class="headerlink" href="#hsv" title="Permalink to this heading">¶</a></h2>
+<h2>HSV<a class="headerlink" href="#hsv" title="本標頭的永久連結">¶</a></h2>
 <p>HSV, occasionally called HSB, is a color coordinate system that measures colors in Hue, Saturation, and Value (also called Brightness).
 Value or Brightness specifically refers to strength at which the pixel-lights on your monitor have to shine. It sets Yellow (rgb:1,1,0), Blue (rgb:0,0,1) and White (rgb:1,1,1) at the same Value (100%).</p>
 </section>
 <section id="hsy">
-<h2>HSY<a class="headerlink" href="#hsy" title="Permalink to this heading">¶</a></h2>
+<h2>HSY<a class="headerlink" href="#hsy" title="本標頭的永久連結">¶</a></h2>
 <p>HSY is a color coordinate system categorizing colors in Hue, Saturation and Luminosity. Well, not really, it uses Luma instead of true luminosity, the difference being that Luminosity is linear while Luma is gamma-corrected and just weights the rgb components.
 Luma is based on scientific studies of how much light a color reflects in real-life. While like intensity it acknowledges that yellow (rgb:1,1,0) is lighter than blue (rgb:0,0,1), it also acknowledges that yellow (rgb:1,1,0) is lighter than cyan (rgb:0,1,1), based on these studies.</p>
 </section>
 <section id="hsx-blending-modes">
-<h2>HSX Blending Modes<a class="headerlink" href="#hsx-blending-modes" title="Permalink to this heading">¶</a></h2>
+<h2>HSX Blending Modes<a class="headerlink" href="#hsx-blending-modes" title="本標頭的永久連結">¶</a></h2>
 <section id="color-hsv-hsi-hsl-hsy">
-<span id="bm-hsy-color"></span><span id="bm-hsi-color"></span><span id="bm-hsl-color"></span><span id="bm-hsv-color"></span><span id="bm-color"></span><h3>色彩 HSV、HSI、HSL、HSY<a class="headerlink" href="#color-hsv-hsi-hsl-hsy" title="Permalink to this heading">¶</a></h3>
+<span id="bm-hsy-color"></span><span id="bm-hsi-color"></span><span id="bm-hsl-color"></span><span id="bm-hsv-color"></span><span id="bm-color"></span><h3>色彩 HSV、HSI、HSL、HSY<a class="headerlink" href="#color-hsv-hsi-hsl-hsy" title="本標頭的永久連結">¶</a></h3>
 <div class="admonition hint">
 <p class="admonition-title">提示</p>
 <p>These blending modes are called &quot;Color&quot; in English.</p>
@@ -339,7 +339,7 @@ Luma is based on scientific studies of how much light a color reflects in real-l
 </figure>
 </section>
 <section id="hue-hsv-hsi-hsl-hsy">
-<span id="bm-hsy-hue"></span><span id="bm-hsi-hue"></span><span id="bm-hsl-hue"></span><span id="bm-hsv-hue"></span><span id="bm-hue"></span><h3>色相 HSV、HSI、HSL、HSY<a class="headerlink" href="#hue-hsv-hsi-hsl-hsy" title="Permalink to this heading">¶</a></h3>
+<span id="bm-hsy-hue"></span><span id="bm-hsi-hue"></span><span id="bm-hsl-hue"></span><span id="bm-hsv-hue"></span><span id="bm-hue"></span><h3>色相 HSV、HSI、HSL、HSY<a class="headerlink" href="#hue-hsv-hsi-hsl-hsy" title="本標頭的永久連結">¶</a></h3>
 <div class="admonition hint">
 <p class="admonition-title">提示</p>
 <p>英文稱為「Hue」。</p>
@@ -372,7 +372,7 @@ Tone in this case being either Value, Lightness, Intensity or Luminosity.</p>
 </figure>
 </section>
 <section id="increase-value-lightness-intensity-or-luminosity">
-<span id="bm-increase-luminosity"></span><span id="bm-increase-intensity"></span><span id="bm-increase-lightness"></span><span id="bm-increase-value"></span><h3>提高明度、提高亮度、提高強度、提高光度<a class="headerlink" href="#increase-value-lightness-intensity-or-luminosity" title="Permalink to this heading">¶</a></h3>
+<span id="bm-increase-luminosity"></span><span id="bm-increase-intensity"></span><span id="bm-increase-lightness"></span><span id="bm-increase-value"></span><h3>提高明度、提高亮度、提高強度、提高光度<a class="headerlink" href="#increase-value-lightness-intensity-or-luminosity" title="本標頭的永久連結">¶</a></h3>
 <div class="admonition hint">
 <p class="admonition-title">提示</p>
 <p>英文稱為「Increase Value / Lightness / Intensity / Luminosity」。</p>
@@ -405,7 +405,7 @@ Checks whether the upper layer's pixel has a higher tone than the lower layer's 
 </figure>
 </section>
 <section id="increase-saturation-hsi-hsv-hsl-hsy">
-<span id="bm-increase-hsy-saturation"></span><span id="bm-increase-hsi-saturation"></span><span id="bm-increase-hsl-saturation"></span><span id="bm-increase-hsv-saturation"></span><span id="bm-increase-saturation"></span><h3>提高飽和度 HSI、HSV、HSL、HSY<a class="headerlink" href="#increase-saturation-hsi-hsv-hsl-hsy" title="Permalink to this heading">¶</a></h3>
+<span id="bm-increase-hsy-saturation"></span><span id="bm-increase-hsi-saturation"></span><span id="bm-increase-hsl-saturation"></span><span id="bm-increase-hsv-saturation"></span><span id="bm-increase-saturation"></span><h3>提高飽和度 HSI、HSV、HSL、HSY<a class="headerlink" href="#increase-saturation-hsi-hsv-hsl-hsy" title="本標頭的永久連結">¶</a></h3>
 <div class="admonition hint">
 <p class="admonition-title">提示</p>
 <p>英文稱為「Increase Saturation」。</p>
@@ -438,7 +438,7 @@ Checks whether the upper layer's pixel has a higher Saturation than the lower la
 </figure>
 </section>
 <section id="intensity">
-<span id="bm-intensity"></span><h3>強度<a class="headerlink" href="#intensity" title="Permalink to this heading">¶</a></h3>
+<span id="bm-intensity"></span><h3>強度<a class="headerlink" href="#intensity" title="本標頭的永久連結">¶</a></h3>
 <div class="admonition hint">
 <p class="admonition-title">提示</p>
 <p>英文稱為「Intensity」。</p>
@@ -452,7 +452,7 @@ Checks whether the upper layer's pixel has a higher Saturation than the lower la
 </figure>
 </section>
 <section id="value">
-<span id="bm-value"></span><h3>明度<a class="headerlink" href="#value" title="Permalink to this heading">¶</a></h3>
+<span id="bm-value"></span><h3>明度<a class="headerlink" href="#value" title="本標頭的永久連結">¶</a></h3>
 <div class="admonition hint">
 <p class="admonition-title">提示</p>
 <p>英文稱為「Value」。</p>
@@ -466,7 +466,7 @@ Checks whether the upper layer's pixel has a higher Saturation than the lower la
 </figure>
 </section>
 <section id="lightness">
-<span id="bm-lightness"></span><h3>亮度<a class="headerlink" href="#lightness" title="Permalink to this heading">¶</a></h3>
+<span id="bm-lightness"></span><h3>亮度<a class="headerlink" href="#lightness" title="本標頭的永久連結">¶</a></h3>
 <div class="admonition hint">
 <p class="admonition-title">提示</p>
 <p>英文稱為「Lightness」。</p>
@@ -480,7 +480,7 @@ Checks whether the upper layer's pixel has a higher Saturation than the lower la
 </figure>
 </section>
 <section id="luminosity">
-<span id="bm-luminosity"></span><h3>光度<a class="headerlink" href="#luminosity" title="Permalink to this heading">¶</a></h3>
+<span id="bm-luminosity"></span><h3>光度<a class="headerlink" href="#luminosity" title="本標頭的永久連結">¶</a></h3>
 <div class="admonition hint">
 <p class="admonition-title">提示</p>
 <p>英文稱為「Luminosity」。</p>
@@ -496,7 +496,7 @@ The most preferred one of the four Tone blending modes, as this one gives fairly
 </figure>
 </section>
 <section id="saturation-hsi-hsv-hsl-hsy">
-<span id="bm-hsy-saturation"></span><span id="bm-hsi-saturation"></span><span id="bm-hsl-saturation"></span><span id="bm-hsv-saturation"></span><span id="bm-saturation"></span><h3>飽和度 HSI、HSV、HSL、HSY<a class="headerlink" href="#saturation-hsi-hsv-hsl-hsy" title="Permalink to this heading">¶</a></h3>
+<span id="bm-hsy-saturation"></span><span id="bm-hsi-saturation"></span><span id="bm-hsl-saturation"></span><span id="bm-hsv-saturation"></span><span id="bm-saturation"></span><h3>飽和度 HSI、HSV、HSL、HSY<a class="headerlink" href="#saturation-hsi-hsv-hsl-hsy" title="本標頭的永久連結">¶</a></h3>
 <div class="admonition hint">
 <p class="admonition-title">提示</p>
 <p>英文稱為「Saturation」。</p>
@@ -528,7 +528,7 @@ The most preferred one of the four Tone blending modes, as this one gives fairly
 </figure>
 </section>
 <section id="decrease-value-lightness-intensity-or-luminosity">
-<span id="bm-decrease-luminosity"></span><span id="bm-decrease-intensity"></span><span id="bm-decrease-lightness"></span><span id="bm-decrease-value"></span><h3>降低明度、降低亮度、降低強度、降低光度<a class="headerlink" href="#decrease-value-lightness-intensity-or-luminosity" title="Permalink to this heading">¶</a></h3>
+<span id="bm-decrease-luminosity"></span><span id="bm-decrease-intensity"></span><span id="bm-decrease-lightness"></span><span id="bm-decrease-value"></span><h3>降低明度、降低亮度、降低強度、降低光度<a class="headerlink" href="#decrease-value-lightness-intensity-or-luminosity" title="本標頭的永久連結">¶</a></h3>
 <div class="admonition hint">
 <p class="admonition-title">提示</p>
 <p>英文稱為「Decrease Value / Lightness / Intensity / Luminosity」。</p>
@@ -573,7 +573,7 @@ Checks whether the upper layer's pixel has a lower tone than the lower layer's p
 </figure>
 </section>
 <section id="decrease-saturation-hsi-hsv-hsl-hsy">
-<span id="bm-decrease-hsy-saturation"></span><span id="bm-decrease-hsi-saturation"></span><span id="bm-decrease-hsl-saturation"></span><span id="bm-decrease-hsv-saturation"></span><span id="bm-decrease-saturation"></span><h3>降低飽和度 HSI、HSV、HSL、HSY<a class="headerlink" href="#decrease-saturation-hsi-hsv-hsl-hsy" title="Permalink to this heading">¶</a></h3>
+<span id="bm-decrease-hsy-saturation"></span><span id="bm-decrease-hsi-saturation"></span><span id="bm-decrease-hsl-saturation"></span><span id="bm-decrease-hsv-saturation"></span><span id="bm-decrease-saturation"></span><h3>降低飽和度 HSI、HSV、HSL、HSY<a class="headerlink" href="#decrease-saturation-hsi-hsv-hsl-hsy" title="本標頭的永久連結">¶</a></h3>
 <div class="admonition hint">
 <p class="admonition-title">提示</p>
 <p>英文稱為「Decrease Saturation」。</p>

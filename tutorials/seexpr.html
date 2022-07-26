@@ -21,8 +21,8 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2022-07-20T15:55:45" />
-  <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta property="og:article:modified_time" content="2022-07-26T01:56:52" />
+  <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 <meta content="SeExpr 介紹" lang="en" name="description" xml:lang="en" />
 
   
@@ -236,12 +236,12 @@
            <div itemprop="articleBody">
             
   <section id="introduction-to-seexpr">
-<span id="seexpr-tut-intro"></span><h1>SeExpr 介紹<a class="headerlink" href="#introduction-to-seexpr" title="Permalink to this heading">¶</a></h1>
+<span id="seexpr-tut-intro"></span><h1>SeExpr 介紹<a class="headerlink" href="#introduction-to-seexpr" title="本標頭的永久連結">¶</a></h1>
 <div class="versionadded">
 <p><span class="versionmodified added">在 4.4 版本新加入: </span>This document will introduce you to the SeExpr expression language.</p>
 </div>
 <section id="what-is-seexpr">
-<h2>什麼是 SeExpr ?<a class="headerlink" href="#what-is-seexpr" title="Permalink to this heading">¶</a></h2>
+<h2>什麼是 SeExpr ?<a class="headerlink" href="#what-is-seexpr" title="本標頭的永久連結">¶</a></h2>
 <p>SeExpr is an embeddable expression language, designed by Disney Animation,
 that allows host applications to render dynamically generated content.
 Pixar calls it <a class="reference external" href="https://renderman.pixar.com/resources/RenderMan_20/PxrSeExpr.html">in its documentation</a> a &quot;scriptable pattern generator and
@@ -260,7 +260,7 @@ combiner&quot;.</p>
 </div>
 </section>
 <section id="background">
-<h2>SeExpr 的背景<a class="headerlink" href="#background" title="Permalink to this heading">¶</a></h2>
+<h2>SeExpr 的背景<a class="headerlink" href="#background" title="本標頭的永久連結">¶</a></h2>
 <p>To understand what SeExpr is about, we need to differentiate between two types
 of graphics, <em>raster</em> and <em>procedural</em>.</p>
 <p>The vast majority of the computer-generated stuff you see every day belong to
@@ -318,7 +318,7 @@ And, because it is not limited in its precision, you can render complex
 patterns in your layers at completely arbitrary resolution.</p>
 </section>
 <section id="writing-a-script">
-<h2>編寫程式腳本<a class="headerlink" href="#writing-a-script" title="Permalink to this heading">¶</a></h2>
+<h2>編寫程式腳本<a class="headerlink" href="#writing-a-script" title="本標頭的永久連結">¶</a></h2>
 <p>In this tutorial, we'll show you how to write a script in SeExpr, render it to
 a layer, and then save it as a preset.</p>
 <p>We'll start by going to the <a class="reference internal" href="../reference_manual/dockers/layers.html#layer-docker"><span class="std std-ref">圖層</span></a>, and adding a new Fill Layer.
@@ -369,7 +369,7 @@ using the sRGB-elle-V2-srgbtrc.icc profile.</p>
 </div>
 </section>
 <section id="managing-your-script-using-widgets">
-<h2>使用小工具管理程式腳本<a class="headerlink" href="#managing-your-script-using-widgets" title="Permalink to this heading">¶</a></h2>
+<h2>使用小工具管理程式腳本<a class="headerlink" href="#managing-your-script-using-widgets" title="本標頭的永久連結">¶</a></h2>
 <p>There is also another way to define and edit your variables.
 Open the fill layer's properties by right-clicking on <span class="guilabel">Fill Layer 1</span>,
 and selecting <span class="guilabel">Layer Properties...</span>.</p>
@@ -406,7 +406,7 @@ Click it and this dialog will open:</p>
 <img alt="../_images/SeExpr_add_variable_vector.png" src="../_images/SeExpr_add_variable_vector.png" />
 </section>
 <section id="creating-your-first-preset">
-<h2>創建第一個預設<a class="headerlink" href="#creating-your-first-preset" title="Permalink to this heading">¶</a></h2>
+<h2>創建第一個預設<a class="headerlink" href="#creating-your-first-preset" title="本標頭的永久連結">¶</a></h2>
 <p>Once your script is ready, you can reuse it by making a preset.</p>
 <p>You can create one through the top bar of the <span class="guilabel">Options</span> tab:</p>
 <blockquote>
@@ -435,7 +435,7 @@ open:</p>
 </dl>
 </section>
 <section id="changing-existing-presets">
-<h2>更改現有預設<a class="headerlink" href="#changing-existing-presets" title="Permalink to this heading">¶</a></h2>
+<h2>更改現有預設<a class="headerlink" href="#changing-existing-presets" title="本標頭的永久連結">¶</a></h2>
 <p>If you change a preset's script, you will notice two new buttons in the top bar of the <span class="guilabel">Options</span> tab:</p>
 <blockquote>
 <div><img alt="../_images/SeExpr_overwrite_preset.png" src="../_images/SeExpr_overwrite_preset.png" />
@@ -448,7 +448,7 @@ entering the new name, and clicking on <span class="guilabel">Save</span>:</p>
 </div></blockquote>
 </section>
 <section id="bundling-your-presets">
-<h2>綁定你的預設<a class="headerlink" href="#bundling-your-presets" title="Permalink to this heading">¶</a></h2>
+<h2>綁定你的預設<a class="headerlink" href="#bundling-your-presets" title="本標頭的永久連結">¶</a></h2>
 <p>Sharing your scripts is easy! SeExpr script presets are just like any other
 resource in Krita. Follow the instructions in <a class="reference internal" href="../reference_manual/resource_management.html#resource-management"><span class="std std-ref">資源管理</span></a> to
 create your own bundles.</p>

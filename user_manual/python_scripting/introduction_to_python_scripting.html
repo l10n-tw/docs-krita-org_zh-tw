@@ -21,8 +21,8 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2022-07-20T15:55:45" />
-  <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta property="og:article:modified_time" content="2022-07-26T01:56:52" />
+  <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 <meta content="Introduction to using Krita's python plugin API." name="description" property="og:description" />
 
   
@@ -249,18 +249,18 @@
            <div itemprop="articleBody">
             
   <section id="introduction-to-python-scripting">
-<span id="index-0"></span><span id="id1"></span><h1>Python 指令稿編寫簡介<a class="headerlink" href="#introduction-to-python-scripting" title="Permalink to this heading">¶</a></h1>
+<span id="index-0"></span><span id="id1"></span><h1>Python 指令稿編寫簡介<a class="headerlink" href="#introduction-to-python-scripting" title="本標頭的永久連結">¶</a></h1>
 <div class="versionadded">
 <p><span class="versionmodified added">在 4.0 版本新加入.</span></p>
 </div>
 <p>When we offered python scripting as one of Kickstarter Stretchgoals we could implement next to vectors and text, it won the backer vote by a landslide. Some people even only picked python and nothing else. So what exactly is python scripting?</p>
 <section id="what-is-python-scripting">
-<h2>甚麼是 Python 指令稿？<a class="headerlink" href="#what-is-python-scripting" title="Permalink to this heading">¶</a></h2>
+<h2>甚麼是 Python 指令稿？<a class="headerlink" href="#what-is-python-scripting" title="本標頭的永久連結">¶</a></h2>
 <p>Python is a scripting language, that can be used to automate tasks. What python scripting in Krita means is that we added an API to krita, which is a bit of programming that allows python to access to parts of Krita. With this we can make dockers, perform menial tasks on a lot of different files and even write our own exporters. People who work with computer graphics, like VFX and video game artists use python a lot to make things like sprite sheets, automate parts of export and more.</p>
 <p>It is outside the scope of this manual to teach you python itself. However, as python is an extremely popular programming language and great for beginners, there's tons of learning material around that can be quickly found with a simple 'learn python' internet search.</p>
 <p>This manual will instead focus on how to use python to automate and extend Krita. For that we'll first start with the basics: How to run Python commands in the scripter.</p>
 <section id="how-to-enable-the-scripter-plugin">
-<h3>如何啟用「指令稿執行器」外掛程式<a class="headerlink" href="#how-to-enable-the-scripter-plugin" title="Permalink to this heading">¶</a></h3>
+<h3>如何啟用「指令稿執行器」外掛程式<a class="headerlink" href="#how-to-enable-the-scripter-plugin" title="本標頭的永久連結">¶</a></h3>
 <p>The scripter plugin is not necessary to use python, but it is very useful for testing and playing around with python. It is a python console, written in python, which can be used to write small scripts and execute them on the fly.</p>
 <p>To open the scripter, navigate to <span class="menuselection">Tools ‣ Scripts ‣ Scripter</span>. If you don't see it listed, go to <span class="menuselection">Settings ‣ Configure Krita... ‣ Python Plugin Manager</span> and toggle &quot;Scripter&quot; in the list to enable it. If you don't see the scripter plugin, make sure you are using an up-to-date version of Krita.</p>
 <p>The scripter will pop up with a text editor window on top and an output window below. Input the following in the text area:</p>
@@ -275,7 +275,7 @@ hello world
 <p>Now we have a console that can run functions like print() from the Python environment - but how do we use it to manage Krita?</p>
 </section>
 <section id="running-basic-krita-commands">
-<h3>執行基本 Krita 命令<a class="headerlink" href="#running-basic-krita-commands" title="Permalink to this heading">¶</a></h3>
+<h3>執行基本 Krita 命令<a class="headerlink" href="#running-basic-krita-commands" title="本標頭的永久連結">¶</a></h3>
 <p>To allow Python to communicate with Krita, we will use the Krita module. At the top of every script, we will write <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">krita</span> <span class="pre">import</span> <span class="pre">*</span></code>.</p>
 <p>This allows us to talk to Krita through <code class="docutils literal notranslate"><span class="pre">Krita.instance()</span></code>. Let's try to double our coding abilities with Python.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">krita</span> <span class="kn">import</span> <span class="o">*</span>
@@ -295,7 +295,7 @@ hello world
 <p>But it's likely that you need more information. For that, we will need see what's hidden behind the asterisk when you <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">*</span> <span class="pre">from</span> <span class="pre">Krita</span></code>. To learn what Krita functions that are available and how to use them, you will want to go for Krita API reference documentation.</p>
 </section>
 <section id="krita-s-api">
-<h3>Krita 的 API（應用程式介面）<a class="headerlink" href="#krita-s-api" title="Permalink to this heading">¶</a></h3>
+<h3>Krita 的 API（應用程式介面）<a class="headerlink" href="#krita-s-api" title="本標頭的永久連結">¶</a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="https://api.kde.org/krita/html/index.html">LibKis API Overview</a></p></li>
 <li><p><a class="reference external" href="https://api.kde.org/krita/html/annotated.html">Krita class documentation</a></p></li>
@@ -365,13 +365,13 @@ Blue morning
 </section>
 </section>
 <section id="technical-details">
-<h2>技術性資料<a class="headerlink" href="#technical-details" title="Permalink to this heading">¶</a></h2>
+<h2>技術性資料<a class="headerlink" href="#technical-details" title="本標頭的永久連結">¶</a></h2>
 <section id="python-scripting-on-windows">
-<h3>在 Windows 上使用 Python 指令稿<a class="headerlink" href="#python-scripting-on-windows" title="Permalink to this heading">¶</a></h3>
+<h3>在 Windows 上使用 Python 指令稿<a class="headerlink" href="#python-scripting-on-windows" title="本標頭的永久連結">¶</a></h3>
 <p>To get Python scripting working on Windows 7/8/8.1, you will need to install the <a class="reference external" href="https://www.microsoft.com/en-us/download/details.aspx?id=48234">Universal C Runtime from Microsoft's website</a>. (Windows 10 already comes with it.)</p>
 </section>
 <section id="python-2-and-3">
-<h3>Python 2 與 Python 3<a class="headerlink" href="#python-2-and-3" title="Permalink to this heading">¶</a></h3>
+<h3>Python 2 與 Python 3<a class="headerlink" href="#python-2-and-3" title="本標頭的永久連結">¶</a></h3>
 <p>By default, Krita is compiled for python 3.</p>
 <p>However, it is possible to compile it with python 2. To do so, you will need to add the following to the <strong class="program">cmake</strong> configuration line:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="n">DENABLE_PYTHON_2</span><span class="o">=</span><span class="n">ON</span>

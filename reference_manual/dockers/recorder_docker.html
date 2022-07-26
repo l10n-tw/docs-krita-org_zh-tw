@@ -21,8 +21,8 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2022-07-20T15:55:45" />
-  <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta property="og:article:modified_time" content="2022-07-26T01:56:52" />
+  <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 <meta content="The recorder docker allows recording time lapses in Krita." name="description" property="og:description" />
 
   
@@ -292,7 +292,7 @@
            <div itemprop="articleBody">
             
   <section id="recorder-docker">
-<span id="index-0"></span><span id="id1"></span><h1>錄影工具<a class="headerlink" href="#recorder-docker" title="Permalink to this heading">¶</a></h1>
+<span id="index-0"></span><span id="id1"></span><h1>錄影工具<a class="headerlink" href="#recorder-docker" title="本標頭的永久連結">¶</a></h1>
 <p>You may have seen artists show little progress movies of their work. This is called a time lapse! Normally a time lapse is recorded using outside software, like OBS, and then sped up around 16 times, and they are used to convey the whole amount of effort that went into an image. The recorder docker simplifies making a time lapse, by taking a snapshot every stroke and then letting you <a class="reference internal" href="../render_animation.html#render-animation"><span class="std std-ref">render it to a video file with ffmpeg</span></a>. Because this docker relies on FFMpeg, it cannot be used on Android.</p>
 <p>The recorder docker makes a snapshot of the canvas every few seconds, or at the end of every stroke. You can tell it's turned on because there will be a <span class="guilabel">recording</span> symbol in the status bar, which is red when it's making snapshots and white when it's on standby.</p>
 <p>Because it stores the snapshots, that means you can take breaks, close the image, turn off the computer, come back a month later. However, snapshots can take up quite a bit of space, so if you are running out of space, don't forget to check the temporary folder!</p>
@@ -303,7 +303,7 @@
 <p>Similarly, this tool should also not be confused with Macro Recording, which is when you tell the program to record all your actions into a file, and have it play those back at a later date. Krita currently does not have this functionality.</p>
 </div>
 <section id="docker-options">
-<h2>Docker Options<a class="headerlink" href="#docker-options" title="Permalink to this heading">¶</a></h2>
+<h2>Docker Options<a class="headerlink" href="#docker-options" title="本標頭的永久連結">¶</a></h2>
 <img alt="../../_images/recorder_docker.png" src="../../_images/recorder_docker.png" />
 <dl class="simple">
 <dt>Recordings Directory:</dt><dd><p>The directory where the snapshots are kept. Note the <span class="guilabel">Manage Recordings</span> button, which will assist you in selecting old recordings to remove.</p>
@@ -332,7 +332,7 @@
 </figure>
 </section>
 <section id="export-options">
-<h2>Export Options<a class="headerlink" href="#export-options" title="Permalink to this heading">¶</a></h2>
+<h2>Export Options<a class="headerlink" href="#export-options" title="本標頭的永久連結">¶</a></h2>
 <p>Compare these options with the one on the <a class="reference internal" href="../render_animation.html#render-animation"><span class="std std-ref">繪製動畫</span></a> page, as they do largely the same things.</p>
 <dl>
 <dt>Recording info:</dt><dd><p>Shows what kind of frames and how many frames are taken into account when creating the final video file. Pressing <span class="guilabel">Open Record Directory</span> will allow you to open the folder where the recordings are located in your file browser.</p>
@@ -364,7 +364,7 @@
 </dl>
 </section>
 <section id="after-export">
-<h2>After Export<a class="headerlink" href="#after-export" title="Permalink to this heading">¶</a></h2>
+<h2>After Export<a class="headerlink" href="#after-export" title="本標頭的永久連結">¶</a></h2>
 <dl class="simple">
 <dt>Watch it:</dt><dd><p>This will open the resulting file in the default video player on your system.</p>
 </dd>

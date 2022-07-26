@@ -21,8 +21,8 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2022-07-20T15:55:45" />
-  <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta property="og:article:modified_time" content="2022-07-26T01:56:52" />
+  <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 <meta content="Overview of the Animation Curves docker." name="description" />
 
   
@@ -293,13 +293,13 @@
            <div itemprop="articleBody">
             
   <section id="animation-curves-docker">
-<span id="index-0"></span><span id="id1"></span><h1>動畫曲線<a class="headerlink" href="#animation-curves-docker" title="Permalink to this heading">¶</a></h1>
+<span id="index-0"></span><span id="id1"></span><h1>動畫曲線<a class="headerlink" href="#animation-curves-docker" title="本標頭的永久連結">¶</a></h1>
 <p><strong class="program">Krita</strong>'s <em class="dfn">Animation Curves Docker</em> allows artists to animate the values of some properties over time.</p>
 <p>When animating a complex cut, it's not unusual to want to animate things that would be difficult or inefficient to do through drawing alone. In traditional pen-and-paper animation dating back to the 1920s, special lighting rigs and purpose-built devices like multiplane cameras were used to pull off special effects that changed animation forever! Likewise, Krita's Animation Curves docker allows us to animate more than just the lines on your canvas, such as a layer's opacity or the position, rotation and scale of a <a class="reference internal" href="../layers_and_masks/transformation_masks.html#transformation-masks"><span class="std std-ref">Transform Mask</span></a>.</p>
 <p>Because most things can be boiled down to numeric values (for example, opacity as a percentage or the position of a Transform Mask), and because computers are great with maths and automation, we can plot and visualize the change in values over time on a simple 2D graph. What's more, we can also draw lines and curves that show the computer how we want it to calculate the values in between each of our plotted keyframe values; a technique known as interpolation or <em class="dfn">tweening</em>.</p>
 <img alt="../../_images/Animation_Curves_Docker.png" src="../../_images/Animation_Curves_Docker.png" />
 <section id="overview">
-<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this heading">¶</a></h2>
+<h2>Overview<a class="headerlink" href="#overview" title="本標頭的永久連結">¶</a></h2>
 <p>As shown in the image above, Krita's Animation Curves Docker can be thought of as different sections:</p>
 <ol class="upperalpha simple">
 <li><p><em class="dfn">Utilities</em> -- The left side of the toolbar gives animators quick access to all of the widgets that are critical to their workflow; <em class="dfn">transport controls</em> (previous, play/pause, stop and next buttons), a frame counter, preview controls (speed and drop frames), buttons for adding and removing <em class="dfn">scalar keyframes</em>, buttons for changing the <em class="dfn">interpolation mode</em> and <em class="dfn">tangent mode</em> of the selected keyframe, a box for setting the selected keyframe to a specific value, as well as buttons to help zoom and navigate the main graph view.</p></li>
@@ -309,7 +309,7 @@
 </ol>
 </section>
 <section id="animating-opacity">
-<h2>Animating Opacity<a class="headerlink" href="#animating-opacity" title="Permalink to this heading">¶</a></h2>
+<h2>Animating Opacity<a class="headerlink" href="#animating-opacity" title="本標頭的永久連結">¶</a></h2>
 <p>Starting with <strong class="program">Krita 5</strong>, we can use the Animation Curves Docker to animate a layer's <a class="reference internal" href="layers.html#term-Opacity"><span class="xref std std-term">opacity</span></a> and, with the help of a <a class="reference internal" href="../layers_and_masks/transformation_masks.html#transformation-masks"><span class="std std-ref">Transform Mask</span></a>, its <em class="dfn">position</em>, <em class="dfn">rotation</em>, <em class="dfn">scale</em> and <em class="dfn">shear</em>.</p>
 <div class="admonition warning">
 <p class="admonition-title">警告</p>
@@ -342,7 +342,7 @@
 <p><em>Ok, it's a bit tough to put in writing...</em> But it's not so bad once you get the hang of it!</p>
 </section>
 <section id="animating-transform-masks">
-<h2>Animating Transform Masks<a class="headerlink" href="#animating-transform-masks" title="Permalink to this heading">¶</a></h2>
+<h2>Animating Transform Masks<a class="headerlink" href="#animating-transform-masks" title="本標頭的永久連結">¶</a></h2>
 <p>Now let's talk a bit about how we can use a <a class="reference internal" href="../layers_and_masks/transformation_masks.html#transformation-masks"><span class="std std-ref">變形遮罩</span></a> to <em>animate our layer's position, rotation, scale and shear</em> for <em class="dfn">&quot;tweening&quot;</em> effects:</p>
 <p>Animating a transform mask is a lot like animating opacity, but first we need to <em>add a Transform Mask</em>. (You can do this by <img alt="滑鼠右鍵" src="../../_images/Krita_mouse_right.png" /> on the layer that you want to animate, and then <span class="menuselection">Add ‣ Transform Mask</span>.)</p>
 <p>Transform Masks allow us to <em class="dfn">transform</em> (translate, rotate, scale, or shear) the layer that they are attached to, without affecting its original position. And (starting with Krita 5) they also allow us to animate a layer's transform!</p>
@@ -368,7 +368,7 @@
 <p>Press the <span class="guilabel">play button</span> and (after a little bit of caching) there you have it, a layer with an animated Transform Mask!</p>
 </section>
 <section id="controls">
-<h2>Controls<a class="headerlink" href="#controls" title="Permalink to this heading">¶</a></h2>
+<h2>Controls<a class="headerlink" href="#controls" title="本標頭的永久連結">¶</a></h2>
 <ol class="arabic">
 <li><p><em class="dfn">Channels List</em></p>
 <blockquote>

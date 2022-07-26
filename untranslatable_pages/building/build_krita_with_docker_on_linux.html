@@ -21,8 +21,8 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2022-07-20T15:55:45" />
-  <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta property="og:article:modified_time" content="2022-07-26T01:56:52" />
+  <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 <meta content="Guide to building Krita with docker on Linux." name="description" />
 
   
@@ -260,7 +260,7 @@
            <div itemprop="articleBody">
             
   <section id="building-krita-with-docker-on-linux">
-<span id="building-krita-with-docker"></span><h1><a class="toc-backref" href="#id2" role="doc-backlink">Building krita with Docker on Linux</a><a class="headerlink" href="#building-krita-with-docker-on-linux" title="Permalink to this heading">¶</a></h1>
+<span id="building-krita-with-docker"></span><h1><a class="toc-backref" href="#id2" role="doc-backlink">Building krita with Docker on Linux</a><a class="headerlink" href="#building-krita-with-docker-on-linux" title="本標頭的永久連結">¶</a></h1>
 <p>This guide is useful when you are an advanced developer and want to build krita with the same patched dependencies that are used for the AppImages. If you just want to hack on Krita, read the Build Krita from Source guide.</p>
 <p>The <em>Dockerfile</em> is based on the official KDE build environment
 that is used on KDE CI for building official AppImage packages. This guide is valid for Ubuntu and Ubuntu-based Linux distributions.</p>
@@ -289,7 +289,7 @@ that is used on KDE CI for building official AppImage packages. This guide is va
 </ul>
 </nav>
 <section id="prerequisites">
-<h2><a class="toc-backref" href="#id3" role="doc-backlink">Prerequisites</a><a class="headerlink" href="#prerequisites" title="Permalink to this heading">¶</a></h2>
+<h2><a class="toc-backref" href="#id3" role="doc-backlink">Prerequisites</a><a class="headerlink" href="#prerequisites" title="本標頭的永久連結">¶</a></h2>
 <p>First make sure you have Docker installed</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">docker</span> <span class="n">docker</span><span class="o">.</span><span class="n">io</span>
 </pre></div>
@@ -345,14 +345,14 @@ folder into another location, where there is enough space.</p>
 </div>
 </section>
 <section id="build-the-docker-image-and-run-the-container">
-<h2><a class="toc-backref" href="#id4" role="doc-backlink">Build the docker image and run the container</a><a class="headerlink" href="#build-the-docker-image-and-run-the-container" title="Permalink to this heading">¶</a></h2>
+<h2><a class="toc-backref" href="#id4" role="doc-backlink">Build the docker image and run the container</a><a class="headerlink" href="#build-the-docker-image-and-run-the-container" title="本標頭的永久連結">¶</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="nb">bin</span><span class="o">/</span><span class="n">build_image</span> <span class="n">krita</span><span class="o">-</span><span class="n">deps</span>
 <span class="o">./</span><span class="nb">bin</span><span class="o">/</span><span class="n">run_container</span> <span class="n">krita</span><span class="o">-</span><span class="n">deps</span> <span class="n">krita</span><span class="o">-</span><span class="n">auto</span><span class="o">-</span><span class="mi">1</span>
 </pre></div>
 </div>
 </section>
 <section id="enter-the-container-and-build-krita">
-<h2><a class="toc-backref" href="#id5" role="doc-backlink">Enter the container and build Krita</a><a class="headerlink" href="#enter-the-container-and-build-krita" title="Permalink to this heading">¶</a></h2>
+<h2><a class="toc-backref" href="#id5" role="doc-backlink">Enter the container and build Krita</a><a class="headerlink" href="#enter-the-container-and-build-krita" title="本標頭的永久連結">¶</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># enter the docker container (the name will be</span>
 <span class="c1"># fetched automatically from &#39;.container_name&#39; file)</span>
 
@@ -371,7 +371,7 @@ folder into another location, where there is enough space.</p>
 </div>
 </section>
 <section id="building-appimage-package-for-your-version-of-krita">
-<h2><a class="toc-backref" href="#id6" role="doc-backlink">Building AppImage package for your version of Krita</a><a class="headerlink" href="#building-appimage-package-for-your-version-of-krita" title="Permalink to this heading">¶</a></h2>
+<h2><a class="toc-backref" href="#id6" role="doc-backlink">Building AppImage package for your version of Krita</a><a class="headerlink" href="#building-appimage-package-for-your-version-of-krita" title="本標頭的永久連結">¶</a></h2>
 <p>If you want to build a portable package for your version of Krita, just enter
 the container and type:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">~/</span><span class="nb">bin</span><span class="o">/</span><span class="n">build_krita_appimage</span><span class="o">.</span><span class="n">sh</span>
@@ -385,7 +385,7 @@ add debugging information, add <em>--debug</em> option to the command line:</p>
 </div>
 </section>
 <section id="creating-a-full-clone-of-the-container">
-<h2><a class="toc-backref" href="#id7" role="doc-backlink">Creating a full clone of the container</a><a class="headerlink" href="#creating-a-full-clone-of-the-container" title="Permalink to this heading">¶</a></h2>
+<h2><a class="toc-backref" href="#id7" role="doc-backlink">Creating a full clone of the container</a><a class="headerlink" href="#creating-a-full-clone-of-the-container" title="本標頭的永久連結">¶</a></h2>
 <p>It is possible to copy the container with the entire environment, sources,
 build directory and QtCreator installation and configuration. After cloning,
 no rebuild of Krita is needed!</p>
@@ -404,7 +404,7 @@ concurrently (e.g. for building multiple merge requests). It has internal
 locking mechanism for resolving concurrency problems</p>
 </section>
 <section id="testing-merge-requests-using-container-clones">
-<h2><a class="toc-backref" href="#id8" role="doc-backlink">Testing merge requests using container clones</a><a class="headerlink" href="#testing-merge-requests-using-container-clones" title="Permalink to this heading">¶</a></h2>
+<h2><a class="toc-backref" href="#id8" role="doc-backlink">Testing merge requests using container clones</a><a class="headerlink" href="#testing-merge-requests-using-container-clones" title="本標頭的永久連結">¶</a></h2>
 <p>To quickly build a merge request '123' basing on the current state of the
 container type in the host system</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="nb">bin</span><span class="o">/</span><span class="n">spawn</span><span class="o">-</span><span class="n">clone</span> <span class="o">-</span><span class="n">m</span> <span class="mi">123</span> <span class="o">-</span><span class="n">be</span>
@@ -426,7 +426,7 @@ completely by running</p>
 <p>You can build multiple merge requests at once!</p>
 </section>
 <section id="updating-dependencies-in-the-docker">
-<h2><a class="toc-backref" href="#id9" role="doc-backlink">Updating dependencies in the docker</a><a class="headerlink" href="#updating-dependencies-in-the-docker" title="Permalink to this heading">¶</a></h2>
+<h2><a class="toc-backref" href="#id9" role="doc-backlink">Updating dependencies in the docker</a><a class="headerlink" href="#updating-dependencies-in-the-docker" title="本標頭的永久連結">¶</a></h2>
 <p>Sometimes dependencies in Krita change and building Krita or making the AppImage fails. To fix that, you need to update the dependencies.</p>
 <div class="admonition note">
 <p class="admonition-title">備註</p>
@@ -452,7 +452,7 @@ completely by running</p>
 <p>After that you need to build Krita in the docker as usual.</p>
 </section>
 <section id="extra-developer-tools">
-<h2><a class="toc-backref" href="#id10" role="doc-backlink">Extra developer tools</a><a class="headerlink" href="#extra-developer-tools" title="Permalink to this heading">¶</a></h2>
+<h2><a class="toc-backref" href="#id10" role="doc-backlink">Extra developer tools</a><a class="headerlink" href="#extra-developer-tools" title="本標頭的永久連結">¶</a></h2>
 <p>To install QtCreator, enter the container and start the installer, downloaded while fetching dependencies. Make sure you install it into '~/qtcreator' directory without any version suffixes, then you will be able to use the script below:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># inside the container</span>
 <span class="o">./</span><span class="n">persistent</span><span class="o">/</span><span class="n">qt</span><span class="o">-</span><span class="n">creator</span><span class="o">-</span><span class="n">opensource</span><span class="o">-</span><span class="n">linux</span><span class="o">-</span><span class="n">x86_64</span><span class="o">.</span><span class="n">run</span>
@@ -465,7 +465,7 @@ completely by running</p>
 </div>
 </section>
 <section id="stopping-the-container-and-cleaning-up">
-<h2><a class="toc-backref" href="#id11" role="doc-backlink">Stopping the container and cleaning up</a><a class="headerlink" href="#stopping-the-container-and-cleaning-up" title="Permalink to this heading">¶</a></h2>
+<h2><a class="toc-backref" href="#id11" role="doc-backlink">Stopping the container and cleaning up</a><a class="headerlink" href="#stopping-the-container-and-cleaning-up" title="本標頭的永久連結">¶</a></h2>
 <p>When not in use you can stop the container. All your filesystem state is saved, but all the currently running processes are killed (just ensure you logout from all the terminals before stopping).</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># stop the container</span>
 <span class="o">./</span><span class="nb">bin</span><span class="o">/</span><span class="n">stop</span>
@@ -484,13 +484,13 @@ completely by running</p>
 </div>
 </section>
 <section id="troubleshooting">
-<h2><a class="toc-backref" href="#id12" role="doc-backlink">Troubleshooting</a><a class="headerlink" href="#troubleshooting" title="Permalink to this heading">¶</a></h2>
+<h2><a class="toc-backref" href="#id12" role="doc-backlink">Troubleshooting</a><a class="headerlink" href="#troubleshooting" title="本標頭的永久連結">¶</a></h2>
 <section id="krita-binary-is-not-found-after-the-first-build">
-<h3><a class="toc-backref" href="#id13" role="doc-backlink">Krita binary is not found after the first build</a><a class="headerlink" href="#krita-binary-is-not-found-after-the-first-build" title="Permalink to this heading">¶</a></h3>
+<h3><a class="toc-backref" href="#id13" role="doc-backlink">Krita binary is not found after the first build</a><a class="headerlink" href="#krita-binary-is-not-found-after-the-first-build" title="本標頭的永久連結">¶</a></h3>
 <p>Either relogin to the container or just execute <cite>source ~/.devenv.inc</cite></p>
 </section>
 <section id="opengl-doesn-t-work-on-nvidia-gpu-with-proprietary-drivers">
-<h3><a class="toc-backref" href="#id14" role="doc-backlink">OpenGL doesn't work on NVidia GPU with proprietary drivers</a><a class="headerlink" href="#opengl-doesn-t-work-on-nvidia-gpu-with-proprietary-drivers" title="Permalink to this heading">¶</a></h3>
+<h3><a class="toc-backref" href="#id14" role="doc-backlink">OpenGL doesn't work on NVidia GPU with proprietary drivers</a><a class="headerlink" href="#opengl-doesn-t-work-on-nvidia-gpu-with-proprietary-drivers" title="本標頭的永久連結">¶</a></h3>
 <p>The docker run script automatically forwards the GPU devices into the container, but it doesn't install the drivers for the GPU. You should install exactly the same version of the driver that is installed on your host system. Just run the following script when you are on host:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="nb">bin</span><span class="o">/</span><span class="n">install_nvidia_drivers</span><span class="o">.</span><span class="n">sh</span>
 </pre></div>

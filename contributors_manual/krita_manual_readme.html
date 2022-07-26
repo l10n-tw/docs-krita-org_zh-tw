@@ -21,8 +21,8 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2022-07-20T15:55:45" />
-  <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta property="og:article:modified_time" content="2022-07-26T01:56:52" />
+  <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 <meta content="給 Krita 說明文件貢獻者的指南。" name="description" />
 
   
@@ -248,7 +248,7 @@
            <div itemprop="articleBody">
             
   <section id="krita-manual-contribution-guide">
-<span id="krita-manual-contributors-guide"></span><h1>Krita 說明文件貢獻指南<a class="headerlink" href="#krita-manual-contribution-guide" title="Permalink to this heading">¶</a></h1>
+<span id="krita-manual-contributors-guide"></span><h1>Krita 說明文件貢獻指南<a class="headerlink" href="#krita-manual-contribution-guide" title="本標頭的永久連結">¶</a></h1>
 <p>歡迎查閱 Krita 說明文件貢獻指南！</p>
 <p>如果有興趣協助撰寫和編輯 Krita 的說明文件，本頁會指導你如何參與。</p>
 <p>Krita 是（自由免費的）開源軟體，實際上是社群參與的專案，由一眾志願工作者同心合力改進。這當然也需要我們來管理給新加入頁獻者的說明文件和教學，才能吸引更多的人來參與。以往我們將相關的文件發佈在多個分散的位置，而這裡的貢獻者手冊是我們嘗試將這些資訊都集中在同一個位置的成果。</p>
@@ -270,15 +270,15 @@
 </dd>
 </dl>
 <section id="for-first-timers">
-<h2>給首次貢獻者的指引<a class="headerlink" href="#for-first-timers" title="Permalink to this heading">¶</a></h2>
+<h2>給首次貢獻者的指引<a class="headerlink" href="#for-first-timers" title="本標頭的永久連結">¶</a></h2>
 <p>與以前使用過的 MediaWiki 平台相比，Sphinx 比較貼近 Krita 程式編寫的工作流程。</p>
 <p>首先最重要的是與我們 Krita 團隊聯絡。你可以加入我們的「#krita」Matrix 聊天室。<a class="reference external" href="https://community.kde.org/Matrix">這裡</a>有一個 Matrix 的簡介。到 <a class="reference external" href="https://webchat.kde.org">https://webchat.kde.org</a> 建立一個 Matrix 的帳號，然後加入 #krita:kde.org 聊天室。另外一件重要事是到 <a class="reference external" href="https://identity.kde.org/">identity.kde.org</a> 建立一個帳號，因為這是容許你登入 invent.kde.org 和 <a class="reference external" href="https://phabricator.kde.org">phabricator</a> 這兩個我們用來組織 Krita 開發工作的平台。</p>
 <p>Sphinx 的運作方式是基於使用 reStructuredText 標記編寫純文字檔案，然後將這些檔案處理並轉化成手冊。我們使用一個名為 <strong class="program">Git</strong> 的版本管理系統來追踪說明文件的更動。</p>
 <section id="making-changes">
-<span id="making-changes-sphinx"></span><h3>作出更動<a class="headerlink" href="#making-changes" title="Permalink to this heading">¶</a></h3>
+<span id="making-changes-sphinx"></span><h3>作出更動<a class="headerlink" href="#making-changes" title="本標頭的永久連結">¶</a></h3>
 <p>由於我們使用的 Git 系統只允許特定人士直接提交更動，因此如有更動，你須要先將其提交作審核。</p>
 <section id="creating-merge-requests-using-edit-mode">
-<span id="merge-request-edit"></span><h4>以編輯 (Edit) 模式建立合併請求 (Merge Request)<a class="headerlink" href="#creating-merge-requests-using-edit-mode" title="Permalink to this heading">¶</a></h4>
+<span id="merge-request-edit"></span><h4>以編輯 (Edit) 模式建立合併請求 (Merge Request)<a class="headerlink" href="#creating-merge-requests-using-edit-mode" title="本標頭的永久連結">¶</a></h4>
 <div class="admonition note">
 <p class="admonition-title">備註</p>
 <p>這個方式只適用於沒有 KDE 原始碼儲存庫提交權限的成員。否則這會將更動直接提交到儲存庫內，不符合目前的工作指引。</p>
@@ -313,7 +313,7 @@
 <a class="reference internal image-reference" href="../_images/screenshot_editmode.png"><img alt="../_images/screenshot_editmode.png" src="../_images/screenshot_editmode.png" style="width: 1000px;" /></a>
 </section>
 <section id="creating-merge-requests-using-webide">
-<span id="merge-request-webide"></span><h4>以 WebIDE 建立合併請求 (Merge Request)<a class="headerlink" href="#creating-merge-requests-using-webide" title="Permalink to this heading">¶</a></h4>
+<span id="merge-request-webide"></span><h4>以 WebIDE 建立合併請求 (Merge Request)<a class="headerlink" href="#creating-merge-requests-using-webide" title="本標頭的永久連結">¶</a></h4>
 <p>建議懂得操作 Git 而又想同時修改多個檔案的人使用。</p>
 <p>如果你不了解 branch（分支）的概念，不建議採用（取而代之，請見<a class="reference internal" href="#merge-request-edit"><span class="std std-ref">以編輯模式建立合併請求</span></a>）。</p>
 <ol class="arabic simple">
@@ -336,7 +336,7 @@
 </div>
 </section>
 <section id="creating-merge-requests-using-command-line">
-<span id="merge-request-terminal"></span><h4>以命令列建立合併請求 (Merge Request)<a class="headerlink" href="#creating-merge-requests-using-command-line" title="Permalink to this heading">¶</a></h4>
+<span id="merge-request-terminal"></span><h4>以命令列建立合併請求 (Merge Request)<a class="headerlink" href="#creating-merge-requests-using-command-line" title="本標頭的永久連結">¶</a></h4>
 <p>建議懂得 Git 並熟習使用命令列操作的人使用。</p>
 <p>如果你不了解 branch（分支）的概念，不建議採用（取而代之，請見<a class="reference internal" href="#merge-request-edit"><span class="std std-ref">以編輯模式建立合併請求</span></a>）。</p>
 <ol class="arabic">
@@ -394,7 +394,7 @@ git push
 </ol>
 </section>
 <section id="guidelines-for-new-merge-requests">
-<span id="new-merge-request"></span><h4>建立合併請求的準則<a class="headerlink" href="#guidelines-for-new-merge-requests" title="Permalink to this heading">¶</a></h4>
+<span id="new-merge-request"></span><h4>建立合併請求的準則<a class="headerlink" href="#guidelines-for-new-merge-requests" title="本標頭的永久連結">¶</a></h4>
 <ol class="arabic">
 <li><p>Commit 訊息應符合這裡提及的標準：<a class="reference external" href="https://chris.beams.io/posts/git-commit/">How to Write a Git Commit Message（如何撰寫 Commit 訊息）</a></p></li>
 <li><p><span class="guilabel">Title</span>（標題）和 <span class="guilabel">Description</span>（描述）應解釋所作的更動和作出更動的原因，與 Commit 訊息相似，因此也應依照相同的標準。</p></li>
@@ -422,16 +422,16 @@ git push
 </div>
 </section>
 <section id="building-the-manual-in-the-command-line">
-<h4>以命令列建置說明文件<a class="headerlink" href="#building-the-manual-in-the-command-line" title="Permalink to this heading">¶</a></h4>
+<h4>以命令列建置說明文件<a class="headerlink" href="#building-the-manual-in-the-command-line" title="本標頭的永久連結">¶</a></h4>
 <p>如果你希望在建立合併請求前首先測試一下更動的效果（而又了解如何使用 Git 和命令列），你可以依照<a class="reference internal" href="#merge-request-terminal"><span class="std std-ref">以命令列建立合併請求</span></a>中第 5 步所列出的步驟。</p>
 </section>
 </section>
 </section>
 <section id="general-philosophy">
-<h2>一般思維<a class="headerlink" href="#general-philosophy" title="Permalink to this heading">¶</a></h2>
+<h2>一般思維<a class="headerlink" href="#general-philosophy" title="本標頭的永久連結">¶</a></h2>
 <p>這個章節是為了確定合適的寫作風格。寫作風格——無論是實際上還是美觀上的考慮——通常都是以一個目的或一般思維為基礎。我們希望透過這份手冊達到甚麼目的呢？這份手冊又是為誰人寫的呢？</p>
 <section id="demographics-and-target-audience-s">
-<h3>目標讀者<a class="headerlink" href="#demographics-and-target-audience-s" title="Permalink to this heading">¶</a></h3>
+<h3>目標讀者<a class="headerlink" href="#demographics-and-target-audience-s" title="本標頭的永久連結">¶</a></h3>
 <p>在討論目標讀者的時候，我們不能作「所有 Krita 使用者都是五十五歲的老人」這種陳述。Krita 的使用者數目眾多，不論各行各業、男女老幼、來自不同背景的人士也有。</p>
 <p>儘管如此，我們對使用者群體有以下的理解：</p>
 <ul>
@@ -469,7 +469,7 @@ git push
 <p>由此我們可以得出以下幾項指引：</p>
 </section>
 <section id="general-writing">
-<h3>一般書寫風格<a class="headerlink" href="#general-writing" title="Permalink to this heading">¶</a></h3>
+<h3>一般書寫風格<a class="headerlink" href="#general-writing" title="本標頭的永久連結">¶</a></h3>
 <dl class="simple">
 <dt>盡可能使用美式英語。</dt><dd><p>我們在這份說明文件中使用美式英語，以配合 Krita 使用者介面預設使用的美式英語。</p>
 </dd>
@@ -482,7 +482,7 @@ git push
 </dl>
 </section>
 <section id="regarding-photos-and-paintings">
-<h3>有關相片與傳統畫作<a class="headerlink" href="#regarding-photos-and-paintings" title="Permalink to this heading">¶</a></h3>
+<h3>有關相片與傳統畫作<a class="headerlink" href="#regarding-photos-and-paintings" title="本標頭的永久連結">¶</a></h3>
 <ul class="simple">
 <li><p>我們不鼓勵在說明文件中加入相片和傳統畫作，除非必定要用它們來解釋一個特定概念。理由是，使用 Krita 製作的現代數位藝術作品多的是。若我們在 Krita 的介面中展示林布蘭大師的名作，這反而顯得不自然，同時亦帶有一點誤導成份。Pepper&amp;Carrot 漫畫作品全集均以 Krita 製作，而且提供了原始檔下載，因此當你沒有合適的影像可用時，可在這套漫畫中搜尋。避免加入相片，因為 Krita 的重心是繪畫軟體而不是相片編輯軟體，過度使用相片或會令讀者產生 Krita 是用來編輯相片的錯覺。</p></li>
 <li><p>當然，我們有時也希望講解一些在相片和名畫中出現的概念，例如光澤或者間接照明 。在這些情況下，請為該影像加上說明文字。如果是名畫，請在當中提及作品的名稱或其作者。如果是相片，請清楚標明。</p></li>
@@ -490,7 +490,7 @@ git push
 </ul>
 </section>
 <section id="regarding-images-in-general">
-<h3>有關使用影像的一般指引<a class="headerlink" href="#regarding-images-in-general" title="Permalink to this heading">¶</a></h3>
+<h3>有關使用影像的一般指引<a class="headerlink" href="#regarding-images-in-general" title="本標頭的永久連結">¶</a></h3>
 <ul class="simple">
 <li><p>避免在影像中嵌入文字。取而代之，使用 <code class="docutils literal notranslate"><span class="pre">figure</span></code> 說明文字標記是較好的做法。</p></li>
 <li><p>如必須加入文字，請使用 SVG 影像格式以方便將來可以簡易地修改文字，或盡量減少文字量。</p></li>
@@ -500,10 +500,10 @@ git push
 </section>
 </section>
 <section id="protocol">
-<h2>程序<a class="headerlink" href="#protocol" title="Permalink to this heading">¶</a></h2>
+<h2>程序<a class="headerlink" href="#protocol" title="本標頭的永久連結">¶</a></h2>
 <p>在這一節我們會列出一系列工作流程。</p>
 <section id="tagging-and-branches">
-<h3>建立標籤 (Tag) 與分支 (Branch)<a class="headerlink" href="#tagging-and-branches" title="Permalink to this heading">¶</a></h3>
+<h3>建立標籤 (Tag) 與分支 (Branch)<a class="headerlink" href="#tagging-and-branches" title="本標頭的永久連結">¶</a></h3>
 <p>加入及移除內文會於 <code class="docutils literal notranslate"><span class="pre">draft</span></code> 分支中進行。</p>
 <p>為現存頁面校對的結果會被視為修正，因此會提交到 <code class="docutils literal notranslate"><span class="pre">master</span></code> 分支並按需要合併到 <code class="docutils literal notranslate"><span class="pre">draft</span></code> 分支中。</p>
 <p>為推出新版本合併 <code class="docutils literal notranslate"><span class="pre">draft</span></code> 分支前：</p>
@@ -515,7 +515,7 @@ git push
 <p>每個發佈版本均上傳一份 EPUB 文件。 ... Where do we get the POT files from? Even the translated versions?</p>
 </section>
 <section id="removing-pages">
-<h3>移除頁面<a class="headerlink" href="#removing-pages" title="Permalink to this heading">¶</a></h3>
+<h3>移除頁面<a class="headerlink" href="#removing-pages" title="本標頭的永久連結">¶</a></h3>
 <p>如有功能在某個版本中被移除，相關頁面會：</p>
 <ol class="arabic">
 <li><p>先標記為「已棄用」。</p>
@@ -533,7 +533,7 @@ git push
 </ol>
 </section>
 <section id="adding-pages">
-<h3>加入頁面<a class="headerlink" href="#adding-pages" title="Permalink to this heading">¶</a></h3>
+<h3>加入頁面<a class="headerlink" href="#adding-pages" title="本標頭的永久連結">¶</a></h3>
 <ol class="arabic">
 <li><p>確認頁面已放到正確的位置。</p></li>
 <li><p>依照 <a class="reference internal" href="krita_manual_conventions.html#krita-markup-conventions"><span class="std std-ref">Krita 說明文件標記格式使用慣例</span></a>以確認頁面的格式正確。</p></li>
@@ -549,7 +549,7 @@ git push
 <p>與影像相同，請勿加入未獲授權使用的文字。加入到此文件的文字必須由你自行撰寫，或者你已從原作者獲得授權可在此文件中使用。此文件以 GDPL 1.3+ 授權，因此任何加入到此文件的文字均會重新以該授權發佈。</p>
 </section>
 <section id="changing-pages">
-<h3>更改頁面<a class="headerlink" href="#changing-pages" title="Permalink to this heading">¶</a></h3>
+<h3>更改頁面<a class="headerlink" href="#changing-pages" title="本標頭的永久連結">¶</a></h3>
 <p>如你將頁面重寫，而非單純作校閱修訂，重寫後的頁面應先通過審核。</p>
 <p>如因功能改動而修改頁面，而你又擁有提交 (commit) 權限，則可以跳過審核而直接將更動推送到主儲存庫（除非你認為經過審核後會較為安心）。你應在變更的部份加上：</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>.. versionchanged:: 版本編號
@@ -564,7 +564,7 @@ git push
 </div>
 </section>
 <section id="faulty-pages">
-<h3>發現問題頁面<a class="headerlink" href="#faulty-pages" title="Permalink to this heading">¶</a></h3>
+<h3>發現問題頁面<a class="headerlink" href="#faulty-pages" title="本標頭的永久連結">¶</a></h3>
 <p>如發現有錯處，可：</p>
 <ul class="simple">
 <li><p>按<a class="reference internal" href="#making-changes-sphinx"><span class="std std-ref">作出更動</span></a>一節建立一個合併請求。</p></li>
@@ -573,7 +573,7 @@ git push
 </ul>
 </section>
 <section id="proofreading">
-<h3>校對<a class="headerlink" href="#proofreading" title="Permalink to this heading">¶</a></h3>
+<h3>校對<a class="headerlink" href="#proofreading" title="本標頭的永久連結">¶</a></h3>
 <p>我們的校對工作分為兩類。</p>
 <p>最重要的一類為<strong>審閱其他人作出的更動</strong>。在 <a class="reference external" href="https://invent.kde.org/">KDE_gitlab</a> 上有兩種方法進行審閱：</p>
 <ol class="arabic">
@@ -594,7 +594,7 @@ git push
 <p>為此你需要依照<a class="reference internal" href="#making-changes-sphinx"><span class="std std-ref">作出更動</span></a>一節的內容以存取整個頁面並對其作出修改。</p>
 </section>
 <section id="translating">
-<h3>翻譯<a class="headerlink" href="#translating" title="Permalink to this heading">¶</a></h3>
+<h3>翻譯<a class="headerlink" href="#translating" title="本標頭的永久連結">¶</a></h3>
 <p>Krita 說明文件的翻譯工作是由<a class="reference external" href="https://l10n.kde.org/">KDE 在地化團隊</a>負責。如果你希望參與正體中文版 Krita 說明文件的翻譯工作，請到<a class="reference external" href="https://t.me/l10n_tw">臺灣自由暨開源軟體在地化社群的 Telegram 群組</a>查詢。</p>
 <p>請到 <a class="reference external" href="https://community.kde.org/Get_Involved/translation">https://community.kde.org/Get_Involved/translation</a> 了解更多關於參與 KDE 在地化工作的指引。</p>
 <p>在地化團隊成員會存取說明文件的 PO 編目檔。這是一種可以使用翻譯軟體（如 POEdit 和 Lokalize）開啟的檔案格式。翻譯者會合作翻譯這些編目檔，並將它們提交到放置翻譯檔的 SVN 儲存庫。一個每日運行一次的自動程式會將翻譯檔由 SVN 套用到說明文件內。正體中文在地化團隊目前的工作流程使用了私人的 Weblate 平台來協助翻譯。</p>
@@ -603,7 +603,7 @@ git push
 </section>
 </section>
 <section id="other">
-<h2>其他<a class="headerlink" href="#other" title="Permalink to this heading">¶</a></h2>
+<h2>其他<a class="headerlink" href="#other" title="本標頭的永久連結">¶</a></h2>
 <p>如要了解 reStructuredText 標記格式的使用慣例，請參閱 <a class="reference internal" href="krita_manual_conventions.html#krita-markup-conventions"><span class="std std-ref">Krita 說明文件標記格式使用慣例</span></a>一頁。</p>
 </section>
 </section>

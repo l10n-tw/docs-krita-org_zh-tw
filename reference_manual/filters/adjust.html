@@ -6,7 +6,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta property="og:title" name="title" content="Adjust" />
+  <meta property="og:title" name="title" content="色彩調整" />
   <meta property="og:site-name" content="Krita Manual" />
   <meta property="og:type" content="article" />
   <meta property="og:locale" content="zh-TW" />
@@ -21,13 +21,13 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2022-07-20T15:55:45" />
-  <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
-<meta content="Overview of the adjust filters." name="description" />
+  <meta property="og:article:modified_time" content="2022-07-26T01:56:52" />
+  <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+<meta content="色彩調整濾鏡的概覽。" name="description" />
 
   
   
-  <title>Adjust &mdash; Krita Manual 5.0.0 說明文件</title>
+  <title>色彩調整 &mdash; Krita Manual 5.0.0 說明文件</title>
   
 
   
@@ -139,10 +139,10 @@
 <li class="toctree-l2"><a class="reference internal" href="../dockers.html">工具面板</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../dr_minw_debugger.html">Dr. MinGW 除錯工具</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../filters.html">濾鏡</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Adjust</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#dodge">Dodge</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#burn">Burn</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#levels">Levels</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">色彩調整</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#dodge">加亮</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#burn">加深</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#levels">色階</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#color-adjustment-curves">Color Adjustment Curves</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#cross-channel-color-adjustment">Cross-channel color adjustment</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#brightness-contrast-curves">Brightness/Contrast curves</a></li>
@@ -253,7 +253,7 @@
         
           <li><a href="../filters.html">濾鏡</a> &raquo;</li>
         
-      <li>Adjust</li>
+      <li>色彩調整</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -278,40 +278,40 @@
            <div itemprop="articleBody">
             
   <section id="adjust">
-<span id="adjust-filters"></span><span id="index-0"></span><h1>Adjust<a class="headerlink" href="#adjust" title="Permalink to this heading">¶</a></h1>
-<p>The Adjustment filters are image-wide and are for manipulating colors and contrast.</p>
+<span id="adjust-filters"></span><span id="index-0"></span><h1>色彩調整<a class="headerlink" href="#adjust" title="本標頭的永久連結">¶</a></h1>
+<p>色彩調整濾鏡是與影像相關的選項，用來調整色彩和對比。</p>
 <section id="dodge">
-<span id="index-1"></span><h2>Dodge<a class="headerlink" href="#dodge" title="Permalink to this heading">¶</a></h2>
-<p>An image-wide dodge-filter. Dodge is named after a trick in traditional dark-room photography that gave the same results.</p>
+<span id="index-1"></span><h2>加亮<a class="headerlink" href="#dodge" title="本標頭的永久連結">¶</a></h2>
+<p>用來把影像加亮的濾鏡。</p>
 <img alt="../../_images/Dodge-filter.png" src="../../_images/Dodge-filter.png" />
 <dl class="simple">
-<dt>Shadows</dt><dd><p>The effect will mostly apply to dark tones.</p>
+<dt>陰影色</dt><dd><p>濾鏡效果大多覆蓋在暗色調上。</p>
 </dd>
-<dt>Midtones</dt><dd><p>The effect will apply to mostly midtones.</p>
+<dt>中間色</dt><dd><p>濾鏡效果大多覆蓋在中間色調。</p>
 </dd>
-<dt>Highlights</dt><dd><p>This will apply the effect on the highlights only.</p>
+<dt>高亮色</dt><dd><p>濾鏡效果只覆蓋在高亮部分。</p>
 </dd>
-<dt>Exposure</dt><dd><p>The strength at which this filter is applied.</p>
+<dt>曝光</dt><dd><p>調整要覆蓋濾鏡的強度。</p>
 </dd>
 </dl>
 </section>
 <section id="burn">
-<span id="index-2"></span><h2>Burn<a class="headerlink" href="#burn" title="Permalink to this heading">¶</a></h2>
-<p>An image-wide burn-filter. Burn is named after a trick in traditional dark-room photography that gave similar results.</p>
+<span id="index-2"></span><h2>加深<a class="headerlink" href="#burn" title="本標頭的永久連結">¶</a></h2>
+<p>用來把影像加深的濾鏡。</p>
 <img alt="../../_images/Burn-filter.png" src="../../_images/Burn-filter.png" />
 <dl class="simple">
-<dt>Shadows</dt><dd><p>The effect will mostly apply to dark tones.</p>
+<dt>陰影色</dt><dd><p>濾鏡效果大多覆蓋在暗色調上。</p>
 </dd>
-<dt>Midtones</dt><dd><p>The effect will apply to mostly midtones.</p>
+<dt>中間色</dt><dd><p>濾鏡效果大多覆蓋在中間色調。</p>
 </dd>
-<dt>Highlights</dt><dd><p>This will apply the effect on the highlights only.</p>
+<dt>高亮色</dt><dd><p>濾鏡效果只覆蓋在高亮部分。</p>
 </dd>
-<dt>Exposure</dt><dd><p>The strength at which this filter is applied.</p>
+<dt>曝光</dt><dd><p>調整要覆蓋濾鏡的強度。</p>
 </dd>
 </dl>
 </section>
 <section id="levels">
-<span id="index-3"></span><h2>Levels<a class="headerlink" href="#levels" title="Permalink to this heading">¶</a></h2>
+<span id="index-3"></span><h2>色階<a class="headerlink" href="#levels" title="本標頭的永久連結">¶</a></h2>
 <p>This filter allows you to directly modify the levels of the tone-values of an image, by manipulating sliders for highlights, midtones and shadows. You can even set an output and input range of tones for the image. A histogram is displayed to show you the tonal distribution.
 The default shortcut for levels filter is <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">L</kbd></kbd>.</p>
 <img alt="../../_images/Levels-filter.png" src="../../_images/Levels-filter.png" />
@@ -357,7 +357,7 @@ The default shortcut for levels filter is <kbd class="kbd compound docutils lite
 <p>If you want to change the settings later you can click on the <span class="guilabel">Create Filter Mask</span> button to add the levels as a filter mask.</p>
 </section>
 <section id="color-adjustment-curves">
-<span id="index-4"></span><h2>Color Adjustment Curves<a class="headerlink" href="#color-adjustment-curves" title="Permalink to this heading">¶</a></h2>
+<span id="index-4"></span><h2>Color Adjustment Curves<a class="headerlink" href="#color-adjustment-curves" title="本標頭的永久連結">¶</a></h2>
 <p>This filter allows you to adjust each channel by manipulating the curves. You can even adjust the alpha channel and the lightness channel through this filter.
 This is used very often by artists as a post processing filter to slightly heighten the mood of the painting by adjust the overall color. For example a scene with fire breathing dragon may be made more red and yellow by adjusting the curves to give it more warmer look, similarly a snowy mountain scene can be made to look cooler by adjusting the blues and greens. The default shortcut for this filter is <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">M</kbd></kbd>.</p>
 <div class="versionchanged">
@@ -366,7 +366,7 @@ This is used very often by artists as a post processing filter to slightly heigh
 <img alt="../../_images/Color-adjustment-curve.png" src="../../_images/Color-adjustment-curve.png" />
 </section>
 <section id="cross-channel-color-adjustment">
-<span id="index-5"></span><h2>Cross-channel color adjustment<a class="headerlink" href="#cross-channel-color-adjustment" title="Permalink to this heading">¶</a></h2>
+<span id="index-5"></span><h2>Cross-channel color adjustment<a class="headerlink" href="#cross-channel-color-adjustment" title="本標頭的永久連結">¶</a></h2>
 <div class="versionadded">
 <p><span class="versionmodified added">在 4.1 版本新加入.</span></p>
 </div>
@@ -379,20 +379,20 @@ This is used very often by artists as a post processing filter to slightly heigh
 <p>If you wish to desaturate everything but the teal/blues, you select <span class="guilabel">Saturation</span> for the channel and <span class="guilabel">Hue</span> for the driver. Then put a dot in the middle and pull down the dots on either sides.</p>
 </section>
 <section id="brightness-contrast-curves">
-<h2>Brightness/Contrast curves<a class="headerlink" href="#brightness-contrast-curves" title="Permalink to this heading">¶</a></h2>
+<h2>Brightness/Contrast curves<a class="headerlink" href="#brightness-contrast-curves" title="本標頭的永久連結">¶</a></h2>
 <p>This filter allows you to adjust the brightness and contrast of the image by adjusting the curves.</p>
 <div class="deprecated">
 <p><span class="versionmodified deprecated">在 4.0 版本開始棄用: </span>These have been removed in Krita 4.0, because the Color Adjustment filter can do the same. Old files with brightness/contrast curves will be loaded as Color Adjustment curves.</p>
 </div>
 </section>
 <section id="color-balance">
-<span id="index-6"></span><h2>Color Balance<a class="headerlink" href="#color-balance" title="Permalink to this heading">¶</a></h2>
+<span id="index-6"></span><h2>Color Balance<a class="headerlink" href="#color-balance" title="本標頭的永久連結">¶</a></h2>
 <p>This filter allows you to control the color balance of the image by adjusting the sliders for Shadows, Midtones and Highlights.
 The default shortcut for this filter is <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">B</kbd></kbd>.</p>
 <img alt="../../_images/Color-balance.png" src="../../_images/Color-balance.png" />
 </section>
 <section id="desaturate">
-<span id="index-7"></span><h2>Desaturate<a class="headerlink" href="#desaturate" title="Permalink to this heading">¶</a></h2>
+<span id="index-7"></span><h2>Desaturate<a class="headerlink" href="#desaturate" title="本標頭的永久連結">¶</a></h2>
 <p>Image-wide desaturation filter. Will make any image Grayscale.
 Has several choices by which logic the colors are turned to gray. The default shortcut for this filter is <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">U</kbd></kbd>.</p>
 <img alt="../../_images/Desaturate-filter.png" src="../../_images/Desaturate-filter.png" />
@@ -412,16 +412,16 @@ Has several choices by which logic the colors are turned to gray. The default sh
 </dl>
 </section>
 <section id="invert">
-<span id="index-8"></span><h2>Invert<a class="headerlink" href="#invert" title="Permalink to this heading">¶</a></h2>
+<span id="index-8"></span><h2>Invert<a class="headerlink" href="#invert" title="本標頭的永久連結">¶</a></h2>
 <p>This filter like the name suggests inverts the color values in the image. So white (1,1,1) becomes black (0,0,0), yellow (1,1,0) becomes blue (0,1,1), etc.
 The default shortcut for this filter is <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">I</kbd></kbd>.</p>
 </section>
 <section id="auto-contrast">
-<span id="index-9"></span><h2>Auto Contrast<a class="headerlink" href="#auto-contrast" title="Permalink to this heading">¶</a></h2>
+<span id="index-9"></span><h2>Auto Contrast<a class="headerlink" href="#auto-contrast" title="本標頭的永久連結">¶</a></h2>
 <p>Tries to adjust the contrast to universally acceptable levels.</p>
 </section>
 <section id="hsv-hsl-adjustment">
-<span id="index-10"></span><h2>HSV/HSL Adjustment<a class="headerlink" href="#hsv-hsl-adjustment" title="Permalink to this heading">¶</a></h2>
+<span id="index-10"></span><h2>HSV/HSL Adjustment<a class="headerlink" href="#hsv-hsl-adjustment" title="本標頭的永久連結">¶</a></h2>
 <p>With this filter, you can adjust the Hue, Saturation, Value or Lightness, through sliders. The default shortcut for this filter is <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">U</kbd></kbd>.</p>
 <img alt="../../_images/Hue-saturation-filter.png" src="../../_images/Hue-saturation-filter.png" />
 <dl class="simple">
@@ -432,11 +432,11 @@ The default shortcut for this filter is <kbd class="kbd compound docutils litera
 </dl>
 </section>
 <section id="threshold">
-<span id="index-11"></span><h2>Threshold<a class="headerlink" href="#threshold" title="Permalink to this heading">¶</a></h2>
+<span id="index-11"></span><h2>Threshold<a class="headerlink" href="#threshold" title="本標頭的永久連結">¶</a></h2>
 <p>A simple black and white threshold filter that uses sRGB luminosity. It'll convert any image to a image with only black and white, with the input number indicating the threshold value at which black becomes white.</p>
 </section>
 <section id="slope-offset-power">
-<span id="index-12"></span><h2>Slope, Offset, Power<a class="headerlink" href="#slope-offset-power" title="Permalink to this heading">¶</a></h2>
+<span id="index-12"></span><h2>Slope, Offset, Power<a class="headerlink" href="#slope-offset-power" title="本標頭的永久連結">¶</a></h2>
 <p>A different kind of color balance filter, with three color selectors, which will have the same shape as the one used in settings.</p>
 <p>This filter is particular useful because it has been defined by the American Society for Cinema as &quot;ASC_CDL&quot;, meaning that it is a standard way of describing a color balance method.</p>
 <a class="reference internal image-reference" href="../../_images/Krita_filters_asc_cdl.png"><img alt="../../_images/Krita_filters_asc_cdl.png" class="align-center" src="../../_images/Krita_filters_asc_cdl.png" style="width: 800px;" /></a>

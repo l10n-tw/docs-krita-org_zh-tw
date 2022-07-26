@@ -21,8 +21,8 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2022-07-20T15:55:45" />
-  <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta property="og:article:modified_time" content="2022-07-26T01:56:52" />
+  <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 <meta content="Detailed steps on how images work in Krita." name="description" property="og:description" />
 
   
@@ -268,15 +268,15 @@
            <div itemprop="articleBody">
             
   <section id="working-with-images">
-<span id="index-0"></span><span id="id1"></span><h1>如何以影像工作<a class="headerlink" href="#working-with-images" title="Permalink to this heading">¶</a></h1>
+<span id="index-0"></span><span id="id1"></span><h1>如何以影像工作<a class="headerlink" href="#working-with-images" title="本標頭的永久連結">¶</a></h1>
 <p>Computers work with files and as a painting program, Krita works with
 images as the type of file it creates and manipulates.</p>
 <section id="what-do-images-contain">
-<h2>影像包含了甚麼？<a class="headerlink" href="#what-do-images-contain" title="Permalink to this heading">¶</a></h2>
+<h2>影像包含了甚麼？<a class="headerlink" href="#what-do-images-contain" title="本標頭的永久連結">¶</a></h2>
 <p>If you have a text document, it of course contains letters, strung in
 the right order, so the computer loads them as coherent sentences.</p>
 <section id="raster-data">
-<h3>點陣數據<a class="headerlink" href="#raster-data" title="Permalink to this heading">¶</a></h3>
+<h3>點陣數據<a class="headerlink" href="#raster-data" title="本標頭的永久連結">¶</a></h3>
 <p>This is the main data on the paint layers you make. So these are the
 strokes with the paint brush and look pixelated up close. A multi-layer
 file will contain several of such layers, that get overlaid on top of
@@ -284,7 +284,7 @@ each other so make the final image.</p>
 <p>A single layer file will usually only contain raster data.</p>
 </section>
 <section id="vector-data">
-<h3>向量數據<a class="headerlink" href="#vector-data" title="Permalink to this heading">¶</a></h3>
+<h3>向量數據<a class="headerlink" href="#vector-data" title="本標頭的永久連結">¶</a></h3>
 <p>These are mathematical operations that tell the computer to draw pixels
 on a spot. This makes them much more scalable, because you just tell the
 operation to make the coordinates 4 times bigger to scale it up. Due to
@@ -292,7 +292,7 @@ this vector data is much more editable, lighter, but at the same time
 it's also much more CPU intensive.</p>
 </section>
 <section id="operation-data">
-<h3>操作數據<a class="headerlink" href="#operation-data" title="Permalink to this heading">¶</a></h3>
+<h3>操作數據<a class="headerlink" href="#operation-data" title="本標頭的永久連結">¶</a></h3>
 <p>Stuff like the filter layers, that tells Krita to change the colors of a
 layer, but also transparency masks, group layer and transformation masks
 are saved to multi-layer files. Being able to load these depend on the
@@ -302,18 +302,18 @@ save transform masks.</p>
 </section>
 </section>
 <section id="metadata">
-<h2>中繼資料<a class="headerlink" href="#metadata" title="Permalink to this heading">¶</a></h2>
+<h2>中繼資料<a class="headerlink" href="#metadata" title="本標頭的永久連結">¶</a></h2>
 <p>Metadata is information like the creation date, author, description and
 also information like DPI.</p>
 </section>
 <section id="image-size">
-<h2>影像尺寸<a class="headerlink" href="#image-size" title="Permalink to this heading">¶</a></h2>
+<h2>影像尺寸<a class="headerlink" href="#image-size" title="本標頭的永久連結">¶</a></h2>
 <p>The image size is the dimension and resolution of the canvas. Image size
 has direct effect file size of the Krita document. The more pixels that
 need to be remembered and the higher the bit depth of the color, the
 heavier the resulting file will be.</p>
 <section id="dpi-ppi">
-<h3>DPI、PPI<a class="headerlink" href="#dpi-ppi" title="Permalink to this heading">¶</a></h3>
+<h3>DPI、PPI<a class="headerlink" href="#dpi-ppi" title="本標頭的永久連結">¶</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">DPI</span></code> stands for <em class="dfn">Dots per Inch</em>, <code class="docutils literal notranslate"><span class="pre">PPI</span></code> stands for <em class="dfn">Pixels per
 Inch</em>. In printing industry, suppose if your printer prints at 300
 <code class="docutils literal notranslate"><span class="pre">DPI</span></code>. It means it is actually putting 300 dots of colors in an area
@@ -339,19 +339,19 @@ image for computer consumption, this is the default.</p>
 </dl>
 </section>
 <section id="color-depth">
-<h3>色彩深度<a class="headerlink" href="#color-depth" title="Permalink to this heading">¶</a></h3>
+<h3>色彩深度<a class="headerlink" href="#color-depth" title="本標頭的永久連結">¶</a></h3>
 <p>We went over color depth in the <a class="reference internal" href="../general_concepts/colors.html#general-concept-color"><span class="std std-ref">Color Management page</span></a>. What you need to
 understand is that Krita has image color spaces, and layer color spaces,
 the latter which can save memory if used right. For example, having a
 line art layer in grayscale can half the memory costs.</p>
 </section>
 <section id="image-color-space-vs-layer-color-space-vs-conversion">
-<h3>影像色彩空間、圖曾色彩空間以及其轉換操作<a class="headerlink" href="#image-color-space-vs-layer-color-space-vs-conversion" title="Permalink to this heading">¶</a></h3>
+<h3>影像色彩空間、圖曾色彩空間以及其轉換操作<a class="headerlink" href="#image-color-space-vs-layer-color-space-vs-conversion" title="本標頭的永久連結">¶</a></h3>
 <p>Because there's a difference between image color space and layer color space, you can change only the image color space in <span class="menuselection">Image ‣ Properties...</span> which will leave the layers alone. But if you want to change the color space of the file including all the layers you can do it by going to <span class="menuselection">Image ‣ Convert Image Color Space...</span> this will convert all the layers color space as well.</p>
 </section>
 </section>
 <section id="author-and-description">
-<h2>作者與描述說明<a class="headerlink" href="#author-and-description" title="Permalink to this heading">¶</a></h2>
+<h2>作者與描述說明<a class="headerlink" href="#author-and-description" title="本標頭的永久連結">¶</a></h2>
 <img alt="../_images/document_information_screen.png" src="../_images/document_information_screen.png" />
 <p>Krita will automatically save who created the image into your image's
 metadata. Along with the other data such as time and date of creation
@@ -364,7 +364,7 @@ document info dialog and of course by unzipping you <code class="docutils litera
 editing the metadata there.</p>
 <p>These things can be edited in <span class="menuselection">File ‣ Document Information</span>, and for the author's information <span class="menuselection">Settings ‣ Configure Krita... ‣ Author</span>. Profiles can be switched under <span class="menuselection">Settings ‣ Active Author Profile</span>.</p>
 <section id="setting-the-canvas-background-color">
-<h3>設定畫布背景色<a class="headerlink" href="#setting-the-canvas-background-color" title="Permalink to this heading">¶</a></h3>
+<h3>設定畫布背景色<a class="headerlink" href="#setting-the-canvas-background-color" title="本標頭的永久連結">¶</a></h3>
 <p>You can set the canvas background color via <span class="menuselection">Image ‣ Image Background
 Color and Transparency...</span> menu item. This allows you to turn the background color
 non-transparent and to change the color. This is also useful for certain file
@@ -377,7 +377,7 @@ section in the new file options, will allow you to work in a slightly more comfo
 environment, where transparency isn't depicted with checkered boxes.</p>
 </section>
 <section id="basic-transforms">
-<h3>基本變形<a class="headerlink" href="#basic-transforms" title="Permalink to this heading">¶</a></h3>
+<h3>基本變形<a class="headerlink" href="#basic-transforms" title="本標頭的永久連結">¶</a></h3>
 <p>There are some basic transforms available in the Image menu.</p>
 <dl class="simple">
 <dt>Shear Image...</dt><dd><p>This will allow you to skew the whole image and its layers.</p>
@@ -391,11 +391,11 @@ environment, where transparency isn't depicted with checkered boxes.</p>
 </section>
 </section>
 <section id="cropping-and-resizing-the-canvas">
-<h2>裁切及調整畫布大小<a class="headerlink" href="#cropping-and-resizing-the-canvas" title="Permalink to this heading">¶</a></h2>
+<h2>裁切及調整畫布大小<a class="headerlink" href="#cropping-and-resizing-the-canvas" title="本標頭的永久連結">¶</a></h2>
 <p>You can crop and image with the
 <a class="reference internal" href="../reference_manual/tools/crop.html#crop-tool"><span class="std std-ref">裁切工具</span></a>, to cut away extra space and improve the composition.</p>
 <section id="trimming">
-<h3>修剪<a class="headerlink" href="#trimming" title="Permalink to this heading">¶</a></h3>
+<h3>修剪<a class="headerlink" href="#trimming" title="本標頭的永久連結">¶</a></h3>
 <p>Using <span class="menuselection">Image ‣ Trim to Current Layer</span>, Krita resizes the
 image to the dimensions of the layer selected. Useful for when you paste
 a too large image into the layer and want to resize the canvas to the extent
@@ -411,7 +411,7 @@ rid of invisible data.</p>
 </section>
 </section>
 <section id="resizing-the-canvas">
-<h2>調整畫布大小<a class="headerlink" href="#resizing-the-canvas" title="Permalink to this heading">¶</a></h2>
+<h2>調整畫布大小<a class="headerlink" href="#resizing-the-canvas" title="本標頭的永久連結">¶</a></h2>
 <p>You can also resize the canvas via <span class="menuselection">Image ‣ Resize Canvas...</span> (or
 the <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Alt</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">C</kbd></kbd> shortcut). The dialog box is shown below.</p>
 <img alt="../_images/Resize_Canvas.png" src="../_images/Resize_Canvas.png" />
@@ -427,7 +427,7 @@ an arrow appear. Clicking this will extend the canvas in that direction.
 You can see the arrow marked in red in the example below:</p>
 <a class="reference internal image-reference" href="../_images/Infinite-canvas.png"><img alt="../_images/Infinite-canvas.png" src="../_images/Infinite-canvas.png" style="width: 700px;" /></a>
 <section id="resizing-the-image">
-<h3>調整影像大小<a class="headerlink" href="#resizing-the-image" title="Permalink to this heading">¶</a></h3>
+<h3>調整影像大小<a class="headerlink" href="#resizing-the-image" title="本標頭的永久連結">¶</a></h3>
 <p><span class="guilabel">Scale Image to New Size...</span> allows you to resize the whole image. Also,
 importantly, this is where you can change the resolution or <em class="dfn">upres</em> your
 image. So for instance, if you were initially working at 72 PPI to block
@@ -440,7 +440,7 @@ on the link and the two halves will separate.</p>
 <img alt="../_images/Scale_Image_to_New_Size.png" src="../_images/Scale_Image_to_New_Size.png" />
 </section>
 <section id="separating-images">
-<h3>分離影像<a class="headerlink" href="#separating-images" title="Permalink to this heading">¶</a></h3>
+<h3>分離影像<a class="headerlink" href="#separating-images" title="本標頭的永久連結">¶</a></h3>
 <img alt="../_images/Separate_Image.png" src="../_images/Separate_Image.png" />
 <p>This powerful image manipulation feature lets you separate an image into
 its different components or channels.</p>
@@ -454,7 +454,7 @@ channel image, etc.</p>
 </section>
 </section>
 <section id="saving-exporting-and-opening-files">
-<h2>儲存、匯出與開啟檔案<a class="headerlink" href="#saving-exporting-and-opening-files" title="Permalink to this heading">¶</a></h2>
+<h2>儲存、匯出與開啟檔案<a class="headerlink" href="#saving-exporting-and-opening-files" title="本標頭的永久連結">¶</a></h2>
 <p>When Krita creates or opens a file, it has a copy of the file in memory,
 that it edits. This is part of the way how computers work: They make a
 copy of their file in the RAM. Thus, when saving, Krita takes its copy

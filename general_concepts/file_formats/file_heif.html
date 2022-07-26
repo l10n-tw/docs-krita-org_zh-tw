@@ -21,8 +21,8 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2022-07-20T15:55:45" />
-  <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta property="og:article:modified_time" content="2022-07-26T01:56:52" />
+  <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 <meta content="The HEIF and AVIF file formats in Krita." name="description" property="og:description" />
 
   
@@ -251,12 +251,12 @@
            <div itemprop="articleBody">
             
   <section id="heif-and-avif">
-<span id="file-avif"></span><span id="file-heif"></span><span id="index-0"></span><h1>*.heif 及 *.avif<a class="headerlink" href="#heif-and-avif" title="Permalink to this heading">¶</a></h1>
+<span id="file-avif"></span><span id="file-heif"></span><span id="index-0"></span><h1>*.heif 及 *.avif<a class="headerlink" href="#heif-and-avif" title="本標頭的永久連結">¶</a></h1>
 <p>The High Efficiency Image Format (<code class="docutils literal notranslate"><span class="pre">*.heif</span></code>, <code class="docutils literal notranslate"><span class="pre">*.heic</span></code>), and its cousin, AV1 Image Format (<code class="docutils literal notranslate"><span class="pre">*.avif</span></code>) are formats which use video codecs (<code class="docutils literal notranslate"><span class="pre">H264</span></code>, <code class="docutils literal notranslate"><span class="pre">H265</span></code> and <code class="docutils literal notranslate"><span class="pre">AV1</span></code>) to store their data. They are more and more popular with mobile phones as their default image file format, and <code class="docutils literal notranslate"><span class="pre">*.avif</span></code> is to be natively supported by all web browsers within the next few years.</p>
 <p>Krita supports saving <a class="reference internal" href="../colors/color_models.html#model-gray"><span class="std std-ref">Grayscale</span></a> and <a class="reference internal" href="../colors/color_models.html#model-rgb"><span class="std std-ref">RGB</span></a> images to these formats. Furthermore, it can save 8 bit, will save 16 bit integer as 12 bit, and can save 16 and 32 bit float as 12 bit, with an HDR color space.</p>
 <p>Compared to <a class="reference internal" href="file_png.html#file-png"><span class="std std-ref">*.png</span></a> and <a class="reference internal" href="file_jpeg.html#file-jpeg"><span class="std std-ref">*.jpg</span></a>, these formats tend to smooth out textures to make them easier to compress, and therefore great for sharp images with a lot of smooth gradients. Images with a lot of texture or fine details may lose said detail (for example, cat whiskers seem to get lost), and thus <a class="reference internal" href="file_jpeg.html#file-jpeg"><span class="std std-ref">*.jpg</span></a> might be better suited.</p>
 <section id="import-options">
-<h2>Import Options<a class="headerlink" href="#import-options" title="Permalink to this heading">¶</a></h2>
+<h2>Import Options<a class="headerlink" href="#import-options" title="本標頭的永久連結">¶</a></h2>
 <p>Krita supports all the color spaces that these formats can handle, and will convert in the case of the few formats it cannot handle. This has been automated for the most part, with Krita selecting or generating the appropriate ICC profile where necessary.</p>
 <p>Images that are HDR images, so the ones that have the Perceptual Quantizer, Hybrid Log Gamma or SMPTE ST 428 transfer functions, will be converted to a linear 32 bit floating point version of that color space.</p>
 <p>However, Hybrid Log Gamma needs an extra conversion step inbetween, as Krita currently does not support sending HLG data to the display. For this <em class="dfn">Scene Linear to Display Linear</em> conversion, it would need to know your <em class="dfn">display gamma</em> and <em class="dfn">maximum brightness</em>. The default brightness and gamma values are the ones used for a HLG to PQ conversion, and probably your best bet when your monitor is able to display Krita's HDR. When exporting this image with HLG, it's recommended to reuse the same values for the reverse OOTF there.</p>
@@ -270,7 +270,7 @@
 </dl>
 </section>
 <section id="export-options">
-<h2>Export Options<a class="headerlink" href="#export-options" title="Permalink to this heading">¶</a></h2>
+<h2>Export Options<a class="headerlink" href="#export-options" title="本標頭的永久連結">¶</a></h2>
 <dl>
 <dt>Lossless</dt><dd><p>Use the lossless encoding options. Disables the <span class="guilabel">Lossy Advanced Settings</span>.</p>
 </dd>
@@ -291,7 +291,7 @@
 </dd>
 </dl>
 <section id="conversion-settings">
-<h3>Conversion Settings<a class="headerlink" href="#conversion-settings" title="Permalink to this heading">¶</a></h3>
+<h3>Conversion Settings<a class="headerlink" href="#conversion-settings" title="本標頭的永久連結">¶</a></h3>
 <p>These only appear on floating point images, and are used to store the images with values above 1.0 as HDR images by encoding them with a specific transfer function.</p>
 <dl>
 <dt>Space:</dt><dd><p>Encoding the right color space depends on how compatible the current color space is with the <code class="docutils literal notranslate"><span class="pre">ITU</span> <span class="pre">H.273</span> <span class="pre">CICP</span></code> values <a class="reference internal" href="#ituh273" id="id1"><span>[ituh273]</span></a>, as this is how <code class="docutils literal notranslate"><span class="pre">PQ</span></code>, <code class="docutils literal notranslate"><span class="pre">HLG</span></code> and <code class="docutils literal notranslate"><span class="pre">SMPTE</span> <span class="pre">ST</span> <span class="pre">428</span></code> are stored. <code class="docutils literal notranslate"><span class="pre">Rec</span> <span class="pre">2100</span> <span class="pre">PQ</span></code> or <code class="docutils literal notranslate"><span class="pre">Rec</span> <span class="pre">2100</span> <span class="pre">HLG</span></code> are the expected values for HDR images <a class="reference internal" href="#rec2100" id="id2"><span>[rec2100]</span></a>.</p>

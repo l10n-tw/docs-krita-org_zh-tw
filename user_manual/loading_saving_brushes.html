@@ -21,8 +21,8 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2022-07-20T15:55:45" />
-  <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta property="og:article:modified_time" content="2022-07-26T01:56:52" />
+  <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 <meta content="Detailed guide on the brush settings dialog in Krita as well as how to make your own brushes and how to share them." name="description" property="og:description" />
 
   
@@ -256,36 +256,36 @@
            <div itemprop="articleBody">
             
   <section id="loading-and-saving-brushes">
-<span id="loading-saving-brushes"></span><span id="index-0"></span><h1>載入與儲存筆刷<a class="headerlink" href="#loading-and-saving-brushes" title="Permalink to this heading">¶</a></h1>
+<span id="loading-saving-brushes"></span><span id="index-0"></span><h1>載入與儲存筆刷<a class="headerlink" href="#loading-and-saving-brushes" title="本標頭的永久連結">¶</a></h1>
 <p>In the real world, when painting or drawing, you don't just use one tool. You use pencils, erasers, paintbrushes, different types of paint, inks, crayons, etc. All these have different ways of making marks.</p>
 <p>In a digital program like Krita you have something similar. We call this a brush engine. And much like how cars have different engines that give different feels when driving, or how pencils make distinctly different marks than roller ball pens, different brush engines have totally different feels.</p>
 <p>The brush engines have a lot of different settings as well. So, you can save those settings into presets.</p>
 <p>Unlike Photoshop, Krita makes a difference between brush-tips and brush-presets. Tips are only a stamp of sorts, while the preset uses a tip and many other settings to create the full brush.</p>
 <section id="the-brush-settings-drop-down">
-<h2>筆刷設定彈出編輯器<a class="headerlink" href="#the-brush-settings-drop-down" title="Permalink to this heading">¶</a></h2>
+<h2>筆刷設定彈出編輯器<a class="headerlink" href="#the-brush-settings-drop-down" title="本標頭的永久連結">¶</a></h2>
 <p>To start, the Brush Settings Editor panel can be accessed in the toolbar, between the <span class="guilabel">Choose brush preset</span> button on the right and the <span class="guilabel">Fill Patterns</span> button on the left. Alternately, you can use the <kbd class="kbd docutils literal notranslate">F5</kbd> key to open it.</p>
 <p>When you open Brush Settings Editor panel you will see something like this:</p>
 <section id="tour-of-the-brush-settings-drop-down">
-<h3>筆刷設定編輯器一覧<a class="headerlink" href="#tour-of-the-brush-settings-drop-down" title="Permalink to this heading">¶</a></h3>
+<h3>筆刷設定編輯器一覧<a class="headerlink" href="#tour-of-the-brush-settings-drop-down" title="本標頭的永久連結">¶</a></h3>
 <a class="reference internal image-reference" href="../_images/Krita_5_0_Brush_Settings_Layout.svg"><img alt="../_images/Krita_5_0_Brush_Settings_Layout.svg" src="../_images/Krita_5_0_Brush_Settings_Layout.svg" width="800" /></a>
 <p>The brush settings drop-down is divided into six areas,</p>
 <section id="section-a-general-information">
-<h4>A 區——基本資訊<a class="headerlink" href="#section-a-general-information" title="Permalink to this heading">¶</a></h4>
+<h4>A 區——基本資訊<a class="headerlink" href="#section-a-general-information" title="本標頭的永久連結">¶</a></h4>
 <p>This contains the <em class="dfn">Preset Icon</em>, <em class="dfn">Live Brush Preview</em>, the <em class="dfn">Preset Name</em>, the <em class="dfn">Engine</em> name, and several buttons for saving, renaming, and reloading.</p>
 <p>Krita's brush settings are stored into the metadata of a 200×200 PNG (the <code class="docutils literal notranslate"><span class="pre">KPP</span></code> file), where the image in the PNG file becomes the preset icon. This icon is used everywhere in Krita, and is useful for differentiating brushes in ways that the live preview cannot.</p>
 <p>The live preview shows a stroke of the current brush as a little s-curve wiggle, with the pressure being non-existent on the left, and increasing to full pressure as it goes to the right. It can thus show the effect of the Pressure, Drawing Angle, Distance, Fade and Fuzzy Dab sensors, but none of the others. For some brush engines it cannot show anything. For the color smudge, filter brush and clone tool, it shows an alternating line pattern because these brush engines use the pixels already on canvas to change their effect.</p>
 <p>After the preset name, there's a button for <em class="dfn">renaming</em> the brush. This will save the brush as a new brush and <a class="reference internal" href="../reference_manual/resource_management.html#deactivating-resources"><span class="std std-ref">deactivate</span></a> the previous brush.</p>
 <section id="engine">
-<h5>筆刷引擎<a class="headerlink" href="#engine" title="Permalink to this heading">¶</a></h5>
+<h5>筆刷引擎<a class="headerlink" href="#engine" title="本標頭的永久連結">¶</a></h5>
 <p>The engine of a brush is the underlying programming that generates the stroke from a brush. What that means is that different brush engines have different options and different results. You can see this as the difference between using crayons, pencils and inks, but because computers are math devices, most of our brush engines produce different things in a more mathematical way.</p>
 <p>For most artists the mathematical nature doesn't matter as much as the different textures and marks each brush engine, and each brush engine has its own distinct flavor and use, and can be further customized by modifying the options.</p>
 </section>
 <section id="reloading">
-<h5>重新載入<a class="headerlink" href="#reloading" title="Permalink to this heading">¶</a></h5>
+<h5>重新載入<a class="headerlink" href="#reloading" title="本標頭的永久連結">¶</a></h5>
 <p>If you change a preset, an icon will appear behind the engine name. This is the <span class="guilabel">Reload the brush preset</span> button. You can use it to revert to the original brush settings.</p>
 </section>
 <section id="saving-a-preset">
-<h5>儲存筆刷預設<a class="headerlink" href="#saving-a-preset" title="Permalink to this heading">¶</a></h5>
+<h5>儲存筆刷預設<a class="headerlink" href="#saving-a-preset" title="本標頭的永久連結">¶</a></h5>
 <p>On the right, there's <span class="guilabel">Save New Brush Preset...</span> and <span class="guilabel">Overwrite Brush</span> buttons.</p>
 <dl class="simple">
 <dt>Save New Brush Preset...</dt><dd><p>Will take the current preset and all its changes and save it as a new preset. If no change was made, you will be making a copy of the current preset.</p>
@@ -312,7 +312,7 @@
 </dl>
 </section>
 <section id="the-icon-library">
-<h5>預設圖示庫<a class="headerlink" href="#the-icon-library" title="Permalink to this heading">¶</a></h5>
+<h5>預設圖示庫<a class="headerlink" href="#the-icon-library" title="本標頭的永久連結">¶</a></h5>
 <p>To make making presets icons faster, Krita got an icon library.</p>
 <img alt="../_images/Krita_4_0_Preset_Icon_Library_Dialog.png" src="../_images/Krita_4_0_Preset_Icon_Library_Dialog.png" />
 <p>It allows you to select tool icons, and an optional small emblem. When you press <span class="guilabel">OK</span> it will load the resulting combination into the mini scratch pad, and you can draw in the stroke.</p>
@@ -323,7 +323,7 @@ making it much better for quick adjustments.</p>
 </section>
 </section>
 <section id="section-b-the-preset-chooser">
-<h4>B 區——筆刷預設選擇器<a class="headerlink" href="#section-b-the-preset-chooser" title="Permalink to this heading">¶</a></h4>
+<h4>B 區——筆刷預設選擇器<a class="headerlink" href="#section-b-the-preset-chooser" title="本標頭的永久連結">¶</a></h4>
 <p>The preset chooser is much the same as the preset docker and the preset drop-down on the <kbd class="kbd docutils literal notranslate">F6</kbd> key. It's unique in that it allows you to filter by engine and this is also where you can create brushes for an engine from scratch.</p>
 <p>It is by default collapsed, so you will need to press the arrow at the top left of the brush engine to show it.</p>
 <p>The top drop-down is set to “all” by default, which means it shows all engines. It then shows a tag section where you can select the tags, the preset list and the search bar.</p>
@@ -331,7 +331,7 @@ making it much better for quick adjustments.</p>
 <p>The trashcan icon does the same as it does in the preset docker: delete, or rather, <a class="reference internal" href="../reference_manual/resource_management.html#deactivating-resources"><span class="std std-ref">deactivate a preset</span></a>, so it won't show up in the list.</p>
 </section>
 <section id="section-c-the-scratch-pad">
-<h4>C 區——繪圖區<a class="headerlink" href="#section-c-the-scratch-pad" title="Permalink to this heading">¶</a></h4>
+<h4>C 區——繪圖區<a class="headerlink" href="#section-c-the-scratch-pad" title="本標頭的永久連結">¶</a></h4>
 <p>When you tweak your brushes, you want to be able to check what each setting does. That's why, to the right of the settings drop-down, there is a scratch pad.</p>
 <p>It is by default collapsed, so you will have to press the arrow at the top right of the brush settings to show it.</p>
 <p>When saving a new preset, you can choose to get the icon from the scratch pad, this will load the dash area into the mini scratch pad of the <span class="guilabel">Save New Brush Preset</span> dialog.</p>
@@ -345,16 +345,16 @@ making it much better for quick adjustments.</p>
 </ol>
 </section>
 <section id="section-d-the-options-list">
-<h4>D 區——選項清單<a class="headerlink" href="#section-d-the-options-list" title="Permalink to this heading">¶</a></h4>
+<h4>D 區——選項清單<a class="headerlink" href="#section-d-the-options-list" title="本標頭的永久連結">¶</a></h4>
 <p>The options, as stated above, are different per brush engine. These represent the different parameters, toggles and knobs that you can turn to make a brush preset unique. For a couple of options, the main things to change are sliders and checkboxes, but for a lot of them, they use curves instead.</p>
 <p>Some options can be toggled, as noted by the little checkboxes next to them, but others, like flow and opacity are so fundamental to how the brush works, that they are always on.</p>
 <p>The little padlock icon next to the options is for locking the brush. This has its own page.</p>
 </section>
 <section id="section-e-option-configuration-widget">
-<h4>E 區—— 選項設定工具<a class="headerlink" href="#section-e-option-configuration-widget" title="Permalink to this heading">¶</a></h4>
+<h4>E 區—— 選項設定工具<a class="headerlink" href="#section-e-option-configuration-widget" title="本標頭的永久連結">¶</a></h4>
 <p>Where section D is the list of options, section E is the widget where you can change things.</p>
 <section id="using-sensor-curves">
-<h5>Using sensor curves<a class="headerlink" href="#using-sensor-curves" title="Permalink to this heading">¶</a></h5>
+<h5>Using sensor curves<a class="headerlink" href="#using-sensor-curves" title="本標頭的永久連結">¶</a></h5>
 <p>One of the big important things that make art unique to the artist who created it is the style of the strokes. Strokes are different because they differ in speed, rotation, direction, and the amount of pressure put onto the stylus. Because these are so important, we would want to customize how these values are understood in detail. The best way to do this is to use curves.</p>
 <p>Curves show up with the size widget for example. With an inking brush, we want to have size mapped to pressure. Just toggling the size option in the option list will do that.</p>
 <p>However, different people have different wrists and thus will press differently on their stylus. Someone who presses softly tends to find it easy to make thin strokes, but very difficult to make thick strokes. Conversely, someone who presses hard on their stylus naturally will have a hard time making thin strokes, but easily makes thick ones.</p>
@@ -398,7 +398,7 @@ with the smallest of the values.</p></li>
 </section>
 </section>
 <section id="section-f-miscellaneous-options">
-<h4>F 區——其他選項<a class="headerlink" href="#section-f-miscellaneous-options" title="Permalink to this heading">¶</a></h4>
+<h4>F 區——其他選項<a class="headerlink" href="#section-f-miscellaneous-options" title="本標頭的永久連結">¶</a></h4>
 <dl>
 <dt>Eraser switch size</dt><dd><p>This switches the brush to a separately stored size when using the <kbd class="kbd docutils literal notranslate">E</kbd> key.</p>
 </dd>
@@ -418,21 +418,21 @@ with the smallest of the values.</p></li>
 </section>
 </section>
 <section id="the-on-canvas-brush-settings">
-<h3>浮動畫具板上的筆刷分量設定<a class="headerlink" href="#the-on-canvas-brush-settings" title="Permalink to this heading">¶</a></h3>
+<h3>浮動畫具板上的筆刷分量設定<a class="headerlink" href="#the-on-canvas-brush-settings" title="本標頭的永久連結">¶</a></h3>
 <p>There is a <a class="reference internal" href="oncanvas_brush_editor.html#oncanvas-brush-editor"><span class="std std-ref">畫布上的筆刷分量設定</span></a>. If you open up the pop-up palette, there should be an icon on the bottom-right. Press that to show the on-canvas brush settings. You will see several sliders here, to quickly make small changes.</p>
 <p>At the top it shows the currently active preset. Next to that is a settings button, click that to get a list of settings that can be shown and organized for the given brush engine. You can use the up and down arrows to order their position, and then left and right arrows to add or remove from the list. You can also drag and drop.</p>
 </section>
 </section>
 <section id="making-a-brush-preset">
-<h2>製作筆刷預設<a class="headerlink" href="#making-a-brush-preset" title="Permalink to this heading">¶</a></h2>
+<h2>製作筆刷預設<a class="headerlink" href="#making-a-brush-preset" title="本標頭的永久連結">¶</a></h2>
 <p>Now, let's make a simple brush to test the waters with:</p>
 <section id="getting-a-default-for-the-brush-engine">
-<h3>筆刷引擎的起始設定<a class="headerlink" href="#getting-a-default-for-the-brush-engine" title="Permalink to this heading">¶</a></h3>
+<h3>筆刷引擎的起始設定<a class="headerlink" href="#getting-a-default-for-the-brush-engine" title="本標頭的永久連結">¶</a></h3>
 <p>First, open the settings with the <kbd class="kbd docutils literal notranslate">F5</kbd> key.</p>
 <p>Then, press the arrow on the upper left to open the preset chooser. There, press the “+” icon to get a list of engines. For this brush we're going to make a pixel brush.</p>
 </section>
 <section id="example-making-an-inking-brush">
-<h3>例子：製作一個上墨用的筆刷<a class="headerlink" href="#example-making-an-inking-brush" title="Permalink to this heading">¶</a></h3>
+<h3>例子：製作一個上墨用的筆刷<a class="headerlink" href="#example-making-an-inking-brush" title="本標頭的永久連結">¶</a></h3>
 <ol class="arabic simple">
 <li><p>Draw on the scratch pad to see what the current brush looks like. If done correctly, you should have a 5px wide brush that has pressure set to opacity.</p></li>
 <li><p>Let us turn off the opacity first. Click on the <a class="reference internal" href="../reference_manual/brushes/brush_settings/opacity_and_flow.html#option-opacity-n-flow"><span class="std std-ref">opacity</span></a> option in the right-hand list. The settings should now be changed to a big curve. This is the sensor curve.</p></li>
@@ -448,7 +448,7 @@ with the smallest of the values.</p></li>
 </ol>
 </section>
 <section id="saving-the-new-brush">
-<h3>儲存新筆刷<a class="headerlink" href="#saving-the-new-brush" title="Permalink to this heading">¶</a></h3>
+<h3>儲存新筆刷<a class="headerlink" href="#saving-the-new-brush" title="本標頭的永久連結">¶</a></h3>
 <p>When you're satisfied, go to the upper left and select <span class="guilabel">Save New Brush Preset...</span> button.</p>
 <p>You will get the save preset dialog. Name the brush something like “My Preset”. Then, select <span class="guilabel">Load from Icon Library</span> to get the icon library. Choose a nice tool icon and press <span class="guilabel">OK</span>.</p>
 <p>The icon will be loaded into the mini scratch pad on the left. Now doodle a nice stroke next to it. If you feel you messed up, just go back to the icon library to load a new icon.</p>
@@ -463,12 +463,12 @@ with the smallest of the values.</p></li>
 </section>
 </section>
 <section id="sharing-brushes">
-<h2>與他人分享筆刷<a class="headerlink" href="#sharing-brushes" title="Permalink to this heading">¶</a></h2>
+<h2>與他人分享筆刷<a class="headerlink" href="#sharing-brushes" title="本標頭的永久連結">¶</a></h2>
 <p>Okay, so you've made a new brush and want to share it. There are several ways to share a brush preset.</p>
 <p>The recommended way to share brushes and presets is by using the <a class="reference internal" href="../reference_manual/resource_management.html#term-Resource-Bundle"><span class="xref std std-term">Resource Bundle</span></a> system. We have detailed instructions on how to use them on the <a class="reference internal" href="../reference_manual/resource_management.html#resource-management"><span class="std std-ref">resource management page</span></a>.</p>
 <p>However, there are various old-fashioned ways of sharing brushes that can be useful when importing and loading very old packs:</p>
 <section id="sharing-a-single-preset">
-<h3>分享單一筆刷預設<a class="headerlink" href="#sharing-a-single-preset" title="Permalink to this heading">¶</a></h3>
+<h3>分享單一筆刷預設<a class="headerlink" href="#sharing-a-single-preset" title="本標頭的永久連結">¶</a></h3>
 <p>There are three types of resources a single preset can take:</p>
 <ol class="arabic simple">
 <li><p>A <code class="docutils literal notranslate"><span class="pre">paintoppreset</span></code> file: This is the preset proper, with the icon and the curves stored inside.</p></li>
@@ -479,17 +479,17 @@ with the smallest of the values.</p></li>
 <p>To find those resources, go to <span class="menuselection">Settings ‣ Manage Resources... ‣ Open Resource Folder</span>.</p>
 <p>There, the preset file will be inside <code class="docutils literal notranslate"><span class="pre">paintoppresets</span></code>, the brush tips inside <code class="docutils literal notranslate"><span class="pre">brushes</span></code> and the texture inside <code class="docutils literal notranslate"><span class="pre">patterns</span></code>.</p>
 <section id="importing-a-single-kpp-file">
-<h4>匯入單一筆刷 KPP 檔案：<a class="headerlink" href="#importing-a-single-kpp-file" title="Permalink to this heading">¶</a></h4>
+<h4>匯入單一筆刷 KPP 檔案：<a class="headerlink" href="#importing-a-single-kpp-file" title="本標頭的永久連結">¶</a></h4>
 <p>Now, if you want to use the single preset, you should go to the preset chooser on the <kbd class="kbd docutils literal notranslate">F6</kbd> key and press the folder icon there. This will give a file dialog. Navigate to the <code class="docutils literal notranslate"><span class="pre">KPP</span></code> file and open it to import it.</p>
 <p>If there are brush tips and patterns coming with the file, do the same with pattern via the pattern docker, and for the brush-tip go to the settings drop-down (<kbd class="kbd docutils literal notranslate">F5</kbd>) and then go to the <span class="guilabel">brush-tip</span> option. There, select predefined brush, and then the <span class="guilabel">import</span> button to call up the file dialog.</p>
 <p>You can also use the import button in <span class="menuselection">Settings ‣ Manage Resources...</span>.</p>
 </section>
 </section>
 <section id="sharing-via-zip-old-fashioned">
-<h3>以 ZIP 壓縮檔分享（舊式做法）<a class="headerlink" href="#sharing-via-zip-old-fashioned" title="Permalink to this heading">¶</a></h3>
+<h3>以 ZIP 壓縮檔分享（舊式做法）<a class="headerlink" href="#sharing-via-zip-old-fashioned" title="本標頭的永久連結">¶</a></h3>
 <p>Sharing via ZIP should be replaced with resource bundles, but older brush packs are stored in ZIP files.</p>
 <section id="using-a-zip-with-the-relevant-files">
-<h4>使用 ZIP 壓縮檔中的檔案：<a class="headerlink" href="#using-a-zip-with-the-relevant-files" title="Permalink to this heading">¶</a></h4>
+<h4>使用 ZIP 壓縮檔中的檔案：<a class="headerlink" href="#using-a-zip-with-the-relevant-files" title="本標頭的永久連結">¶</a></h4>
 <ol class="arabic simple">
 <li><p>Go to <span class="menuselection">Settings ‣ Manage Resources... ‣ Open Resource Folder</span> to open the resource folder.</p></li>
 <li><p>Then, open up the ZIP file.</p></li>

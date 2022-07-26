@@ -21,8 +21,8 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2022-07-20T15:55:45" />
-  <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta property="og:article:modified_time" content="2022-07-26T01:56:52" />
+  <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
   
   
@@ -59,7 +59,7 @@
     <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜尋" href="../search.html" />
-    <link rel="next" title="Adjust" href="filters/adjust.html" />
+    <link rel="next" title="色彩調整" href="filters/adjust.html" />
     <link rel="prev" title="Dr. MinGW 除錯工具" href="dr_minw_debugger.html" /> 
 
   
@@ -138,7 +138,7 @@
 <li class="toctree-l2"><a class="reference internal" href="dockers.html">工具面板</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dr_minw_debugger.html">Dr. MinGW 除錯工具</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">濾鏡</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="filters/adjust.html">Adjust</a></li>
+<li class="toctree-l3"><a class="reference internal" href="filters/adjust.html">色彩調整</a></li>
 <li class="toctree-l3"><a class="reference internal" href="filters/artistic.html">Artistic</a></li>
 <li class="toctree-l3"><a class="reference internal" href="filters/blur.html">Blur</a></li>
 <li class="toctree-l3"><a class="reference internal" href="filters/colors.html">Color</a></li>
@@ -260,14 +260,14 @@
            <div itemprop="articleBody">
             
   <section id="filters">
-<span id="id1"></span><h1>濾鏡<a class="headerlink" href="#filters" title="Permalink to this heading">¶</a></h1>
-<p>Filters are little scripts or operations you can run on your drawing. You can visualize them as real-world camera filters that can make a photo darker or blurrier. Or perhaps like a coffee filter, where only water and coffee gets through, and the ground coffee stays behind.</p>
-<p>Filters are unique to digital painting in terms of complexity, and their part of the painting pipeline. Some artists only use filters to adjust their colors a little. Others, using Filter Layers and Filter Masks use them to dynamically update a part of an image to be filtered. This way, they can keep the original underneath without changing the original image. This is a part of a technique called 'non-destructive' editing.</p>
+<span id="id1"></span><h1>濾鏡<a class="headerlink" href="#filters" title="本標頭的永久連結">¶</a></h1>
+<p>濾鏡是一些可以套用到畫作上的指令碼或操作。你可以當它們是類似於現實中附加在相機鏡頭上的濾鏡，能夠把相片變得暗淡或模糊。又或許像咖啡過濾紙一樣，只容許水和咖啡通過，而咖啡豆則停留在上方。</p>
+<p>濾鏡對於數位繪圖而言，其複雜程度，和在工作流程中所佔的位置，都是有點獨特的。有些畫家只會用濾鏡為畫作稍微調校一下色彩，有些則會利用濾鏡圖層和濾鏡遮罩，以不改變原圖、可以保留本來圖像的方式，動態地更新圖像的一部份。後面這種技巧稱為「非破壞性編輯」。</p>
 <p>濾鏡可以經由<span class="guilabel">濾鏡</span>選單啟動。Krita 帶有兩種濾鏡：內置濾鏡以及 G'MIC 濾鏡。</p>
-<p>Internal filters are often multithreaded, and can thus be used with the <a class="reference internal" href="brushes/brush_engines/filter_brush_engine.html#filter-brush-engine"><span class="std std-ref">濾鏡筆刷工具</span></a> or the <a class="reference internal" href="layers_and_masks/filter_layers.html#filter-layers"><span class="std std-ref">濾鏡圖層</span></a> and <a class="reference internal" href="layers_and_masks/filter_masks.html#filter-masks"><span class="std std-ref">濾鏡遮罩</span></a>.</p>
+<p>內置的濾鏡一般支援多執行緒，因此可以和<a class="reference internal" href="brushes/brush_engines/filter_brush_engine.html#filter-brush-engine"><span class="std std-ref">濾鏡筆刷工具</span></a>，<a class="reference internal" href="layers_and_masks/filter_layers.html#filter-layers"><span class="std std-ref">濾鏡圖層</span></a>或是<a class="reference internal" href="layers_and_masks/filter_masks.html#filter-masks"><span class="std std-ref">濾鏡遮罩</span></a>一起使用。</p>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="filters/adjust.html">Adjust</a></li>
+<li class="toctree-l1"><a class="reference internal" href="filters/adjust.html">色彩調整</a></li>
 <li class="toctree-l1"><a class="reference internal" href="filters/artistic.html">Artistic</a></li>
 <li class="toctree-l1"><a class="reference internal" href="filters/blur.html">Blur</a></li>
 <li class="toctree-l1"><a class="reference internal" href="filters/colors.html">Color</a></li>
@@ -289,7 +289,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="filters/adjust.html" class="btn btn-neutral float-right" title="Adjust" accesskey="n" rel="next"> <!-- 下一個 --> <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="filters/adjust.html" class="btn btn-neutral float-right" title="色彩調整" accesskey="n" rel="next"> <!-- 下一個 --> <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="dr_minw_debugger.html" class="btn btn-neutral" title="Dr. MinGW 除錯工具" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- 上一個  -->  </a>

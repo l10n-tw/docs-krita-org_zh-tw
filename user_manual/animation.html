@@ -21,8 +21,8 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2022-07-20T15:55:45" />
-  <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta property="og:article:modified_time" content="2022-07-26T01:56:52" />
+  <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 <meta content="Krita 動畫工作流程的詳細指南。" name="description" property="og:description" />
 
   
@@ -250,11 +250,11 @@
            <div itemprop="articleBody">
             
   <span class="target" id="index-0"></span><section id="animation-with-krita">
-<span id="animation"></span><h1>用 Krita 製作動畫<a class="headerlink" href="#animation-with-krita" title="Permalink to this heading">¶</a></h1>
+<span id="animation"></span><h1>用 Krita 製作動畫<a class="headerlink" href="#animation-with-krita" title="本標頭的永久連結">¶</a></h1>
 <p>Thanks to the 2015 Kickstarter, <strong class="program">Krita</strong> has animation. In specific, <strong class="program">Krita</strong> has frame-by-frame raster animation.</p>
 <p>To access the animation features, the easiest way is to change your workspace to Animation. This will make the animation dockers and workflow appear.</p>
 <section id="workflow">
-<h2>Workflow<a class="headerlink" href="#workflow" title="Permalink to this heading">¶</a></h2>
+<h2>Workflow<a class="headerlink" href="#workflow" title="本標頭的永久連結">¶</a></h2>
 <p>In traditional animation workflow, what you do is that you make <a class="reference internal" href="../reference_manual/dockers/animation_timeline.html#term-Keyframe"><span class="xref std std-term">Keyframes</span></a>, which contain the important poses, and then draw frames in between (<em class="dfn">tweening</em> in highly sophisticated animator's jargon).</p>
 <p>For this workflow, there are three important dockers:</p>
 <ol class="arabic simple">
@@ -290,10 +290,10 @@
 <p>This may all seem a little complicated, but if your computer doesn't have a lot of resources, you have got to be resourceful yourself!</p>
 </section>
 <section id="introduction-to-animation-how-to-make-a-walk-cycle">
-<h2>Introduction to animation: How to make a walk cycle<a class="headerlink" href="#introduction-to-animation-how-to-make-a-walk-cycle" title="Permalink to this heading">¶</a></h2>
+<h2>Introduction to animation: How to make a walk cycle<a class="headerlink" href="#introduction-to-animation-how-to-make-a-walk-cycle" title="本標頭的永久連結">¶</a></h2>
 <p>The best way to get to understand all these different parts is to actually use them. Walk cycles are considered the most basic form of a full animation, because of all the different parts involved with them. Therefore, going over how one makes a walk cycle should serve as a good introduction.</p>
 <section id="setup">
-<h3>Setup<a class="headerlink" href="#setup" title="Permalink to this heading">¶</a></h3>
+<h3>Setup<a class="headerlink" href="#setup" title="本標頭的永久連結">¶</a></h3>
 <p>First, we make a new file. On the first tab, we type in a nice ratio like 1280×1024, set the dpi to 72 (we're making this for screens after all) and title the document 'walk cycle'.</p>
 <p>In the second tab, we choose a nice background color, and set the background to canvas-color. This means that Krita will automatically fill in any transparent bits with the background color. You can change this in <span class="menuselection">Image ‣ Image Properties</span>. This is very useful for animation, as the layer you do animation on <strong>must</strong> be semi-transparent to get <em class="dfn">onion skinning</em> working.</p>
 <div class="admonition note">
@@ -311,7 +311,7 @@
 </figure>
 </section>
 <section id="animating">
-<h3>Animating<a class="headerlink" href="#animating" title="Permalink to this heading">¶</a></h3>
+<h3>Animating<a class="headerlink" href="#animating" title="本標頭的永久連結">¶</a></h3>
 <p>Make sure there's two transparent layers setup in the layer docker. You can add a new layer by pressing the <span class="guilabel">+</span> or by pressing <kbd class="kbd docutils literal notranslate">ins</kbd>. Let's name the bottom one 'environment' and the top <code class="docutils literal notranslate"><span class="pre">walkcycle</span></code> by double-clicking their names in the layer docker.</p>
 <figure class="align-default">
 <img alt="Layout of the layer stack." src="../_images/Introduction_to_animation_02.png" />
@@ -379,7 +379,7 @@ Notice also how the legs have been made semi-transparent. This isn't necessary w
 <img alt="../_images/animation_walkcycle_2021_4_frames.gif" src="../_images/animation_walkcycle_2021_4_frames.gif" />
 </section>
 <section id="expanding-upon-your-rough-walk-cycle">
-<h3>Expanding upon your rough walk cycle<a class="headerlink" href="#expanding-upon-your-rough-walk-cycle" title="Permalink to this heading">¶</a></h3>
+<h3>Expanding upon your rough walk cycle<a class="headerlink" href="#expanding-upon-your-rough-walk-cycle" title="本標頭的永久連結">¶</a></h3>
 <img alt="../_images/Introduction_to_animation_13.png" src="../_images/Introduction_to_animation_13.png" />
 <p>You can quickly make some space by the <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Alt</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">drag</kbd></kbd> shortcut on any frame. This'll move that frame and all others after it
 in one go. More efficient for us, however, is to select all frames, <img alt="滑鼠右鍵" src="../_images/Krita_mouse_right.png" /> them, and then select <span class="menuselection">Hold frames ‣ Insert Hold Frame</span>, which will insert an empty space or <em class="dfn">Hold Frame</em> in between each <em class="dfn">Keyframe</em>.</p>
@@ -409,7 +409,7 @@ in one go. More efficient for us, however, is to select all frames, <img alt="�
 </figure>
 </section>
 <section id="animating-with-multiple-layers">
-<h3>Animating with multiple layers<a class="headerlink" href="#animating-with-multiple-layers" title="Permalink to this heading">¶</a></h3>
+<h3>Animating with multiple layers<a class="headerlink" href="#animating-with-multiple-layers" title="本標頭的永久連結">¶</a></h3>
 <p>Okay, our walk cycle is missing some hands, let's add them on a separate
 layer. So we make a new layer, and name it hands and...</p>
 <img alt="../_images/Introduction_to_animation_16.png" src="../_images/Introduction_to_animation_16.png" />
@@ -425,13 +425,13 @@ timeline by clicking the <img alt="pintimeline" src="../_images/reference_images
 <img alt="../_images/Introduction_to_animation_18.png" src="../_images/Introduction_to_animation_18.png" />
 </section>
 <section id="exporting">
-<h3>Exporting<a class="headerlink" href="#exporting" title="Permalink to this heading">¶</a></h3>
+<h3>Exporting<a class="headerlink" href="#exporting" title="本標頭的永久連結">¶</a></h3>
 <p>When you are done, select <span class="menuselection">File ‣ Render Animation</span>. To render to a video file, you'll need a program called <strong class="program">FFmpeg</strong>. To learn more, please read <a class="reference internal" href="../reference_manual/render_animation.html#render-animation"><span class="std std-ref">繪製動畫</span></a>.</p>
 <p>Enjoy your walk cycle!</p>
 <img alt="../_images/Introduction_to_animation_walkcycle_02.gif" src="../_images/Introduction_to_animation_walkcycle_02.gif" />
 </section>
 <section id="animating-with-transform-masks">
-<h3>Animating with transform masks<a class="headerlink" href="#animating-with-transform-masks" title="Permalink to this heading">¶</a></h3>
+<h3>Animating with transform masks<a class="headerlink" href="#animating-with-transform-masks" title="本標頭的永久連結">¶</a></h3>
 <div class="versionadded">
 <p><span class="versionmodified added">在 5.0 版本新加入.</span></p>
 </div>

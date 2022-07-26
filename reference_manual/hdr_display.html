@@ -21,8 +21,8 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2022-07-20T15:55:45" />
-  <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta property="og:article:modified_time" content="2022-07-26T01:56:52" />
+  <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 <meta content="How to configure Krita for HDR displays." name="description" />
 
   
@@ -255,7 +255,7 @@
            <div itemprop="articleBody">
             
   <section id="hdr-display">
-<span id="index-0"></span><span id="id1"></span><h1>HDR 顯示器<a class="headerlink" href="#hdr-display" title="Permalink to this heading">¶</a></h1>
+<span id="index-0"></span><span id="id1"></span><h1>HDR 顯示器<a class="headerlink" href="#hdr-display" title="本標頭的永久連結">¶</a></h1>
 <div class="versionadded">
 <p><span class="versionmodified added">在 4.2 版本新加入.</span></p>
 </div>
@@ -265,18 +265,18 @@
 </div>
 <p>Since 4.2 Krita can not just edit high bitdepths images, but also render them on screen in a way that an HDR capable setup can show them as HDR images. HDR images, to put it simply, are images with really bright colors. They do this by having a very large range of colors available, 16 bit and higher, and to understand the upper range of the available colors as brighter than the brightest white most screens can show. HDR screens, in turn, are screens which can show brighter colors than most screens can show, and can thus show the super-bright colors in these HDR images. This allows for images where bright things, like fire, sunsets, magic, look really spectacular! It also shows more subtle shadows and has a better contrast in lower color values, but this requires a sharper eye.</p>
 <section id="configuring-hdr">
-<h2>設定 HDR<a class="headerlink" href="#configuring-hdr" title="Permalink to this heading">¶</a></h2>
+<h2>設定 HDR<a class="headerlink" href="#configuring-hdr" title="本標頭的永久連結">¶</a></h2>
 <p>Krita cannot show HDR with any given monitor, you will need an HDR capable setup. HDR capable setups are screens which can show more than 100 nits, preferably a value like 1000 and can show the rec 2020 PQ space. You will need to have the appropriate display cable(otherwise the values are just turned into regular SDR) and a graphics card which supports HDR, as well as suitable drivers. You then also need to configure the system settings for HDR.</p>
 <p>If you can confirm that the system understands your setup as an HDR setup, you can continue your <a class="reference internal" href="preferences/display_settings.html#hdr-display-settings"><span class="std std-ref">configuration in Krita</span></a>, in <span class="menuselection">Settings ‣ Configure Krita... ‣ Display</span>. There, you need to select the preferred surface, which should be as close to the display format as possible. Then restart Krita.</p>
 </section>
 <section id="painting-in-hdr">
-<h2>用 HDR 繪畫<a class="headerlink" href="#painting-in-hdr" title="Permalink to this heading">¶</a></h2>
+<h2>用 HDR 繪畫<a class="headerlink" href="#painting-in-hdr" title="本標頭的永久連結">¶</a></h2>
 <p>To create a proper HDR image, you will need to make a canvas using a profile with rec 2020 gamut and a linear TRC. <span class="guilabel">Rec2020-elle-V4-g10.icc</span> is the one we ship by default.</p>
 <p>HDR images are standardized to use the Rec2020 gamut, and the PQ TRC. However, a linear TRC is easier to edit images in, so we don't convert to PQ until we're satisfied with our image.</p>
 <p>For painting in this new exciting color space, check the <a class="reference internal" href="../general_concepts/colors/scene_linear_painting.html#scene-linear-painting"><span class="std std-ref">場景線性作畫</span></a> page, which covers things like selecting colors, gotchas, which filters work and cool workflows.</p>
 </section>
 <section id="exporting-hdr">
-<h2>匯出 HDR<a class="headerlink" href="#exporting-hdr" title="Permalink to this heading">¶</a></h2>
+<h2>匯出 HDR<a class="headerlink" href="#exporting-hdr" title="本標頭的永久連結">¶</a></h2>
 <p>Now for saving and loading.</p>
 <p>The KRA file format can save the floating point image just fine, and is thus a good working file format.</p>
 <p>For sharing with other image editors, <a class="reference internal" href="../general_concepts/file_formats/file_exr.html#file-exr"><span class="std std-ref">*.exr</span></a> is recommended. For sharing with the web we currently only have <a class="reference internal" href="../general_concepts/file_formats/file_png.html#file-png"><span class="std std-ref">HDR PNG export</span></a>, but there's currently very little support for this standard. In the future we hope to see heif and avif support.</p>
@@ -296,7 +296,7 @@
 </ul>
 </section>
 <section id="hdr-metadata">
-<h2>HDR 中繼資料<a class="headerlink" href="#hdr-metadata" title="Permalink to this heading">¶</a></h2>
+<h2>HDR 中繼資料<a class="headerlink" href="#hdr-metadata" title="本標頭的永久連結">¶</a></h2>
 <p>This is in the render animation screen. It configures the SMPTE ST.2086 or Master Display Color Volumes metadata and is required for the HDR video to be transferred properly to the screen by video players and the cable.</p>
 <dl>
 <dt>Master Display</dt><dd><p>The colorspace characteristics of the display on for which your image was made, typically also the display that you used to paint the image with. There are two default values for common display color spaces, and a custom value, which will enable the <span class="guilabel">Display</span> options.</p>

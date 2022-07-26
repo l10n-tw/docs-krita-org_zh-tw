@@ -21,8 +21,8 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2022-07-20T15:55:45" />
-  <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta property="og:article:modified_time" content="2022-07-26T01:56:52" />
+  <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 <meta content="在 Krita 中使用剪裁遮罩的介紹。" lang="en" name="description" xml:lang="en" />
 
   
@@ -227,7 +227,7 @@
            <div itemprop="articleBody">
             
   <section id="clipping-masks-and-alpha-inheritance">
-<span id="index-0"></span><span id="id1"></span><h1>遮罩與 Alpha 繼承<a class="headerlink" href="#clipping-masks-and-alpha-inheritance" title="Permalink to this heading">¶</a></h1>
+<span id="index-0"></span><span id="id1"></span><h1>遮罩與 Alpha 繼承<a class="headerlink" href="#clipping-masks-and-alpha-inheritance" title="本標頭的永久連結">¶</a></h1>
 <p>Krita 沒有像 Photoshop 那樣的遮罩功能。 這是因為 Krita ，和它截然不同，群組圖層不是無意義的群組再一起。 相反的，在 Krita 中，群組圖層是與其他圖層順序分開合成的，然後合成將結果計算回上層結構。 換句話說， Krita 在有群組圖層時，圖層不只是簡單的上下堆疊計算而已。</p>
 <a class="reference internal image-reference" href="../_images/Composition_animation.gif"><img alt="動畫顯示群組在其他圖層組合發生之前就進行組合計算。" src="../_images/Composition_animation.gif" style="width: 800px;" /></a>
 <p>當群組圖層使用穿透模式時例外，但這也表示在該開啟**穿透**群組圖層中的其他圖層對 alpha 繼承也無法正常工作。</p>

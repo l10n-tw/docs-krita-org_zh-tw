@@ -21,8 +21,8 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2022-07-20T15:55:45" />
-  <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta property="og:article:modified_time" content="2022-07-26T01:56:52" />
+  <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 <meta content="設定 Krita 以使用眼球追蹤。 " name="description" />
 <meta content="- H. Turgut Uyar &lt;hturgut&#64;uyar.info&gt; " name="authors" />
 <meta content="GNU free documentation license 1.3 or later." name="license" />
@@ -235,7 +235,7 @@
            <div itemprop="articleBody">
             
   <section id="an-example-setup-for-using-krita-with-an-eye-tracker">
-<h1>設定 Krita 以使用眼球追蹤技術的示例<a class="headerlink" href="#an-example-setup-for-using-krita-with-an-eye-tracker" title="Permalink to this heading">¶</a></h1>
+<h1>設定 Krita 以使用眼球追蹤技術的示例<a class="headerlink" href="#an-example-setup-for-using-krita-with-an-eye-tracker" title="本標頭的永久連結">¶</a></h1>
 <div class="admonition attention">
 <p class="admonition-title">注意</p>
 <p>這不是參考文件。 只是一個用戶的體驗。 當使用不同的眼球追蹤設備或不同的控制軟體時，該資訊可能不適用。</p>
@@ -249,13 +249,13 @@
 <li><p>切換模式不會自動啟動操作。 為此，需要採取額外的動作。 在範例中，這個動作是“駐停”。 例如，要啟動一個工具，切換到左側雙擊模式，然後停留在工具的圖標上雙擊。 調整停留時間是一個重要的權衡：更短的停留時間允許更快的工作，但也更容易出錯。</p></li>
 </ul>
 <section id="requirements">
-<h2>要求<a class="headerlink" href="#requirements" title="Permalink to this heading">¶</a></h2>
+<h2>要求<a class="headerlink" href="#requirements" title="本標頭的永久連結">¶</a></h2>
 <p>除了擁有眼球追蹤設備的*明顯*要求外，您還需要一個控製程式，讓您與設備進行互動。 當獲得設備時，設備原廠可能就會附有這樣的程式，但該程式可能不足以將 Krita 連動一起使用。</p>
 <p>這些程式的基本功能之一是模擬滑鼠點擊。 在範例中，該程式提供了一個懸停選單，其中包括用於在滑鼠左鍵/右鍵和單擊/雙擊之間切換模式的大按鈕。 選擇模式後，懸停選單可以折疊起來，為軟體留出更多作畫空間。</p>
 <p>為了使它們更易於設定和使用，某些程式僅包含單擊等基本模式。 這對於許多時下流行的應用程式（例如電子郵件代理和瀏覽器）來說已經足夠了，但是對於 Krita，需要拖放模式才能進行繪圖。 如果提供的控制軟體不支持此模式（通常稱為“滑鼠模擬”），您可以聯繫設備製造商尋求幫助，或尋找開源的解決方案。</p>
 </section>
 <section id="starting-krita">
-<h2>啟動 Krita<a class="headerlink" href="#starting-krita" title="Permalink to this heading">¶</a></h2>
+<h2>啟動 Krita<a class="headerlink" href="#starting-krita" title="本標頭的永久連結">¶</a></h2>
 <p>基本上，將控製程式設定為左鍵雙擊模式並停留在桌面上的 Krita 圖標上就足以啟動 Krita，但這樣做存在一些問題：</p>
 <ul class="simple">
 <li><p>啟動時，Krita 會要求您選擇一個模板。 您可能不想每次都要設定一次，而只想從空白模板開始。</p></li>
@@ -286,7 +286,7 @@
 <p>為了防止這些問題，如果使用者訓練自己注視 ( 因為是眼球追蹤 ) 一些沒有遮擋的地方（例如桌面上的空白區域），直到加載 Krita，這將有所幫助。</p>
 </section>
 <section id="layout">
-<h2>排版<a class="headerlink" href="#layout" title="Permalink to this heading">¶</a></h2>
+<h2>排版<a class="headerlink" href="#layout" title="本標頭的永久連結">¶</a></h2>
 <p>由於界面元素需要比較大空間，因此必須更有效的使用畫面區域。 在全螢幕模式下運行並關閉些未使用的選單和工具欄是可以採取的手段。 這是我們介面佈局的螢幕截圖：</p>
 <a class="reference internal image-reference" href="../_images/eyetracker_layout_screenshot.png"><img alt="與眼球追蹤設備配合使用時 Krita 的螢幕截圖。" class="align-center" src="../_images/eyetracker_layout_screenshot.png" style="width: 800px;" /></a>
 <p>你應該會想把需要的所有功能放在可以輕鬆按的地方。 對於我們的圖紙，最基本項目是畫筆和顏色。 所以我們決定為這些放置永久介面。</p>
@@ -303,7 +303,7 @@ it will be easily accessible but where it will not interfere with Krita.
 On the screenshot you can see it at the left edge of the screen.</p>
 </section>
 <section id="summary">
-<h2>概括<a class="headerlink" href="#summary" title="Permalink to this heading">¶</a></h2>
+<h2>概括<a class="headerlink" href="#summary" title="本標頭的永久連結">¶</a></h2>
 <p>概略的工作流程如下所敘述。</p>
 <p>To start Krita:</p>
 <ol class="arabic simple">

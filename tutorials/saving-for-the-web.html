@@ -21,8 +21,8 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2022-07-20T15:55:45" />
-  <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta property="og:article:modified_time" content="2022-07-26T01:56:52" />
+  <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 <meta content="Tutorial for saving images for the web." lang="en" name="description" xml:lang="en" />
 
   
@@ -235,7 +235,7 @@
            <div itemprop="articleBody">
             
   <section id="saving-for-the-web">
-<span id="id1"></span><h1>轉存成通用的網路傳播格式<a class="headerlink" href="#saving-for-the-web" title="Permalink to this heading">¶</a></h1>
+<span id="id1"></span><h1>轉存成通用的網路傳播格式<a class="headerlink" href="#saving-for-the-web" title="本標頭的永久連結">¶</a></h1>
 <p>Krita's default saving format is the <a class="reference internal" href="../general_concepts/file_formats/file_kra.html#file-kra"><span class="std std-ref">*.kra</span></a> format. This format saves everything Krita can manipulate about an image: Layers, Filters, Assistants, Masks, Color spaces, etc. However, that's a lot of data, so <code class="docutils literal notranslate"><span class="pre">*.kra</span></code> files are pretty big. This doesn't make them very good for uploading to the internet. Imagine how many people's data-plans hit the limit if they only could look at <code class="docutils literal notranslate"><span class="pre">*.kra</span></code> files! So instead, we optimise our images for the web.</p>
 <p>There are a few steps involved:</p>
 <ol class="arabic simple">
@@ -247,18 +247,18 @@
 <li><p>Save as a web-safe image format. There's three that are especially recommended:</p></li>
 </ol>
 <section id="jpg">
-<h2>JPG<a class="headerlink" href="#jpg" title="Permalink to this heading">¶</a></h2>
+<h2>JPG<a class="headerlink" href="#jpg" title="本標頭的永久連結">¶</a></h2>
 <p>Use this for images with a lot of different colors, like paintings.</p>
 </section>
 <section id="png">
-<h2>PNG<a class="headerlink" href="#png" title="Permalink to this heading">¶</a></h2>
+<h2>PNG<a class="headerlink" href="#png" title="本標頭的永久連結">¶</a></h2>
 <p>Use this for images with few colors or which are black and white, like comics and pixel-art. Select <span class="guilabel">Save as indexed PNG, if possible</span> to optimise even more.</p>
 </section>
 <section id="gif">
-<h2>GIF<a class="headerlink" href="#gif" title="Permalink to this heading">¶</a></h2>
+<h2>GIF<a class="headerlink" href="#gif" title="本標頭的永久連結">¶</a></h2>
 <p>Only use this for animation (will be supported this year) or images with a super low color count, because they will get indexed.</p>
 <section id="saving-with-transparency">
-<h3>保存透明度<a class="headerlink" href="#saving-with-transparency" title="Permalink to this heading">¶</a></h3>
+<h3>保存透明度<a class="headerlink" href="#saving-with-transparency" title="本標頭的永久連結">¶</a></h3>
 <img alt="../_images/Save_with_transparency.png" src="../_images/Save_with_transparency.png" />
 <p>Saving with transparency is only possible with GIF and PNG. First, make sure you see the transparency checkers (this can be done by simply hiding the bottom layers, changing the projection color in <span class="menuselection">Image ‣ Image Background Color and Transparency...</span>, or by using <span class="menuselection">Filters ‣ Colors ‣ Color to Alpha...</span>). Then, save as PNG and tick <strong>Store alpha channel (transparency)</strong></p>
 <p>Save your image, upload, and show it off!</p>

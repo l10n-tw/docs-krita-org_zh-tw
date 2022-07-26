@@ -21,8 +21,8 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2022-07-20T15:55:45" />
-  <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta property="og:article:modified_time" content="2022-07-26T01:56:52" />
+  <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 <meta content="Guide for optimizing Krita." name="description" />
 
   
@@ -259,9 +259,9 @@
            <div itemprop="articleBody">
             
   <section id="optimizing-tips-and-tools-for-krita">
-<h1>Optimizing tips and tools for Krita<a class="headerlink" href="#optimizing-tips-and-tools-for-krita" title="Permalink to this heading">¶</a></h1>
+<h1>Optimizing tips and tools for Krita<a class="headerlink" href="#optimizing-tips-and-tools-for-krita" title="本標頭的永久連結">¶</a></h1>
 <section id="hot-spots">
-<h2>Hot Spots<a class="headerlink" href="#hot-spots" title="Permalink to this heading">¶</a></h2>
+<h2>Hot Spots<a class="headerlink" href="#hot-spots" title="本標頭的永久連結">¶</a></h2>
 <ul class="simple">
 <li><p>thumbnails are recalculated a lot</p></li>
 <li><p>the histogram docker calculates even when hidden</p></li>
@@ -275,11 +275,11 @@
 </ul>
 </section>
 <section id="tools">
-<h2>Tools<a class="headerlink" href="#tools" title="Permalink to this heading">¶</a></h2>
+<h2>Tools<a class="headerlink" href="#tools" title="本標頭的永久連結">¶</a></h2>
 <section id="valgrind">
-<h3>Valgrind<a class="headerlink" href="#valgrind" title="Permalink to this heading">¶</a></h3>
+<h3>Valgrind<a class="headerlink" href="#valgrind" title="本標頭的永久連結">¶</a></h3>
 <section id="tips">
-<h4>Tips<a class="headerlink" href="#tips" title="Permalink to this heading">¶</a></h4>
+<h4>Tips<a class="headerlink" href="#tips" title="本標頭的永久連結">¶</a></h4>
 <p>You can tell callgrind to focus only on the part of the code you want to optimize. This results in cleaner data.  For example, you may want to only monitor the performance when drawing a stroke. Unless the thing you're trying to optimize is the program startup, you can tell valgrind to run with the logging, or instrumentation, turned off at start:</p>
 <p><code class="docutils literal notranslate"><span class="pre">valgrind</span>&#160; <span class="pre">--tool=callgrind</span> <span class="pre">--instr-atstart=no</span> <span class="pre">krita</span></code></p>
 <p>Instrumentation can then be activated and deactivated with callgrind_control. To begin performance monitoring:</p>
@@ -295,15 +295,15 @@
 </section>
 </section>
 <section id="sysprof">
-<h3>Sysprof<a class="headerlink" href="#sysprof" title="Permalink to this heading">¶</a></h3>
+<h3>Sysprof<a class="headerlink" href="#sysprof" title="本標頭的永久連結">¶</a></h3>
 </section>
 <section id="mutrace">
-<h3>mutrace<a class="headerlink" href="#mutrace" title="Permalink to this heading">¶</a></h3>
+<h3>mutrace<a class="headerlink" href="#mutrace" title="本標頭的永久連結">¶</a></h3>
 <p><a class="reference external" href="http://0pointer.de/blog/projects/mutrace.html">mutrace</a> is a tool that count how much time is spend waiting for a mutex to unlock.</p>
 </section>
 </section>
 <section id="easy-optimization">
-<h2>Easy optimization<a class="headerlink" href="#easy-optimization" title="Permalink to this heading">¶</a></h2>
+<h2>Easy optimization<a class="headerlink" href="#easy-optimization" title="本標頭的永久連結">¶</a></h2>
 <p>As soon as you see slow code, try to have a look at the code to see if we
 aren't creating a lot of unnecesserary objects, 90% of the time slow code is
 caused by this (the remain 10% are often caused by a lot of access to the
@@ -361,7 +361,7 @@ iterations, this is expensive as hell.</p>
 </div></blockquote>
 </section>
 <section id="vector-instructions">
-<h2>Vector instructions<a class="headerlink" href="#vector-instructions" title="Permalink to this heading">¶</a></h2>
+<h2>Vector instructions<a class="headerlink" href="#vector-instructions" title="本標頭的永久連結">¶</a></h2>
 <p>Krita takes heavy advantage of the <a class="reference external" href="https://github.com/VcDevel/Vc">Vc</a> library to speed up its brush strokes with CPU vector instructions.  If you are planning to work with that library, it is worth reading through its documentation.</p>
 <p>There are more general introductions to what vector instructions are for, and how they work here.</p>
 <blockquote>
@@ -374,7 +374,7 @@ iterations, this is expensive as hell.</p>
 </div></blockquote>
 </section>
 <section id="profile-guided-optimization">
-<h2>Profile guided optimization<a class="headerlink" href="#profile-guided-optimization" title="Permalink to this heading">¶</a></h2>
+<h2>Profile guided optimization<a class="headerlink" href="#profile-guided-optimization" title="本標頭的永久連結">¶</a></h2>
 <p>Profile guided optimization is something else though. It is a special way of compiling and linking, that the compiler and linker use profiling information to know how best to optimize the code. So code that is used a lot is compiled with -O3 (the most optimizations), while code that is not used a lot gets -Os (to take less space), and so forth. This is a very useful technique that was not available on Linux until last year, and the news today is that Firefox now builds properly with it and there is a nice noticeable speed improvement for Linux users.</p>
 <dl class="simple">
 <dt>source:</dt><dd><p><a class="reference external" href="https://linux.slashdot.org/comments.pl?sid=2117150&amp;cid=35987784">https://linux.slashdot.org/comments.pl?sid=2117150&amp;cid=35987784</a></p>
@@ -389,7 +389,7 @@ iterations, this is expensive as hell.</p>
 </div>
 </section>
 <section id="links">
-<h2>Links<a class="headerlink" href="#links" title="Permalink to this heading">¶</a></h2>
+<h2>Links<a class="headerlink" href="#links" title="本標頭的永久連結">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://es.scribd.com/document/53483851/Design-for-Performance">Design for Performance</a>: great read about performance optimization (aimed at game developers, but many tricks apply for Krita).</p></li>
 <li><p><a class="reference external" href="http://goog-perftools.sourceforge.net/doc/tcmalloc.html">TCMalloc</a>: a malloc replacement which make faster allocation of objects by caching some reserved part of the memory.</p></li>

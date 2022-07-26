@@ -21,8 +21,8 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2022-07-20T15:55:45" />
-  <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta property="og:article:modified_time" content="2022-07-26T01:56:52" />
+  <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 <meta content="Krita 內的 JPEG XL 檔案格式。" name="description" />
 
   
@@ -251,16 +251,16 @@
            <div itemprop="articleBody">
             
   <section id="jxl">
-<span id="file-jxl"></span><span id="index-0"></span><h1>*.jxl<a class="headerlink" href="#jxl" title="Permalink to this heading">¶</a></h1>
+<span id="file-jxl"></span><span id="index-0"></span><h1>*.jxl<a class="headerlink" href="#jxl" title="本標頭的永久連結">¶</a></h1>
 <p>JPEG XL (<code class="docutils literal notranslate"><span class="pre">.jxl</span></code>) is a new royalty-free image file format. It supports <a class="reference internal" href="lossy_lossless.html#lossless-compression"><span class="std std-ref">lossy compression mode</span></a> designed for photographs similar to the <a class="reference internal" href="file_jpeg.html#file-jpeg"><span class="std std-ref">JPEG</span></a> file format, and also <a class="reference internal" href="lossy_lossless.html#lossless-compression"><span class="std std-ref">lossless compression mode</span></a> similar to formats like <a class="reference internal" href="file_png.html#file-png"><span class="std std-ref">PNG</span></a>. In addition, it also supports saving animations with multiple frames like <a class="reference internal" href="file_gif.html#file-gif"><span class="std std-ref">GIF</span></a>.</p>
 <p>When deciding between lossy and lossless compression modes, the same advice for <a class="reference internal" href="file_jpeg.html#file-jpeg"><span class="std std-ref">JPEG</span></a> and <a class="reference internal" href="file_png.html#file-png"><span class="std std-ref">PNG</span></a> applies. For images with a lot of gradients, like full scale paintings, lossy compression may work very well to produce small files with very little visual quality loss. But for images with a lot of sharp contrasts, like text and comic book styles, lossless compression is usually the better choice.</p>
 <p>For JPEG XL files using lossy compression, it is not advised to save over the same file multiple times. The lossy compression will cause the file to reduce in quality each time you save it. This is a fundamental problem with lossy compression methods. Instead you should use the lossless compression mode, or a working file format while you are working on the image.</p>
 <p>It is possible to losslessly transcode JPEG images into JPEG XL. Transcoding preserves the already-lossy compression data from the original JPEG image without any quality loss caused by re-encoding, while making the file size smaller than the original. To do this, you need to use specialized tools, for example the <strong class="program">cjxl</strong> command line tool from <a class="reference external" href="https://github.com/libjxl/libjxl">libjxl</a>, to perform the conversion. Beware that you <em>cannot</em> do this by opening the JPEG image in Krita and re-exporting it into JPEG XL. Krita always exports files from the raw pixel data, therefore this does <em>not</em> have the same effect as transcoding directly from JPEG to JPEG XL.</p>
 <p>Exporting animations from Krita as JPEG XL is supported, though this flattens all layers in the image. To export JPEG XL animations, use <a class="reference internal" href="../../reference_manual/main_menu/file_menu.html#term-Export..."><span class="xref std std-term">Export...</span></a> from the <a class="reference internal" href="../../reference_manual/main_menu/file_menu.html#file-menu"><span class="std std-ref">「檔案」選單</span></a> and then saving or exporting to a <code class="docutils literal notranslate"><span class="pre">.jxl</span></code> file. Make sure to enable <span class="guilabel">Save as animated JPEG XL</span> in the export options. This is different from <a class="reference internal" href="../../reference_manual/render_animation.html#render-animation"><span class="std std-ref">繪製動畫</span></a> in that it does not use FFmpeg.</p>
 <section id="export-options">
-<h2>Export Options<a class="headerlink" href="#export-options" title="Permalink to this heading">¶</a></h2>
+<h2>Export Options<a class="headerlink" href="#export-options" title="本標頭的永久連結">¶</a></h2>
 <section id="general">
-<h3>General<a class="headerlink" href="#general" title="Permalink to this heading">¶</a></h3>
+<h3>General<a class="headerlink" href="#general" title="本標頭的永久連結">¶</a></h3>
 <p>JPEG XL's encoder is designed to be fairly hands-off. Where in the case of JPEG you'd have to select the appropriate quality, JPEG XL instead tries to find the best quality for your image. What you instead choose is whether the preferred compression is <a class="reference internal" href="lossy_lossless.html#lossless-compression"><span class="std std-ref">lossy or lossless</span></a>, and how much effort the encoder should put into finding the best compression for your image, with more effort also meaning longer saving times.</p>
 <dl>
 <dt>Save as animated JPEG XL</dt><dd><p>JPEG XL has the ability to store small animations like <a class="reference internal" href="file_gif.html#file-gif"><span class="std std-ref">*.gif</span></a>. Its animation capabilities are simple though, and specifically designed for stylized content that doesn't have a lot of colors, like cel-animation. This is because JPEG XL doesn't have intra-frame prediction, which is the best way to store video files with a lot of colors like 3D animation, film and painterly animation. We recommend you try using video rendering for painterly animation instead.</p>
@@ -289,7 +289,7 @@
 </dl>
 </section>
 <section id="advanced">
-<h3>Advanced<a class="headerlink" href="#advanced" title="Permalink to this heading">¶</a></h3>
+<h3>Advanced<a class="headerlink" href="#advanced" title="本標頭的永久連結">¶</a></h3>
 <p>JPEG XL has two major ways of encoding data:</p>
 <dl class="simple">
 <dt>VarDCT</dt><dd><p>This one is in the same family of compression techniques as used by the original JPEG, and thus best for 'Natural' images, such as photographs and images with a lot of gradients and textures.</p>
@@ -445,7 +445,7 @@ This means that there will be less information stored, leading to a smaller file
 </dl>
 </section>
 <section id="metadata">
-<h3>Metadata<a class="headerlink" href="#metadata" title="Permalink to this heading">¶</a></h3>
+<h3>Metadata<a class="headerlink" href="#metadata" title="本標頭的永久連結">¶</a></h3>
 <dl class="simple">
 <dt>Store document metadata.</dt><dd><p>Whether to store any metadata at all. You can individually toggle <span class="guilabel">Exif</span>, <span class="guilabel">IPTC</span> and <span class="guilabel">XMP</span>.</p>
 </dd>
@@ -461,9 +461,11 @@ This means that there will be less information stored, leading to a smaller file
 <li><p><a class="reference external" href="https://jpegxl.info/">JPEG XL community website</a></p></li>
 <li><p><a class="reference external" href="https://github.com/libjxl/libjxl">libjxl -- JPEG XL reference implementation</a></p></li>
 </ul>
+<aside class="footnote-list brackets">
 <aside class="footnote brackets" id="id2" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
 <p><a class="reference external" href="https://github.com/libjxl/libjxl/blob/315247f000cff01fbc7ee2dd8252ea8fb82d0769/doc/benchmarking.md">Copied from this libjxl readme</a> as well as comments inside the libjxl source code.</p>
+</aside>
 </aside>
 </div>
 </section>
