@@ -49,8 +49,12 @@ Zooming
  Discrete zooming can be done through :kbd:`+` and :kbd:`-` keys. Using the :kbd:`Ctrl + Space` or :kbd:`Ctrl +` |mousemiddle| shortcuts can allow for direct zooming with the stylus.
 Mirroring
  You can mirror the view can be quickly done via :kbd:`M` key. Mirroring is a great technique that seasoned digital artists use to quickly review the composition of their work to ensure that it "reads" well, even when flipped horizontally.
+ 
+ .. versionadded:: 5.1 
+    If you use :kbd:`Alt + M`, mirroring will use the cursor position as the center to mirror around instead of the middle of the view. There is also a :guilabel:`Mirror Canvas` available in the :ref:`shortcut_settings` to assign a shortcut to.
+
 Rotating
- You can rotate the canvas without transforming. It can be done with the :kbd:`Ctrl + [` shortcut or :kbd:`4`key  and the other way with :kbd:`Ctrl + ]` shortcut or :kbd:`6` key. Quick mouse based rotation is the :kbd:`Shift + Space` and :kbd:`Shift +` |mousemiddle| shortcuts. To reset rotation use the :kbd:`5` key.
+ You can rotate the canvas without transforming. It can be done with the :kbd:`Ctrl + [` shortcut or :kbd:`4` key  and the other way with :kbd:`Ctrl + ]` shortcut or :kbd:`6` key. Quick mouse based rotation is the :kbd:`Shift + Space` and :kbd:`Shift +` |mousemiddle| shortcuts. To reset rotation use the :kbd:`5` key.
 
 You can also find these under :menuselection:`View --> Canvas`.
 
@@ -65,7 +69,7 @@ Dockers can be removed by clicking the **x** in the upper-right of the docker-wi
 
 Dockers, as the name implies, can be docked into the main interface. You can do this by dragging the docker to the sides of the canvas (or top or bottom if you prefer).
 
-Dockers contain many of the "hidden", and powerful, aspects of **Krita** that you will want to explore as you start delving deeper into the application.
+Dockers contain many of the "hidden", and powerful, aspects of :program:`Krita` that you will want to explore as you start delving deeper into the application.
 
 You can arrange the dockers in almost any permutation and combination according to the needs of your workflow, and then save these arrangements as Workspaces.
 
@@ -79,9 +83,13 @@ Krita uses these to control values like brush size, opacity, flow, Hue, Saturati
 
 The total range is represented from left to right and blue bar gives an indication of where in the possible range the current value is. Clicking anywhere, left or right, of that slider will change the current number to something lower (to the left) or higher (to the right).
 
-To input a specific number, |mouseright| the slider. A number can now be entered directly for even greater precision.
+To input a specific number, hold |mouseleft| on, or |mouseright| the slider. A number can now be entered directly for even greater precision.
 
 Pressing the :kbd:`Shift` key while dragging the slider changes the values at a smaller increment, and pressing the :kbd:`Ctrl` key while dragging the slider changes the value in whole numbers or multiples of 5.
+
+.. versionchanged:: 5.1
+
+   :kbd:`Shift` while dragging will now also enable "relative mode", which means that the cursor can be dragged outside the slider area.
 
 Toolbars
 --------
