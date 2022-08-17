@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 4.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-21 15:06+0000\n"
+"POT-Creation-Date: 2022-08-17 13:54+0000\n"
 "PO-Revision-Date: 2021-09-24 07:06+0000\n"
 "Last-Translator: BiseChen <bise.chen@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <http://weblate.slat.org/projects/krita-"
@@ -267,9 +267,10 @@ msgid ""
 "image."
 msgstr "這個設定可變更影像透明部分棋盤格的大小。"
 
-#: ../../reference_manual/preferences/display_settings.rst:78
-#: ../../reference_manual/preferences/display_settings.rst:86
-#: ../../reference_manual/preferences/display_settings.rst:98
+#: ../../reference_manual/preferences/display_settings.rst:79
+#: ../../reference_manual/preferences/display_settings.rst:84
+#: ../../reference_manual/preferences/display_settings.rst:94
+#: ../../reference_manual/preferences/display_settings.rst:106
 msgid "Color"
 msgstr "色彩"
 
@@ -277,57 +278,68 @@ msgstr "色彩"
 msgid "The user can set the colors for the checkers over here."
 msgstr "使用者可在這個項目設定棋盤格的顏色。"
 
-#: ../../reference_manual/preferences/display_settings.rst:81
-msgid "Move Checkers When Scrolling"
-msgstr "捲動時移動棋盤格背景"
-
-#: ../../reference_manual/preferences/display_settings.rst:81
-msgid ""
-"When selected the checkers will move along with opaque elements of an image "
-"during canvas Panning, Zooming, etc.  Otherwise the checkers remain "
-"stationary and only the opaque parts of an image will move."
-msgstr ""
-"勾選這個選項後，棋盤格會在畫布平移、縮放時與影像不透明元素一起移動；反之不勾"
-"選的話，棋盤格會保持固定，只有影像與不透明部分會移動。"
-
-#: ../../reference_manual/preferences/display_settings.rst:84
+#: ../../reference_manual/preferences/display_settings.rst:82
 #: ../../reference_manual/preferences/display_settings.rst:12
 msgid "Canvas Border"
 msgstr "畫布外周色彩"
 
-#: ../../reference_manual/preferences/display_settings.rst:87
+#: ../../reference_manual/preferences/display_settings.rst:85
 msgid ""
 "The user can select the color for the canvas i.e. the space beyond a "
 "document's boundaries."
 msgstr "這裡可以指定畫布範圍外背景的顏色。預設是灰色。"
 
-#: ../../reference_manual/preferences/display_settings.rst:89
+#: ../../reference_manual/preferences/display_settings.rst:87
 msgid "Hide Scrollbars"
 msgstr "隱藏捲動軸"
 
-#: ../../reference_manual/preferences/display_settings.rst:89
+#: ../../reference_manual/preferences/display_settings.rst:87
 msgid "Selecting this will hide the scrollbars in all view modes."
 msgstr "鉤選此項目時將在所有檢視模式下隱藏捲動軸。"
 
+#: ../../reference_manual/preferences/display_settings.rst:90
+msgid "Selection Overlay"
+msgstr ""
+
 #: ../../reference_manual/preferences/display_settings.rst:92
+msgid ""
+"Set the color of the alternate :ref:`Selection <selections_basics>` display "
+"mode. This mode is typically used when making complex selections."
+msgstr ""
+
+#: ../../reference_manual/preferences/display_settings.rst:95
+#, fuzzy
+#| msgid "The color of the grid."
+msgid "Color of the overlay."
+msgstr "格線的顏色。"
+
+#: ../../reference_manual/preferences/display_settings.rst:97
+msgid "Opacity"
+msgstr ""
+
+#: ../../reference_manual/preferences/display_settings.rst:97
+msgid "How opaque the overlay is."
+msgstr ""
+
+#: ../../reference_manual/preferences/display_settings.rst:100
 msgid "Pixel Grid"
 msgstr "像素格線"
 
-#: ../../reference_manual/preferences/display_settings.rst:96
+#: ../../reference_manual/preferences/display_settings.rst:104
 msgid ""
 "This allows configuring an automatic pixel-by-pixel grid, which is very "
 "useful for doing pixel art."
 msgstr "這個選項可設定以自動顯示像素格線，此功能對於像素藝術的繪圖非常有幫助。"
 
-#: ../../reference_manual/preferences/display_settings.rst:99
+#: ../../reference_manual/preferences/display_settings.rst:107
 msgid "The color of the grid."
 msgstr "格線的顏色。"
 
-#: ../../reference_manual/preferences/display_settings.rst:101
+#: ../../reference_manual/preferences/display_settings.rst:109
 msgid "Start Showing at"
 msgstr "開始顯示比例"
 
-#: ../../reference_manual/preferences/display_settings.rst:101
+#: ../../reference_manual/preferences/display_settings.rst:109
 msgid ""
 "This determines the zoom level at which the pixel grid starts showing, as "
 "showing it when the image is zoomed out a lot will make the grid overwhelm "
@@ -336,15 +348,44 @@ msgstr ""
 "指定像素格線開始顯示出來時的放大比率，因為當影像縮小很多時顯示這個只會讓格線"
 "覆蓋在影像，若設定太小只會適得其反。"
 
-#: ../../reference_manual/preferences/display_settings.rst:104
+#: ../../reference_manual/preferences/display_settings.rst:112
 msgid "Miscellaneous"
 msgstr "其他"
 
-#: ../../reference_manual/preferences/display_settings.rst:106
+#: ../../reference_manual/preferences/display_settings.rst:114
+#, fuzzy
+#| msgid "Hide window scrollbars."
+msgid "Hide canvas scrollbars."
+msgstr "隱藏畫布捲動軸。"
+
+#: ../../reference_manual/preferences/display_settings.rst:115
+msgid "Hides the scrollbars on the canvas."
+msgstr "隱藏畫布邊捲動條。"
+
+#: ../../reference_manual/preferences/display_settings.rst:116
+msgid "Enable Curve Anti-Aliasing"
+msgstr "啟用曲線反鋸齒"
+
+#: ../../reference_manual/preferences/display_settings.rst:117
+msgid ""
+"This allows anti-aliasing on previewing curves, like the ones for the circle "
+"tool, or the path tool."
+msgstr ""
+"這功能啟用時可在預覽曲線上消除鋸齒，例如圓形工具或路徑工具的曲線會變更平滑。"
+
+#: ../../reference_manual/preferences/display_settings.rst:118
+msgid "Hide Layer thumbnail popup"
+msgstr "隱藏圖層浮動縮圖"
+
+#: ../../reference_manual/preferences/display_settings.rst:119
+msgid "This disables the thumbnail that you get when hovering over a layer."
+msgstr "這功能可停用滑鼠游標停在圖層上顯示的縮圖。"
+
+#: ../../reference_manual/preferences/display_settings.rst:120
 msgid "Color Channels in Color"
 msgstr "顏色中的色彩通道"
 
-#: ../../reference_manual/preferences/display_settings.rst:107
+#: ../../reference_manual/preferences/display_settings.rst:121
 #, fuzzy
 #| msgid ""
 #| "This is supposed to determine what to do when only a single channel is "
@@ -354,42 +395,28 @@ msgid ""
 "single channel is selected in the channels docker."
 msgstr "這個選項是用於控制色彩通道面板選取某個通道時顯示顏色的功能。"
 
-#: ../../reference_manual/preferences/display_settings.rst:108
-msgid "Enable Curve Anti-Aliasing"
-msgstr "啟用曲線反鋸齒"
-
-#: ../../reference_manual/preferences/display_settings.rst:109
-msgid ""
-"This allows anti-aliasing on previewing curves, like the ones for the circle "
-"tool, or the path tool."
-msgstr ""
-"這功能啟用時可在預覽曲線上消除鋸齒，例如圓形工具或路徑工具的曲線會變更平滑。"
-
-#: ../../reference_manual/preferences/display_settings.rst:110
+#: ../../reference_manual/preferences/display_settings.rst:122
 msgid "Enable Selection Outline Anti-Aliasing"
 msgstr "啟用選取區域輪廓反鋸齒"
 
-#: ../../reference_manual/preferences/display_settings.rst:111
+#: ../../reference_manual/preferences/display_settings.rst:123
 msgid ""
 "This allows automatic anti-aliasing on selection. It makes the selection "
 "feel less jaggy and more precise."
 msgstr "這功能啟用時可在選取範圍自動反鋸齒，使選取區域更精確並且降低邊緣鋸齒。"
 
-#: ../../reference_manual/preferences/display_settings.rst:112
-msgid "Hide window scrollbars."
-msgstr "隱藏畫布捲動軸。"
+#: ../../reference_manual/preferences/display_settings.rst:126
+msgid "Move Checkers When Scrolling"
+msgstr "捲動時移動棋盤格背景"
 
-#: ../../reference_manual/preferences/display_settings.rst:113
-msgid "Hides the scrollbars on the canvas."
-msgstr "隱藏畫布邊捲動條。"
-
-#: ../../reference_manual/preferences/display_settings.rst:116
-msgid "Hide Layer thumbnail popup"
-msgstr "隱藏圖層浮動縮圖"
-
-#: ../../reference_manual/preferences/display_settings.rst:115
-msgid "This disables the thumbnail that you get when hovering over a layer."
-msgstr "這功能可停用滑鼠游標停在圖層上顯示的縮圖。"
+#: ../../reference_manual/preferences/display_settings.rst:125
+msgid ""
+"When selected the checkers will move along with opaque elements of an image "
+"during canvas Panning, Zooming, etc.  Otherwise the checkers remain "
+"stationary and only the opaque parts of an image will move."
+msgstr ""
+"勾選這個選項後，棋盤格會在畫布平移、縮放時與影像不透明元素一起移動；反之不勾"
+"選的話，棋盤格會保持固定，只有影像與不透明部分會移動。"
 
 #: ../../reference_manual/preferences/display_settings.rst:12
 msgid "Preferences"

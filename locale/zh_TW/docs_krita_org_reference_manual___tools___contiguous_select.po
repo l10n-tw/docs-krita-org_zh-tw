@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 4.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-30 14:17+0000\n"
+"POT-Creation-Date: 2022-08-17 13:54+0000\n"
 "PO-Revision-Date: 2021-09-29 05:59+0000\n"
 "Last-Translator: RinalNamori <rinalnamori@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <http://weblate.slat.org/projects/krita-"
@@ -107,73 +107,104 @@ msgstr ""
 msgid "Tool Options"
 msgstr "工具選項"
 
-#: ../../reference_manual/tools/contiguous_select.rst:42
-msgid "Anti-aliasing"
-msgstr "反鋸齒"
-
-#: ../../reference_manual/tools/contiguous_select.rst:43
-msgid ""
-"This toggles whether or not to give selections feathered edges. Some people "
-"prefer hard-jagged edges for their selections."
-msgstr "這個選項控制是否要羽化邊緣。有些人會想要選取鋸齒狀的邊緣。"
+#: ../../reference_manual/tools/contiguous_select.rst:48
+#, fuzzy
+#| msgid "Selection"
+msgid "Selection Extent"
+msgstr "選取"
 
 #: ../../reference_manual/tools/contiguous_select.rst:44
-msgid "Fuzziness"
-msgstr "模糊度"
+msgid "Threshold"
+msgstr ""
 
-#: ../../reference_manual/tools/contiguous_select.rst:45
+#: ../../reference_manual/tools/contiguous_select.rst:44
 msgid ""
 "This controls whether or not the contiguous selection sees another color as "
 "a border."
 msgstr "這個數值控制選取工具辨認其他色彩為邊界的程度。"
 
-#: ../../reference_manual/tools/contiguous_select.rst:46
-msgid "Grow/Shrink selection."
-msgstr "擴大/縮小選取區域"
-
-#: ../../reference_manual/tools/contiguous_select.rst:47
-msgid "This value extends/contracts the shape beyond its initial size."
-msgstr "這個數值會擴大或縮小初始選取區域的形狀。"
-
 #: ../../reference_manual/tools/contiguous_select.rst:48
-msgid "Feathering"
-msgstr "羽化半徑"
+msgid "Spread"
+msgstr ""
 
 #: ../../reference_manual/tools/contiguous_select.rst:49
-msgid "This value will add a soft border to the selection-shape."
-msgstr "這個數值會在選取形狀新增一層軟性邊界。"
+msgid ""
+"Set how far the fully opaque portion of the selection should extend. See :"
+"ref:`fill_tool` for extra explanation."
+msgstr ""
 
-#: ../../reference_manual/tools/contiguous_select.rst:60
-msgid "Sample"
-msgstr "取樣"
+#: ../../reference_manual/tools/contiguous_select.rst:55
+msgid "Adjustments"
+msgstr ""
+
+#: ../../reference_manual/tools/contiguous_select.rst:51
+#, fuzzy
+#| msgid "Anti-aliasing"
+msgid "Anti-alias"
+msgstr "反鋸齒"
+
+#: ../../reference_manual/tools/contiguous_select.rst:52
+msgid ""
+"This will smooth the jagged edges present in the selection. It differs from "
+"feathering in that this will smooth in the direction of the edge instead of "
+"all directions, and only if the edge is jagged (high contrast)."
+msgstr ""
 
 #: ../../reference_manual/tools/contiguous_select.rst:53
+#, fuzzy
+#| msgid "Selection"
+msgid "Grow Selection"
+msgstr "選取"
+
+#: ../../reference_manual/tools/contiguous_select.rst:54
+msgid ""
+"This value extends (positive values) or contracts (negative values) the "
+"selection."
+msgstr ""
+
+#: ../../reference_manual/tools/contiguous_select.rst:55
+#, fuzzy
+#| msgid "Feathering"
+msgid "Feathering Radius"
+msgstr "羽化半徑"
+
+#: ../../reference_manual/tools/contiguous_select.rst:56
+#, fuzzy
+#| msgid "This value will add a soft border to the selection-shape."
+msgid "This value will add a soft border to the selection."
+msgstr "這個數值會在選取形狀新增一層軟性邊界。"
+
+#: ../../reference_manual/tools/contiguous_select.rst:71
+msgid "Reference"
+msgstr ""
+
+#: ../../reference_manual/tools/contiguous_select.rst:60
 msgid ""
 "Select which layers to use as a reference for the contiguous select tool. "
 "The options are:"
 msgstr "選取哪一個圖層用作相連選取區域工具的參考。這些選項為："
 
-#: ../../reference_manual/tools/contiguous_select.rst:55
+#: ../../reference_manual/tools/contiguous_select.rst:62
 msgid "Current Layer"
 msgstr "目前圖層"
 
-#: ../../reference_manual/tools/contiguous_select.rst:56
+#: ../../reference_manual/tools/contiguous_select.rst:63
 msgid "Only use the currently selected layer."
 msgstr "只使用當前選取的圖層。"
 
-#: ../../reference_manual/tools/contiguous_select.rst:57
+#: ../../reference_manual/tools/contiguous_select.rst:64
 msgid "All layers"
 msgstr "所有圖層"
 
-#: ../../reference_manual/tools/contiguous_select.rst:58
+#: ../../reference_manual/tools/contiguous_select.rst:65
 msgid "Use all visible layers."
 msgstr "使用所有可見圖層。"
 
-#: ../../reference_manual/tools/contiguous_select.rst:60
+#: ../../reference_manual/tools/contiguous_select.rst:71
 msgid "Color Labeled Layers"
 msgstr "符合色彩標籤的圖層"
 
-#: ../../reference_manual/tools/contiguous_select.rst:60
+#: ../../reference_manual/tools/contiguous_select.rst:67
 msgid ""
 "Use only the layers specified with a certain color label. This is useful for "
 "complex images, where you might have multiple lineart layers. Label them "
@@ -183,13 +214,13 @@ msgstr ""
 "使用符合特定色彩標籤的圖層。這適合用在複雜的圖像，在有著多個線稿圖層時使用合"
 "適的色彩標籤標記，然後標記那些圖層作為參考。"
 
-#: ../../reference_manual/tools/contiguous_select.rst:66
+#: ../../reference_manual/tools/contiguous_select.rst:71
 msgid "Labels Used"
 msgstr "已使用的色彩標籤"
 
-#: ../../reference_manual/tools/contiguous_select.rst:65
-msgid "Used with the 'Color Labeled Layers' option above."
-msgstr "與上面的「符合色彩標籤的圖層」一起使用。"
+#: ../../reference_manual/tools/contiguous_select.rst:70
+msgid "Select the color labels of the layers that should be used as reference."
+msgstr ""
 
 #: ../../reference_manual/tools/contiguous_select.rst:11
 msgid "Selection"
@@ -206,6 +237,26 @@ msgstr "魔術棒"
 #: ../../reference_manual/tools/contiguous_select.rst:11
 msgid "Tools"
 msgstr "工具"
+
+#~ msgid ""
+#~ "This toggles whether or not to give selections feathered edges. Some "
+#~ "people prefer hard-jagged edges for their selections."
+#~ msgstr "這個選項控制是否要羽化邊緣。有些人會想要選取鋸齒狀的邊緣。"
+
+#~ msgid "Fuzziness"
+#~ msgstr "模糊度"
+
+#~ msgid "Grow/Shrink selection."
+#~ msgstr "擴大/縮小選取區域"
+
+#~ msgid "This value extends/contracts the shape beyond its initial size."
+#~ msgstr "這個數值會擴大或縮小初始選取區域的形狀。"
+
+#~ msgid "Sample"
+#~ msgstr "取樣"
+
+#~ msgid "Used with the 'Color Labeled Layers' option above."
+#~ msgstr "與上面的「符合色彩標籤的圖層」一起使用。"
 
 #~ msgid ""
 #~ ":kbd:`R` sets the selection to 'replace' in the tool options, this is the "
