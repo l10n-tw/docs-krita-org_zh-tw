@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 5.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-03 08:09+0000\n"
+"POT-Creation-Date: 2022-08-17 13:54+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -130,7 +130,7 @@ msgstr ""
 msgid "The number of cores you want to allow Krita to use when multithreading."
 msgstr ""
 
-#: ../../reference_manual/preferences/performance_settings.rst:68
+#: ../../reference_manual/preferences/performance_settings.rst:67
 msgid "Frame Rendering Clones Limit"
 msgstr ""
 
@@ -138,175 +138,183 @@ msgstr ""
 msgid "When rendering animations to frames, Krita multithreads by keeping a few copies of the image, with a maximum determined by the number of cores your processor has. If you have a heavy animation file and lots of cores, the copies can be quite heavy on your machine, so in that case try lowering this value."
 msgstr ""
 
-#: ../../reference_manual/preferences/performance_settings.rst:71
-msgid "Other"
+#: ../../reference_manual/preferences/performance_settings.rst:70
+msgid "Frame Rendering Timeout"
 msgstr ""
 
-#: ../../reference_manual/preferences/performance_settings.rst:72
-msgid "Limit frames per second while painting."
+#: ../../reference_manual/preferences/performance_settings.rst:70
+msgid "To prevent Krita from hanging on a single frame, we limit how long it can spend on rendering a frame before moving on the next. If rendering an animation fails very often due a timeout, you can increase this value. Do note that it might also be caused by the file being too complex."
 msgstr ""
 
 #: ../../reference_manual/preferences/performance_settings.rst:73
-msgid "This makes the canvas update less often, which means Krita can spend more time calculating other things. Some people find fewer updates unnerving to watch however, hence this is configurable."
+msgid "Other"
 msgstr ""
 
 #: ../../reference_manual/preferences/performance_settings.rst:74
-msgid "Debug logging of OpenGL framerate"
+msgid "Limit frames per second while painting."
 msgstr ""
 
 #: ../../reference_manual/preferences/performance_settings.rst:75
-msgid "Will show the canvas framerate on the canvas when active."
+msgid "This makes the canvas update less often, which means Krita can spend more time calculating other things. Some people find fewer updates unnerving to watch however, hence this is configurable."
 msgstr ""
 
 #: ../../reference_manual/preferences/performance_settings.rst:76
-msgid "Debug logging for brush rendering speed."
+msgid "Debug logging of OpenGL framerate"
 msgstr ""
 
 #: ../../reference_manual/preferences/performance_settings.rst:77
-msgid "Will show numbers indicating how fast the last brush stroke was on canvas."
+msgid "Will show the canvas framerate on the canvas when active."
 msgstr ""
 
 #: ../../reference_manual/preferences/performance_settings.rst:78
-msgid "Disable vector optimizations (for AMD CPUs)"
+msgid "Debug logging for brush rendering speed."
 msgstr ""
 
 #: ../../reference_manual/preferences/performance_settings.rst:79
-msgid "Vector optimizations are a special way of asking the CPU to do maths, these have names such as SIMD and AVX. These optimizations can make Krita a lot faster when painting, except when you have an AMD CPU under Windows. There seems to be something strange going on there, so just deactivate them then."
+msgid "Will show numbers indicating how fast the last brush stroke was on canvas."
 msgstr ""
 
 #: ../../reference_manual/preferences/performance_settings.rst:80
-msgid "Progress reporting"
+msgid "Disable vector optimizations (for AMD CPUs)"
 msgstr ""
 
 #: ../../reference_manual/preferences/performance_settings.rst:81
-msgid "This allows you to toggle the progress reporter, which is a little feedback progress bar that shows up in the status bar when you let Krita do heavy operations, such as heavy filters or big strokes. The red icon next to the bar will allow you to cancel your operation. This is on by default, but as progress reporting itself can take up some time, you can switch it off here."
+msgid "Vector optimizations are a special way of asking the CPU to do maths, these have names such as SIMD and AVX. These optimizations can make Krita a lot faster when painting, except when you have an AMD CPU under Windows. There seems to be something strange going on there, so just deactivate them then."
 msgstr ""
 
-#: ../../reference_manual/preferences/performance_settings.rst:85
-msgid "Performance logging"
+#: ../../reference_manual/preferences/performance_settings.rst:82
+msgid "Progress reporting"
 msgstr ""
 
 #: ../../reference_manual/preferences/performance_settings.rst:83
-msgid "This enables performance logging, which is then saved to the ``Log`` folder in your ``working directory``. Your working directory is where the autosave is saved at as well."
+msgid "This allows you to toggle the progress reporter, which is a little feedback progress bar that shows up in the status bar when you let Krita do heavy operations, such as heavy filters or big strokes. The red icon next to the bar will allow you to cancel your operation. This is on by default, but as progress reporting itself can take up some time, you can switch it off here."
+msgstr ""
+
+#: ../../reference_manual/preferences/performance_settings.rst:87
+msgid "Performance logging"
 msgstr ""
 
 #: ../../reference_manual/preferences/performance_settings.rst:85
+msgid "This enables performance logging, which is then saved to the ``Log`` folder in your ``working directory``. Your working directory is where the autosave is saved at as well."
+msgstr ""
+
+#: ../../reference_manual/preferences/performance_settings.rst:87
 msgid "So for unnamed files, this is the ``$HOME`` folder in Linux, and the ``%TEMP%`` folder in Windows."
 msgstr ""
 
-#: ../../reference_manual/preferences/performance_settings.rst:88
+#: ../../reference_manual/preferences/performance_settings.rst:90
 msgid "Animation Cache"
 msgstr ""
 
-#: ../../reference_manual/preferences/performance_settings.rst:92
+#: ../../reference_manual/preferences/performance_settings.rst:94
 msgid "The animation cache is the space taken up by animation frames in the memory of the computer. A cache in this sense is a cache of precalculated images."
 msgstr ""
 
-#: ../../reference_manual/preferences/performance_settings.rst:94
+#: ../../reference_manual/preferences/performance_settings.rst:96
 msgid "Playing back a video at 25 FPS means that the computer has to precalculate 25 images per second of video. Now, video playing software is able to do this because it really focuses on this one single task. However, Krita as a painting program also allows you to edit the pictures. Because Krita needs to be able to do this, and a dedicated video player doesn't, Krita cannot do the same kind of optimizations as a dedicated video player can."
 msgstr ""
 
-#: ../../reference_manual/preferences/performance_settings.rst:96
+#: ../../reference_manual/preferences/performance_settings.rst:98
 msgid "Still, an animator does need to be able to see what kind of animation they are making. To do this properly, we need to decide how Krita will regenerate the cache after the animator makes a change. There's fortunately a lot of different options how we can do this. However, the best solution really depends on what kind of computer you have and what kind of animation you are making. Therefore in this tab you can customize the way how and when the cache is generated."
 msgstr ""
 
-#: ../../reference_manual/preferences/performance_settings.rst:99
+#: ../../reference_manual/preferences/performance_settings.rst:101
 msgid "Cache Storage Backend"
 msgstr ""
 
-#: ../../reference_manual/preferences/performance_settings.rst:109
+#: ../../reference_manual/preferences/performance_settings.rst:111
 msgid "In-memory"
 msgstr ""
 
-#: ../../reference_manual/preferences/performance_settings.rst:102
+#: ../../reference_manual/preferences/performance_settings.rst:104
 msgid "Animation frame cache will be stored in RAM, completely without any limitations. This is also the way it was handled before 4.1. This is only recommended for computers with a huge amount of RAM and animations that must show full-canvas full resolution 6k at 25 fps. If you do not have a huge amount (say, 64GiB) of RAM, do *not* use this option (and scale down your projects)."
 msgstr ""
 
-#: ../../reference_manual/preferences/performance_settings.rst:106
+#: ../../reference_manual/preferences/performance_settings.rst:108
 msgid "Please make sure your computer has enough RAM *above* the amount you requested in the :guilabel:`General` tab. Otherwise you might face system freezes."
 msgstr ""
 
-#: ../../reference_manual/preferences/performance_settings.rst:108
+#: ../../reference_manual/preferences/performance_settings.rst:110
 msgid "For 1 second of FullHD @ 25 FPS you will need 200 extra MiB of Memory."
 msgstr ""
 
-#: ../../reference_manual/preferences/performance_settings.rst:109
+#: ../../reference_manual/preferences/performance_settings.rst:111
 msgid "For 1 second of 4K UltraHD@ 25 FPS, you will need 800 extra MiB of Memory."
 msgstr ""
 
-#: ../../reference_manual/preferences/performance_settings.rst:114
+#: ../../reference_manual/preferences/performance_settings.rst:116
 msgid "On-disk"
 msgstr ""
 
-#: ../../reference_manual/preferences/performance_settings.rst:112
+#: ../../reference_manual/preferences/performance_settings.rst:114
 msgid "Animation frames are stored in the hard disk in the same folder as the swap file. The cache is stored in a compressed way. A little amount of extra RAM is needed."
 msgstr ""
 
-#: ../../reference_manual/preferences/performance_settings.rst:114
+#: ../../reference_manual/preferences/performance_settings.rst:116
 msgid "Since data transfer speed of the hard drive is slow, you might want to limit the :guilabel:`Cached Frame Size` to be able to play your video at 25 fps. A limit of 2500 px is usually a good choice."
 msgstr ""
 
-#: ../../reference_manual/preferences/performance_settings.rst:117
+#: ../../reference_manual/preferences/performance_settings.rst:119
 msgid "Cache Generation Options"
 msgstr ""
 
-#: ../../reference_manual/preferences/performance_settings.rst:119
+#: ../../reference_manual/preferences/performance_settings.rst:121
 msgid "Limit Cached Frame Size"
 msgstr ""
 
-#: ../../reference_manual/preferences/performance_settings.rst:120
+#: ../../reference_manual/preferences/performance_settings.rst:122
 msgid "Render scaled down version of the frame if the image is bigger than the provided limit. Make sure you enable this option when using On-Disk storage backend, because On-Disk storage is a little slow. Without the limit, there's a good chance that it will not be able to render at full speed. Lower the size to play back faster at the cost of lower resolution."
 msgstr ""
 
-#: ../../reference_manual/preferences/performance_settings.rst:121
+#: ../../reference_manual/preferences/performance_settings.rst:123
 msgid "Use Region Of Interest"
 msgstr ""
 
-#: ../../reference_manual/preferences/performance_settings.rst:122
+#: ../../reference_manual/preferences/performance_settings.rst:124
 msgid "We technically only need to use the section of the image that is in view. Region of interest represents that section. When the image is above the configurable limit, render only the currently visible part of it."
 msgstr ""
 
-#: ../../reference_manual/preferences/performance_settings.rst:124
+#: ../../reference_manual/preferences/performance_settings.rst:126
 msgid "Enable Background Cache Generation"
 msgstr ""
 
-#: ../../reference_manual/preferences/performance_settings.rst:124
+#: ../../reference_manual/preferences/performance_settings.rst:126
 msgid "This allows you to set whether the animation is cached for playback in the background (that is, when you're not using the computer). Then, when animation is cached when pressing play, this caching will take less long. However, turning off this automatic caching can save power by having your computer work less."
 msgstr ""
 
-#: ../../reference_manual/preferences/performance_settings.rst:129
+#: ../../reference_manual/preferences/performance_settings.rst:131
 msgid "Instant Preview"
 msgstr ""
 
-#: ../../reference_manual/preferences/performance_settings.rst:131
+#: ../../reference_manual/preferences/performance_settings.rst:133
 msgid "Use in-stack preview in Transform Tool"
 msgstr ""
 
-#: ../../reference_manual/preferences/performance_settings.rst:132
+#: ../../reference_manual/preferences/performance_settings.rst:134
 msgid "Whether to use a floating preview for the :ref:`transform_tool`, or whether to have it rendered in place."
 msgstr ""
 
-#: ../../reference_manual/preferences/performance_settings.rst:133
+#: ../../reference_manual/preferences/performance_settings.rst:135
 msgid "Force instant preview in Transform Tool"
 msgstr ""
 
-#: ../../reference_manual/preferences/performance_settings.rst:134
+#: ../../reference_manual/preferences/performance_settings.rst:136
 msgid "Turns on :ref:`instant_preview` for the :ref:`transform_tool` even when it's off in :menuselection:`View --> Instant preview`."
 msgstr ""
 
-#: ../../reference_manual/preferences/performance_settings.rst:135
+#: ../../reference_manual/preferences/performance_settings.rst:137
 msgid "Force instant preview in Move Tool"
 msgstr ""
 
-#: ../../reference_manual/preferences/performance_settings.rst:136
+#: ../../reference_manual/preferences/performance_settings.rst:138
 msgid "Turns on :ref:`instant_preview` for the :ref:`move_tool` even when it's off in :menuselection:`View --> Instant preview`."
 msgstr ""
 
-#: ../../reference_manual/preferences/performance_settings.rst:139
+#: ../../reference_manual/preferences/performance_settings.rst:141
 msgid "Force instant preview in Filters"
 msgstr ""
 
-#: ../../reference_manual/preferences/performance_settings.rst:138
+#: ../../reference_manual/preferences/performance_settings.rst:140
 msgid "Turns on :ref:`instant_preview` for the :ref:`filters` even when it's off in :menuselection:`View --> Instant preview`."
 msgstr ""
 

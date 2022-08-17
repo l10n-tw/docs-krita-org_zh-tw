@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 5.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-30 14:17+0000\n"
+"POT-Creation-Date: 2022-08-17 13:54+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -109,63 +109,83 @@ msgid "This option is explained in the :ref:`pixel_vector_selection` section."
 msgstr ""
 
 #: ../../reference_manual/tools/similar_select.rst:65
-msgid "Anti-aliasing"
+msgid "Selection Extent"
 msgstr ""
 
 #: ../../reference_manual/tools/similar_select.rst:65
-msgid "This toggles whether or not to give selections feathered edges. Some people prefer hard-jagged edges for their selections."
+msgid "Threshold"
 msgstr ""
 
-#: ../../reference_manual/tools/similar_select.rst:69
-msgid "This has been removed as it only caused confusion."
+#: ../../reference_manual/tools/similar_select.rst:66
+msgid "This controls the range of the color hue used to create the selection. A lower number will select colors closer to the color that you chose in the first place. And a higher number will expand the hue range and select colors even if they are not so similar to the original color."
 msgstr ""
 
-#: ../../reference_manual/tools/similar_select.rst:81
-msgid "Sample"
+#: ../../reference_manual/tools/similar_select.rst:75
+msgid "Adjustments"
+msgstr ""
+
+#: ../../reference_manual/tools/similar_select.rst:70
+msgid "Anti-alias"
+msgstr ""
+
+#: ../../reference_manual/tools/similar_select.rst:71
+msgid "This will smooth the jagged edges present in the region. It differs from feathering in that this will smooth in the direction of the edge instead of all directions, and only if the edge is jagged (high contrast)."
+msgstr ""
+
+#: ../../reference_manual/tools/similar_select.rst:73
+msgid "Grow Selection"
 msgstr ""
 
 #: ../../reference_manual/tools/similar_select.rst:74
-msgid "Select which layers to use as a reference for the contiguous select tool. The options are:"
+msgid "This value extends (positive values) or contracts (negative values) the region."
+msgstr ""
+
+#: ../../reference_manual/tools/similar_select.rst:75
+msgid "Feathering Radius"
 msgstr ""
 
 #: ../../reference_manual/tools/similar_select.rst:76
+msgid "This value will add a soft border to the region."
+msgstr ""
+
+#: ../../reference_manual/tools/similar_select.rst:92
+msgid "Reference"
+msgstr ""
+
+#: ../../reference_manual/tools/similar_select.rst:80
+msgid "Select which layers to use as a reference for the contiguous select tool. The options are:"
+msgstr ""
+
+#: ../../reference_manual/tools/similar_select.rst:82
 msgid "Current Layer"
 msgstr ""
 
-#: ../../reference_manual/tools/similar_select.rst:77
+#: ../../reference_manual/tools/similar_select.rst:83
 msgid "Only use the currently selected layer."
 msgstr ""
 
-#: ../../reference_manual/tools/similar_select.rst:78
+#: ../../reference_manual/tools/similar_select.rst:84
 msgid "All layers"
 msgstr ""
 
-#: ../../reference_manual/tools/similar_select.rst:79
+#: ../../reference_manual/tools/similar_select.rst:85
 msgid "Use all visible layers."
 msgstr ""
 
-#: ../../reference_manual/tools/similar_select.rst:81
+#: ../../reference_manual/tools/similar_select.rst:92
 msgid "Color Labeled Layers"
 msgstr ""
 
-#: ../../reference_manual/tools/similar_select.rst:81
+#: ../../reference_manual/tools/similar_select.rst:87
 msgid "Use only the layers specified with a certain color label. This is useful for complex images, where you might have multiple lineart layers. Label them with the appropriate color label and use these labels to mark which layers to use as a reference."
 msgstr ""
 
-#: ../../reference_manual/tools/similar_select.rst:86
+#: ../../reference_manual/tools/similar_select.rst:92
 msgid "Labels Used"
 msgstr ""
 
-#: ../../reference_manual/tools/similar_select.rst:86
-msgid "Used with the 'Color Labeled Layers' option above."
-msgstr ""
-
 #: ../../reference_manual/tools/similar_select.rst:90
-msgid "Fuzziness"
-msgstr ""
-
-#: ../../reference_manual/tools/similar_select.rst:89
-msgid "This controls the range of the color hue used to create the selection. A lower number will select colors closer to the color that you chose in the first place. And a higher number will expand the hue range and select colors even if they are not so similar to the original color."
+msgid "Select the color labels of the layers that should be used as reference."
 msgstr ""
 
 #: ../../reference_manual/tools/similar_select.rst:12
