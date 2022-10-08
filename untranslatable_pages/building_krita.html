@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2022-09-06T12:59:18" />
+  <meta property="og:article:modified_time" content="2022-10-08T11:00:22" />
   <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 <meta content="Guide to building Krita from source." name="description" />
 
@@ -314,7 +314,7 @@
 </li>
 <li><p><a class="reference internal" href="#specialized-ways-of-building-krita" id="id38">Specialized Ways of Building Krita</a></p>
 <ul>
-<li><p><a class="reference internal" href="#krita-devbox-for-linux" id="id39">Krita Devbox for Linux</a></p></li>
+<li><p><a class="reference internal" href="#krita-devbox-for-linux-experimental" id="id39">Krita Devbox for Linux (Experimental)</a></p></li>
 </ul>
 </li>
 </ul>
@@ -706,9 +706,9 @@ i\bin\krita.exe
 </div>
 <p>If you want to debug krita with lldb:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">lldb ~/dev/i/krita.app/Contents/MacOS/krita</span>
-<span class="go">(lldb) target create &quot;./i/bin/krita.app/Contents/MacOS/krita&quot;</span>
+<span class="gp gp-VirtualEnv">(lldb)</span> <span class="go">target create &quot;./i/bin/krita.app/Contents/MacOS/krita&quot;</span>
 <span class="go">Current executable set to &#39;./i/bin/krita.app/Contents/MacOS/krita&#39; (x86_64).</span>
-<span class="go">(lldb) r</span>
+<span class="gp gp-VirtualEnv">(lldb)</span> <span class="go">r</span>
 </pre></div>
 </div>
 <img alt="../_images/Krita-building_for-cats_008-running-success_by-deevad.jpg" src="../_images/Krita-building_for-cats_008-running-success_by-deevad.jpg" />
@@ -763,12 +763,12 @@ and then run it again.</p>
 <section id="specialized-ways-of-building-krita">
 <h2><a class="toc-backref" href="#id38" role="doc-backlink">Specialized Ways of Building Krita</a><a class="headerlink" href="#specialized-ways-of-building-krita" title="本標頭的永久連結">¶</a></h2>
 <p>These are specialized ways of building Krita on Linux while re-using the dependencies built on KDE's binary factory. You only need to try this if you don't want to use distribution dependencies on Linux.</p>
-<section id="krita-devbox-for-linux">
-<h3><a class="toc-backref" href="#id39" role="doc-backlink">Krita Devbox for Linux</a><a class="headerlink" href="#krita-devbox-for-linux" title="本標頭的永久連結">¶</a></h3>
+<section id="krita-devbox-for-linux-experimental">
+<h3><a class="toc-backref" href="#id39" role="doc-backlink">Krita Devbox for Linux (Experimental)</a><a class="headerlink" href="#krita-devbox-for-linux-experimental" title="本標頭的永久連結">¶</a></h3>
 <p><a class="reference external" href="https://invent.kde.org/eoinoneill/krita-devbox">Krita Devbox</a> is a complete Krita development environment in a box!</p>
 <p>Krita Devbox is intended to provide a consistent and easy-to-use development container that comes with just about everything you need to develop Krita on Linux, including writing documentation, producing AppImages, and so on. A key goal for Krita Devbox is to be as simple to setup and use as possible by integrating with the host system (when it makes sense), and otherwise exporting a flexible, human-readable interface script to the host system.</p>
 <p>Krita Devbox's is particularly useful in the context of &quot;atomic&quot; Linux operating systems (like Fedora Kinoite and Silverblue) where the use of &quot;pet containers&quot; for application development is recommended. However, Krita Devbox may also be useful for any Krita developer on Linux who is interested in quick setup, using a containerized development environment, building in a similar context to KDE's official binary factory, and producing test AppImages.</p>
-<p>You can find more details about what Krita Devbox is and how it works over on the <a class="reference external" href="https://invent.kde.org/eoinoneill/krita-devbox">Krita Devbox repository page.</a></p>
+<p>You can find more details about what Krita Devbox is and how it works over on the <a class="reference external" href="https://invent.kde.org/eoinoneill/krita-devbox">Krita Devbox repository page.</a> (Note: This build method is still quite new and experimental, so it's possible that you may run into a configuration issue, build error, or other bug. If so, please submit bug reports concerning the Krita Devbox to the gitlab repository listed above.)</p>
 <div class="toctree-wrapper compound">
 <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul>
@@ -802,7 +802,7 @@ and then run it again.</p>
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>1926022</code>
+          修訂版本 <code>c44cdc1</code>
         </span>
       
 
@@ -830,6 +830,7 @@ and then run it again.</p>
       <script src="../_static/underscore.js"></script>
       <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
       <script src="../_static/doctools.js"></script>
+      <script src="../_static/sphinx_highlight.js"></script>
       <script src="../_static/translations.js"></script>
 
   

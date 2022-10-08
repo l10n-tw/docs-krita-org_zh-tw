@@ -79,17 +79,12 @@ This option exports the file ``file.png`` as a PDF file.
 Open with Custom Screen DPI
 ---------------------------
 
-Open Krita with specified Screen DPI.
 
 .. program:: krita
 
 .. option:: --dpi <dpiX,dpiY>
    
-   Open Krita with specified Screen DPI.
-
-   For example:
-
-   ``krita --dpi <72,72>``
+This legacy option does not do anything anymore.
 
 Open template
 -------------

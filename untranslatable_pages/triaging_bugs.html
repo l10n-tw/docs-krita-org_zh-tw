@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2022-09-06T12:59:18" />
+  <meta property="og:article:modified_time" content="2022-10-08T11:00:22" />
   <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 <meta content="Guide to bugtriaging." name="description" />
 
@@ -394,7 +394,7 @@ The Krita developers cannot handle that stream on their own! Please consider hel
 <p>These are different things. A crash happens when Krita spontaneously stops working <em>or</em> hangs. An assert happens when Krita stops working because we, developers, have added some code to detect an invalid state.</p>
 <p>Asserts are printed to the terminal or shown in a popup window. You can identify an assert by asking for terminal output, debugview output or by checking the backtrace, if there is one.</p>
 <p>If the backtrace contains a line like:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">SAFE</span> <span class="n">ASSERT</span> <span class="p">(</span><span class="n">krita</span><span class="p">):</span> <span class="s2">&quot;!sanityCheckPointer.isValid()&quot;</span> <span class="ow">in</span> <span class="n">file</span> <span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">nix</span><span class="o">-</span><span class="n">build</span><span class="o">-</span><span class="n">krita</span><span class="o">-</span><span class="mf">4.0</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">pre2c</span><span class="o">.</span><span class="n">drv</span><span class="o">-</span><span class="mi">0</span><span class="o">/</span><span class="n">krita</span><span class="o">-</span><span class="mi">1</span><span class="n">b1695a</span><span class="o">/</span><span class="n">libs</span><span class="o">/</span><span class="n">ui</span><span class="o">/</span><span class="n">KisDocument</span><span class="o">.</span><span class="n">cpp</span><span class="p">,</span> <span class="n">line</span> <span class="mi">490</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">SAFE</span> <span class="n">ASSERT</span> <span class="p">(</span><span class="n">krita</span><span class="p">):</span> <span class="s2">&quot;!sanityCheckPointer.isValid()&quot;</span> <span class="ow">in</span> <span class="n">file</span> <span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">nix</span><span class="o">-</span><span class="n">build</span><span class="o">-</span><span class="n">krita</span><span class="o">-</span><span class="mf">4.0.0</span><span class="o">-</span><span class="n">pre2c</span><span class="o">.</span><span class="n">drv</span><span class="o">-</span><span class="mi">0</span><span class="o">/</span><span class="n">krita</span><span class="o">-</span><span class="mi">1</span><span class="n">b1695a</span><span class="o">/</span><span class="n">libs</span><span class="o">/</span><span class="n">ui</span><span class="o">/</span><span class="n">KisDocument</span><span class="o">.</span><span class="n">cpp</span><span class="p">,</span> <span class="n">line</span> <span class="mi">490</span>
 </pre></div>
 </div>
 <p>Or another mention of assert, Q_ASSERT or similar, it's an assert, not a crash.</p>
@@ -489,7 +489,7 @@ The Krita developers cannot handle that stream on their own! Please consider hel
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>1926022</code>
+          修訂版本 <code>c44cdc1</code>
         </span>
       
 
@@ -517,6 +517,7 @@ The Krita developers cannot handle that stream on their own! Please consider hel
       <script src="../_static/underscore.js"></script>
       <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
       <script src="../_static/doctools.js"></script>
+      <script src="../_static/sphinx_highlight.js"></script>
       <script src="../_static/translations.js"></script>
 
   

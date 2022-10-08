@@ -21,7 +21,7 @@ The Enclose and Fill Tool is a different method of filling large colored areas. 
 
 .. figure:: /images/tools/enclose_and_fill_basic_usage.png
 
-    Simple usage of the enclose an fill. Draw a rectangle around everything you wish to fill and :program:`Krita` will try to find all possible areas inside that rectangle that can be filled.
+    Simple usage of the enclose and fill. Draw a rectangle around everything you wish to fill and :program:`Krita` will try to find all possible areas inside that rectangle that can be filled.
 
 Tool Options
 ------------
@@ -47,7 +47,7 @@ Besides choosing how to create an enclosing area, it is also possible to choose 
 
 .. figure:: /images/tools/enclose_and_fill_potential_areas.png
 
-   An image illustrating the different areas that can be found by this tool within this image. Each area has a different outline to indicate it's a seperate area. The following examples all show these outlines to demonstrate which areas are selected, but note that they are for demonstration only and would not show in a real situation.
+   An image illustrating the different areas that can be found by this tool within this image. Each area has a different outline to indicate it's a separate area. The following examples all show these outlines to demonstrate which areas are selected, but note that they are for demonstration only and would not show in a real situation.
 
 .. note::
 
@@ -69,7 +69,7 @@ The following options have an option for :guilabel:`Include Contour Regions`, wh
    Topleft: :guilabel:`Regions of a Specific Color` set to cream white, topright: :guilabel:`Transparent Regions`, bottom: :guilabel:`Regions of a specific color or transparent`.
 
 Regions of a Specific Color.
-    Only regions that are a specific color will be filled. If you have a complex image where seperate figures have their whole silhouette in a seperate color, this can be used to only affect the silhouette of a single figure.
+    Only regions that are a specific color will be filled. If you have a complex image where separate figures have their whole silhouette in a seperate color, this can be used to only affect the silhouette of a single figure.
 Transparent Regions.
     Only regions that are transparent will be filled. Useful for filling a line art.
 Regions of a specific color or transparent.

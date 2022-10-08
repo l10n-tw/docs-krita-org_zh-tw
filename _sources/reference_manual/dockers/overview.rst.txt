@@ -31,4 +31,4 @@ There are furthermore basic navigation functions: Dragging the zoom-slider allow
 
 .. versionadded:: 5.0
 
-    If you check the "pin navigation controls" button, the controls (zoom, rotation, etc.) will always be visible. On the other hand, if the button is unchecked, the controls will automatically hide when the mouse goes outside the docker, and automaticaly shown when it goes over the docker.
+    If you check the "pin navigation controls" button, the controls (zoom, rotation, etc.) will always be visible. On the other hand, if the button is unchecked, the controls will automatically hide when the mouse goes outside the docker, and automatically shown when it goes over the docker.

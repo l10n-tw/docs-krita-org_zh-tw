@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2022-09-06T12:59:18" />
+  <meta property="og:article:modified_time" content="2022-10-08T11:00:22" />
   <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 <meta content="Krita 內的 WebP 檔案格式。" name="description" />
 
@@ -252,7 +252,7 @@
             
   <section id="webp">
 <span id="file-webp"></span><span id="index-0"></span><h1>*.webp<a class="headerlink" href="#webp" title="本標頭的永久連結">¶</a></h1>
-<p>WebP is a file format based on the <a class="reference external" href="https://developers.google.com/speed/webp/docs/riff_container">RIFF container specification</a> that, like <a class="reference internal" href="file_heif.html#file-heif"><span class="std std-ref">*.heif 及 *.avif</span></a>, it builds upon a video codec (<a class="reference external" href="https://developers.google.com/speed/webp/docs/compression#lossy_webp">VP8</a>) to support <a class="reference internal" href="lossy_lossless.html#lossy-compression"><span class="std std-ref">有損與無損影像壓縮方式</span></a>. WebP tends to be largely used for websites, though not all websites support uploading such files. If you self-host you can investigate whether WebP is an improvement over <a class="reference internal" href="file_jpeg.html#file-jpeg"><span class="std std-ref">*.jpg</span></a> or <a class="reference internal" href="file_png.html#file-png"><span class="std std-ref">*.png</span></a>. However, it is not very widely supported by image editors, so if you are doing collaboration with other artists, it may be better to use a different file format.</p>
+<p>WebP is a file format based on the <a class="reference external" href="https://developers.google.com/speed/webp/docs/riff_container">RIFF container specification</a> that, like <a class="reference internal" href="file_heif.html#file-heif"><span class="std std-ref">*.heif 及 *.avif</span></a>, builds upon a video codec (<a class="reference external" href="https://developers.google.com/speed/webp/docs/compression#lossy_webp">VP8</a>) to support <a class="reference internal" href="lossy_lossless.html#lossy-compression"><span class="std std-ref">有損與無損影像壓縮方式</span></a>. WebP tends to be largely used for websites, though not all websites support uploading such files. If you self-host you can investigate whether WebP is an improvement over <a class="reference internal" href="file_jpeg.html#file-jpeg"><span class="std std-ref">*.jpg</span></a> or <a class="reference internal" href="file_png.html#file-png"><span class="std std-ref">*.png</span></a>. However, it is not very widely supported by image editors, so if you are doing collaboration with other artists, it may be better to use a different file format.</p>
 <p><strong class="program">Krita</strong> has supported simple WebP export for a while, but since 5.1 it supports all the export options offered by <a class="reference external" href="https://chromium.googlesource.com/webm/libwebp">libwebp</a>.</p>
 <section id="export-options">
 <h2>Export Options:<a class="headerlink" href="#export-options" title="本標頭的永久連結">¶</a></h2>
@@ -260,13 +260,13 @@
 <section id="general">
 <h3>General:<a class="headerlink" href="#general" title="本標頭的永久連結">¶</a></h3>
 <dl>
-<dt>Preset:</dt><dd><p>WebP offers some presets for given a given type of photo. For stylized images, use <span class="guilabel">Line Drawing</span>, for painterly images, use <span class="guilabel">Portrait</span> or <span class="guilabel">Outdoor Photo</span>.</p>
+<dt>Preset:</dt><dd><p>WebP offers some presets for a given type of photo. For stylized images, use <span class="guilabel">Line Drawing</span>, for painterly images, use <span class="guilabel">Portrait</span> or <span class="guilabel">Outdoor Photo</span>.</p>
 </dd>
-<dt>Lossless Compression:</dt><dd><p>Use the <a class="reference internal" href="lossy_lossless.html#lossless-compression"><span class="std std-ref">lossless compression mode</span></a> mode, this is a slightly different algorithm, which is heavier but gives better results for sharp contrasts.</p>
+<dt>Lossless Compression:</dt><dd><p>Use the <a class="reference internal" href="lossy_lossless.html#lossless-compression"><span class="std std-ref">lossless compression mode</span></a>, this is a slightly different algorithm, which is heavier but gives better results for sharp contrasts.</p>
 </dd>
 <dt>Quality:</dt><dd><p>Slider for quality.</p>
 <p>With <span class="guilabel">Lossless Compression</span>, 0% means the library will use the fewest amount of algorithmic tricks to reduce file size. This means fast saving times, at the expense of larger files. Conversely, 100% means all algorithmic tricks will be used, leading to the smallest file size, but saving will take longer. The first is best for a situation where speed is more important than size, such as files you share via USB. The latter is useful for situations where the file size can become a problem, such as serving it over the Internet.</p>
-<p>Without <span class="guilabel">Lossless Compression</span>, image information considered redundant will be removed, rather than compressed. This means that at 0%, the most information wll be lost and thus the smallest file size is achieved. This also reduces the overall quality. Conversely, 100% will remove the least amount of image information and thus maintain quality at the expense of a large file size.</p>
+<p>Without <span class="guilabel">Lossless Compression</span>, image information considered redundant will be removed, rather than compressed. This means that at 0%, the most information will be lost and thus the smallest file size is achieved. This also reduces the overall quality. Conversely, 100% will remove the least amount of image information and thus maintain quality at the expense of a large file size.</p>
 </dd>
 <dt>Trade Off</dt><dd><p>A slider that allows you to select whether saving speed is more important than quality.</p>
 </dd>
@@ -288,7 +288,7 @@
 <dt>Alpha Plane Compression:</dt><dd><p>Whether to losslessly compress the alpha channel (Lossless) or outright discard it (None).
 None</p>
 </dd>
-<dt>Predictive Filtering for Alpha Plane:</dt><dd><p>Whether to use predictive filtering for the alpha/transparency.:guilabel:<cite>Best</cite> will try all potential predictive filter modes before deciding which one to use, making it slower than <span class="guilabel">Fast</span>, which just makes a guess and selects that.</p>
+<dt>Predictive Filtering for Alpha Plane:</dt><dd><p>Whether to use predictive filtering for the alpha/transparency. <span class="guilabel">Best</span> will try all potential predictive filter modes before deciding which one to use, making it slower than <span class="guilabel">Fast</span>, which just makes a guess and selects that.</p>
 </dd>
 <dt>Alpha Plane Quality:</dt><dd><p>Compression quality for the alpha channel. 0% means smallest size, 100% means no compression. Only with <span class="guilabel">Alpha Plane Compression</span> set to Lossless.</p>
 </dd>
@@ -315,7 +315,7 @@ None</p>
 </dd>
 <dt>Partitions:</dt><dd><p>Sets how many partitions can the VP8 codec use for storing decompression information. Must be between 0 and 3. Default is 0 to make decoding easier.</p>
 </dd>
-<dt>Auto Adjust Filter Stretch:</dt><dd><p>The encoder will spend some time tuning and selecting the best filter options before encoding.</p>
+<dt>Auto Adjust Filter Strength:</dt><dd><p>The encoder will spend some time tuning and selecting the best filter options before encoding.</p>
 </dd>
 <dt>Entropy Passes:</dt><dd><p>Number of passes to do for selecting the best option between target size and target PSNR.</p>
 </dd>
@@ -371,7 +371,7 @@ Automatically triggers <span class="guilabel">Lossless Compression</span>.</p>
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>1926022</code>
+          修訂版本 <code>c44cdc1</code>
         </span>
       
 
@@ -399,6 +399,7 @@ Automatically triggers <span class="guilabel">Lossless Compression</span>.</p>
       <script src="../../_static/underscore.js"></script>
       <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
       <script src="../../_static/doctools.js"></script>
+      <script src="../../_static/sphinx_highlight.js"></script>
       <script src="../../_static/translations.js"></script>
 
   

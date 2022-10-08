@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2022-09-06T12:59:18" />
+  <meta property="og:article:modified_time" content="2022-10-08T11:00:22" />
   <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 <meta content="如何在 Krita 中使用網點。" name="description" />
 
@@ -312,11 +312,11 @@
 </dd>
 <dt id="term-Screen">Screen<a class="headerlink" href="#term-Screen" title="本術語的永久連結">¶</a></dt><dd><p>The term screen comes from the days when analog halftoning was invented. It is also used for example when talking about screen printing. Traditionally it was some kind of sheet with very small holes (a fabric for example) through which the light passed. Here we use the term to refer to the unbounded regular pattern formed by repeating some shape.</p>
 </dd>
-<dt id="term-Screen-Cell">Screen Cell<a class="headerlink" href="#term-Screen-Cell" title="本術語的永久連結">¶</a></dt><dd><p>A screen cell is the minimum rectangular area in the <a class="reference internal" href="#term-Screen"><span class="xref std std-term">screen</span></a> that contains a repeteable shape or image (commonly a dot, but can be a part of a line or other shape). In principle every cell contains the same shape, and the arrangement of the cells, in a regular and orthogonal grid, forms the screen.</p>
+<dt id="term-Screen-Cell">Screen Cell<a class="headerlink" href="#term-Screen-Cell" title="本術語的永久連結">¶</a></dt><dd><p>A screen cell is the minimum rectangular area in the <a class="reference internal" href="#term-Screen"><span class="xref std std-term">screen</span></a> that contains a repeatable shape or image (commonly a dot, but can be a part of a line or other shape). In principle every cell contains the same shape, and the arrangement of the cells, in a regular and orthogonal grid, forms the screen.</p>
 </dd>
 <dt id="term-Screen-Grid">Screen Grid<a class="headerlink" href="#term-Screen-Grid" title="本術語的永久連結">¶</a></dt><dd><p>The screen grid is the grid formed by the regular positioning of <a class="reference internal" href="#term-Screen-Cell"><span class="xref std std-term">screen cells</span></a>.</p>
 </dd>
-<dt id="term-Macrocell">Macrocell<a class="headerlink" href="#term-Macrocell" title="本術語的永久連結">¶</a></dt><dd><p>Because this filter needs to align the <a class="reference internal" href="#term-Screen"><span class="xref std std-term">screen</span></a> image to the <a class="reference internal" href="#term-Pixel-Grid"><span class="xref std std-term">pixel grid</span></a> (the rasterization process) it may happen that not all the <a class="reference internal" href="#term-Screen-Cell"><span class="xref std std-term">cells</span></a> contain exactly the same shape (in terms of pixel values). This can produce artifacts such as moire patterns. To solve this, the <a class="reference internal" href="#term-Screen-Grid"><span class="xref std std-term">screen grid</span></a> can be aligned to the pixel grid in such a way that some screen cell corners fall at integer pixel coordinates. You can select every how many screen cells horizontally and vertically this should happen. The effect is that the shapes of the set of cells between such aligned corners will repeat. For example, if you align the screen grid every 2 cells horizontally and every 1 cell vertically, every 2 by 1 block of cells will be identical (although the cells inside the block can be alightly different with respect to each other). This set of contiguous cells that repeat along the screen is sometimes called a <em class="dfn">macrocell</em> or <em class="dfn">supercell</em>. Similarly the single cell is sometimes called <em class="dfn">microcell</em>.</p>
+<dt id="term-Macrocell">Macrocell<a class="headerlink" href="#term-Macrocell" title="本術語的永久連結">¶</a></dt><dd><p>Because this filter needs to align the <a class="reference internal" href="#term-Screen"><span class="xref std std-term">screen</span></a> image to the <a class="reference internal" href="#term-Pixel-Grid"><span class="xref std std-term">pixel grid</span></a> (the rasterization process) it may happen that not all the <a class="reference internal" href="#term-Screen-Cell"><span class="xref std std-term">cells</span></a> contain exactly the same shape (in terms of pixel values). This can produce artifacts such as moire patterns. To solve this, the <a class="reference internal" href="#term-Screen-Grid"><span class="xref std std-term">screen grid</span></a> can be aligned to the pixel grid in such a way that some screen cell corners fall at integer pixel coordinates. You can select every how many screen cells horizontally and vertically this should happen. The effect is that the shapes of the set of cells between such aligned corners will repeat. For example, if you align the screen grid every 2 cells horizontally and every 1 cell vertically, every 2 by 1 block of cells will be identical (although the cells inside the block can be slightly different with respect to each other). This set of contiguous cells that repeat along the screen is sometimes called a <em class="dfn">macrocell</em> or <em class="dfn">supercell</em>. Similarly the single cell is sometimes called <em class="dfn">microcell</em>.</p>
 </dd>
 <dt id="term-Spot-Function">Spot Function<a class="headerlink" href="#term-Spot-Function" title="本術語的永久連結">¶</a></dt><dd><p>A spot function is a kind of function that generates the shapes analytically inside every <a class="reference internal" href="#term-Screen-Cell"><span class="xref std std-term">screen cell</span></a> (a circle, a line, etc.).</p>
 </dd>
@@ -343,7 +343,7 @@
 <dt>Equalization</dt><dd><div class="versionadded">
 <p><span class="versionmodified added">在 5.1 版本新加入.</span></p>
 </div>
-<p>The <a class="reference internal" href="#term-Spot-Function"><span class="xref std std-term">spot functions</span></a> are simple periodic 2D functions that output a value between black and white. Every one cycle in the width and height forms a <a class="reference internal" href="#term-Screen-Cell"><span class="xref std std-term">screentone cell</span></a> and all the cells combined form the <a class="reference internal" href="#term-Screen-Grid"><span class="xref std std-term">screentone grid</span></a>. The spot functions are designed to be simple and fast to compute, but for some functions this means that they don't have a uniform distribution of values. Suppose we threshold the function (contrast value equal to 100%, the usual in traditional halftoning). This lack of uniform distribution has the downside of not producing shapes that have a direct relation between the brightness of the input and the coverage of the black areas. The effect is a mismatch between the input brightness and the perceived brightness. If the function has a uniform distribution of values, for example choosing a brightness of 40% will produce a shape that has 40% of the pixels <em>white</em> and 60% <em>black</em>. To solve this the user can select between three equalization modes:</p>
+<p>The <a class="reference internal" href="#term-Spot-Function"><span class="xref std std-term">spot functions</span></a> are simple periodic 2D functions that output a value between black and white. Every one cycle in the width and height forms a <a class="reference internal" href="#term-Screen-Cell"><span class="xref std std-term">screentone cell</span></a> and all the cells combined form the <a class="reference internal" href="#term-Screen-Grid"><span class="xref std std-term">screentone grid</span></a>. The spot functions are designed to be simple and fast to compute, but for some functions this means that they don't have a uniform distribution of values. Suppose we threshold the function (contrast value equal to 100%, the usual in traditional halftoning). This lack of uniform distribution has the downside of not producing shapes that have a direct relationship between the brightness of the input and the coverage of the black areas. The effect is a mismatch between the input brightness and the perceived brightness. If the function has a uniform distribution of values, for example choosing a brightness of 40% will produce a shape that has 40% of the pixels <em>white</em> and 60% <em>black</em>. To solve this the user can select between three equalization modes:</p>
 <ul class="simple">
 <li><p><span class="guilabel">None</span>: by selecting this mode the generator will use the <a class="reference internal" href="#term-Spot-Function"><span class="xref std std-term">functions</span></a> as is, it will not enforce a uniform distribution of values if the function is not already equalized. This is the same behavior as in versions prior to 5.1.</p></li>
 <li><p><span class="guilabel">Function based equalization</span>: this mode will perform something similar to histogram equalization to the <a class="reference internal" href="#term-Spot-Function"><span class="xref std std-term">function</span></a>.</p></li>
@@ -365,7 +365,7 @@
 <dt>Size Mode</dt><dd><div class="versionadded">
 <p><span class="versionmodified added">在 5.1 版本新加入.</span></p>
 </div>
-<p>You can choose between a resolution based mode and an pixel based mode to adjust the geometric transformations of the screen. In the resolution mode you set a resolution and change the frequency of the patterns in lines per inch/cm. The pixel mode is the old one in which you set the size of the cells manually. Those two modes are synched so changing the frequency will change the cell size and viceversa.</p>
+<p>You can choose between a resolution based mode and a pixel based mode to adjust the geometric transformations of the screen. In the resolution mode you set a resolution and change the frequency of the patterns in lines per inch/cm. The pixel mode is the old one in which you set the size of the cells manually. Those two modes are synched so changing the frequency will change the cell size and vice versa.</p>
 </dd>
 <dt>Align to Pixel Grid</dt><dd><div class="versionadded">
 <p><span class="versionmodified added">在 5.1 版本新加入.</span></p>
@@ -407,7 +407,7 @@
 <h3><a class="toc-backref" href="#id13" role="doc-backlink">What Interpolation to Use?</a><a class="headerlink" href="#what-interpolation-to-use" title="本標頭的永久連結">¶</a></h3>
 <p>The interpolation sets how the shape of the pattern should vary from dark to light.</p>
 <p>You will only have to worry about the interpolation in the case of the round and elliptical dots and the line patterns, although if you use some equalization mode the interpolation will look the same in the case of the line patterns.</p>
-<p>So, in summary, change the interpolation if you use round or elliptical dots to vary how they change shape when changing the brightness. If you use linear interpolation the dots will look as black circles/ellipses that grow radially until they cover the <a class="reference internal" href="#term-Screen-Cell"><span class="xref std std-term">cells</span></a>. If you use the sinusoidal interpolation, the round/elliptical dot pattern will change <em>symmetrically</em>. This means that at low brightness values the pattern will look as small white circles/ellipses and at hight brightness values it will look as small black circles/ellipses. At mid-brightness values the pattern will look as a checkerboard.</p>
+<p>So, in summary, change the interpolation if you use round or elliptical dots to vary how they change shape when changing the brightness. If you use linear interpolation the dots will look as black circles/ellipses that grow radially until they cover the <a class="reference internal" href="#term-Screen-Cell"><span class="xref std std-term">cells</span></a>. If you use the sinusoidal interpolation, the round/elliptical dot pattern will change <em>symmetrically</em>. This means that at low brightness values the pattern will look as small white circles/ellipses and at high brightness values it will look as small black circles/ellipses. At mid-brightness values the pattern will look as a checkerboard.</p>
 </section>
 <section id="what-equalization-mode-to-use">
 <h3><a class="toc-backref" href="#id14" role="doc-backlink">What Equalization Mode to Use?</a><a class="headerlink" href="#what-equalization-mode-to-use" title="本標頭的永久連結">¶</a></h3>
@@ -423,7 +423,7 @@
 </li>
 <li><p>Cons:</p>
 <ul>
-<li><p>There is a missmatch between the brightness parameter and the perceived brightness.</p></li>
+<li><p>There is a mismatch between the brightness parameter and the perceived brightness.</p></li>
 <li><p>Since it is an analytical approach it may not produce a wide range of brightness variations when the cells are small. For example, the round dot shape grows radially. This means that if the radius grows 1 pixel, then a bunch of pixels are added all around the dot. This produces a big jump on the perceived brightness.</p></li>
 </ul>
 </li>
@@ -434,12 +434,12 @@
 <ul>
 <li><p>Pros:</p>
 <ul>
-<li><p>It produces better perceived tones.</p></li>
+<li><p>It produces better-perceived tones.</p></li>
 <li><p>Nice smoothing of the edges.</p></li>
 </ul>
 </li>
 <li><p>Cons: Since it is still an analytical approach it may not produce a wide range of brightness variations when the cells are small.</p></li>
-<li><p>When to use: use this mode if you need accurate tone representation and you use big cell sizes, or if you need nice smoothing. For example if you use the screentone on graphic design works.</p></li>
+<li><p>When to use: use this mode if you need accurate tone representation and you use big cell sizes, or if you need nice smoothing. For example, if you use the screentone on graphic design works.</p></li>
 </ul>
 </li>
 <li><p><span class="guilabel">Template based equalization</span>:</p>
@@ -458,7 +458,7 @@
 </li>
 <li><p>When to use:</p>
 <ul>
-<li><p>Use this mode whenever possible, specialy if you want small cell sizes or if you want smooth transitions between perceived brightness values.</p></li>
+<li><p>Use this mode whenever possible, especially if you want small cell sizes or if you want smooth transitions between perceived brightness values.</p></li>
 <li><p>Use this mode if you use 100% contrast.</p></li>
 <li><p>Use this mode if you use the screentone generator with the halftone filter.</p></li>
 </ul>
@@ -469,8 +469,8 @@
 </section>
 <section id="what-size-mode-to-use">
 <h3><a class="toc-backref" href="#id15" role="doc-backlink">What Size Mode to Use?</a><a class="headerlink" href="#what-size-mode-to-use" title="本標頭的永久連結">¶</a></h3>
-<p>At the end of the day choosing what size mode to use is a matter of how many size related calculations you want to avoid, and this usually has to be with the final medium you intend the image to be displayed on.</p>
-<p>If you intend to print the image you are making, then you will find it easier setting the <a class="reference internal" href="#term-Screen-Cell"><span class="xref std std-term">cells</span></a> size in terms of resolution and cell frequency. If you choose the same resolution as the resolution of the image then you can easily map the frequency values to real life meassures.</p>
+<p>At the end of the day choosing what size mode to use is a matter of how many size-related calculations you want to avoid, and this usually has to be with the final medium you intend the image to be displayed on.</p>
+<p>If you intend to print the image you are making, then you will find it easier to set the <a class="reference internal" href="#term-Screen-Cell"><span class="xref std std-term">cells</span></a> size in terms of resolution and cell frequency. If you choose the same resolution as the resolution of the image then you can easily map the frequency values to real-life measures.</p>
 <p>On the other hand, if you just want to produce digital images, then you may find it easier to work with pixel sizes directly, as they are easier to compare to the image size. In the case you don't really care about the exact size of the pattern, this mode allows you to easily try different sizes while looking at the image to see the changes.</p>
 </section>
 <section id="using-the-align-to-pixel-grid-options">
@@ -481,14 +481,14 @@
 </section>
 <section id="using-the-brightness-and-contrast-options">
 <h3><a class="toc-backref" href="#id17" role="doc-backlink">Using the Brightness and Contrast Options</a><a class="headerlink" href="#using-the-brightness-and-contrast-options" title="本標頭的永久連結">¶</a></h3>
-<p>Most of the times, to achieve the classical screentone/halftone look, you will have to set the contrast slider to a high value and then change how dark/light the pattern looks with the brightness slider.</p>
+<p>Most of the time, to achieve the classical screentone/halftone look, you will have to set the contrast slider to a high value and then change how dark/light the pattern looks with the brightness slider.</p>
 <p>At 100% contrast the shapes will look aliased, binary. This is the classic approach to digital halftoning, since printers can only output black or white (ink or absence of ink).</p>
 <p>If you want sharp edges but also want antialiased edges, you can try choosing a contrast value around 80% to 95%.</p>
-<p>Sometimes you will need to have extra soft shapes. For example, if you use the screentone generator with the halftone filter, you better use a 50% contrast and 50% brightness. The reason is that the halftone filter performs it's own contrast adjustment. You can take advantage of these soft shapes to then apply your own contrast adjustment filter and achieve even more unique looks as shown in the following image.</p>
+<p>Sometimes you will need to have extra soft shapes. For example, if you use the screentone generator with the halftone filter, you better use a 50% contrast and 50% brightness. The reason is that the halftone filter performs its own contrast adjustment. You can take advantage of these soft shapes to then apply your own contrast adjustment filter and achieve even more unique looks as shown in the following image.</p>
 <figure class="align-default" id="id6">
 <img alt="../../../_images/fill_layer_screentone_brightness_contrast_example.png" src="../../../_images/fill_layer_screentone_brightness_contrast_example.png" />
 <figcaption>
-<p><span class="caption-text">On the left: a simple screentone layer with 50 pixels wide elliptical dots, sinusoidal interpolation and 50% brightness and contrast. On the middle: The layer with a curves filter mask applied to it. On the right: the curve used on the filter.</span><a class="headerlink" href="#id6" title="本圖片的永久連結">¶</a></p>
+<p><span class="caption-text">On the left: a simple screentone layer with 50 pixels wide elliptical dots, sinusoidal interpolation and 50% brightness and contrast. In the middle: The layer with a curves filter mask applied to it. On the right: the curve used on the filter.</span><a class="headerlink" href="#id6" title="本圖片的永久連結">¶</a></p>
 </figcaption>
 </figure>
 </section>
@@ -518,7 +518,7 @@
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>1926022</code>
+          修訂版本 <code>c44cdc1</code>
         </span>
       
 
@@ -546,6 +546,7 @@
       <script src="../../../_static/underscore.js"></script>
       <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
       <script src="../../../_static/doctools.js"></script>
+      <script src="../../../_static/sphinx_highlight.js"></script>
       <script src="../../../_static/translations.js"></script>
 
   

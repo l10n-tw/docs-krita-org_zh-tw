@@ -111,7 +111,7 @@ Cursor Color:
 Use separate settings for eraser
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-This allows you to configure all of the above, but then when the blending mode is set to erase (which is the default on eraser presets as well when toggling erase with :kbd:`E`. The settings are mostly indentical except of the additional eraser tool icon.
+This allows you to configure all of the above, but then when the blending mode is set to erase, which is the default on eraser presets as well when toggling erase with :kbd:`E`. The settings are mostly identical except of the additional eraser tool icon.
 
 .. _window_settings:
 
@@ -246,7 +246,7 @@ Use Zip64
 Trim Files before Saving
     Normally, Krita will always keep pixels outside the visible canvas area and save that. With this option turned on, Krita will first :ref:`crop <crop_tool>` all the layers to the canvas-area and then save it.
 Trim frames when importing animations
-    This will crop frames that where imported using any of the options Krita has available. This saves ram, but may not always be what is required.
+    This will crop frames that where imported using any of the options Krita has available. This saves RAM, but may not always be what is required.
 
 
 .. _misc_settings:
@@ -315,7 +315,7 @@ Font DPI Workaround
     
     .. versionadded:: 5.0
 
-Whn Pasting Into Krita From Other Applications
+When Pasting Into Krita From Other Applications
 
     Some applications, like Google Chrome, provide multiple formats when pasting or dropping an image. This toggle asks which of these you prefer.
     
@@ -326,7 +326,7 @@ Whn Pasting Into Krita From Other Applications
     Paste the attached sRGB bitmap (no filesystem or Internet access required, but metadata will be lost).
         Just paste the attached bitmap. This will always work, and may be the best option if all you copy images for is to make small edits to share with friends. If you intend to copy and edit HDR images however, this option will make your life harder because the HDR version of the image will not be selected by default.
     Ask each time
-        Krita will show a prompt whenever there's multiple options.
+        Krita will show a prompt whenever there are multiple options.
 
     .. versionadded:: 5.1
     

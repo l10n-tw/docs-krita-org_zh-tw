@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2022-09-06T12:59:18" />
+  <meta property="og:article:modified_time" content="2022-10-08T11:00:22" />
   <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 <meta content="Introduction unittests in Krita." name="description" />
 
@@ -424,28 +424,28 @@ you@yourcomputer:~/kritadev/build&gt;./libs/ui/tests/KisSpinBoxSplineUnitConvert
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#ifndef __KIS_SOME_CLASS_TEST_H</span>
 <span class="cp">#define __KIS_SOME_CLASS_TEST_H</span>
 
-<span class="cp">#include</span> <span class="cpf">&lt;QtTest/QtTest&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;QtTest/QtTest&gt;</span><span class="cp"></span>
 
-<span class="k">class</span> <span class="nc">KisSomeClassTest</span> <span class="o">:</span> <span class="k">public</span> <span class="n">QObject</span>
-<span class="p">{</span>
-    <span class="n">Q_OBJECT</span>
-<span class="k">private</span> <span class="nl">Q_SLOTS</span><span class="p">:</span>
-    <span class="kt">void</span> <span class="n">test</span><span class="p">();</span>
-<span class="p">};</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">KisSomeClassTest</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">QObject</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">Q_OBJECT</span><span class="w"></span>
+<span class="k">private</span><span class="w"> </span><span class="n">Q_SLOTS</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">test</span><span class="p">();</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
 
 <span class="cp">#endif </span><span class="cm">/* __KIS_SOME_CLASS_TEST_H */</span><span class="cp">&lt;/syntaxhighlight&gt;</span>
 </pre></div>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">kis_some_class_test.cpp</span></code></p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;kis_some_class_test.h&quot;</span><span class="cp"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;kis_some_class_test.h&quot;</span><span class="cp"></span>
 
-<span class="cp">#include</span> <span class="cpf">&lt;QTest&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;QTest&gt;</span><span class="cp"></span>
 
-<span class="kt">void</span> <span class="n">KisSomeClassTest</span><span class="o">::</span><span class="n">test</span><span class="p">()</span>
-<span class="p">{</span>
-<span class="p">}</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">KisSomeClassTest::test</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 
-<span class="n">QTEST_MAIN</span><span class="p">(</span><span class="n">KisSomeClassTest</span><span class="p">,</span> <span class="n">GUI</span><span class="p">)</span><span class="o">&lt;/</span><span class="n">syntaxhighlight</span><span class="o">&gt;</span>
+<span class="n">QTEST_MAIN</span><span class="p">(</span><span class="n">KisSomeClassTest</span><span class="p">,</span><span class="w"> </span><span class="n">GUI</span><span class="p">)</span><span class="o">&lt;/</span><span class="n">syntaxhighlight</span><span class="o">&gt;</span><span class="w"></span>
 </pre></div>
 </div>
 </div></blockquote>
@@ -454,10 +454,10 @@ you@yourcomputer:~/kritadev/build&gt;./libs/ui/tests/KisSpinBoxSplineUnitConvert
 <blockquote>
 <div><div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="c"># ...</span>
 <span class="c">########### next target ###############</span>
-<span class="nb">set</span><span class="p">(</span><span class="s">kis_some_class_test_SRCS</span> <span class="s">kis_some_class_test.cpp</span> <span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">kis_some_class_test_SRCS</span><span class="w"> </span><span class="s">kis_some_class_test.cpp</span><span class="w"> </span><span class="p">)</span>
 <span class="nb">ecm_add_tests</span><span class="p">(</span><span class="o">${</span><span class="nv">kis_some_class_test_SRCS</span><span class="o">}</span>
-<span class="s">NAME_PREFIX</span> <span class="s2">&quot;libs-somelib-&quot;</span>
-<span class="s">LINK_LIBRARIES</span> <span class="s">kritaimage</span> <span class="s">Qt5::Test</span><span class="p">)</span>
+<span class="s">NAME_PREFIX</span><span class="w"> </span><span class="s2">&quot;libs-somelib-&quot;</span>
+<span class="s">LINK_LIBRARIES</span><span class="w"> </span><span class="s">kritaimage</span><span class="w"> </span><span class="s">Qt5::Test</span><span class="p">)</span>
 <span class="c"># ...</span>
 </pre></div>
 </div>
@@ -465,14 +465,14 @@ you@yourcomputer:~/kritadev/build&gt;./libs/ui/tests/KisSpinBoxSplineUnitConvert
 </li>
 <li><p>Write your test. You can use any macro commands provided by Qt (QVERIFY, QCOMPARE or QBENCHMARK).</p>
 <blockquote>
-<div><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">KisSomeClassTest</span><span class="o">::</span><span class="n">test</span><span class="p">()</span>
-<span class="p">{</span>
-    <span class="n">QString</span> <span class="n">cat</span><span class="p">(</span><span class="s">&quot;cat&quot;</span><span class="p">);</span>
-    <span class="n">QString</span> <span class="nf">dog</span><span class="p">(</span><span class="s">&quot;dog&quot;</span><span class="p">);</span>
+<div><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">KisSomeClassTest::test</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">QString</span><span class="w"> </span><span class="n">cat</span><span class="p">(</span><span class="s">&quot;cat&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">QString</span><span class="w"> </span><span class="n">dog</span><span class="p">(</span><span class="s">&quot;dog&quot;</span><span class="p">);</span><span class="w"></span>
 
-    <span class="n">QVERIFY</span><span class="p">(</span><span class="n">cat</span> <span class="o">!=</span> <span class="n">dog</span><span class="p">);</span>
-    <span class="n">QCOMPARE</span><span class="p">(</span><span class="n">cat</span><span class="p">,</span> <span class="s">&quot;cat&quot;</span><span class="p">);</span>
-<span class="p">}</span>
+<span class="w">    </span><span class="n">QVERIFY</span><span class="p">(</span><span class="n">cat</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">dog</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">QCOMPARE</span><span class="p">(</span><span class="n">cat</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;cat&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 </div></blockquote>
@@ -486,20 +486,20 @@ you@yourcomputer:~/kritadev/build&gt;./libs/ui/tests/KisSpinBoxSplineUnitConvert
 <h3><a class="toc-backref" href="#id21" role="doc-backlink">Fetching reference images</a><a class="headerlink" href="#fetching-reference-images" title="本標頭的永久連結">¶</a></h3>
 <p>All the testing files/images are usually stored in the test's data folder  (e.g. ./krita/image/tests/data/). But there are some files which are used throughout all the unit tests. These files are stored in the global folder ./krita/sdk/tests/data/. If you want to access any file, just use <code class="docutils literal notranslate"><span class="pre">TestUtil::fetchDataFileLazy</span></code>. It first searches the file in the local test's folder and if nothing is found checks the global folder.</p>
 <p>Example:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">QImage</span> <span class="nf">refImage</span><span class="p">(</span><span class="n">TestUtil</span><span class="o">::</span><span class="n">fetchDataFileLazy</span><span class="p">(</span><span class="s">&quot;lena.png&quot;</span><span class="p">));</span>
-<span class="n">QVERIFY</span><span class="p">(</span><span class="o">!</span><span class="n">refImage</span><span class="p">.</span><span class="n">isNull</span><span class="p">());</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">QImage</span><span class="w"> </span><span class="n">refImage</span><span class="p">(</span><span class="n">TestUtil</span><span class="o">::</span><span class="n">fetchDataFileLazy</span><span class="p">(</span><span class="s">&quot;lena.png&quot;</span><span class="p">));</span><span class="w"></span>
+<span class="n">QVERIFY</span><span class="p">(</span><span class="o">!</span><span class="n">refImage</span><span class="p">.</span><span class="n">isNull</span><span class="p">());</span><span class="w"></span>
 </pre></div>
 </div>
 </section>
 <section id="compare-test-result-against-a-reference-qimage">
 <h3><a class="toc-backref" href="#id22" role="doc-backlink">Compare test result against a reference QImage</a><a class="headerlink" href="#compare-test-result-against-a-reference-qimage" title="本標頭的永久連結">¶</a></h3>
 <p>There are two helper functions to compare a given QImage against an image saved in the data folder.</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">bool</span> <span class="n">TestUtil</span><span class="o">::</span><span class="n">checkQImage</span><span class="p">(</span><span class="k">const</span> <span class="n">QImage</span> <span class="o">&amp;</span><span class="n">image</span><span class="p">,</span> <span class="k">const</span> <span class="n">QString</span> <span class="o">&amp;</span><span class="n">testName</span><span class="p">,</span>
-                           <span class="k">const</span> <span class="n">QString</span> <span class="o">&amp;</span><span class="n">prefix</span><span class="p">,</span> <span class="k">const</span> <span class="n">QString</span> <span class="o">&amp;</span><span class="n">name</span><span class="p">,</span>
-                           <span class="kt">int</span> <span class="n">fuzzy</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="kt">int</span> <span class="n">fuzzyAlpha</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="kt">int</span> <span class="n">maxNumFailingPixels</span> <span class="o">=</span> <span class="mi">0</span><span class="p">);</span>
-<span class="kt">bool</span> <span class="n">TestUtil</span><span class="o">::</span><span class="n">checkQImageExternal</span><span class="p">(</span><span class="k">const</span> <span class="n">QImage</span> <span class="o">&amp;</span><span class="n">image</span><span class="p">,</span> <span class="k">const</span> <span class="n">QString</span> <span class="o">&amp;</span><span class="n">testName</span><span class="p">,</span>
-                                   <span class="k">const</span> <span class="n">QString</span> <span class="o">&amp;</span><span class="n">prefix</span><span class="p">,</span> <span class="k">const</span> <span class="n">QString</span> <span class="o">&amp;</span><span class="n">name</span><span class="p">,</span>
-                                   <span class="kt">int</span> <span class="n">fuzzy</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="kt">int</span> <span class="n">fuzzyAlpha</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="kt">int</span> <span class="n">maxNumFailingPixels</span> <span class="o">=</span> <span class="mi">0</span><span class="p">);</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">bool</span><span class="w"> </span><span class="nf">TestUtil::checkQImage</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">QImage</span><span class="w"> </span><span class="o">&amp;</span><span class="n">image</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">QString</span><span class="w"> </span><span class="o">&amp;</span><span class="n">testName</span><span class="p">,</span><span class="w"></span>
+<span class="w">                           </span><span class="k">const</span><span class="w"> </span><span class="n">QString</span><span class="w"> </span><span class="o">&amp;</span><span class="n">prefix</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">QString</span><span class="w"> </span><span class="o">&amp;</span><span class="n">name</span><span class="p">,</span><span class="w"></span>
+<span class="w">                           </span><span class="kt">int</span><span class="w"> </span><span class="n">fuzzy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">fuzzyAlpha</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">-1</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">maxNumFailingPixels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="nf">TestUtil::checkQImageExternal</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">QImage</span><span class="w"> </span><span class="o">&amp;</span><span class="n">image</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">QString</span><span class="w"> </span><span class="o">&amp;</span><span class="n">testName</span><span class="p">,</span><span class="w"></span>
+<span class="w">                                   </span><span class="k">const</span><span class="w"> </span><span class="n">QString</span><span class="w"> </span><span class="o">&amp;</span><span class="n">prefix</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">QString</span><span class="w"> </span><span class="o">&amp;</span><span class="n">name</span><span class="p">,</span><span class="w"></span>
+<span class="w">                                   </span><span class="kt">int</span><span class="w"> </span><span class="n">fuzzy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">fuzzyAlpha</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">-1</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">maxNumFailingPixels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
 <p>The functions search for a PNG file with path</p>
@@ -535,49 +535,49 @@ svn checkout svn+ssh://svn@svn.kde.org/home/kde/trunk/tests/kritatests
 <h3><a class="toc-backref" href="#id23" role="doc-backlink">QImageBasedTest for complex actions</a><a class="headerlink" href="#qimagebasedtest-for-complex-actions" title="本標頭的永久連結">¶</a></h3>
 <p>Sometimes you need to test some complex actions like cropping or transforming the whole image. The main problem of such action is that it should work correctly with any kind of layer or mask, e.g. KisCloneLayer, KisGroupLayer or even KisSelectionMask. To facilitate such complex testing conditions, Krita provides a special class <code class="docutils literal notranslate"><span class="pre">QImageBasedTest</span></code>. It helps you to create a really complex image and check the contents of its layers. You can find the best example of its usage in <code class="docutils literal notranslate"><span class="pre">KisProcessingsTest</span></code>. Basically, to use this class, one should derive its own testing class from it, and call a set of callbacks, which do all the work. Let's consider the code from KisProcessingsTest:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// override QImageBasedTest class</span>
-<span class="k">class</span> <span class="nc">BaseProcessingTest</span> <span class="o">:</span> <span class="k">public</span> <span class="n">TestUtil</span><span class="o">::</span><span class="n">QImageBasedTest</span>
-<span class="p">{</span>
-<span class="k">public</span><span class="o">:</span>
-    <span class="n">BaseProcessingTest</span><span class="p">()</span>
-        <span class="o">:</span> <span class="n">QImageBasedTest</span><span class="p">(</span><span class="s">&quot;processings&quot;</span><span class="p">)</span>
-    <span class="p">{</span>
-    <span class="p">}</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">BaseProcessingTest</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">TestUtil</span><span class="o">::</span><span class="n">QImageBasedTest</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="k">public</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">BaseProcessingTest</span><span class="p">()</span><span class="w"></span>
+<span class="w">        </span><span class="o">:</span><span class="w"> </span><span class="n">QImageBasedTest</span><span class="p">(</span><span class="s">&quot;processings&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
 
-    <span class="c1">// The method is called by test cases. If the test fails, a set of PNG images</span>
-    <span class="c1">// is saved into working directory</span>
-    <span class="kt">void</span> <span class="n">test</span><span class="p">(</span><span class="k">const</span> <span class="n">QString</span> <span class="o">&amp;</span><span class="n">testname</span><span class="p">,</span> <span class="n">KisProcessingVisitorSP</span> <span class="n">visitor</span><span class="p">)</span> <span class="p">{</span>
+<span class="w">    </span><span class="c1">// The method is called by test cases. If the test fails, a set of PNG images</span>
+<span class="w">    </span><span class="c1">// is saved into working directory</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">test</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">QString</span><span class="w"> </span><span class="o">&amp;</span><span class="n">testname</span><span class="p">,</span><span class="w"> </span><span class="n">KisProcessingVisitorSP</span><span class="w"> </span><span class="n">visitor</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 
-        <span class="c1">// create an image and regenerate its projection</span>
-        <span class="n">KisSurrogateUndoStore</span> <span class="o">*</span><span class="n">undoStore</span> <span class="o">=</span> <span class="k">new</span> <span class="n">KisSurrogateUndoStore</span><span class="p">();</span>
-        <span class="n">KisImageSP</span> <span class="n">image</span> <span class="o">=</span> <span class="n">createImage</span><span class="p">(</span><span class="n">undoStore</span><span class="p">);</span>
-        <span class="n">image</span><span class="o">-&gt;</span><span class="n">initialRefreshGraph</span><span class="p">();</span>
+<span class="w">        </span><span class="c1">// create an image and regenerate its projection</span>
+<span class="w">        </span><span class="n">KisSurrogateUndoStore</span><span class="w"> </span><span class="o">*</span><span class="n">undoStore</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">KisSurrogateUndoStore</span><span class="p">();</span><span class="w"></span>
+<span class="w">        </span><span class="n">KisImageSP</span><span class="w"> </span><span class="n">image</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">createImage</span><span class="p">(</span><span class="n">undoStore</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">image</span><span class="o">-&gt;</span><span class="n">initialRefreshGraph</span><span class="p">();</span><span class="w"></span>
 
-        <span class="c1">// check if the image is correct before testing anything</span>
-        <span class="n">QVERIFY</span><span class="p">(</span><span class="n">checkLayersInitial</span><span class="p">(</span><span class="n">image</span><span class="p">));</span>
+<span class="w">        </span><span class="c1">// check if the image is correct before testing anything</span>
+<span class="w">        </span><span class="n">QVERIFY</span><span class="p">(</span><span class="n">checkLayersInitial</span><span class="p">(</span><span class="n">image</span><span class="p">));</span><span class="w"></span>
 
-        <span class="c1">// do the action we are trying to test</span>
-        <span class="n">KisProcessingApplicator</span> <span class="nf">applicator</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">image</span><span class="o">-&gt;</span><span class="n">root</span><span class="p">(),</span>
-                                        <span class="n">KisProcessingApplicator</span><span class="o">::</span><span class="n">RECURSIVE</span><span class="p">);</span>
+<span class="w">        </span><span class="c1">// do the action we are trying to test</span>
+<span class="w">        </span><span class="n">KisProcessingApplicator</span><span class="w"> </span><span class="nf">applicator</span><span class="p">(</span><span class="n">image</span><span class="p">,</span><span class="w"> </span><span class="n">image</span><span class="o">-&gt;</span><span class="n">root</span><span class="p">(),</span><span class="w"></span>
+<span class="w">                                        </span><span class="n">KisProcessingApplicator</span><span class="o">::</span><span class="n">RECURSIVE</span><span class="p">);</span><span class="w"></span>
 
-        <span class="n">applicator</span><span class="p">.</span><span class="n">applyVisitor</span><span class="p">(</span><span class="n">visitor</span><span class="p">);</span>
-        <span class="n">applicator</span><span class="p">.</span><span class="n">end</span><span class="p">();</span>
-        <span class="n">image</span><span class="o">-&gt;</span><span class="n">waitForDone</span><span class="p">();</span>
+<span class="w">        </span><span class="n">applicator</span><span class="p">.</span><span class="n">applyVisitor</span><span class="p">(</span><span class="n">visitor</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">applicator</span><span class="p">.</span><span class="n">end</span><span class="p">();</span><span class="w"></span>
+<span class="w">        </span><span class="n">image</span><span class="o">-&gt;</span><span class="n">waitForDone</span><span class="p">();</span><span class="w"></span>
 
-        <span class="c1">// check the result, and dump images if something went wrong</span>
-        <span class="n">QVERIFY</span><span class="p">(</span><span class="n">checkLayers</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">testname</span><span class="p">));</span>
+<span class="w">        </span><span class="c1">// check the result, and dump images if something went wrong</span>
+<span class="w">        </span><span class="n">QVERIFY</span><span class="p">(</span><span class="n">checkLayers</span><span class="p">(</span><span class="n">image</span><span class="p">,</span><span class="w"> </span><span class="n">testname</span><span class="p">));</span><span class="w"></span>
 
-        <span class="c1">// Check if undo(!) works correctly</span>
-        <span class="n">undoStore</span><span class="o">-&gt;</span><span class="n">undo</span><span class="p">();</span>
-        <span class="n">image</span><span class="o">-&gt;</span><span class="n">waitForDone</span><span class="p">();</span>
+<span class="w">        </span><span class="c1">// Check if undo(!) works correctly</span>
+<span class="w">        </span><span class="n">undoStore</span><span class="o">-&gt;</span><span class="n">undo</span><span class="p">();</span><span class="w"></span>
+<span class="w">        </span><span class="n">image</span><span class="o">-&gt;</span><span class="n">waitForDone</span><span class="p">();</span><span class="w"></span>
 
-        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">checkLayersInitial</span><span class="p">(</span><span class="n">image</span><span class="p">))</span> <span class="p">{</span>
-            <span class="n">qWarning</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;NOTE: undo is not completely identical &quot;</span>
-                    <span class="o">&lt;&lt;</span> <span class="s">&quot;to the original image. Falling back to &quot;</span>
-                    <span class="o">&lt;&lt;</span><span class="s">&quot;projection comparison&quot;</span><span class="p">;</span>
-            <span class="n">QVERIFY</span><span class="p">(</span><span class="n">checkLayersInitialRootOnly</span><span class="p">(</span><span class="n">image</span><span class="p">));</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-<span class="p">};</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">checkLayersInitial</span><span class="p">(</span><span class="n">image</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="n">qWarning</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;NOTE: undo is not completely identical &quot;</span><span class="w"></span>
+<span class="w">                    </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;to the original image. Falling back to &quot;</span><span class="w"></span>
+<span class="w">                    </span><span class="o">&lt;&lt;</span><span class="s">&quot;projection comparison&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="n">QVERIFY</span><span class="p">(</span><span class="n">checkLayersInitialRootOnly</span><span class="p">(</span><span class="n">image</span><span class="p">));</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
 </pre></div>
 </div>
 </section>
@@ -585,18 +585,18 @@ svn checkout svn+ssh://svn@svn.kde.org/home/kde/trunk/tests/kritatests
 <h3><a class="toc-backref" href="#id24" role="doc-backlink">MaskParent object</a><a class="headerlink" href="#maskparent-object" title="本標頭的永久連結">¶</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">TestUtil::MaskParent</span></code> is a simple class that, in its constructor, creates an RGB8 image with a single paint layer, which you can use for further testing. The image and the layer can be accessed as simple member variables.</p>
 <p>Example:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">KisMaskTest</span><span class="o">::</span><span class="n">testCreation</span><span class="p">()</span>
-<span class="p">{</span>
-    <span class="c1">// create an image and a simple layer</span>
-    <span class="n">TestUtil</span><span class="o">::</span><span class="n">MaskParent</span> <span class="n">p</span><span class="p">;</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">KisMaskTest::testCreation</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// create an image and a simple layer</span>
+<span class="w">    </span><span class="n">TestUtil</span><span class="o">::</span><span class="n">MaskParent</span><span class="w"> </span><span class="n">p</span><span class="p">;</span><span class="w"></span>
 
-    <span class="c1">// create a mask and attach its selection to the created layer</span>
-    <span class="n">TestMaskSP</span> <span class="n">mask</span> <span class="o">=</span> <span class="k">new</span> <span class="n">TestMask</span><span class="p">;</span>
-    <span class="n">mask</span><span class="o">-&gt;</span><span class="n">initSelection</span><span class="p">(</span><span class="n">p</span><span class="p">.</span><span class="n">layer</span><span class="p">);</span>
+<span class="w">    </span><span class="c1">// create a mask and attach its selection to the created layer</span>
+<span class="w">    </span><span class="n">TestMaskSP</span><span class="w"> </span><span class="n">mask</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">TestMask</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">mask</span><span class="o">-&gt;</span><span class="n">initSelection</span><span class="p">(</span><span class="n">p</span><span class="p">.</span><span class="n">layer</span><span class="p">);</span><span class="w"></span>
 
-    <span class="n">QCOMPARE</span><span class="p">(</span><span class="n">mask</span><span class="o">-&gt;</span><span class="n">extent</span><span class="p">(),</span> <span class="n">QRect</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">512</span><span class="p">,</span><span class="mi">512</span><span class="p">));</span>
-    <span class="n">QCOMPARE</span><span class="p">(</span><span class="n">mask</span><span class="o">-&gt;</span><span class="n">exactBounds</span><span class="p">(),</span> <span class="n">QRect</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">512</span><span class="p">,</span><span class="mi">512</span><span class="p">));</span>
-<span class="p">}</span>
+<span class="w">    </span><span class="n">QCOMPARE</span><span class="p">(</span><span class="n">mask</span><span class="o">-&gt;</span><span class="n">extent</span><span class="p">(),</span><span class="w"> </span><span class="n">QRect</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">512</span><span class="p">,</span><span class="mi">512</span><span class="p">));</span><span class="w"></span>
+<span class="w">    </span><span class="n">QCOMPARE</span><span class="p">(</span><span class="n">mask</span><span class="o">-&gt;</span><span class="n">exactBounds</span><span class="p">(),</span><span class="w"> </span><span class="n">QRect</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">512</span><span class="p">,</span><span class="mi">512</span><span class="p">));</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 <aside class="footnote-list brackets">
@@ -633,7 +633,7 @@ svn checkout svn+ssh://svn@svn.kde.org/home/kde/trunk/tests/kritatests
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>1926022</code>
+          修訂版本 <code>c44cdc1</code>
         </span>
       
 
@@ -661,6 +661,7 @@ svn checkout svn+ssh://svn@svn.kde.org/home/kde/trunk/tests/kritatests
       <script src="../_static/underscore.js"></script>
       <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
       <script src="../_static/doctools.js"></script>
+      <script src="../_static/sphinx_highlight.js"></script>
       <script src="../_static/translations.js"></script>
 
   

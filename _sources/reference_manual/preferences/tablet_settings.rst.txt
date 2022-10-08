@@ -36,7 +36,7 @@ Maximum Brush Speed
     .. versionadded:: 5.1
 
 Brush Speed Smoothing
-    With some devices the speed samples can be very erratic. This can be reduced by instead of using each sample on it's own, several samples are compared to find a smoother value. This controls how many speed samples should be taken into account. Note that too many samples can result in the loss of subtle speed changes.
+    With some devices the speed samples can be very erratic. This can be reduced by instead of using each sample on its own, several samples are compared to find a smoother value. This controls how many speed samples should be taken into account. Note that too many samples can result in the loss of subtle speed changes.
 
     .. versionadded:: 5.1
     

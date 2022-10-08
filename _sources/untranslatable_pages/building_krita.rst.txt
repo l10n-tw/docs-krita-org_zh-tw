@@ -607,8 +607,8 @@ These are specialized ways of building Krita on Linux while re-using the depende
 
 
 
-Krita Devbox for Linux
-~~~~~~~~~~~~~~~~~~~~~~
+Krita Devbox for Linux (Experimental)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 `Krita Devbox <https://invent.kde.org/eoinoneill/krita-devbox>`_ is a complete Krita development environment in a box!
 
@@ -616,7 +616,7 @@ Krita Devbox is intended to provide a consistent and easy-to-use development con
 
 Krita Devbox's is particularly useful in the context of "atomic" Linux operating systems (like Fedora Kinoite and Silverblue) where the use of "pet containers" for application development is recommended. However, Krita Devbox may also be useful for any Krita developer on Linux who is interested in quick setup, using a containerized development environment, building in a similar context to KDE's official binary factory, and producing test AppImages.
 
-You can find more details about what Krita Devbox is and how it works over on the `Krita Devbox repository page. <https://invent.kde.org/eoinoneill/krita-devbox>`_
+You can find more details about what Krita Devbox is and how it works over on the `Krita Devbox repository page. <https://invent.kde.org/eoinoneill/krita-devbox>`_ (Note: This build method is still quite new and experimental, so it's possible that you may run into a configuration issue, build error, or other bug. If so, please submit bug reports concerning the Krita Devbox to the gitlab repository listed above.) 
 
 
 .. toctree::

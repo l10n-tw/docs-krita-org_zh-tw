@@ -67,16 +67,16 @@ The default shortcut for levels filter is :kbd:`Ctrl + L`.
 2. This area shows the histogram for the active channel.
 3. This is a slider that you can use to quickly change the input black and white points and gamma.
 4. These input boxes do the same as the input levels slider, but allow you to finetune the values.
-5. This is a slider that you can use to quickly change the output black and white ponts.
+5. This is a slider that you can use to quickly change the output black and white points.
 6. These input boxes do the same as the output levels slider, but allow you to finetune the values.
-7. These buttons allow you to control the visualization of the histogram. The first button makes it use a linear scale (the default). The second one makes it use a logarithmic scale. The third one changes its vertical size to fit the whole histogram in the area. The forth one changes the vertical size to fit in the area most of the histogram but cutting long peaks produced by outliers. You can also change the size of the histogram by clicking and dragging verticaly on the area or by double-clicking to change between "fit all" and "fit cutting long peaks".
+7. These buttons allow you to control the visualization of the histogram. The first button makes it use a linear scale (the default). The second one makes it use a logarithmic scale. The third one changes its vertical size to fit the whole histogram in the area. The fourth one changes the vertical size to fit in the area most of the histogram but cutting long peaks produced by outliers. You can also change the size of the histogram by clicking and dragging vertically on the area or by double-clicking to change between "fit all" and "fit cutting long peaks".
 8. This button brings up the auto levels dialog for the current channel.
 9. These buttons allow you to reset (from top to bottom) the levels of the current channel, the input levels of the current channel, the output levels of the current channel, and the levels of all the channels.
 10. This button brings up the multi-channel auto levels dialog (only available in the RGBA color model).
 
 This filter is very useful to do an initial cleanup of scanned lineart or grayscale images. If the scanned lineart is light you can slide the black handle in the input levels to the right to make it darker or if you want to remove the gray areas you can slide the white handle to the left.
 
-Auto levels is a quick way to adjust tone of an image. You can update the levels of the filter automaticaly by using the auto levels dialog that appears when clicking one of the buttons explained earlier:
+Auto levels is a quick way to adjust tone of an image. You can update the levels of the filter automatically by using the auto levels dialog that appears when clicking one of the buttons explained earlier:
 
 .. versionadded:: 5.1
 
@@ -92,7 +92,7 @@ Auto levels is a quick way to adjust tone of an image. You can update the levels
 * :guilabel:`Midtones`: In this group of widgets you can select how the midtones are enhanced.
 
     * :guilabel:`Method`: here you can choose not to enhance the midtones or a method to find the midtone point of the image using the median or the mean of the histogram.
-    * :guilabel:`Amount`: with this parameter you can choose how much the final midtone point used to adjust the image differs from the center of the histogram. If you choose 0% then the center of the histogram is used as midtone point (which meand no correction except for the output color). If you choose 100% then the median or mean is used (depending on the method selected). And if you choose a value inbetween then a midtone point between those is used by linearly interpolating them.
+    * :guilabel:`Amount`: with this parameter you can choose how much the final midtone point used to adjust the image differs from the center of the histogram. If you choose 0% then the center of the histogram is used as midtone point (which means no correction except for the output color). If you choose 100% then the median or mean is used (depending on the method selected). And if you choose a value inbetween then a midtone point between those is used by linearly interpolating them.
     * :guilabel:`Color`: allows you to choose which color should be used for the output midtones.
     
 If you want to change the settings later you can click on the :guilabel:`Create Filter Mask` button to add the levels as a filter mask.

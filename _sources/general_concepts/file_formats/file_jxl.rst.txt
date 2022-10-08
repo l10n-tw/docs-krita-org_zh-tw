@@ -68,14 +68,14 @@ Modular Mode
 
 You could consider VarDCT to be like 'lossy' compression, while Modular Mode is like 'lossless' compression. Furthermore, JPEG XL splits up images into smaller chunks called 'Groups', these are 256x256 for VarDCT and you can choose one of several sizes for Modular Mode.
 
-Color channel resamping.
+Color channel resampling.
     How to sample the color channels.
     This means that there will be less information stored, leading to a smaller file. However, because this only samples a few pixels, sharp contrasts are lost. The effect is similar to if you'd scale down the image by half (for 2x2), quarter (for 4x4) or to an eight (for 8x8) and then scaled it back up to the original size.
     
     This feature is particularly useful for images that are deliberately blurry and devoid of sharp contrast. It's recommended to set this to :guilabel:`No Downsampling` in any other case.
         
 Alpha channel resampling
-    Same as :guilabel:`Color channel resamping`, but then for the transparency of the image.
+    Same as :guilabel:`Color channel resampling`, but then for the transparency of the image.
 Photon noise
     This determines whether noise in the image should be abstracted and added later by the computer, giving a simulation of the noise that cameras sometimes capture.
 Generate dots
@@ -163,10 +163,10 @@ VarDCT parameters
             Create both a 512x512 image and a 64x64 image to use alongside the `DC` values to create the progressive preview.
 
 Modular Parameters
-    Extra options for :guilabel:`Modular Mode`. Modular mode uses something akin to a small programming language by way of predictors to describe image data succint and precise.
+    Extra options for :guilabel:`Modular Mode`. Modular mode uses something akin to a small programming language by way of predictors to describe image data succinct and precise.
 
     Progressive encoding
-        Whether or not to enable progressive encoding/decoding. As explained in :guilabel:`VarDCT parameters`, this means that the image can be saved in such a way that upon downloading and showing it, a rough previous will get shown first.
+        Whether or not to enable progressive encoding/decoding. As explained in :guilabel:`VarDCT parameters`, this means that the image can be saved in such a way that upon downloading and showing it, a rough previews will get shown first.
         
         - Default -- Encoder will select this option depending on :guilabel:`Tradeoff`.
         - Enabled -- Always use this regardless of :guilabel:`Tradeoff`.
