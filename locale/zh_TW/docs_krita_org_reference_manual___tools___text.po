@@ -9,11 +9,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 4.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-21 15:06+0000\n"
+"POT-Creation-Date: 2023-07-23 09:17+0000\n"
 "PO-Revision-Date: 2022-06-29 13:00+0000\n"
 "Last-Translator: RinalNamori <rinalnamori@gmail.com>\n"
-"Language-Team: Chinese (Traditional) <http://weblate.slat.org/projects/"
-"krita-docs/3-reference_manual___tools___text/zh_Hant/>\n"
+"Language-Team: Chinese (Traditional) <http://weblate.slat.org/projects/krita-"
+"docs/3-reference_manual___tools___text/zh_Hant/>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -42,66 +42,77 @@ msgstr "文字工具"
 msgid "This tool allows you to add text to your artwork."
 msgstr "這個工具可以在你的作品裡加上文字。"
 
-#: ../../reference_manual/tools/text.rst:22
+#: ../../reference_manual/tools/text.rst:24
+msgid ""
+"The text layout got reworked in Krita 5.2, however the text tool itself has "
+"not yet received an update. For now, if you want to use features like "
+"``inline-size`` for wrapping or ``writing-mode:vertical-rl`` for vertical "
+"text, you will need to use the SVG source editor. We will update the text "
+"tool in future versions of Krita."
+msgstr ""
+
+#: ../../reference_manual/tools/text.rst:26
 msgid ""
 "You use it by doing |mouseleft| :kbd:`+ drag` to create a rectangular "
 "selection. When releasing |mouseleft| a default text will be created and the "
 "text editor window will pop-up."
 msgstr ""
-"透過 |mouseleft| :kbd:`+ 拖曳` 來新增一個矩形選取區域。當放開 |mouseleft| "
-"時基本的文字段落會出現，同時彈出文字編輯界面。"
+"透過 |mouseleft| :kbd:`+ 拖曳` 來新增一個矩形選取區域。當放開 |mouseleft| 時"
+"基本的文字段落會出現，同時彈出文字編輯界面。"
 
 #: ../../<rst_epilog>:2
 msgid "mouseleft"
 msgstr "滑鼠左鍵"
 
-#: ../../reference_manual/tools/text.rst:24
+#: ../../reference_manual/tools/text.rst:28
 msgid ""
 "Hovering over other text shapes will highlight their bounding box. |"
 "mouseleft| on a highlighted text will select it as the active text."
-msgstr "游標移到其他文字方塊時會標示其邊框。\\ |mouseleft| "
-"會把文字方塊設定為使用中的文字。"
+msgstr ""
+"游標移到其他文字方塊時會標示其邊框。\\ |mouseleft| 會把文字方塊設定為使用中的"
+"文字。"
 
-#: ../../reference_manual/tools/text.rst:27
+#: ../../reference_manual/tools/text.rst:31
 msgid "Tool Options"
 msgstr "工具選項"
 
-#: ../../reference_manual/tools/text.rst:41
+#: ../../reference_manual/tools/text.rst:45
 msgid "Create new texts with..."
 msgstr "建立新文字自..."
 
-#: ../../reference_manual/tools/text.rst:32
+#: ../../reference_manual/tools/text.rst:36
 msgid ""
 "This contains features with which to create new texts, the following items "
 "are available:"
 msgstr "這裡包含了建立新文字的功能，具有以下選項："
 
-#: ../../reference_manual/tools/text.rst:34
+#: ../../reference_manual/tools/text.rst:38
 msgid "Font"
 msgstr "字型"
 
-#: ../../reference_manual/tools/text.rst:35
+#: ../../reference_manual/tools/text.rst:39
 msgid "The letter type used by newly created texts."
 msgstr "設定建立文字時所使用的字型。"
 
-#: ../../reference_manual/tools/text.rst:36
+#: ../../reference_manual/tools/text.rst:40
 msgid "Size in pt"
 msgstr "文字尺寸（pt）"
 
-#: ../../reference_manual/tools/text.rst:37
+#: ../../reference_manual/tools/text.rst:41
 msgid ""
 "The letter-size used by newly created texts. It is in pts (points), which is "
 "a common standard for fonts that is measured 72 points per inch. It "
 "therefore will stay proportionally the same size if you increase or decrease "
 "canvas dpi."
-msgstr "設定建立文字時文字的尺寸。數值為 pts（點），這是 1 英寸比 72 點的標準尺寸。"
-"因此即使改變畫布的 dpi 時文字也會保持相同的尺寸。"
+msgstr ""
+"設定建立文字時文字的尺寸。數值為 pts（點），這是 1 英寸比 72 點的標準尺寸。因"
+"此即使改變畫布的 dpi 時文字也會保持相同的尺寸。"
 
-#: ../../reference_manual/tools/text.rst:38
+#: ../../reference_manual/tools/text.rst:42
 msgid "Anchor/Align text to the left/middle/right"
 msgstr "錨定 / 對齊 文字至左側 / 中間 / 右側"
 
-#: ../../reference_manual/tools/text.rst:39
+#: ../../reference_manual/tools/text.rst:43
 msgid ""
 "Text alignment. This allows you to align text to the left, center it, or to "
 "the right. This is called text-anchor because SVG 1.1's multiline text only "
@@ -111,42 +122,42 @@ msgstr ""
 "文字對齊。可以對齊文字至左側、中間或是右側。稱為文字錨定的原因是 SVG 1.1 的多"
 "行文字只會使用文字錨定，這跟文字對齊有所分別（這也是沒有對齊功能的原因）。"
 
-#: ../../reference_manual/tools/text.rst:41
+#: ../../reference_manual/tools/text.rst:45
 msgid "Letter Spacing"
 msgstr "字距"
 
-#: ../../reference_manual/tools/text.rst:41
+#: ../../reference_manual/tools/text.rst:45
 msgid "The letter spacing used by newly created texts."
 msgstr "設定建立文字時字詞之間的間距。"
 
-#: ../../reference_manual/tools/text.rst:44
+#: ../../reference_manual/tools/text.rst:48
 msgid "Edit Text"
 msgstr "編輯文字"
 
-#: ../../reference_manual/tools/text.rst:44
+#: ../../reference_manual/tools/text.rst:48
 msgid ""
 "This will summon the text editor for the currently selected shape. This can "
 "be quickly invoked with either pressing the :kbd:`Enter` key or :kbd:`double-"
 "click +` |mouseleft| shortcut on the shape."
 msgstr ""
-"為了使用中的物件，Krita 會彈出一個文字編輯器。可以透過 :kbd:`Enter` 鍵，或是 "
-":kbd:`點兩下` |mouseleft| 來快速取用。"
+"為了使用中的物件，Krita 會彈出一個文字編輯器。可以透過 :kbd:`Enter` 鍵，或"
+"是 :kbd:`點兩下` |mouseleft| 來快速取用。"
 
-#: ../../reference_manual/tools/text.rst:47
+#: ../../reference_manual/tools/text.rst:51
 msgid "Text Editor"
 msgstr "文字編輯器"
 
-#: ../../reference_manual/tools/text.rst:49
+#: ../../reference_manual/tools/text.rst:53
 msgid ""
 "A small window for all your text editing needs. The Text Editor has two "
 "tabs: Rich text and SVG source."
 msgstr "包含所有文字編輯需求的視窗。裡面包含兩個分頁：富文字和 SVG 原始碼。"
 
-#: ../../reference_manual/tools/text.rst:57
+#: ../../reference_manual/tools/text.rst:61
 msgid "Activating"
 msgstr "啟用"
 
-#: ../../reference_manual/tools/text.rst:54
+#: ../../reference_manual/tools/text.rst:58
 msgid ""
 "You can use the Text tool to first create a text box. There are a few "
 "options in the tool options if you want to customize how the text will be "
@@ -156,35 +167,37 @@ msgstr ""
 "使用文字工具來建立一個文字方塊。工具選項會有數項選項來改變建立文字時的樣式。"
 "在畫布裡拖曳一個矩形來建立文字區域。文字建立後，可以透過兩個方法來編輯文字："
 
-#: ../../reference_manual/tools/text.rst:56
+#: ../../reference_manual/tools/text.rst:60
 msgid ""
 "Select the text with the shape selection tool (first tool). Press the :kbd:"
 "`Enter` key. The text editor will appear."
-msgstr "透過形狀選取區域工具（第一個工具）來選取文字。按 :kbd:`Enter` "
-"鍵後文字編輯器便會出現。"
+msgstr ""
+"透過形狀選取區域工具（第一個工具）來選取文字。按 :kbd:`Enter` 鍵後文字編輯器"
+"便會出現。"
 
-#: ../../reference_manual/tools/text.rst:57
+#: ../../reference_manual/tools/text.rst:61
 msgid ""
 "Select the text with the shape selection tool (first tool). Then click the "
 "Text tool. In the tool options there is an :guilabel:`Edit Text` button. "
 "When you click that the text editor window will appear."
 msgstr ""
-"透過形狀選取區域工具（第一個工具）來選取文字，然後切換到文字工具，"
-"工具選項裡有 :guilabel:`編輯文字` 按鈕，點擊按鈕後文字編輯器便會出現。"
+"透過形狀選取區域工具（第一個工具）來選取文字，然後切換到文字工具，工具選項裡"
+"有 :guilabel:`編輯文字` 按鈕，點擊按鈕後文字編輯器便會出現。"
 
-#: ../../reference_manual/tools/text.rst:64
+#: ../../reference_manual/tools/text.rst:68
 msgid "Editing"
 msgstr "編輯"
 
-#: ../../reference_manual/tools/text.rst:60
+#: ../../reference_manual/tools/text.rst:64
 msgid ""
 "If you are unfamiliar with the way SVG text works, use the rich text tab, it "
 "will allow you to edit the text as you see it, at the cost of not having all "
 "functionality."
-msgstr "如果你不熟悉 SVG 文字的使用方式，請使用富文字分頁，這分頁可以用肉眼的方式來編"
+msgstr ""
+"如果你不熟悉 SVG 文字的使用方式，請使用富文字分頁，這分頁可以用肉眼的方式來編"
 "輯文字，只是這個分頁沒有包含所有的功能。"
 
-#: ../../reference_manual/tools/text.rst:62
+#: ../../reference_manual/tools/text.rst:66
 msgid ""
 "If you are a little bit more familiar with SVG text, you can directly edit "
 "the SVG source. Do note that not all attributes and properties are converted "
@@ -193,370 +206,374 @@ msgstr ""
 "如果你對 SVG 文字有一定的認知，你可以直接使用 SVG 原始碼來編輯文字。請注意不"
 "是所有屬性都能轉換回富文字編輯器，所以當要換為富文字編輯器時請留意。"
 
-#: ../../reference_manual/tools/text.rst:64
+#: ../../reference_manual/tools/text.rst:68
 msgid ""
 "Press :guilabel:`Save` as you're done with your edits to preview them on "
 "canvas."
 msgstr "當完成編輯後按 :guilabel:`儲存` 來在畫布中預覽文字。"
 
-#: ../../reference_manual/tools/text.rst:70
+#: ../../reference_manual/tools/text.rst:74
 msgid "File"
 msgstr "檔案"
 
-#: ../../reference_manual/tools/text.rst:67
+#: ../../reference_manual/tools/text.rst:71
 msgid "Save :kbd:`Ctrl + S`"
 msgstr "儲存 :kbd:`Ctrl + S`"
 
-#: ../../reference_manual/tools/text.rst:68
+#: ../../reference_manual/tools/text.rst:72
 msgid "Save current edits to the text on canvas."
 msgstr "儲存目前編輯的文字至畫布。"
 
-#: ../../reference_manual/tools/text.rst:70
+#: ../../reference_manual/tools/text.rst:74
 msgid "Close :kbd:`Ctrl + W`"
 msgstr "關閉 :kbd:`Ctrl + W`"
 
-#: ../../reference_manual/tools/text.rst:70
+#: ../../reference_manual/tools/text.rst:74
 msgid "Close the editor."
 msgstr "關閉編輯器。"
 
-#: ../../reference_manual/tools/text.rst:96
+#: ../../reference_manual/tools/text.rst:100
 msgid "Edit"
 msgstr "編輯"
 
-#: ../../reference_manual/tools/text.rst:73
+#: ../../reference_manual/tools/text.rst:77
 msgid "Basic editing functions:"
 msgstr "基本編輯功能："
 
-#: ../../reference_manual/tools/text.rst:75
+#: ../../reference_manual/tools/text.rst:79
 msgid "Undo :kbd:`Ctrl + Z`"
 msgstr "返回上一步 :kbd:`Ctrl + Z`"
 
-#: ../../reference_manual/tools/text.rst:76
+#: ../../reference_manual/tools/text.rst:80
 msgid "Undo the last action in the text editor."
 msgstr "返回文字編輯器裡的上一個步驟。"
 
-#: ../../reference_manual/tools/text.rst:77
+#: ../../reference_manual/tools/text.rst:81
 msgid "Redo :kbd:`Ctrl + Shift + Z`"
 msgstr "重做操作 :kbd:`Ctrl + Shift + Z`"
 
-#: ../../reference_manual/tools/text.rst:78
+#: ../../reference_manual/tools/text.rst:82
 msgid "Redo the last undone action in the text editor."
 msgstr "重做文字編輯器裡上一個未完成的操作。"
 
-#: ../../reference_manual/tools/text.rst:79
+#: ../../reference_manual/tools/text.rst:83
 msgid "Cut :kbd:`Ctrl + X`"
 msgstr "剪下 :kbd:`Ctrl + X`"
 
-#: ../../reference_manual/tools/text.rst:80
+#: ../../reference_manual/tools/text.rst:84
 msgid "Cut selected text to the clipboard."
 msgstr "剪下選取中的文字至剪貼簿。"
 
-#: ../../reference_manual/tools/text.rst:81
+#: ../../reference_manual/tools/text.rst:85
 msgid "Copy :kbd:`Ctrl + C`"
 msgstr "複製 :kbd:`Ctrl + C`"
 
-#: ../../reference_manual/tools/text.rst:82
+#: ../../reference_manual/tools/text.rst:86
 msgid "Copy selected text to the clipboard."
 msgstr "複製選取中的文字至剪貼簿。"
 
-#: ../../reference_manual/tools/text.rst:83
+#: ../../reference_manual/tools/text.rst:87
 msgid "Paste :kbd:`Ctrl + V`"
 msgstr "貼上 :kbd:`Ctrl + V`"
 
-#: ../../reference_manual/tools/text.rst:84
+#: ../../reference_manual/tools/text.rst:88
 msgid "Paste text from the clipboard."
 msgstr "貼上來自剪貼簿的文字。"
 
-#: ../../reference_manual/tools/text.rst:85
+#: ../../reference_manual/tools/text.rst:89
 msgid "Select all :kbd:`Ctrl + A`"
 msgstr "選取所有 :kbd:`Ctrl + A`"
 
-#: ../../reference_manual/tools/text.rst:86
+#: ../../reference_manual/tools/text.rst:90
 msgid "Select all text in the active editor."
 msgstr "選取使用中的文字編輯器裡的所有文字。"
 
-#: ../../reference_manual/tools/text.rst:87
+#: ../../reference_manual/tools/text.rst:91
 msgid "Deselect :kbd:`Ctrl + Shift + A`"
 msgstr "取消選取 :kbd:`Ctrl + Shift + A`"
 
-#: ../../reference_manual/tools/text.rst:88
+#: ../../reference_manual/tools/text.rst:92
 msgid "Deselect any selected text."
 msgstr "取消選取所有已選取的文字。"
 
-#: ../../reference_manual/tools/text.rst:89
+#: ../../reference_manual/tools/text.rst:93
 msgid "Find :kbd:`Ctrl + F`"
 msgstr "尋找 :kbd:`Ctrl +F`"
 
-#: ../../reference_manual/tools/text.rst:90
+#: ../../reference_manual/tools/text.rst:94
 msgid ""
 "Pops up a window with an input to find the given text in the active editor."
 msgstr "彈出一個視窗，輸入文字後會在文字編輯器裡尋找與輸入文字相符的文字。"
 
-#: ../../reference_manual/tools/text.rst:91
+#: ../../reference_manual/tools/text.rst:95
 msgid "Find Next :kbd:`F3`"
 msgstr "尋找下一個 :kbd:`F3`"
 
-#: ../../reference_manual/tools/text.rst:92
+#: ../../reference_manual/tools/text.rst:96
 msgid "Searches for the next text using the last search key."
 msgstr "尋找符合尋找文字的下一個文字。"
 
-#: ../../reference_manual/tools/text.rst:93
+#: ../../reference_manual/tools/text.rst:97
 msgid "Find Previous :kbd:`Shift + F3`"
 msgstr "尋找上一個 :kbd:`Shift + F3`"
 
-#: ../../reference_manual/tools/text.rst:94
+#: ../../reference_manual/tools/text.rst:98
 msgid "Searches for the last text using the last search key."
 msgstr "尋找符合尋找文字的上一個文字。"
 
-#: ../../reference_manual/tools/text.rst:96
+#: ../../reference_manual/tools/text.rst:100
 msgid "Replace... :kbd:`Ctrl + R`"
 msgstr "取代... :kbd:`Ctrl + R`"
 
-#: ../../reference_manual/tools/text.rst:96
+#: ../../reference_manual/tools/text.rst:100
 msgid ""
 "Pops up a dialog with two inputs: The string you wish to find, and the "
 "string you wish to replace it with. Will always replace ALL found instances."
-msgstr "彈出有兩個輸入項目的界面：一個是要尋找的文字，另一個是想取代的文字。會取代所"
+msgstr ""
+"彈出有兩個輸入項目的界面：一個是要尋找的文字，另一個是想取代的文字。會取代所"
 "有符合的項目。"
 
-#: ../../reference_manual/tools/text.rst:102
+#: ../../reference_manual/tools/text.rst:106
 msgid "View"
 msgstr "檢視"
 
-#: ../../reference_manual/tools/text.rst:99
+#: ../../reference_manual/tools/text.rst:103
 msgid "Zoom Out :kbd:`Ctrl + -`"
 msgstr "縮小 :kbd:`Ctrl + -`"
 
-#: ../../reference_manual/tools/text.rst:100
+#: ../../reference_manual/tools/text.rst:104
 msgid "Zoom out the text."
 msgstr "縮小文字。"
 
-#: ../../reference_manual/tools/text.rst:102
+#: ../../reference_manual/tools/text.rst:106
 msgid "Zoom In :kbd:`Ctrl + +`"
 msgstr "放大 :kbd:`Ctrl + +`"
 
-#: ../../reference_manual/tools/text.rst:102
+#: ../../reference_manual/tools/text.rst:106
 msgid "Zoom in the text."
 msgstr "放大文字。"
 
-#: ../../reference_manual/tools/text.rst:106
+#: ../../reference_manual/tools/text.rst:110
 msgid "Insert"
 msgstr "插入"
 
-#: ../../reference_manual/tools/text.rst:106
+#: ../../reference_manual/tools/text.rst:110
 msgid "Special Character... :kbd:`Alt + Shift + C`"
 msgstr "特殊字元... :kbd:`Alt + Shift + C`"
 
-#: ../../reference_manual/tools/text.rst:106
+#: ../../reference_manual/tools/text.rst:110
 msgid ""
 "Pops up a dialog that allows you to search for special characters that are "
 "difficult to type in with your keyboard."
 msgstr "彈出一個用來尋找難以用鍵盤輸入的特殊字元的界面。"
 
-#: ../../reference_manual/tools/text.rst:130
+#: ../../reference_manual/tools/text.rst:134
 msgid "Format"
 msgstr "格式"
 
-#: ../../reference_manual/tools/text.rst:109
+#: ../../reference_manual/tools/text.rst:113
 msgid "Bold :kbd:`Ctrl + B`"
 msgstr "粗體 :kbd:`Ctrl + B`"
 
-#: ../../reference_manual/tools/text.rst:110
+#: ../../reference_manual/tools/text.rst:114
 msgid "Set the font-weight to **bold**."
 msgstr "設定文字粗細為\\ **粗體**\\ 。"
 
-#: ../../reference_manual/tools/text.rst:111
+#: ../../reference_manual/tools/text.rst:115
 msgid "Italic :kbd:`Ctrl + I`"
 msgstr "斜體 :kbd:`Ctrl + I`"
 
-#: ../../reference_manual/tools/text.rst:112
+#: ../../reference_manual/tools/text.rst:116
 msgid "Sets the selected text *italic*."
 msgstr "設定選取文字為\\ *斜體*\\ 。"
 
-#: ../../reference_manual/tools/text.rst:113
+#: ../../reference_manual/tools/text.rst:117
 msgid "Underline :kbd:`Ctrl + U`"
 msgstr "底線 :kbd:`Ctrl + U`"
 
-#: ../../reference_manual/tools/text.rst:114
+#: ../../reference_manual/tools/text.rst:118
 msgid "Underline the selected text."
 msgstr "為選取文字添加底線。"
 
-#: ../../reference_manual/tools/text.rst:115
+#: ../../reference_manual/tools/text.rst:119
 msgid "Strike-Through"
 msgstr "刪除線"
 
-#: ../../reference_manual/tools/text.rst:116
+#: ../../reference_manual/tools/text.rst:120
 msgid "Adds a strike-through text decoration."
 msgstr "為選取文字添加刪除線。"
 
-#: ../../reference_manual/tools/text.rst:117
+#: ../../reference_manual/tools/text.rst:121
 msgid "Superscript :kbd:`Ctrl + Shift + P`"
 msgstr "上標 :kbd:`Ctrl + Shift + P`"
 
-#: ../../reference_manual/tools/text.rst:118
+#: ../../reference_manual/tools/text.rst:122
 msgid "Sets the text to super-script baseline."
 msgstr "設定文字為上標。"
 
-#: ../../reference_manual/tools/text.rst:119
+#: ../../reference_manual/tools/text.rst:123
 msgid "Subscript :kbd:`Ctrl + Shift + B`"
 msgstr "下標 :kbd:`Ctrl + Shift + B`"
 
-#: ../../reference_manual/tools/text.rst:120
+#: ../../reference_manual/tools/text.rst:124
 msgid "Sets the text to subscript baseline."
 msgstr "設定文字為下標。"
 
-#: ../../reference_manual/tools/text.rst:121
+#: ../../reference_manual/tools/text.rst:125
 msgid "Weight"
 msgstr "粗細"
 
-#: ../../reference_manual/tools/text.rst:122
+#: ../../reference_manual/tools/text.rst:126
 msgid ""
 "Sets the font weight a little more specifically. Possibilities are... Light, "
 "Normal, Bold, and Black."
 msgstr "設定更明確的文字粗細。有可能的選項為... 幼，普通，較粗，粗。"
 
-#: ../../reference_manual/tools/text.rst:123
+#: ../../reference_manual/tools/text.rst:127
 msgid "Align Left"
 msgstr "左側對齊"
 
-#: ../../reference_manual/tools/text.rst:124
+#: ../../reference_manual/tools/text.rst:128
 msgid "Align the selected paragraph to the left."
 msgstr "對齊選取段落至左側。"
 
-#: ../../reference_manual/tools/text.rst:125
+#: ../../reference_manual/tools/text.rst:129
 msgid "Align Center :kbd:`Ctrl + Alt + C`"
 msgstr "居中對齊 :kbd:`Ctrl + Alt + C`"
 
-#: ../../reference_manual/tools/text.rst:126
+#: ../../reference_manual/tools/text.rst:130
 msgid "Center the selected paragraph."
 msgstr "居中所選取的段落。"
 
-#: ../../reference_manual/tools/text.rst:127
+#: ../../reference_manual/tools/text.rst:131
 msgid "Align Right :kbd:`Ctrl + Alt + R`"
 msgstr "右側對齊 :kbd:`Ctrl + Alt + R`"
 
-#: ../../reference_manual/tools/text.rst:128
+#: ../../reference_manual/tools/text.rst:132
 msgid "Align the selected paragraph to the right."
 msgstr "對齊選取段落至右側。"
 
-#: ../../reference_manual/tools/text.rst:130
-#: ../../reference_manual/tools/text.rst:184
+#: ../../reference_manual/tools/text.rst:134
+#: ../../reference_manual/tools/text.rst:188
 msgid "Kerning"
 msgstr "字距調整（Kerning）"
 
-#: ../../reference_manual/tools/text.rst:130
+#: ../../reference_manual/tools/text.rst:134
 msgid "Toggles kerning for selected text."
 msgstr "調整選取文字的字距。"
 
-#: ../../reference_manual/tools/text.rst:134
+#: ../../reference_manual/tools/text.rst:138
 msgid "Settings"
 msgstr "設定"
 
-#: ../../reference_manual/tools/text.rst:134
+#: ../../reference_manual/tools/text.rst:138
 msgid "Settings..."
 msgstr "進階..."
 
-#: ../../reference_manual/tools/text.rst:134
+#: ../../reference_manual/tools/text.rst:138
 msgid "Calls up the text-editor settings dialog."
 msgstr "叫出文字編輯器設定的界面。"
 
-#: ../../reference_manual/tools/text.rst:137
+#: ../../reference_manual/tools/text.rst:141
 msgid "Text Editor Settings"
 msgstr "文字編輯器設定"
 
-#: ../../reference_manual/tools/text.rst:139
+#: ../../reference_manual/tools/text.rst:143
 msgid "The settings that can be configured for the text editor."
 msgstr "用來調整文字編輯器的設定。"
 
-#: ../../reference_manual/tools/text.rst:141
+#: ../../reference_manual/tools/text.rst:145
 msgid "Editor Mode"
 msgstr "編輯器模式"
 
-#: ../../reference_manual/tools/text.rst:142
+#: ../../reference_manual/tools/text.rst:146
 msgid ""
 "Whether you want both the Rich Text Editor and the SVG Source Editor, or "
 "only one of either."
-msgstr "設定想使用的編輯器，可以分別使用富文字編輯器和 SVG "
-"原始碼編輯器，或是同時使用。"
+msgstr ""
+"設定想使用的編輯器，可以分別使用富文字編輯器和 SVG 原始碼編輯器，或是同時使"
+"用。"
 
-#: ../../reference_manual/tools/text.rst:159
+#: ../../reference_manual/tools/text.rst:163
 msgid "Colors"
 msgstr "色彩"
 
-#: ../../reference_manual/tools/text.rst:144
+#: ../../reference_manual/tools/text.rst:148
 msgid "Here you can configure the syntax highlighting for the SVG source."
 msgstr "在這裡你可以設定 SVG 原始碼的語法高亮。"
 
-#: ../../reference_manual/tools/text.rst:146
+#: ../../reference_manual/tools/text.rst:150
 msgid "Keyword"
 msgstr "關鍵字"
 
-#: ../../reference_manual/tools/text.rst:147
+#: ../../reference_manual/tools/text.rst:151
 msgid "These highlights important characters like <, /, and >."
 msgstr "這個功能突顯重要符號如 <，/ 和 >。"
 
-#: ../../reference_manual/tools/text.rst:148
+#: ../../reference_manual/tools/text.rst:152
 msgid "Element"
 msgstr "元素"
 
-#: ../../reference_manual/tools/text.rst:149
+#: ../../reference_manual/tools/text.rst:153
 msgid ""
 "The format for highlighting the element tag name. **text** and **tspan** are "
 "examples of element names."
 msgstr "突顯元素標籤名稱的格式。**text** 和 **tspan** 是元素名稱的例子。"
 
-#: ../../reference_manual/tools/text.rst:150
+#: ../../reference_manual/tools/text.rst:154
 msgid "Attribute"
 msgstr "屬性"
 
-#: ../../reference_manual/tools/text.rst:151
+#: ../../reference_manual/tools/text.rst:155
 msgid ""
 "The format for highlighting the attributes of the tag. For example, ``font-"
 "family``, when it isn't in the ``style`` tag is usually written as an "
 "attribute."
-msgstr "突顯標籤屬性的格式。如：\\ ``font-family``\\ ，當這個不在 ``style``\\ "
-"時通常會被寫成一個屬性。"
+msgstr ""
+"突顯標籤屬性的格式。如：\\ ``font-family``\\ ，當這個不在 ``style``\\ 時通常"
+"會被寫成一個屬性。"
 
-#: ../../reference_manual/tools/text.rst:152
+#: ../../reference_manual/tools/text.rst:156
 msgid "Value"
 msgstr "明度"
 
-#: ../../reference_manual/tools/text.rst:153
+#: ../../reference_manual/tools/text.rst:157
 msgid "The format for highlighting value of attributes."
 msgstr "突顯屬性的明度的格式。"
 
-#: ../../reference_manual/tools/text.rst:154
+#: ../../reference_manual/tools/text.rst:158
 msgid "Comment"
 msgstr "注釋"
 
-#: ../../reference_manual/tools/text.rst:155
+#: ../../reference_manual/tools/text.rst:159
 msgid ""
 "This highlights XML comments, which are written as following: ``<!-- This is "
 "an XML comment -->``. Comments are pieces of text that never get interpreted."
-msgstr "突顯 XML 注釋，格式為：\\ ``<!-- 這是一個 XML 注釋 -->``\\ "
-"。注釋是一段不會受任何影響的文字。"
+msgstr ""
+"突顯 XML 注釋，格式為：\\ ``<!-- 這是一個 XML 注釋 -->``\\ 。注釋是一段不會受"
+"任何影響的文字。"
 
-#: ../../reference_manual/tools/text.rst:156
+#: ../../reference_manual/tools/text.rst:160
 msgid "Editor Text Color"
 msgstr "編輯器文字色彩"
 
-#: ../../reference_manual/tools/text.rst:157
+#: ../../reference_manual/tools/text.rst:161
 msgid "The main color of the editor."
 msgstr "編輯器的主要顏色。"
 
-#: ../../reference_manual/tools/text.rst:159
+#: ../../reference_manual/tools/text.rst:163
 msgid "Editor background color"
 msgstr "編輯器的背景色彩"
 
-#: ../../reference_manual/tools/text.rst:159
+#: ../../reference_manual/tools/text.rst:163
 msgid "The main background color of the editor."
 msgstr "編輯器的主要背景色彩。"
 
-#: ../../reference_manual/tools/text.rst:162
+#: ../../reference_manual/tools/text.rst:166
 msgid "Fonts"
 msgstr "字型"
 
-#: ../../reference_manual/tools/text.rst:162
+#: ../../reference_manual/tools/text.rst:166
 msgid ""
 "This allows you to filter the selection of fonts in the editor by writing "
 "system. Some systems have a lot of fonts specifically for showing foreign "
@@ -568,11 +585,11 @@ msgstr ""
 "海外語言的字型，但這些字型未必對你有用。勾選你的系統使用的語言，然後列出支援"
 "該語言的字型。"
 
-#: ../../reference_manual/tools/text.rst:165
+#: ../../reference_manual/tools/text.rst:169
 msgid "Fine typographic control with the SVG Source tab"
 msgstr "在 SVG 原始碼分頁做出精細的排字"
 
-#: ../../reference_manual/tools/text.rst:167
+#: ../../reference_manual/tools/text.rst:171
 msgid ""
 "So, the rich text editor cannot control all functionality that SVG text "
 "allows for. For that, you will need to touch the SVG source directly. But to "
@@ -581,23 +598,23 @@ msgid ""
 "editor will lose some information, so if you go all out, use :guilabel:`SVG "
 "Source`."
 msgstr ""
-"由於富文字編輯器無法控制 SVG 文字所容許的所有功能。如要使用那些功能，"
-"你需要直接使用 SVG 原始碼。在開始之前，你要先去文字編輯器設定並啟用 "
-":guilabel:`SVG 原始碼` 或 :guilabel:`兩者` "
-"的編輯器的模式。富文字編輯器會丟失部分資訊，因此如要保留所有資訊，使用 "
-":guilabel:`SVG 原始碼`\\ 。"
+"由於富文字編輯器無法控制 SVG 文字所容許的所有功能。如要使用那些功能，你需要直"
+"接使用 SVG 原始碼。在開始之前，你要先去文字編輯器設定並啟用 :guilabel:`SVG 原"
+"始碼` 或 :guilabel:`兩者` 的編輯器的模式。富文字編輯器會丟失部分資訊，因此如"
+"要保留所有資訊，使用 :guilabel:`SVG 原始碼`\\ 。"
 
-#: ../../reference_manual/tools/text.rst:170
+#: ../../reference_manual/tools/text.rst:174
 msgid "Word-spacing, Letter-spacing and Kerning"
 msgstr "Word-spacing, Letter-spacing and Kerning（間距，字距和字距調整）"
 
-#: ../../reference_manual/tools/text.rst:172
+#: ../../reference_manual/tools/text.rst:176
 msgid ""
 "These three are written and read from the rich text tab, but only two of "
 "them can be controlled from Rich Text tab."
-msgstr "這三個格式都能在富文字編輯器中輸入及顯示，但只有兩個能在富文字編輯器中控制。"
+msgstr ""
+"這三個格式都能在富文字編輯器中輸入及顯示，但只有兩個能在富文字編輯器中控制。"
 
-#: ../../reference_manual/tools/text.rst:175
+#: ../../reference_manual/tools/text.rst:179
 msgid ""
 "`Kerning, in SVG 1.1 <https://www.w3.org/TR/SVG/text.html#KerningProperty>`_ "
 "behaves slightly differently than ``font-kerning`` in CSS. Krita by default "
@@ -607,11 +624,11 @@ msgid ""
 msgstr ""
 "`字距調整在 SVG 版本 1.1中<https://www.w3.org/TR/SVG/text."
 "html#KerningProperty>` 表現和 在 CSS 裡的 ``font-kerning`` 有些微差異。Krita "
-"預設在這裡使用 ``auto`` 屬性，也表示預設是開啟的。如要關閉字距調整，"
-"請在文字裡的 ``style`` 使用 ``kerning: 0``\\ 。任何其他的數值會被加到目前的 "
-"``letter-spacing``\\ 。"
+"預設在這裡使用 ``auto`` 屬性，也表示預設是開啟的。如要關閉字距調整，請在文字"
+"裡的 ``style`` 使用 ``kerning: 0``\\ 。任何其他的數值會被加到目前的 ``letter-"
+"spacing``\\ 。"
 
-#: ../../reference_manual/tools/text.rst:182
+#: ../../reference_manual/tools/text.rst:186
 msgid ""
 "<text style=\"kerning:0; font-family:Dancing Script; font-size:18pt; font-"
 "size-adjust:0.265625\">\n"
@@ -619,25 +636,25 @@ msgid ""
 "</text>"
 msgstr ""
 
-#: ../../reference_manual/tools/text.rst:187
+#: ../../reference_manual/tools/text.rst:191
 msgid "Letter-spacing"
 msgstr "Letter-spacing（字距）"
 
-#: ../../reference_manual/tools/text.rst:187
+#: ../../reference_manual/tools/text.rst:191
 msgid ""
 "This is the distance between letters in pts, usually. Just write ``letter-"
 "spacing`` in the ``style`` and add a distance in pts behind it. A negative "
 "value will decrease the value between letters."
 msgstr ""
 "這是字母之間的間距，通常以點為單位。只需在 ``style`` 裡加入 ``letter-"
-"spacing``\\ "
-"然後在後面加上以點為距離的數值。當數值為負時會減少字詞之間的數值。"
+"spacing``\\ 然後在後面加上以點為距離的數值。當數值為負時會減少字詞之間的數"
+"值。"
 
-#: ../../reference_manual/tools/text.rst:204
+#: ../../reference_manual/tools/text.rst:208
 msgid "Word-spacing"
 msgstr "Word-spacing（間距）"
 
-#: ../../reference_manual/tools/text.rst:190
+#: ../../reference_manual/tools/text.rst:194
 msgid ""
 "This is the extra distance between words, defaulting to pts. By default, "
 "``word-spacing: 0;`` will have it use only the width of the space character "
@@ -647,7 +664,7 @@ msgstr ""
 "這是用來設定單詞之間的額外距離，預設以點為單位。預設中 ``word-spacing: 0;`` "
 "只會用於該字型空白符號的寬度。當數值為負時會減少單詞之間的空間："
 
-#: ../../reference_manual/tools/text.rst:197
+#: ../../reference_manual/tools/text.rst:201
 msgid ""
 "<text style=\"font-family:Noto Serif; font-size:12pt; font-size-"
 "adjust:0.389915; text-anchor:middle\">\n"
@@ -663,11 +680,11 @@ msgid ""
 "</text>"
 msgstr ""
 
-#: ../../reference_manual/tools/text.rst:207
+#: ../../reference_manual/tools/text.rst:211
 msgid "x, y, dx, dy"
 msgstr ""
 
-#: ../../reference_manual/tools/text.rst:209
+#: ../../reference_manual/tools/text.rst:213
 msgid ""
 "These are even finer-grained controls that can be used to position text. "
 "However, they CANNOT be reliably converted to the format of the rich text "
@@ -678,61 +695,64 @@ msgstr ""
 "文字編輯器格式，因為富文字編輯器使用這些數值一來判斷是否為新一行文字並輸入文"
 "字。"
 
-#: ../../reference_manual/tools/text.rst:211
+#: ../../reference_manual/tools/text.rst:215
 msgid "X and Y"
 msgstr "X 和 Y"
 
-#: ../../reference_manual/tools/text.rst:212
+#: ../../reference_manual/tools/text.rst:216
 msgid ""
 "X and Y are absolute coordinates. But because you cannot change the absolute "
 "coordinates of the text from the editor, these get added to the position "
 "when they show up in a tspan."
-msgstr "X 和 Y 是絕對座標。但因為你無法由文字編輯器更改絕對座標，這些數值會在 tspan "
+msgstr ""
+"X 和 Y 是絕對座標。但因為你無法由文字編輯器更改絕對座標，這些數值會在 tspan "
 "出現時加入定位中。"
 
-#: ../../reference_manual/tools/text.rst:214
+#: ../../reference_manual/tools/text.rst:218
 msgid "dx and dy"
 msgstr "dx 和 dy"
 
-#: ../../reference_manual/tools/text.rst:214
+#: ../../reference_manual/tools/text.rst:218
 msgid "These are relative coordinates to the position of the previous letter."
 msgstr "這些數值是相對座標，對應上一個字母的位置。"
 
-#: ../../reference_manual/tools/text.rst:217
+#: ../../reference_manual/tools/text.rst:221
 msgid "Font-stretch and Small-caps"
 msgstr "字型拉伸和小型大寫字母"
 
-#: ../../reference_manual/tools/text.rst:219
+#: ../../reference_manual/tools/text.rst:223
 msgid ""
 "These can also be stored and written to the rich text tab's internal format, "
 "but they don't get used in the on screen text object."
-msgstr "這些項目也能在富文字分頁的內置格式中儲存及寫入，但不會被用在顯示的文字物件中"
-"。"
+msgstr ""
+"這些項目也能在富文字分頁的內置格式中儲存及寫入，但不會被用在顯示的文字物件"
+"中。"
 
-#: ../../reference_manual/tools/text.rst:222
+#: ../../reference_manual/tools/text.rst:226
 msgid ""
 "Dominant Baseline, Alignment baseline, Font-size-adjust, Writing mode, Glyph-"
 "orientation, rotate"
 msgstr ""
 "Dominant Baseline, Alignment baseline, Font-size-adjust, Writing mode, Glyph-"
-"orientation, "
-"rotate（主導基線，對齊基線，字體大小調整，書寫模式，字形方向，旋轉字元）"
+"orientation, rotate（主導基線，對齊基線，字體大小調整，書寫模式，字形方向，旋"
+"轉字元）"
 
-#: ../../reference_manual/tools/text.rst:224
+#: ../../reference_manual/tools/text.rst:228
 msgid ""
 "These are not stored in the rich text right now, and while they can be "
 "written into the SVG text, the SVG text-shape doesn't do anything with them."
-msgstr "這些屬性目前未能儲存在富文字中，雖然這些屬性能寫進 SVG 文字中，"
-"但是不會反映在 SVG 文字形狀中。"
+msgstr ""
+"這些屬性目前未能儲存在富文字中，雖然這些屬性能寫進 SVG 文字中，但是不會反映"
+"在 SVG 文字形狀中。"
 
-#: ../../reference_manual/tools/text.rst:226
+#: ../../reference_manual/tools/text.rst:230
 msgid ""
 "Krita generates ``font-size-adjust`` for the font when coming from rich "
 "text, as this can help designers when they want to use the SVG source as a "
 "basis for later adjustments."
 msgstr ""
-"Krita 會把富文字中生成的文字加上 ``font-size-adjust``\\ ，"
-"這樣設計能使設計師方便地使用 SVG 原始碼來進行後期的調整。"
+"Krita 會把富文字中生成的文字加上 ``font-size-adjust``\\ ，這樣設計能使設計師"
+"方便地使用 SVG 原始碼來進行後期的調整。"
 
 #: ../../reference_manual/tools/text.rst:11
 msgid "Tools"
