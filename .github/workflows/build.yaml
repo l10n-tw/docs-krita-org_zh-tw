@@ -15,7 +15,7 @@ jobs:
     - uses: actions/checkout@v2
     - name: Install Sphinx and Jieba
       run: |
-        python3 -m pip install sphinx=5.3.0 jieba
+        python3 -m pip install sphinx==5.3.0 jieba
     - name: Clone docs
       run: |
         cd ~
