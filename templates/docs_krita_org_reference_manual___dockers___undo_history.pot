@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Krita Manual 5.0\n"
+"Project-Id-Version: Krita Manual 5.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-27 21:21+0800\n"
+"POT-Creation-Date: 2023-07-23 09:17+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -24,40 +24,65 @@ msgstr ""
 msgid "Undo History"
 msgstr ""
 
-#: ../../reference_manual/dockers/undo_history.rst:21
-msgid "This docker allows you to quickly shift between undo states, and even go back in time far more quickly than rapidly reusing the :kbd:`Ctrl + Z` shortcut."
+#: ../../reference_manual/dockers/undo_history.rst:22
+#: ../../reference_manual/dockers/undo_history.rst:19
+msgid "Undo History Docker"
 msgstr ""
 
 #: ../../reference_manual/dockers/undo_history.rst:26
-msgid "Cumulative Undo"
-msgstr ""
-
-#: ../../reference_manual/dockers/undo_history.rst:28
-msgid "Click on the settings icon at the bottom of the Undo History docker. It will show you a dialog box to enable cumulative undo. You can change these parameters:"
-msgstr ""
-
-#: ../../reference_manual/dockers/undo_history.rst:30
-msgid "Start merging time"
+msgid "This docker allows you to quickly shift between undo states, and even go back in time far more quickly than rapidly reusing the :kbd:`Ctrl + Z` shortcut."
 msgstr ""
 
 #: ../../reference_manual/dockers/undo_history.rst:31
-msgid "The amount of seconds required to consider a group of strokes to be worth one undo step."
-msgstr ""
-
-#: ../../reference_manual/dockers/undo_history.rst:32
-msgid "Group time"
+msgid "Cumulative Undo"
 msgstr ""
 
 #: ../../reference_manual/dockers/undo_history.rst:33
-msgid "According to this parameter -- groups are made. Every stroke is put into the same group until two consecutive strokes have a time gap of more than T seconds. Then a new group is started."
+msgid "Cumulative Undo is a feature of Krita that allows merging similar undo states basing on their time separation. It makes the undo history cleaner."
 msgstr ""
 
-#: ../../reference_manual/dockers/undo_history.rst:36
-msgid "Split strokes."
+#: ../../reference_manual/dockers/undo_history.rst:42
+msgid "Cumulative Undo settings are located under :guilabel:`General` -> :guilabel:`Miscellaneous` page of Krita settings dialog"
 msgstr ""
 
-#: ../../reference_manual/dockers/undo_history.rst:35
-msgid "A user may want to keep the ability of Undoing/Redoing his/her last N strokes. Once N is crossed -- the earlier strokes are merged into the group's first stroke."
+#: ../../reference_manual/dockers/undo_history.rst:46
+msgid "In the advanced section of the settings you can configure the following properties:"
+msgstr ""
+
+#: ../../reference_manual/dockers/undo_history.rst:50
+msgid "Wait before merging strokes"
+msgstr ""
+
+#: ../../reference_manual/dockers/undo_history.rst:51
+msgid "The minimal age (in seconds) of the strokes to become subject to merging. This option allows you to keep undo for last N seconds intact."
+msgstr ""
+
+#: ../../reference_manual/dockers/undo_history.rst:52
+msgid "Exclude last strokes from merge"
+msgstr ""
+
+#: ../../reference_manual/dockers/undo_history.rst:53
+msgid "The minimal number of strokes that undo history should have before merging will start. This option allows you to keep N last strokes intact."
+msgstr ""
+
+#: ../../reference_manual/dockers/undo_history.rst:54
+msgid "Max interval group strokes"
+msgstr ""
+
+#: ../../reference_manual/dockers/undo_history.rst:55
+msgid "The maximum break the user takes between doing two strokes that can be considered to belong the same group. The lower the value, the more irrelevant strokes will be merged."
+msgstr ""
+
+#: ../../reference_manual/dockers/undo_history.rst:57
+msgid "Max group duration"
+msgstr ""
+
+#: ../../reference_manual/dockers/undo_history.rst:57
+msgid "The maximum duration of a single group. When a group becomes too long, Krita just starts a new one."
+msgstr ""
+
+#: ../../reference_manual/dockers/undo_history.rst:59
+msgid "Apart from these options, Krita will make sure that strokes of different colors, brush presets or blending modes are not merged together."
 msgstr ""
 
 #: ../../reference_manual/dockers/undo_history.rst:12
@@ -72,6 +97,6 @@ msgstr ""
 msgid "History"
 msgstr ""
 
-#: ../../reference_manual/dockers/undo_history.rst:23
+#: ../../reference_manual/dockers/undo_history.rst:28
 msgid "Cumulate Undo"
 msgstr ""

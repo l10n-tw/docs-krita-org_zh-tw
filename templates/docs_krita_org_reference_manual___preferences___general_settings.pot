@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Krita Manual 5.0\n"
+"Project-Id-Version: Krita Manual 5.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-08-17 13:54+0000\n"
+"POT-Creation-Date: 2023-07-23 09:17+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -193,7 +193,7 @@ msgid "Use separate settings for eraser"
 msgstr ""
 
 #: ../../reference_manual/preferences/general_settings.rst:114
-msgid "This allows you to configure all of the above, but then when the blending mode is set to erase (which is the default on eraser presets as well when toggling erase with :kbd:`E`. The settings are mostly indentical except of the additional eraser tool icon."
+msgid "This allows you to configure all of the above, but then when the blending mode is set to erase, which is the default on eraser presets as well when toggling erase with :kbd:`E`. The settings are mostly identical except of the additional eraser tool icon."
 msgstr ""
 
 #: ../../reference_manual/preferences/general_settings.rst:119
@@ -209,546 +209,611 @@ msgid "This can be either tabbed like :program:`GIMP` or :program:`Paint Tool SA
 msgstr ""
 
 #: ../../reference_manual/preferences/general_settings.rst:123
-msgid "Background image"
-msgstr ""
-
-#: ../../reference_manual/preferences/general_settings.rst:124
-msgid "Allows you to set a picture background for sub window mode."
-msgstr ""
-
-#: ../../reference_manual/preferences/general_settings.rst:125
-msgid "Window Background"
-msgstr ""
-
-#: ../../reference_manual/preferences/general_settings.rst:126
-msgid "Set the color of the sub window canvas area."
-msgstr ""
-
-#: ../../reference_manual/preferences/general_settings.rst:130
-msgid "Use Custom Interface Font"
-msgstr ""
-
-#: ../../reference_manual/preferences/general_settings.rst:128
-msgid "This allows you to tweak the interface font and the size. Requires a restart."
-msgstr ""
-
-#: ../../reference_manual/preferences/general_settings.rst:132
-msgid "Don't show contents when moving sub-windows"
-msgstr ""
-
-#: ../../reference_manual/preferences/general_settings.rst:133
-msgid "This gives an outline when moving windows to work around ugly glitches with certain graphics-cards."
-msgstr ""
-
-#: ../../reference_manual/preferences/general_settings.rst:134
 msgid "Show on-canvas popup messages"
 msgstr ""
 
-#: ../../reference_manual/preferences/general_settings.rst:135
+#: ../../reference_manual/preferences/general_settings.rst:124
 msgid "Whether you want to see the on-canvas pop-up messages that tell you whether you are in tabbed mode, rotating the canvas, or mirroring it."
 msgstr ""
 
-#: ../../reference_manual/preferences/general_settings.rst:138
+#: ../../reference_manual/preferences/general_settings.rst:128
 msgid "Zoom Margin Size"
 msgstr ""
 
-#: ../../reference_manual/preferences/general_settings.rst:137
+#: ../../reference_manual/preferences/general_settings.rst:126
 msgid "This determines how much margin in pixels will be added when using :guilabel:`Fit Page`. This is particularly useful for large monitors, where the total canvas area might be larger than the center of your field of vision. Using a margin can then center the image inside the canvas area more comfortably."
 msgstr ""
 
-#: ../../reference_manual/preferences/general_settings.rst:140
+#: ../../reference_manual/preferences/general_settings.rst:135
+msgid "Subwindow mode"
+msgstr ""
+
+#: ../../reference_manual/preferences/general_settings.rst:131
+msgid "Background image"
+msgstr ""
+
+#: ../../reference_manual/preferences/general_settings.rst:132
+msgid "Allows you to set a picture background for sub window mode."
+msgstr ""
+
+#: ../../reference_manual/preferences/general_settings.rst:133
+msgid "Window Background"
+msgstr ""
+
+#: ../../reference_manual/preferences/general_settings.rst:134
+msgid "Set the color of the sub window canvas area."
+msgstr ""
+
+#: ../../reference_manual/preferences/general_settings.rst:135
+msgid "Don't show contents when moving sub-windows"
+msgstr ""
+
+#: ../../reference_manual/preferences/general_settings.rst:136
+msgid "This gives an outline when moving windows to work around ugly glitches with certain graphics-cards."
+msgstr ""
+
+#: ../../reference_manual/preferences/general_settings.rst:137
+msgid "Use Custom Interface Font"
+msgstr ""
+
+#: ../../reference_manual/preferences/general_settings.rst:138
+msgid "This allows you to tweak the interface font and the size. Requires a restart."
+msgstr ""
+
+#: ../../reference_manual/preferences/general_settings.rst:145
 msgid "Enable Hi-DPI support"
 msgstr ""
 
-#: ../../reference_manual/preferences/general_settings.rst:141
+#: ../../reference_manual/preferences/general_settings.rst:140
 msgid "Attempt to use the Hi-DPI support. It is an option because we are still experiencing bugs on Windows."
 msgstr ""
 
-#: ../../reference_manual/preferences/general_settings.rst:143
-msgid "(Hi-DPI) Enable fractional scale factor"
+#: ../../reference_manual/preferences/general_settings.rst:145
+msgid "Enable fractional scale factor"
 msgstr ""
 
 #: ../../reference_manual/preferences/general_settings.rst:143
 msgid "Allow the Hi-DPI support to use fractional (not multiples of 100%) display scaling. If you use a fractional display scaling, this option can make the interface of Krita match the interface size of the rest of your system, but it may cause some visual artifacts."
 msgstr ""
 
-#: ../../reference_manual/preferences/general_settings.rst:150
+#: ../../reference_manual/preferences/general_settings.rst:152
 msgid "Allow only one instance of Krita"
 msgstr ""
 
-#: ../../reference_manual/preferences/general_settings.rst:146
+#: ../../reference_manual/preferences/general_settings.rst:148
 msgid "An instance is a single entry in your system's task manager. Turning this option makes sure that Krita will check if there's an instance of Krita open already when you instruct it to open new documents, and then have your documents opened in that single instance. There's some obscure uses to allowing multiple instances, but if you can't think of any, just keep this option on."
 msgstr ""
 
-#: ../../reference_manual/preferences/general_settings.rst:150
+#: ../../reference_manual/preferences/general_settings.rst:152
 msgid "Since Krita 5.0 this has been deprecated, as it now uses a SQLite database for handling the resources, and this cannot be managed by multiple instances."
 msgstr ""
 
-#: ../../reference_manual/preferences/general_settings.rst:155
+#: ../../reference_manual/preferences/general_settings.rst:157
 msgid "Tools Settings"
 msgstr ""
 
-#: ../../reference_manual/preferences/general_settings.rst:158
+#: ../../reference_manual/preferences/general_settings.rst:162
 msgid "Tool Options Location"
 msgstr ""
 
 #: ../../reference_manual/preferences/general_settings.rst:160
-msgid "In docker (default)"
+msgid "In Docker (default)"
 msgstr ""
 
 #: ../../reference_manual/preferences/general_settings.rst:161
 msgid "Gives you the tool options in a docker."
 msgstr ""
 
-#: ../../reference_manual/preferences/general_settings.rst:163
-msgid "In toolbar"
+#: ../../reference_manual/preferences/general_settings.rst:162
+msgid "In Toolbar"
 msgstr ""
 
 #: ../../reference_manual/preferences/general_settings.rst:163
 msgid "Gives you the tool options in the toolbar, next to the brush settings. You can open it with the :kbd:`\\\\` key."
 msgstr ""
 
-#: ../../reference_manual/preferences/general_settings.rst:166
+#: ../../reference_manual/preferences/general_settings.rst:164
 msgid "Brush Flow Mode"
 msgstr ""
 
-#: ../../reference_manual/preferences/general_settings.rst:166
+#: ../../reference_manual/preferences/general_settings.rst:165
 msgid "In Krita 4.2 the behavior of flow in combination with opacity was changed. This allows you to turn it back to the 4.1 behavior. This will however be removed in future versions."
 msgstr ""
 
-#: ../../reference_manual/preferences/general_settings.rst:169
-msgid "Switch Control/Alt Selection Modifiers"
+#: ../../reference_manual/preferences/general_settings.rst:175
+msgid "CMYK Blending Mode"
+msgstr ""
+
+#: ../../reference_manual/preferences/general_settings.rst:167
+msgid "This allows you to control the way blending modes are handled for CMYK."
 msgstr ""
 
 #: ../../reference_manual/preferences/general_settings.rst:169
-msgid "This switches the function of the :kbd:`Ctrl` and :kbd:`Alt` keys when modifying selections. Useful for those used to Gimp instead of Photoshop, or Lefties without a right :kbd:`Alt` key on their keyboard."
+msgid "Subtractive (Krita 5.2+)"
 msgstr ""
 
-#: ../../reference_manual/preferences/general_settings.rst:176
-msgid "Enable Touch painting"
+#: ../../reference_manual/preferences/general_settings.rst:170
+msgid "Channels are inverted before the blending mode is applied. This will result in most blending modes having a similar effect to the same blending modes in RGB. This is useful when you are doing interchange using PSD files."
+msgstr ""
+
+#: ../../reference_manual/preferences/general_settings.rst:173
+msgid "Additive (Krita 5.1 and earlier)"
 msgstr ""
 
 #: ../../reference_manual/preferences/general_settings.rst:172
-msgid "This allows finger painting with capacitive screens. Some devices have both capacitive touch and a stylus, and then this can interfere. In that case, just toggle this."
+msgid "Channels are not inverted before the blending mode is applied, which means that for example, the multiply mode, which decreases pixel values, will in RGB look like it makes things darker, while in this additive CMYK mode it will make things lighter."
 msgstr ""
 
-#: ../../reference_manual/preferences/general_settings.rst:176
-msgid "When this is disabled, panning the canvas can be done with by dragging a single finger over the canvas, while when enabled, panning will only be done by dragging three fingers."
+#: ../../reference_manual/preferences/general_settings.rst:178
+msgid "Switch Control/Alt Selection Modifiers"
 msgstr ""
 
-#: ../../reference_manual/preferences/general_settings.rst:179
-msgid "Activate transform tool after pasting"
-msgstr ""
-
-#: ../../reference_manual/preferences/general_settings.rst:179
-msgid "A convenience feature. When enabling this, the transform tool will activate after pasting for quick moving or rotating."
+#: ../../reference_manual/preferences/general_settings.rst:178
+msgid "This switches the function of the :kbd:`Ctrl` and :kbd:`Alt` keys when modifying selections. Useful for those used to Gimp instead of Photoshop, or Lefties without a right :kbd:`Alt` key on their keyboard."
 msgstr ""
 
 #: ../../reference_manual/preferences/general_settings.rst:185
+msgid "Enable Touch painting"
+msgstr ""
+
+#: ../../reference_manual/preferences/general_settings.rst:181
+msgid "This allows finger painting with capacitive screens. Some devices have both capacitive touch and a stylus, and then this can interfere. In that case, just toggle this."
+msgstr ""
+
+#: ../../reference_manual/preferences/general_settings.rst:185
+msgid "When this is disabled, panning the canvas can be done with by dragging a single finger over the canvas, while when enabled, panning will only be done by dragging three fingers."
+msgstr ""
+
+#: ../../reference_manual/preferences/general_settings.rst:188
+msgid "Activate transform tool after pasting"
+msgstr ""
+
+#: ../../reference_manual/preferences/general_settings.rst:188
+msgid "A convenience feature. When enabling this, the transform tool will activate after pasting for quick moving or rotating."
+msgstr ""
+
+#: ../../reference_manual/preferences/general_settings.rst:195
 msgid "Enable Touch Rotation"
 msgstr ""
 
-#: ../../reference_manual/preferences/general_settings.rst:182
+#: ../../reference_manual/preferences/general_settings.rst:191
 msgid "Without this, gestures on the canvas only allow zoom and pan, with this turned on, the two-finger gesture also allows to rotate."
 msgstr ""
 
-#: ../../reference_manual/preferences/general_settings.rst:186
+#: ../../reference_manual/preferences/general_settings.rst:195
 msgid "Since Krita 5.1, this is removed. Instead it's now possible to configure the navigation gestures inside the :ref:`canvas_input_settings`."
 msgstr ""
 
-#: ../../reference_manual/preferences/general_settings.rst:188
+#: ../../reference_manual/preferences/general_settings.rst:202
 msgid "Enable Smooth Zooming"
 msgstr ""
 
-#: ../../reference_manual/preferences/general_settings.rst:188
+#: ../../reference_manual/preferences/general_settings.rst:198
 msgid "When using |mousescroll|, zooming switches between predefined zoom levels. Turning this on switches that to be a smooth increment."
 msgstr ""
 
 #: ../../<rst_epilog>:8
+#: ../../<rst_epilog>:8
 msgid "mousescroll"
 msgstr ""
 
-#: ../../reference_manual/preferences/general_settings.rst:211
+#: ../../reference_manual/preferences/general_settings.rst:202
+msgid "This got replaced with the :guilabel:`Zoom Steps between powers of Two` option."
+msgstr ""
+
+#: ../../reference_manual/preferences/general_settings.rst:205
+msgid "Zoom Steps between powers of Two"
+msgstr ""
+
+#: ../../reference_manual/preferences/general_settings.rst:205
+msgid "How many zoom steps there are between values that are powers of 2 (For example, 2^-1 is 50%, 2^-2 is 25%, 2^2 is 400%). With this, you can decide how many steps steps go inbetween those. The higher the value, the smoother the zoom with a |mousescroll|."
+msgstr ""
+
+#: ../../reference_manual/preferences/general_settings.rst:228
 msgid "Kinetic Scrolling (Needs Restart)"
 msgstr ""
 
-#: ../../reference_manual/preferences/general_settings.rst:191
+#: ../../reference_manual/preferences/general_settings.rst:208
 msgid "This enables kinetic scrolling for scrollable areas."
 msgstr ""
 
-#: ../../reference_manual/preferences/general_settings.rst:196
+#: ../../reference_manual/preferences/general_settings.rst:213
 msgid "Kinetic scrolling on the brush chooser drop-down with activation mode set to :guilabel:`On Click Drag`, with this disabled all of these clicks would lead to a brush being selected regardless of drag motion."
 msgstr ""
 
-#: ../../reference_manual/preferences/general_settings.rst:206
+#: ../../reference_manual/preferences/general_settings.rst:223
 msgid "Activation"
 msgstr ""
 
-#: ../../reference_manual/preferences/general_settings.rst:199
+#: ../../reference_manual/preferences/general_settings.rst:216
 msgid "How it is activated."
 msgstr ""
 
-#: ../../reference_manual/preferences/general_settings.rst:201
+#: ../../reference_manual/preferences/general_settings.rst:218
 msgid "On Middle-Click Drag"
 msgstr ""
 
-#: ../../reference_manual/preferences/general_settings.rst:202
+#: ../../reference_manual/preferences/general_settings.rst:219
 msgid "Will activate when using the middle mouse button."
 msgstr ""
 
-#: ../../reference_manual/preferences/general_settings.rst:203
+#: ../../reference_manual/preferences/general_settings.rst:220
 msgid "On Touch Drag"
 msgstr ""
 
-#: ../../reference_manual/preferences/general_settings.rst:204
+#: ../../reference_manual/preferences/general_settings.rst:221
 msgid "Will activate if it can recognize a touch event. May not always work."
 msgstr ""
 
-#: ../../reference_manual/preferences/general_settings.rst:206
+#: ../../reference_manual/preferences/general_settings.rst:223
 msgid "On Click Drag"
 msgstr ""
 
-#: ../../reference_manual/preferences/general_settings.rst:206
+#: ../../reference_manual/preferences/general_settings.rst:223
 msgid "Will activate when it can recognize a click event, will always work."
 msgstr ""
 
-#: ../../reference_manual/preferences/general_settings.rst:208
+#: ../../reference_manual/preferences/general_settings.rst:225
 msgid "Sensitivity"
 msgstr ""
 
-#: ../../reference_manual/preferences/general_settings.rst:209
+#: ../../reference_manual/preferences/general_settings.rst:226
 msgid "How quickly the feature activates, this effective determines the length of the drag."
 msgstr ""
 
-#: ../../reference_manual/preferences/general_settings.rst:211
+#: ../../reference_manual/preferences/general_settings.rst:228
 msgid "Hide Scrollbar"
 msgstr ""
 
-#: ../../reference_manual/preferences/general_settings.rst:211
+#: ../../reference_manual/preferences/general_settings.rst:228
 msgid "Whether to show scrollbars when doing this."
 msgstr ""
 
-#: ../../reference_manual/preferences/general_settings.rst:216
+#: ../../reference_manual/preferences/general_settings.rst:233
 msgid "File Handling"
 msgstr ""
 
-#: ../../reference_manual/preferences/general_settings.rst:220
+#: ../../reference_manual/preferences/general_settings.rst:237
 msgid "Enable Autosaving"
 msgstr ""
 
-#: ../../reference_manual/preferences/general_settings.rst:221
+#: ../../reference_manual/preferences/general_settings.rst:238
 msgid "Determines whether Krita should periodically autosave."
 msgstr ""
 
-#: ../../reference_manual/preferences/general_settings.rst:222
+#: ../../reference_manual/preferences/general_settings.rst:239
 msgid "Autosave Every"
 msgstr ""
 
-#: ../../reference_manual/preferences/general_settings.rst:223
+#: ../../reference_manual/preferences/general_settings.rst:240
 msgid "Here the user can specify how often Krita should autosave the file, you can tick the checkbox to turn it off. For Windows these files are saved in the ``%TEMP%`` directory. If you are on Linux it is stored in :file:`/home/'username'`."
 msgstr ""
 
-#: ../../reference_manual/preferences/general_settings.rst:224
+#: ../../reference_manual/preferences/general_settings.rst:241
 msgid "Unnamed autosave files are hidden by default"
 msgstr ""
 
-#: ../../reference_manual/preferences/general_settings.rst:225
+#: ../../reference_manual/preferences/general_settings.rst:242
 msgid "This determines whether the filename of autosaves has a period prepended to the name. On Linux and macOS this is a technique to ensure the file is hidden by default."
 msgstr ""
 
-#: ../../reference_manual/preferences/general_settings.rst:226
+#: ../../reference_manual/preferences/general_settings.rst:243
 msgid "Create Backup File"
 msgstr ""
 
-#: ../../reference_manual/preferences/general_settings.rst:227
+#: ../../reference_manual/preferences/general_settings.rst:244
 msgid "When selected Krita will, upon save, rename the original file as a backup file and save the current image to the original name. The result is that you will have saved the image, and there will be a copy of the image that is saved separately as a backup. This is useful in case of crashes during saves."
 msgstr ""
 
-#: ../../reference_manual/preferences/general_settings.rst:236
+#: ../../reference_manual/preferences/general_settings.rst:253
 msgid "Backup File Location"
 msgstr ""
 
-#: ../../reference_manual/preferences/general_settings.rst:229
+#: ../../reference_manual/preferences/general_settings.rst:246
 msgid "The default location these backups should be stored."
 msgstr ""
 
-#: ../../reference_manual/preferences/general_settings.rst:231
+#: ../../reference_manual/preferences/general_settings.rst:248
 msgid "Same Folder as Original File"
 msgstr ""
 
-#: ../../reference_manual/preferences/general_settings.rst:232
+#: ../../reference_manual/preferences/general_settings.rst:249
 msgid "Store the file in the same folder as the original file was stored."
 msgstr ""
 
-#: ../../reference_manual/preferences/general_settings.rst:233
+#: ../../reference_manual/preferences/general_settings.rst:250
 msgid "User Folder"
 msgstr ""
 
-#: ../../reference_manual/preferences/general_settings.rst:234
+#: ../../reference_manual/preferences/general_settings.rst:251
 msgid "This is the main folder of your computer. On Linux and macOS this is the 'Home' folder, on Windows, the :file:`c:\\Users\\YOUR_USER_NAME` folder (where ``YOUR_USER_NAME`` is your windows username)."
 msgstr ""
 
-#: ../../reference_manual/preferences/general_settings.rst:236
+#: ../../reference_manual/preferences/general_settings.rst:253
 msgid "Temporary File Folder"
 msgstr ""
 
-#: ../../reference_manual/preferences/general_settings.rst:236
+#: ../../reference_manual/preferences/general_settings.rst:253
 msgid "This stored the file in the temp folder. Temp folders are special folders of which the contents are emptied when you shut down your computer. If you don't particularly care about your backup files and want them to be 'cleaned' automatically, this is the best place. If you want your backup files to be kept indefinitely, this is a wrong choice."
 msgstr ""
 
-#: ../../reference_manual/preferences/general_settings.rst:238
+#: ../../reference_manual/preferences/general_settings.rst:255
 msgid "Backup File Suffix"
 msgstr ""
 
-#: ../../reference_manual/preferences/general_settings.rst:239
+#: ../../reference_manual/preferences/general_settings.rst:256
 msgid "The suffix that will be placed after the full filename. ``filename.kra`` will then be saved as ``filename.kra~``, ensuring the files won't show up in Krita's open file dialog."
 msgstr ""
 
-#: ../../reference_manual/preferences/general_settings.rst:240
+#: ../../reference_manual/preferences/general_settings.rst:257
 msgid "Number of Backup Files Kept"
 msgstr ""
 
-#: ../../reference_manual/preferences/general_settings.rst:241
+#: ../../reference_manual/preferences/general_settings.rst:258
 msgid "Number of backup files Krita keeps, by default this is only one, but this can be up to 99. Krita will then number the backup files."
 msgstr ""
 
-#: ../../reference_manual/preferences/general_settings.rst:242
+#: ../../reference_manual/preferences/general_settings.rst:259
 msgid "Compress ``\\*.kra`` files more (slows loading/saving)"
 msgstr ""
 
-#: ../../reference_manual/preferences/general_settings.rst:243
+#: ../../reference_manual/preferences/general_settings.rst:260
 msgid "This increases the ZIP compression on the saved Krita files, which makes them lighter on disk, but this takes longer to load."
 msgstr ""
 
-#: ../../reference_manual/preferences/general_settings.rst:244
+#: ../../reference_manual/preferences/general_settings.rst:261
 msgid "Use Zip64"
 msgstr ""
 
-#: ../../reference_manual/preferences/general_settings.rst:245
+#: ../../reference_manual/preferences/general_settings.rst:262
 msgid "KRA files are ZIP files. Zip64 allows you to make really large image files (which is useful for animation), however, not all ZIP file programs can read Zip64, including older versions of Krita."
 msgstr ""
 
-#: ../../reference_manual/preferences/general_settings.rst:246
+#: ../../reference_manual/preferences/general_settings.rst:263
 msgid "Trim Files before Saving"
 msgstr ""
 
-#: ../../reference_manual/preferences/general_settings.rst:247
+#: ../../reference_manual/preferences/general_settings.rst:264
 msgid "Normally, Krita will always keep pixels outside the visible canvas area and save that. With this option turned on, Krita will first :ref:`crop <crop_tool>` all the layers to the canvas-area and then save it."
 msgstr ""
 
-#: ../../reference_manual/preferences/general_settings.rst:250
+#: ../../reference_manual/preferences/general_settings.rst:266
 msgid "Trim frames when importing animations"
 msgstr ""
 
-#: ../../reference_manual/preferences/general_settings.rst:249
-msgid "This will crop frames that where imported using any of the options Krita has available. This saves ram, but may not always be what is required."
-msgstr ""
-
-#: ../../reference_manual/preferences/general_settings.rst:255
-msgid "Miscellaneous"
-msgstr ""
-
 #: ../../reference_manual/preferences/general_settings.rst:266
-msgid "When Krita starts"
+msgid "This will crop frames that where imported using any of the options Krita has available. This saves RAM, but may not always be what is required."
 msgstr ""
 
-#: ../../reference_manual/preferences/general_settings.rst:258
-msgid "This is the option for handling :ref:`user sessions <working_sessions>`. It has the following options:"
-msgstr ""
-
-#: ../../reference_manual/preferences/general_settings.rst:260
-msgid "Open Default Window"
-msgstr ""
-
-#: ../../reference_manual/preferences/general_settings.rst:261
-msgid "This opens the regular empty window with the last used workspace."
-msgstr ""
-
-#: ../../reference_manual/preferences/general_settings.rst:262
-msgid "Load Previous Session"
-msgstr ""
-
-#: ../../reference_manual/preferences/general_settings.rst:263
-msgid "Load the last opened session. If you have :guilabel:`Save session when Krita closes` toggled, this becomes the last files you had open and the like."
-msgstr ""
-
-#: ../../reference_manual/preferences/general_settings.rst:265
-msgid "Show Session Manager"
-msgstr ""
-
-#: ../../reference_manual/preferences/general_settings.rst:265
-msgid "Show the session manager directly, so you can pick a session."
-msgstr ""
-
-#: ../../reference_manual/preferences/general_settings.rst:270
-msgid "Save session when Krita closes"
-msgstr ""
-
-#: ../../reference_manual/preferences/general_settings.rst:269
-msgid "Save the current open windows, documents and the like into the current session when closing Krita, so you can resume where you left off."
-msgstr ""
-
-#: ../../reference_manual/preferences/general_settings.rst:272
-msgid "Upon importing Images as Layers, convert to the image color space."
-msgstr ""
-
-#: ../../reference_manual/preferences/general_settings.rst:273
-msgid "This makes sure that layers are the same color space as the image, necessary for saving to PSD."
-msgstr ""
-
-#: ../../reference_manual/preferences/general_settings.rst:274
-msgid "Undo Stack Size"
+#: ../../reference_manual/preferences/general_settings.rst:271
+msgid "When Pasting Into Krita From Other Applications"
 msgstr ""
 
 #: ../../reference_manual/preferences/general_settings.rst:275
-msgid "This is the number of undo commands Krita remembers. You can set the value to 0 for unlimited undo commands."
-msgstr ""
-
-#: ../../reference_manual/preferences/general_settings.rst:280
-msgid "Enable Logging For Bug Reports"
-msgstr ""
-
-#: ../../reference_manual/preferences/general_settings.rst:277
-msgid "This controls whether Krita keeps a log of the important actions, which can then be attached to a bug report. You can view the log itself via :menuselection:`Help --> Show Krita Log for Bug Reports`, and the log itself is stored in the shared application settings."
-msgstr ""
-
-#: ../../reference_manual/preferences/general_settings.rst:281
-msgid "Krita does not automatically transfer data anywhere. The log needs to be uploaded by users themselves if necessary."
-msgstr ""
-
-#: ../../reference_manual/preferences/general_settings.rst:287
-msgid "Hide splash screen on startup."
-msgstr ""
-
-#: ../../reference_manual/preferences/general_settings.rst:283
-msgid "This'll hide the splash screen automatically once Krita is fully loaded."
-msgstr ""
-
-#: ../../reference_manual/preferences/general_settings.rst:287
-msgid "Deprecated because Krita now has a welcome widget when no canvas is open."
-msgstr ""
-
-#: ../../reference_manual/preferences/general_settings.rst:289
-msgid "Enable Native File Dialog"
-msgstr ""
-
-#: ../../reference_manual/preferences/general_settings.rst:290
-msgid "This allows you to use the system file dialog. Turned off by default, because we cannot seem to get native file dialogues 100% bug free."
-msgstr ""
-
-#: ../../reference_manual/preferences/general_settings.rst:291
-msgid "Maximum brush size"
-msgstr ""
-
-#: ../../reference_manual/preferences/general_settings.rst:292
-msgid "This allows you to set the maximum brush size to a size of up to 10,000 pixels. Do be careful with using this, as a 10,000 pixel size can very quickly be a full gigabyte of data being manipulated, per dab. In other words, this might be slow."
-msgstr ""
-
-#: ../../reference_manual/preferences/general_settings.rst:297
-msgid "Recalculate animation cache in background."
-msgstr ""
-
-#: ../../reference_manual/preferences/general_settings.rst:294
-msgid "Krita will recalculate the cache when you're not doing anything."
-msgstr ""
-
-#: ../../reference_manual/preferences/general_settings.rst:298
-msgid "This is now in the :ref:`performance_settings` under :guilabel:`Animation Cache`."
-msgstr ""
-
-#: ../../reference_manual/preferences/general_settings.rst:302
-msgid "Automatically Pin New layers To Timeline."
-msgstr ""
-
-#: ../../reference_manual/preferences/general_settings.rst:300
-msgid "Used with the :ref:`timeline_docker`, this will pin all animation layers to the timeline automatically. Depending on your workflow, this can be quite intense, so hence the option to turn it off."
-msgstr ""
-
-#: ../../reference_manual/preferences/general_settings.rst:307
-msgid "Adapt playback range to key frames."
-msgstr ""
-
-#: ../../reference_manual/preferences/general_settings.rst:305
-msgid "This option decides whether adding key frames outside the current playback range automatically extends the playback range or not."
-msgstr ""
-
-#: ../../reference_manual/preferences/general_settings.rst:316
-msgid "Font DPI Workaround"
-msgstr ""
-
-#: ../../reference_manual/preferences/general_settings.rst:310
-msgid "We had a bug in Krita 4.x where the DPI of the display affected the DPI of the text."
-msgstr ""
-
-#: ../../reference_manual/preferences/general_settings.rst:312
-msgid "Now when loading a file created in Krita 4.4 we convert its font sizes using the DPI of the display and bake this new value into the file. The user can override this behavior by selecting another DPI in here. Setting this value to 72 DPI will effectively disable any scaling."
-msgstr ""
-
-#: ../../reference_manual/preferences/general_settings.rst:314
-msgid "In Krita 4.x the size of the text was also affected by the HiDPI settings, the best conversion results are dependent on whether `Use HiDPI` and `Use Fractional HiDPI` were used when creating the text. In other words, if you want the text to look exactly the same, try to match the Krita 5 HiDPI settings to the Krita 4 HiDPI settings. You don't have to keep these settings the same after the conversion has happened."
-msgstr ""
-
-#: ../../reference_manual/preferences/general_settings.rst:318
-msgid "Whn Pasting Into Krita From Other Applications"
-msgstr ""
-
-#: ../../reference_manual/preferences/general_settings.rst:320
 msgid "Some applications, like Google Chrome, provide multiple formats when pasting or dropping an image. This toggle asks which of these you prefer."
 msgstr ""
 
-#: ../../reference_manual/preferences/general_settings.rst:322
+#: ../../reference_manual/preferences/general_settings.rst:277
 msgid "Prefer downloading the original source (this requires Internet access)."
 msgstr ""
 
-#: ../../reference_manual/preferences/general_settings.rst:323
+#: ../../reference_manual/preferences/general_settings.rst:278
 msgid "If the clipboard data contains an URL, Krita will try to download those contents and paste them inside Krita."
 msgstr ""
 
-#: ../../reference_manual/preferences/general_settings.rst:324
+#: ../../reference_manual/preferences/general_settings.rst:279
 msgid "Prefer a local copy (if available; metadata may be lost)"
 msgstr ""
 
-#: ../../reference_manual/preferences/general_settings.rst:325
+#: ../../reference_manual/preferences/general_settings.rst:280
 msgid "If the file had been downloaded by your computer previously (for example, to show it inside the web browser), Krita will use that instead."
 msgstr ""
 
-#: ../../reference_manual/preferences/general_settings.rst:326
+#: ../../reference_manual/preferences/general_settings.rst:281
 msgid "Paste the attached sRGB bitmap (no filesystem or Internet access required, but metadata will be lost)."
 msgstr ""
 
-#: ../../reference_manual/preferences/general_settings.rst:327
+#: ../../reference_manual/preferences/general_settings.rst:282
 msgid "Just paste the attached bitmap. This will always work, and may be the best option if all you copy images for is to make small edits to share with friends. If you intend to copy and edit HDR images however, this option will make your life harder because the HDR version of the image will not be selected by default."
 msgstr ""
 
-#: ../../reference_manual/preferences/general_settings.rst:329
+#: ../../reference_manual/preferences/general_settings.rst:286
 msgid "Ask each time"
 msgstr ""
 
-#: ../../reference_manual/preferences/general_settings.rst:329
-msgid "Krita will show a prompt whenever there's multiple options."
+#: ../../reference_manual/preferences/general_settings.rst:284
+msgid "Krita will show a prompt whenever there are multiple options."
 msgstr ""
 
-#: ../../reference_manual/preferences/general_settings.rst:337
-msgid "Resources"
+#: ../../reference_manual/preferences/general_settings.rst:291
+msgid "Miscellaneous"
 msgstr ""
 
-#: ../../reference_manual/preferences/general_settings.rst:339
-msgid "For determining the location of the resource folder and the cache."
+#: ../../reference_manual/preferences/general_settings.rst:302
+msgid "When Krita starts"
+msgstr ""
+
+#: ../../reference_manual/preferences/general_settings.rst:294
+msgid "This is the option for handling :ref:`user sessions <working_sessions>`. It has the following options:"
+msgstr ""
+
+#: ../../reference_manual/preferences/general_settings.rst:296
+msgid "Open Default Window"
+msgstr ""
+
+#: ../../reference_manual/preferences/general_settings.rst:297
+msgid "This opens the regular empty window with the last used workspace."
+msgstr ""
+
+#: ../../reference_manual/preferences/general_settings.rst:298
+msgid "Load Previous Session"
+msgstr ""
+
+#: ../../reference_manual/preferences/general_settings.rst:299
+msgid "Load the last opened session. If you have :guilabel:`Save session when Krita closes` toggled, this becomes the last files you had open and the like."
+msgstr ""
+
+#: ../../reference_manual/preferences/general_settings.rst:301
+msgid "Show Session Manager"
+msgstr ""
+
+#: ../../reference_manual/preferences/general_settings.rst:301
+msgid "Show the session manager directly, so you can pick a session."
+msgstr ""
+
+#: ../../reference_manual/preferences/general_settings.rst:306
+msgid "Save session when Krita closes"
+msgstr ""
+
+#: ../../reference_manual/preferences/general_settings.rst:305
+msgid "Save the current open windows, documents and the like into the current session when closing Krita, so you can resume where you left off."
+msgstr ""
+
+#: ../../reference_manual/preferences/general_settings.rst:308
+msgid "Upon importing Images as Layers, convert to the image color space."
+msgstr ""
+
+#: ../../reference_manual/preferences/general_settings.rst:309
+msgid "This makes sure that layers are the same color space as the image, necessary for saving to PSD."
+msgstr ""
+
+#: ../../reference_manual/preferences/general_settings.rst:310
+msgid "Undo Stack Size"
+msgstr ""
+
+#: ../../reference_manual/preferences/general_settings.rst:311
+msgid "This is the number of undo commands Krita remembers. You can set the value to 0 for unlimited undo commands."
+msgstr ""
+
+#: ../../reference_manual/preferences/general_settings.rst:316
+msgid "Enable Logging For Bug Reports"
+msgstr ""
+
+#: ../../reference_manual/preferences/general_settings.rst:313
+msgid "This controls whether Krita keeps a log of the important actions, which can then be attached to a bug report. You can view the log itself via :menuselection:`Help --> Show Krita Log for Bug Reports`, and the log itself is stored in the shared application settings."
+msgstr ""
+
+#: ../../reference_manual/preferences/general_settings.rst:317
+msgid "Krita does not automatically transfer data anywhere. The log needs to be uploaded by users themselves if necessary."
+msgstr ""
+
+#: ../../reference_manual/preferences/general_settings.rst:323
+msgid "Hide splash screen on startup."
+msgstr ""
+
+#: ../../reference_manual/preferences/general_settings.rst:319
+msgid "This'll hide the splash screen automatically once Krita is fully loaded."
+msgstr ""
+
+#: ../../reference_manual/preferences/general_settings.rst:323
+msgid "Deprecated because Krita now has a welcome widget when no canvas is open."
+msgstr ""
+
+#: ../../reference_manual/preferences/general_settings.rst:325
+msgid "Enable Native File Dialog"
+msgstr ""
+
+#: ../../reference_manual/preferences/general_settings.rst:326
+msgid "This allows you to use the system file dialog. Turned off by default, because we cannot seem to get native file dialogues 100% bug free."
+msgstr ""
+
+#: ../../reference_manual/preferences/general_settings.rst:327
+msgid "Maximum brush size"
+msgstr ""
+
+#: ../../reference_manual/preferences/general_settings.rst:328
+msgid "This allows you to set the maximum brush size to a size of up to 10,000 pixels. Do be careful with using this, as a 10,000 pixel size can very quickly be a full gigabyte of data being manipulated, per dab. In other words, this might be slow."
+msgstr ""
+
+#: ../../reference_manual/preferences/general_settings.rst:333
+msgid "Recalculate animation cache in background."
+msgstr ""
+
+#: ../../reference_manual/preferences/general_settings.rst:330
+msgid "Krita will recalculate the cache when you're not doing anything."
+msgstr ""
+
+#: ../../reference_manual/preferences/general_settings.rst:334
+msgid "This is now in the :ref:`performance_settings` under :guilabel:`Animation Cache`."
+msgstr ""
+
+#: ../../reference_manual/preferences/general_settings.rst:338
+msgid "Automatically Pin New layers To Timeline."
+msgstr ""
+
+#: ../../reference_manual/preferences/general_settings.rst:336
+msgid "Used with the :ref:`timeline_docker`, this will pin all animation layers to the timeline automatically. Depending on your workflow, this can be quite intense, so hence the option to turn it off."
 msgstr ""
 
 #: ../../reference_manual/preferences/general_settings.rst:343
-msgid "Cache Location"
+msgid "Adapt playback range to key frames."
 msgstr ""
 
-#: ../../reference_manual/preferences/general_settings.rst:344
-msgid "Sets where the SQLite Database that manages all the resources is located."
+#: ../../reference_manual/preferences/general_settings.rst:341
+msgid "This option decides whether adding key frames outside the current playback range automatically extends the playback range or not."
 msgstr ""
 
-#: ../../reference_manual/preferences/general_settings.rst:347
-msgid "Resource Folder"
+#: ../../reference_manual/preferences/general_settings.rst:352
+msgid "Font DPI Workaround"
 msgstr ""
 
 #: ../../reference_manual/preferences/general_settings.rst:346
+msgid "We had a bug in Krita 4.x where the DPI of the display affected the DPI of the text."
+msgstr ""
+
+#: ../../reference_manual/preferences/general_settings.rst:348
+msgid "Now when loading a file created in Krita 4.4 we convert its font sizes using the DPI of the display and bake this new value into the file. The user can override this behavior by selecting another DPI in here. Setting this value to 72 DPI will effectively disable any scaling."
+msgstr ""
+
+#: ../../reference_manual/preferences/general_settings.rst:350
+msgid "In Krita 4.x the size of the text was also affected by the HiDPI settings, the best conversion results are dependent on whether `Use HiDPI` and `Use Fractional HiDPI` were used when creating the text. In other words, if you want the text to look exactly the same, try to match the Krita 5 HiDPI settings to the Krita 4 HiDPI settings. You don't have to keep these settings the same after the conversion has happened."
+msgstr ""
+
+#: ../../reference_manual/preferences/general_settings.rst:354
+msgid "Automatic Layer Suffixes"
+msgstr ""
+
+#: ../../reference_manual/preferences/general_settings.rst:356
+msgid "By default, Krita will add extra info behind layers it generates. These toggles allow you to turn that off."
+msgstr ""
+
+#: ../../reference_manual/preferences/general_settings.rst:358
+msgid "Add \"Merged\" to merged group layers."
+msgstr ""
+
+#: ../../reference_manual/preferences/general_settings.rst:359
+msgid "When you flatten a group layer into a single paint layer, Krita will add \"Merged\" after the layer name. If you make frequent use of merging, it can be useful to turn this off."
+msgstr ""
+
+#: ../../reference_manual/preferences/general_settings.rst:361
+msgid "Add \"(Pasted)\" to pasted layers."
+msgstr ""
+
+#: ../../reference_manual/preferences/general_settings.rst:361
+msgid "When you copy and paste a section of a layer, Krita will add \"(Pasted)\" after the layer name so you can keep track of that."
+msgstr ""
+
+#: ../../reference_manual/preferences/general_settings.rst:369
+msgid "Resources"
+msgstr ""
+
+#: ../../reference_manual/preferences/general_settings.rst:371
+msgid "For determining the location of the resource folder and the cache."
+msgstr ""
+
+#: ../../reference_manual/preferences/general_settings.rst:375
+msgid "Cache Location"
+msgstr ""
+
+#: ../../reference_manual/preferences/general_settings.rst:376
+msgid "Sets where the SQLite Database that manages all the resources is located."
+msgstr ""
+
+#: ../../reference_manual/preferences/general_settings.rst:379
+msgid "Resource Folder"
+msgstr ""
+
+#: ../../reference_manual/preferences/general_settings.rst:378
 msgid "Sets where the Resource Folder itself is located."
 msgstr ""
 
