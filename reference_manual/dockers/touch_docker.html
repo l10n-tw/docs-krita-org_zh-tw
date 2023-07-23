@@ -6,7 +6,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta property="og:title" name="title" content="Touch Docker" />
+  <meta property="og:title" name="title" content="觸控按鈕面板" />
   <meta property="og:site-name" content="Krita Manual" />
   <meta property="og:type" content="article" />
   <meta property="og:locale" content="zh-TW" />
@@ -23,13 +23,13 @@
   <meta property="og:locale:alternate" content="tr" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2023-07-23T09:58:56" />
+  <meta property="og:article:modified_time" content="2023-07-23T13:46:11" />
   <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 <meta content="Overview of the touch docker." name="description" />
 
   
   
-  <title>Touch Docker &mdash; Krita Manual 5.2.0 說明文件</title>
+  <title>觸控按鈕面板 &mdash; Krita Manual 5.2.0 說明文件</title>
   
 
   
@@ -62,7 +62,7 @@
     <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="搜尋" href="../../search.html" />
-    <link rel="next" title="Undo History" href="undo_history.html" />
+    <link rel="next" title="復原歷史記錄" href="undo_history.html" />
     <link rel="prev" title="操作集合工具面板" href="task_sets.html" /> 
 
   
@@ -167,15 +167,15 @@
 <li class="toctree-l3"><a class="reference internal" href="recorder_docker.html">錄影工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="reference_images_docker.html">Reference Images Docker</a></li>
 <li class="toctree-l3"><a class="reference internal" href="shape_properties_docker.html">形狀屬性工具面板</a></li>
-<li class="toctree-l3"><a class="reference internal" href="small_color_selector.html">Small Color Selector</a></li>
-<li class="toctree-l3"><a class="reference internal" href="snapshot_docker.html">Snapshot Docker</a></li>
-<li class="toctree-l3"><a class="reference internal" href="specific_color_selector.html">Specific Color Selector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="small_color_selector.html">小型選色器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="snapshot_docker.html">快照工具面板</a></li>
+<li class="toctree-l3"><a class="reference internal" href="specific_color_selector.html">量化選色器</a></li>
 <li class="toctree-l3"><a class="reference internal" href="storyboard_docker.html">Storyboard Docker</a></li>
 <li class="toctree-l3"><a class="reference internal" href="task_sets.html">操作集合工具面板</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Touch Docker</a></li>
-<li class="toctree-l3"><a class="reference internal" href="undo_history.html">Undo History</a></li>
-<li class="toctree-l3"><a class="reference internal" href="vector_library.html">Vector Library</a></li>
-<li class="toctree-l3"><a class="reference internal" href="wide_gamut_color_selector.html">Wide Gamut Color Selector</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">觸控按鈕面板</a></li>
+<li class="toctree-l3"><a class="reference internal" href="undo_history.html">復原歷史記錄</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vector_library.html">Symbol Libraries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wide_gamut_color_selector.html">廣色域選色器</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../dr_minw_debugger.html">Dr. MinGW 除錯工具</a></li>
@@ -198,7 +198,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../separate_image.html">分離影像</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../sharing_krita_logs.html">獲取紀錄檔</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../split_layer.html">分割圖層</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../storyboard_svg_template.html">SVG Storyboard Export Templates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../storyboard_svg_template.html">SVG 分鏡匯出模板</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../stroke_selection.html">對選取區域描邊</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../tools.html">工具</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../welcome_screen.html">歡迎畫面</a></li>
@@ -267,7 +267,7 @@
         
           <li><a href="../dockers.html">工具面板</a> &raquo;</li>
         
-      <li>Touch Docker</li>
+      <li>觸控按鈕面板</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -292,7 +292,7 @@
            <div itemprop="articleBody">
             
   <section id="touch-docker">
-<span id="index-0"></span><span id="id1"></span><h1>Touch Docker<a class="headerlink" href="#touch-docker" title="本標頭的永久連結">¶</a></h1>
+<span id="index-0"></span><span id="id1"></span><h1>觸控按鈕面板<a class="headerlink" href="#touch-docker" title="本標頭的永久連結">¶</a></h1>
 <p>The Touch Docker is a QML docker with several convenient actions on it. Its purpose is to aid those who use Krita on a touch-enabled screen by providing bigger gui elements.</p>
 <p>Its actions are...</p>
 <table class="docutils align-default">
@@ -339,7 +339,7 @@ by 15°</p></td>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="undo_history.html" class="btn btn-neutral float-right" title="Undo History" accesskey="n" rel="next"> <!-- 下一個 --> <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="undo_history.html" class="btn btn-neutral float-right" title="復原歷史記錄" accesskey="n" rel="next"> <!-- 下一個 --> <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="task_sets.html" class="btn btn-neutral" title="操作集合工具面板" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- 上一個  -->  </a>
@@ -354,7 +354,7 @@ by 15°</p></td>
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>fd19cea</code>
+          修訂版本 <code>6e01174</code>
         </span>
       
 

@@ -1,22 +1,22 @@
 .. meta::
    :description property=og\:description:
-        Overview of the vector library docker.
+        Overview of the symbol libraries docker.
 
 .. metadata-placeholder
 
    :authors: - Wolthera van Hövell tot Westerflier <griffinvalley@gmail.com>
    :license: GNU free documentation license 1.3 or later.
 
-.. index:: Vector Library, SVG Symbols, Reusable Vector Shapes
+.. index:: Vector Library, Symbol Library, Symbol Libraries, SVG Symbols, Reusable Vector Shapes
 .. _vector_library_docker:
 
-==============
-Vector Library
-==============
+================
+Symbol Libraries
+================
 
 .. versionadded: 4.0
 
-The Vector Library Docker loads the symbol libraries in SVG files, when those SVG files are put into the ``symbols`` folder in the resource folder :menuselection:`Settings --> Manage Resources... --> Open Resource Folder`. They are a type of :ref:`resource <resource_management>`.
+The Symbol Libraries Docker loads the symbol libraries in SVG files, when those SVG files are put into the ``symbols`` folder in the resource folder :menuselection:`Settings --> Manage Resources... --> Open Resource Folder`. They are a type of :ref:`resource <resource_management>`.
 
 The vector symbols can then be dragged and dropped onto the canvas, allowing you to quickly use complicated images.
 

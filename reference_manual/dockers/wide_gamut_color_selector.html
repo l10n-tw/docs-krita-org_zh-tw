@@ -6,7 +6,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta property="og:title" name="title" content="Wide Gamut Color Selector" />
+  <meta property="og:title" name="title" content="廣色域選色器" />
   <meta property="og:site-name" content="Krita Manual" />
   <meta property="og:type" content="article" />
   <meta property="og:locale" content="zh-TW" />
@@ -23,13 +23,13 @@
   <meta property="og:locale:alternate" content="tr" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2023-07-23T09:58:56" />
+  <meta property="og:article:modified_time" content="2023-07-23T13:46:11" />
   <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 <meta content="Overview of the Wide Gamut Color Selector docker." lang="en" name="description" xml:lang="en" />
 
   
   
-  <title>Wide Gamut Color Selector &mdash; Krita Manual 5.2.0 說明文件</title>
+  <title>廣色域選色器 &mdash; Krita Manual 5.2.0 說明文件</title>
   
 
   
@@ -63,7 +63,7 @@
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="搜尋" href="../../search.html" />
     <link rel="next" title="Dr. MinGW 除錯工具" href="../dr_minw_debugger.html" />
-    <link rel="prev" title="Vector Library" href="vector_library.html" /> 
+    <link rel="prev" title="Symbol Libraries" href="vector_library.html" /> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -167,15 +167,15 @@
 <li class="toctree-l3"><a class="reference internal" href="recorder_docker.html">錄影工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="reference_images_docker.html">Reference Images Docker</a></li>
 <li class="toctree-l3"><a class="reference internal" href="shape_properties_docker.html">形狀屬性工具面板</a></li>
-<li class="toctree-l3"><a class="reference internal" href="small_color_selector.html">Small Color Selector</a></li>
-<li class="toctree-l3"><a class="reference internal" href="snapshot_docker.html">Snapshot Docker</a></li>
-<li class="toctree-l3"><a class="reference internal" href="specific_color_selector.html">Specific Color Selector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="small_color_selector.html">小型選色器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="snapshot_docker.html">快照工具面板</a></li>
+<li class="toctree-l3"><a class="reference internal" href="specific_color_selector.html">量化選色器</a></li>
 <li class="toctree-l3"><a class="reference internal" href="storyboard_docker.html">Storyboard Docker</a></li>
 <li class="toctree-l3"><a class="reference internal" href="task_sets.html">操作集合工具面板</a></li>
-<li class="toctree-l3"><a class="reference internal" href="touch_docker.html">Touch Docker</a></li>
-<li class="toctree-l3"><a class="reference internal" href="undo_history.html">Undo History</a></li>
-<li class="toctree-l3"><a class="reference internal" href="vector_library.html">Vector Library</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Wide Gamut Color Selector</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="touch_docker.html">觸控按鈕面板</a></li>
+<li class="toctree-l3"><a class="reference internal" href="undo_history.html">復原歷史記錄</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vector_library.html">Symbol Libraries</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">廣色域選色器</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#configuration">Configuration</a></li>
 </ul>
 </li>
@@ -201,7 +201,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../separate_image.html">分離影像</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../sharing_krita_logs.html">獲取紀錄檔</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../split_layer.html">分割圖層</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../storyboard_svg_template.html">SVG Storyboard Export Templates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../storyboard_svg_template.html">SVG 分鏡匯出模板</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../stroke_selection.html">對選取區域描邊</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../tools.html">工具</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../welcome_screen.html">歡迎畫面</a></li>
@@ -270,7 +270,7 @@
         
           <li><a href="../dockers.html">工具面板</a> &raquo;</li>
         
-      <li>Wide Gamut Color Selector</li>
+      <li>廣色域選色器</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -295,7 +295,7 @@
            <div itemprop="articleBody">
             
   <section id="wide-gamut-color-selector">
-<span id="wide-gamut-color-selector-docker"></span><span id="index-0"></span><h1>Wide Gamut Color Selector<a class="headerlink" href="#wide-gamut-color-selector" title="本標頭的永久連結">¶</a></h1>
+<span id="wide-gamut-color-selector-docker"></span><span id="index-0"></span><h1>廣色域選色器<a class="headerlink" href="#wide-gamut-color-selector" title="本標頭的永久連結">¶</a></h1>
 <div class="versionadded">
 <p><span class="versionmodified added">在 5.2 版本新加入.</span></p>
 </div>
@@ -459,7 +459,7 @@
         <a href="../dr_minw_debugger.html" class="btn btn-neutral float-right" title="Dr. MinGW 除錯工具" accesskey="n" rel="next"> <!-- 下一個 --> <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="vector_library.html" class="btn btn-neutral" title="Vector Library" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- 上一個  -->  </a>
+        <a href="vector_library.html" class="btn btn-neutral" title="Symbol Libraries" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- 上一個  -->  </a>
       
     </div>
   
@@ -471,7 +471,7 @@
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>fd19cea</code>
+          修訂版本 <code>6e01174</code>
         </span>
       
 
