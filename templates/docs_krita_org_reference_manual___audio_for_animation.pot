@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Krita Manual 5.0\n"
+"Project-Id-Version: Krita Manual 5.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-19 22:30+0800\n"
+"POT-Creation-Date: 2023-07-23 09:17+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,134 +20,86 @@ msgstr ""
 msgid "The audio playback with animation in Krita."
 msgstr ""
 
-#: ../../reference_manual/audio_for_animation.rst:17
+#: ../../reference_manual/audio_for_animation.rst:18
 msgid "Audio for Animation"
 msgstr ""
 
-#: ../../reference_manual/audio_for_animation.rst:21
-msgid "Audio for animation is an unfinished feature. It has multiple bugs and may not work on your system."
+#: ../../reference_manual/audio_for_animation.rst:20
+msgid "Within Krita you can load an audio file into your document to help syncronize your animation with dialogue or music. This functionality is available from the audio menu in the Timeline Docker's titlebar."
 msgstr ""
 
 #: ../../reference_manual/audio_for_animation.rst:23
-msgid "You can add audio files to your animation to help sync lips or music. This functionality is available in the timeline docker."
-msgstr ""
-
-#: ../../reference_manual/audio_for_animation.rst:26
 msgid "Importing Audio Files"
 msgstr ""
 
-#: ../../reference_manual/audio_for_animation.rst:28
-msgid "Krita supports MP3, OGM, and WAV audio files. When you open up your timeline docker, there will be a speaker button in the top left area."
+#: ../../reference_manual/audio_for_animation.rst:25
+msgid "Krita supports a variety of audio file types, including WAV, FLAC, OGG, MP3, and more."
 msgstr ""
 
-#: ../../reference_manual/audio_for_animation.rst:30
-msgid "If you press the speaker button, you will get the available audio options for the animation."
+#: ../../reference_manual/audio_for_animation.rst:27
+msgid "To load an audio file into your Krita document, first open the Timeline Docker."
+msgstr ""
+
+#: ../../reference_manual/audio_for_animation.rst:29
+msgid "On the right-hand side of the Timeline Docker's toolbar, you'll find the Audio Menu button with an icon that looks like a speaker. This is the main area where you will interact with Krita's audio system, including loading and removing audio tracks and adjusting the playback volume."
 msgstr ""
 
 #: ../../reference_manual/audio_for_animation.rst:32
-msgid "Open"
-msgstr ""
-
-#: ../../reference_manual/audio_for_animation.rst:33
-msgid "Mute"
+msgid "Specifically, these options and widgets are available in the Audio Menu:"
 msgstr ""
 
 #: ../../reference_manual/audio_for_animation.rst:34
-msgid "Remove audio"
+msgid "Load Audio File"
 msgstr ""
 
 #: ../../reference_manual/audio_for_animation.rst:35
-msgid "Volume slider"
+msgid "Remove Audio File"
+msgstr ""
+
+#: ../../reference_manual/audio_for_animation.rst:36
+msgid "Mute Audio"
 msgstr ""
 
 #: ../../reference_manual/audio_for_animation.rst:37
-msgid "Krita saves the location of your audio file. If you move the audio file or rename it, Krita will not be able to find it. Krita will tell you the file was moved or deleted the next time you try to open the Krita file up."
+msgid "Audio Volume Slider"
 msgstr ""
 
-#: ../../reference_manual/audio_for_animation.rst:40
-msgid "Using Audio"
+#: ../../reference_manual/audio_for_animation.rst:39
+msgid "Crucially, Krita only saves the location (file path) of your audio file inside your Krita document. Because of that, if you happen to move or rename an audio file that you've referenced in one of your Krita animations, Krita will no longer be able to find it and you will need to re-load it manually. However, Krita will tell you the file was moved or deleted the next time you try to open the Krita file up."
 msgstr ""
 
 #: ../../reference_manual/audio_for_animation.rst:42
-msgid "After you import the audio, you can scrub through the timeline and it will play the audio chunk at the time spot. When you press the Play button, the entire the audio file will playback as it will in the final version. There is no visual display of the audio file on the screen, so you will need to use your ears and the scrubbing functionality to position frames."
+msgid "Using Audio"
+msgstr ""
+
+#: ../../reference_manual/audio_for_animation.rst:44
+msgid "Once you've imported some audio, you will be able scrub through frames on the timeline and Krita will play the audio chunk associated with the frame that you want on. Then, when you press the Play button, your audio will playback while you animation plays synchronized with the image frame changes."
 msgstr ""
 
 #: ../../reference_manual/audio_for_animation.rst:46
+msgid "As of now there is no visual audio waveform display in Krita's UI, so you will need to use your ears and the scrubbing functionality to line your keyframes up with specific parts of the audio."
+msgstr ""
+
+#: ../../reference_manual/audio_for_animation.rst:50
 msgid "Exporting with Audio"
 msgstr ""
 
-#: ../../reference_manual/audio_for_animation.rst:48
-msgid "To get the audio file included when you are exporting, you need to include it in the Render Animation options. In the :menuselection:`File --> Render Animation` options there is a checkbox :guilabel:`Include Audio`. Make sure that is checked before you export and you should be good to go."
+#: ../../reference_manual/audio_for_animation.rst:52
+msgid "To have audio included with you exported animation video you will need to check enable it in the Render Animation options. In the :menuselection:`File --> Render Animation` options there is a checkbox :guilabel:`Include Audio`. Make sure that is checked before you export and you should be good to go."
 msgstr ""
 
-#: ../../reference_manual/audio_for_animation.rst:51
-msgid "Packages needed for Audio on Linux"
-msgstr ""
-
-#: ../../reference_manual/audio_for_animation.rst:53
-msgid "The following packages are necessary for having the audio support on Linux:"
-msgstr ""
-
-#: ../../reference_manual/audio_for_animation.rst:56
-msgid "For people who build Krita on Linux:"
-msgstr ""
-
-#: ../../reference_manual/audio_for_animation.rst:58
-msgid "libasound2-dev"
-msgstr ""
-
-#: ../../reference_manual/audio_for_animation.rst:59
-msgid "libgstreamer1.0-dev gstreamer1.0-pulseaudio"
-msgstr ""
-
-#: ../../reference_manual/audio_for_animation.rst:60
-msgid "libgstreamer-plugins-base1.0-dev"
-msgstr ""
-
-#: ../../reference_manual/audio_for_animation.rst:61
-msgid "libgstreamer-plugins-good1.0-dev"
-msgstr ""
-
-#: ../../reference_manual/audio_for_animation.rst:62
-msgid "libgstreamer-plugins-bad1.0-dev"
-msgstr ""
-
-#: ../../reference_manual/audio_for_animation.rst:64
-msgid "For people who use Krita on Linux:"
-msgstr ""
-
-#: ../../reference_manual/audio_for_animation.rst:66
-msgid "libqt5multimedia5-plugins"
-msgstr ""
-
-#: ../../reference_manual/audio_for_animation.rst:67
-msgid "libgstreamer-plugins-base1.0"
-msgstr ""
-
-#: ../../reference_manual/audio_for_animation.rst:68
-msgid "libgstreamer-plugins-good1.0"
-msgstr ""
-
-#: ../../reference_manual/audio_for_animation.rst:69
-msgid "libgstreamer-plugins-bad1.0"
-msgstr ""
-
-#: ../../reference_manual/audio_for_animation.rst:71
-msgid "Since Krita 4.4, audio works inside the AppImage."
-msgstr ""
-
-#: ../../reference_manual/audio_for_animation.rst:12
+#: ../../reference_manual/audio_for_animation.rst:13
 msgid "Animation"
 msgstr ""
 
-#: ../../reference_manual/audio_for_animation.rst:12
+#: ../../reference_manual/audio_for_animation.rst:13
 msgid "Audio"
 msgstr ""
 
-#: ../../reference_manual/audio_for_animation.rst:12
+#: ../../reference_manual/audio_for_animation.rst:13
 msgid "Sound"
 msgstr ""
 
-#: ../../reference_manual/audio_for_animation.rst:12
+#: ../../reference_manual/audio_for_animation.rst:13
 msgid "Timeline"
 msgstr ""
