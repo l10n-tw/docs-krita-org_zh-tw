@@ -19,15 +19,17 @@
   <meta property="og:locale:alternate" content="nl" />
   <meta property="og:locale:alternate" content="pl" />
   <meta property="og:locale:alternate" content="pt_PT" />
+  <meta property="og:locale:alternate" content="sl" />
+  <meta property="og:locale:alternate" content="tr" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2022-10-08T11:00:22" />
+  <meta property="og:article:modified_time" content="2023-07-23T09:58:56" />
   <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 <meta content="Overview of the layers docker." name="description" property="og:description" />
 
   
   
-  <title>圖層 &mdash; Krita Manual 5.0.0 說明文件</title>
+  <title>圖層 &mdash; Krita Manual 5.2.0 說明文件</title>
   
 
   
@@ -35,14 +37,14 @@
 
   
   
-    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
     
   
   
   
     <link rel="canonical" href="zh_TW/reference_manual/dockers/layers.html"/>
     <meta property="og:url" content="zh_TW/reference_manual/dockers/layers.html" />
-    <meta property="og:image" content="zh_TW/_static/sidebar-logo.png" />
+    <meta property="og:image" content="zh_TW/../../_static/sidebar-logo.png" />
   
 
   
@@ -81,7 +83,7 @@
        
            <a href="../../index.html" class="icon icon-home">
 
-			<img src="../../_static/sidebar-logo.png" class="logo" alt="Logo"/>
+			<img src="../../../../_static/sidebar-logo.png" class="logo" alt="Logo"/>
            	
            <!--	Krita Manual -->
 
@@ -113,6 +115,8 @@
 	        		<option value="nl">Nederlands</option>
 	        		<option value="pl">Polski</option>
 	        		<option value="pt_PT">português</option>
+                    <option value="sl">slovenščina</option>
+                    <option value="tr">Türkçe</option>
 	        		<option value="uk_UA">Українська</option>
 	        		<option value="zh_CN">简体中文</option>
 	        	</select>
@@ -176,6 +180,7 @@
 <li class="toctree-l3"><a class="reference internal" href="touch_docker.html">Touch Docker</a></li>
 <li class="toctree-l3"><a class="reference internal" href="undo_history.html">Undo History</a></li>
 <li class="toctree-l3"><a class="reference internal" href="vector_library.html">Vector Library</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wide_gamut_color_selector.html">Wide Gamut Color Selector</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../dr_minw_debugger.html">Dr. MinGW 除錯工具</a></li>
@@ -295,7 +300,25 @@
 <span id="layer-docker"></span><span id="index-0"></span><h1>圖層<a class="headerlink" href="#layers" title="本標頭的永久連結">¶</a></h1>
 <img alt="../../_images/Krita_Layers_Docker.png" src="../../_images/Krita_Layers_Docker.png" />
 <p>The Layers docker is for one of the core concepts of Krita: <a class="reference internal" href="../../user_manual/layers_and_masks.html#layers-and-masks"><span class="std std-ref">Layer Management</span></a>. You can add, delete, rename, duplicate and do many other things to layers here.</p>
-<p>At the top there are four controls. Two of them are layer properties, the blending mode and the opacity. But there are also two smaller buttons. One is the filter option. This allows you to filter all existing layers by either color label, or since Krita 5.0 by layer name. The second button allows you to control the thumbnail size of the layers and how much layers indent when they are grouped. Some people prefer large thumbnails with a lot of indentation, others want the visuals to take up the least amount of space.</p>
+<p>At the top there are four controls. Two of them are layer properties, the blending mode and the opacity. But there are also two smaller buttons. One is the filter option. This allows you to filter all existing layers by either color label, or since Krita 5.0 by layer name.</p>
+<p>The second button allows you to adjust some extra display options of the layer docker.</p>
+<p>The first slider controls the thumbnail size of the layers and how much layers indent when they are grouped. Some people prefer large thumbnails with a lot of indentation, others want the visuals to take up the least amount of space.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">在 5.2 版本新加入.</span></p>
+</div>
+<p>Then there's the blending info options. The dropdown has four options:</p>
+<dl class="simple">
+<dt>None</dt><dd><p>No extra informationm is shown.</p>
+</dd>
+<dt>Simple</dt><dd><p>This will only display the opacity or the blending mode when they're not 100% and 'Normal'.</p>
+</dd>
+<dt>Balanced</dt><dd><p>This will display both the opacity and the blending mode for layers where either the opacity is below 100%, or the blending mode is not 'normal'.</p>
+</dd>
+<dt>Detailed</dt><dd><p>This will always show the opacity and blending options for all layers.</p>
+</dd>
+</dl>
+<p>The opacity slider below the dropdown allows you to control the opacity of the extra blending info label.</p>
+<p>Then there's <span class="guilabel">Checkbox for Selecting Layers</span>, which enables the extra checkboxes between the visibility icon and the label. This is useful for situations where you may not have access to a Ctrl or Shift key to select multiple layers, such as on a tablet.</p>
 <section id="the-layer-stack">
 <h2>The Layer Stack<a class="headerlink" href="#the-layer-stack" title="本標頭的永久連結">¶</a></h2>
 <p>You can select the active layer here. Using the <kbd class="kbd docutils literal notranslate">Shift</kbd> and <kbd class="kbd docutils literal notranslate">Ctrl</kbd> keys you can select multiple layers and drag-and-drop them. You can also change the visibility, edit state, alpha inheritance and rename layers. You can open and close groups, and you can drag and drop layers, either to reorder them, or to put them in groups.</p>
@@ -360,7 +383,16 @@ There, to change the names of all layers, the checkbox before <span class="guila
 <li><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">+</kbd> <kbd class="kbd docutils literal notranslate">drag</kbd></kbd> shortcut makes a duplicate of the selected layers, for you to drag and drop.</p></li>
 <li><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">E</kbd></kbd> shortcut for merging a layer down. This also merges selected layers, layer styles and will keep selection masks intact. Using the <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">E</kbd></kbd> shortcut on a single layer with a mask will merge down the mask into the layer.</p></li>
 <li><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">E</kbd></kbd> shortcut merges all layers.</p></li>
-<li><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">R</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> shortcut allows you to select layers on canvas, similar to picking colors directly on canvas. Use the <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">R</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> shortcut for multiple layers.</p></li>
+<li><dl class="simple">
+<dt><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">R</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="滑鼠左鍵" src="../../_images/Krita_mouse_left.png" /> shortcut allows you to select the top layer with content below the cursor as the active layer. In addition to this, you can set shortcuts for 4 other modes:</dt><dd><ul>
+<li><p>&quot;Select All Layers (Replace Selection)&quot; allows you to select all layers with content below the cursor as the currently selected layers.</p></li>
+<li><p>&quot;Select All Layers (Add to Selection)&quot; allows you to select all layers that have content below the cursor and add them to the selected layers.</p></li>
+<li><p>&quot;Select from Menu (Replace Selection)&quot; allows you to select a layer from a pop-up menu or all layers in the menu as the active layer or active layers.</p></li>
+<li><p>&quot;Select from Menu (Add to Selection)&quot; allows you to select all layers in the menu as the new active layer or active layers. The latter two modes are similar to using <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate">+</kbd></kbd> <img alt="滑鼠右鍵" src="../../_images/Krita_mouse_right.png" /> to select a layer in Photoshop.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
 <li><p><kbd class="kbd docutils literal notranslate">Ins</kbd> key for adding a new layer.</p></li>
 <li><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Ins</kbd></kbd> key for adding a new vector layer.</p></li>
 <li><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">G</kbd></kbd> shortcut will create a group layer. If multiple layers are selected, they are put into the group layer.</p></li>
@@ -400,7 +432,7 @@ There, to change the names of all layers, the checkbox before <span class="guila
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>c44cdc1</code>
+          修訂版本 <code>fd19cea</code>
         </span>
       
 

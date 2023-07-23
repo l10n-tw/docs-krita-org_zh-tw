@@ -73,7 +73,7 @@ Gathering information
 
 #. What is the version of the tablet driver?
 
-#. Please collect Tablet Tester (:menuselection:`Configure Krita --> Tablet Settings --> Tablet Tester``) text output and share it: :ref:`intro_user_support_sharing_files`.
+#. Please collect Tablet Tester (:menuselection:`Configure Krita --> Tablet Settings --> Tablet Tester`) text output and share it: :ref:`intro_user_support_sharing_files`.
 
 #. More detailed Tablet Events log:
 

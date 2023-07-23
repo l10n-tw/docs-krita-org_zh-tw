@@ -19,15 +19,17 @@
   <meta property="og:locale:alternate" content="nl" />
   <meta property="og:locale:alternate" content="pl" />
   <meta property="og:locale:alternate" content="pt_PT" />
+  <meta property="og:locale:alternate" content="sl" />
+  <meta property="og:locale:alternate" content="tr" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2022-10-08T11:00:22" />
+  <meta property="og:article:modified_time" content="2023-07-23T09:58:56" />
   <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 <meta content="Introduction to hacking Krita." name="description" />
 
   
   
-  <title>Introduction to Hacking Krita &mdash; Krita Manual 5.0.0 說明文件</title>
+  <title>Introduction to Hacking Krita &mdash; Krita Manual 5.2.0 說明文件</title>
   
 
   
@@ -35,14 +37,14 @@
 
   
   
-    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
     
   
   
   
     <link rel="canonical" href="zh_TW/untranslatable_pages/intro_hacking_krita.html"/>
     <meta property="og:url" content="zh_TW/untranslatable_pages/intro_hacking_krita.html" />
-    <meta property="og:image" content="zh_TW/_static/sidebar-logo.png" />
+    <meta property="og:image" content="zh_TW/../_static/sidebar-logo.png" />
   
 
   
@@ -61,7 +63,7 @@
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜尋" href="../search.html" />
     <link rel="next" title="The Krita Palette format KPL" href="kpl_defintion.html" />
-    <link rel="prev" title="Enable static analyzer" href="enable_static_analyzer.html" /> 
+    <link rel="prev" title="How to patch Qt" href="how_to_patch_qt.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -81,7 +83,7 @@
        
            <a href="../index.html" class="icon icon-home">
 
-			<img src="../_static/sidebar-logo.png" class="logo" alt="Logo"/>
+			<img src="../../_static/sidebar-logo.png" class="logo" alt="Logo"/>
            	
            <!--	Krita Manual -->
 
@@ -113,6 +115,8 @@
 	        		<option value="nl">Nederlands</option>
 	        		<option value="pl">Polski</option>
 	        		<option value="pt_PT">português</option>
+                    <option value="sl">slovenščina</option>
+                    <option value="tr">Türkçe</option>
 	        		<option value="uk_UA">Українська</option>
 	        		<option value="zh_CN">简体中文</option>
 	        	</select>
@@ -139,9 +143,11 @@
 <li class="toctree-l2"><a class="reference internal" href="../contributors_manual/optimising_images.html">供說明文件使用的影像</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../contributors_manual/user_support.html">使用者支援入門介紹</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../untranslatable_pages.html">Technical Pages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="brush_editor_gui_with_lager.html">Brush GUI Design with Lager</a></li>
 <li class="toctree-l3"><a class="reference internal" href="building_krita.html">Building Krita from Source</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cmake_settings_for_developers.html">CMake Settings for Developers</a></li>
 <li class="toctree-l3"><a class="reference internal" href="enable_static_analyzer.html">Enable static analyzer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="how_to_patch_qt.html">How to patch Qt</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Introduction to Hacking Krita</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#getting-started-with-kde-software">Getting started with KDE Software</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#getting-started">Getting Started</a></li>
@@ -155,6 +161,7 @@
 <li class="toctree-l3"><a class="reference internal" href="krita_svg_extensions.html">Krita SVG Extensions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="modern_cpp_in_krita.html">Modern C++ usage guidelines for the Krita codebase</a></li>
 <li class="toctree-l3"><a class="reference internal" href="new_features.html">Developing Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="optimize_image_processing_with_xsimd.html">Optimize Image Processing with XSIMD</a></li>
 <li class="toctree-l3"><a class="reference internal" href="optimizing_tips_for_krita.html">Optimizing tips and tools for Krita</a></li>
 <li class="toctree-l3"><a class="reference internal" href="participating_in_gsoc.html">Google Summer of Code</a></li>
 <li class="toctree-l3"><a class="reference internal" href="patch_review_guide.html">Advanced Merge Request Guide</a></li>
@@ -405,9 +412,9 @@
 <li><p>In your fork, you press <span class="guilabel">clone</span> to get the git urls to do the <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span></code> from. You can then pull and push your commits from these.</p>
 <blockquote>
 <div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># for ssh access</span>
-git clone git@invent.kde.org:&lt;username&gt;/krita.git
+git<span class="w"> </span>clone<span class="w"> </span>git@invent.kde.org:&lt;username&gt;/krita.git
 <span class="c1"># for https access</span>
-git clone https://invent.kde.org/&lt;username&gt;/krita.git
+git<span class="w"> </span>clone<span class="w"> </span>https://invent.kde.org/&lt;username&gt;/krita.git
 </pre></div>
 </div>
 <p>You can also use the <span class="guilabel">Web IDE</span> to make your changes directly on invent.kde.org, but because Krita is a c++ program, we don't recommend this outside of typo fixes and doxygen documentation strings. You wouldn't be able to see the effect of your changes, after all!</p>
@@ -416,13 +423,13 @@ git clone https://invent.kde.org/&lt;username&gt;/krita.git
 <li><p>Set up a new remote which points to the official repository, so you'll be able to update your local master branch.</p>
 <blockquote>
 <div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># for ssh access</span>
-git remote add upstream git@invent.kde.org:graphics/krita.git
+git<span class="w"> </span>remote<span class="w"> </span>add<span class="w"> </span>upstream<span class="w"> </span>git@invent.kde.org:graphics/krita.git
 <span class="c1"># for https access</span>
-git remote add upstream https://invent.kde.org/graphics/krita.git
+git<span class="w"> </span>remote<span class="w"> </span>add<span class="w"> </span>upstream<span class="w"> </span>https://invent.kde.org/graphics/krita.git
 </pre></div>
 </div>
 <p>After that, you can see all of your urls using:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git remote --verbose
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>remote<span class="w"> </span>--verbose
 </pre></div>
 </div>
 <p>As you can see, <cite>origin</cite> points to your fork, while <cite>upstream</cite> points to the official repository.</p>
@@ -430,7 +437,7 @@ git remote add upstream https://invent.kde.org/graphics/krita.git
 </li>
 <li><p>Create a new branch and checkout to it.</p>
 <blockquote>
-<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git checkout -b <span class="s2">&quot;&lt;username&gt;/&lt;description of the new feature&gt;&quot;</span>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span><span class="s2">&quot;&lt;username&gt;/&lt;description of the new feature&gt;&quot;</span>
 </pre></div>
 </div>
 </div></blockquote>
@@ -438,15 +445,15 @@ git remote add upstream https://invent.kde.org/graphics/krita.git
 <li><p>Make your first fix, push everything to your branch in your fork.</p>
 <blockquote>
 <div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># make sure you didn&#39;t leave any unnecessary debug or unfinished code</span>
-git diff
+git<span class="w"> </span>diff
 <span class="c1"># stage all changes</span>
-git add .
+git<span class="w"> </span>add<span class="w"> </span>.
 <span class="c1"># make sure that all added files are the ones you want to have in your commit</span>
-git status
+git<span class="w"> </span>status
 <span class="c1"># commit changes (here, write a commit messages that follows the rules)</span>
-git commit
+git<span class="w"> </span>commit
 <span class="c1"># push to your branch</span>
-git push
+git<span class="w"> </span>push
 </pre></div>
 </div>
 <div class="admonition attention">
@@ -474,21 +481,21 @@ git push
 <ol class="arabic">
 <li><p>Checkout the master branch in your working environment.</p>
 <blockquote>
-<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git checkout master
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>checkout<span class="w"> </span>master
 </pre></div>
 </div>
 </div></blockquote>
 </li>
 <li><p>Pull changes from the official repository.</p>
 <blockquote>
-<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git pull --ff-only upstream master
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>pull<span class="w"> </span>--ff-only<span class="w"> </span>upstream<span class="w"> </span>master
 </pre></div>
 </div>
 </div></blockquote>
 </li>
 <li><p>Push it to your fork.</p>
 <blockquote>
-<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git push
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>push
 </pre></div>
 </div>
 <p>The other possibility is to just delete the fork you worked previously on and create another one -- it will be up-to-date with official repository's master branch already.</p>
@@ -541,11 +548,11 @@ git push
 <li><p>If you only need to fix previous commits, don't add new ones -- instead, amend the ones that you made before and force-push your new commits to the branch in your fork.</p>
 <blockquote>
 <div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># if you already committed your changes...</span>
-git commit
+git<span class="w"> </span>commit
 <span class="c1"># ...add all changed files the &quot;staged&quot; state</span>
-git add .
+git<span class="w"> </span>add<span class="w"> </span>.
 <span class="c1"># and amend the previous commit</span>
-git commit --amend
+git<span class="w"> </span>commit<span class="w"> </span>--amend
 </pre></div>
 </div>
 <div class="admonition note">
@@ -581,7 +588,7 @@ git commit --amend
         <a href="kpl_defintion.html" class="btn btn-neutral float-right" title="The Krita Palette format KPL" accesskey="n" rel="next"> <!-- 下一個 --> <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="enable_static_analyzer.html" class="btn btn-neutral" title="Enable static analyzer" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- 上一個  -->  </a>
+        <a href="how_to_patch_qt.html" class="btn btn-neutral" title="How to patch Qt" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- 上一個  -->  </a>
       
     </div>
   
@@ -593,7 +600,7 @@ git commit --amend
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>c44cdc1</code>
+          修訂版本 <code>fd19cea</code>
         </span>
       
 

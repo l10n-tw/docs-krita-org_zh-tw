@@ -19,14 +19,16 @@
   <meta property="og:locale:alternate" content="nl" />
   <meta property="og:locale:alternate" content="pl" />
   <meta property="og:locale:alternate" content="pt_PT" />
+  <meta property="og:locale:alternate" content="sl" />
+  <meta property="og:locale:alternate" content="tr" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2022-10-08T11:00:22" />
+  <meta property="og:article:modified_time" content="2023-07-23T09:58:56" />
   <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
   
   
-  <title>Modern C++ usage guidelines for the Krita codebase &mdash; Krita Manual 5.0.0 說明文件</title>
+  <title>Modern C++ usage guidelines for the Krita codebase &mdash; Krita Manual 5.2.0 說明文件</title>
   
 
   
@@ -34,14 +36,14 @@
 
   
   
-    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
     
   
   
   
     <link rel="canonical" href="zh_TW/untranslatable_pages/modern_cpp_in_krita.html"/>
     <meta property="og:url" content="zh_TW/untranslatable_pages/modern_cpp_in_krita.html" />
-    <meta property="og:image" content="zh_TW/_static/sidebar-logo.png" />
+    <meta property="og:image" content="zh_TW/../_static/sidebar-logo.png" />
   
 
   
@@ -80,7 +82,7 @@
        
            <a href="../index.html" class="icon icon-home">
 
-			<img src="../_static/sidebar-logo.png" class="logo" alt="Logo"/>
+			<img src="../../_static/sidebar-logo.png" class="logo" alt="Logo"/>
            	
            <!--	Krita Manual -->
 
@@ -112,6 +114,8 @@
 	        		<option value="nl">Nederlands</option>
 	        		<option value="pl">Polski</option>
 	        		<option value="pt_PT">português</option>
+                    <option value="sl">slovenščina</option>
+                    <option value="tr">Türkçe</option>
 	        		<option value="uk_UA">Українська</option>
 	        		<option value="zh_CN">简体中文</option>
 	        	</select>
@@ -138,9 +142,11 @@
 <li class="toctree-l2"><a class="reference internal" href="../contributors_manual/optimising_images.html">供說明文件使用的影像</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../contributors_manual/user_support.html">使用者支援入門介紹</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../untranslatable_pages.html">Technical Pages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="brush_editor_gui_with_lager.html">Brush GUI Design with Lager</a></li>
 <li class="toctree-l3"><a class="reference internal" href="building_krita.html">Building Krita from Source</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cmake_settings_for_developers.html">CMake Settings for Developers</a></li>
 <li class="toctree-l3"><a class="reference internal" href="enable_static_analyzer.html">Enable static analyzer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="how_to_patch_qt.html">How to patch Qt</a></li>
 <li class="toctree-l3"><a class="reference internal" href="intro_hacking_krita.html">Introduction to Hacking Krita</a></li>
 <li class="toctree-l3"><a class="reference internal" href="kpl_defintion.html">The Krita Palette format KPL</a></li>
 <li class="toctree-l3"><a class="reference internal" href="krita_svg_extensions.html">Krita SVG Extensions</a></li>
@@ -150,6 +156,7 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="new_features.html">Developing Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="optimize_image_processing_with_xsimd.html">Optimize Image Processing with XSIMD</a></li>
 <li class="toctree-l3"><a class="reference internal" href="optimizing_tips_for_krita.html">Optimizing tips and tools for Krita</a></li>
 <li class="toctree-l3"><a class="reference internal" href="participating_in_gsoc.html">Google Summer of Code</a></li>
 <li class="toctree-l3"><a class="reference internal" href="patch_review_guide.html">Advanced Merge Request Guide</a></li>
@@ -323,16 +330,16 @@
 <h3><a class="toc-backref" href="#id6" role="doc-backlink">Type Inference (auto)</a><a class="headerlink" href="#type-inference-auto" title="本標頭的永久連結">¶</a></h3>
 <dl>
 <dt>Motivation:</dt><dd><p>If a function <code class="docutils literal notranslate"><span class="pre">f</span></code> has a return type Type, it is redundant to write a local variable <code class="docutils literal notranslate"><span class="pre">Type</span> <span class="pre">x</span> <span class="pre">=</span> <span class="pre">f(y).</span></code>  Using auto declarations is a simplification in two ways scenarios.  First, it allows the programmer to write code without worrying about doing the manual type deduction, for example:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="p">(</span><span class="w"> </span><span class="n">KoXmlReader</span><span class="o">::</span><span class="n">const_iterator</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">iter</span><span class="p">.</span><span class="n">begin</span><span class="p">(),...</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="p">(</span><span class="w"> </span><span class="n">KoXmlReader</span><span class="o">::</span><span class="n">const_iterator</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">iter</span><span class="p">.</span><span class="n">begin</span><span class="p">(),...</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">}</span>
 </pre></div>
 </div>
 <p>versus:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">iter</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="p">...)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">iter</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="p">...)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">}</span>
 </pre></div>
 </div>
 <p>This is particularly useful with nested template types and C++11 lambdas, and other complex types which have an obvious role, but a lengthy type definition.</p>
 <p>A second important benefit of auto is that it allows the programmer to more easily refactor.  Suppose we have a function <code class="docutils literal notranslate"><span class="pre">gimmeSomeStrings()</span></code> which returns a <code class="docutils literal notranslate"><span class="pre">QList&lt;QString&gt;</span></code>, and we access it somewhere else like this</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span><span class="w"> </span><span class="n">someStrings</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">gimmeSomeStrings</span><span class="p">();</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span><span class="w"> </span><span class="n">someStrings</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">gimmeSomeStrings</span><span class="p">();</span>
 </pre></div>
 </div>
 <p>If we later decide that we want to store a hash of strings and that <code class="docutils literal notranslate"><span class="pre">gimmeSomeStrings</span></code> should return a <code class="docutils literal notranslate"><span class="pre">QMap&lt;int,</span> <span class="pre">QString&gt;</span></code>, we probably won't need to make any changes inside the client snippet if we are doing tasks like iterating.</p>
@@ -347,7 +354,7 @@
 <h3><a class="toc-backref" href="#id7" role="doc-backlink">Range-based for loop</a><a class="headerlink" href="#range-based-for-loop" title="本標頭的永久連結">¶</a></h3>
 <dl>
 <dt>Motivation:</dt><dd><p>This is something a long time coming in C++.  It is a standardized replacement for Qt's foreach() construct, which works not only with Qt objects but all iterable C++ types.</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">T</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">list</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">T</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">list</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">}</span>
 </pre></div>
 </div>
 <p>It will work with standard tooling and static analysis, and can be faster by defaulting to in-place access.  For this reason range-based iterators should always be used for STL containers, if those are ever needed in Krita.</p>
@@ -358,7 +365,7 @@
 <div><p>Sometimes, the range-based for is faster.  Sometimes the Qt iterator is faster.  Personally I like the range-based for in principle, since it works better with static analysis, it has a faster best-case speed, and it is always possible to write it in a way that replicates the <code class="docutils literal notranslate"><span class="pre">foreach()</span></code> behavior, though the reverse is not true.</p>
 </div></blockquote>
 <p>On the other hand, there is a bad, dangerous  worst case performance hit when a detach/copy is triggered, and this is not easy to catch with standard syntax. In the blog post linked above, the discussion explains that is possible to get around this limitation by defining a macro <code class="docutils literal notranslate"><span class="pre">const_()</span></code>, which will gives a new syntax to request the compiler use constant iterators:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">T</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">_const</span><span class="p">(</span><span class="n">list</span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">T</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">_const</span><span class="p">(</span><span class="n">list</span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">}</span>
 </pre></div>
 </div>
 <p>Qt's recommendation on the other hand is to use foreach() for Qt iterators, and range-based for on STL containers, because you always know what you're getting, and you always keep your syntax easy to read.  In my opinion is the most meaningful new feature without any sort of clear answer, and quite interesting to think about.</p>
@@ -370,11 +377,11 @@
 <dl>
 <dt>Motivation:</dt><dd><p>Initializer lists are intended to work in many different places to simplify the syntax for complicated initialization.  For example, a list of strings could be initialized <code class="docutils literal notranslate"><span class="pre">const</span> <span class="pre">QStringList</span> <span class="pre">x</span> <span class="pre">=</span> <span class="pre">{&quot;abc&quot;,</span> <span class="pre">&quot;def&quot;,</span> <span class="pre">&quot;xyz&quot;</span>&#160; <span class="pre">};</span></code> and if you later changed the type to <code class="docutils literal notranslate"><span class="pre">QVector&lt;QString&gt;</span></code>, or even <code class="docutils literal notranslate"><span class="pre">std::list&lt;std::string&gt;</span></code>, you wouldn't have to make any change to the right hand side.</p>
 <p>A second place initializer lists are used is in creating standard initial values for class members.  This takes the place of writing a lengthy constructor list like:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Type</span><span class="o">::</span><span class="n">Type</span><span class="p">()</span><span class="w"></span>
-<span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">MemberString1</span><span class="p">(</span><span class="s">&quot;a&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="n">Subclass1</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="w"></span>
-<span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="n">Subclass2</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"></span>
-<span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="p">...</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Type</span><span class="o">::</span><span class="n">Type</span><span class="p">()</span>
+<span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">MemberString1</span><span class="p">(</span><span class="s">&quot;a&quot;</span><span class="p">)</span>
+<span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="n">Subclass1</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="n">Subclass2</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="p">...</span>
 </pre></div>
 </div>
 <p>In addition to being more concise, it saves you from repeating yourself, if you have several constructors which all start with the same defaults.</p>
@@ -393,11 +400,11 @@
 <div><p>Lambda expressions are a big new addition for C++11. Many programmers claim they start to feel like an essential part of the language very quickly. One of the biggest uses for lambdas is in the standard algorithm library &lt;algorithm&gt;, which is described below.  In Qt5, this, along with std::function and std::bind, allow for One of the most useful C++11 integrations, a new signal/slot syntax which replaces the moc macros SIGNAL() and SLOT() with standard C++.</p>
 </div></blockquote>
 <p>Old style:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">connect</span><span class="p">(</span><span class="n">sender</span><span class="p">,</span><span class="w"> </span><span class="n">SIGNAL</span><span class="w"> </span><span class="p">(</span><span class="n">valueChanged</span><span class="p">(</span><span class="n">QString</span><span class="p">,</span><span class="n">QString</span><span class="p">)),</span><span class="w">  </span><span class="n">receiver</span><span class="p">,</span><span class="w"> </span><span class="n">SLOT</span><span class="w"> </span><span class="p">(</span><span class="n">updateValue</span><span class="p">(</span><span class="n">QString</span><span class="p">))</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">connect</span><span class="p">(</span><span class="n">sender</span><span class="p">,</span><span class="w"> </span><span class="n">SIGNAL</span><span class="w"> </span><span class="p">(</span><span class="n">valueChanged</span><span class="p">(</span><span class="n">QString</span><span class="p">,</span><span class="n">QString</span><span class="p">)),</span><span class="w">  </span><span class="n">receiver</span><span class="p">,</span><span class="w"> </span><span class="n">SLOT</span><span class="w"> </span><span class="p">(</span><span class="n">updateValue</span><span class="p">(</span><span class="n">QString</span><span class="p">))</span><span class="w"> </span><span class="p">);</span>
 </pre></div>
 </div>
 <p>New style:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">connect</span><span class="p">(</span><span class="n">sender</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">Sender</span><span class="o">::</span><span class="n">valueChanged</span><span class="p">,</span><span class="w"> </span><span class="n">receiver</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">Receiver</span><span class="o">::</span><span class="n">updateValue</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">connect</span><span class="p">(</span><span class="n">sender</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">Sender</span><span class="o">::</span><span class="n">valueChanged</span><span class="p">,</span><span class="w"> </span><span class="n">receiver</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">Receiver</span><span class="o">::</span><span class="n">updateValue</span><span class="w"> </span><span class="p">);</span>
 </pre></div>
 </div>
 <p>New style signals and slots provide a great benefit from the tooling perspective: now, all types for functions and function arguments can be checked statically, and you don't have to catch typos by monitoring debug messages saying &quot;no such slot.&quot;</p>
@@ -432,7 +439,7 @@
 <h3><a class="toc-backref" href="#id11" role="doc-backlink">&lt;algorithm&gt;</a><a class="headerlink" href="#algorithm" title="本標頭的永久連結">¶</a></h3>
 <dl>
 <dt>Motivation:</dt><dd><p>A handwritten loop that looks for occurences of the number 20 and replaces it with 99 is routine, and will take several lines to write, including defining local variables. Instead, something like</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">replace</span><span class="w"> </span><span class="p">(</span><span class="n">myvector</span><span class="p">.</span><span class="n">cbegin</span><span class="p">(),</span><span class="w"> </span><span class="n">myvector</span><span class="p">.</span><span class="n">cend</span><span class="p">(),</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">99</span><span class="p">);</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">replace</span><span class="w"> </span><span class="p">(</span><span class="n">myvector</span><span class="p">.</span><span class="n">cbegin</span><span class="p">(),</span><span class="w"> </span><span class="n">myvector</span><span class="p">.</span><span class="n">cend</span><span class="p">(),</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">99</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>is more concise, safer  is even self-documenting, since the name of the function itself explains what it is doing. &lt;u&gt;If you make sure to use Qt's const iterators&lt;/u&gt;, there should never see a performance penalty compared to a hand-written loop, there can sometimes even see a gain. <a class="reference external" href="http://www.cplusplus.com/reference/algorithm/">A list of standard algorithms can be found here.</a> Historically Qt provided its own algorithm library, but now encourages programmers to use the STL versions instead, and Qt's own algorithm library will mostly become deprecated. <a class="reference external" href="https://doc.qt.io/qt-5/qtalgorithms.html">https://doc.qt.io/qt-5/qtalgorithms.html</a>  Unlike range-based for, where it is difficult to specify a const iterator instead of a standard iterator, with <code class="docutils literal notranslate"><span class="pre">&lt;algorithm&gt;</span></code> we are easily able to specify the const iterator.</p>
@@ -447,11 +454,11 @@
 <h3><a class="toc-backref" href="#id12" role="doc-backlink">enum class</a><a class="headerlink" href="#enum-class" title="本標頭的永久連結">¶</a></h3>
 <dl>
 <dt>Motivation:</dt><dd><p>These are a type-safe version of enums, and allows the programmer to associate several different types of data with an enum, such as a character.  This gives stricter type safety, for example, when it might be possible to accidentally convert a variable into a numeric type.  For example:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">enum</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Color</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="p">{</span><span class="n">Red</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;R&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">Green</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;G&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">Blue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;B&#39;</span><span class="p">};</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">enum</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Color</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="p">{</span><span class="n">Red</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;R&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">Green</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;G&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">Blue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;B&#39;</span><span class="p">};</span>
 </pre></div>
 </div>
 <p>Other benefits of enum classes are that they can be forward-declared, and that the data can be any sort of constexpr.  For example, if one had a constexpr function <code class="docutils literal notranslate"><span class="pre">color_symbol()</span></code> that returned the symbol given some color data, the enum class members could be defined like:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">enum</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Color</span><span class="o">:</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="p">{</span><span class="n">Red</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">color_symbol</span><span class="p">({</span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">})</span><span class="w"> </span><span class="p">...};</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">enum</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Color</span><span class="o">:</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="p">{</span><span class="n">Red</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">color_symbol</span><span class="p">({</span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">})</span><span class="w"> </span><span class="p">...};</span>
 </pre></div>
 </div>
 <p>The standard C++ reference does a nice job explaining these features. <a class="reference external" href="https://en.cppreference.com/w/cpp/language/enum">https://en.cppreference.com/w/cpp/language/enum</a></p>
@@ -477,8 +484,8 @@
 <h3><a class="toc-backref" href="#id14" role="doc-backlink">nullptr</a><a class="headerlink" href="#nullptr" title="本標頭的永久連結">¶</a></h3>
 <dl>
 <dt>Motivation:</dt><dd><p>The use of nullptr as a default pointer initializer is a very small change in C++11, and mostly an aesthetic one. Technically, there are only a few things it prevents : it cannot be converted to a numeric type like <code class="docutils literal notranslate"><span class="pre">int</span> <span class="pre">x</span> <span class="pre">=</span> <span class="pre">nullptr;</span></code>, and it cannot be used as a class type in a template, so the following is a compiler error:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">meta_type</span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">A</span><span class="p">,</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">B</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
-<span class="n">meta_type</span><span class="o">&lt;</span><span class="n">C</span><span class="p">,</span><span class="w"> </span><span class="k">nullptr</span><span class="o">&gt;</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">meta_type</span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">A</span><span class="p">,</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">B</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="n">meta_type</span><span class="o">&lt;</span><span class="n">C</span><span class="p">,</span><span class="w"> </span><span class="k">nullptr</span><span class="o">&gt;</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>The most important to nullptr is simply that you are tagging your code - ''hey: there is a null pointer lurking around here, be careful!''</p>
@@ -588,7 +595,7 @@
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>c44cdc1</code>
+          修訂版本 <code>fd19cea</code>
         </span>
       
 

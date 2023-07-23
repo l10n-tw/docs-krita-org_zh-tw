@@ -38,6 +38,10 @@ Hotkeys and Sticky keys
 
    * Hovering your cursor over the dashed line of the selection, or marching ants as it is commonly called, turns the cursor into the move tool icon, which you |mouseleft| and drag to move the selection.
    * |mouseright| will open up a selection quick menu with amongst others the ability to edit the selection.
+       
+        .. versionadded:: 5.1.2
+            
+            If you already began making a selection, |mouseright| will undo the last added point.
 
 .. image:: /images/tools/selections-right-click-menu.png
    :width: 200

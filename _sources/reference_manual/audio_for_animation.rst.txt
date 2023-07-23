@@ -7,6 +7,7 @@
    :authors: - Wolthera van Hövell tot Westerflier <griffinvalley@gmail.com>
              - Scott Petrovic
              - Marcidy
+             - Emmet O'Neill <emmetoneill.pdx@gmail.com>
    :license: GNU free documentation license 1.3 or later.
 
 .. index:: Animation, Audio, Sound, Timeline
@@ -16,56 +17,36 @@
 Audio for Animation
 ===================
 
-.. caution::
-
-    Audio for animation is an unfinished feature. It has multiple bugs and may not work on your system.
-
-You can add audio files to your animation to help sync lips or music. This functionality is available in the timeline docker.
+Within Krita you can load an audio file into your document to help syncronize your animation with dialogue or music. This functionality is available from the audio menu in the Timeline Docker's titlebar.
 
 Importing Audio Files
 ---------------------
 
-Krita supports MP3, OGM, and WAV audio files. When you open up your timeline docker, there will be a speaker button in the top left area.
+Krita supports a variety of audio file types, including WAV, FLAC, OGG, MP3, and more. 
 
-If you press the speaker button, you will get the available audio options for the animation.
+To load an audio file into your Krita document, first open the Timeline Docker.
 
-* Open
-* Mute
-* Remove audio
-* Volume slider
+On the right-hand side of the Timeline Docker's toolbar, you'll find the Audio Menu button with an icon that looks like a speaker.
+This is the main area where you will interact with Krita's audio system, including loading and removing audio tracks and adjusting the playback volume.
 
-Krita saves the location of your audio file. If you move the audio file or rename it, Krita will not be able to find it. Krita will tell you the file was moved or deleted the next time you try to open the Krita file up.
+Specifically, these options and widgets are available in the Audio Menu:
+
+* Load Audio File
+* Remove Audio File
+* Mute Audio
+* Audio Volume Slider
+
+Crucially, Krita only saves the location (file path) of your audio file inside your Krita document. Because of that, if you happen to move or rename an audio file that you've referenced in one of your Krita animations, Krita will no longer be able to find it and you will need to re-load it manually. However, Krita will tell you the file was moved or deleted the next time you try to open the Krita file up.
 
 Using Audio
 -----------
 
-After you import the audio, you can scrub through the timeline and it will play the audio chunk at the time spot. When you press the Play button, the entire the audio file will playback as it will in the final version. There is no visual display of the audio file on the screen, so you will need to use your ears and the scrubbing functionality to position frames.
+Once you've imported some audio, you will be able scrub through frames on the timeline and Krita will play the audio chunk associated with the frame that you want on. Then, when you press the Play button, your audio will playback while you animation plays synchronized with the image frame changes. 
+
+As of now there is no visual audio waveform display in Krita's UI, so you will need to use your ears and the scrubbing functionality to line your keyframes up with specific parts of the audio.
 
 
 Exporting with Audio
 --------------------
 
-To get the audio file included when you are exporting, you need to include it in the Render Animation options. In the :menuselection:`File --> Render Animation` options there is a checkbox :guilabel:`Include Audio`. Make sure that is checked before you export and you should be good to go.
-
-Packages needed for Audio on Linux
-----------------------------------
-
-The following packages are necessary for having the audio support on Linux:
-
-
-For people who build Krita on Linux:
-
-* libasound2-dev
-* libgstreamer1.0-dev gstreamer1.0-pulseaudio
-* libgstreamer-plugins-base1.0-dev
-* libgstreamer-plugins-good1.0-dev
-* libgstreamer-plugins-bad1.0-dev
-
-For people who use Krita on Linux:
-
-* libqt5multimedia5-plugins
-* libgstreamer-plugins-base1.0
-* libgstreamer-plugins-good1.0
-* libgstreamer-plugins-bad1.0
-
-Since Krita 4.4, audio works inside the AppImage.
+To have audio included with you exported animation video you will need to check enable it in the Render Animation options. In the :menuselection:`File --> Render Animation` options there is a checkbox :guilabel:`Include Audio`. Make sure that is checked before you export and you should be good to go.

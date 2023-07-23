@@ -56,8 +56,6 @@ RGB models: HSV, HSL, HSI and HSY
 
 These are not included as their own color spaces in Krita. However, they do show up in the blending modes and color selectors, so a brief overview:
 
---Images of relationship rgb-hsv etc.
-
 Hue
     The tint of a color, or, whether it's red, yellow, green, etc. Krita's Hue is measured in 360 degrees, with 0 being red, 120 being green and 240 being blue.
 Saturation
@@ -97,6 +95,10 @@ CMYK
 Cyan, Magenta, Yellow, Key
 
 This is the color space of printers. Unlike computers, printers have these four colors, and adding them all adds up to black instead of white. This is thus also called a 'subtractive' color space.
+
+.. versionchanged:: 5.2
+
+    Krita 5.1 and older had the blending modes apply direct on the channels. Not all software does this, and thus, to make it simpler to work together with other artists, Krita 5.2 by default inverts the channels before applying the blending mode. You can control this in the :ref:`preferences <tool_options_settings>`.
 
 +-------+-----------------------+-----------------------+-----------------------+--------------------------+--------------------------+
 |       | Color 1               |       Color 2         | Normal                | Multiply                 | Screen                   |
@@ -148,10 +150,6 @@ Cb
 
 This color space is often used in photography and in (correct) implementations of JPEG. As a human you're much more sensitive to the lightness of colors, and thus JPEG tries to compress the Cr and Cb channels, and leave the Y channel in full quality.
 
-.. warning:: 
-    
-    Krita doesn't bundle a ICC profile for YCrCb on the basis of there being no open source ICC profiles for this color space. It's unusable without one, and also probably very untested.
-
 .. _model_xyz:
 
 XYZ
@@ -160,23 +158,14 @@ XYZ
 Back in 1931, the CIE (Institute of Color and Light), was studying human color perception.
 In doing so, they made the first color spaces, with XYZ being the one best at approximating human vision.
 
-It's almost impossible to really explain what XYZ is.
-
-Y
-    Is equal to green.
-Z
-    Akin to blue.
-X
-    Is supposed to be red.
-
-XYZ is used as a baseline reference for all other profiles and models. All color conversions are done in XYZ, and all profiles coordinates match XYZ.
+XYZ is used as a baseline reference for all other profiles and models. All color conversions are done in XYZ, and all profiles coordinates match XYZ. An RGB color space where Red is set to 100% X, Green is set to 100% Y and Blue is set to 100% Z, with the gamma correction being linear is in effect the same as an XYZ color space.
 
 .. _model_lab:
 
 L\*a\*b\*
 ~~~~~~~~~
 
-Stands for:
+A Color space based on the opposition theory of color vision, L\*a\*b\* splits colors into the luminosity, red-green contrast and blue-yellow contrast:
 
 L\*
     Lightness, similar to luminosity in this case.
@@ -185,7 +174,7 @@ a\*
 b\*
     b\* in this case is a measurement of how yellow a color is versus how blue a color is.
 
-L\*a\*b\* is supposed to be a more comprehensible variety of XYZ and the most 'complete' of all color spaces. It's often used as an in between color space in conversion, but even more as the correct color space to do color-balancing in. It's far easier to adjust the contrast and color tone in L*a*b*.
+L\*a\*b\* is supposed to be a more comprehensible to use that XYZ. It's often used as an in between color space in conversion, but even more as the correct color space to do color-balancing in. It's far easier to adjust the contrast and color tone in L*a*b*.
 
 L\*a\*b\* is technically the same as Photoshop's LAB. Photoshop specifically uses CIELAB d50.
 

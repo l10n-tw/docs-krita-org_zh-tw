@@ -202,20 +202,21 @@ Mesh Size
 Show control points
     This will toggle the control points.
 
-Recursive Transform
--------------------
+    
+Transform Multiple Layers
+-------------------------
 
-.. deprecated:: 5.0
+Krita allows you to transform multiple layers at once.
 
-   As of Krita 5.0, the toggle for recursive transform has been removed to reduce confusion, as this only worked with masks. Recursive transform is on by default for all contents of a group layer. To achieve non-recursive transformation you can use the layer lock feature.
+In Krita versions older than 5.0 this required using the :guilabel:`Recursive Transform` option while transforming a group layer, whose icon was a little spider. Since 5.0, this option is enabled by default for group layers (To achieve non-recursive transformation you can use the layer lock feature).
 
-The little spider icon on the lower-left of the transform tool options is the :guilabel:`Recursive Transform`.
+.. versionchanged:: 5.2
+
+    Transforming multiple layers doesn't require a group anymore, now all layers selected in the layer docker will be transformed at once.
 
 .. figure:: /images/tools/Krita_transforms_recursive.png
 
-    Recursive transform transforms all the layers in the group, so with this apple, both the lineart as the fill will be transformed.
-
-Recursive transform, when toggled, allows you to mass-transform all the layers in a group when only transforming the group.
+    Krita allows you to transforms all the layers in the group, so with this apple, both the lineart as the fill will be transformed.
 
 Continuous Transform
 --------------------

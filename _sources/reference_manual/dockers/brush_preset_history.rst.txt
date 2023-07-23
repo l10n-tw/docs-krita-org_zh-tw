@@ -33,3 +33,5 @@ History Behaviour
       Move the last used preset to the top.
    Bubble Up on Repeated Use
       Move presets to the top depending on how often you use them.
+   Configure Number of Brushes Shown...
+      How many of the last used presets you want to keep track of. By default this number is 10.

@@ -20,5 +20,9 @@ With this tool you can draw polygons. Click the |mouseleft| to indicate the star
 
 :kbd:`Shift + Z` undoes the last clicked point.
 
+.. versionadded:: 5.1.2
+
+   |mouseright| wills also undo the last added point.
+
 Tool Options
 ------------

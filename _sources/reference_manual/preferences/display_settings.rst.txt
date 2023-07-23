@@ -20,22 +20,31 @@ Display Settings
 
 Here various settings for the rendering of Krita can be edited.
 
-OpenGL
-------
+Canvas Graphics Acceleration
+----------------------------
 
-**For Krita 3.3 or later: Reworded as "*Canvas Graphics Acceleration*"**
+.. note::
+
+   In Krita 3.2 and before, this used to be named :guilabel:`OpenGL`, with the checkbox for :guilabel:`Canvas Graphics Acceleration` being named :guilabel:`Enable OpenGL`.
 
 OpenGL is a bit of code especially for graphics cards. Graphics cards a dedicate piece of hardware for helping your computer out with graphics calculations, which Krita uses a lot. All modern computer have graphics cards.
 
-**For Krita 3.3 or later:** On Windows, Krita also supports using Direct3D instead with the help of the ANGLE library. ANGLE works by converting the OpenGL functions that Krita makes use of to the equivalent in Direct3D. It may (or may not) be slower than native OpenGL, but it has better compatibility with typical Windows graphics drivers.
+On Windows, Krita also supports using Direct3D instead with the help of the ANGLE library. ANGLE works by converting the OpenGL functions that Krita makes use of to the equivalent in Direct3D. It may (or may not) be slower than native OpenGL, but it has better compatibility with typical Windows graphics drivers.
 
-Enable OpenGL **(For Krita 3.3 or later: Reworded as *Canvas Graphics Acceleration*)**
+Canvas Graphics Acceleration
     Selecting this checkbox will enable the OpenGL / ANGLE canvas drawing mode. With a decent graphics card this should give faster feedback on brushes and tools. Also the canvas operations like Rotate, Zoom and Pan should be considerably faster. 
-For Krita 3.3 or later:
-    Renderer
-        *On Windows:* You can switch between native OpenGL or ANGLE Direct3D 11 rendering. The usual recommendation is to leave it as "Auto", which Krita will decide the best to use based on some internal compatibility checking. Changes to this option require a restart of Krita to take effect.
-Use Texture Buffer
-    This setting utilizes the graphics card's buffering capabilities to speed things up a bit. Although for now, this feature may be broken on some AMD/Radeon cards and may work fine on some Intel graphics cards.
+    
+    Renderer (Requires Restart)
+
+        Auto (Recommended)
+            Krita will decide the best renderer to use based on some internal compatibility checking. 
+        OpenGL
+            Krita will use OpenGL.
+        OpenGL ES
+            Krita will use OpenGl ES, which is a subset of OpenGL. Using this can be useful for less powerful devices.
+        ANGLE Direct3D (Windows Only)
+            Krita will use the ANGLE compatibility layer to convert the OpenGL calls to Direct3D calls. Wether this works better than regular OpenGL depends on the graphics drivers of the computer.
+
 Scaling Mode
     The user can choose which scaling mode to use while zooming the canvas. The choice here only affects the way the image is displayed during canvas operations and has no effect on how Krita scales an image when a transformation is applied.
     
@@ -47,6 +56,10 @@ Scaling Mode
         This should give a little better result than Bilinear Filtering.
     High Quality Filtering
         Only available when your graphics card supports OpenGL 3.0. As the name suggests, this setting provides the best looking image during canvas operations.
+Use Texture Buffer
+    This setting utilizes the graphics card's buffering capabilities to speed things up a bit. Although for now, this feature may be broken on some AMD/Radeon cards and may work fine on some Intel graphics cards.
+Use Large Pixmap Cache
+    This should be enabled if you experience artifacts with the :ref:`assistants <painting_with_assistants>`.
 
 .. _hdr_display_settings:
 
@@ -68,45 +81,36 @@ Current Output format
 Preferred Output Format
     Which surface type you prefer. This should be ideally the closest to the display format, but perhaps due to driver issues you might want to try other formats. This requires a restart.
 
-Transparency Checkerboard 
--------------------------
+Canvas Decorations
+------------------
 
-Krita supports layer transparency. Of course, the nasty thing is that transparency can't be seen. So to indicate transparency at the lowest layer, we use a checker pattern. This part allows you to configure it.
+Transparency Checkerboard:
+    Krita supports layer transparency. Of course, the nasty thing is that transparency can't be seen. So to indicate transparency at the lowest layer, we use a checker pattern. This part allows you to configure it.
 
-Size
-    This sets the size of the checkers which show up in transparent parts of an image. 
-Color
-    The user can set the colors for the checkers over here.
-
+    Size
+        This sets the size of the checkers which show up in transparent parts of an image. 
+    Color
+        The user can set the colors for the checkers over here.
 Canvas Border
--------------
+    Color
+        The user can select the color for the canvas i.e. the space beyond a document's boundaries. 
+Pixel Grid
+    .. versionadded:: 4.0
 
-Color
-    The user can select the color for the canvas i.e. the space beyond a document's boundaries. 
-Hide Scrollbars
-    Selecting this will hide the scrollbars in all view modes. 
+    This allows configuring an automatic pixel-by-pixel grid, which is very useful for doing pixel art.
+
+    Color
+        The color of the grid.
+    Start Showing at
+        This determines the zoom level at which the pixel grid starts showing, as showing it when the image is zoomed out a lot will make the grid overwhelm the image, and is thus counter productive.
 
 Selection Overlay
------------------
-
-Set the color of the alternate :ref:`Selection <selections_basics>` display mode. This mode is typically used when making complex selections.
-
-Color
-    Color of the overlay.
-Opacity
-    How opaque the overlay is.
-    
-Pixel Grid
-----------
-
-.. versionadded:: 4.0
-
-This allows configuring an automatic pixel-by-pixel grid, which is very useful for doing pixel art.
-
-Color
-    The color of the grid.
-Start Showing at
-    This determines the zoom level at which the pixel grid starts showing, as showing it when the image is zoomed out a lot will make the grid overwhelm the image, and is thus counter productive.
+    Outline Opacity
+        Set the opacity of the regular :ref:`Selection <selections_basics>` display mode.
+    Overlay Color
+        Set the color of the alternate :ref:`Selection <selections_basics>` display mode. This mode is typically used when making complex selections.
+    Opacity
+        How opaque the selection overlay is.
 
 Miscellaneous
 -------------

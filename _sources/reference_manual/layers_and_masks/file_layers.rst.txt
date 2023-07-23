@@ -1,5 +1,5 @@
 .. meta::
-   :description:
+   :description property=og\:description:
         How to use file layers in Krita.
 
 .. metadata-placeholder
@@ -26,13 +26,13 @@ Scale to Image Size
     Scales the file layer to fit exactly within the canvas boundaries of the image.
 Adapt to image resolution
     If the imported layer and the image have a different resolution, it'll scale the filelayer by scaling its resolution. In other words, import a 600dpi A4 image onto a 300dpi A4 image, and the filelayer will be scaled to fit precisely on the 300dpi image. Useful for comics, where the ink-layer is preferred to be at a higher resolution than the colors.
-
-File Layers can currently not be painted on. If you want to transform a file layer, you need to apply a transformation mask to it and use that.
-
-.. versionadded:: 3.3
+Scaling Filter
+    Here you can set the scaling filter. Most of the time, you will want to use :guilabel:`Bicubic`. However when working with pixel art, it is more useful to to use :guilabel:Ǹearest Neighbour` which doesn't try to mix colors.
     
-    In the layerdocker, next to the file layer only, there's a little folder icon. Pressing that will open the file pointed at in Krita if it hadn't yet. Using the properties you can make the file layer point to a different file.
+    .. versionadded:: 5.2
+    
+File Layers can currently not be painted on. If you want to transform a file layer, you need to apply a transformation mask to it and use that.
+    
+In the layerdocker, next to the file layer only, there's a little folder icon. Pressing that will open the file pointed at in Krita if it hadn't yet. Using the properties you can make the file layer point to a different file.
 
-.. versionadded:: 4.0
-
-    You can turn any set of layers into a file layer by right-clicking them and doing :menuselection:`Convert --> to File Layer`. It will then open a save prompt for the file location and when done will save the file and replace the layer with a file layer pointing at that file.
+You can turn any set of layers into a file layer by right-clicking them and doing :menuselection:`Convert --> to File Layer`. It will then open a save prompt for the file location and when done will save the file and replace the layer with a file layer pointing at that file.

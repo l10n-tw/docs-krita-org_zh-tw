@@ -23,33 +23,59 @@ For rendering to an animated file format, Krita will first render to a PNG seque
 
 This means that you will need to find a good place to stick your frames before you can start rendering. If you only do throwaway animations, you can use a spot on your hard-drive with enough room and select :guilabel:`Delete Sequence After Rendering`.
 
-Image Sequence
---------------
+General
+-------
 
-Base Name
-    The base name of your image sequence. This will get suffixed with a number depending on the frame.
-File Format
-    The file format to export the sequence to. When rendering we enforce PNG. The usual export options can be modified with :guilabel:`...`.
-Render Location
-    Where you render the image sequence to. Some people prefer to use a flash-drive or perhaps a harddrive that is fast.
 First Frame
     The first frame of the range of frames you wish to adjust. Automatically set to the first frame of your current selection in the timeline. This is useful when you only want to re-render a little part.
 Last Frame
     As above, the last frame of the range of frames you wish to adjust. Automatically set to the last frame of your current selection in the timeline.
-Naming Sequence starts with
+
+Export as Image Sequence
+------------------------
+
+File Format
+    The file format to export the sequence to. When rendering we enforce PNG. The usual export options can be modified with :guilabel:`...`.
+Image Location
+    Where you render the image sequence to. Some people prefer to use a flash-drive or perhaps a harddrive that is fast.
+Base Name
+    The base name of your image sequence. This will get suffixed with a number depending on the frame.
+Start numbering at.
     The frames are named by using :guilabel:`Base Name`  above and adding a number for the frame. This allows you to set where the frame number starts, so rendering from 8 to 10 with starting point 3 will give you images named 11 and 15. Useful for programs that don't understand sequences starting with 0, or for precision output.
+Only Unique Frames
+    Normally Krita generates a frame for every FPS in the sequence. Ticking this will only generate keyframes, saving space.
 
-Render Animation
-----------------
+Export as Video
+---------------
 
+Width
+    Set the desired width in pixels.
+Height
+    Set the desired height in pixels.
+FPS
+    Set the desired frames per second.
+Filter
+    Set the scaling filter. :guilabel:`Bicubic` is fine for most cases, but if you wnat to, say, export a pixel art animation at twice the size, [Nearest] :guilabel:`Neighbour` will preserve the fine details better.
 Render As
     The file format to render to. All except GIF have extra options that can be manipulated via :guilabel:`...`.
-File
+Video Location
     Location and name of the rendered animation.
+    
+    Inlude Audio
+        Include any audio you have added.
+    
 FFmpeg
-    The location where your have FFmpeg. If you don't have this, Krita cannot render an animation. For proper GIF support, you will need FFmpeg 2.6, as we use its palettegen functionality.
+    The location where your have FFmpeg.
+    
+    .. versionchanged:: 5.2
+        This is now optional. Krita's bundled FFMpeg functionality is able to provide some options, but it is still useful to set this if you want to use a specific version of FFMpeg for rendering videos.
+    
 Delete Sequence After Rendering
     Delete the prerendered image sequence after done rendering. This allows you to choose whether to try and save some space, or to save the sequence for when encoding fails.
+    
+    .. deprecated:: 5.2
+    
+        Since 5.2, Krita will always delete the image sequence if :guilabel:`Export as Image Sequence` is not checked while :guilabel:`Export as Video` is.
 
 .. warning::
 
@@ -58,7 +84,19 @@ Delete Sequence After Rendering
 Setting Up Krita for Exporting Animations
 -----------------------------------------
 
-You will need to download an extra application and link it in Krita for it to work. The application is pretty big (50MB), so the Krita developers didn't want to bundle it with the normal application. The software that we will use is free and called FFmpeg. The following instructions will explain how to get it and set it up. The setup is a one-time thing so you won't have to do it again.
+.. versionchanged:: 5.2
+
+Since Krita 5.2, Krita bundles a small part of FFmpeg. This means that you will not strictly have to download and setup FFMpeg to render animations. Different versions of the program have different options however, and video experts might want to use a specific version of FFMpeg to get more codec options.
+
+The bundled FFmpeg supports the following containers: ``Webm``, ``Matroska`` and ``OGG``, which are a wrapper around the video data (amongst others), which are encoded with codecs, of which the bundled FFMpeg supports:
+
+- AOM AV1
+- VPX VP9
+- VPX VP8
+- H. 264 (via openH264)
+- Theora
+
+The following instructions will explain how to get a non-bundled version of FFMpeg and set it up. The setup is a one-time thing so you won't have to do it again.
 
 Step 1 - Downloading FFmpeg
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~

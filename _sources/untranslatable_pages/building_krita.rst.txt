@@ -293,12 +293,12 @@ Prerequisites
 
 4. LLVM MinGW compiler toolchain
 
-    - Can be downloaded here: https://github.com/mstorsjo/llvm-mingw/releases/download/20220323/llvm-mingw-20220323-ucrt-x86_64.zip
+    - Can be downloaded here: https://github.com/mstorsjo/llvm-mingw/releases/download/20220906/llvm-mingw-20220906-ucrt-x86_64.zip
     - Unzip the archive with `7zip <https://www.7-zip.org/>`_ into a folder like :file:`C:\\llvm-mingw`; the full path must not contain any spaces.
-    - At the time of writing, we are using the tagged release 20220323 with LLVM 14.0.0 on the Binary Factory. In theory a newer version should be compatible, but use at your own risk.
+    - We are using the tagged release 20220906 with LLVM 15.0.0 on the Binary Factory. In theory a newer version should be compatible, but use at your own risk.
     - If you really want to use other compilers, see below.
 
-5. You will also need a release of Python 3.8 (not 3.7, not 3.9) - https://www.python.org.
+5. You will also need a release of Python 3.10 (not 3.7, not 3.8, not 3.9, not 3.11) - https://www.python.org.
 
     - Make sure to have that version of python.exe in your path. This version of Python will be used for two things to configure Qt and to build the Python scripting module.  Do not set PYTHONHOME or PYTHONPATH.
     - Make sure that your Python will have the correct architecture for the version you are trying to build. If building for 32-bit target, you need the 32-bit release of Python.
@@ -341,7 +341,7 @@ Then prepare a batch file to set the environment. Read this example and **adjust
 .. code:: batch
 
     :: Build/dev tools
-    set MINGW_BIN_DIR=C:\llvm-mingw\llvm-mingw-20220323-ucrt-x86_64\bin
+    set MINGW_BIN_DIR=C:\llvm-mingw\llvm-mingw-20220906-ucrt-x86_64\bin
     set CMAKE_BIN_DIR=C:\Program Files\CMake\bin
     set NINJA_BIN_DIR=C:\krita-dev\ninja
     set PYTHON_BIN_DIR=C:\Python38
@@ -349,6 +349,11 @@ Then prepare a batch file to set the environment. Read this example and **adjust
 
     set BUILDROOT=C:\krita-dev
     set PATH=C:\krita-dev\i\bin;C:\krita-dev\i\lib;%MINGW_BIN_DIR%;%MINGW_BIN_DIR%\..\x86_64-w64-mingw32\bin;%CMAKE_BIN_DIR%;%NINJA_BIN_DIR%;%QTCREATOR_DIR%;%PATH%
+
+.. attention::
+    Make sure your ``PATH`` variable does **not** have double backslash symbols ``\\``. Especially as a result of multiple path variables concatenation.
+
+    If it has, ASAN symbolizer will crash when parsing error-reports.
 
 Every time you want to build or run your home-grown Krita, open the CMD window, change to the ``C:\krita-dev`` folder and run the ``env.bat`` file:
 
@@ -391,6 +396,11 @@ To fetch prebuilt dependencies just run the embedded cmake script:
 
 (Or you can download it yourself from https://binary-factory.kde.org/job/Krita_Nightly_Windows_Dependency_Build/)
 
+.. attention::
+    If you build Krita with ASAN, make sure you don't use prebuilt deps, or at least manually rebuild Qt with
+    ASAN support as well (``-DQT_ENABLE_ASAN=ON``). There is a `know issue in LLVM's linker <https://github.com/llvm/llvm-project/issues/61685>`_,
+    which causes Qt be loaded before ASAN and, therefore, causing some allocations confuse ASAN. Until this issue is fixed,
+    build Qt with ASAN as a workaround.
 
 Building dependencies yourself
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -597,26 +607,6 @@ Crash
 ~~~~~
 
 If Krita crashes you can look up the logs using ``adb logcat``
-
-
-
-Specialized Ways of Building Krita
-----------------------------------
-
-These are specialized ways of building Krita on Linux while re-using the dependencies built on KDE's binary factory. You only need to try this if you don't want to use distribution dependencies on Linux.
-
-
-
-Krita Devbox for Linux (Experimental)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-`Krita Devbox <https://invent.kde.org/eoinoneill/krita-devbox>`_ is a complete Krita development environment in a box!
-
-Krita Devbox is intended to provide a consistent and easy-to-use development container that comes with just about everything you need to develop Krita on Linux, including writing documentation, producing AppImages, and so on. A key goal for Krita Devbox is to be as simple to setup and use as possible by integrating with the host system (when it makes sense), and otherwise exporting a flexible, human-readable interface script to the host system.
-
-Krita Devbox's is particularly useful in the context of "atomic" Linux operating systems (like Fedora Kinoite and Silverblue) where the use of "pet containers" for application development is recommended. However, Krita Devbox may also be useful for any Krita developer on Linux who is interested in quick setup, using a containerized development environment, building in a similar context to KDE's official binary factory, and producing test AppImages.
-
-You can find more details about what Krita Devbox is and how it works over on the `Krita Devbox repository page. <https://invent.kde.org/eoinoneill/krita-devbox>`_ (Note: This build method is still quite new and experimental, so it's possible that you may run into a configuration issue, build error, or other bug. If so, please submit bug reports concerning the Krita Devbox to the gitlab repository listed above.) 
 
 
 .. toctree::

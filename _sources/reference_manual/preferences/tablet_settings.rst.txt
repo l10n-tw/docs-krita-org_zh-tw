@@ -21,7 +21,7 @@ Tablet Settings
 Tablet 
     Input Pressure Global Curve : This is the global curve setting that your tablet will use in Krita. The settings here will make your tablet feel soft or hard globally.
 Use Mouse Events for Right and Middle clicks.
-    Some tablet devices don't tell us whether the side buttons on a stylus. If you have such a device, you can try activate this workaround. Krita will try to read right and middle-button clicks as if they were coming from a mouse instead of a tablet. It may or may not work on your device (depends on the tablet driver implementation). After changing this option Krita should be restarted.
+    Some tablet devices don't tell us whether it has side buttons on a stylus. If you have such a device, you can try activate this workaround. Krita will try to read right and middle-button clicks as if they were coming from a mouse instead of a tablet. It may or may not work on your device (depends on the tablet driver implementation). After changing this option Krita should be restarted.
     
     .. versionadded:: 4.2
 

@@ -19,6 +19,10 @@ Text Tool
 
 This tool allows you to add text to your artwork.
 
+.. note::
+
+   The text layout got reworked in Krita 5.2, however the text tool itself has not yet received an update. For now, if you want to use features like ``inline-size`` for wrapping or ``writing-mode:vertical-rl`` for vertical text, you will need to use the SVG source editor. We will update the text tool in future versions of Krita.
+
 You use it by doing |mouseleft| :kbd:`+ drag` to create a rectangular selection. When releasing |mouseleft| a default text will be created and the text editor window will pop-up.
 
 Hovering over other text shapes will highlight their bounding box. |mouseleft| on a highlighted text will select it as the active text.

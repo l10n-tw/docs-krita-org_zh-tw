@@ -1,0 +1,1078 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-TW" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-TW" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" name="title" content="Optimize Image Processing with XSIMD" />
+  <meta property="og:site-name" content="Krita Manual" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="zh-TW" />
+  <meta property="og:locale:alternate" content="ca" />
+  <meta property="og:locale:alternate" content="en" />
+  <meta property="og:locale:alternate" content="fr" />
+  <meta property="og:locale:alternate" content="it" />
+  <meta property="og:locale:alternate" content="ja" />
+  <meta property="og:locale:alternate" content="ko" />
+  <meta property="og:locale:alternate" content="nl" />
+  <meta property="og:locale:alternate" content="pl" />
+  <meta property="og:locale:alternate" content="pt_PT" />
+  <meta property="og:locale:alternate" content="sl" />
+  <meta property="og:locale:alternate" content="tr" />
+  <meta property="og:locale:alternate" content="uk_UA" />
+  <meta property="og:locale:alternate" content="zh_CN" />
+  <meta property="og:article:modified_time" content="2023-07-23T09:58:56" />
+  <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+<meta content="Optimize Image Processing with XSIMD" name="description" />
+
+  
+  
+  <title>Optimize Image Processing with XSIMD &mdash; Krita Manual 5.2.0 說明文件</title>
+  
+
+  
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    
+  
+  
+  
+    <link rel="canonical" href="zh_TW/untranslatable_pages/optimize_image_processing_with_xsimd.html"/>
+    <meta property="og:url" content="zh_TW/untranslatable_pages/optimize_image_processing_with_xsimd.html" />
+    <meta property="og:image" content="zh_TW/../_static/sidebar-logo.png" />
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜尋" href="../search.html" />
+    <link rel="next" title="Optimizing tips and tools for Krita" href="optimizing_tips_for_krita.html" />
+    <link rel="prev" title="Developing Features" href="new_features.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+       
+           <a href="../index.html" class="icon icon-home">
+
+			<img src="../../_static/sidebar-logo.png" class="logo" alt="Logo"/>
+           	
+           <!--	Krita Manual -->
+
+
+          </a>
+
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="搜尋文件" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-side-nav-language-selector">
+        	<p class="caption-text">
+	        	<select id="language-selector-container">
+	        		<option value="ca">Català</option>
+	        		<option value="en">English</option>
+	        		<option value="fr">français</option>
+	        		<option value="it">Italiano</option>
+	        		<option value="ja">日本語</option>
+	        		<option value="ko">한국어</option>
+	        		<option value="nl">Nederlands</option>
+	        		<option value="pl">Polski</option>
+	        		<option value="pt_PT">português</option>
+                    <option value="sl">slovenščina</option>
+                    <option value="tr">Türkçe</option>
+	        		<option value="uk_UA">Українська</option>
+	        		<option value="zh_CN">简体中文</option>
+	        	</select>
+        	</p>
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../user_manual.html">使用者手冊</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general_concepts.html">通用概念</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference_manual.html">參考文件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials.html">教學及指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../KritaFAQ.html">常見問題 FAQ</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../contributors_manual.html">貢獻者手冊</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../contributors_manual/community.html">Krita 的社群</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributors_manual/krita_manual_conventions.html">Krita 說明文件標記格式使用慣例</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributors_manual/krita_manual_readme.html">Krita 說明文件貢獻指南</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributors_manual/optimising_images.html">供說明文件使用的影像</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributors_manual/user_support.html">使用者支援入門介紹</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../untranslatable_pages.html">Technical Pages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="brush_editor_gui_with_lager.html">Brush GUI Design with Lager</a></li>
+<li class="toctree-l3"><a class="reference internal" href="building_krita.html">Building Krita from Source</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cmake_settings_for_developers.html">CMake Settings for Developers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enable_static_analyzer.html">Enable static analyzer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="how_to_patch_qt.html">How to patch Qt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="intro_hacking_krita.html">Introduction to Hacking Krita</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kpl_defintion.html">The Krita Palette format KPL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="krita_svg_extensions.html">Krita SVG Extensions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modern_cpp_in_krita.html">Modern C++ usage guidelines for the Krita codebase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new_features.html">Developing Features</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Optimize Image Processing with XSIMD</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#about-simd">About SIMD</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#data-alignment">Data alignment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fixed-size-chunks">Fixed-size chunks</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#separate-builds-for-each-cpu">Separate builds for each CPU</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#xsimd-library">XSIMD Library</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#useful-projects-for-krita">Useful projects for Krita</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="optimizing_tips_for_krita.html">Optimizing tips and tools for Krita</a></li>
+<li class="toctree-l3"><a class="reference internal" href="participating_in_gsoc.html">Google Summer of Code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="patch_review_guide.html">Advanced Merge Request Guide</a></li>
+<li class="toctree-l3"><a class="reference internal" href="python_coding.html">Python Developer Tools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quality_assurance.html">Introduction to Quality Assurance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release_krita.html">Making a release</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reporting_bugs.html">Reporting Bugs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strokes_documentation.html">Strokes queue</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strokes_documentation.html#strokes-public-api">Strokes public API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strokes_documentation.html#internals-of-the-freehand-tool">Internals of the freehand tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strokes_documentation.html#scheduled-undo-redo">Scheduled Undo/Redo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strokes_documentation.html#processings-framework">Processings framework</a></li>
+<li class="toctree-l3"><a class="reference internal" href="testing_strategy.html">Testing Strategy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="triaging_bugs.html">Triaging Bugs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="unit_tests_in_krita.html">Unittests in Krita</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../resources_page.html">資源</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+	<!-- start top banner area (for fundraisers or messages)
+
+	<div style="text-align: center; background-color: #333">
+		<a href="https://krita.org/en/fundraising-2018-campaign/" target="_self" onclick="ga('send', 'event', 'frontpage', 'button', 'Fundraiser 2018');">
+			<img src="https://krita.org/wp-content/themes/krita-org-theme/images/decoration/2018-fundraiser-banner.png" style="max-width: 100%">
+		</a>
+	</div>
+	
+	 end top banner area -->
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Krita Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">文件</a> &raquo;</li>
+        
+          <li><a href="../contributors_manual.html">貢獻者手冊</a> &raquo;</li>
+        
+          <li><a href="../untranslatable_pages.html">Technical Pages</a> &raquo;</li>
+        
+      <li>Optimize Image Processing with XSIMD</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+          
+            <a href="../_sources/untranslatable_pages/optimize_image_processing_with_xsimd.rst.txt" rel="nofollow"> 
+             
+              <img src="../_static/images/source-code.png" />
+             <!-- 檢視頁面原始碼 -->
+
+          </a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="optimize-image-processing-with-xsimd">
+<span id="id1"></span><h1><a class="toc-backref" href="#id13" role="doc-backlink">Optimize Image Processing with XSIMD</a><a class="headerlink" href="#optimize-image-processing-with-xsimd" title="本標頭的永久連結">¶</a></h1>
+<nav class="contents" id="id2">
+<p class="topic-title">目錄</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#optimize-image-processing-with-xsimd" id="id13">Optimize Image Processing with XSIMD</a></p>
+<ul>
+<li><p><a class="reference internal" href="#about-simd" id="id14">About SIMD</a></p></li>
+<li><p><a class="reference internal" href="#data-alignment" id="id15">Data alignment</a></p></li>
+<li><p><a class="reference internal" href="#fixed-size-chunks" id="id16">Fixed-size chunks</a></p></li>
+<li><p><a class="reference internal" href="#separate-builds-for-each-cpu" id="id17">Separate builds for each CPU</a></p>
+<ul>
+<li><p><a class="reference internal" href="#compilation-targets" id="id18">Compilation targets</a></p></li>
+<li><p><a class="reference internal" href="#multiarch-builds" id="id19">Multiarch builds</a></p>
+<ul>
+<li><p><a class="reference internal" href="#dll-based-approach" id="id20">1. DLL-based approach</a></p></li>
+<li><p><a class="reference internal" href="#template-based-approach" id="id21">2. Template-based approach</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#xsimd-library" id="id22">XSIMD Library</a></p>
+<ul>
+<li><p><a class="reference internal" href="#arithmetic-operations" id="id23">Arithmetic operations</a></p></li>
+<li><p><a class="reference internal" href="#conditionals" id="id24">Conditionals</a></p></li>
+<li><p><a class="reference internal" href="#gather-scatter" id="id25">Gather-scatter</a></p></li>
+<li><p><a class="reference internal" href="#mixed-style" id="id26">Mixed-style</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#useful-projects-for-krita" id="id27">Useful projects for Krita</a></p></li>
+</ul>
+</li>
+</ul>
+</nav>
+<section id="about-simd">
+<h2><a class="toc-backref" href="#id14" role="doc-backlink">About SIMD</a><a class="headerlink" href="#about-simd" title="本標頭的永久連結">¶</a></h2>
+<p>SIMD (Single instruction, multiple data) is a type of parallel data processing where a single processor instruction can process multiple values. For this purpose the CPU incorporates special computational blocks that perform the most popular arithmetic operations in parallel. For example, using AVX blocks it can multiply 8 floating-point numbers by other 8 floating-point numbers at roughly the same &quot;speed&quot; <a class="footnote-reference brackets" href="#id5" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> as it would multiply a couple of numbers using a standard instruction. Such speed increase is possible because these blocks have 8 separate physical pipelines that do the multiplication in parallel.</p>
+<figure class="align-center" id="id7">
+<img alt="../_images/parallel_multiply_example.png" src="../_images/parallel_multiply_example.png" />
+<figcaption>
+<p><span class="caption-text"><em>_mm256_mul_ps</em> is potentially 8 times faster than normal <em>fmul</em> instruction</span><a class="headerlink" href="#id7" title="本圖片的永久連結">¶</a></p>
+</figcaption>
+</figure>
+<p>All SSE/AVX instruction are available in C++ compiler using so-called &quot;compiler intrinsics&quot;. A very convenient reference for them can be found in this <a class="reference external" href="https://www.intel.com/content/www/us/en/docs/intrinsics-guide/index.html">guide from Intel</a>. They have a bit weird naming, but it is usually enough just to understand the naming scheme. For example, multiplication intrinsic has at least 10 variants <a class="footnote-reference brackets" href="#id6" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a>:</p>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>Single-precision multiplication (<code class="docutils literal notranslate"><span class="pre">float</span></code>):</dt><dd><ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">__m256</span> <span class="pre">_mm256_mul_ps</span> <span class="pre">(__m256</span> <span class="pre">a,</span> <span class="pre">__m256</span> <span class="pre">b)</span></code> --- multiply 8 pairs of packed single-precision floating-point values stored in two 256-bit registers</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__m128</span> <span class="pre">_mm_mul_ps</span> <span class="pre">(__m128</span> <span class="pre">a,</span> <span class="pre">__m128</span> <span class="pre">b)</span></code> multiply 4 pairs of packed single-precision floating-point values stored in two 128-bit registers</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__m128</span> <span class="pre">_mm_mul_ss</span> <span class="pre">(__m128</span> <span class="pre">a,</span> <span class="pre">__m128</span> <span class="pre">b)</span></code> --- multiply 1(!) pair of single-precision floating-point values stored in lowest 32-bits of two 128-bit registers</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Double-precision multiplication (<code class="docutils literal notranslate"><span class="pre">double</span></code>):</dt><dd><ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">__m256d</span> <span class="pre">_mm256_mul_pd</span> <span class="pre">(__m256d</span> <span class="pre">a,</span> <span class="pre">__m256d</span> <span class="pre">b)</span></code> --- multiply 4 pairs of packed double-precision floating-point values stored in two 256-bit registers</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__m128d</span> <span class="pre">_mm_mul_pd</span> <span class="pre">(__m128d</span> <span class="pre">a,</span> <span class="pre">__m128d</span> <span class="pre">b)</span></code> --- multiply 2 pairs of packed single-precision floating-point values stored in two 128-bit registers</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__m128d</span> <span class="pre">_mm_mul_sd</span> <span class="pre">(__m128d</span> <span class="pre">a,</span> <span class="pre">__m128d</span> <span class="pre">b)</span></code> --- multiply 1(!) pair of double-precision floating-point values stored in lowest 64-bits of two 128-bit registers</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>32-bit signed integer multiplication (<code class="docutils literal notranslate"><span class="pre">qint32</span></code>):</dt><dd><ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">__m256i</span> <span class="pre">_mm256_mul_epi32</span> <span class="pre">(__m256i</span> <span class="pre">a,</span> <span class="pre">__m256i</span> <span class="pre">b)</span></code> --- multiply 8 pairs of packed signed 32-bit integer values stored in two 256-bit registers</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__m128i</span> <span class="pre">_mm_mul_epi32</span> <span class="pre">(__m128i</span> <span class="pre">a,</span> <span class="pre">__m128i</span> <span class="pre">b)</span></code> --- multiply 4 pairs of packed signed 32-bit integer values stored in two 128-bit registers</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>32-bit unsigned integer multiplication (<code class="docutils literal notranslate"><span class="pre">quint32</span></code>):</dt><dd><ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">__m256i</span> <span class="pre">_mm256_mul_epu32</span> <span class="pre">(__m256i</span> <span class="pre">a,</span> <span class="pre">__m256i</span> <span class="pre">b)</span></code> --- multiply 8 pairs of packed unsigned 32-bit integer values stored in two 256-bit registers</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__m128i</span> <span class="pre">_mm_mul_epu32</span> <span class="pre">(__m128i</span> <span class="pre">a,</span> <span class="pre">__m128i</span> <span class="pre">b)</span></code> --- multiply 4 pairs of packed unsigned 32-bit integer values stored in two 128-bit registers</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+<p>You don't need to remember all the intrinsics by heart. It is usually enough to remember what features are available in the CPU and then use Intel's guide linked above to find the proper intrinsic name and variant. Or use XSIMD library that hides all this boilerplate completely.</p>
+<p>There is one thing you need to remember though, that is so-called &quot;scalar&quot; intrinsics. Look at functions <code class="docutils literal notranslate"><span class="pre">_mm_mul_ss</span></code> and <code class="docutils literal notranslate"><span class="pre">_mm_mul_sd</span></code> in the list above. Even though they are listed among &quot;vector&quot; instructions, they are not &quot;vector&quot;. They multiply <strong>a single</strong> pair of floating point numbers stored in the lowest bits of vector registers. Such instructions will be very important for us when we start implementing scalar versions of vector algorithms a bit later. The point is, <code class="docutils literal notranslate"><span class="pre">_mm_mul_ss</span></code> has exactly the same precision and rounding rules as its vector counterpart (<code class="docutils literal notranslate"><span class="pre">_mm_mul_ps</span></code>), so we can guarantee that the two versions of the algorithm generate exactly the same result.</p>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>The standard instruction for floating point multiplication is <code class="docutils literal notranslate"><span class="pre">fmul</span></code> from x87 FPU instruction set. All x87 FPU instructions use 80-bit precision and its rounding mode it controlled by a special rounding control register, which is usually set to <em>to-nearest</em> mode. But SIMD-based vector instructions use the exact precision of their operands (32 or 64 bits) and rounding is always set to <em>to-nearest-even</em>. It means that we should avoid mixing x87 FPU and SIMD instructions in the same algorithm, or we get inconsistent results!</p>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<p>Beware the C standard library functions, they may use x87 FPU instructions!</p>
+</div>
+</div>
+<p>As we learned before, vector instructions allow doing 8-times more computations at roughly the same time. But why are they used so rarely in the real applications? The answer is, one needs to satisfy several very severe requirements to use them. Usually, it also involves a significant amount of boiler-plate code.</p>
+<p>Requirements for SIMD usage:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>Data alignment.</strong> The data should preferably have strict alignment by 128/256-bit (for older CPUs).</p></li>
+<li><p><strong>Fixed-size chunks.</strong> One instruction can process exactly 4 or 8 elements at a time; one cannot process 3 or 5 elements without doing (a lot of) extra work. Hence it is difficult to write generic and reusable algorithms</p></li>
+<li><p><strong>Per-arch builds.</strong> At compile time we don't know what instructions set will actually be supported by the user's CPU: it might be SSE4, AVX or AVX2, we don't know; therefore we need to compile multiple versions of our algorithm for each supported CPU</p></li>
+</ul>
+</div></blockquote>
+<p>These requirements mean that we cannot just pass a random data to SIMD and get a 8-times improvement. We need to do a lot of preparatory work. The rest of the this manual will explain how to satisfy these three requirements.</p>
+</section>
+<section id="data-alignment">
+<h2><a class="toc-backref" href="#id15" role="doc-backlink">Data alignment</a><a class="headerlink" href="#data-alignment" title="本標頭的永久連結">¶</a></h2>
+<p>In the original SIMD instruction set there were two instructions available: one for aligned memory access and one for unaligned:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">__m256</span> <span class="pre">_mm256_load_ps</span> <span class="pre">(float</span> <span class="pre">const</span> <span class="pre">*</span> <span class="pre">mem_addr)</span></code> --- load eight 32-bit floating point values stored at <code class="docutils literal notranslate"><span class="pre">mem_addr</span></code> into a 256-bit register. The address at <code class="docutils literal notranslate"><span class="pre">mem_addr</span></code> must be 256-bit aligned, otherwise application will crash with <em>SIGSEGV</em>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__m256</span> <span class="pre">_mm256_loadu_ps</span> <span class="pre">(float</span> <span class="pre">const</span> <span class="pre">*</span> <span class="pre">mem_addr)</span></code> --- same as above, but <code class="docutils literal notranslate"><span class="pre">mem_addr</span></code> is allowed to be unaligned.</p></li>
+</ul>
+</div></blockquote>
+<p>In older CPUs (before <a class="reference external" href="https://en.wikipedia.org/wiki/Nehalem_(microarchitecture)">Nehalem for Intel</a> and before <code class="docutils literal notranslate"><span class="pre">TODO:unknown</span></code> for AMD) aligned version of the instruction was more efficient when dealing with aligned data than the unaligned one. Hence we had to write two different versions of the code, one for aligned data and one for unaligned. In modern Intel CPUs both instructions give exactly the same performance when passed with the aligned data, so it is considered safe to use the <em>unaligned</em> version all the time.</p>
+<div class="admonition caution">
+<p class="admonition-title">警示</p>
+<ul class="simple">
+<li><p>TODO: Is it safe to always use unaligned access on ARM?</p></li>
+<li><p>TODO: Are we required to use <em>element-aligned</em> on ARM?</p></li>
+</ul>
+</div>
+<p>Please remember, that for better performance it is still recommended to make sure that all buffers are aligned to SIMD-word boundary (that is, 32 bytes for AVX and 16 bytes for SSE).</p>
+</section>
+<section id="fixed-size-chunks">
+<h2><a class="toc-backref" href="#id16" role="doc-backlink">Fixed-size chunks</a><a class="headerlink" href="#fixed-size-chunks" title="本標頭的永久連結">¶</a></h2>
+<p>Even though we can partially ignore alignment issues with modern CPUs, we still cannot ignore the fact that the size of the chunks must be fixed.</p>
+<p>Let's consider the following example, where we need to process 10 pixels:</p>
+<figure class="align-center" id="id8">
+<img alt="../_images/fixed_size_chunks_example.png" src="../_images/fixed_size_chunks_example.png" />
+<figcaption>
+<p><span class="caption-text"><em>_mm256_mul_ps</em> will potentially read past the end of the allocated buffers</span><a class="headerlink" href="#id8" title="本圖片的永久連結">¶</a></p>
+</figcaption>
+</figure>
+<p>If we simply apply the vector instruction twice, we will read past the end of the allocated buffer, which will cause <em>SIGSEGV</em>.</p>
+<p>In general there are three solutions for the problem:</p>
+<ol class="arabic">
+<li><p><strong>Solution 1</strong>: always allocate a buffer of &quot;aligned&quot; size, that is, always round-up buffer size to the next multiple of simd-word's length</p>
+<blockquote>
+<div><figure class="align-center" id="id9">
+<img alt="../_images/solution1_roundup_buffer_size.png" src="../_images/solution1_roundup_buffer_size.png" />
+<figcaption>
+<p><span class="caption-text">Always allocate a bit more data to make the buffer size &quot;aligned&quot;</span><a class="headerlink" href="#id9" title="本圖片的永久連結">¶</a></p>
+</figcaption>
+</figure>
+<p>After processing you can just ignore the processed values at the tail of the buffer.</p>
+<p>This approach is usually the best one of the three:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>you only need one (vector) version of the algorithm</p></li>
+<li><p>it is extremely efficient (you need minimal amount of 'if's or other boilerplate)</p></li>
+</ul>
+</div></blockquote>
+<p>Though this solution is not always possible. Sometimes the buffer is provided by the caller and we know nothing about it, including where it ends.</p>
+<p>As a rule of thumb, use this approach when you have full control over the buffer allocation and deallocation. For example, when you process some temporary buffer inside some self-contained algorithm. Just allocate the aligned buffer with &quot;aligned&quot; size and enjoy the speed!</p>
+<p>We use this approach in <code class="docutils literal notranslate"><span class="pre">KisBrushMaskVectorApplicator&lt;...&gt;::processVector</span></code>. This function generates a dab of an auto-brush. To do that, it allocates a fully aligned buffer with <code class="docutils literal notranslate"><span class="pre">xsimd::vector_aligned_malloc&lt;float&gt;(simdWidth)</span></code>, processes the full <code class="docutils literal notranslate"><span class="pre">simdWidth</span></code> of it, and then just ignores the values past the requested <code class="docutils literal notranslate"><span class="pre">width</span></code> of the brush.</p>
+</div></blockquote>
+</li>
+<li><p><strong>Solution 2</strong>: implement two versions of the algorithm, vector and scalar</p>
+<blockquote>
+<div><p>If we have two versions of the algorithm, vector and scalar, then we can easily process the biggest part of the buffer with the vector version, and finish the tail in a one-by-one manner with the scalar one:</p>
+<figure class="align-center" id="id10">
+<img alt="../_images/solution2_two_versions_of_the_algorithm.png" src="../_images/solution2_two_versions_of_the_algorithm.png" />
+<figcaption>
+<p><span class="caption-text">Process the tail with the scalar version of the algorithm</span><a class="headerlink" href="#id10" title="本圖片的永久連結">¶</a></p>
+</figcaption>
+</figure>
+<p>The downside of this approach is that we need to implement the same algorithm twice(!). It is extremely time-consuming and error-prone, but it is still usually the default choice, since it allows us to work with buffers of any alignment or size.</p>
+<p>The two algorithms should use <strong>exactly</strong> the same operations mathematically. Even floating-point precision and rounding should be exactly the same. Otherwise the rendering will have subtle artifacts (stair-like stripes aligned to 8-pixel boundaries).</p>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>As noted before, modern CPUs have two different floating-point computation blocks: x87 FPU and SSE scalar blocks. They have different precision and rounding rules. Make sure your scalar version of the algorithm does <strong>not</strong> use x87 FPU, even transitively via standard C library.</p>
+</div>
+<p>Rules of thumb:</p>
+<blockquote>
+<div><ol class="arabic">
+<li><p>Always write a unittest that compares the results of vector and scalar versions of the algorithm (see <code class="docutils literal notranslate"><span class="pre">KisCompositionBenchmark::checkRounding.+()</span></code> tests for example). There <strike> might be</strike> will be rounding errors in your algorithms.</p></li>
+<li><p>Avoid using standard C library functions in the scalar version of your algorithm</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>standard C library is supposed to use x87 FPU by default</p></li>
+<li><p>the choice of the FPU engine depends on whether <code class="docutils literal notranslate"><span class="pre">-ffast-math</span></code> option is passed to the compiler. Usually, <code class="docutils literal notranslate"><span class="pre">-ffast-math</span></code> switches library functions to the SSE engine, but that is an &quot;implementation defined&quot; area.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>When having issues, check the assembly. The scalar version of the algorithm shouldn't use any x87 FPU instructions, only <code class="docutils literal notranslate"><span class="pre">_mm_..._ss</span></code> instructions from SSE set.</p></li>
+<li><p>If your code generates stair-like artifacts aligned to 8-pixel border, check rounding again.</p>
+<blockquote>
+<div><figure class="align-default">
+<img alt="Rounding artifacts example" src="../_images/solution2_rounding_artifacts1.png" />
+</figure>
+</div></blockquote>
+</li>
+<li><p>Make sure that all 'if' conditions are exactly the same in both, vector and scalar algorithms.</p>
+<blockquote>
+<div><p>Sometimes you will be tempted to do some fast-path optimization in the scalar version of the algorithm, which are not available in the vector version. Don't do that! For example, when blending two pixels, if the source pixel is fully transparent you can just skip writing into the destination pixel. The problem is, you cannot do the same in the vector version, because the neighboring source pixels are not fully transparent. You cannot exclude a single pixel from a batch-write, so that will cause a write operation into the destination. In some cases such subtle difference will cause really hard to find bugs in rendering.</p>
+<p>Basically, you need to always make sure that the fast-path optimization in scalar and vector algorithms are exactly the same, even if it means you have to remove some optimizations from the scalar version.</p>
+</div></blockquote>
+</li>
+</ol>
+</div></blockquote>
+<p>Here in Krita we use this &quot;two versions&quot; approach in composite ops. You can check an example in <code class="docutils literal notranslate"><span class="pre">KoOptimizedCompositeCopy128.h</span></code>:</p>
+<blockquote>
+<div><ul>
+<li><p>the main algorithm is implemented in class <code class="docutils literal notranslate"><span class="pre">CopyCompositor128</span></code>. It has two methods <code class="docutils literal notranslate"><span class="pre">compositeVector()</span></code> and <code class="docutils literal notranslate"><span class="pre">compositeOnePixelScalar()</span></code>.</p></li>
+<li><p>these two functions are called from <code class="docutils literal notranslate"><span class="pre">KoStreamedMath::genericComposite</span></code>; this helper function handles both, alignment issues and scalar tail processing</p></li>
+<li><p>basically, <code class="docutils literal notranslate"><span class="pre">KoStreamedMath::genericComposite</span></code> splits processing into 4 stages:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>stage 1: calls <code class="docutils literal notranslate"><span class="pre">compositeOnePixelScalar()</span></code> until the <strong>dst</strong> buffer is aligned</p></li>
+<li><p>stage 2a: in case src and dst buffers have the same alignment, calls fully aligned version of <code class="docutils literal notranslate"><span class="pre">compositeVector()</span></code></p></li>
+<li><p>stage 2b: in case src and dst buffers have different alignment, calls a special version of <code class="docutils literal notranslate"><span class="pre">compositeVector()</span></code> that expects dst buffer to be aligned, but src buffer not aligned</p></li>
+<li><p>stage 3: call <code class="docutils literal notranslate"><span class="pre">compositeOnePixelScalar()</span></code> to process the tail</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<p>Here is an illustration of what happens in <code class="docutils literal notranslate"><span class="pre">KoStreamedMath::genericComposite</span></code>:</p>
+<blockquote>
+<div><ul>
+<li><p>case 1: src and dst buffers have the same alignment</p>
+<blockquote>
+<div><figure class="align-center" id="id11">
+<img alt="../_images/generic_composite_case1.png" src="../_images/generic_composite_case1.png" />
+<figcaption>
+<p><span class="caption-text">src and dst buffers have the same alignment</span><a class="headerlink" href="#id11" title="本圖片的永久連結">¶</a></p>
+</figcaption>
+</figure>
+</div></blockquote>
+</li>
+<li><p>case 2: src and dst buffers have different alignment</p>
+<blockquote>
+<div><figure class="align-center" id="id12">
+<img alt="../_images/generic_composite_case2.png" src="../_images/generic_composite_case2.png" />
+<figcaption>
+<p><span class="caption-text">src and dst buffers have different alignment</span><a class="headerlink" href="#id12" title="本圖片的永久連結">¶</a></p>
+</figcaption>
+</figure>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<p>This approach looks extremely complicated (and it really is), but is solves all the SIMD problems on all possible CPUs, even the older ones. Therefore we use it in the most speed-critical part of Krita, in color composition.</p>
+</div></blockquote>
+</li>
+<li><p><strong>Solution 3</strong>: copy the tail into the temporary (aligned) buffer and process it using the vector version of the algorithm</p>
+<blockquote>
+<div><p>This is quite an obvious solution, but we don't use it anywhere in Krita. Copying the data into the temporary buffer and back is rather expensive, especially when the algorithm might be called for shorter chunks (e.g. for 10 pixels)</p>
+</div></blockquote>
+</li>
+</ol>
+</section>
+<section id="separate-builds-for-each-cpu">
+<h2><a class="toc-backref" href="#id17" role="doc-backlink">Separate builds for each CPU</a><a class="headerlink" href="#separate-builds-for-each-cpu" title="本標頭的永久連結">¶</a></h2>
+<section id="compilation-targets">
+<h3><a class="toc-backref" href="#id18" role="doc-backlink">Compilation targets</a><a class="headerlink" href="#compilation-targets" title="本標頭的永久連結">¶</a></h3>
+<p>The term &quot;cpu optimization&quot; is usually rather confusing. It can be used in three different meanings:</p>
+<blockquote>
+<div><ol class="arabic">
+<li><p>Compiler's &quot;target architecture&quot;. An architecture, for which the compiler generates code. This architecture is selected by <code class="docutils literal notranslate"><span class="pre">-march</span></code> and <code class="docutils literal notranslate"><span class="pre">-mtune</span></code> compiler switches. <code class="docutils literal notranslate"><span class="pre">-march</span></code> allows the compiler to issue architecture specific instructions. It also enables the corresponding intrinsics. <code class="docutils literal notranslate"><span class="pre">-mtune</span></code> activates automatic optimizations (and vectorizations) of the code for the specified architecture.</p>
+<blockquote>
+<div><p>For example, if we specify <code class="docutils literal notranslate"><span class="pre">-march=nehalem</span></code>, then <code class="docutils literal notranslate"><span class="pre">_mm_mul_ps</span></code> intrinsic will become available (since it is a part SSE), but <code class="docutils literal notranslate"><span class="pre">_mm256_mul_ps</span></code> will not (it is from AVX set). If we specify <code class="docutils literal notranslate"><span class="pre">-march=sandybridge</span></code>, then both intrinsic will become available.</p>
+</div></blockquote>
+</li>
+<li><p>&quot;Host architecture&quot;. An architecture of the CPU where we compile Krita on. In most of the cases this architecture doesn't matter. If the compiler supports generation of instructions for a specific instruction set at all (e.g. AVX), then it will generate them on any host CPU, even the older one.</p>
+<blockquote>
+<div><p>Theoretically, you can instruct the compiler to build Krita for the &quot;host architecture&quot;, by passing <code class="docutils literal notranslate"><span class="pre">-march=native</span> <span class="pre">-mtune=native</span></code>, but it is not recommended, since it makes the binaries not portable.</p>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>Back in 2012 Krita also had an option to compile for the &quot;host architecture&quot;. That option was removed later in favor of multiarch builds of the critical code.</p>
+</div>
+</div></blockquote>
+</li>
+<li><p>&quot;User's CPU architecture&quot;. An architecture of the CPU where the user will run Krita on.</p></li>
+</ol>
+</div></blockquote>
+<p>Obviously, we cannot tell in advance what CPU the user will run Krita on. We can detect CPU capabilities only when Krita actually starts on user's device. Therefore we need to have multiple versions of the hot-path algorithms, prebuilt for each possible CPU architecture and select the optimal version on Krita startup.</p>
+<p>Here is Krita we prebuild code for 7 most popular target instruction sets:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p><em>SSE2</em> --- basic 128-bit floating-point and integer arithmetic</p></li>
+<li><p><em>SSSE3</em> --- SSE2 + several shuffle instructions</p></li>
+<li><p><em>SSE4.1</em> --- SSSE3 + integer conversions and rounding instructions</p></li>
+<li><p><em>AVX</em> --- SSE4.1 + 256-bit floating-point (only!) arithmetic and shuffles</p></li>
+<li><p><em>AVX2+FMA</em> --- AVX + 256-bit integer arithmetic and fused-multiply-add (used a lot in compositioning code for implementation of <em>lerp</em> function)</p></li>
+</ol>
+</div></blockquote>
+</section>
+<section id="multiarch-builds">
+<h3><a class="toc-backref" href="#id19" role="doc-backlink">Multiarch builds</a><a class="headerlink" href="#multiarch-builds" title="本標頭的永久連結">¶</a></h3>
+<p>There are two standard approaches for multiarch builds:</p>
+<section id="dll-based-approach">
+<h4><a class="toc-backref" href="#id20" role="doc-backlink">1. DLL-based approach</a><a class="headerlink" href="#dll-based-approach" title="本標頭的永久連結">¶</a></h4>
+<p>The easiest approach assumes that you build the same .dll or .so library multiple times, one for each supported architecture. Then, on application launch, you load the library that fits best to the current CPU. <em>GNU ld</em> also has some special features that allow automatically resolve symbols on a per-architecture basis. <em>GNU libc</em> uses this approach.</p>
+<p>Here in Krita we <strong>do not</strong> use this approach:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>it causes too much code to be duplicated between the cloned libraries</p></li>
+<li><p>relying on the linker features is not a portable approach</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="template-based-approach">
+<h4><a class="toc-backref" href="#id21" role="doc-backlink">2. Template-based approach</a><a class="headerlink" href="#template-based-approach" title="本標頭的永久連結">¶</a></h4>
+<p>In Krita we use a template based approach. It is very explicit and provides full control over how implementations are generated and selected.</p>
+<p>Let's consider an example of <code class="docutils literal notranslate"><span class="pre">KoOptimizedPixelDataScalerU8ToU16</span></code>. It is a simple class that provides optimized routines for converting pixels between uint8 and uint16 pixel formats. We use this class to increase precision of colorsmudge brush and avoid the well-known &quot;color drift on low opacity&quot; bug.</p>
+<p>Firstly, we need to declare an abstract interface class that will be available to the user:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// file: KoOptimizedPixelDataScalerU8ToU16Base.h</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">KRITAPIGMENT_EXPORT</span><span class="w"> </span><span class="n">KoOptimizedPixelDataScalerU8ToU16Base</span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+<span class="w">    </span><span class="c1">// ...</span>
+<span class="w">    </span><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">convertU8ToU16</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">quint8</span><span class="w"> </span><span class="o">*</span><span class="n">src</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">srcRowStride</span><span class="p">,</span>
+<span class="w">                                </span><span class="n">quint8</span><span class="w"> </span><span class="o">*</span><span class="n">dst</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">dstRowStride</span><span class="p">,</span>
+<span class="w">                                </span><span class="kt">int</span><span class="w"> </span><span class="n">numRows</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">numColumns</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">convertU16ToU8</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">quint8</span><span class="w"> </span><span class="o">*</span><span class="n">src</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">srcRowStride</span><span class="p">,</span>
+<span class="w">                                </span><span class="n">quint8</span><span class="w"> </span><span class="o">*</span><span class="n">dst</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">dstRowStride</span><span class="p">,</span>
+<span class="w">                                </span><span class="kt">int</span><span class="w"> </span><span class="n">numRows</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">numColumns</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="c1">// ...</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<p>The class does nothing serious other than declares two pure virtual methods that will be used by the colorsmudge brush later.</p>
+<p>Then we need to add <strong>a header</strong> file with the class that actually implements this interface using SSE/AVX instructions:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// file: KoOptimizedPixelDataScalerU8ToU16.h</span>
+
+<span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">_impl</span><span class="o">&gt;</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">KoOptimizedPixelDataScalerU8ToU16</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">KoOptimizedPixelDataScalerU8ToU16Base</span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+<span class="w">    </span><span class="c1">// ...</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">convertU8ToU16</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">quint8</span><span class="w"> </span><span class="o">*</span><span class="n">src</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">srcRowStride</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">quint8</span><span class="w"> </span><span class="o">*</span><span class="n">dst</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">dstRowStride</span><span class="p">,</span>
+<span class="w">                        </span><span class="kt">int</span><span class="w"> </span><span class="n">numRows</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">numColumns</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="k">override</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// ... very clever implementation of U8-&gt;U16 scaling using SSE/AVX is skipped ...</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">convertU16ToU8</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">quint8</span><span class="w"> </span><span class="o">*</span><span class="n">src</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">srcRowStride</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">quint8</span><span class="w"> </span><span class="o">*</span><span class="n">dst</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">dstRowStride</span><span class="p">,</span>
+<span class="w">                        </span><span class="kt">int</span><span class="w"> </span><span class="n">numRows</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">numColumns</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="k">override</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// ... very clever implementation of U16-&gt;U8 scaling using SSE/AVX is skipped ...</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="c1">// ...</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<p>Pay attention to the only template parameter of the class. The class is parameterized with &quot;architecture&quot;, which is a simple class provided by XSIMD. We don't use this template parameter inside the class. We only need it to create multiple copies of the class without violating ODR-rule.</p>
+<p>In the next step we need to create a <em>FactoryImpl</em> class. It is actually the class that will be copied multiple times.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// file: KoOptimizedPixelDataScalerU8ToU16FactoryImpl.h</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">KRITAPIGMENT_EXPORT</span><span class="w"> </span><span class="n">KoOptimizedPixelDataScalerU8ToU16FactoryImpl</span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+
+<span class="w">    </span><span class="c1">/// declare a templated factory method that is parameterized</span>
+<span class="w">    </span><span class="c1">/// by the CPU architecture</span>
+
+<span class="w">    </span><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">_impl</span><span class="o">&gt;</span>
+<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="n">KoOptimizedPixelDataScalerU8ToU16Base</span><span class="o">*</span><span class="w"> </span><span class="n">create</span><span class="p">(</span><span class="kt">int</span><span class="p">);</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// file: KoOptimizedPixelDataScalerU8ToU16FactoryImpl.cpp</span>
+
+<span class="c1">/// define a full template specialization for the factory</span>
+<span class="c1">/// method for `xsimd::current_arch` architecture</span>
+
+<span class="k">template</span><span class="o">&lt;&gt;</span>
+<span class="n">KoOptimizedPixelDataScalerU8ToU16Base</span><span class="w"> </span><span class="o">*</span>
+<span class="n">KoOptimizedPixelDataScalerU8ToU16FactoryImpl</span><span class="o">::</span><span class="n">create</span><span class="o">&lt;</span><span class="n">xsimd</span><span class="o">::</span><span class="n">current_arch</span><span class="o">&gt;</span><span class="p">(</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">channelsPerPixel</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">KoOptimizedPixelDataScalerU8ToU16</span><span class="o">&lt;</span><span class="n">xsimd</span><span class="o">::</span><span class="n">current_arch</span><span class="o">&gt;</span><span class="p">(</span>
+<span class="w">        </span><span class="n">channelsPerPixel</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><em>FactoryImpl</em> class has the only method. This method creates the scaler object and returns it via the abstract interface. Pay attention that <code class="docutils literal notranslate"><span class="pre">create()</span></code> method has no generic template implementation. Its only implementation is fully specialized with &quot;magic&quot; type <code class="docutils literal notranslate"><span class="pre">xsimd::current_arch</span></code>. <code class="docutils literal notranslate"><span class="pre">xsimd::current_arch</span></code> is a special placeholder type that points to the &quot;desired target&quot; architecture type, when the .cpp file is compiled for multiple architectures.</p>
+<p>Now we need to actually compile <code class="docutils literal notranslate"><span class="pre">KoOptimizedPixelDataScalerU8ToU16FactoryImpl.cpp</span></code> for all targets. To do that we should use a special CMake macro:</p>
+<div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span>// file: CMakeLists.txt
+
+if(HAVE_XSIMD)
+
+    # create 6 copies of the file and compile each one
+    # with the corresponding compiler flags
+
+    ko_compile_for_all_implementations(__per_arch_rgb_scaler_factory_objs
+                                       KoOptimizedPixelDataScalerU8ToU16FactoryImpl.cpp)
+else()
+
+    # in case XSIMD is not available, just compile the .cpp file once
+    # with the default compiler options (x86_64)
+
+    set(__per_arch_rgb_scaler_factory_objs KoOptimizedPixelDataScalerU8ToU16FactoryImpl.cpp)
+endif()
+
+# ...
+
+set(kritapigment_SRCS
+    # ...
+    ${__per_arch_rgb_scaler_factory_objs}
+    # ...
+)
+</pre></div>
+</div>
+<p>Now we have six explicit intantiations of <code class="docutils literal notranslate"><span class="pre">KoOptimizedPixelDataScalerU8ToU16FactoryImpl</span></code> class. One for each target architecture. The only thing left is to implement runtime selection of the proper instantiation. To do that, let's implement a real <em>Factory</em> class:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// file: KoOptimizedPixelDataScalerU8ToU16Factory.h</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">KRITAPIGMENT_EXPORT</span><span class="w"> </span><span class="n">KoOptimizedPixelDataScalerU8ToU16Factory</span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="n">KoOptimizedPixelDataScalerU8ToU16Base</span><span class="o">*</span><span class="w"> </span><span class="n">createRgbaScaler</span><span class="p">();</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// file: KoOptimizedPixelDataScalerU8ToU16Factory.cpp</span>
+
+<span class="n">KoOptimizedPixelDataScalerU8ToU16Base</span><span class="w"> </span><span class="o">*</span><span class="nf">KoOptimizedPixelDataScalerU8ToU16Factory::createRgbaScaler</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">createOptimizedClass</span><span class="o">&lt;</span>
+<span class="w">            </span><span class="n">KoOptimizedPixelDataScalerU8ToU16FactoryImpl</span><span class="o">&gt;</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The <em>Factory</em> class calls a special function <code class="docutils literal notranslate"><span class="pre">createOptimizedClass()</span></code>, which detects the current CPU architecture and calls the proper instantiation of the <em>FactoryImpl</em> class to create the scaler object.</p>
+<p>The usage of the optimized class is very simple:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">/// detect the current CPU capabilities, select the best-fit `FactoryImpl`</span>
+<span class="c1">/// factory and create the scaler object that is optimized for the current CPU</span>
+
+<span class="n">KoOptimizedPixelDataScalerU8ToU16Base</span><span class="w"> </span><span class="o">*</span><span class="n">scaler</span><span class="w"> </span><span class="o">=</span>
+<span class="w">    </span><span class="n">KoOptimizedPixelDataScalerU8ToU16Factory</span><span class="o">::</span><span class="n">createRgbaScaler</span><span class="p">();</span>
+
+<span class="c1">/// use the scaler as usual...</span>
+
+<span class="n">scaler</span><span class="o">-&gt;</span><span class="n">convertU8ToU16</span><span class="p">(...);</span>
+</pre></div>
+</div>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>Why do we have two factory objects, <em>FactoryImpl</em> and <em>Factory</em>?</p>
+<p>The main reason is that we really don't want to export a templated class from a .so/.dll library. Exporting templates is not portable, so we encapsulate all the templates behind the wall of a <em>Factory</em> class.</p>
+</div>
+<p>Some notes about writing efficient processing functions:</p>
+<blockquote>
+<div><ul>
+<li><p>when processing pixels we should perform as few <em>virtual calls</em> as possible</p></li>
+<li><p>the best way to minimize the number of virtual calls is to use &quot;row-stride&quot; approach, like <cite>convertU8ToU16()</cite> does</p>
+<blockquote>
+<div><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="n">convertU8ToU16</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">quint8</span><span class="w"> </span><span class="o">*</span><span class="n">src</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">srcRowStride</span><span class="p">,</span>
+<span class="w">                    </span><span class="n">quint8</span><span class="w"> </span><span class="o">*</span><span class="n">dst</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">dstRowStride</span><span class="p">,</span>
+<span class="w">                    </span><span class="kt">int</span><span class="w"> </span><span class="n">numRows</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">numColumns</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="k">override</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>when implementing your own algorithms just reuse the signature of <cite>convertU8ToU16()</cite></p></li>
+</ul>
+</div></blockquote>
+</section>
+</section>
+</section>
+<section id="xsimd-library">
+<h2><a class="toc-backref" href="#id22" role="doc-backlink">XSIMD Library</a><a class="headerlink" href="#xsimd-library" title="本標頭的永久連結">¶</a></h2>
+<p>All we did before was just a preparation for the actual work. Now we need to write the actual SIMD code.</p>
+<p>Here in Krita we use a special library <a class="reference external" href="https://github.com/xtensor-stack/xsimd">XSIMD</a>. It wraps all the compiler intrinsics into convenient C++ classes. The heart of XSIMD is <code class="docutils literal notranslate"><span class="pre">xsimd::batch&lt;type,</span> <span class="pre">arch&gt;</span></code> class. It behaves as if it were a simple arithmetic type, but processes multiple values at once.</p>
+<p>Example:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">/// Define convenience types to manage vector batches.</span>
+<span class="c1">/// `_impl` is a template parameter that is passed via `xsimd::current_arch`</span>
+<span class="c1">/// by the per-arch build script. The size of the vector is defined</span>
+<span class="c1">/// by the actual architecture passed to it.</span>
+
+<span class="k">using</span><span class="w"> </span><span class="n">uint_v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">xsimd</span><span class="o">::</span><span class="n">batch</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="n">_impl</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="k">using</span><span class="w"> </span><span class="n">float_v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">xsimd</span><span class="o">::</span><span class="n">batch</span><span class="o">&lt;</span><span class="kt">float</span><span class="p">,</span><span class="w"> </span><span class="n">_impl</span><span class="o">&gt;</span><span class="p">;</span>
+
+<span class="c1">// load pixels into a vector register</span>
+
+<span class="n">uint_v</span><span class="w"> </span><span class="n">data_i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">uint_v</span><span class="o">::</span><span class="n">load_unaligned</span><span class="p">(</span><span class="k">reinterpret_cast</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="n">quint32</span><span class="w"> </span><span class="o">*&gt;</span><span class="p">(</span><span class="n">pixels</span><span class="p">));</span>
+
+<span class="c1">// extract alpha channel from the pixels and convert it to float</span>
+
+<span class="k">const</span><span class="w"> </span><span class="n">float_v</span><span class="w"> </span><span class="n">pixelAlpha</span><span class="w"> </span><span class="o">=</span>
+<span class="w">    </span><span class="n">xsimd</span><span class="o">::</span><span class="n">to_float</span><span class="p">(</span><span class="n">xsimd</span><span class="o">::</span><span class="n">bitwise_cast</span><span class="o">&lt;</span><span class="n">int_v</span><span class="o">&gt;</span><span class="p">(</span><span class="n">data_i</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">24U</span><span class="p">));</span>
+</pre></div>
+</div>
+<p>In Krita we have a set of predefined convenience types for vector batches in <code class="docutils literal notranslate"><span class="pre">KoStreamedMath</span></code>:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>batch type</p></th>
+<th class="head"><p>element type</p></th>
+<th class="head"><p>num elements (AVX2)</p></th>
+<th class="head"><p>num elements (AVX)</p></th>
+<th class="head"><p>num elements (SSE2)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>int_v</p></td>
+<td><p>qint32</p></td>
+<td><p>8</p></td>
+<td><p>8*</p></td>
+<td><p>4</p></td>
+</tr>
+<tr class="row-odd"><td><p>uint_v</p></td>
+<td><p>quint32</p></td>
+<td><p>8</p></td>
+<td><p>8*</p></td>
+<td><p>4</p></td>
+</tr>
+<tr class="row-even"><td><p>float_v</p></td>
+<td><p>float</p></td>
+<td><p>8</p></td>
+<td><p>8</p></td>
+<td><p>4</p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p>--- even though the first version of AVX doesn't support integer packs, XSIMD implements that by combining two(!) SSE2 registers into one batch. This way we can easily convert <code class="docutils literal notranslate"><span class="pre">int_v</span></code> into <code class="docutils literal notranslate"><span class="pre">float_v</span></code> back and forth.</p></li>
+</ul>
+<section id="arithmetic-operations">
+<h3><a class="toc-backref" href="#id23" role="doc-backlink">Arithmetic operations</a><a class="headerlink" href="#arithmetic-operations" title="本標頭的永久連結">¶</a></h3>
+<p>Arithmetic operations with SIMD batches look exactly the same as if you did them with normal <code class="docutils literal notranslate"><span class="pre">int</span></code> or <code class="docutils literal notranslate"><span class="pre">float</span></code> values. Let's consider example from <code class="docutils literal notranslate"><span class="pre">KoAlphaMaskApplicator::fillGrayBrushWithColor</span></code>, which fills the alpha mask of the RGBA8 brush with provided color (all the inline comments assume the current architecture is AVX2):</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">/// a convenience batch for 8 copies of the provided brush color</span>
+<span class="c1">/// (please note that the constructor accepts a plain quint32 value,</span>
+<span class="c1">/// this value is loaded into all 8 slots of the batch)</span>
+
+<span class="k">const</span><span class="w"> </span><span class="n">uint_v</span><span class="w"> </span><span class="nf">brushColor_i</span><span class="p">(</span><span class="o">*</span><span class="k">reinterpret_cast</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="n">quint32</span><span class="o">*&gt;</span><span class="p">(</span><span class="n">brushColor</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="mh">0x00FFFFFFu</span><span class="p">);</span>
+
+<span class="c1">/// a convenience batch of 8 values `0xFF`</span>
+
+<span class="k">const</span><span class="w"> </span><span class="n">uint_v</span><span class="w"> </span><span class="nf">redChannelMask</span><span class="p">(</span><span class="mh">0xFF</span><span class="p">);</span>
+
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">block1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">vectorPixelStride</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">numChannels</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">float_v</span><span class="o">::</span><span class="n">size</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">/// Load RGBA8 pixels into the brush. If `brush` pointer is aligned to 256 bits,</span>
+<span class="w">    </span><span class="c1">/// the speed it a little bit better, but it is not strictly necessary, since we</span>
+<span class="w">    </span><span class="c1">/// use `load_unaligned` call.</span>
+
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">uint_v</span><span class="w"> </span><span class="n">maskPixels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">uint_v</span><span class="o">::</span><span class="n">load_unaligned</span><span class="p">(</span><span class="k">reinterpret_cast</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="n">quint32</span><span class="o">*&gt;</span><span class="p">(</span><span class="n">brush</span><span class="p">));</span>
+
+<span class="w">    </span><span class="c1">/// calculate the alpha channel value of each pixel</span>
+
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">uint_v</span><span class="w"> </span><span class="n">pixelAlpha</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">maskPixels</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">24</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">/// calculate the red channel value of each pixel (the brush is guaranteed to be</span>
+<span class="w">    </span><span class="c1">/// grayscale here, that is, all color channels have the same value)</span>
+
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">uint_v</span><span class="w"> </span><span class="n">pixelRed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">maskPixels</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">redChannelMask</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">/// calculate the final alpha value of the brush</span>
+
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">uint_v</span><span class="w"> </span><span class="n">pixelAlpha_i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">multiply</span><span class="p">(</span><span class="n">redChannelMask</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">pixelRed</span><span class="p">,</span><span class="w"> </span><span class="n">pixelAlpha</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">/// combine alpha value and the provided painting color</span>
+
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">uint_v</span><span class="w"> </span><span class="n">data_i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">brushColor_i</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="p">(</span><span class="n">pixelAlpha_i</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">24</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">/// store the result into the brush memory buffer</span>
+
+<span class="w">    </span><span class="n">data_i</span><span class="p">.</span><span class="n">store_unaligned</span><span class="p">(</span><span class="k">reinterpret_cast</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">uint_v</span><span class="o">::</span><span class="n">value_type</span><span class="w"> </span><span class="o">*&gt;</span><span class="p">(</span><span class="n">dst</span><span class="p">));</span>
+
+<span class="w">    </span><span class="n">dst</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">vectorPixelStride</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">/// we have processed `float_v::size` pixels at once, so advance the pointer</span>
+<span class="w">    </span><span class="c1">/// (for AVX2 `float_v::size` is `8`)</span>
+
+<span class="w">    </span><span class="n">brush</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">float_v</span><span class="o">::</span><span class="n">size</span><span class="p">;</span>
+<span class="w"> </span><span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="conditionals">
+<h3><a class="toc-backref" href="#id24" role="doc-backlink">Conditionals</a><a class="headerlink" href="#conditionals" title="本標頭的永久連結">¶</a></h3>
+<p>Conditionals for vectorized values look very different from normal values. You can compare two batches, but instead of getting a single boolean you get <em>a batch of booleans</em>. This resulting boolean batch is called &quot;a mask&quot; and you can analyze it afterwards.</p>
+<p>Let's consider an example from <cite>KoOptimizedCompositeOpAlphaDarken.h</cite>. Alpha-darken blending mode has a lot of conditionals inside, so it is a very nice example. Here is a short excerpt from it:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">/// check what dst pixels have zero alpha value, the result is</span>
+<span class="c1">/// written into a mask of type `float_m`</span>
+
+<span class="k">const</span><span class="w"> </span><span class="n">float_m</span><span class="w"> </span><span class="n">empty_dst_pixels_mask</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dst_alpha</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">zeroValue</span><span class="p">;</span>
+
+<span class="c1">/// check if **all** dst pixels have null alpha</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">xsimd</span><span class="o">::</span><span class="n">all</span><span class="p">(</span><span class="n">empty_dst_pixels_mask</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="c1">/// it seems like there are some pixels with non-zero alpha...</span>
+<span class="w">    </span><span class="c1">/// check if all pixels have non-zero alpha</span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">xsimd</span><span class="o">::</span><span class="n">none</span><span class="p">(</span><span class="n">empty_dst_pixels_mask</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">        </span><span class="c1">/// if all destination pixels have non-zero alpha, just</span>
+<span class="w">        </span><span class="c1">/// blend them as usual</span>
+
+<span class="w">        </span><span class="n">dst_c1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">src_c1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">dst_c1</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">src_alpha</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">dst_c1</span><span class="p">;</span>
+<span class="w">        </span><span class="n">dst_c2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">src_c2</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">dst_c2</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">src_alpha</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">dst_c2</span><span class="p">;</span>
+<span class="w">        </span><span class="n">dst_c3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">src_c3</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">dst_c3</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">src_alpha</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">dst_c3</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">        </span><span class="c1">/// if at least one pixel has zero alpha, we cannot use its</span>
+<span class="w">        </span><span class="c1">/// `dst_c1` value, because it is undefined; we need to</span>
+<span class="w">        </span><span class="c1">/// conditionally overwrite such pixels with `src_c1`</span>
+
+<span class="w">        </span><span class="n">dst_c1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">xsimd</span><span class="o">::</span><span class="n">select</span><span class="p">(</span><span class="n">empty_dst_pixels_mask</span><span class="p">,</span><span class="w"> </span><span class="n">src_c1</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="n">src_c1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">dst_c1</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">src_alpha</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">dst_c1</span><span class="p">);</span>
+<span class="w">        </span><span class="n">dst_c2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">xsimd</span><span class="o">::</span><span class="n">select</span><span class="p">(</span><span class="n">empty_dst_pixels_mask</span><span class="p">,</span><span class="w"> </span><span class="n">src_c2</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="n">src_c2</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">dst_c2</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">src_alpha</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">dst_c2</span><span class="p">);</span>
+<span class="w">        </span><span class="n">dst_c3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">xsimd</span><span class="o">::</span><span class="n">select</span><span class="p">(</span><span class="n">empty_dst_pixels_mask</span><span class="p">,</span><span class="w"> </span><span class="n">src_c3</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="n">src_c3</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">dst_c3</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">src_alpha</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">dst_c3</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+<span class="k">else</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="c1">/// if **all** dst pixels have null alpha, just overwrite them</span>
+
+<span class="w">    </span><span class="n">dst_c1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">src_c1</span><span class="p">;</span>
+<span class="w">    </span><span class="n">dst_c2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">src_c2</span><span class="p">;</span>
+<span class="w">    </span><span class="n">dst_c3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">src_c3</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="gather-scatter">
+<h3><a class="toc-backref" href="#id25" role="doc-backlink">Gather-scatter</a><a class="headerlink" href="#gather-scatter" title="本標頭的永久連結">¶</a></h3>
+<p>TODO: this chapter is not written yet. Please check implementation of <code class="docutils literal notranslate"><span class="pre">FastRowProcessor&lt;KisCurveMaskGenerator&gt;</span></code> and <code class="docutils literal notranslate"><span class="pre">PixelWrapper&lt;quint16,</span> <span class="pre">impl&gt;::read</span></code> for examples.</p>
+</section>
+<section id="mixed-style">
+<h3><a class="toc-backref" href="#id26" role="doc-backlink">Mixed-style</a><a class="headerlink" href="#mixed-style" title="本標頭的永久連結">¶</a></h3>
+<p>Sometimes you may want to mix <em>XSIMD</em> code and raw compiler intrinsics. In some cases, it may give much better performance, especially if a specific CPU instruction exists for your operation. In such cases you can just access the underlying <code class="docutils literal notranslate"><span class="pre">__m128</span></code> or <code class="docutils literal notranslate"><span class="pre">__m256</span></code> type of the batch via <code class="docutils literal notranslate"><span class="pre">.data</span></code> member.</p>
+<p>Let's consider an example from <cite>KoOptimizedPixelDataScalerU8ToU16</cite>:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// a pack of 16 quint16 values stored in a 256-bit AVX2 register</span>
+<span class="k">using</span><span class="w"> </span><span class="n">uint16_avx_v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">xsimd</span><span class="o">::</span><span class="n">batch</span><span class="o">&lt;</span><span class="kt">uint16_t</span><span class="p">,</span><span class="w"> </span><span class="n">xsimd</span><span class="o">::</span><span class="n">avx2</span><span class="o">&gt;</span><span class="p">;</span>
+
+<span class="c1">// a pack of 16 quint8 values stored in a 128-bit SSE register</span>
+<span class="k">using</span><span class="w"> </span><span class="n">uint8_v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">xsimd</span><span class="o">::</span><span class="n">batch</span><span class="o">&lt;</span><span class="kt">uint8_t</span><span class="p">,</span><span class="w"> </span><span class="n">xsimd</span><span class="o">::</span><span class="n">sse4_1</span><span class="o">&gt;</span><span class="p">;</span>
+
+
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">avx2Block</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="c1">/// load a pack of 16 8-bit integer values using SSE4 instruction</span>
+
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">uint8_v</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">uint8_v</span><span class="o">::</span><span class="n">load_unaligned</span><span class="p">(</span><span class="n">srcPtr</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">/// convert them into 16 16-bit integers (and store in a</span>
+<span class="w">    </span><span class="c1">/// wider register) using AVX2 instruction</span>
+
+<span class="w">    </span><span class="n">uint16_avx_v</span><span class="w"> </span><span class="nf">y</span><span class="p">(</span><span class="n">_mm256_cvtepu8_epi16</span><span class="p">(</span><span class="n">x</span><span class="p">));</span>
+
+<span class="w">    </span><span class="c1">/// scale the value and add entropy to the lower bits to make</span>
+<span class="w">    </span><span class="c1">/// rounding smoother using AVX2 instruction</span>
+
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">uint16_avx_v</span><span class="w"> </span><span class="n">y_shifted</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">8</span><span class="p">;</span>
+<span class="w">    </span><span class="n">y</span><span class="w"> </span><span class="o">|=</span><span class="w"> </span><span class="n">y_shifted</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">/// store the value using AVX2 instruction</span>
+
+<span class="w">    </span><span class="n">y</span><span class="p">.</span><span class="n">store_unaligned</span><span class="p">(</span>
+<span class="w">         </span><span class="k">reinterpret_cast</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">uint16_avx_v</span><span class="o">::</span><span class="n">value_type</span><span class="w"> </span><span class="o">*&gt;</span><span class="p">(</span><span class="n">dstPtr</span><span class="p">));</span>
+
+<span class="w">    </span><span class="n">srcPtr</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">channelsPerAvx2Block</span><span class="p">;</span>
+<span class="w">    </span><span class="n">dstPtr</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">channelsPerAvx2Block</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>This approach uses a custom instruction provided by the CPU to optimize the conversion process. It gives a huge speed benefit for the color smudge brush, where this scaler is used. The main problem of this approach is that you need to implement the custom code for <strong>every</strong> platform we support, including <em>NEON</em> and <em>NEON64</em>.</p>
+</section>
+</section>
+<section id="useful-projects-for-krita">
+<h2><a class="toc-backref" href="#id27" role="doc-backlink">Useful projects for Krita</a><a class="headerlink" href="#useful-projects-for-krita" title="本標頭的永久連結">¶</a></h2>
+<ol class="arabic">
+<li><p>[easy, small] Optimize lightness mode for Krita brushes</p>
+<blockquote>
+<div><p>It needs changes in the following places:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">KoColorSpace::modulateLightnessByGrayBrush()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">KoColorSpace::fillGrayBrushWithColorAndLightnessWithStrength()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">KoColorSpace::fillGrayBrushWithColorAndLightnessOverlay()</span></code></p></li>
+</ul>
+</div></blockquote>
+<p>The project is really nice and self-contained. You can follow the example of <code class="docutils literal notranslate"><span class="pre">KoColorSpaceAbstract::m_alphaMaskApplicator</span></code> that does exactly the same thing.</p>
+</div></blockquote>
+</li>
+<li><p>[easy, big] Optimize masking brush compositioning</p>
+<blockquote>
+<div><p>You basically need to rewrite a single class <code class="docutils literal notranslate"><span class="pre">KisMaskingBrushCompositeOp</span></code>. The problem is that the class is parameterized with a dozen of composition functions. Theoretically, those functions are arithmetic, so they can be just passed with xsimd's batches, but you would probably need to define custom <cite>KoColorSpaceMathsTraits</cite> for them.</p>
+</div></blockquote>
+</li>
+<li><p>[difficult, small] Optimize gradients</p>
+<blockquote>
+<div><p>The project basically needs to optimize <code class="docutils literal notranslate"><span class="pre">KoCachedGradient</span></code> and all the places where it is used. The project might be a bit complicated, because it needs to use gather/scatter functionality, which is a bit tricky.</p>
+</div></blockquote>
+</li>
+<li><p>[easy, small, depends on the previous three] Optimize brush textures</p>
+<blockquote>
+<div><p>Basically, you needs to rewrite <code class="docutils literal notranslate"><span class="pre">KisTextureOption::apply</span></code> to use the code of the previous three projects to do batch-processing.</p>
+</div></blockquote>
+</li>
+<li><p>[very difficult, big] Scale predefined brushes with vectorized instructions</p>
+<blockquote>
+<div><p>In this project you needs to rewrite <code class="docutils literal notranslate"><span class="pre">KisQImagePyramid</span></code> class to use custom scaling algorithm instead of relying on <code class="docutils literal notranslate"><span class="pre">QImage</span></code>. We know that <code class="docutils literal notranslate"><span class="pre">QImage</span></code> internally uses SSE/AVX instructions for scaling, but we are required to use RGBA8 mode for that. And our brushes are usually GrayA8 or even Alpha8, so we have huge overhead on allocations, copies and conversions (confirmed by VTune).</p>
+</div></blockquote>
+</li>
+</ol>
+<p class="rubric">Footnotes</p>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id5" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">1</a><span class="fn-bracket">]</span></span>
+<p>The term &quot;speed&quot; here is am intentional simplification. The real &quot;speed&quot; of instructions is usually measured in two values, <em>latency</em> and <em>throughput</em>.</p>
+</aside>
+<aside class="footnote brackets" id="id6" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">2</a><span class="fn-bracket">]</span></span>
+<p>Actually, it has much more variants, one of each integer size, sign-ness variant and register width.</p>
+</aside>
+</aside>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="optimizing_tips_for_krita.html" class="btn btn-neutral float-right" title="Optimizing tips and tools for Krita" accesskey="n" rel="next"> <!-- 下一個 --> <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="new_features.html" class="btn btn-neutral" title="Developing Features" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- 上一個  -->  </a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
+      
+        <span class="commit">
+          修訂版本 <code>fd19cea</code>
+        </span>
+      
+
+    </p>
+  </div>
+  使用 <a href="http://sphinx-doc.org/">Sphinx</a> 以及經修改過的 <a href="https://github.com/rtfd/sphinx_rtd_theme">RTD 主題</a>建置<br/>
+  <a href="https://krita.org" title="Krita 官方網站">Krita 官方網站</a> |
+  <a href="https://invent.kde.org/documentation/docs-krita-org/" title="這份手冊的 KDE GitLab 專案網址">docs.krita.org 的 Git 原始碼儲存庫</a> |
+  <a href="https://www.kde.org/community/whatiskde/impressum-en.php" title="了解更多關於 KDE、code of conduct（行為準則）、隱私政策及 GDPR（一般資料保護規則）">KDE Impressum</a>
+   
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  
+      <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+      <script src="../_static/jquery.js"></script>
+      <script src="../_static/underscore.js"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+      <script src="../_static/doctools.js"></script>
+      <script src="../_static/sphinx_highlight.js"></script>
+      <script src="../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
+      });
+  </script> 
+
+ <script type="text/javascript">
+	 var _paq=_paq||[];
+	 _paq.push(['setCookieDomain','*.krita.org']);
+	 _paq.push(['setDomains','*.krita.org']);
+	 _paq.push(['setDocumentTitle',document.domain+"/"+document.title]);
+	 _paq.push(['trackPageView']);
+	 _paq.push(['enableLinkTracking']);
+
+	 (function(){
+	 	var u="//stats.kde.org/";
+	    _paq.push(['setTrackerUrl',u+'piwik.php']);
+	    _paq.push(['setSiteId',13]);
+	    var d = document, g = d.createElement('script'),s=d.getElementsByTagName('script')[0];
+	    g.type = 'text/javascript';
+	    g.async = true;
+	    g.defer = true;
+	    g.src = u+'piwik.js';
+	    s.parentNode.insertBefore(g,s);
+	  })();
+</script> 
+<noscript><p><img src="//stats.kde.org/piwik.php?idsite=13" style="border:0;" alt="" /></p></noscript>
+
+</body>
+</html>

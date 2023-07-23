@@ -19,15 +19,17 @@
   <meta property="og:locale:alternate" content="nl" />
   <meta property="og:locale:alternate" content="pl" />
   <meta property="og:locale:alternate" content="pt_PT" />
+  <meta property="og:locale:alternate" content="sl" />
+  <meta property="og:locale:alternate" content="tr" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2022-10-08T11:00:22" />
+  <meta property="og:article:modified_time" content="2023-07-23T09:58:56" />
   <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 <meta content="Krita 內的 JPEG XL 檔案格式。" name="description" />
 
   
   
-  <title>*.jxl &mdash; Krita Manual 5.0.0 說明文件</title>
+  <title>*.jxl &mdash; Krita Manual 5.2.0 說明文件</title>
   
 
   
@@ -35,14 +37,14 @@
 
   
   
-    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
     
   
   
   
     <link rel="canonical" href="zh_TW/general_concepts/file_formats/file_jxl.html"/>
     <meta property="og:url" content="zh_TW/general_concepts/file_formats/file_jxl.html" />
-    <meta property="og:image" content="zh_TW/_static/sidebar-logo.png" />
+    <meta property="og:image" content="zh_TW/../../_static/sidebar-logo.png" />
   
 
   
@@ -81,7 +83,7 @@
        
            <a href="../../index.html" class="icon icon-home">
 
-			<img src="../../_static/sidebar-logo.png" class="logo" alt="Logo"/>
+			<img src="../../../../_static/sidebar-logo.png" class="logo" alt="Logo"/>
            	
            <!--	Krita Manual -->
 
@@ -113,6 +115,8 @@
 	        		<option value="nl">Nederlands</option>
 	        		<option value="pl">Polski</option>
 	        		<option value="pt_PT">português</option>
+                    <option value="sl">slovenščina</option>
+                    <option value="tr">Türkçe</option>
 	        		<option value="uk_UA">Українська</option>
 	        		<option value="zh_CN">简体中文</option>
 	        	</select>
@@ -265,9 +269,32 @@
 <dl>
 <dt>Save as animated JPEG XL</dt><dd><p>JPEG XL has the ability to store small animations like <a class="reference internal" href="file_gif.html#file-gif"><span class="std std-ref">*.gif</span></a>. Its animation capabilities are simple though, and specifically designed for stylized content that doesn't have a lot of colors, like cel-animation. This is because JPEG XL doesn't have intra-frame prediction, which is the best way to store video files with a lot of colors like 3D animation, film and painterly animation. We recommend you try using video rendering for painterly animation instead.</p>
 </dd>
-<dt>Encoding Options</dt><dd><dl>
-<dt>Lossless encoding.</dt><dd><p>Whether to use <a class="reference internal" href="lossy_lossless.html#lossless-compression"><span class="std std-ref">Lossless compression</span></a>. Like <a class="reference internal" href="file_webp.html#file-webp"><span class="std std-ref">*.webp</span></a>, JPEG XL has a different way of encoding the images in lossless and lossy mode, with the latter being closer to the way the original <a class="reference internal" href="file_jpeg.html#file-jpeg"><span class="std std-ref">*.jpg</span></a> encodes.</p>
+<dt>Flatten the image</dt><dd><p>If disabled, JPEG XL has the ability to store frames as layers if it's not being used as animation, this can be useful to store multi-page images like <a class="reference internal" href="file_tif.html#file-tif"><span class="std std-ref">*.tiff</span></a>.</p>
+<p>Its layered capabilities are very basic, and not designed to store complex layer stacks like <a class="reference internal" href="file_psd.html#file-psd"><span class="std std-ref">*.psd</span></a> and <a class="reference internal" href="file_kra.html#file-kra"><span class="std std-ref">*.kra</span></a> does. Some of its limitations are:</p>
+<ul class="simple">
+<li><p>Only raster paint layers are supported, any other type of layer will get rasterized and group layers will be flattened.</p></li>
+<li><p>Limited blending modes, only Normal and Addition while other modes will get converted to Normal.</p></li>
+<li><p>No partial layer opacity, will only export visible layers with full opacity setting (100%).</p></li>
+<li><p>No layer styles, these will get rasterized with Normal blending mode for outside pixels.</p></li>
+<li><p>Layer masks will be flattened and rasterized, but Colorize Mask won't get rendered.</p></li>
+</ul>
+<p>We recommend you leave this option enabled for web delivery.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">在 5.2 版本新加入.</span></p>
+</div>
 </dd>
+<dt>Encoding Options</dt><dd><dl class="simple">
+<dt>Lossy encoding</dt><dd><p>Whether to use <a class="reference internal" href="lossy_lossless.html#lossy-compression"><span class="std std-ref">Lossy compression</span></a>. Like <a class="reference internal" href="file_webp.html#file-webp"><span class="std std-ref">*.webp</span></a>, JPEG XL has a different way of encoding the images in lossless and lossy mode, with the latter being closer to the way the original <a class="reference internal" href="file_jpeg.html#file-jpeg"><span class="std std-ref">*.jpg</span></a> encodes.</p>
+</dd>
+<dt>Quality</dt><dd><p>This option sets the desired quality for lossy compression. Higher values look better, but lower values have a lower file size.</p>
+</dd>
+<dt>Use modular mode</dt><dd><p>Use the alternative Modular mode for lossy compression. By default, JPEG XL encodes lossy image with VarDCT mode.</p>
+</dd>
+</dl>
+<div class="versionadded">
+<p><span class="versionmodified added">在 5.2 版本新加入.</span></p>
+</div>
+<dl>
 <dt>Tradeoff</dt><dd><p>The encoder can give a better result if it is given more time. This slider allows you to decide how much the encoder should prioritize quality over speed. The different modes can be seen as presets <a class="footnote-reference brackets" href="#id2" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>:</p>
 <ol class="arabic simple">
 <li><p>Lightning -- A fast mode useful for lossless mode. Fastest possible values for lossy compression, for lossless uses gradient predictors and fast histograms, but no MA tree.</p></li>
@@ -287,6 +314,13 @@
 </dl>
 </dd>
 </dl>
+</section>
+<section id="conversion-settings">
+<h3>Conversion Settings<a class="headerlink" href="#conversion-settings" title="本標頭的永久連結">¶</a></h3>
+<p>This option is only enabled when the image is in a floating point color space, and the options are exactly the same as the conversion settings for <a class="reference internal" href="file_heif.html#file-heif"><span class="std std-ref">*.heif 及 *.avif</span></a>.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">在 5.2 版本新加入.</span></p>
+</div>
 </section>
 <section id="advanced">
 <h3>Advanced<a class="headerlink" href="#advanced" title="本標頭的永久連結">¶</a></h3>
@@ -495,7 +529,7 @@ This means that there will be less information stored, leading to a smaller file
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>c44cdc1</code>
+          修訂版本 <code>fd19cea</code>
         </span>
       
 

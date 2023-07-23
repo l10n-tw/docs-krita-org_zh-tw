@@ -69,7 +69,7 @@ Create and push the tag
 
     .. code::
     
-        git tag -a v5.1.0-beta1 -m "Krita 5.1.0 Beta1"
+        git tag -a 5.1.0-beta1 -m "Krita 5.1.0 Beta1"
 
 2. Push the tag: 
 
@@ -83,7 +83,7 @@ Create and push the tag
 
         # remove the previous tag
 
-        git push origin :refs/tags/v5.1.0-beta1
+        git push origin :refs/tags/5.1.0-beta1
 
         # make a new tag locally
         git tag -a v5.1.0-beta1 -m "Krita 5.1.0 Beta1"
@@ -100,9 +100,7 @@ Create the tarball
 
 1. Get the tarball from gitlab: https://invent.kde.org/graphics/krita/-/tags
 2. Unpack the tarball
-3. Run build-tools/copy_po.py in the unpacked folder
-4. Package the tarball as .gz and .xz
-
+3. Package the tarball as .gz and .xz
 4. Sign both tarballs:
 
     .. code::

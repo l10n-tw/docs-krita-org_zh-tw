@@ -19,15 +19,17 @@
   <meta property="og:locale:alternate" content="nl" />
   <meta property="og:locale:alternate" content="pl" />
   <meta property="og:locale:alternate" content="pt_PT" />
+  <meta property="og:locale:alternate" content="sl" />
+  <meta property="og:locale:alternate" content="tr" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2022-10-08T11:00:22" />
+  <meta property="og:article:modified_time" content="2023-07-23T09:58:56" />
   <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 <meta content="Krita 的一般偏好設定。" name="description" property="og:description" />
 
   
   
-  <title>「一般」設定 &mdash; Krita Manual 5.0.0 說明文件</title>
+  <title>「一般」設定 &mdash; Krita Manual 5.2.0 說明文件</title>
   
 
   
@@ -35,14 +37,14 @@
 
   
   
-    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
     
   
   
   
     <link rel="canonical" href="zh_TW/reference_manual/preferences/general_settings.html"/>
     <meta property="og:url" content="zh_TW/reference_manual/preferences/general_settings.html" />
-    <meta property="og:image" content="zh_TW/_static/sidebar-logo.png" />
+    <meta property="og:image" content="zh_TW/../../_static/sidebar-logo.png" />
   
 
   
@@ -81,7 +83,7 @@
        
            <a href="../../index.html" class="icon icon-home">
 
-			<img src="../../_static/sidebar-logo.png" class="logo" alt="Logo"/>
+			<img src="../../../../_static/sidebar-logo.png" class="logo" alt="Logo"/>
            	
            <!--	Krita Manual -->
 
@@ -113,6 +115,8 @@
 	        		<option value="nl">Nederlands</option>
 	        		<option value="pl">Polski</option>
 	        		<option value="pt_PT">português</option>
+                    <option value="sl">slovenščina</option>
+                    <option value="tr">Türkçe</option>
 	        		<option value="uk_UA">Українська</option>
 	        		<option value="zh_CN">简体中文</option>
 	        	</select>
@@ -163,6 +167,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#window-settings">視窗設定</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#tools-settings">工具設定</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#file-handling">檔案處理</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#when-pasting-into-krita-from-other-applications">When Pasting Into Krita From Other Applications</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#miscellaneous">其它</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#resources">資源</a></li>
 </ul>
@@ -355,16 +360,6 @@
 <dl>
 <dt>多檔案模式</dt><dd><p>這裡可依喜好設定為類似 <strong class="program">GIMP</strong> 或 <strong class="program">Paint Tool SAI</strong> 那樣將每個開啟的檔案在畫布視圖上以「分頁」方式呈現；也可設定為 <strong class="program">PhotoShop</strong> 那樣將每個開啟的檔案以「子視窗」呈現。</p>
 </dd>
-<dt>背景影像</dt><dd><p>這功能可讓您選取並自訂子視窗模式的背景影像，若不想再使用背景影像時可按「清除」移除。</p>
-</dd>
-<dt>視窗背景色彩</dt><dd><p>自訂子視窗模式下畫布區域的色彩。</p>
-</dd>
-<dt>自訂使用者介面字型</dt><dd><div class="versionadded">
-<p><span class="versionmodified added">在 4.4.2 版本新加入: </span>這裡可自訂使用者介面字型與字體大小。變更之後需要重新啟動 Krita。</p>
-</div>
-</dd>
-<dt>移動子視窗時不顯示內容</dt><dd><p>移動子視窗時只顯示輪廓。在比較差的顯卡驅動程式下可試著使用這項目以改善顯示。</p>
-</dd>
 <dt>在畫布上顯示浮動訊息</dt><dd><p>選擇是否在畫布上浮動顯示當前您使用的是何種功能選項模式、旋轉畫布或鏡像。</p>
 </dd>
 <dt>Zoom Margin Size</dt><dd><p>This determines how much margin in pixels will be added when using <span class="guilabel">Fit Page</span>. This is particularly useful for large monitors, where the total canvas area might be larger than the center of your field of vision. Using a margin can then center the image inside the canvas area more comfortably.</p>
@@ -372,11 +367,25 @@
 <p><span class="versionmodified added">在 5.1 版本新加入.</span></p>
 </div>
 </dd>
-<dt>啟用高解析度螢幕（Hi-DPI ）支援</dt><dd><p>嘗試使用 Hi-DPI 支援。這只是個選項，因為在 Windows 系統上此功能尚未成熟依然有介面顯示過大的錯誤發生。</p>
+<dt>Subwindow mode</dt><dd><dl class="simple">
+<dt>背景影像</dt><dd><p>這功能可讓您選取並自訂子視窗模式的背景影像，若不想再使用背景影像時可按「清除」移除。</p>
 </dd>
-<dt>啟用非整數比例縮放（Hi-DPI）</dt><dd><div class="versionadded">
-<p><span class="versionmodified added">在 5.0 版本新加入: </span>允許在高解析支援模式下使用非整數倍數（不是 100% 的整數倍數）顯示縮放。若您的系統使用了非整數倍數縮放，這個選項可讓 Krita 的介面與系統互相配合，但可能因此造成一些顯示時不自然的問題。</p>
+<dt>視窗背景色彩</dt><dd><p>自訂子視窗模式下畫布區域的色彩。</p>
+</dd>
+<dt>移動子視窗時不顯示內容</dt><dd><p>移動子視窗時只顯示輪廓。在比較差的顯卡驅動程式下可試著使用這項目以改善顯示。</p>
+</dd>
+</dl>
+</dd>
+<dt>自訂使用者介面字型</dt><dd><p>這裡可自訂使用者介面字型與字體大小。變更之後需要重新啟動 Krita。</p>
+</dd>
+<dt>啟用高解析度螢幕（Hi-DPI ）支援</dt><dd><p>嘗試使用 Hi-DPI 支援。這只是個選項，因為在 Windows 系統上此功能尚未成熟依然有介面顯示過大的錯誤發生。</p>
+<dl>
+<dt>Enable fractional scale factor</dt><dd><p>允許在高解析支援模式下使用非整數倍數（不是 100% 的整數倍數）顯示縮放。若您的系統使用了非整數倍數縮放，這個選項可讓 Krita 的介面與系統互相配合，但可能因此造成一些顯示時不自然的問題。</p>
+<div class="versionadded">
+<p><span class="versionmodified added">在 5.0 版本新加入.</span></p>
 </div>
+</dd>
+</dl>
 </dd>
 <dt>只允許一個 Krita 實例執行</dt><dd><p>實例是系統任務管理員中的單個處理程序。打開此選項可確保在點開 Krita 格式檔案時，先檢查是否有 Krita 處理程序已經‎‎打開，若有的話就使用這個實例來打開檔案。在某些比較少見的工作流程可能會需要使用多個 Krita 實例，但若您不知可以做何種用途的話請將這個項目勾選即可。</p>
 <div class="deprecated">
@@ -387,14 +396,26 @@
 </section>
 <section id="tools-settings">
 <span id="tool-options-settings"></span><h2>工具設定<a class="headerlink" href="#tools-settings" title="本標頭的永久連結">¶</a></h2>
-<section id="tool-options-location">
-<h3>工具選項位置<a class="headerlink" href="#tool-options-location" title="本標頭的永久連結">¶</a></h3>
 <dl>
-<dt>在工具面版中（預設）</dt><dd><p>工具選項會顯示在一個單獨的面版中，這是預設。</p>
+<dt>工具選項位置</dt><dd><dl class="simple">
+<dt>In Docker (default)</dt><dd><p>工具選項會顯示在一個單獨的面版中，這是預設。</p>
 </dd>
-<dt>在工具列內</dt><dd><p>使用此選項的話，工具選項會顯示在工具列上，點一下即可顯示，也可用 <kbd class="kbd docutils literal notranslate">\</kbd> 快捷鍵叫出。</p>
+<dt>In Toolbar</dt><dd><p>使用此選項的話，工具選項會顯示在工具列上，點一下即可顯示，也可用 <kbd class="kbd docutils literal notranslate">\</kbd> 快捷鍵叫出。</p>
+</dd>
+</dl>
 </dd>
 <dt>筆刷流量模式</dt><dd><p>Krita 4.2 版改變了筆刷在使用流量和不透明度的演算法，這選項允許您切換到舊版模式，但這最後也將會在未來的版本中移除。</p>
+</dd>
+<dt>CMYK Blending Mode</dt><dd><p>This allows you to control the way blending modes are handled for CMYK.</p>
+<dl class="simple">
+<dt>Subtractive (Krita 5.2+)</dt><dd><p>Channels are inverted before the blending mode is applied. This will result in most blending modes having a similar effect to the same blending modes in RGB. This is useful when you are doing interchange using PSD files.</p>
+</dd>
+<dt>Additive (Krita 5.1 and earlier)</dt><dd><p>Channels are not inverted before the blending mode is applied, which means that for example, the multiply mode, which decreases pixel values, will in RGB look like it makes things darker, while in this additive CMYK mode it will make things lighter.</p>
+</dd>
+</dl>
+<div class="versionadded">
+<p><span class="versionmodified added">在 5.2 版本新加入.</span></p>
+</div>
 </dd>
 <dt>在使用選取區域工具時交換 Ctrl 與 Alt 組合鍵的作用</dt><dd><p>選用這個功能後，會交換 <kbd class="kbd docutils literal notranslate">Ctrl</kbd> 和 <kbd class="kbd docutils literal notranslate">Alt</kbd> 鍵在修改選取區域時的組合鍵。此功能是專為習慣 Gimp 而不是 PhotoShop 組合鍵的人，或鍵盤右邊沒有 <kbd class="kbd docutils literal notranslate">Alt</kbd> 鍵的左撇子畫家而準備的。</p>
 </dd>
@@ -413,6 +434,11 @@
 </div>
 </dd>
 <dt>Enable Smooth Zooming</dt><dd><p>When using <img alt="mousescroll" src="../../_images/Krita_mouse_scroll.png" />, zooming switches between predefined zoom levels. Turning this on switches that to be a smooth increment.</p>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">在 5.1 版本開始棄用: </span>This got replaced with the <span class="guilabel">Zoom Steps between powers of Two</span> option.</p>
+</div>
+</dd>
+<dt>Zoom Steps between powers of Two</dt><dd><p>How many zoom steps there are between values that are powers of 2 (For example, 2^-1 is 50%, 2^-2 is 25%, 2^2 is 400%). With this, you can decide how many steps steps go inbetween those. The higher the value, the smoother the zoom with a <img alt="mousescroll" src="../../_images/Krita_mouse_scroll.png" />.</p>
 </dd>
 <dt>拖曳捲動（需要重啟程式）</dt><dd><p>在所有可捲動面板啟用「拖曳捲動」的功能，預設是使用按下滑鼠中鍵的方式拖動，效果類似在觸控螢幕以指尖滑動。</p>
 <figure class="align-center" id="id3">
@@ -439,7 +465,6 @@
 </dl>
 </dd>
 </dl>
-</section>
 </section>
 <section id="file-handling">
 <span id="file-handling-settings"></span><h2>檔案處理<a class="headerlink" href="#file-handling" title="本標頭的永久連結">¶</a></h2>
@@ -476,6 +501,23 @@
 <dt>儲存前裁剪檔案</dt><dd><p>通常 Krita 儲存時會將所有可見像素保留在畫布及畫布以外的區域。啟用這個選項後，Krita 會先以 <a class="reference internal" href="../tools/crop.html#crop-tool"><span class="std std-ref">修剪至影像大小</span></a>將所有圖層裁剪到僅有畫布區域再進行儲存。</p>
 </dd>
 <dt>Trim frames when importing animations</dt><dd><p>This will crop frames that where imported using any of the options Krita has available. This saves RAM, but may not always be what is required.</p>
+</dd>
+</dl>
+</section>
+<section id="when-pasting-into-krita-from-other-applications">
+<span id="pasting-settings"></span><h2>When Pasting Into Krita From Other Applications<a class="headerlink" href="#when-pasting-into-krita-from-other-applications" title="本標頭的永久連結">¶</a></h2>
+<div class="versionadded">
+<p><span class="versionmodified added">在 5.1 版本新加入.</span></p>
+</div>
+<p>Some applications, like Google Chrome, provide multiple formats when pasting or dropping an image. This toggle asks which of these you prefer.</p>
+<dl class="simple">
+<dt>Prefer downloading the original source (this requires Internet access).</dt><dd><p>If the clipboard data contains an URL, Krita will try to download those contents and paste them inside Krita.</p>
+</dd>
+<dt>Prefer a local copy (if available; metadata may be lost)</dt><dd><p>If the file had been downloaded by your computer previously (for example, to show it inside the web browser), Krita will use that instead.</p>
+</dd>
+<dt>Paste the attached sRGB bitmap (no filesystem or Internet access required, but metadata will be lost).</dt><dd><p>Just paste the attached bitmap. This will always work, and may be the best option if all you copy images for is to make small edits to share with friends. If you intend to copy and edit HDR images however, this option will make your life harder because the HDR version of the image will not be selected by default.</p>
+</dd>
+<dt>Ask each time</dt><dd><p>Krita will show a prompt whenever there are multiple options.</p>
 </dd>
 </dl>
 </section>
@@ -542,21 +584,17 @@
 </div>
 </dd>
 </dl>
-<p>When Pasting Into Krita From Other Applications</p>
+<p>Automatic Layer Suffixes</p>
 <blockquote>
-<div><p>Some applications, like Google Chrome, provide multiple formats when pasting or dropping an image. This toggle asks which of these you prefer.</p>
+<div><p>By default, Krita will add extra info behind layers it generates. These toggles allow you to turn that off.</p>
 <dl class="simple">
-<dt>Prefer downloading the original source (this requires Internet access).</dt><dd><p>If the clipboard data contains an URL, Krita will try to download those contents and paste them inside Krita.</p>
+<dt>Add &quot;Merged&quot; to merged group layers.</dt><dd><p>When you flatten a group layer into a single paint layer, Krita will add &quot;Merged&quot; after the layer name. If you make frequent use of merging, it can be useful to turn this off.</p>
 </dd>
-<dt>Prefer a local copy (if available; metadata may be lost)</dt><dd><p>If the file had been downloaded by your computer previously (for example, to show it inside the web browser), Krita will use that instead.</p>
-</dd>
-<dt>Paste the attached sRGB bitmap (no filesystem or Internet access required, but metadata will be lost).</dt><dd><p>Just paste the attached bitmap. This will always work, and may be the best option if all you copy images for is to make small edits to share with friends. If you intend to copy and edit HDR images however, this option will make your life harder because the HDR version of the image will not be selected by default.</p>
-</dd>
-<dt>Ask each time</dt><dd><p>Krita will show a prompt whenever there are multiple options.</p>
+<dt>Add &quot;(Pasted)&quot; to pasted layers.</dt><dd><p>When you copy and paste a section of a layer, Krita will add &quot;(Pasted)&quot; after the layer name so you can keep track of that.</p>
 </dd>
 </dl>
 <div class="versionadded">
-<p><span class="versionmodified added">在 5.1 版本新加入.</span></p>
+<p><span class="versionmodified added">在 5.2 版本新加入.</span></p>
 </div>
 </div></blockquote>
 </section>
@@ -598,7 +636,7 @@
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>c44cdc1</code>
+          修訂版本 <code>fd19cea</code>
         </span>
       
 

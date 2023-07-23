@@ -152,7 +152,9 @@ If you press the :kbd:`Shift` key while holding the first two handles, they will
 
 .. versionadded:: 5.0
 
-This assistant simplifies the setup of a two point perspective by putting the two vanishing points and the parallel vertical ruler into one single assistant. This allows it to draw a grid of squares. It requires 3 points at minimum: 2 for perspective, and the final for the mid-point of the vanishing points, which controls how the grid is drawn.
+This assistant simplifies the setup of a two point perspective by combining the functions of the :ref:`assistant_vanishing_point` assistant and the parallel vertical :ref:`assistant_ruler` into one single assistant. Additionally, it displays accurate square grid planes of the configured perspective, which can help you visually tune the intensity of the perspective distortion.
+
+It requires 3 points to achieve this: the first 2 of which are the vanishing points, while the third point is used to determine the *center of vision*, which affects how the grid is displayed. In two point perspective the *center of vision* is a point on the horizon line, so the assistant displays a small notch to indicate its location. Generally, the center of vision is also where the main focus of an illustration is.
 
 Density
     An extra option in the tool options, this controls how dense the grid is.
@@ -162,6 +164,18 @@ Enable Vertical Ruler
 .. figure:: /images/assistants/Assistants_2_pointperspective_03.png
    
    In the above image, a two point perspective with an area limiter is enough to draw an indoor area. The assistant is colored blue here.
+
+Tips
+^^^^
+
+You can hold specific key combinations while moving a vanishing point to activate the following behaviours:
+
+:kbd:`Alt`
+    The vanishing point will only move along the horizon line
+:kbd:`Ctrl`
+    The grid will rotate along with the vanishing point on the horizon line. This allows you to easily draw several two-point objects that belong in the same scene at various angles to each other.
+:kbd:`Ctrl+Shift`
+    Both vanishing points move to change the visual size of the grid's *field of view*.
 
 Tutorials
 ^^^^^^^^^

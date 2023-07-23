@@ -19,15 +19,17 @@
   <meta property="og:locale:alternate" content="nl" />
   <meta property="og:locale:alternate" content="pl" />
   <meta property="og:locale:alternate" content="pt_PT" />
+  <meta property="og:locale:alternate" content="sl" />
+  <meta property="og:locale:alternate" content="tr" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2022-10-08T11:00:22" />
+  <meta property="og:article:modified_time" content="2023-07-23T09:58:56" />
   <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 <meta content="Krita 的顯示設定。" name="description" property="og:description" />
 
   
   
-  <title>「顯示」設定 &mdash; Krita Manual 5.0.0 說明文件</title>
+  <title>「顯示」設定 &mdash; Krita Manual 5.2.0 說明文件</title>
   
 
   
@@ -35,14 +37,14 @@
 
   
   
-    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
     
   
   
   
     <link rel="canonical" href="zh_TW/reference_manual/preferences/display_settings.html"/>
     <meta property="og:url" content="zh_TW/reference_manual/preferences/display_settings.html" />
-    <meta property="og:image" content="zh_TW/_static/sidebar-logo.png" />
+    <meta property="og:image" content="zh_TW/../../_static/sidebar-logo.png" />
   
 
   
@@ -81,7 +83,7 @@
        
            <a href="../../index.html" class="icon icon-home">
 
-			<img src="../../_static/sidebar-logo.png" class="logo" alt="Logo"/>
+			<img src="../../../../_static/sidebar-logo.png" class="logo" alt="Logo"/>
            	
            <!--	Krita Manual -->
 
@@ -113,6 +115,8 @@
 	        		<option value="nl">Nederlands</option>
 	        		<option value="pl">Polski</option>
 	        		<option value="pt_PT">português</option>
+                    <option value="sl">slovenščina</option>
+                    <option value="tr">Türkçe</option>
 	        		<option value="uk_UA">Українська</option>
 	        		<option value="zh_CN">简体中文</option>
 	        	</select>
@@ -157,12 +161,9 @@
 <li class="toctree-l3"><a class="reference internal" href="color_management_settings.html">「色彩管理」設定</a></li>
 <li class="toctree-l3"><a class="reference internal" href="color_selector_settings.html">「選色器」設定</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">「顯示」設定</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#opengl">OpenGL（Open Graphics Library 開放式圖形庫）</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#canvas-graphics-acceleration">畫布圖形加速</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#hdr">HDR 設定</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#transparency-checkerboard">透明棋盤格色彩</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#canvas-border">畫布外周色彩</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#selection-overlay">Selection Overlay</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#pixel-grid">像素格線</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#canvas-decorations">Canvas Decorations</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#miscellaneous">其他</a></li>
 </ul>
 </li>
@@ -278,20 +279,29 @@
 <span id="index-0"></span><span id="id1"></span><h1>「顯示」設定<a class="headerlink" href="#display-settings" title="本標頭的永久連結">¶</a></h1>
 <img alt="../../_images/Krita_Preferences_Display.png" src="../../_images/Krita_Preferences_Display.png" />
 <p>這裡可以編輯 Krita 顯示方面相關的設定。</p>
-<section id="opengl">
-<h2>OpenGL（Open Graphics Library 開放式圖形庫）<a class="headerlink" href="#opengl" title="本標頭的永久連結">¶</a></h2>
-<p><strong>Kruta 3.3 之後的版本：改稱為「 畫布圖形加速」</strong></p>
+<section id="canvas-graphics-acceleration">
+<h2>畫布圖形加速<a class="headerlink" href="#canvas-graphics-acceleration" title="本標頭的永久連結">¶</a></h2>
+<div class="admonition note">
+<p class="admonition-title">備註</p>
+<p>In Krita 3.2 and before, this used to be named <span class="guilabel">OpenGL</span>, with the checkbox for <span class="guilabel">Canvas Graphics Acceleration</span> being named <span class="guilabel">Enable OpenGL</span>.</p>
+</div>
 <p>OpenGL 是一些使用於顯示卡的語言，顯示卡則是專門幫助電腦進行圖形運算的硬體，Krita 也依靠它進行圖形運算。現代的電腦上面通常會有一張顯卡，或是通過內建顯示晶片的 CPU 來提供圖形運算能力。</p>
-<p><strong>Krita 3.3 與之後的版本：</strong>在 Windows 作業系統下 Krita 還支援了 ANGLE 程式庫，依靠它的幫助以使用 Direct3D ，ANGLE 的工作原理是將 Krita 使用的 OpenGL 函數轉換為 Direct3D 中的相等功能，可能會（也可能不會）比原生 OpenGL 慢，但它與典型的 Windows 顯示驅動程式具有更好的相容性。</p>
+<p>On Windows, Krita also supports using Direct3D instead with the help of the ANGLE library. ANGLE works by converting the OpenGL functions that Krita makes use of to the equivalent in Direct3D. It may (or may not) be slower than native OpenGL, but it has better compatibility with typical Windows graphics drivers.</p>
 <dl>
-<dt>啟用 OpenGL <strong>（Krita 3.3 與之後的版本：改稱「畫布圖形加速」）</strong></dt><dd><p>勾選這個項目後會啟用 OpenGL/ANGLE 「畫布圖形加速」模式。若顯示卡性能夠好，應該可以更快速反應筆刷和工具的操作，此外對於旋轉、縮放的動作也會更快、更細與膩滑順不會有停滯感。</p>
+<dt>畫布圖形加速</dt><dd><p>勾選這個項目後會啟用 OpenGL/ANGLE 「畫布圖形加速」模式。若顯示卡性能夠好，應該可以更快速反應筆刷和工具的操作，此外對於旋轉、縮放的動作也會更快、更細與膩滑順不會有停滯感。</p>
+<p>Renderer (Requires Restart)</p>
+<blockquote>
+<div><dl class="simple">
+<dt>Auto (Recommended)</dt><dd><p>Krita will decide the best renderer to use based on some internal compatibility checking.</p>
 </dd>
-<dt>Krita 3.3 與之後的版本：</dt><dd><dl class="simple">
-<dt>繪製</dt><dd><p><em>在 Windows 作業系統上：</em>您可以在 OpenGL 或 ANGLE、 Direct3D 11 繪製器之間切換。 通常建議將其保留為「自動」，因為 Krita 會根據一些內部相容性檢查來決定最佳使用模式。 此選項若經更改，需重啟 Krita 才能生效。</p>
+<dt>OpenGL（Open Graphics Library 開放式圖形庫）</dt><dd><p>Krita will use OpenGL.</p>
+</dd>
+<dt>OpenGL ES</dt><dd><p>Krita will use OpenGl ES, which is a subset of OpenGL. Using this can be useful for less powerful devices.</p>
+</dd>
+<dt>ANGLE Direct3D (Windows Only)</dt><dd><p>Krita will use the ANGLE compatibility layer to convert the OpenGL calls to Direct3D calls. Wether this works better than regular OpenGL depends on the graphics drivers of the computer.</p>
 </dd>
 </dl>
-</dd>
-<dt>啟用紋理緩衝區</dt><dd><p>勾選此項目可利用顯示卡的緩衝區來加快顯示速度。雖然目前此功能在某些 AMD/Radeon 顯示卡上可能會造成一些問題，在某些 Intel 顯卡上則可能工作良好，因此請實際測試後再選用。</p>
+</div></blockquote>
 </dd>
 <dt>檢視縮放演算法</dt><dd><p>使用者可以選擇在檢視縮放畫布時使用哪種縮放演算法。這裡的選擇僅影響畫布操作時影像顯示之畫質，與 Krita 實際調整影像大小、變形工具之類處理後的影像品質沒有關係。</p>
 <dl class="simple">
@@ -304,6 +314,10 @@
 <dt>高品質過濾</dt><dd><p>這個選項只有在您的顯示卡支援 OpenGL 3.0 或更高的版本時才可用。顧名思義，這個選項啟用後可在畫布操作時提供最好的畫質。</p>
 </dd>
 </dl>
+</dd>
+<dt>啟用紋理緩衝區</dt><dd><p>勾選此項目可利用顯示卡的緩衝區來加快顯示速度。雖然目前此功能在某些 AMD/Radeon 顯示卡上可能會造成一些問題，在某些 Intel 顯卡上則可能工作良好，因此請實際測試後再選用。</p>
+</dd>
+<dt>Use Large Pixmap Cache</dt><dd><p>This should be enabled if you experience artifacts with the <a class="reference internal" href="../../user_manual/painting_with_assistants.html#painting-with-assistants"><span class="std std-ref">assistants</span></a>.</p>
 </dd>
 </dl>
 </section>
@@ -323,38 +337,23 @@
 </dd>
 </dl>
 </section>
-<section id="transparency-checkerboard">
-<h2>透明棋盤格色彩<a class="headerlink" href="#transparency-checkerboard" title="本標頭的永久連結">¶</a></h2>
-<p>Krita 所有圖層都支援透明度，因為透明度是無法看到的，所以 Krita 預設以灰、白兩色的棋盤格圖案來代表透明區域。 你可在這些選項中更改棋盤格圖案的相關設定。</p>
+<section id="canvas-decorations">
+<h2>Canvas Decorations<a class="headerlink" href="#canvas-decorations" title="本標頭的永久連結">¶</a></h2>
+<dl>
+<dt>Transparency Checkerboard:</dt><dd><p>Krita 所有圖層都支援透明度，因為透明度是無法看到的，所以 Krita 預設以灰、白兩色的棋盤格圖案來代表透明區域。 你可在這些選項中更改棋盤格圖案的相關設定。</p>
 <dl class="simple">
 <dt>大小</dt><dd><p>這個設定可變更影像透明部分棋盤格的大小。</p>
 </dd>
 <dt>色彩</dt><dd><p>使用者可在這個項目設定棋盤格的顏色。</p>
 </dd>
 </dl>
-</section>
-<section id="canvas-border">
-<h2>畫布外周色彩<a class="headerlink" href="#canvas-border" title="本標頭的永久連結">¶</a></h2>
-<dl class="simple">
+</dd>
+<dt>畫布外周色彩</dt><dd><dl class="simple">
 <dt>色彩</dt><dd><p>這裡可以指定畫布範圍外背景的顏色。預設是灰色。</p>
 </dd>
-<dt>隱藏捲動軸</dt><dd><p>鉤選此項目時將在所有檢視模式下隱藏捲動軸。</p>
-</dd>
 </dl>
-</section>
-<section id="selection-overlay">
-<h2>Selection Overlay<a class="headerlink" href="#selection-overlay" title="本標頭的永久連結">¶</a></h2>
-<p>Set the color of the alternate <a class="reference internal" href="../../user_manual/selections.html#selections-basics"><span class="std std-ref">Selection</span></a> display mode. This mode is typically used when making complex selections.</p>
-<dl class="simple">
-<dt>色彩</dt><dd><p>Color of the overlay.</p>
 </dd>
-<dt>Opacity</dt><dd><p>How opaque the overlay is.</p>
-</dd>
-</dl>
-</section>
-<section id="pixel-grid">
-<h2>像素格線<a class="headerlink" href="#pixel-grid" title="本標頭的永久連結">¶</a></h2>
-<div class="versionadded">
+<dt>像素格線</dt><dd><div class="versionadded">
 <p><span class="versionmodified added">在 4.0 版本新加入.</span></p>
 </div>
 <p>這個選項可設定以自動顯示像素格線，此功能對於像素藝術的繪圖非常有幫助。</p>
@@ -362,6 +361,17 @@
 <dt>色彩</dt><dd><p>格線的顏色。</p>
 </dd>
 <dt>開始顯示比例</dt><dd><p>指定像素格線開始顯示出來時的放大比率，因為當影像縮小很多時顯示這個只會讓格線覆蓋在影像，若設定太小只會適得其反。</p>
+</dd>
+</dl>
+</dd>
+<dt>Selection Overlay</dt><dd><dl class="simple">
+<dt>Outline Opacity</dt><dd><p>Set the opacity of the regular <a class="reference internal" href="../../user_manual/selections.html#selections-basics"><span class="std std-ref">Selection</span></a> display mode.</p>
+</dd>
+<dt>Overlay Color</dt><dd><p>Set the color of the alternate <a class="reference internal" href="../../user_manual/selections.html#selections-basics"><span class="std std-ref">Selection</span></a> display mode. This mode is typically used when making complex selections.</p>
+</dd>
+<dt>Opacity</dt><dd><p>How opaque the selection overlay is.</p>
+</dd>
+</dl>
 </dd>
 </dl>
 </section>
@@ -407,7 +417,7 @@
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>c44cdc1</code>
+          修訂版本 <code>fd19cea</code>
         </span>
       
 

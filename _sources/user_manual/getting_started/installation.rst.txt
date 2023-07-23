@@ -60,7 +60,7 @@ Since April 2016, KDE's Dolphin file manager shows KRA and ORA thumbnails by def
 AppImages
 ~~~~~~~~~
 
-For Krita 3.0 and later, first try out the AppImage from the website. **90% of the time this is by far the easiest way to get the latest Krita.** Just download the AppImage, and then use the file properties or the bash command ``chmod`` to make the AppImage executable. Double-click it, and enjoy Krita. (Or run it in the terminal with
+For Krita 3.0 and later, first try out the AppImage from the `official website <https://krita.org/en/download/krita-desktop/>`_. **90% of the time this is by far the easiest way to get the latest Krita.** Just download the AppImage, and then use the file properties or the bash command ``chmod`` to make the AppImage executable. Double-click it, and enjoy Krita. (Or run it in the terminal with
 ``./appimagename.appimage``)
 
 - Open the terminal into the folder you have the AppImage.

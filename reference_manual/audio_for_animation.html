@@ -19,15 +19,17 @@
   <meta property="og:locale:alternate" content="nl" />
   <meta property="og:locale:alternate" content="pl" />
   <meta property="og:locale:alternate" content="pt_PT" />
+  <meta property="og:locale:alternate" content="sl" />
+  <meta property="og:locale:alternate" content="tr" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2022-10-08T11:00:22" />
+  <meta property="og:article:modified_time" content="2023-07-23T09:58:56" />
   <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 <meta content="Krita 的動畫音訊播放功能。" name="description" />
 
   
   
-  <title>動畫音訊 &mdash; Krita Manual 5.0.0 說明文件</title>
+  <title>動畫音訊 &mdash; Krita Manual 5.2.0 說明文件</title>
   
 
   
@@ -35,14 +37,14 @@
 
   
   
-    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
     
   
   
   
     <link rel="canonical" href="zh_TW/reference_manual/audio_for_animation.html"/>
     <meta property="og:url" content="zh_TW/reference_manual/audio_for_animation.html" />
-    <meta property="og:image" content="zh_TW/_static/sidebar-logo.png" />
+    <meta property="og:image" content="zh_TW/../_static/sidebar-logo.png" />
   
 
   
@@ -81,7 +83,7 @@
        
            <a href="../index.html" class="icon icon-home">
 
-			<img src="../_static/sidebar-logo.png" class="logo" alt="Logo"/>
+			<img src="../../_static/sidebar-logo.png" class="logo" alt="Logo"/>
            	
            <!--	Krita Manual -->
 
@@ -113,6 +115,8 @@
 	        		<option value="nl">Nederlands</option>
 	        		<option value="pl">Polski</option>
 	        		<option value="pt_PT">português</option>
+                    <option value="sl">slovenščina</option>
+                    <option value="tr">Türkçe</option>
 	        		<option value="uk_UA">Українська</option>
 	        		<option value="zh_CN">简体中文</option>
 	        	</select>
@@ -134,7 +138,6 @@
 <li class="toctree-l3"><a class="reference internal" href="#importing-audio-files">匯入音訊檔案</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#using-audio">使用音訊</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#exporting-with-audio">連同音訊匯出</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#packages-needed-for-audio-on-linux">在 Linux 下使用音訊所需的套件</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="blending_modes.html">混色模式</a></li>
@@ -256,50 +259,30 @@
             
   <section id="audio-for-animation">
 <span id="audio-animation"></span><span id="index-0"></span><h1>動畫音訊<a class="headerlink" href="#audio-for-animation" title="本標頭的永久連結">¶</a></h1>
-<div class="admonition caution">
-<p class="admonition-title">警示</p>
-<p>動畫音訊是一個尚未完善的功能。它仍有一些程式錯誤，在某些系統中可能無法正常運作。</p>
-</div>
-<p>在動畫時間軸面板，你可以將音訊檔案匯入到動畫中，與畫面同步播放。</p>
+<p>Within Krita you can load an audio file into your document to help syncronize your animation with dialogue or music. This functionality is available from the audio menu in the Timeline Docker's titlebar.</p>
 <section id="importing-audio-files">
 <h2>匯入音訊檔案<a class="headerlink" href="#importing-audio-files" title="本標頭的永久連結">¶</a></h2>
-<p>Krita 支援 MP3、OGM 和 WAV 音訊檔案。當你打開動畫時間軸面板，在左上角可以找到揚聲器按鈕。</p>
-<p>點選揚聲器按鈕則會顯示可供動畫使用的音訊選項。</p>
+<p>Krita supports a variety of audio file types, including WAV, FLAC, OGG, MP3, and more.</p>
+<p>To load an audio file into your Krita document, first open the Timeline Docker.</p>
+<p>On the right-hand side of the Timeline Docker's toolbar, you'll find the Audio Menu button with an icon that looks like a speaker.
+This is the main area where you will interact with Krita's audio system, including loading and removing audio tracks and adjusting the playback volume.</p>
+<p>Specifically, these options and widgets are available in the Audio Menu:</p>
 <ul class="simple">
-<li><p>開啟音訊</p></li>
-<li><p>靜音</p></li>
-<li><p>移除音訊</p></li>
-<li><p>音量</p></li>
+<li><p>Load Audio File</p></li>
+<li><p>Remove Audio File</p></li>
+<li><p>Mute Audio</p></li>
+<li><p>Audio Volume Slider</p></li>
 </ul>
-<p>Krita 會記錄音訊檔案的位置與名稱。若您移動或重命名音訊檔案，Krita 將會無法找到它。在下次打開該 Krita 檔案時，Krita 會提示音訊檔案已被移動或刪除。</p>
+<p>Crucially, Krita only saves the location (file path) of your audio file inside your Krita document. Because of that, if you happen to move or rename an audio file that you've referenced in one of your Krita animations, Krita will no longer be able to find it and you will need to re-load it manually. However, Krita will tell you the file was moved or deleted the next time you try to open the Krita file up.</p>
 </section>
 <section id="using-audio">
 <h2>使用音訊<a class="headerlink" href="#using-audio" title="本標頭的永久連結">¶</a></h2>
-<p>匯入音訊之後，你可以通過拖曳時間軸來播放相對時間點的音訊。點選「播放」按鈕時，音訊檔案會與動畫同步播放。音訊信息不會顯示在畫面上，因此你只能透過拖曳時間軸播放來定位音訊的幀數。</p>
+<p>Once you've imported some audio, you will be able scrub through frames on the timeline and Krita will play the audio chunk associated with the frame that you want on. Then, when you press the Play button, your audio will playback while you animation plays synchronized with the image frame changes.</p>
+<p>As of now there is no visual audio waveform display in Krita's UI, so you will need to use your ears and the scrubbing functionality to line your keyframes up with specific parts of the audio.</p>
 </section>
 <section id="exporting-with-audio">
 <h2>連同音訊匯出<a class="headerlink" href="#exporting-with-audio" title="本標頭的永久連結">¶</a></h2>
-<p>若要在匯出動畫時包含音訊檔案，必須在匯出前勾選其相關選項。打開<span class="menuselection">檔案 ‣ 繪製動畫</span> ，匯出選項請選擇<span class="guilabel">影片</span> ，並確保<span class="guilabel">包含音訊</span> 已打勾後才輸出。</p>
-</section>
-<section id="packages-needed-for-audio-on-linux">
-<h2>在 Linux 下使用音訊所需的套件<a class="headerlink" href="#packages-needed-for-audio-on-linux" title="本標頭的永久連結">¶</a></h2>
-<p>在 Linux 環境下，需安裝下列套件才能支援音訊功能：</p>
-<p>在 Linux 中建置 Krita：</p>
-<ul class="simple">
-<li><p>libasound2-dev</p></li>
-<li><p>libgstreamer1.0-dev gstreamer1.0-pulseaudio</p></li>
-<li><p>libgstreamer-plugins-base1.0-dev</p></li>
-<li><p>libgstreamer-plugins-good1.0-dev</p></li>
-<li><p>libgstreamer-plugins-bad1.0-dev</p></li>
-</ul>
-<p>在 Linux 中使用 Krita：</p>
-<ul class="simple">
-<li><p>libqt5multimedia5-plugins</p></li>
-<li><p>libgstreamer-plugins-base1.0</p></li>
-<li><p>libgstreamer-plugins-good1.0</p></li>
-<li><p>libgstreamer-plugins-bad1.0</p></li>
-</ul>
-<p>音訊於 Krita 4.4 版本之後已能在 AppImage 裡運行。</p>
+<p>To have audio included with you exported animation video you will need to check enable it in the Render Animation options. In the <span class="menuselection">File ‣ Render Animation</span> options there is a checkbox <span class="guilabel">Include Audio</span>. Make sure that is checked before you export and you should be good to go.</p>
 </section>
 </section>
 
@@ -326,7 +309,7 @@
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>c44cdc1</code>
+          修訂版本 <code>fd19cea</code>
         </span>
       
 

@@ -19,15 +19,17 @@
   <meta property="og:locale:alternate" content="nl" />
   <meta property="og:locale:alternate" content="pl" />
   <meta property="og:locale:alternate" content="pt_PT" />
+  <meta property="og:locale:alternate" content="sl" />
+  <meta property="og:locale:alternate" content="tr" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2022-10-08T11:00:22" />
+  <meta property="og:article:modified_time" content="2023-07-23T09:58:56" />
   <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 <meta content="Guide on all the specifics of creating Krita python plugins." name="description" property="og:description" />
 
   
   
-  <title>如何為 Krita 製作 Python 外掛程式 &mdash; Krita Manual 5.0.0 說明文件</title>
+  <title>如何為 Krita 製作 Python 外掛程式 &mdash; Krita Manual 5.2.0 說明文件</title>
   
 
   
@@ -35,14 +37,14 @@
 
   
   
-    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
     
   
   
   
     <link rel="canonical" href="zh_TW/user_manual/python_scripting/krita_python_plugin_howto.html"/>
     <meta property="og:url" content="zh_TW/user_manual/python_scripting/krita_python_plugin_howto.html" />
-    <meta property="og:image" content="zh_TW/_static/sidebar-logo.png" />
+    <meta property="og:image" content="zh_TW/../../_static/sidebar-logo.png" />
   
 
   
@@ -81,7 +83,7 @@
        
            <a href="../../index.html" class="icon icon-home">
 
-			<img src="../../_static/sidebar-logo.png" class="logo" alt="Logo"/>
+			<img src="../../../../_static/sidebar-logo.png" class="logo" alt="Logo"/>
            	
            <!--	Krita Manual -->
 
@@ -113,6 +115,8 @@
 	        		<option value="nl">Nederlands</option>
 	        		<option value="pl">Polski</option>
 	        		<option value="pt_PT">português</option>
+                    <option value="sl">slovenščina</option>
+                    <option value="tr">Türkçe</option>
 	        		<option value="uk_UA">Українська</option>
 	        		<option value="zh_CN">简体中文</option>
 	        	</select>
@@ -407,23 +411,23 @@
 <p>Now, your new action doesn't show up in <span class="menuselection">Settings ‣ Configure Krita ‣ Keyboard Shortcuts</span>.</p>
 <p>Krita, for various reasons, only adds actions to the <a class="reference internal" href="../../reference_manual/preferences/shortcut_settings.html#shortcut-settings"><span class="std std-ref">「鍵盤快捷鍵」設定</span></a> when they are present in an <code class="docutils literal notranslate"><span class="pre">.action</span></code> file. The action file to get our action to be added to the shortcuts should look like this:</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
-<span class="nt">&lt;ActionCollection</span> <span class="na">version=</span><span class="s">&quot;2&quot;</span> <span class="na">name=</span><span class="s">&quot;Scripts&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;Actions</span> <span class="na">category=</span><span class="s">&quot;Scripts&quot;</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;text&gt;</span>My Scripts<span class="nt">&lt;/text&gt;</span>
+<span class="nt">&lt;ActionCollection</span><span class="w"> </span><span class="na">version=</span><span class="s">&quot;2&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Scripts&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Actions</span><span class="w"> </span><span class="na">category=</span><span class="s">&quot;Scripts&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;text&gt;</span>My<span class="w"> </span>Scripts<span class="nt">&lt;/text&gt;</span>
 
-        <span class="nt">&lt;Action</span> <span class="na">name=</span><span class="s">&quot;myAction&quot;</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;icon&gt;&lt;/icon&gt;</span>
-        <span class="nt">&lt;text&gt;</span>My Script<span class="nt">&lt;/text&gt;</span>
-        <span class="nt">&lt;whatsThis&gt;&lt;/whatsThis&gt;</span>
-        <span class="nt">&lt;toolTip&gt;&lt;/toolTip&gt;</span>
-        <span class="nt">&lt;iconText&gt;&lt;/iconText&gt;</span>
-        <span class="nt">&lt;activationFlags&gt;</span>10000<span class="nt">&lt;/activationFlags&gt;</span>
-        <span class="nt">&lt;activationConditions&gt;</span>0<span class="nt">&lt;/activationConditions&gt;</span>
-        <span class="nt">&lt;shortcut&gt;</span>ctrl+alt+shift+p<span class="nt">&lt;/shortcut&gt;</span>
-        <span class="nt">&lt;isCheckable&gt;</span>false<span class="nt">&lt;/isCheckable&gt;</span>
-        <span class="nt">&lt;statusTip&gt;&lt;/statusTip&gt;</span>
-        <span class="nt">&lt;/Action&gt;</span>
-    <span class="nt">&lt;/Actions&gt;</span>
+<span class="w">        </span><span class="nt">&lt;Action</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;myAction&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;icon&gt;&lt;/icon&gt;</span>
+<span class="w">        </span><span class="nt">&lt;text&gt;</span>My<span class="w"> </span>Script<span class="nt">&lt;/text&gt;</span>
+<span class="w">        </span><span class="nt">&lt;whatsThis&gt;&lt;/whatsThis&gt;</span>
+<span class="w">        </span><span class="nt">&lt;toolTip&gt;&lt;/toolTip&gt;</span>
+<span class="w">        </span><span class="nt">&lt;iconText&gt;&lt;/iconText&gt;</span>
+<span class="w">        </span><span class="nt">&lt;activationFlags&gt;</span>10000<span class="nt">&lt;/activationFlags&gt;</span>
+<span class="w">        </span><span class="nt">&lt;activationConditions&gt;</span>0<span class="nt">&lt;/activationConditions&gt;</span>
+<span class="w">        </span><span class="nt">&lt;shortcut&gt;</span>ctrl+alt+shift+p<span class="nt">&lt;/shortcut&gt;</span>
+<span class="w">        </span><span class="nt">&lt;isCheckable&gt;</span>false<span class="nt">&lt;/isCheckable&gt;</span>
+<span class="w">        </span><span class="nt">&lt;statusTip&gt;&lt;/statusTip&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/Action&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/Actions&gt;</span>
 <span class="nt">&lt;/ActionCollection&gt;</span>
 </pre></div>
 </div>
@@ -572,7 +576,7 @@
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>c44cdc1</code>
+          修訂版本 <code>fd19cea</code>
         </span>
       
 

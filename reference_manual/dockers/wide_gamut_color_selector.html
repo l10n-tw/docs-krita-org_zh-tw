@@ -1,0 +1,543 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-TW" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-TW" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" name="title" content="Wide Gamut Color Selector" />
+  <meta property="og:site-name" content="Krita Manual" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="zh-TW" />
+  <meta property="og:locale:alternate" content="ca" />
+  <meta property="og:locale:alternate" content="en" />
+  <meta property="og:locale:alternate" content="fr" />
+  <meta property="og:locale:alternate" content="it" />
+  <meta property="og:locale:alternate" content="ja" />
+  <meta property="og:locale:alternate" content="ko" />
+  <meta property="og:locale:alternate" content="nl" />
+  <meta property="og:locale:alternate" content="pl" />
+  <meta property="og:locale:alternate" content="pt_PT" />
+  <meta property="og:locale:alternate" content="sl" />
+  <meta property="og:locale:alternate" content="tr" />
+  <meta property="og:locale:alternate" content="uk_UA" />
+  <meta property="og:locale:alternate" content="zh_CN" />
+  <meta property="og:article:modified_time" content="2023-07-23T09:58:56" />
+  <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+<meta content="Overview of the Wide Gamut Color Selector docker." lang="en" name="description" xml:lang="en" />
+
+  
+  
+  <title>Wide Gamut Color Selector &mdash; Krita Manual 5.2.0 說明文件</title>
+  
+
+  
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+    
+  
+  
+  
+    <link rel="canonical" href="zh_TW/reference_manual/dockers/wide_gamut_color_selector.html"/>
+    <meta property="og:url" content="zh_TW/reference_manual/dockers/wide_gamut_color_selector.html" />
+    <meta property="og:image" content="zh_TW/../../_static/sidebar-logo.png" />
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜尋" href="../../search.html" />
+    <link rel="next" title="Dr. MinGW 除錯工具" href="../dr_minw_debugger.html" />
+    <link rel="prev" title="Vector Library" href="vector_library.html" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+       
+           <a href="../../index.html" class="icon icon-home">
+
+			<img src="../../../../_static/sidebar-logo.png" class="logo" alt="Logo"/>
+           	
+           <!--	Krita Manual -->
+
+
+          </a>
+
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="搜尋文件" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-side-nav-language-selector">
+        	<p class="caption-text">
+	        	<select id="language-selector-container">
+	        		<option value="ca">Català</option>
+	        		<option value="en">English</option>
+	        		<option value="fr">français</option>
+	        		<option value="it">Italiano</option>
+	        		<option value="ja">日本語</option>
+	        		<option value="ko">한국어</option>
+	        		<option value="nl">Nederlands</option>
+	        		<option value="pl">Polski</option>
+	        		<option value="pt_PT">português</option>
+                    <option value="sl">slovenščina</option>
+                    <option value="tr">Türkçe</option>
+	        		<option value="uk_UA">Українська</option>
+	        		<option value="zh_CN">简体中文</option>
+	        	</select>
+        	</p>
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../user_manual.html">使用者手冊</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../general_concepts.html">通用概念</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../reference_manual.html">參考文件</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../audio_for_animation.html">動畫音訊</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blending_modes.html">混色模式</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../brushes.html">筆刷</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../clones_array.html">再製陣列</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_new_document.html">建立新文件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../default_python_plugins.html">預設安裝的 Python 外掛程式</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../dockers.html">工具面板</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="add_shape.html">加入形狀</a></li>
+<li class="toctree-l3"><a class="reference internal" href="advanced_color_selector.html">進階選色器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="animation_curves.html">動畫曲線</a></li>
+<li class="toctree-l3"><a class="reference internal" href="animation_docker.html">動畫面板</a></li>
+<li class="toctree-l3"><a class="reference internal" href="animation_timeline.html">動畫時間軸</a></li>
+<li class="toctree-l3"><a class="reference internal" href="arrange.html">向量圖形排列</a></li>
+<li class="toctree-l3"><a class="reference internal" href="artistic_color_selector.html">美術選色器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="brush_preset_docker.html">筆刷預設</a></li>
+<li class="toctree-l3"><a class="reference internal" href="brush_preset_history.html">筆刷預設歷史</a></li>
+<li class="toctree-l3"><a class="reference internal" href="channels_docker.html">色彩通道</a></li>
+<li class="toctree-l3"><a class="reference internal" href="color_sliders.html">調色滑塊</a></li>
+<li class="toctree-l3"><a class="reference internal" href="compositions.html">圖層組合方案</a></li>
+<li class="toctree-l3"><a class="reference internal" href="digital_color_mixer.html">數位混色器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gamut_mask_docker.html">色域遮罩</a></li>
+<li class="toctree-l3"><a class="reference internal" href="grids_and_guides.html">格線與參考線</a></li>
+<li class="toctree-l3"><a class="reference internal" href="histogram_docker.html">色階分佈圖</a></li>
+<li class="toctree-l3"><a class="reference internal" href="layers.html">圖層</a></li>
+<li class="toctree-l3"><a class="reference internal" href="log_viewer.html">紀錄檢視器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lut_management.html">LUT 色彩管理</a></li>
+<li class="toctree-l3"><a class="reference internal" href="onion_skin.html">洋蔥皮檢視</a></li>
+<li class="toctree-l3"><a class="reference internal" href="overview.html">總覽圖</a></li>
+<li class="toctree-l3"><a class="reference internal" href="palette_docker.html">調色板</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pattern_docker.html">圖案</a></li>
+<li class="toctree-l3"><a class="reference internal" href="recorder_docker.html">錄影工具</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reference_images_docker.html">Reference Images Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="shape_properties_docker.html">形狀屬性工具面板</a></li>
+<li class="toctree-l3"><a class="reference internal" href="small_color_selector.html">Small Color Selector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="snapshot_docker.html">Snapshot Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="specific_color_selector.html">Specific Color Selector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="storyboard_docker.html">Storyboard Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="task_sets.html">操作集合工具面板</a></li>
+<li class="toctree-l3"><a class="reference internal" href="touch_docker.html">Touch Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="undo_history.html">Undo History</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vector_library.html">Vector Library</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Wide Gamut Color Selector</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#configuration">Configuration</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../dr_minw_debugger.html">Dr. MinGW 除錯工具</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../filters.html">濾鏡</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hdr_display.html">HDR 顯示器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../image_split.html">分割影像</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../import_animation.html">匯入動畫</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../instant_preview.html">即時預覽</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../krita_4_preset_bundle.html">Krita 4 資源包介紹</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../layers_and_masks.html">圖層及遮罩</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../linux_command_line.html">命令列及參數</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../list_supported_tablets.html">支援的繪圖板、數位板</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../main_menu.html">主選單</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../maths_input.html">數學運算式輸入</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../popup-palette.html">浮動畫具板</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preferences.html">偏好選項</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../render_animation.html">繪製動畫</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../resource_management.html">資源管理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../seexpr.html">SeExpr 快速參考</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../separate_image.html">分離影像</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sharing_krita_logs.html">獲取紀錄檔</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../split_layer.html">分割圖層</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../storyboard_svg_template.html">SVG Storyboard Export Templates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../stroke_selection.html">對選取區域描邊</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools.html">工具</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../welcome_screen.html">歡迎畫面</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials.html">教學及指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../KritaFAQ.html">常見問題 FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributors_manual.html">貢獻者手冊</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../resources_page.html">資源</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+	<!-- start top banner area (for fundraisers or messages)
+
+	<div style="text-align: center; background-color: #333">
+		<a href="https://krita.org/en/fundraising-2018-campaign/" target="_self" onclick="ga('send', 'event', 'frontpage', 'button', 'Fundraiser 2018');">
+			<img src="https://krita.org/wp-content/themes/krita-org-theme/images/decoration/2018-fundraiser-banner.png" style="max-width: 100%">
+		</a>
+	</div>
+	
+	 end top banner area -->
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Krita Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">文件</a> &raquo;</li>
+        
+          <li><a href="../../reference_manual.html">參考文件</a> &raquo;</li>
+        
+          <li><a href="../dockers.html">工具面板</a> &raquo;</li>
+        
+      <li>Wide Gamut Color Selector</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+          
+            <a href="../../_sources/reference_manual/dockers/wide_gamut_color_selector.rst.txt" rel="nofollow"> 
+             
+              <img src="../../_static/images/source-code.png" />
+             <!-- 檢視頁面原始碼 -->
+
+          </a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="wide-gamut-color-selector">
+<span id="wide-gamut-color-selector-docker"></span><span id="index-0"></span><h1>Wide Gamut Color Selector<a class="headerlink" href="#wide-gamut-color-selector" title="本標頭的永久連結">¶</a></h1>
+<div class="versionadded">
+<p><span class="versionmodified added">在 5.2 版本新加入.</span></p>
+</div>
+<img alt="../../_images/wide_gamut_selector.png" src="../../_images/wide_gamut_selector.png" />
+<p>The wide gamut color selector provides a customizable color selector that is also able to select colors outside of the basic sRGB color gamut.</p>
+<p>To open the Wide Gamut Color Selector choose <span class="menuselection">Settings ‣ Dockers ‣ Wide Gamut Color Selector</span>.</p>
+<p>The top right of the selector has a foreground and background selector, while the middle is the main selector.</p>
+<p>You can configure this docker by clicking the settings icons in the top level of the selector. Here you can access quick settings, like the color model and prefered selector shapes, and more configuration can be accessed with <span class="guilabel">Configure...</span>.</p>
+<div class="admonition note">
+<p class="admonition-title">備註</p>
+<p>The Wide Gamut Color Selector is intended to eventually replace the <a class="reference internal" href="advanced_color_selector.html#advanced-color-selector-docker"><span class="std std-ref">進階選色器</span></a>, so many of its options will be familiar to you.</p>
+</div>
+<section id="configuration">
+<h2>Configuration<a class="headerlink" href="#configuration" title="本標頭的永久連結">¶</a></h2>
+<section id="color-selection">
+<h3>Color Selection<a class="headerlink" href="#color-selection" title="本標頭的永久連結">¶</a></h3>
+<p>Here you can select the color model and the main shape.</p>
+<dl>
+<dt>Hue Ring Appearance</dt><dd><p>This allows you to choose how the hue ring (if applicable) will appear.</p>
+<dl class="simple">
+<dt>Static</dt><dd><p>The hue right will always be at the most colorful color in that hue.</p>
+</dd>
+<dt>Dynamic</dt><dd><p>The hue ring will adjust based on the lightness and saturation of the current color.</p>
+</dd>
+<dt>Dynamic + Static Edge</dt><dd><p>The hue ring will be split in two parts: the inner edge will be dynamic, while the outer-edge will be static.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p>The color selector options are similar to the 'Type and Shape' entries in <a class="reference internal" href="advanced_color_selector.html#advanced-color-selector-docker"><span class="std std-ref">進階選色器</span></a>.</p>
+</section>
+<section id="general">
+<h3>General<a class="headerlink" href="#general" title="本標頭的永久連結">¶</a></h3>
+<p>This sections covers the selector layout.</p>
+<dl>
+<dt>Show Quick Settings Menu</dt><dd><p>This will allow you to turn off the quick settings.</p>
+</dd>
+<dt>Favourite selection</dt><dd><p>This will allow you to select prefered shapes that show up in the quick settings menu.</p>
+</dd>
+<dt>Selection Color space</dt><dd><p>Select which color space will be used for the selector. You can use between current layer/mask, image, or a custom profile. This is useful for when you need to ensure your colors work inside a specific CMYK color space, while having the main image in RGB.</p>
+<dl class="simple">
+<dt>Proof Colors to Painting Color Space</dt><dd><p>This ensures that the selector will display colors in the current painting color space, which happens with the options <span class="guilabel">Custom</span> and <span class="guilabel">Image</span> if the selected layer or mask does not have the same color space as the image. It has no effect when using <span class="guilabel">Layer/Mask</span></p>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+<section id="pop-ups">
+<h3>Pop-ups<a class="headerlink" href="#pop-ups" title="本標頭的永久連結">¶</a></h3>
+<p>These settings configure the pop-ups that can be created with the wide gamut selector actions for <span class="guilabel">Show Color History</span>, <span class="guilabel">Show MyPaint Selector</span>, <span class="guilabel">Show Wide Gamut Selector</span> and <span class="guilabel">Show Wide Gamut Shade Selector</span>. Configuring the keyboard shortcuts for these colors is done in <span class="menuselection">Configure Krita -&gt; Keyboard Shortcuts -&gt; WG Color Selector Actions</span>.</p>
+<dl class="simple">
+<dt>Size</dt><dd><p>The size of the pop-up in pixels.</p>
+</dd>
+</dl>
+<section id="color-patches">
+<h4>Color patches<a class="headerlink" href="#color-patches" title="本標頭的永久連結">¶</a></h4>
+<dl>
+<dt>Layout</dt><dd><dl>
+<dt>Orientation</dt><dd><p>Whether these are oriented horizontally or vertically.</p>
+</dd>
+<dt>Scrolling</dt><dd><p>This controls both the scroll direction as well as which direction the patches are laid out in, the latter perpendicular to the former.</p>
+<dl class="simple">
+<dt>None</dt><dd><p>No scrolling.</p>
+</dd>
+<dt>Along orientation</dt><dd><p>Scrolls vertically or horizontally depending on orientation. Patches are laid out in the perpendicular direction.</p>
+</dd>
+<dt>Laterally</dt><dd><p>Shows perpendicular to the orientation, so vertically when the orientation is horizontal, and vice-versa. Patches are laid out following the orientation.</p>
+</dd>
+</dl>
+</dd>
+<dt>Rows</dt><dd><p>The amount of rows the patches will take up.</p>
+</dd>
+</dl>
+</dd>
+<dt>Patches</dt><dd><dl class="simple">
+<dt>Width/Height:</dt><dd><p>The size of the patches.</p>
+</dd>
+<dt>Max Patches:</dt><dd><p>The maximum number of patches allowed.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</section>
+<section id="shade-selector">
+<h3>Shade Selector<a class="headerlink" href="#shade-selector" title="本標頭的永久連結">¶</a></h3>
+<p>This configures the shade selector.</p>
+<dl>
+<dt>Update Base Color</dt><dd><dl class="simple">
+<dt>Color Changes Externally</dt><dd><p>When the shade selector is not responsible for the active color changes.</p>
+</dd>
+<dt>Right-clicking on shade selector</dt><dd><p>The color changes by right clicking on the shade selector.</p>
+</dd>
+<dt>Interaction ends</dt><dd><p>When the interaction with the selector ends. So a click+drag will not update the base color until the action is finished, but each single click will always update the color.</p>
+</dd>
+</dl>
+</dd>
+<dt>Line count</dt><dd><p>How many shade selectors are available.</p>
+<p>For each number there will be a button added to the right side.</p>
+</dd>
+<dt>Line Height</dt><dd><p>How big the selectors are in pixels.</p>
+</dd>
+</dl>
+<p>On the righthand side there will be a preview of each possible shade selector. Clicking these will allow you to edit the adjustment of the selector. The shade selectors follow the color model selected in the Color Selection options.</p>
+<dl class="simple">
+<dt>Range</dt><dd><p>How strong the color change is. The further the value from zero, the bigger the change to the color. Negative values will flip the adjustment.</p>
+</dd>
+<dt>Offset</dt><dd><p>How much the center of the selector is offset from the base color. Setting Hue to 0.5 for example will always show the complementary color to the current base color as the center of the slider.</p>
+</dd>
+<dt>Display</dt><dd><p>Whether to show as a continuous gradient, or split up into patches, and if so, how many patches.</p>
+</dd>
+</dl>
+</section>
+<section id="id1">
+<h3>Color Patches<a class="headerlink" href="#id1" title="本標頭的永久連結">¶</a></h3>
+<p>This allows you to configure the color patches for the color history and the colors from the image.</p>
+<dl class="simple">
+<dt>Layout</dt><dd><dl class="simple">
+<dt>Orientation</dt><dd><p>Whether these are oriented horizontally or vertically.</p>
+</dd>
+<dt>Scrolling</dt><dd><dl class="simple">
+<dt>None</dt><dd><p>No scrolling.</p>
+</dd>
+<dt>Along orientation</dt><dd><p>Scrolls vertically or horizontally depending on orientation.</p>
+</dd>
+<dt>Laterally</dt><dd><p>Shows perpendicular to the orientation, so vertically when the orientation is horizontal, and vice-versa.</p>
+</dd>
+</dl>
+</dd>
+<dt>Rows</dt><dd><p>The amount of rows the patches will take up.</p>
+</dd>
+</dl>
+</dd>
+<dt>Patches</dt><dd><dl class="simple">
+<dt>Width/Height:</dt><dd><p>The size of the patches.</p>
+</dd>
+<dt>Max Patches:</dt><dd><p>The maximum number of patches allowed.</p>
+</dd>
+</dl>
+</dd>
+<dt>Options</dt><dd><dl class="simple">
+<dt>Clear Button</dt><dd><p>Whether the clear button is present. Only for the color history.</p>
+</dd>
+<dt>Autoupdate</dt><dd><p>Whether the 'colors from image' auto updates, this will mean you will not have to press the refresh button in the docker to see them.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../dr_minw_debugger.html" class="btn btn-neutral float-right" title="Dr. MinGW 除錯工具" accesskey="n" rel="next"> <!-- 下一個 --> <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="vector_library.html" class="btn btn-neutral" title="Vector Library" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- 上一個  -->  </a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
+      
+        <span class="commit">
+          修訂版本 <code>fd19cea</code>
+        </span>
+      
+
+    </p>
+  </div>
+  使用 <a href="http://sphinx-doc.org/">Sphinx</a> 以及經修改過的 <a href="https://github.com/rtfd/sphinx_rtd_theme">RTD 主題</a>建置<br/>
+  <a href="https://krita.org" title="Krita 官方網站">Krita 官方網站</a> |
+  <a href="https://invent.kde.org/documentation/docs-krita-org/" title="這份手冊的 KDE GitLab 專案網址">docs.krita.org 的 Git 原始碼儲存庫</a> |
+  <a href="https://www.kde.org/community/whatiskde/impressum-en.php" title="了解更多關於 KDE、code of conduct（行為準則）、隱私政策及 GDPR（一般資料保護規則）">KDE Impressum</a>
+   
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  
+      <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+      <script src="../../_static/jquery.js"></script>
+      <script src="../../_static/underscore.js"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+      <script src="../../_static/doctools.js"></script>
+      <script src="../../_static/sphinx_highlight.js"></script>
+      <script src="../../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
+      });
+  </script> 
+
+ <script type="text/javascript">
+	 var _paq=_paq||[];
+	 _paq.push(['setCookieDomain','*.krita.org']);
+	 _paq.push(['setDomains','*.krita.org']);
+	 _paq.push(['setDocumentTitle',document.domain+"/"+document.title]);
+	 _paq.push(['trackPageView']);
+	 _paq.push(['enableLinkTracking']);
+
+	 (function(){
+	 	var u="//stats.kde.org/";
+	    _paq.push(['setTrackerUrl',u+'piwik.php']);
+	    _paq.push(['setSiteId',13]);
+	    var d = document, g = d.createElement('script'),s=d.getElementsByTagName('script')[0];
+	    g.type = 'text/javascript';
+	    g.async = true;
+	    g.defer = true;
+	    g.src = u+'piwik.js';
+	    s.parentNode.insertBefore(g,s);
+	  })();
+</script> 
+<noscript><p><img src="//stats.kde.org/piwik.php?idsite=13" style="border:0;" alt="" /></p></noscript>
+
+</body>
+</html>

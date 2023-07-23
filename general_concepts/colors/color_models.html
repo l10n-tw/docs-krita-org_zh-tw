@@ -19,15 +19,17 @@
   <meta property="og:locale:alternate" content="nl" />
   <meta property="og:locale:alternate" content="pl" />
   <meta property="og:locale:alternate" content="pt_PT" />
+  <meta property="og:locale:alternate" content="sl" />
+  <meta property="og:locale:alternate" content="tr" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2022-10-08T11:00:22" />
+  <meta property="og:article:modified_time" content="2023-07-23T09:58:56" />
   <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 <meta content="Color Models in Krita" name="description" />
 
   
   
-  <title>色彩模型 &mdash; Krita Manual 5.0.0 說明文件</title>
+  <title>色彩模型 &mdash; Krita Manual 5.2.0 說明文件</title>
   
 
   
@@ -35,14 +37,14 @@
 
   
   
-    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
     
   
   
   
     <link rel="canonical" href="zh_TW/general_concepts/colors/color_models.html"/>
     <meta property="og:url" content="zh_TW/general_concepts/colors/color_models.html" />
-    <meta property="og:image" content="zh_TW/_static/sidebar-logo.png" />
+    <meta property="og:image" content="zh_TW/../../_static/sidebar-logo.png" />
   
 
   
@@ -81,7 +83,7 @@
        
            <a href="../../index.html" class="icon icon-home">
 
-			<img src="../../_static/sidebar-logo.png" class="logo" alt="Logo"/>
+			<img src="../../../../_static/sidebar-logo.png" class="logo" alt="Logo"/>
            	
            <!--	Krita Manual -->
 
@@ -113,6 +115,8 @@
 	        		<option value="nl">Nederlands</option>
 	        		<option value="pl">Polski</option>
 	        		<option value="pt_PT">português</option>
+                    <option value="sl">slovenščina</option>
+                    <option value="tr">Türkçe</option>
 	        		<option value="uk_UA">Українська</option>
 	        		<option value="zh_CN">简体中文</option>
 	        	</select>
@@ -325,7 +329,6 @@
 <section id="rgb-models-hsv-hsl-hsi-and-hsy">
 <h3>RGB models: HSV, HSL, HSI and HSY<a class="headerlink" href="#rgb-models-hsv-hsl-hsi-and-hsy" title="本標頭的永久連結">¶</a></h3>
 <p>These are not included as their own color spaces in Krita. However, they do show up in the blending modes and color selectors, so a brief overview:</p>
-<p>--Images of relationship rgb-hsv etc.</p>
 <dl class="simple">
 <dt>Hue</dt><dd><p>The tint of a color, or, whether it's red, yellow, green, etc. Krita's Hue is measured in 360 degrees, with 0 being red, 120 being green and 240 being blue.</p>
 </dd>
@@ -379,6 +382,9 @@ This is useful, because by only registering gray values, it only needs one chann
 <span id="model-cmyk"></span><h2>CMYK<a class="headerlink" href="#cmyk" title="本標頭的永久連結">¶</a></h2>
 <p>Cyan, Magenta, Yellow, Key</p>
 <p>This is the color space of printers. Unlike computers, printers have these four colors, and adding them all adds up to black instead of white. This is thus also called a 'subtractive' color space.</p>
+<div class="versionchanged">
+<p><span class="versionmodified changed">在 5.2 版本變更: </span>Krita 5.1 and older had the blending modes apply direct on the channels. Not all software does this, and thus, to make it simpler to work together with other artists, Krita 5.2 by default inverts the channels before applying the blending mode. You can control this in the <a class="reference internal" href="../../reference_manual/preferences/general_settings.html#tool-options-settings"><span class="std std-ref">preferences</span></a>.</p>
+</div>
 <table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"></th>
@@ -534,28 +540,15 @@ Or you can just give the workspace rgb image to your printer and let them handle
 </dd>
 </dl>
 <p>This color space is often used in photography and in (correct) implementations of JPEG. As a human you're much more sensitive to the lightness of colors, and thus JPEG tries to compress the Cr and Cb channels, and leave the Y channel in full quality.</p>
-<div class="admonition warning">
-<p class="admonition-title">警告</p>
-<p>Krita doesn't bundle a ICC profile for YCrCb on the basis of there being no open source ICC profiles for this color space. It's unusable without one, and also probably very untested.</p>
-</div>
 <section id="xyz">
 <span id="model-xyz"></span><h3>XYZ<a class="headerlink" href="#xyz" title="本標頭的永久連結">¶</a></h3>
 <p>Back in 1931, the CIE (Institute of Color and Light), was studying human color perception.
 In doing so, they made the first color spaces, with XYZ being the one best at approximating human vision.</p>
-<p>It's almost impossible to really explain what XYZ is.</p>
-<dl class="simple">
-<dt>Y</dt><dd><p>Is equal to green.</p>
-</dd>
-<dt>Z</dt><dd><p>Akin to blue.</p>
-</dd>
-<dt>X</dt><dd><p>Is supposed to be red.</p>
-</dd>
-</dl>
-<p>XYZ is used as a baseline reference for all other profiles and models. All color conversions are done in XYZ, and all profiles coordinates match XYZ.</p>
+<p>XYZ is used as a baseline reference for all other profiles and models. All color conversions are done in XYZ, and all profiles coordinates match XYZ. An RGB color space where Red is set to 100% X, Green is set to 100% Y and Blue is set to 100% Z, with the gamma correction being linear is in effect the same as an XYZ color space.</p>
 </section>
 <section id="l-a-b">
 <span id="model-lab"></span><h3>L*a*b*<a class="headerlink" href="#l-a-b" title="本標頭的永久連結">¶</a></h3>
-<p>Stands for:</p>
+<p>A Color space based on the opposition theory of color vision, L*a*b* splits colors into the luminosity, red-green contrast and blue-yellow contrast:</p>
 <dl class="simple">
 <dt>L*</dt><dd><p>Lightness, similar to luminosity in this case.</p>
 </dd>
@@ -564,7 +557,7 @@ In doing so, they made the first color spaces, with XYZ being the one best at ap
 <dt>b*</dt><dd><p>b* in this case is a measurement of how yellow a color is versus how blue a color is.</p>
 </dd>
 </dl>
-<p>L*a*b* is supposed to be a more comprehensible variety of XYZ and the most 'complete' of all color spaces. It's often used as an in between color space in conversion, but even more as the correct color space to do color-balancing in. It's far easier to adjust the contrast and color tone in L*a*b*.</p>
+<p>L*a*b* is supposed to be a more comprehensible to use that XYZ. It's often used as an in between color space in conversion, but even more as the correct color space to do color-balancing in. It's far easier to adjust the contrast and color tone in L*a*b*.</p>
 <p>L*a*b* is technically the same as Photoshop's LAB. Photoshop specifically uses CIELAB d50.</p>
 </section>
 </section>
@@ -597,7 +590,7 @@ In doing so, they made the first color spaces, with XYZ being the one best at ap
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>c44cdc1</code>
+          修訂版本 <code>fd19cea</code>
         </span>
       
 

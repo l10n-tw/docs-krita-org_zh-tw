@@ -19,15 +19,17 @@
   <meta property="og:locale:alternate" content="nl" />
   <meta property="og:locale:alternate" content="pl" />
   <meta property="og:locale:alternate" content="pt_PT" />
+  <meta property="og:locale:alternate" content="sl" />
+  <meta property="og:locale:alternate" content="tr" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2022-10-08T11:00:22" />
+  <meta property="og:article:modified_time" content="2023-07-23T09:58:56" />
   <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 <meta content="Guide to building Krita from source." name="description" />
 
   
   
-  <title>Building Krita from Source &mdash; Krita Manual 5.0.0 說明文件</title>
+  <title>Building Krita from Source &mdash; Krita Manual 5.2.0 說明文件</title>
   
 
   
@@ -35,14 +37,14 @@
 
   
   
-    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
     
   
   
   
     <link rel="canonical" href="zh_TW/untranslatable_pages/building_krita.html"/>
     <meta property="og:url" content="zh_TW/untranslatable_pages/building_krita.html" />
-    <meta property="og:image" content="zh_TW/_static/sidebar-logo.png" />
+    <meta property="og:image" content="zh_TW/../_static/sidebar-logo.png" />
   
 
   
@@ -61,7 +63,7 @@
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜尋" href="../search.html" />
     <link rel="next" title="Building krita with Docker on Linux" href="building/build_krita_with_docker_on_linux.html" />
-    <link rel="prev" title="Technical Pages" href="../untranslatable_pages.html" /> 
+    <link rel="prev" title="Brush GUI Design with Lager" href="brush_editor_gui_with_lager.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -81,7 +83,7 @@
        
            <a href="../index.html" class="icon icon-home">
 
-			<img src="../_static/sidebar-logo.png" class="logo" alt="Logo"/>
+			<img src="../../_static/sidebar-logo.png" class="logo" alt="Logo"/>
            	
            <!--	Krita Manual -->
 
@@ -113,6 +115,8 @@
 	        		<option value="nl">Nederlands</option>
 	        		<option value="pl">Polski</option>
 	        		<option value="pt_PT">português</option>
+                    <option value="sl">slovenščina</option>
+                    <option value="tr">Türkçe</option>
 	        		<option value="uk_UA">Українська</option>
 	        		<option value="zh_CN">简体中文</option>
 	        	</select>
@@ -139,21 +143,23 @@
 <li class="toctree-l2"><a class="reference internal" href="../contributors_manual/optimising_images.html">供說明文件使用的影像</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../contributors_manual/user_support.html">使用者支援入門介紹</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../untranslatable_pages.html">Technical Pages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="brush_editor_gui_with_lager.html">Brush GUI Design with Lager</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Building Krita from Source</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#building-on-linux">Building on Linux</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#building-on-windows">Building on Windows</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#building-on-macos">Building on macOS</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#building-on-android">Building on Android</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#specialized-ways-of-building-krita">Specialized Ways of Building Krita</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="cmake_settings_for_developers.html">CMake Settings for Developers</a></li>
 <li class="toctree-l3"><a class="reference internal" href="enable_static_analyzer.html">Enable static analyzer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="how_to_patch_qt.html">How to patch Qt</a></li>
 <li class="toctree-l3"><a class="reference internal" href="intro_hacking_krita.html">Introduction to Hacking Krita</a></li>
 <li class="toctree-l3"><a class="reference internal" href="kpl_defintion.html">The Krita Palette format KPL</a></li>
 <li class="toctree-l3"><a class="reference internal" href="krita_svg_extensions.html">Krita SVG Extensions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="modern_cpp_in_krita.html">Modern C++ usage guidelines for the Krita codebase</a></li>
 <li class="toctree-l3"><a class="reference internal" href="new_features.html">Developing Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="optimize_image_processing_with_xsimd.html">Optimize Image Processing with XSIMD</a></li>
 <li class="toctree-l3"><a class="reference internal" href="optimizing_tips_for_krita.html">Optimizing tips and tools for Krita</a></li>
 <li class="toctree-l3"><a class="reference internal" href="participating_in_gsoc.html">Google Summer of Code</a></li>
 <li class="toctree-l3"><a class="reference internal" href="patch_review_guide.html">Advanced Merge Request Guide</a></li>
@@ -310,11 +316,6 @@
 <li><p><a class="reference internal" href="#id7" id="id35">Building Krita</a></p></li>
 <li><p><a class="reference internal" href="#installing-krita-apk" id="id36">Installing Krita APK</a></p></li>
 <li><p><a class="reference internal" href="#crash" id="id37">Crash</a></p></li>
-</ul>
-</li>
-<li><p><a class="reference internal" href="#specialized-ways-of-building-krita" id="id38">Specialized Ways of Building Krita</a></p>
-<ul>
-<li><p><a class="reference internal" href="#krita-devbox-for-linux-experimental" id="id39">Krita Devbox for Linux (Experimental)</a></p></li>
 </ul>
 </li>
 </ul>
@@ -522,14 +523,14 @@
 <li><p>LLVM MinGW compiler toolchain</p>
 <blockquote>
 <div><ul class="simple">
-<li><p>Can be downloaded here: <a class="reference external" href="https://github.com/mstorsjo/llvm-mingw/releases/download/20220323/llvm-mingw-20220323-ucrt-x86_64.zip">https://github.com/mstorsjo/llvm-mingw/releases/download/20220323/llvm-mingw-20220323-ucrt-x86_64.zip</a></p></li>
+<li><p>Can be downloaded here: <a class="reference external" href="https://github.com/mstorsjo/llvm-mingw/releases/download/20220906/llvm-mingw-20220906-ucrt-x86_64.zip">https://github.com/mstorsjo/llvm-mingw/releases/download/20220906/llvm-mingw-20220906-ucrt-x86_64.zip</a></p></li>
 <li><p>Unzip the archive with <a class="reference external" href="https://www.7-zip.org/">7zip</a> into a folder like <code class="file docutils literal notranslate"><span class="pre">C:\llvm-mingw</span></code>; the full path must not contain any spaces.</p></li>
-<li><p>At the time of writing, we are using the tagged release 20220323 with LLVM 14.0.0 on the Binary Factory. In theory a newer version should be compatible, but use at your own risk.</p></li>
+<li><p>We are using the tagged release 20220906 with LLVM 15.0.0 on the Binary Factory. In theory a newer version should be compatible, but use at your own risk.</p></li>
 <li><p>If you really want to use other compilers, see below.</p></li>
 </ul>
 </div></blockquote>
 </li>
-<li><p>You will also need a release of Python 3.8 (not 3.7, not 3.9) - <a class="reference external" href="https://www.python.org">https://www.python.org</a>.</p>
+<li><p>You will also need a release of Python 3.10 (not 3.7, not 3.8, not 3.9, not 3.11) - <a class="reference external" href="https://www.python.org">https://www.python.org</a>.</p>
 <blockquote>
 <div><ul class="simple">
 <li><p>Make sure to have that version of python.exe in your path. This version of Python will be used for two things to configure Qt and to build the Python scripting module.  Do not set PYTHONHOME or PYTHONPATH.</p></li>
@@ -568,7 +569,7 @@
 </div>
 <p>Then prepare a batch file to set the environment. Read this example and <strong>adjust the version numbers and paths</strong> where necessary so the PATH is correct. Save this as <code class="docutils literal notranslate"><span class="pre">C:\krita-dev\env.bat</span></code>.</p>
 <div class="highlight-batch notranslate"><div class="highlight"><pre><span></span><span class="p">:</span><span class="c1">: Build/dev tools</span>
-<span class="k">set</span> <span class="nv">MINGW_BIN_DIR</span><span class="p">=</span>C:\llvm-mingw\llvm-mingw-20220323-ucrt-x86_64\bin
+<span class="k">set</span> <span class="nv">MINGW_BIN_DIR</span><span class="p">=</span>C:\llvm-mingw\llvm-mingw-20220906-ucrt-x86_64\bin
 <span class="k">set</span> <span class="nv">CMAKE_BIN_DIR</span><span class="p">=</span>C:\Program Files\CMake\bin
 <span class="k">set</span> <span class="nv">NINJA_BIN_DIR</span><span class="p">=</span>C:\krita-dev\ninja
 <span class="k">set</span> <span class="nv">PYTHON_BIN_DIR</span><span class="p">=</span>C:\Python38
@@ -577,6 +578,11 @@
 <span class="k">set</span> <span class="nv">BUILDROOT</span><span class="p">=</span>C:\krita-dev
 <span class="k">set</span> <span class="nv">PATH</span><span class="p">=</span>C:\krita-dev\i\bin;C:\krita-dev\i\lib;<span class="nv">%MINGW_BIN_DIR%</span>;<span class="nv">%MINGW_BIN_DIR%</span>\..\x86_64-w64-mingw32\bin;<span class="nv">%CMAKE_BIN_DIR%</span>;<span class="nv">%NINJA_BIN_DIR%</span>;<span class="nv">%QTCREATOR_DIR%</span>;<span class="nv">%PATH%</span>
 </pre></div>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">注意</p>
+<p>Make sure your <code class="docutils literal notranslate"><span class="pre">PATH</span></code> variable does <strong>not</strong> have double backslash symbols <code class="docutils literal notranslate"><span class="pre">\\</span></code>. Especially as a result of multiple path variables concatenation.</p>
+<p>If it has, ASAN symbolizer will crash when parsing error-reports.</p>
 </div>
 <p>Every time you want to build or run your home-grown Krita, open the CMD window, change to the <code class="docutils literal notranslate"><span class="pre">C:\krita-dev</span></code> folder and run the <code class="docutils literal notranslate"><span class="pre">env.bat</span></code> file:</p>
 <div class="highlight-batch notranslate"><div class="highlight"><pre><span></span><span class="k">cd</span> /d C:\krita-dev
@@ -606,6 +612,13 @@ cmake --build fetch-deps
 </pre></div>
 </div>
 <p>(Or you can download it yourself from <a class="reference external" href="https://binary-factory.kde.org/job/Krita_Nightly_Windows_Dependency_Build/">https://binary-factory.kde.org/job/Krita_Nightly_Windows_Dependency_Build/</a>)</p>
+<div class="admonition attention">
+<p class="admonition-title">注意</p>
+<p>If you build Krita with ASAN, make sure you don't use prebuilt deps, or at least manually rebuild Qt with
+ASAN support as well (<code class="docutils literal notranslate"><span class="pre">-DQT_ENABLE_ASAN=ON</span></code>). There is a <a class="reference external" href="https://github.com/llvm/llvm-project/issues/61685">know issue in LLVM's linker</a>,
+which causes Qt be loaded before ASAN and, therefore, causing some allocations confuse ASAN. Until this issue is fixed,
+build Qt with ASAN as a workaround.</p>
+</div>
 </section>
 <section id="building-dependencies-yourself">
 <h4><a class="toc-backref" href="#id24" role="doc-backlink">Building dependencies yourself</a><a class="headerlink" href="#building-dependencies-yourself" title="本標頭的永久連結">¶</a></h4>
@@ -727,12 +740,12 @@ website</a>.</p>
 <p>If you downloaded Android Studio then open SDK manager and download <code class="docutils literal notranslate"><span class="pre">Android</span> <span class="pre">SDK</span> <span class="pre">Build-Tools</span></code>. (more info:
 <a class="reference external" href="https://developer.android.com/studio/intro/update#sdk-manager">https://developer.android.com/studio/intro/update#sdk-manager</a>)</p>
 <p>If you download just <code class="docutils literal notranslate"><span class="pre">sdk-tools</span></code>, then, extract it and run:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> &lt;extracted-android-sdk-tools&gt;/tools/bin
-./sdkmanager --licenses
-./sdkmanager platform-tools
-./sdkmanager <span class="s2">&quot;platforms;android-21&quot;</span>
-./sdkmanager <span class="s2">&quot;platforms;android-28&quot;</span>    <span class="c1"># for androiddeployqt</span>
-./sdkmanager <span class="s2">&quot;build-tools;28.0.2&quot;</span>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>&lt;extracted-android-sdk-tools&gt;/tools/bin
+./sdkmanager<span class="w"> </span>--licenses
+./sdkmanager<span class="w"> </span>platform-tools
+./sdkmanager<span class="w"> </span><span class="s2">&quot;platforms;android-21&quot;</span>
+./sdkmanager<span class="w"> </span><span class="s2">&quot;platforms;android-28&quot;</span><span class="w">    </span><span class="c1"># for androiddeployqt</span>
+./sdkmanager<span class="w"> </span><span class="s2">&quot;build-tools;28.0.2&quot;</span>
 </pre></div>
 </div>
 <p>If you get some <code class="docutils literal notranslate"><span class="pre">ClasNotFoundException</span></code> it might be because <code class="docutils literal notranslate"><span class="pre">java</span></code>
@@ -745,7 +758,7 @@ and then run it again.</p>
 <p>Now, to build krita, run
 <code class="docutils literal notranslate"><span class="pre">&lt;krita-source&gt;/packaging/android/androidbuild.sh</span> <span class="pre">--help</span></code> and pass the required arguments.</p>
 <p>Example:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>./androidbuild.sh -p<span class="o">=</span>all --src<span class="o">=</span>/home/sh_zam/workspace/krita --build-type<span class="o">=</span>Debug --build-root<span class="o">=</span>/home/sh_zam/workspace/build-krita-android --ndk-path<span class="o">=</span>/home/sh_zam/Android/Sdk/ndk-bundle --sdk-path<span class="o">=</span>/home/sh_zam/Android/Sdk --api-level<span class="o">=</span><span class="m">21</span> --android-abi<span class="o">=</span>armeabi-v7a
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>./androidbuild.sh<span class="w"> </span>-p<span class="o">=</span>all<span class="w"> </span>--src<span class="o">=</span>/home/sh_zam/workspace/krita<span class="w"> </span>--build-type<span class="o">=</span>Debug<span class="w"> </span>--build-root<span class="o">=</span>/home/sh_zam/workspace/build-krita-android<span class="w"> </span>--ndk-path<span class="o">=</span>/home/sh_zam/Android/Sdk/ndk-bundle<span class="w"> </span>--sdk-path<span class="o">=</span>/home/sh_zam/Android/Sdk<span class="w"> </span>--api-level<span class="o">=</span><span class="m">21</span><span class="w"> </span>--android-abi<span class="o">=</span>armeabi-v7a
 </pre></div>
 </div>
 </section>
@@ -758,17 +771,6 @@ and then run it again.</p>
 <section id="crash">
 <h3><a class="toc-backref" href="#id37" role="doc-backlink">Crash</a><a class="headerlink" href="#crash" title="本標頭的永久連結">¶</a></h3>
 <p>If Krita crashes you can look up the logs using <code class="docutils literal notranslate"><span class="pre">adb</span> <span class="pre">logcat</span></code></p>
-</section>
-</section>
-<section id="specialized-ways-of-building-krita">
-<h2><a class="toc-backref" href="#id38" role="doc-backlink">Specialized Ways of Building Krita</a><a class="headerlink" href="#specialized-ways-of-building-krita" title="本標頭的永久連結">¶</a></h2>
-<p>These are specialized ways of building Krita on Linux while re-using the dependencies built on KDE's binary factory. You only need to try this if you don't want to use distribution dependencies on Linux.</p>
-<section id="krita-devbox-for-linux-experimental">
-<h3><a class="toc-backref" href="#id39" role="doc-backlink">Krita Devbox for Linux (Experimental)</a><a class="headerlink" href="#krita-devbox-for-linux-experimental" title="本標頭的永久連結">¶</a></h3>
-<p><a class="reference external" href="https://invent.kde.org/eoinoneill/krita-devbox">Krita Devbox</a> is a complete Krita development environment in a box!</p>
-<p>Krita Devbox is intended to provide a consistent and easy-to-use development container that comes with just about everything you need to develop Krita on Linux, including writing documentation, producing AppImages, and so on. A key goal for Krita Devbox is to be as simple to setup and use as possible by integrating with the host system (when it makes sense), and otherwise exporting a flexible, human-readable interface script to the host system.</p>
-<p>Krita Devbox's is particularly useful in the context of &quot;atomic&quot; Linux operating systems (like Fedora Kinoite and Silverblue) where the use of &quot;pet containers&quot; for application development is recommended. However, Krita Devbox may also be useful for any Krita developer on Linux who is interested in quick setup, using a containerized development environment, building in a similar context to KDE's official binary factory, and producing test AppImages.</p>
-<p>You can find more details about what Krita Devbox is and how it works over on the <a class="reference external" href="https://invent.kde.org/eoinoneill/krita-devbox">Krita Devbox repository page.</a> (Note: This build method is still quite new and experimental, so it's possible that you may run into a configuration issue, build error, or other bug. If so, please submit bug reports concerning the Krita Devbox to the gitlab repository listed above.)</p>
 <div class="toctree-wrapper compound">
 <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul>
@@ -790,7 +792,7 @@ and then run it again.</p>
         <a href="building/build_krita_with_docker_on_linux.html" class="btn btn-neutral float-right" title="Building krita with Docker on Linux" accesskey="n" rel="next"> <!-- 下一個 --> <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../untranslatable_pages.html" class="btn btn-neutral" title="Technical Pages" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- 上一個  -->  </a>
+        <a href="brush_editor_gui_with_lager.html" class="btn btn-neutral" title="Brush GUI Design with Lager" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- 上一個  -->  </a>
       
     </div>
   
@@ -802,7 +804,7 @@ and then run it again.</p>
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>c44cdc1</code>
+          修訂版本 <code>fd19cea</code>
         </span>
       
 

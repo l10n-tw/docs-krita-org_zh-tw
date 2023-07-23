@@ -32,7 +32,7 @@ Hotkeys and Sticky keys
 
 
    * Hovering over a selection allows you to move it.
-   * |mouseright| will open up a selection quick menu with amongst others the ability to edit the selection.
+   * When not actively making a selection, |mouseright| will open up a selection quick menu with amongst others the ability to edit the selection. If you already began making a selection, |mouseright| will undo the last added point.
 
 
 .. note::

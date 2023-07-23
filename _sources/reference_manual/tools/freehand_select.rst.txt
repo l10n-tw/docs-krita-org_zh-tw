@@ -36,14 +36,16 @@ Hotkeys and Sticky keys
 * :kbd:`Ctrl +` |mouseleft| sets the subsequent selection to 'replace'.
 * :kbd:`Shift + Alt +` |mouseleft| sets the subsequent selection to 'intersect'.
 
-.. deprecated:: 5.1
-
-    * Holding the :kbd:`Ctrl` key while drawing the selection temporarily makes this tool behave like the Polygon Selection tool and you can then draw straight line selections by just clicking on the canvas. This has been removed in 5.1
+* Holding the :kbd:`Ctrl` key while drawing the selection temporarily makes this tool behave like the Polygon Selection tool and you can then draw straight line selections by just clicking on the canvas.
 
 .. versionadded:: 4.2
 
    * Hovering your cursor over the dashed line of the selection, or marching ants as it is commonly called turns the cursor into the move tool icon, which you |mouseleft| and drag to move the selection.
    * |mouseright| will open up a selection quick menu with amongst others the ability to edit the selection.
+       
+        .. versionadded:: 5.1.2
+            
+            If you already began making a selection and the polygon mode is active (:kbd:`Ctrl` key is pressed), |mouseright| will undo the last added point.
 
 .. image:: /images/tools/selections-right-click-menu.png
    :width: 200

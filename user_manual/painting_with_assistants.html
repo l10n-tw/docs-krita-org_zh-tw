@@ -19,15 +19,17 @@
   <meta property="og:locale:alternate" content="nl" />
   <meta property="og:locale:alternate" content="pl" />
   <meta property="og:locale:alternate" content="pt_PT" />
+  <meta property="og:locale:alternate" content="sl" />
+  <meta property="og:locale:alternate" content="tr" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2022-10-08T11:00:22" />
+  <meta property="og:article:modified_time" content="2023-07-23T09:58:56" />
   <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 <meta content="How to use the painting assistants in Krita to draw perspectives." name="description" property="og:description" />
 
   
   
-  <title>使用輔助尺來繪畫 &mdash; Krita Manual 5.0.0 說明文件</title>
+  <title>使用輔助尺來繪畫 &mdash; Krita Manual 5.2.0 說明文件</title>
   
 
   
@@ -35,14 +37,14 @@
 
   
   
-    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
     
   
   
   
     <link rel="canonical" href="zh_TW/user_manual/painting_with_assistants.html"/>
     <meta property="og:url" content="zh_TW/user_manual/painting_with_assistants.html" />
-    <meta property="og:image" content="zh_TW/_static/sidebar-logo.png" />
+    <meta property="og:image" content="zh_TW/../_static/sidebar-logo.png" />
   
 
   
@@ -81,7 +83,7 @@
        
            <a href="../index.html" class="icon icon-home">
 
-			<img src="../_static/sidebar-logo.png" class="logo" alt="Logo"/>
+			<img src="../../_static/sidebar-logo.png" class="logo" alt="Logo"/>
            	
            <!--	Krita Manual -->
 
@@ -113,6 +115,8 @@
 	        		<option value="nl">Nederlands</option>
 	        		<option value="pl">Polski</option>
 	        		<option value="pt_PT">português</option>
+                    <option value="sl">slovenščina</option>
+                    <option value="tr">Türkçe</option>
 	        		<option value="uk_UA">Українська</option>
 	        		<option value="zh_CN">简体中文</option>
 	        	</select>
@@ -349,7 +353,8 @@ third handle, and it'll snap to a perfect circle.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">在 5.0 版本新加入.</span></p>
 </div>
-<p>This assistant simplifies the setup of a two point perspective by putting the two vanishing points and the parallel vertical ruler into one single assistant. This allows it to draw a grid of squares. It requires 3 points at minimum: 2 for perspective, and the final for the mid-point of the vanishing points, which controls how the grid is drawn.</p>
+<p>This assistant simplifies the setup of a two point perspective by combining the functions of the <a class="reference internal" href="#assistant-vanishing-point"><span class="std std-ref">消失點</span></a> assistant and the parallel vertical <a class="reference internal" href="#assistant-ruler"><span class="std std-ref">直線</span></a> into one single assistant. Additionally, it displays accurate square grid planes of the configured perspective, which can help you visually tune the intensity of the perspective distortion.</p>
+<p>It requires 3 points to achieve this: the first 2 of which are the vanishing points, while the third point is used to determine the <em>center of vision</em>, which affects how the grid is displayed. In two point perspective the <em>center of vision</em> is a point on the horizon line, so the assistant displays a small notch to indicate its location. Generally, the center of vision is also where the main focus of an illustration is.</p>
 <dl class="simple">
 <dt>Density</dt><dd><p>An extra option in the tool options, this controls how dense the grid is.</p>
 </dd>
@@ -362,6 +367,18 @@ third handle, and it'll snap to a perfect circle.</p>
 <p><span class="caption-text">In the above image, a two point perspective with an area limiter is enough to draw an indoor area. The assistant is colored blue here.</span><a class="headerlink" href="#id3" title="本圖片的永久連結">¶</a></p>
 </figcaption>
 </figure>
+<section id="tips">
+<h4>Tips<a class="headerlink" href="#tips" title="本標頭的永久連結">¶</a></h4>
+<p>You can hold specific key combinations while moving a vanishing point to activate the following behaviours:</p>
+<dl class="simple">
+<dt><kbd class="kbd docutils literal notranslate">Alt</kbd></dt><dd><p>The vanishing point will only move along the horizon line</p>
+</dd>
+<dt><kbd class="kbd docutils literal notranslate">Ctrl</kbd></dt><dd><p>The grid will rotate along with the vanishing point on the horizon line. This allows you to easily draw several two-point objects that belong in the same scene at various angles to each other.</p>
+</dd>
+<dt><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>+<kbd class="kbd docutils literal notranslate">Shift</kbd></kbd></dt><dd><p>Both vanishing points move to change the visual size of the grid's <em>field of view</em>.</p>
+</dd>
+</dl>
+</section>
 <section id="tutorials">
 <h4>教學<a class="headerlink" href="#tutorials" title="本標頭的永久連結">¶</a></h4>
 <p>Check out this in depth discussion and tutorial on
@@ -464,7 +481,7 @@ third handle, and it'll snap to a perfect circle.</p>
         &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
       
         <span class="commit">
-          修訂版本 <code>c44cdc1</code>
+          修訂版本 <code>fd19cea</code>
         </span>
       
 

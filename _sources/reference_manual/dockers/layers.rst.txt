@@ -20,7 +20,30 @@ Layers
 
 The Layers docker is for one of the core concepts of Krita: :ref:`Layer Management <layers_and_masks>`. You can add, delete, rename, duplicate and do many other things to layers here.
 
-At the top there are four controls. Two of them are layer properties, the blending mode and the opacity. But there are also two smaller buttons. One is the filter option. This allows you to filter all existing layers by either color label, or since Krita 5.0 by layer name. The second button allows you to control the thumbnail size of the layers and how much layers indent when they are grouped. Some people prefer large thumbnails with a lot of indentation, others want the visuals to take up the least amount of space.
+At the top there are four controls. Two of them are layer properties, the blending mode and the opacity. But there are also two smaller buttons. One is the filter option. This allows you to filter all existing layers by either color label, or since Krita 5.0 by layer name.
+
+
+
+The second button allows you to adjust some extra display options of the layer docker.
+
+The first slider controls the thumbnail size of the layers and how much layers indent when they are grouped. Some people prefer large thumbnails with a lot of indentation, others want the visuals to take up the least amount of space.
+
+.. versionadded:: 5.2
+
+Then there's the blending info options. The dropdown has four options:
+
+None
+    No extra informationm is shown.
+Simple
+    This will only display the opacity or the blending mode when they're not 100% and 'Normal'.
+Balanced
+    This will display both the opacity and the blending mode for layers where either the opacity is below 100%, or the blending mode is not 'normal'.
+Detailed
+    This will always show the opacity and blending options for all layers.
+
+The opacity slider below the dropdown allows you to control the opacity of the extra blending info label.
+
+Then there's :guilabel:`Checkbox for Selecting Layers`, which enables the extra checkboxes between the visibility icon and the label. This is useful for situations where you may not have access to a Ctrl or Shift key to select multiple layers, such as on a tablet.
 
 The Layer Stack
 ---------------
@@ -103,7 +126,11 @@ Hot keys and Sticky Keys
 * :kbd:`Ctrl +` |mouseleft| :kbd:`+ drag` shortcut makes a duplicate of the selected layers, for you to drag and drop.
 * :kbd:`Ctrl + E` shortcut for merging a layer down. This also merges selected layers, layer styles and will keep selection masks intact. Using the :kbd:`Ctrl + E` shortcut on a single layer with a mask will merge down the mask into the layer.
 * :kbd:`Ctrl + Shift + E` shortcut merges all layers.
-* :kbd:`R +` |mouseleft| shortcut allows you to select layers on canvas, similar to picking colors directly on canvas. Use the :kbd:`Shift + R +` |mouseleft| shortcut for multiple layers.
+* :kbd:`R +` |mouseleft| shortcut allows you to select the top layer with content below the cursor as the active layer. In addition to this, you can set shortcuts for 4 other modes:
+    - "Select All Layers (Replace Selection)" allows you to select all layers with content below the cursor as the currently selected layers.
+    - "Select All Layers (Add to Selection)" allows you to select all layers that have content below the cursor and add them to the selected layers.
+    - "Select from Menu (Replace Selection)" allows you to select a layer from a pop-up menu or all layers in the menu as the active layer or active layers.
+    - "Select from Menu (Add to Selection)" allows you to select all layers in the menu as the new active layer or active layers. The latter two modes are similar to using :kbd:`Ctrl +` |mouseright| to select a layer in Photoshop.
 * :kbd:`Ins` key for adding a new layer. 
 * :kbd:`Shift + Ins` key for adding a new vector layer.
 * :kbd:`Ctrl + G` shortcut will create a group layer. If multiple layers are selected, they are put into the group layer.

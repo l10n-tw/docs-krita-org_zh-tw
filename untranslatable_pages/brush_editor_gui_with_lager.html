@@ -1,0 +1,1050 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-TW" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-TW" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" name="title" content="Brush GUI Design with Lager" />
+  <meta property="og:site-name" content="Krita Manual" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="zh-TW" />
+  <meta property="og:locale:alternate" content="ca" />
+  <meta property="og:locale:alternate" content="en" />
+  <meta property="og:locale:alternate" content="fr" />
+  <meta property="og:locale:alternate" content="it" />
+  <meta property="og:locale:alternate" content="ja" />
+  <meta property="og:locale:alternate" content="ko" />
+  <meta property="og:locale:alternate" content="nl" />
+  <meta property="og:locale:alternate" content="pl" />
+  <meta property="og:locale:alternate" content="pt_PT" />
+  <meta property="og:locale:alternate" content="sl" />
+  <meta property="og:locale:alternate" content="tr" />
+  <meta property="og:locale:alternate" content="uk_UA" />
+  <meta property="og:locale:alternate" content="zh_CN" />
+  <meta property="og:article:modified_time" content="2023-07-23T09:58:56" />
+  <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+<meta content="Brush Editor GUI design with Lager" name="description" />
+
+  
+  
+  <title>Brush GUI Design with Lager &mdash; Krita Manual 5.2.0 說明文件</title>
+  
+
+  
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    
+  
+  
+  
+    <link rel="canonical" href="zh_TW/untranslatable_pages/brush_editor_gui_with_lager.html"/>
+    <meta property="og:url" content="zh_TW/untranslatable_pages/brush_editor_gui_with_lager.html" />
+    <meta property="og:image" content="zh_TW/../_static/sidebar-logo.png" />
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜尋" href="../search.html" />
+    <link rel="next" title="Building Krita from Source" href="building_krita.html" />
+    <link rel="prev" title="Technical Pages" href="../untranslatable_pages.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+       
+           <a href="../index.html" class="icon icon-home">
+
+			<img src="../../_static/sidebar-logo.png" class="logo" alt="Logo"/>
+           	
+           <!--	Krita Manual -->
+
+
+          </a>
+
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="搜尋文件" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-side-nav-language-selector">
+        	<p class="caption-text">
+	        	<select id="language-selector-container">
+	        		<option value="ca">Català</option>
+	        		<option value="en">English</option>
+	        		<option value="fr">français</option>
+	        		<option value="it">Italiano</option>
+	        		<option value="ja">日本語</option>
+	        		<option value="ko">한국어</option>
+	        		<option value="nl">Nederlands</option>
+	        		<option value="pl">Polski</option>
+	        		<option value="pt_PT">português</option>
+                    <option value="sl">slovenščina</option>
+                    <option value="tr">Türkçe</option>
+	        		<option value="uk_UA">Українська</option>
+	        		<option value="zh_CN">简体中文</option>
+	        	</select>
+        	</p>
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../user_manual.html">使用者手冊</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general_concepts.html">通用概念</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference_manual.html">參考文件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials.html">教學及指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../KritaFAQ.html">常見問題 FAQ</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../contributors_manual.html">貢獻者手冊</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../contributors_manual/community.html">Krita 的社群</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributors_manual/krita_manual_conventions.html">Krita 說明文件標記格式使用慣例</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributors_manual/krita_manual_readme.html">Krita 說明文件貢獻指南</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributors_manual/optimising_images.html">供說明文件使用的影像</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributors_manual/user_support.html">使用者支援入門介紹</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../untranslatable_pages.html">Technical Pages</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Brush GUI Design with Lager</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#krita-controls-overview">Krita controls overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#problem-definition">Problem Definition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#what-is-lager">What is Lager?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#what-lager-provides">What Lager provides?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#how-all-this-applies-to-krita">How all this applies to Krita?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#a-complete-example-from-krita">A complete example from Krita</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#paint-engine-porting-guide">Paint engine porting guide</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="building_krita.html">Building Krita from Source</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cmake_settings_for_developers.html">CMake Settings for Developers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enable_static_analyzer.html">Enable static analyzer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="how_to_patch_qt.html">How to patch Qt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="intro_hacking_krita.html">Introduction to Hacking Krita</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kpl_defintion.html">The Krita Palette format KPL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="krita_svg_extensions.html">Krita SVG Extensions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modern_cpp_in_krita.html">Modern C++ usage guidelines for the Krita codebase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new_features.html">Developing Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="optimize_image_processing_with_xsimd.html">Optimize Image Processing with XSIMD</a></li>
+<li class="toctree-l3"><a class="reference internal" href="optimizing_tips_for_krita.html">Optimizing tips and tools for Krita</a></li>
+<li class="toctree-l3"><a class="reference internal" href="participating_in_gsoc.html">Google Summer of Code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="patch_review_guide.html">Advanced Merge Request Guide</a></li>
+<li class="toctree-l3"><a class="reference internal" href="python_coding.html">Python Developer Tools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quality_assurance.html">Introduction to Quality Assurance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release_krita.html">Making a release</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reporting_bugs.html">Reporting Bugs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strokes_documentation.html">Strokes queue</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strokes_documentation.html#strokes-public-api">Strokes public API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strokes_documentation.html#internals-of-the-freehand-tool">Internals of the freehand tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strokes_documentation.html#scheduled-undo-redo">Scheduled Undo/Redo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strokes_documentation.html#processings-framework">Processings framework</a></li>
+<li class="toctree-l3"><a class="reference internal" href="testing_strategy.html">Testing Strategy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="triaging_bugs.html">Triaging Bugs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="unit_tests_in_krita.html">Unittests in Krita</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../resources_page.html">資源</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+	<!-- start top banner area (for fundraisers or messages)
+
+	<div style="text-align: center; background-color: #333">
+		<a href="https://krita.org/en/fundraising-2018-campaign/" target="_self" onclick="ga('send', 'event', 'frontpage', 'button', 'Fundraiser 2018');">
+			<img src="https://krita.org/wp-content/themes/krita-org-theme/images/decoration/2018-fundraiser-banner.png" style="max-width: 100%">
+		</a>
+	</div>
+	
+	 end top banner area -->
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Krita Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">文件</a> &raquo;</li>
+        
+          <li><a href="../contributors_manual.html">貢獻者手冊</a> &raquo;</li>
+        
+          <li><a href="../untranslatable_pages.html">Technical Pages</a> &raquo;</li>
+        
+      <li>Brush GUI Design with Lager</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+          
+            <a href="../_sources/untranslatable_pages/brush_editor_gui_with_lager.rst.txt" rel="nofollow"> 
+             
+              <img src="../_static/images/source-code.png" />
+             <!-- 檢視頁面原始碼 -->
+
+          </a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="brush-gui-design-with-lager">
+<span id="id1"></span><h1><a class="toc-backref" href="#id3" role="doc-backlink">Brush GUI Design with Lager</a><a class="headerlink" href="#brush-gui-design-with-lager" title="本標頭的永久連結">¶</a></h1>
+<nav class="contents" id="id2">
+<p class="topic-title">目錄</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#brush-gui-design-with-lager" id="id3">Brush GUI Design with Lager</a></p>
+<ul>
+<li><p><a class="reference internal" href="#krita-controls-overview" id="id4">Krita controls overview</a></p></li>
+<li><p><a class="reference internal" href="#problem-definition" id="id5">Problem Definition</a></p></li>
+<li><p><a class="reference internal" href="#what-is-lager" id="id6">What is Lager?</a></p>
+<ul>
+<li><p><a class="reference internal" href="#value-oriented-design" id="id7">Value-oriented design</a></p></li>
+<li><p><a class="reference internal" href="#unidirectional-data-flow-architecture" id="id8">Unidirectional data-flow architecture</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#what-lager-provides" id="id9">What Lager provides?</a></p>
+<ul>
+<li><p><a class="reference internal" href="#on-the-fly-value-transformations" id="id10">On-the-fly value transformations</a></p></li>
+<li><p><a class="reference internal" href="#value-aggregation-and-effectivevalue-pattern" id="id11">Value aggregation and &quot;effectiveValue&quot; pattern</a></p></li>
+<li><p><a class="reference internal" href="#combining-value-transformations" id="id12">Combining value transformations</a></p></li>
+<li><p><a class="reference internal" href="#extending-value-types" id="id13">Extending value types</a></p></li>
+<li><p><a class="reference internal" href="#official-documentation" id="id14">Official documentation</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#how-all-this-applies-to-krita" id="id15">How all this applies to Krita?</a></p></li>
+<li><p><a class="reference internal" href="#a-complete-example-from-krita" id="id16">A complete example from Krita</a></p>
+<ul>
+<li><p><a class="reference internal" href="#data-for-painting-mode-option" id="id17">'Data' for &quot;painting mode&quot; option</a></p></li>
+<li><p><a class="reference internal" href="#model-for-painting-mode-option" id="id18">'Model' for &quot;painting mode&quot; option</a></p></li>
+<li><p><a class="reference internal" href="#widget-for-painting-mode-option" id="id19">'Widget' for &quot;painting mode&quot; option</a></p></li>
+<li><p><a class="reference internal" href="#option-for-mirror-option" id="id20">'Option' for &quot;mirror&quot; option</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#paint-engine-porting-guide" id="id21">Paint engine porting guide</a></p></li>
+</ul>
+</li>
+</ul>
+</nav>
+<section id="krita-controls-overview">
+<h2><a class="toc-backref" href="#id4" role="doc-backlink">Krita controls overview</a><a class="headerlink" href="#krita-controls-overview" title="本標頭的永久連結">¶</a></h2>
+<p>In Krita we have a really complicated system of brush settings, so in the beginning it would be nice to make a short overview of what we have</p>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">PaintOp</span></code></dt><dd><p><em>PaintOp</em> is a brush engine that can load a brush preset and paint on canvas</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">PaintOpOption</span></code></dt><dd><p><em>Option</em> is a high-level property of the brush. E.g. &quot;Size&quot;, &quot;Opacity&quot; or &quot;Smudge Rate&quot;. In the GUI an <em>option</em> is represented as a single page full of smaller settings. Most of Krita options also have a curve that links option's value to the stylus sensors.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">Sensor</span></code></dt><dd><p><em>Sensor</em> represents a single sensor available in the stylus.</p>
+</dd>
+</dl>
+<figure class="align-default">
+<img alt="Overview of brush editor controls" src="../_images/controls_overview.png" />
+</figure>
+</section>
+<section id="problem-definition">
+<h2><a class="toc-backref" href="#id5" role="doc-backlink">Problem Definition</a><a class="headerlink" href="#problem-definition" title="本標頭的永久連結">¶</a></h2>
+<p>The building block of any brush engine GUI is a <em>PaintOpOption</em>. When building a configuration widget for a <em>PaintOp</em> we just compose a set of independent options, pass them the brush preset (in a form of <code class="docutils literal notranslate"><span class="pre">KisPropertiesConfiguration</span></code> object) and show the result to the user.</p>
+<p>Each option has four responsibilities:</p>
+<ol class="arabic simple">
+<li><p>read/write serialized XML or properties data</p></li>
+<li><p>define dependencies between properties of the option and other options, for example</p></li>
+</ol>
+<blockquote>
+<div><ul>
+<li><p>Brush Application widget is available only for RGB brushes. For all standard brushes it   should be grayed out and set to &quot;Mask&quot; mode</p>
+<figure class="align-default">
+<img alt="Mask mode is forced for non-RGB brushes" src="../_images/forced_mask_mode.png" />
+</figure>
+</li>
+<li><p>Lightness Strength option is available only when an RGB brush is selected and &quot;Lightness Map&quot; mode is enabled</p>
+<figure class="align-default">
+<img alt="Lightness strength is disabled for non-lightness brushes" src="../_images/lightness_strength_disabled.png" />
+</figure>
+</li>
+</ul>
+</div></blockquote>
+<ol class="arabic simple" start="3">
+<li><p>show options in the GUI as Qt's widgets</p></li>
+<li><p>apply the actual effect of the option to the stroke on the canvas</p></li>
+</ol>
+<p>The problem of our current implementation is that all four responsibilities are packed either in one (sometimes two) classes (see e.g. <code class="docutils literal notranslate"><span class="pre">KisAirbrushOptionWidget</span></code>, or <code class="docutils literal notranslate"><span class="pre">KisSmudgeOption</span></code> + <code class="docutils literal notranslate"><span class="pre">KisSmudgeOptionWidget</span></code>). And the dependencies logic is usually implemented in Widget part of the pack, which makes it extremely hard to debug and maintain (not speaking about porting to QML).</p>
+</section>
+<section id="what-is-lager">
+<h2><a class="toc-backref" href="#id6" role="doc-backlink">What is Lager?</a><a class="headerlink" href="#what-is-lager" title="本標頭的永久連結">¶</a></h2>
+<p><a class="reference external" href="https://github.com/arximboldi/lager">Lager</a> is a C++ library to assist value-oriented design by implementing the unidirectional data-flow architecture. It is heavily inspired by Elm and Redux, and enables composable designs by promoting the use of simple value types and testable application logic via pure functions.</p>
+<p>What does it mean for us?</p>
+<section id="value-oriented-design">
+<h3><a class="toc-backref" href="#id7" role="doc-backlink">Value-oriented design</a><a class="headerlink" href="#value-oriented-design" title="本標頭的永久連結">¶</a></h3>
+<p>Value oriented design means that the library operates with immutable &quot;value types&quot;. We don't &quot;edit&quot; any model. When we want to change something we just replace the whole &quot;state&quot;.</p>
+<p>For Krita it means that we have a C++ structure for each part of the brush settings and can manipulate it easily. See, for example, <code class="docutils literal notranslate"><span class="pre">KisAirbrushOptionData</span></code> which represents the corresponding option:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">struct</span><span class="w"> </span><span class="nc">KisAirbrushOptionData</span>
+<span class="w">    </span><span class="o">:</span><span class="w"> </span><span class="n">boost</span><span class="o">::</span><span class="n">equality_comparable</span><span class="o">&lt;</span><span class="n">KisAirbrushOptionData</span><span class="o">&gt;</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kr">inline</span><span class="w"> </span><span class="k">friend</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="k">operator</span><span class="o">==</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">KisAirbrushOptionData</span><span class="w"> </span><span class="o">&amp;</span><span class="n">lhs</span><span class="p">,</span>
+<span class="w">                                  </span><span class="k">const</span><span class="w"> </span><span class="n">KisAirbrushOptionData</span><span class="w"> </span><span class="o">&amp;</span><span class="n">rhs</span><span class="p">);</span>
+
+<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">isChecked</span><span class="w"> </span><span class="p">{</span><span class="nb">false</span><span class="p">};</span>
+<span class="w">    </span><span class="n">qreal</span><span class="w"> </span><span class="n">airbrushRate</span><span class="w"> </span><span class="p">{</span><span class="mf">50.0</span><span class="p">};</span>
+<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">ignoreSpacing</span><span class="w"> </span><span class="p">{</span><span class="nb">false</span><span class="p">};</span>
+
+<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="nf">read</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">KisPropertiesConfiguration</span><span class="w"> </span><span class="o">*</span><span class="n">setting</span><span class="p">);</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">write</span><span class="p">(</span><span class="n">KisPropertiesConfiguration</span><span class="w"> </span><span class="o">*</span><span class="n">setting</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">KisAirbrushOptionData</span></code> is a simple structure without any constructor, destructor or virtual functions. It is assignable and comparable. One can also <em>write</em> or <em>read</em> its value to a <code class="docutils literal notranslate"><span class="pre">KisPropertiesConfiguration</span></code> object.</p>
+<p>The main benefit of having such representation of the option is that now we can compare <em>old</em> and <em>new</em> value of the option and if the value hasn't changed, don't issue any update. It solves the problem of cycling updates that we have in the old implementation. The old implementation stores <strong>all</strong> the options in a single <code class="docutils literal notranslate"><span class="pre">KisPropertiesConfiguration</span></code>, so we cannot split or compare it.</p>
+</section>
+<section id="unidirectional-data-flow-architecture">
+<h3><a class="toc-backref" href="#id8" role="doc-backlink">Unidirectional data-flow architecture</a><a class="headerlink" href="#unidirectional-data-flow-architecture" title="本標頭的永久連結">¶</a></h3>
+<p>The original idea of Lager is that the system would be implemented in a fully &quot;functional
+programming&quot; approach. That is, there is a single &quot;state&quot; and the GUI calling &quot;pure functions&quot; to replace this state. We cannot use this &quot;functional&quot; design fully right now, but we can use other composing tools lager provides for our benefit.</p>
+<p>Basically, Lager provides tools for building tree-like structures of values that depend on each other in uni-directional way.</p>
+<p>Let's consider the following simplified example of a scatter option:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">struct</span><span class="w"> </span><span class="nc">KisSensorData</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">KoID</span><span class="w"> </span><span class="n">id</span><span class="p">;</span>
+<span class="w">    </span><span class="n">QString</span><span class="w"> </span><span class="n">curve</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="k">struct</span><span class="w"> </span><span class="nc">KisCurveOptionData</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">isChecked</span><span class="w"> </span><span class="p">{</span><span class="nb">false</span><span class="p">};</span>
+<span class="w">    </span><span class="n">qreal</span><span class="w"> </span><span class="n">strength</span><span class="w"> </span><span class="p">{</span><span class="mf">1.0</span><span class="p">};</span>
+
+<span class="w">    </span><span class="n">KisSensorData</span><span class="w"> </span><span class="n">pressureSensor</span><span class="p">;</span>
+<span class="w">    </span><span class="n">KisSensorData</span><span class="w"> </span><span class="n">rotationSensor</span><span class="p">;</span>
+<span class="w">    </span><span class="n">KisSensorData</span><span class="w"> </span><span class="n">fuzzySensor</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="k">struct</span><span class="w"> </span><span class="nc">KisScatterOptionData</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">scatterAxisX</span><span class="w"> </span><span class="p">{</span><span class="nb">true</span><span class="p">};</span>
+<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">scatterAxisY</span><span class="w"> </span><span class="p">{</span><span class="nb">true</span><span class="p">};</span>
+
+<span class="w">    </span><span class="n">KisCurveOptionData</span><span class="w"> </span><span class="n">curveOption</span><span class="p">;</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<p>You can see that the scatter option is composed of a curve option and a few own properties, like <code class="docutils literal notranslate"><span class="pre">scatterAxisX</span></code> and <code class="docutils literal notranslate"><span class="pre">scatterAxisY</span></code>.</p>
+<p>The whole GUI is represented as a graph. Each node of this graph knows its value (and has a representation as a plain C++ struct).</p>
+<figure class="align-default">
+<img alt="Graph of the scatter option" src="../_images/scatter_option_graph.png" />
+</figure>
+<p>Since each node knows its current value, when an update comes, the node can compare the new value against the current one and cancel update propagation in case the value haven't changed. It allows us to avoid the problem of cycling updates, since a lot of Qt's widgets emit updates even when the value doesn't change.</p>
+<figure class="align-default">
+<img alt="Graph of the scatter option" src="../_images/scatter_option_graph_updates.png" />
+</figure>
+</section>
+</section>
+<section id="what-lager-provides">
+<h2><a class="toc-backref" href="#id9" role="doc-backlink">What Lager provides?</a><a class="headerlink" href="#what-lager-provides" title="本標頭的永久連結">¶</a></h2>
+<p>Lager library consists of four main classes:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">lager::state&lt;&gt;</span></code> is the single source of truth in the system. It stores the actual data and always represents the <em>root</em> of the graph.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lager::cursor&lt;&gt;</span></code> is a node of the graph. A cursor connects to the <em>state</em> and track all of its updates. One can read or write into the cursor and the value will be propagated up the tree:</p>
+<blockquote>
+<div><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// create state with automatic updates</span>
+<span class="n">lager</span><span class="o">::</span><span class="n">state</span><span class="o">&lt;</span><span class="n">KisScatterOptionData</span><span class="p">,</span><span class="w"> </span><span class="n">lager</span><span class="o">::</span><span class="n">automatic_tag</span><span class="o">&gt;</span><span class="w"> </span><span class="n">optionState</span><span class="p">;</span>
+
+<span class="c1">// connect to one specific subvalue of the state</span>
+<span class="n">lager</span><span class="o">::</span><span class="n">cursor</span><span class="o">&lt;</span><span class="n">qreal</span><span class="o">&gt;</span><span class="w"> </span><span class="n">strength</span><span class="w"> </span><span class="o">=</span>
+<span class="w">    </span><span class="n">optionState</span><span class="p">[</span><span class="o">&amp;</span><span class="n">KisScatterOptionData</span><span class="o">::</span><span class="n">curveOption</span><span class="p">][</span><span class="o">&amp;</span><span class="n">KisCurveOptionData</span><span class="o">::</span><span class="n">strength</span><span class="p">];</span>
+
+<span class="c1">// read the linked value</span>
+<span class="n">strengthSpinBox</span><span class="o">-&gt;</span><span class="n">setValue</span><span class="p">(</span><span class="n">strength</span><span class="p">.</span><span class="n">get</span><span class="p">());</span>
+
+<span class="c1">// write the linked value</span>
+<span class="n">strength</span><span class="p">.</span><span class="n">set</span><span class="p">(</span><span class="n">strengthSpinBox</span><span class="o">-&gt;</span><span class="n">value</span><span class="p">());</span>
+
+<span class="c1">// subscribe to the linked value updates</span>
+<span class="c1">// (please note that lager also has a way to connect via</span>
+<span class="c1">// native Qt signals)</span>
+<span class="n">strength</span><span class="p">.</span><span class="n">bind</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">bind</span><span class="p">(</span><span class="o">&amp;</span><span class="n">QDoubleSpinBox</span><span class="o">::</span><span class="n">setValue</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">strengthSpinBox</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">std</span><span class="o">::</span><span class="n">placeholders</span><span class="o">::</span><span class="n">_1</span><span class="p">));</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lager::reader&lt;&gt;</span></code> and <code class="docutils literal notranslate"><span class="pre">lager::writer&lt;&gt;</span></code> work in the same way as cursors, but for read-only and write-only access types</p></li>
+</ul>
+<section id="on-the-fly-value-transformations">
+<h3><a class="toc-backref" href="#id10" role="doc-backlink">On-the-fly value transformations</a><a class="headerlink" href="#on-the-fly-value-transformations" title="本標頭的永久連結">¶</a></h3>
+<p>When creating a node with a cursor one can not only access member variables, but also do transformations on the fly!</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">lager</span><span class="o">::</span><span class="n">state</span><span class="o">&lt;</span><span class="n">KisScatterOptionData</span><span class="p">,</span><span class="w"> </span><span class="n">lager</span><span class="o">::</span><span class="n">automatic_tag</span><span class="o">&gt;</span><span class="w"> </span><span class="n">optionState</span><span class="p">;</span>
+
+<span class="c1">// connect to one specific subvalue of the state</span>
+<span class="n">lager</span><span class="o">::</span><span class="n">cursor</span><span class="o">&lt;</span><span class="n">qreal</span><span class="o">&gt;</span><span class="w"> </span><span class="n">strength</span><span class="w"> </span><span class="o">=</span>
+<span class="w">    </span><span class="n">optionState</span><span class="p">[</span><span class="o">&amp;</span><span class="n">KisScatterOptionData</span><span class="o">::</span><span class="n">curveOption</span><span class="p">][</span><span class="o">&amp;</span><span class="n">KisCurveOptionData</span><span class="o">::</span><span class="n">strength</span><span class="p">];</span>
+
+<span class="c1">// create a cursor that automatically scales the strength value from 0...1 range</span>
+<span class="c1">// to 0...100</span>
+<span class="n">lager</span><span class="o">::</span><span class="n">cursor</span><span class="o">&lt;</span><span class="n">qreal</span><span class="o">&gt;</span><span class="w"> </span><span class="n">scaledStrength</span><span class="w"> </span><span class="o">=</span>
+<span class="w">    </span><span class="n">strength</span><span class="p">.</span><span class="n">zoom</span><span class="p">(</span><span class="n">kiszug</span><span class="o">::</span><span class="n">lenses</span><span class="o">::</span><span class="n">scale</span><span class="o">&lt;</span><span class="n">qreal</span><span class="o">&gt;</span><span class="p">(</span><span class="mf">100.0</span><span class="p">));</span>
+</pre></div>
+</div>
+<p>Here we use a <code class="docutils literal notranslate"><span class="pre">.zoom()</span></code> expression with a lens that implements conversion of the value in both directions. That is, when <code class="docutils literal notranslate"><span class="pre">scaledStrength</span></code> value is read, the lens multiplies the source value by 100.0. When <code class="docutils literal notranslate"><span class="pre">scaledStrength</span></code> is written, it automatically divides the new value by 100.0 before writing into the source.</p>
+</section>
+<section id="value-aggregation-and-effectivevalue-pattern">
+<h3><a class="toc-backref" href="#id11" role="doc-backlink">Value aggregation and &quot;effectiveValue&quot; pattern</a><a class="headerlink" href="#value-aggregation-and-effectivevalue-pattern" title="本標頭的永久連結">¶</a></h3>
+<p>In some cases one needs to combine multiple cursors coming from different sources. For example, <em>Lightness Strength</em> option's <em>checked</em> state depends on the two separate values:</p>
+<ul class="simple">
+<li><p>whether the user checked it using the checkbox</p></li>
+<li><p>whether <em>Lightness Strength</em> is actually supported by the brush</p></li>
+</ul>
+<p>When the brush does not support <em>Lightness Strength</em>, then the option is <em>unchecked</em> and <em>disabled</em>. That can be written in Lager using the <code class="docutils literal notranslate"><span class="pre">lager::with()</span></code> expression:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">lager</span><span class="o">::</span><span class="n">state</span><span class="o">&lt;</span><span class="n">KisLightnessStrengthOptionData</span><span class="p">,</span><span class="w"> </span><span class="n">lager</span><span class="o">::</span><span class="n">automatic_tag</span><span class="o">&gt;</span><span class="w"> </span><span class="n">optionState</span><span class="p">;</span>
+
+<span class="c1">// the cursor provided by the brush option externally</span>
+<span class="n">lager</span><span class="o">::</span><span class="n">cursor</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span><span class="w"> </span><span class="n">allowedByTheBrush</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">...;</span>
+
+
+<span class="c1">// connect to the user-set value</span>
+<span class="n">lager</span><span class="o">::</span><span class="n">cursor</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span><span class="w"> </span><span class="n">isCheckedByUser</span><span class="w"> </span><span class="o">=</span>
+<span class="w">    </span><span class="n">optionState</span><span class="p">[</span><span class="o">&amp;</span><span class="n">KisLightnessStrengthOptionData</span><span class="o">::</span><span class="n">curveOption</span><span class="p">]</span>
+<span class="w">               </span><span class="p">[</span><span class="o">&amp;</span><span class="n">KisCurveOptionData</span><span class="o">::</span><span class="n">isChecked</span><span class="p">];</span>
+
+
+<span class="c1">// combine the two cursors using logical-and operator into</span>
+<span class="c1">// an &quot;effective&quot; isChecked value;</span>
+<span class="n">lager</span><span class="o">::</span><span class="n">reader</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span><span class="w"> </span><span class="n">effectiveIsChecked</span><span class="w"> </span><span class="o">=</span>
+
+<span class="w">    </span><span class="c1">// `lager::with()` expression combines multiple cursors into one tuple</span>
+
+<span class="w">    </span><span class="n">lager</span><span class="o">::</span><span class="n">with</span><span class="p">(</span><span class="n">allowedByTheBrush</span><span class="p">,</span><span class="w"> </span><span class="n">isCheckedByUser</span><span class="p">)</span>
+
+<span class="w">    </span><span class="c1">// `.map()` expression accepts a standard function or functor which is used to</span>
+<span class="w">    </span><span class="c1">// transform the source cursor on-the-fly</span>
+
+<span class="w">        </span><span class="p">.</span><span class="n">map</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">logical_and</span><span class="p">{});</span>
+</pre></div>
+</div>
+<p>We use such &quot;effectiveValue&quot; design a lot. It is the main tool against the cycling dependencies. The point is, we cannot assign anything to <code class="docutils literal notranslate"><span class="pre">isCheckedByUser</span></code> from within the update, it would create a cycling dependency:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// piping one cursor into another creates loops, don&#39;t do this!</span>
+<span class="n">allowedByTheBrush</span><span class="p">.</span><span class="n">bind</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">bind</span><span class="p">(</span><span class="o">&amp;</span><span class="n">lager</span><span class="o">::</span><span class="n">cursor</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;::</span><span class="n">set</span><span class="p">,</span>
+<span class="w">                                </span><span class="o">&amp;</span><span class="n">isCheckedByUser</span><span class="p">,</span>
+<span class="w">                                </span><span class="n">std</span><span class="o">::</span><span class="n">placeholders</span><span class="o">::</span><span class="n">_1</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Such design has a small complication though. This &quot;effective&quot; value is no longer serialized by <code class="docutils literal notranslate"><span class="pre">KisScatterOptionData</span></code> automatically, since it is not <strong>present</strong> in <code class="docutils literal notranslate"><span class="pre">KisScatterOptionData</span></code>. To overcome this issue we use the process of &quot;baking&quot; the model into the data. This process will be explained later.</p>
+</section>
+<section id="combining-value-transformations">
+<h3><a class="toc-backref" href="#id12" role="doc-backlink">Combining value transformations</a><a class="headerlink" href="#combining-value-transformations" title="本標頭的永久連結">¶</a></h3>
+<p>Lager performs value transformations via so called <em>transducers</em>. Transducer is a special form of a lambda expression that allows combining multiple operations into a single C++ entity, which can be manipulated later. Standard transducers for Lager are provided by <strong>zug</strong> library (check <a class="reference external" href="https://sinusoid.es/zug/index.html">official documentation for zug</a>). Krita also provides a set of useful transducers in <code class="docutils literal notranslate"><span class="pre">KisZug.h</span></code>.</p>
+<p>Let's check an example from <code class="docutils literal notranslate"><span class="pre">KisPredefinedBrushModel.h</span></code>. Our brightness adjustment is stored in a form of a <cite>qreal</cite> value with range 0...1, but the GUI widget shows it as an integer percentage value in range 0...100. Here is an example of how we can link these values with Lager:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">struct</span><span class="w"> </span><span class="nc">PredefinedBrushData</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="c1">// source value is `qreal`!</span>
+<span class="w">    </span><span class="n">qreal</span><span class="w"> </span><span class="n">brightnessAdjustment</span><span class="w"> </span><span class="p">{</span><span class="mf">0.0</span><span class="p">};</span>
+<span class="p">};</span>
+
+<span class="c1">// destination value is `int`!</span>
+<span class="n">lager</span><span class="o">::</span><span class="n">cursor</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">brightnessAdjustment</span><span class="w"> </span><span class="o">=</span>
+
+<span class="w">    </span><span class="n">predefinedBrushData</span><span class="p">[</span><span class="o">&amp;</span><span class="n">PredefinedBrushData</span><span class="o">::</span><span class="n">brightnessAdjustment</span><span class="p">]</span>
+
+<span class="w">        </span><span class="c1">// `xform` expression accepts two transducers that transform the expression</span>
+<span class="w">        </span><span class="c1">// on-the-fly. The first transducer is a &quot;getter&quot;, the second is a &quot;setter&quot;</span>
+
+<span class="w">        </span><span class="p">.</span><span class="n">xform</span><span class="p">(</span>
+
+<span class="w">            </span><span class="c1">// getter: multiply the value by 100.0 and then round it to the nearest</span>
+<span class="w">            </span><span class="c1">//         integer</span>
+
+<span class="w">            </span><span class="n">kiszug</span><span class="o">::</span><span class="n">map_mupliply</span><span class="o">&lt;</span><span class="n">qreal</span><span class="o">&gt;</span><span class="p">(</span><span class="mf">100.0</span><span class="p">)</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">kiszug</span><span class="o">::</span><span class="n">map_round</span><span class="p">,</span>
+
+<span class="w">            </span><span class="c1">// setter: cast integer into a `qreal` and scale back into 0...1 range</span>
+
+<span class="w">            </span><span class="n">kiszug</span><span class="o">::</span><span class="n">map_static_cast</span><span class="o">&lt;</span><span class="n">qreal</span><span class="o">&gt;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">kiszug</span><span class="o">::</span><span class="n">map_mupliply</span><span class="o">&lt;</span><span class="n">qreal</span><span class="o">&gt;</span><span class="p">(</span><span class="mf">0.01</span><span class="p">));</span>
+</pre></div>
+</div>
+</section>
+<section id="extending-value-types">
+<h3><a class="toc-backref" href="#id13" role="doc-backlink">Extending value types</a><a class="headerlink" href="#extending-value-types" title="本標頭的永久連結">¶</a></h3>
+<p>The value oriented design has one non-obvious complication. Since we want all the values to be easily assignable and comparable, we can use <strong>no polymorphism</strong>. Basically, virtual functions are prohibited in the &quot;values&quot; we operate with.</p>
+<p>Consequently, if we need to extend some type, e.g. <code class="docutils literal notranslate"><span class="pre">KisCurveOptionData</span></code>, we cannot do that by overriding virtual methods (what we would do in the old design). Instead we should combine <code class="docutils literal notranslate"><span class="pre">KisCurveOptionData</span></code> with extra data using composition or inheritance. Here is an example of how we do that for <code class="docutils literal notranslate"><span class="pre">KisScatterOptionData</span></code>:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Define the scatter-specific options in a separate mixin class that</span>
+<span class="c1">// implements all standard operations: equality comparison, read and write</span>
+
+<span class="k">struct</span><span class="w"> </span><span class="nc">KisScatterOptionMixIn</span>
+<span class="w">    </span><span class="o">:</span><span class="w"> </span><span class="n">boost</span><span class="o">::</span><span class="n">equality_comparable</span><span class="o">&lt;</span><span class="n">KisScatterOptionMixInImpl</span><span class="o">&gt;</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">friend</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="k">operator</span><span class="o">==</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">KisScatterOptionMixInImpl</span><span class="w"> </span><span class="o">&amp;</span><span class="n">lhs</span><span class="p">,</span>
+<span class="w">                                </span><span class="k">const</span><span class="w"> </span><span class="n">KisScatterOptionMixInImpl</span><span class="w"> </span><span class="o">&amp;</span><span class="n">rhs</span><span class="p">);</span>
+
+<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">axisX</span><span class="w"> </span><span class="p">{</span><span class="nb">true</span><span class="p">};</span>
+<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">axisY</span><span class="w"> </span><span class="p">{</span><span class="nb">true</span><span class="p">};</span>
+
+<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="nf">read</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">KisPropertiesConfiguration</span><span class="w"> </span><span class="o">*</span><span class="n">setting</span><span class="p">);</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">write</span><span class="p">(</span><span class="n">KisPropertiesConfiguration</span><span class="w"> </span><span class="o">*</span><span class="n">setting</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="c1">// Combine this mixin class with KisCurveOptionData and manually forward</span>
+<span class="c1">// all the main operators to the parent classes</span>
+
+<span class="k">struct</span><span class="w"> </span><span class="nc">KisScatterOptionData</span>
+<span class="w">    </span><span class="o">:</span><span class="w"> </span><span class="n">KisCurveOptionData</span><span class="p">,</span>
+<span class="w">    </span><span class="p">,</span><span class="w"> </span><span class="n">KisScatterOptionMixIn</span>
+<span class="w">    </span><span class="p">,</span><span class="w"> </span><span class="n">boost</span><span class="o">::</span><span class="n">equality_comparable</span><span class="o">&lt;</span><span class="n">KisScatterOptionData</span><span class="o">&gt;</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">KisScatterOptionData</span><span class="p">()</span>
+<span class="w">        </span><span class="o">:</span><span class="w"> </span><span class="n">KisCurveOptionData</span><span class="p">(</span><span class="n">KoID</span><span class="p">(</span><span class="s">&quot;Scatter&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">i18n</span><span class="p">(</span><span class="s">&quot;Scatter&quot;</span><span class="p">)))</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">friend</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="k">operator</span><span class="o">==</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">KisScatterOptionMixInImpl</span><span class="w"> </span><span class="o">&amp;</span><span class="n">lhs</span><span class="p">,</span>
+<span class="w">                           </span><span class="k">const</span><span class="w"> </span><span class="n">KisScatterOptionMixInImpl</span><span class="w"> </span><span class="o">&amp;</span><span class="n">rhs</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="n">KisCurveOptionData</span><span class="o">&amp;&gt;</span><span class="p">(</span><span class="n">lhs</span><span class="p">)</span><span class="w"> </span><span class="o">==</span>
+<span class="w">               </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="n">KisCurveOptionData</span><span class="o">&amp;&gt;</span><span class="p">(</span><span class="n">rhs</span><span class="p">)</span>
+<span class="w">               </span><span class="o">&amp;&amp;</span>
+<span class="w">               </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="n">KisScatterOptionMixIn</span><span class="o">&amp;&gt;</span><span class="p">(</span><span class="n">lhs</span><span class="p">)</span><span class="w"> </span><span class="o">==</span>
+<span class="w">               </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="n">KisScatterOptionMixIn</span><span class="o">&amp;&gt;</span><span class="p">(</span><span class="n">rhs</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">read</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">KisPropertiesConfiguration</span><span class="w"> </span><span class="o">*</span><span class="n">setting</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">KisCurveOptionData</span><span class="o">::</span><span class="n">read</span><span class="p">(</span><span class="n">setting</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span>
+<span class="w">            </span><span class="n">KisScatterOptionMixIn</span><span class="o">::</span><span class="n">read</span><span class="p">(</span><span class="n">setting</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">write</span><span class="p">(</span><span class="n">KisPropertiesConfiguration</span><span class="w"> </span><span class="o">*</span><span class="n">setting</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">KisCurveOptionData</span><span class="o">::</span><span class="n">write</span><span class="p">(</span><span class="n">setting</span><span class="p">);</span>
+<span class="w">        </span><span class="n">KisScatterOptionMixIn</span><span class="o">::</span><span class="n">write</span><span class="p">(</span><span class="n">setting</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<p>In this example we manually define a class that combines our scatter-specific mixin class with the base <code class="docutils literal notranslate"><span class="pre">KisCurveOptionData</span></code>. You see it requires a lot of boiler-plate code. Hence there is a special tool to do such composition automatically :)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Combine the mixin class with KisCurveOptionData using a special tool class</span>
+<span class="c1">// KisOptionTuple. It inherits from all its template parameters and automatically</span>
+<span class="c1">// implements equality comparison, read and write operators.</span>
+
+<span class="k">struct</span><span class="w"> </span><span class="nc">KisScatterOptionData</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">KisOptionTuple</span><span class="o">&lt;</span><span class="n">KisCurveOptionData</span><span class="p">,</span>
+<span class="w">                                             </span><span class="n">KisScatterOptionMixIn</span><span class="o">&gt;</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">KisScatterOptionData</span><span class="p">()</span>
+<span class="w">        </span><span class="o">:</span><span class="w"> </span><span class="n">KisOptionTuple</span><span class="o">&lt;</span><span class="n">KisCurveOptionData</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">KisScatterOptionMixIn</span><span class="o">&gt;</span><span class="p">(</span><span class="n">KoID</span><span class="p">(</span><span class="s">&quot;Scatter&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">i18n</span><span class="p">(</span><span class="s">&quot;Scatter&quot;</span><span class="p">)))</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>Even though virtual function are prohibited, we still use them in one place, <code class="docutils literal notranslate"><span class="pre">KisDynamicSensor</span></code>. <code class="docutils literal notranslate"><span class="pre">KisDynamicSensor</span></code> is a representation of a single sensor in <code class="docutils literal notranslate"><span class="pre">KisCurveOptionData</span></code> and it is somewhat polymorphic. <strong>But</strong> these polymorphic sensors are fully contained inside a single curve option. They are created internally and none of their pointers are ever exposed to the outer world.</p>
+</div>
+</section>
+<section id="official-documentation">
+<h3><a class="toc-backref" href="#id14" role="doc-backlink">Official documentation</a><a class="headerlink" href="#official-documentation" title="本標頭的永久連結">¶</a></h3>
+<ul class="simple">
+<li><p>Lager</p>
+<ul>
+<li><p>Source code: <a class="reference external" href="https://github.com/arximboldi/lager">https://github.com/arximboldi/lager</a></p></li>
+<li><p>Documentation: <a class="reference external" href="https://sinusoid.es/lager/introduction.html">https://sinusoid.es/lager/introduction.html</a></p></li>
+</ul>
+</li>
+<li><p>Zug</p>
+<ul>
+<li><p>Source code: <a class="reference external" href="https://github.com/arximboldi/zug">https://github.com/arximboldi/zug</a></p></li>
+<li><p>Documentation: <a class="reference external" href="https://sinusoid.es/zug/index.html">https://sinusoid.es/zug/index.html</a></p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+<section id="how-all-this-applies-to-krita">
+<h2><a class="toc-backref" href="#id15" role="doc-backlink">How all this applies to Krita?</a><a class="headerlink" href="#how-all-this-applies-to-krita" title="本標頭的永久連結">¶</a></h2>
+<p>From the previous chapters you know that each option in Krita has four responsibilities:</p>
+<ol class="arabic simple">
+<li><p>read/write serialized XML or properties data</p></li>
+<li><p>define dependencies between properties of the option and other options, for example</p></li>
+<li><p>show options in the GUI as Qt's widgets</p></li>
+<li><p>apply the actual effect of the option to the stroke on the canvas</p></li>
+</ol>
+<p>The problem of the old implementation was that all of them were implemented in a single class, which was hard to maintain and extent.</p>
+<p>In the Lager-based implementation each option now has five different entities that map to these responsibilities cleanly:</p>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Data</span></code> reads/writes to/from XML or properties; has <strong>no logic</strong> inside!</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">State</span></code> --- the single source of truth of the system. It just wraps <code class="docutils literal notranslate"><span class="pre">Data</span></code> into <code class="docutils literal notranslate"><span class="pre">lager::state&lt;Data&gt;</span></code> and brings it into the world of Lager.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Model</span></code> models all dependencies between brush settings and other options; it implements <strong>all the logic</strong> of the option.</p></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><p>a <em>model</em> is connected to its <em>state</em> via <code class="docutils literal notranslate"><span class="pre">lager::cursor&lt;&gt;</span></code></p></li>
+<li><p>a model creates a Qt Property for each brush setting so we could connect it either to a widget or QML control</p></li>
+</ul>
+</div></blockquote>
+<ol class="arabic simple" start="4">
+<li><p><code class="docutils literal notranslate"><span class="pre">Widget</span></code> implements an actual widget for the option</p></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><p>a <em>widget</em> connects to model's Qt Properties using <cite>KisWidgetConnectionUtils</cite>. In the future QML controls will be connected to these properties directly.</p></li>
+<li><p>widgets have <strong>no logic</strong> inside!</p></li>
+</ul>
+</div></blockquote>
+<ol class="arabic simple" start="5">
+<li><p><code class="docutils literal notranslate"><span class="pre">Option</span></code> is used by <code class="docutils literal notranslate"><span class="pre">KisPaintOp</span></code> to apply the actual effect to the brush stroke. <em>Options</em> do not depend on any Lager or GUI classes, they only use <em>Data</em> objects to actually read the data.</p></li>
+</ol>
+</section>
+<section id="a-complete-example-from-krita">
+<h2><a class="toc-backref" href="#id16" role="doc-backlink">A complete example from Krita</a><a class="headerlink" href="#a-complete-example-from-krita" title="本標頭的永久連結">¶</a></h2>
+<p>Let's consider <cite>KisPaintingModeOption</cite> as a simple example. This option is used to select brush painting mode and has only one setting that can flip between two values: build-up and wash.</p>
+<figure class="align-default">
+<img alt="Brush painting mode selection in the GUI" src="../_images/brush_painting_mode.png" />
+</figure>
+<section id="data-for-painting-mode-option">
+<h3><a class="toc-backref" href="#id17" role="doc-backlink">'Data' for &quot;painting mode&quot; option</a><a class="headerlink" href="#data-for-painting-mode-option" title="本標頭的永久連結">¶</a></h3>
+<p>First define a <code class="docutils literal notranslate"><span class="pre">Data</span></code> structure that implements equality comparison, read and write operators:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">enum</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">enumPaintingMode</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">BUILDUP</span><span class="p">,</span>
+<span class="w">    </span><span class="n">WASH</span>
+<span class="p">};</span>
+
+<span class="k">struct</span><span class="w"> </span><span class="nc">KisPaintingModeOptionData</span>
+<span class="w">    </span><span class="o">:</span><span class="w"> </span><span class="n">boost</span><span class="o">::</span><span class="n">equality_comparable</span><span class="o">&lt;</span><span class="n">KisPaintingModeOptionData</span><span class="o">&gt;</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kr">inline</span><span class="w"> </span><span class="k">friend</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="k">operator</span><span class="o">==</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">KisPaintingModeOptionData</span><span class="w"> </span><span class="o">&amp;</span><span class="n">lhs</span><span class="p">,</span>
+<span class="w">                                  </span><span class="k">const</span><span class="w"> </span><span class="n">KisPaintingModeOptionData</span><span class="w"> </span><span class="o">&amp;</span><span class="n">rhs</span><span class="p">);</span>
+
+<span class="w">    </span><span class="n">enumPaintingMode</span><span class="w"> </span><span class="n">paintingMode</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">enumPaintingMode</span><span class="o">::</span><span class="n">BUILDUP</span><span class="w"> </span><span class="p">};</span>
+
+<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="nf">read</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">KisPropertiesConfiguration</span><span class="w"> </span><span class="o">*</span><span class="n">setting</span><span class="p">);</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">write</span><span class="p">(</span><span class="n">KisPropertiesConfiguration</span><span class="w"> </span><span class="o">*</span><span class="n">setting</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+</section>
+<section id="model-for-painting-mode-option">
+<h3><a class="toc-backref" href="#id18" role="doc-backlink">'Model' for &quot;painting mode&quot; option</a><a class="headerlink" href="#model-for-painting-mode-option" title="本標頭的永久連結">¶</a></h3>
+<p>Now let's implement a model for this option. Painting mode has a minor complication: it is available <strong>only when masking brush feature is disabled</strong>. When the user enables masking brush feature, the painting mode option becomes disabled and selects <code class="docutils literal notranslate"><span class="pre">WASH</span></code> mode automatically.</p>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>The code below uses <code class="docutils literal notranslate"><span class="pre">LAGER_QT_CURSOR</span></code> macro. It defines a cursor of the provided type, creates a Qt Property with the provided name and links it to the cursor. To access the cursor later we should write <code class="docutils literal notranslate"><span class="pre">LAGER_QT(propertyName)</span></code>.</p>
+</div>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">namespace</span><span class="w"> </span><span class="p">{</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">calcEffectivePaintingMode</span><span class="p">(</span><span class="n">enumPaintingMode</span><span class="w"> </span><span class="n">mode</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">maskingBrushEnabled</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">maskingBrushEnabled</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">enumPaintingMode</span><span class="o">::</span><span class="n">WASH</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">mode</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">KisPaintingModeOptionModel</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">QObject</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">Q_OBJECT</span>
+<span class="k">public</span><span class="o">:</span>
+
+<span class="w">    </span><span class="c1">// declare cursors of the model</span>
+
+<span class="w">    </span><span class="n">lager</span><span class="o">::</span><span class="n">cursor</span><span class="o">&lt;</span><span class="n">KisPaintingModeOptionData</span><span class="o">&gt;</span><span class="w"> </span><span class="n">optionData</span><span class="p">;</span>
+<span class="w">    </span><span class="n">lager</span><span class="o">::</span><span class="n">reader</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span><span class="w"> </span><span class="n">maskingBrushEnabled</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">//</span>
+<span class="w">    </span><span class="c1">// Define option settings and create Qt Properties for them:</span>
+<span class="w">    </span><span class="c1">//</span>
+
+<span class="w">    </span><span class="c1">// paintingMode is the mode selected by the user in the GUI</span>
+
+<span class="w">    </span><span class="n">LAGER_QT_CURSOR</span><span class="p">(</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="n">paintingMode</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// effectivePaintingMode is the actual mode used by the brush</span>
+<span class="w">    </span><span class="c1">// calculated from the combination of user selection and the</span>
+<span class="w">    </span><span class="c1">// masking brush presence</span>
+
+<span class="w">    </span><span class="n">LAGER_QT_READER</span><span class="p">(</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="n">effectivePaintingMode</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// A special property type that updates a state (isEnabled + currentIndex)</span>
+<span class="w">    </span><span class="c1">// of a button group in a single signal call. It is useful to avoid partial</span>
+<span class="w">    </span><span class="c1">// updates that can lead to cycles in some cases.</span>
+
+<span class="w">    </span><span class="n">LAGER_QT_READER</span><span class="p">(</span><span class="n">ButtonGroupState</span><span class="p">,</span><span class="w"> </span><span class="n">paintingModeState</span><span class="p">);</span>
+
+
+<span class="w">    </span><span class="c1">// The constructor of the model accepts two cursors. `optionData` is stored in</span>
+<span class="w">    </span><span class="c1">// an external &#39;state&#39;; `maskingBrushEnabled` cursor is provided by masking</span>
+<span class="w">    </span><span class="c1">// brush option</span>
+
+<span class="w">    </span><span class="n">KisPaintingModeOptionModel</span><span class="p">(</span><span class="n">lager</span><span class="o">::</span><span class="n">cursor</span><span class="o">&lt;</span><span class="n">KisPaintingModeOptionData</span><span class="o">&gt;</span><span class="w"> </span><span class="n">_optionData</span><span class="p">,</span>
+<span class="w">                               </span><span class="n">lager</span><span class="o">::</span><span class="n">reader</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span><span class="w"> </span><span class="n">_maskingBrushEnabled</span><span class="p">)</span>
+<span class="w">        </span><span class="o">:</span><span class="w"> </span><span class="n">optionData</span><span class="p">(</span><span class="n">_optionData</span><span class="p">)</span>
+<span class="w">        </span><span class="p">,</span><span class="w"> </span><span class="n">maskingBrushEnabled</span><span class="p">(</span><span class="n">_maskingBrushEnabled</span><span class="p">)</span>
+
+<span class="w">        </span><span class="c1">// in paintingMode cursor we just erase the enum type to be able</span>
+<span class="w">        </span><span class="c1">// to make connection to QGroupBox</span>
+
+<span class="w">        </span><span class="p">,</span><span class="w"> </span><span class="n">LAGER_QT</span><span class="p">(</span><span class="n">paintingMode</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">optionData</span><span class="p">[</span><span class="o">&amp;</span><span class="n">KisPaintingModeOptionData</span><span class="o">::</span><span class="n">paintingMode</span><span class="p">]</span>
+<span class="w">                </span><span class="p">.</span><span class="n">zoom</span><span class="p">(</span><span class="n">kiszug</span><span class="o">::</span><span class="n">lenses</span><span class="o">::</span><span class="n">do_static_cast</span><span class="o">&lt;</span><span class="n">enumPaintingMode</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">&gt;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="c1">// effectivePaintingMode depends on both inputs of the model</span>
+
+<span class="w">        </span><span class="p">,</span><span class="w"> </span><span class="n">LAGER_QT</span><span class="p">(</span><span class="n">effectivePaintingMode</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">lager</span><span class="o">::</span><span class="n">with</span><span class="p">(</span><span class="n">optionData</span><span class="p">[</span><span class="o">&amp;</span><span class="n">KisPaintingModeOptionData</span><span class="o">::</span><span class="n">paintingMode</span><span class="p">],</span>
+<span class="w">                        </span><span class="n">maskingBrushEnabled</span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="n">map</span><span class="p">(</span><span class="o">&amp;</span><span class="n">calcEffectivePaintingMode</span><span class="p">)</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="c1">// combine two properties into one state</span>
+
+<span class="w">        </span><span class="p">,</span><span class="w"> </span><span class="n">LAGER_QT</span><span class="p">(</span><span class="n">paintingModeState</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">lager</span><span class="o">::</span><span class="n">with</span><span class="p">(</span><span class="n">LAGER_QT</span><span class="p">(</span><span class="n">effectivePaintingMode</span><span class="p">),</span>
+<span class="w">                        </span><span class="n">maskingBrushEnabled</span><span class="p">.</span><span class="n">map</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">logical_not</span><span class="p">{}))</span>
+<span class="w">                </span><span class="p">.</span><span class="n">map</span><span class="p">(</span><span class="n">ToControlState</span><span class="p">{})}</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// bakedOptionData() creates a new &#39;Data&#39; objects that has all</span>
+<span class="w">    </span><span class="c1">// the &quot;effective&quot; values baked into it.</span>
+
+<span class="w">    </span><span class="n">KisPaintingModeOptionData</span><span class="w"> </span><span class="n">bakedOptionData</span><span class="p">()</span><span class="w"> </span><span class="k">const</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">KisPaintingModeOptionData</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">optionData</span><span class="p">.</span><span class="n">get</span><span class="p">();</span>
+<span class="w">        </span><span class="n">data</span><span class="p">.</span><span class="n">paintingMode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="n">enumPaintingMode</span><span class="o">&gt;</span><span class="p">(</span><span class="n">effectivePaintingMode</span><span class="p">());</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">data</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<p>Please pay attention to <code class="docutils literal notranslate"><span class="pre">bakedOptionData()</span></code> method of the model. The model has one &quot;effective&quot; property that is not directly stored in its <code class="docutils literal notranslate"><span class="pre">Data</span></code> storage. Therefore, before serializing the model, we should first bake all the &quot;effective&quot; values into the data object and then use this new object for actual writing. Granted copying option's data objects is cheap and easy now.</p>
+</section>
+<section id="widget-for-painting-mode-option">
+<h3><a class="toc-backref" href="#id19" role="doc-backlink">'Widget' for &quot;painting mode&quot; option</a><a class="headerlink" href="#widget-for-painting-mode-option" title="本標頭的永久連結">¶</a></h3>
+<p>Finally, let's consider a simplified version of the code in <code class="docutils literal notranslate"><span class="pre">KisPaintingModeOptionWidget</span></code>:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">KisPaintingModeOptionWidget</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">KisPaintOpOption</span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+<span class="w">    </span><span class="n">KisPaintingModeOptionWidget</span><span class="p">(</span><span class="n">lager</span><span class="o">::</span><span class="n">cursor</span><span class="o">&lt;</span><span class="n">KisPaintingModeOptionData</span><span class="o">&gt;</span><span class="w"> </span><span class="n">optionData</span><span class="p">,</span>
+<span class="w">                                </span><span class="n">lager</span><span class="o">::</span><span class="n">reader</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span><span class="w"> </span><span class="n">maskingBrushEnabled</span><span class="p">)</span>
+<span class="w">        </span><span class="o">:</span><span class="w"> </span><span class="n">m_model</span><span class="p">(</span><span class="n">optionData</span><span class="p">,</span><span class="w"> </span><span class="n">maskingBrushEnabled</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// for connectControlState()</span>
+<span class="w">        </span><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">KisWidgetConnectionUtils</span><span class="p">;</span>
+
+<span class="w">        </span><span class="c1">// Create the main widget</span>
+
+<span class="w">        </span><span class="n">KisPaintingModeWidget</span><span class="w"> </span><span class="o">*</span><span class="n">widget</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">KisPaintingModeWidget</span><span class="p">();</span>
+<span class="w">        </span><span class="n">setConfigurationPage</span><span class="p">(</span><span class="n">widget</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// Create the button group for mode selection</span>
+
+<span class="w">        </span><span class="n">QButtonGroup</span><span class="w"> </span><span class="o">*</span><span class="n">group</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">QButtonGroup</span><span class="p">(</span><span class="n">widget</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// .. skipped ..</span>
+<span class="w">        </span><span class="c1">// .. initialize group and add actual buttons to it ...</span>
+<span class="w">        </span><span class="c1">// .. skipped ..</span>
+
+<span class="w">        </span><span class="c1">// Connect the group to the model: &quot;paintingModeState&quot; is the</span>
+<span class="w">        </span><span class="c1">// &quot;read&quot; property, &quot;paintingMode&quot; is &quot;write&quot; property. We read</span>
+<span class="w">        </span><span class="c1">// from &quot;effective&quot; property and write directly into &#39;data&#39;.</span>
+
+<span class="w">        </span><span class="n">connectControlState</span><span class="p">(</span><span class="n">group</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">m_model</span><span class="p">,</span>
+<span class="w">                            </span><span class="s">&quot;paintingModeState&quot;</span><span class="p">,</span>
+<span class="w">                            </span><span class="s">&quot;paintingMode&quot;</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// connect the changes in the model to the output signal</span>
+<span class="w">        </span><span class="c1">// of the configuration page</span>
+
+<span class="w">        </span><span class="n">m_model</span><span class="p">.</span><span class="n">optionData</span><span class="p">.</span><span class="n">bind</span><span class="p">(</span>
+<span class="w">            </span><span class="n">std</span><span class="o">::</span><span class="n">bind</span><span class="p">(</span><span class="o">&amp;</span><span class="n">KisPaintingModeOptionWidget</span><span class="o">::</span><span class="n">emitSettingChanged</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">));</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">writeOptionSetting</span><span class="p">(</span><span class="n">KisPropertiesConfigurationSP</span><span class="w"> </span><span class="n">setting</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="k">override</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// write **baked** data!</span>
+<span class="w">        </span><span class="n">m_model</span><span class="p">.</span><span class="n">bakedOptionData</span><span class="p">().</span><span class="n">write</span><span class="p">(</span><span class="n">setting</span><span class="p">.</span><span class="n">data</span><span class="p">());</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">readOptionSetting</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">KisPropertiesConfigurationSP</span><span class="w"> </span><span class="n">setting</span><span class="p">)</span><span class="w"> </span><span class="k">override</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">KisPaintingModeOptionData</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">*</span><span class="n">m_model</span><span class="p">.</span><span class="n">optionData</span><span class="p">;</span>
+<span class="w">        </span><span class="n">data</span><span class="p">.</span><span class="n">read</span><span class="p">(</span><span class="n">setting</span><span class="p">.</span><span class="n">data</span><span class="p">());</span>
+<span class="w">        </span><span class="n">m_model</span><span class="p">.</span><span class="n">optionData</span><span class="p">.</span><span class="n">set</span><span class="p">(</span><span class="n">data</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="k">private</span><span class="o">:</span>
+<span class="w">    </span><span class="n">KisPaintingModeOptionModel</span><span class="w"> </span><span class="n">m_model</span><span class="p">;</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+</section>
+<section id="option-for-mirror-option">
+<h3><a class="toc-backref" href="#id20" role="doc-backlink">'Option' for &quot;mirror&quot; option</a><a class="headerlink" href="#option-for-mirror-option" title="本標頭的永久連結">¶</a></h3>
+<p>Since painting mode is very simple, it doesn't have any <cite>Option</cite> representation. The brush engine uses its <cite>Data</cite> object directly.</p>
+<p>For a good example of an 'option' let's consider <code class="docutils literal notranslate"><span class="pre">KisMirrorOption</span></code>. This class is used by the brush engine while painting the actual stroke of the canvas. The responsibility of <code class="docutils literal notranslate"><span class="pre">KisMirrorOption</span></code> is to accept the state of the stylus (in a form of <code class="docutils literal notranslate"><span class="pre">KisPaintInformation</span></code> object) and calculate <code class="docutils literal notranslate"><span class="pre">MirrorProperties</span></code> from it.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;KisPaintOpOptionUtils.h&gt;</span>
+<span class="k">namespace</span><span class="w"> </span><span class="nn">kpou</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nn">KisPaintOpOptionUtils</span><span class="p">;</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">KisMirrorOption</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">KisCurveOption</span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+
+<span class="w">    </span><span class="c1">// The public constructor creates a data object from</span>
+<span class="w">    </span><span class="c1">// the settings pointer and passes it to a private constructor</span>
+<span class="w">    </span><span class="c1">// that initializes all the necessary state</span>
+
+<span class="w">    </span><span class="n">KisMirrorOption</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">KisPropertiesConfiguration</span><span class="w"> </span><span class="o">*</span><span class="n">setting</span><span class="p">)</span>
+<span class="w">        </span><span class="o">:</span><span class="w"> </span><span class="n">KisMirrorOption</span><span class="p">(</span>
+<span class="w">            </span><span class="n">kpou</span><span class="o">::</span><span class="n">loadOptionData</span><span class="o">&lt;</span><span class="n">KisMirrorOptionData</span><span class="o">&gt;</span><span class="p">(</span><span class="n">setting</span><span class="p">))</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="k">private</span><span class="o">:</span>
+
+<span class="w">    </span><span class="c1">// The private constructor initializes all the necessary state</span>
+<span class="w">    </span><span class="c1">// from the data and passes it to the base option class.</span>
+<span class="w">    </span><span class="c1">//</span>
+<span class="w">    </span><span class="c1">// Please note that the data is **not** stored anywhere in the</span>
+<span class="w">    </span><span class="c1">// option, it is used only during the initialization</span>
+
+<span class="w">    </span><span class="n">KisMirrorOption</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">KisMirrorOptionData</span><span class="w"> </span><span class="o">&amp;</span><span class="n">data</span><span class="p">)</span>
+<span class="w">        </span><span class="o">:</span><span class="w"> </span><span class="n">KisCurveOption</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="w">        </span><span class="p">,</span><span class="w"> </span><span class="n">m_enableHorizontalMirror</span><span class="p">(</span><span class="n">data</span><span class="p">.</span><span class="n">enableHorizontalMirror</span><span class="p">)</span>
+<span class="w">        </span><span class="p">,</span><span class="w"> </span><span class="n">m_enableVerticalMirror</span><span class="p">(</span><span class="n">data</span><span class="p">.</span><span class="n">enableVerticalMirror</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="k">public</span><span class="o">:</span>
+
+<span class="w">    </span><span class="n">MirrorProperties</span><span class="w"> </span><span class="n">apply</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">KisPaintInformation</span><span class="w"> </span><span class="o">&amp;</span><span class="n">info</span><span class="p">)</span><span class="w"> </span><span class="k">const</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// ...</span>
+<span class="w">        </span><span class="c1">// skipped some calculations using:</span>
+<span class="w">        </span><span class="c1">//   * m_enableHorizontalMirror</span>
+<span class="w">        </span><span class="c1">//   * m_enableVerticalMirror</span>
+<span class="w">        </span><span class="c1">//   * KisCurveOption::computeSizeLikeValue(info)</span>
+<span class="w">        </span><span class="c1">// ...</span>
+
+<span class="w">        </span><span class="n">MirrorProperties</span><span class="w"> </span><span class="n">mirrors</span><span class="p">;</span>
+
+<span class="w">        </span><span class="n">mirrors</span><span class="p">.</span><span class="n">verticalMirror</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">...;</span>
+<span class="w">        </span><span class="n">mirrors</span><span class="p">.</span><span class="n">horizontalMirror</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">...;</span>
+<span class="w">        </span><span class="n">mirrors</span><span class="p">.</span><span class="n">coordinateSystemFlipped</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">...;</span>
+
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">mirrors</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="k">private</span><span class="o">:</span>
+<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">m_enableHorizontalMirror</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">m_enableVerticalMirror</span><span class="p">;</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="paint-engine-porting-guide">
+<h2><a class="toc-backref" href="#id21" role="doc-backlink">Paint engine porting guide</a><a class="headerlink" href="#paint-engine-porting-guide" title="本標頭的永久連結">¶</a></h2>
+<p>When porting is it recommended to use <code class="docutils literal notranslate"><span class="pre">KisBrushOp</span></code> as an reference implementation.</p>
+<p>The rough plan for porting an arbitrary painting engine <code class="docutils literal notranslate"><span class="pre">FooOp</span></code> to lager is the following:</p>
+<ol class="arabic simple">
+<li><p>Port the GUI part</p></li>
+</ol>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Open <code class="docutils literal notranslate"><span class="pre">KisFooOpSettingsWidget</span></code> class and look at its constructor that creates all the option widgets.</p></li>
+<li><p>Replace all standard option widgets with the already ported ones. Use <code class="docutils literal notranslate"><span class="pre">KisBrushOpSettingsWidget</span></code> as a reference of existing widgets.</p></li>
+<li><p>Test if GUI still works correctly and affects the brush in an expected way</p></li>
+<li><p>Port all non-standard options to lager and add them to <code class="docutils literal notranslate"><span class="pre">KisFooOpSettingsWidget</span></code>. Usually, old and new class names map as the following:</p></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">KisFooBarOptionData</span></code> usually borrows reading and writing code from <code class="docutils literal notranslate"><span class="pre">KisPressureFooBarOption</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">KisFooBarOptionModel</span></code> is just written from scratch</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">KisFooBarOptionWidget</span></code> borrows GUI code from <code class="docutils literal notranslate"><span class="pre">KisPressureFooBarOptionWidget</span></code></p></li>
+</ul>
+</div></blockquote>
+<p>Use <code class="docutils literal notranslate"><span class="pre">KisScatterOptionData</span></code>, <code class="docutils literal notranslate"><span class="pre">KisScatterOptionModel</span></code> and <code class="docutils literal notranslate"><span class="pre">KisScatterOptionWidget</span></code> as a reference implementation.</p>
+<ol class="arabic simple" start="5">
+<li><p>Test if GUI still works correctly and affects the brush in an expected way</p></li>
+</ol>
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li><p>Port the painting part</p></li>
+</ol>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Open <code class="docutils literal notranslate"><span class="pre">KisFooOp</span></code></p></li>
+<li><p>Replace all standard <code class="docutils literal notranslate"><span class="pre">KisPressureFooBarOption</span></code> classes with the already ported ones. Use <code class="docutils literal notranslate"><span class="pre">KisBrushOp</span></code> as a reference of existing options.</p></li>
+<li><p>Port all non-standard options to lager: you just need to extract <code class="docutils literal notranslate"><span class="pre">KisPressureFooBarOption::apply()</span></code> function into a separate class named <code class="docutils literal notranslate"><span class="pre">KisFooBarOption</span></code>. Use <code class="docutils literal notranslate"><span class="pre">KisScatterOption</span></code> as a reference implementation.</p></li>
+<li><p>Test if the brush still reacts to the GUI changes in an expected way</p></li>
+</ol>
+</div></blockquote>
+<ol class="arabic simple" start="3">
+<li><p>Check if any of the options you ported had <code class="docutils literal notranslate"><span class="pre">KisPressureFooBarOption::lodLimitation()</span></code> method. If so, port these limitations to your new <code class="docutils literal notranslate"><span class="pre">KisFooBarOptionData</span></code> and use a special creation function <code class="docutils literal notranslate"><span class="pre">KisPaintOpOptionWidgetUtils::createOptionWidgetWithLodLimitations()</span></code> to create a widget for it. Use <code class="docutils literal notranslate"><span class="pre">KisSizeOptionData</span></code> and <code class="docutils literal notranslate"><span class="pre">KisSizeOptionWidget</span></code> as a reference implementation.</p></li>
+<li><p>If any new brush option has &quot;effective&quot; values, verify that you have <code class="docutils literal notranslate"><span class="pre">KisFooBarOptionModel::bakedOptionData()</span></code> method in the model and calls it from <code class="docutils literal notranslate"><span class="pre">KisFooBarOptionWidget::writeOptionSetting()</span></code> in the widget.</p></li>
+<li><p>Open <code class="docutils literal notranslate"><span class="pre">KisFooOpSettings</span></code> and port all the <em>uniform properties</em> to use new data classes. Use <code class="docutils literal notranslate"><span class="pre">KisColorSmudgeOpSettings</span></code> as a reference implementation.</p></li>
+</ol>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="building_krita.html" class="btn btn-neutral float-right" title="Building Krita from Source" accesskey="n" rel="next"> <!-- 下一個 --> <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../untranslatable_pages.html" class="btn btn-neutral" title="Technical Pages" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> <!-- 上一個  -->  </a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; 版權所有 licensed under the GNU Free Documentation License 1.3+ unless stated otherwise。
+      
+        <span class="commit">
+          修訂版本 <code>fd19cea</code>
+        </span>
+      
+
+    </p>
+  </div>
+  使用 <a href="http://sphinx-doc.org/">Sphinx</a> 以及經修改過的 <a href="https://github.com/rtfd/sphinx_rtd_theme">RTD 主題</a>建置<br/>
+  <a href="https://krita.org" title="Krita 官方網站">Krita 官方網站</a> |
+  <a href="https://invent.kde.org/documentation/docs-krita-org/" title="這份手冊的 KDE GitLab 專案網址">docs.krita.org 的 Git 原始碼儲存庫</a> |
+  <a href="https://www.kde.org/community/whatiskde/impressum-en.php" title="了解更多關於 KDE、code of conduct（行為準則）、隱私政策及 GDPR（一般資料保護規則）">KDE Impressum</a>
+   
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  
+      <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+      <script src="../_static/jquery.js"></script>
+      <script src="../_static/underscore.js"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+      <script src="../_static/doctools.js"></script>
+      <script src="../_static/sphinx_highlight.js"></script>
+      <script src="../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
+      });
+  </script> 
+
+ <script type="text/javascript">
+	 var _paq=_paq||[];
+	 _paq.push(['setCookieDomain','*.krita.org']);
+	 _paq.push(['setDomains','*.krita.org']);
+	 _paq.push(['setDocumentTitle',document.domain+"/"+document.title]);
+	 _paq.push(['trackPageView']);
+	 _paq.push(['enableLinkTracking']);
+
+	 (function(){
+	 	var u="//stats.kde.org/";
+	    _paq.push(['setTrackerUrl',u+'piwik.php']);
+	    _paq.push(['setSiteId',13]);
+	    var d = document, g = d.createElement('script'),s=d.getElementsByTagName('script')[0];
+	    g.type = 'text/javascript';
+	    g.async = true;
+	    g.defer = true;
+	    g.src = u+'piwik.js';
+	    s.parentNode.insertBefore(g,s);
+	  })();
+</script> 
+<noscript><p><img src="//stats.kde.org/piwik.php?idsite=13" style="border:0;" alt="" /></p></noscript>
+
+</body>
+</html>
