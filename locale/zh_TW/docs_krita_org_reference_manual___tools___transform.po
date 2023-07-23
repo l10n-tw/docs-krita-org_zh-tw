@@ -9,11 +9,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 4.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-08-17 13:54+0000\n"
+"POT-Creation-Date: 2023-07-23 09:17+0000\n"
 "PO-Revision-Date: 2022-08-18 08:13+0000\n"
 "Last-Translator: Alvin Wong <alvin@alvinhc.com>\n"
-"Language-Team: Chinese (Traditional) <http://weblate.slat.org/projects/"
-"krita-docs/3-reference_manual___tools___transform/zh_Hant/>\n"
+"Language-Team: Chinese (Traditional) <http://weblate.slat.org/projects/krita-"
+"docs/3-reference_manual___tools___transform/zh_Hant/>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -603,7 +603,7 @@ msgstr ""
 "給予用於調整格柵水平和垂直的數量的精確控制。當增加或減少格柵的數量，Krita 會"
 "嘗試保持彎曲的程度不變，為你的調整給予便利。"
 
-#: ../../reference_manual/tools/transform.rst:203
+#: ../../reference_manual/tools/transform.rst:204
 msgid "Show control points"
 msgstr "顯示控制點"
 
@@ -611,42 +611,47 @@ msgstr "顯示控制點"
 msgid "This will toggle the control points."
 msgstr "這個選項能控制顯示控制點的開關。"
 
-#: ../../reference_manual/tools/transform.rst:206
-msgid "Recursive Transform"
-msgstr "遞歸運算轉換"
+#: ../../reference_manual/tools/transform.rst:207
+#, fuzzy
+#| msgid "Transformation Masks"
+msgid "Transform Multiple Layers"
+msgstr "變形遮罩"
 
-#: ../../reference_manual/tools/transform.rst:210
-msgid ""
-"As of Krita 5.0, the toggle for recursive transform has been removed to "
-"reduce confusion, as this only worked with masks. Recursive transform is on "
-"by default for all contents of a group layer. To achieve non-recursive "
-"transformation you can use the layer lock feature."
+#: ../../reference_manual/tools/transform.rst:209
+msgid "Krita allows you to transform multiple layers at once."
 msgstr ""
 
-#: ../../reference_manual/tools/transform.rst:212
+#: ../../reference_manual/tools/transform.rst:211
 msgid ""
-"The little spider icon on the lower-left of the transform tool options is "
-"the :guilabel:`Recursive Transform`."
-msgstr "在變形工具選項裡左下的蜘蛛圖示便是 :guilabel:`遞歸運算轉換`。"
+"In Krita versions older than 5.0 this required using the :guilabel:"
+"`Recursive Transform` option while transforming a group layer, whose icon "
+"was a little spider. Since 5.0, this option is enabled by default for group "
+"layers (To achieve non-recursive transformation you can use the layer lock "
+"feature)."
+msgstr ""
 
-#: ../../reference_manual/tools/transform.rst:216
+#: ../../reference_manual/tools/transform.rst:215
 msgid ""
-"Recursive transform transforms all the layers in the group, so with this "
+"Transforming multiple layers doesn't require a group anymore, now all layers "
+"selected in the layer docker will be transformed at once."
+msgstr ""
+
+#: ../../reference_manual/tools/transform.rst:219
+#, fuzzy
+#| msgid ""
+#| "Recursive transform transforms all the layers in the group, so with this "
+#| "apple, both the lineart as the fill will be transformed."
+msgid ""
+"Krita allows you to transforms all the layers in the group, so with this "
 "apple, both the lineart as the fill will be transformed."
 msgstr ""
 "遞歸運算轉換會變形所有在群組裡的圖層，如圖中所示，線條和填充顏色都被變形。"
 
-#: ../../reference_manual/tools/transform.rst:218
-msgid ""
-"Recursive transform, when toggled, allows you to mass-transform all the "
-"layers in a group when only transforming the group."
-msgstr "遞歸運算轉換，當被開啟時，可以在只變形群組時變形在群組裡的圖層。"
-
-#: ../../reference_manual/tools/transform.rst:221
+#: ../../reference_manual/tools/transform.rst:222
 msgid "Continuous Transform"
 msgstr "連續變形"
 
-#: ../../reference_manual/tools/transform.rst:223
+#: ../../reference_manual/tools/transform.rst:224
 msgid ""
 "If you apply a transformation, and try to start a new one directly "
 "afterwards, Krita will attempt to recall the previous transform, so you can "
@@ -658,11 +663,11 @@ msgstr ""
 "形。這便是「連續變形」。你可以按 :kbd:`Esc` 來取消來開始一個新的變形，或在沒"
 "有變形時按工具選項裡的 :guilabel:`重設`。"
 
-#: ../../reference_manual/tools/transform.rst:226
+#: ../../reference_manual/tools/transform.rst:227
 msgid "Transformation Masks"
 msgstr "變形遮罩"
 
-#: ../../reference_manual/tools/transform.rst:228
+#: ../../reference_manual/tools/transform.rst:229
 msgid ""
 "These allow you to make non-destructive transforms, check :ref:`here "
 "<transformation_masks>` for more info."
@@ -681,3 +686,16 @@ msgstr "變形"
 #: ../../reference_manual/tools/transform.rst:13
 msgid "Liquefy"
 msgstr "液化"
+
+#~ msgid "Recursive Transform"
+#~ msgstr "遞歸運算轉換"
+
+#~ msgid ""
+#~ "The little spider icon on the lower-left of the transform tool options is "
+#~ "the :guilabel:`Recursive Transform`."
+#~ msgstr "在變形工具選項裡左下的蜘蛛圖示便是 :guilabel:`遞歸運算轉換`。"
+
+#~ msgid ""
+#~ "Recursive transform, when toggled, allows you to mass-transform all the "
+#~ "layers in a group when only transforming the group."
+#~ msgstr "遞歸運算轉換，當被開啟時，可以在只變形群組時變形在群組裡的圖層。"

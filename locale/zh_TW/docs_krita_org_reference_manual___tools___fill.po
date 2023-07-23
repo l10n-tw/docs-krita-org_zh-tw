@@ -9,11 +9,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 4.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-27 21:21+0800\n"
+"POT-Creation-Date: 2023-07-23 09:17+0000\n"
 "PO-Revision-Date: 2021-08-24 21:23+0000\n"
 "Last-Translator: Alvin Wong <alvin@alvinhc.com>\n"
-"Language-Team: Chinese (Traditional) <http://weblate.slat.org/projects/"
-"krita-docs/3-reference_manual___tools___fill/zh_Hant/>\n"
+"Language-Team: Chinese (Traditional) <http://weblate.slat.org/projects/krita-"
+"docs/3-reference_manual___tools___fill/zh_Hant/>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -26,11 +26,11 @@ msgstr ""
 msgid "Krita's fill tool reference."
 msgstr "Krita 填色工具的說明文件。"
 
-#: ../../reference_manual/tools/fill.rst:16
+#: ../../reference_manual/tools/fill.rst:17
 msgid "Fill Tool"
 msgstr "填色工具"
 
-#: ../../reference_manual/tools/fill.rst:18
+#: ../../reference_manual/tools/fill.rst:19
 msgid "|toolfill|"
 msgstr "填色工具"
 
@@ -38,138 +38,325 @@ msgstr "填色工具"
 msgid "toolfill"
 msgstr "填色工具"
 
-#: ../../reference_manual/tools/fill.rst:20
+#: ../../reference_manual/tools/fill.rst:21
 msgid ""
 "Krita has one of the most powerful and capable Fill functions available. The "
 "options found in the Tool Options docker and outlined below will give you a "
 "great deal of flexibility working with layers and selections."
-msgstr "Krita 擁有最強大的填色功能。選項可以在工具面板中找到，並且在接下來的導覽中將為您提供靈活運用圖層和選項的方法。"
+msgstr ""
+"Krita 擁有最強大的填色功能。選項可以在工具面板中找到，並且在接下來的導覽中將"
+"為您提供靈活運用圖層和選項的方法。"
 
-#: ../../reference_manual/tools/fill.rst:22
+#: ../../reference_manual/tools/fill.rst:23
 msgid ""
 "To get started, clicking anywhere on screen with the fill-tool will allow "
 "that area to be filed with the foreground color."
 msgstr "要開始使用，使用填色工具在畫面上的任何地方將會直接以前景色填滿該區域。"
 
-#: ../../reference_manual/tools/fill.rst:25
+#: ../../reference_manual/tools/fill.rst:26
 msgid "Tool Options"
 msgstr "工具選項"
 
-#: ../../reference_manual/tools/fill.rst:27
-msgid "Fast Mode"
-msgstr "快速填充模式"
-
-#: ../../reference_manual/tools/fill.rst:28
-msgid ""
-"This is a special mode for really fast filling. However, many functions "
-"don't work with this mode."
-msgstr "這是個特殊模式用於快速填色。然而，許多功能並不適用於這個模式。"
+#: ../../reference_manual/tools/fill.rst:41
+#, fuzzy
+#| msgid "Fill Tool"
+msgid "Fill Mode"
+msgstr "填色工具"
 
 #: ../../reference_manual/tools/fill.rst:29
-msgid "Threshold"
-msgstr "閾值"
+#, fuzzy
+#| msgid "Grow Selection"
+msgid "Current Selection"
+msgstr "擴大選取區域"
 
 #: ../../reference_manual/tools/fill.rst:30
 #, fuzzy
-msgid "Determines when the fill-tool sees another color as a border."
-msgstr "確定填充工具何時將另一種顏色視為邊框。"
-
-#: ../../reference_manual/tools/fill.rst:31
-msgid "Grow Selection"
-msgstr "擴大選取區域"
-
-#: ../../reference_manual/tools/fill.rst:32
-msgid "This value extends the shape beyond its initial size."
-msgstr "此值將形狀擴展到其初始大小之外。"
-
-#: ../../reference_manual/tools/fill.rst:33
-msgid "Feathering Radius"
-msgstr "羽化半徑"
-
-#: ../../reference_manual/tools/fill.rst:34
-msgid "This value will add a soft border to the filled-shape."
-msgstr "這個值將為填充形狀添加淡化的邊框。"
-
-#: ../../reference_manual/tools/fill.rst:45
-msgid "Fill Entire Selection"
-msgstr "填充整個選取區域"
-
-#: ../../reference_manual/tools/fill.rst:36
+#| msgid ""
+#| "Activating this will result in the shape filling the whole of the active "
+#| "selection, regardless of threshold."
 msgid ""
 "Activating this will result in the shape filling the whole of the active "
-"selection, regardless of threshold."
+"selection."
 msgstr "選取這個選項將導致形狀填充整個選取範圍，而不受閾值控制。"
 
-#: ../../reference_manual/tools/fill.rst:44
-msgid "Use selection as boundary"
-msgstr "以選取區域為邊界"
+#: ../../reference_manual/tools/fill.rst:32
+msgid "Contiguous Region"
+msgstr ""
+
+#: ../../reference_manual/tools/fill.rst:32
+msgid ""
+"This option is the default and allows filling a region of contiguous pixels "
+"obtained from the image at the point where the user clicks."
+msgstr ""
+
+#: ../../reference_manual/tools/fill.rst:37
+msgid "Regions of Similar Color"
+msgstr ""
+
+#: ../../reference_manual/tools/fill.rst:37
+msgid ""
+"This option allows filling all the regions similar in color to the pixel "
+"where the user clicks"
+msgstr ""
 
 #: ../../reference_manual/tools/fill.rst:41
 msgid ""
-"When checked, this will count the borders of the selection as an extra "
-"boundary on top of the pixel difference."
+"a: An image with a selection. The red dot marks where the user clicked to "
+"fill. b: The region filled using:guilabel:`Current Selection`. c: The region "
+"filled using :guilabel:`Contiguous Pixels`, filling all pixels that are both "
+"similar and contiguous to the one the user clicked. d: The region filled "
+"with :guilabel:`Regions of Similar Color`, filling pixels similarly colored "
+"to the one the user clicked."
+msgstr ""
+
+#: ../../reference_manual/tools/fill.rst:62
+#, fuzzy
+#| msgid "Fill Tool"
+msgid "Fill Source"
+msgstr "填色工具"
+
+#: ../../reference_manual/tools/fill.rst:45
+msgid "Foreground Color"
 msgstr ""
 
 #: ../../reference_manual/tools/fill.rst:45
 msgid ""
-"Left: Original selection with a line. Middle: Filled with 'use selection as "
-"boundary' off. Right: Filled with 'use selection as boundary' on."
+"Selecting this option will fill the obtained region with the foreground "
+"color."
 msgstr ""
 
-#: ../../reference_manual/tools/fill.rst:57
-msgid "Use Pattern"
+#: ../../reference_manual/tools/fill.rst:50
+msgid "Background Color"
 msgstr ""
 
-#: ../../reference_manual/tools/fill.rst:48
-msgid "Ticking this will result in the active pattern being used."
+#: ../../reference_manual/tools/fill.rst:50
+msgid ""
+"Selecting this option will fill the obtained region with the background "
+"color."
 msgstr ""
 
-#: ../../reference_manual/tools/fill.rst:52
-msgid "Rotation"
+#: ../../reference_manual/tools/fill.rst:62
+msgid "Pattern"
 msgstr ""
 
 #: ../../reference_manual/tools/fill.rst:53
-msgid "This allows you to rotate the pattern used in the fill."
+msgid ""
+"Selecting this option will fill the obtained region with the current pattern."
 msgstr ""
 
 #: ../../reference_manual/tools/fill.rst:57
 msgid "Scale"
 msgstr ""
 
-#: ../../reference_manual/tools/fill.rst:57
+#: ../../reference_manual/tools/fill.rst:58
 msgid "This allows you to scale the pattern used in the fill."
 msgstr ""
 
-#: ../../reference_manual/tools/fill.rst:69
-msgid "Sample"
+#: ../../reference_manual/tools/fill.rst:62
+msgid "Rotation"
 msgstr ""
 
 #: ../../reference_manual/tools/fill.rst:62
+msgid "This allows you to rotate the pattern used in the fill."
+msgstr ""
+
+#: ../../reference_manual/tools/fill.rst:108
+msgid "Fill Extent"
+msgstr ""
+
+#: ../../reference_manual/tools/fill.rst:87
+msgid "Pixel Selection Modes"
+msgstr ""
+
+#: ../../reference_manual/tools/fill.rst:68
+msgid ""
+"When filling a contiguous region, the user can choose how the pixels are "
+"selected based on color similarity."
+msgstr ""
+
+#: ../../reference_manual/tools/fill.rst:74
+msgid "Fill Similar Pixels"
+msgstr ""
+
+#: ../../reference_manual/tools/fill.rst:74
+msgid ""
+"The contiguous pixels that are similar to the one the user clicked on are "
+"selected."
+msgstr ""
+
+#: ../../reference_manual/tools/fill.rst:83
+msgid "Fill All Pixels Until a Boundary"
+msgstr ""
+
+#: ../../reference_manual/tools/fill.rst:80
+msgid ""
+"All the contiguous pixels are selected as long as they are not similar to "
+"the user defined boundary color."
+msgstr ""
+
+#: ../../reference_manual/tools/fill.rst:83
+msgid "Boundary Color"
+msgstr ""
+
+#: ../../reference_manual/tools/fill.rst:83
+msgid "Defines the color used as a boundary."
+msgstr ""
+
+#: ../../reference_manual/tools/fill.rst:87
+msgid ""
+"a: An image with a red dot marking where the user clicked to fill. b: The "
+"filled region when selecting only the similar contiguous pixels. c: The "
+"filled region all the pixels until the boundary color (here set to the color "
+"black)."
+msgstr ""
+
+#: ../../reference_manual/tools/fill.rst:90
+msgid "Threshold"
+msgstr "閾值"
+
+#: ../../reference_manual/tools/fill.rst:90
+msgid ""
+"Determines when the fill-tool sees another color as a border. In other "
+"words, how far the region should extend from the selected pixel in terms of "
+"color similarity."
+msgstr ""
+
+#: ../../reference_manual/tools/fill.rst:99
+msgid "Spread"
+msgstr ""
+
+#: ../../reference_manual/tools/fill.rst:95
+msgid ""
+"Set how far the fully opaque portion of the region should extend. 0% will "
+"make opaque only the pixels that are exactly equal to the selected pixel. "
+"100% will make opaque all the pixels in the region up to its boundary."
+msgstr ""
+
+#: ../../reference_manual/tools/fill.rst:99
+msgid ""
+"Left: Original image. The black dot indicates where the fill operation "
+"starts. Top-right: a row of images that show the result of filling with a "
+"threshold value of 30 and a spread value of 0, 30, 60 and 100 percent from "
+"left to right. Bottom-right: a row of images that show the result of filling "
+"with a threshold value of 65 and a spread value of 0, 30, 60 and 100 percent "
+"from left to right."
+msgstr ""
+
+#: ../../reference_manual/tools/fill.rst:108
+#, fuzzy
+#| msgid "Use selection as boundary"
+msgid "Use Selection as Boundary"
+msgstr "以選取區域為邊界"
+
+#: ../../reference_manual/tools/fill.rst:104
+msgid ""
+"When checked, this will count the borders of the selection as an extra "
+"boundary on top of the pixel difference."
+msgstr ""
+
+#: ../../reference_manual/tools/fill.rst:108
+msgid ""
+"Left: Original selection with a line. Middle: Filled with 'use selection as "
+"boundary' off. Right: Filled with 'use selection as boundary' on."
+msgstr ""
+
+#: ../../reference_manual/tools/fill.rst:135
+msgid "Adjustments"
+msgstr ""
+
+#: ../../reference_manual/tools/fill.rst:114
+msgid "Anti-aliasing"
+msgstr ""
+
+#: ../../reference_manual/tools/fill.rst:114
+msgid ""
+"This will smooth the jagged edges present in the region. It differs from "
+"feathering in that this will smooth in the direction of the edge instead of "
+"all directions, and only if the edge is jagged (high contrast)."
+msgstr ""
+
+#: ../../reference_manual/tools/fill.rst:132
+msgid "Grow Selection"
+msgstr "擴大選取區域"
+
+#: ../../reference_manual/tools/fill.rst:117
+msgid ""
+"This value extends (positive values) or contracts (negative values) the "
+"region."
+msgstr ""
+
+#: ../../reference_manual/tools/fill.rst:132
+msgid "Stop Growing at the Darkest and/or More Opaque Pixels"
+msgstr ""
+
+#: ../../reference_manual/tools/fill.rst:125
+msgid ""
+"This option is useful when filling inner regions of a lineart. When the "
+"lines have smooth borders, some unwanted pixels may remain unfilled between "
+"the line's darkest or more opaque parts and the filled region. To improve "
+"that, it is common to grow the region a bit to cover those pixels."
+msgstr ""
+
+#: ../../reference_manual/tools/fill.rst:127
+msgid ""
+"One issue that may arise is that the lines vary in width and the expanded "
+"region exceeds some of the thinner ones. If this option is selected, the "
+"growing process will stop adaptively if the color of the pixels begins to "
+"get lighter or less opaque. This effectively prevents the expanded region "
+"from reaching the opposite side of the lines."
+msgstr ""
+
+#: ../../reference_manual/tools/fill.rst:131
+msgid ""
+"Comparison of the filled region with and without the option selected. The "
+"filled regions were painted with the multiply blending mode for clarity. a: "
+"An image with some lineart that varies in width and a red dot indicating "
+"where the user clicked to fill. b: The filled region without being expanded. "
+"c: The filled region after being expanded by twelve pixels. Note that the "
+"region exceeds the line in some points. d: The filled region after being "
+"expanded by twelve pixels, but stopping adaptively at the darkest pixels."
+msgstr ""
+
+#: ../../reference_manual/tools/fill.rst:135
+msgid "Feathering Radius"
+msgstr "羽化半徑"
+
+#: ../../reference_manual/tools/fill.rst:135
+#, fuzzy
+#| msgid "This value will add a soft border to the filled-shape."
+msgid "This value will add a soft border to the region."
+msgstr "這個值將為填充形狀添加淡化的邊框。"
+
+#: ../../reference_manual/tools/fill.rst:161
+msgid "Reference"
+msgstr ""
+
+#: ../../reference_manual/tools/fill.rst:140
 msgid ""
 "Select which layers to use as a reference for the fill tool. The options are:"
 msgstr ""
 
-#: ../../reference_manual/tools/fill.rst:64
+#: ../../reference_manual/tools/fill.rst:142
 msgid "Current Layer"
 msgstr ""
 
-#: ../../reference_manual/tools/fill.rst:65
+#: ../../reference_manual/tools/fill.rst:143
 msgid "Only use the currently selected layer."
 msgstr ""
 
-#: ../../reference_manual/tools/fill.rst:66
+#: ../../reference_manual/tools/fill.rst:144
 msgid "All layers"
 msgstr ""
 
-#: ../../reference_manual/tools/fill.rst:67
+#: ../../reference_manual/tools/fill.rst:145
 msgid "Use all visible layers."
 msgstr ""
 
-#: ../../reference_manual/tools/fill.rst:69
+#: ../../reference_manual/tools/fill.rst:150
 msgid "Color Labeled Layers"
 msgstr ""
 
-#: ../../reference_manual/tools/fill.rst:69
+#: ../../reference_manual/tools/fill.rst:147
 msgid ""
 "Use only the layers specified with a certain color label. This is useful for "
 "complex images, where you might have multiple lineart layers. Label them "
@@ -177,22 +364,71 @@ msgid ""
 "to use as a reference."
 msgstr ""
 
-#: ../../reference_manual/tools/fill.rst:75
+#: ../../reference_manual/tools/fill.rst:150
 msgid "Labels Used"
 msgstr ""
 
-#: ../../reference_manual/tools/fill.rst:74
-msgid "Used with the 'Color Labeled Layers' option above."
+#: ../../reference_manual/tools/fill.rst:150
+msgid "Select the color labels of the layers that should be used as reference."
 msgstr ""
 
-#: ../../reference_manual/tools/fill.rst:11
+#: ../../reference_manual/tools/fill.rst:161
+msgid "Drag-Fill Mode"
+msgstr ""
+
+#: ../../reference_manual/tools/fill.rst:155
+msgid ""
+"Select what should happen when one clicks and drags the pointer on the "
+"canvas."
+msgstr ""
+
+#: ../../reference_manual/tools/fill.rst:157
+msgid "Fill Regions of Any Color"
+msgstr ""
+
+#: ../../reference_manual/tools/fill.rst:158
+msgid ""
+"With this option selected, the tool will fill any region along the path "
+"described by the pointer while dragging, regardless of its color."
+msgstr ""
+
+#: ../../reference_manual/tools/fill.rst:161
+msgid "Fill Regions of Similar Colors"
+msgstr ""
+
+#: ../../reference_manual/tools/fill.rst:160
+msgid ""
+"With this option selected, the tool will fill the regions along path "
+"described by the pointer while dragging that have the same color as the "
+"first region filled."
+msgstr ""
+
+#: ../../reference_manual/tools/fill.rst:12
 msgid "Tools"
 msgstr "工具"
 
-#: ../../reference_manual/tools/fill.rst:11
+#: ../../reference_manual/tools/fill.rst:12
 msgid "Fill"
 msgstr ""
 
-#: ../../reference_manual/tools/fill.rst:11
+#: ../../reference_manual/tools/fill.rst:12
 msgid "Bucket"
 msgstr ""
+
+#~ msgid "Fast Mode"
+#~ msgstr "快速填充模式"
+
+#~ msgid ""
+#~ "This is a special mode for really fast filling. However, many functions "
+#~ "don't work with this mode."
+#~ msgstr "這是個特殊模式用於快速填色。然而，許多功能並不適用於這個模式。"
+
+#, fuzzy
+#~ msgid "Determines when the fill-tool sees another color as a border."
+#~ msgstr "確定填充工具何時將另一種顏色視為邊框。"
+
+#~ msgid "This value extends the shape beyond its initial size."
+#~ msgstr "此值將形狀擴展到其初始大小之外。"
+
+#~ msgid "Fill Entire Selection"
+#~ msgstr "填充整個選取區域"
