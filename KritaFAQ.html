@@ -23,7 +23,7 @@
   <meta property="og:locale:alternate" content="tr" />
   <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta property="og:article:modified_time" content="2023-07-23T20:56:20" />
+  <meta property="og:article:modified_time" content="2023-07-25T14:58:19" />
   <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
   
@@ -515,7 +515,7 @@
 </section>
 <section id="what-graphics-cards-does-krita-support">
 <h3><a class="toc-backref" href="#id13" role="doc-backlink">Krita 支援哪些顯示卡？</a><a class="headerlink" href="#what-graphics-cards-does-krita-support" title="本標頭的永久連結">¶</a></h3>
-<p>Krita can use OpenGL to accelerate painting and canvas zooming, rotation and panning. Nvidia and recent Intel GPUs give the best results. Make sure your OpenGL drivers support OpenGL 3.2 as the minimum. AMD/ATI GPU’s are known to be troublesome, especially with the proprietary drivers on Linux. However, it works perfectly with the Radeon free driver on Linux for supported AMD GPU. Try to get a graphics card that can support OpenGL 3.2 or above for the best results, some examples:</p>
+<p>Krita 使用 OpenGL 圖形加速來獲得平滑的繪畫與畫布平移、旋轉和縮放體驗。使用 NVIDIA 與近期的 Intel 顯示卡 GPU 效果較佳。請確認你的 OpenGL 驅動程式支援 OpenGL 3.2 或以上。 已知 AMD/ATI 的顯示卡在使用 Linux 的非自由驅動程式時比較麻煩。不過，兼容的顯示卡使用開源 Radeon 驅動程式則沒有問題。以下舉例：</p>
 <dl class="simple">
 <dt>Intel</dt><dd><p>Intel 3rd Generation HD Graphics, IvyBridge or Bay-Trail microarchitecture, released in 2012. Commonly available products: Celeron J1x00, N2x00, Celeron (G)1xx0, Pentium J2x00, N3500, Pentium (G)2xx0, Core i3/5/7-3xx0.</p>
 </dd>
@@ -707,15 +707,15 @@ unzip<span class="w"> </span>file_new2.zip
 </li>
 <li><p>按下鍵盤快捷鍵 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">T</kbd></kbd>，便會出現一個對話方塊告知你已開始進行記錄。</p></li>
 <li><p>嘗試重現你發現的問題。在使用數位板繪畫的同時，你應能夠看到紀錄檢視器中出現新的紀錄項目。</p></li>
-<li><p>Save the output from the log viewer into a TXT file, and attach it to the bug report.</p></li>
+<li><p>將紀錄檢視器的輸出儲存為 TXT 純文字檔案，然後將該檔案附加到錯誤報告中。</p></li>
 </ol>
-<p>On Linux, it is also useful to have the following information:</p>
+<p>使用 Linux 的話，一併提供以下資訊或許有幫助：</p>
 <ol class="arabic simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">lsmod</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">xinput</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lsmod</span></code> 的輸出</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">xinput</span></code> 的輸出</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">xinput</span> <span class="pre">list-props</span></code> (ID can be fetched from the item 2)</p></li>
 </ol>
-<p>However, in 100% of the cases where Windows users have reported that their tablet didn't work over the past five years, the problem has been either a buggy driver or a broken driver installation, but not a bug in Krita.</p>
+<p>不過，在過去五年使用者回報無法在 Windows 使用數位板的個案當中，大多數都是因為驅動程式本身有問題或安裝驅動程式出問題而引致的，並非 Krita 的問題。</p>
 </section>
 <section id="how-to-fix-a-tablet-offset-on-multiple-screen-setup-on-windows">
 <h3><a class="toc-backref" href="#id34" role="doc-backlink">如何修正繪圖板筆尖與游標位置不符合的問題</a><a class="headerlink" href="#how-to-fix-a-tablet-offset-on-multiple-screen-setup-on-windows" title="本標頭的永久連結">¶</a></h3>
